@@ -1,0 +1,46 @@
+{
+  "tables": [
+    {
+      "name": "markets",
+      "label": "Markets",
+      "icon": "trending_up",
+      "description": "Live cryptocurrency prices (top coins by market cap) from the CoinGecko public API.",
+      "source": {
+        "type": "rest",
+        "url": "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=25&page=1&price_change_percentage=24h",
+        "method": "GET",
+        "autoRefresh": true
+      }
+    },
+    {
+      "name": "btc_history",
+      "label": "BTC history",
+      "icon": "show_chart",
+      "description": "Bitcoin daily price (last 90 days, USD) from the CoinGecko public API.",
+      "source": {
+        "type": "rest",
+        "url": "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=90&interval=daily",
+        "method": "GET",
+        "rowsPath": "prices",
+        "arrayColumns": ["time", "price"],
+        "idField": "time",
+        "autoRefresh": true
+      }
+    },
+    {
+      "name": "eth_history",
+      "label": "ETH history",
+      "icon": "show_chart",
+      "description": "Ethereum daily price (last 90 days, USD) from the CoinGecko public API.",
+      "source": {
+        "type": "rest",
+        "url": "https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=90&interval=daily",
+        "method": "GET",
+        "rowsPath": "prices",
+        "arrayColumns": ["time", "price"],
+        "idField": "time",
+        "autoRefresh": true
+      }
+    }
+  ]
+}

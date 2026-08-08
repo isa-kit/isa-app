@@ -1,0 +1,76 @@
+{
+  "tables": [
+    {
+      "name": "tasks",
+      "label": {
+        "en": "Tasks",
+        "fr": "Tâches",
+        "de": "Aufgaben",
+        "es": "Tareas",
+        "it": "Attività",
+        "sv": "Uppgifter",
+        "cs": "Úkoly",
+        "el": "Εργασίες",
+        "ko": "할 일",
+        "zh": "任务",
+        "ja": "タスク"
+      },
+      "icon": "check_circle",
+      "description": "Nested units of work. A task may have a parent task, forming a tree."
+    },
+    {
+      "name": "notes",
+      "label": {
+        "en": "Notes",
+        "fr": "Notes",
+        "de": "Notizen",
+        "es": "Notas",
+        "it": "Note",
+        "sv": "Anteckningar",
+        "cs": "Poznámky",
+        "el": "Σημειώσεις",
+        "ko": "메모",
+        "zh": "笔记",
+        "ja": "メモ"
+      },
+      "icon": "sticky_note",
+      "description": "Free-form notes. Each note has a title, a body, and an optional date and tags."
+    },
+    {
+      "name": "profiles",
+      "label": {
+        "en": "Profiles",
+        "fr": "Profils",
+        "de": "Profile",
+        "es": "Perfiles",
+        "it": "Profili",
+        "sv": "Profiler",
+        "cs": "Profily",
+        "el": "Προφίλ",
+        "ko": "프로필",
+        "zh": "档案",
+        "ja": "プロフィール"
+      },
+      "icon": "star",
+      "description": "Contexts a task can belong to (work, personal, …). A task may have several."
+    },
+    {
+      "name": "templates",
+      "label": {
+        "en": "Templates",
+        "fr": "Modèles",
+        "de": "Vorlagen",
+        "es": "Plantillas",
+        "it": "Modelli",
+        "sv": "Mallar",
+        "cs": "Šablony",
+        "el": "Πρότυπα",
+        "ko": "템플릿",
+        "zh": "模板",
+        "ja": "テンプレート"
+      },
+      "icon": "checklist",
+      "description": "Reusable process templates: a template task plus its steps. Tap Use to copy one (and its steps) into Tasks."
+    }
+  ]
+}

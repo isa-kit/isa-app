@@ -1,0 +1,52 @@
+{
+  "pages": [
+    { "name": "name", "type": "text", "label": "Name", "required": true },
+    { "name": "kind", "type": "text", "label": "Kind", "description": "folder · page", "rules": { "hidden": true } },
+    { "name": "parentId", "type": "text", "label": "Parent folder", "rules": { "hidden": true } },
+    { "name": "order", "type": "number", "label": "Order", "rules": { "hidden": true } }
+  ],
+  "boxes": [
+    { "name": "label", "type": "text", "label": "Label", "required": true },
+    { "name": "kind", "type": "enum", "label": "Kind", "options": ["frame", "nav", "button", "input", "text", "image", "list", "section"], "description": "What kind of UI block this is." },
+    { "name": "note", "type": "text", "label": "Note", "description": "Detail / intent behind this block." },
+    { "name": "pageId", "type": "text", "label": "Page", "rules": { "hidden": true } },
+    { "name": "x", "type": "number", "label": "X", "rules": { "hidden": true } },
+    { "name": "y", "type": "number", "label": "Y", "rules": { "hidden": true } },
+    { "name": "w", "type": "number", "label": "Width", "rules": { "hidden": true } },
+    { "name": "h", "type": "number", "label": "Height", "rules": { "hidden": true } },
+    { "name": "z", "type": "number", "label": "Z-order", "description": "Stacking order — higher paints on top.", "rules": { "hidden": true } },
+    { "name": "locked", "type": "bool", "label": "Locked", "description": "A locked block can't be moved or resized.", "rules": { "hidden": true } },
+    { "name": "fill", "type": "text", "label": "Fill", "rules": { "hidden": true } },
+    { "name": "borderColor", "type": "text", "label": "Border color", "rules": { "hidden": true } },
+    { "name": "borderWidth", "type": "number", "label": "Border width", "rules": { "hidden": true } },
+    { "name": "layerId", "type": "text", "label": "Layer", "rules": { "hidden": true } },
+    { "name": "fontSize", "type": "number", "label": "Font size", "rules": { "hidden": true } },
+    { "name": "textAlign", "type": "text", "label": "Text align", "rules": { "hidden": true } },
+    { "name": "bold", "type": "bool", "label": "Bold", "rules": { "hidden": true } }
+  ],
+  "links": [
+    { "name": "from", "type": "ref", "label": "From", "refTable": "boxes" },
+    { "name": "to", "type": "ref", "label": "To", "refTable": "boxes" },
+    { "name": "label", "type": "text", "label": "On tap" },
+    { "name": "route", "type": "text", "label": "Route", "rules": { "hidden": true } },
+    { "name": "arrow", "type": "text", "label": "Arrowhead", "rules": { "hidden": true } },
+    { "name": "dash", "type": "text", "label": "Line style", "rules": { "hidden": true } },
+    { "name": "pageId", "type": "text", "label": "Page", "rules": { "hidden": true } }
+  ],
+  "sketch": [
+    { "name": "pageId", "type": "text", "label": "Page", "rules": { "hidden": true } },
+    { "name": "strokes", "type": "text", "label": "Strokes", "rules": { "hidden": true } }
+  ],
+  "layers": [
+    { "name": "name", "type": "text", "label": "Name", "required": true },
+    { "name": "visible", "type": "bool", "label": "Visible" },
+    { "name": "locked", "type": "bool", "label": "Locked" },
+    { "name": "pageId", "type": "text", "label": "Page", "rules": { "hidden": true } }
+  ],
+  "customWidgets": [
+    { "name": "name", "type": "text", "label": "Name", "required": true },
+    { "name": "w", "type": "number", "label": "Width", "rules": { "hidden": true } },
+    { "name": "h", "type": "number", "label": "Height", "rules": { "hidden": true } },
+    { "name": "definitionJson", "type": "text", "label": "Definition", "rules": { "hidden": true } }
+  ]
+}

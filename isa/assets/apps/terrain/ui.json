@@ -1,0 +1,3735 @@
+{
+  "app": {
+    "title": "Urbanset",
+    "primaryColor": "#2E6E5A",
+    "theme": "material",
+    "maxContentWidth": 900
+  },
+  "nav": [
+    {
+      "id": "overview",
+      "label": "Urbanset",
+      "icon": "insights",
+      "screen": "overview"
+    },
+    {
+      "id": "runs",
+      "label": "Runs",
+      "icon": "history",
+      "screen": "runs"
+    },
+    {
+      "id": "outputs",
+      "label": "Outputs",
+      "icon": "hub",
+      "screen": "outputs"
+    },
+    {
+      "id": "catalog",
+      "label": "Registries",
+      "icon": "category",
+      "screen": "catalog"
+    },
+    {
+      "id": "about",
+      "label": "About",
+      "icon": "info",
+      "screen": "about"
+    }
+  ],
+  "screens": {
+    "overview": {
+      "title": "Urbanset",
+      "maxContentWidth": 1160,
+      "body": {
+        "type": "column",
+        "scroll": true,
+        "children": [
+          {
+            "type": "cards",
+            "table": "models",
+            "expandable": false,
+            "title": "name",
+            "subtitle": "summary",
+            "search": true,
+            "groupBy": "kind",
+            "groupOrder": [
+              "foundation",
+              "step",
+              "layer"
+            ],
+            "collapsible": true,
+            "tags": [
+              {
+                "column": "confidence_tier",
+                "colors": {
+                  "focused": "green",
+                  "exploratory": "amber"
+                }
+              }
+            ],
+            "tableView": false,
+            "action": {
+              "chain": [
+                {
+                  "fn": "selectRow"
+                },
+                {
+                  "fn": "goto",
+                  "args": {
+                    "screenColumn": "detail_screen"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "header": {
+        "type": "row",
+        "children": [
+          {
+            "type": "button",
+            "label": "Atlas",
+            "icon": "public",
+            "action": {
+              "fn": "hostCall",
+              "args": {
+                "name": "openApplet",
+                "appId": "atlas",
+                "title": "Atlas \u2014 place analysis"
+              }
+            }
+          },
+          {
+            "type": "button",
+            "label": "Scenarios",
+            "icon": "account_tree",
+            "action": {
+              "fn": "hostCall",
+              "args": {
+                "name": "openApplet",
+                "appId": "scenarios",
+                "title": "Scenarios"
+              }
+            }
+          },
+          {
+            "type": "button",
+            "label": "Reports",
+            "icon": "insights",
+            "action": {
+              "fn": "hostCall",
+              "args": {
+                "name": "openApplet",
+                "appId": "modelreport",
+                "title": "Model reports"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "runs": {
+      "title": "Runs",
+      "body": {
+        "type": "column",
+        "scroll": true,
+        "children": [
+          {
+            "type": "cards",
+            "table": "run_config",
+            "title": "run_label",
+            "subtitle": "last_status",
+            "tags": [
+              {
+                "column": "year",
+                "colors": {
+                  "2010": "gray",
+                  "2019": "teal",
+                  "2030": "purple",
+                  "2040": "amber",
+                  "2050": "coral"
+                }
+              }
+            ],
+            "expandable": false,
+            "swipeActions": [
+              "edit"
+            ],
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "list",
+            "table": "run_config",
+            "titleColumn": "run_label",
+            "subtitleColumns": [
+              "last_status"
+            ],
+            "swipeActions": false,
+            "onTap": {
+              "chain": [
+                {
+                  "fn": "setFields",
+                  "args": {
+                    "set": {
+                      "last_run": "now",
+                      "last_status": "\u2192 Recorded below with a full setup snapshot. The live call fired too \u2014 nothing extra arriving means the endpoint did not answer (403-locked or offline; see About)."
+                    }
+                  }
+                },
+                {
+                  "fn": "addRow",
+                  "args": {
+                    "table": "runs",
+                    "silentAdd": true,
+                    "values": {
+                      "state": "recorded",
+                      "status": "recorded (server pending)"
+                    }
+                  }
+                },
+                {
+                  "when": {
+                    "field": "year",
+                    "op": "eq",
+                    "value": "2010"
+                  },
+                  "then": {
+                    "fn": "http",
+                    "onError": "continue",
+                    "args": {
+                      "url": "https://167.233.64.97/model/scenario",
+                      "method": "POST",
+                      "body": {
+                        "year": 2010
+                      },
+                      "into": {
+                        "table": "runs",
+                        "path": "summary"
+                      },
+                      "timeoutMs": 120000
+                    }
+                  }
+                },
+                {
+                  "when": {
+                    "field": "year",
+                    "op": "eq",
+                    "value": "2019"
+                  },
+                  "then": {
+                    "fn": "http",
+                    "onError": "continue",
+                    "args": {
+                      "url": "https://167.233.64.97/model/scenario",
+                      "method": "POST",
+                      "body": {
+                        "year": 2019
+                      },
+                      "into": {
+                        "table": "runs",
+                        "path": "summary"
+                      },
+                      "timeoutMs": 120000
+                    }
+                  }
+                },
+                {
+                  "when": {
+                    "field": "year",
+                    "op": "eq",
+                    "value": "2030"
+                  },
+                  "then": {
+                    "fn": "http",
+                    "onError": "continue",
+                    "args": {
+                      "url": "https://167.233.64.97/model/scenario",
+                      "method": "POST",
+                      "body": {
+                        "year": 2030
+                      },
+                      "into": {
+                        "table": "runs",
+                        "path": "summary"
+                      },
+                      "timeoutMs": 120000
+                    }
+                  }
+                },
+                {
+                  "when": {
+                    "field": "year",
+                    "op": "eq",
+                    "value": "2040"
+                  },
+                  "then": {
+                    "fn": "http",
+                    "onError": "continue",
+                    "args": {
+                      "url": "https://167.233.64.97/model/scenario",
+                      "method": "POST",
+                      "body": {
+                        "year": 2040
+                      },
+                      "into": {
+                        "table": "runs",
+                        "path": "summary"
+                      },
+                      "timeoutMs": 120000
+                    }
+                  }
+                },
+                {
+                  "when": {
+                    "field": "year",
+                    "op": "eq",
+                    "value": "2050"
+                  },
+                  "then": {
+                    "fn": "http",
+                    "onError": "continue",
+                    "args": {
+                      "url": "https://167.233.64.97/model/scenario",
+                      "method": "POST",
+                      "body": {
+                        "year": 2050
+                      },
+                      "into": {
+                        "table": "runs",
+                        "path": "summary"
+                      },
+                      "timeoutMs": 120000
+                    }
+                  }
+                },
+                {
+                  "when": {
+                    "not": {
+                      "field": "year",
+                      "op": "in",
+                      "value": [
+                        "2010",
+                        "2019",
+                        "2030",
+                        "2040",
+                        "2050"
+                      ]
+                    }
+                  },
+                  "then": {
+                    "fn": "setFields",
+                    "args": {
+                      "set": {
+                        "last_status": "\u26a0 Unsupported year \u2014 tap the setup card and pick 2010, 2019, 2030, 2040 or 2050."
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Runs record locally with a full setup snapshot \u2014 the server call is wired but the endpoint is locked today (About has the full status)."
+          },
+          {
+            "type": "cards",
+            "table": "runs",
+            "title": "city",
+            "subtitle": "status",
+            "search": true,
+            "searchColumns": [
+              "city",
+              "status",
+              "note",
+              "model_version"
+            ],
+            "sortBy": "when",
+            "sortDir": "desc",
+            "tags": [
+              {
+                "column": "state",
+                "colors": {
+                  "recorded": "purple",
+                  "done": "green",
+                  "warned": "amber",
+                  "audit-failed": "coral"
+                }
+              },
+              {
+                "column": "year"
+              },
+              {
+                "column": "tier",
+                "colors": {
+                  "focused": "green",
+                  "exploratory": "amber"
+                }
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              {
+                "column": "when",
+                "label": "When"
+              },
+              {
+                "column": "model_id",
+                "label": "Model"
+              },
+              {
+                "column": "model_version",
+                "label": "Model version"
+              },
+              {
+                "column": "zone_system",
+                "label": "Zone system"
+              },
+              {
+                "column": "beta",
+                "label": "Beta (calibrated)"
+              },
+              {
+                "column": "calib",
+                "label": "transit_calib"
+              },
+              {
+                "column": "calib_method",
+                "label": "Calibration method"
+              },
+              {
+                "column": "note",
+                "label": "Scenario note"
+              },
+              {
+                "column": "transit_pct",
+                "label": "Transit %",
+                "format": "number",
+                "decimals": 1
+              },
+              {
+                "column": "avg_trip_mi",
+                "label": "Avg trip (mi)",
+                "format": "number",
+                "decimals": 2
+              },
+              {
+                "column": "total_trips",
+                "label": "Total trips",
+                "format": "compact"
+              },
+              {
+                "column": "n_zones",
+                "label": "Zones"
+              },
+              {
+                "column": "soundness",
+                "label": "Soundness"
+              }
+            ],
+            "action": {
+              "fn": "editRow"
+            },
+            "expandSingle": true,
+            "expandChevron": true
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "Endpoint"
+          },
+          {
+            "type": "button",
+            "label": "Health check",
+            "icon": "monitor_heart",
+            "action": {
+              "chain": [
+                {
+                  "fn": "setFields",
+                  "args": {
+                    "table": "run_config",
+                    "id": "cfg",
+                    "set": {
+                      "last_status": "\u2192 Health check sent \u2014 service info appears below when the endpoint answers."
+                    }
+                  }
+                },
+                {
+                  "fn": "updateRows",
+                  "args": {
+                    "table": "endpoint_info",
+                    "set": {
+                      "service": "checking\u2026 (if this text stays: no reply \u2014 endpoint locked or offline)"
+                    }
+                  }
+                },
+                {
+                  "fn": "http",
+                  "onError": "continue",
+                  "args": {
+                    "url": "https://167.233.64.97/model/health",
+                    "method": "GET",
+                    "into": {
+                      "table": "endpoint_info",
+                      "mode": "replace"
+                    },
+                    "timeoutMs": 20000
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "table",
+            "table": "endpoint_info",
+            "columns": [
+              "service",
+              "checked"
+            ],
+            "height": 120,
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "catalog": {
+      "title": "Registries",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "segments",
+            "segments": [
+              {
+                "label": "Steps",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "cards",
+                      "table": "model_steps",
+                      "title": "label",
+                      "subtitle": "sublabel",
+                      "tags": [
+                        {
+                          "column": "kind",
+                          "colors": {
+                            "in": "teal",
+                            "process": "purple",
+                            "out": "amber"
+                          }
+                        }
+                      ],
+                      "expandable": true,
+                      "open": "Step detail",
+                      "expandFields": [
+                        {
+                          "column": "inputs",
+                          "label": "Data in"
+                        },
+                        {
+                          "column": "outputs",
+                          "label": "Data out"
+                        },
+                        {
+                          "column": "why",
+                          "label": "Why this method"
+                        },
+                        {
+                          "column": "cons",
+                          "label": "Cons / limits"
+                        },
+                        {
+                          "column": "alternatives",
+                          "label": "Swap-in alternatives"
+                        },
+                        {
+                          "column": "method",
+                          "label": "Method"
+                        }
+                      ],
+                      "action": {
+                        "fn": "editRow"
+                      },
+                      "expandSingle": true,
+                      "expandChevron": true
+                    },
+                    {
+                      "type": "text",
+                      "style": "eyebrow",
+                      "value": "Arrows \u2014 what flows between steps"
+                    },
+                    {
+                      "type": "table",
+                      "table": "step_links",
+                      "columns": [
+                        "from",
+                        "to",
+                        "carries",
+                        "kind"
+                      ],
+                      "height": 240,
+                      "action": {
+                        "fn": "editRow"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Cities",
+                "child": {
+                  "type": "cards",
+                  "table": "cities",
+                  "title": "name",
+                  "subtitle": "note",
+                  "collapsible": true,
+                  "sort": {
+                    "column": "transit_pct",
+                    "dir": "desc"
+                  },
+                  "groupBy": "country",
+                  "groupByOptions": [
+                    {
+                      "label": "Country",
+                      "column": "country"
+                    },
+                    {
+                      "label": "Tier",
+                      "column": "tier"
+                    }
+                  ],
+                  "tags": [
+                    {
+                      "column": "tier",
+                      "colors": {
+                        "focused": "green",
+                        "exploratory": "amber"
+                      }
+                    }
+                  ],
+                  "expandable": true,
+                  "expandFields": [
+                    {
+                      "column": "transit_pct",
+                      "label": "Transit share %"
+                    },
+                    {
+                      "column": "role",
+                      "label": "Role"
+                    }
+                  ],
+                  "action": {
+                    "fn": "editRow"
+                  },
+                  "expandSingle": true,
+                  "expandChevron": true
+                }
+              },
+              {
+                "label": "Zones & modes",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "cards",
+                      "table": "zone_systems",
+                      "title": "name",
+                      "subtitle": "validation",
+                      "tags": [
+                        {
+                          "column": "fidelity",
+                          "colors": {
+                            "exact": "green",
+                            "high": "teal",
+                            "medium": "amber",
+                            "model": "blue",
+                            "custom": "purple"
+                          }
+                        }
+                      ],
+                      "expandable": true,
+                      "open": "Zone system detail",
+                      "expandFields": [
+                        {
+                          "column": "count",
+                          "label": "Zones"
+                        },
+                        {
+                          "column": "geography",
+                          "label": "Geography"
+                        },
+                        {
+                          "column": "conversion",
+                          "label": "Conversion / crosswalk"
+                        },
+                        {
+                          "column": "validation",
+                          "label": "Validation (measured)"
+                        },
+                        {
+                          "column": "note",
+                          "label": "Note"
+                        }
+                      ],
+                      "action": {
+                        "fn": "editRow"
+                      },
+                      "expandSingle": true,
+                      "expandChevron": true
+                    },
+                    {
+                      "type": "text",
+                      "style": "eyebrow",
+                      "value": "Modes"
+                    },
+                    {
+                      "type": "cards",
+                      "table": "modes",
+                      "title": "mode",
+                      "subtitle": "comparability",
+                      "tags": [
+                        {
+                          "column": "status",
+                          "colors": {
+                            "live": "green",
+                            "partial": "amber",
+                            "planned": "gray"
+                          }
+                        }
+                      ],
+                      "expandable": true,
+                      "expandFields": [
+                        {
+                          "column": "scale",
+                          "label": "Scales"
+                        },
+                        {
+                          "column": "status",
+                          "label": "Status"
+                        }
+                      ],
+                      "action": {
+                        "fn": "editRow"
+                      },
+                      "expandSingle": true,
+                      "expandChevron": true
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Methods",
+                "child": {
+                  "type": "cards",
+                  "table": "methods",
+                  "title": "method",
+                  "subtitle": "purpose",
+                  "expandable": true,
+                  "open": "Method detail",
+                  "expandFields": [
+                    {
+                      "column": "when_use",
+                      "label": "When to use"
+                    },
+                    {
+                      "column": "approach",
+                      "label": "Approach / formula"
+                    },
+                    {
+                      "column": "cons",
+                      "label": "Cons / limits"
+                    },
+                    {
+                      "column": "documentation",
+                      "label": "Must document"
+                    },
+                    {
+                      "column": "intent",
+                      "label": "Intent"
+                    },
+                    {
+                      "column": "hf_repo",
+                      "label": "HuggingFace repo"
+                    }
+                  ],
+                  "action": {
+                    "fn": "editRow"
+                  },
+                  "search": true,
+                  "searchColumns": [
+                    "method",
+                    "purpose"
+                  ],
+                  "expandSingle": true,
+                  "expandChevron": true
+                }
+              },
+              {
+                "label": "Metrics & wellbeing",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "cards",
+                      "table": "metric_families",
+                      "title": "metric",
+                      "subtitle": "how_computed",
+                      "groupBy": "family",
+                      "collapsible": true,
+                      "expandable": true,
+                      "expandFields": [
+                        {
+                          "column": "unit",
+                          "label": "Unit"
+                        },
+                        {
+                          "column": "source_dataset",
+                          "label": "Source dataset"
+                        },
+                        {
+                          "column": "model",
+                          "label": "Model / layer"
+                        }
+                      ],
+                      "tags": [
+                        {
+                          "column": "status",
+                          "colors": {
+                            "live": "green",
+                            "proxy": "amber",
+                            "planned": "coral"
+                          }
+                        }
+                      ],
+                      "action": {
+                        "fn": "editRow"
+                      },
+                      "search": true,
+                      "searchColumns": [
+                        "metric",
+                        "family",
+                        "source_dataset"
+                      ],
+                      "expandSingle": true,
+                      "expandChevron": true
+                    },
+                    {
+                      "type": "text",
+                      "style": "eyebrow",
+                      "value": "Wellbeing factors"
+                    },
+                    {
+                      "type": "cards",
+                      "table": "wellbeing_factors",
+                      "title": "factor",
+                      "subtitle": "basis",
+                      "tags": [
+                        {
+                          "column": "core",
+                          "colors": {
+                            "true": "green",
+                            "false": "gray"
+                          }
+                        },
+                        {
+                          "column": "dimension"
+                        }
+                      ],
+                      "expandable": true,
+                      "open": "Factor detail",
+                      "expandFields": [
+                        {
+                          "column": "source",
+                          "label": "Data source"
+                        },
+                        {
+                          "column": "why",
+                          "label": "Why included"
+                        },
+                        {
+                          "column": "cons",
+                          "label": "Cons / limits"
+                        },
+                        {
+                          "column": "weight",
+                          "label": "Weight (adjustable)"
+                        },
+                        {
+                          "column": "core",
+                          "label": "Core (predetermined)"
+                        }
+                      ],
+                      "action": {
+                        "fn": "editRow"
+                      },
+                      "expandSingle": true,
+                      "expandChevron": true
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Algorithm layers",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "text",
+                      "style": "caption",
+                      "value": "Every algorithm working inside a model, as attach/swap/remove rows: pick the model, the registry method, and the stage (pre-processor, core, post-processor)."
+                    },
+                    {
+                      "type": "button",
+                      "label": "Attach a function to a model",
+                      "icon": "add",
+                      "action": {
+                        "fn": "addRow",
+                        "args": {
+                          "table": "model_layers"
+                        }
+                      }
+                    },
+                    {
+                      "type": "cards",
+                      "table": "model_layers",
+                      "title": "layer",
+                      "subtitle": "algorithm",
+                      "groupBy": "model_id",
+                      "collapsible": true,
+                      "groupsCollapsed": true,
+                      "expandable": true,
+                      "expandSingle": true,
+                      "tableView": false,
+                      "expandChevron": true,
+                      "tags": [
+                        {
+                          "column": "stage"
+                        },
+                        {
+                          "column": "status",
+                          "colors": {
+                            "active": "green",
+                            "selectable": "teal",
+                            "planned": "amber"
+                          }
+                        }
+                      ],
+                      "expandFields": [
+                        {
+                          "column": "role",
+                          "label": "Role in this model"
+                        },
+                        {
+                          "column": "stage",
+                          "label": "Stage"
+                        },
+                        {
+                          "column": "note",
+                          "label": "Note"
+                        }
+                      ],
+                      "action": {
+                        "fn": "editRow"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Inputs",
+                "child": {
+                  "type": "cards",
+                  "table": "data_inputs",
+                  "title": "input",
+                  "subtitle": "source",
+                  "groupBy": "model_id",
+                  "collapsible": true,
+                  "groupsCollapsed": true,
+                  "expandable": true,
+                  "expandSingle": true,
+                  "tableView": false,
+                  "filterable": true,
+                  "tags": [
+                    {
+                      "column": "status",
+                      "colors": {
+                        "cached": "green",
+                        "live": "green",
+                        "proven": "teal",
+                        "approx": "amber",
+                        "key-gated": "amber",
+                        "planned": "blue",
+                        "gap": "red"
+                      }
+                    }
+                  ],
+                  "expandFields": [
+                    {
+                      "column": "geofence",
+                      "label": "Geofence"
+                    },
+                    {
+                      "column": "granularity",
+                      "label": "Granularity"
+                    },
+                    {
+                      "column": "vintage",
+                      "label": "Vintage"
+                    },
+                    {
+                      "column": "doc",
+                      "label": "Script / doc"
+                    },
+                    {
+                      "column": "stitch",
+                      "label": "Stitched with"
+                    }
+                  ],
+                  "action": {
+                    "fn": "editRow"
+                  },
+                  "expandChevron": true
+                }
+              },
+              {
+                "label": "Stacks",
+                "child": {
+                  "type": "cards",
+                  "table": "model_stacks",
+                  "title": "name",
+                  "subtitle": "purpose",
+                  "expandable": true,
+                  "expandSingle": true,
+                  "tableView": false,
+                  "tags": [
+                    {
+                      "column": "status",
+                      "colors": {
+                        "live": "green",
+                        "opt-in": "teal",
+                        "foundation": "amber",
+                        "direction": "blue"
+                      }
+                    }
+                  ],
+                  "expandFields": [
+                    {
+                      "column": "members",
+                      "label": "Models, in order"
+                    },
+                    {
+                      "column": "seams",
+                      "label": "What crosses each seam"
+                    }
+                  ],
+                  "action": {
+                    "fn": "editRow"
+                  },
+                  "expandChevron": true
+                }
+              },
+              {
+                "label": "Providers",
+                "child": {
+                  "type": "cards",
+                  "table": "providers",
+                  "title": "name",
+                  "subtitle": "summary",
+                  "expandable": true,
+                  "expandSingle": true,
+                  "tableView": false,
+                  "tags": [
+                    {
+                      "column": "status",
+                      "colors": {
+                        "live": "green",
+                        "held": "amber",
+                        "planned": "blue"
+                      }
+                    },
+                    {
+                      "column": "kind",
+                      "colors": {
+                        "device": "teal",
+                        "forge-julia": "purple",
+                        "forge-ollama": "gray",
+                        "hf-hosted": "blue",
+                        "browser": "teal"
+                      }
+                    }
+                  ],
+                  "expandFields": [
+                    {
+                      "column": "kind",
+                      "label": "Kind"
+                    },
+                    {
+                      "column": "notes",
+                      "label": "Notes"
+                    }
+                  ],
+                  "action": {
+                    "fn": "editRow"
+                  },
+                  "expandChevron": true
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "about": {
+      "title": "About Terrain",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "value": "Terrain is a reproducible observatory over the transit model stack. The four-step model computes server-side; Terrain catalogs the models, steps, datasets and layers as editable rows and traces every published number back to its model version, input datasets, soundness checks and confidence tier."
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "What is real"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Real now: composed views, CSV imports, and the full reproducibility trail. Phase 2 (needs engine): drag-resize panes and a native map that paints your own layers and shows, for the coordinates on screen, the proof-chain from raw source through each pipeline stage to the delivered value. Phase 3 (needs server): live model, custom-zone and GTFS jobs once the /model endpoint authorizes the app."
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "Confidence tiers"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Focused (green) = calibrated to real sourced local targets, residuals within tolerance, cross-checked. Exploratory (amber) = national or peer anchors \u2014 directionally useful, not a calibrated forecast. Promotion is earned by sourced targets and in-tolerance calibration, never by editing the label."
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "Model runs, honestly"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "As of 2026-07-06 every /model/* route answers HTTP 403 \u2014 locked at the edge since the token lockdown. \u25b6 Run scenario therefore records the run locally with a full snapshot of the setup (model version, tier, \u03b2, transit_calib, calibration method, zone system, city, year, growth, note). The live call is wired (same chain as Atlas) and degrades silently; the day the edge authorizes this app, the same tap also lands a second row labeled 'live model run' with the server's numbers \u2014 the pair shares its launch stamp. \u03b2, transit_calib and growth are RECORDED on the run, not sent: today's engine cannot attach table values to request bodies, so the live call carries the year only. Web builds additionally need CORS on /model/*. Only the four-step engine is runnable; the other layers read its outputs. Endpoint swap point: the six http blocks on the Runs screen + app.json meta."
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "Suite roles"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Terrain's Runs is the cockpit ledger: launches you record here plus curated real run reports. The Scenarios applet remains the deep-provenance archive (run inputs, checks, history); Atlas maps outputs; Model reports charts them."
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "Seeded history"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Past runs are real transit4 run reports generated 2026-07-01; each row's status names its source file. Exploratory rows hit their targets exactly because targets are transferred anchors; NY/London trip lengths are geometry-limited (\u03b2 at floor) and carry their real warnings; Boston appears at two resolutions because \u03b2 honestly moves with zone size (0.0579 at TAZ \u2192 0.1271 at block group). One benign stamp mismatch is preserved, not smoothed: run reports stamp foundation fee6a0b while the changelog stamps f35456f."
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "Standards conformance"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Standards: FHWA / NCHRP-716 / TMIP / STOPS \u2014 pinned per model on the model record."
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "A defensible model shows its methodology, its cited inputs, its calibration residuals, its re-runnable versions, and its stated limits \u2014 Terrain surfaces all five as rows you can inspect."
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "One universal model, regional settings"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "There is one baseline engine \u2014 the same four-step model everywhere \u2014 never a different model per place. Each region gets settings, not a fork: calibrated \u03b2 and transit share against sourced local targets, with urban, suburban and rural treated as distinct travel-behavior contexts (suburban deliberately not lumped into either)."
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "One data format"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Every table in this suite is the same standardized, transportable data object used across all applets \u2014 one format for import, export, snapshot, backup, sync and sharing, so a slice you save here opens anywhere."
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "Safe change practices"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Changes ship additive-only through a schema-compatibility gate; every run pins a model version (git sha); raw sources are never edited in place; and nightly integrity-checked backups are restore-verified. Future-proofing is built into the pipeline, not promised."
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Model-card facts (calibration, sources, extents) are curated summaries of the registries \u2014 when a registry row changes, update the model card in the same edit. On module lists, a teal stripe marks a swappable component."
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "Seed vintage"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Seoul seed built 2026-07-17 \u2014 kr_stations (471 OSM subway stations) via tool/korea/build_korea.py, per apps/terrain/VINTAGE.json."
+          }
+        ]
+      }
+    },
+    "model": {
+      "title": "Model",
+      "body": {
+        "type": "column",
+        "crossAxis": "stretch",
+        "children": [
+          {
+            "type": "segments",
+            "fill": true,
+            "segments": [
+              {
+                "label": "Map",
+                "child": {
+                  "type": "switch",
+                  "table": "models",
+                  "id": "$selected:models",
+                  "column": "outputs_screen",
+                  "cases": {
+                    "outputs_centrality": {
+                      "type": "column",
+                      "scroll": true,
+                      "children": [
+                        {
+                          "type": "glmap",
+                          "id": "seoul_glmap",
+                          "table": "kr_stations",
+                          "latColumn": "lat",
+                          "lonColumn": "lng",
+                          "labelColumn": "maplabel",
+                          "markerIcon": "pin",
+                          "height": "fill",
+                          "zoom": 11,
+                          "center": [
+                            37.5665,
+                            126.978
+                          ],
+                          "action": {
+                            "fn": "editRow"
+                          },
+                          "geojsonSources": {
+                            "stations": "apps/terrain/kr_stations.geojson",
+                            "districts": "apps/terrain/seoul_districts.geojson",
+                            "network": "apps/terrain/network.geojson",
+                            "hub_trees": "apps/terrain/hub_trees.geojson",
+                            "dong": "apps/terrain/seoul_dong.geojson"
+                          },
+                          "sourceLayers": [
+                            {
+                              "id": "station_heat",
+                              "source": "stations",
+                              "kind": "heatmap",
+                              "paint": {
+                                "weightProp": "conn_score",
+                                "weightMax": 100,
+                                "radius": 22,
+                                "opacity": 0.75
+                              }
+                            },
+                            {
+                              "id": "district_lines",
+                              "source": "districts",
+                              "kind": "line",
+                              "paint": {
+                                "color": "gray",
+                                "width": 1.2
+                              }
+                            },
+                            {
+                              "id": "district_fill",
+                              "source": "districts",
+                              "kind": "fill",
+                              "visible": false,
+                              "paint": {
+                                "colorProp": "conn_tier",
+                                "ramp": {
+                                  "well-connected": "green",
+                                  "mid": "amber",
+                                  "peripheral": "coral"
+                                },
+                                "opacity": 0.45
+                              }
+                            },
+                            {
+                              "id": "dong_fill",
+                              "source": "dong",
+                              "kind": "fill",
+                              "visible": false,
+                              "paint": {
+                                "colorProp": "conn_tier",
+                                "ramp": {
+                                  "very-low": "#EFF3FF",
+                                  "low": "#BDD7E7",
+                                  "mid": "#6BAED6",
+                                  "high": "#3182BD",
+                                  "very-high": "#08519C",
+                                  "no-data": "#D9D9D9"
+                                },
+                                "opacity": 0.55
+                              }
+                            },
+                            {
+                              "id": "network_lines",
+                              "source": "network",
+                              "kind": "line",
+                              "visible": false,
+                              "paint": {
+                                "color": "blue",
+                                "width": 1.5,
+                                "opacity": 0.8
+                              }
+                            },
+                            {
+                              "id": "hub_routes",
+                              "source": "hub_trees",
+                              "kind": "line",
+                              "filter": [
+                                "==",
+                                "origin",
+                                "__none__"
+                              ],
+                              "paint": {
+                                "color": "coral",
+                                "width": 2.5
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "row",
+                          "wrap": true,
+                          "spacing": 6,
+                          "runSpacing": 6,
+                          "children": [
+                            {
+                              "type": "button",
+                              "label": "Show Connectivity heatmap",
+                              "variant": "tonal",
+                              "action": {
+                                "fn": "mapSetLayerVisible",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "station_heat",
+                                  "visible": true
+                                }
+                              }
+                            },
+                            {
+                              "type": "button",
+                              "label": "Hide Connectivity heatmap",
+                              "variant": "outlined",
+                              "action": {
+                                "fn": "mapSetLayerVisible",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "station_heat",
+                                  "visible": false
+                                }
+                              }
+                            },
+                            {
+                              "type": "button",
+                              "label": "Show District boundaries",
+                              "variant": "tonal",
+                              "action": {
+                                "fn": "mapSetLayerVisible",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "district_lines",
+                                  "visible": true
+                                }
+                              }
+                            },
+                            {
+                              "type": "button",
+                              "label": "Hide District boundaries",
+                              "variant": "outlined",
+                              "action": {
+                                "fn": "mapSetLayerVisible",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "district_lines",
+                                  "visible": false
+                                }
+                              }
+                            },
+                            {
+                              "type": "button",
+                              "label": "Show Districts (coarse)",
+                              "variant": "tonal",
+                              "action": {
+                                "fn": "mapSetLayerVisible",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "district_fill",
+                                  "visible": true
+                                }
+                              }
+                            },
+                            {
+                              "type": "button",
+                              "label": "Show Neighborhoods (fine)",
+                              "variant": "tonal",
+                              "action": {
+                                "fn": "mapSetLayerVisible",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "dong_fill",
+                                  "visible": true
+                                }
+                              }
+                            },
+                            {
+                              "type": "button",
+                              "label": "Hide Districts (coarse)",
+                              "variant": "outlined",
+                              "action": {
+                                "fn": "mapSetLayerVisible",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "district_fill",
+                                  "visible": false
+                                }
+                              }
+                            },
+                            {
+                              "type": "button",
+                              "label": "Hide Neighborhoods (fine)",
+                              "variant": "outlined",
+                              "action": {
+                                "fn": "mapSetLayerVisible",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "dong_fill",
+                                  "visible": false
+                                }
+                              }
+                            },
+                            {
+                              "type": "button",
+                              "label": "Show Subway network",
+                              "variant": "tonal",
+                              "action": {
+                                "fn": "mapSetLayerVisible",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "network_lines",
+                                  "visible": true
+                                }
+                              }
+                            },
+                            {
+                              "type": "button",
+                              "label": "Hide Subway network",
+                              "variant": "outlined",
+                              "action": {
+                                "fn": "mapSetLayerVisible",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "network_lines",
+                                  "visible": false
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "style": "eyebrow",
+                          "value": "Tap the map to drop pins \u2014 routes draw between them"
+                        },
+                        {
+                          "type": "text",
+                          "style": "eyebrow",
+                          "value": "Hub route trees \u2014 tap a hub to trace its subway route tree (Layers panel above still controls the base map)"
+                        },
+                        {
+                          "type": "row",
+                          "wrap": true,
+                          "spacing": 8,
+                          "runSpacing": 8,
+                          "children": [
+                            {
+                              "type": "button",
+                              "label": "Seoul Station",
+                              "action": {
+                                "fn": "mapSetFilter",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "hub_routes",
+                                  "filter": [
+                                    "==",
+                                    "origin",
+                                    "Yongsan-gu"
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "button",
+                              "label": "Express Bus Terminal",
+                              "action": {
+                                "fn": "mapSetFilter",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "hub_routes",
+                                  "filter": [
+                                    "==",
+                                    "origin",
+                                    "Seocho-gu"
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "button",
+                              "label": "Jongno 3-ga",
+                              "action": {
+                                "fn": "mapSetFilter",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "hub_routes",
+                                  "filter": [
+                                    "==",
+                                    "origin",
+                                    "Jongno-gu"
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "button",
+                              "label": "Gangnam",
+                              "action": {
+                                "fn": "mapSetFilter",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "hub_routes",
+                                  "filter": [
+                                    "==",
+                                    "origin",
+                                    "Gangnam-gu"
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "button",
+                              "label": "Hongik Univ.",
+                              "action": {
+                                "fn": "mapSetFilter",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "hub_routes",
+                                  "filter": [
+                                    "==",
+                                    "origin",
+                                    "Mapo-gu"
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "outputs_ttmap": {
+                      "type": "column",
+                      "scroll": true,
+                      "children": [
+                        {
+                          "type": "glmap",
+                          "id": "seoul_glmap",
+                          "table": "kr_stations",
+                          "latColumn": "lat",
+                          "lonColumn": "lng",
+                          "labelColumn": "maplabel",
+                          "markerIcon": "pin",
+                          "height": "fill",
+                          "zoom": 11,
+                          "center": [
+                            37.5665,
+                            126.978
+                          ],
+                          "action": {
+                            "fn": "editRow"
+                          },
+                          "pinMode": true,
+                          "pinsTable": "nav_pins",
+                          "routingNodesTable": "kr_stations",
+                          "routingNodeAccessoryColumn": "conn_tier",
+                          "routingEdgesAsset": "apps/terrain/network.geojson",
+                          "snapMaxKm": 1.5,
+                          "geojsonSources": {
+                            "stations": "apps/terrain/kr_stations.geojson",
+                            "districts": "apps/terrain/seoul_districts.geojson",
+                            "network": "apps/terrain/network.geojson",
+                            "hub_trees": "apps/terrain/hub_trees.geojson",
+                            "dong": "apps/terrain/seoul_dong.geojson"
+                          },
+                          "sourceLayers": [
+                            {
+                              "id": "station_heat",
+                              "source": "stations",
+                              "kind": "heatmap",
+                              "paint": {
+                                "weightProp": "conn_score",
+                                "weightMax": 100,
+                                "radius": 22,
+                                "opacity": 0.75
+                              }
+                            },
+                            {
+                              "id": "district_lines",
+                              "source": "districts",
+                              "kind": "line",
+                              "paint": {
+                                "color": "gray",
+                                "width": 1.2
+                              }
+                            },
+                            {
+                              "id": "district_fill",
+                              "source": "districts",
+                              "kind": "fill",
+                              "visible": false,
+                              "paint": {
+                                "colorProp": "conn_tier",
+                                "ramp": {
+                                  "well-connected": "green",
+                                  "mid": "amber",
+                                  "peripheral": "coral"
+                                },
+                                "opacity": 0.45
+                              }
+                            },
+                            {
+                              "id": "dong_fill",
+                              "source": "dong",
+                              "kind": "fill",
+                              "visible": false,
+                              "paint": {
+                                "colorProp": "conn_tier",
+                                "ramp": {
+                                  "very-low": "#EFF3FF",
+                                  "low": "#BDD7E7",
+                                  "mid": "#6BAED6",
+                                  "high": "#3182BD",
+                                  "very-high": "#08519C",
+                                  "no-data": "#D9D9D9"
+                                },
+                                "opacity": 0.55
+                              }
+                            },
+                            {
+                              "id": "network_lines",
+                              "source": "network",
+                              "kind": "line",
+                              "visible": false,
+                              "paint": {
+                                "color": "blue",
+                                "width": 1.5,
+                                "opacity": 0.8
+                              }
+                            },
+                            {
+                              "id": "hub_routes",
+                              "source": "hub_trees",
+                              "kind": "line",
+                              "filter": [
+                                "==",
+                                "origin",
+                                "__none__"
+                              ],
+                              "paint": {
+                                "color": "coral",
+                                "width": 2.5
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "row",
+                          "wrap": true,
+                          "spacing": 6,
+                          "runSpacing": 6,
+                          "children": [
+                            {
+                              "type": "button",
+                              "label": "Show Connectivity heatmap",
+                              "variant": "tonal",
+                              "action": {
+                                "fn": "mapSetLayerVisible",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "station_heat",
+                                  "visible": true
+                                }
+                              }
+                            },
+                            {
+                              "type": "button",
+                              "label": "Hide Connectivity heatmap",
+                              "variant": "outlined",
+                              "action": {
+                                "fn": "mapSetLayerVisible",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "station_heat",
+                                  "visible": false
+                                }
+                              }
+                            },
+                            {
+                              "type": "button",
+                              "label": "Show District boundaries",
+                              "variant": "tonal",
+                              "action": {
+                                "fn": "mapSetLayerVisible",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "district_lines",
+                                  "visible": true
+                                }
+                              }
+                            },
+                            {
+                              "type": "button",
+                              "label": "Hide District boundaries",
+                              "variant": "outlined",
+                              "action": {
+                                "fn": "mapSetLayerVisible",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "district_lines",
+                                  "visible": false
+                                }
+                              }
+                            },
+                            {
+                              "type": "button",
+                              "label": "Show Districts (coarse)",
+                              "variant": "tonal",
+                              "action": {
+                                "fn": "mapSetLayerVisible",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "district_fill",
+                                  "visible": true
+                                }
+                              }
+                            },
+                            {
+                              "type": "button",
+                              "label": "Show Neighborhoods (fine)",
+                              "variant": "tonal",
+                              "action": {
+                                "fn": "mapSetLayerVisible",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "dong_fill",
+                                  "visible": true
+                                }
+                              }
+                            },
+                            {
+                              "type": "button",
+                              "label": "Hide Districts (coarse)",
+                              "variant": "outlined",
+                              "action": {
+                                "fn": "mapSetLayerVisible",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "district_fill",
+                                  "visible": false
+                                }
+                              }
+                            },
+                            {
+                              "type": "button",
+                              "label": "Hide Neighborhoods (fine)",
+                              "variant": "outlined",
+                              "action": {
+                                "fn": "mapSetLayerVisible",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "dong_fill",
+                                  "visible": false
+                                }
+                              }
+                            },
+                            {
+                              "type": "button",
+                              "label": "Show Subway network",
+                              "variant": "tonal",
+                              "action": {
+                                "fn": "mapSetLayerVisible",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "network_lines",
+                                  "visible": true
+                                }
+                              }
+                            },
+                            {
+                              "type": "button",
+                              "label": "Hide Subway network",
+                              "variant": "outlined",
+                              "action": {
+                                "fn": "mapSetLayerVisible",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "network_lines",
+                                  "visible": false
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "style": "eyebrow",
+                          "value": "Tap the map to drop pins \u2014 routes draw between them"
+                        },
+                        {
+                          "type": "text",
+                          "style": "eyebrow",
+                          "value": "Hub route trees \u2014 tap a hub to trace its subway route tree (Layers panel above still controls the base map)"
+                        },
+                        {
+                          "type": "row",
+                          "wrap": true,
+                          "spacing": 8,
+                          "runSpacing": 8,
+                          "children": [
+                            {
+                              "type": "button",
+                              "label": "Seoul Station",
+                              "action": {
+                                "fn": "mapSetFilter",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "hub_routes",
+                                  "filter": [
+                                    "==",
+                                    "origin",
+                                    "Yongsan-gu"
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "button",
+                              "label": "Express Bus Terminal",
+                              "action": {
+                                "fn": "mapSetFilter",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "hub_routes",
+                                  "filter": [
+                                    "==",
+                                    "origin",
+                                    "Seocho-gu"
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "button",
+                              "label": "Jongno 3-ga",
+                              "action": {
+                                "fn": "mapSetFilter",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "hub_routes",
+                                  "filter": [
+                                    "==",
+                                    "origin",
+                                    "Jongno-gu"
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "button",
+                              "label": "Gangnam",
+                              "action": {
+                                "fn": "mapSetFilter",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "hub_routes",
+                                  "filter": [
+                                    "==",
+                                    "origin",
+                                    "Gangnam-gu"
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "button",
+                              "label": "Hongik Univ.",
+                              "action": {
+                                "fn": "mapSetFilter",
+                                "args": {
+                                  "node": "seoul_glmap",
+                                  "layer": "hub_routes",
+                                  "filter": [
+                                    "==",
+                                    "origin",
+                                    "Mapo-gu"
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "outputs_kraccess": {
+                      "type": "map",
+                      "table": "kr_stations",
+                      "latColumn": "lat",
+                      "lonColumn": "lng",
+                      "labelColumn": "maplabel",
+                      "markerIcon": "pin",
+                      "height": "fill",
+                      "action": {
+                        "fn": "editRow"
+                      },
+                      "layers": [
+                        {
+                          "id": "pins",
+                          "kind": "markers",
+                          "label": "Stations",
+                          "colorColumn": "reach_band",
+                          "colors": {
+                            "very-low": "red",
+                            "low": "coral",
+                            "mid": "amber",
+                            "high": "teal",
+                            "very-high": "green"
+                          }
+                        },
+                        {
+                          "id": "labels",
+                          "kind": "labels",
+                          "label": "Station names",
+                          "on": false
+                        }
+                      ]
+                    },
+                    "outputs_none": {
+                      "type": "column",
+                      "crossAxis": "stretch",
+                      "children": [
+                        {
+                          "type": "text",
+                          "style": "eyebrow",
+                          "value": "No baked map for this model yet"
+                        },
+                        {
+                          "type": "text",
+                          "value": "Outputs are server-gated \u2014 no baked map ships in the applet for this model yet. Check Scenarios & runs for run history, or Edit model for its full spec."
+                        }
+                      ]
+                    },
+                    "outputs_router": {
+                      "type": "column",
+                      "crossAxis": "stretch",
+                      "children": [
+                        {
+                          "type": "text",
+                          "style": "eyebrow",
+                          "value": "This model's output is a policy ladder, not a map \u2014 the tier table below is the baked output"
+                        },
+                        {
+                          "type": "cards",
+                          "table": "routing_tiers",
+                          "title": "tier",
+                          "subtitle": "role",
+                          "sortBy": "rank",
+                          "sortDir": "asc",
+                          "tags": [
+                            {
+                              "column": "relative_cost",
+                              "colors": {
+                                "lowest": "green",
+                                "low": "teal",
+                                "high": "red",
+                                "variable": "purple"
+                              }
+                            }
+                          ],
+                          "expandable": true,
+                          "expandFields": [
+                            {
+                              "column": "best_for",
+                              "label": "Best for"
+                            },
+                            {
+                              "column": "examples",
+                              "label": "Examples"
+                            }
+                          ],
+                          "action": {
+                            "fn": "editRow"
+                          },
+                          "expandSingle": true,
+                          "expandChevron": true,
+                          "height": 360
+                        }
+                      ]
+                    }
+                  },
+                  "default": {
+                    "type": "column",
+                    "crossAxis": "stretch",
+                    "children": [
+                      {
+                        "type": "text",
+                        "style": "eyebrow",
+                        "value": "No baked map for this model yet"
+                      },
+                      {
+                        "type": "text",
+                        "value": "Outputs are server-gated \u2014 no baked map ships in the applet for this model yet. Check Scenarios & runs for run history, or Edit model for its full spec."
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "label": "Flow",
+                "child": {
+                  "type": "column",
+                  "crossAxis": "stretch",
+                  "children": [
+                    {
+                      "type": "row",
+                      "wrap": true,
+                      "children": [
+                        {
+                          "type": "button",
+                          "label": "Edit model",
+                          "icon": "edit",
+                          "action": {
+                            "fn": "editRow",
+                            "args": {
+                              "table": "models",
+                              "id": "$selected:models"
+                            }
+                          }
+                        },
+                        {
+                          "type": "button",
+                          "label": "Scenarios & runs",
+                          "icon": "history",
+                          "action": {
+                            "fn": "goto",
+                            "args": {
+                              "screen": "runs"
+                            }
+                          }
+                        },
+                        {
+                          "type": "button",
+                          "label": "View output on map",
+                          "icon": "map",
+                          "action": {
+                            "fn": "goto",
+                            "args": {
+                              "table": "models",
+                              "id": "$selected:models",
+                              "screenColumn": "outputs_screen"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "flowcanvas",
+                      "fitOnLoad": true,
+                      "nodesTable": "model_steps",
+                      "edgesTable": "step_links",
+                      "labelColumn": "label",
+                      "fromColumn": "from",
+                      "toColumn": "to",
+                      "height": "0.8fill",
+                      "fillPhone": true,
+                      "laneColumn": "lane",
+                      "milestoneColumn": "stage",
+                      "orderColumn": "flow_order",
+                      "allowAddStage": true,
+                      "allowInsertStep": true,
+                      "colorColumn": "kind",
+                      "colors": {
+                        "in": "teal",
+                        "process": "purple",
+                        "out": "amber"
+                      },
+                      "action": {
+                        "fn": "editRow"
+                      },
+                      "dataTable": "data_inputs",
+                      "dataStageColumn": "stage",
+                      "dataIntentColumn": "intent",
+                      "dataLabelColumn": "input",
+                      "dataLinkColumn": "feeds_step",
+                      "filter": {
+                        "column": "model_id",
+                        "value": "$selected:models"
+                      },
+                      "dataFilter": {
+                        "column": "model_id",
+                        "value": "$selected:models"
+                      }
+                    },
+                    {
+                      "type": "palette",
+                      "table": "model_steps",
+                      "items": [
+                        {
+                          "label": "Input",
+                          "icon": "input",
+                          "values": {
+                            "kind": "in",
+                            "label": "New input"
+                          }
+                        },
+                        {
+                          "label": "Process",
+                          "icon": "settings",
+                          "values": {
+                            "kind": "process",
+                            "label": "New step"
+                          }
+                        },
+                        {
+                          "label": "Output",
+                          "icon": "output",
+                          "values": {
+                            "kind": "out",
+                            "label": "New output"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "outputs": {
+      "title": "Model outputs \u2014 Seoul transit",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Real output of the two Korea models: 471 Seoul subway stations pulled live from OpenStreetMap (\u00a9 OpenStreetMap contributors, ODbL; keyless), built by tool/korea/build_korea.py. The map shows where the stations are (the biggest hubs are labelled); the lists below rank them. Betweenness = bridge importance (removing it fractures journeys); degree = lines/connections; travel time is a network estimate (33 km/h + dwell \u2014 honest, not yet timetable-exact) from a picked origin hub \u2014 Seoul Station, Express Bus Terminal, Jongno 3-ga, Gangnam, or Hongik Univ."
+          },
+          {
+            "type": "map",
+            "table": "kr_stations",
+            "latColumn": "lat",
+            "lonColumn": "lng",
+            "labelColumn": "maplabel",
+            "markerIcon": "pin",
+            "height": 640,
+            "action": {
+              "fn": "editRow"
+            },
+            "layers": [
+              {
+                "id": "pins",
+                "kind": "markers",
+                "label": "Stations",
+                "colorColumn": "btw_tier",
+                "colors": {
+                  "critical": "red",
+                  "high": "amber",
+                  "notable": "teal",
+                  "local": "gray"
+                }
+              },
+              {
+                "id": "labels",
+                "kind": "labels",
+                "label": "Station names",
+                "on": false
+              }
+            ]
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "segments",
+            "segments": [
+              {
+                "label": "Hubs",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "text",
+                      "style": "eyebrow",
+                      "value": "Centrality \u2014 critical transfer hubs first"
+                    },
+                    {
+                      "type": "cards",
+                      "table": "kr_stations",
+                      "title": "name",
+                      "subtitle": "btw_tier",
+                      "sort": {
+                        "column": "rank",
+                        "dir": "asc"
+                      },
+                      "search": true,
+                      "searchColumns": [
+                        "name"
+                      ],
+                      "tags": [
+                        {
+                          "column": "btw_tier",
+                          "colors": {
+                            "critical": "red",
+                            "high": "amber",
+                            "notable": "teal",
+                            "local": "gray"
+                          }
+                        }
+                      ],
+                      "expandable": true,
+                      "open": "Station scores",
+                      "expandFields": [
+                        {
+                          "column": "rank",
+                          "label": "Rank"
+                        },
+                        {
+                          "column": "betweenness",
+                          "label": "Betweenness"
+                        },
+                        {
+                          "column": "degree",
+                          "label": "Lines/connections"
+                        },
+                        {
+                          "column": "pagerank",
+                          "label": "PageRank"
+                        },
+                        {
+                          "column": "closeness",
+                          "label": "Closeness"
+                        }
+                      ],
+                      "action": {
+                        "fn": "editRow"
+                      },
+                      "expandSingle": true,
+                      "expandChevron": true
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Connectivity",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "text",
+                      "style": "eyebrow",
+                      "value": "Most connections (interchange size)"
+                    },
+                    {
+                      "type": "cards",
+                      "table": "kr_stations",
+                      "title": "name",
+                      "subtitle": "deg_tier",
+                      "sort": {
+                        "column": "degree",
+                        "dir": "desc"
+                      },
+                      "search": true,
+                      "searchColumns": [
+                        "name"
+                      ],
+                      "tags": [
+                        {
+                          "column": "deg_tier",
+                          "colors": {
+                            "hub": "purple",
+                            "major": "blue",
+                            "connector": "teal",
+                            "line": "gray"
+                          }
+                        }
+                      ],
+                      "expandable": true,
+                      "open": "Station scores",
+                      "expandFields": [
+                        {
+                          "column": "degree",
+                          "label": "Lines/connections"
+                        },
+                        {
+                          "column": "btw_tier",
+                          "label": "Hub tier"
+                        },
+                        {
+                          "column": "minutes_from_origin",
+                          "label": "Min from Seoul Stn"
+                        }
+                      ],
+                      "action": {
+                        "fn": "editRow"
+                      },
+                      "expandSingle": true,
+                      "expandChevron": true
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Travel time",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "text",
+                      "style": "eyebrow",
+                      "value": "Pick an origin hub \u2014 estimated minutes from it to all 471 stations (nearest first), banded 0-15/15-30/30-45/45-60/60+"
+                    },
+                    {
+                      "type": "segments",
+                      "segments": [
+                        {
+                          "label": "Seoul Station",
+                          "child": {
+                            "type": "cards",
+                            "table": "kr_stations",
+                            "title": "name",
+                            "subtitle": "tt_band",
+                            "sort": {
+                              "column": "minutes_from_origin",
+                              "dir": "asc"
+                            },
+                            "search": true,
+                            "searchColumns": [
+                              "name"
+                            ],
+                            "tags": [
+                              {
+                                "column": "tt_band",
+                                "colors": {
+                                  "0\u201315": "green",
+                                  "15\u201330": "teal",
+                                  "30\u201345": "amber",
+                                  "45\u201360": "coral",
+                                  "60+": "red",
+                                  "unreached": "gray"
+                                }
+                              }
+                            ],
+                            "expandable": true,
+                            "open": "Station scores",
+                            "expandFields": [
+                              {
+                                "column": "minutes_from_origin",
+                                "label": "Minutes from Seoul Stn"
+                              },
+                              {
+                                "column": "tt_band",
+                                "label": "Band"
+                              },
+                              {
+                                "column": "degree",
+                                "label": "Lines/connections"
+                              }
+                            ],
+                            "action": {
+                              "fn": "editRow"
+                            },
+                            "expandSingle": true,
+                            "expandChevron": true
+                          }
+                        },
+                        {
+                          "label": "Express Bus Terminal",
+                          "child": {
+                            "type": "cards",
+                            "table": "kr_stations",
+                            "title": "name",
+                            "subtitle": "tt_band_ebt",
+                            "sort": {
+                              "column": "minutes_from_origin_ebt",
+                              "dir": "asc"
+                            },
+                            "search": true,
+                            "searchColumns": [
+                              "name"
+                            ],
+                            "tags": [
+                              {
+                                "column": "tt_band_ebt",
+                                "colors": {
+                                  "0\u201315": "green",
+                                  "15\u201330": "teal",
+                                  "30\u201345": "amber",
+                                  "45\u201360": "coral",
+                                  "60+": "red",
+                                  "unreached": "gray"
+                                }
+                              }
+                            ],
+                            "expandable": true,
+                            "open": "Station scores",
+                            "expandFields": [
+                              {
+                                "column": "minutes_from_origin_ebt",
+                                "label": "Minutes from Express Bus Terminal"
+                              },
+                              {
+                                "column": "tt_band_ebt",
+                                "label": "Band"
+                              },
+                              {
+                                "column": "degree",
+                                "label": "Lines/connections"
+                              }
+                            ],
+                            "action": {
+                              "fn": "editRow"
+                            },
+                            "expandSingle": true,
+                            "expandChevron": true
+                          }
+                        },
+                        {
+                          "label": "Jongno 3-ga",
+                          "child": {
+                            "type": "cards",
+                            "table": "kr_stations",
+                            "title": "name",
+                            "subtitle": "tt_band_jongno",
+                            "sort": {
+                              "column": "minutes_from_origin_jongno",
+                              "dir": "asc"
+                            },
+                            "search": true,
+                            "searchColumns": [
+                              "name"
+                            ],
+                            "tags": [
+                              {
+                                "column": "tt_band_jongno",
+                                "colors": {
+                                  "0\u201315": "green",
+                                  "15\u201330": "teal",
+                                  "30\u201345": "amber",
+                                  "45\u201360": "coral",
+                                  "60+": "red",
+                                  "unreached": "gray"
+                                }
+                              }
+                            ],
+                            "expandable": true,
+                            "open": "Station scores",
+                            "expandFields": [
+                              {
+                                "column": "minutes_from_origin_jongno",
+                                "label": "Minutes from Jongno 3-ga"
+                              },
+                              {
+                                "column": "tt_band_jongno",
+                                "label": "Band"
+                              },
+                              {
+                                "column": "degree",
+                                "label": "Lines/connections"
+                              }
+                            ],
+                            "action": {
+                              "fn": "editRow"
+                            },
+                            "expandSingle": true,
+                            "expandChevron": true
+                          }
+                        },
+                        {
+                          "label": "Gangnam",
+                          "child": {
+                            "type": "cards",
+                            "table": "kr_stations",
+                            "title": "name",
+                            "subtitle": "tt_band_gangnam",
+                            "sort": {
+                              "column": "minutes_from_origin_gangnam",
+                              "dir": "asc"
+                            },
+                            "search": true,
+                            "searchColumns": [
+                              "name"
+                            ],
+                            "tags": [
+                              {
+                                "column": "tt_band_gangnam",
+                                "colors": {
+                                  "0\u201315": "green",
+                                  "15\u201330": "teal",
+                                  "30\u201345": "amber",
+                                  "45\u201360": "coral",
+                                  "60+": "red",
+                                  "unreached": "gray"
+                                }
+                              }
+                            ],
+                            "expandable": true,
+                            "open": "Station scores",
+                            "expandFields": [
+                              {
+                                "column": "minutes_from_origin_gangnam",
+                                "label": "Minutes from Gangnam"
+                              },
+                              {
+                                "column": "tt_band_gangnam",
+                                "label": "Band"
+                              },
+                              {
+                                "column": "degree",
+                                "label": "Lines/connections"
+                              }
+                            ],
+                            "action": {
+                              "fn": "editRow"
+                            },
+                            "expandSingle": true,
+                            "expandChevron": true
+                          }
+                        },
+                        {
+                          "label": "Hongik Univ.",
+                          "child": {
+                            "type": "column",
+                            "children": [
+                              {
+                                "type": "cards",
+                                "table": "kr_stations",
+                                "title": "name",
+                                "subtitle": "tt_band_hongik",
+                                "sort": {
+                                  "column": "minutes_from_origin_hongik",
+                                  "dir": "asc"
+                                },
+                                "search": true,
+                                "searchColumns": [
+                                  "name"
+                                ],
+                                "tags": [
+                                  {
+                                    "column": "tt_band_hongik",
+                                    "colors": {
+                                      "0\u201315": "green",
+                                      "15\u201330": "teal",
+                                      "30\u201345": "amber",
+                                      "45\u201360": "coral",
+                                      "60+": "red",
+                                      "unreached": "gray"
+                                    }
+                                  }
+                                ],
+                                "expandable": true,
+                                "open": "Station scores",
+                                "expandFields": [
+                                  {
+                                    "column": "minutes_from_origin_hongik",
+                                    "label": "Minutes from Hongik Univ."
+                                  },
+                                  {
+                                    "column": "tt_band_hongik",
+                                    "label": "Band"
+                                  },
+                                  {
+                                    "column": "degree",
+                                    "label": "Lines/connections"
+                                  }
+                                ],
+                                "action": {
+                                  "fn": "editRow"
+                                },
+                                "expandSingle": true,
+                                "expandChevron": true
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "outputs_centrality": {
+      "title": "Model outputs \u2014 Transit-network centrality (Korea)",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Real output of the m_centrality model: 471 Seoul subway stations pulled live from OpenStreetMap (\u00a9 OpenStreetMap contributors, ODbL; keyless), built by tool/korea/build_korea.py. Betweenness = bridge importance (removing it fractures journeys); degree = lines/connections. Shares the same layered Seoul map as the travel-time model: toggle the connectivity heatmap, district boundaries/fill, and subway network below; tap a hub to trace its route tree."
+          },
+          {
+            "type": "glmap",
+            "id": "seoul_glmap",
+            "table": "kr_stations",
+            "latColumn": "lat",
+            "lonColumn": "lng",
+            "labelColumn": "maplabel",
+            "markerIcon": "pin",
+            "height": 640,
+            "zoom": 11,
+            "center": [
+              37.5665,
+              126.978
+            ],
+            "action": {
+              "fn": "editRow"
+            },
+            "geojsonSources": {
+              "stations": "apps/terrain/kr_stations.geojson",
+              "districts": "apps/terrain/seoul_districts.geojson",
+              "network": "apps/terrain/network.geojson",
+              "hub_trees": "apps/terrain/hub_trees.geojson",
+              "dong": "apps/terrain/seoul_dong.geojson"
+            },
+            "sourceLayers": [
+              {
+                "id": "station_heat",
+                "source": "stations",
+                "kind": "heatmap",
+                "paint": {
+                  "weightProp": "conn_score",
+                  "weightMax": 100,
+                  "radius": 22,
+                  "opacity": 0.75
+                }
+              },
+              {
+                "id": "district_lines",
+                "source": "districts",
+                "kind": "line",
+                "paint": {
+                  "color": "gray",
+                  "width": 1.2
+                }
+              },
+              {
+                "id": "district_fill",
+                "source": "districts",
+                "kind": "fill",
+                "visible": false,
+                "paint": {
+                  "colorProp": "conn_tier",
+                  "ramp": {
+                    "well-connected": "green",
+                    "mid": "amber",
+                    "peripheral": "coral"
+                  },
+                  "opacity": 0.45
+                }
+              },
+              {
+                "id": "dong_fill",
+                "source": "dong",
+                "kind": "fill",
+                "visible": false,
+                "paint": {
+                  "colorProp": "conn_tier",
+                  "ramp": {
+                    "very-low": "#EFF3FF",
+                    "low": "#BDD7E7",
+                    "mid": "#6BAED6",
+                    "high": "#3182BD",
+                    "very-high": "#08519C",
+                    "no-data": "#D9D9D9"
+                  },
+                  "opacity": 0.55
+                }
+              },
+              {
+                "id": "network_lines",
+                "source": "network",
+                "kind": "line",
+                "visible": false,
+                "paint": {
+                  "color": "blue",
+                  "width": 1.5,
+                  "opacity": 0.8
+                }
+              },
+              {
+                "id": "hub_routes",
+                "source": "hub_trees",
+                "kind": "line",
+                "filter": [
+                  "==",
+                  "origin",
+                  "__none__"
+                ],
+                "paint": {
+                  "color": "coral",
+                  "width": 2.5
+                }
+              }
+            ]
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "spacing": 6,
+            "runSpacing": 6,
+            "children": [
+              {
+                "type": "button",
+                "label": "Show Connectivity heatmap",
+                "variant": "tonal",
+                "action": {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "station_heat",
+                    "visible": true
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Hide Connectivity heatmap",
+                "variant": "outlined",
+                "action": {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "station_heat",
+                    "visible": false
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Show District boundaries",
+                "variant": "tonal",
+                "action": {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "district_lines",
+                    "visible": true
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Hide District boundaries",
+                "variant": "outlined",
+                "action": {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "district_lines",
+                    "visible": false
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Show Districts (coarse)",
+                "variant": "tonal",
+                "action": {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "district_fill",
+                    "visible": true
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Show Neighborhoods (fine)",
+                "variant": "tonal",
+                "action": {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "dong_fill",
+                    "visible": true
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Hide Districts (coarse)",
+                "variant": "outlined",
+                "action": {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "district_fill",
+                    "visible": false
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Hide Neighborhoods (fine)",
+                "variant": "outlined",
+                "action": {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "dong_fill",
+                    "visible": false
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Show Subway network",
+                "variant": "tonal",
+                "action": {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "network_lines",
+                    "visible": true
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Hide Subway network",
+                "variant": "outlined",
+                "action": {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "network_lines",
+                    "visible": false
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "Tap the map to drop pins \u2014 routes draw between them"
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "Hub route trees \u2014 tap a hub to trace its subway route tree (Layers panel above still controls the base map)"
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "spacing": 8,
+            "runSpacing": 8,
+            "children": [
+              {
+                "type": "button",
+                "label": "Seoul Station",
+                "action": {
+                  "fn": "mapSetFilter",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "hub_routes",
+                    "filter": [
+                      "==",
+                      "origin",
+                      "Yongsan-gu"
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Express Bus Terminal",
+                "action": {
+                  "fn": "mapSetFilter",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "hub_routes",
+                    "filter": [
+                      "==",
+                      "origin",
+                      "Seocho-gu"
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Jongno 3-ga",
+                "action": {
+                  "fn": "mapSetFilter",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "hub_routes",
+                    "filter": [
+                      "==",
+                      "origin",
+                      "Jongno-gu"
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Gangnam",
+                "action": {
+                  "fn": "mapSetFilter",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "hub_routes",
+                    "filter": [
+                      "==",
+                      "origin",
+                      "Gangnam-gu"
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Hongik Univ.",
+                "action": {
+                  "fn": "mapSetFilter",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "hub_routes",
+                    "filter": [
+                      "==",
+                      "origin",
+                      "Mapo-gu"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "segments",
+            "segments": [
+              {
+                "label": "Hubs",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "text",
+                      "style": "eyebrow",
+                      "value": "Centrality \u2014 critical transfer hubs first"
+                    },
+                    {
+                      "type": "cards",
+                      "table": "kr_stations",
+                      "title": "name",
+                      "subtitle": "btw_tier",
+                      "sort": {
+                        "column": "rank",
+                        "dir": "asc"
+                      },
+                      "search": true,
+                      "searchColumns": [
+                        "name"
+                      ],
+                      "tags": [
+                        {
+                          "column": "btw_tier",
+                          "colors": {
+                            "critical": "red",
+                            "high": "amber",
+                            "notable": "teal",
+                            "local": "gray"
+                          }
+                        }
+                      ],
+                      "expandable": true,
+                      "open": "Station scores",
+                      "expandFields": [
+                        {
+                          "column": "rank",
+                          "label": "Rank"
+                        },
+                        {
+                          "column": "betweenness",
+                          "label": "Betweenness"
+                        },
+                        {
+                          "column": "degree",
+                          "label": "Lines/connections"
+                        },
+                        {
+                          "column": "pagerank",
+                          "label": "PageRank"
+                        },
+                        {
+                          "column": "closeness",
+                          "label": "Closeness"
+                        }
+                      ],
+                      "action": {
+                        "fn": "editRow"
+                      },
+                      "expandSingle": true,
+                      "expandChevron": true
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Connectivity",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "text",
+                      "style": "eyebrow",
+                      "value": "Most connections (interchange size)"
+                    },
+                    {
+                      "type": "cards",
+                      "table": "kr_stations",
+                      "title": "name",
+                      "subtitle": "deg_tier",
+                      "sort": {
+                        "column": "degree",
+                        "dir": "desc"
+                      },
+                      "search": true,
+                      "searchColumns": [
+                        "name"
+                      ],
+                      "tags": [
+                        {
+                          "column": "deg_tier",
+                          "colors": {
+                            "hub": "purple",
+                            "major": "blue",
+                            "connector": "teal",
+                            "line": "gray"
+                          }
+                        }
+                      ],
+                      "expandable": true,
+                      "open": "Station scores",
+                      "expandFields": [
+                        {
+                          "column": "degree",
+                          "label": "Lines/connections"
+                        },
+                        {
+                          "column": "btw_tier",
+                          "label": "Hub tier"
+                        },
+                        {
+                          "column": "minutes_from_origin",
+                          "label": "Min from Seoul Stn"
+                        }
+                      ],
+                      "action": {
+                        "fn": "editRow"
+                      },
+                      "expandSingle": true,
+                      "expandChevron": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "outputs_ttmap": {
+      "title": "Model outputs \u2014 Travel-time heatmap (Korea, from an origin)",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Real output of the m_ttmap model: Seoul's 471 subway stations shaded by connectivity (the heatmap \u2014 station-level, brighter = better connected), plotted on a MapLibre GL vector map. Toggle layers below the map: the connectivity heatmap, district boundaries, an optional district connectivity fill, and the subway network. Tap a hub button to trace its route tree; tap any station pin for its name, connectivity, and per-hub travel times. Navigate: tap ANY point on the map to drop an ordered pin (no station needed) \u2014 each consecutive pair snaps to its nearest station and shows a walk + ride + walk estimate below the map (network estimate only, not timetable-exact; a pin farther than ~1.5km from any station is shown honestly as having no nearby station, never a fabricated route). Network estimate only (33 km/h + dwell), built by tool/korea/build_korea.py + build_district_od.py. District boundaries + station positions: OpenStreetMap \u00a9 OpenStreetMap contributors, ODbL."
+          },
+          {
+            "type": "glmap",
+            "id": "seoul_glmap",
+            "table": "kr_stations",
+            "latColumn": "lat",
+            "lonColumn": "lng",
+            "labelColumn": "maplabel",
+            "markerIcon": "pin",
+            "height": 640,
+            "zoom": 11,
+            "center": [
+              37.5665,
+              126.978
+            ],
+            "action": {
+              "fn": "editRow"
+            },
+            "pinMode": true,
+            "pinsTable": "nav_pins",
+            "routingNodesTable": "kr_stations",
+            "routingNodeAccessoryColumn": "conn_tier",
+            "routingEdgesAsset": "apps/terrain/network.geojson",
+            "snapMaxKm": 1.5,
+            "geojsonSources": {
+              "stations": "apps/terrain/kr_stations.geojson",
+              "districts": "apps/terrain/seoul_districts.geojson",
+              "network": "apps/terrain/network.geojson",
+              "hub_trees": "apps/terrain/hub_trees.geojson",
+              "dong": "apps/terrain/seoul_dong.geojson"
+            },
+            "sourceLayers": [
+              {
+                "id": "station_heat",
+                "source": "stations",
+                "kind": "heatmap",
+                "paint": {
+                  "weightProp": "conn_score",
+                  "weightMax": 100,
+                  "radius": 22,
+                  "opacity": 0.75
+                }
+              },
+              {
+                "id": "district_lines",
+                "source": "districts",
+                "kind": "line",
+                "paint": {
+                  "color": "gray",
+                  "width": 1.2
+                }
+              },
+              {
+                "id": "district_fill",
+                "source": "districts",
+                "kind": "fill",
+                "visible": false,
+                "paint": {
+                  "colorProp": "conn_tier",
+                  "ramp": {
+                    "well-connected": "green",
+                    "mid": "amber",
+                    "peripheral": "coral"
+                  },
+                  "opacity": 0.45
+                }
+              },
+              {
+                "id": "dong_fill",
+                "source": "dong",
+                "kind": "fill",
+                "visible": false,
+                "paint": {
+                  "colorProp": "conn_tier",
+                  "ramp": {
+                    "very-low": "#EFF3FF",
+                    "low": "#BDD7E7",
+                    "mid": "#6BAED6",
+                    "high": "#3182BD",
+                    "very-high": "#08519C",
+                    "no-data": "#D9D9D9"
+                  },
+                  "opacity": 0.55
+                }
+              },
+              {
+                "id": "network_lines",
+                "source": "network",
+                "kind": "line",
+                "visible": false,
+                "paint": {
+                  "color": "blue",
+                  "width": 1.5,
+                  "opacity": 0.8
+                }
+              },
+              {
+                "id": "hub_routes",
+                "source": "hub_trees",
+                "kind": "line",
+                "filter": [
+                  "==",
+                  "origin",
+                  "__none__"
+                ],
+                "paint": {
+                  "color": "coral",
+                  "width": 2.5
+                }
+              }
+            ]
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "spacing": 6,
+            "runSpacing": 6,
+            "children": [
+              {
+                "type": "button",
+                "label": "Show Connectivity heatmap",
+                "variant": "tonal",
+                "action": {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "station_heat",
+                    "visible": true
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Hide Connectivity heatmap",
+                "variant": "outlined",
+                "action": {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "station_heat",
+                    "visible": false
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Show District boundaries",
+                "variant": "tonal",
+                "action": {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "district_lines",
+                    "visible": true
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Hide District boundaries",
+                "variant": "outlined",
+                "action": {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "district_lines",
+                    "visible": false
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Show Districts (coarse)",
+                "variant": "tonal",
+                "action": {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "district_fill",
+                    "visible": true
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Show Neighborhoods (fine)",
+                "variant": "tonal",
+                "action": {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "dong_fill",
+                    "visible": true
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Hide Districts (coarse)",
+                "variant": "outlined",
+                "action": {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "district_fill",
+                    "visible": false
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Hide Neighborhoods (fine)",
+                "variant": "outlined",
+                "action": {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "dong_fill",
+                    "visible": false
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Show Subway network",
+                "variant": "tonal",
+                "action": {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "network_lines",
+                    "visible": true
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Hide Subway network",
+                "variant": "outlined",
+                "action": {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "network_lines",
+                    "visible": false
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "Tap the map to drop pins \u2014 routes draw between them"
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "Hub route trees \u2014 tap a hub to trace its subway route tree (Layers panel above still controls the base map)"
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "spacing": 8,
+            "runSpacing": 8,
+            "children": [
+              {
+                "type": "button",
+                "label": "Seoul Station",
+                "action": {
+                  "fn": "mapSetFilter",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "hub_routes",
+                    "filter": [
+                      "==",
+                      "origin",
+                      "Yongsan-gu"
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Express Bus Terminal",
+                "action": {
+                  "fn": "mapSetFilter",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "hub_routes",
+                    "filter": [
+                      "==",
+                      "origin",
+                      "Seocho-gu"
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Jongno 3-ga",
+                "action": {
+                  "fn": "mapSetFilter",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "hub_routes",
+                    "filter": [
+                      "==",
+                      "origin",
+                      "Jongno-gu"
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Gangnam",
+                "action": {
+                  "fn": "mapSetFilter",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "hub_routes",
+                    "filter": [
+                      "==",
+                      "origin",
+                      "Gangnam-gu"
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Hongik Univ.",
+                "action": {
+                  "fn": "mapSetFilter",
+                  "args": {
+                    "node": "seoul_glmap",
+                    "layer": "hub_routes",
+                    "filter": [
+                      "==",
+                      "origin",
+                      "Mapo-gu"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "Districts ranked by overall connectivity"
+          },
+          {
+            "type": "cards",
+            "table": "kr_district_conn",
+            "title": "d",
+            "subtitle": "tier",
+            "sort": {
+              "column": "rank",
+              "dir": "asc"
+            },
+            "tags": [
+              {
+                "column": "tier",
+                "colors": {
+                  "well-connected": "green",
+                  "mid": "amber",
+                  "peripheral": "coral"
+                }
+              }
+            ],
+            "expandable": true,
+            "open": "District detail",
+            "expandFields": [
+              {
+                "column": "mean_m",
+                "label": "Mean minutes to other districts"
+              },
+              {
+                "column": "rank",
+                "label": "Rank (most-connected first)"
+              }
+            ],
+            "expandSingle": true,
+            "expandChevron": true
+          }
+        ]
+      }
+    },
+    "outputs_kraccess": {
+      "title": "Model outputs \u2014 Transit access (Korea, 45-min reach)",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Real output of the m_kraccess model: 471 Seoul subway stations pulled live from OpenStreetMap (\u00a9 OpenStreetMap contributors, ODbL; keyless), built by tool/korea/build_korea.py. reach45 = how many OTHER stations each station reaches within 45 minutes (network Dijkstra estimate at 33 km/h + dwell \u2014 not timetable-exact); access band is a data-driven quintile of that distribution."
+          },
+          {
+            "type": "map",
+            "table": "kr_stations",
+            "latColumn": "lat",
+            "lonColumn": "lng",
+            "labelColumn": "maplabel",
+            "markerIcon": "pin",
+            "height": 640,
+            "action": {
+              "fn": "editRow"
+            },
+            "layers": [
+              {
+                "id": "pins",
+                "kind": "markers",
+                "label": "Stations",
+                "colorColumn": "reach_band",
+                "colors": {
+                  "very-low": "red",
+                  "low": "coral",
+                  "mid": "amber",
+                  "high": "teal",
+                  "very-high": "green"
+                }
+              },
+              {
+                "id": "labels",
+                "kind": "labels",
+                "label": "Station names",
+                "on": false
+              }
+            ]
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "Stations ranked by 45-minute reach \u2014 most-accessible first"
+          },
+          {
+            "type": "cards",
+            "table": "kr_stations",
+            "title": "name",
+            "subtitle": "reach_band",
+            "sort": {
+              "column": "reach45",
+              "dir": "desc"
+            },
+            "search": true,
+            "searchColumns": [
+              "name"
+            ],
+            "tags": [
+              {
+                "column": "reach_band",
+                "colors": {
+                  "very-low": "red",
+                  "low": "coral",
+                  "mid": "amber",
+                  "high": "teal",
+                  "very-high": "green"
+                }
+              }
+            ],
+            "expandable": true,
+            "open": "Station scores",
+            "expandFields": [
+              {
+                "column": "reach45",
+                "label": "Stations reachable in 45 min"
+              },
+              {
+                "column": "reach_band",
+                "label": "Access tier"
+              },
+              {
+                "column": "degree",
+                "label": "Lines/connections"
+              },
+              {
+                "column": "minutes_from_origin",
+                "label": "Min from Seoul Stn"
+              }
+            ],
+            "action": {
+              "fn": "editRow"
+            },
+            "expandSingle": true,
+            "expandChevron": true
+          }
+        ]
+      }
+    },
+    "outputs_none": {
+      "title": "Model outputs \u2014 no baked run yet",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "No baked outputs for this model yet"
+          },
+          {
+            "type": "text",
+            "value": "Runs are server-gated \u2014 this model doesn't ship a pre-computed dataset in the applet the way the two Korea models (transit-network centrality + travel-time heatmap) do. Check Scenarios & runs for run history, or Edit model for its full spec."
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "Scenarios & runs",
+                "icon": "history",
+                "action": {
+                  "fn": "goto",
+                  "args": {
+                    "screen": "runs"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Edit model",
+                "icon": "edit",
+                "action": {
+                  "fn": "editRow",
+                  "args": {
+                    "table": "models",
+                    "id": "$selected:models"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "outputs_router": {
+      "title": "Model outputs \u2014 Auto-router (task \u2192 cheapest capable model)",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "The routing rule: each task goes to the cheapest tier that can do it well \u2014 effort matches difficulty, and a tier escalates only when the change would alter the outcome. T3 triggers (auth \u00b7 sharing \u00b7 write-paths \u00b7 links \u00b7 money \u00b7 sync) always escalate verification to Opus. This is the viewable routing policy \u2014 in-app task dispatch itself stays server-gated."
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "segments",
+            "segments": [
+              {
+                "label": "Tiers",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "text",
+                      "style": "eyebrow",
+                      "value": "Ladder \u2014 cheapest first"
+                    },
+                    {
+                      "type": "cards",
+                      "table": "routing_tiers",
+                      "title": "tier",
+                      "subtitle": "role",
+                      "sortBy": "rank",
+                      "sortDir": "asc",
+                      "tags": [
+                        {
+                          "column": "relative_cost",
+                          "colors": {
+                            "lowest": "green",
+                            "low": "teal",
+                            "high": "red",
+                            "variable": "purple"
+                          }
+                        }
+                      ],
+                      "expandable": true,
+                      "expandFields": [
+                        {
+                          "column": "best_for",
+                          "label": "Best for"
+                        },
+                        {
+                          "column": "examples",
+                          "label": "Examples"
+                        }
+                      ],
+                      "action": {
+                        "fn": "editRow"
+                      },
+                      "expandSingle": true,
+                      "expandChevron": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

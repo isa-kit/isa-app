@@ -1,0 +1,12 @@
+{
+  "id": "bublee",
+  "name": "bublie",
+  "category": "Creative",
+  "icon": "bubble_chart",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_bublee"
+  },
+  "seedVersion": "2026-08-02.projectpathcol",
+  "seedContent": "initial-only"
+}

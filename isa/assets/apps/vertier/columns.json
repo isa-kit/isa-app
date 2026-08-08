@@ -1,0 +1,312 @@
+{
+  "collections": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name"
+    },
+    {
+      "name": "domain",
+      "type": "text",
+      "label": "Domain"
+    },
+    {
+      "name": "icon",
+      "type": "text",
+      "label": "Icon"
+    },
+    {
+      "name": "description",
+      "type": "text",
+      "label": "Description"
+    },
+    {
+      "name": "attributes",
+      "type": "text",
+      "label": "Attributes (JSON)"
+    }
+  ],
+  "items": [
+    {
+      "name": "collectionId",
+      "type": "text",
+      "label": "Collection"
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name"
+    },
+    {
+      "name": "image",
+      "type": "text",
+      "label": "Image"
+    },
+    {
+      "name": "attrs",
+      "type": "text",
+      "label": "Attributes (JSON)"
+    }
+  ],
+  "tierlists": [
+    {
+      "name": "collectionId",
+      "type": "text",
+      "label": "Collection"
+    },
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Title"
+    },
+    {
+      "name": "tiers",
+      "type": "text",
+      "label": "Tiers (JSON)"
+    },
+    {
+      "name": "placements",
+      "type": "text",
+      "label": "Placements (JSON)"
+    }
+  ],
+  "creations": [
+    {
+      "name": "type",
+      "type": "text",
+      "label": "Type"
+    },
+    {
+      "name": "kind",
+      "type": "text",
+      "label": "Kind"
+    },
+    {
+      "name": "url",
+      "type": "text",
+      "label": "Link"
+    },
+    {
+      "name": "safety",
+      "type": "text",
+      "label": "Link safety"
+    },
+    {
+      "name": "collId",
+      "type": "text",
+      "label": "Collection"
+    },
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Title"
+    },
+    {
+      "name": "body",
+      "type": "text",
+      "label": "Post (markdown)"
+    },
+    {
+      "name": "author",
+      "type": "text",
+      "label": "Author"
+    },
+    {
+      "name": "authorName",
+      "type": "text",
+      "label": "Author name"
+    },
+    {
+      "name": "payload",
+      "type": "text",
+      "label": "Snapshot (JSON)"
+    },
+    {
+      "name": "publishedAt",
+      "type": "text",
+      "label": "Published"
+    },
+    {
+      "name": "upvotes",
+      "type": "number",
+      "label": "Upvotes"
+    },
+    {
+      "name": "downvotes",
+      "type": "number",
+      "label": "Downvotes"
+    },
+    {
+      "name": "score",
+      "type": "number",
+      "label": "Score"
+    }
+  ],
+  "votes": [
+    {
+      "name": "creationId",
+      "type": "text",
+      "label": "Creation"
+    },
+    {
+      "name": "voter",
+      "type": "text",
+      "label": "Voter"
+    },
+    {
+      "name": "value",
+      "type": "number",
+      "label": "Value"
+    },
+    {
+      "name": "votedAt",
+      "type": "text",
+      "label": "Voted at"
+    }
+  ],
+  "replies": [
+    {
+      "name": "creationId",
+      "type": "text",
+      "label": "Creation"
+    },
+    {
+      "name": "body",
+      "type": "text",
+      "label": "Reply"
+    },
+    {
+      "name": "author",
+      "type": "text",
+      "label": "Author"
+    },
+    {
+      "name": "repliedAt",
+      "type": "text",
+      "label": "Replied at"
+    }
+  ],
+  "posts": [
+    {
+      "name": "type",
+      "type": "text",
+      "label": "Type"
+    },
+    {
+      "name": "kind",
+      "type": "text",
+      "label": "Kind"
+    },
+    {
+      "name": "url",
+      "type": "text",
+      "label": "Link"
+    },
+    {
+      "name": "safety",
+      "type": "text",
+      "label": "Link safety"
+    },
+    {
+      "name": "collId",
+      "type": "text",
+      "label": "Collection"
+    },
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Title"
+    },
+    {
+      "name": "body",
+      "type": "text",
+      "label": "Post (markdown)"
+    },
+    {
+      "name": "author",
+      "type": "text",
+      "label": "Author"
+    },
+    {
+      "name": "authorName",
+      "type": "text",
+      "label": "Author name"
+    },
+    {
+      "name": "audience",
+      "type": "text",
+      "label": "Shared with"
+    },
+    {
+      "name": "audienceIds",
+      "type": "text",
+      "label": "Shared-with ids (JSON)"
+    },
+    {
+      "name": "pbId",
+      "type": "text",
+      "label": "Server id"
+    },
+    {
+      "name": "publishedAt",
+      "type": "text",
+      "label": "Created"
+    },
+    {
+      "name": "upvotes",
+      "type": "number",
+      "label": "Upvotes"
+    },
+    {
+      "name": "downvotes",
+      "type": "number",
+      "label": "Downvotes"
+    },
+    {
+      "name": "score",
+      "type": "number",
+      "label": "Score"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name"
+    }
+  ],
+  "circles": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name"
+    },
+    {
+      "name": "memberIds",
+      "type": "text",
+      "label": "Members (JSON ids)"
+    }
+  ],
+  "postvotes": [
+    {
+      "name": "creationId",
+      "type": "text",
+      "label": "Post"
+    },
+    {
+      "name": "voter",
+      "type": "text",
+      "label": "Voter"
+    },
+    {
+      "name": "value",
+      "type": "number",
+      "label": "Value"
+    },
+    {
+      "name": "votedAt",
+      "type": "text",
+      "label": "Voted at"
+    }
+  ]
+}

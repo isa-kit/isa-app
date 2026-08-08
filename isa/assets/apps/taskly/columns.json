@@ -1,0 +1,572 @@
+{
+  "tasks": [
+    {
+      "name": "title",
+      "type": "text",
+      "label": {
+        "en": "Title",
+        "fr": "Titre",
+        "de": "Titel",
+        "es": "Título",
+        "it": "Titolo",
+        "sv": "Titel",
+        "cs": "Název",
+        "el": "Τίτλος",
+        "ko": "제목",
+        "zh": "标题",
+        "ja": "タイトル"
+      },
+      "required": true
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "label": {
+        "en": "Status",
+        "fr": "Statut",
+        "de": "Status",
+        "es": "Estado",
+        "it": "Stato",
+        "sv": "Status",
+        "cs": "Stav",
+        "el": "Κατάσταση",
+        "ko": "상태",
+        "zh": "状态",
+        "ja": "ステータス"
+      },
+      "options": [
+        "todo",
+        "doing",
+        "done"
+      ],
+      "default": "todo"
+    },
+    {
+      "name": "parentId",
+      "type": "ref",
+      "label": {
+        "en": "Parents",
+        "fr": "Parents",
+        "de": "Übergeordnet",
+        "es": "Padres",
+        "it": "Genitori",
+        "sv": "Föräldrar",
+        "cs": "Nadřazené",
+        "el": "Γονείς",
+        "ko": "상위",
+        "zh": "父级",
+        "ja": "親"
+      },
+      "refTable": "tasks",
+      "advanced": true,
+      "multi": true
+    },
+    {
+      "name": "order",
+      "type": "number",
+      "label": {
+        "en": "Order",
+        "fr": "Ordre",
+        "de": "Reihenfolge",
+        "es": "Orden",
+        "it": "Ordine",
+        "sv": "Ordning",
+        "cs": "Pořadí",
+        "el": "Σειρά",
+        "ko": "순서",
+        "zh": "顺序",
+        "ja": "順序"
+      }
+    },
+    {
+      "name": "scheduledStart",
+      "type": "date",
+      "label": {
+        "en": "Scheduled",
+        "fr": "Planifié",
+        "de": "Geplant",
+        "es": "Programado",
+        "it": "Programmato",
+        "sv": "Schemalagd",
+        "cs": "Naplánováno",
+        "el": "Προγραμματισμένο",
+        "ko": "예정",
+        "zh": "已排期",
+        "ja": "予定"
+      },
+      "advanced": true
+    },
+    {
+      "name": "due",
+      "type": "date",
+      "label": {
+        "en": "Due",
+        "fr": "Échéance",
+        "de": "Fällig",
+        "es": "Vence",
+        "it": "Scadenza",
+        "sv": "Förfaller",
+        "cs": "Termín",
+        "el": "Προθεσμία",
+        "ko": "마감",
+        "zh": "截止",
+        "ja": "期限"
+      }
+    },
+    {
+      "name": "createdAt",
+      "type": "date",
+      "label": {
+        "en": "Created",
+        "fr": "Créé",
+        "de": "Erstellt",
+        "es": "Creado",
+        "it": "Creato",
+        "sv": "Skapad",
+        "cs": "Vytvořeno",
+        "el": "Δημιουργήθηκε",
+        "ko": "생성됨",
+        "zh": "创建于",
+        "ja": "作成"
+      },
+      "default": "today"
+    },
+    {
+      "name": "completed",
+      "type": "date",
+      "label": {
+        "en": "Completed",
+        "fr": "Terminé",
+        "de": "Abgeschlossen",
+        "es": "Completado",
+        "it": "Completato",
+        "sv": "Slutförd",
+        "cs": "Dokončeno",
+        "el": "Ολοκληρώθηκε",
+        "ko": "완료됨",
+        "zh": "已完成",
+        "ja": "完了"
+      },
+      "advanced": true
+    },
+    {
+      "name": "completedTime",
+      "type": "text",
+      "label": {
+        "en": "Completed time",
+        "fr": "Heure de fin",
+        "de": "Abschlusszeit",
+        "es": "Hora de finalización",
+        "it": "Ora di completamento",
+        "sv": "Sluttid",
+        "cs": "Čas dokončení",
+        "el": "Ώρα ολοκλήρωσης",
+        "ko": "완료 시간",
+        "zh": "完成时间",
+        "ja": "完了時刻"
+      },
+      "advanced": true
+    },
+    {
+      "name": "estimateMins",
+      "type": "number",
+      "label": {
+        "en": "Estimate (min)",
+        "fr": "Estimation (min)",
+        "de": "Schätzung (Min.)",
+        "es": "Estimación (min)",
+        "it": "Stima (min)",
+        "sv": "Uppskattning (min)",
+        "cs": "Odhad (min)",
+        "el": "Εκτίμηση (λεπτά)",
+        "ko": "예상 (분)",
+        "zh": "预估 (分钟)",
+        "ja": "見積もり (分)"
+      },
+      "advanced": true
+    },
+    {
+      "name": "notes",
+      "type": "text",
+      "label": {
+        "en": "Notes",
+        "fr": "Notes",
+        "de": "Notizen",
+        "es": "Notas",
+        "it": "Note",
+        "sv": "Anteckningar",
+        "cs": "Poznámky",
+        "el": "Σημειώσεις",
+        "ko": "메모",
+        "zh": "笔记",
+        "ja": "メモ"
+      }
+    },
+    {
+      "name": "profiles",
+      "type": "ref",
+      "refTable": "profiles",
+      "multi": true,
+      "label": {
+        "en": "Profiles",
+        "fr": "Profils",
+        "de": "Profile",
+        "es": "Perfiles",
+        "it": "Profili",
+        "sv": "Profiler",
+        "cs": "Profily",
+        "el": "Προφίλ",
+        "ko": "프로필",
+        "zh": "档案",
+        "ja": "プロフィール"
+      },
+      "advanced": true
+    },
+    {
+      "name": "updatedAt",
+      "type": "date",
+      "label": {
+        "en": "Updated",
+        "fr": "Mis à jour",
+        "de": "Aktualisiert",
+        "es": "Actualizado",
+        "it": "Aggiornato",
+        "sv": "Uppdaterad",
+        "cs": "Aktualizováno",
+        "el": "Ενημερώθηκε",
+        "ko": "업데이트됨",
+        "zh": "更新于",
+        "ja": "更新"
+      },
+      "default": "today"
+    },
+    {
+      "name": "endDate",
+      "type": "date",
+      "label": {
+        "en": "End date",
+        "fr": "Date de fin",
+        "de": "Enddatum",
+        "es": "Fecha de fin",
+        "it": "Data di fine",
+        "sv": "Slutdatum",
+        "cs": "Datum konce",
+        "el": "Ημερομηνία λήξης",
+        "ko": "종료일",
+        "zh": "结束日期",
+        "ja": "終了日"
+      }
+    },
+    {
+      "name": "dependsOn",
+      "type": "ref",
+      "refTable": "tasks",
+      "multi": true,
+      "label": {
+        "en": "Depends on",
+        "fr": "Dépend de",
+        "de": "Hängt ab von",
+        "es": "Depende de",
+        "it": "Dipende da",
+        "sv": "Beror på",
+        "cs": "Závisí na",
+        "el": "Εξαρτάται από",
+        "ko": "의존",
+        "zh": "依赖于",
+        "ja": "依存先"
+      },
+      "advanced": true
+    },
+    {
+      "name": "assignee",
+      "type": "text",
+      "label": {
+        "en": "Assignee",
+        "fr": "Assigné à",
+        "de": "Zugewiesen",
+        "es": "Asignado",
+        "it": "Assegnatario",
+        "sv": "Tilldelad",
+        "cs": "Přiřazeno",
+        "el": "Ανατέθηκε",
+        "ko": "담당자",
+        "zh": "负责人",
+        "ja": "担当者"
+      },
+      "advanced": true
+    },
+    {
+      "name": "actualMins",
+      "type": "number",
+      "label": {
+        "en": "Actual (mins)",
+        "fr": "Réel (min)",
+        "de": "Tatsächlich (Min.)",
+        "es": "Real (min)",
+        "it": "Effettivo (min)",
+        "sv": "Faktisk (min)",
+        "cs": "Skutečné (min)",
+        "el": "Πραγματικό (λεπτά)",
+        "ko": "실제 (분)",
+        "zh": "实际 (分钟)",
+        "ja": "実績 (分)"
+      },
+      "advanced": true
+    },
+    {
+      "name": "repeat",
+      "type": "text",
+      "label": {
+        "en": "Repeat (d:1 / w:1 / m:1)",
+        "fr": "Répéter (d:1 / w:1 / m:1)",
+        "de": "Wiederholen (d:1 / w:1 / m:1)",
+        "es": "Repetir (d:1 / w:1 / m:1)",
+        "it": "Ripeti (d:1 / w:1 / m:1)",
+        "sv": "Upprepa (d:1 / w:1 / m:1)",
+        "cs": "Opakovat (d:1 / w:1 / m:1)",
+        "el": "Επανάληψη (d:1 / w:1 / m:1)",
+        "ko": "반복 (d:1 / w:1 / m:1)",
+        "zh": "重复 (d:1 / w:1 / m:1)",
+        "ja": "繰り返し (d:1 / w:1 / m:1)"
+      },
+      "advanced": true
+    },
+    {
+      "name": "timerStart",
+      "type": "text",
+      "label": {
+        "en": "Timer running since",
+        "fr": "Minuteur depuis",
+        "de": "Timer läuft seit",
+        "es": "Temporizador desde",
+        "it": "Timer attivo da",
+        "sv": "Timer sedan",
+        "cs": "Časovač běží od",
+        "el": "Χρονόμετρο από",
+        "ko": "타이머 시작",
+        "zh": "计时开始于",
+        "ja": "タイマー開始"
+      },
+      "advanced": true
+    }
+  ],
+  "notes": [
+    {
+      "name": "title",
+      "type": "text",
+      "label": {
+        "en": "Title",
+        "fr": "Titre",
+        "de": "Titel",
+        "es": "Título",
+        "it": "Titolo",
+        "sv": "Titel",
+        "cs": "Název",
+        "el": "Τίτλος",
+        "ko": "제목",
+        "zh": "标题",
+        "ja": "タイトル"
+      },
+      "required": true
+    },
+    {
+      "name": "body",
+      "type": "text",
+      "label": {
+        "en": "Body",
+        "fr": "Contenu",
+        "de": "Inhalt",
+        "es": "Cuerpo",
+        "it": "Corpo",
+        "sv": "Innehåll",
+        "cs": "Obsah",
+        "el": "Περιεχόμενο",
+        "ko": "본문",
+        "zh": "正文",
+        "ja": "本文"
+      }
+    },
+    {
+      "name": "date",
+      "type": "date",
+      "label": {
+        "en": "Date",
+        "fr": "Date",
+        "de": "Datum",
+        "es": "Fecha",
+        "it": "Data",
+        "sv": "Datum",
+        "cs": "Datum",
+        "el": "Ημερομηνία",
+        "ko": "날짜",
+        "zh": "日期",
+        "ja": "日付"
+      },
+      "default": "today"
+    },
+    {
+      "name": "tags",
+      "type": "text",
+      "label": {
+        "en": "Tags",
+        "fr": "Étiquettes",
+        "de": "Tags",
+        "es": "Etiquetas",
+        "it": "Tag",
+        "sv": "Taggar",
+        "cs": "Štítky",
+        "el": "Ετικέτες",
+        "ko": "태그",
+        "zh": "标签",
+        "ja": "タグ"
+      }
+    },
+    {
+      "name": "pinned",
+      "type": "bool",
+      "label": {
+        "en": "Pinned",
+        "fr": "Épinglé",
+        "de": "Angepinnt",
+        "es": "Fijado",
+        "it": "Fissato",
+        "sv": "Fäst",
+        "cs": "Připnuto",
+        "el": "Καρφιτσωμένο",
+        "ko": "고정됨",
+        "zh": "已置顶",
+        "ja": "ピン留め"
+      },
+      "default": false
+    }
+  ],
+  "profiles": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": {
+        "en": "Name",
+        "fr": "Nom",
+        "de": "Name",
+        "es": "Nombre",
+        "it": "Nome",
+        "sv": "Namn",
+        "cs": "Název",
+        "el": "Όνομα",
+        "ko": "이름",
+        "zh": "名称",
+        "ja": "名前"
+      },
+      "required": true
+    },
+    {
+      "name": "color",
+      "type": "text",
+      "label": {
+        "en": "Color",
+        "fr": "Couleur",
+        "de": "Farbe",
+        "es": "Color",
+        "it": "Colore",
+        "sv": "Färg",
+        "cs": "Barva",
+        "el": "Χρώμα",
+        "ko": "색상",
+        "zh": "颜色",
+        "ja": "色"
+      }
+    }
+  ],
+  "templates": [
+    {
+      "name": "title",
+      "type": "text",
+      "label": {
+        "en": "Title",
+        "fr": "Titre",
+        "de": "Titel",
+        "es": "Título",
+        "it": "Titolo",
+        "sv": "Titel",
+        "cs": "Název",
+        "el": "Τίτλος",
+        "ko": "제목",
+        "zh": "标题",
+        "ja": "タイトル"
+      },
+      "required": true
+    },
+    {
+      "name": "parentId",
+      "type": "ref",
+      "label": {
+        "en": "Parent step",
+        "fr": "Étape parente",
+        "de": "Übergeordneter Schritt",
+        "es": "Paso padre",
+        "it": "Passo principale",
+        "sv": "Överordnat steg",
+        "cs": "Nadřazený krok",
+        "el": "Γονικό βήμα",
+        "ko": "상위 단계",
+        "zh": "父步骤",
+        "ja": "親ステップ"
+      },
+      "refTable": "templates",
+      "multi": true,
+      "advanced": true
+    },
+    {
+      "name": "order",
+      "type": "number",
+      "label": {
+        "en": "Order",
+        "fr": "Ordre",
+        "de": "Reihenfolge",
+        "es": "Orden",
+        "it": "Ordine",
+        "sv": "Ordning",
+        "cs": "Pořadí",
+        "el": "Σειρά",
+        "ko": "순서",
+        "zh": "顺序",
+        "ja": "順序"
+      }
+    },
+    {
+      "name": "notes",
+      "type": "text",
+      "label": {
+        "en": "Notes",
+        "fr": "Notes",
+        "de": "Notizen",
+        "es": "Notas",
+        "it": "Note",
+        "sv": "Anteckningar",
+        "cs": "Poznámky",
+        "el": "Σημειώσεις",
+        "ko": "메모",
+        "zh": "笔记",
+        "ja": "メモ"
+      }
+    },
+    {
+      "name": "estimateMins",
+      "type": "number",
+      "label": {
+        "en": "Estimate (min)",
+        "fr": "Estimation (min)",
+        "de": "Schätzung (Min.)",
+        "es": "Estimación (min)",
+        "it": "Stima (min)",
+        "sv": "Uppskattning (min)",
+        "cs": "Odhad (min)",
+        "el": "Εκτίμηση (λεπτά)",
+        "ko": "예상 (분)",
+        "zh": "预估 (分钟)",
+        "ja": "見積もり (分)"
+      },
+      "advanced": true
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "next_service",
+  "name": "Next service",
+  "category": "Maps",
+  "icon": "departure_board",
+  "color": "#00695C",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_departures"
+  },
+  "seedVersion": "2026-07-10.1-datasources"
+}

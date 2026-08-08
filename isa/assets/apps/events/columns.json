@@ -1,0 +1,21 @@
+{
+  "files": [
+    { "name": "name", "type": "text", "label": "File" },
+    { "name": "order", "type": "integer", "label": "Order", "hidden": true }
+  ],
+  "events": [
+    { "name": "title", "type": "text", "label": "Title", "required": true },
+    { "name": "start", "type": "date", "label": "Start", "required": true },
+    { "name": "location", "type": "text", "label": "Location" },
+    { "name": "lat", "type": "number", "label": "Latitude" },
+    { "name": "lon", "type": "number", "label": "Longitude" },
+    { "name": "going", "type": "bool", "label": "Going", "default": false },
+    { "name": "tags", "type": "ref", "refTable": "tags", "multi": true, "label": "Tags" },
+    { "name": "notes", "type": "text", "label": "Notes" },
+    { "name": "file", "type": "text", "label": "File", "hidden": true }
+  ],
+  "tags": [
+    { "name": "name", "type": "text", "label": "Name", "required": true },
+    { "name": "file", "type": "text", "label": "File", "hidden": true }
+  ]
+}

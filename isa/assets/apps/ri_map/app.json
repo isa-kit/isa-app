@@ -1,0 +1,11 @@
+{
+  "id": "ri_map",
+  "name": "RI Map (maplibre)",
+  "category": "Maps",
+  "icon": "map",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_ri_map"
+  },
+  "seedVersion": "2026-06-05.2"
+}

@@ -1,0 +1,130 @@
+{
+  "results": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "scenario",
+      "type": "text",
+      "label": "Scenario"
+    },
+    {
+      "name": "route",
+      "type": "text",
+      "label": "Route"
+    },
+    {
+      "name": "district",
+      "type": "text",
+      "label": "District"
+    },
+    {
+      "name": "mode",
+      "type": "text",
+      "label": "Mode"
+    },
+    {
+      "name": "boardings",
+      "type": "number",
+      "label": "Boardings"
+    },
+    {
+      "name": "alightings",
+      "type": "number",
+      "label": "Alightings"
+    },
+    {
+      "name": "avg_trip_mi",
+      "type": "number",
+      "label": "Avg trip (mi)"
+    },
+    {
+      "name": "lat",
+      "type": "number",
+      "hidden": true
+    },
+    {
+      "name": "lng",
+      "type": "number",
+      "hidden": true
+    },
+    {
+      "name": "cost",
+      "type": "number",
+      "label": "Cost ($)"
+    },
+    {
+      "name": "benefit_cost",
+      "type": "number",
+      "label": "Benefit / cost"
+    },
+    {
+      "name": "vmt",
+      "type": "number",
+      "label": "VMT"
+    }
+  ],
+  "slices": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name"
+    },
+    {
+      "name": "config",
+      "type": "text",
+      "label": "Configuration (JSON)"
+    }
+  ],
+  "metrics": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "scenario",
+      "type": "text",
+      "label": "Scenario"
+    },
+    {
+      "name": "boardings",
+      "type": "number",
+      "label": "Boardings (total)"
+    },
+    {
+      "name": "alightings",
+      "type": "number",
+      "label": "Alightings (total)"
+    },
+    {
+      "name": "retention_pct",
+      "type": "number",
+      "label": "Retention %"
+    }
+  ],
+  "district_stats": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "district",
+      "type": "text",
+      "label": "District"
+    },
+    {
+      "name": "boardings",
+      "type": "number",
+      "label": "Boardings (total)"
+    }
+  ]
+}

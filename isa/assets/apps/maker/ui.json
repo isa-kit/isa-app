@@ -1,0 +1,987 @@
+{
+  "app": {
+    "title": "Maker",
+    "primaryColor": "#7E57C2",
+    "theme": "contrast"
+  },
+  "nav": [
+    {
+      "id": "design",
+      "label": "Design",
+      "icon": "brush",
+      "screen": "design_mode"
+    },
+    {
+      "id": "develop",
+      "label": "Develop",
+      "icon": "code",
+      "screen": "develop_mode"
+    }
+  ],
+  "screens": {
+    "design_mode": {
+      "title": "Design",
+      "body": {
+        "type": "segments",
+        "segments": [
+          {
+            "label": "Wireframe",
+            "child": {
+              "type": "panel",
+              "title": "Widgets",
+              "icon": "widgets",
+              "width": 280,
+              "child": {
+                "type": "column",
+                "children": [
+                  {
+                    "type": "text",
+                    "style": "caption",
+                    "value": "Step 1 \u2014 block out your screens. Add a frame, then drop blocks inside it. Drag to place, drag the corner to resize, tap to rename. Pinch / scroll to zoom, two-finger or wheel to pan."
+                  },
+                  {
+                    "type": "palette",
+                    "table": "boxes",
+                    "items": [
+                      {
+                        "label": "Screen",
+                        "icon": "smartphone",
+                        "values": {
+                          "kind": "frame",
+                          "label": "Screen",
+                          "w": 260,
+                          "h": 440
+                        }
+                      },
+                      {
+                        "label": "Section",
+                        "icon": "crop_square",
+                        "values": {
+                          "kind": "section",
+                          "label": "Section",
+                          "w": 220,
+                          "h": 120
+                        }
+                      },
+                      {
+                        "label": "Nav bar",
+                        "icon": "menu",
+                        "values": {
+                          "kind": "nav",
+                          "label": "Nav",
+                          "w": 240,
+                          "h": 44
+                        }
+                      },
+                      {
+                        "label": "Button",
+                        "icon": "smart_button",
+                        "values": {
+                          "kind": "button",
+                          "label": "Button",
+                          "w": 140,
+                          "h": 44
+                        }
+                      },
+                      {
+                        "label": "Input",
+                        "icon": "text_fields",
+                        "values": {
+                          "kind": "input",
+                          "label": "Input",
+                          "w": 200,
+                          "h": 44
+                        }
+                      },
+                      {
+                        "label": "Text",
+                        "icon": "title",
+                        "values": {
+                          "kind": "text",
+                          "label": "Text",
+                          "w": 200,
+                          "h": 36
+                        }
+                      },
+                      {
+                        "label": "Image",
+                        "icon": "image",
+                        "values": {
+                          "kind": "image",
+                          "label": "Image",
+                          "w": 180,
+                          "h": 120
+                        }
+                      },
+                      {
+                        "label": "List",
+                        "icon": "list",
+                        "values": {
+                          "kind": "list",
+                          "label": "List",
+                          "w": 220,
+                          "h": 160
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "style": "caption",
+                    "value": "Arrows: pick the Connect tool (the arrow, top-left of the canvas), then tap two blocks to link them."
+                  },
+                  {
+                    "type": "text",
+                    "style": "caption",
+                    "value": "draw.io \u2014 open your wireframe in diagrams.net, or bring one in."
+                  },
+                  {
+                    "type": "row",
+                    "wrap": true,
+                    "children": [
+                      {
+                        "type": "button",
+                        "label": "Export to draw.io",
+                        "icon": "upload",
+                        "variant": "text",
+                        "action": {
+                          "fn": "exportDrawio",
+                          "args": {
+                            "nodesTable": "boxes",
+                            "edgesTable": "links",
+                            "diagramName": "Wireframe",
+                            "sketchTable": "sketch",
+                            "sketchColumn": "strokes"
+                          }
+                        }
+                      },
+                      {
+                        "type": "button",
+                        "label": "Import from draw.io",
+                        "icon": "download",
+                        "variant": "text",
+                        "action": {
+                          "fn": "importDrawio",
+                          "args": {
+                            "nodesTable": "boxes",
+                            "edgesTable": "links"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "body": {
+                "type": "canvas",
+                "nodesTable": "boxes",
+                "edgesTable": "links",
+                "labelColumn": "label",
+                "xColumn": "x",
+                "yColumn": "y",
+                "widthColumn": "w",
+                "heightColumn": "h",
+                "zColumn": "z",
+                "fromColumn": "from",
+                "toColumn": "to",
+                "edgeLabelColumn": "label",
+                "colorColumn": "kind",
+                "fillColumn": "fill",
+                "borderColorColumn": "borderColor",
+                "borderWidthColumn": "borderWidth",
+                "colors": {
+                  "frame": "gray",
+                  "nav": "coral",
+                  "button": "blue",
+                  "input": "teal",
+                  "text": "green",
+                  "image": "purple",
+                  "list": "pink",
+                  "section": "amber"
+                },
+                "height": "fill",
+                "fidelity": "themed",
+                "sketchTable": "sketch",
+                "sketchColumn": "strokes",
+                "action": {
+                  "fn": "editRow"
+                }
+              }
+            }
+          },
+          {
+            "label": "Flow",
+            "child": {
+              "type": "panel",
+              "title": "Flow steps",
+              "icon": "account_tree",
+              "width": 280,
+              "child": {
+                "type": "column",
+                "children": [
+                  {
+                    "type": "text",
+                    "style": "caption",
+                    "value": "Step 2 \u2014 map how the app behaves: start, a process, a decision, a data read/write, an end. Same connected blueprint \u2014 it travels with your screens and data."
+                  },
+                  {
+                    "type": "row",
+                    "wrap": true,
+                    "children": [
+                      {
+                        "type": "button",
+                        "label": "Start",
+                        "icon": "play_arrow",
+                        "action": {
+                          "fn": "addRow",
+                          "args": {
+                            "table": "flow_nodes",
+                            "values": {
+                              "kind": "start",
+                              "label": "Start",
+                              "w": 120,
+                              "h": 44
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "button",
+                        "label": "Process",
+                        "icon": "crop_square",
+                        "action": {
+                          "fn": "addRow",
+                          "args": {
+                            "table": "flow_nodes",
+                            "values": {
+                              "kind": "process",
+                              "label": "Step",
+                              "w": 160,
+                              "h": 56
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "button",
+                        "label": "Decision",
+                        "icon": "call_split",
+                        "action": {
+                          "fn": "addRow",
+                          "args": {
+                            "table": "flow_nodes",
+                            "values": {
+                              "kind": "decision",
+                              "label": "Decision?",
+                              "w": 160,
+                              "h": 56
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "button",
+                        "label": "Data",
+                        "icon": "table_rows",
+                        "action": {
+                          "fn": "addRow",
+                          "args": {
+                            "table": "flow_nodes",
+                            "values": {
+                              "kind": "data",
+                              "label": "Data",
+                              "w": 140,
+                              "h": 48
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "button",
+                        "label": "End",
+                        "icon": "stop",
+                        "action": {
+                          "fn": "addRow",
+                          "args": {
+                            "table": "flow_nodes",
+                            "values": {
+                              "kind": "end",
+                              "label": "End",
+                              "w": 120,
+                              "h": 44
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "button",
+                        "label": "Arrow",
+                        "icon": "arrow_forward",
+                        "action": {
+                          "fn": "addRow",
+                          "args": {
+                            "table": "flow_edges"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "style": "caption",
+                    "value": "draw.io — export/import this flow in diagrams.net."
+                  },
+                  {
+                    "type": "row",
+                    "wrap": true,
+                    "children": [
+                      {
+                        "type": "button",
+                        "label": "Export to draw.io",
+                        "icon": "upload",
+                        "variant": "text",
+                        "action": {
+                          "fn": "exportDrawio",
+                          "args": {
+                            "nodesTable": "flow_nodes",
+                            "edgesTable": "flow_edges",
+                            "diagramName": "Flow"
+                          }
+                        }
+                      },
+                      {
+                        "type": "button",
+                        "label": "Import from draw.io",
+                        "icon": "download",
+                        "variant": "text",
+                        "action": {
+                          "fn": "importDrawio",
+                          "args": {
+                            "nodesTable": "flow_nodes",
+                            "edgesTable": "flow_edges"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "body": {
+                "type": "canvas",
+                "nodesTable": "flow_nodes",
+                "edgesTable": "flow_edges",
+                "labelColumn": "label",
+                "xColumn": "x",
+                "yColumn": "y",
+                "widthColumn": "w",
+                "heightColumn": "h",
+                "fromColumn": "from",
+                "toColumn": "to",
+                "edgeLabelColumn": "label",
+                "colorColumn": "kind",
+                "colors": {
+                  "start": "green",
+                  "process": "blue",
+                  "decision": "amber",
+                  "data": "teal",
+                  "end": "coral"
+                },
+                "height": "fill",
+                "action": {
+                  "fn": "editRow"
+                }
+              }
+            }
+          },
+          {
+            "label": "Brief",
+            "child": {
+              "type": "segments",
+              "segments": [
+                {
+                  "label": "Request",
+                  "child": {
+                    "type": "column",
+                    "children": [
+                      {
+                        "type": "text",
+                        "style": "caption",
+                        "value": "Tell the model what you want. The screens, flow and data you drew come along automatically \u2014 here you just say the ask."
+                      },
+                      {
+                        "type": "text",
+                        "value": "Your request",
+                        "style": "subtitle"
+                      },
+                      {
+                        "type": "cards",
+                        "emptyIcon": "description",
+                        "emptyTitle": "No brief yet",
+                        "emptyText": "Describe the app you want to build.",
+                        "table": "brief",
+                        "title": "title",
+                        "subtitle": "summary",
+                        "tags": [
+                          {
+                            "column": "type"
+                          }
+                        ],
+                        "action": {
+                          "fn": "editRow"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "label": "Specifics",
+                  "child": {
+                    "type": "column",
+                    "children": [
+                      {
+                        "type": "text",
+                        "style": "caption",
+                        "value": "Break the request into features, changes, fixes or questions, each with a priority. Skip this if your summary above already says enough."
+                      },
+                      {
+                        "type": "button",
+                        "label": "Add a specific",
+                        "icon": "add",
+                        "variant": "text",
+                        "action": {
+                          "fn": "addRow",
+                          "args": {
+                            "table": "features",
+                            "values": {
+                              "kind": "feature",
+                              "priority": "should"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "cards",
+                        "emptyIcon": "playlist_add_check",
+                        "emptyTitle": "No features yet",
+                        "emptyText": "List what your app should do.",
+                        "emptyAction": {
+                          "fn": "addRow",
+                          "args": {
+                            "table": "features",
+                            "values": {
+                              "kind": "feature",
+                              "priority": "should"
+                            }
+                          }
+                        },
+                        "emptyActionLabel": "Add feature",
+                        "table": "features",
+                        "title": "title",
+                        "subtitle": "detail",
+                        "search": true,
+                        "filterable": true,
+                        "groupByOptions": [
+                          { "label": "Priority", "column": "priority" },
+                          { "label": "Kind", "column": "kind" },
+                          { "label": "Screen", "column": "target" }
+                        ],
+                        "tags": [
+                          {
+                            "column": "kind",
+                            "colors": {
+                              "feature": "blue",
+                              "change": "amber",
+                              "fix": "coral",
+                              "question": "purple",
+                              "note": "gray"
+                            }
+                          },
+                          {
+                            "column": "priority"
+                          }
+                        ],
+                        "action": {
+                          "fn": "editRow"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "fill": true
+      }
+    },
+    "develop_mode": {
+      "title": "Develop",
+      "body": {
+        "type": "segments",
+        "segments": [
+          {
+            "label": "Data",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": "Step 3 \u2014 define the data your app holds. Add a table (entity), then give it typed fields below (name + type). You'll connect screens to these on Bind and wire behavior on Logic."
+                },
+                {
+                  "type": "button",
+                  "label": "Add table",
+                  "icon": "add",
+                  "action": {
+                    "fn": "addRow",
+                    "args": {
+                      "table": "data_model"
+                    }
+                  }
+                },
+                {
+                  "type": "cards",
+                  "table": "data_model",
+                  "title": "entity",
+                  "subtitle": "fields",
+                  "search": true,
+                  "emptyIcon": "table_chart",
+                  "emptyTitle": "No tables yet",
+                  "emptyText": "Add your first data table to define what your app remembers \u2014 like tasks, recipes, or contacts.",
+                  "emptyAction": {
+                    "fn": "addRow",
+                    "args": {
+                      "table": "data_model"
+                    }
+                  },
+                  "emptyActionLabel": "Add table",
+                  "tags": [
+                    {
+                      "column": "relationships"
+                    }
+                  ],
+                  "action": {
+                    "fn": "editRow"
+                  }
+                },
+                {
+                  "type": "divider"
+                },
+                {
+                  "type": "text",
+                  "value": "Fields",
+                  "style": "subtitle"
+                },
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": "Edit each field right here in the table \u2014 its name, TYPE (text \u00b7 number \u00b7 date \u00b7 yes/no \u00b7 a choice list \u00b7 or a link to another table), the OPTIONS for a choice list, whether it's REQUIRED, and which TABLE it belongs to. This typed schema is what the app is really built from."
+                },
+                {
+                  "type": "button",
+                  "label": "Add field",
+                  "icon": "add",
+                  "action": {
+                    "fn": "addRow",
+                    "args": {
+                      "table": "model_fields"
+                    }
+                  }
+                },
+                {
+                  "type": "table",
+                  "table": "model_fields",
+                  "columns": [
+                    "name",
+                    "type",
+                    "options",
+                    "required",
+                    "table"
+                  ],
+                  "height": 320,
+                  "action": {
+                    "fn": "editRow"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "label": "Bind",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": "Step 4 \u2014 the connection. Tap a screen element below and pick the data table it shows or writes (a list shows rows of a table; an input writes a field). This is what ties the screens to the data so the whole thing builds as one app."
+                },
+                {
+                  "type": "table",
+                  "table": "boxes",
+                  "columns": [
+                    "label",
+                    "kind",
+                    "boundTable"
+                  ],
+                  "height": 420,
+                  "action": {
+                    "fn": "editRow"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "label": "Logic",
+            "child": {
+              "type": "segments",
+              "segments": [
+                {
+                  "label": "Behaviors",
+                  "child": {
+                    "type": "column",
+                    "children": [
+                      {
+                        "type": "text",
+                        "style": "caption",
+                        "value": "The behavior layer \u2014 the companion to Bind. Bind said what each element SHOWS; this says what it DOES. Add a behavior, pick the block, choose what it does (adds a row, writes a field, filters a list\u2026) and which data table. Claude turns these into real actions when it builds."
+                      },
+                      {
+                        "type": "button",
+                        "label": "Add behavior",
+                        "icon": "add",
+                        "action": {
+                          "fn": "addRow",
+                          "args": {
+                            "table": "wires"
+                          }
+                        }
+                      },
+                      {
+                        "type": "table",
+                        "table": "wires",
+                        "columns": [
+                          "element",
+                          "behavior",
+                          "table"
+                        ],
+                        "height": 240,
+                        "action": {
+                          "fn": "editRow"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "label": "Try it",
+                  "child": {
+                    "type": "column",
+                    "children": [
+                      {
+                        "type": "text",
+                        "style": "caption",
+                        "value": "A tiny working demo of the same idea on a scratch table. Add item runs a real 'adds a row' action and the row appears below. Fill example data asks your local model to generate rows when it's running, and otherwise drops in a few built-in examples \u2014 either way the list updates."
+                      },
+                      {
+                        "type": "row",
+                        "wrap": true,
+                        "children": [
+                          {
+                            "type": "button",
+                            "label": "Add item",
+                            "icon": "add",
+                            "action": {
+                              "fn": "addRow",
+                              "args": {
+                                "table": "demo_items",
+                                "values": {
+                                  "title": "New item",
+                                  "done": false
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "type": "button",
+                            "label": "Fill example data",
+                            "icon": "auto_awesome",
+                            "action": {
+                              "fn": "callRest",
+                              "args": {
+                                "url": "${slmBaseUrl}/v1/chat/completions",
+                                "method": "POST",
+                                "body": {
+                                  "model": "qwen2.5:3b-instruct",
+                                  "temperature": 0.4,
+                                  "response_format": {
+                                    "type": "json_object"
+                                  },
+                                  "messages": [
+                                    {
+                                      "role": "system",
+                                      "content": "You generate example rows for a to-do / habit demo table. Reply ONLY with JSON: {\"items\":[{\"title\":\"short label\",\"done\":false}]}."
+                                    },
+                                    {
+                                      "role": "user",
+                                      "content": "Given this app's data model: ${table:data_model}, give 5 short, varied example rows that fit it (each: a title and done=false)."
+                                    }
+                                  ]
+                                },
+                                "into": "demo_items",
+                                "parse": {
+                                  "path": "choices[0].message.content",
+                                  "json": true,
+                                  "rows": "items"
+                                },
+                                "stub": [
+                                  {
+                                    "title": "Drink water",
+                                    "done": false
+                                  },
+                                  {
+                                    "title": "Read 10 pages",
+                                    "done": false
+                                  },
+                                  {
+                                    "title": "Walk 20 minutes",
+                                    "done": true
+                                  },
+                                  {
+                                    "title": "Stretch",
+                                    "done": false
+                                  },
+                                  {
+                                    "title": "Journal",
+                                    "done": false
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "table",
+                        "table": "demo_items",
+                        "columns": [
+                          "title",
+                          "done"
+                        ],
+                        "height": 220,
+                        "action": {
+                          "fn": "editRow"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "label": "Code",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": "The app's whole config as raw JSON. \u201cGenerate from design\u201d fills it from everything you've drawn; edit it freely; \u201cBuild from this code\u201d rebuilds the app from whatever's in the box. The power-user / dev view."
+                },
+                {
+                  "type": "row",
+                  "wrap": true,
+                  "children": [
+                    {
+                      "type": "button",
+                      "label": "Generate from design",
+                      "icon": "sync",
+                      "action": {
+                        "fn": "hostCall",
+                        "args": {
+                          "name": "generateCode",
+                          "appId": "maker_app",
+                          "appName": "My app"
+                        }
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "label": "Build from this code",
+                      "icon": "play_arrow",
+                      "action": {
+                        "fn": "hostCall",
+                        "args": {
+                          "name": "buildFromCode",
+                          "appId": "maker_app",
+                          "appName": "My app"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "cards",
+                  "table": "code",
+                  "title": "title",
+                  "subtitle": "json",
+                  "expandable": true,
+                  "open": "Edit / view full code",
+                  "action": {
+                    "fn": "editRow"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "label": "Build",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": "Step 5 \u2014 turn the blueprint into a real app. Build app from wireframe creates an editable app on your shelf from your screens (with bound tables wired in). Prepare for the model bundles the whole connected blueprint \u2014 screens, flow, data, bindings, brief \u2014 for hand-off."
+                },
+                {
+                  "type": "button",
+                  "label": "Build app from wireframe",
+                  "icon": "auto_awesome",
+                  "action": {
+                    "fn": "hostCall",
+                    "args": {
+                      "name": "buildFromDesign",
+                      "appId": "maker_app",
+                      "appName": "My app"
+                    }
+                  }
+                },
+                {
+                  "type": "button",
+                  "label": "Prepare for the model",
+                  "icon": "send",
+                  "action": {
+                    "fn": "hostCall",
+                    "args": {
+                      "name": "prepareBrief"
+                    }
+                  }
+                },
+                {
+                  "type": "button",
+                  "label": "Draft with the model",
+                  "icon": "auto_awesome",
+                  "action": {
+                    "fn": "callRest",
+                    "args": {
+                      "url": "${slmBaseUrl}/v1/chat/completions",
+                      "method": "POST",
+                      "body": {
+                        "model": "qwen2.5:3b-instruct",
+                        "temperature": 0.5,
+                        "response_format": {
+                          "type": "json_object"
+                        },
+                        "messages": [
+                          {
+                            "role": "system",
+                            "content": "You are a co-designer for a small no-code app builder. Read the user's app design and suggest concrete next steps. Reply ONLY with JSON: {\"suggestions\":[{\"title\":\"short\",\"detail\":\"one sentence\",\"kind\":\"feature\"}]} where kind is one of feature, data, screen, fix."
+                          },
+                          {
+                            "role": "user",
+                            "content": "Request: ${table:brief}. Data model: ${table:data_model}. Fields: ${table:model_fields}. Features so far: ${table:features}. Suggest 5 concrete improvements or missing pieces for this app."
+                          }
+                        ]
+                      },
+                      "into": "suggestions",
+                      "parse": {
+                        "path": "choices[0].message.content",
+                        "json": true,
+                        "rows": "suggestions"
+                      },
+                      "stub": [
+                        {
+                          "title": "Stamp a created date",
+                          "detail": "Add a date field set when each row is created, so lists can sort by recency.",
+                          "kind": "data"
+                        },
+                        {
+                          "title": "Friendly empty state",
+                          "detail": "Show a short message and an Add button when a list has no rows yet.",
+                          "kind": "screen"
+                        },
+                        {
+                          "title": "One-tap done",
+                          "detail": "Let a list row toggle done without opening the editor.",
+                          "kind": "feature"
+                        },
+                        {
+                          "title": "A details screen",
+                          "detail": "Tapping a row opens a full view instead of inline edit only.",
+                          "kind": "screen"
+                        },
+                        {
+                          "title": "Mark key fields required",
+                          "detail": "Flag the must-have fields as required so the form guides input.",
+                          "kind": "fix"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "divider"
+                },
+                {
+                  "type": "text",
+                  "value": "What's in the blueprint",
+                  "style": "subtitle"
+                },
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": "Screens (Wireframe) \u00b7 flow steps (Flow) \u00b7 data tables (Data) \u00b7 screen\u2192table bindings (Bind) \u00b7 your request (Brief). The more connected it is, the closer the generated app matches what you meant."
+                },
+                {
+                  "type": "divider"
+                },
+                {
+                  "type": "text",
+                  "value": "Model suggestions",
+                  "style": "subtitle"
+                },
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": "Draft with the model reads your whole design (request, data model, fields, features) on your device and suggests concrete next steps below. With no local model running it shows a few starter ideas."
+                },
+                {
+                  "type": "cards",
+                  "emptyIcon": "auto_awesome",
+                  "emptyTitle": "No suggestions yet",
+                  "emptyText": "Tap Draft with the model for next-step ideas.",
+                  "table": "suggestions",
+                  "title": "title",
+                  "subtitle": "detail",
+                  "tags": [
+                    {
+                      "column": "kind"
+                    }
+                  ],
+                  "action": {
+                    "fn": "editRow"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "fill": true
+      }
+    }
+  }
+}

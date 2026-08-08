@@ -1,0 +1,47 @@
+{
+  "files": [
+    { "name": "name", "type": "text", "label": "Name", "required": true },
+    { "name": "kind", "type": "text", "label": "Kind", "advanced": true },
+    { "name": "parentId", "type": "ref", "refTable": "files", "label": "Folder", "advanced": true },
+    { "name": "body", "type": "richtext", "label": "Content" },
+    { "name": "updatedAt", "type": "date", "label": "Updated", "advanced": true },
+    { "name": "order", "type": "number", "label": "Order", "advanced": true }
+  ],
+  "tools": [
+    { "name": "id", "type": "text", "label": "ID", "advanced": true },
+    { "name": "name", "type": "text", "label": "Tool", "required": true },
+    { "name": "tagline", "type": "text", "label": "Tagline" },
+    { "name": "icon", "type": "text", "label": "Icon", "advanced": true },
+    { "name": "screen", "type": "text", "label": "Opens screen", "advanced": true },
+    { "name": "order", "type": "number", "label": "Order", "advanced": true }
+  ],
+  "sheet_budget": [
+    { "name": "id", "type": "text", "label": "ID", "advanced": true },
+    { "name": "category", "type": "text", "label": "Category" },
+    { "name": "planned", "type": "number", "label": "Planned" },
+    { "name": "actual", "type": "number", "label": "Actual" },
+    { "name": "notes", "type": "text", "label": "Notes" }
+  ],
+  "sheet_roster": [
+    { "name": "id", "type": "text", "label": "ID", "advanced": true },
+    { "name": "name", "type": "text", "label": "Name" },
+    { "name": "role", "type": "text", "label": "Role" },
+    { "name": "hours", "type": "number", "label": "Hours" },
+    { "name": "rate", "type": "number", "label": "Rate" }
+  ],
+  "pages": [
+    { "name": "title", "type": "text", "label": "Title", "required": true },
+    { "name": "parentId", "type": "ref", "refTable": "pages", "label": "Parent page", "advanced": true },
+    { "name": "body", "type": "richtext", "label": "Document" },
+    { "name": "attachments", "type": "attachments", "label": "Attachments" },
+    { "name": "pinned", "type": "boolean", "label": "Pinned", "advanced": true },
+    { "name": "order", "type": "number", "label": "Order", "advanced": true },
+    { "name": "updatedAt", "type": "date", "label": "Updated", "advanced": true }
+  ],
+  "notes": [
+    { "name": "title", "type": "text", "label": "Title", "required": true },
+    { "name": "body", "type": "text", "label": "Body" },
+    { "name": "date", "type": "date", "label": "Date", "default": "today" },
+    { "name": "pinned", "type": "boolean", "label": "Pinned", "default": false }
+  ]
+}

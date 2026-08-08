@@ -1,0 +1,272 @@
+{
+  "app": {
+    "title": "TAZ Delta",
+    "primaryColor": "#00695C",
+    "theme": "contrast"
+  },
+  "nav": [
+    { "id": "delta", "label": "Delta", "icon": "compare_arrows", "screen": "delta" },
+    { "id": "transit", "label": "Transit", "icon": "directions_transit", "screen": "transit" },
+    { "id": "new_taz", "label": "New TAZ", "icon": "grid_on", "screen": "new_taz" },
+    { "id": "old_taz", "label": "Old TAZ", "icon": "grid_off", "screen": "old_taz" },
+    { "id": "review", "label": "Review", "icon": "fact_check", "screen": "review" }
+  ],
+  "screens": {
+    "delta": {
+      "title": "Old vs new TAZs by town",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "CTPS Boston-region TAZ redesign review (imported from the TAZ Delta Tool). Each town pin compares its old (TDM23 2017g) and draft new TAZ counts — tap a pin or a card to open the full delta record. Zone geometry is reduced to centroids; demographics ride on the New TAZ tab."
+          },
+          {
+            "type": "row",
+            "children": [
+              { "type": "stat", "table": "towns", "label": "Towns", "color": "teal" },
+              { "type": "stat", "table": "old_taz", "label": "Old TAZs", "color": "gray" },
+              { "type": "stat", "table": "new_taz", "label": "New TAZs", "color": "green" },
+              { "type": "stat", "table": "towns", "agg": "sum", "valueColumn": "delta", "label": "Net Δ zones", "color": "coral" }
+            ]
+          },
+          {
+            "type": "map",
+            "table": "towns",
+            "latColumn": "lat",
+            "lonColumn": "lon",
+            "labelColumn": "town",
+            "height": "0.55fill",
+            "geojsonAsset": "apps/taz_delta/taz_towns.geojson",
+            "fillOpacity": 0.55,
+            "strokeWidth": 0.6,
+            "action": { "fn": "editRow" }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Choropleth: gray = outside the draft redraw; warm (coral/red) = town lost TAZs; cool (teal/green) = gained. Tap a town pin to open its delta record."
+          },
+          {
+            "type": "barchart",
+            "table": "towns",
+            "labelColumn": "town",
+            "valueColumn": "delta",
+            "agg": "sum",
+            "limit": 14,
+            "label": "Largest TAZ-count changes (Δ new − old)",
+            "filter": { "column": "covered", "value": "yes" }
+          },
+          {
+            "type": "cards",
+            "table": "towns",
+            "title": "town",
+            "subtitle": "delta",
+            "search": true,
+            "searchColumns": ["town"],
+            "sortBy": "delta",
+            "sortDir": "asc",
+            "expandable": true,
+            "open": "Open town record",
+            "tags": [ { "column": "covered", "colors": { "yes": "green", "no": "gray" } } ],
+            "action": { "fn": "editRow" }
+          }
+        ]
+      }
+    },
+    "transit": {
+      "title": "Four-step transit demand",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Home-based-work travel demand from the classic four-step model (tools/transit4) run over the draft TAZs: trip generation (workers→jobs) → doubly-constrained gravity distribution → ACS journey-to-work mode choice → town-to-town assignment. Numbers are modeled planning estimates, not a calibrated forecast."
+          },
+          {
+            "type": "row",
+            "children": [
+              { "type": "stat", "table": "model_run", "agg": "sum", "valueColumn": "total_trips", "label": "HBW trips/day", "color": "blue" },
+              { "type": "stat", "table": "model_run", "agg": "sum", "valueColumn": "transit_trips", "label": "Transit trips", "color": "teal" },
+              { "type": "stat", "table": "model_run", "agg": "sum", "valueColumn": "transit_pct", "label": "Region transit %", "color": "green" },
+              { "type": "stat", "table": "model_run", "agg": "sum", "valueColumn": "avg_transit_trip_mi", "label": "Avg transit mi", "color": "amber" }
+            ]
+          },
+          {
+            "type": "map",
+            "table": "towns",
+            "latColumn": "lat",
+            "lonColumn": "lon",
+            "labelColumn": "town",
+            "height": "0.55fill",
+            "geojsonAsset": "apps/taz_delta/taz_towns_transit.geojson",
+            "fillOpacity": 0.6,
+            "strokeWidth": 0.6,
+            "action": { "fn": "editRow" }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Choropleth: deeper teal = higher residence-based transit commute share (ACS B08301). Tap a town pin to open its record — productions, attractions and modeled transit trips ride on the town fields."
+          },
+          {
+            "type": "barchart",
+            "table": "towns",
+            "labelColumn": "town",
+            "valueColumn": "transit_pct",
+            "agg": "max",
+            "limit": 14,
+            "label": "Highest transit-share towns (%)",
+            "filter": { "column": "covered", "value": "yes" }
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Top transit corridors (desire lines)"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "The strongest town-to-town home-based-work transit flows assigned by the model — the corridors that carry the most modeled riders."
+          },
+          {
+            "type": "table",
+            "overflow": "cards",
+            "table": "corridors",
+            "columns": ["rank", "corridor", "trips"],
+            "height": "fill",
+            "action": { "fn": "editRow" }
+          },
+          {
+            "type": "cards",
+            "table": "corridors",
+            "title": "corridor",
+            "subtitle": "trips",
+            "search": true,
+            "searchColumns": ["corridor", "from_town", "to_town"],
+            "sortBy": "trips",
+            "sortDir": "desc",
+            "expandable": true,
+            "open": "Open corridor",
+            "action": { "fn": "editRow" }
+          }
+        ]
+      }
+    },
+    "new_taz": {
+      "title": "Draft new TAZs",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "1,669 draft zones with 2019 demographics and 2049 projections. Tap a row to open the full record (and set its review status)."
+          },
+          {
+            "type": "row",
+            "children": [
+              { "type": "stat", "table": "new_taz", "agg": "sum", "valueColumn": "persns19", "label": "Persons 2019", "color": "blue" },
+              { "type": "stat", "table": "new_taz", "agg": "sum", "valueColumn": "persns49", "label": "Persons 2049", "color": "teal" },
+              { "type": "stat", "table": "new_taz", "agg": "sum", "valueColumn": "emp19", "label": "Jobs 2019", "color": "amber" },
+              { "type": "stat", "table": "new_taz", "agg": "sum", "valueColumn": "emp49", "label": "Jobs 2049", "color": "green" }
+            ]
+          },
+          {
+            "type": "table",
+            "overflow": "cards",
+            "table": "new_taz",
+            "columns": ["taz_id", "town", "hh19", "hh49", "emp19", "emp49", "status"],
+            "height": "fill",
+            "action": { "fn": "editRow" }
+          },
+          {
+            "type": "barchart",
+            "table": "new_taz",
+            "groupColumn": "town",
+            "valueColumn": "emp49",
+            "agg": "sum",
+            "limit": 12,
+            "label": "Projected 2049 employment — top towns"
+          }
+        ]
+      }
+    },
+    "old_taz": {
+      "title": "Current TDM23 TAZs",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "2,057 zones in the current model (2017g). The old layer covers more towns than the draft new layer — the Delta tab shows which."
+          },
+          {
+            "type": "table",
+            "overflow": "cards",
+            "table": "old_taz",
+            "columns": ["taz_id", "town", "subregion", "district", "land_area", "urban"],
+            "height": "fill",
+            "action": { "fn": "editRow" }
+          },
+          {
+            "type": "barchart",
+            "table": "old_taz",
+            "groupColumn": "subregion",
+            "limit": 12,
+            "label": "Zones per subregion"
+          }
+        ]
+      }
+    },
+    "review": {
+      "title": "Zone review",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Work through the draft zones: open a TAZ, check its numbers, set status to approved or flagged and leave a note. Search by TAZ id or town."
+          },
+          {
+            "type": "progress",
+            "table": "new_taz",
+            "statusColumn": "status",
+            "doneValue": "approved",
+            "color": "green",
+            "label": "Approved"
+          },
+          {
+            "type": "row",
+            "children": [
+              { "type": "stat", "table": "new_taz", "filter": { "column": "status", "value": "todo" }, "label": "To review", "color": "amber" },
+              { "type": "stat", "table": "new_taz", "filter": { "column": "status", "value": "flagged" }, "label": "Flagged", "color": "coral" },
+              { "type": "stat", "table": "new_taz", "filter": { "column": "status", "value": "approved" }, "label": "Approved", "color": "green" }
+            ]
+          },
+          {
+            "type": "cards",
+            "emptyIcon": "add_location_alt",
+            "emptyTitle": "No zones yet",
+            "emptyText": "Draw a new zone to start planning.",
+            "table": "new_taz",
+            "title": "name",
+            "subtitle": "town",
+            "groupBy": "status",
+            "groupOrder": ["flagged", "todo", "approved"],
+            "search": true,
+            "searchColumns": ["name", "town"],
+            "collapsible": true,
+            "open": "Open zone",
+            "tags": [ { "column": "status", "colors": { "todo": "amber", "flagged": "coral", "approved": "green" } } ],
+            "action": { "fn": "editRow" }
+          }
+        ]
+      }
+    }
+  }
+}

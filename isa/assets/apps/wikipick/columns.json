@@ -1,0 +1,29 @@
+{
+  "articles": [
+    { "name": "title", "type": "text", "label": "Title", "required": true },
+    { "name": "revisionId", "type": "text", "label": "Revision ID", "description": "Wikipedia revision id at time of fetch — shown in the reader footer for attribution." },
+    { "name": "canonicalUrl", "type": "uri", "label": "Source URL" },
+    { "name": "extractText", "type": "richtext", "label": "Cached text", "description": "Plaintext/HTML extract, no images." },
+    { "name": "fetchedAt", "type": "date", "label": "Fetched" },
+    { "name": "seed", "type": "boolean", "label": "Seed article", "default": false, "description": "True if the user picked this directly, false if reached by crawling links." },
+    { "name": "depth", "type": "integer", "label": "Degrees from nearest seed", "default": 0 }
+  ],
+  "links": [
+    { "name": "fromArticle", "type": "text", "label": "From article", "required": true },
+    { "name": "toArticleTitle", "type": "text", "label": "To article title", "required": true },
+    { "name": "resolved", "type": "boolean", "label": "Target cached", "default": false, "description": "Whether toArticleTitle has been fetched into Library yet." }
+  ],
+  "crawl_queue": [
+    { "name": "title", "type": "text", "label": "Article title", "required": true },
+    { "name": "depth", "type": "integer", "label": "Depth", "default": 1 },
+    {
+      "name": "status",
+      "type": "enum",
+      "label": "Status",
+      "options": ["pending", "fetched", "failed"],
+      "default": "pending"
+    },
+    { "name": "sourceCrawlId", "type": "text", "label": "Crawl ID" },
+    { "name": "discoveredAt", "type": "date", "label": "Discovered" }
+  ]
+}

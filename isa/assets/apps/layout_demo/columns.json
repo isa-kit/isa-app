@@ -1,0 +1,30 @@
+{
+  "items": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true
+    },
+    {
+      "name": "category",
+      "type": "text",
+      "label": "Category"
+    },
+    {
+      "name": "status",
+      "type": "text",
+      "label": "Status"
+    },
+    {
+      "name": "value",
+      "type": "number",
+      "label": "Value"
+    },
+    {
+      "name": "due",
+      "type": "date",
+      "label": "Due"
+    }
+  ]
+}

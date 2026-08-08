@@ -1,0 +1,79 @@
+{
+  "cities": [
+    { "name": "city", "type": "text", "label": "City", "required": true },
+    { "name": "country", "type": "text", "label": "Country" },
+    { "name": "lat", "type": "number", "label": "Latitude" },
+    { "name": "lon", "type": "number", "label": "Longitude" },
+    { "name": "rank", "type": "number", "label": "Rank" },
+    { "name": "score", "type": "number", "label": "Score (0-100, mirrors score_log)" },
+    { "name": "score_log", "type": "number", "label": "Score, log scale (0-100) — drives tier" },
+    { "name": "score_linear", "type": "number", "label": "Score, linear scale (0-100) — raw spread" },
+    {
+      "name": "tier",
+      "type": "enum",
+      "label": "Tier",
+      "options": ["excellent", "good", "fair", "car-needed"],
+      "default": "fair"
+    },
+    {
+      "name": "transit_job_access_percapita",
+      "type": "number",
+      "label": "Car-free job access per capita (modeled)"
+    },
+    {
+      "name": "jobs_within_45min_transit",
+      "type": "number",
+      "label": "Jobs reachable within 45 min transit"
+    },
+    { "name": "transit_pct", "type": "number", "label": "Transit mode share (%)" },
+    { "name": "scenario_label", "type": "text", "label": "Scenario" },
+    { "name": "source", "type": "text", "label": "Data source" },
+    { "name": "method_note", "type": "text", "label": "Scoring method" }
+  ],
+  "citymode": [
+    { "name": "city", "type": "text", "label": "City", "required": true },
+    {
+      "name": "mode",
+      "type": "enum",
+      "label": "Mode",
+      "options": ["all", "bus", "tram", "subway", "rail"],
+      "default": "all",
+      "required": true
+    },
+    { "name": "country", "type": "text", "label": "Country" },
+    { "name": "lat", "type": "number", "label": "Latitude" },
+    { "name": "lon", "type": "number", "label": "Longitude" },
+    { "name": "rank", "type": "number", "label": "Rank (mode=all only)" },
+    { "name": "score", "type": "number", "label": "Score 0-100, mirrors score_log (mode=all only)" },
+    { "name": "score_log", "type": "number", "label": "Score, log scale (mode=all only) — drives tier" },
+    { "name": "score_linear", "type": "number", "label": "Score, linear scale (mode=all only) — raw spread" },
+    {
+      "name": "tier",
+      "type": "enum",
+      "label": "Tier (mode=all only)",
+      "options": ["excellent", "good", "fair", "car-needed"]
+    },
+    {
+      "name": "transit_job_access_percapita",
+      "type": "number",
+      "label": "Car-free job access per capita (mode=all ONLY — never per-mode)"
+    },
+    {
+      "name": "jobs_within_45min_transit",
+      "type": "number",
+      "label": "Jobs reachable within 45 min transit (mode=all only)"
+    },
+    { "name": "transit_pct", "type": "number", "label": "Transit mode share % (mode=all only)" },
+    { "name": "scenario_label", "type": "text", "label": "Scenario (mode=all only)" },
+    { "name": "source", "type": "text", "label": "Data source" },
+    { "name": "method_note", "type": "text", "label": "Method note" },
+    { "name": "stops", "type": "number", "label": "Stops served" },
+    { "name": "routes", "type": "number", "label": "Routes" },
+    { "name": "network_km", "type": "number", "label": "Network length (km)" },
+    { "name": "span_hrs", "type": "number", "label": "Service span (hrs)" },
+    { "name": "trips_per_hr_peak", "type": "number", "label": "Trips/hr, AM peak" },
+    { "name": "median_headway_min", "type": "number", "label": "Median headway, AM peak (min)" },
+    { "name": "area_km2", "type": "number", "label": "Walk-coverage area (km2, 500m buffer approx.)" },
+    { "name": "stops_per_km2", "type": "number", "label": "Stops per km2" }
+  ]
+}

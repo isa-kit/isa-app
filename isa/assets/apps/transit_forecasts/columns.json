@@ -1,0 +1,253 @@
+{
+  "scenarios": [
+    {
+      "name": "scenario",
+      "type": "text",
+      "label": "Scenario"
+    },
+    {
+      "name": "year",
+      "type": "integer",
+      "label": "Year"
+    },
+    {
+      "name": "transit_share_pct",
+      "type": "number",
+      "label": "Transit share %"
+    },
+    {
+      "name": "jobs_reachable_45",
+      "type": "integer",
+      "label": "Jobs reachable (45min transit)"
+    },
+    {
+      "name": "transit_trips",
+      "type": "integer",
+      "label": "Transit trips/day"
+    },
+    {
+      "name": "avg_trip_mi",
+      "type": "number",
+      "label": "Avg trip (mi)"
+    }
+  ],
+  "invest": [
+    {
+      "name": "objective",
+      "type": "text",
+      "label": "Goal"
+    },
+    {
+      "name": "rank",
+      "type": "integer",
+      "label": "#"
+    },
+    {
+      "name": "town",
+      "type": "text",
+      "label": "Invest in"
+    },
+    {
+      "name": "gain",
+      "type": "integer",
+      "label": "Marginal gain"
+    }
+  ],
+  "agents": [
+    {
+      "name": "town",
+      "type": "text",
+      "label": "Town"
+    },
+    {
+      "name": "income_k",
+      "type": "number",
+      "label": "Income $k"
+    },
+    {
+      "name": "cost_burden_pct",
+      "type": "number",
+      "label": "Transport cost burden %"
+    },
+    {
+      "name": "commute_mi",
+      "type": "number",
+      "label": "Commute (mi)"
+    },
+    {
+      "name": "transit_access_pct",
+      "type": "number",
+      "label": "Transit access %"
+    },
+    {
+      "name": "transport",
+      "type": "number",
+      "label": "Transport $/yr"
+    },
+    {
+      "name": "mode",
+      "type": "text",
+      "label": "Commute mode"
+    },
+    {
+      "name": "hh_type",
+      "type": "text",
+      "label": "Household"
+    },
+    {
+      "name": "age",
+      "type": "text",
+      "label": "Age"
+    },
+    {
+      "name": "has_car",
+      "type": "text",
+      "label": "Car access"
+    }
+  ],
+  "towns": [
+    {
+      "name": "town",
+      "type": "text",
+      "label": "Town"
+    },
+    {
+      "name": "lat",
+      "type": "number",
+      "label": "Latitude"
+    },
+    {
+      "name": "lon",
+      "type": "number",
+      "label": "Longitude"
+    },
+    {
+      "name": "income_k",
+      "type": "number",
+      "label": "Median income $k"
+    },
+    {
+      "name": "no_car_pct",
+      "type": "number",
+      "label": "No-vehicle households %"
+    },
+    {
+      "name": "net_per_hh",
+      "type": "number",
+      "label": "Municipal net $/hh"
+    },
+    {
+      "name": "infra_per_hh",
+      "type": "number",
+      "label": "Infra cost $/hh"
+    },
+    {
+      "name": "revenue_per_hh",
+      "type": "number",
+      "label": "Revenue $/hh"
+    },
+    {
+      "name": "min_cost_life",
+      "type": "number",
+      "label": "Min cost of life $"
+    },
+    {
+      "name": "car_needed",
+      "type": "text",
+      "label": "Car dependence"
+    }
+  ],
+  "invest_access": [
+    {
+      "name": "rank",
+      "type": "integer",
+      "label": "#"
+    },
+    {
+      "name": "town",
+      "type": "text",
+      "label": "Town"
+    },
+    {
+      "name": "gain",
+      "type": "integer",
+      "label": "Marginal gain"
+    }
+  ],
+  "invest_equity": [
+    {
+      "name": "rank",
+      "type": "integer",
+      "label": "#"
+    },
+    {
+      "name": "town",
+      "type": "text",
+      "label": "Town"
+    },
+    {
+      "name": "gain",
+      "type": "integer",
+      "label": "Marginal gain"
+    }
+  ],
+  "invest_ridership": [
+    {
+      "name": "rank",
+      "type": "integer",
+      "label": "#"
+    },
+    {
+      "name": "town",
+      "type": "text",
+      "label": "Town"
+    },
+    {
+      "name": "gain",
+      "type": "integer",
+      "label": "Marginal gain"
+    }
+  ],
+  "cities": [
+    {
+      "name": "city",
+      "type": "text",
+      "label": "City"
+    },
+    {
+      "name": "region",
+      "type": "text",
+      "label": "Metro"
+    },
+    {
+      "name": "transit_pct",
+      "type": "number",
+      "label": "Transit share %"
+    },
+    {
+      "name": "target_pct",
+      "type": "number",
+      "label": "ACS target %"
+    },
+    {
+      "name": "avg_trip_mi",
+      "type": "number",
+      "label": "Avg trip (mi)"
+    },
+    {
+      "name": "transit_trips",
+      "type": "number",
+      "label": "Transit trips/day"
+    },
+    {
+      "name": "beta",
+      "type": "number",
+      "label": "\u03b2"
+    },
+    {
+      "name": "calib",
+      "type": "number",
+      "label": "calib"
+    }
+  ]
+}

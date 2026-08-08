@@ -1,0 +1,41 @@
+{
+  "app": {
+    "title": "Hesset",
+    "primaryColor": "#7C5CF0"
+  },
+  "nav": [
+    { "id": "play", "label": "Play", "icon": "category", "screen": "play" },
+    { "id": "how", "label": "How to", "icon": "info", "screen": "how" }
+  ],
+  "screens": {
+    "play": {
+      "title": "Hesset",
+      "body": { "type": "hesset", "seed": 7, "fillPhone": true }
+    },
+    "how": {
+      "title": "How to play",
+      "body": {
+        "type": "column",
+        "children": [
+          { "type": "text", "style": "title", "value": "Draw living geometry. Protect your Core." },
+          { "type": "text", "value": "Welcome to Hesset! At the centre of the board sits your CORE — a bright point of light that everything wants to reach. Your defence isn't walls or guns you buy off a shelf: it's geometry you DRAW. Place shapes, connect them with edges, and when your lines close into a loop, the space inside comes alive as a FIELD that fights for you. New here? Pick 🎯 Campaign from the menu — it teaches one shape at a time. This How-to stays here as your cheat sheet." },
+          { "type": "text", "style": "subtitle", "value": "Controls — place, connect, close the loop" },
+          { "type": "text", "value": "👆 Tap an empty spot to place the shape you have selected. Each placed shape becomes a NODE on the board.\n✏️ Drag from one node to another to draw an EDGE between them. Edges are your lines of defence — and the walls of your fields.\n🔷 Close a loop — when your edges join up into a ring, the space inside comes ALIVE as a field. This is the heart of the game: loops are power.\n💰 Tap Sell, then a shape, to remove it and get some of its cost back." },
+          { "type": "text", "style": "subtitle", "value": "The shapes — your four building blocks" },
+          { "type": "text", "value": "Every shape does a job on its own, AND changes what a field becomes when it's part of a ring:" },
+          { "type": "text", "value": "△ Spike — your fighter. It shoots at anything hostile in range. Cheap enough to scatter, sharp enough to matter.\n□ Anchor — cheap, sturdy structure. Anchors don't attack; they're the affordable corners and walls you build your loops out of.\n⬠ Well — makes FLUX, the energy that pays for everything you place. More wells, more to spend. Keep some safe behind your lines.\n⬡ Prism — the amplifier. A prism makes the shapes and fields around it stronger. Expensive, but it turns a decent ring into a great one." },
+          { "type": "text", "style": "subtitle", "value": "Fields — the ring's majority picks its role" },
+          { "type": "text", "value": "When you close a loop, look at the shapes making up the ring. The MAJORITY shape decides what the field inside does:" },
+          { "type": "text", "value": "△ Mostly Spikes → a KILL field — it damages enemies that cross it.\n⬠ Mostly Wells → a POWER field — it generates extra flux for you.\n□ Mostly Anchors → a BASTION field — tough and defensive, it soaks the hits.\n⬡ Mostly Prisms → a RESONANCE field — it amplifies everything it touches.\nWant a different role? Reshape the ring — swap a corner, add a node — and the field follows the new majority." },
+          { "type": "text", "style": "subtitle", "value": "The foes — what's coming for you" },
+          { "type": "text", "value": "Enemies come in waves, and each type attacks your geometry differently:" },
+          { "type": "text", "value": "🪚 Shards — small and vicious, they SAW through your edges. A cut edge breaks the loop, and a broken loop kills the field. Watch your lines.\n🔴 Orbs — they ram your NODES head-on. A destroyed node takes every edge attached to it down too.\n🪨 Masses — big, slow grinders that push straight for the CORE. If nothing stops them, they'll grind it down. Layer kill fields in their path." },
+          { "type": "text", "value": "Losing ground? It's usually a broken loop — one sawed edge or one rammed node and the whole field went dark. Between waves, patch your rings before you build new ones." },
+          { "type": "text", "style": "subtitle", "value": "Three ways to play" },
+          { "type": "text", "value": "🎯 Campaign — start here. It introduces one shape at a time, so you learn Spikes before Wells, Wells before Prisms — nothing overwhelming.\n♾️ Endless — waves without end, growing harder. How long can your geometry hold?\n🧩 Sandbox — free drawing, no enemies. Experiment with loops, majorities and field roles in peace." },
+          { "type": "text", "style": "caption", "value": "Tip: close small loops early. A tiny living field near the Core beats a huge unfinished masterpiece. Good luck — draw well!" }
+        ]
+      }
+    }
+  }
+}

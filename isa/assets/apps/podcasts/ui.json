@@ -1,0 +1,560 @@
+{
+  "app": {
+    "title": "Podcasts",
+    "primaryColor": "#8E24AA",
+    "theme": "material"
+  },
+  "nav": [
+    { "id": "files",    "label": "Files",    "icon": "folder",     "screen": "files" },
+    { "id": "shows",    "label": "Shows",    "icon": "podcasts",    "screen": "shows" },
+    { "id": "queue",    "label": "Queue",    "icon": "playlist_play", "screen": "queue" },
+    { "id": "episodes", "label": "Episodes", "icon": "graphic_eq",  "screen": "episodes" },
+    { "id": "search",   "label": "Discover", "icon": "recommend",   "screen": "search" }
+  ],
+  "screens": {
+    "files": {
+      "title": "Files",
+      "body": {
+        "type": "explorer",
+        "table": "files",
+        "nameColumn": "name",
+        "orderColumn": "order",
+        "allowFolders": false,
+        "railMode": "collapsible",
+        "title": "Files",
+        "fileIcon": "podcasts",
+        "newFileLabel": "New library",
+        "emptyHome": true,
+        "homeTitle": "Your podcast libraries",
+        "homeSubtitle": "Open a recent library, or start a new one.",
+        "addItems": [
+          { "label": "New library", "icon": "add", "values": { "name": "Untitled library" } }
+        ],
+        "autoSelectFirst": true,
+        "scopeTargets": [
+          { "table": "shows", "column": "file" },
+          { "table": "episodes", "column": "file" }
+        ],
+        "detail": {
+          "type": "column",
+          "crossAxis": "stretch",
+          "children": [
+            {
+              "type": "text",
+              "style": "caption",
+              "value": "A file is one podcast library — its own shows and episodes. Pick a file on the left, then use the other tabs to work in it. Tap + to start a new library, and a file's ⋮ menu to rename or delete it."
+            },
+            {
+              "type": "button",
+              "label": "Open this library",
+              "icon": "podcasts",
+              "action": {
+                "fn": "goto",
+                "args": {
+                  "screen": "shows"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "shows": {
+      "title": "Shows",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Podcasts you follow or want to try. Tap a show to edit it, or follow new ones. Grouped by category."
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "stat",
+                "table": "shows",
+                "label": "Shows",
+                "color": "purple"
+              },
+              {
+                "type": "stat",
+                "table": "shows",
+                "filter": {
+                  "column": "following",
+                  "value": true
+                },
+                "label": "Following",
+                "color": "teal"
+              }
+            ]
+          },
+          {
+            "type": "button",
+            "label": "Follow a show",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "shows",
+                "values": {
+                  "following": true,
+                  "category": "Other"
+                }
+              }
+            }
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "All",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "shows",
+                    "column": "category",
+                    "value": ""
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Tech",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "shows",
+                    "column": "category",
+                    "value": "Tech"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "News",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "shows",
+                    "column": "category",
+                    "value": "News"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Comedy",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "shows",
+                    "column": "category",
+                    "value": "Comedy"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Story",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "shows",
+                    "column": "category",
+                    "value": "Story"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Other",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "shows",
+                    "column": "category",
+                    "value": "Other"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "table": "shows",
+            "groupBy": "category",
+            "groupOrder": [
+              "Tech",
+              "News",
+              "Comedy",
+              "Story",
+              "Other"
+            ],
+            "sort": {
+              "column": "title",
+              "dir": "asc"
+            },
+            "title": "title",
+            "subtitle": "author",
+            "tags": [
+              {
+                "column": "following",
+                "colors": {
+                  "true": "teal",
+                  "false": "gray"
+                }
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              {
+                "column": "author",
+                "label": "Author"
+              },
+              {
+                "column": "category",
+                "label": "Category"
+              },
+              {
+                "column": "notes",
+                "label": "Notes"
+              }
+            ],
+            "open": "Edit show",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "queue": {
+      "title": "Queue",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Episodes you lined up to listen to. Tick one off when you finish it, or open it in your browser below. Use the funnel to narrow by show or status."
+          },
+          {
+            "type": "cards",
+            "table": "episodes",
+            "filter": {
+              "column": "queued",
+              "value": "true"
+            },
+            "sort": {
+              "column": "published",
+              "dir": "desc"
+            },
+            "title": "title",
+            "subtitle": "tags",
+            "tags": [
+              {
+                "column": "status",
+                "colors": {
+                  "unplayed": "blue",
+                  "playing": "amber",
+                  "done": "green"
+                }
+              }
+            ],
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Mark progress"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Tap an episode below to tick it off — done episodes drop out of the queue list above."
+          },
+          {
+            "type": "agenda",
+            "table": "episodes",
+            "filterable": true,
+            "titleColumn": "title",
+            "statusColumn": "status",
+            "doneValue": "done",
+            "dateColumns": [
+              "published"
+            ],
+            "action": {
+              "fn": "editRow"
+            },
+            "onToggle": {
+              "fn": "toggleDone"
+            }
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Open an episode"
+          },
+          {
+            "type": "button",
+            "label": "Open in browser",
+            "icon": "open_in_browser",
+            "action": {
+              "fn": "openLink",
+              "args": {
+                "url": "https://gimletmedia.com/shows/reply-all/n8hwl6"
+              }
+            }
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "stat",
+                "table": "episodes",
+                "filter": {
+                  "column": "queued",
+                  "value": true
+                },
+                "label": "Queued",
+                "color": "amber"
+              },
+              {
+                "type": "stat",
+                "table": "episodes",
+                "filter": {
+                  "column": "status",
+                  "value": "done"
+                },
+                "label": "Done",
+                "color": "green"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "episodes": {
+      "title": "Episodes",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Every episode, grouped by show, newest first. Tap one to edit it, or open the listen link below."
+          },
+          {
+            "type": "button",
+            "label": "Add episode",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "episodes",
+                "values": {
+                  "status": "unplayed",
+                  "queued": false
+                }
+              }
+            }
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "All",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "episodes",
+                    "column": "status",
+                    "value": ""
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Unplayed",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "episodes",
+                    "column": "status",
+                    "value": "unplayed"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Playing",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "episodes",
+                    "column": "status",
+                    "value": "playing"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Done",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "episodes",
+                    "column": "status",
+                    "value": "done"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "button",
+            "label": "Open in browser",
+            "icon": "open_in_browser",
+            "action": {
+              "fn": "openLink",
+              "args": {
+                "url": "https://99percentinvisible.org/episode/petrichor"
+              }
+            }
+          },
+          {
+            "type": "cards",
+            "table": "episodes",
+            "groupBy": "show",
+            "sort": {
+              "column": "published",
+              "dir": "desc"
+            },
+            "title": "title",
+            "subtitle": "tags",
+            "tags": [
+              {
+                "column": "status",
+                "colors": {
+                  "unplayed": "blue",
+                  "playing": "amber",
+                  "done": "green"
+                }
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              {
+                "column": "published",
+                "label": "Published"
+              },
+              {
+                "column": "durationMin",
+                "label": "Duration (min)"
+              },
+              {
+                "column": "rating",
+                "label": "Rating"
+              },
+              {
+                "column": "notes",
+                "label": "Notes"
+              }
+            ],
+            "open": "Edit episode",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "search": {
+      "title": "Discover",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Discover — shows that bridge your interests"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Computed on your device from the shows you follow — no account, no API key. Tap below and it suggests shows you don't follow yet that connect your different interests (the ones bridging, say, your tech and story sides)."
+          },
+          {
+            "type": "button",
+            "label": "Find shows for you",
+            "icon": "recommend",
+            "action": {
+              "fn": "recommend",
+              "args": {
+                "table": "shows",
+                "linkColumns": ["category", "tags"],
+                "excludeWhen": { "column": "following", "value": true },
+                "scoreColumn": "recScore",
+                "reasonColumn": "recReason",
+                "topicColumn": "category",
+                "limit": 5
+              }
+            }
+          },
+          {
+            "type": "cards",
+            "table": "shows",
+            "filter": { "column": "following", "value": false },
+            "sort": { "column": "recScore", "dir": "desc" },
+            "title": "title",
+            "subtitle": "recReason",
+            "tags": [
+              {
+                "column": "category",
+                "colors": {
+                  "Tech": "blue",
+                  "News": "amber",
+                  "Comedy": "coral",
+                  "Story": "teal",
+                  "Other": "gray"
+                }
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              { "column": "recReason", "label": "Why" },
+              { "column": "author", "label": "Author" },
+              { "column": "category", "label": "Category" }
+            ],
+            "open": "Follow / edit",
+            "action": { "fn": "editRow" }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Open a suggestion to follow it. Want live iTunes search (type a name, add any show) too? That's a separate keyless follow-up."
+          }
+        ]
+      }
+    }
+  }
+}

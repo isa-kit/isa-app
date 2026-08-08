@@ -1,0 +1,255 @@
+{
+  "app": {
+    "title": "Applet Studio",
+    "primaryColor": "#E8590C",
+    "theme": "steampunk",
+    "autosave": true
+  },
+  "nav": [
+    {
+      "id": "projects",
+      "label": "Projects",
+      "icon": "apps",
+      "screen": "projects"
+    },
+    {
+      "id": "checklist",
+      "label": "Checklist",
+      "icon": "task",
+      "screen": "checklist"
+    },
+    {
+      "id": "playbook",
+      "label": "Playbook",
+      "icon": "menu_book",
+      "screen": "playbook"
+    },
+    {
+      "id": "design",
+      "label": "Design",
+      "icon": "palette",
+      "screen": "design"
+    },
+    {
+      "id": "customize",
+      "label": "Customize",
+      "icon": "tune",
+      "screen": "customize"
+    }
+  ],
+  "screens": {
+    "projects": {
+      "title": "Projects",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Every applet you're making, from spark to shipped. Start one (fill in its name + icon), then tap it and choose Open builder to design and build the real app — it lands on your home shelf. The Checklist + Playbook guide each step."
+          },
+          {
+            "type": "button",
+            "label": "New applet project",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "projects",
+                "values": {
+                  "status": "idea",
+                  "style": "clean"
+                }
+              }
+            }
+          },
+          {
+            "type": "cards",
+            "emptyIcon": "dashboard_customize",
+            "emptyTitle": "No projects yet",
+            "emptyText": "Start a project to design and build an app.",
+            "emptyAction": {"fn": "addRow", "args": {"table": "projects", "values": {"status": "idea", "style": "clean"}}},
+            "emptyActionLabel": "New project",
+            "table": "projects",
+            "groupBy": "status",
+            "groupOrder": ["building", "polishing", "shaping", "idea", "shipped"],
+            "groupByOptions": [
+              { "label": "Status", "column": "status" },
+              { "label": "Style", "column": "style" }
+            ],
+            "title": "name",
+            "subtitle": "tagline",
+            "search": true,
+            "tags": [
+              {
+                "column": "status",
+                "colors": {
+                  "idea": "gray",
+                  "shaping": "blue",
+                  "building": "amber",
+                  "polishing": "purple",
+                  "shipped": "green"
+                }
+              },
+              { "column": "style" }
+            ],
+            "pulse": { "column": "status", "value": "building" },
+            "expandable": true,
+            "expandFields": [
+              { "column": "tagline", "label": "Purpose" },
+              { "column": "audience", "label": "Who it's for" },
+              { "column": "style", "label": "Design style" },
+              { "column": "accent", "label": "Accent color" },
+              { "column": "icon", "label": "Icon" },
+              { "column": "notes", "label": "Notes" }
+            ],
+            "open": "Open builder",
+            "action": { "fn": "hostCall", "args": { "name": "buildApplet" } }
+          }
+        ]
+      }
+    },
+    "checklist": {
+      "title": "Checklist",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "The path from idea to shipped applet, in five phases. Tick steps off as you go; tap one for its details, or add steps of your own."
+          },
+          {
+            "type": "button",
+            "label": "New step",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "steps",
+                "values": {
+                  "phase": "1 · Define",
+                  "status": "todo",
+                  "project": "p1"
+                }
+              }
+            }
+          },
+          {
+            "type": "buckets",
+            "emptyIcon": "checklist",
+            "emptyTitle": "No steps yet",
+            "emptyText": "Break the work into steps to track progress.",
+            "table": "steps",
+            "groupColumn": "phase",
+            "groupOrder": [
+              "1 · Define",
+              "2 · Data",
+              "3 · Screens",
+              "4 · Feel",
+              "5 · Ship"
+            ],
+            "titleColumn": "title",
+            "statusColumn": "status",
+            "doneValue": "done",
+            "openValue": "todo",
+            "subtitleColumns": ["tip"],
+            "onTap": { "fn": "editRow" }
+          }
+        ]
+      }
+    },
+    "playbook": {
+      "title": "Playbook",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Everything the checklist assumes you know, explained properly. One guide per idea — expand a card to read it."
+          },
+          {
+            "type": "cards",
+            "table": "playbook",
+            "groupBy": "phase",
+            "groupOrder": [
+              "1 · Define",
+              "2 · Data",
+              "3 · Screens",
+              "4 · Feel",
+              "5 · Ship"
+            ],
+            "sort": { "column": "order", "dir": "asc" },
+            "title": "topic",
+            "subtitle": "summary",
+            "search": true,
+            "expandable": true,
+            "expandFields": [
+              { "column": "details", "label": "Guide" }
+            ],
+            "open": "Open guide",
+            "action": { "fn": "editRow" }
+          }
+        ]
+      }
+    },
+    "design": {
+      "title": "Design",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "An applet's feel is its accent color plus one of these eight styles. Pick the pair that matches the mood — a journal wants different paper than a game — and set them on your project."
+          },
+          {
+            "type": "cards",
+            "table": "styles",
+            "title": "name",
+            "subtitle": "vibe",
+            "tags": [
+              {
+                "column": "name",
+                "colors": {
+                  "clean": "blue",
+                  "material": "teal",
+                  "minimal": "gray",
+                  "contrast": "red",
+                  "watercolor": "purple",
+                  "pastel": "pink",
+                  "sepia": "amber",
+                  "neon": "green"
+                }
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              { "column": "bestFor", "label": "Best for" },
+              { "column": "pairWith", "label": "Accents that pair well" }
+            ],
+            "open": "Open style",
+            "action": { "fn": "editRow" }
+          }
+        ]
+      }
+    },
+    "customize": {
+      "title": "Customize",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Reshape the Studio itself: add or remove tables and attributes — extra checklist fields, a links table, whatever your process needs. Changes apply instantly."
+          },
+          {
+            "type": "schemaeditor"
+          }
+        ]
+      }
+    }
+  }
+}

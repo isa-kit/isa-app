@@ -1,0 +1,49 @@
+{
+  "drawings": [
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Title"
+    },
+    {
+      "name": "strokes",
+      "type": "text",
+      "label": "Strokes (vector)"
+    },
+    {
+      "name": "image",
+      "type": "text",
+      "label": "Image (pasted, base64 PNG)"
+    },
+    {
+      "name": "createdAt",
+      "type": "text",
+      "label": "Created"
+    },
+    {
+      "name": "updatedAt",
+      "type": "text",
+      "label": "Updated"
+    },
+    {
+      "name": "kind",
+      "type": "text",
+      "label": "Kind"
+    },
+    {
+      "name": "parentId",
+      "type": "text",
+      "label": "Folder"
+    },
+    {
+      "name": "trashed",
+      "type": "bool",
+      "label": "Trashed"
+    },
+    {
+      "name": "order",
+      "type": "number",
+      "label": "Page order"
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/isa/">
+
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Podcasts">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Podcasts">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Podcasts</title>
+  <link rel="manifest" href="manifest.json">
+
+  <script>
+    // STANDALONE per-applet identity. Each published applet has a dedicated
+    // URL (/isan-web/<id>/ — a real deploy-generated directory, see
+    // tool/write_standalone_apps.sh) that boots straight into the applet with
+    // no home launcher. Point the manifest link at that applet's own
+    // deploy-generated manifest (manifest_<id>.json: own name + start_url) so
+    // "install app" installs the APPLET as its own app, not isan. Done in JS —
+    // not baked into the per-directory HTML copy — so the swap also holds when
+    // the service worker serves this cached shell for a /<id>/ navigation.
+    // The id rule mirrors lib/src/deeplink.dart standaloneIdFromUri: last
+    // non-empty path segment (ignoring index.html), ^[a-z0-9_]{1,64}$.
+    // It must NOT fire on the app's own page. Standalone copies keep the
+    // app's <base href> (they share its bundle), so the app is exactly the
+    // page whose last path segment equals the base segment — compare against
+    // the base rather than pattern-matching the site root, which silently
+    // broke when the base moved from the hyphenated "isan-web" to "isa"
+    // (the app then asked for a manifest_isa.json that does not exist).
+    (function () {
+      var base = document.querySelector('base');
+      var baseSegs = (base ? base.getAttribute('href') || '' : '')
+          .split('/').filter(Boolean);
+      var baseSeg = baseSegs[baseSegs.length - 1];
+      var segs = window.location.pathname.split('/').filter(function (s) {
+        return s && s !== 'index.html';
+      });
+      var id = segs[segs.length - 1];
+      if (id && id !== baseSeg && /^[a-z0-9_]{1,64}$/.test(id)) {
+        var link = document.querySelector('link[rel="manifest"]');
+        if (link) link.setAttribute('href', 'manifest_' + id + '.json');
+      }
+    })();
+  </script>
+
+  <!-- MapLibre GL JS + CSS — provides the global `maplibregl` for the glmap node. -->
+  <link href="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.css" rel="stylesheet" />
+  <script src="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.js"></script>
+
+  <style>
+    /* App shell. The page must not bounce, pull-to-refresh, or navigate on an
+       overscroll: a vertical overscroll mid-design would reload (losing canvas
+       state), and a two-finger horizontal swipe on a Mac trackpad was
+       accidentally triggering the browser's back/forward navigation. Contain
+       BOTH axes (`overscroll-behavior: none`) — the clean CSS containment, not
+       the old popstate trap that was janky. The app owns its own scrolling. */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      overscroll-behavior: none;
+      /* Stop the browser's native text/element selection from hijacking a
+         click-drag. On a Mac a drag on the canvas used to start a "heavy"
+         browser selection (highlighting the page) and the wireframe's marquee
+         only registered on a hard press; suppressing user-select hands every
+         drag straight to the app, so a normal click-drag draws the selection
+         rectangle. (touch-action is left at the default so the horizontal
+         edge-swipe-back still works.) */
+      user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+    /* Belt-and-braces for the Flutter host element across engine versions. */
+    flutter-view, flt-glass-pane {
+      overscroll-behavior: none;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+  </style>
+
+  <script>
+    // App-shell gesture guards. The app owns its own scrolling and zoom.
+    // `overscroll-behavior:none` (above) contains BOTH pull-to-refresh and the
+    // horizontal swipe-to-navigate (which was accidentally going back a page on
+    // a Mac trackpad). This block only blocks PAGE pinch-zoom (1).
+    (function () {
+      // 1) Block the browser's PAGE pinch-zoom. Chrome/Edge surface a trackpad
+      //    pinch as a ctrl+wheel event; Safari uses gesture* events. The app's
+      //    own zoom (e.g. the sheet's zoom control) is unaffected.
+      window.addEventListener('wheel', function (e) {
+        if (e.ctrlKey) e.preventDefault();
+      }, { passive: false });
+      ['gesturestart', 'gesturechange', 'gestureend'].forEach(function (type) {
+        window.addEventListener(type, function (e) { e.preventDefault(); }, { passive: false });
+      });
+
+      // 2) Back/forward navigation is intentionally NOT trapped. The old
+      //    sentinel (pushState + re-assert on every popstate) was removed per
+      //    user request: on a phone the edge-swipe-back fired anyway and the
+      //    trap re-pushed the entry, leaving the back gesture stuck/janky. Let
+      //    the browser back-swipe navigate normally; the app still offers its
+      //    own on-screen back/exit.
+
+      // 3) Auto-update on deploy. The deploy patches the service worker to
+      //    skipWaiting + claim, so a fresh build's worker takes control of this
+      //    open page (fires `controllerchange`). Reload ONCE so the new app code
+      //    loads — this is what makes a deployed fix appear without the user
+      //    having to hard-refresh / clear site data. Guarded so the first-ever
+      //    SW install on a fresh client does NOT reload (no prior controller to
+      //    replace), and so it never loops.
+      //    (SW registration itself is the stock flutter_bootstrap.js flow with
+      //    its embedded service-worker version — nothing manual here. If a
+      //    deploy ever ships the STOCK worker — no skipWaiting patch — the new
+      //    build parks `waiting` and this listener never fires; the in-app
+      //    updater detects that waiting worker on its periodic check and offers
+      //    a "new version — Reload" prompt instead: lib/src/update/
+      //    web_reload_web.dart hasWaitingServiceWorker.)
+      if ('serviceWorker' in navigator) {
+        var hadControllerAtLoad = !!navigator.serviceWorker.controller;
+        var isReloading = false;
+        navigator.serviceWorker.addEventListener('controllerchange', function () {
+          if (isReloading || !hadControllerAtLoad) return;
+          isReloading = true;
+          window.location.reload();
+        });
+      }
+    })();
+  </script>
+</head>
+<body>
+  <!--
+    You can customize the "flutter_bootstrap.js" script.
+    This is useful to provide a custom configuration to the Flutter loader
+    or to give the user feedback during the initialization process.
+
+    For more details:
+    * https://docs.flutter.dev/platform-integration/web/initialization
+  -->
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

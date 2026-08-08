@@ -1,0 +1,11 @@
+{
+  "id": "bike_share",
+  "name": "Bike Share \u2014 isa-kit demo",
+  "category": "Maps",
+  "icon": "auto_awesome",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_bikeshare"
+  },
+  "seedVersion": "2026-06-05.2"
+}

@@ -1,0 +1,163 @@
+{
+  "app": { "title": "Transit forecasts", "primaryColor": "#00695C", "theme": "material" },
+  "nav": [
+    { "id": "forecasts", "label": "Forecasts", "icon": "timeline", "screen": "forecasts" },
+    { "id": "cities", "label": "Cities", "icon": "public", "screen": "cities" },
+    { "id": "explorer", "label": "Agent explorer", "icon": "groups", "screen": "explorer" },
+    { "id": "crossfilter", "label": "Cross-filter", "icon": "scatter_plot", "screen": "crossfilter" },
+    { "id": "fiscal", "label": "Fiscal map", "icon": "map", "screen": "fiscal" },
+    { "id": "livemap", "label": "Transit map", "icon": "my_location", "screen": "livemap" },
+    { "id": "invest", "label": "Where to invest", "icon": "trending_up", "screen": "invest" },
+    { "id": "about", "label": "About", "icon": "info", "screen": "about" }
+  ],
+  "screens": {
+    "cities": {
+      "title": "US metros — one model per city",
+      "body": {
+        "type": "column",
+        "children": [
+          { "type": "text", "style": "caption",
+            "value": "The same census-anchored four-step model run on multiple metros, each calibrated to ITS OWN observed targets (ACS transit share + NHTS trip length) — so the numbers compare apples-to-apples." },
+          { "type": "barchart", "table": "cities", "labelColumn": "city", "valueColumn": "transit_pct",
+            "agg": "sum" },
+          { "type": "table", "table": "cities",
+            "columns": ["city", "transit_pct", "target_pct", "avg_trip_mi", "transit_trips"],
+            "height": 220 },
+          { "type": "text", "style": "caption",
+            "value": "Boston uses bespoke CTPS zones + GTFS-routed access; Chicago & Seattle use the scalable census-tract pipeline (a straight-line access proxy for now). Built one-command per metro." }
+        ]
+      }
+    },
+    "forecasts": {
+      "title": "Boston transit forecasts",
+      "body": {
+        "type": "column",
+        "children": [
+          { "type": "text", "style": "caption",
+            "value": "Census-anchored four-step model (LODES + decennial over CTPS zones), calibrated to ACS/NHTS. 2019 → 2040, plus an Allston intensification scenario." },
+          { "type": "table", "table": "scenarios",
+            "columns": ["scenario", "transit_share_pct", "jobs_reachable_45", "transit_trips", "avg_trip_mi"],
+            "height": "fill" },
+          { "type": "text", "style": "caption",
+            "value": "Allston vs 2040 control: jobs reachable by transit +4.5%, transit trips +8.2%, share +0.6pp. Relative differences are the signal." }
+        ]
+      }
+    },
+    "cities": {
+      "title": "Cities",
+      "body": {
+        "type": "column",
+        "children": [
+          { "type": "text", "style": "caption",
+            "value": "US metros — one model per city: the same census-anchored four-step model run on multiple metros, each calibrated to ITS OWN observed targets (ACS transit share + NHTS trip length), so the numbers compare apples-to-apples." },
+          { "type": "barchart", "table": "cities", "labelColumn": "city", "valueColumn": "transit_pct", "agg": "sum" },
+          { "type": "table", "table": "cities",
+            "columns": ["city", "transit_pct", "target_pct", "avg_trip_mi", "transit_trips"],
+            "height": 220 },
+          { "type": "text", "style": "caption",
+            "value": "Boston uses bespoke CTPS zones + GTFS-routed access; Chicago & Seattle use the scalable census-tract pipeline. One-command build per metro." }
+        ]
+      }
+    },
+    "explorer": {
+      "title": "Agent explorer",
+      "body": {
+        "type": "column",
+        "children": [
+          { "type": "text", "style": "caption",
+            "value": "2,998 synthetic travel agents (census income + vehicles). Drag across a chart to slice a range; build two cohorts (A/B) and compare." },
+          { "type": "crossfilter", "table": "agents",
+            "numeric": [
+              {"col": "income_k", "label": "Income $k"},
+              {"col": "cost_burden_pct", "label": "Transport cost burden %"},
+              {"col": "commute_mi", "label": "Commute (mi)"},
+              {"col": "transit_access_pct", "label": "Transit access %"},
+              {"col": "transport", "label": "Transport $/yr"}
+            ],
+            "categorical": ["mode", "hh_type", "age", "has_car"],
+            "x": "income_k", "y": "cost_burden_pct" },
+          { "type": "text", "style": "caption",
+            "value": "Mode choice is locally calibrated + validated out-of-sample (5-fold CV): R²=0.92, held-out RMSE 3.3pp over 76 towns. Income + vehicles are real ACS." }
+        ]
+      }
+    },
+    "crossfilter": {
+      "title": "Cross-filter towns",
+      "body": {
+        "type": "column",
+        "children": [
+          { "type": "text", "style": "caption",
+            "value": "76 towns by income, vehicles, and municipal fiscal balance. Pick X/Y, drag to filter, compare two cohorts." },
+          { "type": "crossfilter", "table": "towns",
+            "numeric": [
+              {"col": "income_k", "label": "Median income $k"},
+              {"col": "no_car_pct", "label": "No-vehicle households %"},
+              {"col": "net_per_hh", "label": "Municipal net $/hh"},
+              {"col": "infra_per_hh", "label": "Infra cost $/hh"},
+              {"col": "min_cost_life", "label": "Min cost of life $"}
+            ],
+            "categorical": ["car_needed"],
+            "x": "income_k", "y": "net_per_hh" }
+        ]
+      }
+    },
+    "fiscal": {
+      "title": "Fiscal map",
+      "body": {
+        "type": "column",
+        "children": [
+          { "type": "text", "style": "caption",
+            "value": "Municipal net balance per household by town — revenue minus lifecycle infrastructure cost. Cool = net-positive (dense pays its way), warm = net-negative (sprawl costs more to serve). Tap a town for its numbers. Illustrative coefficients (Strong Towns gradient)." },
+          { "type": "map", "table": "towns",
+            "latColumn": "lat", "lonColumn": "lon", "labelColumn": "town",
+            "geojsonAsset": "apps/transit_forecasts/fiscal.geojson",
+            "fillOpacity": 0.6, "strokeWidth": 0.5, "fillPhone": true,
+            "action": { "fn": "editRow" } }
+        ]
+      }
+    },
+    "livemap": {
+      "title": "Live transit map",
+      "body": {
+        "type": "column",
+        "children": [
+          { "type": "text", "style": "caption",
+            "value": "Real moving vehicles + transit stops on a live map. Pick a city; Boston & Seattle stream live vehicle positions (refreshed server-side every ~30s), Toronto & Chicago show their full stop networks." },
+          { "type": "webframe", "label": "Live transit map",
+            "url": "https://urban-planning-dashboard.github.io/transit4/transitmap.html",
+            "height": "fill" }
+        ]
+      }
+    },
+    "invest": {
+      "title": "Where should transit go?",
+      "body": {
+        "type": "column",
+        "children": [
+          { "type": "text", "style": "caption",
+            "value": "Optimizer: top towns to boost transit, by goal. Access favors the dense core; equity lifts outer underserved towns — the trade-off is the point." },
+          { "type": "text", "style": "subtitle", "value": "Access — efficiency" },
+          { "type": "barchart", "table": "invest_access", "labelColumn": "town", "valueColumn": "gain" },
+          { "type": "text", "style": "subtitle", "value": "Equity — lift worst-served" },
+          { "type": "barchart", "table": "invest_equity", "labelColumn": "town", "valueColumn": "gain" },
+          { "type": "text", "style": "subtitle", "value": "Ridership — total trips" },
+          { "type": "barchart", "table": "invest_ridership", "labelColumn": "town", "valueColumn": "gain" }
+        ]
+      }
+    },
+    "about": {
+      "title": "About",
+      "body": {
+        "type": "column",
+        "children": [
+          { "type": "text",
+            "value": "Census-anchored results for the Boston region with the full interactive filters. For the geographic maps (fiscal map, routed access) open the web dashboard." },
+          { "type": "button", "label": "Open full web dashboard", "icon": "open_in_browser",
+            "action": { "fn": "openLink", "args": { "url": "https://urban-planning-dashboard.github.io/transit4/dashboard.html" } } },
+          { "type": "text", "style": "caption",
+            "value": "Sources: US Census LODES + decennial + ACS, CTPS TAZ, NHTS, NTD. Absolutes omit congestion/fares/non-work trips." }
+        ]
+      }
+    }
+  }
+}

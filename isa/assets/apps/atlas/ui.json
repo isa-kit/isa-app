@@ -1,0 +1,1153 @@
+{
+  "app": {
+    "title": "Atlas — place analysis",
+    "primaryColor": "#00695C",
+    "theme": "material"
+  },
+  "nav": [
+    {
+      "id": "dashboard",
+      "label": "Dashboard",
+      "icon": "dashboard",
+      "screen": "dashboard"
+    },
+    {
+      "id": "map",
+      "label": "Deep map",
+      "icon": "public",
+      "screen": "map",
+      "addon": true
+    },
+    {
+      "id": "run",
+      "label": "Run",
+      "icon": "rocket_launch",
+      "screen": "run"
+    },
+    {
+      "id": "results",
+      "label": "Results",
+      "icon": "leaderboard",
+      "screen": "results"
+    },
+    {
+      "id": "about",
+      "label": "About",
+      "icon": "info",
+      "screen": "about"
+    }
+  ],
+  "screens": {
+    "map": {
+      "title": "Atlas — place analysis",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "One map, every scale: national metro/county dots (zoom out), Massachusetts tracts, Boston blocks, and street-level simulated agents (zoom in). Pick a LENS to recolor places, a SLICE to filter the agents. Dark teal = stronger on the current lens."
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "spacing": 8,
+            "children": [
+              {
+                "type": "button",
+                "label": "Transit '19",
+                "icon": "directions_transit",
+                "variant": "tonal",
+                "action": {
+                  "chain": [
+                    {
+                      "fn": "mapSetLayerVisible",
+                      "args": {
+                        "node": "atlasmap",
+                        "layer": "areas_lo",
+                        "visible": true
+                      }
+                    },
+                    {
+                      "fn": "mapSetLayerVisible",
+                      "args": {
+                        "node": "atlasmap",
+                        "layer": "areas_mid",
+                        "visible": true
+                      }
+                    },
+                    {
+                      "fn": "mapSetLayerVisible",
+                      "args": {
+                        "node": "atlasmap",
+                        "layer": "areas_hi",
+                        "visible": true
+                      }
+                    },
+                    {
+                      "fn": "mapSetFilter",
+                      "args": {
+                        "node": "atlasmap",
+                        "layer": "areas_lo",
+                        "filter": [
+                          "<",
+                          "share19",
+                          0.05
+                        ]
+                      }
+                    },
+                    {
+                      "fn": "mapSetFilter",
+                      "args": {
+                        "node": "atlasmap",
+                        "layer": "areas_mid",
+                        "filter": [
+                          "all",
+                          [
+                            ">=",
+                            "share19",
+                            0.05
+                          ],
+                          [
+                            "<",
+                            "share19",
+                            0.15
+                          ]
+                        ]
+                      }
+                    },
+                    {
+                      "fn": "mapSetFilter",
+                      "args": {
+                        "node": "atlasmap",
+                        "layer": "areas_hi",
+                        "filter": [
+                          ">=",
+                          "share19",
+                          0.15
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "button",
+                "label": "Car-free",
+                "icon": "directions_walk",
+                "variant": "tonal",
+                "action": {
+                  "chain": [
+                    {
+                      "fn": "mapSetLayerVisible",
+                      "args": {
+                        "node": "atlasmap",
+                        "layer": "areas_lo",
+                        "visible": true
+                      }
+                    },
+                    {
+                      "fn": "mapSetLayerVisible",
+                      "args": {
+                        "node": "atlasmap",
+                        "layer": "areas_mid",
+                        "visible": true
+                      }
+                    },
+                    {
+                      "fn": "mapSetLayerVisible",
+                      "args": {
+                        "node": "atlasmap",
+                        "layer": "areas_hi",
+                        "visible": true
+                      }
+                    },
+                    {
+                      "fn": "mapSetFilter",
+                      "args": {
+                        "node": "atlasmap",
+                        "layer": "areas_lo",
+                        "filter": [
+                          "<",
+                          "carfree_idx",
+                          0.5
+                        ]
+                      }
+                    },
+                    {
+                      "fn": "mapSetFilter",
+                      "args": {
+                        "node": "atlasmap",
+                        "layer": "areas_mid",
+                        "filter": [
+                          "all",
+                          [
+                            ">=",
+                            "carfree_idx",
+                            0.5
+                          ],
+                          [
+                            "<",
+                            "carfree_idx",
+                            0.75
+                          ]
+                        ]
+                      }
+                    },
+                    {
+                      "fn": "mapSetFilter",
+                      "args": {
+                        "node": "atlasmap",
+                        "layer": "areas_hi",
+                        "filter": [
+                          ">=",
+                          "carfree_idx",
+                          0.75
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "button",
+                "label": "Affordability",
+                "icon": "savings",
+                "variant": "tonal",
+                "action": {
+                  "chain": [
+                    {
+                      "fn": "mapSetLayerVisible",
+                      "args": {
+                        "node": "atlasmap",
+                        "layer": "areas_lo",
+                        "visible": true
+                      }
+                    },
+                    {
+                      "fn": "mapSetLayerVisible",
+                      "args": {
+                        "node": "atlasmap",
+                        "layer": "areas_mid",
+                        "visible": true
+                      }
+                    },
+                    {
+                      "fn": "mapSetLayerVisible",
+                      "args": {
+                        "node": "atlasmap",
+                        "layer": "areas_hi",
+                        "visible": true
+                      }
+                    },
+                    {
+                      "fn": "mapSetFilter",
+                      "args": {
+                        "node": "atlasmap",
+                        "layer": "areas_hi",
+                        "filter": [
+                          "<",
+                          "ht_pct",
+                          25
+                        ]
+                      }
+                    },
+                    {
+                      "fn": "mapSetFilter",
+                      "args": {
+                        "node": "atlasmap",
+                        "layer": "areas_mid",
+                        "filter": [
+                          "all",
+                          [
+                            ">=",
+                            "ht_pct",
+                            25
+                          ],
+                          [
+                            "<",
+                            "ht_pct",
+                            32
+                          ]
+                        ]
+                      }
+                    },
+                    {
+                      "fn": "mapSetFilter",
+                      "args": {
+                        "node": "atlasmap",
+                        "layer": "areas_lo",
+                        "filter": [
+                          ">=",
+                          "ht_pct",
+                          32
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "button",
+                "label": "Agents",
+                "icon": "groups",
+                "variant": "tonal",
+                "action": {
+                  "chain": [
+                    {
+                      "fn": "mapSetLayerVisible",
+                      "args": {
+                        "node": "atlasmap",
+                        "layer": "areas_lo",
+                        "visible": false
+                      }
+                    },
+                    {
+                      "fn": "mapSetLayerVisible",
+                      "args": {
+                        "node": "atlasmap",
+                        "layer": "areas_mid",
+                        "visible": false
+                      }
+                    },
+                    {
+                      "fn": "mapSetLayerVisible",
+                      "args": {
+                        "node": "atlasmap",
+                        "layer": "areas_hi",
+                        "visible": false
+                      }
+                    },
+                    {
+                      "fn": "mapSetLayerVisible",
+                      "args": {
+                        "node": "atlasmap",
+                        "layer": "agents",
+                        "visible": true
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "spacing": 8,
+            "children": [
+              {
+                "type": "button",
+                "label": "All",
+                "variant": "outlined",
+                "action": {
+                  "fn": "mapSetFilter",
+                  "args": {
+                    "node": "atlasmap",
+                    "layer": "agents",
+                    "filter": []
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Transit",
+                "variant": "outlined",
+                "action": {
+                  "fn": "mapSetFilter",
+                  "args": {
+                    "node": "atlasmap",
+                    "layer": "agents",
+                    "filter": [
+                      "==",
+                      "mode",
+                      "transit"
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Car",
+                "variant": "outlined",
+                "action": {
+                  "fn": "mapSetFilter",
+                  "args": {
+                    "node": "atlasmap",
+                    "layer": "agents",
+                    "filter": [
+                      "==",
+                      "mode",
+                      "car"
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Walk",
+                "variant": "outlined",
+                "action": {
+                  "fn": "mapSetFilter",
+                  "args": {
+                    "node": "atlasmap",
+                    "layer": "agents",
+                    "filter": [
+                      "==",
+                      "mode",
+                      "walk"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "glmap",
+            "id": "atlasmap",
+            "height": 520,
+            "zoom": 9,
+            "center": [
+              42.3601,
+              -71.0589
+            ],
+            "tiles": {
+              "urls": [
+                "https://167.233.64.97/tiles/atlas/{z}/{x}/{y}.mvt"
+              ],
+              "minzoom": 0,
+              "maxzoom": 16,
+              "attribution": "US Census LODES/ACS · transit4 model"
+            },
+            "sourceLayers": [
+              {
+                "id": "areas_lo",
+                "sourceLayer": "areas",
+                "kind": "circle",
+                "minzoom": 0,
+                "maxzoom": 11,
+                "filter": [
+                  "<",
+                  "share19",
+                  0.05
+                ],
+                "paint": {
+                  "color": "#B2DFDB",
+                  "radius": 4,
+                  "opacity": 0.75
+                }
+              },
+              {
+                "id": "areas_mid",
+                "sourceLayer": "areas",
+                "kind": "circle",
+                "minzoom": 0,
+                "maxzoom": 11,
+                "filter": [
+                  "all",
+                  [
+                    ">=",
+                    "share19",
+                    0.05
+                  ],
+                  [
+                    "<",
+                    "share19",
+                    0.15
+                  ]
+                ],
+                "paint": {
+                  "color": "#26A69A",
+                  "radius": 4.5,
+                  "opacity": 0.8
+                }
+              },
+              {
+                "id": "areas_hi",
+                "sourceLayer": "areas",
+                "kind": "circle",
+                "minzoom": 0,
+                "maxzoom": 11,
+                "filter": [
+                  ">=",
+                  "share19",
+                  0.15
+                ],
+                "paint": {
+                  "color": "#00695C",
+                  "radius": 5,
+                  "opacity": 0.9
+                }
+              },
+              {
+                "id": "ma_tracts",
+                "sourceLayer": "ma_tracts",
+                "kind": "circle",
+                "minzoom": 9,
+                "maxzoom": 14,
+                "paint": {
+                  "color": "#00897B",
+                  "radius": 3,
+                  "opacity": 0.6
+                }
+              },
+              {
+                "id": "boston_blocks",
+                "sourceLayer": "boston_blocks",
+                "kind": "circle",
+                "minzoom": 12,
+                "maxzoom": 16,
+                "paint": {
+                  "color": "#546E7A",
+                  "radius": 2,
+                  "opacity": 0.45
+                }
+              },
+              {
+                "id": "agents",
+                "sourceLayer": "agents",
+                "kind": "circle",
+                "minzoom": 13.6,
+                "paint": {
+                  "colorProp": "mode",
+                  "radius": 3,
+                  "opacity": 0.9,
+                  "color": "#9E9E9E",
+                  "ramp": {
+                    "transit": "#00695C",
+                    "car": "#78909C",
+                    "walk": "#43A047",
+                    "bike": "#7C3AED",
+                    "wfh": "#D97706",
+                    "other": "#DB2777"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Simulated agents — synthetic population, not real people."
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Live vector tiles from the isan server — zoom and pan the whole region; provenance for every layer is on About."
+          }
+        ]
+      }
+    },
+    "run": {
+      "title": "Run the model",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "header",
+            "eyebrow": "Model run",
+            "title": "Configure · set up · run",
+            "subtitle": "Drive the transit4 four-step model LIVE on the server (forge) against its loaded city — currently chicago.",
+            "icon": "rocket_launch",
+            "size": "compact"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "1 · CONFIGURE — tap the card below to edit the scenario. The fields: year = the scenario year the model runs (2019 is the calibrated base; 2022/2030/2040/2050 are forecast runs) · growth factor = your demand-growth assumption, recorded onto each run for comparison (sent to the model once the growth-vector contract is verified) · note = a free label copied onto every run row."
+          },
+          {
+            "type": "cards",
+            "table": "run_config",
+            "title": "run_label",
+            "subtitle": "last_status",
+            "tags": [
+              {
+                "column": "year",
+                "colors": {
+                  "2019": "teal",
+                  "2022": "blue",
+                  "2030": "purple",
+                  "2040": "amber",
+                  "2050": "coral"
+                }
+              }
+            ],
+            "action": {
+              "fn": "editRow"
+            },
+            "swipeActions": [
+              "edit"
+            ],
+            "expandable": false
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Connection fields on the same card: endpoint = where the call goes (documented target; the baked swap point is apps/atlas/ui.json — one line, same pattern as the map tile endpoint) · token = YOUR bearer token, recorded locally only. Honesty note: today's engine cannot attach table values to request headers, so the token is NOT sent — authorization must be granted at the edge (the platform keeps secrets server-side by design). App data stays on your device."
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "2 · RUN — tap the row below. It POSTs {year} to ${endpoint}/scenario and appends the reply summary into Results the moment the server answers."
+          },
+          {
+            "type": "list",
+            "table": "run_config",
+            "titleColumn": "run_label",
+            "subtitleColumns": [
+              "last_status"
+            ],
+            "swipeActions": false,
+            "onTap": {
+              "chain": [
+                {
+                  "fn": "setFields",
+                  "args": {
+                    "set": {
+                      "last_run": "now",
+                      "last_status": "→ Scenario sent. A new row appears in Results when the model replies (a few seconds). Nothing arriving = the endpoint did not answer (locked 403 or offline — see About)."
+                    }
+                  }
+                },
+                {
+                  "when": {
+                    "field": "year",
+                    "op": "eq",
+                    "value": "2019"
+                  },
+                  "then": {
+                    "fn": "http",
+                    "onError": "continue",
+                    "args": {
+                      "url": "https://167.233.64.97/model/scenario",
+                      "method": "POST",
+                      "body": {
+                        "year": 2019
+                      },
+                      "into": {
+                        "table": "runs"
+                      },
+                      "timeoutMs": 120000
+                    }
+                  }
+                },
+                {
+                  "when": {
+                    "field": "year",
+                    "op": "eq",
+                    "value": "2022"
+                  },
+                  "then": {
+                    "fn": "http",
+                    "onError": "continue",
+                    "args": {
+                      "url": "https://167.233.64.97/model/scenario",
+                      "method": "POST",
+                      "body": {
+                        "year": 2022
+                      },
+                      "into": {
+                        "table": "runs"
+                      },
+                      "timeoutMs": 120000
+                    }
+                  }
+                },
+                {
+                  "when": {
+                    "field": "year",
+                    "op": "eq",
+                    "value": "2030"
+                  },
+                  "then": {
+                    "fn": "http",
+                    "onError": "continue",
+                    "args": {
+                      "url": "https://167.233.64.97/model/scenario",
+                      "method": "POST",
+                      "body": {
+                        "year": 2030
+                      },
+                      "into": {
+                        "table": "runs"
+                      },
+                      "timeoutMs": 120000
+                    }
+                  }
+                },
+                {
+                  "when": {
+                    "field": "year",
+                    "op": "eq",
+                    "value": "2040"
+                  },
+                  "then": {
+                    "fn": "http",
+                    "onError": "continue",
+                    "args": {
+                      "url": "https://167.233.64.97/model/scenario",
+                      "method": "POST",
+                      "body": {
+                        "year": 2040
+                      },
+                      "into": {
+                        "table": "runs"
+                      },
+                      "timeoutMs": 120000
+                    }
+                  }
+                },
+                {
+                  "when": {
+                    "field": "year",
+                    "op": "eq",
+                    "value": "2050"
+                  },
+                  "then": {
+                    "fn": "http",
+                    "onError": "continue",
+                    "args": {
+                      "url": "https://167.233.64.97/model/scenario",
+                      "method": "POST",
+                      "body": {
+                        "year": 2050
+                      },
+                      "into": {
+                        "table": "runs"
+                      },
+                      "timeoutMs": 120000
+                    }
+                  }
+                },
+                {
+                  "when": {
+                    "not": {
+                      "field": "year",
+                      "op": "in",
+                      "value": [
+                        "2019",
+                        "2022",
+                        "2030",
+                        "2040",
+                        "2050"
+                      ]
+                    }
+                  },
+                  "then": {
+                    "fn": "setFields",
+                    "args": {
+                      "set": {
+                        "last_status": "⚠ Unsupported year — tap the configuration card and pick 2019, 2022, 2030, 2040 or 2050."
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "3 · CONNECTION — check the endpoint before running. GET ${endpoint}/health; the service info lands in the panel below (that parse-into step is the same mechanism the run uses)."
+          },
+          {
+            "type": "button",
+            "label": "Health check",
+            "icon": "monitor_heart",
+            "variant": "tonal",
+            "action": {
+              "chain": [
+                {
+                  "fn": "setFields",
+                  "args": {
+                    "table": "run_config",
+                    "id": "cfg",
+                    "set": {
+                      "last_status": "→ Health check sent — service info appears below when the endpoint answers."
+                    }
+                  }
+                },
+                {
+                  "fn": "updateRows",
+                  "args": {
+                    "table": "endpoint_info",
+                    "set": {
+                      "service": "checking… (if this text stays: no reply — endpoint locked or offline)"
+                    }
+                  }
+                },
+                {
+                  "fn": "http",
+                  "onError": "continue",
+                  "args": {
+                    "url": "https://167.233.64.97/model/health",
+                    "method": "GET",
+                    "into": {
+                      "table": "endpoint_info",
+                      "mode": "replace"
+                    },
+                    "timeoutMs": 20000
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "table",
+            "table": "endpoint_info",
+            "columns": [
+              "service",
+              "checked"
+            ],
+            "height": 120
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Status, honestly: as of 2026-07-02 the /model route answers HTTP 403 for every caller — it is locked at the edge since the token lockdown. Everything here is wired and will work the moment the edge authorizes the app (see About → Model runs)."
+          }
+        ]
+      }
+    },
+    "results": {
+      "title": "Results",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "header",
+            "eyebrow": "Model output",
+            "title": "Run ledger + comparison",
+            "subtitle": "One row per live run — appended the moment the server replies.",
+            "icon": "leaderboard",
+            "size": "compact"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Output — the parse step is the post-population: the reply's summary fields (zones, total trips, transit %, average trip miles) land here as a new row, and when/year/growth/note are stamped from your configuration at insert. No rows yet? Run a scenario from the Run tab — nothing here is canned."
+          },
+          {
+            "type": "table",
+            "table": "runs",
+            "overflow": "cards",
+            "columns": [
+              "when",
+              "year",
+              "zones",
+              "total_trips",
+              "transit_pct",
+              "avg_trip_mi",
+              "status",
+              "note"
+            ],
+            "height": 320
+          },
+          {
+            "type": "barchart",
+            "table": "runs",
+            "labelColumn": "year",
+            "valueColumn": "transit_pct",
+            "label": "Transit share by run (transit_pct)",
+            "limit": 24
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Visualize — one bar per run, so scenario years compare at a glance. Tie-back to the Map tab: its Transit '19 lens colors places by the OBSERVED 2019 transit share; these bars are the MODEL's share per run — the 2019 base should land near the observed picture, forecast years show the trajectory. Note the runs compute against the forge-loaded city (currently chicago) while the map's detail layers center on Boston — compare patterns, not dots."
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "A run row is the summary. Analysis layers — cost-benefit, accessibility, equity — attach SERVER-side per the foundation contract and ride the same run when they ship; this ledger is the anchor they join onto."
+          }
+        ]
+      }
+    },
+    "about": {
+      "title": "About",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "header",
+            "eyebrow": "Provenance",
+            "title": "Where every dot comes from",
+            "subtitle": "Open federal data in, one calibrated model, every layer accounted for.",
+            "icon": "travel_explore",
+            "size": "compact"
+          },
+          {
+            "type": "text",
+            "value": "Sources: US Census LODES (jobs) + ACS (2019 and 2022 — commute shares, vehicles, income, rent). Model: the transit4 four-step travel model. Calibration: real ACS targets per metro, so modeled shares track observed ones. The agents layer is a SYNTHETIC population drawn from those distributions — it shows patterns, not people."
+          },
+          {
+            "type": "table",
+            "table": "layers",
+            "overflow": "cards",
+            "columns": [
+              "layer",
+              "what",
+              "source",
+              "vintage",
+              "zooms"
+            ],
+            "height": 260
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Every layer above carries its provenance; the table is seeded data you can inspect like any other applet table."
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Tile endpoint (dev-local for now): https://167.233.64.97/tiles/atlas/{z}/{x}/{y}.mvt — served by `pmtiles serve` from atlas.pmtiles on this machine. Config swap point for a hosted endpoint later: the tiles.urls value on the Map screen's glmap node (apps/atlas/ui.json) + the meta.tileEndpoint note in apps/atlas/app.json. One URL swap, no code change."
+          },
+          {
+            "type": "header",
+            "eyebrow": "Model runs",
+            "title": "Live server computations",
+            "subtitle": "The Run tab drives the real transit4 model, not a canned demo.",
+            "icon": "rocket_launch",
+            "size": "compact"
+          },
+          {
+            "type": "text",
+            "value": "Model runs: the Run tab POSTs your scenario to the transit4 model service — edge proxy https://167.233.64.97/model, forwarded to forge (the private compute box) over the tailnet. Every Results row is a LIVE four-step-model computation against the city loaded on forge, which is currently CHICAGO — city switching is not exposed through this endpoint yet, so runs describe Chicago even while the map's detail layers show the Boston region. The reply summary (zones, total trips, transit share, average trip length) is appended verbatim; cost-benefit and other analysis layers attach server-side per the foundation contract."
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Access, honestly: as of 2026-07-02 the /model route answers HTTP 403 — locked at the edge since the token lockdown. The token is USER-SUPPLIED and never baked into this applet: the configuration's token field records yours locally, but today's engine cannot attach table values to request headers, so authorization has to be granted at the edge (the platform's secrets-stay-server-side rule). Web builds additionally need CORS opened on /model/*. Endpoint swap point: the scenario/health URLs on the Run screen (apps/atlas/ui.json) + meta.modelEndpoint in apps/atlas/app.json — one-line swaps, same pattern as the tile endpoint."
+          }
+        ]
+      }
+    },
+    "dashboard": {
+      "title": "Dashboard — map layers + calculations",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "The integrated view: calculations painted on the map as layers, charts on the same rows below. Pick a layer tab, tap a town to filter everything to it (tap again to clear), use the Towns chip to hide the overlay. Layer values live in the zone layers table — editable rows like everything else."
+          },
+          {
+            "type": "segments",
+            "segments": [
+              {
+                "label": "Ridership layer",
+                "child": {
+                  "type": "map",
+                  "table": "results",
+                  "latColumn": "lat",
+                  "lonColumn": "lng",
+                  "labelColumn": "route",
+                  "colorColumn": "scenario",
+                  "colors": {
+                    "Baseline": "teal",
+                    "Forecast": "blue"
+                  },
+                  "geojsonAsset": "apps/atlas/towns.geojson",
+                  "nameProperty": "town",
+                  "choropleth": {
+                    "table": "zone_stats",
+                    "valueColumn": "trips",
+                    "nameColumn": "zone",
+                    "color": "teal"
+                  },
+                  "featureFilterColumn": "zone",
+                  "overlayToggle": "Towns",
+                  "height": 440,
+                  "zoom": 11,
+                  "pointList": false
+                }
+              },
+              {
+                "label": "Cost layer",
+                "child": {
+                  "type": "map",
+                  "table": "results",
+                  "latColumn": "lat",
+                  "lonColumn": "lng",
+                  "labelColumn": "route",
+                  "colorColumn": "scenario",
+                  "colors": {
+                    "Baseline": "teal",
+                    "Forecast": "blue"
+                  },
+                  "geojsonAsset": "apps/atlas/towns.geojson",
+                  "nameProperty": "town",
+                  "choropleth": {
+                    "table": "zone_stats",
+                    "valueColumn": "cost_per_pax_mi",
+                    "nameColumn": "zone",
+                    "color": "amber"
+                  },
+                  "featureFilterColumn": "zone",
+                  "overlayToggle": "Towns",
+                  "height": 440,
+                  "zoom": 11,
+                  "pointList": false
+                }
+              }
+            ]
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "Charts on the same data"
+          },
+          {
+            "type": "column",
+            "children": [
+              {
+                "type": "text",
+                "style": "caption",
+                "value": "Tap the tune icon to configure, bookmark to save a view, and tap a bar group to cross-filter every view (tap again to clear)."
+              },
+              {
+                "type": "report",
+                "table": "results",
+                "slicesTable": "slices",
+                "seriesColumn": "scenario",
+                "exclude": [
+                  "id",
+                  "lat",
+                  "lng"
+                ],
+                "label": "Model outputs",
+                "height": 430,
+                "linkFilter": true,
+                "config": {
+                  "mode": "chart",
+                  "xAxis": "route",
+                  "series": "scenario",
+                  "value": "value",
+                  "filters": [
+                    {
+                      "column": "metric",
+                      "query": "boardings",
+                      "condition": "equals"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "Compare scenarios"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Each bar is a scenario's % change vs Baseline on the same route — swap the base run or value column from the tune icon."
+          },
+          {
+            "type": "report",
+            "table": "results",
+            "slicesTable": "slices",
+            "seriesColumn": "scenario",
+            "exclude": [
+              "id",
+              "lat",
+              "lng"
+            ],
+            "label": "% change vs Baseline",
+            "height": 400,
+            "config": {
+              "mode": "chart",
+              "xAxis": "route",
+              "series": "scenario",
+              "value": "value",
+              "pctDiff": true,
+              "pctBase": "Baseline",
+              "filters": [
+                {
+                  "column": "metric",
+                  "query": "boardings",
+                  "condition": "equals"
+                }
+              ]
+            }
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "report",
+            "table": "results",
+            "tools": [
+              "table"
+            ],
+            "exclude": [
+              "id",
+              "lat",
+              "lng"
+            ],
+            "label": "Value by scenario",
+            "height": 180,
+            "config": {
+              "mode": "table",
+              "groupBy": "scenario",
+              "aggregations": {
+                "value": "sum"
+              }
+            }
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "By town"
+          },
+          {
+            "type": "report",
+            "table": "results",
+            "tools": [
+              "table"
+            ],
+            "exclude": [
+              "id",
+              "lat",
+              "lng"
+            ],
+            "height": 260,
+            "config": {
+              "mode": "table",
+              "groupBy": "zone",
+              "aggregations": {
+                "value": "sum"
+              }
+            }
+          },
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": "Provenance & runs — Scenarios",
+                "icon": "fact_check",
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "openApplet",
+                    "appId": "scenarios",
+                    "title": "Scenarios"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

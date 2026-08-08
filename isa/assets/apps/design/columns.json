@@ -1,0 +1,62 @@
+{
+  "boxes": [
+    { "name": "label", "type": "text", "label": "Label", "required": true },
+    { "name": "kind", "type": "text", "label": "Kind", "description": "frame · nav · button · input · text · image · list · section" },
+    { "name": "note", "type": "text", "label": "Note", "description": "Detail / intent behind this block — Claude reads this." },
+    { "name": "x", "type": "number", "label": "X" },
+    { "name": "y", "type": "number", "label": "Y" },
+    { "name": "w", "type": "number", "label": "Width" },
+    { "name": "h", "type": "number", "label": "Height" },
+    { "name": "z", "type": "number", "label": "Stack order", "description": "Paint/stack order; higher sits on top. Set by Bring forward / Send back." }
+  ],
+  "links": [
+    { "name": "from", "type": "ref", "label": "From", "refTable": "boxes" },
+    { "name": "to", "type": "ref", "label": "To", "refTable": "boxes" },
+    { "name": "label", "type": "text", "label": "On tap" }
+  ],
+  "flow_nodes": [
+    { "name": "label", "type": "text", "label": "Label", "required": true },
+    { "name": "kind", "type": "text", "label": "Kind", "description": "start · process · decision · data · end" },
+    { "name": "note", "type": "text", "label": "Note", "description": "Detail behind this step." },
+    { "name": "x", "type": "number", "label": "X" },
+    { "name": "y", "type": "number", "label": "Y" },
+    { "name": "w", "type": "number", "label": "Width" },
+    { "name": "h", "type": "number", "label": "Height" }
+  ],
+  "flow_edges": [
+    { "name": "from", "type": "ref", "label": "From", "refTable": "flow_nodes" },
+    { "name": "to", "type": "ref", "label": "To", "refTable": "flow_nodes" },
+    { "name": "label", "type": "text", "label": "Condition" }
+  ],
+  "brief": [
+    { "name": "type", "type": "text", "label": "Request type", "description": "new (build a new applet) or change (modify an existing one)" },
+    { "name": "target", "type": "text", "label": "Target app", "description": "If a change: which app (name or id)." },
+    { "name": "title", "type": "text", "label": "Title", "required": true },
+    { "name": "summary", "type": "text", "label": "Summary", "description": "In a sentence or two: what you want and why." }
+  ],
+  "features": [
+    { "name": "title", "type": "text", "label": "What", "required": true },
+    { "name": "kind", "type": "text", "label": "Kind", "description": "feature · change · fix · question · note" },
+    { "name": "detail", "type": "text", "label": "Detail" },
+    { "name": "target", "type": "text", "label": "Where", "description": "Which screen / block / area it relates to." },
+    { "name": "priority", "type": "text", "label": "Priority", "description": "must · should · nice" }
+  ],
+  "data_model": [
+    { "name": "entity", "type": "text", "label": "Entity / table", "required": true },
+    { "name": "fields", "type": "text", "label": "Fields", "description": "e.g. name, email, joined date" },
+    { "name": "relationships", "type": "text", "label": "Relationships", "description": "e.g. has many orders" },
+    { "name": "notes", "type": "text", "label": "Notes" }
+  ],
+  "notes": [
+    { "name": "title", "type": "text", "label": "Topic", "required": true },
+    { "name": "body", "type": "text", "label": "Note" },
+    { "name": "author", "type": "text", "label": "Author", "description": "you or claude" }
+  ],
+  "drawings": [
+    { "name": "title", "type": "text", "label": "Title" },
+    { "name": "strokes", "type": "text", "label": "Strokes (vector)" }
+  ],
+  "sketch": [
+    { "name": "strokes", "type": "text", "label": "Strokes" }
+  ]
+}

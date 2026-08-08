@@ -1,0 +1,12 @@
+{
+  "id": "dispatch",
+  "name": "Dispatch",
+  "category": "Productivity",
+  "icon": "forum",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_dispatch"
+  },
+  "seedVersion": "2026-08-08.rulesauto",
+  "seedContent": "initial-only"
+}

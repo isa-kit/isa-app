@@ -1,0 +1,170 @@
+{
+  "app": {
+    "title": "Codev",
+    "primaryColor": "#3F8E7B",
+    "theme": "neon",
+    "footerHeight": 64,
+    "fab": { "table": "tasks", "icon": "add", "label": "New work item" }
+  },
+  "nav": [
+    { "id": "board", "label": "Board", "icon": "view_kanban", "screen": "board" },
+    { "id": "activity", "label": "Activity", "icon": "history", "screen": "activity" },
+    { "id": "table", "label": "All", "icon": "table_rows", "screen": "table" },
+    { "id": "settings", "label": "Settings", "icon": "settings", "screen": "settings" }
+  ],
+  "screens": {
+    "board": {
+      "title": "Codev — shared work board",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "countdown",
+            "label": "Next batch pickup",
+            "intervalSeconds": 900,
+            "onZero": "picking up…"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Shared work items between you and Claude. Owner shows who's on it (you / claude), status shows where it is. Grouped by status — tap a section to collapse. This board mirrors to codev/data/ so Claude can read what you add and push updates back."
+          },
+          {
+            "type": "cards",
+            "table": "tasks",
+            "groupBy": "status",
+            "groupOrder": ["in progress", "awaiting", "current", "queue", "blocked", "done"],
+            "pulse": { "column": "status", "value": "in progress" },
+            "emptyIcon": "add_task",
+            "emptyTitle": "No work items yet",
+            "emptyText": "Add your first work item to share it with Claude on the board.",
+            "emptyAction": { "fn": "addRow", "args": { "table": "tasks" } },
+            "emptyActionLabel": "New work item",
+            "collapsible": true,
+            "search": true,
+            "searchColumns": ["title", "detail", "owner", "assigned"],
+            "title": "title",
+            "subtitle": "detail",
+            "tags": [
+              { "column": "assigned", "colors": { "you": "gray", "claude": "blue" } },
+              { "column": "status", "colors": { "queue": "gray", "current": "teal", "in progress": "amber", "awaiting": "purple", "done": "green", "blocked": "red" } }
+            ],
+            "expandable": true,
+            "expandFields": [
+              { "column": "note", "label": "Note / reply" },
+              { "column": "owner", "label": "Owner" },
+              { "column": "assigned", "label": "Assigned to" },
+              { "column": "createdBy", "label": "Created by" },
+              { "column": "completedBy", "label": "Completed by" },
+              { "column": "completedAt", "label": "Completed at" }
+            ],
+            "open": "Open",
+            "action": { "fn": "editRow" }
+          },
+          {
+            "type": "button",
+            "label": "New work item",
+            "icon": "add",
+            "action": { "fn": "addRow", "args": { "table": "tasks" } }
+          }
+        ]
+      }
+    },
+    "activity": {
+      "title": "Activity — ongoing status + history",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Live status updates AND the question/answer thread per work item — newest first, grouped by item. When a task is waiting on you it sits in the 'awaiting' status; ask or reply here to keep the chain going. Set Kind = question to ask, answer to reply, note for plain progress."
+          },
+          {
+            "type": "cards",
+            "table": "updates",
+            "groupBy": "taskTitle",
+            "sortBy": "at",
+            "sortDir": "desc",
+            "search": true,
+            "searchColumns": ["taskTitle", "message", "status", "kind"],
+            "emptyIcon": "forum",
+            "emptyTitle": "No activity yet",
+            "emptyText": "Ask a question or post an update to start the thread on a work item.",
+            "emptyAction": { "fn": "addRow", "args": { "table": "updates" } },
+            "emptyActionLabel": "Ask / reply",
+            "title": "message",
+            "subtitle": "at",
+            "tags": [
+              { "column": "kind", "colors": { "note": "gray", "question": "amber", "answer": "green" } },
+              { "column": "by", "colors": { "you": "gray", "claude": "blue" } }
+            ],
+            "expandable": true,
+            "expandFields": [
+              { "column": "taskTitle", "label": "On work item" },
+              { "column": "kind", "label": "Kind" },
+              { "column": "status", "label": "Status at time" },
+              { "column": "by", "label": "By" }
+            ],
+            "action": { "fn": "editRow" },
+            "collapsible": true
+          },
+          {
+            "type": "button",
+            "label": "Ask / reply",
+            "icon": "forum",
+            "action": { "fn": "addRow", "args": { "table": "updates" } }
+          }
+        ]
+      }
+    },
+    "settings": {
+      "title": "Codev settings",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Autobuild: when ON, Claude's watcher automatically RUNS (builds) any item you set to status=current and assign to claude — unattended, ~15s after you queue it. When OFF, it only picks up + marks 'in progress' and Claude builds on demand. Tap the row to toggle. (Off is safer; turn on when you want hands-off runs.)"
+          },
+          {
+            "type": "cards",
+            "table": "settings",
+            "title": "name",
+            "tags": [
+              { "column": "on", "colors": { "true": "green", "false": "gray" } }
+            ],
+            "action": { "fn": "editRow" }
+          }
+        ]
+      }
+    },
+    "table": {
+      "title": "All work items",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Every work item with all fields. Tap a row to edit."
+          },
+          {
+            "type": "table",
+            "table": "tasks",
+            "columns": ["title", "status", "assigned", "owner", "completedAt"],
+            "height": "fill",
+            "action": { "fn": "editRow" }
+          },
+          {
+            "type": "button",
+            "label": "New work item",
+            "icon": "add",
+            "action": { "fn": "addRow", "args": { "table": "tasks" } }
+          }
+        ]
+      }
+    }
+  }
+}

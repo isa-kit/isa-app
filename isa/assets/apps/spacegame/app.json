@@ -1,0 +1,11 @@
+{
+  "id": "spacegame",
+  "name": "Tetherfield",
+  "category": "Games",
+  "icon": "rocket_launch",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_spacegame"
+  },
+  "seedVersion": "2026-07-05.1"
+}

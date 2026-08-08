@@ -1,0 +1,255 @@
+{
+  "app": {
+    "title": "Notes",
+    "primaryColor": "#3F51B5",
+    "theme": "warmshift"
+  },
+  "nav": [
+    { "id": "files", "label": "Files", "icon": "folder", "screen": "files" },
+    { "id": "edit", "label": "Notes", "icon": "edit_note", "screen": "edit" },
+    { "id": "browse", "label": "Browse", "icon": "sticky_note", "screen": "browse" },
+    { "id": "graph", "label": "Graph", "icon": "hub", "screen": "graph" }
+  ],
+  "screens": {
+    "files": {
+      "title": "Files",
+      "body": {
+        "type": "explorer",
+        "table": "files",
+        "nameColumn": "name",
+        "orderColumn": "order",
+        "allowFolders": false,
+        "railMode": "collapsible",
+        "title": "Files",
+        "fileIcon": "folder",
+        "newFileLabel": "New file",
+        "autoSelectFirst": true,
+        "scopeTargets": [
+          { "table": "notes", "column": "file" }
+        ],
+        "detail": {
+          "type": "column",
+          "crossAxis": "stretch",
+          "children": [
+            {
+              "type": "text",
+              "style": "caption",
+              "value": "A file is its own set of notes. Pick a file on the left to open just its notes. Tap + to start a new file, and a file's ⋮ menu to rename or delete it."
+            },
+            {
+              "type": "button",
+              "label": "Open this file",
+              "icon": "edit_note",
+              "action": { "fn": "goto", "args": { "screen": "edit" } }
+            },
+            {
+              "type": "text",
+              "style": "subtitle",
+              "value": "Notes in this file"
+            },
+            {
+              "type": "table",
+              "table": "notes",
+              "columns": ["title"],
+              "action": { "fn": "editRow" }
+            }
+          ]
+        }
+      }
+    },
+    "edit": {
+      "title": "Notes",
+      "body": {
+        "type": "explorer",
+        "railMode": "collapsible",
+        "table": "notes",
+        "nameColumn": "title",
+        "kindColumn": "kind",
+        "parentColumn": "parentId",
+        "scopeColumn": "file",
+        "title": "Notes",
+        "fileIcon": "note",
+        "newFileLabel": "New note",
+        "newFolderLabel": "New folder",
+        "emptyHome": true,
+        "followSelection": true,
+        "menuActions": [
+          {
+            "label": "Export a copy…",
+            "action": { "fn": "exportFileScope" }
+          }
+        ],
+        "detail": {
+          "type": "column",
+          "bindRow": true,
+          "scroll": true,
+          "children": [
+            {
+              "type": "notepad",
+              "table": "notes",
+              "column": "body",
+              "titleColumn": "title",
+              "colorColumn": "color",
+              "toolbar": true,
+              "liveFormat": true,
+              "autoHeight": true,
+              "minLines": 12,
+              "placeholder": "Jot a note… **bold**, # headings and - bullets all work. Type [[Note title]] to link another note.",
+              "linksTable": "links",
+              "linkFromColumn": "fromId",
+              "linkToColumn": "toId",
+              "linkTitleColumn": "toTitle",
+              "linkFromTitleColumn": "fromTitle"
+            },
+            {
+              "type": "text",
+              "style": "caption",
+              "value": "Linked from"
+            },
+            {
+              "type": "cards",
+              "table": "links",
+              "filter": { "column": "toId", "value": "$rowId" },
+              "title": "fromTitle",
+              "expandable": false,
+              "hideWhenEmpty": true,
+              "action": {
+                "fn": "selectRow",
+                "args": { "table": "notes", "idColumn": "fromId" }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "browse": {
+      "title": "Browse",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Your sticky wall — pinned notes first. Tap one to open it, or colour it when you edit."
+          },
+          {
+            "type": "button",
+            "label": "Jot a note",
+            "icon": "note_add",
+            "action": { "fn": "addRow", "args": { "table": "notes" } }
+          },
+          {
+            "type": "cards",
+            "masonry": true,
+            "windowed": false,
+            "colorColumn": "color",
+            "emptyIcon": "note_add",
+            "emptyTitle": "No notes yet",
+            "emptyText": "Create your first note to get started.",
+            "emptyAction": { "fn": "addRow", "args": { "table": "notes" } },
+            "emptyActionLabel": "Jot a note",
+            "emptyActionIcon": "note_add",
+            "table": "notes",
+            "groupBy": "pinned",
+            "groupOrder": ["true", "false"],
+            "sort": { "column": "date", "dir": "desc" },
+            "title": "title",
+            "subtitle": "body",
+            "tags": [
+              { "column": "pinned", "colors": { "true": "amber", "false": "gray" } }
+            ],
+            "action": {
+              "chain": [
+                { "fn": "selectRow", "args": { "table": "notes" } },
+                { "fn": "goto", "args": { "screen": "edit" } }
+              ]
+            },
+            "swipeActions": [
+              { "label": "Pin / unpin", "icon": "push_pin", "action": { "fn": "toggleField", "args": { "column": "pinned" } } },
+              {
+                "label": "Edit",
+                "icon": "edit",
+                "action": {
+                  "chain": [
+                    { "fn": "selectRow", "args": { "table": "notes" } },
+                    { "fn": "goto", "args": { "screen": "edit" } }
+                  ]
+                }
+              },
+              "delete"
+            ],
+            "expandable": true,
+            "expandFields": [
+              { "column": "body", "label": "Note" },
+              { "column": "date", "label": "Date" }
+            ],
+            "open": "Edit note"
+          }
+        ]
+      }
+    },
+    "graph": {
+      "title": "Graph",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Every note as a bubble; a line links two notes that reference each other with [[double brackets]]. Drag to arrange, tap a bubble to open that note."
+          },
+          {
+            "type": "row",
+            "mainAxis": "end",
+            "children": [
+              {
+                "type": "button",
+                "label": "Tidy",
+                "icon": "auto_awesome_mosaic",
+                "variant": "text",
+                "action": {
+                  "fn": "bublArrange",
+                  "args": {
+                    "table": "notes",
+                    "posColumn": "pos",
+                    "bubbleSize": 52
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "segments",
+            "fill": true,
+            "segments": [
+              {
+                "label": "Graph",
+                "icon": "hub",
+                "child": {
+                  "type": "bubl",
+                  "look": "soft",
+                  "fillPhone": true,
+                  "table": "notes",
+                  "labelColumn": "title",
+                  "posColumn": "pos",
+                  "linksTable": "links",
+                  "linkFromColumn": "fromId",
+                  "linkToColumn": "toId",
+                  "autoArrange": "radial",
+                  "contain": true,
+                  "pinchZoom": true,
+                  "onTap": {
+                    "chain": [
+                      { "fn": "selectRow" },
+                      { "fn": "goto", "args": { "screen": "edit" } }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

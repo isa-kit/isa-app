@@ -1,0 +1,12 @@
+{
+  "id": "scenarios",
+  "name": "Scenarios",
+  "category": "Analytics",
+  "icon": "play_circle",
+  "color": "#2E6E5A",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_scenarios"
+  },
+  "seedVersion": "2026-07-14.1-provenance-labels"
+}

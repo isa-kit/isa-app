@@ -1,0 +1,72 @@
+{
+  "items": [
+    {
+      "name": "front",
+      "type": "text",
+      "label": "Front"
+    },
+    {
+      "name": "rank",
+      "type": "text",
+      "label": "Rank"
+    },
+    {
+      "name": "suit",
+      "type": "text",
+      "label": "Suit"
+    },
+    {
+      "name": "faceUp",
+      "type": "boolean",
+      "label": "Face up",
+      "default": false
+    },
+    {
+      "name": "holder",
+      "type": "text",
+      "label": "Holder",
+      "default": "table"
+    },
+    {
+      "name": "visibleTo",
+      "type": "text",
+      "label": "Visible to"
+    },
+    {
+      "name": "x",
+      "type": "number",
+      "label": "X",
+      "default": 0
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "label": "Y",
+      "default": 0
+    },
+    {
+      "name": "z",
+      "type": "number",
+      "label": "Z",
+      "default": 0
+    },
+    {
+      "name": "kind",
+      "type": "text",
+      "label": "Kind",
+      "default": "card"
+    }
+  ],
+  "house": [
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Game"
+    },
+    {
+      "name": "rules",
+      "type": "text",
+      "label": "Rules"
+    }
+  ]
+}

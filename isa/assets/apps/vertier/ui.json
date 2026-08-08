@@ -1,0 +1,200 @@
+{
+  "app": {
+    "title": "Vertier",
+    "primaryColor": "#7C3AED",
+    "theme": "neon"
+  },
+  "nav": [
+    {
+      "id": "discover",
+      "label": "Discover",
+      "icon": "campaign",
+      "screen": "discover"
+    }
+  ],
+  "screens": {
+    "discover": {
+      "title": "Discover",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Share what you find, what you think, an idea. It's yours \u2014 keep it to yourself or open it up to a few people or everyone. Your call, any time."
+          },
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": "Share a link",
+                "icon": "link",
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "promptLink",
+                    "collectionId": "football",
+                    "author": "You"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Write a post",
+                "icon": "edit_note",
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "promptText",
+                    "collectionId": "football",
+                    "author": "You"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Yours"
+          },
+          {
+            "type": "votefeed",
+            "table": "posts",
+            "voteTable": "postvotes",
+            "collectionColumn": "collId",
+            "renderKinds": true,
+            "kindColumn": "kind",
+            "urlColumn": "url",
+            "bodyColumn": "body",
+            "scoped": true,
+            "votable": false,
+            "groupTable": "circles",
+            "groupMemberColumn": "memberIds",
+            "onOpenLink": {
+              "fn": "openLink"
+            },
+            "onShare": {
+              "fn": "hostCall",
+              "args": {
+                "name": "shareTo"
+              }
+            },
+            "ranking": "balanced"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "From everyone"
+          },
+          {
+            "type": "votefeed",
+            "table": "creations",
+            "voteTable": "votes",
+            "collectionColumn": "collId",
+            "renderKinds": true,
+            "kindColumn": "kind",
+            "urlColumn": "url",
+            "onOpenLink": {
+              "fn": "openLink"
+            },
+            "dailyBudget": 10,
+            "ranking": "balanced",
+            "onVote": {
+              "fn": "vertierVote"
+            },
+            "commentable": true,
+            "repliesTable": "replies",
+            "onReply": {
+              "fn": "vertierReply"
+            }
+          }
+        ]
+      }
+    },
+    "compare": {
+      "title": "Compare",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Footballers \u2014 tap a column to sort, or switch to head-to-head. Figures are public, approximate and editable."
+          },
+          {
+            "type": "compare",
+            "collectionId": "football",
+            "collectionTable": "collections",
+            "itemsTable": "items"
+          }
+        ]
+      }
+    },
+    "tiers": {
+      "title": "Tier list",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Drag players from Unranked into the tiers. Your ranking saves automatically \u2014 then publish it for the community to vote on."
+          },
+          {
+            "type": "tierlist",
+            "collectionId": "football",
+            "itemsTable": "items"
+          },
+          {
+            "type": "button",
+            "label": "Publish to Discover",
+            "icon": "campaign",
+            "action": {
+              "fn": "vertierPublish",
+              "args": {
+                "table": "creations",
+                "from": "tierlists",
+                "fromId": "tl_football",
+                "snapshot": [
+                  "placements",
+                  "tiers"
+                ],
+                "values": {
+                  "type": "tier list",
+                  "collectionId": "football",
+                  "title": "My football tiers",
+                  "author": "You"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "collections": {
+      "title": "Collections",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "A collection is any set of things to compare and rank \u2014 players, phones, anything. Making your own (with your own attributes) is coming next."
+          },
+          {
+            "type": "cards",
+            "emptyIcon": "collections_bookmark",
+            "emptyTitle": "No collections yet",
+            "emptyText": "Group your saved links and posts into a collection.",
+            "table": "collections",
+            "title": "name",
+            "subtitle": "domain",
+            "search": true
+          }
+        ]
+      }
+    }
+  }
+}

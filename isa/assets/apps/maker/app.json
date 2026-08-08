@@ -1,0 +1,12 @@
+{
+  "id": "maker",
+  "name": "Maker",
+  "category": "Creative",
+  "icon": "auto_awesome",
+  "color": "#7E57C2",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_maker"
+  },
+  "seedVersion": "2026-08-01.1-flow-drawio-buttons"
+}

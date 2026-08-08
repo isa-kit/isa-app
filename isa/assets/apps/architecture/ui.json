@@ -1,0 +1,342 @@
+{
+  "app": {
+    "title": "Architecture",
+    "primaryColor": "#5C6BC0",
+    "theme": "mui"
+  },
+  "nav": [
+    {
+      "id": "workflow",
+      "label": "Claude workflow",
+      "icon": "smart_toy",
+      "screen": "workflow"
+    },
+    {
+      "id": "updates",
+      "label": "What's new",
+      "icon": "auto_awesome",
+      "screen": "updates"
+    },
+    {
+      "id": "arch",
+      "label": "Architecture",
+      "icon": "account_tree",
+      "screen": "arch"
+    },
+    {
+      "id": "classes",
+      "label": "Widgets",
+      "icon": "widgets",
+      "screen": "classes"
+    },
+    {
+      "id": "ref",
+      "label": "Reference",
+      "icon": "menu_book",
+      "screen": "ref"
+    },
+    {
+      "id": "data",
+      "label": "Packages",
+      "icon": "table_rows",
+      "screen": "data"
+    }
+  ],
+  "screens": {
+    "ref": {
+      "title": "Widget reference",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Every flutterboard widget and its options. Tap a widget name to expand its attributes; each line shows the option, its type, and (where fixed) its allowed values. Search to jump to an option."
+          },
+          {
+            "type": "cards",
+            "table": "catalog",
+            "groupBy": "widget",
+            "collapsible": true,
+            "search": true,
+            "searchColumns": [
+              "widget",
+              "attr",
+              "detail"
+            ],
+            "title": "attr",
+            "subtitle": "detail",
+            "tags": [
+              {
+                "column": "type"
+              }
+            ],
+            "expandable": false
+          }
+        ]
+      }
+    },
+    "classes": {
+      "title": "Widget map",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "flutterboard widgets and what each depends on. Blue = flutterboard-native; green = datakit (the data layer they read from); amber = imported external packages (flutter_map / maplibre). Drag a node to rearrange, tap to rename, pinch or use the zoom buttons to see it all. Arrows show the dependency chain."
+          },
+          {
+            "type": "canvas",
+            "nodesTable": "wnodes",
+            "edgesTable": "wedges",
+            "labelColumn": "label",
+            "xColumn": "x",
+            "yColumn": "y",
+            "fromColumn": "from",
+            "toColumn": "to",
+            "edgeLabelColumn": "label",
+            "colorColumn": "pkg",
+            "colors": {
+              "flutterboard": "blue",
+              "datakit": "green",
+              "imported": "amber"
+            },
+            "fillPhone": true,
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "New widget node",
+                "icon": "add",
+                "action": {
+                  "fn": "addRow",
+                  "args": {
+                    "table": "wnodes"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "New link",
+                "icon": "add",
+                "action": {
+                  "fn": "addRow",
+                  "args": {
+                    "table": "wedges"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "arch": {
+      "title": "The package stack",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "The isan package stack — each layer depends on the one below it. Drag a node to reposition, tap to rename. Add a package or dependency with the buttons below."
+          },
+          {
+            "type": "canvas",
+            "nodesTable": "nodes",
+            "edgesTable": "edges",
+            "labelColumn": "label",
+            "xColumn": "x",
+            "yColumn": "y",
+            "fromColumn": "from",
+            "toColumn": "to",
+            "fillPhone": true,
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "New package",
+                "icon": "add",
+                "action": {
+                  "fn": "addRow",
+                  "args": {
+                    "table": "nodes"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "New dependency",
+                "icon": "add",
+                "action": {
+                  "fn": "addRow",
+                  "args": {
+                    "table": "edges"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "data": {
+      "title": "Packages & dependencies",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "value": "Packages",
+            "style": "subtitle"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "One row per package in the stack. Tap to edit its name or position."
+          },
+          {
+            "type": "table",
+            "table": "nodes",
+            "columns": [
+              "label",
+              "x",
+              "y"
+            ],
+            "height": 240,
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "button",
+            "label": "New package",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "nodes"
+              }
+            }
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "text",
+            "value": "Dependencies",
+            "style": "subtitle"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Which package depends on which. Tap to change the direction or label."
+          },
+          {
+            "type": "table",
+            "table": "edges",
+            "columns": [
+              "from",
+              "to",
+              "label"
+            ],
+            "height": 240,
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "button",
+            "label": "New dependency",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "edges"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "workflow": {
+      "title": "Claude workflow",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "value": "How this app gets built"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "One task is split across many AI agents working in parallel. Every step below must pass automatic checks before it ever reaches you."
+          },
+          {
+            "type": "cards",
+            "table": "workflow",
+            "title": "title",
+            "subtitle": "detail",
+            "sortBy": "step",
+            "sortDir": "asc",
+            "expandable": false,
+            "tag": {
+              "column": "phase",
+              "colors": {
+                "Plan": "blue",
+                "Build": "amber",
+                "Ship": "green"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "updates": {
+      "title": "What's new",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "value": "What's new"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Recent features, grouped by area. Tap a card for detail, or search to find something."
+          },
+          {
+            "type": "cards",
+            "table": "updates",
+            "groupBy": "area",
+            "title": "title",
+            "subtitle": "detail",
+            "search": true,
+            "expandable": true,
+            "expandFields": [
+              {
+                "column": "detail",
+                "label": "Detail"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

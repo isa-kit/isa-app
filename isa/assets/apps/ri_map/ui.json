@@ -1,0 +1,164 @@
+{
+  "app": {
+    "title": "RI Map",
+    "primaryColor": "#1565C0",
+    "theme": "contrast"
+  },
+  "nav": [
+    {
+      "id": "map",
+      "label": "Map",
+      "icon": "map",
+      "screen": "map"
+    },
+    {
+      "id": "places",
+      "label": "Places",
+      "icon": "table_rows",
+      "screen": "places"
+    }
+  ],
+  "screens": {
+    "map": {
+      "title": "Rhode Island places",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Notable places across Rhode Island on a tile basemap. Tap a pin (or a row in the list below the map) to edit a place. In Places, use the map button at the end of a row to open it here, centered and highlighted. Tap \"Show all places\" to zoom back out. Use + New place to drop another point."
+          },
+          {
+            "type": "button",
+            "label": "Show all places",
+            "icon": "public",
+            "action": { "fn": "clearFocus", "args": { "table": "places" } }
+          },
+          {
+            "type": "map",
+            "table": "places",
+            "latColumn": "lat",
+            "lonColumn": "lon",
+            "labelColumn": "name",
+            "fillPhone": true,
+            "zoom": 9,
+            "markerIcon": "pin",
+            "fill": "blue",
+            "fillOpacity": 0.12,
+            "stroke": "blue",
+            "strokeWidth": 1.5,
+            "action": {
+              "fn": "editRow"
+            },
+            "geojson": {
+              "type": "FeatureCollection",
+              "features": [
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "RI (approx)"
+                  },
+                  "geometry": {
+                    "type": "Polygon",
+                    "coordinates": [
+                      [
+                        [
+                          -71.9,
+                          41.1
+                        ],
+                        [
+                          -71.1,
+                          41.1
+                        ],
+                        [
+                          -71.1,
+                          42.02
+                        ],
+                        [
+                          -71.9,
+                          42.02
+                        ],
+                        [
+                          -71.9,
+                          41.1
+                        ]
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "button",
+            "label": "New place",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "places",
+                "values": {
+                  "kind": "city"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "places": {
+      "title": "All places",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Every place plotted on the map. Tap a row to edit its name, kind, or coordinates."
+          },
+          {
+            "type": "table",
+            "table": "places",
+            "columns": [
+              "name",
+              "kind",
+              "lat",
+              "lon"
+            ],
+            "height": "fill",
+            "action": {
+              "fn": "editRow"
+            },
+            "openActions": [
+              {
+                "label": "Show on map",
+                "icon": "map",
+                "action": {
+                  "chain": [
+                    { "fn": "focusRow" },
+                    { "fn": "goto", "args": { "screen": "map" } }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "type": "button",
+            "label": "New place",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "places",
+                "values": {
+                  "kind": "city"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

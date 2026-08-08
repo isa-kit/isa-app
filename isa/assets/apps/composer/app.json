@@ -1,0 +1,13 @@
+{
+  "id": "composer",
+  "name": "Screen Composer",
+  "category": "Creative",
+  "icon": "dashboard_customize",
+  "color": "#3F51B5",
+  "hidden": false,
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_composer"
+  },
+  "seedVersion": "2026-07-31.compose"
+}

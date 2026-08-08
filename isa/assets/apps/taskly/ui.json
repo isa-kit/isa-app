@@ -1,0 +1,1302 @@
+{
+ "app": {
+  "title": {
+   "en": "Taskly",
+   "fr": "Taskly",
+   "de": "Taskly",
+   "es": "Taskly",
+   "it": "Taskly",
+   "sv": "Taskly",
+   "cs": "Taskly",
+   "el": "Taskly",
+   "ko": "Taskly",
+   "zh": "Taskly",
+   "ja": "Taskly"
+  },
+  "primaryColor": "#5C6BC0",
+  "theme": "mui",
+  "translatable": true,
+  "languages": [
+   "en",
+   "fr",
+   "de",
+   "es",
+   "it",
+   "sv",
+   "cs",
+   "el",
+   "ko",
+   "zh",
+   "ja"
+  ]
+ },
+ "nav": [
+  {
+   "id": "tasks",
+   "label": {
+    "en": "Tasks",
+    "fr": "Tâches",
+    "de": "Aufgaben",
+    "es": "Tareas",
+    "it": "Attività",
+    "sv": "Uppgifter",
+    "cs": "Úkoly",
+    "el": "Εργασίες",
+    "ko": "할 일",
+    "zh": "任务",
+    "ja": "タスク"
+   },
+   "icon": "account_tree",
+   "screen": "tasks"
+  },
+  {
+   "id": "board",
+   "label": {
+    "en": "Board",
+    "fr": "Tableau",
+    "de": "Board",
+    "es": "Tablero",
+    "it": "Bacheca",
+    "sv": "Tavla",
+    "cs": "Nástěnka",
+    "el": "Πίνακας",
+    "ko": "보드",
+    "zh": "看板",
+    "ja": "ボード"
+   },
+   "icon": "dashboard",
+   "screen": "board"
+  },
+  {
+   "id": "plan",
+   "label": {
+    "en": "Plan",
+    "fr": "Plan",
+    "de": "Plan",
+    "es": "Plan",
+    "it": "Piano",
+    "sv": "Plan",
+    "cs": "Plán",
+    "el": "Πλάνο",
+    "ko": "계획",
+    "zh": "计划",
+    "ja": "プラン"
+   },
+   "icon": "calendar_today",
+   "screen": "plan"
+  },
+  {
+   "id": "templates",
+   "label": "Templates",
+   "icon": "checklist",
+   "screen": "templates"
+  },
+  {
+   "id": "notes",
+   "label": {
+    "en": "Notes",
+    "fr": "Notes",
+    "de": "Notizen",
+    "es": "Notas",
+    "it": "Note",
+    "sv": "Anteckningar",
+    "cs": "Poznámky",
+    "el": "Σημειώσεις",
+    "ko": "메모",
+    "zh": "笔记",
+    "ja": "メモ"
+   },
+   "icon": "sticky_note",
+   "screen": "notes"
+  }
+ ],
+ "screens": {
+  "tasks": {
+   "title": {
+    "en": "Tasks",
+    "fr": "Tâches",
+    "de": "Aufgaben",
+    "es": "Tareas",
+    "it": "Attività",
+    "sv": "Uppgifter",
+    "cs": "Úkoly",
+    "el": "Εργασίες",
+    "ko": "할 일",
+    "zh": "任务",
+    "ja": "タスク"
+   },
+   "body": {
+    "type": "column",
+    "children": [
+     {
+      "type": "row",
+      "wrap": true,
+      "children": [
+       {
+        "type": "button",
+        "label": {
+         "en": "All",
+         "fr": "Tout",
+         "de": "Alle",
+         "es": "Todo",
+         "it": "Tutto",
+         "sv": "Alla",
+         "cs": "Vše",
+         "el": "Όλα",
+         "ko": "전체",
+         "zh": "全部",
+         "ja": "すべて"
+        },
+        "action": {
+         "fn": "setFilter",
+         "args": {
+          "table": "tasks",
+          "column": "profiles",
+          "value": ""
+         }
+        }
+       },
+       {
+        "type": "button",
+        "label": {
+         "en": "Work",
+         "fr": "Travail",
+         "de": "Arbeit",
+         "es": "Trabajo",
+         "it": "Lavoro",
+         "sv": "Arbete",
+         "cs": "Práce",
+         "el": "Δουλειά",
+         "ko": "업무",
+         "zh": "工作",
+         "ja": "仕事"
+        },
+        "action": {
+         "fn": "setFilter",
+         "args": {
+          "table": "tasks",
+          "column": "profiles",
+          "value": "p_work"
+         }
+        }
+       },
+       {
+        "type": "button",
+        "label": {
+         "en": "Personal",
+         "fr": "Personnel",
+         "de": "Privat",
+         "es": "Personal",
+         "it": "Personale",
+         "sv": "Privat",
+         "cs": "Osobní",
+         "el": "Προσωπικά",
+         "ko": "개인",
+         "zh": "个人",
+         "ja": "個人"
+        },
+        "action": {
+         "fn": "setFilter",
+         "args": {
+          "table": "tasks",
+          "column": "profiles",
+          "value": "p_home"
+         }
+        }
+       },
+       {
+        "type": "button",
+        "label": {
+         "en": "Studio",
+         "fr": "Studio",
+         "de": "Studio",
+         "es": "Estudio",
+         "it": "Studio",
+         "sv": "Studio",
+         "cs": "Studio",
+         "el": "Στούντιο",
+         "ko": "스튜디오",
+         "zh": "工作室",
+         "ja": "スタジオ"
+        },
+        "action": {
+         "fn": "setFilter",
+         "args": {
+          "table": "tasks",
+          "column": "profiles",
+          "value": "p_studio"
+         }
+        }
+       },
+       {
+        "type": "button",
+        "label": {
+         "en": "Dev",
+         "fr": "Dév",
+         "de": "Dev",
+         "es": "Dev",
+         "it": "Dev",
+         "sv": "Dev",
+         "cs": "Vývoj",
+         "el": "Ανάπτυξη",
+         "ko": "개발",
+         "zh": "开发",
+         "ja": "開発"
+        },
+        "action": {
+         "fn": "setFilter",
+         "args": {
+          "table": "tasks",
+          "column": "profiles",
+          "value": "p_dev"
+         }
+        }
+       }
+      ]
+     },
+     {
+      "type": "button",
+      "label": {
+       "en": "New task",
+       "fr": "Nouvelle tâche",
+       "de": "Neue Aufgabe",
+       "es": "Nueva tarea",
+       "it": "Nuova attività",
+       "sv": "Ny uppgift",
+       "cs": "Nový úkol",
+       "el": "Νέα εργασία",
+       "ko": "새 할 일",
+       "zh": "新建任务",
+       "ja": "新しいタスク"
+      },
+      "icon": "add",
+      "action": {
+       "fn": "addRow",
+       "args": {
+        "table": "tasks",
+        "values": {
+         "status": "todo"
+        }
+       }
+      }
+     },
+     {
+      "type": "tree",
+      "table": "tasks",
+      "parentColumn": "parentId",
+      "titleColumn": "title",
+      "statusColumn": "status",
+      "orderColumn": "order",
+      "doneValue": "done",
+      "action": {
+       "fn": "editRow"
+      },
+      "onToggle": {
+       "fn": "toggleDone"
+      },
+      "addChild": true,
+      "reorder": "hold",
+      "filterable": true
+     },
+     {
+      "type": "divider"
+     },
+     {
+      "type": "text",
+      "style": "subtitle",
+      "value": "Quick stage"
+     },
+     {
+      "type": "text",
+      "style": "caption",
+      "value": "Tap a task to advance it (To do → Doing → Done). Reaching Done stamps today’s date."
+     },
+     {
+      "type": "row",
+      "wrap": true,
+      "children": [
+       {
+        "type": "button",
+        "label": "Undo last change",
+        "icon": "undo",
+        "action": {
+         "fn": "undoData"
+        }
+       }
+      ]
+     },
+     {
+      "type": "cards",
+      "emptyIcon": "add_task",
+      "emptyTitle": "No tasks yet",
+      "emptyText": "Add your first task to get rolling.",
+      "emptyAction": {"fn": "addRow", "args": {"table": "tasks", "values": {"status": "todo"}}},
+      "emptyActionLabel": "Add task",
+      "table": "tasks",
+      "filter": {
+       "column": "status",
+       "in": [
+        "todo",
+        "doing"
+       ]
+      },
+      "title": "title",
+      "subtitle": "status",
+      "expandable": false,
+      "search": true,
+      "sortBy": "order",
+      "sortDir": "asc",
+      "action": {
+       "chain": [
+        {
+         "fn": "cycle",
+         "args": {
+          "column": "status",
+          "values": [
+           "todo",
+           "doing",
+           "done"
+          ]
+         }
+        },
+        {
+         "when": {
+          "field": "status",
+          "op": "eq",
+          "value": "done"
+         },
+         "then": {
+          "fn": "setFields",
+          "args": {
+           "set": {
+            "completed": "today"
+           }
+          }
+         },
+         "else": {
+          "fn": "setFields",
+          "args": {
+           "set": {
+            "completed": ""
+           }
+          }
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "divider"
+     },
+     {
+      "type": "row",
+      "wrap": true,
+      "children": [
+       {
+        "type": "stat",
+        "table": "tasks",
+        "filter": {
+         "column": "status",
+         "value": "todo"
+        },
+        "label": {
+         "en": "To do",
+         "fr": "À faire",
+         "de": "Zu erledigen",
+         "es": "Por hacer",
+         "it": "Da fare",
+         "sv": "Att göra",
+         "cs": "K udělání",
+         "el": "Προς εκτέλεση",
+         "ko": "할 일",
+         "zh": "待办",
+         "ja": "未着手"
+        },
+        "color": "blue"
+       },
+       {
+        "type": "stat",
+        "table": "tasks",
+        "filter": {
+         "column": "status",
+         "value": "doing"
+        },
+        "label": {
+         "en": "Doing",
+         "fr": "En cours",
+         "de": "In Arbeit",
+         "es": "En curso",
+         "it": "In corso",
+         "sv": "Pågår",
+         "cs": "Probíhá",
+         "el": "Σε εξέλιξη",
+         "ko": "진행 중",
+         "zh": "进行中",
+         "ja": "進行中"
+        },
+        "color": "amber"
+       },
+       {
+        "type": "stat",
+        "table": "tasks",
+        "filter": {
+         "column": "status",
+         "value": "done"
+        },
+        "label": {
+         "en": "Done",
+         "fr": "Terminé",
+         "de": "Erledigt",
+         "es": "Hecho",
+         "it": "Fatto",
+         "sv": "Klart",
+         "cs": "Hotovo",
+         "el": "Ολοκληρωμένα",
+         "ko": "완료",
+         "zh": "完成",
+         "ja": "完了"
+        },
+        "color": "green"
+       }
+      ]
+     },
+     {
+      "type": "progress",
+      "table": "tasks",
+      "statusColumn": "status",
+      "doneValue": "done",
+      "label": {
+       "en": "Completed",
+       "fr": "Terminées",
+       "de": "Abgeschlossen",
+       "es": "Completadas",
+       "it": "Completate",
+       "sv": "Slutförda",
+       "cs": "Dokončené",
+       "el": "Ολοκληρωμένες",
+       "ko": "완료됨",
+       "zh": "已完成",
+       "ja": "完了済み"
+      },
+      "color": "green"
+     }
+    ]
+   }
+  },
+  "board": {
+   "title": {
+    "en": "Board",
+    "fr": "Tableau",
+    "de": "Board",
+    "es": "Tablero",
+    "it": "Bacheca",
+    "sv": "Tavla",
+    "cs": "Nástěnka",
+    "el": "Πίνακας",
+    "ko": "보드",
+    "zh": "看板",
+    "ja": "ボード"
+   },
+   "body": {
+    "type": "column",
+    "children": [
+     {
+      "type": "row",
+      "wrap": true,
+      "children": [
+       {
+        "type": "button",
+        "label": {
+         "en": "All",
+         "fr": "Tout",
+         "de": "Alle",
+         "es": "Todo",
+         "it": "Tutto",
+         "sv": "Alla",
+         "cs": "Vše",
+         "el": "Όλα",
+         "ko": "전체",
+         "zh": "全部",
+         "ja": "すべて"
+        },
+        "action": {
+         "fn": "setFilter",
+         "args": {
+          "table": "tasks",
+          "column": "profiles",
+          "value": ""
+         }
+        }
+       },
+       {
+        "type": "button",
+        "label": {
+         "en": "Work",
+         "fr": "Travail",
+         "de": "Arbeit",
+         "es": "Trabajo",
+         "it": "Lavoro",
+         "sv": "Arbete",
+         "cs": "Práce",
+         "el": "Δουλειά",
+         "ko": "업무",
+         "zh": "工作",
+         "ja": "仕事"
+        },
+        "action": {
+         "fn": "setFilter",
+         "args": {
+          "table": "tasks",
+          "column": "profiles",
+          "value": "p_work"
+         }
+        }
+       },
+       {
+        "type": "button",
+        "label": {
+         "en": "Personal",
+         "fr": "Personnel",
+         "de": "Privat",
+         "es": "Personal",
+         "it": "Personale",
+         "sv": "Privat",
+         "cs": "Osobní",
+         "el": "Προσωπικά",
+         "ko": "개인",
+         "zh": "个人",
+         "ja": "個人"
+        },
+        "action": {
+         "fn": "setFilter",
+         "args": {
+          "table": "tasks",
+          "column": "profiles",
+          "value": "p_home"
+         }
+        }
+       },
+       {
+        "type": "button",
+        "label": {
+         "en": "Studio",
+         "fr": "Studio",
+         "de": "Studio",
+         "es": "Estudio",
+         "it": "Studio",
+         "sv": "Studio",
+         "cs": "Studio",
+         "el": "Στούντιο",
+         "ko": "스튜디오",
+         "zh": "工作室",
+         "ja": "スタジオ"
+        },
+        "action": {
+         "fn": "setFilter",
+         "args": {
+          "table": "tasks",
+          "column": "profiles",
+          "value": "p_studio"
+         }
+        }
+       },
+       {
+        "type": "button",
+        "label": {
+         "en": "Dev",
+         "fr": "Dév",
+         "de": "Dev",
+         "es": "Dev",
+         "it": "Dev",
+         "sv": "Dev",
+         "cs": "Vývoj",
+         "el": "Ανάπτυξη",
+         "ko": "개발",
+         "zh": "开发",
+         "ja": "開発"
+        },
+        "action": {
+         "fn": "setFilter",
+         "args": {
+          "table": "tasks",
+          "column": "profiles",
+          "value": "p_dev"
+         }
+        }
+       }
+      ]
+     },
+     {
+      "type": "buckets",
+      "table": "tasks",
+      "groupColumn": "status",
+      "groupOrder": [
+       "doing",
+       "todo",
+       "done"
+      ],
+      "titleColumn": "title",
+      "statusColumn": "status",
+      "doneValue": "done",
+      "subtitleColumns": [
+       "due"
+      ],
+      "action": {
+       "fn": "editRow"
+      }
+     },
+     {
+      "type": "divider"
+     },
+     {
+      "type": "text",
+      "style": "subtitle",
+      "value": "Quick stage"
+     },
+     {
+      "type": "text",
+      "style": "caption",
+      "value": "Tap a task to advance it (To do → Doing → Done). Reaching Done stamps today’s date and drops it off this list."
+     },
+     {
+      "type": "row",
+      "wrap": true,
+      "children": [
+       {
+        "type": "button",
+        "label": "Undo last change",
+        "icon": "undo",
+        "action": {
+         "fn": "undoData"
+        }
+       }
+      ]
+     },
+     {
+      "type": "cards",
+      "table": "tasks",
+      "filter": {
+       "column": "status",
+       "in": [
+        "todo",
+        "doing"
+       ]
+      },
+      "title": "title",
+      "subtitle": "status",
+      "expandable": false,
+      "search": true,
+      "sortBy": "order",
+      "sortDir": "asc",
+      "action": {
+       "chain": [
+        {
+         "fn": "cycle",
+         "args": {
+          "column": "status",
+          "values": [
+           "todo",
+           "doing",
+           "done"
+          ]
+         }
+        },
+        {
+         "when": {
+          "field": "status",
+          "op": "eq",
+          "value": "done"
+         },
+         "then": {
+          "fn": "setFields",
+          "args": {
+           "set": {
+            "completed": "today"
+           }
+          }
+         },
+         "else": {
+          "fn": "setFields",
+          "args": {
+           "set": {
+            "completed": ""
+           }
+          }
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "divider"
+     },
+     {
+      "type": "text",
+      "style": "subtitle",
+      "value": {
+       "en": "Time tracking",
+       "fr": "Suivi du temps",
+       "de": "Zeiterfassung",
+       "es": "Registro de tiempo",
+       "it": "Tracciamento tempo",
+       "sv": "Tidsspårning",
+       "cs": "Sledování času",
+       "el": "Καταγραφή χρόνου",
+       "ko": "시간 추적",
+       "zh": "时间跟踪",
+       "ja": "時間記録"
+      }
+     },
+     {
+      "type": "text",
+      "style": "caption",
+      "value": {
+       "en": "Tap a task below to START its timer; tap again to STOP and log the minutes.",
+       "fr": "Touchez une tâche ci-dessous pour DÉMARRER son minuteur ; touchez à nouveau pour ARRÊTER et enregistrer.",
+       "de": "Aufgabe unten antippen, um den Timer zu STARTEN; erneut antippen zum STOPPEN und Erfassen.",
+       "es": "Toca una tarea abajo para INICIAR su temporizador; toca de nuevo para PARAR y registrar.",
+       "it": "Tocca un'attività qui sotto per AVVIARE il timer; tocca di nuovo per FERMARE e registrare.",
+       "sv": "Tryck på en uppgift nedan för att STARTA dess timer; tryck igen för att STOPPA och logga.",
+       "cs": "Klepnutím na úkol níže SPUSTÍŠ jeho stopky; dalším klepnutím je ZASTAVÍŠ a čas se uloží.",
+       "el": "Πάτησε μια εργασία παρακάτω για ΕΝΑΡΞΗ χρονομέτρου· πάτησε ξανά για ΔΙΑΚΟΠΗ και καταγραφή.",
+       "ko": "아래 할 일을 누르면 타이머가 시작되고, 다시 누르면 정지되어 기록됩니다.",
+       "zh": "点击下方任务开始计时；再次点击停止并记录用时。",
+       "ja": "下のタスクをタップしてタイマーを開始します。もう一度タップすると停止し、時間を記録します。"
+      }
+     },
+     {
+      "type": "cards",
+      "table": "tasks",
+      "filter": {
+       "column": "status",
+       "value": "doing"
+      },
+      "title": "title",
+      "subtitle": "timerStart"
+     },
+     {
+      "type": "row",
+      "wrap": true,
+      "children": [
+       {
+        "type": "stat",
+        "table": "tasks",
+        "agg": "sum",
+        "valueColumn": "actualMins",
+        "label": {
+         "en": "Tracked",
+         "fr": "Suivi",
+         "de": "Erfasst",
+         "es": "Registrado",
+         "it": "Tracciato",
+         "sv": "Spårat",
+         "cs": "Zaznamenáno",
+         "el": "Καταγεγραμμένος",
+         "ko": "기록됨",
+         "zh": "已记录",
+         "ja": "記録済み"
+        },
+        "unit": "min",
+        "color": "teal"
+       },
+       {
+        "type": "stat",
+        "table": "tasks",
+        "agg": "sum",
+        "valueColumn": "estimateMins",
+        "label": {
+         "en": "Estimated",
+         "fr": "Estimé",
+         "de": "Geschätzt",
+         "es": "Estimado",
+         "it": "Stimato",
+         "sv": "Uppskattat",
+         "cs": "Odhadnuto",
+         "el": "Εκτιμώμενος",
+         "ko": "예상",
+         "zh": "预计",
+         "ja": "見積もり"
+        },
+        "unit": "min",
+        "color": "gray"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "plan": {
+   "title": {
+    "en": "Plan",
+    "fr": "Plan",
+    "de": "Plan",
+    "es": "Plan",
+    "it": "Piano",
+    "sv": "Plan",
+    "cs": "Plán",
+    "el": "Πλάνο",
+    "ko": "계획",
+    "zh": "计划",
+    "ja": "プラン"
+   },
+   "body": {
+    "type": "segments",
+    "segments": [
+     {
+      "label": {
+       "en": "Agenda",
+       "fr": "Agenda",
+       "de": "Agenda",
+       "es": "Agenda",
+       "it": "Agenda",
+       "sv": "Agenda",
+       "cs": "Agenda",
+       "el": "Ατζέντα",
+       "ko": "일정",
+       "zh": "日程",
+       "ja": "予定"
+      },
+      "child": {
+       "type": "column",
+       "children": [
+        {
+         "type": "agenda",
+         "table": "tasks",
+         "filterable": true,
+         "titleColumn": "title",
+         "statusColumn": "status",
+         "doneValue": "done",
+         "dateColumns": [
+          "scheduledStart",
+          "due"
+         ],
+         "action": {
+          "fn": "editRow"
+         },
+         "onToggle": {
+          "fn": "toggleDone"
+         }
+        },
+        {
+         "type": "button",
+         "label": {
+          "en": "Export calendar (.ics)",
+          "fr": "Exporter le calendrier (.ics)",
+          "de": "Kalender exportieren (.ics)",
+          "es": "Exportar calendario (.ics)",
+          "it": "Esporta calendario (.ics)",
+          "sv": "Exportera kalender (.ics)",
+          "cs": "Exportovat kalendář (.ics)",
+          "el": "Εξαγωγή ημερολογίου (.ics)",
+          "ko": "캘린더 내보내기 (.ics)",
+          "zh": "导出日历 (.ics)",
+          "ja": "カレンダーを書き出す (.ics)"
+         },
+         "icon": "event",
+         "action": {
+          "fn": "exportIcs",
+          "args": {
+           "table": "tasks"
+          }
+         }
+        },
+        {
+         "type": "button",
+         "label": {
+          "en": "Export all data (JSON)",
+          "fr": "Exporter toutes les données (JSON)",
+          "de": "Alle Daten exportieren (JSON)",
+          "es": "Exportar todos los datos (JSON)",
+          "it": "Esporta tutti i dati (JSON)",
+          "sv": "Exportera alla data (JSON)",
+          "cs": "Exportovat všechna data (JSON)",
+          "el": "Εξαγωγή όλων των δεδομένων (JSON)",
+          "ko": "모든 데이터 내보내기 (JSON)",
+          "zh": "导出全部数据 (JSON)",
+          "ja": "すべてのデータを書き出す (JSON)"
+         },
+         "icon": "download",
+         "action": {
+          "fn": "exportData",
+          "args": {
+           "format": "json",
+           "pretty": true
+          }
+         }
+        },
+        {
+         "type": "button",
+         "label": {
+          "en": "Export tasks (CSV)",
+          "fr": "Exporter les tâches (CSV)",
+          "de": "Aufgaben exportieren (CSV)",
+          "es": "Exportar tareas (CSV)",
+          "it": "Esporta attività (CSV)",
+          "sv": "Exportera uppgifter (CSV)",
+          "cs": "Exportovat úkoly (CSV)",
+          "el": "Εξαγωγή εργασιών (CSV)",
+          "ko": "작업 내보내기 (CSV)",
+          "zh": "导出任务 (CSV)",
+          "ja": "タスクを書き出す (CSV)"
+         },
+         "icon": "table",
+         "action": {
+          "fn": "exportData",
+          "args": {
+           "format": "csv",
+           "table": "tasks"
+          }
+         }
+        }
+       ]
+      }
+     },
+     {
+      "label": {
+       "en": "Calendar",
+       "fr": "Calendrier",
+       "de": "Kalender",
+       "es": "Calendario",
+       "it": "Calendario",
+       "sv": "Kalender",
+       "cs": "Kalendář",
+       "el": "Ημερολόγιο",
+       "ko": "캘린더",
+       "zh": "日历",
+       "ja": "カレンダー"
+      },
+      "child": {
+       "type": "calendar",
+       "table": "tasks",
+       "titleColumn": "title",
+       "statusColumn": "status",
+       "doneValue": "done",
+       "dateColumns": [
+        "scheduledStart",
+        "due"
+       ],
+       "action": {
+        "fn": "editRow"
+       }
+      }
+     },
+     {
+      "label": "Gantt",
+      "child": {
+       "type": "gantt",
+       "table": "tasks",
+       "label": {
+        "en": "All scheduled tasks",
+        "fr": "Toutes les tâches planifiées",
+        "de": "Alle geplanten Aufgaben",
+        "es": "Todas las tareas programadas",
+        "it": "Tutte le attività programmate",
+        "sv": "Alla schemalagda uppgifter",
+        "cs": "Všechny naplánované úkoly",
+        "el": "Όλες οι προγραμματισμένες εργασίες",
+        "ko": "모든 예정된 할 일",
+        "zh": "所有已排期任务",
+        "ja": "すべての予定タスク"
+       },
+       "fillPhone": true
+      }
+     }
+    ]
+   }
+  },
+  "notes": {
+   "title": {
+    "en": "Notes",
+    "fr": "Notes",
+    "de": "Notizen",
+    "es": "Notas",
+    "it": "Note",
+    "sv": "Anteckningar",
+    "cs": "Poznámky",
+    "el": "Σημειώσεις",
+    "ko": "메모",
+    "zh": "笔记",
+    "ja": "メモ"
+   },
+   "body": {
+    "type": "segments",
+    "segments": [
+     {
+      "label": {
+       "en": "Notes",
+       "fr": "Notes",
+       "de": "Notizen",
+       "es": "Notas",
+       "it": "Note",
+       "sv": "Anteckningar",
+       "cs": "Poznámky",
+       "el": "Σημειώσεις",
+       "ko": "메모",
+       "zh": "笔记",
+       "ja": "メモ"
+      },
+      "child": {
+       "type": "column",
+       "children": [
+        {
+         "type": "button",
+         "label": {
+          "en": "New note",
+          "fr": "Nouvelle note",
+          "de": "Neue Notiz",
+          "es": "Nueva nota",
+          "it": "Nuova nota",
+          "sv": "Ny anteckning",
+          "cs": "Nová poznámka",
+          "el": "Νέα σημείωση",
+          "ko": "새 메모",
+          "zh": "新建笔记",
+          "ja": "新しいメモ"
+         },
+         "icon": "add",
+         "action": {
+          "fn": "addRow",
+          "args": {
+           "table": "notes",
+           "values": {
+            "date": "2026-06-05"
+           }
+          }
+         }
+        },
+        {
+         "type": "cards",
+         "emptyIcon": "note_add",
+         "emptyTitle": "No notes yet",
+         "emptyText": "Jot a note alongside your tasks.",
+         "emptyAction": {"fn": "addRow", "args": {"table": "notes", "values": {"date": "2026-06-05"}}},
+         "emptyActionLabel": "New note",
+         "table": "notes",
+         "groupBy": "pinned",
+         "groupOrder": [
+          "true",
+          "false"
+         ],
+         "sort": {
+          "column": "date",
+          "dir": "desc"
+         },
+         "title": "title",
+         "subtitle": "body",
+         "tags": [
+          {
+           "column": "pinned",
+           "colors": {
+            "true": "amber",
+            "false": "gray"
+           }
+          },
+          {
+           "column": "tags"
+          }
+         ],
+         "expandable": true,
+         "expandFields": [
+          {
+           "column": "body",
+           "label": {
+            "en": "Note",
+            "fr": "Note",
+            "de": "Notiz",
+            "es": "Nota",
+            "it": "Nota",
+            "sv": "Anteckning",
+            "cs": "Poznámka",
+            "el": "Σημείωση",
+            "ko": "메모",
+            "zh": "笔记",
+            "ja": "メモ"
+           }
+          },
+          {
+           "column": "tags",
+           "label": {
+            "en": "Tags",
+            "fr": "Étiquettes",
+            "de": "Tags",
+            "es": "Etiquetas",
+            "it": "Tag",
+            "sv": "Taggar",
+            "cs": "Štítky",
+            "el": "Ετικέτες",
+            "ko": "태그",
+            "zh": "标签",
+            "ja": "タグ"
+           }
+          },
+          {
+           "column": "date",
+           "label": {
+            "en": "Date",
+            "fr": "Date",
+            "de": "Datum",
+            "es": "Fecha",
+            "it": "Data",
+            "sv": "Datum",
+            "cs": "Datum",
+            "el": "Ημερομηνία",
+            "ko": "날짜",
+            "zh": "日期",
+            "ja": "日付"
+           }
+          }
+         ],
+         "open": {
+          "en": "Edit note",
+          "fr": "Modifier la note",
+          "de": "Notiz bearbeiten",
+          "es": "Editar nota",
+          "it": "Modifica nota",
+          "sv": "Redigera anteckning",
+          "cs": "Upravit poznámku",
+          "el": "Επεξεργασία σημείωσης",
+          "ko": "메모 편집",
+          "zh": "编辑笔记",
+          "ja": "メモを編集"
+         },
+         "action": {
+          "fn": "editRow"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "label": {
+       "en": "Profiles",
+       "fr": "Profils",
+       "de": "Profile",
+       "es": "Perfiles",
+       "it": "Profili",
+       "sv": "Profiler",
+       "cs": "Profily",
+       "el": "Προφίλ",
+       "ko": "프로필",
+       "zh": "档案",
+       "ja": "プロフィール"
+      },
+      "child": {
+       "type": "column",
+       "children": [
+        {
+         "type": "button",
+         "label": {
+          "en": "New profile",
+          "fr": "Nouveau profil",
+          "de": "Neues Profil",
+          "es": "Nuevo perfil",
+          "it": "Nuovo profilo",
+          "sv": "Ny profil",
+          "cs": "Nový profil",
+          "el": "Νέο προφίλ",
+          "ko": "새 프로필",
+          "zh": "新建档案",
+          "ja": "新しいプロフィール"
+         },
+         "icon": "add",
+         "action": {
+          "fn": "addRow",
+          "args": {
+           "table": "profiles"
+          }
+         }
+        },
+        {
+         "type": "list",
+         "table": "profiles",
+         "titleColumn": "name",
+         "metaColumns": [
+          "color"
+         ],
+         "sortColumn": "name",
+         "sortDir": "asc",
+         "action": {
+          "fn": "editRow"
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  "templates": {
+   "title": "Templates",
+   "body": {
+    "type": "column",
+    "children": [
+     {
+      "type": "text",
+      "style": "caption",
+      "value": "Tap a template below to copy it (and all its steps) into your Tasks."
+     },
+     {
+      "type": "cards",
+      "emptyIcon": "bookmark_add",
+      "emptyTitle": "No templates yet",
+      "emptyText": "Save a task template to reuse later.",
+      "emptyAction": {"fn": "addRow", "args": {"table": "templates"}},
+      "emptyActionLabel": "New template",
+      "table": "templates",
+      "filter": {
+       "column": "parentId",
+       "empty": true
+      },
+      "title": "title",
+      "expandable": false,
+      "action": {
+       "fn": "applyTemplate",
+       "args": {
+        "toTable": "tasks",
+        "set": {
+         "status": "todo"
+        }
+       }
+      }
+     },
+     {
+      "type": "divider"
+     },
+     {
+      "type": "text",
+      "style": "subtitle",
+      "value": "Build templates"
+     },
+     {
+      "type": "text",
+      "style": "caption",
+      "value": "Add a template, then tap it to add steps underneath."
+     },
+     {
+      "type": "button",
+      "label": "New template",
+      "icon": "add",
+      "action": {
+       "fn": "addRow",
+       "args": {
+        "table": "templates"
+       }
+      }
+     },
+     {
+      "type": "tree",
+      "table": "templates",
+      "parentColumn": "parentId",
+      "titleColumn": "title",
+      "orderColumn": "order",
+      "action": {
+       "fn": "editRow"
+      },
+      "addChild": true,
+      "reorder": "hold"
+     }
+    ]
+   }
+  }
+ }
+}

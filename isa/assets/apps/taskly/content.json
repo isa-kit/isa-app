@@ -1,0 +1,3754 @@
+{
+  "tasks": [
+    {
+      "id": "r_weekly_review",
+      "title": "Weekly review (repeats weekly)",
+      "status": "todo",
+      "due": "2026-06-19",
+      "repeat": "w:1",
+      "profiles": [
+        "p_work"
+      ],
+      "createdAt": "2026-06-15",
+      "order": 5
+    },
+    {
+      "id": "r1_1780441041542",
+      "title": "taskly",
+      "status": "todo",
+      "order": 10,
+      "profiles": [
+        "p_work"
+      ],
+      "createdAt": "2026-06-02"
+    },
+    {
+      "id": "r2_1780441069293",
+      "parentId": "r1_1780441041542",
+      "title": "press hold to select from list",
+      "status": "todo",
+      "createdAt": "2026-06-02"
+    },
+    {
+      "id": "r3_1780441107163",
+      "parentId": "r1_1780441041542",
+      "title": "add sun tasks from selected utem",
+      "status": "todo",
+      "createdAt": "2026-06-02"
+    },
+    {
+      "id": "r4_1780441142463",
+      "parentId": "r1_1780441041542",
+      "title": "click drag selected items to tasks to make subtasks",
+      "status": "todo",
+      "createdAt": "2026-06-02"
+    },
+    {
+      "id": "r9_1780444183745",
+      "parentId": "r1_1780441041542",
+      "title": "sub task adding parent task being very lengthy and hard to manage - mulyi yoer task parent nestle options may help - multitude task parent selection options that expands as needed based on existence of child tasks",
+      "status": "todo",
+      "createdAt": "2026-06-02"
+    },
+    {
+      "id": "r5_1780441203789",
+      "title": "isant",
+      "status": "todo",
+      "order": 20,
+      "profiles": [
+        "p_studio"
+      ],
+      "createdAt": "2026-06-02"
+    },
+    {
+      "id": "r6_1780441330167",
+      "title": "or issant",
+      "status": "todo",
+      "order": 70,
+      "createdAt": "2026-06-02"
+    },
+    {
+      "id": "r7_1780441361370",
+      "parentId": "r5_1780441203789",
+      "title": "could functions change after coded or new functions added",
+      "status": "todo",
+      "createdAt": "2026-06-02"
+    },
+    {
+      "id": "r8_1780444108584",
+      "parentId": "r5_1780441203789",
+      "title": "overflow pixel issue handling better",
+      "status": "todo",
+      "createdAt": "2026-06-02"
+    },
+    {
+      "id": "r10_1780444232682",
+      "title": "-features-",
+      "status": "todo",
+      "order": 60,
+      "createdAt": "2026-06-02"
+    },
+    {
+      "id": "r11_1780444241939",
+      "title": "app ideas",
+      "status": "todo",
+      "order": 90,
+      "profiles": [
+        "p_home"
+      ],
+      "createdAt": "2026-06-02"
+    },
+    {
+      "id": "r12_1780444256161",
+      "parentId": "r11_1780444241939",
+      "title": "relisted re inventory",
+      "status": "todo",
+      "order": 10,
+      "createdAt": "2026-06-02"
+    },
+    {
+      "id": "r13_1780444264758",
+      "parentId": "r11_1780444241939",
+      "title": "frame of mind",
+      "status": "todo",
+      "order": 20,
+      "createdAt": "2026-06-02"
+    },
+    {
+      "id": "r14_1780444309968",
+      "title": "todo app",
+      "status": "todo",
+      "order": 80,
+      "createdAt": "2026-06-02"
+    },
+    {
+      "id": "r15_1780444340287",
+      "parentId": "r11_1780444241939",
+      "title": "dashboard for maps for events - possibly coming with events list for todo",
+      "status": "todo",
+      "order": 30,
+      "createdAt": "2026-06-02"
+    },
+    {
+      "id": "r16_1780444798510",
+      "parentId": "r11_1780444241939",
+      "title": "running app that imports from other apps",
+      "status": "todo",
+      "order": 40,
+      "createdAt": "2026-06-02"
+    },
+    {
+      "id": "r21_1780455526763",
+      "parentId": "r11_1780444241939",
+      "title": "cooking based on recipies in pantry - leverage server call (my local server with local SLM running)",
+      "status": "todo",
+      "order": 60,
+      "createdAt": "2026-06-02"
+    },
+    {
+      "id": "r17_1780444808171",
+      "title": "ideas",
+      "status": "todo",
+      "order": 100,
+      "profiles": [
+        "p_work",
+        "p_home"
+      ],
+      "createdAt": "2026-06-02"
+    },
+    {
+      "id": "r18_1780444830924",
+      "title": "identity recorded app on blackchain",
+      "status": "todo",
+      "order": 40,
+      "createdAt": "2026-06-02"
+    },
+    {
+      "id": "r19_1780444907432",
+      "title": "blockchain based schedule aggregator",
+      "status": "todo",
+      "order": 50,
+      "createdAt": "2026-06-02"
+    },
+    {
+      "id": "r20_1780445070476",
+      "title": "run code and allow code to run on a server that I host for a fee or allow users to connect to their own servers",
+      "status": "todo",
+      "order": 30,
+      "createdAt": "2026-06-02"
+    },
+    {
+      "parentId": "r1_1780441041542",
+      "title": "day night and foreign language set",
+      "status": "todo",
+      "id": "r22_1780472957600",
+      "createdAt": "2026-06-03"
+    },
+    {
+      "parentId": "r26_1780501114153",
+      "title": "contact dancing places email",
+      "status": "todo",
+      "id": "r23_1780472983646",
+      "order": 50,
+      "createdAt": "2026-06-03"
+    },
+    {
+      "parentId": "r11_1780444241939",
+      "title": "auto update live web apps for review from claude",
+      "status": "todo",
+      "id": "r24_1780501057493",
+      "order": 70,
+      "createdAt": "2026-06-03"
+    },
+    {
+      "title": "organisation",
+      "status": "todo",
+      "id": "r25_1780501092060",
+      "createdAt": "2026-06-03"
+    },
+    {
+      "title": "things to do",
+      "status": "todo",
+      "id": "r26_1780501114153",
+      "createdAt": "2026-06-03"
+    },
+    {
+      "parentId": "r25_1780501092060",
+      "title": "a log sheet usable by remote vs local for organization one place recording what's happening for all - this is currently multiple files I believe - ways to timestamp past takss current takss future tasks",
+      "status": "todo",
+      "id": "r27_1780501177667",
+      "createdAt": "2026-06-03"
+    },
+    {
+      "parentId": "r25_1780501092060",
+      "title": "ways to view past tasks current tasks and future tasks - maybe in taskly app auto updatable",
+      "status": "todo",
+      "id": "r28_1780501246281",
+      "createdAt": "2026-06-03"
+    },
+    {
+      "parentId": "r25_1780501092060",
+      "title": "organizational items view improvement one way or the other",
+      "status": "todo",
+      "id": "r29_1780501274023",
+      "createdAt": "2026-06-03"
+    },
+    {
+      "parentId": "r1_1780441041542",
+      "title": "how to best sync taskly app contents from phone to online?",
+      "status": "todo",
+      "id": "r30_1780503529391",
+      "createdAt": "2026-06-03"
+    },
+    {
+      "id": "wb-t1",
+      "title": "DataType + value coercion",
+      "status": "done",
+      "completed": "2026-05-20",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t2",
+      "title": "Record container",
+      "status": "done",
+      "completed": "2026-05-20",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t3",
+      "title": "Relative date shorthand (0,3d,-1m,3y)",
+      "status": "done",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t4",
+      "title": "Schema / ColumnSpec",
+      "status": "done",
+      "completed": "2026-05-20",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t5",
+      "title": "DataTable / Database / query",
+      "status": "done",
+      "completed": "2026-05-20",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t6",
+      "title": "DbBundle import + export",
+      "status": "done",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t7",
+      "title": "UUID v4 keys",
+      "status": "done",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t8",
+      "title": "Multi-value (ref+multi) columns",
+      "status": "done",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t9",
+      "title": "seedVersion + ui in bundle",
+      "status": "done",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t10",
+      "title": "Store registry",
+      "status": "done",
+      "completed": "2026-05-20",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t11",
+      "title": "RestSource",
+      "status": "done",
+      "completed": "2026-05-20",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t12",
+      "title": "buildSource + load/unload lifecycle",
+      "status": "done",
+      "completed": "2026-05-20",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t13",
+      "title": "BoardState mutation chokepoint",
+      "status": "done",
+      "completed": "2026-05-20",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t14",
+      "title": "FunctionRegistry actions",
+      "status": "done",
+      "completed": "2026-05-20",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t15",
+      "title": "JSON renderer nodes",
+      "status": "done",
+      "completed": "2026-05-20",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t16",
+      "title": "Branching undo / redo history",
+      "status": "done",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t17",
+      "title": "Canvas + diagram node",
+      "status": "done",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t18",
+      "title": "Structured editor v2",
+      "status": "done",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t19",
+      "title": "Generic record editor (multi-ref)",
+      "status": "done",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t20",
+      "title": "Map + glmap nodes",
+      "status": "done",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t21",
+      "title": "SLM connector",
+      "status": "done",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t22",
+      "title": "App launcher loading JSON apps",
+      "status": "done",
+      "completed": "2026-05-20",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t23",
+      "title": "Per-app store + web routing",
+      "status": "done",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t24",
+      "title": "db.loadAll prepopulation fix",
+      "status": "done",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t25",
+      "title": "Per-app export / import",
+      "status": "done",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t26",
+      "title": "seedVersion reseed",
+      "status": "done",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t27",
+      "title": "macOS network entitlements",
+      "status": "done",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t28",
+      "title": "30 tasks + 3 notes seeded",
+      "status": "done",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t29",
+      "title": "Many-to-many profiles",
+      "status": "done",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t30",
+      "title": "toggleDone stamps completion",
+      "status": "done",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t31",
+      "title": "13 seeded fridge items",
+      "status": "done",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t32",
+      "title": "Recipe table",
+      "status": "done",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t33",
+      "title": "SLM recipe button (working)",
+      "status": "done",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t34",
+      "title": "Blue Bikes station map + tags",
+      "status": "done",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t35",
+      "title": "GBFS source",
+      "status": "done",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t36",
+      "title": "Diagram applet",
+      "status": "done",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t37",
+      "title": "Marquee select, edges, snapping",
+      "status": "done",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t38",
+      "title": "Copy / paste, duplicate / delete",
+      "status": "done",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t39",
+      "title": "ER diagram of all tables",
+      "status": "done",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t40",
+      "title": "Recipes app",
+      "status": "done",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t41",
+      "title": "Notes app",
+      "status": "done",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t42",
+      "title": "Package + architecture diagram",
+      "status": "done",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t43",
+      "title": "Census-block boundaries (geojson)",
+      "status": "done",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t44",
+      "title": "Journaling: people, events, tags",
+      "status": "done",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t45",
+      "title": "Event viewer",
+      "status": "done",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t46",
+      "title": "Workboard: 10 rounds + 32 tasks seeded",
+      "status": "done",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t47",
+      "title": "Drive auto push / pull",
+      "status": "done",
+      "completed": "2026-05-20",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t48",
+      "title": "Merge-by-id import",
+      "status": "done",
+      "completed": "2026-05-20",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t49",
+      "title": "CloudSync service + Settings toggle",
+      "status": "done",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t50",
+      "title": "Mesh P0 decision (Nostr + LWW)",
+      "status": "done",
+      "completed": "2026-06-04",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t51",
+      "title": "Mesh P1 merge core (per-field LWW)",
+      "status": "done",
+      "completed": "2026-06-04",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t52",
+      "title": "Mesh P2 scopes / slices",
+      "status": "done",
+      "completed": "2026-06-04",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t53",
+      "title": "Mesh P3 identity (stub keypair)",
+      "status": "done",
+      "completed": "2026-06-04",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t54",
+      "title": "Mesh P4 transport + node touch flow",
+      "status": "done",
+      "completed": "2026-06-04",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t55",
+      "title": "flutter_map + maplibre engines",
+      "status": "done",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t56",
+      "title": "Structured editor v2 tiers/reorder/tree",
+      "status": "done",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t57",
+      "title": "Calendar node",
+      "status": "doing",
+      "notes": "Calendar node: a JSON view that places rows on a month grid by date. Reusable across apps (tasks/events).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t58",
+      "title": "Per-app launcher icons",
+      "status": "doing",
+      "notes": "Per-app launcher icons: give each app on the home launcher its own distinct tile icon.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t59",
+      "title": "Events: decide where events sync from",
+      "status": "doing",
+      "notes": "Events data source. DECIDED: .ics calendar feeds + optional login to account calendars (Google/Apple).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t60",
+      "title": "Align workboard status to tiers",
+      "status": "doing",
+      "notes": "Map task status to shared priority tiers. OVERLAPS the new priority model — merge with the task-model task (see d10).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t61",
+      "title": "On-demand registry sync function",
+      "status": "todo",
+      "notes": "Pull-on-demand sync action in dbkit's store registry (refresh a source when asked, not auto). Reused by Drive sync.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t62",
+      "title": "Parent picker for nested rows",
+      "status": "todo",
+      "notes": "Record-editor control to pick/change a row's parent, so subtasks can be nested from the UI.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t63",
+      "title": "List overflow / scroll fix",
+      "status": "todo",
+      "notes": "Fix long lists overflowing / not scrolling within their container.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t64",
+      "title": "Collapse old-done in list view",
+      "status": "todo",
+      "notes": "Auto-collapse old completed items in list views to cut clutter.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t65",
+      "title": "Theme / locale picker",
+      "status": "doing",
+      "notes": "The visible half of Language-next: settings UI to pick app theme + locale. Pairs with 51eadf8b + t80. Effort: M.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t66",
+      "title": "Per-app Drive sync",
+      "status": "todo",
+      "notes": "Per-app cloud sync via Google Drive. BLOCKED: needs per-app OAuth, awkward on desktop/isan (see d12).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t67",
+      "title": "Ship Taskly as seeded bundle",
+      "status": "todo",
+      "notes": "Package Taskly as a DbBundle pre-loaded with starter tasks/notes so it opens populated. Decide starter content.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t68",
+      "title": "Open schema map into diagram",
+      "status": "todo",
+      "notes": "Open the auto-generated ER diagram (schema_map app) inside the editable diagram applet to rearrange/annotate.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t69",
+      "title": "Table node with dropdowns",
+      "status": "todo",
+      "notes": "Finish the table view's inline editing: enum/ref cells edit via dropdowns.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t70",
+      "title": "Devgraph layout mode",
+      "status": "todo",
+      "notes": "Canvas 'graph' layout deriving node positions from track lanes + milestone columns (swimlane timeline).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t71",
+      "title": "Complex filtering / analytics",
+      "status": "todo",
+      "notes": "Advanced filtering + analytics (likely a hosted/paid feature).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t72",
+      "title": "ICS sync source",
+      "status": "todo",
+      "notes": "Concrete .ics feed source for events (implements the events decision).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t73",
+      "title": "Events map view",
+      "status": "todo",
+      "notes": "Show events on a map (reuses the map node).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t74",
+      "title": "Paid filtering tier",
+      "status": "todo",
+      "notes": "Monetized advanced filtering (see monetization decision).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t75",
+      "title": "Dating matching backend",
+      "status": "todo",
+      "notes": "Backend + matching for the dating app; likely mesh-based.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t76",
+      "title": "Mesh P5 real Nostr transport + keypairs",
+      "status": "todo",
+      "notes": "Mesh P5: real Nostr transport + keypairs.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t77",
+      "title": "Mesh P6 engine MeshSyncProvider",
+      "status": "todo",
+      "notes": "Mesh P6: engine-level MeshSyncProvider so any app can mesh-sync.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t78",
+      "title": "Mesh revocation / TTL",
+      "status": "todo",
+      "notes": "Mesh access revocation + time-to-live for shared data.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t79",
+      "title": "Mesh peer discovery",
+      "status": "todo",
+      "notes": "Mesh peer discovery.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t80",
+      "title": "Per-locale overlay + language files",
+      "status": "todo",
+      "notes": "Deep half of Language: per-app language files + locale overlays. Effort: L. Follows the picker.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t81",
+      "title": "GitHub Actions web deploy",
+      "status": "todo",
+      "notes": "CI to build + deploy the web build (GitHub Actions).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t82",
+      "title": "Decentralized keypair login",
+      "status": "todo",
+      "notes": "Identity via keypair, no central account.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t83",
+      "title": "Charge for heavy hosted logic",
+      "status": "todo",
+      "notes": "Monetize compute-heavy hosted features.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t84",
+      "title": "Ads-free vs ad-supported model",
+      "status": "todo",
+      "notes": "Decide monetization: ads-free vs ad-supported (see decision).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t85",
+      "title": "Workboard unit field for filtering",
+      "status": "todo",
+      "notes": "Add a filter control to show tasks for a chosen unit/project (units column already exists).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t86",
+      "title": "Reconnect Drive sink (cloud sync)",
+      "status": "todo",
+      "notes": "Wire a real CloudSync into the DriveSink slot so changes sync to a cloud file across devices/people. — Wire a real CloudSync into the DriveSink slot for cross-device/people sync.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t87",
+      "title": "Two-way mirror: app reads back my edits",
+      "status": "todo",
+      "notes": "Make the local mirror bidirectional: app watches the shared folder and merges external (Claude) edits by id, with a loop guard. Desktop + app running. — App watches the shared mirror folder (_devdata/_worksync) and merges Claude's JSON edits back by id, with a loop guard — bidirectional sync.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-74950628-7a53-4fb6-b054-c8f6e308786a",
+      "title": "Filter for views — by column + operator (incl. is-empty/null)",
+      "status": "todo",
+      "notes": "User-facing filter on any view. Operators: isEmpty/isNotEmpty (null), equals, contains, before/after/range. Example you asked for: show tasks where `completed` is empty (not yet done). Folds into t98. Effort: M.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-f994e5a2-1f76-46b2-8a28-89dbfa9a0e8c",
+      "title": "clicking on columns to reorder; hold to filter (text/regex, and/or)",
+      "status": "todo",
+      "notes": "Table headers: tap = sort/reorder, long-press = filter (text + regex, AND/OR).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-51eadf8b-a6b0-41c3-8afa-aa9a13bcf303",
+      "title": "Language settings (global + per-app) — NEXT",
+      "status": "doing",
+      "notes": "NEXT BUILD (user-chosen). A global app language + per-app override. Scope: locale picker in settings (t65) + per-app language files/overlays (t80). Effort: L (i18n plumbing once, then JSON per app). Engine-owner session: do this next.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-37deb0b6-4793-4652-960d-171f02a91870",
+      "title": "distinguish settings levels (architecture vs app vs view)",
+      "status": "todo",
+      "notes": "Design the settings hierarchy: platform/architecture vs per-app vs per-view (see d13).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-e86890fa-7bc7-438b-b672-7e5e93f53176",
+      "title": "light/dark + custom color themes",
+      "status": "todo",
+      "notes": "Theming: light/dark + custom palette (extensible). Overlaps t65.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-68e98684-5b1a-4927-ad76-e242db10c3bf",
+      "title": "Workboard tab buttons all the same — hard to navigate",
+      "status": "done",
+      "completed": "2026-06-05",
+      "notes": "DONE (tabs restyled to tonal chips). Was stuck on an invalid phase 'todo' — corrected to past.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-a6196415-fac9-4bd2-ae16-0fdb04f88e82",
+      "title": "table view hard to navigate; cut off without full screen",
+      "status": "doing",
+      "notes": "Table view: use full width/height + scroll/paging/sticky header for large tables (related t63).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-91b0830b-44fe-400a-bb86-5d297190c9c2",
+      "title": "prioritize tasks: priority tiers separate from phase + sensible defaults",
+      "status": "doing",
+      "notes": "Task model: priority tiers separate from phase; new-task defaults; completion date marks done. Needs t89 (see d10).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t88",
+      "title": "Worklog: record what each nightly run did",
+      "status": "done",
+      "completed": "2026-06-05",
+      "notes": "Worklog: each nightly run appends a dated entry + stamps completed tasks; a Worklog tab shows a reverse-chron feed.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t89",
+      "title": "Add created / completed / priority columns to tasks",
+      "status": "todo",
+      "notes": "Add created / completed / priority columns to tasks — schema for prioritization + worklog stamps.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t90",
+      "title": "Responsive launcher tiles (phone/tablet/browser)",
+      "status": "done",
+      "completed": "2026-06-05",
+      "notes": "DONE: launcher grid now sizes by extent so app tiles reflow across phone/tablet/browser instead of two huge cards.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t91",
+      "title": "Events: log into account calendars (Google/Apple)",
+      "status": "todo",
+      "notes": "From the events decision: authenticate to calendar accounts to pull events (OAuth). Desktop feasibility TBD (see d12).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t92",
+      "title": "Extract sync into a fundamental package",
+      "status": "todo",
+      "notes": "Move sync sinks/pipeline out of isan/lib/src/sync into a package. Recommend dbkit or new synckit; keep DbBundle packing in datakit; flutterboard only triggers via functions (see d11).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t93",
+      "title": "Refine all 12 applets for usability + responsiveness",
+      "status": "done",
+      "completed": "2026-06-05",
+      "notes": "DONE: reworked cooking, fridge, notes, taskly, diagram, schema_map, arch_map, ri_map, neujour, events, dating, bikeshare — clearer purpose, captions, grouping/filtering, first-run seed, no fixed widths (responsive).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-proj-decentralized-data",
+      "title": "BIG: Decentralized data — conflict-safe merge (CRDT + signatures, not blockchain)",
+      "status": "todo",
+      "notes": "Major initiative. Flexible data creation + safe merge across devices/people without erasing critical info. Direction: signatures (authenticity) + CRDT keep-both (safe auto-merge) + version vectors (lineage); NOT blockchain (it discards forks). Staged in mesh/ as R&D, integrate at mesh P6. Full design: DECENTRALIZED_DATA.md.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-feat-workboard-one-view",
+      "title": "Workboard: single list view + saved preset filter views (fold Recent/Completed tabs)",
+      "status": "todo",
+      "notes": "Consolidate Recent / Completed / etc. into ONE cards view with a search bar + selectable PRESET filter views (saved filter sets you can pick and add to). A preset is just a named filter/sort/group config; the view stays editable. Cuts tab clutter.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-feat-unified-editor",
+      "title": "Unified editor: merge < > JSON + pencil structured into one view (live preview + side drawer: tree/attributes + JSON toggle)",
+      "status": "todo",
+      "notes": "One editing surface. Default = the live 'current view' with placeholders. A collapsible side drawer holds the widget-tree + widget-attribute editors AND a toggle to view/edit the raw JSON, switching back and forth on the same doc. Supersedes the separate StructuredEditor (pencil) + BuilderPanel (< >).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-bug-ui-json-reactivity",
+      "title": "ui.json file edits should reflect (hot-restart) + make < > editor reliably apply to live UI",
+      "status": "doing",
+      "notes": "Editing ui.json on disk only reflects after a hot RESTART in debug (file is read at launch), not hot reload. The < > (BuilderPanel) edits don't update the live UI as reliably as the pencil (StructuredEditor) does — repair/unify so layout edits apply consistently. Folds into the unified-editor work.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-feat-edit-from-launcher",
+      "title": "Author mode via launcher long-press; normal run is read-only (no widget editing)",
+      "status": "doing",
+      "notes": "Long-press an applet on the launcher -> highlight + 'Edit' -> opens the applet in author mode (unified editor, all screens). Normal tap just runs the app with no widget-editing UI. AppScreen gains an editMode flag.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-feat-per-widget-user-edit",
+      "title": "FUTURE: per-widget end-user editing within constraints (e.g. dashboard) without full widget tree",
+      "status": "todo",
+      "notes": "Mark specific widgets as user-editable with a BOUNDED edit surface (only allowed props), gated separately from full author mode, so an end user can tweak e.g. a dashboard widget without opening the applet's whole widget tree. Builds on the unified editor.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t94",
+      "title": "Canvas/map: own gestures (no page-scroll steal)",
+      "status": "done",
+      "completed": "2026-06-05",
+      "notes": "DONE: screens that contain a canvas/map are no longer wrapped in the page's vertical scroll, so node drag (both axes) is handled by the view instead of panning the page. Fixes diagram nodes not moving.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t95",
+      "title": "Detail view: side panel on wide/tablet, bottom sheet on phone",
+      "status": "todo",
+      "notes": "CONFIRMED by macOS/browser screenshots: the wide layout has empty space ideal for a SIDE detail panel. Open a row/task's detail in a right-side panel on wide screens; bottom sheet on phone. Per-object-type: side|sheet|page. Pairs with t96. Effort: M.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t96",
+      "title": "Auto-fit content span to available space (wide-screen layout)",
+      "status": "todo",
+      "notes": "CONFIRMED: on macOS/browser content is a narrow centered column with large empty margins (awkward). Views should expand to use available width/height with a sane max for readability; responsive across phone/tablet/browser. Effort: M.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb-t97",
+      "title": "Collection widget — core (own scroll/gestures, selection, bulk delete)",
+      "status": "todo",
+      "notes": "First-class collection view owning its viewport+gestures (ends scroll/pan/drag conflicts). select{mode:none|single|multi,trigger:hold,holdMs}; bulkActions:[delete]. Effort: L. Batch 1; queued after Language."
+    },
+    {
+      "id": "wb-t98",
+      "title": "Collection widget — sort / filter / search / group",
+      "status": "todo",
+      "notes": "Built-in data ops, datakit-backed. Filter operators MUST include isEmpty/isNotEmpty (null), equals, contains, before/after/range — e.g. show tasks where `completed` is empty (incomplete). Effort: M. Batch 2."
+    },
+    {
+      "id": "wb-t99",
+      "title": "Collection widget — row actions + inline edit by type",
+      "status": "todo",
+      "notes": "rowActions:[{icon/label,fn,args}] (e.g. +add-subtask); inline cell edit per column type via board/LWW. Effort: M. Batch 3."
+    },
+    {
+      "id": "wb-t100",
+      "title": "Collection widget — unified view switch (table/list/cards/tree)",
+      "status": "todo",
+      "notes": "One node, view: table|list|cards|tree; supersedes separate nodes. Effort: M. Batch 4."
+    },
+    {
+      "id": "wb-t101",
+      "title": "JSON logic: composition verbs + sandboxed expression DSL + builder fn-picker",
+      "status": "todo",
+      "notes": "sequence/when/setFields/incr/cycle verbs + bounded expression evaluator + builder fn-picker. NO arbitrary code (shared-bundle security; AOT can't eval). Effort: L."
+    },
+    {
+      "id": "wb-t102",
+      "title": "Build-queue: choose from the board what Claude builds next",
+      "status": "todo",
+      "notes": "A marker/filter (priority or a build-next label) so the board is the selection point for the next batch. Effort: S."
+    },
+    {
+      "id": "wb-t103",
+      "title": "Workspace bundle: import-all / export-all + hidden Admin entry",
+      "status": "todo",
+      "notes": "One file for the whole platform (all apps). Import-all updates every applet; export-all extracts all to share. Hidden behind a non-obvious gesture (long-press build stamp) + optional passphrase — soft gate, NOT real access control. Effort: M. PENDING: gesture-only vs +passphrase; replace vs merge."
+    },
+    {
+      "id": "wb-t104",
+      "title": "Compact the bottom navigation bar (too tall on phone)",
+      "status": "doing",
+      "notes": "On phone the bottom NavigationBar + the filter-chip row take too much vertical space (see screenshot 2026-06-06). Reduce NavigationBar height/density; tighten chip sizing. Effort: S."
+    },
+    {
+      "id": "wb-t105",
+      "title": "Editor/detail sheets: Save at top + save/discard/cancel on close",
+      "status": "doing",
+      "notes": "In record/detail bottom-sheets (e.g. Edit Nodes), the Save sits below the fields and is hidden by the keyboard. Add a persistent Save in the sheet HEADER (always visible); and on close (X / swipe-down / back) prompt Save / Discard / Cancel when there are unsaved edits. Applies to ALL slide-up sheets. Effort: M."
+    },
+    {
+      "id": "wb-t106",
+      "title": "Bundle export must include ui + validate 4-part bundle on Replace",
+      "status": "doing",
+      "notes": "BUG: applet export omits `ui`, so Replace keeps the target app's old ui → 'unknown table' errors (fridge←taskly). Fix: export writes tables+columns+ui+content; and Replace warns if any of the 4 parts is missing instead of silently half-applying. Effort: S."
+    },
+    {
+      "id": "wb-t107",
+      "title": "isan: Create NEW applet from a file (don't replace an existing app)",
+      "status": "doing",
+      "notes": "From the launcher, import a full bundle (tables+columns+ui+content) as a BRAND-NEW app with its own id — fridge/others untouched. Distinct from 'Replace applet' (overwrites). Prompt for/derive a new appId, register it in the catalog. Effort: M."
+    },
+    {
+      "status": "todo",
+      "id": "cd3248ee-a2a7-403e-a36d-430e0a7ed54c",
+      "createdAt": "2026-06-06T23:47:22.787258Z",
+      "updatedAt": "2026-06-06T23:47:22.787258Z",
+      "_ts": {
+        "status": 1780789642794842
+      }
+    },
+    {
+      "title": "pending features",
+      "status": "todo",
+      "parentId": [],
+      "scheduledStart": null,
+      "due": null,
+      "completed": null,
+      "completedTime": null,
+      "estimateMins": null,
+      "notes": null,
+      "profiles": [],
+      "id": "ea7ce3df-cec9-4742-b96f-b010ac97f8c9",
+      "createdAt": "2026-06-06T23:54:25.622324Z",
+      "updatedAt": "2026-06-06T23:54:25.622324Z",
+      "_ts": {
+        "title": 1780790065622481,
+        "status": 1780790065622496,
+        "parentId": 1780790065622498,
+        "scheduledStart": 1780790065622499,
+        "due": 1780790065622500,
+        "completed": 1780790065622501,
+        "completedTime": 1780790065622502,
+        "estimateMins": 1780790065622503,
+        "notes": 1780790065622504,
+        "profiles": 1780790065622506
+      }
+    },
+    {
+      "title": "pending features",
+      "status": "todo",
+      "parentId": [],
+      "scheduledStart": null,
+      "due": null,
+      "completed": null,
+      "completedTime": null,
+      "estimateMins": null,
+      "notes": null,
+      "profiles": [],
+      "id": "be1bc481-ae01-4402-bd29-1f60846c8dcf",
+      "createdAt": "2026-06-06T23:55:49.341084Z",
+      "updatedAt": "2026-06-06T23:55:49.341084Z",
+      "_ts": {
+        "title": 1780790149341364,
+        "status": 1780790149341374,
+        "parentId": 1780790149341379,
+        "scheduledStart": 1780790149341383,
+        "due": 1780790149341387,
+        "completed": 1780790149341391,
+        "completedTime": 1780790149341394,
+        "estimateMins": 1780790149341397,
+        "notes": 1780790149341399,
+        "profiles": 1780790149341404
+      }
+    },
+    {
+      "status": "todo",
+      "parentId": [
+        "ea7ce3df-cec9-4742-b96f-b010ac97f8c9"
+      ],
+      "title": "when new sub tasks are added, do not auto populate titles - do note titles as \"required\" that is a logical rule as well",
+      "id": "9e13ca17-49fa-4435-979e-723def365225",
+      "createdAt": "2026-06-07T00:27:03.963489Z",
+      "updatedAt": "2026-06-07T00:27:42.799063Z",
+      "_ts": {
+        "parentId": 1780792062799010,
+        "title": 1780792062798680,
+        "status": 1780792062798691,
+        "scheduledStart": 1780792062799031,
+        "due": 1780792062799035,
+        "completed": 1780792062799038,
+        "completedTime": 1780792062799040,
+        "estimateMins": 1780792062799041,
+        "notes": 1780792062799043,
+        "profiles": 1780792062799053
+      },
+      "scheduledStart": null,
+      "due": null,
+      "completed": null,
+      "completedTime": null,
+      "estimateMins": null,
+      "notes": null,
+      "profiles": []
+    },
+    {
+      "status": "todo",
+      "parentId": [
+        "ea7ce3df-cec9-4742-b96f-b010ac97f8c9"
+      ],
+      "title": "edit and save with check mark for tasks might make more sense not being on top left",
+      "id": "a39715b8-99ee-4531-abb3-81af9ee2d1d9",
+      "createdAt": "2026-06-07T00:27:45.785568Z",
+      "updatedAt": "2026-06-07T00:28:42.308662Z",
+      "_ts": {
+        "parentId": 1780792122308640,
+        "title": 1780792122308620,
+        "status": 1780792122308632,
+        "scheduledStart": 1780792122308643,
+        "due": 1780792122308646,
+        "completed": 1780792122308649,
+        "completedTime": 1780792122308650,
+        "estimateMins": 1780792122308652,
+        "notes": 1780792122308654,
+        "profiles": 1780792122308657
+      },
+      "scheduledStart": null,
+      "due": null,
+      "completed": null,
+      "completedTime": null,
+      "estimateMins": null,
+      "notes": null,
+      "profiles": []
+    },
+    {
+      "status": "todo",
+      "parentId": [
+        "ea7ce3df-cec9-4742-b96f-b010ac97f8c9"
+      ],
+      "title": "frame of mind of analysis of users and their daily activities and their measurement of exercise work etc could be a feature within neujour - regressions can help find end users draw correlations with daily journal and tasks and other measurements of their being emotions physical health etc - food they eat might be a diary option as well within neujour along with weight- almost feel like these are modules that can be added to neujour almost like applets, applet of applet almost but not exactly as they are meant to be within the applet",
+      "id": "9d45e893-0f2a-45c2-8a88-92eda9867861",
+      "createdAt": "2026-06-07T00:28:46.389840Z",
+      "updatedAt": "2026-06-07T00:30:59.416038Z",
+      "_ts": {
+        "parentId": 1780792259416016,
+        "title": 1780792259415995,
+        "status": 1780792259416008,
+        "scheduledStart": 1780792259416020,
+        "due": 1780792259416023,
+        "completed": 1780792259416026,
+        "completedTime": 1780792259416028,
+        "estimateMins": 1780792259416030,
+        "notes": 1780792259416031,
+        "profiles": 1780792259416035
+      },
+      "scheduledStart": null,
+      "due": null,
+      "completed": null,
+      "completedTime": null,
+      "estimateMins": null,
+      "notes": null,
+      "profiles": []
+    },
+    {
+      "status": "todo",
+      "parentId": [
+        "ea7ce3df-cec9-4742-b96f-b010ac97f8c9"
+      ],
+      "title": "click and drag of tasks should scroll so users can move tasks up and down beyond view initially",
+      "id": "ee1327da-b8ab-479a-a284-c6eb564e27b8",
+      "createdAt": "2026-06-07T00:31:41.885363Z",
+      "updatedAt": "2026-06-07T00:32:06.105009Z",
+      "_ts": {
+        "parentId": 1780792326104990,
+        "title": 1780792326104970,
+        "status": 1780792326104982,
+        "scheduledStart": 1780792326104992,
+        "due": 1780792326104995,
+        "completed": 1780792326104997,
+        "completedTime": 1780792326104999,
+        "estimateMins": 1780792326105001,
+        "notes": 1780792326105003,
+        "profiles": 1780792326105006
+      },
+      "scheduledStart": null,
+      "due": null,
+      "completed": null,
+      "completedTime": null,
+      "estimateMins": null,
+      "notes": null,
+      "profiles": []
+    },
+    {
+      "status": "done",
+      "parentId": [
+        "r1_1780441041542"
+      ],
+      "id": "b0436598-d5ba-4369-a936-e7d9b20434d7",
+      "createdAt": "2026-06-07T00:48:58.682378Z",
+      "updatedAt": "2026-06-07T00:50:16.637030Z",
+      "_ts": {
+        "parentId": 1780793416636982,
+        "title": 1780793416636646,
+        "status": 1780793416636676,
+        "scheduledStart": 1780793416636995,
+        "due": 1780793416637000,
+        "completed": 1780793416637003,
+        "completedTime": 1780793416637004,
+        "estimateMins": 1780793416637006,
+        "notes": 1780793416637009,
+        "profiles": 1780793416637017
+      },
+      "title": "when add subtask initialized with new view with empty title but no change occurs, it saves when it shouldn't. it should force user to enter a title or auto delete as it should never have fully created a subtask (I noticed sub task counter rises before the view even opens ) unsure best way of handling this logic",
+      "scheduledStart": null,
+      "due": null,
+      "completed": null,
+      "completedTime": null,
+      "estimateMins": null,
+      "notes": null,
+      "profiles": []
+    },
+    {
+      "id": "mig_codev",
+      "title": "Codev — Claude work board",
+      "status": "doing",
+      "order": 900,
+      "profiles": "p_work",
+      "notes": "Migrated from the codev applet. Claude-assigned work items."
+    },
+    {
+      "id": "mig_wb",
+      "title": "Workboard",
+      "status": "doing",
+      "order": 910,
+      "profiles": "p_work",
+      "notes": "Migrated from the workboard applet. Sub-grouped by track."
+    },
+    {
+      "id": "mig_wb_engine",
+      "title": "Engine",
+      "status": "doing",
+      "parentId": "mig_wb",
+      "order": 1,
+      "profiles": "p_work"
+    },
+    {
+      "id": "mig_wb_apps",
+      "title": "Apps",
+      "status": "doing",
+      "parentId": "mig_wb",
+      "order": 2,
+      "profiles": "p_work"
+    },
+    {
+      "id": "mig_wb_sync",
+      "title": "Sync",
+      "status": "doing",
+      "parentId": "mig_wb",
+      "order": 3,
+      "profiles": "p_work"
+    },
+    {
+      "id": "mig_wb_product",
+      "title": "Product",
+      "status": "doing",
+      "parentId": "mig_wb",
+      "order": 4,
+      "profiles": "p_work"
+    },
+    {
+      "id": "cv_cv1",
+      "title": "Live file bridge via codev/data/ folder",
+      "status": "doing",
+      "parentId": "mig_codev",
+      "order": 10,
+      "profiles": "p_work",
+      "notes": "Per-applet data/ folder: app mirrors state.json, Claude writes inbox.json, merge is per-field LWW."
+    },
+    {
+      "id": "cv_cv2",
+      "title": "Near-live inbox poll (no manual Sync)",
+      "status": "todo",
+      "parentId": "mig_codev",
+      "order": 20,
+      "profiles": "p_work",
+      "notes": "Poll inbox.json every few seconds / on window focus so Claude's writes appear without tapping Sync."
+    },
+    {
+      "id": "cv_cv3",
+      "title": "Widget map diagram (colour-coded)",
+      "status": "done",
+      "parentId": "mig_codev",
+      "order": 30,
+      "profiles": "p_work",
+      "notes": "arch_map Widgets tab: draggable nodes, blue=flutterboard / green=datakit / amber=imported."
+    },
+    {
+      "id": "cv_cv4",
+      "title": "Diagram zoom controls",
+      "status": "done",
+      "parentId": "mig_codev",
+      "order": 40,
+      "profiles": "p_work",
+      "notes": "Zoom out/in/reset buttons on every free-layout canvas (engine 2026-06-06.25)."
+    },
+    {
+      "id": "cv_cv5",
+      "title": "Widget reference tab (readable list)",
+      "status": "doing",
+      "parentId": "mig_codev",
+      "order": 50,
+      "profiles": "p_work",
+      "notes": "Simple per-widget list: widget name, each attribute, type, and options."
+    },
+    {
+      "id": "cv_cv6",
+      "title": "neujour analysis modules (regressions, journal/exercise/food)",
+      "status": "todo",
+      "parentId": "mig_codev",
+      "order": 60,
+      "profiles": "p_work",
+      "notes": "Larger R&D: correlate journal + tasks + measurements; applet-of-applet modules."
+    },
+    {
+      "id": "cv_cv7",
+      "title": "Run build 2026-06-06.25 on the phone and review",
+      "status": "todo",
+      "parentId": "mig_codev",
+      "order": 70,
+      "profiles": "p_work",
+      "notes": "Confirm zoom, widget map, save fixes, provisional sub-task removal."
+    },
+    {
+      "id": "cv_cv8",
+      "title": "Decide: share a tasks layer with taskly/workboard",
+      "status": "todo",
+      "parentId": "mig_codev",
+      "order": 80,
+      "profiles": "p_work",
+      "notes": "Stand-alone first; link the shared layer once the bridge is proven."
+    },
+    {
+      "id": "wb_t1",
+      "title": "DataType + value coercion",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 0,
+      "profiles": "p_work",
+      "completed": "2026-05-20",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t2",
+      "title": "Record container",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 1,
+      "profiles": "p_work",
+      "completed": "2026-05-20",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t3",
+      "title": "Relative date shorthand (0,3d,-1m,3y)",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 2,
+      "profiles": "p_work",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t4",
+      "title": "Schema / ColumnSpec",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 3,
+      "profiles": "p_work",
+      "completed": "2026-05-20",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t5",
+      "title": "DataTable / Database / query",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 4,
+      "profiles": "p_work",
+      "completed": "2026-05-20",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t6",
+      "title": "DbBundle import + export",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 5,
+      "profiles": "p_work",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t7",
+      "title": "UUID v4 keys",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 6,
+      "profiles": "p_work",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t8",
+      "title": "Multi-value (ref+multi) columns",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 7,
+      "profiles": "p_work",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t9",
+      "title": "seedVersion + ui in bundle",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 8,
+      "profiles": "p_work",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t10",
+      "title": "Store registry",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 9,
+      "profiles": "p_work",
+      "completed": "2026-05-20",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t11",
+      "title": "RestSource",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 10,
+      "profiles": "p_work",
+      "completed": "2026-05-20",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t12",
+      "title": "buildSource + load/unload lifecycle",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 11,
+      "profiles": "p_work",
+      "completed": "2026-05-20",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t13",
+      "title": "BoardState mutation chokepoint",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 12,
+      "profiles": "p_work",
+      "completed": "2026-05-20",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t14",
+      "title": "FunctionRegistry actions",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 13,
+      "profiles": "p_work",
+      "completed": "2026-05-20",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t15",
+      "title": "JSON renderer nodes",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 14,
+      "profiles": "p_work",
+      "completed": "2026-05-20",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t16",
+      "title": "Branching undo / redo history",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 15,
+      "profiles": "p_work",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t17",
+      "title": "Canvas + diagram node",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 16,
+      "profiles": "p_work",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t18",
+      "title": "Structured editor v2",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 17,
+      "profiles": "p_work",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t19",
+      "title": "Generic record editor (multi-ref)",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 18,
+      "profiles": "p_work",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t20",
+      "title": "Map + glmap nodes",
+      "status": "done",
+      "parentId": "mig_wb_apps",
+      "order": 19,
+      "profiles": "p_work",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t21",
+      "title": "SLM connector",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 20,
+      "profiles": "p_work",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t22",
+      "title": "App launcher loading JSON apps",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 21,
+      "profiles": "p_work",
+      "completed": "2026-05-20",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t23",
+      "title": "Per-app store + web routing",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 22,
+      "profiles": "p_work",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t24",
+      "title": "db.loadAll prepopulation fix",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 23,
+      "profiles": "p_work",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t25",
+      "title": "Per-app export / import",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 24,
+      "profiles": "p_work",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t26",
+      "title": "seedVersion reseed",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 25,
+      "profiles": "p_work",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t27",
+      "title": "macOS network entitlements",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 26,
+      "profiles": "p_work",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t28",
+      "title": "30 tasks + 3 notes seeded",
+      "status": "done",
+      "parentId": "mig_wb_apps",
+      "order": 27,
+      "profiles": "p_work",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t29",
+      "title": "Many-to-many profiles",
+      "status": "done",
+      "parentId": "mig_wb_apps",
+      "order": 28,
+      "profiles": "p_work",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t30",
+      "title": "toggleDone stamps completion",
+      "status": "done",
+      "parentId": "mig_wb_apps",
+      "order": 29,
+      "profiles": "p_work",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t31",
+      "title": "13 seeded fridge items",
+      "status": "done",
+      "parentId": "mig_wb_apps",
+      "order": 30,
+      "profiles": "p_work",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t32",
+      "title": "Recipe table",
+      "status": "done",
+      "parentId": "mig_wb_apps",
+      "order": 31,
+      "profiles": "p_work",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t33",
+      "title": "SLM recipe button (working)",
+      "status": "done",
+      "parentId": "mig_wb_apps",
+      "order": 32,
+      "profiles": "p_work",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t34",
+      "title": "Blue Bikes station map + tags",
+      "status": "done",
+      "parentId": "mig_wb_apps",
+      "order": 33,
+      "profiles": "p_work",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t35",
+      "title": "GBFS source",
+      "status": "done",
+      "parentId": "mig_wb_apps",
+      "order": 34,
+      "profiles": "p_work",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t36",
+      "title": "Diagram applet",
+      "status": "done",
+      "parentId": "mig_wb_apps",
+      "order": 35,
+      "profiles": "p_work",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t37",
+      "title": "Marquee select, edges, snapping",
+      "status": "done",
+      "parentId": "mig_wb_apps",
+      "order": 36,
+      "profiles": "p_work",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t38",
+      "title": "Copy / paste, duplicate / delete",
+      "status": "done",
+      "parentId": "mig_wb_apps",
+      "order": 37,
+      "profiles": "p_work",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t39",
+      "title": "ER diagram of all tables",
+      "status": "done",
+      "parentId": "mig_wb_apps",
+      "order": 38,
+      "profiles": "p_work",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t40",
+      "title": "Recipes app",
+      "status": "done",
+      "parentId": "mig_wb_apps",
+      "order": 39,
+      "profiles": "p_work",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t41",
+      "title": "Notes app",
+      "status": "done",
+      "parentId": "mig_wb_apps",
+      "order": 40,
+      "profiles": "p_work",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t42",
+      "title": "Package + architecture diagram",
+      "status": "done",
+      "parentId": "mig_wb_apps",
+      "order": 41,
+      "profiles": "p_work",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t43",
+      "title": "Census-block boundaries (geojson)",
+      "status": "done",
+      "parentId": "mig_wb_apps",
+      "order": 42,
+      "profiles": "p_work",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t44",
+      "title": "Journaling: people, events, tags",
+      "status": "done",
+      "parentId": "mig_wb_apps",
+      "order": 43,
+      "profiles": "p_work",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t45",
+      "title": "Event viewer",
+      "status": "done",
+      "parentId": "mig_wb_apps",
+      "order": 44,
+      "profiles": "p_work",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t46",
+      "title": "Workboard: 10 rounds + 32 tasks seeded",
+      "status": "done",
+      "parentId": "mig_wb_apps",
+      "order": 45,
+      "profiles": "p_work",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t47",
+      "title": "Drive auto push / pull",
+      "status": "done",
+      "parentId": "mig_wb_sync",
+      "order": 46,
+      "profiles": "p_work",
+      "completed": "2026-05-20",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t48",
+      "title": "Merge-by-id import",
+      "status": "done",
+      "parentId": "mig_wb_sync",
+      "order": 47,
+      "profiles": "p_work",
+      "completed": "2026-05-20",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t49",
+      "title": "CloudSync service + Settings toggle",
+      "status": "done",
+      "parentId": "mig_wb_sync",
+      "order": 48,
+      "profiles": "p_work",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t50",
+      "title": "Mesh P0 decision (Nostr + LWW)",
+      "status": "done",
+      "parentId": "mig_wb_sync",
+      "order": 49,
+      "profiles": "p_work",
+      "completed": "2026-06-04",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t51",
+      "title": "Mesh P1 merge core (per-field LWW)",
+      "status": "done",
+      "parentId": "mig_wb_sync",
+      "order": 50,
+      "profiles": "p_work",
+      "completed": "2026-06-04",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t52",
+      "title": "Mesh P2 scopes / slices",
+      "status": "done",
+      "parentId": "mig_wb_sync",
+      "order": 51,
+      "profiles": "p_work",
+      "completed": "2026-06-04",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t53",
+      "title": "Mesh P3 identity (stub keypair)",
+      "status": "done",
+      "parentId": "mig_wb_sync",
+      "order": 52,
+      "profiles": "p_work",
+      "completed": "2026-06-04",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t54",
+      "title": "Mesh P4 transport + node touch flow",
+      "status": "done",
+      "parentId": "mig_wb_sync",
+      "order": 53,
+      "profiles": "p_work",
+      "completed": "2026-06-04",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t55",
+      "title": "flutter_map + maplibre engines",
+      "status": "done",
+      "parentId": "mig_wb_apps",
+      "order": 54,
+      "profiles": "p_work",
+      "completed": "2026-05-27",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t56",
+      "title": "Structured editor v2 tiers/reorder/tree",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 55,
+      "profiles": "p_work",
+      "completed": "2026-06-01",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t57",
+      "title": "Calendar node",
+      "status": "doing",
+      "parentId": "mig_wb_engine",
+      "order": 56,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06",
+      "notes": "[high]"
+    },
+    {
+      "id": "wb_t58",
+      "title": "Per-app launcher icons",
+      "status": "doing",
+      "parentId": "mig_wb_engine",
+      "order": 57,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06",
+      "notes": "[high]"
+    },
+    {
+      "id": "wb_t59",
+      "title": "Events: decide where events sync from",
+      "status": "doing",
+      "parentId": "mig_wb_apps",
+      "order": 58,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06",
+      "notes": "[high]"
+    },
+    {
+      "id": "wb_t60",
+      "title": "Align workboard status to tiers",
+      "status": "doing",
+      "parentId": "mig_wb_apps",
+      "order": 59,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06",
+      "notes": "[high]"
+    },
+    {
+      "id": "wb_t61",
+      "title": "On-demand registry sync function",
+      "status": "todo",
+      "parentId": "mig_wb_engine",
+      "order": 60,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t62",
+      "title": "Parent picker for nested rows",
+      "status": "todo",
+      "parentId": "mig_wb_engine",
+      "order": 61,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t63",
+      "title": "List overflow / scroll fix",
+      "status": "todo",
+      "parentId": "mig_wb_engine",
+      "order": 62,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t64",
+      "title": "Collapse old-done in list view",
+      "status": "todo",
+      "parentId": "mig_wb_engine",
+      "order": 63,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t65",
+      "title": "Theme / locale picker",
+      "status": "doing",
+      "parentId": "mig_wb_engine",
+      "order": 64,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06",
+      "notes": "[high]"
+    },
+    {
+      "id": "wb_t66",
+      "title": "Per-app Drive sync",
+      "status": "todo",
+      "parentId": "mig_wb_sync",
+      "order": 65,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t67",
+      "title": "Ship Taskly as seeded bundle",
+      "status": "todo",
+      "parentId": "mig_wb_apps",
+      "order": 66,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t68",
+      "title": "Open schema map into diagram",
+      "status": "todo",
+      "parentId": "mig_wb_apps",
+      "order": 67,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t69",
+      "title": "Table node with dropdowns",
+      "status": "todo",
+      "parentId": "mig_wb_engine",
+      "order": 68,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t70",
+      "title": "Devgraph layout mode",
+      "status": "todo",
+      "parentId": "mig_wb_engine",
+      "order": 69,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t71",
+      "title": "Complex filtering / analytics",
+      "status": "todo",
+      "parentId": "mig_wb_apps",
+      "order": 70,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t72",
+      "title": "ICS sync source",
+      "status": "todo",
+      "parentId": "mig_wb_apps",
+      "order": 71,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t73",
+      "title": "Events map view",
+      "status": "todo",
+      "parentId": "mig_wb_apps",
+      "order": 72,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t74",
+      "title": "Paid filtering tier",
+      "status": "todo",
+      "parentId": "mig_wb_product",
+      "order": 73,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t75",
+      "title": "Dating matching backend",
+      "status": "todo",
+      "parentId": "mig_wb_apps",
+      "order": 74,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t76",
+      "title": "Mesh P5 real Nostr transport + keypairs",
+      "status": "todo",
+      "parentId": "mig_wb_sync",
+      "order": 75,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t77",
+      "title": "Mesh P6 engine MeshSyncProvider",
+      "status": "todo",
+      "parentId": "mig_wb_sync",
+      "order": 76,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t78",
+      "title": "Mesh revocation / TTL",
+      "status": "todo",
+      "parentId": "mig_wb_sync",
+      "order": 77,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t79",
+      "title": "Mesh peer discovery",
+      "status": "todo",
+      "parentId": "mig_wb_sync",
+      "order": 78,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t80",
+      "title": "Per-locale overlay + language files",
+      "status": "todo",
+      "parentId": "mig_wb_engine",
+      "order": 79,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t81",
+      "title": "GitHub Actions web deploy",
+      "status": "todo",
+      "parentId": "mig_wb_engine",
+      "order": 80,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t82",
+      "title": "Decentralized keypair login",
+      "status": "todo",
+      "parentId": "mig_wb_sync",
+      "order": 81,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t83",
+      "title": "Charge for heavy hosted logic",
+      "status": "todo",
+      "parentId": "mig_wb_product",
+      "order": 82,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t84",
+      "title": "Ads-free vs ad-supported model",
+      "status": "todo",
+      "parentId": "mig_wb_product",
+      "order": 83,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t85",
+      "title": "Workboard unit field for filtering",
+      "status": "todo",
+      "parentId": "mig_wb_apps",
+      "order": 84,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t86",
+      "title": "Reconnect Drive sink (cloud sync)",
+      "status": "todo",
+      "parentId": "mig_wb_sync",
+      "order": 85,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06",
+      "notes": "Wire a real CloudSync into the DriveSink slot so changes sync to a cloud file across devices/people."
+    },
+    {
+      "id": "wb_t87",
+      "title": "Two-way mirror: app reads back my edits",
+      "status": "todo",
+      "parentId": "mig_wb_sync",
+      "order": 86,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06",
+      "notes": "Make the local mirror bidirectional: app watches the shared folder and merges external (Claude) edits by id, with a loop guard. Desktop + app running."
+    },
+    {
+      "id": "wb_74950628-7a53-4fb6-b054-c8f6e308786a",
+      "title": "Filter for views — by column + operator (incl. is-empty/null)",
+      "status": "todo",
+      "parentId": "mig_wb_engine",
+      "order": 87,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_f994e5a2-1f76-46b2-8a28-89dbfa9a0e8c",
+      "title": "clicking on columns to reorder; hold to filter (text/regex, and/or)",
+      "status": "todo",
+      "parentId": "mig_wb_engine",
+      "order": 88,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_51eadf8b-a6b0-41c3-8afa-aa9a13bcf303",
+      "title": "Language settings (global + per-app) — NEXT",
+      "status": "doing",
+      "parentId": "mig_wb_engine",
+      "order": 89,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06",
+      "notes": "[high]"
+    },
+    {
+      "id": "wb_37deb0b6-4793-4652-960d-171f02a91870",
+      "title": "distinguish settings levels (architecture vs app vs view)",
+      "status": "todo",
+      "parentId": "mig_wb_engine",
+      "order": 90,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_e86890fa-7bc7-438b-b672-7e5e93f53176",
+      "title": "light/dark + custom color themes",
+      "status": "todo",
+      "parentId": "mig_wb_engine",
+      "order": 91,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_68e98684-5b1a-4927-ad76-e242db10c3bf",
+      "title": "Workboard tab buttons all the same — hard to navigate",
+      "status": "done",
+      "parentId": "mig_wb_apps",
+      "order": 92,
+      "profiles": "p_work",
+      "completed": "2026-06-05",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_a6196415-fac9-4bd2-ae16-0fdb04f88e82",
+      "title": "table view hard to navigate; cut off without full screen",
+      "status": "doing",
+      "parentId": "mig_wb_engine",
+      "order": 93,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06",
+      "notes": "[high]"
+    },
+    {
+      "id": "wb_91b0830b-44fe-400a-bb86-5d297190c9c2",
+      "title": "prioritize tasks: priority tiers separate from phase + sensible defaults",
+      "status": "doing",
+      "parentId": "mig_wb_engine",
+      "order": 94,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06",
+      "notes": "[high]"
+    },
+    {
+      "id": "wb_t88",
+      "title": "Worklog: record what each nightly run did",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 95,
+      "profiles": "p_work",
+      "completed": "2026-06-05",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t89",
+      "title": "Add created / completed / priority columns to tasks",
+      "status": "todo",
+      "parentId": "mig_wb_engine",
+      "order": 96,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t90",
+      "title": "Responsive launcher tiles (phone/tablet/browser)",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 97,
+      "profiles": "p_work",
+      "completed": "2026-06-05",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t91",
+      "title": "Events: log into account calendars (Google/Apple)",
+      "status": "todo",
+      "parentId": "mig_wb_apps",
+      "order": 98,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t92",
+      "title": "Extract sync into a fundamental package",
+      "status": "todo",
+      "parentId": "mig_wb_sync",
+      "order": 99,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t93",
+      "title": "Refine all 12 applets for usability + responsiveness",
+      "status": "done",
+      "parentId": "mig_wb_apps",
+      "order": 100,
+      "profiles": "p_work",
+      "completed": "2026-06-05",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_proj-decentralized-data",
+      "title": "BIG: Decentralized data — conflict-safe merge (CRDT + signatures, not blockchain)",
+      "status": "todo",
+      "parentId": "mig_wb_sync",
+      "order": 101,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06",
+      "notes": "Major initiative. Flexible data creation + safe merge across devices/people without erasing critical info. Direction: signatures (authenticity) + CRDT keep-both (safe auto-merge) + version vectors (lineage); NOT blockchain (it discards forks). Staged in mesh/ as R&D, integrate at mesh P6. Full design: DECENTRALIZED_DATA.md. [high]"
+    },
+    {
+      "id": "wb_feat-workboard-one-view",
+      "title": "Workboard: single list view + saved preset filter views (fold Recent/Completed tabs)",
+      "status": "todo",
+      "parentId": "mig_wb_apps",
+      "order": 102,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06",
+      "notes": "Consolidate Recent / Completed / etc. into ONE cards view with a search bar + selectable PRESET filter views (saved filter sets you can pick and add to). A preset is just a named filter/sort/group config; the view stays editable. Cuts tab clutter."
+    },
+    {
+      "id": "wb_feat-unified-editor",
+      "title": "Unified editor: merge < > JSON + pencil structured into one view (live preview + side drawer: tree/attributes + JSON toggle)",
+      "status": "todo",
+      "parentId": "mig_wb_engine",
+      "order": 103,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06",
+      "notes": "One editing surface. Default = the live 'current view' with placeholders. A collapsible side drawer holds the widget-tree + widget-attribute editors AND a toggle to view/edit the raw JSON, switching back and forth on the same doc. Supersedes the separate StructuredEditor (pencil) + BuilderPanel (< >). [high]"
+    },
+    {
+      "id": "wb_bug-ui-json-reactivity",
+      "title": "ui.json file edits should reflect (hot-restart) + make < > editor reliably apply to live UI",
+      "status": "doing",
+      "parentId": "mig_wb_engine",
+      "order": 104,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06",
+      "notes": "Editing ui.json on disk only reflects after a hot RESTART in debug (file is read at launch), not hot reload. The < > (BuilderPanel) edits don't update the live UI as reliably as the pencil (StructuredEditor) does — repair/unify so layout edits apply consistently. Folds into the unified-editor work."
+    },
+    {
+      "id": "wb_feat-edit-from-launcher",
+      "title": "Author mode via launcher long-press; normal run is read-only (no widget editing)",
+      "status": "doing",
+      "parentId": "mig_wb_engine",
+      "order": 105,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06",
+      "notes": "Long-press an applet on the launcher -> highlight + 'Edit' -> opens the applet in author mode (unified editor, all screens). Normal tap just runs the app with no widget-editing UI. AppScreen gains an editMode flag. [high]"
+    },
+    {
+      "id": "wb_feat-per-widget-user-edit",
+      "title": "FUTURE: per-widget end-user editing within constraints (e.g. dashboard) without full widget tree",
+      "status": "todo",
+      "parentId": "mig_wb_engine",
+      "order": 106,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06",
+      "notes": "Mark specific widgets as user-editable with a BOUNDED edit surface (only allowed props), gated separately from full author mode, so an end user can tweak e.g. a dashboard widget without opening the applet's whole widget tree. Builds on the unified editor."
+    },
+    {
+      "id": "wb_t94",
+      "title": "Canvas/map: own gestures (no page-scroll steal)",
+      "status": "done",
+      "parentId": "mig_wb_engine",
+      "order": 107,
+      "profiles": "p_work",
+      "completed": "2026-06-05",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "wb_t95",
+      "title": "Detail view: side panel on wide/tablet, bottom sheet on phone",
+      "status": "todo",
+      "parentId": "mig_wb_engine",
+      "order": 108,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06",
+      "notes": "[high]"
+    },
+    {
+      "id": "wb_t96",
+      "title": "Auto-fit content span to available space (wide-screen layout)",
+      "status": "todo",
+      "parentId": "mig_wb_engine",
+      "order": 109,
+      "profiles": "p_work",
+      "createdAt": "2026-06-06",
+      "notes": "[high]"
+    },
+    {
+      "id": "wb_t97",
+      "title": "Collection widget — core (own scroll/gestures, selection, bulk delete)",
+      "status": "todo",
+      "parentId": "mig_wb_engine",
+      "order": 110,
+      "profiles": "p_work",
+      "notes": "[high]"
+    },
+    {
+      "id": "wb_t98",
+      "title": "Collection widget — sort / filter / search / group",
+      "status": "todo",
+      "parentId": "mig_wb_engine",
+      "order": 111,
+      "profiles": "p_work"
+    },
+    {
+      "id": "wb_t99",
+      "title": "Collection widget — row actions + inline edit by type",
+      "status": "todo",
+      "parentId": "mig_wb_engine",
+      "order": 112,
+      "profiles": "p_work"
+    },
+    {
+      "id": "wb_t100",
+      "title": "Collection widget — unified view switch (table/list/cards/tree)",
+      "status": "todo",
+      "parentId": "mig_wb_engine",
+      "order": 113,
+      "profiles": "p_work"
+    },
+    {
+      "id": "wb_t101",
+      "title": "JSON logic: composition verbs + sandboxed expression DSL + builder fn-picker",
+      "status": "todo",
+      "parentId": "mig_wb_engine",
+      "order": 114,
+      "profiles": "p_work"
+    },
+    {
+      "id": "wb_t102",
+      "title": "Build-queue: choose from the board what Claude builds next",
+      "status": "todo",
+      "parentId": "mig_wb_product",
+      "order": 115,
+      "profiles": "p_work"
+    },
+    {
+      "id": "wb_t103",
+      "title": "Workspace bundle: import-all / export-all + hidden Admin entry",
+      "status": "todo",
+      "parentId": "mig_wb_engine",
+      "order": 116,
+      "profiles": "p_work"
+    },
+    {
+      "id": "wb_t104",
+      "title": "Compact the bottom navigation bar (too tall on phone)",
+      "status": "doing",
+      "parentId": "mig_wb_engine",
+      "order": 117,
+      "profiles": "p_work"
+    },
+    {
+      "id": "wb_t105",
+      "title": "Editor/detail sheets: Save at top + save/discard/cancel on close",
+      "status": "doing",
+      "parentId": "mig_wb_engine",
+      "order": 118,
+      "profiles": "p_work",
+      "notes": "[high]"
+    },
+    {
+      "id": "wb_t106",
+      "title": "Bundle export must include ui + validate 4-part bundle on Replace",
+      "status": "doing",
+      "parentId": "mig_wb_engine",
+      "order": 119,
+      "profiles": "p_work",
+      "notes": "[high]"
+    },
+    {
+      "id": "wb_t107",
+      "title": "isan: Create NEW applet from a file (don't replace an existing app)",
+      "status": "doing",
+      "parentId": "mig_wb_engine",
+      "order": 120,
+      "profiles": "p_work",
+      "notes": "[high]"
+    },
+    {
+      "id": "gp",
+      "title": "Launch plan (Gantt demo)",
+      "status": "doing",
+      "order": 920,
+      "profiles": "p_work"
+    },
+    {
+      "id": "gp1",
+      "title": "Scope & spec",
+      "status": "done",
+      "parentId": [
+        "gp"
+      ],
+      "scheduledStart": "2026-06-01",
+      "endDate": "2026-06-04",
+      "completed": "2026-06-04",
+      "profiles": "p_work"
+    },
+    {
+      "id": "gp2",
+      "title": "Design pass",
+      "status": "done",
+      "parentId": [
+        "gp"
+      ],
+      "scheduledStart": "2026-06-04",
+      "endDate": "2026-06-08",
+      "dependsOn": [
+        "gp1"
+      ],
+      "completed": "2026-06-08",
+      "profiles": "p_work"
+    },
+    {
+      "id": "gp3",
+      "title": "Build core",
+      "status": "doing",
+      "parentId": [
+        "gp"
+      ],
+      "scheduledStart": "2026-06-08",
+      "endDate": "2026-06-16",
+      "dependsOn": [
+        "gp2"
+      ],
+      "profiles": "p_work"
+    },
+    {
+      "id": "gp4",
+      "title": "Content & seeds",
+      "status": "doing",
+      "parentId": [
+        "gp"
+      ],
+      "scheduledStart": "2026-06-10",
+      "endDate": "2026-06-15",
+      "dependsOn": [
+        "gp2"
+      ],
+      "profiles": "p_work"
+    },
+    {
+      "id": "gp5",
+      "title": "Beta test",
+      "status": "todo",
+      "parentId": [
+        "gp"
+      ],
+      "scheduledStart": "2026-06-16",
+      "endDate": "2026-06-20",
+      "dependsOn": [
+        "gp3",
+        "gp4"
+      ],
+      "profiles": "p_work"
+    },
+    {
+      "id": "gp6",
+      "title": "Launch",
+      "status": "todo",
+      "parentId": [
+        "gp"
+      ],
+      "scheduledStart": "2026-06-20",
+      "endDate": "2026-06-21",
+      "dependsOn": [
+        "gp5"
+      ],
+      "due": "2026-06-21",
+      "profiles": "p_work"
+    },
+    {
+      "id": "t57",
+      "title": "Calendar node",
+      "status": "doing",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] priority:high track:engine milestone:Now units:flutterboard labels:build-once\nCalendar node: a JSON view that places rows on a month grid by date. Reusable across apps (tasks/events).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t58",
+      "title": "Per-app launcher icons",
+      "status": "doing",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] priority:high track:engine milestone:Now units:isan\nPer-app launcher icons: give each app on the home launcher its own distinct tile icon.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t59",
+      "title": "Events: decide where events sync from",
+      "status": "doing",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] priority:high track:apps milestone:Now units:events_app labels:decision\nEvents data source. DECIDED: .ics calendar feeds + optional login to account calendars (Google/Apple).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t60",
+      "title": "Align workboard status to tiers",
+      "status": "doing",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] priority:high track:apps milestone:Now units:workboard\nMap task status to shared priority tiers. OVERLAPS the new priority model — merge with the task-model task (see d10).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t61",
+      "title": "On-demand registry sync function",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:engine milestone:Next units:dbkit,Sync / Drive labels:shared,build-once\nPull-on-demand sync action in dbkit's store registry (refresh a source when asked, not auto). Reused by Drive sync.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t62",
+      "title": "Parent picker for nested rows",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:engine milestone:Next units:flutterboard labels:engine\nRecord-editor control to pick/change a row's parent, so subtasks can be nested from the UI.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t63",
+      "title": "List overflow / scroll fix",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:engine milestone:Next units:flutterboard labels:engine\nFix long lists overflowing / not scrolling within their container.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t64",
+      "title": "Collapse old-done in list view",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:engine milestone:Next units:flutterboard,taskly labels:shared\nAuto-collapse old completed items in list views to cut clutter.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t65",
+      "title": "Theme / locale picker",
+      "status": "doing",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] priority:high track:engine milestone:Now units:isan,Language / i18n labels:build-once\nThe visible half of Language-next: settings UI to pick app theme + locale. Pairs with 51eadf8b + t80. Effort: M.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t66",
+      "title": "Per-app Drive sync",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:sync milestone:Next units:isan,Sync / Drive labels:shared\nPer-app cloud sync via Google Drive. BLOCKED: needs per-app OAuth, awkward on desktop/isan (see d12).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t67",
+      "title": "Ship Taskly as seeded bundle",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:apps milestone:Next units:taskly\nPackage Taskly as a DbBundle pre-loaded with starter tasks/notes so it opens populated. Decide starter content.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t68",
+      "title": "Open schema map into diagram",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:apps milestone:Next units:diagram,schema_map labels:shared\nOpen the auto-generated ER diagram (schema_map app) inside the editable diagram applet to rearrange/annotate.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t69",
+      "title": "Table node with dropdowns",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:engine milestone:Next units:flutterboard,workboard labels:engine\nFinish the table view's inline editing: enum/ref cells edit via dropdowns.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t70",
+      "title": "Devgraph layout mode",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:engine milestone:Next units:flutterboard,workboard labels:engine\nCanvas 'graph' layout deriving node positions from track lanes + milestone columns (swimlane timeline).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t71",
+      "title": "Complex filtering / analytics",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:apps milestone:Future units:neujour,Hosted / paid tier\nAdvanced filtering + analytics (likely a hosted/paid feature).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t72",
+      "title": "ICS sync source",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:apps milestone:Future units:events_app\nConcrete .ics feed source for events (implements the events decision).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t73",
+      "title": "Events map view",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:apps milestone:Future units:events_app,Maps labels:shared\nShow events on a map (reuses the map node).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t74",
+      "title": "Paid filtering tier",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:product milestone:Future units:events_app,Hosted / paid tier\nMonetized advanced filtering (see monetization decision).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t75",
+      "title": "Dating matching backend",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:apps milestone:Future units:dating,Mesh (decentralized) labels:shared\nBackend + matching for the dating app; likely mesh-based.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t76",
+      "title": "Mesh P5 real Nostr transport + keypairs",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:sync milestone:Future units:Mesh (decentralized),Identity labels:R&D\nMesh P5: real Nostr transport + keypairs.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t77",
+      "title": "Mesh P6 engine MeshSyncProvider",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:sync milestone:Future units:Mesh (decentralized),flutterboard,Sync / Drive labels:shared,high-leverage\nMesh P6: engine-level MeshSyncProvider so any app can mesh-sync.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t78",
+      "title": "Mesh revocation / TTL",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:sync milestone:Future units:Mesh (decentralized) labels:R&D\nMesh access revocation + time-to-live for shared data.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t79",
+      "title": "Mesh peer discovery",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:sync milestone:Future units:Mesh (decentralized) labels:R&D\nMesh peer discovery.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t80",
+      "title": "Per-locale overlay + language files",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:engine milestone:Next units:Language / i18n labels:build-once\nDeep half of Language: per-app language files + locale overlays. Effort: L. Follows the picker.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t81",
+      "title": "GitHub Actions web deploy",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:engine milestone:Future units:Web deploy\nCI to build + deploy the web build (GitHub Actions).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t82",
+      "title": "Decentralized keypair login",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:sync milestone:Future units:Identity,Mesh (decentralized),isan labels:shared\nIdentity via keypair, no central account.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t83",
+      "title": "Charge for heavy hosted logic",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:product milestone:Future units:Hosted / paid tier\nMonetize compute-heavy hosted features.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t84",
+      "title": "Ads-free vs ad-supported model",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:product milestone:Future units:Hosted / paid tier labels:decision\nDecide monetization: ads-free vs ad-supported (see decision).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t85",
+      "title": "Workboard unit field for filtering",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:apps milestone:Next units:workboard\nAdd a filter control to show tasks for a chosen unit/project (units column already exists).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t86",
+      "title": "Reconnect Drive sink (cloud sync)",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:sync milestone:Future units:Sync / Drive,isan\nWire a real CloudSync into the DriveSink slot so changes sync to a cloud file across devices/people.\nWire a real CloudSync into the DriveSink slot for cross-device/people sync.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t87",
+      "title": "Two-way mirror: app reads back my edits",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:sync milestone:Next units:isan,Sync / Drive labels:shared\nMake the local mirror bidirectional: app watches the shared folder and merges external (Claude) edits by id, with a loop guard. Desktop + app running.\nApp watches the shared mirror folder (_devdata/_worksync) and merges Claude's JSON edits back by id, with a loop guard — bidirectional sync.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "74950628-7a53-4fb6-b054-c8f6e308786a",
+      "title": "Filter for views — by column + operator (incl. is-empty/null)",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:engine milestone:Next units:flutterboard,workboard labels:engine\nUser-facing filter on any view. Operators: isEmpty/isNotEmpty (null), equals, contains, before/after/range. Example you asked for: show tasks where `completed` is empty (not yet done). Folds into t98. Effort: M.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "f994e5a2-1f76-46b2-8a28-89dbfa9a0e8c",
+      "title": "clicking on columns to reorder; hold to filter (text/regex, and/or)",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:engine milestone:Next units:flutterboard,workboard labels:engine\nTable headers: tap = sort/reorder, long-press = filter (text + regex, AND/OR).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "51eadf8b-a6b0-41c3-8afa-aa9a13bcf303",
+      "title": "Language settings (global + per-app) — NEXT",
+      "status": "doing",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] priority:high track:engine milestone:Now units:isan,Language / i18n labels:build-once\nNEXT BUILD (user-chosen). A global app language + per-app override. Scope: locale picker in settings (t65) + per-app language files/overlays (t80). Effort: L (i18n plumbing once, then JSON per app). Engine-owner session: do this next.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "37deb0b6-4793-4652-960d-171f02a91870",
+      "title": "distinguish settings levels (architecture vs app vs view)",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:engine milestone:Next units:isan labels:decision\nDesign the settings hierarchy: platform/architecture vs per-app vs per-view (see d13).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "e86890fa-7bc7-438b-b672-7e5e93f53176",
+      "title": "light/dark + custom color themes",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:engine milestone:Next units:isan labels:build-once\nTheming: light/dark + custom palette (extensible). Overlaps t65.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "a6196415-fac9-4bd2-ae16-0fdb04f88e82",
+      "title": "table view hard to navigate; cut off without full screen",
+      "status": "doing",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] priority:high track:engine milestone:Now units:flutterboard,workboard labels:engine\nTable view: use full width/height + scroll/paging/sticky header for large tables (related t63).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "91b0830b-44fe-400a-bb86-5d297190c9c2",
+      "title": "prioritize tasks: priority tiers separate from phase + sensible defaults",
+      "status": "doing",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] priority:high track:engine milestone:Next units:flutterboard,workboard labels:decision,engine\nTask model: priority tiers separate from phase; new-task defaults; completion date marks done. Needs t89 (see d10).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t89",
+      "title": "Add created / completed / priority columns to tasks",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:engine milestone:Next units:flutterboard,workboard labels:engine\nAdd created / completed / priority columns to tasks — schema for prioritization + worklog stamps.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t91",
+      "title": "Events: log into account calendars (Google/Apple)",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:apps milestone:Next units:events_app,Identity\nFrom the events decision: authenticate to calendar accounts to pull events (OAuth). Desktop feasibility TBD (see d12).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t92",
+      "title": "Extract sync into a fundamental package",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:sync milestone:Next units:isan,Sync / Drive labels:shared\nMove sync sinks/pipeline out of isan/lib/src/sync into a package. Recommend dbkit or new synckit; keep DbBundle packing in datakit; flutterboard only triggers via functions (see d11).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "proj-decentralized-data",
+      "title": "BIG: Decentralized data — conflict-safe merge (CRDT + signatures, not blockchain)",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] priority:high track:sync units:Mesh (decentralized),Sync / Drive labels:high-leverage,R&D\nMajor initiative. Flexible data creation + safe merge across devices/people without erasing critical info. Direction: signatures (authenticity) + CRDT keep-both (safe auto-merge) + version vectors (lineage); NOT blockchain (it discards forks). Staged in mesh/ as R&D, integrate at mesh P6. Full design: DECENTRALIZED_DATA.md.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "feat-workboard-one-view",
+      "title": "Workboard: single list view + saved preset filter views (fold Recent/Completed tabs)",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:apps units:workboard,flutterboard\nConsolidate Recent / Completed / etc. into ONE cards view with a search bar + selectable PRESET filter views (saved filter sets you can pick and add to). A preset is just a named filter/sort/group config; the view stays editable. Cuts tab clutter.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "feat-unified-editor",
+      "title": "Unified editor: merge < > JSON + pencil structured into one view (live preview + side drawer: tree/attributes + JSON toggle)",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] priority:high track:engine units:flutterboard labels:high-leverage\nOne editing surface. Default = the live 'current view' with placeholders. A collapsible side drawer holds the widget-tree + widget-attribute editors AND a toggle to view/edit the raw JSON, switching back and forth on the same doc. Supersedes the separate StructuredEditor (pencil) + BuilderPanel (< >).",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "bug-ui-json-reactivity",
+      "title": "ui.json file edits should reflect (hot-restart) + make < > editor reliably apply to live UI",
+      "status": "doing",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:engine units:flutterboard,isan\nEditing ui.json on disk only reflects after a hot RESTART in debug (file is read at launch), not hot reload. The < > (BuilderPanel) edits don't update the live UI as reliably as the pencil (StructuredEditor) does — repair/unify so layout edits apply consistently. Folds into the unified-editor work.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "feat-edit-from-launcher",
+      "title": "Author mode via launcher long-press; normal run is read-only (no widget editing)",
+      "status": "doing",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] priority:high track:engine units:isan,flutterboard\nLong-press an applet on the launcher -> highlight + 'Edit' -> opens the applet in author mode (unified editor, all screens). Normal tap just runs the app with no widget-editing UI. AppScreen gains an editMode flag.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "feat-per-widget-user-edit",
+      "title": "FUTURE: per-widget end-user editing within constraints (e.g. dashboard) without full widget tree",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:engine units:flutterboard labels:high-leverage\nMark specific widgets as user-editable with a BOUNDED edit surface (only allowed props), gated separately from full author mode, so an end user can tweak e.g. a dashboard widget without opening the applet's whole widget tree. Builds on the unified editor.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t95",
+      "title": "Detail view: side panel on wide/tablet, bottom sheet on phone",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] priority:high track:engine milestone:Next units:flutterboard labels:build-once\nCONFIRMED by macOS/browser screenshots: the wide layout has empty space ideal for a SIDE detail panel. Open a row/task's detail in a right-side panel on wide screens; bottom sheet on phone. Per-object-type: side|sheet|page. Pairs with t96. Effort: M.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t96",
+      "title": "Auto-fit content span to available space (wide-screen layout)",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] priority:high track:engine milestone:Next units:flutterboard,isan labels:build-once\nCONFIRMED: on macOS/browser content is a narrow centered column with large empty margins (awkward). Views should expand to use available width/height with a sane max for readability; responsive across phone/tablet/browser. Effort: M.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "t97",
+      "title": "Collection widget — core (own scroll/gestures, selection, bulk delete)",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] priority:high track:engine milestone:Next units:flutterboard labels:build-once,high-leverage\nFirst-class collection view owning its viewport+gestures (ends scroll/pan/drag conflicts). select{mode:none|single|multi,trigger:hold,holdMs}; bulkActions:[delete]. Effort: L. Batch 1; queued after Language."
+    },
+    {
+      "id": "t98",
+      "title": "Collection widget — sort / filter / search / group",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:engine milestone:Next units:flutterboard,datakit labels:build-once\nBuilt-in data ops, datakit-backed. Filter operators MUST include isEmpty/isNotEmpty (null), equals, contains, before/after/range — e.g. show tasks where `completed` is empty (incomplete). Effort: M. Batch 2."
+    },
+    {
+      "id": "t99",
+      "title": "Collection widget — row actions + inline edit by type",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:engine milestone:Next units:flutterboard labels:build-once\nrowActions:[{icon/label,fn,args}] (e.g. +add-subtask); inline cell edit per column type via board/LWW. Effort: M. Batch 3."
+    },
+    {
+      "id": "t100",
+      "title": "Collection widget — unified view switch (table/list/cards/tree)",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:engine milestone:Next units:flutterboard labels:build-once\nOne node, view: table|list|cards|tree; supersedes separate nodes. Effort: M. Batch 4."
+    },
+    {
+      "id": "t101",
+      "title": "JSON logic: composition verbs + sandboxed expression DSL + builder fn-picker",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:engine milestone:Next units:flutterboard labels:build-once\nsequence/when/setFields/incr/cycle verbs + bounded expression evaluator + builder fn-picker. NO arbitrary code (shared-bundle security; AOT can't eval). Effort: L."
+    },
+    {
+      "id": "t102",
+      "title": "Build-queue: choose from the board what Claude builds next",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:product milestone:Next units:workboard\nA marker/filter (priority or a build-next label) so the board is the selection point for the next batch. Effort: S."
+    },
+    {
+      "id": "t103",
+      "title": "Workspace bundle: import-all / export-all + hidden Admin entry",
+      "status": "todo",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:engine milestone:Next units:isan,Sync / Drive\nOne file for the whole platform (all apps). Import-all updates every applet; export-all extracts all to share. Hidden behind a non-obvious gesture (long-press build stamp) + optional passphrase — soft gate, NOT real access control. Effort: M. PENDING: gesture-only vs +passphrase; replace vs merge."
+    },
+    {
+      "id": "t104",
+      "title": "Compact the bottom navigation bar (too tall on phone)",
+      "status": "doing",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] track:engine milestone:Now units:isan\nOn phone the bottom NavigationBar + the filter-chip row take too much vertical space (see screenshot 2026-06-06). Reduce NavigationBar height/density; tighten chip sizing. Effort: S."
+    },
+    {
+      "id": "t105",
+      "title": "Editor/detail sheets: Save at top + save/discard/cancel on close",
+      "status": "doing",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] priority:high track:engine milestone:Now units:flutterboard labels:build-once\nIn record/detail bottom-sheets (e.g. Edit Nodes), the Save sits below the fields and is hidden by the keyboard. Add a persistent Save in the sheet HEADER (always visible); and on close (X / swipe-down / back) prompt Save / Discard / Cancel when there are unsaved edits. Applies to ALL slide-up sheets. Effort: M."
+    },
+    {
+      "id": "t106",
+      "title": "Bundle export must include ui + validate 4-part bundle on Replace",
+      "status": "doing",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] priority:high track:engine milestone:Now units:isan labels:build-once\nBUG: applet export omits `ui`, so Replace keeps the target app's old ui → 'unknown table' errors (fridge←taskly). Fix: export writes tables+columns+ui+content; and Replace warns if any of the 4 parts is missing instead of silently half-applying. Effort: S."
+    },
+    {
+      "id": "t107",
+      "title": "isan: Create NEW applet from a file (don't replace an existing app)",
+      "status": "doing",
+      "profiles": [
+        "p_dev"
+      ],
+      "notes": "[from workboard] priority:high track:engine milestone:Now units:isan labels:build-once\nFrom the launcher, import a full bundle (tables+columns+ui+content) as a BRAND-NEW app with its own id — fridge/others untouched. Distinct from 'Replace applet' (overwrites). Prompt for/derive a new appId, register it in the catalog. Effort: M."
+    },
+    {
+      "id": "rm_root",
+      "title": "isan roadmap (synced from Claude)",
+      "status": "doing",
+      "createdAt": "2026-06-15",
+      "order": 5,
+      "notes": "Auto-synced from the master task ledger on 2026-06-15. Same content lives in Workboard and Dispatch — compare which design you like."
+    },
+    {
+      "id": "rm_a",
+      "title": "Move everything to the new home",
+      "status": "doing",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_root"
+    },
+    {
+      "id": "rm_a1",
+      "title": "Code reorganised into clean repos",
+      "status": "done",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_a"
+    },
+    {
+      "id": "rm_a2",
+      "title": "Live website served from new home",
+      "status": "done",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_a"
+    },
+    {
+      "id": "rm_a3",
+      "title": "Auto-publish website on green tests",
+      "status": "done",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_a"
+    },
+    {
+      "id": "rm_a4",
+      "title": "Mobile app released from new home",
+      "status": "done",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_a"
+    },
+    {
+      "id": "rm_a5",
+      "title": "Future plans rescued from old archive",
+      "status": "done",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_a"
+    },
+    {
+      "id": "rm_a6",
+      "title": "Desktop (Mac) bridge cutover",
+      "status": "doing",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_a",
+      "notes": "repo side just landed; Mac app rebuild remains"
+    },
+    {
+      "id": "rm_a7",
+      "title": "Retire old archive + delete spare repo",
+      "status": "todo",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_a",
+      "notes": "needs you"
+    },
+    {
+      "id": "rm_b",
+      "title": "Automation & tracking",
+      "status": "done",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_root"
+    },
+    {
+      "id": "rm_b1",
+      "title": "Auto-publish on green (CI)",
+      "status": "done",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_b"
+    },
+    {
+      "id": "rm_b2",
+      "title": "One-command ship tool",
+      "status": "done",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_b"
+    },
+    {
+      "id": "rm_b3",
+      "title": "Task tracking system",
+      "status": "done",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_b"
+    },
+    {
+      "id": "rm_b4",
+      "title": "About / what's-new + update check",
+      "status": "done",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_b"
+    },
+    {
+      "id": "rm_c",
+      "title": "The app today",
+      "status": "doing",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_root"
+    },
+    {
+      "id": "rm_c1",
+      "title": "Engine: maps, cards, dice, draw, charts",
+      "status": "done",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_c"
+    },
+    {
+      "id": "rm_c2",
+      "title": "~25 applets shipped",
+      "status": "done",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_c"
+    },
+    {
+      "id": "rm_c3",
+      "title": "Device-to-device sync wiring",
+      "status": "doing",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_c"
+    },
+    {
+      "id": "rm_c4",
+      "title": "Deferred UI polish",
+      "status": "todo",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_c"
+    },
+    {
+      "id": "rm_d",
+      "title": "Product roadmap (future)",
+      "status": "todo",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_root"
+    },
+    {
+      "id": "rm_d1",
+      "title": "Applet store (P0 catalog+install to P1 hosted features)",
+      "status": "todo",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_d"
+    },
+    {
+      "id": "rm_d2",
+      "title": "Make money (tips to subscription to packs)",
+      "status": "todo",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_d"
+    },
+    {
+      "id": "rm_d3",
+      "title": "taskly to Asana-class task and project tool",
+      "status": "todo",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_d"
+    },
+    {
+      "id": "rm_d4",
+      "title": "On-phone AI (offline recipes/receipts)",
+      "status": "todo",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_d"
+    },
+    {
+      "id": "rm_d5",
+      "title": "No-code authoring (build applets in-app)",
+      "status": "todo",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_d"
+    },
+    {
+      "id": "rm_d6",
+      "title": "Split out reusable packages",
+      "status": "todo",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_d"
+    },
+    {
+      "id": "rm_d7",
+      "title": "Vertier - compare/rank/vote platform",
+      "status": "doing",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_d",
+      "notes": "in design"
+    },
+    {
+      "id": "rm_e",
+      "title": "Decisions only you can make",
+      "status": "todo",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_root",
+      "notes": "these unblock the roadmap"
+    },
+    {
+      "id": "rm_e1",
+      "title": "Store: own-only vs others? free vs paid? install identity?",
+      "status": "todo",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_e"
+    },
+    {
+      "id": "rm_e2",
+      "title": "Money: launch subscription soon, or grow free first?",
+      "status": "todo",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_e"
+    },
+    {
+      "id": "rm_e3",
+      "title": "Second small server now (~4 eur/mo) or static v0?",
+      "status": "todo",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_e"
+    },
+    {
+      "id": "rm_e4",
+      "title": "Adopt notifications? (unblocks reminders + fridge)",
+      "status": "todo",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_e"
+    },
+    {
+      "id": "rm_e5",
+      "title": "Two sync defaults (encryption + delete memory)",
+      "status": "todo",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_e"
+    },
+    {
+      "id": "rm_e6",
+      "title": "Keep or retire the GitHub Pages mirror?",
+      "status": "todo",
+      "createdAt": "2026-06-15",
+      "parentId": "rm_e"
+    },
+    {
+      "id": "rm_d8",
+      "parentId": "rm_d",
+      "title": "Science / study materials (atoms to chemistry to biology)",
+      "status": "todo",
+      "createdAt": "2026-06-15",
+      "notes": "learning vertical: interactive references, flashcards/quizzes, diagrams"
+    },
+    {
+      "id": "rm_d9",
+      "parentId": "rm_d",
+      "title": "Voice creation (text-to-speech)",
+      "status": "todo",
+      "createdAt": "2026-06-15",
+      "notes": "decide on-device vs service"
+    },
+    {
+      "id": "rm_d10",
+      "parentId": "rm_d",
+      "title": "Translation (text + speech, incl. on-device AI)",
+      "status": "todo",
+      "createdAt": "2026-06-15",
+      "notes": "extends on-phone SLM beyond recipes"
+    }
+  ],
+  "notes": [
+    {
+      "id": "n1",
+      "title": "Engine idea: ref columns are nesting",
+      "body": "A self-referential ref column (parentId -> tasks) is all you need for hierarchy. Nesting is data, not a special case.",
+      "date": "2026-06-01",
+      "tags": "architecture",
+      "pinned": true
+    },
+    {
+      "id": "n2",
+      "title": "Builder: name is the stable key",
+      "body": "Let users edit the label freely, but keep the column/table name immutable so row values and refs never break.",
+      "date": "2026-06-01",
+      "tags": "settings, builder"
+    },
+    {
+      "id": "n3",
+      "title": "Grocery list",
+      "body": "Oat milk, eggs, spinach, coffee beans.",
+      "date": "2026-06-02",
+      "tags": "personal"
+    },
+    {
+      "id": "d1",
+      "title": "Pluggable canvas layouts (tree/flow) or chart node first?",
+      "body": "[from workboard decision] status:open\ncontext: We can add tree/flow layouts to the canvas node (reshapes the SAME diagram data into hierarchy or flowchart form) and/or a chart node (bar/pie/line for counts and trends). Both are useful — which should I build first?\noptions: A) tree + flow layouts   B) chart node   C) both",
+      "date": "2026-06-04",
+      "tags": "decision,dev,open"
+    },
+    {
+      "id": "d2",
+      "title": "Fix devgraph edge-centering offset?",
+      "body": "[from workboard decision] status:open\ncontext: Graph node cards became wider than the edge math assumes, so arrows attach slightly off the card center. Purely cosmetic. Fix now or defer?\noptions: fix now / defer",
+      "date": "2026-06-04",
+      "tags": "decision,dev,open"
+    },
+    {
+      "id": "d3",
+      "title": "Extract view rendering into a viewkit package?",
+      "body": "[from workboard decision] status:open\ncontext: The cards/table/graph rendering currently lives in flutterboard. If the view library keeps growing we could extract a dedicated `viewkit` package. Pure code-organization; no JSON changes. Now or later?\noptions: now / later (recommended)",
+      "date": "2026-06-04",
+      "tags": "decision,dev,open"
+    },
+    {
+      "id": "d4",
+      "title": "Where should events sync from?",
+      "body": "[from workboard decision] status:answered\ncontext: events_app needs a real data source. Options: subscribe to .ics calendar feeds, a hosted source (possibly paid), or purely user-entered events. This affects the ICS task and the paid tier.\noptions: ICS / hosted / user-entered / a mix\nanswer: Calendar feeds (.ics) + optional login to account calendars (Google/Apple).",
+      "date": "2026-06-04",
+      "tags": "decision,dev,answered"
+    },
+    {
+      "id": "d5",
+      "title": "Dating app backend approach?",
+      "body": "[from workboard decision] status:open\ncontext: Dating needs storage + matching. The natural fit is the mesh (need-to-know sharing) once P5/P6 land. Confirm mesh-based, or stand up a simpler hosted backend first?\noptions: mesh-based / hosted-first",
+      "date": "2026-06-04",
+      "tags": "decision,dev,open"
+    },
+    {
+      "id": "d6",
+      "title": "Monetization model?",
+      "body": "[from workboard decision] status:open\ncontext: For heavy hosted logic / analytics: charge a small fee, go free-with-ads, or both (per app)? Shapes the paid tier and events.\noptions: paid / ads / both / undecided",
+      "date": "2026-06-04",
+      "tags": "decision,dev,open"
+    },
+    {
+      "id": "d7",
+      "title": "First-run build report?",
+      "body": "[from workboard decision] status:open\ncontext: I have structurally validated the Dart but have NOT compiled it. Please run `cd isan && flutter run -d macos` (or -d chrome) and paste any build errors back so I can fix the first compile.",
+      "date": "2026-06-04",
+      "tags": "decision,dev,open"
+    },
+    {
+      "id": "d8",
+      "title": "Which languages for i18n first?",
+      "body": "[from workboard decision] status:open\ncontext: When we add per-app internationalization, which locales matter to you first?",
+      "date": "2026-06-04",
+      "tags": "decision,dev,open"
+    },
+    {
+      "id": "d9",
+      "title": "Task focus: inline expand or slide-in editor?",
+      "body": "[from workboard decision] status:answered\ncontext: How should tapping a task behave?\noptions: inline / slide-in / both\nanswer: Inline expand in place; an 'Open task' button opens the full editor in a new view — and make 'open ___' a reusable, JSON-labelled action for notes/recipes/etc.",
+      "date": "2026-06-04",
+      "tags": "decision,dev,answered"
+    },
+    {
+      "id": "d10",
+      "title": "Merge t60 into the new priority-tier model?",
+      "body": "[from workboard decision] status:open\ncontext: t60 overlaps the new priority model (now/next/future-important/nice). Recommend merging.\noptions: merge / keep separate",
+      "date": "2026-06-05",
+      "tags": "decision,dev,open"
+    },
+    {
+      "id": "d11",
+      "title": "Where should sync live?",
+      "body": "[from workboard decision] status:open\ncontext: DbBundle packing stays in datakit; sync sinks+registry move to dbkit or a new synckit; flutterboard only triggers via functions. Pick the package.\noptions: dbkit / new synckit",
+      "date": "2026-06-05",
+      "tags": "decision,dev,open"
+    },
+    {
+      "id": "d12",
+      "title": "OAuth feasibility on desktop (Drive + account calendars)?",
+      "body": "[from workboard decision] status:open\ncontext: t66 + t91 need OAuth, awkward on macOS desktop. Which targets must support it?",
+      "date": "2026-06-05",
+      "tags": "decision,dev,open"
+    },
+    {
+      "id": "d13",
+      "title": "Settings hierarchy levels?",
+      "body": "[from workboard decision] status:open\ncontext: Organize platform/architecture vs per-app vs per-view settings (capture 37deb0b6).",
+      "date": "2026-06-05",
+      "tags": "decision,dev,open"
+    },
+    {
+      "id": "d14",
+      "title": "Sync: adopt a library vs bespoke mesh/LWW?",
+      "body": "[from workboard decision] status:open\ncontext: Recommend: keep single-writer-through-Dispatch now; adopt Automerge/Yjs or Ditto only when real multi-device/user editing is needed. Don't build CRDT for a problem you don't have yet.\noptions: keep-bespoke / adopt CRDT lib / Ditto P2P / defer",
+      "date": "2026-06-05",
+      "tags": "decision,dev,open"
+    },
+    {
+      "id": "d15",
+      "title": "Define one persistence contract",
+      "body": "[from workboard decision] status:open\ncontext: seedVersion vs saved-store vs debug-disk vs bundled = 4 sources of truth; caused data-wipe + phone-persist bugs. Pick one load/merge contract.\noptions: document+refactor / leave",
+      "date": "2026-06-05",
+      "tags": "decision,dev,open"
+    },
+    {
+      "id": "d16",
+      "title": "Lighthouse app to ship first?",
+      "body": "[from workboard decision] status:open\ncontext: Make one app genuinely great + shipped; grow the engine in service of it (avoid platform-forever).\noptions: taskly / workboard",
+      "date": "2026-06-05",
+      "tags": "decision,dev,open"
+    },
+    {
+      "id": "d17",
+      "title": "Add a test / golden harness for the engine",
+      "body": "[from workboard decision] status:open\ncontext: Engine changes can silently break all apps; Claude can't compile. A golden/widget-test harness catches regressions per build.\noptions: yes / later",
+      "date": "2026-06-05",
+      "tags": "decision,dev,open"
+    },
+    {
+      "id": "d18",
+      "title": "Package taskly as a standalone app (future)?",
+      "body": "[from workboard decision] status:open\ncontext: Future: taskly as its own app with its own package config, separate from the isan host. Apps may also combine within one app.\noptions: later",
+      "date": "2026-06-05",
+      "tags": "decision,dev,open"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "p_work",
+      "name": "Work",
+      "color": "#5C6BC0"
+    },
+    {
+      "id": "p_home",
+      "name": "Personal",
+      "color": "#EF5350"
+    },
+    {
+      "id": "p_studio",
+      "name": "Studio",
+      "color": "#26A69A"
+    },
+    {
+      "id": "p_dev",
+      "name": "Dev",
+      "color": "#8D6E63"
+    }
+  ],
+  "templates": [
+    {
+      "id": "tpl_onboard",
+      "title": "Onboard a new client",
+      "order": 10
+    },
+    {
+      "id": "tpl_onboard_s1",
+      "title": "Send welcome email",
+      "parentId": [
+        "tpl_onboard"
+      ],
+      "order": 10
+    },
+    {
+      "id": "tpl_onboard_s2",
+      "title": "Schedule kickoff call",
+      "parentId": [
+        "tpl_onboard"
+      ],
+      "order": 20
+    },
+    {
+      "id": "tpl_onboard_s3",
+      "title": "Create shared workspace",
+      "parentId": [
+        "tpl_onboard"
+      ],
+      "order": 30
+    },
+    {
+      "id": "tpl_weekly",
+      "title": "Weekly review",
+      "order": 20
+    },
+    {
+      "id": "tpl_weekly_s1",
+      "title": "Clear the inbox",
+      "parentId": [
+        "tpl_weekly"
+      ],
+      "order": 10
+    },
+    {
+      "id": "tpl_weekly_s2",
+      "title": "Review goals & priorities",
+      "parentId": [
+        "tpl_weekly"
+      ],
+      "order": 20
+    },
+    {
+      "id": "tpl_weekly_s3",
+      "title": "Plan next week",
+      "parentId": [
+        "tpl_weekly"
+      ],
+      "order": 30
+    }
+  ]
+}

@@ -1,0 +1,941 @@
+{
+  "app": {
+    "title": "Neujour",
+    "primaryColor": "#7E57C2",
+    "autosave": true,
+    "theme": "sepia"
+  },
+  "nav": [
+    {
+      "id": "journal",
+      "label": "Entries",
+      "icon": "book",
+      "screen": "journal"
+    },
+    {
+      "id": "feelings",
+      "label": "Feelings",
+      "icon": "favorite",
+      "screen": "feelings"
+    },
+    {
+      "id": "calendar",
+      "label": "Calendar",
+      "icon": "calendar_today",
+      "screen": "calendar"
+    },
+    {
+      "id": "timeline",
+      "label": "Timeline",
+      "icon": "history",
+      "screen": "timeline"
+    },
+    {
+      "id": "trends",
+      "label": "Trends",
+      "icon": "insights",
+      "screen": "trends"
+    },
+    {
+      "id": "atlas",
+      "label": "Atlas",
+      "icon": "people",
+      "screen": "atlas"
+    },
+    {
+      "id": "customize",
+      "label": "Customize",
+      "icon": "tune",
+      "screen": "customize"
+    }
+  ],
+  "screens": {
+    "journal": {
+      "title": "Journal",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Your journal — capture a moment, then tap any entry to add people, events, tags, or independent parts. Edits autosave; Undo/Redo live in the entry view. Filter by mood or tag below."
+          },
+          {
+            "type": "button",
+            "label": "New entry",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "entries",
+                "values": {}
+              }
+            }
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "Reflection",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "entries",
+                    "column": "tags",
+                    "value": "tag_reflection"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Work",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "entries",
+                    "column": "tags",
+                    "value": "tag_work"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Family",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "entries",
+                    "column": "tags",
+                    "value": "tag_family"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "All",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "entries",
+                    "column": "tags",
+                    "value": ""
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "emptyIcon": "note_add",
+            "emptyTitle": "Your journal is empty",
+            "emptyText": "Capture your first moment — tap New entry to start writing today.",
+            "emptyAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "entries",
+                "values": {}
+              }
+            },
+            "emptyActionLabel": "New entry",
+            "confirmDelete": true,
+            "table": "entries",
+            "groupBy": "mood",
+            "groupOrder": [
+              "great",
+              "good",
+              "ok",
+              "low",
+              "rough"
+            ],
+            "groupByOptions": [
+              {
+                "label": "Mood",
+                "column": "mood"
+              },
+              {
+                "label": "Tag",
+                "column": "tags"
+              },
+              {
+                "label": "People",
+                "column": "people"
+              }
+            ],
+            "sort": {
+              "column": "date",
+              "dir": "desc"
+            },
+            "title": "title",
+            "subtitle": "body",
+            "tags": [
+              {
+                "column": "mood",
+                "colors": {
+                  "great": "green",
+                  "good": "teal",
+                  "ok": "blue",
+                  "low": "amber",
+                  "rough": "red"
+                }
+              },
+              {
+                "column": "date"
+              },
+              {
+                "column": "time"
+              }
+            ],
+            "collapsible": true,
+            "recent": 8,
+            "expandable": true,
+            "expandFields": [
+              {
+                "column": "date",
+                "label": "Date"
+              },
+              {
+                "column": "time",
+                "label": "Time"
+              },
+              {
+                "column": "tz",
+                "label": "Time zone"
+              },
+              {
+                "column": "mood",
+                "label": "Mood"
+              },
+              {
+                "column": "people",
+                "label": "People"
+              },
+              {
+                "column": "events",
+                "label": "Events"
+              },
+              {
+                "column": "tags",
+                "label": "Tags"
+              },
+              {
+                "column": "places",
+                "label": "Places"
+              },
+              {
+                "column": "quantity",
+                "label": "Quantity"
+              },
+              {
+                "column": "body",
+                "label": "Full entry"
+              }
+            ],
+            "open": "Open entry",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "calendar": {
+      "title": "Calendar",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Your entries by date. Tap an entry to open it; tap an empty day to start a new entry already dated to that day. Use the arrows to look back."
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "text",
+                "style": "caption",
+                "value": "Week starts on:"
+              },
+              {
+                "type": "button",
+                "label": "Monday",
+                "action": {
+                  "fn": "setField",
+                  "args": {
+                    "table": "prefs",
+                    "id": "prefs",
+                    "column": "weekStart",
+                    "value": "monday"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Sunday",
+                "action": {
+                  "fn": "setField",
+                  "args": {
+                    "table": "prefs",
+                    "id": "prefs",
+                    "column": "weekStart",
+                    "value": "sunday"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "calendar",
+            "table": "entries",
+            "titleColumn": "title",
+            "scroll": true,
+            "dateColumns": [
+              "date"
+            ],
+            "dateColumn": "date",
+            "weekStartTable": "prefs",
+            "weekStartColumn": "weekStart",
+            "action": {
+              "fn": "editRow"
+            },
+            "addAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "entries",
+                "values": {}
+              }
+            }
+          }
+        ]
+      }
+    },
+    "timeline": {
+      "title": "Timeline",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Your days. Write an overall note for a day, and see every entry grouped under the day it happened."
+          },
+          {
+            "type": "button",
+            "label": "Day note",
+            "icon": "edit_calendar",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "days"
+              }
+            }
+          },
+          {
+            "type": "cards",
+            "table": "days",
+            "confirmDelete": true,
+            "sort": {
+              "column": "date",
+              "dir": "desc"
+            },
+            "title": "date",
+            "subtitle": "summary",
+            "tags": [
+              {
+                "column": "mood",
+                "colors": {
+                  "great": "green",
+                  "good": "teal",
+                  "ok": "blue",
+                  "low": "amber",
+                  "rough": "red"
+                }
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              {
+                "column": "summary",
+                "label": "Overall"
+              },
+              {
+                "column": "mood",
+                "label": "Day mood"
+              }
+            ],
+            "open": "Open day",
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Entries, grouped by day."
+          },
+          {
+            "type": "cards",
+            "emptyIcon": "edit_note",
+            "emptyTitle": "No entries yet",
+            "emptyText": "Write your first entry -- today is a good place to start.",
+            "emptyAction": {"fn": "addRow", "args": {"table": "entries", "values": {}}},
+            "emptyActionLabel": "New entry",
+            "table": "entries",
+            "confirmDelete": true,
+            "groupBy": "date",
+            "groupByOptions": [
+              {
+                "label": "Day",
+                "column": "date"
+              },
+              {
+                "label": "Mood",
+                "column": "mood"
+              }
+            ],
+            "sort": {
+              "column": "date",
+              "dir": "desc"
+            },
+            "title": "title",
+            "subtitle": "body",
+            "tags": [
+              {
+                "column": "date"
+              },
+              {
+                "column": "time"
+              },
+              {
+                "column": "mood",
+                "colors": {
+                  "great": "green",
+                  "good": "teal",
+                  "ok": "blue",
+                  "low": "amber",
+                  "rough": "red"
+                }
+              }
+            ],
+            "search": true,
+            "searchColumns": [
+              "title",
+              "body"
+            ],
+            "expandable": true,
+            "expandFields": [
+              {
+                "column": "date",
+                "label": "Date"
+              },
+              {
+                "column": "time",
+                "label": "Time"
+              },
+              {
+                "column": "tz",
+                "label": "Time zone"
+              },
+              {
+                "column": "mood",
+                "label": "Mood"
+              },
+              {
+                "column": "people",
+                "label": "People"
+              },
+              {
+                "column": "tags",
+                "label": "Tags"
+              },
+              {
+                "column": "body",
+                "label": "Full entry"
+              }
+            ],
+            "open": "Open entry",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "customize": {
+      "title": "Customize",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Shape Neujour to fit you. Add or remove data types (e.g. drop Places), and add/edit/remove attributes on any type — pick each one's kind: text, rich text, number, date, yes/no, options (with your own values, like colors), a link to another type, or attachments. Changes apply instantly and sync."
+          },
+          {
+            "type": "schemaeditor"
+          }
+        ]
+      }
+    },
+    "trends": {
+      "title": "Trends",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Two lenses: WHAT MOVES YOU — a multivariable fit over your entries (people, tags, places, feelings vs. your Emotion score), computed on this device; and a single-metric trend + forecast from measurements. Set Emotion (0–5) on entries to feed the first."
+          },
+          {
+            "type": "segments",
+            "segments": [
+              {
+                "label": "What moves you",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "insights",
+                      "table": "entries",
+                      "targetColumn": "emotion",
+                      "featureRefs": [
+                        "people",
+                        "tags",
+                        "places"
+                      ],
+                      "featuresTable": "feelings",
+                      "featureNameColumn": "name",
+                      "featureValueColumn": "score",
+                      "featureScaleColumn": "outOf",
+                      "featureLinkColumn": "entry",
+                      "label": "What makes you happy (and what doesn’t)",
+                      "topN": 8
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Measurements",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "button",
+                      "label": "Add measurement",
+                      "icon": "add",
+                      "action": {
+                        "fn": "addRow",
+                        "args": {
+                          "table": "measurements",
+                          "values": {
+                            "metric": "energy"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "regression",
+                      "table": "measurements",
+                      "xColumn": "date",
+                      "yColumn": "value",
+                      "height": "0.45fill",
+                      "filterColumn": "metric"
+                    },
+                    {
+                      "type": "table",
+                      "table": "measurements",
+                      "columns": [
+                        "date",
+                        "metric",
+                        "value"
+                      ],
+                      "height": "0.55fill",
+                      "action": {
+                        "fn": "editRow"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "feelings": {
+      "title": "Feelings",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Named scores, on your own scale: sad 3.5/5, bored 1/5, motivated 10/10. Log one any time; link it to an entry to decode that day’s overall emotion into its parts."
+          },
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "stat",
+                "table": "feelings",
+                "agg": "count",
+                "label": "Logged"
+              },
+              {
+                "type": "stat",
+                "table": "feelings",
+                "agg": "avg",
+                "valueColumn": "score",
+                "label": "Average score",
+                "color": "purple"
+              }
+            ]
+          },
+          {
+            "type": "button",
+            "label": "Log a feeling",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "feelings",
+                "values": {
+                  "outOf": "5"
+                }
+              }
+            }
+          },
+          {
+            "type": "cards",
+            "emptyIcon": "mood",
+            "emptyTitle": "No feelings logged",
+            "emptyText": "Track how you feel to see patterns over time.",
+            "emptyAction": {"fn": "addRow", "args": {"table": "feelings", "values": {"outOf": "5"}}},
+            "emptyActionLabel": "Add",
+            "confirmDelete": true,
+            "table": "feelings",
+            "title": "name",
+            "subtitle": "score",
+            "tags": [
+              {
+                "column": "outOf"
+              },
+              {
+                "column": "date"
+              }
+            ],
+            "search": true,
+            "searchColumns": [
+              "name",
+              "note"
+            ],
+            "sortDir": "desc",
+            "expandable": true,
+            "expandFields": [
+              {
+                "column": "score",
+                "label": "Score"
+              },
+              {
+                "column": "outOf",
+                "label": "Out of"
+              },
+              {
+                "column": "note",
+                "label": "Note"
+              },
+              {
+                "column": "entry",
+                "label": "Entry"
+              }
+            ],
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "atlas": {
+      "title": "Atlas",
+      "body": {
+        "type": "segments",
+        "segments": [
+          {
+            "label": "People",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": "People you mention in your journal — now a web: drag faces to arrange, connect them to map relationships, tap to edit details, quantity and position."
+                },
+                {
+                  "type": "row",
+                  "children": [
+                    {
+                      "type": "button",
+                      "label": "New person",
+                      "icon": "add",
+                      "action": {
+                        "fn": "addRow",
+                        "args": {
+                          "table": "people"
+                        }
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "label": "Connect two people",
+                      "icon": "link",
+                      "action": {
+                        "fn": "addRow",
+                        "args": {
+                          "table": "connections"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "canvas",
+                  "nodesTable": "people",
+                  "edgesTable": "connections",
+                  "labelColumn": "name",
+                  "xColumn": "x",
+                  "yColumn": "y",
+                  "fromColumn": "from",
+                  "toColumn": "to",
+                  "edgeLabelColumn": "label",
+                  "fillPhone": true,
+                  "action": {
+                    "fn": "editRow"
+                  }
+                },
+                {
+                  "type": "cards",
+                  "emptyIcon": "people",
+                  "emptyTitle": "No people yet",
+                  "emptyText": "Add the people who matter to you.",
+                  "emptyAction": {"fn": "addRow", "args": {"table": "people"}},
+                  "emptyActionLabel": "Add person",
+                  "confirmDelete": true,
+                  "table": "people",
+                  "groupByOptions": [
+                    {
+                      "label": "Relation",
+                      "column": "relation"
+                    }
+                  ],
+                  "groupBy": "relation",
+                  "title": "name",
+                  "subtitle": "relation",
+                  "tags": [
+                    {
+                      "column": "relation"
+                    }
+                  ],
+                  "expandable": true,
+                  "expandFields": [
+                    {
+                      "column": "relation",
+                      "label": "Relation"
+                    }
+                  ],
+                  "open": "Open",
+                  "action": {
+                    "fn": "editRow"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "label": "Events",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": "Moments and occasions you've journaled about. Tap to edit or add a new one."
+                },
+                {
+                  "type": "button",
+                  "label": "New event",
+                  "icon": "add",
+                  "action": {
+                    "fn": "addRow",
+                    "args": {
+                      "table": "events"
+                    }
+                  }
+                },
+                {
+                  "type": "cards",
+                  "emptyIcon": "event",
+                  "emptyTitle": "No events yet",
+                  "emptyText": "Note the moments worth remembering.",
+                  "emptyAction": {"fn": "addRow", "args": {"table": "events"}},
+                  "emptyActionLabel": "Add",
+                  "confirmDelete": true,
+                  "table": "events",
+                  "sort": {
+                    "column": "date",
+                    "dir": "desc"
+                  },
+                  "title": "name",
+                  "subtitle": "place",
+                  "tags": [
+                    {
+                      "column": "date"
+                    }
+                  ],
+                  "expandable": true,
+                  "expandFields": [
+                    {
+                      "column": "date",
+                      "label": "Date"
+                    },
+                    {
+                      "column": "place",
+                      "label": "Place"
+                    }
+                  ],
+                  "open": "Open",
+                  "action": {
+                    "fn": "editRow"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "label": "Tags",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": "Tags help you find themes across entries. Tap to rename or recolor."
+                },
+                {
+                  "type": "button",
+                  "label": "New tag",
+                  "icon": "add",
+                  "action": {
+                    "fn": "addRow",
+                    "args": {
+                      "table": "tags"
+                    }
+                  }
+                },
+                {
+                  "type": "canvas",
+                  "nodesTable": "tags",
+                  "labelColumn": "name",
+                  "xColumn": "x",
+                  "yColumn": "y",
+                  "fillPhone": true,
+                  "action": {
+                    "fn": "editRow"
+                  }
+                },
+                {
+                  "type": "list",
+                  "emptyIcon": "label",
+                  "emptyTitle": "No tags yet",
+                  "emptyText": "Create tags to organize your entries.",
+                  "emptyAction": {"fn": "addRow", "args": {"table": "tags"}},
+                  "emptyActionLabel": "New tag",
+                  "confirmDelete": true,
+                  "table": "tags",
+                  "titleColumn": "name",
+                  "metaColumns": [
+                    "color"
+                  ],
+                  "sortColumn": "name",
+                  "sortDir": "asc",
+                  "action": {
+                    "fn": "editRow"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "label": "Places",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": "Geolocations you've journaled about. Tap to edit; add coordinates (lat, lng). New places can also be created right from an entry."
+                },
+                {
+                  "type": "button",
+                  "label": "New place",
+                  "icon": "add",
+                  "action": {
+                    "fn": "addRow",
+                    "args": {
+                      "table": "places"
+                    }
+                  }
+                },
+                {
+                  "type": "canvas",
+                  "nodesTable": "places",
+                  "labelColumn": "name",
+                  "xColumn": "x",
+                  "yColumn": "y",
+                  "fillPhone": true,
+                  "action": {
+                    "fn": "editRow"
+                  }
+                },
+                {
+                  "type": "cards",
+                  "emptyIcon": "place",
+                  "emptyTitle": "No places yet",
+                  "emptyText": "Add the places you go.",
+                  "emptyAction": {"fn": "addRow", "args": {"table": "places"}},
+                  "emptyActionLabel": "Add place",
+                  "confirmDelete": true,
+                  "table": "places",
+                  "title": "name",
+                  "subtitle": "coords",
+                  "expandable": true,
+                  "expandFields": [
+                    {
+                      "column": "coords",
+                      "label": "Coordinates (lat, lng)"
+                    },
+                    {
+                      "column": "notes",
+                      "label": "Notes"
+                    }
+                  ],
+                  "open": "Open",
+                  "action": {
+                    "fn": "editRow"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

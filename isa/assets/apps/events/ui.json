@@ -1,0 +1,368 @@
+{
+  "app": {
+    "title": "Events",
+    "primaryColor": "#00ACC1",
+    "theme": "neon"
+  },
+  "nav": [
+    {
+      "id": "files",
+      "label": "Files",
+      "icon": "folder",
+      "screen": "files"
+    },
+    {
+      "id": "upcoming",
+      "label": "Browse",
+      "icon": "list",
+      "screen": "upcoming"
+    },
+    {
+      "id": "going",
+      "label": "Going",
+      "icon": "check_circle",
+      "screen": "going"
+    },
+    {
+      "id": "calendar",
+      "label": "Calendar",
+      "icon": "calendar_today",
+      "screen": "calendar"
+    },
+    {
+      "id": "map",
+      "label": "Map",
+      "icon": "map",
+      "screen": "map"
+    }
+  ],
+  "screens": {
+    "files": {
+      "title": "Files",
+      "body": {
+        "type": "explorer",
+        "table": "files",
+        "nameColumn": "name",
+        "orderColumn": "order",
+        "allowFolders": false,
+        "railMode": "collapsible",
+        "title": "Files",
+        "fileIcon": "event",
+        "newFileLabel": "New list",
+        "emptyHome": true,
+        "homeTitle": "Your event lists",
+        "homeSubtitle": "Open a recent list, or start a new one.",
+        "addItems": [
+          { "label": "New list", "icon": "add", "values": { "name": "Untitled list" } }
+        ],
+        "autoSelectFirst": true,
+        "scopeTargets": [
+          { "table": "events", "column": "file" },
+          { "table": "tags", "column": "file" }
+        ],
+        "detail": {
+          "type": "column",
+          "crossAxis": "stretch",
+          "children": [
+            {
+              "type": "text",
+              "style": "caption",
+              "value": "A file is one list of events — its own events and tags. Pick a file on the left, then use the other tabs to work in it. Tap + to start a new list, and a file's ⋮ menu to rename or delete it."
+            },
+            {
+              "type": "button",
+              "label": "Open this list",
+              "icon": "event",
+              "action": {
+                "fn": "goto",
+                "args": {
+                  "screen": "upcoming"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "upcoming": {
+      "title": "Browse events",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "What's happening nearby. Filter by type, tap a card to see details, or open it to RSVP."
+          },
+          {
+            "type": "button",
+            "label": "New event",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "events",
+                "values": {
+                  "going": false
+                }
+              }
+            }
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "Music",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "events",
+                    "column": "tags",
+                    "value": "etag_music"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Food",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "events",
+                    "column": "tags",
+                    "value": "etag_food"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Tech",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "events",
+                    "column": "tags",
+                    "value": "etag_tech"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "All",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "events",
+                    "column": "tags",
+                    "value": ""
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "table": "events",
+            "groupByOptions": [
+              {
+                "label": "Type",
+                "column": "tags"
+              },
+              {
+                "label": "Going",
+                "column": "going"
+              }
+            ],
+            "groupBy": "tags",
+            "sort": {
+              "column": "start",
+              "dir": "asc"
+            },
+            "title": "title",
+            "subtitle": "location",
+            "tags": [
+              {
+                "column": "start"
+              },
+              {
+                "column": "going",
+                "colors": {
+                  "true": "green",
+                  "false": "gray"
+                }
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              {
+                "column": "start",
+                "label": "Start"
+              },
+              {
+                "column": "location",
+                "label": "Location"
+              },
+              {
+                "column": "going",
+                "label": "Going"
+              },
+              {
+                "column": "tags",
+                "label": "Tags"
+              },
+              {
+                "column": "notes",
+                "label": "Notes"
+              }
+            ],
+            "open": "Open / RSVP",
+            "action": {
+              "fn": "editRow"
+            },
+            "openActions": [
+              {
+                "label": "Show on map",
+                "icon": "map",
+                "action": {
+                  "chain": [
+                    { "fn": "focusRow" },
+                    { "fn": "goto", "args": { "screen": "map" } }
+                  ]
+                }
+              }
+            ],
+            "emptyIcon": "event",
+            "emptyTitle": "No events yet",
+            "emptyText": "Add an event and it'll show up here, ready to share and RSVP.",
+            "emptyAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "events",
+                "values": {
+                  "going": false
+                }
+              }
+            },
+            "emptyActionLabel": "New event"
+          }
+        ]
+      }
+    },
+    "going": {
+      "title": "You're going",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Events you've RSVP'd yes to, soonest first. Open one to update your plans."
+          },
+          {
+            "type": "cards",
+            "table": "events",
+            "filter": {
+              "column": "going",
+              "value": "true"
+            },
+            "sort": {
+              "column": "start",
+              "dir": "asc"
+            },
+            "title": "title",
+            "subtitle": "location",
+            "tags": [
+              {
+                "column": "start"
+              },
+              {
+                "column": "tags"
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              {
+                "column": "start",
+                "label": "Start"
+              },
+              {
+                "column": "location",
+                "label": "Location"
+              },
+              {
+                "column": "notes",
+                "label": "Notes"
+              }
+            ],
+            "open": "Open",
+            "action": {
+              "fn": "editRow"
+            },
+            "emptyIcon": "check_circle",
+            "emptyTitle": "Nothing on your list",
+            "emptyText": "RSVP yes to an event from Browse and it'll land here, soonest first."
+          }
+        ]
+      }
+    },
+    "calendar": {
+      "title": "Calendar",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Events laid out by date. Tap a day to open that event."
+          },
+          {
+            "type": "calendar",
+            "table": "events",
+            "titleColumn": "title",
+            "dateColumns": [
+              "start"
+            ],
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "map": {
+      "title": "Event map",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Where each event is. In the events list, tap an event and press \"Show on map\" to open it here, centered on its spot. Tap \"Show all events\" to zoom back out. Tap a pin to open the event."
+          },
+          {
+            "type": "button",
+            "label": "Show all events",
+            "icon": "public",
+            "action": {
+              "fn": "clearFocus",
+              "args": { "table": "events" }
+            }
+          },
+          {
+            "type": "map",
+            "table": "events",
+            "latColumn": "lat",
+            "lonColumn": "lon",
+            "labelColumn": "title",
+            "fillPhone": true,
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

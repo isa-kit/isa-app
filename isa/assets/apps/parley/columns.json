@@ -1,0 +1,12 @@
+{
+  "messages": [
+    { "name": "sender", "type": "text", "label": "From" },
+    { "name": "text", "type": "text", "label": "Message" },
+    { "name": "translated", "type": "text", "label": "Translation" },
+    { "name": "fromLang", "type": "text", "label": "Language" },
+    { "name": "sentAt", "type": "text", "label": "Sent" }
+  ],
+  "participants": [
+    { "name": "lang", "type": "text", "label": "Language" }
+  ]
+}

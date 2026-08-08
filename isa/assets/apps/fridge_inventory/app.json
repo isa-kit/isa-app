@@ -1,0 +1,11 @@
+{
+  "id": "fridge_inventory",
+  "name": "Fridge Inventory",
+  "category": "Life",
+  "icon": "kitchen",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_fridge"
+  },
+  "seedVersion": "2026-06-05.2"
+}

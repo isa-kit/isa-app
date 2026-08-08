@@ -1,0 +1,406 @@
+{
+  "app": {
+    "title": "Porchfest map",
+    "primaryColor": "#3F7DD9",
+    "theme": "contrast"
+  },
+  "nav": [
+    {
+      "id": "map",
+      "label": "Map",
+      "icon": "map",
+      "screen": "map"
+    },
+    {
+      "id": "schedule",
+      "label": "Schedule",
+      "icon": "event_note",
+      "screen": "schedule"
+    },
+    {
+      "id": "about",
+      "label": "About",
+      "icon": "menu_book",
+      "screen": "about"
+    }
+  ],
+  "screens": {
+    "map": {
+      "title": "Porchfest map",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Cambridge Porchfest, July 11\u201312, 2026. Porches colored by time block \u2014 blue = 12\u20132 PM, green = 2\u20134 PM, amber = 4\u20136 PM. Tap or drag across the day/time strip and filter by genre in the control panel, or press \u25b6 to sweep the day one slot at a time \u2014 matching pins gently pulse. Tap a pin or list row to zoom in and see the performer's start time, genre and website."
+          },
+          {
+            "type": "datacontrols",
+            "table": "events",
+            "dock": "auto",
+            "children": [
+              {
+                "type": "databars",
+                "table": "events",
+                "column": "slot",
+                "sectionColumn": "day",
+                "colors": {
+                  "Sat 12 PM": "blue",
+                  "Sat 1 PM": "blue",
+                  "Sat 2 PM": "green",
+                  "Sat 3 PM": "green",
+                  "Sat 4 PM": "amber",
+                  "Sat 5 PM": "amber",
+                  "Sun 12 PM": "blue",
+                  "Sun 1 PM": "blue",
+                  "Sun 2 PM": "green",
+                  "Sun 3 PM": "green",
+                  "Sun 4 PM": "amber",
+                  "Sun 5 PM": "amber"
+                },
+                "play": true
+              },
+              {
+                "type": "datasegment",
+                "table": "events",
+                "column": "genreTag",
+                "label": "Genre",
+                "max": 12
+              }
+            ],
+            "body": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "pick",
+                  "table": "viewPrefs",
+                  "rowId": "v1",
+                  "column": "view",
+                  "variant": "segmented",
+                  "options": [
+                    {
+                      "value": "map",
+                      "label": "Map"
+                    },
+                    {
+                      "value": "table",
+                      "label": "Table"
+                    }
+                  ]
+                },
+                {
+                  "type": "switch",
+                  "table": "viewPrefs",
+                  "rowId": "v1",
+                  "column": "view",
+                  "cases": {
+                    "map": {
+                      "type": "column",
+                      "children": [
+                        {
+                          "type": "map",
+                          "table": "events",
+                          "latColumn": "lat",
+                          "lonColumn": "lon",
+                          "labelColumn": "artist",
+                          "colorColumn": "zone",
+                          "colors": {
+                            "12\u20132 PM": "blue",
+                            "2\u20134 PM": "green",
+                            "4\u20136 PM": "amber"
+                          },
+                          "configSource": "board",
+                          "cluster": true,
+                          "markerPulse": true,
+                          "userLocation": true,
+                          "zoom": 15,
+                          "height": "520",
+                          "action": {
+                            "fn": "openLink"
+                          },
+                          "listSubtitleColumn": "start",
+                          "listTagColumn": "genreTag",
+                          "detailPopup": true,
+                          "detailFields": [
+                            "start",
+                            "genreTag"
+                          ],
+                          "linkColumn": "url"
+                        },
+                        {
+                          "type": "row",
+                          "wrap": true,
+                          "spacing": 16,
+                          "children": [
+                            {
+                              "type": "row",
+                              "spacing": 4,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "\u25cf",
+                                  "color": "blue"
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "12\u20132 PM",
+                                  "style": "caption"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "row",
+                              "spacing": 4,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "\u25cf",
+                                  "color": "green"
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "2\u20134 PM",
+                                  "style": "caption"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "row",
+                              "spacing": 4,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "\u25cf",
+                                  "color": "amber"
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "4\u20136 PM",
+                                  "style": "caption"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "table": {
+                      "type": "cards",
+                      "table": "events",
+                      "title": "artist",
+                      "subtitle": "address",
+                      "groupBy": "slot",
+                      "tags": [
+                        {
+                          "column": "start"
+                        },
+                        {
+                          "column": "genreTag"
+                        }
+                      ],
+                      "configSource": "board",
+                      "search": true,
+                      "typeToSearch": true,
+                      "filterable": true,
+                      "filterableColumns": [
+                        "artist",
+                        "day",
+                        "start",
+                        "hour",
+                        "genreTag",
+                        "address",
+                        "slot"
+                      ],
+                      "collapsible": true,
+                      "sortBy": "startMin",
+                      "height": 520,
+                      "action": {
+                        "fn": "editRow"
+                      }
+                    }
+                  },
+                  "default": {
+                    "type": "column",
+                    "children": [
+                      {
+                        "type": "map",
+                        "table": "events",
+                        "latColumn": "lat",
+                        "lonColumn": "lon",
+                        "labelColumn": "artist",
+                        "colorColumn": "zone",
+                        "colors": {
+                          "12\u20132 PM": "blue",
+                          "2\u20134 PM": "green",
+                          "4\u20136 PM": "amber"
+                        },
+                        "configSource": "board",
+                        "cluster": true,
+                        "markerPulse": true,
+                        "userLocation": true,
+                        "zoom": 15,
+                        "height": "520",
+                        "action": {
+                          "fn": "openLink"
+                        },
+                        "listSubtitleColumn": "start",
+                        "listTagColumn": "genreTag",
+                        "detailPopup": true,
+                        "detailFields": [
+                          "start",
+                          "genreTag"
+                        ],
+                        "linkColumn": "url"
+                      },
+                      {
+                        "type": "row",
+                        "wrap": true,
+                        "spacing": 16,
+                        "children": [
+                          {
+                            "type": "row",
+                            "spacing": 4,
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "\u25cf",
+                                "color": "blue"
+                              },
+                              {
+                                "type": "text",
+                                "value": "12\u20132 PM",
+                                "style": "caption"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "row",
+                            "spacing": 4,
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "\u25cf",
+                                "color": "green"
+                              },
+                              {
+                                "type": "text",
+                                "value": "2\u20134 PM",
+                                "style": "caption"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "row",
+                            "spacing": 4,
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "\u25cf",
+                                "color": "amber"
+                              },
+                              {
+                                "type": "text",
+                                "value": "4\u20136 PM",
+                                "style": "caption"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "schedule": {
+      "title": "Schedule",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "cards",
+            "table": "events",
+            "title": "artist",
+            "subtitle": "address",
+            "groupBy": "hour",
+            "tags": [
+              {
+                "column": "start"
+              },
+              {
+                "column": "day"
+              }
+            ],
+            "search": true,
+            "typeToSearch": true,
+            "filterable": true,
+            "filterableColumns": [
+              "artist",
+              "day",
+              "start",
+              "hour",
+              "genreTag",
+              "address",
+              "slot"
+            ],
+            "collapsible": true,
+            "sortBy": "startMin",
+            "height": 480,
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "about": {
+      "title": "About this map",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Cambridgeport Porchfest"
+          },
+          {
+            "type": "text",
+            "value": "A two-day event. Saturday, July 11, 2026, 12:00 PM \u2013 6:00 PM, in the Cambridgeport neighborhood \u2014 a neighborhood-wide day of free porch concerts. Sunday, July 12, 2026, performances continue at restaurants and cafes along Mass Ave, in Central Square and Harvard Square, Cambridge MA."
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Where the data comes from"
+          },
+          {
+            "type": "text",
+            "value": "Scraped today from cambridgeport.org/porchfestmaps and the City of Cambridge's public ArcGIS Porchfest dashboard feature layer, which carries exact GPS points for each performance on both days. Regenerate with apps/porchfest/pipeline/build.py."
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": "On accuracy"
+          },
+          {
+            "type": "text",
+            "value": "Coordinates are the ArcGIS dashboard's own points, published by the organizers for this event \u2014 not independently geocoded, so a few porches may sit slightly off if the source point does. A handful of slots may be missing a pin if a row didn't carry a location."
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Map color legend"
+          },
+          {
+            "type": "text",
+            "value": "Blue = 12\u20132 PM \u00b7 green = 2\u20134 PM \u00b7 amber = 4\u20136 PM. Use the Map tab's control panel to filter by date (Saturday/Sunday), time block, or genre \u2014 the map, legend and pin colors all update together. Tap a pin or list row to zoom in on that performer and see a card with their start time, genre and an \"Open website\" button (when they listed one)."
+          }
+        ]
+      }
+    }
+  }
+}

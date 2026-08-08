@@ -1,0 +1,7 @@
+{
+  "runs": [
+    { "name": "id", "type": "text" },
+    { "name": "day", "type": "number", "label": "Day" },
+    { "name": "noms", "type": "number", "label": "Noms" }
+  ]
+}

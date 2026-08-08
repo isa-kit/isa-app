@@ -1,0 +1,12 @@
+{
+  "id": "diagram",
+  "name": "Diagram",
+  "category": "Creative",
+  "hidden": true,
+  "icon": "account_tree",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_diagram"
+  },
+  "seedVersion": "2026-08-01.1-drawio-buttons"
+}

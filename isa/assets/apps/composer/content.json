@@ -1,0 +1,72 @@
+{
+  "boards": [
+    { "id": "bd_myapp", "name": "My app", "order": 0 }
+  ],
+  "screens": [
+    {
+      "id": "sc_home",
+      "board": "bd_myapp",
+      "name": "Home",
+      "device": "phone",
+      "x": 0,
+      "y": 0,
+      "variantOf": null
+    },
+    {
+      "id": "sc_details",
+      "board": "bd_myapp",
+      "name": "Details",
+      "device": "phone",
+      "x": 480,
+      "y": 0,
+      "variantOf": null
+    }
+  ],
+  "widgets": [
+    {
+      "id": "w_titlebar",
+      "screen": "sc_home",
+      "kind": "titlebar",
+      "label": "Home",
+      "region": "top",
+      "order": 0,
+      "intent": null
+    },
+    {
+      "id": "w_search",
+      "screen": "sc_home",
+      "kind": "searchbar",
+      "label": "Search",
+      "region": "top",
+      "order": 1,
+      "intent": null
+    },
+    {
+      "id": "w_scroll",
+      "screen": "sc_home",
+      "kind": "scrollview",
+      "label": "Feed",
+      "region": "body",
+      "order": 0,
+      "intent": null
+    },
+    {
+      "id": "w_bottomnav",
+      "screen": "sc_home",
+      "kind": "bottomnav",
+      "label": "Nav",
+      "region": "bottom",
+      "order": 0,
+      "intent": null
+    }
+  ],
+  "flows": [
+    {
+      "id": "fl_home_details",
+      "board": "bd_myapp",
+      "fromWidget": "w_scroll",
+      "toScreen": "sc_details",
+      "transition": "push"
+    }
+  ]
+}

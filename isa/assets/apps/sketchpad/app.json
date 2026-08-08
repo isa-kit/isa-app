@@ -1,0 +1,11 @@
+{
+  "id": "sketchpad",
+  "name": "Sketchpad",
+  "category": "Creative",
+  "icon": "brush",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_sketchpad"
+  },
+  "seedVersion": "2026-06-15.2"
+}

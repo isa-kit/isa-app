@@ -1,0 +1,174 @@
+{
+  "tasks": [
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Title",
+      "required": true
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "label": "Status",
+      "options": [
+        "queue",
+        "current",
+        "in progress",
+        "awaiting",
+        "done",
+        "blocked"
+      ],
+      "default": "queue"
+    },
+    {
+      "name": "owner",
+      "type": "enum",
+      "label": "Owner",
+      "options": [
+        "you",
+        "claude"
+      ],
+      "default": "you"
+    },
+    {
+      "name": "assigned",
+      "type": "enum",
+      "label": "Assigned to",
+      "options": [
+        "you",
+        "claude"
+      ],
+      "default": "you"
+    },
+    {
+      "name": "createdBy",
+      "type": "text",
+      "label": "Created by",
+      "advanced": true
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Detail"
+    },
+    {
+      "name": "attachments",
+      "type": "attachments",
+      "label": "Attachments"
+    },
+    {
+      "name": "note",
+      "type": "text",
+      "label": "Note / reply",
+      "advanced": true
+    },
+    {
+      "name": "order",
+      "type": "number",
+      "label": "Order",
+      "advanced": true
+    },
+    {
+      "name": "updatedBy",
+      "type": "text",
+      "label": "Updated by",
+      "advanced": true
+    },
+    {
+      "name": "updatedAt",
+      "type": "date",
+      "label": "Updated",
+      "advanced": true,
+      "default": "today"
+    },
+    {
+      "name": "completedBy",
+      "type": "text",
+      "label": "Completed by",
+      "advanced": true
+    },
+    {
+      "name": "completedAt",
+      "type": "date",
+      "label": "Completed at",
+      "advanced": true
+    }
+  ],
+  "settings": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Setting"
+    },
+    {
+      "name": "on",
+      "type": "boolean",
+      "label": "On",
+      "default": false
+    }
+  ],
+  "updates": [
+    {
+      "name": "taskId",
+      "type": "text",
+      "label": "Task ID",
+      "advanced": true
+    },
+    {
+      "name": "taskTitle",
+      "type": "text",
+      "label": "Task"
+    },
+    {
+      "name": "kind",
+      "type": "enum",
+      "label": "Kind",
+      "options": [
+        "note",
+        "question",
+        "answer"
+      ],
+      "default": "note"
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "label": "Status",
+      "options": [
+        "queue",
+        "current",
+        "in progress",
+        "awaiting",
+        "done",
+        "blocked"
+      ],
+      "advanced": true
+    },
+    {
+      "name": "message",
+      "type": "text",
+      "label": "Message"
+    },
+    {
+      "name": "attachments",
+      "type": "attachments",
+      "label": "Attachments"
+    },
+    {
+      "name": "by",
+      "type": "enum",
+      "label": "By",
+      "options": [
+        "you",
+        "claude"
+      ],
+      "default": "you"
+    },
+    {
+      "name": "at",
+      "type": "date",
+      "label": "At",
+      "default": "today"
+    }
+  ]
+}

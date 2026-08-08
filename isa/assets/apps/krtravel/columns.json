@@ -1,0 +1,454 @@
+{
+ "districts": [
+  {
+   "name": "district",
+   "type": "text",
+   "label": "District"
+  },
+  {
+   "name": "travel_ease_score",
+   "type": "number",
+   "label": "Travel-ease score",
+   "rules": {
+    "meter": true,
+    "max": 100
+   }
+  },
+  {
+   "name": "travel_ease_tier",
+   "type": "enum",
+   "label": "Travel-ease tier",
+   "options": [
+    "very-low",
+    "low",
+    "mid",
+    "high",
+    "very-high",
+    "no-data"
+   ]
+  },
+  {
+   "name": "walk_ease_mean",
+   "type": "number",
+   "label": "Walk-ease (mean)"
+  },
+  {
+   "name": "area_centrality_score",
+   "type": "number",
+   "label": "Area-centrality score",
+   "rules": {
+    "meter": true,
+    "max": 100
+   }
+  },
+  {
+   "name": "area_centrality_tier",
+   "type": "enum",
+   "label": "Area-centrality tier",
+   "options": [
+    "very-low",
+    "low",
+    "mid",
+    "high",
+    "very-high",
+    "no-data"
+   ]
+  },
+  {
+   "name": "station_count",
+   "type": "number",
+   "label": "Stations in district"
+  },
+  {
+   "name": "inbound_mean_m",
+   "type": "number",
+   "label": "Avg minutes arriving here"
+  },
+  {
+   "name": "inbound_access_score",
+   "type": "number",
+   "label": "Destination-access score",
+   "rules": {
+    "meter": true,
+    "max": 100
+   }
+  },
+  {
+   "name": "best_spots_score",
+   "type": "number",
+   "label": "Best-spots score",
+   "rules": {
+    "meter": true,
+    "max": 100
+   }
+  },
+  {
+   "name": "best_spots_tier",
+   "type": "enum",
+   "label": "Best-spots tier",
+   "options": [
+    "very-low",
+    "low",
+    "mid",
+    "high",
+    "very-high"
+   ]
+  },
+  {
+   "name": "best_spots_rank",
+   "type": "number",
+   "label": "Best-spots rank"
+  }
+ ],
+ "dong": [
+  {
+   "name": "dong",
+   "type": "text",
+   "label": "Neighborhood (dong)"
+  },
+  {
+   "name": "dong_kr",
+   "type": "text",
+   "label": "Neighborhood (Korean)"
+  },
+  {
+   "name": "station_count",
+   "type": "number",
+   "label": "Stations in dong"
+  },
+  {
+   "name": "travel_ease_score",
+   "type": "number",
+   "label": "Travel-ease score",
+   "rules": {
+    "meter": true,
+    "max": 100
+   }
+  },
+  {
+   "name": "travel_ease_tier",
+   "type": "enum",
+   "label": "Travel-ease tier",
+   "options": [
+    "very-low",
+    "low",
+    "mid",
+    "high",
+    "very-high",
+    "no-data"
+   ]
+  },
+  {
+   "name": "area_centrality_score",
+   "type": "number",
+   "label": "Area-centrality score",
+   "rules": {
+    "meter": true,
+    "max": 100
+   }
+  },
+  {
+   "name": "area_centrality_tier",
+   "type": "enum",
+   "label": "Area-centrality tier",
+   "options": [
+    "very-low",
+    "low",
+    "mid",
+    "high",
+    "very-high",
+    "no-data"
+   ]
+  }
+ ],
+ "stations": [
+  {
+   "name": "sid",
+   "type": "text",
+   "label": "Station id"
+  },
+  {
+   "name": "name",
+   "type": "text",
+   "label": "Station"
+  },
+  {
+   "name": "district",
+   "type": "text",
+   "label": "District"
+  },
+  {
+   "name": "lat",
+   "type": "number",
+   "label": "Latitude"
+  },
+  {
+   "name": "lng",
+   "type": "number",
+   "label": "Longitude"
+  },
+  {
+   "name": "transit_stress_score",
+   "type": "number",
+   "label": "Transit-stress score",
+   "rules": {
+    "meter": true,
+    "max": 100
+   }
+  },
+  {
+   "name": "transit_stress_tier",
+   "type": "enum",
+   "label": "Transit-stress tier",
+   "options": [
+    "very-low",
+    "low",
+    "mid",
+    "high",
+    "very-high"
+   ]
+  },
+  {
+   "name": "walk_stress_score",
+   "type": "number",
+   "label": "Walk-stress score (proxy)",
+   "rules": {
+    "meter": true,
+    "max": 100
+   }
+  },
+  {
+   "name": "walk_stress_tier",
+   "type": "enum",
+   "label": "Walk-stress tier (proxy)",
+   "options": [
+    "very-low",
+    "low",
+    "mid",
+    "high",
+    "very-high"
+   ]
+  }
+ ],
+ "best_spots": [
+  {
+   "name": "district",
+   "type": "text",
+   "label": "District"
+  },
+  {
+   "name": "best_spots_score",
+   "type": "number",
+   "label": "Best-spots score",
+   "rules": {
+    "meter": true,
+    "max": 100
+   }
+  },
+  {
+   "name": "best_spots_tier",
+   "type": "enum",
+   "label": "Best-spots tier",
+   "options": [
+    "very-low",
+    "low",
+    "mid",
+    "high",
+    "very-high"
+   ]
+  },
+  {
+   "name": "best_spots_rank",
+   "type": "number",
+   "label": "Rank"
+  },
+  {
+   "name": "best_spots_rank_key",
+   "type": "text",
+   "label": "Rank key (sort)"
+  },
+  {
+   "name": "rank_label",
+   "type": "text",
+   "label": "Rank + district (display)"
+  },
+  {
+   "name": "inbound_access_score",
+   "type": "number",
+   "label": "Destination-access score",
+   "rules": {
+    "meter": true,
+    "max": 100
+   }
+  },
+  {
+   "name": "inbound_mean_m",
+   "type": "number",
+   "label": "Avg minutes arriving (from elsewhere)"
+  },
+  {
+   "name": "area_centrality_score",
+   "type": "number",
+   "label": "Area-centrality score",
+   "rules": {
+    "meter": true,
+    "max": 100
+   }
+  },
+  {
+   "name": "travel_ease_score",
+   "type": "number",
+   "label": "Overall travel-ease score",
+   "rules": {
+    "meter": true,
+    "max": 100
+   }
+  },
+  {
+   "name": "travel_ease_tier",
+   "type": "enum",
+   "label": "Overall travel-ease tier",
+   "options": [
+    "very-low",
+    "low",
+    "mid",
+    "high",
+    "very-high",
+    "no-data"
+   ]
+  },
+  {
+   "name": "lat",
+   "type": "number",
+   "label": "District centre latitude"
+  },
+  {
+   "name": "lon",
+   "type": "number",
+   "label": "District centre longitude"
+  }
+ ],
+ "events": [
+  {
+   "name": "title",
+   "type": "text",
+   "label": "Event",
+   "required": true
+  },
+  {
+   "name": "start_date",
+   "type": "date",
+   "label": "Start date",
+   "required": true
+  },
+  {
+   "name": "end_date",
+   "type": "date",
+   "label": "End date"
+  },
+  {
+   "name": "start_display",
+   "type": "text",
+   "label": "Start date (display)",
+   "rules": {
+    "date": true
+   }
+  },
+  {
+   "name": "end_display",
+   "type": "text",
+   "label": "End date (display)",
+   "rules": {
+    "date": true
+   }
+  },
+  {
+   "name": "month",
+   "type": "enum",
+   "label": "Month",
+   "options": [
+    "aug",
+    "sep",
+    "oct"
+   ]
+  },
+  {
+   "name": "city",
+   "type": "text",
+   "label": "City"
+  },
+  {
+   "name": "category",
+   "type": "text",
+   "label": "Category"
+  },
+  {
+   "name": "genre",
+   "type": "enum",
+   "label": "Genre",
+   "options": [
+    "music",
+    "culture",
+    "food",
+    "film",
+    "fireworks",
+    "sport",
+    "seasonal",
+    "other"
+   ]
+  },
+  {
+   "name": "url",
+   "type": "text",
+   "label": "Link"
+  },
+  {
+   "name": "source_note",
+   "type": "text",
+   "label": "Source note"
+  }
+ ],
+ "kr_cities": [
+  {
+   "name": "slug",
+   "type": "text",
+   "label": "Slug"
+  },
+  {
+   "name": "name_en",
+   "type": "text",
+   "label": "City"
+  },
+  {
+   "name": "name_kr",
+   "type": "text",
+   "label": "City (KR)"
+  },
+  {
+   "name": "n",
+   "type": "integer",
+   "label": "Bus stops"
+  },
+  {
+   "name": "url",
+   "type": "text",
+   "label": "Slice URL"
+  }
+ ],
+ "reach_origins": [
+  {
+   "name": "label",
+   "type": "text",
+   "label": "Label",
+   "required": true
+  }
+ ],
+ "reach_budgets": [
+  {
+   "name": "label",
+   "type": "text",
+   "label": "Label",
+   "required": true
+  }
+ ]
+}

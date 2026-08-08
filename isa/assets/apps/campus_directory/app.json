@@ -1,0 +1,11 @@
+{
+  "id": "campus_directory",
+  "name": "Campus directory & map",
+  "category": "Maps",
+  "icon": "school",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_campus_directory"
+  },
+  "seedVersion": "2026-07-03.3-typeahead"
+}

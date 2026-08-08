@@ -1,0 +1,1175 @@
+{
+  "matches": [
+    {
+      "name": "id",
+      "type": "text",
+      "label": "ID",
+      "advanced": true
+    },
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Title"
+    },
+    {
+      "name": "status",
+      "type": "text",
+      "label": "Status"
+    },
+    {
+      "name": "fen",
+      "type": "text",
+      "label": "Position (FEN)",
+      "advanced": true
+    },
+    {
+      "name": "moves",
+      "type": "json",
+      "label": "Move log",
+      "advanced": true
+    }
+  ],
+  "units": [
+    {
+      "name": "id",
+      "type": "text",
+      "label": "ID",
+      "advanced": true
+    },
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Label"
+    },
+    {
+      "name": "side",
+      "type": "enum",
+      "label": "Side",
+      "options": [
+        "blue",
+        "red"
+      ],
+      "default": "blue"
+    },
+    {
+      "name": "kind",
+      "type": "enum",
+      "label": "Kind",
+      "options": [
+        "base",
+        "infantry",
+        "archer",
+        "cavalry"
+      ],
+      "default": "infantry"
+    },
+    {
+      "name": "hp",
+      "type": "integer",
+      "label": "HP",
+      "default": 10
+    },
+    {
+      "name": "x",
+      "type": "number",
+      "label": "X",
+      "advanced": true
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "label": "Y",
+      "advanced": true
+    }
+  ],
+  "war": [
+    {
+      "name": "id",
+      "type": "text",
+      "label": "ID",
+      "advanced": true
+    },
+    {
+      "name": "turn",
+      "type": "integer",
+      "label": "Turn"
+    },
+    {
+      "name": "blueGold",
+      "type": "integer",
+      "label": "Blue gold"
+    },
+    {
+      "name": "redGold",
+      "type": "integer",
+      "label": "Red gold"
+    },
+    {
+      "name": "blueArmy",
+      "type": "integer",
+      "label": "Blue army"
+    },
+    {
+      "name": "redArmy",
+      "type": "integer",
+      "label": "Red army"
+    },
+    {
+      "name": "lastRoll",
+      "type": "integer",
+      "label": "Last roll"
+    }
+  ],
+  "warlog": [
+    {
+      "name": "id",
+      "type": "text",
+      "label": "ID",
+      "advanced": true
+    },
+    {
+      "name": "turn",
+      "type": "integer",
+      "label": "Turn"
+    },
+    {
+      "name": "blueGold",
+      "type": "integer",
+      "label": "Blue gold"
+    },
+    {
+      "name": "redGold",
+      "type": "integer",
+      "label": "Red gold"
+    },
+    {
+      "name": "blueArmy",
+      "type": "integer",
+      "label": "Blue army"
+    },
+    {
+      "name": "redArmy",
+      "type": "integer",
+      "label": "Red army"
+    }
+  ],
+  "games": [
+    {
+      "name": "id",
+      "type": "text",
+      "label": "ID",
+      "advanced": true
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name"
+    },
+    {
+      "name": "tagline",
+      "type": "text",
+      "label": "Tagline"
+    },
+    {
+      "name": "screen",
+      "type": "text",
+      "label": "Screen",
+      "advanced": true
+    },
+    {
+      "name": "genre",
+      "type": "enum",
+      "label": "Genre",
+      "options": [
+        "board",
+        "cards",
+        "dice",
+        "party",
+        "strategy",
+        "sandbox",
+        "shop"
+      ],
+      "default": "board"
+    },
+    {
+      "name": "mode",
+      "type": "enum",
+      "label": "Mode",
+      "options": [
+        "live",
+        "solo"
+      ],
+      "default": "live"
+    },
+    {
+      "name": "players",
+      "type": "text",
+      "label": "Players"
+    }
+  ],
+  "pieces": [
+    {
+      "name": "id",
+      "type": "text",
+      "label": "ID",
+      "advanced": true
+    },
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Label"
+    },
+    {
+      "name": "owner",
+      "type": "enum",
+      "label": "Owner",
+      "options": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "neutral"
+      ],
+      "default": "neutral"
+    },
+    {
+      "name": "x",
+      "type": "number",
+      "label": "X",
+      "advanced": true
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "label": "Y",
+      "advanced": true
+    }
+  ],
+  "blackjack_cards": [
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Card"
+    },
+    {
+      "name": "rank",
+      "type": "text",
+      "advanced": true
+    },
+    {
+      "name": "suit",
+      "type": "text",
+      "advanced": true
+    },
+    {
+      "name": "value",
+      "type": "number",
+      "advanced": true
+    },
+    {
+      "name": "holder",
+      "type": "text",
+      "label": "Held by"
+    },
+    {
+      "name": "visibleTo",
+      "type": "text",
+      "advanced": true
+    },
+    {
+      "name": "faceUp",
+      "type": "bool",
+      "advanced": true
+    },
+    {
+      "name": "order",
+      "type": "number",
+      "advanced": true
+    }
+  ],
+  "blackjack_players": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name"
+    },
+    {
+      "name": "chips",
+      "type": "number",
+      "label": "Chips"
+    },
+    {
+      "name": "bet",
+      "type": "number",
+      "label": "Bet"
+    }
+  ],
+  "old_maid_cards": [
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Card"
+    },
+    {
+      "name": "rank",
+      "type": "text",
+      "advanced": true
+    },
+    {
+      "name": "suit",
+      "type": "text",
+      "advanced": true
+    },
+    {
+      "name": "value",
+      "type": "number",
+      "advanced": true
+    },
+    {
+      "name": "holder",
+      "type": "text",
+      "label": "Held by"
+    },
+    {
+      "name": "visibleTo",
+      "type": "text",
+      "advanced": true
+    },
+    {
+      "name": "faceUp",
+      "type": "bool",
+      "advanced": true
+    },
+    {
+      "name": "order",
+      "type": "number",
+      "advanced": true
+    }
+  ],
+  "old_maid_players": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name"
+    }
+  ],
+  "go_fish_cards": [
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Card"
+    },
+    {
+      "name": "rank",
+      "type": "text",
+      "advanced": true
+    },
+    {
+      "name": "suit",
+      "type": "text",
+      "advanced": true
+    },
+    {
+      "name": "value",
+      "type": "number",
+      "advanced": true
+    },
+    {
+      "name": "holder",
+      "type": "text",
+      "label": "Held by"
+    },
+    {
+      "name": "visibleTo",
+      "type": "text",
+      "advanced": true
+    },
+    {
+      "name": "faceUp",
+      "type": "bool",
+      "advanced": true
+    },
+    {
+      "name": "order",
+      "type": "number",
+      "advanced": true
+    }
+  ],
+  "go_fish_players": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name"
+    }
+  ],
+  "war_cards": [
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Card"
+    },
+    {
+      "name": "rank",
+      "type": "text",
+      "advanced": true
+    },
+    {
+      "name": "suit",
+      "type": "text",
+      "advanced": true
+    },
+    {
+      "name": "value",
+      "type": "number",
+      "advanced": true
+    },
+    {
+      "name": "holder",
+      "type": "text",
+      "label": "Held by"
+    },
+    {
+      "name": "visibleTo",
+      "type": "text",
+      "advanced": true
+    },
+    {
+      "name": "faceUp",
+      "type": "bool",
+      "advanced": true
+    },
+    {
+      "name": "order",
+      "type": "number",
+      "advanced": true
+    }
+  ],
+  "war_players": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name"
+    }
+  ],
+  "memory_pairs_cards": [
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Card",
+      "advanced": true
+    },
+    {
+      "name": "rank",
+      "type": "text",
+      "advanced": true
+    },
+    {
+      "name": "suit",
+      "type": "text",
+      "advanced": true
+    },
+    {
+      "name": "value",
+      "type": "number",
+      "advanced": true
+    },
+    {
+      "name": "holder",
+      "type": "text",
+      "label": "Held by"
+    },
+    {
+      "name": "visibleTo",
+      "type": "text",
+      "advanced": true
+    },
+    {
+      "name": "faceUp",
+      "type": "bool",
+      "label": "Face up"
+    },
+    {
+      "name": "order",
+      "type": "number",
+      "label": "Spot"
+    }
+  ],
+  "backgammon_checkers": [
+    {
+      "name": "id",
+      "type": "text",
+      "label": "ID",
+      "advanced": true
+    },
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Label"
+    },
+    {
+      "name": "color",
+      "type": "enum",
+      "label": "Color",
+      "options": [
+        "white",
+        "black",
+        "zone"
+      ],
+      "default": "white"
+    },
+    {
+      "name": "x",
+      "type": "number",
+      "label": "X",
+      "advanced": true
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "label": "Y",
+      "advanced": true
+    },
+    {
+      "name": "w",
+      "type": "number",
+      "label": "W",
+      "advanced": true
+    },
+    {
+      "name": "h",
+      "type": "number",
+      "label": "H",
+      "advanced": true
+    }
+  ],
+  "backgammon_dice": [
+    {
+      "name": "id",
+      "type": "text",
+      "label": "ID",
+      "advanced": true
+    },
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Die"
+    },
+    {
+      "name": "value",
+      "type": "number",
+      "label": "Value"
+    }
+  ],
+  "backgammon_players": [
+    {
+      "name": "id",
+      "type": "text",
+      "label": "ID",
+      "advanced": true
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name"
+    },
+    {
+      "name": "playerId",
+      "type": "text",
+      "label": "Player ID",
+      "advanced": true
+    },
+    {
+      "name": "side",
+      "type": "enum",
+      "label": "Side",
+      "options": [
+        "white",
+        "black"
+      ],
+      "default": "white"
+    },
+    {
+      "name": "score",
+      "type": "number",
+      "label": "Score",
+      "default": 0
+    }
+  ],
+  "backgammon_turn": [
+    {
+      "name": "id",
+      "type": "text",
+      "label": "ID",
+      "advanced": true
+    },
+    {
+      "name": "player",
+      "type": "enum",
+      "label": "Turn",
+      "options": [
+        "White",
+        "Black"
+      ],
+      "default": "White"
+    }
+  ],
+  "checkers_pieces": [
+    {
+      "name": "id",
+      "type": "text",
+      "label": "ID",
+      "advanced": true
+    },
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Label"
+    },
+    {
+      "name": "kind",
+      "type": "enum",
+      "label": "Kind",
+      "options": [
+        "red",
+        "black",
+        "redKing",
+        "blackKing"
+      ],
+      "default": "red"
+    },
+    {
+      "name": "x",
+      "type": "number",
+      "label": "X",
+      "advanced": true
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "label": "Y",
+      "advanced": true
+    },
+    {
+      "name": "w",
+      "type": "number",
+      "label": "W",
+      "advanced": true
+    },
+    {
+      "name": "h",
+      "type": "number",
+      "label": "H",
+      "advanced": true
+    }
+  ],
+  "checkers_players": [
+    {
+      "name": "id",
+      "type": "text",
+      "label": "ID",
+      "advanced": true
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name"
+    },
+    {
+      "name": "playerId",
+      "type": "text",
+      "label": "Player ID",
+      "advanced": true
+    },
+    {
+      "name": "side",
+      "type": "enum",
+      "label": "Side",
+      "options": [
+        "red",
+        "black"
+      ],
+      "default": "red"
+    },
+    {
+      "name": "score",
+      "type": "number",
+      "label": "Score",
+      "default": 0
+    }
+  ],
+  "checkers_turn": [
+    {
+      "name": "id",
+      "type": "text",
+      "label": "ID",
+      "advanced": true
+    },
+    {
+      "name": "player",
+      "type": "enum",
+      "label": "Turn",
+      "options": [
+        "Red",
+        "Black"
+      ],
+      "default": "Red"
+    }
+  ],
+  "mancala_tokens": [
+    {
+      "name": "id",
+      "type": "text",
+      "label": "ID",
+      "advanced": true
+    },
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Label"
+    },
+    {
+      "name": "kind",
+      "type": "enum",
+      "label": "Kind",
+      "options": [
+        "seed",
+        "pit",
+        "store"
+      ],
+      "default": "seed"
+    },
+    {
+      "name": "x",
+      "type": "number",
+      "label": "X",
+      "advanced": true
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "label": "Y",
+      "advanced": true
+    },
+    {
+      "name": "w",
+      "type": "number",
+      "label": "W",
+      "advanced": true
+    },
+    {
+      "name": "h",
+      "type": "number",
+      "label": "H",
+      "advanced": true
+    }
+  ],
+  "mancala_players": [
+    {
+      "name": "id",
+      "type": "text",
+      "label": "ID",
+      "advanced": true
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name"
+    },
+    {
+      "name": "playerId",
+      "type": "text",
+      "label": "Player ID",
+      "advanced": true
+    },
+    {
+      "name": "side",
+      "type": "enum",
+      "label": "Side",
+      "options": [
+        "A",
+        "B"
+      ],
+      "default": "A"
+    },
+    {
+      "name": "score",
+      "type": "number",
+      "label": "Score",
+      "default": 0
+    }
+  ],
+  "mancala_turn": [
+    {
+      "name": "id",
+      "type": "text",
+      "label": "ID",
+      "advanced": true
+    },
+    {
+      "name": "player",
+      "type": "enum",
+      "label": "Turn",
+      "options": [
+        "A",
+        "B"
+      ],
+      "default": "A"
+    }
+  ],
+  "battleship_ships": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Ship"
+    },
+    {
+      "name": "owner",
+      "type": "enum",
+      "label": "Owner",
+      "options": [
+        "p1",
+        "p2"
+      ]
+    },
+    {
+      "name": "x",
+      "type": "number",
+      "label": "Bow column X (1-10)"
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "label": "Bow row Y (1-10)"
+    },
+    {
+      "name": "length",
+      "type": "number",
+      "label": "Length (cells)"
+    },
+    {
+      "name": "horizontal",
+      "type": "number",
+      "label": "Horizontal? (1 = yes, 0 = vertical)"
+    },
+    {
+      "name": "sunk",
+      "type": "bool",
+      "label": "Sunk"
+    },
+    {
+      "name": "visibleTo",
+      "type": "text",
+      "advanced": true
+    }
+  ],
+  "battleship_shots": [
+    {
+      "name": "by",
+      "type": "enum",
+      "label": "Fired by",
+      "options": [
+        "p1",
+        "p2"
+      ]
+    },
+    {
+      "name": "x",
+      "type": "number",
+      "label": "Target column X (1-10)"
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "label": "Target row Y (1-10)"
+    },
+    {
+      "name": "result",
+      "type": "enum",
+      "label": "Result (defender marks)",
+      "options": [
+        "pending",
+        "miss",
+        "hit",
+        "sunk"
+      ]
+    }
+  ],
+  "dots_boxes_spots": [
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Marker"
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Position"
+    },
+    {
+      "name": "kind",
+      "type": "text",
+      "advanced": true
+    },
+    {
+      "name": "owner",
+      "type": "enum",
+      "label": "Claimed by",
+      "options": [
+        "open",
+        "p1",
+        "p2",
+        "dot"
+      ]
+    },
+    {
+      "name": "x",
+      "type": "number",
+      "advanced": true
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "advanced": true
+    }
+  ],
+  "dots_boxes_boxes": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Box"
+    },
+    {
+      "name": "owner",
+      "type": "enum",
+      "label": "Owner",
+      "options": [
+        "open",
+        "p1",
+        "p2"
+      ]
+    }
+  ],
+  "tabletop_tokens": [
+    {
+      "name": "id",
+      "type": "text",
+      "label": "ID",
+      "advanced": true
+    },
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Label"
+    },
+    {
+      "name": "owner",
+      "type": "enum",
+      "label": "Owner",
+      "options": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "neutral"
+      ],
+      "default": "neutral"
+    },
+    {
+      "name": "x",
+      "type": "number",
+      "label": "X",
+      "advanced": true
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "label": "Y",
+      "advanced": true
+    }
+  ],
+  "saboteur_players": [
+    {
+      "name": "id",
+      "type": "text",
+      "label": "ID",
+      "advanced": true
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name"
+    },
+    {
+      "name": "playerId",
+      "type": "text",
+      "label": "Player ID"
+    }
+  ],
+  "saboteur_roles": [
+    {
+      "name": "id",
+      "type": "text",
+      "label": "ID",
+      "advanced": true
+    },
+    {
+      "name": "player",
+      "type": "text",
+      "label": "Player"
+    },
+    {
+      "name": "role",
+      "type": "enum",
+      "label": "Role",
+      "options": [
+        "builder",
+        "saboteur"
+      ],
+      "default": "builder"
+    },
+    {
+      "name": "visibleTo",
+      "type": "text",
+      "label": "Visible to"
+    }
+  ],
+  "saboteur_pieces": [
+    {
+      "name": "id",
+      "type": "text",
+      "label": "ID",
+      "advanced": true
+    },
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Label"
+    },
+    {
+      "name": "by",
+      "type": "text",
+      "label": "By"
+    },
+    {
+      "name": "sabotaged",
+      "type": "boolean",
+      "label": "Sabotaged",
+      "default": false
+    },
+    {
+      "name": "x",
+      "type": "number",
+      "label": "X",
+      "advanced": true
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "label": "Y",
+      "advanced": true
+    }
+  ],
+  "saboteur_votes": [
+    {
+      "name": "id",
+      "type": "text",
+      "label": "ID",
+      "advanced": true
+    },
+    {
+      "name": "accuser",
+      "type": "text",
+      "label": "Accuser"
+    },
+    {
+      "name": "accused",
+      "type": "text",
+      "label": "Accused"
+    }
+  ],
+  "yahtzee_dice": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Die"
+    },
+    {
+      "name": "value",
+      "type": "number",
+      "label": "Value"
+    }
+  ],
+  "yahtzee_scorecard": [
+    {
+      "name": "category",
+      "type": "text",
+      "label": "Category"
+    },
+    {
+      "name": "p1",
+      "type": "number",
+      "label": "Player 1"
+    },
+    {
+      "name": "p2",
+      "type": "number",
+      "label": "Player 2"
+    }
+  ],
+  "runs": [
+    {
+      "name": "score",
+      "type": "number",
+      "label": "Score"
+    },
+    {
+      "name": "outcome",
+      "type": "enum",
+      "label": "Outcome",
+      "options": [
+        "clear",
+        "down"
+      ]
+    },
+    {
+      "name": "seconds",
+      "type": "number",
+      "label": "Time (s)"
+    },
+    {
+      "name": "at",
+      "type": "date",
+      "label": "When",
+      "default": "today"
+    }
+  ],
+  "shop": [
+    {
+      "name": "id",
+      "type": "text",
+      "label": "ID",
+      "advanced": true
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Game"
+    },
+    {
+      "name": "genre",
+      "type": "text",
+      "label": "Genre"
+    },
+    {
+      "name": "tagline",
+      "type": "text",
+      "label": "About"
+    },
+    {
+      "name": "pack",
+      "type": "json",
+      "label": "Pack",
+      "advanced": true
+    }
+  ]
+}

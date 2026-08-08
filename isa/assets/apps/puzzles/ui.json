@@ -1,0 +1,123 @@
+{
+  "app": {
+    "title": "Puzzles",
+    "primaryColor": "#7C4DFF",
+    "theme": "arcade",
+    "autosave": true,
+    "liveSeconds": 3
+  },
+  "nav": [
+    {
+      "id": "slide",
+      "label": "Slide",
+      "icon": "grid_on",
+      "screen": "slide"
+    },
+    {
+      "id": "pattern",
+      "label": "Pattern",
+      "icon": "dashboard",
+      "screen": "pattern"
+    },
+    {
+      "id": "records",
+      "label": "Records",
+      "icon": "history",
+      "screen": "records"
+    }
+  ],
+  "screens": {
+    "slide": {
+      "title": "Slide 15",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Tap a tile beside the gap to slide it; order 1\u201315 to win. Share this applet into a room (\u22ee \u2192 Share) and solve it together \u2014 every move syncs live."
+          },
+          {
+            "type": "puzzlegrid",
+            "table": "pieces",
+            "cols": 4,
+            "rows": 4,
+            "mode": "slide",
+            "win": {
+              "type": "order"
+            },
+            "resultsTable": "results"
+          }
+        ]
+      }
+    },
+    "pattern": {
+      "title": "Pattern",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Co-op: tap a gem, then tap an empty cell to move it. Get every gem to the bottom row in A\u2013F order."
+          },
+          {
+            "type": "puzzlegrid",
+            "table": "pattern",
+            "cols": 6,
+            "rows": 3,
+            "mode": "free",
+            "win": {
+              "type": "target"
+            },
+            "resultsTable": "results",
+            "colors": {
+              "blue": "blue",
+              "green": "green",
+              "amber": "amber",
+              "teal": "teal",
+              "purple": "purple",
+              "pink": "pink"
+            }
+          }
+        ]
+      }
+    },
+    "records": {
+      "title": "Records",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Fewest moves wins. Solves from every device in the room land here."
+          },
+          {
+            "type": "cards",
+            "emptyIcon": "emoji_events",
+            "emptyTitle": "No results yet",
+            "emptyText": "Solve a puzzle and your times will appear here.",
+            "table": "results",
+            "title": "moves",
+            "subtitle": "seconds",
+            "sort": {
+              "column": "moves",
+              "dir": "asc"
+            },
+            "expandFields": [
+              {
+                "column": "at",
+                "label": "When"
+              }
+            ],
+            "open": "Edit",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

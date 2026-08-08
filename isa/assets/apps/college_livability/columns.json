@@ -1,0 +1,32 @@
+{
+  "colleges": [
+    { "name": "name", "type": "text", "label": "College", "required": true },
+    { "name": "city", "type": "text", "label": "City" },
+    { "name": "state", "type": "text", "label": "State / region" },
+    { "name": "country", "type": "text", "label": "Country" },
+    { "name": "location", "type": "text", "label": "Location" },
+    { "name": "lat", "type": "number", "label": "Latitude" },
+    { "name": "lon", "type": "number", "label": "Longitude" },
+    { "name": "score", "type": "number", "label": "Score (0-100)" },
+    {
+      "name": "tier",
+      "type": "enum",
+      "label": "Tier",
+      "options": ["excellent", "good", "fair", "car-needed"],
+      "default": "fair"
+    },
+    { "name": "walkability", "type": "text", "label": "Walkability" },
+    { "name": "top_fields", "type": "text", "label": "Biggest fields (by graduates)" },
+    { "name": "programs", "type": "text", "label": "Programs offered" },
+    { "name": "transit", "type": "text", "label": "Car-free commute (area)" },
+    { "name": "cost", "type": "text", "label": "Households without a car (area)" },
+    { "name": "net_price", "type": "text", "label": "Net price / yr (avg, after aid)" },
+    { "name": "earnings", "type": "text", "label": "Median pay, 10 yrs after entry" },
+    { "name": "tuition_in", "type": "text", "label": "In-state tuition / yr" },
+    { "name": "tuition_out", "type": "text", "label": "Out-of-state tuition / yr" },
+    { "name": "room_board", "type": "text", "label": "Room & board incl. meals / yr" },
+    { "name": "books", "type": "text", "label": "Books & supplies / yr" },
+    { "name": "blurb", "type": "text", "label": "Why" },
+    { "name": "source", "type": "text", "label": "Data source" }
+  ]
+}

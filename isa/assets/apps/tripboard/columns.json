@@ -1,0 +1,161 @@
+{
+  "entries": [
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Title",
+      "description": "Trip name / member name / plan-event-todo-packing-note title."
+    },
+    {
+      "name": "body",
+      "type": "text",
+      "label": "Notes",
+      "description": "Freeform note/body text -- the trip's own description, or a plan/note's content."
+    },
+    {
+      "name": "kind",
+      "type": "enum",
+      "label": "Kind",
+      "options": ["trip", "member", "plan", "event", "todo", "packing", "note"],
+      "required": true,
+      "description": "What this row IS -- the single discriminator every view filters on. `trip` = the one root row; `member` = a person on the trip; the rest are trip content."
+    },
+    {
+      "name": "type",
+      "type": "text",
+      "label": "Sync type",
+      "rules": { "hidden": true },
+      "description": "Compatibility discriminator for the SHARE pipeline only -- isan's share_sink.dart levelMayPush() checks Dispatch's `type` vocabulary (kCommenterCreatableKinds), not tripboard's own `kind`. Stamped 'note' on note-kind rows ONLY (the sole tripboard kind with a real Dispatch counterpart), so a commenter-level collaborator can push their own notes; every other kind stays editor-gated in v1 (see MIGRATION.md). Never shown in the record editor (rules.hidden) -- this is plumbing, not user-facing data."
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "label": "Status",
+      "options": ["todo", "done"],
+      "default": "todo",
+      "description": "Done/open state for a todo or packing row. Unused on other kinds."
+    },
+    {
+      "name": "date",
+      "type": "date",
+      "label": "Date",
+      "description": "For an event: when it happens. Drives the Calendar."
+    },
+    {
+      "name": "endDate",
+      "type": "date",
+      "label": "End date",
+      "description": "Optional multi-day event end date."
+    },
+    {
+      "name": "timeLabel",
+      "type": "text",
+      "label": "Time",
+      "rules": { "time": true },
+      "description": "For an event: a time-of-day label (e.g. 18:00)."
+    },
+    {
+      "name": "place",
+      "type": "text",
+      "label": "Place",
+      "description": "For an event: a place name."
+    },
+    {
+      "name": "lat",
+      "type": "number",
+      "label": "Latitude",
+      "description": "For an event or note: pin location. Only rows with both lat and lon set show on the Map."
+    },
+    {
+      "name": "lon",
+      "type": "number",
+      "label": "Longitude",
+      "description": "For an event or note: pin location. Only rows with both lat and lon set show on the Map."
+    },
+    {
+      "name": "weekLabel",
+      "type": "text",
+      "label": "Week",
+      "description": "For a plan: which week bucket it belongs to on the Week board."
+    },
+    {
+      "name": "assignee",
+      "type": "ref",
+      "refTable": "entries",
+      "label": "Assigned to",
+      "description": "For a todo or packing row: which member (a kind=member entry) it's assigned to."
+    },
+    {
+      "name": "author",
+      "type": "ref",
+      "refTable": "entries",
+      "label": "Added by",
+      "description": "Which member (a kind=member entry) created this row -- stamped at creation from the per-install `tripboardMemberId` setting, NOT from sign-in identity (signing in must never change who a past row is attributed to). Empty means the device hadn't picked a member yet when the row was made -- shown as 'Unattributed', not an error or a raw id."
+    },
+    {
+      "name": "color",
+      "type": "enum",
+      "label": "Color",
+      "options": ["blue", "pink", "teal", "green", "purple", "gray", "amber", "coral", "red"],
+      "description": "For a member: their chip color."
+    },
+    {
+      "name": "emoji",
+      "type": "text",
+      "label": "Emoji",
+      "description": "For a member: their chip emoji."
+    },
+    {
+      "name": "url",
+      "type": "text",
+      "label": "Link",
+      "description": "Optional reference link (booking confirmation, listing, map link, etc.)."
+    },
+    {
+      "name": "category",
+      "type": "text",
+      "label": "Category",
+      "description": "Optional free-text tag (e.g. a packing category)."
+    },
+    {
+      "name": "updatedAt",
+      "type": "text",
+      "label": "Updated",
+      "rules": { "hidden": true, "date": true },
+      "description": "The engine's own auto-stamped per-row write time (an ISO-8601 string, stamped by the reserved key name regardless of declared column type -- BoardState.addRow/setField/updateRow). DISPLAY-ONLY -- it is LWW-reserved and silently overwritten on every save, so it is never listed as an addRow/editable value (rules.hidden keeps it out of the record editor). Declared `text` (was `dateTime`) + `rules.date:true` so Activity's tag renders it humanized (\"Jul 21, 11:05\") instead of the raw ISO string -- renderer._valueLabel's rules['date'] branch only fires for a text-typed column (dateTime falls through to raw toString()); storage/sort are unaffected, same ISO string as before (see MIGRATION.md's designpass-0728 unit-3 entry for the compat note)."
+    },
+    {
+      "name": "createdBy",
+      "type": "text",
+      "label": "Created by (sync)",
+      "rules": { "hidden": true },
+      "description": "Signed-in PocketBase user id when signed in, else this install's stable local actor id (`board.settings['playerId']` falls back to `ThemeSettings.localActorId`, never empty) -- stamped `$playerId` at creation on every addRow action -- used ONLY by the sharing pipeline's per-row 'own row' gate (share_sink.dart's rowAuthoredBySelf / share_scope.dart's userRefFields default) so a commenter-level collaborator can push their own note. Separate from `author` (tripboard's own member-attribution column, which must never key off sign-in). Never shown in the record editor."
+    }
+  ],
+  "relations": [
+    {
+      "name": "fromId",
+      "type": "ref",
+      "refTable": "entries",
+      "label": "From",
+      "required": true,
+      "description": "The source node of this relationship (the trip root, for every edge in v1)."
+    },
+    {
+      "name": "toId",
+      "type": "ref",
+      "refTable": "entries",
+      "label": "To",
+      "required": true,
+      "description": "The target node of this relationship (the member/plan/event/todo/packing/note it links in)."
+    },
+    {
+      "name": "type",
+      "type": "enum",
+      "label": "Relationship",
+      "options": ["contains"],
+      "default": "contains",
+      "description": "`contains` is the only edge type v1 needs: structural trip-root -> item, walked by the share pipeline's subtree closure (mirrors Dispatch's `relations.type=contains` exactly)."
+    }
+  ]
+}

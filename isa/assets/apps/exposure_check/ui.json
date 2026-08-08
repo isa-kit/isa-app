@@ -1,0 +1,195 @@
+{
+  "app": {
+    "title": "Exposure Check",
+    "primaryColor": "#0F6E56",
+    "theme": "minimal"
+  },
+  "nav": [
+    { "id": "overview", "label": "Overview", "icon": "shield", "screen": "overview" },
+    { "id": "identifiers", "label": "My details", "icon": "badge", "screen": "identifiers" },
+    { "id": "protections", "label": "Protections", "icon": "verified_user", "screen": "protections" },
+    { "id": "brokers", "label": "Opt-outs", "icon": "person_off", "screen": "brokers" },
+    { "id": "guides", "label": "Guides", "icon": "menu_book", "screen": "guides" }
+  ],
+  "screens": {
+    "overview": {
+      "title": "Overview",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Your personal-exposure workbook. It reduces real risk with steps you can act on today — no scanning, no accounts, no cost. Start on My details, then work the Protections list."
+          },
+          {
+            "type": "row",
+            "children": [
+              { "type": "stat", "table": "hardening", "agg": "count", "filter": { "column": "status", "value": "done" }, "label": "Protections done", "color": "green" },
+              { "type": "stat", "table": "hardening", "agg": "count", "filter": { "column": "priority", "value": "critical" }, "label": "Critical steps", "color": "coral" },
+              { "type": "stat", "table": "brokers", "agg": "count", "filter": { "column": "status", "value": "confirmed" }, "label": "Opt-outs confirmed", "color": "blue" }
+            ]
+          },
+          { "type": "text", "style": "subtitle", "value": "Start here" },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "The critical items below are the highest-payoff protections. Tap through to the Protections tab to mark them done."
+          },
+          {
+            "type": "cards",
+            "table": "hardening",
+            "filter": { "column": "priority", "value": "critical" },
+            "title": "step",
+            "subtitle": "area",
+            "expandable": true,
+            "expandFields": [
+              { "column": "why", "label": "Why it matters" },
+              { "column": "how", "label": "How to do it" },
+              { "column": "status", "label": "Status" }
+            ],
+            "action": { "fn": "cycle", "args": { "column": "status", "values": ["todo", "done"] } }
+          }
+        ]
+      }
+    },
+    "identifiers": {
+      "title": "My details",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "List the details you want to protect. Add one per email, domain, phone, name or address. Tap a row to flip it between 'to review' and 'reviewed'."
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              { "type": "button", "label": "Add email", "icon": "mail", "action": { "fn": "addRow", "args": { "table": "identifiers", "values": { "label": "New email", "kind": "email", "reviewed": "to review" } } } },
+              { "type": "button", "label": "Add website", "icon": "language", "action": { "fn": "addRow", "args": { "table": "identifiers", "values": { "label": "New website", "kind": "website", "reviewed": "to review" } } } },
+              { "type": "button", "label": "Add phone", "icon": "phone", "action": { "fn": "addRow", "args": { "table": "identifiers", "values": { "label": "New phone", "kind": "phone", "reviewed": "to review" } } } },
+              { "type": "button", "label": "Add name", "icon": "person", "action": { "fn": "addRow", "args": { "table": "identifiers", "values": { "label": "New name", "kind": "name", "reviewed": "to review" } } } },
+              { "type": "button", "label": "Add address", "icon": "home", "action": { "fn": "addRow", "args": { "table": "identifiers", "values": { "label": "New address", "kind": "address", "reviewed": "to review" } } } }
+            ]
+          },
+          {
+            "type": "cards",
+            "table": "identifiers",
+            "search": true,
+            "searchColumns": ["label", "value"],
+            "title": "label",
+            "subtitle": "kind",
+            "expandable": true,
+            "expandFields": [
+              { "column": "value", "label": "The detail" },
+              { "column": "reviewed", "label": "Reviewed" },
+              { "column": "notes", "label": "Notes" }
+            ],
+            "action": { "fn": "cycle", "args": { "column": "reviewed", "values": ["to review", "reviewed"] } }
+          }
+        ]
+      }
+    },
+    "protections": {
+      "title": "Protections",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "The checklist that actually reduces your exposure, most important first. Tap any item to flip to-do ↔ done. Expand for why it matters and exactly how."
+          },
+          {
+            "type": "row",
+            "children": [
+              { "type": "stat", "table": "hardening", "agg": "count", "filter": { "column": "status", "value": "done" }, "label": "Done", "color": "green" },
+              { "type": "stat", "table": "hardening", "agg": "count", "filter": { "column": "status", "value": "todo" }, "label": "To do", "color": "amber" }
+            ]
+          },
+          {
+            "type": "cards",
+            "table": "hardening",
+            "search": true,
+            "searchColumns": ["step", "area", "priority"],
+            "sort": { "column": "priority", "dir": "asc" },
+            "title": "step",
+            "subtitle": "priority",
+            "expandable": true,
+            "expandFields": [
+              { "column": "area", "label": "Area" },
+              { "column": "why", "label": "Why it matters" },
+              { "column": "how", "label": "How to do it" },
+              { "column": "status", "label": "Status" }
+            ],
+            "action": { "fn": "cycle", "args": { "column": "status", "values": ["todo", "done"] } }
+          }
+        ]
+      }
+    },
+    "brokers": {
+      "title": "Data-broker opt-outs",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "People-search sites publish your name, address and phone. Opting out is free but tedious. Tap a site to advance not started → requested → confirmed. Expand to see the opt-out page to open."
+          },
+          {
+            "type": "row",
+            "children": [
+              { "type": "stat", "table": "brokers", "agg": "count", "filter": { "column": "status", "value": "confirmed" }, "label": "Confirmed", "color": "green" },
+              { "type": "stat", "table": "brokers", "agg": "count", "filter": { "column": "status", "value": "requested" }, "label": "Requested", "color": "amber" },
+              { "type": "stat", "table": "brokers", "agg": "count", "filter": { "column": "status", "value": "not started" }, "label": "Not started", "color": "coral" }
+            ]
+          },
+          {
+            "type": "cards",
+            "table": "brokers",
+            "search": true,
+            "searchColumns": ["broker", "exposes"],
+            "title": "broker",
+            "subtitle": "status",
+            "expandable": true,
+            "expandFields": [
+              { "column": "exposes", "label": "What it exposes" },
+              { "column": "opt_out_url", "label": "Opt-out page" },
+              { "column": "difficulty", "label": "Difficulty" },
+              { "column": "notes", "label": "Notes" }
+            ],
+            "action": { "fn": "cycle", "args": { "column": "status", "values": ["not started", "requested", "confirmed"] } }
+          }
+        ]
+      }
+    },
+    "guides": {
+      "title": "Guides",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Plain-language explainers. Tap a guide to expand it. The last one covers the optional advanced (paid) checks — which are not set up yet."
+          },
+          {
+            "type": "cards",
+            "table": "guides",
+            "search": true,
+            "searchColumns": ["topic", "category"],
+            "title": "topic",
+            "subtitle": "category",
+            "expandable": true,
+            "expandFields": [
+              { "column": "body", "label": "" }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "dispatch2",
+  "name": "Dispatch (new)",
+  "category": "Productivity",
+  "icon": "forum",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_dispatch"
+  },
+  "seedVersion": "2026-08-08.rulesauto",
+  "syncId": "dispatch",
+  "seedContent": "initial-only",
+  "changeJournal": ["entries", "relations"]
+}

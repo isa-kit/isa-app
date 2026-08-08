@@ -1,0 +1,426 @@
+{
+  "app": {
+    "title": "Model reports",
+    "primaryColor": "#00695C",
+    "theme": "material"
+  },
+  "nav": [
+    {
+      "id": "dashboard",
+      "label": "Dashboard",
+      "icon": "dashboard",
+      "screen": "dashboard"
+    },
+    {
+      "id": "metrics",
+      "label": "Metrics",
+      "icon": "insights",
+      "screen": "metrics"
+    },
+    {
+      "id": "compare",
+      "label": "Compare",
+      "icon": "insights",
+      "screen": "compare"
+    },
+    {
+      "id": "mapview",
+      "label": "Map",
+      "icon": "map",
+      "screen": "mapview",
+      "addon": true
+    },
+    {
+      "id": "data",
+      "label": "Data",
+      "icon": "table_rows",
+      "screen": "data"
+    },
+    {
+      "id": "about",
+      "label": "About",
+      "icon": "info",
+      "screen": "about"
+    }
+  ],
+  "screens": {
+    "dashboard": {
+      "title": "Report dashboard",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "The full report workbench: chart or table, filters, sorts, group-by rollups, and saved views. Tap ⚙ (tune) to configure; bookmark to save or load a view. TAP A BAR GROUP to select that category — the rows below (and any other view on this data) filter to it; tap again to clear."
+          },
+          {
+            "type": "report",
+            "table": "results",
+            "slicesTable": "slices",
+            "seriesColumn": "scenario",
+            "exclude": [
+              "id",
+              "lat",
+              "lng"
+            ],
+            "label": "Model outputs",
+            "height": 430,
+            "config": {
+              "mode": "chart",
+              "xAxis": "route",
+              "series": "scenario",
+              "value": "boardings"
+            },
+            "linkFilter": true,
+            "showProvenance": true
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Rows in the current selection:"
+          },
+          {
+            "type": "table",
+            "table": "results",
+            "columns": [
+              "scenario",
+              "route",
+              "district",
+              "boardings",
+              "alightings"
+            ],
+            "height": 220,
+            "showProvenance": true
+          }
+        ]
+      }
+    },
+    "compare": {
+      "title": "Compare model runs",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Percent difference vs the base run: each bar is a scenario's change from Baseline on the same route. Swap the base or the value column from ⚙."
+          },
+          {
+            "type": "report",
+            "table": "results",
+            "slicesTable": "slices",
+            "seriesColumn": "scenario",
+            "exclude": [
+              "id",
+              "lat",
+              "lng"
+            ],
+            "label": "% change vs Baseline",
+            "height": 400,
+            "config": {
+              "mode": "chart",
+              "xAxis": "route",
+              "series": "scenario",
+              "value": "boardings",
+              "pctDiff": true,
+              "pctBase": "Baseline"
+            },
+            "showProvenance": true
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Totals side by side (a locked, table-only report — the same node with tools trimmed):"
+          },
+          {
+            "type": "report",
+            "table": "results",
+            "tools": [
+              "table"
+            ],
+            "exclude": [
+              "id",
+              "lat",
+              "lng"
+            ],
+            "label": "Boardings by scenario",
+            "height": 170,
+            "config": {
+              "mode": "table",
+              "groupBy": "scenario",
+              "aggregations": {
+                "boardings": "sum",
+                "alightings": "sum"
+              }
+            },
+            "showProvenance": true
+          }
+        ]
+      }
+    },
+    "mapview": {
+      "title": "Map (add-on)",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "The geospatial ADD-ON. Districts shade by cached totals (darker = more boardings) — TAP A DISTRICT to filter every view to it (tap again to clear), and use the Districts chip to hide the overlay. Don't need maps? Switch this whole screen off under ⋮ → Add-ons."
+          },
+          {
+            "type": "map",
+            "table": "results",
+            "latColumn": "lat",
+            "lonColumn": "lng",
+            "labelColumn": "route",
+            "colorColumn": "scenario",
+            "colors": {
+              "Baseline": "teal",
+              "Alt A": "blue",
+              "Alt B": "amber"
+            },
+            "geojsonAsset": "apps/modelreport/districts.geojson",
+            "nameProperty": "name",
+            "choropleth": {
+              "table": "district_stats",
+              "valueColumn": "boardings",
+              "nameColumn": "district",
+              "color": "teal"
+            },
+            "featureFilterColumn": "district",
+            "overlayToggle": "Districts",
+            "height": 460,
+            "zoom": 12
+          }
+        ]
+      }
+    },
+    "data": {
+      "title": "Data",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "The seeded rows are a fictional demo of the report STRUCTURE — replace them with your own model outputs. CSV columns should match the table's column names (scenario, route, boardings, …); extra rows merge in."
+          },
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": "Import CSV (merge)",
+                "icon": "upload",
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "importCsv",
+                    "table": "results"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Import CSV (replace)",
+                "icon": "restore",
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "importCsv",
+                    "table": "results",
+                    "replace": true
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": "Export CSV",
+                "icon": "download",
+                "action": {
+                  "fn": "exportData",
+                  "args": {
+                    "format": "csv",
+                    "table": "results"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Export all (JSON)",
+                "icon": "download",
+                "action": {
+                  "fn": "exportData",
+                  "args": {
+                    "format": "json",
+                    "pretty": true
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "dataview",
+            "tables": [
+              "results",
+              "slices"
+            ],
+            "height": 380
+          }
+        ]
+      }
+    },
+    "about": {
+      "title": "About",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Part of the urban-models suite — this is the REPORT BUILDER. Pair it with Scenarios (runs + proof), Urbanset (the logic), and Atlas (the map). Seed rows here are FICTIONAL — structure demo only; import real outputs via CSV."
+          },
+          {
+            "type": "text",
+            "style": "display",
+            "value": "Model reports"
+          },
+          {
+            "type": "text",
+            "value": "A report dashboard for comparing model outputs — scenario runs, forecasts, any table of results. It reuses the structure of a standalone STOPS report visualizer, rebuilt as a reusable engine piece: filters → sorts → row limit, then a grouped bar chart or a pivot table, with percent-difference against a base run for side-by-side comparison."
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "Feeding it real data"
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "Cached calculations"
+          },
+          {
+            "type": "text",
+            "value": "The Metrics tab holds derived numbers (totals, retention %) computed once from your outputs and STORED as ordinary rows. Every chart, table and map shading reads those cached values — fast on big datasets, always consistent, refreshed only when you tap Recalculate. The map's district totals work the same way."
+          },
+          {
+            "type": "text",
+            "value": "The seeded rows are fictional and only demonstrate the shape. On the Data tab, import a CSV whose header row matches the column names (scenario, route, district, mode, boardings, alightings, avg_trip_mi, lat, lng) — merge adds rows, replace swaps the table. You can also add or rename columns first from the schema editor, then import a CSV matching your own shape."
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "Built to grow — or shrink"
+          },
+          {
+            "type": "text",
+            "value": "Every capability is modular, at two levels. Inside a report widget, a tools list (chart, table, slices, configure) trims controls — like the locked table on the Compare tab. And whole screens can be ADD-ONS: the Map tab is one — open ⋮ → Add-ons to switch it off (or back on) without touching your data. The same socket is how future add-ons arrive: a stock-market watch, a hyperdimensional (many-axis) explorer, or anything else that reads the same tables."
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "Saved views"
+          },
+          {
+            "type": "text",
+            "value": "The bookmark icon saves the current configuration as a named view (a plain row in the Saved views table), so favorite comparisons are one tap away — and they back up, sync and export like any other data."
+          }
+        ]
+      }
+    },
+    "metrics": {
+      "title": "Cached metrics",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Derived numbers computed ONCE and stored as rows — charts, tables and the map all read these cached values instead of recalculating. After importing new model outputs, tap Recalculate."
+          },
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": "Recalculate metrics",
+                "icon": "refresh",
+                "action": {
+                  "fn": "deriveTable",
+                  "args": {
+                    "from": "results",
+                    "into": "metrics",
+                    "groupBy": "scenario",
+                    "aggregations": {
+                      "boardings": "sum",
+                      "alightings": "sum"
+                    },
+                    "compute": [
+                      {
+                        "name": "retention_pct",
+                        "expr": "alightings / boardings * 100"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Recalculate district totals",
+                "icon": "refresh",
+                "action": {
+                  "fn": "deriveTable",
+                  "args": {
+                    "from": "results",
+                    "into": "district_stats",
+                    "groupBy": "district",
+                    "aggregations": {
+                      "boardings": "sum"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "table",
+            "table": "metrics",
+            "columns": [
+              "scenario",
+              "boardings",
+              "alightings",
+              "retention_pct"
+            ],
+            "height": 190
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "District totals (feed the map's shading):"
+          },
+          {
+            "type": "barchart",
+            "table": "district_stats",
+            "labelColumn": "district",
+            "valueColumn": "boardings",
+            "agg": "sum",
+            "label": "Boardings by district"
+          }
+        ]
+      }
+    }
+  }
+}

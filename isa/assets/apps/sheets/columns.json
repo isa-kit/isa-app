@@ -1,0 +1,20 @@
+{
+  "files": [
+    {"name": "name", "type": "text", "label": "File"},
+    {"name": "order", "type": "integer", "label": "Order", "hidden": true}
+  ],
+  "sheet_budget": [
+    {"name": "item", "type": "text", "label": "Item"},
+    {"name": "qty", "type": "text", "label": "Qty"},
+    {"name": "price", "type": "text", "label": "Price"},
+    {"name": "total", "type": "text", "label": "Total"},
+    {"name": "file", "type": "text", "label": "File", "hidden": true}
+  ],
+  "sheet_scores": [
+    {"name": "name", "type": "text", "label": "Name"},
+    {"name": "m1", "type": "text", "label": "Mark 1"},
+    {"name": "m2", "type": "text", "label": "Mark 2"},
+    {"name": "avg", "type": "text", "label": "Average"},
+    {"name": "file", "type": "text", "label": "File", "hidden": true}
+  ]
+}

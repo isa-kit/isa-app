@@ -1,0 +1,11 @@
+{
+  "id": "city_planner",
+  "name": "City Planner",
+  "category": "Maps",
+  "icon": "location_city",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_cityplan"
+  },
+  "seedVersion": "2026-06-09.3"
+}

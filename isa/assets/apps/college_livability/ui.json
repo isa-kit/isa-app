@@ -1,0 +1,235 @@
+{
+  "app": {
+    "title": "Car-free college guide",
+    "primaryColor": "#0F6E56",
+    "theme": "contrast"
+  },
+  "nav": [
+    {
+      "id": "rankings",
+      "label": "Rankings",
+      "icon": "leaderboard",
+      "screen": "rankings"
+    },
+    {
+      "id": "map",
+      "label": "Map",
+      "icon": "map",
+      "screen": "map"
+    },
+    {
+      "id": "about",
+      "label": "About",
+      "icon": "menu_book",
+      "screen": "about"
+    }
+  ],
+  "screens": {
+    "rankings": {
+      "title": "Colleges ranked",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Every US college (real data) plus a curated set of major world cities, ranked by how livable each is WITHOUT a car and on a tight budget. Use search or the filter to find your state or school; tap a card to see why — then \"Show on map\" to see that campus on the map."
+          },
+          {
+            "type": "cards",
+            "table": "colleges",
+            "height": 620,
+            "search": true,
+            "sort": {
+              "column": "score",
+              "dir": "desc"
+            },
+            "title": "name",
+            "subtitle": "location",
+            "collapsible": true,
+            "recent": 6,
+            "groupByOptions": [
+              { "label": "Tier", "column": "tier" },
+              { "label": "State", "column": "state" },
+              { "label": "Country", "column": "country" }
+            ],
+            "tags": [
+              {
+                "column": "tier",
+                "colors": {
+                  "excellent": "green",
+                  "good": "teal",
+                  "fair": "amber",
+                  "car-needed": "red"
+                }
+              }
+            ],
+            "filterable": true,
+            "expandable": true,
+            "expandFields": [
+              { "column": "score", "label": "Score (0-100)" },
+              { "column": "walkability", "label": "Walkability" },
+              { "column": "programs", "label": "Programs offered" },
+              { "column": "top_fields", "label": "Biggest fields (by graduates)" },
+              { "column": "transit", "label": "Car-free commute (area)" },
+              { "column": "cost", "label": "Households without a car (area)" },
+              { "column": "net_price", "label": "Net price / yr (avg, after aid)" },
+              { "column": "earnings", "label": "Median pay, 10 yrs after entry" },
+              { "column": "tuition_in", "label": "In-state tuition / yr" },
+              { "column": "tuition_out", "label": "Out-of-state tuition / yr" },
+              { "column": "room_board", "label": "Room & board incl. meals / yr" },
+              { "column": "books", "label": "Books & supplies / yr" },
+              { "column": "source", "label": "Data source" }
+            ],
+            "open": "View / edit",
+            "action": {
+              "fn": "editRow"
+            },
+            "openActions": [
+              {
+                "label": "Show on map",
+                "icon": "map",
+                "action": {
+                  "chain": [
+                    { "fn": "focusRow" },
+                    { "fn": "goto", "args": { "screen": "map" } }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "type": "button",
+            "label": "Add a college",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "colleges",
+                "values": {
+                  "tier": "fair"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "map": {
+      "title": "Colleges on the map",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Colleges plotted worldwide. With thousands of schools, the map shows an even sample of pins for speed. In Rankings, tap a college and press \"Show on map\" to open it here, centered and zoomed on its campus (highlighted). Tap \"Show all colleges\" to zoom back out. Tap any pin to see or edit its details."
+          },
+          {
+            "type": "button",
+            "label": "Show all colleges",
+            "icon": "public",
+            "action": {
+              "fn": "clearFocus",
+              "args": { "table": "colleges" }
+            }
+          },
+          {
+            "type": "map",
+            "table": "colleges",
+            "latColumn": "lat",
+            "lonColumn": "lon",
+            "labelColumn": "name",
+            "height": 480,
+            "zoom": 3,
+            "markerIcon": "pin",
+            "maxMarkers": 400,
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "about": {
+      "title": "About this guide",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Who this is for"
+          },
+          {
+            "type": "text",
+            "value": "Students choosing a college who don't have a car and don't have much money. Each score asks one question: can you actually live here without a car, on a tight budget?"
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Built on real data (US)"
+          },
+          {
+            "type": "text",
+            "value": "Every US college here — about 4,400 two- and four-year institutions — comes from the federal IPEDS database: real names, real map coordinates. Then, for each one, we pull real US Census numbers for that campus's own city (or county): how many households own no car, and how many people actually walk, bike, or take transit to work. Both come straight from the government, no sign-up or key needed."
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Real prices too"
+          },
+          {
+            "type": "text",
+            "value": "Expand a card for each college's real published costs: tuition, books, and on-campus room & board — which includes the meal plan, so it's the closest public figure for what food costs there. Menu prices at specific restaurants or grocery stores aren't open data anywhere, so those can't be listed."
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Net price and future pay"
+          },
+          {
+            "type": "text",
+            "value": "Two numbers matter most for a tight budget, both from the federal College Scorecard. Net price is what students actually pay per year after grants and scholarships — usually far below the sticker price. Median pay is what former students earn about 10 years after they started. Around 4 in 5 US colleges report both; the rest are mostly very small or new schools the government doesn't publish figures for (a real coverage gap, not an error)."
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Majors and departments"
+          },
+          {
+            "type": "text",
+            "value": "Each US college also shows how many degree programs it offers and its biggest fields by number of graduates — grouped into departments like Engineering, Business, Health, Biology, and so on (from the federal IPEDS completions data). Two honest gaps: minors aren't reported to the government by any college, and which building each department sits in isn't published as open data anywhere — so neither can be listed."
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": "How the score works"
+          },
+          {
+            "type": "text",
+            "value": "Each score blends the real Census car-free numbers for the area with how urban vs rural the campus is. Expand any card to see the actual figures. Excellent (78+): genuinely car-free, lots of people already live without one. Good (62-77): very doable with a bike or transit pass. Fair (46-61): workable but you'll plan around gaps. Car-needed (below 46): expect to need a car or a ride."
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": "The honest picture"
+          },
+          {
+            "type": "text",
+            "value": "Most US colleges land in fair or car-needed — that's the real story: America is mostly built for cars, and genuinely car-free campuses are the exception, not the rule. The area numbers can also understate a bike-friendly campus that sits in a big, car-heavy county. Non-US entries are still a small curated sample, not real data yet."
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Coming next"
+          },
+          {
+            "type": "text",
+            "value": "The deepest layer is our own transit accessibility model (the four-step model): not just how people commute today, but how much you could actually reach without a car from each campus. Add your own colleges, edit any score, and verify with your own research before deciding — every card shows its exact data source."
+          }
+        ]
+      }
+    }
+  }
+}

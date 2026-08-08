@@ -1,0 +1,12 @@
+{
+  "id": "datalens",
+  "name": "Datalab",
+  "category": "Analytics",
+  "icon": "query_stats",
+  "color": "#2E6E5A",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_datalens"
+  },
+  "seedVersion": "2026-07-20.1-p3"
+}

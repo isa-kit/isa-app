@@ -1,0 +1,8 @@
+{
+  "pages": [
+    { "id": "home", "name": "Page 1", "kind": "page", "order": 0 }
+  ],
+  "boxes": [],
+  "links": [],
+  "sketch": []
+}

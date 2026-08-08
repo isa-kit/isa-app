@@ -1,0 +1,1103 @@
+{
+  "app": {
+    "title": "Workboard",
+    "primaryColor": "#455A64",
+    "theme": "contrast"
+  },
+  "nav": [
+    {
+      "id": "home",
+      "label": "Tasks",
+      "icon": "checklist",
+      "screen": "home"
+    },
+    {
+      "id": "plan",
+      "label": "Plan",
+      "icon": "layout_grid",
+      "screen": "plan"
+    },
+    {
+      "id": "people",
+      "label": "People",
+      "icon": "person",
+      "screen": "people"
+    },
+    {
+      "id": "table",
+      "label": "Table",
+      "icon": "table_rows",
+      "screen": "table"
+    },
+    {
+      "id": "worklog",
+      "label": "Worklog",
+      "icon": "check_circle",
+      "screen": "worklog"
+    }
+  ],
+  "screens": {
+    "home": {
+      "title": "Tasks",
+      "body": {
+        "type": "segments",
+        "segments": [
+          {
+            "label": "Now",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "In progress",
+                  "style": "title"
+                },
+                {
+                  "type": "cards",
+                  "emptyIcon": "add_task",
+                  "emptyTitle": "No tasks yet",
+                  "emptyText": "Add your first task to the board.",
+                  "emptyAction": {"fn": "addRow", "args": {"table": "tasks", "values": {"phase": "future", "priority": "normal"}}},
+                  "emptyActionLabel": "Add task",
+                  "table": "tasks",
+                  "filter": {
+                    "column": "phase",
+                    "value": "current"
+                  },
+                  "title": "title",
+                  "subtitle": "detail",
+                  "tags": [
+                    {
+                      "column": "track",
+                      "colors": {
+                        "engine": "blue",
+                        "apps": "pink",
+                        "sync": "teal",
+                        "product": "green"
+                      }
+                    }
+                  ],
+                  "open": "Open task",
+                  "action": {
+                    "fn": "editRow"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": "Needs your decision",
+                  "style": "title"
+                },
+                {
+                  "type": "cards",
+                  "emptyIcon": "gavel",
+                  "emptyTitle": "No decisions yet",
+                  "emptyText": "Log a decision or an open question.",
+                  "emptyAction": {"fn": "addRow", "args": {"table": "decisions", "values": {"status": "open", "kind": "question"}}},
+                  "emptyActionLabel": "Add",
+                  "table": "decisions",
+                  "filter": {
+                    "column": "status",
+                    "value": "open"
+                  },
+                  "title": "title",
+                  "subtitle": "context",
+                  "tags": [
+                    {
+                      "column": "priority",
+                      "colors": {
+                        "high": "red",
+                        "normal": "amber",
+                        "low": "gray"
+                      }
+                    },
+                    {
+                      "column": "kind",
+                      "colors": {
+                        "question": "blue",
+                        "decision": "purple"
+                      }
+                    }
+                  ],
+                  "open": "Open / answer",
+                  "action": {
+                    "fn": "editRow"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": "Up next",
+                  "style": "title"
+                },
+                {
+                  "type": "cards",
+                  "table": "tasks",
+                  "filter": {
+                    "column": "phase",
+                    "value": "future"
+                  },
+                  "title": "title",
+                  "subtitle": "detail",
+                  "tags": [
+                    {
+                      "column": "track",
+                      "colors": {
+                        "engine": "blue",
+                        "apps": "pink",
+                        "sync": "teal",
+                        "product": "green"
+                      }
+                    }
+                  ],
+                  "open": "Open task",
+                  "action": {
+                    "fn": "editRow"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": "Recently decided",
+                  "style": "title"
+                },
+                {
+                  "type": "cards",
+                  "table": "decisions",
+                  "filter": {
+                    "column": "status",
+                    "value": "answered"
+                  },
+                  "title": "title",
+                  "subtitle": "answer",
+                  "tags": [
+                    {
+                      "column": "kind",
+                      "colors": {
+                        "question": "blue",
+                        "decision": "purple"
+                      }
+                    }
+                  ],
+                  "open": "Open / answer",
+                  "action": {
+                    "fn": "editRow"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "label": "Tasks",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": "Active work — current and upcoming. Search or group as needed."
+                },
+                {
+                  "type": "button",
+                  "label": "New task",
+                  "icon": "add",
+                  "action": {
+                    "fn": "addRow",
+                    "args": {
+                      "table": "tasks",
+                      "values": {
+                        "phase": "future",
+                        "priority": "normal"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "cards",
+                  "table": "tasks",
+                  "search": true,
+                  "filterable": true,
+                  "groupBy": "phase",
+                  "groupOrder": [
+                    "current",
+                    "future"
+                  ],
+                  "groupByOptions": [
+                    {
+                      "label": "Phase",
+                      "column": "phase"
+                    },
+                    {
+                      "label": "Priority",
+                      "column": "priority"
+                    },
+                    {
+                      "label": "Track",
+                      "column": "track"
+                    },
+                    {
+                      "label": "Project",
+                      "column": "units"
+                    }
+                  ],
+                  "title": "title",
+                  "subtitle": "detail",
+                  "tags": [
+                    {
+                      "column": "priority",
+                      "colors": {
+                        "urgent": "red",
+                        "high": "amber",
+                        "normal": "gray",
+                        "low": "teal"
+                      }
+                    },
+                    {
+                      "column": "phase",
+                      "colors": {
+                        "future": "blue",
+                        "current": "amber",
+                        "past": "gray"
+                      }
+                    },
+                    {
+                      "column": "track",
+                      "colors": {
+                        "engine": "blue",
+                        "apps": "pink",
+                        "sync": "teal",
+                        "product": "green"
+                      }
+                    }
+                  ],
+                  "collapsible": true,
+                  "recent": 5,
+                  "expandFields": [
+                    {
+                      "column": "context",
+                      "label": "Context"
+                    },
+                    {
+                      "column": "phase",
+                      "label": "Phase"
+                    },
+                    {
+                      "column": "priority",
+                      "label": "Priority"
+                    },
+                    {
+                      "column": "milestone",
+                      "label": "Milestone"
+                    },
+                    {
+                      "column": "units",
+                      "label": "Units"
+                    },
+                    {
+                      "column": "labels",
+                      "label": "Labels"
+                    },
+                    {
+                      "column": "notes",
+                      "label": "My notes"
+                    }
+                  ],
+                  "open": "Open task",
+                  "action": {
+                    "fn": "editRow"
+                  },
+                  "filter": {
+                    "column": "phase",
+                    "in": [
+                      "current",
+                      "future"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "label": "Schedule",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": "Tasks with a scheduled or due date, grouped by day. Set Scheduled (pending) or Due to see a task here."
+                },
+                {
+                  "type": "row",
+                  "wrap": true,
+                  "children": [
+                    {
+                      "type": "button",
+                      "label": "Incomplete",
+                      "action": {
+                        "fn": "setPresence",
+                        "args": {
+                          "table": "tasks",
+                          "column": "completed",
+                          "mode": "empty"
+                        }
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "label": "Done",
+                      "action": {
+                        "fn": "setPresence",
+                        "args": {
+                          "table": "tasks",
+                          "column": "completed",
+                          "mode": "set"
+                        }
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "label": "All",
+                      "action": {
+                        "fn": "setPresence",
+                        "args": {
+                          "table": "tasks",
+                          "column": "completed",
+                          "mode": ""
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "agenda",
+                  "table": "tasks",
+                  "filterable": true,
+                  "dateColumns": [
+                    "scheduledStart",
+                    "due"
+                  ],
+                  "titleColumn": "title",
+                  "statusColumn": "phase",
+                  "doneValue": "past",
+                  "action": {
+                    "fn": "editRow"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "label": "Sub-tasks",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": "Parent/child task tree. Set a task's Parent to nest it (make a bigger task to house subtasks), or use + to add a subtask. Drag to nest/reorder; tap to open."
+                },
+                {
+                  "type": "tree",
+                  "table": "tasks",
+                  "parentColumn": "parent",
+                  "titleColumn": "title",
+                  "statusColumn": "phase",
+                  "doneValue": "past",
+                  "onTap": {
+                    "fn": "editRow"
+                  },
+                  "filterable": true,
+                  "addChild": true,
+                  "orderColumn": "order"
+                }
+              ]
+            }
+          },
+          {
+            "label": "Notes",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "button",
+                  "label": "New note",
+                  "icon": "add",
+                  "action": {
+                    "fn": "addRow",
+                    "args": {
+                      "table": "notes",
+                      "values": {}
+                    }
+                  }
+                },
+                {
+                  "type": "cards",
+                  "emptyIcon": "note_add",
+                  "emptyTitle": "No notes yet",
+                  "emptyText": "Add a note.",
+                  "emptyAction": {"fn": "addRow", "args": {"table": "notes", "values": {}}},
+                  "emptyActionLabel": "New note",
+                  "table": "notes",
+                  "search": true,
+                  "filterable": true,
+                  "title": "title",
+                  "subtitle": "body",
+                  "expandFields": [
+                    {
+                      "column": "body",
+                      "label": "Note"
+                    },
+                    {
+                      "column": "tasks",
+                      "label": "Tasks"
+                    },
+                    {
+                      "column": "createdAt",
+                      "label": "Created"
+                    }
+                  ],
+                  "open": "Open note",
+                  "action": {
+                    "fn": "editRow"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "label": "Completed",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": "Completed tasks, newest first. Completion date shown on each."
+                },
+                {
+                  "type": "cards",
+                  "table": "tasks",
+                  "filter": {
+                    "column": "completed",
+                    "exists": true
+                  },
+                  "sort": {
+                    "column": "completed",
+                    "dir": "desc"
+                  },
+                  "title": "title",
+                  "subtitle": "detail",
+                  "tags": [
+                    {
+                      "column": "completed"
+                    },
+                    {
+                      "column": "track",
+                      "colors": {
+                        "engine": "blue",
+                        "apps": "pink",
+                        "sync": "teal",
+                        "product": "green"
+                      }
+                    }
+                  ],
+                  "collapsible": true,
+                  "recent": 50,
+                  "expandable": true,
+                  "expandFields": [
+                    {
+                      "column": "context",
+                      "label": "Context"
+                    },
+                    {
+                      "column": "completed",
+                      "label": "Completed"
+                    },
+                    {
+                      "column": "completedTime",
+                      "label": "Time"
+                    },
+                    {
+                      "column": "milestone",
+                      "label": "Milestone"
+                    },
+                    {
+                      "column": "units",
+                      "label": "Units"
+                    },
+                    {
+                      "column": "detail",
+                      "label": "Detail"
+                    }
+                  ],
+                  "open": "Open task",
+                  "action": {
+                    "fn": "editRow"
+                  },
+                  "search": true
+                }
+              ]
+            }
+          },
+          {
+            "label": "Stats",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": "The board at a glance — work by phase, track, and priority."
+                },
+                {
+                  "type": "row",
+                  "wrap": true,
+                  "children": [
+                    {
+                      "type": "stat",
+                      "table": "tasks",
+                      "filter": {
+                        "column": "phase",
+                        "value": "current"
+                      },
+                      "label": "In progress",
+                      "color": "amber"
+                    },
+                    {
+                      "type": "stat",
+                      "table": "tasks",
+                      "filter": {
+                        "column": "phase",
+                        "value": "future"
+                      },
+                      "label": "Queued",
+                      "color": "blue"
+                    },
+                    {
+                      "type": "stat",
+                      "table": "tasks",
+                      "filter": {
+                        "column": "phase",
+                        "value": "past"
+                      },
+                      "label": "Shipped",
+                      "color": "green"
+                    },
+                    {
+                      "type": "stat",
+                      "table": "decisions",
+                      "filter": {
+                        "column": "status",
+                        "value": "open"
+                      },
+                      "label": "Open questions",
+                      "color": "coral"
+                    }
+                  ]
+                },
+                {
+                  "type": "progress",
+                  "table": "tasks",
+                  "statusColumn": "phase",
+                  "doneValue": "past",
+                  "label": "Shipped",
+                  "color": "green"
+                },
+                {
+                  "type": "barchart",
+                  "table": "tasks",
+                  "groupColumn": "track",
+                  "label": "Tasks per track",
+                  "colors": {
+                    "engine": "blue",
+                    "apps": "pink",
+                    "sync": "teal",
+                    "product": "green"
+                  }
+                },
+                {
+                  "type": "piechart",
+                  "table": "tasks",
+                  "groupColumn": "priority",
+                  "label": "Priority mix",
+                  "height": 160,
+                  "colors": {
+                    "urgent": "red",
+                    "high": "coral",
+                    "normal": "blue",
+                    "low": "gray"
+                  }
+                },
+                {
+                  "type": "barchart",
+                  "table": "tasks",
+                  "groupColumn": "milestone",
+                  "label": "Tasks per milestone",
+                  "limit": 8
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "people": {
+      "title": "People",
+      "body": {
+        "type": "segments",
+        "segments": [
+          {
+            "label": "Profiles",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "button",
+                  "label": "New profile",
+                  "icon": "add",
+                  "action": {
+                    "fn": "addRow",
+                    "args": {
+                      "table": "profiles",
+                      "values": {}
+                    }
+                  }
+                },
+                {
+                  "type": "cards",
+                  "table": "profiles",
+                  "search": true,
+                  "title": "name",
+                  "subtitle": "role",
+                  "expandFields": [
+                    {
+                      "column": "role",
+                      "label": "Role"
+                    },
+                    {
+                      "column": "notes",
+                      "label": "Notes"
+                    }
+                  ],
+                  "open": "Open profile",
+                  "action": {
+                    "fn": "editRow"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "label": "Projects",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "button",
+                  "label": "New project",
+                  "icon": "add",
+                  "action": {
+                    "fn": "addRow",
+                    "args": {
+                      "table": "projects",
+                      "values": {
+                        "status": "active"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "cards",
+                  "emptyIcon": "folder_open",
+                  "emptyTitle": "No projects yet",
+                  "emptyText": "Add a project to group your work.",
+                  "emptyAction": {"fn": "addRow", "args": {"table": "projects", "values": {"status": "active"}}},
+                  "emptyActionLabel": "New project",
+                  "table": "projects",
+                  "search": true,
+                  "filterable": true,
+                  "groupBy": "profile",
+                  "title": "name",
+                  "subtitle": "summary",
+                  "tags": [
+                    {
+                      "column": "status",
+                      "colors": {
+                        "active": "green",
+                        "paused": "amber",
+                        "done": "gray"
+                      }
+                    }
+                  ],
+                  "expandFields": [
+                    {
+                      "column": "profile",
+                      "label": "Profile"
+                    },
+                    {
+                      "column": "status",
+                      "label": "Status"
+                    },
+                    {
+                      "column": "summary",
+                      "label": "Summary"
+                    }
+                  ],
+                  "open": "Open project",
+                  "action": {
+                    "fn": "editRow"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "plan": {
+      "title": "Plan",
+      "body": {
+        "type": "segments",
+        "segments": [
+          {
+            "label": "Decisions",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "row",
+                  "wrap": true,
+                  "children": [
+                    {
+                      "type": "button",
+                      "label": "Open",
+                      "action": {
+                        "fn": "setFilter",
+                        "args": {
+                          "table": "decisions",
+                          "column": "status",
+                          "value": "open"
+                        }
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "label": "Answered",
+                      "action": {
+                        "fn": "setFilter",
+                        "args": {
+                          "table": "decisions",
+                          "column": "status",
+                          "value": "answered"
+                        }
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "label": "Deferred",
+                      "action": {
+                        "fn": "setFilter",
+                        "args": {
+                          "table": "decisions",
+                          "column": "status",
+                          "value": "deferred"
+                        }
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "label": "All",
+                      "action": {
+                        "fn": "setFilter",
+                        "args": {
+                          "table": "decisions",
+                          "column": "status",
+                          "value": ""
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "cards",
+                  "table": "decisions",
+                  "groupBy": "status",
+                  "groupOrder": [
+                    "open",
+                    "deferred",
+                    "answered"
+                  ],
+                  "title": "title",
+                  "subtitle": "context",
+                  "tags": [
+                    {
+                      "column": "priority",
+                      "colors": {
+                        "high": "red",
+                        "normal": "amber",
+                        "low": "gray"
+                      }
+                    },
+                    {
+                      "column": "kind",
+                      "colors": {
+                        "question": "blue",
+                        "decision": "purple"
+                      }
+                    }
+                  ],
+                  "collapsible": true,
+                  "recent": 5,
+                  "expandFields": [
+                    {
+                      "column": "context",
+                      "label": "Context"
+                    },
+                    {
+                      "column": "options",
+                      "label": "Options"
+                    },
+                    {
+                      "column": "answer",
+                      "label": "Your answer"
+                    },
+                    {
+                      "column": "related",
+                      "label": "Related tasks"
+                    }
+                  ],
+                  "open": "Open / answer",
+                  "action": {
+                    "fn": "editRow"
+                  },
+                  "search": true
+                },
+                {
+                  "type": "button",
+                  "label": "Add",
+                  "icon": "add",
+                  "action": {
+                    "fn": "addRow",
+                    "args": {
+                      "table": "decisions",
+                      "values": {
+                        "status": "open",
+                        "kind": "question"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "label": "Designs",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "cards",
+                  "table": "designs",
+                  "groupBy": "kind",
+                  "groupOrder": [
+                    "architecture",
+                    "product",
+                    "project"
+                  ],
+                  "title": "title",
+                  "subtitle": "summary",
+                  "tags": [
+                    {
+                      "column": "kind",
+                      "colors": {
+                        "architecture": "purple",
+                        "product": "pink",
+                        "project": "teal"
+                      }
+                    }
+                  ],
+                  "open": "Open design",
+                  "action": {
+                    "fn": "editRow"
+                  },
+                  "search": true
+                }
+              ]
+            }
+          },
+          {
+            "label": "Graph",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "canvas",
+                  "layout": "graph",
+                  "nodesTable": "tasks",
+                  "labelColumn": "title",
+                  "laneColumn": "track",
+                  "laneOrder": [
+                    "engine",
+                    "apps",
+                    "sync",
+                    "product"
+                  ],
+                  "milestoneColumn": "phase",
+                  "milestoneOrder": [
+                    "past",
+                    "current",
+                    "future"
+                  ],
+                  "colorColumn": "phase",
+                  "colors": {
+                    "future": "blue",
+                    "current": "amber",
+                    "past": "gray"
+                  },
+                  "edgesTable": "links",
+                  "fromColumn": "from",
+                  "toColumn": "to",
+                  "colGap": 240,
+                  "laneGap": 130,
+                  "cellStack": 66,
+                  "marginX": 110,
+                  "marginY": 60,
+                  "fillPhone": true,
+                  "action": {
+                    "fn": "editRow"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "table": {
+      "title": "Table",
+      "body": {
+        "type": "segments",
+        "segments": [
+          {
+            "label": "Table",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "table",
+                  "table": "tasks",
+                  "overflow": "cards",
+                  "columns": [
+                    "title",
+                    "phase",
+                    "priority",
+                    "track",
+                    "units",
+                    "labels",
+                    "createdAt",
+                    "updatedAt"
+                  ],
+                  "fillPhone": true,
+                  "action": {
+                    "fn": "editRow"
+                  }
+                },
+                {
+                  "type": "button",
+                  "label": "New task",
+                  "icon": "add",
+                  "action": {
+                    "fn": "addRow",
+                    "args": {
+                      "table": "tasks",
+                      "values": {
+                        "phase": "future",
+                        "priority": "normal"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "label": "Data",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Browse any table",
+                  "style": "title"
+                },
+                {
+                  "type": "dataview",
+                  "overflow": "cards"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "worklog": {
+      "title": "Worklog",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "What I did each run, newest first. Each entry links the tasks it touched."
+          },
+          {
+            "type": "cards",
+            "table": "worklog",
+            "sort": {
+              "column": "date",
+              "dir": "desc"
+            },
+            "title": "summary",
+            "subtitle": "detail",
+            "tags": [
+              {
+                "column": "date"
+              },
+              {
+                "column": "kind",
+                "colors": {
+                  "added": "green",
+                  "changed": "blue",
+                  "fixed": "amber",
+                  "decided": "purple",
+                  "note": "gray"
+                }
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              {
+                "column": "date",
+                "label": "Date"
+              },
+              {
+                "column": "kind",
+                "label": "Kind"
+              },
+              {
+                "column": "tasks",
+                "label": "Tasks"
+              },
+              {
+                "column": "detail",
+                "label": "Detail"
+              }
+            ],
+            "open": "Open",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

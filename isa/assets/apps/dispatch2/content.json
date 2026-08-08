@@ -1,0 +1,778 @@
+{
+  "users": [
+    {
+      "id": "u_you",
+      "name": "You"
+    },
+    {
+      "id": "u_claude",
+      "name": "Claude"
+    }
+  ],
+  "tag_types": [
+    {
+      "id": "tt_bug",
+      "name": "bug",
+      "label": "Bug",
+      "color": "red"
+    },
+    {
+      "id": "tt_feature",
+      "name": "feature",
+      "label": "Feature",
+      "color": "blue"
+    },
+    {
+      "id": "tt_infra",
+      "name": "infra",
+      "label": "Infra",
+      "color": "purple"
+    },
+    {
+      "id": "tt_docs",
+      "name": "docs",
+      "label": "Docs",
+      "color": "teal"
+    },
+    {
+      "id": "tt_followup",
+      "name": "followup",
+      "label": "Follow-up",
+      "color": "amber"
+    }
+  ],
+  "entries": [
+    {
+      "id": "p_roadmap",
+      "type": "group",
+      "title": "Roadmap & decisions",
+      "status": "active",
+      "order": 1,
+      "comment": "Projects and decisions live here. Open one to see its child entries.",
+      "rulesActive": true,
+      "rulesVersion": "2026-08-07",
+      "rules": "Manual only — no AI edits inside this project or any sub-project of it. A human makes every change here."
+    },
+    {
+      "id": "n_howto",
+      "type": "task",
+      "title": "How dispatch works",
+      "status": "done",
+      "order": 1,
+      "comment": "Every entry is one node: it has a title and a comment, and a TYPE that decides its content — a note, a wireframe, a sheet, a doc, or a sketch (each keeps its own data). Nodes relate through the relations table, so ONE entry can live under many parents.",
+      "createdBy": "u_claude",
+      "prompting": [
+        "u_you"
+      ],
+      "estimateMins": 15,
+      "priority": "low",
+      "importance": "normal"
+    },
+    {
+      "id": "n_store",
+      "type": "group",
+      "title": "Store & money decisions",
+      "status": "active",
+      "order": 2,
+      "comment": "Decisions, one at a time, each with a recommendation.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "n_store_req",
+      "type": "task",
+      "title": "Store & pricing decisions",
+      "status": "active",
+      "order": 1,
+      "comment": "Walk me through store + pricing one at a time, simply, with a recommendation for each.",
+      "createdBy": "u_you",
+      "prompting": [
+        "u_claude"
+      ],
+      "estimateMins": 30,
+      "priority": "normal",
+      "importance": "normal",
+      "due": "2026-07-15"
+    },
+    {
+      "id": "n_store_wf",
+      "type": "wireframe",
+      "title": "Pricing screen — wireframe",
+      "status": "active",
+      "order": 2,
+      "createdBy": "u_you"
+    },
+    {
+      "id": "n_bridge",
+      "type": "task",
+      "title": "Finish the desktop bridge",
+      "status": "queued",
+      "order": 3,
+      "comment": "Rebuild the Mac app on the new workspace and finish the M2 cutover.",
+      "createdBy": "u_you",
+      "estimateMins": 240,
+      "priority": "high",
+      "importance": "high",
+      "scheduledStart": "2026-07-20",
+      "due": "2026-08-15",
+      "blocked": true
+    },
+    {
+      "id": "p_inbox",
+      "type": "group",
+      "title": "Inbox",
+      "status": "active",
+      "order": 2,
+      "comment": "A place to drop new entries."
+    },
+    {
+      "id": "l_store_1",
+      "type": "note",
+      "comment": "Recommendation drafted — one decision per card; the store page ships first.",
+      "createdBy": "u_claude",
+      "created": "2026-07-01",
+      "postedAt": "2026-07-01T09:05:00"
+    },
+    {
+      "id": "l_store_2",
+      "type": "note",
+      "comment": "Sounds good — start with pricing, then the store terms.",
+      "createdBy": "u_you",
+      "created": "2026-07-01",
+      "postedAt": "2026-07-01T09:20:00"
+    },
+    {
+      "id": "t_store_wf",
+      "type": "task",
+      "title": "Pricing screen",
+      "status": "done",
+      "createdBy": "u_you",
+      "comment": "The pricing screen design — its wireframe is attached below.",
+      "finishedAt": "2026-07-10",
+      "completedBy": "u_you",
+      "estimateMins": 120,
+      "priority": "normal",
+      "importance": "normal",
+      "scheduledStart": "2026-07-08",
+      "due": "2026-07-10"
+    },
+    {
+      "id": "g_bublie_import_myboard",
+      "type": "group",
+      "title": "bublie import — My board",
+      "status": "active",
+      "order": 1,
+      "comment": "Imported from bublie board 'My board' (apps/bublee/content.json) via tool/bublie_to_dispatch.py. Structure + text only -- visual styling was dropped, not carried."
+    },
+    {
+      "id": "b_milk",
+      "type": "task",
+      "role": "task",
+      "title": "milk",
+      "status": "queued",
+      "order": 1,
+      "comment": "2 L",
+      "pos": "70,250"
+    },
+    {
+      "id": "b_cream",
+      "type": "task",
+      "role": "task",
+      "title": "cream",
+      "status": "active",
+      "order": 2,
+      "comment": "350 ml",
+      "pos": "190,120"
+    },
+    {
+      "id": "b_butter",
+      "type": "task",
+      "role": "task",
+      "title": "butter",
+      "status": "active",
+      "order": 3,
+      "comment": "low",
+      "pos": "330,120"
+    },
+    {
+      "id": "b_crois",
+      "type": "task",
+      "role": "task",
+      "title": "croissant",
+      "status": "done",
+      "order": 4,
+      "comment": "6 baked",
+      "pos": "450,190"
+    },
+    {
+      "id": "b_ricotta",
+      "type": "task",
+      "role": "task",
+      "title": "ricotta",
+      "status": "active",
+      "order": 5,
+      "comment": "500 g",
+      "pos": "190,390"
+    },
+    {
+      "id": "b_cannoli",
+      "type": "task",
+      "role": "task",
+      "title": "cannoli",
+      "status": "done",
+      "order": 6,
+      "comment": "out",
+      "pos": "330,390"
+    },
+    {
+      "id": "b_cheese",
+      "type": "task",
+      "role": "task",
+      "title": "cheese",
+      "status": "done",
+      "order": 7,
+      "comment": "aging",
+      "pos": "335,255"
+    },
+    {
+      "id": "p_tetherfield",
+      "type": "group",
+      "title": "Tetherfield",
+      "status": "active",
+      "order": 3,
+      "comment": "Original tower-defense→offense game on the spacegame engine node. All state + docs: memory tetherfield-space-game.md · specs _claude/projects/tetherfield-{worldmap-spec,handoff-tasks,multiplayer-scope,mp-taskplan}.md. Dev-site only (no prod per user).",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "t_tf_waves_abc",
+      "type": "task",
+      "title": "Waves A-C: Living Worlds themes, Mk generations, War duels",
+      "status": "done",
+      "order": 1,
+      "comment": "6 engine-painted themes over one skeleton sim; endless Mk upgrades w/ traits; Roost unit production + foe-base duels. Adversarial Opus passes caught game-breakers each wave (frozen repaint, save clobber, Lanchester stalemate).",
+      "createdBy": "u_you",
+      "completedBy": "u_you",
+      "finishedAt": "2026-07-10"
+    },
+    {
+      "id": "t_tf_d1_blueprints",
+      "type": "task",
+      "title": "Wave D1: Blueprints",
+      "status": "done",
+      "order": 2,
+      "comment": "Master a base → save as recipe → paced auto-rebuild anywhere. Bridge between Build and War modes. Build ed3e7d9.",
+      "createdBy": "u_you",
+      "completedBy": "u_you",
+      "finishedAt": "2026-07-11"
+    },
+    {
+      "id": "t_tf_d2_worldmap",
+      "type": "task",
+      "title": "Wave D2: War mode world map",
+      "status": "done",
+      "order": 3,
+      "comment": "Bases as nodes, macro select-and-send, zoom w/ summarize-back; Sandbox→Build workshop. 141 tests. Build 113cf5b. 5 Opus findings fixed pre-ship.",
+      "createdBy": "u_you",
+      "completedBy": "u_you",
+      "finishedAt": "2026-07-12"
+    },
+    {
+      "id": "t_tf_p01_unitclasses",
+      "type": "task",
+      "title": "P0.1 Unit classes (Swift/Heavy/Siege/Warden + counter matrix)",
+      "status": "active",
+      "order": 4,
+      "comment": "Composition-beats-strength combat depth; first of three P0 waves before any networking. Contract → concurrent part-file builds → Opus verify → ship. Plan: tetherfield-mp-taskplan.md.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "t_tf_p02_patrolzones",
+      "type": "task",
+      "title": "P0.2 Patrol zones + doctrine",
+      "status": "queued",
+      "order": 5,
+      "comment": "Same combat files as P0.1 (depends on it); the user's original patrol vision — timing set by user for skillsets. Loiter/engage/return + hold garrison, doctrine toggle.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "t_tf_p03_convoys",
+      "type": "task",
+      "title": "P0.3 Convoys, reinforce, scarcity (Q1/Q4 defaults)",
+      "status": "queued",
+      "order": 6,
+      "comment": "Base-to-base sending beyond attack; scarcity makes generosity strategic. Conservation invariant (never mint/lose) is load-bearing; Q1 wallet + Q4 interception defaults recommended, user confirms at the P0 checkpoint.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "t_tf_p1_asynccoop",
+      "type": "task",
+      "title": "P1 Async co-op (last-reader-advances tick; T3 Opus mandatory)",
+      "status": "queued",
+      "order": 7,
+      "comment": "Two accounts, one world, no live server compute — any client polling replays ordered commands and advances the tick, so every client converges with zero server workers. Networking write-path: T3, Opus verify not optional.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "t_tf_p2_livecoop",
+      "type": "task",
+      "title": "P2 Live co-op (locks+presence)",
+      "status": "queued",
+      "order": 8,
+      "comment": "Base locks + presence + team-vs-AI once async co-op is approved by the user; adaptive delta polling tightens the loop. T3 verify: lock races, heartbeat-expiry abuse, convergence under simultaneous zoom+send.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "t_tf_p3_versus",
+      "type": "task",
+      "title": "P3 Versus 2v2",
+      "status": "queued",
+      "order": 9,
+      "comment": "Sides/teams model + trust-but-clamp hardening + spectator role + balance-bot harness, once live co-op holds. T3 verify before ship.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "t_tf_p4_systemgates",
+      "type": "task",
+      "title": "P4 System gates (re-scope first)",
+      "status": "queued",
+      "order": 10,
+      "comment": "Federation edge-node gates linking world docs — depends on the platform's sharing/decentralization work maturing; re-scope against its then-current state before building from this stub, not from an old plan.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "e_rm_goal",
+      "type": "task",
+      "role": "goal",
+      "title": "Every lens answers one question",
+      "status": "active",
+      "order": 4,
+      "comment": "The end state: opening a project answers how it is doing and what is next, without stacking every lens at once.",
+      "createdBy": "u_you",
+      "prioLane": "now"
+    },
+    {
+      "id": "e_rm_milestone",
+      "type": "task",
+      "role": "milestone",
+      "title": "Lens coverage is binding",
+      "status": "active",
+      "order": 5,
+      "comment": "Checkpoint: each lens has a row it must render and a sibling row it must not.",
+      "createdBy": "u_you",
+      "prioLane": "next"
+    },
+    {
+      "id": "e_rm_decision",
+      "type": "task",
+      "role": "decision",
+      "title": "Lenses open on demand, never stacked",
+      "status": "done",
+      "decisionKind": "predetermined",
+      "order": 6,
+      "comment": "Settled: the project detail defaults to a compact overview; each lens is reached by a deliberate tap.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "t_rm_preview",
+      "type": "task",
+      "title": "Wire the overview priorities preview",
+      "status": "active",
+      "order": 7,
+      "prioLane": "now",
+      "priority": "high",
+      "importance": "high",
+      "comment": "The chrome-stripped priolanes copy that previews Now/Next inline on the project overview.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "l_rm_log",
+      "type": "note",
+      "title": "Roadmap log opener",
+      "order": 8,
+      "postedAt": "2026-08-07T09:00:00",
+      "comment": "Roadmap log opener - the first entry in this project's own log.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "f_rm_doc",
+      "type": "docs",
+      "title": "Roadmap rules doc",
+      "order": 9,
+      "postedAt": "2026-08-07T09:05:00",
+      "comment": "Roadmap rules doc - the project-level document, not any one task's.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "e_tf_goal",
+      "type": "task",
+      "role": "goal",
+      "title": "Tetherfield reaches playable multiplayer",
+      "status": "active",
+      "order": 11,
+      "comment": "The end state for Tetherfield: async co-op through versus, all on the spacegame engine node.",
+      "createdBy": "u_you",
+      "prioLane": "next"
+    },
+    {
+      "id": "e_tf_milestone",
+      "type": "task",
+      "role": "milestone",
+      "title": "Tetherfield worldmap spec accepted",
+      "status": "queued",
+      "order": 12,
+      "comment": "Checkpoint before any multiplayer work starts.",
+      "createdBy": "u_you",
+      "prioLane": "queued"
+    },
+    {
+      "id": "e_tf_decision",
+      "type": "task",
+      "role": "decision",
+      "title": "Tetherfield stays dev-site only",
+      "status": "done",
+      "decisionKind": "predetermined",
+      "order": 13,
+      "comment": "Settled with the user: no prod release for Tetherfield.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "t_tf_pacing",
+      "type": "task",
+      "title": "Tetherfield wave pacing balance",
+      "status": "active",
+      "order": 14,
+      "prioLane": "now",
+      "comment": "Tune the wave curve so the first three waves teach the tether mechanic.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "l_tf_log",
+      "type": "note",
+      "title": "Tetherfield log opener",
+      "order": 15,
+      "postedAt": "2026-08-07T09:10:00",
+      "comment": "Tetherfield log opener - the first entry in Tetherfield's own log.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "f_tf_doc",
+      "type": "docs",
+      "title": "Tetherfield worldmap spec",
+      "order": 16,
+      "postedAt": "2026-08-07T09:15:00",
+      "comment": "Tetherfield worldmap spec - the project-level document for Tetherfield.",
+      "createdBy": "u_you"
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "fromId": "p_roadmap",
+      "toId": "n_howto",
+      "type": "contains",
+      "order": 1
+    },
+    {
+      "id": "r2",
+      "fromId": "p_roadmap",
+      "toId": "n_store",
+      "type": "contains",
+      "order": 2
+    },
+    {
+      "id": "r3",
+      "fromId": "n_store",
+      "toId": "n_store_req",
+      "type": "contains",
+      "order": 1
+    },
+    {
+      "id": "r4",
+      "fromId": "n_store",
+      "toId": "t_store_wf",
+      "type": "contains",
+      "order": 2
+    },
+    {
+      "id": "r5",
+      "fromId": "p_roadmap",
+      "toId": "n_bridge",
+      "type": "contains",
+      "order": 3
+    },
+    {
+      "id": "r6",
+      "fromId": "p_inbox",
+      "toId": "t_store_wf",
+      "type": "contains",
+      "order": 1,
+      "label": "same wireframe, tracked in Inbox too"
+    },
+    {
+      "id": "r7",
+      "fromId": "n_bridge",
+      "toId": "n_howto",
+      "type": "references",
+      "label": "see how entries work"
+    },
+    {
+      "id": "r8",
+      "fromId": "n_store_req",
+      "toId": "l_store_1",
+      "type": "contains",
+      "order": 1
+    },
+    {
+      "id": "r9",
+      "fromId": "n_store_req",
+      "toId": "l_store_2",
+      "type": "contains",
+      "order": 2
+    },
+    {
+      "id": "r10",
+      "fromId": "t_store_wf",
+      "toId": "n_store_wf",
+      "type": "contains",
+      "order": 1
+    },
+    {
+      "id": "r_g_bublie_import_myboard_b_milk",
+      "fromId": "g_bublie_import_myboard",
+      "toId": "b_milk",
+      "type": "contains",
+      "order": 1
+    },
+    {
+      "id": "r_g_bublie_import_myboard_b_cream",
+      "fromId": "g_bublie_import_myboard",
+      "toId": "b_cream",
+      "type": "contains",
+      "order": 2
+    },
+    {
+      "id": "r_g_bublie_import_myboard_b_butter",
+      "fromId": "g_bublie_import_myboard",
+      "toId": "b_butter",
+      "type": "contains",
+      "order": 3
+    },
+    {
+      "id": "r_g_bublie_import_myboard_b_crois",
+      "fromId": "g_bublie_import_myboard",
+      "toId": "b_crois",
+      "type": "contains",
+      "order": 4
+    },
+    {
+      "id": "r_g_bublie_import_myboard_b_ricotta",
+      "fromId": "g_bublie_import_myboard",
+      "toId": "b_ricotta",
+      "type": "contains",
+      "order": 5
+    },
+    {
+      "id": "r_g_bublie_import_myboard_b_cannoli",
+      "fromId": "g_bublie_import_myboard",
+      "toId": "b_cannoli",
+      "type": "contains",
+      "order": 6
+    },
+    {
+      "id": "r_g_bublie_import_myboard_b_cheese",
+      "fromId": "g_bublie_import_myboard",
+      "toId": "b_cheese",
+      "type": "contains",
+      "order": 7
+    },
+    {
+      "id": "rel_l_mcrm",
+      "fromId": "b_milk",
+      "toId": "b_cream",
+      "type": "references"
+    },
+    {
+      "id": "rel_l_mric",
+      "fromId": "b_milk",
+      "toId": "b_ricotta",
+      "type": "references"
+    },
+    {
+      "id": "rel_l_mchz",
+      "fromId": "b_milk",
+      "toId": "b_cheese",
+      "type": "references"
+    },
+    {
+      "id": "rel_l_crmb",
+      "fromId": "b_cream",
+      "toId": "b_butter",
+      "type": "references"
+    },
+    {
+      "id": "rel_l_bcro",
+      "fromId": "b_butter",
+      "toId": "b_crois",
+      "type": "references"
+    },
+    {
+      "id": "rel_l_rcan",
+      "fromId": "b_ricotta",
+      "toId": "b_cannoli",
+      "type": "references"
+    },
+    {
+      "id": "r_tf_1",
+      "fromId": "p_tetherfield",
+      "toId": "t_tf_waves_abc",
+      "type": "contains",
+      "order": 1
+    },
+    {
+      "id": "r_tf_2",
+      "fromId": "p_tetherfield",
+      "toId": "t_tf_d1_blueprints",
+      "type": "contains",
+      "order": 2
+    },
+    {
+      "id": "r_tf_3",
+      "fromId": "p_tetherfield",
+      "toId": "t_tf_d2_worldmap",
+      "type": "contains",
+      "order": 3
+    },
+    {
+      "id": "r_tf_4",
+      "fromId": "p_tetherfield",
+      "toId": "t_tf_p01_unitclasses",
+      "type": "contains",
+      "order": 4
+    },
+    {
+      "id": "r_tf_5",
+      "fromId": "p_tetherfield",
+      "toId": "t_tf_p02_patrolzones",
+      "type": "contains",
+      "order": 5
+    },
+    {
+      "id": "r_tf_6",
+      "fromId": "p_tetherfield",
+      "toId": "t_tf_p03_convoys",
+      "type": "contains",
+      "order": 6
+    },
+    {
+      "id": "r_tf_7",
+      "fromId": "p_tetherfield",
+      "toId": "t_tf_p1_asynccoop",
+      "type": "contains",
+      "order": 7
+    },
+    {
+      "id": "r_tf_8",
+      "fromId": "p_tetherfield",
+      "toId": "t_tf_p2_livecoop",
+      "type": "contains",
+      "order": 8
+    },
+    {
+      "id": "r_tf_9",
+      "fromId": "p_tetherfield",
+      "toId": "t_tf_p3_versus",
+      "type": "contains",
+      "order": 9
+    },
+    {
+      "id": "r_tf_10",
+      "fromId": "p_tetherfield",
+      "toId": "t_tf_p4_systemgates",
+      "type": "contains",
+      "order": 10
+    },
+    {
+      "id": "r_lp_1",
+      "fromId": "p_roadmap",
+      "toId": "e_rm_goal",
+      "type": "contains",
+      "order": 4
+    },
+    {
+      "id": "r_lp_2",
+      "fromId": "p_roadmap",
+      "toId": "e_rm_milestone",
+      "type": "contains",
+      "order": 5
+    },
+    {
+      "id": "r_lp_3",
+      "fromId": "p_roadmap",
+      "toId": "e_rm_decision",
+      "type": "contains",
+      "order": 6
+    },
+    {
+      "id": "r_lp_4",
+      "fromId": "p_roadmap",
+      "toId": "t_rm_preview",
+      "type": "contains",
+      "order": 7
+    },
+    {
+      "id": "r_lp_5",
+      "fromId": "p_roadmap",
+      "toId": "l_rm_log",
+      "type": "contains",
+      "order": 8
+    },
+    {
+      "id": "r_lp_6",
+      "fromId": "p_roadmap",
+      "toId": "f_rm_doc",
+      "type": "contains",
+      "order": 9
+    },
+    {
+      "id": "r_lp_7",
+      "fromId": "p_tetherfield",
+      "toId": "e_tf_goal",
+      "type": "contains",
+      "order": 11
+    },
+    {
+      "id": "r_lp_8",
+      "fromId": "p_tetherfield",
+      "toId": "e_tf_milestone",
+      "type": "contains",
+      "order": 12
+    },
+    {
+      "id": "r_lp_9",
+      "fromId": "p_tetherfield",
+      "toId": "e_tf_decision",
+      "type": "contains",
+      "order": 13
+    },
+    {
+      "id": "r_lp_10",
+      "fromId": "p_tetherfield",
+      "toId": "t_tf_pacing",
+      "type": "contains",
+      "order": 14
+    },
+    {
+      "id": "r_lp_11",
+      "fromId": "p_tetherfield",
+      "toId": "l_tf_log",
+      "type": "contains",
+      "order": 15
+    },
+    {
+      "id": "r_lp_12",
+      "fromId": "p_tetherfield",
+      "toId": "f_tf_doc",
+      "type": "contains",
+      "order": 16
+    }
+  ]
+}

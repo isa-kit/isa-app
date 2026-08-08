@@ -1,0 +1,12 @@
+{
+  "id": "puzzles",
+  "name": "Puzzles",
+  "category": "Games",
+  "icon": "grid_on",
+  "color": "#7C4DFF",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_puzzles"
+  },
+  "seedVersion": "2026-06-15.1"
+}

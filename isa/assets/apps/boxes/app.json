@@ -1,0 +1,12 @@
+{
+  "id": "boxes",
+  "name": "Boxes",
+  "category": "Life",
+  "icon": "inventory_2",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_boxes"
+  },
+  "seedVersion": "2026-07-27.4",
+  "seedContent": "initial-only"
+}

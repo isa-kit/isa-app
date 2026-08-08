@@ -1,0 +1,12 @@
+{
+  "id": "docs",
+  "name": "Docs",
+  "category": "Productivity",
+  "icon": "menu_book",
+  "color": "#00897B",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_docs"
+  },
+  "seedVersion": "2026-08-01.fileslibrary"
+}

@@ -1,0 +1,55 @@
+{
+  "parcels": [
+    { "name": "id", "type": "text", "label": "ID", "advanced": true },
+    { "name": "name", "type": "text", "label": "Lot" },
+    { "name": "zone", "type": "enum", "label": "Zone",
+      "options": ["empty", "residential", "commercial", "industrial", "park", "grocery", "school", "hospital", "transit"],
+      "default": "empty" },
+    { "name": "quality", "type": "number", "label": "Quality (0-100)",
+      "rules": { "min": 0, "max": 100 } },
+    { "name": "cost", "type": "number", "label": "Cost / price (grocery)",
+      "rules": { "min": 0 } },
+    { "name": "lat", "type": "number", "label": "Latitude", "advanced": true },
+    { "name": "lon", "type": "number", "label": "Longitude", "advanced": true }
+  ],
+  "city": [
+    { "name": "id", "type": "text", "label": "ID", "advanced": true },
+    { "name": "turn", "type": "integer", "label": "Turn" },
+    { "name": "budget", "type": "number", "label": "Budget ($k)" },
+    { "name": "population", "type": "number", "label": "Population" },
+    { "name": "happiness", "type": "number", "label": "Happiness" },
+    { "name": "education", "type": "number", "label": "Education" },
+    { "name": "healthcare", "type": "number", "label": "Healthcare" },
+    { "name": "groceryAccess", "type": "number", "label": "Grocery access" },
+    { "name": "groceryCost", "type": "number", "label": "Grocery cost" },
+    { "name": "walkability", "type": "number", "label": "Walkability" },
+    { "name": "carCost", "type": "number", "label": "Car cost" },
+    { "name": "pollution", "type": "number", "label": "Pollution" }
+  ],
+  "city_history": [
+    { "name": "id", "type": "text", "label": "ID", "advanced": true },
+    { "name": "turn", "type": "number", "label": "Turn" },
+    { "name": "budget", "type": "number", "label": "Budget" },
+    { "name": "population", "type": "number", "label": "Population" },
+    { "name": "happiness", "type": "number", "label": "Happiness" }
+  ],
+  "features": [
+    { "name": "id", "type": "text", "label": "ID", "advanced": true },
+    { "name": "lat", "type": "number", "label": "Latitude", "advanced": true },
+    { "name": "lon", "type": "number", "label": "Longitude", "advanced": true },
+    { "name": "kind", "type": "text", "label": "Kind" },
+    { "name": "name", "type": "text", "label": "Name" }
+  ],
+  "residents": [
+    { "name": "id", "type": "text", "label": "ID", "advanced": true },
+    { "name": "name", "type": "text", "label": "Name" },
+    { "name": "lat", "type": "number", "label": "Latitude", "advanced": true },
+    { "name": "lon", "type": "number", "label": "Longitude", "advanced": true },
+    { "name": "naturePref", "type": "number", "label": "Nature preference (0-100)",
+      "rules": { "min": 0, "max": 100 } },
+    { "name": "carTolerance", "type": "number", "label": "Car tolerance (0-100)",
+      "rules": { "min": 0, "max": 100 } },
+    { "name": "happiness", "type": "number", "label": "Happiness" },
+    { "name": "band", "type": "text", "label": "Band", "advanced": true }
+  ]
+}

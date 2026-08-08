@@ -1,0 +1,428 @@
+{
+  "app": {
+    "title": "Watchlist",
+    "primaryColor": "#E53935",
+    "theme": "material"
+  },
+  "nav": [
+    { "id": "files", "label": "Files", "icon": "folder", "screen": "files" },
+    { "id": "watch", "label": "Watch", "icon": "smart_display", "screen": "watch" },
+    { "id": "byChannel", "label": "By channel", "icon": "subscriptions", "screen": "byChannel" },
+    { "id": "watched", "label": "Watched", "icon": "check_circle", "screen": "watched" },
+    { "id": "recs", "label": "Recommendations", "icon": "recommend", "screen": "recs" }
+  ],
+  "screens": {
+    "files": {
+      "title": "Files",
+      "body": {
+        "type": "explorer",
+        "table": "files",
+        "nameColumn": "name",
+        "orderColumn": "order",
+        "allowFolders": false,
+        "railMode": "collapsible",
+        "title": "Files",
+        "fileIcon": "smart_display",
+        "newFileLabel": "New watchlist",
+        "emptyHome": true,
+        "homeTitle": "Your watchlists",
+        "homeSubtitle": "Open a recent watchlist, or start a new one.",
+        "addItems": [
+          { "label": "New watchlist", "icon": "add", "values": { "name": "Untitled watchlist" } }
+        ],
+        "autoSelectFirst": true,
+        "scopeTargets": [
+          { "table": "channels", "column": "file" },
+          { "table": "videos", "column": "file" }
+        ],
+        "detail": {
+          "type": "column",
+          "crossAxis": "stretch",
+          "children": [
+            {
+              "type": "text",
+              "style": "caption",
+              "value": "A file is one watchlist — its own channels and videos. Pick a file on the left, then use the other tabs to work in it. Tap + to start a new watchlist, and a file's ⋮ menu to rename or delete it."
+            },
+            {
+              "type": "button",
+              "label": "Open this watchlist",
+              "icon": "smart_display",
+              "action": {
+                "fn": "goto",
+                "args": {
+                  "screen": "watch"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "watch": {
+      "title": "Watch",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Everything queued up, sorted into Must / Maybe / Someday. Newest on top. Tap a card to edit it, or open the video in your browser."
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "stat",
+                "table": "videos",
+                "filter": { "column": "status", "value": "todo" },
+                "label": "To watch",
+                "color": "blue"
+              },
+              {
+                "type": "stat",
+                "table": "videos",
+                "filter": { "column": "priority", "value": "must" },
+                "label": "Must-watch",
+                "color": "coral"
+              }
+            ]
+          },
+          {
+            "type": "button",
+            "label": "Add a video",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "videos",
+                "values": {
+                  "status": "todo",
+                  "priority": "maybe",
+                  "source": "manual",
+                  "added": "2026-06-21"
+                }
+              }
+            }
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "All",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "videos", "column": "priority", "value": "" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Must",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "videos", "column": "priority", "value": "must" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Maybe",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "videos", "column": "priority", "value": "maybe" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Someday",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "videos", "column": "priority", "value": "someday" }
+                }
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "table": "videos",
+            "groupBy": "priority",
+            "groupOrder": ["must", "maybe", "someday"],
+            "sort": { "column": "added", "dir": "desc" },
+            "title": "title",
+            "subtitle": "channel",
+            "tags": [
+              {
+                "column": "status",
+                "colors": {
+                  "todo": "blue",
+                  "watching": "amber",
+                  "watched": "green"
+                }
+              },
+              {
+                "column": "topic",
+                "colors": {
+                  "Science": "teal",
+                  "Tech": "blue",
+                  "Cooking": "coral",
+                  "Music": "purple",
+                  "Other": "gray"
+                }
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              { "column": "channel", "label": "Channel" },
+              { "column": "lengthMin", "label": "Length (min)" },
+              { "column": "source", "label": "Source" },
+              { "column": "rating", "label": "Rating" },
+              { "column": "notes", "label": "Notes" }
+            ],
+            "open": "Edit video",
+            "action": { "fn": "editRow" }
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Open a video"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "These open in your browser. Links are safety-checked on your device before they open."
+          },
+          {
+            "type": "linkcard",
+            "url": "https://www.youtube.com/watch?v=bHIhgxav9LY",
+            "title": "The Big Misconception About Electricity — Veritasium",
+            "onOpen": { "fn": "openLink" }
+          },
+          {
+            "type": "linkcard",
+            "url": "https://www.youtube.com/watch?v=r6sGWTCMz2k",
+            "title": "But What Is a Fourier Series? — 3Blue1Brown",
+            "onOpen": { "fn": "openLink" }
+          }
+        ]
+      }
+    },
+    "byChannel": {
+      "title": "By channel",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Your channels, then every video grouped under the channel it came from. Add a video straight to your list below."
+          },
+          {
+            "type": "button",
+            "label": "Add a channel",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "channels",
+                "values": { "topic": "Other", "subscribed": false }
+              }
+            }
+          },
+          {
+            "type": "list",
+            "table": "channels",
+            "titleColumn": "name",
+            "subtitleColumns": ["topic"],
+            "metaColumns": ["subscribed"],
+            "sortColumn": "name",
+            "sortDir": "asc",
+            "action": { "fn": "editRow" }
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Videos by channel"
+          },
+          {
+            "type": "button",
+            "label": "Add a video",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "videos",
+                "values": {
+                  "status": "todo",
+                  "priority": "maybe",
+                  "source": "manual",
+                  "added": "2026-06-21"
+                }
+              }
+            }
+          },
+          {
+            "type": "cards",
+            "table": "videos",
+            "groupBy": "channel",
+            "sort": { "column": "added", "dir": "desc" },
+            "title": "title",
+            "subtitle": "topic",
+            "tags": [
+              {
+                "column": "priority",
+                "colors": {
+                  "must": "coral",
+                  "maybe": "amber",
+                  "someday": "gray"
+                }
+              },
+              {
+                "column": "status",
+                "colors": {
+                  "todo": "blue",
+                  "watching": "amber",
+                  "watched": "green"
+                }
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              { "column": "channel", "label": "Channel" },
+              { "column": "lengthMin", "label": "Length (min)" },
+              { "column": "source", "label": "Source" },
+              { "column": "notes", "label": "Notes" }
+            ],
+            "open": "Edit video",
+            "action": { "fn": "editRow" }
+          }
+        ]
+      }
+    },
+    "watched": {
+      "title": "Watched",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Everything you've finished, your highest-rated first. The chart shows how your viewing splits across topics."
+          },
+          {
+            "type": "barchart",
+            "table": "videos",
+            "groupColumn": "topic",
+            "filter": { "column": "status", "value": "watched" },
+            "label": "Watched by topic"
+          },
+          {
+            "type": "cards",
+            "table": "videos",
+            "filter": { "column": "status", "value": "watched" },
+            "sort": { "column": "rating", "dir": "desc" },
+            "title": "title",
+            "subtitle": "channel",
+            "tags": [
+              {
+                "column": "topic",
+                "colors": {
+                  "Science": "teal",
+                  "Tech": "blue",
+                  "Cooking": "coral",
+                  "Music": "purple",
+                  "Other": "gray"
+                }
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              { "column": "channel", "label": "Channel" },
+              { "column": "rating", "label": "Rating" },
+              { "column": "lengthMin", "label": "Length (min)" },
+              { "column": "added", "label": "Added" },
+              { "column": "notes", "label": "Notes" }
+            ],
+            "open": "Edit video",
+            "action": { "fn": "editRow" }
+          }
+        ]
+      }
+    },
+    "recs": {
+      "title": "Recommendations",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Bridges — discover across your interests"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Computed on your device from how your videos connect — no account, no API key. These are your unwatched videos that bridge your different interests (the ones linking, say, your science and tech sides), strongest first."
+          },
+          {
+            "type": "button",
+            "label": "Find my bridges",
+            "icon": "recommend",
+            "action": {
+              "fn": "recommend",
+              "args": {
+                "table": "videos",
+                "linkColumns": ["topic", "channel", "tags"],
+                "excludeWhen": { "column": "status", "value": "watched" },
+                "scoreColumn": "recScore",
+                "reasonColumn": "recReason",
+                "topicColumn": "topic",
+                "limit": 5
+              }
+            }
+          },
+          {
+            "type": "cards",
+            "table": "videos",
+            "filter": { "column": "status", "value": "todo" },
+            "sort": { "column": "recScore", "dir": "desc" },
+            "title": "title",
+            "subtitle": "recReason",
+            "tags": [
+              {
+                "column": "topic",
+                "colors": {
+                  "Science": "teal",
+                  "Tech": "blue",
+                  "Cooking": "coral",
+                  "Music": "purple",
+                  "Other": "gray"
+                }
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              { "column": "recReason", "label": "Why" },
+              { "column": "channel", "label": "Channel" },
+              { "column": "lengthMin", "label": "Length (min)" }
+            ],
+            "open": "Edit video",
+            "action": { "fn": "editRow" }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Tip: the more you add, the better the bridges. Want YouTube's own recommendations too? That's a separate future option — it needs a YouTube API key and a one-time sign-in."
+          }
+        ]
+      }
+    }
+  }
+}

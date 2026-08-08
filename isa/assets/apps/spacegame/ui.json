@@ -1,0 +1,129 @@
+{
+  "app": {
+    "title": "Tetherfield",
+    "primaryColor": "#4C7DF0"
+  },
+  "nav": [
+    {
+      "id": "world",
+      "label": "Play",
+      "icon": "rocket_launch",
+      "screen": "world"
+    },
+    {
+      "id": "how",
+      "label": "How to",
+      "icon": "info",
+      "screen": "how"
+    }
+  ],
+  "screens": {
+    "world": {
+      "title": "Tetherfield",
+      "body": {
+        "type": "spacegame",
+        "seed": 7,
+        "fillPhone": true
+      }
+    },
+    "how": {
+      "title": "How to play",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Protect the hub: power up, mine the rocks, hold the line"
+          },
+          {
+            "type": "text",
+            "value": "Welcome to Tetherfield! You're dropped into an asteroid field with one job: keep your command HUB alive. To do that you'll build a power grid, mine the asteroids for minerals, and set up turrets to shoot down waves of enemy ships. New here? Pick 🎯 Campaign from the menu — it walks you through everything one step at a time. This How-to lives here as your cheat sheet whenever you need a reminder."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "The core loop — make power, mine minerals"
+          },
+          {
+            "type": "text",
+            "value": "Everything you build runs on power, and everything you buy costs 💎 minerals. Here's the whole loop:"
+          },
+          {
+            "type": "text",
+            "value": "☀️ Solar — makes power. Your energy starts here, so build a few first.\n📡 Relay — carries power across the field. Think of relays as wires: chain them to reach distant asteroids and stretch your grid outward.\n🔋 Storage — banks spare power so you've got a reserve for when a wave hits.\n⛏️ Miner — place it on an asteroid to turn power INTO 💎 minerals — your build currency. More miners, more money to spend."
+          },
+          {
+            "type": "text",
+            "value": "So the loop is: ☀️ Solar makes power → 📡 Relays carry it → 🔋 Storage banks it → ⛏️ Miners turn power into 💎 minerals → you spend minerals to build more. Keep the grid CONNECTED — if the chain breaks, the power stops flowing and everything downstream goes dark."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Turrets — your four defenders"
+          },
+          {
+            "type": "text",
+            "value": "Turrets aim and fire on their own. Your job is picking the right ones and placing them well. Each has its own range and strength, so mix them up:"
+          },
+          {
+            "type": "text",
+            "value": "🔴 Laser — cheap and short range. Your go-to turret. Ring the hub with these to shred anything that gets close.\n⚡ Pulser — fires fast. Perfect for swarms of small, quick ships.\n🔵 THEL beam — reaches far, but it's WEAK against 💍 Ring ships (they shrug off beams). Great at long range otherwise.\n🚀 Missile — long range and hits hard, but it CAN'T shoot point-blank. Put missiles BEHIND your lasers so they hammer far-off targets while the lasers cover up close."
+          },
+          {
+            "type": "text",
+            "value": "The secret is layering: long-range 🚀 Missiles and 🔵 THEL beams up front to soften ships as they approach, 🔴 Lasers and ⚡ Pulsers hugging the hub as your last line. No single turret does it all — the mix is what wins."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "The enemies — who's coming for you"
+          },
+          {
+            "type": "text",
+            "value": "Enemies attack in waves that grow tougher over time. Knowing each type tells you what to build:"
+          },
+          {
+            "type": "text",
+            "value": "🛩️ Fighters — a fast swarm of little ships. ⚡ Pulsers and 🔴 Lasers mow them down.\n💣 Bombers — slower, but they hunt your modules. Stop them early with long-range fire.\n💍 Ring ships — armored against BEAMS, so 🔵 THEL barely dents them. Use GUNS — 🔴 Lasers, ⚡ Pulsers and 🚀 Missiles.\n🛸 Mothership — the BOSS. Huge and tough. Focus your heaviest firepower and make sure the grid keeps your turrets powered through the whole fight."
+          },
+          {
+            "type": "text",
+            "value": "Can't stop a wave? It's usually a gap in your grid — turrets going dark because power isn't reaching them, or a flank left uncovered. Between waves, patch the network and fill the holes."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Controls"
+          },
+          {
+            "type": "text",
+            "value": "👆 Tap an empty spot — or drag a tool from the tray straight onto the map — to line up a build. A live preview (its shape, reach and links) follows your finger; nudge it anywhere to fine-tune, then tap ✓ to build (✗ cancels — nothing is spent until ✓). PRECISION TIP: drag from EMPTY SPACE and the piece moves a fraction of your finger — the farther away you grab, the finer the nudge (grab it directly for 1:1).\n💰 Tap Sell to remove a building for a refund.\n🔍 Pinch or scroll to zoom; drag to pan (use two fingers while you're lining up a build).\n⏩ Tap Send to call the next wave early — do it and you'll earn a bonus.\n🎨 Change the look anytime on the main menu — six skins: Medieval, Forest, Neon, Volcanic, Oceanic and Cats 🐱 — every building, enemy and even the tethers between them take on that world (in Medieval your farms feed the villagers who carry the power; in Cats… the final boss is The Vacuum), and your pick is remembered. Busy routes visibly wear in: ruts deepen, vines thicken, yarn frays.\n🎯 A weapon's ATTACK range shows as an orange ring, so it stands apart from your build/connection reach."
+          },
+          {
+            "type": "text",
+            "value": "🔺 Tap any building to UPGRADE it through GENERATIONS: Mk I fine-tunes, Mk II compounds, Mk III AWAKENS it (turrets gain splash, extractors tap a second deposit, generators surge when the grid is starved) and Mk IV climbs forever. Maxing a generation unlocks the next — evolving is pricier but transforms the building, and it visibly changes. You can also MOVE (drag anywhere, small fee) or SELL.\n🔎 Tap ANYTHING to inspect it — deposits show ore left, enemies show what they are and how to counter them.\n🛡 Shields now recharge only while NOT under fire — watch the bubble drain, flare, and breathe back.\n⭕ Ring colours: orange = attack range, ore-coloured = mining reach, violet = support fields, glowing = power reach.\n⚔️ NEW — THE WAR: the final missions add an ENEMY BASE. Build a Roost (Barracks · Warren · Fab · Foundry · Spawning Reef · Cattery) and it births fighters that march on the enemy base ALL BY THEMSELVES — they brawl whatever they meet on the way and grind the citadel down. You never steer them: build the machine, the machine fights. And mind its garrison — it sorties back at you.\n📐 BLUEPRINTS: master a base, then pause → Save as blueprint. On any later mission, pause → Auto-build and your civilization rebuilds itself the way YOU designed it — backbone first, one piece at a time, as minerals allow.\n🌍 WAR MODE: your bases are the nodes now. Assign each a blueprint — it builds itself the way you designed — then select a base, SEND, and tap the enemy. Zoom into any base to run it by hand (stronger), or stay zoomed out and command many (scales). Build mode is your workshop; War is where your blueprints fight.\n🎖 UNIT CLASSES: your Roost breeds a MIX as it evolves — Swift skirmishers, Heavy bruisers, Siege base-crackers, Warden protectors. Composition beats raw strength: the mix your bases field IS your strategy, and world streams show their make-up as pips."
+          },
+          {
+            "type": "text",
+            "value": "🔗 Only RELAYS carry power onward — they're the bridges (the branches/roots of your web). The core is the heart; everything else — generators, batteries, miners, turrets — just DRAWS from a relay or the core in range. So run relays out to reach far asteroids, and upgrade a relay to stretch its reach. Connections are unlimited — a relay feeds everything that reaches it."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Three ways to play"
+          },
+          {
+            "type": "text",
+            "value": "🎯 Campaign — start here. It teaches you step by step, introducing one new piece per level so nothing feels overwhelming.\n♾️ Survival — endless, escalating waves. See how long you can hold out.\n🧩 Sandbox — free build, no pressure. Experiment with layouts, power routes and turret mixes with nothing trying to blow you up."
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Tip: power first, then guns. A beautiful wall of turrets does nothing if the grid behind it goes dark. You've got this — good luck out there!"
+          }
+        ]
+      }
+    }
+  }
+}

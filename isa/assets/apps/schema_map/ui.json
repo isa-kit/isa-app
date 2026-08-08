@@ -1,0 +1,159 @@
+{
+  "app": {
+    "title": "Schema Map",
+    "primaryColor": "#0277BD",
+    "theme": "neon"
+  },
+  "nav": [
+    {
+      "id": "map",
+      "label": "Schema",
+      "icon": "account_tree",
+      "screen": "map"
+    },
+    {
+      "id": "data",
+      "label": "Data",
+      "icon": "table_rows",
+      "screen": "data"
+    }
+  ],
+  "screens": {
+    "map": {
+      "title": "All tables & relationships",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Each node is a table across the isan apps; arrows are reference relationships (foreign keys). Drag a node to rearrange, tap to rename. Add a table or relationship with the buttons below."
+          },
+          {
+            "type": "canvas",
+            "nodesTable": "nodes",
+            "edgesTable": "edges",
+            "labelColumn": "label",
+            "xColumn": "x",
+            "yColumn": "y",
+            "fromColumn": "from",
+            "toColumn": "to",
+            "fillPhone": true,
+            "sketchTable": "sketch",
+            "sketchColumn": "strokes",
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "New table",
+                "icon": "add",
+                "action": {
+                  "fn": "addRow",
+                  "args": {
+                    "table": "nodes"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "New relationship",
+                "icon": "add",
+                "action": {
+                  "fn": "addRow",
+                  "args": {
+                    "table": "edges"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "data": {
+      "title": "Tables & relationships",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "value": "Tables",
+            "style": "subtitle"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "One row per table in the schema. Tap to rename or reposition."
+          },
+          {
+            "type": "table",
+            "table": "nodes",
+            "columns": [
+              "label",
+              "x",
+              "y"
+            ],
+            "height": 260,
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "button",
+            "label": "New table",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "nodes"
+              }
+            }
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "text",
+            "value": "Relationships",
+            "style": "subtitle"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Reference relationships between tables. Tap to change the endpoints or label."
+          },
+          {
+            "type": "table",
+            "table": "edges",
+            "columns": [
+              "from",
+              "to",
+              "label"
+            ],
+            "height": 260,
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "button",
+            "label": "New relationship",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "edges"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

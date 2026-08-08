@@ -1,0 +1,420 @@
+{
+  "entries": [
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Title",
+      "required": true
+    },
+    {
+      "name": "date",
+      "type": "date",
+      "label": "Date",
+      "required": true,
+      "default": "today"
+    },
+    {
+      "name": "time",
+      "type": "text",
+      "label": "Time",
+      "rules": {
+        "time": true
+      },
+      "default": "now"
+    },
+    {
+      "name": "tz",
+      "type": "text",
+      "label": "Time zone",
+      "rules": {
+        "tz": true,
+        "coordZoneFrom": "places"
+      },
+      "default": "system",
+      "advanced": true
+    },
+    {
+      "name": "body",
+      "type": "text",
+      "label": "Body"
+    },
+    {
+      "name": "mood",
+      "type": "enum",
+      "label": "Mood",
+      "options": [
+        "great",
+        "good",
+        "ok",
+        "low",
+        "rough"
+      ]
+    },
+    {
+      "name": "quantity",
+      "type": "number",
+      "label": "Quantity"
+    },
+    {
+      "name": "people",
+      "type": "ref",
+      "refTable": "people",
+      "multi": true,
+      "label": "People"
+    },
+    {
+      "name": "events",
+      "type": "ref",
+      "refTable": "events",
+      "multi": true,
+      "label": "Events"
+    },
+    {
+      "name": "tags",
+      "type": "ref",
+      "refTable": "tags",
+      "multi": true,
+      "label": "Tags"
+    },
+    {
+      "name": "places",
+      "type": "ref",
+      "refTable": "places",
+      "multi": true,
+      "label": "Places"
+    },
+    {
+      "name": "emotion",
+      "type": "number",
+      "label": "Emotion (0–5)",
+      "description": "Overall feeling for this entry — decode it into named scores on the Feelings tab."
+    }
+  ],
+  "entry_parts": [
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Title"
+    },
+    {
+      "name": "kind",
+      "type": "enum",
+      "label": "Kind",
+      "options": [
+        "note",
+        "rich",
+        "measurement",
+        "photo"
+      ],
+      "default": "note"
+    },
+    {
+      "name": "body",
+      "type": "richtext",
+      "label": "Body"
+    },
+    {
+      "name": "quantity",
+      "type": "number",
+      "label": "Quantity"
+    },
+    {
+      "name": "attachments",
+      "type": "attachments",
+      "label": "Attachments"
+    },
+    {
+      "name": "entry",
+      "type": "ref",
+      "refTable": "entries",
+      "label": "Entry",
+      "advanced": true
+    },
+    {
+      "name": "order",
+      "type": "number",
+      "label": "Order",
+      "advanced": true
+    }
+  ],
+  "people": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true
+    },
+    {
+      "name": "relation",
+      "type": "text",
+      "label": "Relation"
+    },
+    {
+      "name": "details",
+      "type": "text",
+      "label": "Details",
+      "description": "Anything worth remembering about them."
+    },
+    {
+      "name": "quantity",
+      "type": "number",
+      "label": "Quantity",
+      "description": "A number that matters to you here — visits, calls, coffees…"
+    },
+    {
+      "name": "x",
+      "type": "number",
+      "label": "X",
+      "advanced": true
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "label": "Y",
+      "advanced": true
+    }
+  ],
+  "places": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name (optional)"
+    },
+    {
+      "name": "coords",
+      "type": "text",
+      "label": "Coordinates (lat, lng)",
+      "rules": {
+        "geopick": true
+      }
+    },
+    {
+      "name": "notes",
+      "type": "text",
+      "label": "Notes"
+    },
+    {
+      "name": "x",
+      "type": "number",
+      "label": "X",
+      "advanced": true
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "label": "Y",
+      "advanced": true
+    }
+  ],
+  "events": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true
+    },
+    {
+      "name": "date",
+      "type": "date",
+      "label": "Date"
+    },
+    {
+      "name": "place",
+      "type": "text",
+      "label": "Place"
+    },
+    {
+      "name": "details",
+      "type": "text",
+      "label": "Details"
+    },
+    {
+      "name": "x",
+      "type": "number",
+      "label": "X",
+      "advanced": true
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "label": "Y",
+      "advanced": true
+    }
+  ],
+  "tags": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true
+    },
+    {
+      "name": "color",
+      "type": "text",
+      "label": "Color"
+    },
+    {
+      "name": "details",
+      "type": "text",
+      "label": "Details"
+    },
+    {
+      "name": "quantity",
+      "type": "number",
+      "label": "Quantity"
+    },
+    {
+      "name": "x",
+      "type": "number",
+      "label": "X",
+      "advanced": true
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "label": "Y",
+      "advanced": true
+    }
+  ],
+  "measurements": [
+    {
+      "name": "id",
+      "type": "text",
+      "label": "ID",
+      "advanced": true
+    },
+    {
+      "name": "date",
+      "type": "date",
+      "label": "Date",
+      "required": true,
+      "default": "today"
+    },
+    {
+      "name": "metric",
+      "type": "text",
+      "label": "Metric",
+      "default": "energy"
+    },
+    {
+      "name": "value",
+      "type": "number",
+      "label": "Value",
+      "required": true
+    },
+    {
+      "name": "note",
+      "type": "text",
+      "label": "Note",
+      "advanced": true
+    }
+  ],
+  "connections": [
+    {
+      "name": "from",
+      "type": "ref",
+      "refTable": "people",
+      "label": "From",
+      "required": true
+    },
+    {
+      "name": "to",
+      "type": "ref",
+      "refTable": "people",
+      "label": "To",
+      "required": true
+    },
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Relationship",
+      "description": "friend · sibling · mentor · …"
+    }
+  ],
+  "feelings": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Feeling",
+      "required": true,
+      "description": "sad · bored · motivated · calm · … any word that fits"
+    },
+    {
+      "name": "score",
+      "type": "number",
+      "label": "Score",
+      "required": true
+    },
+    {
+      "name": "outOf",
+      "type": "enum",
+      "label": "Out of",
+      "options": [
+        "5",
+        "10"
+      ],
+      "default": "5"
+    },
+    {
+      "name": "date",
+      "type": "date",
+      "label": "Date"
+    },
+    {
+      "name": "note",
+      "type": "text",
+      "label": "Note"
+    },
+    {
+      "name": "entry",
+      "type": "ref",
+      "refTable": "entries",
+      "label": "Entry",
+      "description": "Optional — tie this score to a journal entry."
+    }
+  ],
+  "prefs": [
+    {
+      "name": "id",
+      "type": "text",
+      "label": "ID",
+      "advanced": true
+    },
+    {
+      "name": "weekStart",
+      "type": "enum",
+      "label": "Calendar week starts on",
+      "options": [
+        "monday",
+        "sunday"
+      ],
+      "default": "monday"
+    }
+  ],
+  "days": [
+    {
+      "name": "date",
+      "type": "date",
+      "label": "Date",
+      "required": true
+    },
+    {
+      "name": "summary",
+      "type": "text",
+      "label": "Overall",
+      "description": "How was the day, overall? A line about the whole day, separate from the individual entries."
+    },
+    {
+      "name": "mood",
+      "type": "enum",
+      "label": "Day mood",
+      "options": [
+        "great",
+        "good",
+        "ok",
+        "low",
+        "rough"
+      ]
+    }
+  ]
+}

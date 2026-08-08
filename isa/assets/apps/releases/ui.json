@@ -1,0 +1,139 @@
+{
+  "app": {
+    "title": "Releases",
+    "primaryColor": "#0F6E56"
+  },
+  "nav": [
+    { "id": "status", "label": "Status", "icon": "monitor_heart", "screen": "status" },
+    { "id": "about", "label": "About", "icon": "info", "screen": "about" }
+  ],
+  "screens": {
+    "status": {
+      "title": "Releases",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "header",
+            "eyebrow": "environments",
+            "title": "What each site is serving",
+            "subtitle": "Tap Refresh to read the live build stamp from each site. Same commit on both = dev and production are in sync. Different commits = dev is carrying work production does not have yet.",
+            "icon": "rocket_launch"
+          },
+          {
+            "type": "button",
+            "label": "Refresh",
+            "icon": "refresh",
+            "action": {
+              "parallel": [
+                {
+                  "fn": "http",
+                  "onError": "continue",
+                  "args": {
+                    "url": "https://devisant.com/isa/build_info.json",
+                    "method": "GET",
+                    "into": { "table": "prod", "mode": "replace" },
+                    "timeoutMs": 15000
+                  }
+                },
+                {
+                  "fn": "http",
+                  "onError": "continue",
+                  "args": {
+                    "url": "https://dev.devisant.com/isa/build_info.json",
+                    "method": "GET",
+                    "into": { "table": "dev", "mode": "replace" },
+                    "timeoutMs": 15000
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Both cards stay empty until you tap Refresh — this dashboard never shows a build stamp it did not just fetch from a live site. One site being unreachable leaves that card alone; it does not blank the other."
+          },
+          { "type": "divider" },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Production — isan-web"
+          },
+          {
+            "type": "cards",
+            "table": "prod",
+            "title": "commit",
+            "subtitle": "build",
+            "expandable": true,
+            "expandFields": [
+              { "column": "build", "label": "Build stamp" },
+              { "column": "builtAt", "label": "Built at (UTC)" }
+            ]
+          },
+          { "type": "spacer" },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Dev — dev.devisant.com"
+          },
+          {
+            "type": "cards",
+            "table": "dev",
+            "title": "commit",
+            "subtitle": "build",
+            "expandable": true,
+            "expandFields": [
+              { "column": "build", "label": "Build stamp" },
+              { "column": "builtAt", "label": "Built at (UTC)" }
+            ]
+          }
+        ]
+      }
+    },
+    "about": {
+      "title": "About",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "header",
+            "eyebrow": "phase 1",
+            "title": "Read-only release dashboard",
+            "subtitle": "The first slice of running the dev-to-production pipeline from inside isan.",
+            "icon": "info"
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Where the numbers come from"
+          },
+          {
+            "type": "text",
+            "value": "Production reads https://devisant.com/isa/build_info.json — the stamp the production deploy writes.\n\nDev reads https://dev.devisant.com/isa/build_info.json — the stamp the dev deploy writes.\n\nBoth are plain public JSON files ({build, commit, builtAt}). This applet only ever reads them. It holds no credentials, and it cannot deploy, promote, or change anything."
+          },
+          { "type": "divider" },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "How to read it"
+          },
+          {
+            "type": "text",
+            "value": "Each card's title is the short commit the site is serving. Same commit on both cards means dev and production are in sync. Different commits mean dev is ahead — it has landed work that has not been promoted to production yet.\n\nA site's build stamp changes only when that site is deployed. Landing a commit on the dev BRANCH does not change the dev SITE until the dev site is published."
+          },
+          { "type": "divider" },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Known limits"
+          },
+          {
+            "type": "text",
+            "value": "Caching: each site serves its build stamp with a ten-minute cache. A deploy finished seconds ago can take a few minutes to show up here. If a stamp looks behind, wait and refresh again.\n\nNot shown yet: how many commits dev is ahead by, and whether CI is green. Both need authenticated access to a private repository, and this applet deliberately carries no credentials. They arrive in a later phase, served by the backend rather than fetched by the client."
+          }
+        ]
+      }
+    }
+  }
+}

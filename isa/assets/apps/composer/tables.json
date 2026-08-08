@@ -1,0 +1,28 @@
+{
+  "tables": [
+    {
+      "name": "boards",
+      "label": "Boards",
+      "icon": "dashboard_customize",
+      "description": "The file unit: a workboard of screens, each a real layout that re-solves as you drop widgets."
+    },
+    {
+      "name": "screens",
+      "label": "Screens",
+      "icon": "smartphone",
+      "description": "One device frame on the board (phone/tablet/web); holds the widgets that make up its layout."
+    },
+    {
+      "name": "widgets",
+      "label": "Widgets",
+      "icon": "widgets",
+      "description": "A widget dropped into a screen's top/body/bottom/overlay region; the layout solves around it."
+    },
+    {
+      "name": "flows",
+      "label": "Flows",
+      "icon": "arrow_forward",
+      "description": "A navigation link from a widget to a target screen; play mode animates along these."
+    }
+  ]
+}

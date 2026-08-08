@@ -1,0 +1,14 @@
+{
+  "runs": [
+    { "name": "id", "type": "text" },
+    { "name": "mode", "type": "text", "label": "Mode" },
+    { "name": "wave", "type": "number", "label": "Wave reached" }
+  ],
+  "campaign": [
+    { "name": "id", "type": "text" },
+    { "name": "levelId", "type": "text", "label": "Level" },
+    { "name": "stars", "type": "number", "label": "Stars" },
+    { "name": "score", "type": "number", "label": "Best score" },
+    { "name": "version", "type": "number", "label": "Save version" }
+  ]
+}

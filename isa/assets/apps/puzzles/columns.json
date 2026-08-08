@@ -1,0 +1,69 @@
+{
+  "pieces": [
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Tile"
+    },
+    {
+      "name": "x",
+      "type": "number",
+      "label": "X"
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "label": "Y"
+    }
+  ],
+  "pattern": [
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Gem"
+    },
+    {
+      "name": "kind",
+      "type": "text",
+      "label": "Kind"
+    },
+    {
+      "name": "x",
+      "type": "number",
+      "label": "X"
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "label": "Y"
+    },
+    {
+      "name": "targetX",
+      "type": "number",
+      "label": "Home X"
+    },
+    {
+      "name": "targetY",
+      "type": "number",
+      "label": "Home Y"
+    }
+  ],
+  "results": [
+    {
+      "name": "moves",
+      "type": "number",
+      "label": "Moves"
+    },
+    {
+      "name": "seconds",
+      "type": "number",
+      "label": "Seconds"
+    },
+    {
+      "name": "at",
+      "type": "date",
+      "label": "When",
+      "default": "today"
+    }
+  ]
+}

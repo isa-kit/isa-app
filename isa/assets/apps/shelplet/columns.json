@@ -1,0 +1,29 @@
+{
+  "exec_summary": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "headline",
+      "type": "text",
+      "label": "Headline"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Detail"
+    },
+    {
+      "name": "tier",
+      "type": "text",
+      "label": "Confidence"
+    },
+    {
+      "name": "audit",
+      "type": "text",
+      "label": "Audit"
+    }
+  ]
+}

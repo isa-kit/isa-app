@@ -1,0 +1,50 @@
+{
+  "app": {
+    "title": "Sketchpad",
+    "primaryColor": "#6D28D9",
+    "theme": "watercolor"
+  },
+  "nav": [
+    {
+      "id": "files",
+      "label": "Sketchpad",
+      "icon": "brush",
+      "screen": "files"
+    }
+  ],
+  "screens": {
+    "files": {
+      "title": "Sketchpad",
+      "body": {
+        "type": "explorer",
+        "table": "drawings",
+        "nameColumn": "title",
+        "kindColumn": "kind",
+        "parentColumn": "parentId",
+        "trashColumn": "trashed",
+        "title": "Drawings",
+        "fileIcon": "draw",
+        "newFileLabel": "New drawing",
+        "newFolderLabel": "New folder",
+        "railMode": "drawer",
+        "startBlank": true,
+        "menuActions": [
+          {
+            "label": "Export a copy…",
+            "action": { "fn": "exportFileScope" }
+          }
+        ],
+        "detail": {
+          "type": "draw",
+          "table": "drawings",
+          "strokesColumn": "strokes",
+          "titleColumn": "title",
+          "imageColumn": "image",
+          "manualSave": true,
+          "twoFingerHoldMs": 250,
+          "fillPhone": true
+        }
+      }
+    }
+  }
+}

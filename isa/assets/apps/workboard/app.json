@@ -1,0 +1,11 @@
+{
+  "id": "workboard",
+  "name": "Workboard",
+  "category": "Developer",
+  "icon": "dashboard",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_workboard"
+  },
+  "seedVersion": "2026-06-15.roadmap3"
+}

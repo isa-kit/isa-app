@@ -1,0 +1,8 @@
+{
+  "id": "parley",
+  "name": "Parley",
+  "icon": "translate",
+  "category": "Life",
+  "store": { "type": "sqflite", "namespace": "isan_parley" },
+  "seedVersion": "2026-06-17.2"
+}

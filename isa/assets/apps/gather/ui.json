@@ -1,0 +1,317 @@
+{
+  "app": {
+    "primaryColor": "purple",
+    "theme": "pastel",
+    "footerHeight": 64,
+    "fab": {
+      "table": "messages",
+      "icon": "send",
+      "label": "New message"
+    },
+    "meshSpaces": {
+      "spacesTable": "spaces",
+      "keyColumn": "key",
+      "spaceColumn": "space",
+      "tables": [
+        "messages",
+        "events",
+        "members",
+        "listings"
+      ]
+    }
+  },
+  "nav": [
+    {
+      "label": "Chats",
+      "icon": "chat",
+      "screen": "chats"
+    },
+    {
+      "label": "Calendar",
+      "icon": "event",
+      "screen": "calendar"
+    },
+    {
+      "label": "People",
+      "icon": "group",
+      "screen": "people"
+    },
+    {
+      "label": "Browse",
+      "icon": "travel_explore",
+      "screen": "browse"
+    },
+    {
+      "label": "Spaces",
+      "icon": "forum",
+      "screen": "spaces"
+    },
+    {
+      "label": "About",
+      "icon": "help_outline",
+      "screen": "about"
+    }
+  ],
+  "screens": {
+    "chats": {
+      "title": "Chats",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Messages live in spaces — events, groups, your team, or notes-to-self. Everything syncs member-to-member through public relays, end-to-end encrypted. No server."
+          },
+          {
+            "type": "cards",
+            "table": "messages",
+            "groupBy": "space",
+            "title": "text",
+            "subtitle": "author",
+            "sortDir": "desc",
+            "emptyIcon": "forum",
+            "emptyTitle": "No messages yet",
+            "emptyText": "Join or create a space, then send the first message — it syncs to everyone there.",
+            "emptyAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "messages"
+              }
+            },
+            "emptyActionLabel": "New message"
+          }
+        ]
+      }
+    },
+    "calendar": {
+      "title": "Calendar",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Events from every space you're in. Add one with the button — pick its space and everyone there sees it."
+          },
+          {
+            "type": "button",
+            "label": "New event",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "events"
+              }
+            }
+          },
+          {
+            "type": "calendar",
+            "table": "events",
+            "dateColumns": [
+              "date"
+            ],
+            "titleColumn": "title"
+          },
+          {
+            "type": "agenda",
+            "emptyIcon": "event",
+            "emptyTitle": "No events yet",
+            "emptyText": "Plan a meetup -- add the first event.",
+            "emptyAction": {"fn": "addRow", "args": {"table": "events"}},
+            "emptyActionLabel": "New event",
+            "table": "events",
+            "dateColumns": [
+              "date"
+            ],
+            "titleColumn": "title"
+          }
+        ]
+      }
+    },
+    "people": {
+      "title": "People",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Who's in your spaces. Add yourself when you join one — your profile fills the card."
+          },
+          {
+            "type": "button",
+            "label": "Set up my profile",
+            "icon": "badge",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "profile"
+              }
+            }
+          },
+          {
+            "type": "button",
+            "label": "Add me to a space",
+            "icon": "person_add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "members"
+              }
+            }
+          },
+          {
+            "type": "cards",
+            "emptyIcon": "group_add",
+            "emptyTitle": "No members yet",
+            "emptyText": "Invite people to join this space.",
+            "table": "members",
+            "groupBy": "space",
+            "title": "name",
+            "subtitle": "emoji"
+          }
+        ]
+      }
+    },
+    "spaces": {
+      "title": "Spaces",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Create a space for an event, group, or team — a secret invite key is minted automatically. To invite someone: open the space, copy the key, send it any way you like. To join: New space, paste their key into the Invite key field."
+          },
+          {
+            "type": "button",
+            "label": "New space",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "spaces"
+              }
+            }
+          },
+          {
+            "type": "cards",
+            "emptyIcon": "groups",
+            "emptyTitle": "No spaces yet",
+            "emptyText": "Create a space for your group.",
+            "emptyAction": {"fn": "addRow", "args": {"table": "spaces"}},
+            "emptyActionLabel": "New space",
+            "table": "spaces",
+            "groupBy": "kind",
+            "title": "name",
+            "subtitle": "place",
+            "expandFields": [
+              "key"
+            ],
+            "tags": [
+              {
+                "column": "kind",
+                "colors": {
+                  "event": "purple",
+                  "group": "teal",
+                  "team": "blue",
+                  "self": "gray"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "about": {
+      "title": "How Gather works",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": "All mesh. No server."
+          },
+          {
+            "type": "text",
+            "value": "1. Tap People → Set up my profile — your name signs everything you post.\n2. Create a space per event, group, or team (Spaces → New space). A 'self' space is your private notebook.\n3. Invite by sharing the space's secret key (open the space card — the key field is right there). Anyone with the key is in, like a key to a room.\n4. Messages, events, and member cards sync member-to-member through public relays, encrypted end to end. Relays only ever see ciphertext.\n5. No accounts, no phone numbers, no server — your profile lives on your device; your spaces live with their members."
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Privacy model: the key IS the access. Share it only with people who belong. To revoke someone, make a new space and re-invite everyone else. Your device key settings (Sync settings) are unrelated — spaces carry their own keys."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Community servers (optional)"
+          },
+          {
+            "type": "text",
+            "value": "Gather needs no server — but groups that want accounts, moderation, and guaranteed history can run their own: the isan backend is a single small binary anyone can self-host (see the platform's SERVER_HOSTING runbook). Members point their app at that server for login and durable rooms, while still using mesh spaces for everything else. Your community, your machine, your rules."
+          }
+        ]
+      }
+    },
+    "browse": {
+      "title": "Public directory",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Spaces people chose to make public. To join one: open its card, copy the join key, then Spaces → New space → paste it into the Invite key field. To publish yours: Announce, pick the Public directory as where to post, and include your space's key only if anyone may join."
+          },
+          {
+            "type": "button",
+            "label": "Announce a space",
+            "icon": "campaign",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "listings",
+                "values": {
+                  "space": "directory"
+                }
+              }
+            }
+          },
+          {
+            "type": "cards",
+            "emptyIcon": "sell",
+            "emptyTitle": "Nothing posted yet",
+            "emptyText": "Share the first listing with your group.",
+            "emptyAction": {"fn": "addRow", "args": {"table": "listings", "values": {"space": "directory"}}},
+            "emptyActionLabel": "New listing",
+            "table": "listings",
+            "groupBy": "kind",
+            "title": "title",
+            "subtitle": "blurb",
+            "expandFields": [
+              "joinKey",
+              "by"
+            ],
+            "tags": [
+              {
+                "column": "kind",
+                "colors": {
+                  "event": "purple",
+                  "group": "teal",
+                  "team": "blue"
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Open square, open rules: anyone can post here, nobody moderates, and relays may not keep history forever. For curated communities with accounts and durable storage, anyone can run a community server — see About."
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,856 @@
+{
+  "app": {
+    "title": "Car-free access ranking",
+    "primaryColor": "#2E6E5A",
+    "theme": "contrast"
+  },
+  "nav": [
+    {
+      "id": "model",
+      "label": "Ranking · log",
+      "icon": "leaderboard",
+      "screen": "model"
+    },
+    {
+      "id": "model_linear",
+      "label": "Ranking · linear",
+      "icon": "trending_up",
+      "screen": "model_linear"
+    },
+    {
+      "id": "network_frequency",
+      "label": "Frequency",
+      "icon": "schedule",
+      "screen": "network_frequency"
+    },
+    {
+      "id": "network_density",
+      "label": "Density",
+      "icon": "grid_4x4",
+      "screen": "network_density"
+    },
+    {
+      "id": "network_coverage",
+      "label": "Coverage",
+      "icon": "public",
+      "screen": "network_coverage"
+    },
+    {
+      "id": "map",
+      "label": "Map",
+      "icon": "map",
+      "screen": "map"
+    },
+    {
+      "id": "about",
+      "label": "About",
+      "icon": "menu_book",
+      "screen": "about"
+    }
+  ],
+  "screens": {
+    "model": {
+      "title": "Car-free job access, ranked (log scale)",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "car-free job access — modeled travel times, 2019 baseline. \"All\" rows are the transit4 four-step model's transit_job_access_percapita, log-scale normalized across the seeded city set (this is the only place a jobs/access number ever appears). Bus/Tram/Subway/Rail rows are a DIFFERENT metric — GTFS-derived network coverage & frequency (stops, route-km, service span, peak frequency, walk-coverage area), never a per-mode access number. No filter selected below shows every mode, grouped; tap a mode to narrow both the list and the map. This is the LOG-scale view — see the \"Ranking · linear\" tab for the raw min-max spread of the same numbers; both use the exact same mode filter (it's the same underlying table). Want to rank by NETWORK metric instead of access score — densest, most frequent, or broadest-coverage network? See the \"Frequency\", \"Density\", and \"Coverage\" tabs."
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "All",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "all" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Bus",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "bus" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Tram",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "tram" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Subway",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "subway" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Rail",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "rail" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Every mode",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "" }
+                }
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "table": "citymode",
+            "height": 420,
+            "search": true,
+            "groupBy": "mode",
+            "sort": {
+              "column": "score_log",
+              "dir": "desc"
+            },
+            "filter": { "column": "score_log", "exists": true },
+            "title": "city",
+            "subtitle": "country",
+            "collapsible": true,
+            "tags": [
+              {
+                "column": "mode",
+                "colors": {
+                  "all": "indigo",
+                  "bus": "teal",
+                  "tram": "amber",
+                  "subway": "violet",
+                  "rail": "coral"
+                }
+              },
+              {
+                "column": "tier",
+                "colors": {
+                  "excellent": "green",
+                  "good": "teal",
+                  "fair": "amber",
+                  "car-needed": "coral"
+                }
+              },
+              {
+                "column": "score_log",
+                "prefix": "log ",
+                "positiveColor": "indigo"
+              }
+            ],
+            "filterable": true,
+            "expandable": true,
+            "expandFields": [
+              { "column": "mode", "label": "Mode" },
+              { "column": "rank", "label": "Rank (mode=all only)" },
+              { "column": "score_log", "label": "Score, log scale 0-100 — drives tier (mode=all only)" },
+              { "column": "score_linear", "label": "Score, linear scale 0-100 — raw spread (mode=all only)" },
+              { "column": "transit_job_access_percapita", "label": "Car-free job access per capita (mode=all ONLY)" },
+              { "column": "jobs_within_45min_transit", "label": "Jobs reachable within 45 min transit (mode=all only)" },
+              { "column": "transit_pct", "label": "Transit mode share (%) (mode=all only)" },
+              { "column": "scenario_label", "label": "Scenario (mode=all only)" },
+              { "column": "stops", "label": "Stops served" },
+              { "column": "routes", "label": "Routes" },
+              { "column": "network_km", "label": "Network length (km)" },
+              { "column": "span_hrs", "label": "Service span (hrs)" },
+              { "column": "trips_per_hr_peak", "label": "Trips/hr, AM peak" },
+              { "column": "median_headway_min", "label": "Median headway, AM peak (min)" },
+              { "column": "area_km2", "label": "Walk-coverage area (km2, 500m buffer, approx.)" },
+              { "column": "stops_per_km2", "label": "Stops per km2" },
+              { "column": "method_note", "label": "Method" },
+              { "column": "source", "label": "Data source" }
+            ],
+            "open": "View / edit",
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Map"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Same board-level mode filter above reshapes this map too (both read the `citymode` table directly — no embed). Point markers colored by tier (green=excellent, teal=good, amber=fair, coral=car-needed) — same tier legend as the standalone Map tab. Tap a pin to see or edit its row."
+          },
+          {
+            "type": "map",
+            "table": "citymode",
+            "latColumn": "lat",
+            "lonColumn": "lon",
+            "labelColumn": "city",
+            "height": 420,
+            "zoom": 2,
+            "markerIcon": "pin",
+            "colorColumn": "tier",
+            "colors": {
+              "excellent": "green",
+              "good": "teal",
+              "fair": "amber",
+              "car-needed": "coral"
+            },
+            "maxMarkers": 200,
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "model_linear": {
+      "title": "Car-free job access, ranked (linear scale)",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "car-free job access — modeled travel times, 2019 baseline. Same underlying transit4 numbers as the \"Ranking · log\" tab, but scored with a plain LINEAR min-max normalize instead of a log normalize — the raw spread, showing exactly how far ahead the top cities (New York, London) truly are; every other city compresses toward the bottom. Tier chips still come from the log scale (see About) — they don't change between tabs. No filter selected below shows every mode, grouped; tap a mode to narrow the list (same mode filter as the log tab — it's the same underlying table)."
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "All",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "all" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Bus",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "bus" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Tram",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "tram" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Subway",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "subway" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Rail",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "rail" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Every mode",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "" }
+                }
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "table": "citymode",
+            "height": 420,
+            "search": true,
+            "groupBy": "mode",
+            "sort": {
+              "column": "score_linear",
+              "dir": "desc"
+            },
+            "filter": { "column": "score_linear", "exists": true },
+            "title": "city",
+            "subtitle": "country",
+            "collapsible": true,
+            "tags": [
+              {
+                "column": "mode",
+                "colors": {
+                  "all": "indigo",
+                  "bus": "teal",
+                  "tram": "amber",
+                  "subway": "violet",
+                  "rail": "coral"
+                }
+              },
+              {
+                "column": "tier",
+                "colors": {
+                  "excellent": "green",
+                  "good": "teal",
+                  "fair": "amber",
+                  "car-needed": "coral"
+                }
+              },
+              {
+                "column": "score_linear",
+                "prefix": "linear ",
+                "positiveColor": "teal"
+              }
+            ],
+            "filterable": true,
+            "expandable": true,
+            "expandFields": [
+              { "column": "mode", "label": "Mode" },
+              { "column": "rank", "label": "Rank (mode=all only)" },
+              { "column": "score_linear", "label": "Score, linear scale 0-100 — raw spread (mode=all only)" },
+              { "column": "score_log", "label": "Score, log scale 0-100 — drives tier (mode=all only)" },
+              { "column": "transit_job_access_percapita", "label": "Car-free job access per capita (mode=all ONLY)" },
+              { "column": "jobs_within_45min_transit", "label": "Jobs reachable within 45 min transit (mode=all only)" },
+              { "column": "transit_pct", "label": "Transit mode share (%) (mode=all only)" },
+              { "column": "scenario_label", "label": "Scenario (mode=all only)" },
+              { "column": "stops", "label": "Stops served" },
+              { "column": "routes", "label": "Routes" },
+              { "column": "network_km", "label": "Network length (km)" },
+              { "column": "span_hrs", "label": "Service span (hrs)" },
+              { "column": "trips_per_hr_peak", "label": "Trips/hr, AM peak" },
+              { "column": "median_headway_min", "label": "Median headway, AM peak (min)" },
+              { "column": "area_km2", "label": "Walk-coverage area (km2, 500m buffer, approx.)" },
+              { "column": "stops_per_km2", "label": "Stops per km2" },
+              { "column": "method_note", "label": "Method" },
+              { "column": "source", "label": "Data source" }
+            ],
+            "open": "View / edit",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "network_frequency": {
+      "title": "Network ranking · frequency (median AM-peak headway)",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Which city runs the MOST FREQUENT service, per mode? Sorted by median_headway_min ascending — lowest minutes-between-vehicles first, so the top card is the most frequent network for the selected mode. This is a network-coverage metric (see the \"Ranking\" tabs for job-access rankings) — only the 10 cities with a local GTFS feed have a number here; every other seeded city shows blank, never zero. New York, San Francisco, and Los Angeles feeds cover only their rail/subway operator (not the full transit network) — their numbers here are rail/subway-only, not citywide; tap a card to expand its Method note for the exact caveat. Tap a mode button to narrow to one mode — e.g. tap \"Bus\" to see which city's BUS network is most frequent."
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "All",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "all" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Bus",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "bus" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Tram",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "tram" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Subway",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "subway" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Rail",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "rail" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Every mode",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "" }
+                }
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "table": "citymode",
+            "height": 420,
+            "search": true,
+            "groupBy": "mode",
+            "sort": {
+              "column": "median_headway_min",
+              "dir": "asc"
+            },
+            "title": "city",
+            "subtitle": "country",
+            "collapsible": true,
+            "tags": [
+              {
+                "column": "mode",
+                "colors": {
+                  "all": "indigo",
+                  "bus": "teal",
+                  "tram": "amber",
+                  "subway": "violet",
+                  "rail": "coral"
+                }
+              },
+              {
+                "column": "median_headway_min",
+                "suffix": " min headway",
+                "positiveColor": "teal"
+              }
+            ],
+            "filterable": true,
+            "expandable": true,
+            "expandFields": [
+              { "column": "mode", "label": "Mode" },
+              { "column": "median_headway_min", "label": "Median headway, AM peak (min) — lower = more frequent" },
+              { "column": "trips_per_hr_peak", "label": "Trips/hr, AM peak" },
+              { "column": "span_hrs", "label": "Service span (hrs)" },
+              { "column": "stops", "label": "Stops served" },
+              { "column": "routes", "label": "Routes" },
+              { "column": "network_km", "label": "Network length (km)" },
+              { "column": "area_km2", "label": "Walk-coverage area (km2, 500m buffer, approx.)" },
+              { "column": "stops_per_km2", "label": "Stops per km2" },
+              { "column": "method_note", "label": "Method (partial-feed caveat, if any, is stated here)" },
+              { "column": "source", "label": "Data source" }
+            ],
+            "open": "View / edit",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "network_density": {
+      "title": "Network ranking · density (stops per km2)",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Which city has the DENSEST stop network, per mode? Sorted by stops_per_km2 descending — the top card packs the most stops per square kilometer of walk-coverage area for the selected mode. Network-coverage metric — only the 10 cities with a local GTFS feed have a number here; every other seeded city shows blank, never zero. New York, San Francisco, and Los Angeles feeds cover only their rail/subway operator (not the full transit network) — their numbers here are rail/subway-only, not citywide; tap a card to expand its Method note for the exact caveat. Tap a mode button to narrow to one mode — e.g. tap \"Bus\" to see which city's BUS network is densest."
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "All",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "all" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Bus",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "bus" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Tram",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "tram" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Subway",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "subway" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Rail",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "rail" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Every mode",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "" }
+                }
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "table": "citymode",
+            "height": 420,
+            "search": true,
+            "groupBy": "mode",
+            "sort": {
+              "column": "stops_per_km2",
+              "dir": "desc"
+            },
+            "title": "city",
+            "subtitle": "country",
+            "collapsible": true,
+            "tags": [
+              {
+                "column": "mode",
+                "colors": {
+                  "all": "indigo",
+                  "bus": "teal",
+                  "tram": "amber",
+                  "subway": "violet",
+                  "rail": "coral"
+                }
+              },
+              {
+                "column": "stops_per_km2",
+                "suffix": " stops/km2",
+                "positiveColor": "indigo"
+              }
+            ],
+            "filterable": true,
+            "expandable": true,
+            "expandFields": [
+              { "column": "mode", "label": "Mode" },
+              { "column": "stops_per_km2", "label": "Stops per km2 — higher = denser" },
+              { "column": "stops", "label": "Stops served" },
+              { "column": "area_km2", "label": "Walk-coverage area (km2, 500m buffer, approx.)" },
+              { "column": "routes", "label": "Routes" },
+              { "column": "network_km", "label": "Network length (km)" },
+              { "column": "span_hrs", "label": "Service span (hrs)" },
+              { "column": "trips_per_hr_peak", "label": "Trips/hr, AM peak" },
+              { "column": "median_headway_min", "label": "Median headway, AM peak (min)" },
+              { "column": "method_note", "label": "Method (partial-feed caveat, if any, is stated here)" },
+              { "column": "source", "label": "Data source" }
+            ],
+            "open": "View / edit",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "network_coverage": {
+      "title": "Network ranking · coverage (walk-coverage area)",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Which city's network covers the LARGEST walkable area, per mode? Sorted by area_km2 descending — the top card's 500m walk-radius buffer around its stops spans the most square kilometers for the selected mode. Network-coverage metric — only the 10 cities with a local GTFS feed have a number here; every other seeded city shows blank, never zero. New York, San Francisco, and Los Angeles feeds cover only their rail/subway operator (not the full transit network) — their numbers here are rail/subway-only, not citywide; tap a card to expand its Method note for the exact caveat. Tap a mode button to narrow to one mode — e.g. tap \"Bus\" to see which city's BUS network covers the most area."
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "All",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "all" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Bus",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "bus" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Tram",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "tram" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Subway",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "subway" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Rail",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "rail" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Every mode",
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "citymode", "column": "mode", "value": "" }
+                }
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "table": "citymode",
+            "height": 420,
+            "search": true,
+            "groupBy": "mode",
+            "sort": {
+              "column": "area_km2",
+              "dir": "desc"
+            },
+            "title": "city",
+            "subtitle": "country",
+            "collapsible": true,
+            "tags": [
+              {
+                "column": "mode",
+                "colors": {
+                  "all": "indigo",
+                  "bus": "teal",
+                  "tram": "amber",
+                  "subway": "violet",
+                  "rail": "coral"
+                }
+              },
+              {
+                "column": "area_km2",
+                "suffix": " km2",
+                "positiveColor": "coral"
+              }
+            ],
+            "filterable": true,
+            "expandable": true,
+            "expandFields": [
+              { "column": "mode", "label": "Mode" },
+              { "column": "area_km2", "label": "Walk-coverage area (km2, 500m buffer, approx.) — higher = broader reach" },
+              { "column": "stops_per_km2", "label": "Stops per km2" },
+              { "column": "stops", "label": "Stops served" },
+              { "column": "routes", "label": "Routes" },
+              { "column": "network_km", "label": "Network length (km)" },
+              { "column": "span_hrs", "label": "Service span (hrs)" },
+              { "column": "trips_per_hr_peak", "label": "Trips/hr, AM peak" },
+              { "column": "median_headway_min", "label": "Median headway, AM peak (min)" },
+              { "column": "method_note", "label": "Method (partial-feed caveat, if any, is stated here)" },
+              { "column": "source", "label": "Data source" }
+            ],
+            "open": "View / edit",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "map": {
+      "title": "Cities on the map",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Point markers colored by tier (green=excellent, teal=good, amber=fair, coral=car-needed) — a v1 stand-in for size/shade-by-score until city boundary polygons are sourced for a true choropleth. Tap a pin to see or edit its row. This standalone Map tab reads the whole-network `cities` table (unaffected by the Ranking screen's per-mode filter)."
+          },
+          {
+            "type": "map",
+            "table": "cities",
+            "latColumn": "lat",
+            "lonColumn": "lon",
+            "labelColumn": "city",
+            "height": 420,
+            "zoom": 2,
+            "markerIcon": "pin",
+            "colorColumn": "tier",
+            "colors": {
+              "excellent": "green",
+              "good": "teal",
+              "fair": "amber",
+              "car-needed": "coral"
+            },
+            "maxMarkers": 200,
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "about": {
+      "title": "About this ranking",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": "What this measures"
+          },
+          {
+            "type": "text",
+            "value": "car-free job access — modeled travel times, 2019 baseline. Each city's headline number is transit_job_access_percapita from the transit4 four-step transportation model: how many jobs an average resident can reach by transit, per capita, under 2019 baseline conditions. This is a MODELED estimate, not a survey or a real-time measurement. This access number appears ONLY on \"all\"-mode rows — never on a per-mode (bus/tram/subway/rail) row."
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Per-mode rows are network coverage, not access"
+          },
+          {
+            "type": "text",
+            "value": "Bus/Tram/Subway/Rail rows describe the NETWORK ITSELF — stops served, route count, route-km, service span, AM-peak frequency (trips/hr and median headway), and an approximate walk-coverage area — computed from each city's static GTFS feed (app/mode_network_stats.py in transit4-server). They are NOT a jobs-reachable or access number for that mode; that would require a per-mode routing run this v1 does not do."
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": "500 m walk-coverage area is an approximation"
+          },
+          {
+            "type": "text",
+            "value": "area_km2 approximates a 500 m walk-radius buffered union of a mode's stop points using a pure-stdlib 100 m grid-count method — NOT an exact circle union or convex hull. See transit4-server/DATA_SOURCES.md and the script's area_km2_grid() docstring for the method. network_km sums each route's longest shape (haversine length) with no de-duplication of overlapping/shared branches, which can slightly over-count route-km on feeds with many branching routes — stated here rather than silently assumed."
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": "The 33 cities (+ Helsinki, network-only)"
+          },
+          {
+            "type": "text",
+            "value": "33 cities across the US, Canada, the UK, and Australia are in the job-access RANKING — every city with a transit4-server run report as of 2026-07-12 (the original 5 committed locally, plus 28 pulled from the production model server the same day, each matched to its 2019 scenario for comparability). Of those 33, nine now carry full per-mode network-coverage rows because a local static GTFS feed was ingested: Boston, Chicago, Seattle, Toronto (2026-07-12) plus New York, San Francisco, Los Angeles, Atlanta, and Portland (2026-07-31, roadmap unit T2). The other 24 cities have NO local GTFS feed — their per-mode network-coverage columns are left blank (never shown as zero); only their job-access ranking numbers appear. Helsinki (also added 2026-07-31) is a 34th city in the `citymode` table ONLY, with full per-mode network-coverage rows but no access-ranking row — it has no four-step access model run yet (that's a separate roadmap unit, T7), so it does not appear in the job-access ranking or the standalone Map tab, only in the per-mode comparison."
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Feed coverage caveat"
+          },
+          {
+            "type": "text",
+            "value": "Each city's per-mode counts (including zeros, e.g. Chicago/Seattle/Toronto showing 0 rail routes) reflect ONLY the single agency GTFS feed ingested for that city — a separate commuter-rail or regional operator not present in that feed (e.g. Chicago's Metra, Toronto's GO Transit) is NOT counted here. A zero in a per-mode row means \"zero in this feed\", not \"zero service in this city\"."
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Partial feeds: rail/subway network only (New York, San Francisco, Los Angeles)"
+          },
+          {
+            "type": "text",
+            "value": "Three cities' GTFS feeds cover only ONE rail/subway operator, not the full transit network — their per-mode NETWORK stats (stops/routes/network_km/etc, including the mode=all row) are rail/subway network only, not citywide: New York (MTA subway GTFS — no bus), San Francisco (BART GTFS — no Muni bus/light rail), Los Angeles (LA Metro rail GTFS — tram+subway lines only, no bus). Their JOB-ACCESS numbers (transit_job_access_percapita, jobs_within_45min_transit, transit_pct, score, rank, tier) are unaffected — those come from the separate four-step model run, not from this GTFS feed, and remain fully valid city-wide numbers. Each affected row's Method column states the caveat inline."
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": "How the score works — two scales, on purpose"
+          },
+          {
+            "type": "text",
+            "value": "This app now ships BOTH scales side by side, on two tabs, so you can read whichever is more useful: \"Ranking · log\" (score_log) and \"Ranking · linear\" (score_linear). Both are derived from the same underlying number, transit_job_access_percapita, and both keep the SAME city order — a scale only changes how spread-out the numbers look, never who's ahead of whom."
+          },
+          {
+            "type": "text",
+            "value": "score_log = LOG-scale normalize across the seeded city set: round(100*(ln(x)-ln(min))/(ln(max)-ln(min)),1), scaled 0-100 (lowest city in the set = 0, highest = 100). This is the READABLE comparison: New York and London are ~10x access outliers, and a plain linear scale compresses every other city into the bottom of the range (e.g. Chicago would read 2.8 and look flatly car-needed despite having real transit). The log scale spreads the rest of the field out into honest, comparable numbers — e.g. Chicago reads 37.0 instead of 2.8. Switched to log as the DEFAULT on 2026-07-12; tier (excellent 65+, good 45-64, fair 25-44, car-needed below 25) is always derived from score_log, on BOTH tabs — the tier chip does not change when you switch scales."
+          },
+          {
+            "type": "text",
+            "value": "score_linear = plain min-max normalize of the same number: round(100*(x-min)/(max-min),1), 0-100. This is the RAW SPREAD — it shows just how far ahead New York (100) and London (~83) truly are over everyone else (Washington ~18.9, Boston ~10.1, Chicago ~2.8, the lowest city 0). Nothing is hidden or smoothed here; it's the unadjusted gap. Added 2026-07-12 alongside score_log so neither view is the only one on offer — log for a readable comparison, linear for the honest magnitude of the gap."
+          },
+          {
+            "type": "text",
+            "value": "Both scales re-normalize automatically as more cities are appended, so scores (not ranks) will keep shifting as the set grows. Ranking cards default-sort by their tab's score (score_log on the log tab, score_linear on the linear tab), descending; tap a mode button to narrow to just that mode on either tab — the mode filter is shared (same underlying table) so it stays in sync between tabs. The plain `score` column mirrors score_log for any older binding that still reads it."
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": "One feed, two views"
+          },
+          {
+            "type": "text",
+            "value": "The Ranking screen's cards AND its inline map both read the same `citymode` table directly (no embed) — the mode filter buttons reshape both together. The standalone Map tab reads the separate whole-network `cities` table and is unaffected by that filter."
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Rank by network metric, not just access score (Frequency / Density / Coverage tabs)"
+          },
+          {
+            "type": "text",
+            "value": "Three tabs added 2026-07-31 (roadmap unit T3) let you rank cities by a per-mode NETWORK metric instead of the job-access score: \"Frequency\" sorts by median_headway_min ascending (lowest minutes-between-vehicles first — the most frequent service); \"Density\" sorts by stops_per_km2 descending (most stops packed per square kilometer); \"Coverage\" sorts by area_km2 descending (largest 500m walk-radius footprint). Each tab reuses the exact same mode filter row and `citymode` table as the Ranking tabs — tap a tab, then tap a mode button (e.g. \"Bus\") to answer \"which city has the densest/most frequent/broadest BUS network?\" in two taps. Only the 10 cities with a local GTFS feed (see \"The 33 cities\" above) have numbers on these tabs; every other seeded city shows blank, never zero, same convention as elsewhere in this app. The New York/San Francisco/Los Angeles partial-feed caveat (previous section) applies here too — their numbers are rail/subway-only, not citywide; each card's Method note states this inline when you expand it, same as the Ranking tabs."
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Map: v1 vs upgrade path"
+          },
+          {
+            "type": "text",
+            "value": "v1: mono (single-color) point markers on the citymode map, and tier-shaded markers on the standalone Map tab — the simplest honest options with no boundary data or per-mode marker-color support on hand. Upgrade path: true boundary choropleth once city polygon (GeoJSON) data is sourced per city; per-mode marker color needs a map-node colorColumn engine change (explicitly out of scope for this v1, JSON-only build)."
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Growing further"
+          },
+          {
+            "type": "text",
+            "value": "All 33 modeled cities from the production server are now in the ranking, with 9 of them (plus Helsinki, network-only) also carrying per-mode GTFS rows. Growing further is a data-ops step, not a rebuild: model a new city in transit4-server (or add its GTFS feed for per-mode network stats), then append rows to `cities` (and, if GTFS is available, `citymode`) from its run report — every screen picks them up automatically. A worldwide catalog of ~1,967 transit feeds across ~68 countries is the long-run intake pool."
+          }
+        ]
+      }
+    }
+  }
+}

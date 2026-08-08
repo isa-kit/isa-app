@@ -1,0 +1,11 @@
+{
+  "id": "porchfest",
+  "name": "Porchfest map",
+  "category": "Maps & cities",
+  "icon": "music_note",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_porchfest"
+  },
+  "seedVersion": "2026-07-31.wave1"
+}

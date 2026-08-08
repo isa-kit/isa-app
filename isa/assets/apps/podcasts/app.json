@@ -1,0 +1,12 @@
+{
+  "id": "podcasts",
+  "name": "Podcasts",
+  "icon": "podcasts",
+  "color": "#8E24AA",
+  "category": "Media",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_podcasts"
+  },
+  "seedVersion": "2026-07-20.files"
+}

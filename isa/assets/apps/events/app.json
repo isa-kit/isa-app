@@ -1,0 +1,11 @@
+{
+  "id": "events",
+  "name": "Events",
+  "category": "Life",
+  "icon": "event",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_events_app"
+  },
+  "seedVersion": "2026-07-20.files"
+}

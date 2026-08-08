@@ -1,0 +1,157 @@
+{
+  "nodes": [
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Package",
+      "required": true
+    },
+    {
+      "name": "x",
+      "type": "number",
+      "label": "X"
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "label": "Y"
+    }
+  ],
+  "edges": [
+    {
+      "name": "from",
+      "type": "ref",
+      "label": "From",
+      "refTable": "nodes"
+    },
+    {
+      "name": "to",
+      "type": "ref",
+      "label": "To",
+      "refTable": "nodes"
+    },
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Dependency"
+    }
+  ],
+  "wnodes": [
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Widget",
+      "required": true
+    },
+    {
+      "name": "pkg",
+      "type": "text",
+      "label": "Package"
+    },
+    {
+      "name": "x",
+      "type": "number",
+      "label": "X"
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "label": "Y"
+    }
+  ],
+  "wedges": [
+    {
+      "name": "from",
+      "type": "ref",
+      "label": "From",
+      "refTable": "wnodes"
+    },
+    {
+      "name": "to",
+      "type": "ref",
+      "label": "To",
+      "refTable": "wnodes"
+    },
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Relationship"
+    }
+  ],
+  "catalog": [
+    {
+      "name": "widget",
+      "type": "text",
+      "label": "Widget"
+    },
+    {
+      "name": "attr",
+      "type": "text",
+      "label": "Option"
+    },
+    {
+      "name": "type",
+      "type": "text",
+      "label": "Type"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Details"
+    }
+  ],
+  "workflow": [
+    {
+      "name": "step",
+      "type": "number",
+      "label": "Step"
+    },
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Title",
+      "required": true
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Detail"
+    },
+    {
+      "name": "phase",
+      "type": "enum",
+      "label": "Phase",
+      "options": [
+        "Plan",
+        "Build",
+        "Ship"
+      ]
+    }
+  ],
+  "updates": [
+    {
+      "name": "area",
+      "type": "enum",
+      "label": "Area",
+      "options": [
+        "Visibility",
+        "App",
+        "No-code",
+        "Tasks",
+        "Sharing",
+        "Engine"
+      ]
+    },
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Title",
+      "required": true
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Detail"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "applet_studio",
+  "name": "Applet Studio",
+  "category": "Developer",
+  "icon": "construction",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_studio"
+  },
+  "seedVersion": "2026-06-12.1"
+}

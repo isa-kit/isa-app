@@ -1,0 +1,70 @@
+{
+  "tables": [
+    {
+      "name": "units",
+      "label": "Units",
+      "icon": "widgets",
+      "description": "Things being built: packages, apps, and cross-cutting projects."
+    },
+    {
+      "name": "labels",
+      "label": "Labels",
+      "icon": "label",
+      "description": "Free-form tags applied to tasks (build-once, shared, R&D, decision, ...)."
+    },
+    {
+      "name": "milestones",
+      "label": "Milestones",
+      "icon": "flag",
+      "description": "Rounds / phases of work over time (past rounds, now, next, future)."
+    },
+    {
+      "name": "tasks",
+      "label": "Tasks",
+      "icon": "task",
+      "description": "Units of work. Each task belongs to a milestone and many units and labels."
+    },
+    {
+      "name": "links",
+      "label": "Links",
+      "icon": "link",
+      "description": "Directed dependency edges between tasks for the devgraph."
+    },
+    {
+      "name": "decisions",
+      "label": "Decisions",
+      "icon": "help_outline",
+      "description": "Shared question / decision queue: Claude queues questions and decisions, you answer them here."
+    },
+    {
+      "name": "designs",
+      "label": "Designs",
+      "icon": "layout_grid",
+      "description": "Architecture, product, and project design notes for the platform."
+    },
+    {
+      "name": "worklog",
+      "label": "Worklog",
+      "icon": "check_circle",
+      "description": "What Claude did each run \u2014 a dated log so you can see overnight progress at a glance."
+    },
+    {
+      "name": "profiles",
+      "label": "Profiles",
+      "icon": "person",
+      "description": "People / personas. Projects are grouped under a profile."
+    },
+    {
+      "name": "projects",
+      "label": "Projects",
+      "icon": "folder",
+      "description": "Projects, each associated to a profile."
+    },
+    {
+      "name": "notes",
+      "label": "Notes",
+      "icon": "sticky_note_2",
+      "description": "Standalone notes that can be associated with one or more tasks."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "app": {
+    "title": "Noms",
+    "primaryColor": "#4E944F",
+    "theme": "arcade"
+  },
+  "nav": [
+    { "id": "world", "label": "World", "icon": "pets", "screen": "world" },
+    { "id": "how", "label": "How to", "icon": "info", "screen": "how" }
+  ],
+  "screens": {
+    "world": {
+      "title": "Noms",
+      "body": { "type": "noms", "cols": 44, "rows": 30, "fillPhone": true }
+    },
+    "how": {
+      "title": "How to play",
+      "body": {
+        "type": "column",
+        "children": [
+          { "type": "text", "style": "title", "value": "Grow a society of noms — and build their city" },
+          { "type": "text", "value": "You guide a little civilisation of creatures. You don't micro-manage them — you shape their world, set the rules they live by, and place the buildings they'll raise into a town. Then watch them get on with it." },
+          { "type": "text", "style": "subtitle", "value": "Start here (first 30 seconds)" },
+          { "type": "text", "value": "The game opens on a menu — tap New game to jump in (or Custom game to pick the world size, mode and seed). The 🍔 Menu button in the top-left takes you back any time; your game waits for you to Resume." },
+          { "type": "text", "value": "Just want to watch? Pick 🤖 Autoplay from the menu (or tap 🤖 in-game) and an auto-keeper grows a thriving, balanced colony itself — digging water, spawning noms, laying zones, tuning policies and building a town. Tap 🤖 again to take over." },
+          { "type": "text", "value": "1. The yellow tip at the top of the screen always tells you the next thing to do — follow it.\n2. ⛏️ Dig down from the blue spring so water spreads. Watered soil grows 🌳 trees (the food).\n3. Open 🗺️ Zones, pick 🌾 Gather, and drag a box over your trees. Add a 🏠 Home box near your noms.\n4. Use ⏸️ to pause and the speed button (1×/2×) any time you want to slow down and look." },
+          { "type": "text", "value": "Watch the noms' colour to read them: green = content, amber ring = hungry, gold = overfed & greedy, red = gone feral." },
+          { "type": "text", "style": "subtitle", "value": "Move your critters" },
+          { "type": "text", "value": "📍 Rally — the easiest way: one tap drops a flag and your tribe walks to it. No selecting first. Drop SEVERAL flags and each nom heads to the nearest one, so you can split the tribe (some to food, some to the front). Tap a flag again to take it down." },
+          { "type": "text", "value": "👆 Select then ➡️ Move — to steer just a few: tap a nom (or drag a box over several), switch to Move, then tap the ground to send them, or tap an enemy to attack-move." },
+          { "type": "text", "value": "✋ Pan & zoom — drag with two fingers to pan and pinch to zoom (touch); on desktop use the mouse wheel to zoom and Pan mode to drag. The world is bigger than the screen — move the camera to see it all." },
+          { "type": "text", "style": "subtitle", "value": "Design the flow (the real strategy)" },
+          { "type": "text", "value": "Instead of steering every nom, you DESIGN where work happens and let the colony run itself. 🗺️ Zones mode — pick a role, then drag a box on the map to paint a zone. Set the 'flow' number for how many noms it should pull in. Tap a zone to remove it." },
+          { "type": "text", "value": "🌾 Gather — noms forage for food inside the zone.\n🌱 Grow — noms water the soil here so trees grow.\n🛡️ Guard — noms hold this area and fight anyone who enters.\n🏠 Home — a happy refuge where noms rest." },
+          { "type": "text", "value": "Routes appear on their own: place a Gather zone AND a Home zone and your gatherers carry food along the line between them — a supply chain you built just by choosing where the zones go. Start with one or two zones; master it by balancing a whole self-running colony." },
+          { "type": "text", "value": "Same seed, same world: the New-world button shows the world's seed. The same seed always makes the same terrain, so you can keep re-testing a design on identical ground." },
+          { "type": "text", "style": "subtitle", "value": "Grow your world" },
+          { "type": "text", "value": "💧 Place a Spring, then ⛏️ Dig channels so the water flows across the soil. Watered soil grows 🌳 trees that bear fruit." },
+          { "type": "text", "value": "🐣 Spawn noms. Fed noms get happy and breed into more — and bigger — noms (nom-nom!). ✨ Cheer a struggling nom to lift its spirits." },
+          { "type": "text", "style": "subtitle", "value": "Guide them with miracles" },
+          { "type": "text", "value": "You can't invent things FOR the noms. You set down a MIRACLE and let them find it: a nom nearby LEARNS it, then teaches its tribe and passes it to its children." },
+          { "type": "text", "value": "🔥 Fire → warmth: happier noms, and their food goes further.\n🛠️ Tools totem → stronger in a fight and better at eating.\n🏠 Hearth → rest: the tribe stays happy." },
+          { "type": "text", "style": "subtitle", "value": "Keep the balance (the heart of the game)" },
+          { "type": "text", "value": "Both extremes end the same way — in greed, violence and collapse. Too LITTLE food and noms grow desperate (greed to survive). Too MUCH and they grow decadent (greed for comfort). Either way, left too long, a nom DEVOLVES: it turns feral, attacks anyone, and forgets what it learned. The bar at the top (scarce · balanced · excess) shows where your tribe sits — aim for the green middle." },
+          { "type": "text", "value": "⚖️ Policies — open this panel to set the rules your society lives by:\n🤝 Share food — the fed feed the hungry.\n👷 Cooperate — noms work faster together.\n🕳️ Build tunnels — workers dig water channels (costs food).\n🧘 Self-control — the dial against decadence; low = indulgent, high = disciplined.\n🤖 Auto-policies — hand the rules to the creatures. Convenient, but their self-control slowly erodes toward greed." },
+          { "type": "text", "value": "Food is the economy. Gatherers stock a shared 🍞 granary (the count in the HUD); Home noms eat from it, and every zone you keep costs upkeep. Build more than you can feed and the society starves." },
+          { "type": "text", "style": "subtitle", "value": "Build a city" },
+          { "type": "text", "value": "Once food is flowing, your noms can build a town. 🏗️ Build mode — pick a building, then tap a spot to drop a blueprint. Nearby noms walk over and construct it, spending 🍞 from the granary; a little progress bar fills, then it's done. Tap a building to knock it down. The 🏙️ count in the top bar is your city size." },
+          { "type": "text", "value": "It's fictional tech with a familiar feel:\n🛖 Burrow — a cosy home; noms nearby are happier.\n💡 Glow-post — their 'electric' light: cheer + faster work around it.\n🍲 Larder — food security; steadies the mood and eases upkeep.\n🔔 Moot-hall — the town's civic heart; a wider circle of pride." },
+          { "type": "text", "style": "subtitle", "value": "Cultures grow on their own" },
+          { "type": "text", "value": "Your noms form CULTURES. Each one has a cultural identity (a colour) and values it shares with its neighbours — and those spread: noms standing together drift toward a common culture, children inherit their parents', and groups that live apart slowly grow into DIFFERENT cultures. Noms are happier among their own kind, so cultures tend to cluster and hold together." },
+          { "type": "text", "value": "Tap 🎭 in the top bar to colour every nom by its culture and watch the distinct groups appear, spread and meet. The 🎭 number shows how many cultures your tribe holds." },
+          { "type": "text", "value": "When two cultures MEET at their border they either CLASH or BLEND — close cousins melt together into one, while strangers rub each other the wrong way and bicker. Turn on the 🎭 culture view to see the seams light up where groups touch, and watch the ⚡ clash count in the HUD climb when tensions flare." },
+          { "type": "text", "value": "Cultures also grow a TRAIT of their own — a little personality your tribe lives by:\n🎁 Rite of Sharing — generous and warm; these noms hand food around freely.\n🚫 Taboo of Hoarding — frugal and thrifty; they resist sliding into decadence even when food piles up.\nThe HUD shows your tribe's trait so you always know who you're dealing with." },
+          { "type": "text", "value": "Culture changes how noms BEHAVE, not just how they look: a communal, sharing-minded culture pools more food and cooperates harder under the very same policies — so two tribes with identical rules can run completely differently depending on who they are." },
+          { "type": "text", "style": "subtitle", "value": "Get to know a nom" },
+          { "type": "text", "value": "👆 Tap any nom to INSPECT it — a little card shows its energy, happiness and indulgence, its culture + trait, what tech it has learned, and the zone it's working. Handy for spotting the one hungry straggler or the nom tipping into greed." },
+          { "type": "text", "value": "Not sure what a colour means? Tap the ? for a LEGEND of the ring colours — hungry, decadent, feral and clash — so you can read the whole colony at a glance." },
+          { "type": "text", "style": "subtitle", "value": "Two tribes" },
+          { "type": "text", "value": "🟢 Nom spawns YOUR tribe; 🔵 Rival spawns the other. Opposing tribes fight when they meet — the winner eats the loser and grows. Feral and decadent noms attack anyone, including their own." },
+          { "type": "text", "style": "subtitle", "value": "Game modes" },
+          { "type": "text", "value": "🎯 (top bar) pick a mode:\n🌱 Sandbox — free play. Win by DOMINATION (last tribe standing) or HARMONY (keep 10+ noms happy for a while).\n🏁 Speed run — race the clock to grow 12 🌳 trees as fast as you can. The timer and your tree count show in the top bar; a banner reports your finish time. Dig channels fast to water more soil." },
+          { "type": "text", "style": "subtitle", "value": "Little comforts" },
+          { "type": "text", "value": "A few things to make life nicer:\n🌱 Share a SEED to hand someone the exact same world — same terrain, same start, every time, so you can both race identical ground.\n🌳 Grow zones now really grow trees where you paint them, so you can plant a forest on purpose.\n🧘 A society that's gone decadent can RECOVER — turn up self-control and they'll pull back from the brink instead of spiralling.\n🗺️ Big maps now pan all the way to the edges, so nothing hides off-screen." },
+          { "type": "text", "style": "caption", "value": "Coming later: more speed-run goals and challenge modes; more policies (density, defensive/offensive stances, communities); and racing a friend live on the same seeded world." }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,1490 @@
+{
+  "models": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name"
+    },
+    {
+      "name": "kind",
+      "type": "enum",
+      "label": "Kind",
+      "options": [
+        "foundation",
+        "step",
+        "layer"
+      ],
+      "default": "step"
+    },
+    {
+      "name": "description",
+      "type": "text",
+      "label": "What it does"
+    },
+    {
+      "name": "summary",
+      "type": "text",
+      "label": "Summary"
+    },
+    {
+      "name": "coverage",
+      "type": "text",
+      "label": "Cities / countries covered"
+    },
+    {
+      "name": "data_in",
+      "type": "text",
+      "label": "Data in"
+    },
+    {
+      "name": "data_out",
+      "type": "text",
+      "label": "Data out"
+    },
+    {
+      "name": "model_version",
+      "type": "text",
+      "label": "Model version"
+    },
+    {
+      "name": "confidence_tier",
+      "type": "enum",
+      "label": "Confidence tier",
+      "options": [
+        "focused",
+        "exploratory"
+      ],
+      "default": "exploratory"
+    },
+    {
+      "name": "tier",
+      "type": "enum",
+      "label": "Tier",
+      "options": [
+        "focused",
+        "exploratory"
+      ],
+      "default": "exploratory"
+    },
+    {
+      "name": "uses_model",
+      "type": "text",
+      "label": "Model used (builds on)"
+    },
+    {
+      "name": "provider",
+      "type": "text",
+      "label": "Runs on (server / provider)"
+    },
+    {
+      "name": "provider_id",
+      "type": "enum",
+      "label": "Provider (registry)",
+      "options": [
+        "pv_device",
+        "pv_forge_julia",
+        "pv_forge_ollama",
+        "pv_hf",
+        "pv_browser"
+      ]
+    },
+    {
+      "name": "standard",
+      "type": "text",
+      "label": "Standards"
+    },
+    {
+      "name": "script",
+      "type": "text",
+      "label": "Provenance (script)"
+    },
+    {
+      "name": "runnable",
+      "type": "enum",
+      "label": "Scenario-runnable",
+      "options": [
+        "yes",
+        "no"
+      ],
+      "default": "no"
+    },
+    {
+      "name": "primary_method",
+      "type": "ref",
+      "refTable": "methods",
+      "label": "Primary method"
+    },
+    {
+      "name": "cal_method",
+      "type": "text",
+      "label": "Calibration pill (mirrors primary method)"
+    },
+    {
+      "name": "calibration",
+      "type": "text",
+      "label": "Calibration methods (curated)"
+    },
+    {
+      "name": "sources",
+      "type": "text",
+      "label": "Geospatial data sources (curated)"
+    },
+    {
+      "name": "order",
+      "type": "number",
+      "label": "Display order"
+    },
+    {
+      "name": "data_status",
+      "type": "text",
+      "label": "Inputs satisfied"
+    },
+    {
+      "name": "outputs_screen",
+      "type": "text",
+      "hidden": true,
+      "label": "Outputs screen"
+    },
+    {
+      "name": "detail_screen",
+      "type": "text",
+      "hidden": true,
+      "label": "Detail screen"
+    }
+  ],
+  "cities": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": "City"
+    },
+    {
+      "name": "country",
+      "type": "text",
+      "label": "Country"
+    },
+    {
+      "name": "settlement",
+      "type": "enum",
+      "label": "Settlement type",
+      "options": [
+        "urban",
+        "suburban",
+        "rural",
+        "mixed"
+      ],
+      "default": "mixed"
+    },
+    {
+      "name": "tier",
+      "type": "enum",
+      "label": "Confidence tier",
+      "options": [
+        "focused",
+        "exploratory"
+      ],
+      "default": "exploratory"
+    },
+    {
+      "name": "role",
+      "type": "enum",
+      "label": "Role",
+      "options": [
+        "focused",
+        "exploratory"
+      ],
+      "default": "exploratory"
+    },
+    {
+      "name": "transit_pct",
+      "type": "number",
+      "label": "Transit share %"
+    },
+    {
+      "name": "note",
+      "type": "text",
+      "label": "Note"
+    }
+  ],
+  "model_steps": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Step"
+    },
+    {
+      "name": "kind",
+      "type": "enum",
+      "label": "Kind",
+      "options": [
+        "in",
+        "process",
+        "out"
+      ],
+      "default": "process"
+    },
+    {
+      "name": "sublabel",
+      "type": "text",
+      "label": "Data / status"
+    },
+    {
+      "name": "model_id",
+      "type": "ref",
+      "refTable": "models",
+      "label": "Model"
+    },
+    {
+      "name": "method",
+      "type": "text",
+      "label": "Method"
+    },
+    {
+      "name": "inputs",
+      "type": "text",
+      "label": "Data in (this step)"
+    },
+    {
+      "name": "outputs",
+      "type": "text",
+      "label": "Data out (this step)"
+    },
+    {
+      "name": "why",
+      "type": "text",
+      "label": "Why this method"
+    },
+    {
+      "name": "cons",
+      "type": "text",
+      "label": "Cons / limits (frank)"
+    },
+    {
+      "name": "alternatives",
+      "type": "text",
+      "label": "Swap-in alternatives"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "What it does"
+    },
+    {
+      "name": "swappable",
+      "type": "boolean",
+      "label": "Interchangeable middle step",
+      "default": false
+    },
+    {
+      "name": "pos",
+      "type": "text",
+      "label": "Position",
+      "hidden": true
+    },
+    {
+      "name": "parent",
+      "type": "text",
+      "label": "Nested in",
+      "hidden": true
+    },
+    {
+      "name": "role",
+      "type": "enum",
+      "label": "Role",
+      "options": [
+        "source",
+        "preprocess",
+        "engine",
+        "math",
+        "subprocess",
+        "postprocess",
+        "output"
+      ],
+      "default": "subprocess"
+    },
+    {
+      "name": "math",
+      "type": "text",
+      "label": "Mathematical logic"
+    },
+    {
+      "name": "stage",
+      "type": "text",
+      "label": "Flow stage",
+      "detail": "Ordered L-to-R milestone value; lexical sort = flow order (e.g. 'a-begin' < 'f-mid1' < 'z-end')."
+    },
+    {
+      "name": "lane",
+      "type": "text",
+      "label": "Lane",
+      "hidden": true,
+      "detail": "Optional row grouping within a stage (defaults to the step's role)."
+    },
+    {
+      "name": "flow_order",
+      "type": "number",
+      "label": "Order in stage",
+      "hidden": true,
+      "detail": "Intra-stage ordering — sort within a lane+stage cell."
+    }
+  ],
+  "step_links": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "from",
+      "type": "text",
+      "label": "From step",
+      "hidden": true
+    },
+    {
+      "name": "to",
+      "type": "text",
+      "label": "To step",
+      "hidden": true
+    },
+    {
+      "name": "carries",
+      "type": "text",
+      "label": "Carries (data that flows)"
+    },
+    {
+      "name": "dataset_id",
+      "type": "ref",
+      "refTable": "datasets",
+      "label": "Fed by dataset"
+    },
+    {
+      "name": "kind",
+      "type": "enum",
+      "label": "Arrow kind",
+      "options": [
+        "flow",
+        "calibration"
+      ],
+      "default": "flow"
+    }
+  ],
+  "metric_families": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "family",
+      "type": "enum",
+      "label": "Family",
+      "options": [
+        "quality_of_life",
+        "traffic",
+        "behavioral",
+        "economic_growth",
+        "education",
+        "health",
+        "jobs",
+        "food_access"
+      ]
+    },
+    {
+      "name": "metric",
+      "type": "text",
+      "label": "Metric"
+    },
+    {
+      "name": "unit",
+      "type": "text",
+      "label": "Unit"
+    },
+    {
+      "name": "source_dataset",
+      "type": "text",
+      "label": "Source dataset"
+    },
+    {
+      "name": "model",
+      "type": "text",
+      "label": "Model / layer"
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "label": "Status",
+      "options": [
+        "live",
+        "planned",
+        "proxy"
+      ],
+      "default": "planned"
+    },
+    {
+      "name": "how_computed",
+      "type": "text",
+      "label": "How it is computed"
+    }
+  ],
+  "zone_systems": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Zone system"
+    },
+    {
+      "name": "count",
+      "type": "text",
+      "label": "Zones"
+    },
+    {
+      "name": "geography",
+      "type": "text",
+      "label": "Geography"
+    },
+    {
+      "name": "fidelity",
+      "type": "enum",
+      "label": "Fidelity to source data",
+      "options": [
+        "exact",
+        "high",
+        "medium",
+        "model",
+        "custom"
+      ],
+      "default": "model"
+    },
+    {
+      "name": "conversion",
+      "type": "text",
+      "label": "Conversion / crosswalk"
+    },
+    {
+      "name": "validation",
+      "type": "text",
+      "label": "Validation (measured)"
+    },
+    {
+      "name": "note",
+      "type": "text",
+      "label": "Note"
+    }
+  ],
+  "modes": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "mode",
+      "type": "text",
+      "label": "Mode"
+    },
+    {
+      "name": "scale",
+      "type": "text",
+      "label": "Scales"
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "label": "Status",
+      "options": [
+        "live",
+        "partial",
+        "planned"
+      ],
+      "default": "planned"
+    },
+    {
+      "name": "comparability",
+      "type": "text",
+      "label": "Like-for-like comparability"
+    }
+  ],
+  "wellbeing_factors": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "factor",
+      "type": "text",
+      "label": "Factor"
+    },
+    {
+      "name": "dimension",
+      "type": "text",
+      "label": "Dimension"
+    },
+    {
+      "name": "basis",
+      "type": "text",
+      "label": "Research basis (why trust it)"
+    },
+    {
+      "name": "source",
+      "type": "text",
+      "label": "Data source"
+    },
+    {
+      "name": "why",
+      "type": "text",
+      "label": "Why included"
+    },
+    {
+      "name": "cons",
+      "type": "text",
+      "label": "Cons / limits"
+    },
+    {
+      "name": "weight",
+      "type": "number",
+      "label": "Weight (adjustable)",
+      "default": 1
+    },
+    {
+      "name": "core",
+      "type": "boolean",
+      "label": "Core (predetermined)",
+      "default": false
+    }
+  ],
+  "methods": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "method",
+      "type": "text",
+      "label": "Method"
+    },
+    {
+      "name": "purpose",
+      "type": "text",
+      "label": "Purpose"
+    },
+    {
+      "name": "when_use",
+      "type": "text",
+      "label": "When to use"
+    },
+    {
+      "name": "approach",
+      "type": "text",
+      "label": "Approach / formula"
+    },
+    {
+      "name": "cons",
+      "type": "text",
+      "label": "Cons / limits"
+    },
+    {
+      "name": "documentation",
+      "type": "text",
+      "label": "Must document when applied"
+    },
+    {
+      "name": "package",
+      "type": "text",
+      "label": "Package / where it runs"
+    },
+    {
+      "name": "intent",
+      "type": "enum",
+      "options": [
+        "translate",
+        "embed",
+        "classify",
+        "stt",
+        "chat",
+        "none"
+      ],
+      "default": "none",
+      "label": "Intent (network model kind; none = pure math)"
+    },
+    {
+      "name": "hf_repo",
+      "type": "text",
+      "label": "HuggingFace repo (provenance id, never an endpoint/key)"
+    }
+  ],
+  "run_config": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "run_label",
+      "type": "text",
+      "label": "Run action"
+    },
+    {
+      "name": "model_id",
+      "type": "ref",
+      "refTable": "models",
+      "default": "m_4step",
+      "label": "Model"
+    },
+    {
+      "name": "model_version",
+      "type": "text",
+      "label": "Model version (snapshot)"
+    },
+    {
+      "name": "tier",
+      "type": "enum",
+      "options": [
+        "focused",
+        "exploratory"
+      ],
+      "default": "exploratory",
+      "label": "Confidence tier"
+    },
+    {
+      "name": "city",
+      "type": "text",
+      "default": "Boston",
+      "label": "City / region"
+    },
+    {
+      "name": "year",
+      "type": "enum",
+      "options": [
+        "2010",
+        "2019",
+        "2030",
+        "2040",
+        "2050"
+      ],
+      "default": "2019",
+      "label": "Scenario year"
+    },
+    {
+      "name": "beta",
+      "type": "text",
+      "label": "Beta (calibrated, recorded)"
+    },
+    {
+      "name": "calib",
+      "type": "text",
+      "label": "transit_calib (recorded)"
+    },
+    {
+      "name": "calib_method",
+      "type": "enum",
+      "options": [
+        "bisection",
+        "IPF",
+        "Bayesian optimization"
+      ],
+      "default": "bisection",
+      "label": "Calibration method (selectable)"
+    },
+    {
+      "name": "zone_system",
+      "type": "text",
+      "label": "Zone system"
+    },
+    {
+      "name": "growth_factor",
+      "type": "number",
+      "default": 1.0,
+      "label": "Growth factor (recorded)"
+    },
+    {
+      "name": "note",
+      "type": "text",
+      "label": "Note (copied onto the run)"
+    },
+    {
+      "name": "endpoint",
+      "type": "text",
+      "label": "Model endpoint (documented)"
+    },
+    {
+      "name": "last_status",
+      "type": "text",
+      "label": "Last status"
+    },
+    {
+      "name": "last_run",
+      "type": "dateTime",
+      "label": "Last attempt"
+    }
+  ],
+  "runs": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "when",
+      "type": "dateTime",
+      "default": "now",
+      "label": "When"
+    },
+    {
+      "name": "launch",
+      "type": "text",
+      "default": "first:run_config.last_run",
+      "label": "Launch stamp (pairs local + server rows)"
+    },
+    {
+      "name": "city",
+      "type": "text",
+      "default": "first:run_config.city",
+      "label": "City / region"
+    },
+    {
+      "name": "year",
+      "type": "text",
+      "default": "first:run_config.year",
+      "label": "Year"
+    },
+    {
+      "name": "model_id",
+      "type": "text",
+      "default": "first:run_config.model_id",
+      "label": "Model"
+    },
+    {
+      "name": "model_version",
+      "type": "text",
+      "default": "first:run_config.model_version",
+      "label": "Model version"
+    },
+    {
+      "name": "tier",
+      "type": "text",
+      "default": "first:run_config.tier",
+      "label": "Confidence tier (stamped)"
+    },
+    {
+      "name": "zone_system",
+      "type": "text",
+      "default": "first:run_config.zone_system",
+      "label": "Zone system"
+    },
+    {
+      "name": "beta",
+      "type": "text",
+      "default": "first:run_config.beta",
+      "label": "Beta (calibrated)"
+    },
+    {
+      "name": "calib",
+      "type": "text",
+      "default": "first:run_config.calib",
+      "label": "transit_calib"
+    },
+    {
+      "name": "calib_method",
+      "type": "text",
+      "default": "first:run_config.calib_method",
+      "label": "Calibration method"
+    },
+    {
+      "name": "growth",
+      "type": "text",
+      "default": "first:run_config.growth_factor",
+      "label": "Growth cfg"
+    },
+    {
+      "name": "note",
+      "type": "text",
+      "default": "first:run_config.note",
+      "label": "Scenario note"
+    },
+    {
+      "name": "state",
+      "type": "enum",
+      "options": [
+        "recorded",
+        "done",
+        "warned",
+        "audit-failed"
+      ],
+      "default": "done",
+      "label": "State"
+    },
+    {
+      "name": "status",
+      "type": "text",
+      "default": "live model run",
+      "label": "Status"
+    },
+    {
+      "name": "n_zones",
+      "type": "number",
+      "label": "Zones"
+    },
+    {
+      "name": "total_trips",
+      "type": "number",
+      "label": "Total trips"
+    },
+    {
+      "name": "transit_pct",
+      "type": "number",
+      "label": "Transit %"
+    },
+    {
+      "name": "avg_trip_mi",
+      "type": "number",
+      "label": "Avg trip (mi)"
+    },
+    {
+      "name": "soundness",
+      "type": "text",
+      "label": "Soundness"
+    }
+  ],
+  "endpoint_info": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "service",
+      "type": "text",
+      "label": "Service"
+    },
+    {
+      "name": "checked",
+      "type": "dateTime",
+      "default": "now",
+      "label": "Checked"
+    }
+  ],
+  "model_layers": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "layer",
+      "type": "text",
+      "label": "Layer"
+    },
+    {
+      "name": "model_id",
+      "type": "ref",
+      "refTable": "models",
+      "label": "Model"
+    },
+    {
+      "name": "method_id",
+      "type": "ref",
+      "refTable": "methods",
+      "label": "Method (registry)"
+    },
+    {
+      "name": "algorithm",
+      "type": "text",
+      "label": "Algorithm (mirrors registry)"
+    },
+    {
+      "name": "role",
+      "type": "text",
+      "label": "Role in this model"
+    },
+    {
+      "name": "stage",
+      "type": "enum",
+      "options": [
+        "pre",
+        "core",
+        "post"
+      ],
+      "default": "core",
+      "label": "Stage (pre / core / post processor)"
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "options": [
+        "active",
+        "selectable",
+        "planned"
+      ],
+      "default": "planned",
+      "label": "Status"
+    },
+    {
+      "name": "note",
+      "type": "text",
+      "label": "Note"
+    }
+  ],
+  "data_inputs": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "input",
+      "type": "text",
+      "label": "Data input"
+    },
+    {
+      "name": "model_id",
+      "type": "ref",
+      "refTable": "models",
+      "label": "Model"
+    },
+    {
+      "name": "source",
+      "type": "text",
+      "label": "Source"
+    },
+    {
+      "name": "geofence",
+      "type": "text",
+      "label": "Geofence (where it applies)"
+    },
+    {
+      "name": "granularity",
+      "type": "text",
+      "label": "Granularity"
+    },
+    {
+      "name": "vintage",
+      "type": "text",
+      "label": "Vintage"
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "label": "Status",
+      "options": [
+        "cached",
+        "live",
+        "proven",
+        "approx",
+        "key-gated",
+        "planned",
+        "gap"
+      ],
+      "default": "cached"
+    },
+    {
+      "name": "doc",
+      "type": "text",
+      "label": "Script / doc"
+    },
+    {
+      "name": "stitch",
+      "type": "text",
+      "label": "Stitched with (join)"
+    },
+    {
+      "name": "shape",
+      "type": "text",
+      "label": "Data shape (rows x cols)"
+    },
+    {
+      "name": "extent",
+      "type": "text",
+      "label": "Geo extent"
+    },
+    {
+      "name": "regions",
+      "type": "text",
+      "label": "Regions"
+    },
+    {
+      "name": "stage",
+      "type": "text",
+      "label": "Flow stage",
+      "detail": "Which model_steps stage this data row attaches to on the flow."
+    },
+    {
+      "name": "intent",
+      "type": "enum",
+      "label": "Intent",
+      "options": [
+        "source",
+        "calibration",
+        "validation",
+        "context",
+        "future"
+      ],
+      "default": "source",
+      "detail": "Why the data is there: source=drives the model, calibration=fits a parameter, validation=sanity-checks a result, context=informational/infra, future=not yet consumed."
+    },
+    {
+      "name": "feeds_step",
+      "type": "ref",
+      "refTable": "model_steps",
+      "label": "Feeds step",
+      "hidden": true,
+      "detail": "Which model_steps row consumes this data (optional — 'future' intent rows may have none)."
+    }
+  ],
+  "model_stacks": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Stack"
+    },
+    {
+      "name": "purpose",
+      "type": "text",
+      "label": "Purpose"
+    },
+    {
+      "name": "members",
+      "type": "text",
+      "label": "Models, in order"
+    },
+    {
+      "name": "seams",
+      "type": "text",
+      "label": "What crosses each seam"
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "label": "Status",
+      "options": [
+        "live",
+        "opt-in",
+        "foundation",
+        "direction"
+      ],
+      "default": "direction"
+    }
+  ],
+  "kr_stations": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Station"
+    },
+    {
+      "name": "lat",
+      "type": "number",
+      "hidden": true
+    },
+    {
+      "name": "lng",
+      "type": "number",
+      "hidden": true
+    },
+    {
+      "name": "degree",
+      "type": "number",
+      "label": "Lines / connections (degree)"
+    },
+    {
+      "name": "betweenness",
+      "type": "number",
+      "label": "Betweenness (bridge importance)"
+    },
+    {
+      "name": "closeness",
+      "type": "number",
+      "label": "Closeness (network-central)"
+    },
+    {
+      "name": "pagerank",
+      "type": "number",
+      "label": "PageRank"
+    },
+    {
+      "name": "minutes_from_origin",
+      "type": "number",
+      "label": "Minutes from Seoul Station"
+    },
+    {
+      "name": "btw_tier",
+      "type": "enum",
+      "label": "Hub tier",
+      "options": [
+        "critical",
+        "high",
+        "notable",
+        "local"
+      ]
+    },
+    {
+      "name": "deg_tier",
+      "type": "enum",
+      "label": "Connectivity",
+      "options": [
+        "hub",
+        "major",
+        "connector",
+        "line"
+      ]
+    },
+    {
+      "name": "tt_band",
+      "type": "enum",
+      "label": "Travel-time band",
+      "options": [
+        "0–15",
+        "15–30",
+        "30–45",
+        "45–60",
+        "60+",
+        "unreached"
+      ]
+    },
+    {
+      "name": "maplabel",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "rank",
+      "type": "number",
+      "label": "Rank (betweenness)"
+    },
+    {
+      "name": "minutes_from_origin_ebt",
+      "type": "number",
+      "label": "Minutes from Express Bus Terminal"
+    },
+    {
+      "name": "tt_band_ebt",
+      "type": "enum",
+      "label": "Travel-time band (Express Bus Terminal)",
+      "options": [
+        "0–15",
+        "15–30",
+        "30–45",
+        "45–60",
+        "60+",
+        "unreached"
+      ]
+    },
+    {
+      "name": "minutes_from_origin_jongno",
+      "type": "number",
+      "label": "Minutes from Jongno 3-ga"
+    },
+    {
+      "name": "tt_band_jongno",
+      "type": "enum",
+      "label": "Travel-time band (Jongno 3-ga)",
+      "options": [
+        "0–15",
+        "15–30",
+        "30–45",
+        "45–60",
+        "60+",
+        "unreached"
+      ]
+    },
+    {
+      "name": "minutes_from_origin_gangnam",
+      "type": "number",
+      "label": "Minutes from Gangnam"
+    },
+    {
+      "name": "tt_band_gangnam",
+      "type": "enum",
+      "label": "Travel-time band (Gangnam)",
+      "options": [
+        "0–15",
+        "15–30",
+        "30–45",
+        "45–60",
+        "60+",
+        "unreached"
+      ]
+    },
+    {
+      "name": "minutes_from_origin_hongik",
+      "type": "number",
+      "label": "Minutes from Hongik Univ."
+    },
+    {
+      "name": "tt_band_hongik",
+      "type": "enum",
+      "label": "Travel-time band (Hongik Univ.)",
+      "options": [
+        "0–15",
+        "15–30",
+        "30–45",
+        "45–60",
+        "60+",
+        "unreached"
+      ]
+    },
+    {
+      "name": "reach45",
+      "type": "number",
+      "label": "Stations reachable in 45 min"
+    },
+    {
+      "name": "reach_band",
+      "type": "enum",
+      "label": "Access tier (45-min reach)",
+      "options": [
+        "very-low",
+        "low",
+        "mid",
+        "high",
+        "very-high"
+      ]
+    },
+    {
+      "name": "district",
+      "type": "text",
+      "label": "District (gu)",
+      "hidden": true
+    },
+    {
+      "name": "conn_score",
+      "type": "number",
+      "label": "Overall connectivity (0-100)"
+    },
+    {
+      "name": "conn_tier",
+      "type": "enum",
+      "label": "Overall connectivity tier",
+      "options": [
+        "very-low",
+        "low",
+        "mid",
+        "high",
+        "very-high"
+      ]
+    }
+  ],
+  "providers": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name"
+    },
+    {
+      "name": "kind",
+      "type": "enum",
+      "label": "Kind",
+      "options": [
+        "device",
+        "forge-julia",
+        "forge-ollama",
+        "hf-hosted",
+        "browser"
+      ]
+    },
+    {
+      "name": "summary",
+      "type": "text",
+      "label": "Summary"
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "label": "Status",
+      "options": [
+        "live",
+        "held",
+        "planned"
+      ],
+      "default": "planned"
+    },
+    {
+      "name": "notes",
+      "type": "text",
+      "label": "Notes"
+    }
+  ],
+  "routing_tiers": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "tier",
+      "type": "text",
+      "label": "Tier / model"
+    },
+    {
+      "name": "role",
+      "type": "text",
+      "label": "Role"
+    },
+    {
+      "name": "best_for",
+      "type": "text",
+      "label": "Best for"
+    },
+    {
+      "name": "relative_cost",
+      "type": "enum",
+      "label": "Relative cost",
+      "options": [
+        "lowest",
+        "low",
+        "high",
+        "variable"
+      ],
+      "default": "low"
+    },
+    {
+      "name": "examples",
+      "type": "text",
+      "label": "Examples"
+    },
+    {
+      "name": "rank",
+      "type": "number",
+      "label": "Sort rank",
+      "hidden": true
+    }
+  ],
+  "kr_district_od": [
+    {
+      "name": "o",
+      "type": "text",
+      "label": "Origin district",
+      "hidden": true
+    },
+    {
+      "name": "d",
+      "type": "text",
+      "label": "Destination district"
+    },
+    {
+      "name": "m",
+      "type": "number",
+      "label": "Avg minutes from origin"
+    },
+    {
+      "name": "b",
+      "type": "text",
+      "label": "Band"
+    }
+  ],
+  "kr_district_conn": [
+    {
+      "name": "d",
+      "type": "text",
+      "label": "District"
+    },
+    {
+      "name": "mean_m",
+      "type": "number",
+      "label": "Mean minutes to other districts"
+    },
+    {
+      "name": "rank",
+      "type": "number",
+      "label": "Rank (most-connected first)"
+    },
+    {
+      "name": "tier",
+      "type": "enum",
+      "label": "Connectivity tier",
+      "options": [
+        "well-connected",
+        "mid",
+        "peripheral"
+      ]
+    }
+  ],
+  "kr_dong_conn": [
+    {
+      "name": "dong",
+      "type": "text",
+      "label": "Dong"
+    },
+    {
+      "name": "dong_kr",
+      "type": "text",
+      "label": "Dong (Korean)"
+    },
+    {
+      "name": "station_count",
+      "type": "number",
+      "label": "Member subway stations"
+    },
+    {
+      "name": "conn_score",
+      "type": "number",
+      "label": "Mean connectivity score (0-100)"
+    },
+    {
+      "name": "conn_tier",
+      "type": "enum",
+      "label": "Connectivity tier",
+      "options": [
+        "very-low",
+        "low",
+        "mid",
+        "high",
+        "very-high",
+        "no-data"
+      ]
+    }
+  ],
+  "nav_pins": [
+    {
+      "name": "seq",
+      "type": "number",
+      "label": "Order"
+    },
+    {
+      "name": "lat",
+      "type": "number",
+      "hidden": true
+    },
+    {
+      "name": "lon",
+      "type": "number",
+      "hidden": true
+    }
+  ]
+}

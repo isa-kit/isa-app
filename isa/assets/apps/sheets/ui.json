@@ -1,0 +1,131 @@
+{
+  "app": {
+    "title": {
+      "en": "Sheets",
+      "fr": "Feuilles",
+      "de": "Tabellen",
+      "es": "Hojas",
+      "it": "Fogli",
+      "sv": "Kalkylblad",
+      "cs": "Tabulky",
+      "el": "Φύλλα",
+      "ko": "시트"
+    },
+    "primaryColor": "#3F51B5",
+    "theme": "warmshift",
+    "translatable": true,
+    "languages": ["en", "fr", "de", "es", "it", "sv", "cs", "el", "ko"],
+    "settings": [
+      {
+        "label": "Save Budget as Excel (.xlsx)",
+        "hint": "Export the budget sheet as a real .xlsx workbook",
+        "icon": "download",
+        "action": "exportXlsx",
+        "args": { "table": "sheet_budget" }
+      },
+      {
+        "label": "Save Scores as Excel (.xlsx)",
+        "hint": "Export the scores sheet as a real .xlsx workbook",
+        "icon": "download",
+        "action": "exportXlsx",
+        "args": { "table": "sheet_scores" }
+      }
+    ]
+  },
+  "nav": [
+    {
+      "id": "files",
+      "label": "Files",
+      "icon": "folder",
+      "screen": "files"
+    },
+    {
+      "id": "sheets",
+      "label": {
+        "en": "Sheets",
+        "fr": "Feuilles",
+        "de": "Tabellen",
+        "es": "Hojas",
+        "it": "Fogli",
+        "sv": "Kalkylblad",
+        "cs": "Tabulky",
+        "el": "Φύλλα",
+        "ko": "시트"
+      },
+      "icon": "table_chart",
+      "screen": "sheets"
+    }
+  ],
+  "screens": {
+    "files": {
+      "title": "Files",
+      "body": {
+        "type": "explorer",
+        "table": "files",
+        "nameColumn": "name",
+        "orderColumn": "order",
+        "allowFolders": false,
+        "railMode": "collapsible",
+        "title": "Files",
+        "fileIcon": "table_chart",
+        "newFileLabel": "New workbook",
+        "emptyHome": true,
+        "homeTitle": "Your workbooks",
+        "homeSubtitle": "Open a recent workbook, or start a new one.",
+        "addItems": [
+          { "label": "New workbook", "icon": "add", "values": { "name": "Untitled workbook" } }
+        ],
+        "autoSelectFirst": true,
+        "scopeTargets": [
+          { "table": "sheet_budget", "column": "file" },
+          { "table": "sheet_scores", "column": "file" }
+        ],
+        "detail": {
+          "type": "column",
+          "crossAxis": "stretch",
+          "children": [
+            {
+              "type": "text",
+              "style": "caption",
+              "value": "A file is one workbook — its own Budget and Scores sheets. Pick a file on the left, then use the Sheets tab to edit it. Tap + to start a new workbook, and a file's ⋮ menu to rename or delete it."
+            },
+            {
+              "type": "button",
+              "label": "Open this workbook",
+              "icon": "table_chart",
+              "action": {
+                "fn": "goto",
+                "args": {
+                  "screen": "sheets"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "sheets": {
+      "title": {
+        "en": "Sheets",
+        "fr": "Feuilles",
+        "de": "Tabellen",
+        "es": "Hojas",
+        "it": "Fogli",
+        "sv": "Kalkylblad",
+        "cs": "Tabulky",
+        "el": "Φύλλα",
+        "ko": "시트"
+      },
+      "body": {
+        "type": "dataview",
+        "tables": [
+          "sheet_budget",
+          "sheet_scores"
+        ],
+        "scopeColumn": "file",
+        "sheet": true,
+        "fillPhone": true
+      }
+    }
+  }
+}

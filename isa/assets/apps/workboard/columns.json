@@ -1,0 +1,423 @@
+{
+  "units": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true
+    },
+    {
+      "name": "kind",
+      "type": "enum",
+      "label": "Kind",
+      "options": [
+        "package",
+        "app",
+        "project"
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true
+    }
+  ],
+  "milestones": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true
+    },
+    {
+      "name": "phase",
+      "type": "enum",
+      "label": "Phase",
+      "options": [
+        "past",
+        "now",
+        "next",
+        "future"
+      ]
+    },
+    {
+      "name": "order",
+      "type": "number",
+      "label": "Order"
+    },
+    {
+      "name": "date",
+      "type": "date",
+      "label": "Date"
+    },
+    {
+      "name": "summary",
+      "type": "text",
+      "label": "Summary"
+    }
+  ],
+  "tasks": [
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Title",
+      "required": true
+    },
+    {
+      "name": "phase",
+      "type": "enum",
+      "label": "Phase",
+      "options": [
+        "future",
+        "current",
+        "past"
+      ],
+      "default": "future"
+    },
+    {
+      "name": "priority",
+      "type": "enum",
+      "label": "Priority",
+      "options": [
+        "urgent",
+        "high",
+        "normal",
+        "low"
+      ],
+      "default": "normal"
+    },
+    {
+      "name": "track",
+      "type": "enum",
+      "label": "Track",
+      "options": [
+        "engine",
+        "apps",
+        "sync",
+        "product"
+      ]
+    },
+    {
+      "name": "milestone",
+      "type": "ref",
+      "label": "Milestone",
+      "refTable": "milestones",
+      "advanced": true
+    },
+    {
+      "name": "units",
+      "type": "ref",
+      "label": "Units",
+      "refTable": "units",
+      "multi": true,
+      "advanced": true
+    },
+    {
+      "name": "labels",
+      "type": "ref",
+      "label": "Labels",
+      "refTable": "labels",
+      "multi": true,
+      "advanced": true
+    },
+    {
+      "name": "parent",
+      "type": "ref",
+      "label": "Parents",
+      "refTable": "tasks",
+      "advanced": true,
+      "multi": true
+    },
+    {
+      "name": "scheduledStart",
+      "type": "date",
+      "label": "Scheduled (pending)",
+      "advanced": true
+    },
+    {
+      "name": "due",
+      "type": "date",
+      "label": "Due"
+    },
+    {
+      "name": "notes",
+      "type": "text",
+      "label": "My notes"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Detail",
+      "advanced": true
+    },
+    {
+      "name": "context",
+      "type": "text",
+      "label": "Context (what + why)",
+      "advanced": true
+    },
+    {
+      "name": "completed",
+      "type": "date",
+      "label": "Completed",
+      "advanced": true
+    },
+    {
+      "name": "completedTime",
+      "type": "text",
+      "label": "Completed time",
+      "advanced": true
+    },
+    {
+      "name": "createdAt",
+      "type": "text",
+      "label": "Created"
+    },
+    {
+      "name": "updatedAt",
+      "type": "text",
+      "label": "Updated"
+    },
+    {
+      "name": "order",
+      "type": "number",
+      "label": "Order",
+      "advanced": true
+    }
+  ],
+  "links": [
+    {
+      "name": "from",
+      "type": "ref",
+      "label": "From",
+      "refTable": "tasks"
+    },
+    {
+      "name": "to",
+      "type": "ref",
+      "label": "To",
+      "refTable": "tasks"
+    }
+  ],
+  "decisions": [
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Title",
+      "required": true
+    },
+    {
+      "name": "kind",
+      "type": "enum",
+      "label": "Kind",
+      "options": [
+        "question",
+        "decision"
+      ],
+      "default": "question"
+    },
+    {
+      "name": "priority",
+      "type": "enum",
+      "label": "Priority",
+      "options": [
+        "high",
+        "normal",
+        "low"
+      ],
+      "default": "normal"
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "label": "Status",
+      "options": [
+        "open",
+        "answered",
+        "deferred"
+      ],
+      "default": "open"
+    },
+    {
+      "name": "context",
+      "type": "text",
+      "label": "Context"
+    },
+    {
+      "name": "options",
+      "type": "text",
+      "label": "Options"
+    },
+    {
+      "name": "answer",
+      "type": "text",
+      "label": "Your answer"
+    },
+    {
+      "name": "related",
+      "type": "ref",
+      "label": "Related",
+      "refTable": "tasks",
+      "multi": true
+    },
+    {
+      "name": "asked",
+      "type": "date",
+      "label": "Asked",
+      "default": "today"
+    }
+  ],
+  "designs": [
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Title",
+      "required": true
+    },
+    {
+      "name": "kind",
+      "type": "enum",
+      "label": "Kind",
+      "options": [
+        "architecture",
+        "product",
+        "project"
+      ]
+    },
+    {
+      "name": "summary",
+      "type": "text",
+      "label": "Summary"
+    },
+    {
+      "name": "link",
+      "type": "text",
+      "label": "Opens"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Detail"
+    }
+  ],
+  "worklog": [
+    {
+      "name": "date",
+      "type": "date",
+      "label": "Date",
+      "default": "today"
+    },
+    {
+      "name": "summary",
+      "type": "text",
+      "label": "Summary",
+      "required": true
+    },
+    {
+      "name": "kind",
+      "type": "enum",
+      "label": "Kind",
+      "options": [
+        "added",
+        "changed",
+        "fixed",
+        "decided",
+        "note"
+      ],
+      "default": "changed"
+    },
+    {
+      "name": "tasks",
+      "type": "ref",
+      "label": "Tasks",
+      "refTable": "tasks",
+      "multi": true
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Detail"
+    }
+  ],
+  "profiles": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true
+    },
+    {
+      "name": "role",
+      "type": "text",
+      "label": "Role"
+    },
+    {
+      "name": "notes",
+      "type": "text",
+      "label": "Notes"
+    }
+  ],
+  "projects": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true
+    },
+    {
+      "name": "profile",
+      "type": "ref",
+      "label": "Profile",
+      "refTable": "profiles"
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "label": "Status",
+      "options": [
+        "active",
+        "paused",
+        "done"
+      ],
+      "default": "active"
+    },
+    {
+      "name": "summary",
+      "type": "text",
+      "label": "Summary"
+    }
+  ],
+  "notes": [
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Title"
+    },
+    {
+      "name": "body",
+      "type": "text",
+      "label": "Note",
+      "required": true
+    },
+    {
+      "name": "tasks",
+      "type": "ref",
+      "label": "Tasks",
+      "refTable": "tasks",
+      "multi": true
+    },
+    {
+      "name": "createdAt",
+      "type": "text",
+      "label": "Created"
+    },
+    {
+      "name": "updatedAt",
+      "type": "text",
+      "label": "Updated"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "college_livability",
+  "name": "Car-free college guide",
+  "category": "Maps",
+  "icon": "school",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_college_livability"
+  },
+  "seedVersion": "2026-07-02.9-accuracy"
+}

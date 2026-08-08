@@ -1,0 +1,155 @@
+{
+  "files": [
+    { "name": "name", "type": "text", "label": "File" },
+    { "name": "order", "type": "integer", "label": "Order", "hidden": true }
+  ],
+  "channels": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true
+    },
+    {
+      "name": "file",
+      "type": "text",
+      "label": "File",
+      "hidden": true
+    },
+    {
+      "name": "topic",
+      "type": "enum",
+      "label": "Topic",
+      "options": [
+        "Science",
+        "Tech",
+        "Cooking",
+        "Music",
+        "Other"
+      ]
+    },
+    {
+      "name": "url",
+      "type": "uri",
+      "label": "URL"
+    },
+    {
+      "name": "subscribed",
+      "type": "bool",
+      "label": "Subscribed",
+      "default": false
+    },
+    {
+      "name": "notes",
+      "type": "text",
+      "label": "Notes"
+    }
+  ],
+  "videos": [
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Title",
+      "required": true
+    },
+    {
+      "name": "channel",
+      "type": "ref",
+      "label": "Channel",
+      "refTable": "channels"
+    },
+    {
+      "name": "url",
+      "type": "uri",
+      "label": "URL"
+    },
+    {
+      "name": "topic",
+      "type": "enum",
+      "label": "Topic",
+      "options": [
+        "Science",
+        "Tech",
+        "Cooking",
+        "Music",
+        "Other"
+      ]
+    },
+    {
+      "name": "source",
+      "type": "enum",
+      "label": "Source",
+      "options": [
+        "recommended",
+        "subscription",
+        "manual"
+      ]
+    },
+    {
+      "name": "priority",
+      "type": "enum",
+      "label": "Priority",
+      "options": [
+        "must",
+        "maybe",
+        "someday"
+      ],
+      "default": "maybe"
+    },
+    {
+      "name": "lengthMin",
+      "type": "number",
+      "label": "Length (min)"
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "label": "Status",
+      "options": [
+        "todo",
+        "watching",
+        "watched"
+      ],
+      "default": "todo"
+    },
+    {
+      "name": "rating",
+      "type": "number",
+      "label": "Rating"
+    },
+    {
+      "name": "added",
+      "type": "date",
+      "label": "Added",
+      "default": "today"
+    },
+    {
+      "name": "tags",
+      "type": "text",
+      "label": "Tags"
+    },
+    {
+      "name": "notes",
+      "type": "text",
+      "label": "Notes"
+    },
+    {
+      "name": "recReason",
+      "type": "text",
+      "label": "Why recommended",
+      "advanced": true
+    },
+    {
+      "name": "recScore",
+      "type": "number",
+      "label": "Bridge score",
+      "advanced": true
+    },
+    {
+      "name": "file",
+      "type": "text",
+      "label": "File",
+      "hidden": true
+    }
+  ]
+}

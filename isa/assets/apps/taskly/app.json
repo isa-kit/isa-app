@@ -1,0 +1,12 @@
+{
+  "id": "taskly",
+  "name": "Taskly",
+  "category": "Productivity",
+  "icon": "check_circle",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_taskly"
+  },
+  "seedVersion": "2026-06-15.recurring",
+  "seedContent": "initial-only"
+}

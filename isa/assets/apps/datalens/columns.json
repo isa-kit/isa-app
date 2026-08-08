@@ -1,0 +1,217 @@
+{
+  "records": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "zone",
+      "type": "text",
+      "label": "Zone (town)"
+    },
+    {
+      "name": "scenario",
+      "type": "text",
+      "label": "Scenario"
+    },
+    {
+      "name": "trips",
+      "type": "number",
+      "label": "Daily trips"
+    },
+    {
+      "name": "cost_per_mi",
+      "type": "number",
+      "label": "Cost per person-mile ($)"
+    },
+    {
+      "name": "jobs",
+      "type": "number",
+      "label": "Jobs reachable (30 min)"
+    },
+    {
+      "name": "households",
+      "type": "number",
+      "label": "Households"
+    }
+  ],
+  "zone_stats": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "zone",
+      "type": "text",
+      "label": "Zone"
+    },
+    {
+      "name": "trips",
+      "type": "number",
+      "label": "Daily trips (sum)"
+    },
+    {
+      "name": "cost_per_mi",
+      "type": "number",
+      "label": "Cost per person-mile (avg)"
+    },
+    {
+      "name": "jobs",
+      "type": "number",
+      "label": "Jobs reachable (sum)"
+    },
+    {
+      "name": "households",
+      "type": "number",
+      "label": "Households (sum)"
+    }
+  ],
+  "slices": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": "View"
+    },
+    {
+      "name": "config",
+      "type": "text",
+      "label": "Configuration (JSON)"
+    }
+  ],
+  "panels": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Panel"
+    },
+    {
+      "name": "kind",
+      "type": "enum",
+      "label": "View",
+      "options": [
+        "chart",
+        "table",
+        "delta",
+        "kpi",
+        "explore",
+        "notes"
+      ],
+      "default": "chart"
+    },
+    {
+      "name": "weight",
+      "type": "number",
+      "label": "Size weight",
+      "default": 1
+    },
+    {
+      "name": "visible",
+      "type": "boolean",
+      "label": "Shown",
+      "default": true
+    },
+    {
+      "name": "order",
+      "type": "number",
+      "label": "Order",
+      "default": 1
+    },
+    {
+      "name": "template",
+      "type": "enum",
+      "label": "Template",
+      "options": [
+        "overview",
+        "compare",
+        "explore"
+      ]
+    }
+  ],
+  "notes": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "body",
+      "type": "text",
+      "label": "Notes"
+    }
+  ],
+  "dataconfig": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "dataset",
+      "type": "text",
+      "label": "Dataset"
+    },
+    {
+      "name": "config",
+      "type": "text",
+      "label": "Configuration (JSON)"
+    }
+  ],
+  "boardviews": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": "View"
+    },
+    {
+      "name": "payload",
+      "type": "text",
+      "label": "Arrangement (JSON)"
+    }
+  ],
+  "controlblocks": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "kind",
+      "type": "enum",
+      "label": "Block",
+      "options": ["filter", "group", "sort", "range", "segment", "search"]
+    },
+    {
+      "name": "column",
+      "type": "text",
+      "label": "Column"
+    },
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Label"
+    },
+    {
+      "name": "order",
+      "type": "number",
+      "label": "Order",
+      "default": 0
+    }
+  ]
+}

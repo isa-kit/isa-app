@@ -1,0 +1,22 @@
+{
+  "tables": [
+    {
+      "name": "articles",
+      "label": "Library",
+      "icon": "menu_book",
+      "description": "Wikipedia articles cached for offline reading — text only, no images. Includes seeds you picked directly and articles reached by crawling links."
+    },
+    {
+      "name": "links",
+      "label": "Links",
+      "icon": "link",
+      "description": "Outgoing links discovered on a cached article, and whether the target article has been fetched yet."
+    },
+    {
+      "name": "crawl_queue",
+      "label": "Crawl queue",
+      "icon": "hourglass_bottom",
+      "description": "Articles discovered by a crawl and their fetch status — pending, fetched or failed. Lets a crawl pause and resume."
+    }
+  ]
+}

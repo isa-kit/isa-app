@@ -1,0 +1,11 @@
+{
+  "id": "neujour",
+  "name": "Neujour",
+  "category": "Life",
+  "icon": "book",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_neujour"
+  },
+  "seedVersion": "2026-06-25.timezone"
+}

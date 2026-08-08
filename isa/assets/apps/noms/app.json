@@ -1,0 +1,11 @@
+{
+  "id": "noms",
+  "name": "Noms",
+  "category": "Games",
+  "icon": "pets",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_noms"
+  },
+  "seedVersion": "2026-06-15.1"
+}

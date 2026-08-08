@@ -1,0 +1,11 @@
+{
+  "id": "vertier",
+  "name": "Vertier",
+  "category": "Games",
+  "icon": "leaderboard",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_vertier"
+  },
+  "seedVersion": "2026-06-19.links"
+}

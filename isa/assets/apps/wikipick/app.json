@@ -1,0 +1,11 @@
+{
+  "id": "wikipick",
+  "name": "Wikipick",
+  "category": "Reference",
+  "icon": "public",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_wikipick"
+  },
+  "seedVersion": "2026-07-26.1"
+}

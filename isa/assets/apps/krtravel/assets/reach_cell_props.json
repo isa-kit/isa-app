@@ -1,0 +1,205 @@
+{
+  "hubs": [
+    {
+      "index": 1,
+      "key": "seoul_station",
+      "sid": "kr_005",
+      "label": "Seoul Station"
+    },
+    {
+      "index": 2,
+      "key": "city_hall",
+      "sid": "kr_014",
+      "label": "City Hall"
+    },
+    {
+      "index": 3,
+      "key": "gangnam",
+      "sid": "kr_027",
+      "label": "Gangnam"
+    },
+    {
+      "index": 4,
+      "key": "wangsimni",
+      "sid": "kr_071",
+      "label": "Wangsimni"
+    },
+    {
+      "index": 5,
+      "key": "sadang",
+      "sid": "kr_133",
+      "label": "Sadang"
+    },
+    {
+      "index": 6,
+      "key": "jamsil",
+      "sid": "kr_178",
+      "label": "Jamsil (Songpa-gu Office)"
+    },
+    {
+      "index": 7,
+      "key": "konkuk",
+      "sid": "kr_209",
+      "label": "Konkuk University"
+    },
+    {
+      "index": 8,
+      "key": "hongik",
+      "sid": "kr_368",
+      "label": "Hongik University"
+    }
+  ],
+  "modes": [
+    {
+      "slot": 0,
+      "mode": "subway",
+      "label": "Subway"
+    },
+    {
+      "slot": 1,
+      "mode": "rail",
+      "label": "Subway + rail"
+    }
+  ],
+  "bucketLimits": [
+    10,
+    20,
+    30,
+    45,
+    60,
+    90,
+    120
+  ],
+  "bucketLabels": [
+    "<10",
+    "10-20",
+    "20-30",
+    "30-45",
+    "45-60",
+    "60-90",
+    "90-120",
+    "120+"
+  ],
+  "cappedIndex": 7,
+  "capMinutes": 120,
+  "cellProps": [
+    {
+      "hubIndex": 1,
+      "hub": "seoul_station",
+      "mode": "subway",
+      "numKey": "a",
+      "strKey": "A"
+    },
+    {
+      "hubIndex": 1,
+      "hub": "seoul_station",
+      "mode": "rail",
+      "numKey": "b",
+      "strKey": "B"
+    },
+    {
+      "hubIndex": 2,
+      "hub": "city_hall",
+      "mode": "subway",
+      "numKey": "c",
+      "strKey": "C"
+    },
+    {
+      "hubIndex": 2,
+      "hub": "city_hall",
+      "mode": "rail",
+      "numKey": "d",
+      "strKey": "D"
+    },
+    {
+      "hubIndex": 3,
+      "hub": "gangnam",
+      "mode": "subway",
+      "numKey": "e",
+      "strKey": "E"
+    },
+    {
+      "hubIndex": 3,
+      "hub": "gangnam",
+      "mode": "rail",
+      "numKey": "f",
+      "strKey": "F"
+    },
+    {
+      "hubIndex": 4,
+      "hub": "wangsimni",
+      "mode": "subway",
+      "numKey": "g",
+      "strKey": "G"
+    },
+    {
+      "hubIndex": 4,
+      "hub": "wangsimni",
+      "mode": "rail",
+      "numKey": "h",
+      "strKey": "H"
+    },
+    {
+      "hubIndex": 5,
+      "hub": "sadang",
+      "mode": "subway",
+      "numKey": "i",
+      "strKey": "I"
+    },
+    {
+      "hubIndex": 5,
+      "hub": "sadang",
+      "mode": "rail",
+      "numKey": "j",
+      "strKey": "J"
+    },
+    {
+      "hubIndex": 6,
+      "hub": "jamsil",
+      "mode": "subway",
+      "numKey": "k",
+      "strKey": "K"
+    },
+    {
+      "hubIndex": 6,
+      "hub": "jamsil",
+      "mode": "rail",
+      "numKey": "l",
+      "strKey": "L"
+    },
+    {
+      "hubIndex": 7,
+      "hub": "konkuk",
+      "mode": "subway",
+      "numKey": "m",
+      "strKey": "M"
+    },
+    {
+      "hubIndex": 7,
+      "hub": "konkuk",
+      "mode": "rail",
+      "numKey": "n",
+      "strKey": "N"
+    },
+    {
+      "hubIndex": 8,
+      "hub": "hongik",
+      "mode": "subway",
+      "numKey": "o",
+      "strKey": "O"
+    },
+    {
+      "hubIndex": 8,
+      "hub": "hongik",
+      "mode": "rail",
+      "numKey": "p",
+      "strKey": "P"
+    }
+  ],
+  "propNaming": "Single-char keys, lowercase = JSON number (bucket index 0-7, slider mapSetFilter), uppercase twin = JSON STRING bucket-range label (colorProp+ramp match AND direct tap display, reachfix-0728 -- was a bare index digit through round 4). Mapping is cellProps[] above (also derivable as KEY_ALPHABET[(hubIndex-1)*2+modeSlot] in build_reach_cells.py) -- never hardcode letters in the UI without checking this manifest.",
+  "hubSideAccessConstant": 0,
+  "assets": {
+    "fine": "reach_cells_fine.geojson",
+    "coarse": "reach_cells_coarse.geojson"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "tables": [
+    {
+      "name": "messages",
+      "label": "Messages",
+      "icon": "forum",
+      "description": "One row per chat message: who sent it, the original text, its translation, and the sender's language."
+    },
+    {
+      "name": "participants",
+      "label": "Participants",
+      "icon": "people",
+      "description": "One row per person in the room (keyed by their device id): the language they read and write in. Synced so each device knows what language to translate the other person's messages into."
+    }
+  ]
+}

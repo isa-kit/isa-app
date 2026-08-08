@@ -1,0 +1,11 @@
+{
+  "id": "sheets",
+  "name": "Sheets",
+  "category": "Productivity",
+  "icon": "table_chart",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_sheets"
+  },
+  "seedVersion": "2026-07-20.files"
+}

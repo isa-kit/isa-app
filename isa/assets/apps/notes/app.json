@@ -1,0 +1,12 @@
+{
+  "id": "notes",
+  "name": "Notes",
+  "category": "Productivity",
+  "icon": "sticky_note",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_notes"
+  },
+  "seedVersion": "2026-08-01.wikilinks-files",
+  "seedContent": "initial-only"
+}

@@ -1,0 +1,79 @@
+{
+  "identifiers": [
+    { "name": "label", "type": "text", "label": "Label", "required": true },
+    {
+      "name": "kind",
+      "type": "enum",
+      "label": "Kind",
+      "options": ["email", "website", "phone", "name", "address"],
+      "default": "email",
+      "required": true
+    },
+    { "name": "value", "type": "text", "label": "The detail", "description": "e.g. you@example.com · example.com · +1 555 123 4567" },
+    {
+      "name": "reviewed",
+      "type": "enum",
+      "label": "Reviewed",
+      "options": ["to review", "reviewed"],
+      "default": "to review"
+    },
+    { "name": "notes", "type": "text", "label": "Notes" }
+  ],
+  "hardening": [
+    { "name": "step", "type": "text", "label": "Step", "required": true },
+    {
+      "name": "area",
+      "type": "enum",
+      "label": "Area",
+      "options": ["email", "website", "phone", "name & address", "general"],
+      "default": "general"
+    },
+    {
+      "name": "priority",
+      "type": "enum",
+      "label": "Priority",
+      "options": ["critical", "high", "nice to have"],
+      "default": "high"
+    },
+    { "name": "why", "type": "text", "label": "Why it matters" },
+    { "name": "how", "type": "text", "label": "How to do it" },
+    {
+      "name": "status",
+      "type": "enum",
+      "label": "Status",
+      "options": ["todo", "done"],
+      "default": "todo"
+    }
+  ],
+  "brokers": [
+    { "name": "broker", "type": "text", "label": "Site", "required": true },
+    { "name": "exposes", "type": "text", "label": "What it exposes" },
+    { "name": "opt_out_url", "type": "text", "label": "Opt-out page" },
+    {
+      "name": "difficulty",
+      "type": "enum",
+      "label": "Difficulty",
+      "options": ["easy", "medium", "hard"],
+      "default": "medium"
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "label": "Status",
+      "options": ["not started", "requested", "confirmed"],
+      "default": "not started"
+    },
+    { "name": "notes", "type": "text", "label": "Notes" }
+  ],
+  "guides": [
+    { "name": "topic", "type": "text", "label": "Topic", "required": true },
+    {
+      "name": "category",
+      "type": "enum",
+      "label": "Category",
+      "options": ["how leaks happen", "what to check", "opt-out", "advanced"],
+      "default": "what to check"
+    },
+    { "name": "body", "type": "text", "label": "Explainer" }
+  ]
+}

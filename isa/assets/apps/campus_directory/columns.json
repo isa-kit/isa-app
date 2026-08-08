@@ -1,0 +1,534 @@
+{
+  "mit_features": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true
+    },
+    {
+      "name": "purpose",
+      "type": "text",
+      "label": "Purpose / dept"
+    },
+    {
+      "name": "category",
+      "type": "text",
+      "label": "Type"
+    },
+    {
+      "name": "kind",
+      "type": "text",
+      "label": "Kind"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Detail"
+    },
+    {
+      "name": "lat",
+      "type": "number",
+      "label": "Latitude"
+    },
+    {
+      "name": "lon",
+      "type": "number",
+      "label": "Longitude"
+    }
+  ],
+  "harvard_features": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true
+    },
+    {
+      "name": "purpose",
+      "type": "text",
+      "label": "Purpose / dept"
+    },
+    {
+      "name": "category",
+      "type": "text",
+      "label": "Type"
+    },
+    {
+      "name": "kind",
+      "type": "text",
+      "label": "Kind"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Detail"
+    },
+    {
+      "name": "lat",
+      "type": "number",
+      "label": "Latitude"
+    },
+    {
+      "name": "lon",
+      "type": "number",
+      "label": "Longitude"
+    }
+  ],
+  "yale_features": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true
+    },
+    {
+      "name": "purpose",
+      "type": "text",
+      "label": "Purpose / dept"
+    },
+    {
+      "name": "category",
+      "type": "text",
+      "label": "Type"
+    },
+    {
+      "name": "kind",
+      "type": "text",
+      "label": "Kind"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Detail"
+    },
+    {
+      "name": "lat",
+      "type": "number",
+      "label": "Latitude"
+    },
+    {
+      "name": "lon",
+      "type": "number",
+      "label": "Longitude"
+    }
+  ],
+  "columbia_features": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true
+    },
+    {
+      "name": "purpose",
+      "type": "text",
+      "label": "Purpose / dept"
+    },
+    {
+      "name": "category",
+      "type": "text",
+      "label": "Type"
+    },
+    {
+      "name": "kind",
+      "type": "text",
+      "label": "Kind"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Detail"
+    },
+    {
+      "name": "lat",
+      "type": "number",
+      "label": "Latitude"
+    },
+    {
+      "name": "lon",
+      "type": "number",
+      "label": "Longitude"
+    }
+  ],
+  "stanford_features": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true
+    },
+    {
+      "name": "purpose",
+      "type": "text",
+      "label": "Purpose / dept"
+    },
+    {
+      "name": "category",
+      "type": "text",
+      "label": "Type"
+    },
+    {
+      "name": "kind",
+      "type": "text",
+      "label": "Kind"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Detail"
+    },
+    {
+      "name": "lat",
+      "type": "number",
+      "label": "Latitude"
+    },
+    {
+      "name": "lon",
+      "type": "number",
+      "label": "Longitude"
+    }
+  ],
+  "berkeley_features": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true
+    },
+    {
+      "name": "purpose",
+      "type": "text",
+      "label": "Purpose / dept"
+    },
+    {
+      "name": "category",
+      "type": "text",
+      "label": "Type"
+    },
+    {
+      "name": "kind",
+      "type": "text",
+      "label": "Kind"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Detail"
+    },
+    {
+      "name": "lat",
+      "type": "number",
+      "label": "Latitude"
+    },
+    {
+      "name": "lon",
+      "type": "number",
+      "label": "Longitude"
+    }
+  ],
+  "ucla_features": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true
+    },
+    {
+      "name": "purpose",
+      "type": "text",
+      "label": "Purpose / dept"
+    },
+    {
+      "name": "category",
+      "type": "text",
+      "label": "Type"
+    },
+    {
+      "name": "kind",
+      "type": "text",
+      "label": "Kind"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Detail"
+    },
+    {
+      "name": "lat",
+      "type": "number",
+      "label": "Latitude"
+    },
+    {
+      "name": "lon",
+      "type": "number",
+      "label": "Longitude"
+    }
+  ],
+  "uw_features": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true
+    },
+    {
+      "name": "purpose",
+      "type": "text",
+      "label": "Purpose / dept"
+    },
+    {
+      "name": "category",
+      "type": "text",
+      "label": "Type"
+    },
+    {
+      "name": "kind",
+      "type": "text",
+      "label": "Kind"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Detail"
+    },
+    {
+      "name": "lat",
+      "type": "number",
+      "label": "Latitude"
+    },
+    {
+      "name": "lon",
+      "type": "number",
+      "label": "Longitude"
+    }
+  ],
+  "umich_features": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true
+    },
+    {
+      "name": "purpose",
+      "type": "text",
+      "label": "Purpose / dept"
+    },
+    {
+      "name": "category",
+      "type": "text",
+      "label": "Type"
+    },
+    {
+      "name": "kind",
+      "type": "text",
+      "label": "Kind"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Detail"
+    },
+    {
+      "name": "lat",
+      "type": "number",
+      "label": "Latitude"
+    },
+    {
+      "name": "lon",
+      "type": "number",
+      "label": "Longitude"
+    }
+  ],
+  "osu_features": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true
+    },
+    {
+      "name": "purpose",
+      "type": "text",
+      "label": "Purpose / dept"
+    },
+    {
+      "name": "category",
+      "type": "text",
+      "label": "Type"
+    },
+    {
+      "name": "kind",
+      "type": "text",
+      "label": "Kind"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Detail"
+    },
+    {
+      "name": "lat",
+      "type": "number",
+      "label": "Latitude"
+    },
+    {
+      "name": "lon",
+      "type": "number",
+      "label": "Longitude"
+    }
+  ],
+  "gatech_features": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true
+    },
+    {
+      "name": "purpose",
+      "type": "text",
+      "label": "Purpose / dept"
+    },
+    {
+      "name": "category",
+      "type": "text",
+      "label": "Type"
+    },
+    {
+      "name": "kind",
+      "type": "text",
+      "label": "Kind"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Detail"
+    },
+    {
+      "name": "lat",
+      "type": "number",
+      "label": "Latitude"
+    },
+    {
+      "name": "lon",
+      "type": "number",
+      "label": "Longitude"
+    }
+  ],
+  "utexas_features": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true
+    },
+    {
+      "name": "purpose",
+      "type": "text",
+      "label": "Purpose / dept"
+    },
+    {
+      "name": "category",
+      "type": "text",
+      "label": "Type"
+    },
+    {
+      "name": "kind",
+      "type": "text",
+      "label": "Kind"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Detail"
+    },
+    {
+      "name": "lat",
+      "type": "number",
+      "label": "Latitude"
+    },
+    {
+      "name": "lon",
+      "type": "number",
+      "label": "Longitude"
+    }
+  ],
+  "asu_features": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true
+    },
+    {
+      "name": "purpose",
+      "type": "text",
+      "label": "Purpose / dept"
+    },
+    {
+      "name": "category",
+      "type": "text",
+      "label": "Type"
+    },
+    {
+      "name": "kind",
+      "type": "text",
+      "label": "Kind"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Detail"
+    },
+    {
+      "name": "lat",
+      "type": "number",
+      "label": "Latitude"
+    },
+    {
+      "name": "lon",
+      "type": "number",
+      "label": "Longitude"
+    }
+  ],
+  "wisc_features": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true
+    },
+    {
+      "name": "purpose",
+      "type": "text",
+      "label": "Purpose / dept"
+    },
+    {
+      "name": "category",
+      "type": "text",
+      "label": "Type"
+    },
+    {
+      "name": "kind",
+      "type": "text",
+      "label": "Kind"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Detail"
+    },
+    {
+      "name": "lat",
+      "type": "number",
+      "label": "Latitude"
+    },
+    {
+      "name": "lon",
+      "type": "number",
+      "label": "Longitude"
+    }
+  ]
+}

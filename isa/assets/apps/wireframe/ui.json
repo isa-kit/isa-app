@@ -1,0 +1,1011 @@
+{
+  "app": {
+    "title": "Wireframe",
+    "primaryColor": "#3F51B5",
+    "theme": "warmshift",
+    "liveSeconds": 2,
+    "settings": [
+      {
+        "label": "Export draw.io (.drawio)",
+        "hint": "Save this wireframe's blocks + arrows as XML",
+        "icon": "download",
+        "action": "exportDrawio",
+        "args": {
+          "nodesTable": "boxes",
+          "edgesTable": "links",
+          "diagramName": "Wireframe"
+        }
+      },
+      {
+        "label": "Delete unfiled (legacy) boxes",
+        "hint": "Removes boxes that belong to no page — old data from before pages existed, which otherwise shows whenever no file is open.",
+        "icon": "delete_outline",
+        "action": "deleteRows",
+        "args": {
+          "table": "boxes",
+          "where": {
+            "column": "pageId",
+            "in": [
+              null,
+              ""
+            ]
+          }
+        },
+        "confirm": "Delete every box that belongs to no page? Boxes filed into a page are untouched. This cannot be undone."
+      }
+    ]
+  },
+  "nav": [
+    {
+      "id": "wireframe",
+      "label": "Wireframe",
+      "icon": "dashboard_customize",
+      "screen": "wireframe"
+    },
+    {
+      "id": "data",
+      "label": "Project",
+      "icon": "folder",
+      "screen": "data"
+    }
+  ],
+  "screens": {
+    "wireframe": {
+      "title": "Wireframe",
+      "body": {
+        "type": "explorer",
+        "railMode": "collapsible",
+        "table": "pages",
+        "nameColumn": "name",
+        "kindColumn": "kind",
+        "parentColumn": "parentId",
+        "folderValue": "folder",
+        "title": "Pages",
+        "newFileLabel": "New page",
+        "newFolderLabel": "New folder",
+        "fileIcon": "dashboard_customize",
+        "scopeTargets": [
+          {
+            "table": "boxes",
+            "column": "pageId"
+          },
+          {
+            "table": "links",
+            "column": "pageId"
+          },
+          {
+            "table": "sketch",
+            "column": "pageId"
+          },
+          {
+            "table": "layers",
+            "column": "pageId"
+          }
+        ],
+        "detail": {
+          "type": "panel",
+          "title": "Widgets",
+          "icon": "widgets",
+          "width": 248,
+          "child": {
+            "type": "column",
+            "children": [
+              {
+                "type": "text",
+                "style": "caption",
+                "value": "Block out this page. Add a Screen frame, then drop nav, buttons, inputs, text, images and lists inside it. Drag to place, drag a corner to resize, tap to rename. Pinch / scroll to zoom; the hand tool or two fingers to pan."
+              },
+              {
+                "type": "palette",
+                "grouped": true,
+                "tiles": true,
+                "table": "boxes",
+                "componentsTable": "customWidgets",
+                "items": [
+                  {
+                    "label": "Screen",
+                    "group": "Layout",
+                    "preview": "frame",
+                    "icon": "smartphone",
+                    "values": {
+                      "kind": "frame",
+                      "label": "Screen",
+                      "w": 260,
+                      "h": 440
+                    }
+                  },
+                  {
+                    "label": "Section",
+                    "group": "Layout",
+                    "preview": "section",
+                    "icon": "crop_square",
+                    "values": {
+                      "kind": "section",
+                      "label": "Section",
+                      "w": 220,
+                      "h": 120
+                    }
+                  },
+                  {
+                    "label": "Nav bar",
+                    "group": "Navigation",
+                    "preview": "nav",
+                    "icon": "menu",
+                    "values": {
+                      "kind": "nav",
+                      "label": "Nav",
+                      "w": 240,
+                      "h": 44
+                    }
+                  },
+                  {
+                    "label": "Button",
+                    "group": "Inputs",
+                    "preview": "button",
+                    "icon": "smart_button",
+                    "values": {
+                      "kind": "button",
+                      "label": "Button",
+                      "w": 140,
+                      "h": 44
+                    }
+                  },
+                  {
+                    "label": "Input",
+                    "group": "Inputs",
+                    "preview": "input",
+                    "icon": "text_fields",
+                    "values": {
+                      "kind": "input",
+                      "label": "Input",
+                      "w": 200,
+                      "h": 44
+                    }
+                  },
+                  {
+                    "label": "Text",
+                    "group": "Content",
+                    "preview": "text",
+                    "icon": "title",
+                    "values": {
+                      "kind": "text",
+                      "label": "Text",
+                      "w": 200,
+                      "h": 36
+                    }
+                  },
+                  {
+                    "label": "Image",
+                    "group": "Content",
+                    "preview": "image",
+                    "icon": "image",
+                    "values": {
+                      "kind": "image",
+                      "label": "Image",
+                      "w": 180,
+                      "h": 120
+                    }
+                  },
+                  {
+                    "label": "List",
+                    "group": "Content",
+                    "preview": "list",
+                    "icon": "list",
+                    "values": {
+                      "kind": "list",
+                      "label": "List",
+                      "w": 220,
+                      "h": 160
+                    }
+                  },
+                  {
+                    "label": "Heading",
+                    "group": "Content",
+                    "preview": "heading",
+                    "icon": "title",
+                    "values": {
+                      "kind": "text",
+                      "label": "Heading",
+                      "w": 220,
+                      "h": 40
+                    }
+                  },
+                  {
+                    "label": "Paragraph",
+                    "group": "Content",
+                    "preview": "paragraph",
+                    "icon": "notes",
+                    "values": {
+                      "kind": "text",
+                      "label": "Paragraph",
+                      "w": 240,
+                      "h": 84
+                    }
+                  },
+                  {
+                    "label": "Checkbox",
+                    "group": "Inputs",
+                    "preview": "checkbox",
+                    "icon": "check_box",
+                    "values": {
+                      "kind": "input",
+                      "label": "Checkbox",
+                      "w": 180,
+                      "h": 36
+                    }
+                  },
+                  {
+                    "label": "Dropdown",
+                    "group": "Inputs",
+                    "preview": "dropdown",
+                    "icon": "arrow_drop_down_circle",
+                    "values": {
+                      "kind": "input",
+                      "label": "Dropdown",
+                      "w": 200,
+                      "h": 44
+                    }
+                  },
+                  {
+                    "label": "Search bar",
+                    "group": "Navigation",
+                    "preview": "search",
+                    "icon": "search",
+                    "values": {
+                      "kind": "input",
+                      "label": "Search",
+                      "w": 240,
+                      "h": 44
+                    }
+                  },
+                  {
+                    "label": "Tabs",
+                    "group": "Navigation",
+                    "preview": "tabs",
+                    "icon": "tab",
+                    "values": {
+                      "kind": "nav",
+                      "label": "Tabs",
+                      "w": 260,
+                      "h": 44
+                    }
+                  },
+                  {
+                    "label": "Card",
+                    "group": "Layout",
+                    "preview": "card",
+                    "icon": "crop_portrait",
+                    "values": {
+                      "kind": "section",
+                      "label": "Card",
+                      "w": 200,
+                      "h": 150
+                    }
+                  },
+                  {
+                    "label": "Avatar",
+                    "group": "Content",
+                    "preview": "avatar",
+                    "icon": "account_circle",
+                    "values": {
+                      "kind": "image",
+                      "label": "Avatar",
+                      "w": 64,
+                      "h": 64
+                    }
+                  },
+                  {
+                    "label": "Icon",
+                    "group": "Content",
+                    "preview": "icon",
+                    "icon": "star",
+                    "values": {
+                      "kind": "image",
+                      "label": "Icon",
+                      "w": 44,
+                      "h": 44
+                    }
+                  },
+                  {
+                    "label": "Divider",
+                    "group": "Layout",
+                    "preview": "divider",
+                    "icon": "horizontal_rule",
+                    "values": {
+                      "kind": "text",
+                      "label": "Divider",
+                      "w": 240,
+                      "h": 12
+                    }
+                  },
+                  {
+                    "label": "Table",
+                    "group": "Content",
+                    "preview": "table",
+                    "icon": "grid_on",
+                    "values": {
+                      "kind": "list",
+                      "label": "Table",
+                      "w": 280,
+                      "h": 170
+                    }
+                  },
+                  {
+                    "label": "Footer",
+                    "group": "Navigation",
+                    "preview": "footer",
+                    "icon": "web_asset",
+                    "values": {
+                      "kind": "nav",
+                      "label": "Footer",
+                      "w": 260,
+                      "h": 48
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "style": "caption",
+                "value": "Arrows: pick the Connect tool (the arrow, top-left of the canvas), then tap two blocks to link them."
+              },
+              {
+                "type": "text",
+                "style": "caption",
+                "value": "draw.io — export/import THIS page in diagrams.net."
+              },
+              {
+                "type": "row",
+                "wrap": true,
+                "children": [
+                  {
+                    "type": "button",
+                    "label": "Export to draw.io",
+                    "icon": "upload",
+                    "variant": "text",
+                    "action": {
+                      "fn": "exportDrawio",
+                      "args": {
+                        "nodesTable": "boxes",
+                        "edgesTable": "links",
+                        "diagramName": "Wireframe",
+                        "sketchTable": "sketch",
+                        "sketchColumn": "strokes"
+                      }
+                    }
+                  },
+                  {
+                    "type": "button",
+                    "label": "Import from draw.io",
+                    "icon": "download",
+                    "variant": "text",
+                    "action": {
+                      "fn": "importDrawio",
+                      "args": {
+                        "nodesTable": "boxes",
+                        "edgesTable": "links"
+                      }
+                    }
+                  },
+                  {
+                    "type": "button",
+                    "label": "Export image (SVG)",
+                    "icon": "image",
+                    "variant": "text",
+                    "action": {
+                      "fn": "exportSvg",
+                      "args": {
+                        "nodesTable": "boxes",
+                        "edgesTable": "links",
+                        "fillColumn": "fill",
+                        "borderColorColumn": "borderColor",
+                        "arrowColumn": "arrow",
+                        "dashColumn": "dash",
+                        "sketchTable": "sketch",
+                        "sketchColumn": "strokes"
+                      }
+                    }
+                  },
+                  {
+                    "type": "button",
+                    "label": "Export this page (.isan)",
+                    "icon": "file_download",
+                    "variant": "text",
+                    "action": {
+                      "fn": "exportWireframe",
+                      "args": {
+                        "scoped": true,
+                        "pagesTable": "pages",
+                        "nodesTable": "boxes",
+                        "edgesTable": "links",
+                        "sketchTable": "sketch",
+                        "pageColumn": "pageId",
+                        "title": "Wireframe page"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "button",
+                "label": "Build app from wireframe",
+                "icon": "auto_awesome",
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "buildFromDesign",
+                    "appId": "wireframe_app",
+                    "appName": "My wireframe app"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "style": "subtitle",
+                "value": "Layers"
+              },
+              {
+                "type": "text",
+                "style": "caption",
+                "value": "Group blocks into sheets you can show / hide or lock. Select blocks, then use the layers button (▦) in the selection toolbar to move them onto a layer. Tap a layer below to rename it or toggle its eye / lock."
+              },
+              {
+                "type": "button",
+                "label": "New layer",
+                "icon": "add",
+                "variant": "text",
+                "action": {
+                  "fn": "addRow",
+                  "args": {
+                    "table": "layers",
+                    "values": {
+                      "name": "Layer",
+                      "visible": true
+                    }
+                  }
+                }
+              },
+              {
+                "type": "table",
+                "table": "layers",
+                "columns": [
+                  "name",
+                  "visible",
+                  "locked"
+                ],
+                "height": 160,
+                "action": {
+                  "fn": "editRow"
+                }
+              }
+            ]
+          },
+          "body": {
+            "type": "canvas",
+            "nodesTable": "boxes",
+            "edgesTable": "links",
+            "labelColumn": "label",
+            "xColumn": "x",
+            "yColumn": "y",
+            "widthColumn": "w",
+            "heightColumn": "h",
+            "zColumn": "z",
+            "lockColumn": "locked",
+            "layerColumn": "layerId",
+            "layersTable": "layers",
+            "fontSizeColumn": "fontSize",
+            "textAlignColumn": "textAlign",
+            "boldColumn": "bold",
+            "fromColumn": "from",
+            "toColumn": "to",
+            "edgeLabelColumn": "label",
+            "routeColumn": "route",
+            "arrowColumn": "arrow",
+            "dashColumn": "dash",
+            "componentsTable": "customWidgets",
+            "colorColumn": "kind",
+            "fillColumn": "fill",
+            "borderColorColumn": "borderColor",
+            "borderWidthColumn": "borderWidth",
+            "colors": {
+              "frame": "gray",
+              "nav": "coral",
+              "button": "blue",
+              "input": "teal",
+              "text": "green",
+              "image": "purple",
+              "list": "pink",
+              "section": "amber"
+            },
+            "height": "fill",
+            "fidelity": "themed",
+            "sketchTable": "sketch",
+            "sketchColumn": "strokes",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        }
+      }
+    },
+    "data": {
+      "title": "Project",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "value": "Project file",
+            "style": "subtitle"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Save your whole project — every page and folder, with its blocks, arrows and sketches — as one .isan file, or bring a project file back in. (draw.io export/import, in a page's drawer, handles a single page.)"
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "Export project (.isan)",
+                "icon": "save",
+                "action": {
+                  "fn": "exportWireframe",
+                  "args": {
+                    "pagesTable": "pages",
+                    "nodesTable": "boxes",
+                    "edgesTable": "links",
+                    "sketchTable": "sketch",
+                    "pageColumn": "pageId",
+                    "title": "Wireframe project"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Import project (.isan)",
+                "icon": "folder_open",
+                "variant": "text",
+                "action": {
+                  "fn": "importWireframe",
+                  "args": {
+                    "pagesTable": "pages",
+                    "nodesTable": "boxes",
+                    "edgesTable": "links",
+                    "sketchTable": "sketch",
+                    "pageColumn": "pageId"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "Blocks on the open page",
+            "style": "subtitle"
+          },
+          {
+            "type": "table",
+            "table": "boxes",
+            "columns": [
+              "label",
+              "kind",
+              "note"
+            ],
+            "height": 220,
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "solo": {
+      "title": "Canvas",
+      "body": {
+        "type": "panel",
+        "title": "Widgets",
+        "icon": "widgets",
+        "width": 248,
+        "child": {
+          "type": "column",
+          "children": [
+            {
+              "type": "text",
+              "style": "caption",
+              "value": "Block out this page. Add a Screen frame, then drop nav, buttons, inputs, text, images and lists inside it. Drag to place, drag a corner to resize, tap to rename. Pinch / scroll to zoom; the hand tool or two fingers to pan."
+            },
+            {
+              "type": "palette",
+              "table": "boxes",
+              "componentsTable": "customWidgets",
+              "items": [
+                {
+                  "label": "Screen",
+                  "icon": "smartphone",
+                  "values": {
+                    "kind": "frame",
+                    "label": "Screen",
+                    "w": 260,
+                    "h": 440
+                  }
+                },
+                {
+                  "label": "Section",
+                  "icon": "crop_square",
+                  "values": {
+                    "kind": "section",
+                    "label": "Section",
+                    "w": 220,
+                    "h": 120
+                  }
+                },
+                {
+                  "label": "Nav bar",
+                  "icon": "menu",
+                  "values": {
+                    "kind": "nav",
+                    "label": "Nav",
+                    "w": 240,
+                    "h": 44
+                  }
+                },
+                {
+                  "label": "Button",
+                  "icon": "smart_button",
+                  "values": {
+                    "kind": "button",
+                    "label": "Button",
+                    "w": 140,
+                    "h": 44
+                  }
+                },
+                {
+                  "label": "Input",
+                  "icon": "text_fields",
+                  "values": {
+                    "kind": "input",
+                    "label": "Input",
+                    "w": 200,
+                    "h": 44
+                  }
+                },
+                {
+                  "label": "Text",
+                  "icon": "title",
+                  "values": {
+                    "kind": "text",
+                    "label": "Text",
+                    "w": 200,
+                    "h": 36
+                  }
+                },
+                {
+                  "label": "Image",
+                  "icon": "image",
+                  "values": {
+                    "kind": "image",
+                    "label": "Image",
+                    "w": 180,
+                    "h": 120
+                  }
+                },
+                {
+                  "label": "List",
+                  "icon": "list",
+                  "values": {
+                    "kind": "list",
+                    "label": "List",
+                    "w": 220,
+                    "h": 160
+                  }
+                },
+                {
+                  "label": "Heading",
+                  "icon": "title",
+                  "values": {
+                    "kind": "text",
+                    "label": "Heading",
+                    "w": 220,
+                    "h": 40
+                  }
+                },
+                {
+                  "label": "Paragraph",
+                  "icon": "notes",
+                  "values": {
+                    "kind": "text",
+                    "label": "Paragraph",
+                    "w": 240,
+                    "h": 84
+                  }
+                },
+                {
+                  "label": "Checkbox",
+                  "icon": "check_box",
+                  "values": {
+                    "kind": "input",
+                    "label": "Checkbox",
+                    "w": 180,
+                    "h": 36
+                  }
+                },
+                {
+                  "label": "Dropdown",
+                  "icon": "arrow_drop_down_circle",
+                  "values": {
+                    "kind": "input",
+                    "label": "Dropdown",
+                    "w": 200,
+                    "h": 44
+                  }
+                },
+                {
+                  "label": "Search bar",
+                  "icon": "search",
+                  "values": {
+                    "kind": "input",
+                    "label": "Search",
+                    "w": 240,
+                    "h": 44
+                  }
+                },
+                {
+                  "label": "Tabs",
+                  "icon": "tab",
+                  "values": {
+                    "kind": "nav",
+                    "label": "Tabs",
+                    "w": 260,
+                    "h": 44
+                  }
+                },
+                {
+                  "label": "Card",
+                  "icon": "crop_portrait",
+                  "values": {
+                    "kind": "section",
+                    "label": "Card",
+                    "w": 200,
+                    "h": 150
+                  }
+                },
+                {
+                  "label": "Avatar",
+                  "icon": "account_circle",
+                  "values": {
+                    "kind": "image",
+                    "label": "Avatar",
+                    "w": 64,
+                    "h": 64
+                  }
+                },
+                {
+                  "label": "Icon",
+                  "icon": "star",
+                  "values": {
+                    "kind": "image",
+                    "label": "Icon",
+                    "w": 44,
+                    "h": 44
+                  }
+                },
+                {
+                  "label": "Divider",
+                  "icon": "horizontal_rule",
+                  "values": {
+                    "kind": "text",
+                    "label": "Divider",
+                    "w": 240,
+                    "h": 12
+                  }
+                },
+                {
+                  "label": "Table",
+                  "icon": "grid_on",
+                  "values": {
+                    "kind": "list",
+                    "label": "Table",
+                    "w": 280,
+                    "h": 170
+                  }
+                },
+                {
+                  "label": "Footer",
+                  "icon": "web_asset",
+                  "values": {
+                    "kind": "nav",
+                    "label": "Footer",
+                    "w": 260,
+                    "h": 48
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "style": "caption",
+              "value": "Arrows: pick the Connect tool (the arrow, top-left of the canvas), then tap two blocks to link them."
+            },
+            {
+              "type": "text",
+              "style": "caption",
+              "value": "draw.io — export/import THIS page in diagrams.net."
+            },
+            {
+              "type": "row",
+              "wrap": true,
+              "children": [
+                {
+                  "type": "button",
+                  "label": "Export to draw.io",
+                  "icon": "upload",
+                  "variant": "text",
+                  "action": {
+                    "fn": "exportDrawio",
+                    "args": {
+                      "nodesTable": "boxes",
+                      "edgesTable": "links",
+                      "diagramName": "Wireframe",
+                      "sketchTable": "sketch",
+                      "sketchColumn": "strokes"
+                    }
+                  }
+                },
+                {
+                  "type": "button",
+                  "label": "Import from draw.io",
+                  "icon": "download",
+                  "variant": "text",
+                  "action": {
+                    "fn": "importDrawio",
+                    "args": {
+                      "nodesTable": "boxes",
+                      "edgesTable": "links"
+                    }
+                  }
+                },
+                {
+                  "type": "button",
+                  "label": "Export image (SVG)",
+                  "icon": "image",
+                  "variant": "text",
+                  "action": {
+                    "fn": "exportSvg",
+                    "args": {
+                      "nodesTable": "boxes",
+                      "edgesTable": "links",
+                      "fillColumn": "fill",
+                      "borderColorColumn": "borderColor",
+                      "arrowColumn": "arrow",
+                      "dashColumn": "dash",
+                      "sketchTable": "sketch",
+                      "sketchColumn": "strokes"
+                    }
+                  }
+                },
+                {
+                  "type": "button",
+                  "label": "Export this page (.isan)",
+                  "icon": "file_download",
+                  "variant": "text",
+                  "action": {
+                    "fn": "exportWireframe",
+                    "args": {
+                      "scoped": true,
+                      "pagesTable": "pages",
+                      "nodesTable": "boxes",
+                      "edgesTable": "links",
+                      "sketchTable": "sketch",
+                      "pageColumn": "pageId",
+                      "title": "Wireframe page"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "button",
+              "label": "Build app from wireframe",
+              "icon": "auto_awesome",
+              "action": {
+                "fn": "hostCall",
+                "args": {
+                  "name": "buildFromDesign",
+                  "appId": "wireframe_app",
+                  "appName": "My wireframe app"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "style": "subtitle",
+              "value": "Layers"
+            },
+            {
+              "type": "text",
+              "style": "caption",
+              "value": "Group blocks into sheets you can show / hide or lock. Select blocks, then use the layers button (▦) in the selection toolbar to move them onto a layer. Tap a layer below to rename it or toggle its eye / lock."
+            },
+            {
+              "type": "button",
+              "label": "New layer",
+              "icon": "add",
+              "variant": "text",
+              "action": {
+                "fn": "addRow",
+                "args": {
+                  "table": "layers",
+                  "values": {
+                    "name": "Layer",
+                    "visible": true
+                  }
+                }
+              }
+            },
+            {
+              "type": "table",
+              "table": "layers",
+              "columns": [
+                "name",
+                "visible",
+                "locked"
+              ],
+              "height": 160,
+              "action": {
+                "fn": "editRow"
+              }
+            }
+          ]
+        },
+        "body": {
+          "type": "canvas",
+          "nodesTable": "boxes",
+          "edgesTable": "links",
+          "labelColumn": "label",
+          "xColumn": "x",
+          "yColumn": "y",
+          "widthColumn": "w",
+          "heightColumn": "h",
+          "zColumn": "z",
+          "lockColumn": "locked",
+          "layerColumn": "layerId",
+          "layersTable": "layers",
+          "fontSizeColumn": "fontSize",
+          "textAlignColumn": "textAlign",
+          "boldColumn": "bold",
+          "fromColumn": "from",
+          "toColumn": "to",
+          "edgeLabelColumn": "label",
+          "routeColumn": "route",
+          "arrowColumn": "arrow",
+          "dashColumn": "dash",
+          "componentsTable": "customWidgets",
+          "colorColumn": "kind",
+          "fillColumn": "fill",
+          "borderColorColumn": "borderColor",
+          "borderWidthColumn": "borderWidth",
+          "colors": {
+            "frame": "gray",
+            "nav": "coral",
+            "button": "blue",
+            "input": "teal",
+            "text": "green",
+            "image": "purple",
+            "list": "pink",
+            "section": "amber"
+          },
+          "height": "fill",
+          "fidelity": "themed",
+          "sketchTable": "sketch",
+          "sketchColumn": "strokes",
+          "action": {
+            "fn": "editRow"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,340 @@
+{
+  "layers": [
+    {
+      "name": "layer",
+      "type": "text",
+      "label": "Layer"
+    },
+    {
+      "name": "what",
+      "type": "text",
+      "label": "What it shows"
+    },
+    {
+      "name": "source",
+      "type": "text",
+      "label": "Source"
+    },
+    {
+      "name": "vintage",
+      "type": "text",
+      "label": "Vintage"
+    },
+    {
+      "name": "zooms",
+      "type": "text",
+      "label": "Zoom range"
+    }
+  ],
+  "run_config": [
+    {
+      "name": "run_label",
+      "type": "text",
+      "label": "Run action"
+    },
+    {
+      "name": "year",
+      "type": "enum",
+      "label": "Scenario year",
+      "options": [
+        "2019",
+        "2022",
+        "2030",
+        "2040",
+        "2050"
+      ],
+      "default": "2019"
+    },
+    {
+      "name": "growth_factor",
+      "type": "number",
+      "label": "Growth factor"
+    },
+    {
+      "name": "note",
+      "type": "text",
+      "label": "Note (copied onto the run)"
+    },
+    {
+      "name": "endpoint",
+      "type": "text",
+      "label": "Model endpoint (documented)"
+    },
+    {
+      "name": "token",
+      "type": "text",
+      "label": "Bearer token (recorded, not sent)"
+    },
+    {
+      "name": "last_status",
+      "type": "text",
+      "label": "Last status"
+    },
+    {
+      "name": "last_run",
+      "type": "dateTime",
+      "label": "Last attempt"
+    }
+  ],
+  "runs": [
+    {
+      "name": "when",
+      "type": "dateTime",
+      "label": "When",
+      "default": "now"
+    },
+    {
+      "name": "year",
+      "type": "text",
+      "label": "Year",
+      "default": "first:run_config.year"
+    },
+    {
+      "name": "zones",
+      "type": "number",
+      "label": "Zones"
+    },
+    {
+      "name": "total_trips",
+      "type": "number",
+      "label": "Total trips"
+    },
+    {
+      "name": "transit_pct",
+      "type": "number",
+      "label": "Transit %"
+    },
+    {
+      "name": "avg_trip_mi",
+      "type": "number",
+      "label": "Avg trip (mi)"
+    },
+    {
+      "name": "growth",
+      "type": "text",
+      "label": "Growth cfg",
+      "default": "first:run_config.growth_factor"
+    },
+    {
+      "name": "note",
+      "type": "text",
+      "label": "Note",
+      "default": "first:run_config.note"
+    },
+    {
+      "name": "status",
+      "type": "text",
+      "label": "Status",
+      "default": "live model run"
+    }
+  ],
+  "endpoint_info": [
+    {
+      "name": "service",
+      "type": "text",
+      "label": "Service"
+    },
+    {
+      "name": "checked",
+      "type": "dateTime",
+      "label": "Checked",
+      "default": "now"
+    }
+  ],
+  "results": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "run_id",
+      "type": "text",
+      "label": "Run"
+    },
+    {
+      "name": "scenario",
+      "type": "text",
+      "label": "Scenario"
+    },
+    {
+      "name": "city",
+      "type": "text",
+      "label": "City"
+    },
+    {
+      "name": "route",
+      "type": "text",
+      "label": "Route / segment"
+    },
+    {
+      "name": "zone",
+      "type": "text",
+      "label": "Zone (town)"
+    },
+    {
+      "name": "metric_family",
+      "type": "text",
+      "label": "Metric family"
+    },
+    {
+      "name": "metric",
+      "type": "text",
+      "label": "Metric"
+    },
+    {
+      "name": "value",
+      "type": "number",
+      "label": "Value"
+    },
+    {
+      "name": "model",
+      "type": "text",
+      "label": "Model"
+    },
+    {
+      "name": "model_version",
+      "type": "text",
+      "label": "Model version"
+    },
+    {
+      "name": "confidence_tier",
+      "type": "text",
+      "label": "Confidence tier"
+    },
+    {
+      "name": "lat",
+      "type": "number",
+      "hidden": true
+    },
+    {
+      "name": "lng",
+      "type": "number",
+      "hidden": true
+    }
+  ],
+  "slices": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name"
+    },
+    {
+      "name": "config",
+      "type": "text",
+      "label": "Configuration (JSON)"
+    }
+  ],
+  "shapes": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Shape name"
+    },
+    {
+      "name": "source",
+      "type": "enum",
+      "label": "Source",
+      "options": [
+        "drawn",
+        "imported",
+        "shapefile"
+      ],
+      "default": "drawn"
+    },
+    {
+      "name": "geojson",
+      "type": "text",
+      "label": "GeoJSON (FeatureCollection)"
+    },
+    {
+      "name": "clat",
+      "type": "number",
+      "hidden": true
+    },
+    {
+      "name": "clng",
+      "type": "number",
+      "hidden": true
+    },
+    {
+      "name": "workers",
+      "type": "number",
+      "label": "Workers (stamped)"
+    },
+    {
+      "name": "jobs",
+      "type": "number",
+      "label": "Jobs (stamped)"
+    },
+    {
+      "name": "households",
+      "type": "number",
+      "label": "Households (stamped)"
+    },
+    {
+      "name": "insight",
+      "type": "text",
+      "label": "Insight / notes"
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "label": "Compute status",
+      "options": [
+        "draft",
+        "submitted",
+        "computed",
+        "local-only"
+      ],
+      "default": "draft"
+    }
+  ],
+  "zone_stats": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "zone",
+      "type": "text",
+      "label": "Town"
+    },
+    {
+      "name": "trips",
+      "type": "number",
+      "label": "Daily trips (sum)"
+    },
+    {
+      "name": "cost_per_pax_mi",
+      "type": "number",
+      "label": "Cost per person-mile ($)"
+    },
+    {
+      "name": "source_run_id",
+      "type": "text",
+      "label": "Source run"
+    },
+    {
+      "name": "computed_at",
+      "type": "text",
+      "label": "Computed"
+    },
+    {
+      "name": "method",
+      "type": "text",
+      "label": "Method"
+    }
+  ]
+}

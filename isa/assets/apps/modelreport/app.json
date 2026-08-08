@@ -1,0 +1,12 @@
+{
+  "id": "modelreport",
+  "name": "Model reports",
+  "category": "Analytics",
+  "icon": "leaderboard",
+  "color": "#2E6E5A",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_modelreport"
+  },
+  "seedVersion": "2026-07-14.1-provenance-labels"
+}

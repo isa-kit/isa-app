@@ -1,0 +1,11 @@
+{
+  "id": "hesset",
+  "name": "Hesset",
+  "category": "Games",
+  "icon": "category",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_hesset"
+  },
+  "seedVersion": "2026-07-04.1"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "tabletop",
+  "name": "Tabletop",
+  "category": "Games",
+  "icon": "casino",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_tabletop"
+  },
+  "seedVersion": "2026-06-20.inline"
+}

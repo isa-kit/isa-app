@@ -1,0 +1,123 @@
+{
+  "app": {
+    "title": "Screen Composer",
+    "primaryColor": "#3F51B5",
+    "theme": "warmshift",
+    "guide": "how"
+  },
+  "nav": [
+    {
+      "id": "board",
+      "label": "Board",
+      "icon": "dashboard_customize",
+      "screen": "board"
+    }
+  ],
+  "screens": {
+    "board": {
+      "title": "Screen Composer",
+      "body": {
+        "type": "explorer",
+        "table": "boards",
+        "nameColumn": "name",
+        "orderColumn": "order",
+        "allowFolders": false,
+        "railMode": "collapsible",
+        "title": "Boards",
+        "fileIcon": "dashboard_customize",
+        "newFileLabel": "New board",
+        "autoSelectFirst": true,
+        "scopeTargets": [
+          { "table": "screens", "column": "board" },
+          { "table": "flows", "column": "board" }
+        ],
+        "menuActions": [
+          {
+            "label": "Export a copy…",
+            "action": { "fn": "exportFileScope" }
+          }
+        ],
+        "detail": {
+          "type": "compose",
+          "screensTable": "screens",
+          "widgetsTable": "widgets",
+          "flowsTable": "flows",
+          "scope": "$selected:boards",
+          "screenNameColumn": "name",
+          "screenDeviceColumn": "device",
+          "screenXColumn": "x",
+          "screenYColumn": "y",
+          "screenVariantOfColumn": "variantOf",
+          "widgetScreenColumn": "screen",
+          "widgetKindColumn": "kind",
+          "widgetLabelColumn": "label",
+          "widgetRegionColumn": "region",
+          "widgetOrderColumn": "order",
+          "widgetIntentColumn": "intent",
+          "flowFromWidgetColumn": "fromWidget",
+          "flowToScreenColumn": "toScreen",
+          "flowTransitionColumn": "transition",
+          "showFlows": true,
+          "height": "fill"
+        }
+      }
+    },
+    "how": {
+      "title": "How to use Screen Composer",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Plan real screens, not drawings"
+          },
+          {
+            "type": "text",
+            "value": "Screen Composer is an auto-layout planner: drop a widget on a screen and the layout re-solves right there, the same way a scroll view actually expands to fill whatever space is left. It is not a freehand drawing tool — every frame you see is the real layout."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Adding screens"
+          },
+          {
+            "type": "text",
+            "value": "Tap + Screen on the board to add a new device frame. Drag a frame by its header chip to move it around the board; pinch or use two fingers to pan and zoom the whole board."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Dropping widgets + fill behaviour"
+          },
+          {
+            "type": "text",
+            "value": "The widget strip along the top of the board holds all 12 kinds. Drag a chip onto a screen to insert it into the region under your drop point (top/body/bottom/overlay); tap a chip instead to add it to the end of the selected screen's default region."
+          },
+          {
+            "type": "text",
+            "value": "Each kind has a default size behaviour: fixed widgets (titlebar, searchbar, tabs, bottomnav, fab) keep a set height; wrap widgets (text, card, image, buttonrow) size to their content; fill widgets (scrollview, list, settings) stretch to share whatever vertical space is left in the body, splitting it evenly with any other fill widgets on the same screen. Tap a widget to select it and use the quick actions bar to rename, delete, reorder, cycle its region, or override its size intent."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Variants"
+          },
+          {
+            "type": "text",
+            "value": "Use “Make variant” on a screen to project it to another device frame (phone/tablet/web). The variant starts as a copy of the widgets, laid out fresh at the new frame size, then lives independently — edits on one side do not sync to the other."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Flows and play mode"
+          },
+          {
+            "type": "text",
+            "value": "Select a widget and choose “link to screen…”, then tap a target screen to create a flow — shown as a light curved arrow on the board. Toggle Play to try it: tapping a linked widget animates the board over to its target screen and briefly highlights the frame."
+          }
+        ]
+      }
+    }
+  }
+}

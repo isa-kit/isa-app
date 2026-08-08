@@ -1,0 +1,142 @@
+{
+  "files": [
+    { "name": "name", "type": "text", "label": "File" },
+    { "name": "order", "type": "integer", "label": "Order", "hidden": true }
+  ],
+  "shows": [
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Title",
+      "required": true
+    },
+    {
+      "name": "file",
+      "type": "text",
+      "label": "File",
+      "hidden": true
+    },
+    {
+      "name": "author",
+      "type": "text",
+      "label": "Author"
+    },
+    {
+      "name": "category",
+      "type": "enum",
+      "label": "Category",
+      "options": [
+        "Tech",
+        "News",
+        "Comedy",
+        "Story",
+        "Other"
+      ]
+    },
+    {
+      "name": "feedUrl",
+      "type": "uri",
+      "label": "Feed URL"
+    },
+    {
+      "name": "siteUrl",
+      "type": "uri",
+      "label": "Site URL"
+    },
+    {
+      "name": "following",
+      "type": "bool",
+      "label": "Following",
+      "default": false
+    },
+    {
+      "name": "notes",
+      "type": "text",
+      "label": "Notes"
+    },
+    {
+      "name": "tags",
+      "type": "text",
+      "label": "Tags"
+    },
+    {
+      "name": "recReason",
+      "type": "text",
+      "label": "Why recommended",
+      "advanced": true
+    },
+    {
+      "name": "recScore",
+      "type": "number",
+      "label": "Bridge score",
+      "advanced": true
+    }
+  ],
+  "episodes": [
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Title",
+      "required": true
+    },
+    {
+      "name": "show",
+      "type": "ref",
+      "label": "Show",
+      "refTable": "shows"
+    },
+    {
+      "name": "url",
+      "type": "uri",
+      "label": "URL"
+    },
+    {
+      "name": "published",
+      "type": "date",
+      "label": "Published"
+    },
+    {
+      "name": "durationMin",
+      "type": "number",
+      "label": "Duration (min)"
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "label": "Status",
+      "options": [
+        "unplayed",
+        "playing",
+        "done"
+      ],
+      "default": "unplayed"
+    },
+    {
+      "name": "rating",
+      "type": "number",
+      "label": "Rating"
+    },
+    {
+      "name": "queued",
+      "type": "bool",
+      "label": "Queued",
+      "default": false
+    },
+    {
+      "name": "tags",
+      "type": "text",
+      "label": "Tags"
+    },
+    {
+      "name": "notes",
+      "type": "text",
+      "label": "Notes"
+    },
+    {
+      "name": "file",
+      "type": "text",
+      "label": "File",
+      "hidden": true
+    }
+  ]
+}

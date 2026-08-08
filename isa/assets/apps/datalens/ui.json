@@ -1,0 +1,537 @@
+{
+  "app": {
+    "title": "Datalab",
+    "primaryColor": "#2E6E5A"
+  },
+  "nav": [
+    {
+      "id": "report",
+      "label": "Databoard",
+      "icon": "dashboard",
+      "screen": "report"
+    },
+    {
+      "id": "controls",
+      "label": "Controls",
+      "icon": "tune",
+      "screen": "controls"
+    },
+    {
+      "id": "data",
+      "label": "Data",
+      "icon": "table_rows",
+      "screen": "data"
+    },
+    {
+      "id": "about",
+      "label": "About",
+      "icon": "info",
+      "screen": "about"
+    }
+  ],
+  "screens": {
+    "data": {
+      "title": "Data \u2014 read it in, look at it",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "The dataset behind every view: one row per zone \u00d7 scenario. Import your own CSV with the same columns \u2014 merge adds rows, replace starts fresh. Add filters below; every filter is type-checked against the column it targets."
+          },
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": "Import CSV (merge)",
+                "icon": "upload",
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "importCsv",
+                    "table": "records"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Import CSV (replace)",
+                "icon": "restore",
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "importCsv",
+                    "table": "records",
+                    "replace": true
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "report",
+            "table": "records",
+            "filterable": true,
+            "tools": [
+              "table"
+            ],
+            "exclude": [
+              "id"
+            ],
+            "label": "Records",
+            "height": 420,
+            "config": {
+              "mode": "table"
+            },
+            "showProvenance": true
+          }
+        ]
+      }
+    },
+    "about": {
+      "title": "About Datalab",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Read data. Build the report. Take it with you."
+          },
+          {
+            "type": "text",
+            "value": "Datalab is a report builder over one dataset \u2014 the data databoard. The Databoard is a board of panels you mix and match: add or remove them, drag the divider to resize, and switch each panel between the block kinds \u2014 chart, table, % delta, KPI number tiles, an interactive explorer, and notes. Pick a ready-made layout \u2014 Overview, Compare or Explore \u2014 from the template icon at the top-right. Working with geospatial data (places, zones, regions)? Use Geolabs, Datalab's geo sibling, which adds map views and tap-a-region cross-filtering on top of everything here."
+          },
+          {
+            "type": "text",
+            "value": "Filters are type-checked against their columns and can be saved as named slices. Everything \u2014 the rows, the panel layout, your slices \u2014 is data, so it travels with the applet's share code and backups. And the HTML export writes a standalone styled report file you can open, mail or archive anywhere."
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Seeded numbers are illustrative structure \u2014 import your own CSV to make it yours."
+          }
+        ]
+      }
+    },
+    "report": {
+      "title": "Databoard \u2014 data controls beside your panels",
+      "body": {
+        "type": "datacontrols",
+        "table": "records",
+        "dock": "auto",
+        "blocksTable": "controlblocks",
+        "body": {
+          "type": "splitpane",
+          "axis": "col",
+          "table": "panels",
+          "weightColumn": "weight",
+          "visibleColumn": "visible",
+          "orderColumn": "order",
+          "kindColumn": "kind",
+          "titleColumn": "name",
+          "templateColumn": "template",
+          "viewsTable": "boardviews",
+          "dataset": "records",
+          "templates": [
+            {
+              "id": "overview",
+              "label": "Overview",
+              "icon": "insights"
+            },
+            {
+              "id": "compare",
+              "label": "Compare",
+              "icon": "compare"
+            },
+            {
+              "id": "explore",
+              "label": "Explore",
+              "icon": "explore"
+            }
+          ],
+          "removable": true,
+          "editable": true,
+          "reorderable": true,
+          "gap": 10,
+          "paneKinds": {
+            "chart": {
+              "type": "column",
+              "scroll": true,
+              "children": [
+                {
+                  "type": "report",
+                  "table": "records",
+                  "filterable": true,
+                  "slicesTable": "slices",
+                  "seriesColumn": "scenario",
+                  "exclude": [
+                    "id"
+                  ],
+                  "label": "Scenarios by zone",
+                  "height": 300,
+                  "linkFilter": true,
+                  "config": {
+                    "mode": "chart",
+                    "xAxis": "zone",
+                    "series": "scenario",
+                    "value": "trips"
+                  },
+                  "configSource": "board",
+                  "showProvenance": true
+                }
+              ]
+            },
+            "delta": {
+              "type": "column",
+              "scroll": true,
+              "children": [
+                {
+                  "type": "report",
+                  "table": "records",
+                  "filterable": true,
+                  "seriesColumn": "scenario",
+                  "exclude": [
+                    "id"
+                  ],
+                  "label": "% change vs Baseline",
+                  "height": 300,
+                  "config": {
+                    "mode": "chart",
+                    "xAxis": "zone",
+                    "series": "scenario",
+                    "value": "trips",
+                    "pctDiff": true,
+                    "pctBase": "Baseline"
+                  },
+                  "configSource": "board",
+                  "showProvenance": true
+                }
+              ]
+            },
+            "table": {
+              "type": "column",
+              "scroll": true,
+              "children": [
+                {
+                  "type": "report",
+                  "table": "records",
+                  "filterable": true,
+                  "tools": [
+                    "table"
+                  ],
+                  "exclude": [
+                    "id"
+                  ],
+                  "label": "Rows",
+                  "height": 300,
+                  "config": {
+                    "mode": "table"
+                  },
+                  "configSource": "board",
+                  "showProvenance": true
+                }
+              ]
+            },
+            "kpi": {
+              "type": "column",
+              "scroll": true,
+              "children": [
+                {
+                  "type": "row",
+                  "wrap": true,
+                  "children": [
+                    {
+                      "type": "stat",
+                      "table": "records",
+                      "agg": "sum",
+                      "valueColumn": "trips",
+                      "label": "Daily trips",
+                      "format": "compact",
+                      "color": "teal",
+                      "configSource": "board"
+                    },
+                    {
+                      "type": "stat",
+                      "table": "records",
+                      "agg": "avg",
+                      "valueColumn": "cost_per_mi",
+                      "label": "Cost / person-mile",
+                      "format": "currency",
+                      "decimals": 2,
+                      "color": "amber",
+                      "configSource": "board"
+                    },
+                    {
+                      "type": "stat",
+                      "table": "records",
+                      "agg": "sum",
+                      "valueColumn": "jobs",
+                      "label": "Jobs reachable",
+                      "format": "compact",
+                      "color": "blue",
+                      "configSource": "board"
+                    },
+                    {
+                      "type": "stat",
+                      "table": "records",
+                      "agg": "sum",
+                      "valueColumn": "households",
+                      "label": "Households",
+                      "format": "compact",
+                      "color": "purple",
+                      "configSource": "board"
+                    }
+                  ]
+                }
+              ]
+            },
+            "explore": {
+              "type": "column",
+              "scroll": true,
+              "children": [
+                {
+                  "type": "crossfilter",
+                  "table": "records",
+                  "numeric": [
+                    {
+                      "col": "trips",
+                      "label": "Daily trips"
+                    },
+                    {
+                      "col": "cost_per_mi",
+                      "label": "Cost / person-mile"
+                    },
+                    {
+                      "col": "jobs",
+                      "label": "Jobs reachable"
+                    },
+                    {
+                      "col": "households",
+                      "label": "Households"
+                    }
+                  ],
+                  "categorical": [
+                    "scenario",
+                    "zone"
+                  ],
+                  "x": "trips",
+                  "y": "jobs"
+                }
+              ]
+            },
+            "notes": {
+              "type": "notepad",
+              "table": "notes",
+              "rowId": "note1",
+              "column": "body",
+              "placeholder": "Write notes about this report\u2026"
+            }
+          }
+        },
+        "children": [
+          {
+            "type": "datasegment",
+            "table": "records",
+            "column": "scenario",
+            "label": "Scenario"
+          },
+          {
+            "type": "datafilter",
+            "table": "records"
+          },
+          {
+            "type": "datagroup",
+            "table": "records"
+          },
+          {
+            "type": "datasort",
+            "table": "records"
+          },
+          {
+            "type": "datarange",
+            "table": "records",
+            "column": "trips",
+            "label": "Daily trips"
+          }
+        ]
+      }
+    },
+    "controls": {
+      "title": "Controls \u2014 build your report",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Build the databoard: each panel is a row here \u2014 its Template, view kind, order, size and visibility. Switch templates from the icon at the top-right of the Databoard; a panel shows under its Template (leave Template empty to show it in every one). On the Databoard each panel also switches view in place (the icon beside its title), resizes by dragging the divider, and hides with its \u00d7."
+          },
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": "Add panel",
+                "icon": "add",
+                "action": {
+                  "fn": "addRow",
+                  "args": {
+                    "table": "panels",
+                    "values": {
+                      "kind": "chart",
+                      "visible": true,
+                      "weight": 1,
+                      "order": 9
+                    }
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Export report (HTML)",
+                "icon": "download",
+                "action": {
+                  "fn": "exportHtml",
+                  "args": {
+                    "title": "Datalab report",
+                    "tables": [
+                      "records",
+                      "zone_stats"
+                    ],
+                    "filename": "datalens-report.html"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Export data (CSV)",
+                "icon": "table_view",
+                "action": {
+                  "fn": "exportData",
+                  "args": {
+                    "format": "csv",
+                    "table": "records"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "Add a block"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Mix in more block kinds beside chart/table/delta: KPI number tiles, an interactive explorer (brush + cohorts + scatter), or a notes panel. A newly added block has no Template, so it appears under every template until you set one in the panel row above."
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "+ KPI tiles",
+                "icon": "add",
+                "action": {
+                  "fn": "addRow",
+                  "args": {
+                    "table": "panels",
+                    "values": {
+                      "name": "Headline numbers",
+                      "kind": "kpi",
+                      "visible": true,
+                      "weight": 0.6,
+                      "order": 9
+                    }
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "+ Explorer",
+                "icon": "add",
+                "action": {
+                  "fn": "addRow",
+                  "args": {
+                    "table": "panels",
+                    "values": {
+                      "name": "Explore",
+                      "kind": "explore",
+                      "visible": true,
+                      "weight": 1.2,
+                      "order": 9
+                    }
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "+ Notes",
+                "icon": "add",
+                "action": {
+                  "fn": "addRow",
+                  "args": {
+                    "table": "panels",
+                    "values": {
+                      "name": "Notes",
+                      "kind": "notes",
+                      "visible": true,
+                      "weight": 0.8,
+                      "order": 9
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "table",
+            "table": "panels",
+            "columns": [
+              "name",
+              "template",
+              "kind",
+              "visible",
+              "order",
+              "weight"
+            ],
+            "height": 240,
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "Saved views (slices)"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Chart panels carry a bookmark that saves the current filters + grouping here as a named row \u2014 your slices travel with the applet's share code and backups, and the HTML export takes the whole report out of the app."
+          },
+          {
+            "type": "table",
+            "table": "slices",
+            "columns": [
+              "name",
+              "config"
+            ],
+            "height": 160,
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

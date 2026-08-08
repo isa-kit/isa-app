@@ -1,0 +1,13 @@
+{
+  "id": "wireframe",
+  "name": "Wireframe",
+  "category": "Creative",
+  "icon": "dashboard_customize",
+  "color": "#546E7A",
+  "hidden": false,
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_wireframe"
+  },
+  "seedVersion": "2026-06-19.pages"
+}

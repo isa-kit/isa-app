@@ -1,0 +1,712 @@
+{
+  "app": {
+    "title": "City Planner",
+    "primaryColor": "#2E7D32",
+    "theme": "material",
+    "autosave": true
+  },
+  "nav": [
+    {
+      "id": "map",
+      "label": "Map",
+      "icon": "map",
+      "screen": "map"
+    },
+    {
+      "id": "stats",
+      "label": "Stats",
+      "icon": "insights",
+      "screen": "stats"
+    },
+    {
+      "id": "residents",
+      "label": "Residents",
+      "icon": "person",
+      "screen": "residents"
+    },
+    {
+      "id": "guide",
+      "label": "How to play",
+      "icon": "help_outline",
+      "screen": "guide"
+    }
+  ],
+  "screens": {
+    "map": {
+      "title": "City Planner",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Zone the lots, then end the turn. Residents' happiness rises with good, affordable groceries, schools, healthcare, parks, walkability and transit — and falls with pollution, car dependence and high grocery prices. Tap a pin to set its zone (and quality/cost for groceries, schools, hospitals)."
+          },
+          {
+            "type": "table",
+            "table": "city",
+            "columns": [
+              "turn",
+              "budget",
+              "population",
+              "happiness"
+            ],
+            "height": 96
+          },
+          {
+            "type": "button",
+            "label": "End turn",
+            "icon": "skip_next",
+            "action": {
+              "fn": "endTurn",
+              "args": {
+                "state": "city",
+                "stateId": "s1",
+                "units": "parcels",
+                "turnField": "turn",
+                "tallies": {
+                  "res": {
+                    "column": "zone",
+                    "value": "residential"
+                  },
+                  "com": {
+                    "column": "zone",
+                    "value": "commercial"
+                  },
+                  "ind": {
+                    "column": "zone",
+                    "value": "industrial"
+                  },
+                  "park": {
+                    "column": "zone",
+                    "value": "park"
+                  },
+                  "grocery": {
+                    "column": "zone",
+                    "value": "grocery"
+                  },
+                  "school": {
+                    "column": "zone",
+                    "value": "school"
+                  },
+                  "hospital": {
+                    "column": "zone",
+                    "value": "hospital"
+                  },
+                  "transit": {
+                    "column": "zone",
+                    "value": "transit"
+                  },
+                  "schoolQual": {
+                    "column": "zone",
+                    "value": "school",
+                    "agg": "avg",
+                    "field": "quality"
+                  },
+                  "hospitalQual": {
+                    "column": "zone",
+                    "value": "hospital",
+                    "agg": "avg",
+                    "field": "quality"
+                  },
+                  "groceryQual": {
+                    "column": "zone",
+                    "value": "grocery",
+                    "agg": "avg",
+                    "field": "quality"
+                  },
+                  "groceryCostAvg": {
+                    "column": "zone",
+                    "value": "grocery",
+                    "agg": "avg",
+                    "field": "cost"
+                  }
+                },
+                "effects": [
+                  {
+                    "field": "budget",
+                    "mode": "add",
+                    "base": -5,
+                    "terms": [
+                      {
+                        "tally": "com",
+                        "coef": 12
+                      },
+                      {
+                        "tally": "res",
+                        "coef": 4
+                      },
+                      {
+                        "tally": "ind",
+                        "coef": 9
+                      },
+                      {
+                        "tally": "grocery",
+                        "coef": 5
+                      },
+                      {
+                        "tally": "park",
+                        "coef": -2
+                      },
+                      {
+                        "tally": "school",
+                        "coef": -5
+                      },
+                      {
+                        "tally": "hospital",
+                        "coef": -7
+                      },
+                      {
+                        "tally": "transit",
+                        "coef": -4
+                      }
+                    ]
+                  },
+                  {
+                    "field": "population",
+                    "mode": "add",
+                    "base": 0,
+                    "min": 0,
+                    "terms": [
+                      {
+                        "tally": "res",
+                        "coef": 25
+                      }
+                    ]
+                  },
+                  {
+                    "field": "pollution",
+                    "mode": "set",
+                    "base": 0,
+                    "min": 0,
+                    "max": 100,
+                    "terms": [
+                      {
+                        "tally": "ind",
+                        "coef": 6
+                      },
+                      {
+                        "tally": "com",
+                        "coef": 1
+                      },
+                      {
+                        "tally": "park",
+                        "coef": -2
+                      },
+                      {
+                        "tally": "transit",
+                        "coef": -1
+                      }
+                    ]
+                  },
+                  {
+                    "field": "walkability",
+                    "mode": "set",
+                    "base": 10,
+                    "min": 0,
+                    "max": 100,
+                    "terms": [
+                      {
+                        "tally": "park",
+                        "coef": 4
+                      },
+                      {
+                        "tally": "grocery",
+                        "coef": 5
+                      },
+                      {
+                        "tally": "transit",
+                        "coef": 6
+                      },
+                      {
+                        "tally": "school",
+                        "coef": 3
+                      },
+                      {
+                        "tally": "ind",
+                        "coef": -2
+                      }
+                    ]
+                  },
+                  {
+                    "field": "carCost",
+                    "mode": "set",
+                    "base": 60,
+                    "min": 0,
+                    "max": 100,
+                    "terms": [
+                      {
+                        "tally": "transit",
+                        "coef": -8
+                      },
+                      {
+                        "field": "walkability",
+                        "coef": -0.3
+                      }
+                    ]
+                  },
+                  {
+                    "field": "education",
+                    "mode": "set",
+                    "base": 0,
+                    "min": 0,
+                    "max": 100,
+                    "terms": [
+                      {
+                        "tally": "schoolQual",
+                        "coef": 0.9
+                      },
+                      {
+                        "tally": "school",
+                        "coef": 2
+                      }
+                    ]
+                  },
+                  {
+                    "field": "healthcare",
+                    "mode": "set",
+                    "base": 0,
+                    "min": 0,
+                    "max": 100,
+                    "terms": [
+                      {
+                        "tally": "hospitalQual",
+                        "coef": 0.9
+                      },
+                      {
+                        "tally": "hospital",
+                        "coef": 2
+                      }
+                    ]
+                  },
+                  {
+                    "field": "groceryAccess",
+                    "mode": "set",
+                    "base": 0,
+                    "min": 0,
+                    "max": 100,
+                    "terms": [
+                      {
+                        "tally": "groceryQual",
+                        "coef": 0.8
+                      },
+                      {
+                        "tally": "grocery",
+                        "coef": 4
+                      }
+                    ]
+                  },
+                  {
+                    "field": "groceryCost",
+                    "mode": "set",
+                    "base": 0,
+                    "min": 0,
+                    "terms": [
+                      {
+                        "tally": "groceryCostAvg",
+                        "coef": 1
+                      }
+                    ]
+                  },
+                  {
+                    "field": "happiness",
+                    "mode": "set",
+                    "base": 50,
+                    "min": 0,
+                    "max": 100,
+                    "terms": [
+                      {
+                        "field": "education",
+                        "coef": 0.15
+                      },
+                      {
+                        "field": "healthcare",
+                        "coef": 0.15
+                      },
+                      {
+                        "field": "groceryAccess",
+                        "coef": 0.15
+                      },
+                      {
+                        "field": "walkability",
+                        "coef": 0.1
+                      },
+                      {
+                        "tally": "park",
+                        "coef": 2
+                      },
+                      {
+                        "tally": "transit",
+                        "coef": 1
+                      },
+                      {
+                        "field": "pollution",
+                        "coef": -0.3
+                      },
+                      {
+                        "field": "carCost",
+                        "coef": -0.15
+                      },
+                      {
+                        "field": "groceryCost",
+                        "coef": -0.4
+                      }
+                    ]
+                  }
+                ],
+                "history": {
+                  "table": "city_history",
+                  "copy": [
+                    "turn",
+                    "budget",
+                    "population",
+                    "happiness"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "type": "glmap",
+            "table": "parcels",
+            "latColumn": "lat",
+            "lonColumn": "lon",
+            "labelColumn": "zone",
+            "zoom": 14,
+            "fillPhone": true,
+            "styleUrl": "https://www.openhistoricalmap.org/map-styles/main/main.json",
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Basemap: OpenHistoricalMap (historical style) on web; desktop falls back to a standard map. The rules are plain JSON in the End-turn button — open Edit mode to tune the model."
+          }
+        ]
+      }
+    },
+    "stats": {
+      "title": "City stats",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Residents' happiness and what drives it. End turns to grow the city; watch the trends."
+          },
+          {
+            "type": "segments",
+            "segments": [
+              {
+                "label": "Zones",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "table",
+                      "table": "city",
+                      "columns": [
+                        "happiness",
+                        "education",
+                        "healthcare",
+                        "groceryAccess",
+                        "groceryCost",
+                        "walkability",
+                        "carCost",
+                        "pollution"
+                      ],
+                      "height": 96
+                    },
+                    {
+                      "type": "piechart",
+                      "table": "parcels",
+                      "groupColumn": "zone",
+                      "label": "Parcels by zone",
+                      "height": 170,
+                      "colors": {
+                        "residential": "blue",
+                        "commercial": "purple",
+                        "industrial": "gray",
+                        "park": "green",
+                        "grocery": "amber",
+                        "school": "teal",
+                        "hospital": "red",
+                        "transit": "pink"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Mood",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "barchart",
+                      "table": "residents",
+                      "groupColumn": "band",
+                      "label": "Residents by mood"
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Trends",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "linechart",
+                      "label": "Happiness over turns",
+                      "table": "city_history",
+                      "xColumn": "turn",
+                      "yColumn": "happiness",
+                      "height": 170
+                    },
+                    {
+                      "type": "linechart",
+                      "label": "Population over turns",
+                      "table": "city_history",
+                      "xColumn": "turn",
+                      "yColumn": "population",
+                      "height": 170
+                    },
+                    {
+                      "type": "linechart",
+                      "label": "Budget over turns",
+                      "table": "city_history",
+                      "xColumn": "turn",
+                      "yColumn": "budget",
+                      "height": 170
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "residents": {
+      "title": "Residents",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Every resident has their own happiness, driven by what's physically NEARBY. A line-of-sight proxy (proximity within a radius) checks how much real-world nature/parks they can reach, how much road/car exposure they suffer, and their access to groceries, schools and hospitals. Each factor is weighted by that resident's own nature and car preferences — nature-lovers gain more from nearby green, the car-averse lose more next to roads. The green/road points are real OpenStreetMap features baked into this app. Tap a resident below and press \"Show on map\" to see them highlighted above; tap \"Show all residents\" to zoom back out."
+          },
+          {
+            "type": "button",
+            "label": "Show all residents",
+            "icon": "public",
+            "action": { "fn": "clearFocus", "args": { "table": "residents" } }
+          },
+          {
+            "type": "button",
+            "label": "Recompute happiness",
+            "icon": "calculate",
+            "action": {
+              "fn": "spatialScore",
+              "args": {
+                "subjects": "residents",
+                "latColumn": "lat",
+                "lonColumn": "lon",
+                "factors": [
+                  {
+                    "name": "natureF",
+                    "table": "features",
+                    "column": "kind",
+                    "value": "green",
+                    "radiusMeters": 300
+                  },
+                  {
+                    "name": "parkP",
+                    "table": "parcels",
+                    "column": "zone",
+                    "value": "park",
+                    "radiusMeters": 300
+                  },
+                  {
+                    "name": "carF",
+                    "table": "features",
+                    "column": "kind",
+                    "value": "road",
+                    "radiusMeters": 200
+                  },
+                  {
+                    "name": "indP",
+                    "table": "parcels",
+                    "column": "zone",
+                    "value": "industrial",
+                    "radiusMeters": 300
+                  },
+                  {
+                    "name": "grocery",
+                    "table": "parcels",
+                    "column": "zone",
+                    "value": "grocery",
+                    "radiusMeters": 400,
+                    "agg": "avg",
+                    "field": "quality"
+                  },
+                  {
+                    "name": "school",
+                    "table": "parcels",
+                    "column": "zone",
+                    "value": "school",
+                    "radiusMeters": 500,
+                    "agg": "avg",
+                    "field": "quality"
+                  },
+                  {
+                    "name": "hospital",
+                    "table": "parcels",
+                    "column": "zone",
+                    "value": "hospital",
+                    "radiusMeters": 600,
+                    "agg": "avg",
+                    "field": "quality"
+                  }
+                ],
+                "effects": [
+                  {
+                    "field": "happiness",
+                    "mode": "set",
+                    "base": 50,
+                    "min": 0,
+                    "max": 100,
+                    "terms": [
+                      {
+                        "factor": "natureF",
+                        "prefField": "naturePref",
+                        "coef": 6
+                      },
+                      {
+                        "factor": "parkP",
+                        "prefField": "naturePref",
+                        "coef": 8
+                      },
+                      {
+                        "factor": "carF",
+                        "prefField": "carTolerance",
+                        "coef": -5
+                      },
+                      {
+                        "factor": "indP",
+                        "coef": -4
+                      },
+                      {
+                        "factor": "grocery",
+                        "coef": 0.1
+                      },
+                      {
+                        "factor": "school",
+                        "coef": 0.1
+                      },
+                      {
+                        "factor": "hospital",
+                        "coef": 0.1
+                      }
+                    ]
+                  }
+                ],
+                "bandField": "band",
+                "bandFrom": "happiness",
+                "bands": [
+                  {
+                    "max": 40,
+                    "name": "low"
+                  },
+                  {
+                    "max": 70,
+                    "name": "ok"
+                  },
+                  {
+                    "name": "high"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "type": "glmap",
+            "table": "residents",
+            "latColumn": "lat",
+            "lonColumn": "lon",
+            "labelColumn": "name",
+            "colorColumn": "band",
+            "colors": {
+              "low": "red",
+              "ok": "amber",
+              "high": "green"
+            },
+            "zoom": 14,
+            "height": "0.55fill",
+            "styleUrl": "https://www.openhistoricalmap.org/map-styles/main/main.json",
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "cards",
+            "table": "residents",
+            "title": "name",
+            "subtitle": "happiness",
+            "emptyIcon": "groups",
+            "emptyTitle": "No residents yet",
+            "emptyText": "Once your city has people, recompute happiness to see how each resident feels about their neighborhood.",
+            "sort": {
+              "column": "happiness",
+              "dir": "desc"
+            },
+            "tags": [
+              {
+                "column": "band",
+                "colors": {
+                  "low": "red",
+                  "ok": "amber",
+                  "high": "green"
+                }
+              }
+            ],
+            "action": {
+              "fn": "editRow"
+            },
+            "openActions": [
+              {
+                "label": "Show on map",
+                "icon": "map",
+                "action": {
+                  "fn": "focusRow"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "guide": {
+      "title": "How to play",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "value": "Goal: maximise residents' happiness while staying solvent."
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Zones & effects:\n• Residential — adds population.\n• Commercial / Industrial — earn budget (industry pollutes).\n• Grocery — set its Quality and Cost; high quality + low cost lifts happiness.\n• School / Hospital — set Quality → education / healthcare.\n• Park — happiness, walkability, less pollution.\n• Transit — raises walkability, cuts car cost and pollution.\n\nEach End turn: budget changes by your mix; population grows from housing; pollution, walkability, car cost, education, healthcare, grocery access & cost recompute; and happiness = a weighted blend of all of them. People, cars and transit are modelled as these factors (not animated). Tune every number in Edit mode — the rulebook is JSON."
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "app": {
+    "title": "Shelplet"
+  },
+  "nav": [
+    {
+      "id": "atlas",
+      "label": "Atlas",
+      "icon": "map",
+      "screen": "atlas"
+    },
+    {
+      "id": "scenarios",
+      "label": "Scenarios",
+      "icon": "play_arrow",
+      "screen": "scenarios"
+    },
+    {
+      "id": "models",
+      "label": "Models",
+      "icon": "account_tree",
+      "screen": "models"
+    },
+    {
+      "id": "reports",
+      "label": "Reports",
+      "icon": "leaderboard",
+      "screen": "reports"
+    },
+    {
+      "id": "decision",
+      "label": "Decision",
+      "icon": "verified",
+      "screen": "decision"
+    }
+  ],
+  "screens": {
+    "atlas": {
+      "title": "Atlas — map dashboard",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "embed",
+            "appletId": "atlas",
+            "height": 680
+          }
+        ]
+      }
+    },
+    "scenarios": {
+      "title": "Scenarios — run & prove",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "embed",
+            "appletId": "scenarios",
+            "height": 680
+          }
+        ]
+      }
+    },
+    "models": {
+      "title": "Models — the logic",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "embed",
+            "appletId": "terrain",
+            "height": 680
+          }
+        ]
+      }
+    },
+    "reports": {
+      "title": "Model reports",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "embed",
+            "appletId": "modelreport",
+            "height": 680
+          }
+        ]
+      }
+    },
+    "decision": {
+      "title": "Decision — the 5-minute read",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "What changed, what it costs, how confident, and what the auditors said — one screen. This is a seeded snapshot of the precomputed runs; every number traces in Scenarios (provenance) and paints in Atlas (map)."
+          },
+          {
+            "type": "cards",
+            "table": "exec_summary",
+            "title": "headline",
+            "subtitle": "detail",
+            "expandable": true,
+            "expandFields": [
+              {
+                "column": "tier",
+                "label": "Confidence"
+              },
+              {
+                "column": "audit",
+                "label": "Audit"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Confidence: green FOCUSED = calibrated to real, sourced local targets. Amber EXPLORATORY = coverage/comparison only — not a decision basis."
+          },
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": "Full proof — Scenarios",
+                "icon": "fact_check",
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "openApplet",
+                    "appId": "scenarios",
+                    "title": "Scenarios"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "On the map — Atlas",
+                "icon": "travel_explore",
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "openApplet",
+                    "appId": "atlas",
+                    "title": "Atlas — place analysis"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "layout_demo",
+  "name": "Layout demo",
+  "category": "Developer",
+  "icon": "dashboard",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_layout_demo"
+  },
+  "seedVersion": "2026-06-15.1"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "watchlist",
+  "name": "Watchlist",
+  "icon": "smart_display",
+  "color": "#E53935",
+  "category": "Media",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_watchlist"
+  },
+  "seedVersion": "2026-07-20.files"
+}

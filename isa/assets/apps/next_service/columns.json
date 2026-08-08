@@ -1,0 +1,78 @@
+{
+  "agencies": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Agency",
+      "required": true
+    },
+    {
+      "name": "status",
+      "type": "text",
+      "label": "Status"
+    },
+    {
+      "name": "base",
+      "type": "text",
+      "label": "Server (data stored here)",
+      "required": true
+    },
+    {
+      "name": "source",
+      "type": "text",
+      "label": "Source (GTFS)"
+    },
+    {
+      "name": "liveVeh",
+      "type": "text",
+      "label": "Live vehicles feed"
+    },
+    {
+      "name": "lat",
+      "type": "number",
+      "label": "Latitude",
+      "required": true
+    },
+    {
+      "name": "lng",
+      "type": "number",
+      "label": "Longitude",
+      "required": true
+    },
+    {
+      "name": "tz",
+      "type": "text",
+      "label": "Time zone"
+    },
+    {
+      "name": "built",
+      "type": "text",
+      "label": "Last built"
+    },
+    {
+      "name": "stops",
+      "type": "number",
+      "label": "Stops"
+    },
+    {
+      "name": "enabled",
+      "type": "bool",
+      "label": "Enabled",
+      "default": true
+    },
+    {
+      "name": "notes",
+      "type": "text",
+      "label": "Notes"
+    }
+  ],
+  "views": [
+    { "name": "name", "type": "text", "label": "Name", "required": true },
+    { "name": "lat", "type": "number", "label": "Latitude", "required": true },
+    { "name": "lng", "type": "number", "label": "Longitude", "required": true },
+    { "name": "zoom", "type": "number", "label": "Zoom" },
+    { "name": "radius", "type": "number", "label": "Radius" },
+    { "name": "mode", "type": "text", "label": "Mode" },
+    { "name": "hidden", "type": "text", "label": "Hidden routes" }
+  ]
+}

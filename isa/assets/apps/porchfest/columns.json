@@ -1,0 +1,82 @@
+{
+  "viewPrefs": [
+    {
+      "name": "view",
+      "type": "text",
+      "label": "View"
+    }
+  ],
+  "events": [
+    {
+      "name": "artist",
+      "type": "text",
+      "label": "Artist",
+      "required": true
+    },
+    {
+      "name": "start",
+      "type": "text",
+      "label": "Start time"
+    },
+    {
+      "name": "startMin",
+      "type": "number",
+      "label": "Start (min after noon)"
+    },
+    {
+      "name": "hour",
+      "type": "text",
+      "label": "Hour"
+    },
+    {
+      "name": "address",
+      "type": "text",
+      "label": "Address"
+    },
+    {
+      "name": "locNum",
+      "type": "text",
+      "label": "Map #"
+    },
+    {
+      "name": "genre",
+      "type": "text",
+      "label": "Genre"
+    },
+    {
+      "name": "genreTag",
+      "type": "text",
+      "label": "Genre (chip)"
+    },
+    {
+      "name": "url",
+      "type": "text",
+      "label": "Performer page"
+    },
+    {
+      "name": "lat",
+      "type": "number",
+      "label": "Latitude"
+    },
+    {
+      "name": "lon",
+      "type": "number",
+      "label": "Longitude"
+    },
+    {
+      "name": "day",
+      "type": "text",
+      "label": "Day"
+    },
+    {
+      "name": "zone",
+      "type": "text",
+      "label": "Time zone"
+    },
+    {
+      "name": "slot",
+      "type": "text",
+      "label": "Day + time slot"
+    }
+  ]
+}

@@ -1,0 +1,3318 @@
+{
+  "app": {
+    "title": "Games",
+    "primaryColor": "#19E6C0",
+    "theme": "arcade",
+    "autosave": true,
+    "liveSeconds": 2,
+    "translatable": true,
+    "languages": [
+      "en",
+      "fr",
+      "de",
+      "es",
+      "it",
+      "sv",
+      "cs",
+      "el",
+      "ko",
+      "zh",
+      "ja"
+    ]
+  },
+  "nav": [
+    {
+      "id": "home",
+      "label": {
+        "en": "Home",
+        "ko": "홈",
+        "fr": "Accueil",
+        "de": "Start",
+        "es": "Inicio",
+        "it": "Home",
+        "sv": "Hem",
+        "cs": "Domů",
+        "el": "Αρχική",
+        "zh": "主页",
+        "ja": "ホーム"
+      },
+      "icon": "dashboard",
+      "screen": "home"
+    },
+    {
+      "id": "runner",
+      "label": "Runner",
+      "icon": "sports_esports",
+      "screen": "runner"
+    },
+    {
+      "id": "chess",
+      "label": {
+        "en": "Chess",
+        "ko": "체스",
+        "fr": "Échecs",
+        "de": "Schach",
+        "es": "Ajedrez",
+        "it": "Scacchi",
+        "sv": "Schack",
+        "cs": "Šachy",
+        "el": "Σκάκι",
+        "zh": "国际象棋",
+        "ja": "チェス"
+      },
+      "icon": "grid_on",
+      "screen": "chess"
+    },
+    {
+      "id": "skirmish",
+      "label": {
+        "en": "Skirmish",
+        "ko": "스커미시",
+        "fr": "Escarmouche",
+        "de": "Scharmützel",
+        "es": "Escaramuza",
+        "it": "Schermaglia",
+        "sv": "Skärmytsling",
+        "cs": "Šarvátka",
+        "el": "Αψιμαχία",
+        "zh": "小规模战斗",
+        "ja": "スカーミッシュ"
+      },
+      "icon": "shield",
+      "screen": "skirmish"
+    }
+  ],
+  "screens": {
+    "chess": {
+      "title": {
+        "en": "Chess",
+        "ko": "체스",
+        "fr": "Échecs",
+        "de": "Schach",
+        "es": "Ajedrez",
+        "it": "Scacchi",
+        "sv": "Schack",
+        "cs": "Šachy",
+        "el": "Σκάκι",
+        "zh": "国际象棋",
+        "ja": "チェス"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Full-rules chess: tap a piece, then a highlighted square. Castling, en passant, promotion, check and mate are enforced. Matches are plain data — they persist, take-back works, and when devices sync you can play one side from each.",
+              "ko": "정식 룰 체스: 말을 누른 뒤 표시된 칸을 누르세요. 캐슬링, 앙파상, 승격까지 모두 지원합니다.",
+              "fr": "Échecs aux règles complètes : touchez une pièce, puis une case en surbrillance. Roque, prise en passant, promotion — tout y est.",
+              "de": "Schach mit allen Regeln: Figur antippen, dann ein markiertes Feld. Rochade, en passant, Umwandlung — alles dabei.",
+              "es": "Ajedrez con reglas completas: toca una pieza y luego una casilla resaltada. Enroque, captura al paso, promoción — todo incluido.",
+              "it": "Scacchi con regole complete: tocca un pezzo, poi una casella evidenziata. Arrocco, en passant, promozione — c'è tutto.",
+              "sv": "Schack med fullständiga regler: tryck på en pjäs och sedan på en markerad ruta. Rockad, en passant, promovering — allt finns.",
+              "cs": "Šachy s úplnými pravidly: klepněte na figurku a pak na zvýrazněné pole. Rošáda, braní mimochodem, proměna — vše funguje.",
+              "el": "Σκάκι με πλήρεις κανόνες: πατήστε ένα κομμάτι και μετά ένα φωτισμένο τετράγωνο. Ροκέ, αν πασάν, προαγωγή — όλα υποστηρίζονται.",
+              "zh": "完整规则的国际象棋：点击一个棋子，再点击高亮的方格。王车易位、吃过路兵、升变、将军和将死都会被强制执行。对局只是普通数据——它们会被保存，可以悔棋，设备同步后你还能各执一方对弈。",
+              "ja": "フルルールのチェス：駒をタップしてからハイライトされたマスをタップします。キャスリング、アンパッサン、プロモーション、チェック、チェックメイトが適用されます。対局は単なるデータで、保存され、待ったも可能。デバイスを同期すれば、双方を別々の端末でプレイできます。"
+            }
+          },
+          {
+            "type": "chessboard",
+            "table": "matches"
+          }
+        ]
+      }
+    },
+    "skirmish": {
+      "title": {
+        "en": "Skirmish",
+        "ko": "스커미시",
+        "fr": "Escarmouche",
+        "de": "Scharmützel",
+        "es": "Escaramuza",
+        "it": "Schermaglia",
+        "sv": "Skärmytsling",
+        "cs": "Šarvátka",
+        "el": "Αψιμαχία",
+        "zh": "小规模战斗",
+        "ja": "スカーミッシュ"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "A tiny turn-based wargame, tabletop style. Drag units to maneuver; resolve fights with the dice and edit the loser's HP (tap a unit). Recruiting is on your honor — a recruit costs 5 gold, so check the tiles first. End turn pays each side +6 gold minus 1 upkeep per unit and logs the round.",
+              "ko": "작은 턴제 전쟁 게임, 테이블탑 스타일. 유닛을 끌어 기동하고, 주사위로 교전을 해결하세요.",
+              "fr": "Un petit wargame au tour par tour, façon jeu de plateau. Glissez les unités pour manœuvrer ; résolvez les combats aux dés.",
+              "de": "Ein kleines rundenbasiertes Kriegsspiel im Tabletop-Stil. Einheiten zum Manövrieren ziehen; Gefechte mit Würfeln entscheiden.",
+              "es": "Un pequeño juego de guerra por turnos, estilo tablero. Arrastra unidades para maniobrar; resuelve choques con dados.",
+              "it": "Un piccolo wargame a turni, in stile da tavolo. Trascina le unità per manovrare; risolvi gli scontri con i dadi.",
+              "sv": "Ett litet turordningsbaserat krigsspel i bordsspelsstil. Dra enheter för att manövrera; avgör strider med tärningar.",
+              "cs": "Malá tahová válečná hra ve stylu deskovky. Přetahujte jednotky a střety řešte kostkami.",
+              "el": "Ένα μικρό πολεμικό παιχνίδι γύρων, σε στιλ επιτραπέζιου. Σύρετε μονάδες για ελιγμούς· κρίνετε τις συγκρούσεις με ζάρια.",
+              "zh": "一个桌面风格的小型回合制战棋游戏。拖动单位进行机动；用骰子结算战斗并编辑落败方的生命值（点击单位）。招募靠自觉——一个新兵花费5金币，所以先看看地块。结束回合时，每方获得+6金币，每个单位减去1点维护费，并记录该回合。",
+              "ja": "テーブルトップ風の小さなターン制ウォーゲーム。ユニットをドラッグして移動し、サイコロで戦闘を解決して敗者のHPを編集します（ユニットをタップ）。徴兵は自己申告制——新兵は5ゴールドかかるので、まずタイルを確認しましょう。ターン終了で各陣営は+6ゴールド、ユニットごとに維持費1を引き、ラウンドを記録します。"
+            }
+          },
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "stat",
+                "table": "war",
+                "agg": "sum",
+                "valueColumn": "turn",
+                "label": {
+                  "en": "Turn",
+                  "ko": "턴",
+                  "fr": "Tour",
+                  "de": "Zug",
+                  "es": "Turno",
+                  "it": "Turno",
+                  "sv": "Tur",
+                  "cs": "Tah",
+                  "el": "Γύρος",
+                  "zh": "回合",
+                  "ja": "ターン"
+                }
+              },
+              {
+                "type": "stat",
+                "table": "war",
+                "agg": "sum",
+                "valueColumn": "blueGold",
+                "label": {
+                  "en": "Blue gold",
+                  "ko": "파랑 골드",
+                  "fr": "Or bleu",
+                  "de": "Blaues Gold",
+                  "es": "Oro azul",
+                  "it": "Oro blu",
+                  "sv": "Blått guld",
+                  "cs": "Modré zlato",
+                  "el": "Μπλε χρυσός",
+                  "zh": "蓝方金币",
+                  "ja": "青のゴールド"
+                },
+                "color": "blue"
+              },
+              {
+                "type": "stat",
+                "table": "war",
+                "agg": "sum",
+                "valueColumn": "redGold",
+                "label": {
+                  "en": "Red gold",
+                  "ko": "빨강 골드",
+                  "fr": "Or rouge",
+                  "de": "Rotes Gold",
+                  "es": "Oro rojo",
+                  "it": "Oro rosso",
+                  "sv": "Rött guld",
+                  "cs": "Červené zlato",
+                  "el": "Κόκκινος χρυσός",
+                  "zh": "红方金币",
+                  "ja": "赤のゴールド"
+                },
+                "color": "red"
+              },
+              {
+                "type": "stat",
+                "table": "war",
+                "agg": "sum",
+                "valueColumn": "lastRoll",
+                "label": {
+                  "en": "Last roll",
+                  "ko": "마지막 굴림",
+                  "fr": "Dernier jet",
+                  "de": "Letzter Wurf",
+                  "es": "Última tirada",
+                  "it": "Ultimo lancio",
+                  "sv": "Senaste kast",
+                  "cs": "Poslední hod",
+                  "el": "Τελευταία ζαριά",
+                  "zh": "上次掷骰",
+                  "ja": "最後の出目"
+                },
+                "color": "amber"
+              }
+            ]
+          },
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": {
+                  "en": "Recruit blue",
+                  "ko": "파랑 모병",
+                  "fr": "Recruter bleu",
+                  "de": "Blau rekrutieren",
+                  "es": "Reclutar azul",
+                  "it": "Recluta blu",
+                  "sv": "Värva blå",
+                  "cs": "Naverbovat modré",
+                  "el": "Στρατολόγηση μπλε",
+                  "zh": "招募蓝方",
+                  "ja": "青を徴兵"
+                },
+                "icon": "add",
+                "action": {
+                  "fn": "addRow",
+                  "args": {
+                    "table": "units",
+                    "values": {
+                      "label": "⚔️ Infantry",
+                      "side": "blue",
+                      "kind": "infantry",
+                      "hp": 10,
+                      "x": 220,
+                      "y": 200
+                    }
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "Recruit red",
+                  "ko": "빨강 모병",
+                  "fr": "Recruter rouge",
+                  "de": "Rot rekrutieren",
+                  "es": "Reclutar rojo",
+                  "it": "Recluta rosso",
+                  "sv": "Värva röd",
+                  "cs": "Naverbovat červené",
+                  "el": "Στρατολόγηση κόκκινων",
+                  "zh": "招募红方",
+                  "ja": "赤を徴兵"
+                },
+                "icon": "add",
+                "action": {
+                  "fn": "addRow",
+                  "args": {
+                    "table": "units",
+                    "values": {
+                      "label": "⚔️ Infantry",
+                      "side": "red",
+                      "kind": "infantry",
+                      "hp": 10,
+                      "x": 460,
+                      "y": 200
+                    }
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "Roll 2d6",
+                  "ko": "주사위 2d6 굴리기",
+                  "fr": "Lancer 2d6",
+                  "de": "2W6 würfeln",
+                  "es": "Tirar 2d6",
+                  "it": "Lancia 2d6",
+                  "sv": "Slå 2t6",
+                  "cs": "Hodit 2k6",
+                  "el": "Ρίξε 2δ6",
+                  "zh": "掷 2d6",
+                  "ja": "2d6を振る"
+                },
+                "action": {
+                  "fn": "roll",
+                  "args": {
+                    "table": "war",
+                    "id": "w1",
+                    "column": "lastRoll",
+                    "sides": 6,
+                    "count": 2
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "End turn",
+                  "ko": "턴 종료",
+                  "fr": "Fin du tour",
+                  "de": "Zug beenden",
+                  "es": "Terminar turno",
+                  "it": "Fine turno",
+                  "sv": "Avsluta tur",
+                  "cs": "Ukončit tah",
+                  "el": "Τέλος γύρου",
+                  "zh": "结束回合",
+                  "ja": "ターン終了"
+                },
+                "icon": "check",
+                "action": {
+                  "fn": "endTurn",
+                  "args": {
+                    "state": "war",
+                    "stateId": "w1",
+                    "units": "units",
+                    "tallies": {
+                      "blue": {
+                        "column": "side",
+                        "value": "blue"
+                      },
+                      "red": {
+                        "column": "side",
+                        "value": "red"
+                      }
+                    },
+                    "effects": [
+                      {
+                        "field": "blueArmy",
+                        "mode": "set",
+                        "base": 0,
+                        "terms": [
+                          {
+                            "tally": "blue",
+                            "coef": 1
+                          }
+                        ]
+                      },
+                      {
+                        "field": "redArmy",
+                        "mode": "set",
+                        "base": 0,
+                        "terms": [
+                          {
+                            "tally": "red",
+                            "coef": 1
+                          }
+                        ]
+                      },
+                      {
+                        "field": "blueGold",
+                        "mode": "add",
+                        "base": 6,
+                        "terms": [
+                          {
+                            "tally": "blue",
+                            "coef": -1
+                          }
+                        ],
+                        "min": 0
+                      },
+                      {
+                        "field": "redGold",
+                        "mode": "add",
+                        "base": 6,
+                        "terms": [
+                          {
+                            "tally": "red",
+                            "coef": -1
+                          }
+                        ],
+                        "min": 0
+                      }
+                    ],
+                    "turnField": "turn",
+                    "history": {
+                      "table": "warlog",
+                      "copy": [
+                        "turn",
+                        "blueGold",
+                        "redGold",
+                        "blueArmy",
+                        "redArmy"
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "canvas",
+            "nodesTable": "units",
+            "layout": "free",
+            "xColumn": "x",
+            "yColumn": "y",
+            "labelColumn": "label",
+            "colorColumn": "side",
+            "colors": {
+              "blue": "blue",
+              "red": "red"
+            },
+            "action": {
+              "fn": "editRow"
+            },
+            "fillPhone": true
+          },
+          {
+            "type": "historybar"
+          }
+        ]
+      }
+    },
+    "matches": {
+      "title": {
+        "en": "Matches",
+        "ko": "대국",
+        "fr": "Parties",
+        "de": "Partien",
+        "es": "Partidas",
+        "it": "Partite",
+        "sv": "Partier",
+        "cs": "Partie",
+        "el": "Παρτίδες",
+        "zh": "对局",
+        "ja": "対局"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Every chess match, and the skirmish round log. Tap a match to rename it; the Chess board's dropdown switches between matches.",
+              "ko": "모든 체스 대국과 스커미시 라운드 기록. 대국을 누르면 이름을 바꾸거나 자세히 볼 수 있습니다.",
+              "fr": "Toutes les parties d'échecs et le journal des manches d'escarmouche. Touchez une partie pour la renommer ou voir les détails.",
+              "de": "Alle Schachpartien und das Rundenprotokoll des Scharmützels. Partie antippen zum Umbenennen oder für Details.",
+              "es": "Cada partida de ajedrez y el registro de rondas de escaramuza. Toca una partida para renombrarla o ver detalles.",
+              "it": "Tutte le partite di scacchi e il registro dei round di schermaglia. Tocca una partita per rinominarla o vedere i dettagli.",
+              "sv": "Alla schackpartier och skärmytslingens rondlogg. Tryck på ett parti för att byta namn eller se detaljer.",
+              "cs": "Všechny šachové partie a záznam kol šarvátky. Klepnutím partii přejmenujete nebo zobrazíte podrobnosti.",
+              "el": "Όλες οι παρτίδες σκακιού και το ημερολόγιο γύρων της αψιμαχίας. Πατήστε μια παρτίδα για μετονομασία ή λεπτομέρειες.",
+              "zh": "每一局国际象棋，以及小规模战斗的回合记录。点击一局可重命名；棋盘上的下拉菜单可在各局之间切换。",
+              "ja": "すべてのチェスの対局と、小競り合いのラウンドログ。対局をタップして名前を変更できます。チェス盤のドロップダウンで対局を切り替えられます。"
+            }
+          },
+          {
+            "type": "cards",
+            "table": "matches",
+            "title": "title",
+            "subtitle": "status",
+            "action": {
+              "fn": "editRow"
+            },
+            "emptyIcon": "grid_on",
+            "emptyTitle": "No matches yet",
+            "emptyText": "Start a chess match and it will show up here, ready to pick up any time.",
+            "emptyActionLabel": "New chess match",
+            "emptyAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "matches",
+                "values": {
+                  "title": "New match",
+                  "status": "White to move",
+                  "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+                  "moves": []
+                }
+              }
+            }
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": {
+              "en": "Skirmish rounds",
+              "ko": "스커미시 라운드",
+              "fr": "Manches d'escarmouche",
+              "de": "Scharmützel-Runden",
+              "es": "Rondas de escaramuza",
+              "it": "Round di schermaglia",
+              "sv": "Skärmytslingsronder",
+              "cs": "Kola šarvátky",
+              "el": "Γύροι αψιμαχίας",
+              "zh": "战斗回合",
+              "ja": "小競り合いのラウンド"
+            }
+          },
+          {
+            "type": "table",
+            "table": "warlog",
+            "columns": [
+              "turn",
+              "blueGold",
+              "redGold",
+              "blueArmy",
+              "redArmy"
+            ],
+            "height": "fill"
+          }
+        ]
+      }
+    },
+    "home": {
+      "title": {
+        "en": "Games",
+        "ko": "게임",
+        "fr": "Jeux",
+        "de": "Spiele",
+        "es": "Juegos",
+        "it": "Giochi",
+        "sv": "Spel",
+        "cs": "Hry",
+        "el": "Παιχνίδια",
+        "zh": "游戏",
+        "ja": "ゲーム"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Pick a game. Share the room from below to play live with friends."
+          },
+          {
+            "type": "console",
+            "table": "games",
+            "header": "GAMES",
+            "titleColumn": "name",
+            "subtitleColumn": "tagline",
+            "groupColumn": "genre",
+            "groupOrder": [
+              "board",
+              "cards",
+              "dice",
+              "party",
+              "strategy",
+              "sandbox",
+              "shop"
+            ],
+            "action": {
+              "fn": "goto",
+              "args": {
+                "screenColumn": "screen"
+              }
+            }
+          },
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": {
+                  "en": "Share — live room",
+                  "ko": "공유 — 라이브 룸",
+                  "fr": "Partager — salle live",
+                  "de": "Teilen — Live-Raum",
+                  "es": "Compartir — sala en vivo",
+                  "it": "Condividi — stanza live",
+                  "sv": "Dela — live-rum",
+                  "cs": "Sdílet — živá místnost",
+                  "el": "Κοινοποίηση — ζωντανό δωμάτιο",
+                  "zh": "分享 — 实时房间",
+                  "ja": "共有 — ライブルーム"
+                },
+                "icon": "upload",
+                "action": {
+                  "fn": "shareBoard"
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "New chess match",
+                  "ko": "새 체스 대국",
+                  "fr": "Nouvelle partie d'échecs",
+                  "de": "Neue Schachpartie",
+                  "es": "Nueva partida de ajedrez",
+                  "it": "Nuova partita di scacchi",
+                  "sv": "Nytt schackparti",
+                  "cs": "Nová šachová partie",
+                  "el": "Νέα παρτίδα σκακιού",
+                  "zh": "新建国际象棋对局",
+                  "ja": "新しいチェスの対局"
+                },
+                "icon": "add",
+                "action": {
+                  "fn": "addRow",
+                  "args": {
+                    "table": "matches",
+                    "values": {
+                      "title": "New match",
+                      "status": "White to move",
+                      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+                      "moves": []
+                    }
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "All matches",
+                  "ko": "전체 대국",
+                  "fr": "Toutes les parties",
+                  "de": "Alle Partien",
+                  "es": "Todas las partidas",
+                  "it": "Tutte le partite",
+                  "sv": "Alla partier",
+                  "cs": "Všechny partie",
+                  "el": "Όλες οι παρτίδες",
+                  "zh": "所有对局",
+                  "ja": "すべての対局"
+                },
+                "icon": "filter",
+                "action": {
+                  "fn": "goto",
+                  "args": {
+                    "screen": "matches"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Create a game: turn on edit mode (the app editor) to add a screen and tables — that's all a game is. The Free board is a blank tabletop for prototyping one before you formalize it.",
+              "ko": "게임 만들기: 편집 모드(앱 에디터)에서 화면과 보드를 추가하세요. 이 허브에는 모든 화면이 자동으로 나타납니다.",
+              "fr": "Créez un jeu : activez le mode édition (l'éditeur d'app) pour ajouter un écran et un plateau — cet espace liste chaque écran automatiquement.",
+              "de": "Eigenes Spiel: Bearbeitungsmodus (App-Editor) einschalten, Bildschirm und Brett hinzufügen — dieser Hub listet jeden Bildschirm automatisch.",
+              "es": "Crea un juego: activa el modo edición (el editor de la app) para añadir una pantalla y un tablero — este centro lista cada pantalla automáticamente.",
+              "it": "Crea un gioco: attiva la modalità modifica (l'editor dell'app) per aggiungere una schermata e una board — questo hub elenca ogni schermata automaticamente.",
+              "sv": "Skapa ett spel: slå på redigeringsläget (appredigeraren) och lägg till en skärm och ett bräde — hubben listar varje skärm automatiskt.",
+              "cs": "Vytvoř hru: zapni režim úprav (editor aplikace), přidej obrazovku a desku — rozcestník zobrazí každou obrazovku automaticky.",
+              "el": "Φτιάξε παιχνίδι: ενεργοποίησε τη λειτουργία επεξεργασίας (επεξεργαστής εφαρμογής) για να προσθέσεις οθόνη και πίνακα — το κέντρο εμφανίζει κάθε οθόνη αυτόματα.",
+              "zh": "创建一个游戏：开启编辑模式（应用编辑器）来添加屏幕和数据表——游戏就是这么简单。Free board 是一块空白桌面，可在正式制作之前用来构建原型。",
+              "ja": "ゲームを作る：編集モード（アプリエディタ）をオンにして画面とテーブルを追加します——ゲームとはそれだけのものです。Free boardは空白のテーブルトップで、正式に作る前にプロトタイプを試せます。"
+            }
+          }
+        ]
+      }
+    },
+    "freeboard": {
+      "title": {
+        "en": "Free board",
+        "ko": "자유 보드",
+        "fr": "Plateau libre",
+        "de": "Freies Brett",
+        "es": "Tablero libre",
+        "it": "Board libera",
+        "sv": "Fritt bräde",
+        "cs": "Volná deska",
+        "el": "Ελεύθερος πίνακας",
+        "zh": "自由棋盘",
+        "ja": "フリーボード"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "A blank tabletop: add pieces, drag them, invent the rules as you go. Share a live room from Home to play it together.",
+              "ko": "빈 테이블탑: 말을 추가하고 끌어 움직이며 규칙을 자유롭게 만드세요. 룸으로 공유하면 함께 플레이할 수 있습니다.",
+              "fr": "Un plateau vierge : ajoutez des pièces, déplacez-les, inventez les règles en jouant. Partagez en salle pour jouer ensemble.",
+              "de": "Ein leerer Spieltisch: Figuren hinzufügen, ziehen, Regeln unterwegs erfinden. Als Raum teilen und zusammen spielen.",
+              "es": "Un tablero en blanco: añade piezas, arrástralas, inventa las reglas sobre la marcha. Compártelo como sala para jugar juntos.",
+              "it": "Un tavolo vuoto: aggiungi pezzi, trascinali, inventa le regole strada facendo. Condividi come stanza per giocare insieme.",
+              "sv": "Ett tomt spelbord: lägg till pjäser, dra dem, hitta på reglerna efter hand. Dela som rum och spela tillsammans.",
+              "cs": "Prázdný herní stůl: přidávej figurky, přetahuj je a pravidla si vymýšlej za pochodu. Sdílej jako místnost a hrajte spolu.",
+              "el": "Ένα κενό τραπέζι: πρόσθεσε κομμάτια, σύρε τα, εφεύρε τους κανόνες στην πορεία. Μοιράσου το ως δωμάτιο για να παίξετε μαζί.",
+              "zh": "一块空白桌面：添加棋子、拖动它们、随心所欲地发明规则。在主页分享实时房间即可一起游玩。",
+              "ja": "空白のテーブルトップ：駒を追加し、ドラッグして、進めながらルールを考えます。ホームからライブルームを共有すれば一緒に遊べます。"
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "Add piece",
+              "ko": "말 추가",
+              "fr": "Ajouter une pièce",
+              "de": "Figur hinzufügen",
+              "es": "Añadir pieza",
+              "it": "Aggiungi pezzo",
+              "sv": "Lägg till pjäs",
+              "cs": "Přidat figurku",
+              "el": "Προσθήκη κομματιού",
+              "zh": "添加棋子",
+              "ja": "駒を追加"
+            },
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "pieces",
+                "values": {
+                  "label": "Piece",
+                  "owner": "neutral",
+                  "x": 200,
+                  "y": 200
+                }
+              }
+            }
+          },
+          {
+            "type": "canvas",
+            "nodesTable": "pieces",
+            "layout": "free",
+            "xColumn": "x",
+            "yColumn": "y",
+            "labelColumn": "label",
+            "colorColumn": "owner",
+            "colors": {
+              "p1": "blue",
+              "p2": "red",
+              "p3": "green",
+              "p4": "amber",
+              "neutral": "gray"
+            },
+            "action": {
+              "fn": "editRow"
+            },
+            "fillPhone": true
+          }
+        ]
+      }
+    },
+    "blackjack": {
+      "title": "Blackjack",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": "Chips",
+                "action": {
+                  "fn": "goto",
+                  "args": {
+                    "screen": "blackjack_chips"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "How to",
+                "action": {
+                  "fn": "goto",
+                  "args": {
+                    "screen": "blackjack_howto"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "Sit: Player 1",
+                "action": {
+                  "fn": "setSetting",
+                  "args": {
+                    "key": "playerId",
+                    "value": "p1"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Sit: Player 2",
+                "action": {
+                  "fn": "setSetting",
+                  "args": {
+                    "key": "playerId",
+                    "value": "p2"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Sit: Player 3",
+                "action": {
+                  "fn": "setSetting",
+                  "args": {
+                    "key": "playerId",
+                    "value": "p3"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "Deal new round",
+                "icon": "refresh",
+                "action": {
+                  "fn": "dealCards",
+                  "args": {
+                    "table": "blackjack_cards",
+                    "players": [
+                      "p1",
+                      "p2",
+                      "p3"
+                    ],
+                    "handSize": 2
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Hit me",
+                "icon": "add_card",
+                "action": {
+                  "fn": "drawCard",
+                  "args": {
+                    "table": "blackjack_cards",
+                    "to": "$playerId"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Dealer draws",
+                "icon": "person",
+                "action": {
+                  "fn": "drawCard",
+                  "args": {
+                    "table": "blackjack_cards",
+                    "to": "table",
+                    "faceUp": true
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Hands"
+          },
+          {
+            "type": "cardtable",
+            "table": "blackjack_cards",
+            "filter": {
+              "column": "holder",
+              "in": [
+                "p1",
+                "p2",
+                "p3",
+                "table"
+              ]
+            },
+            "layout": "fan",
+            "cardWidth": 64,
+            "pileOrder": [
+              "table",
+              "p1",
+              "p2",
+              "p3"
+            ],
+            "pileLabels": {
+              "p1": "Player 1",
+              "p2": "Player 2",
+              "p3": "Player 3",
+              "table": "Dealer"
+            }
+          }
+        ]
+      }
+    },
+    "blackjack_chips": {
+      "title": "Chips",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Settle bets by hand after each round — tap a player to edit chips and bet."
+          },
+          {
+            "type": "table",
+            "table": "blackjack_players",
+            "columns": [
+              "name",
+              "chips",
+              "bet"
+            ]
+          }
+        ]
+      }
+    },
+    "blackjack_howto": {
+      "title": "How to play",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Blackjack (21)"
+          },
+          {
+            "type": "text",
+            "value": "1. Each device taps its seat once (Sit: Player N).\n2. Deal new round — everyone gets 2 private cards.\n3. Hit me draws to YOUR hand (stays private). Dealer draws plays to the table, face up.\n4. Closest to 21 without busting wins; settle chips on the Chips tab.\n5. Deal new round reshuffles a fresh shoe."
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Multiplayer: share this applet's data via a room code (menu, Share by code) or play pass-and-play on one device."
+          }
+        ]
+      }
+    },
+    "old_maid": {
+      "title": "Old Maid",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": "How to",
+                "action": {
+                  "fn": "goto",
+                  "args": {
+                    "screen": "old_maid_howto"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "Sit: Player 1",
+                "action": {
+                  "fn": "setSetting",
+                  "args": {
+                    "key": "playerId",
+                    "value": "p1"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Sit: Player 2",
+                "action": {
+                  "fn": "setSetting",
+                  "args": {
+                    "key": "playerId",
+                    "value": "p2"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Sit: Player 3",
+                "action": {
+                  "fn": "setSetting",
+                  "args": {
+                    "key": "playerId",
+                    "value": "p3"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "button",
+            "label": "Deal new game",
+            "icon": "refresh",
+            "action": {
+              "fn": "dealCards",
+              "args": {
+                "table": "old_maid_cards",
+                "players": [
+                  "p1",
+                  "p2",
+                  "p3"
+                ],
+                "handSize": "all",
+                "without": [
+                  "Q♣"
+                ]
+              }
+            }
+          },
+          {
+            "type": "segments",
+            "segments": [
+              {
+                "label": "Discard pairs",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "text",
+                      "style": "caption",
+                      "value": "Got two cards of the same rank? Tap each of the two cards in YOUR hand to throw the pair away."
+                    },
+                    {
+                      "type": "cardtable",
+                      "table": "old_maid_cards",
+                      "filter": {
+                        "column": "holder",
+                        "in": [
+                          "p1",
+                          "p2",
+                          "p3"
+                        ]
+                      },
+                      "layout": "fan",
+                      "cardWidth": 52,
+                      "action": {
+                        "fn": "setField",
+                        "args": {
+                          "column": "holder",
+                          "value": "discard"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Pass a card left",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "text",
+                      "style": "caption",
+                      "value": "Your turn: tap ONE card in your hand to put it face down on the pass pile. Then your left neighbour taps it below to take it (without peeking first — honor system)."
+                    },
+                    {
+                      "type": "cardtable",
+                      "table": "old_maid_cards",
+                      "filter": {
+                        "column": "holder",
+                        "in": [
+                          "p1",
+                          "p2",
+                          "p3"
+                        ]
+                      },
+                      "layout": "fan",
+                      "cardWidth": 52,
+                      "action": {
+                        "fn": "setField",
+                        "args": {
+                          "column": "holder",
+                          "value": "pass"
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "style": "subtitle",
+                      "value": "Pass pile — receiver taps to take"
+                    },
+                    {
+                      "type": "cardtable",
+                      "table": "old_maid_cards",
+                      "filter": {
+                        "column": "holder",
+                        "value": "pass"
+                      },
+                      "layout": "fan",
+                      "cardWidth": 52,
+                      "action": {
+                        "fn": "setField",
+                        "args": {
+                          "column": "holder",
+                          "value": "$playerId"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "old_maid_howto": {
+      "title": "How to play",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Old Maid"
+          },
+          {
+            "type": "text",
+            "value": "1. Each device taps its seat once (Sit: Player N).\n2. Deal new game — the whole deck (minus the Q♣) is split between the three players, so one queen has no pair.\n3. Everyone discards their pairs: on the Discard pairs tab, tap both cards of a same-rank pair in YOUR hand.\n4. Then take turns passing: on the Pass a card left tab, the passer taps one card (it goes face down to the pass pile); the player to their left taps the pass-pile card to take it into their hand.\n5. After taking, discard any new pair you made, then it is your turn to pass.\n6. Players who run out of cards are safe. The game ends when only the odd queen is left in someone's hand — that player is the Old Maid and loses."
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Honor system: the table keeps honest shared state (your cards stay private to your device), but turn order and not-peeking are up to you. Only tap cards in your own hand."
+          }
+        ]
+      }
+    },
+    "go_fish": {
+      "title": "Go Fish",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": "How to",
+                "action": {
+                  "fn": "goto",
+                  "args": {
+                    "screen": "go_fish_howto"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "Sit: Player 1",
+                "action": {
+                  "fn": "setSetting",
+                  "args": {
+                    "key": "playerId",
+                    "value": "p1"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Sit: Player 2",
+                "action": {
+                  "fn": "setSetting",
+                  "args": {
+                    "key": "playerId",
+                    "value": "p2"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Sit: Player 3",
+                "action": {
+                  "fn": "setSetting",
+                  "args": {
+                    "key": "playerId",
+                    "value": "p3"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "Deal new game",
+                "icon": "refresh",
+                "action": {
+                  "fn": "dealCards",
+                  "args": {
+                    "table": "go_fish_cards",
+                    "players": [
+                      "p1",
+                      "p2",
+                      "p3"
+                    ],
+                    "handSize": 7
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Go fish!",
+                "action": {
+                  "fn": "drawCard",
+                  "args": {
+                    "table": "go_fish_cards",
+                    "to": "$playerId"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "segments",
+            "segments": [
+              {
+                "label": "Hands & asking",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "text",
+                      "style": "caption",
+                      "value": "Asked for a rank you have? Tap those cards in YOUR hand to put them in the middle; the asker taps them below to take them."
+                    },
+                    {
+                      "type": "cardtable",
+                      "table": "go_fish_cards",
+                      "filter": {
+                        "column": "holder",
+                        "in": [
+                          "p1",
+                          "p2",
+                          "p3"
+                        ]
+                      },
+                      "layout": "fan",
+                      "cardWidth": 52,
+                      "action": {
+                        "fn": "setField",
+                        "args": {
+                          "column": "holder",
+                          "value": "pass"
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "style": "subtitle",
+                      "value": "In the middle — asker taps to take"
+                    },
+                    {
+                      "type": "cardtable",
+                      "table": "go_fish_cards",
+                      "filter": {
+                        "column": "holder",
+                        "value": "pass"
+                      },
+                      "layout": "fan",
+                      "cardWidth": 52,
+                      "action": {
+                        "fn": "setField",
+                        "args": {
+                          "column": "holder",
+                          "value": "$playerId"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Lay down books",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "text",
+                      "style": "caption",
+                      "value": "Collected all 4 of a rank? Tap each of the 4 cards in YOUR section to lay the book down — it counts on your score tile above."
+                    },
+                    {
+                      "type": "text",
+                      "style": "subtitle",
+                      "value": "Player 1's hand"
+                    },
+                    {
+                      "type": "cardtable",
+                      "table": "go_fish_cards",
+                      "filter": {
+                        "column": "holder",
+                        "value": "p1"
+                      },
+                      "layout": "fan",
+                      "cardWidth": 52,
+                      "action": {
+                        "fn": "setField",
+                        "args": {
+                          "column": "holder",
+                          "value": "books1"
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "style": "subtitle",
+                      "value": "Player 2's hand"
+                    },
+                    {
+                      "type": "cardtable",
+                      "table": "go_fish_cards",
+                      "filter": {
+                        "column": "holder",
+                        "value": "p2"
+                      },
+                      "layout": "fan",
+                      "cardWidth": 52,
+                      "action": {
+                        "fn": "setField",
+                        "args": {
+                          "column": "holder",
+                          "value": "books2"
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "style": "subtitle",
+                      "value": "Player 3's hand"
+                    },
+                    {
+                      "type": "cardtable",
+                      "table": "go_fish_cards",
+                      "filter": {
+                        "column": "holder",
+                        "value": "p3"
+                      },
+                      "layout": "fan",
+                      "cardWidth": 52,
+                      "action": {
+                        "fn": "setField",
+                        "args": {
+                          "column": "holder",
+                          "value": "books3"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "go_fish_howto": {
+      "title": "How to play",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Go Fish"
+          },
+          {
+            "type": "text",
+            "value": "1. Each device taps its seat once (Sit: Player N).\n2. Deal new game — everyone gets 7 private cards; the rest is the pond.\n3. On your turn, ask one player out loud for a rank you already hold (\"Any sevens?\").\n4. If they have any, they tap those cards in their hand (Hands & asking tab) — the cards go to the middle and you tap them to take them. Then ask again.\n5. If they don't, they say \"Go fish!\" — press the Go fish! button to draw one card from the pond into your hand. Your turn ends (unless you drew the rank you asked for).\n6. When you collect all 4 cards of a rank, lay the book down: on the Lay down books tab, tap each of the 4 cards in your section.\n7. The game ends when the pond is empty and all books are down. Most book cards on the score tiles wins (each book is 4 cards)."
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Honor system: the table keeps honest shared state (hands stay private to each device), but asking truthfully, handing over every matching card, and turn order are up to you. Only tap cards in your own hand."
+          }
+        ]
+      }
+    },
+    "war": {
+      "title": "War",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": "How to",
+                "action": {
+                  "fn": "goto",
+                  "args": {
+                    "screen": "war_howto"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Pick a seat, shuffle, then flip in turn — high card takes both."
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "Sit: Player 1",
+                "action": {
+                  "fn": "setSetting",
+                  "args": {
+                    "key": "playerId",
+                    "value": "p1"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Sit: Player 2",
+                "action": {
+                  "fn": "setSetting",
+                  "args": {
+                    "key": "playerId",
+                    "value": "p2"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "Shuffle new deck",
+                "icon": "refresh",
+                "action": {
+                  "fn": "dealCards",
+                  "args": {
+                    "table": "war_cards",
+                    "players": [],
+                    "handSize": "all"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Flip: Player 1",
+                "action": {
+                  "fn": "drawCard",
+                  "args": {
+                    "table": "war_cards",
+                    "to": "table",
+                    "faceUp": true
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Flip: Player 2",
+                "action": {
+                  "fn": "drawCard",
+                  "args": {
+                    "table": "war_cards",
+                    "to": "table",
+                    "faceUp": true
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Battlefield — winner taps each card to claim it"
+          },
+          {
+            "type": "cardtable",
+            "table": "war_cards",
+            "layout": "piles",
+            "pileOrder": [
+              "p1",
+              "deck",
+              "table",
+              "p2"
+            ],
+            "pileLabels": {
+              "p1": "Player 1",
+              "deck": "Deck",
+              "table": "Battlefield",
+              "p2": "Player 2"
+            },
+            "cardWidth": 72,
+            "action": {
+              "fn": "setField",
+              "args": {
+                "column": "holder",
+                "value": "$playerId"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "war_howto": {
+      "title": "How to play",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": "War"
+          },
+          {
+            "type": "text",
+            "value": "1. Each device taps its seat once (Sit: Player N).\n2. Shuffle new deck — all 52 cards go face down into one shared deck.\n3. Each round, Player 1 presses Flip: Player 1 and Player 2 presses Flip: Player 2 — each flips the top card face up onto the battlefield.\n4. Higher card wins the round. The winner taps BOTH battlefield cards to claim them into their captured pile.\n5. Tie? That's war: each player flips one more card (face up here, for simplicity) — highest new card takes everything on the battlefield.\n6. When the deck runs out, the bigger captured pile wins."
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Honor system: the table keeps honest shared state, but flipping in turn and claiming only your wins is up to you."
+          }
+        ]
+      }
+    },
+    "memory_pairs": {
+      "title": "Memory Pairs",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": "How to",
+                "action": {
+                  "fn": "goto",
+                  "args": {
+                    "screen": "memory_pairs_howto"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Sit once per device, then New game. Tap a numbered spot to flip it; matching cards (same rank, same color) are claimed by tapping them in the flipped row."
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "Sit: Player 1",
+                "action": {
+                  "fn": "setSetting",
+                  "args": {
+                    "key": "playerId",
+                    "value": "p1"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Sit: Player 2",
+                "action": {
+                  "fn": "setSetting",
+                  "args": {
+                    "key": "playerId",
+                    "value": "p2"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "New game",
+                "icon": "refresh",
+                "action": {
+                  "fn": "dealCards",
+                  "args": {
+                    "table": "memory_pairs_cards",
+                    "players": [],
+                    "handSize": 0,
+                    "without": [
+                      "7♠",
+                      "8♠",
+                      "9♠",
+                      "10♠",
+                      "J♠",
+                      "Q♠",
+                      "K♠",
+                      "7♥",
+                      "8♥",
+                      "9♥",
+                      "10♥",
+                      "J♥",
+                      "Q♥",
+                      "K♥",
+                      "7♦",
+                      "8♦",
+                      "9♦",
+                      "10♦",
+                      "J♦",
+                      "Q♦",
+                      "K♦",
+                      "7♣",
+                      "8♣",
+                      "9♣",
+                      "10♣",
+                      "J♣",
+                      "Q♣",
+                      "K♣"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Face down — tap a spot to flip it"
+          },
+          {
+            "type": "cardtable",
+            "table": "memory_pairs_cards",
+            "filter": {
+              "column": "faceUp",
+              "value": false
+            },
+            "layout": "grid",
+            "cardWidth": 56,
+            "action": {
+              "fn": "setField",
+              "args": {
+                "column": "faceUp",
+                "value": true
+              }
+            }
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Face up — matched a pair? Tap both cards to claim them"
+          },
+          {
+            "type": "cardtable",
+            "table": "memory_pairs_cards",
+            "filter": {
+              "column": "faceUp",
+              "value": true
+            },
+            "layout": "grid",
+            "cardWidth": 56,
+            "action": {
+              "fn": "setField",
+              "args": {
+                "column": "holder",
+                "value": "$playerId"
+              }
+            }
+          },
+          {
+            "type": "button",
+            "label": "No match — flip unclaimed back",
+            "icon": "refresh",
+            "action": {
+              "fn": "updateRows",
+              "args": {
+                "table": "memory_pairs_cards",
+                "where": {
+                  "column": "holder",
+                  "value": "deck"
+                },
+                "set": {
+                  "faceUp": false
+                }
+              }
+            }
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "stat",
+                "table": "memory_pairs_cards",
+                "filter": {
+                  "column": "holder",
+                  "value": "p1"
+                },
+                "label": "Player 1 cards",
+                "color": "blue"
+              },
+              {
+                "type": "stat",
+                "table": "memory_pairs_cards",
+                "filter": {
+                  "column": "holder",
+                  "value": "p2"
+                },
+                "label": "Player 2 cards",
+                "color": "teal"
+              },
+              {
+                "type": "stat",
+                "table": "memory_pairs_cards",
+                "filter": {
+                  "column": "holder",
+                  "value": "deck"
+                },
+                "label": "Still on the table",
+                "color": "gray"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "memory_pairs_howto": {
+      "title": "How to play",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Memory Pairs"
+          },
+          {
+            "type": "text",
+            "value": "1. Each device taps its seat once (Sit: Player 1 / Player 2), then anyone taps New game — 24 cards (A-6 of every suit) are shuffled face down into numbered spots.\n2. On your turn, flip TWO cards by tapping their numbered spots; they appear in the face-up row for everyone.\n3. A pair is two cards of the SAME RANK and SAME COLOR (e.g. 4♥ + 4♦, or A♠ + A♣). Made a pair? Tap both face-up cards to claim them into your pile, then take another turn.\n4. No pair? Tap 'No match - flip unclaimed back' to turn them face down again (spot numbers don't change - remember them!), and play passes to the other player.\n5. When the table is empty, the player with more cards wins."
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Honor system: flips are public, shared state. Flip exactly two per turn, only claim true pairs, and only tap YOUR claim on the cards you matched - players enforce the rules, the board just stays honest."
+          }
+        ]
+      }
+    },
+    "backgammon": {
+      "title": "Backgammon",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": "Players",
+                "action": {
+                  "fn": "goto",
+                  "args": {
+                    "screen": "backgammon_players"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "How to",
+                "action": {
+                  "fn": "goto",
+                  "args": {
+                    "screen": "backgammon_howto"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Top row = points 13-24 (left to right); bottom row = points 12-1. The gap mid-board is the BAR; the BEAR OFF zone is on the far right. Roll, then drag your checkers - the board keeps honest positions, you follow the rules."
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "Sit: White",
+                "action": {
+                  "fn": "setSetting",
+                  "args": {
+                    "key": "playerId",
+                    "value": "p1"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Sit: Black",
+                "action": {
+                  "fn": "setSetting",
+                  "args": {
+                    "key": "playerId",
+                    "value": "p2"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "Roll both dice",
+                "icon": "refresh",
+                "action": {
+                  "chain": [
+                    {
+                      "fn": "roll",
+                      "args": {
+                        "table": "backgammon_dice",
+                        "id": "d1",
+                        "column": "value",
+                        "sides": 6
+                      }
+                    },
+                    {
+                      "fn": "roll",
+                      "args": {
+                        "table": "backgammon_dice",
+                        "id": "d2",
+                        "column": "value",
+                        "sides": 6
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "dice",
+                "table": "backgammon_dice",
+                "valueColumn": "value",
+                "dieSize": 72,
+                "onTap": {
+                  "fn": "roll",
+                  "args": {
+                    "column": "value",
+                    "sides": 6
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "Turn: White",
+                "action": {
+                  "fn": "setField",
+                  "args": {
+                    "table": "backgammon_turn",
+                    "id": "t1",
+                    "column": "player",
+                    "value": "White"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Turn: Black",
+                "action": {
+                  "fn": "setField",
+                  "args": {
+                    "table": "backgammon_turn",
+                    "id": "t1",
+                    "column": "player",
+                    "value": "Black"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "table": "backgammon_turn",
+            "titleColumn": "player",
+            "onTap": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "canvas",
+            "nodesTable": "backgammon_checkers",
+            "layout": "free",
+            "xColumn": "x",
+            "yColumn": "y",
+            "labelColumn": "label",
+            "widthColumn": "w",
+            "heightColumn": "h",
+            "colorColumn": "color",
+            "colors": {
+              "white": "gray",
+              "black": "red",
+              "zone": "teal"
+            },
+            "action": {
+              "fn": "editRow"
+            },
+            "fillPhone": true
+          }
+        ]
+      }
+    },
+    "backgammon_players": {
+      "title": "Players",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Rename yourselves and keep the match score here. Tap a row to edit."
+          },
+          {
+            "type": "table",
+            "table": "backgammon_players",
+            "columns": [
+              "name",
+              "side",
+              "score"
+            ],
+            "height": "fill",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "backgammon_howto": {
+      "title": "How to play",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Backgammon"
+          },
+          {
+            "type": "text",
+            "value": "1. Each device taps its seat once (Sit: White / Sit: Black).\n2. White's checkers (gray, W1-W15) travel from the top-right toward the bottom-left home (points 19-24 are White's home board on this layout); Black (red, B1-B15) travels the opposite way.\n3. On your turn press both Roll buttons, then drag checkers forward by the pips shown - one checker per die, or one checker by both. Doubles play four moves.\n4. A point with two or more enemy checkers is blocked. A lone enemy checker is hit: drag it onto the BAR marker mid-board. A checker on the bar must re-enter in the opponent's home board before anything else moves.\n5. Once all 15 of your checkers reach your home board, bear them off: drag them onto the BEAR OFF zone on the right.\n6. First to bear off all 15 wins - press your Turn button after moving so everyone sees whose go it is, and log the result on the Players tab.\n7. Honor system: the board only keeps honest shared positions; you follow the movement rules yourselves."
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Pinch to zoom the board; drag empty space to pan. Share the applet's data via a room code (menu, Share by code) or play pass-and-play on one device."
+          }
+        ]
+      }
+    },
+    "checkers": {
+      "title": "Checkers",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": "Players",
+                "action": {
+                  "fn": "goto",
+                  "args": {
+                    "screen": "checkers_players"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "How to",
+                "action": {
+                  "fn": "goto",
+                  "args": {
+                    "screen": "checkers_howto"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "An 8x8 board of dark squares: pieces sit on a grid and move diagonally one cell. Drag to move; tap a piece to crown it (Kind: redKing / blackKing) or delete it when captured."
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "Sit: Red",
+                "action": {
+                  "fn": "setSetting",
+                  "args": {
+                    "key": "playerId",
+                    "value": "p1"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Sit: Black",
+                "action": {
+                  "fn": "setSetting",
+                  "args": {
+                    "key": "playerId",
+                    "value": "p2"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "Turn: Red",
+                "action": {
+                  "fn": "setField",
+                  "args": {
+                    "table": "checkers_turn",
+                    "id": "t1",
+                    "column": "player",
+                    "value": "Red"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Turn: Black",
+                "action": {
+                  "fn": "setField",
+                  "args": {
+                    "table": "checkers_turn",
+                    "id": "t1",
+                    "column": "player",
+                    "value": "Black"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "table": "checkers_turn",
+            "titleColumn": "player",
+            "onTap": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "canvas",
+            "nodesTable": "checkers_pieces",
+            "layout": "free",
+            "xColumn": "x",
+            "yColumn": "y",
+            "labelColumn": "label",
+            "widthColumn": "w",
+            "heightColumn": "h",
+            "colorColumn": "kind",
+            "colors": {
+              "red": "red",
+              "black": "gray",
+              "redKing": "coral",
+              "blackKing": "purple"
+            },
+            "action": {
+              "fn": "editRow"
+            },
+            "fillPhone": true
+          }
+        ]
+      }
+    },
+    "checkers_players": {
+      "title": "Players",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Rename yourselves and keep score across games. Tap a row to edit."
+          },
+          {
+            "type": "table",
+            "table": "checkers_players",
+            "columns": [
+              "name",
+              "side",
+              "score"
+            ],
+            "height": "fill",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "checkers_howto": {
+      "title": "How to play",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Checkers (Draughts)"
+          },
+          {
+            "type": "text",
+            "value": "1. Each device taps its seat once (Sit: Red / Sit: Black). Red moves first.\n2. Pieces start on the dark squares of an 8x8 grid: drag a piece one square diagonally forward onto an empty dark square. Keep pieces roughly aligned to the grid spacing they started on.\n3. Capture by jumping: if an enemy piece sits diagonally next to you with an empty square beyond, drag over it to that square, then tap the jumped piece and delete it. Chain jumps in one turn when possible.\n4. Reach the far row to be crowned: tap the piece and set Kind to redKing or blackKing - kings change colour and may move and jump diagonally backwards too.\n5. You win when your opponent has no pieces or no legal moves. Press your Turn button after moving and log wins on the Players tab.\n6. Honor system: the board only keeps honest shared positions; you follow the movement rules yourselves."
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Pinch to zoom; drag empty space to pan. Share the applet's data via a room code (menu, Share by code) or play pass-and-play on one device."
+          }
+        ]
+      }
+    },
+    "mancala": {
+      "title": "Mancala",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": "Players",
+                "action": {
+                  "fn": "goto",
+                  "args": {
+                    "screen": "mancala_players"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "How to",
+                "action": {
+                  "fn": "goto",
+                  "args": {
+                    "screen": "mancala_howto"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Two rows of six pits, four seeds each. Bottom row (pits A1-A6) belongs to Player A with STORE A on the right; top row (B1-B6, shown right to left) belongs to Player B with STORE B on the left. The small teal chips are pit labels - sow counter-clockwise past them."
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "Sit: Player A",
+                "action": {
+                  "fn": "setSetting",
+                  "args": {
+                    "key": "playerId",
+                    "value": "p1"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Sit: Player B",
+                "action": {
+                  "fn": "setSetting",
+                  "args": {
+                    "key": "playerId",
+                    "value": "p2"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "Turn: A",
+                "action": {
+                  "fn": "setField",
+                  "args": {
+                    "table": "mancala_turn",
+                    "id": "t1",
+                    "column": "player",
+                    "value": "A"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Turn: B",
+                "action": {
+                  "fn": "setField",
+                  "args": {
+                    "table": "mancala_turn",
+                    "id": "t1",
+                    "column": "player",
+                    "value": "B"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "table": "mancala_turn",
+            "titleColumn": "player",
+            "onTap": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "canvas",
+            "nodesTable": "mancala_tokens",
+            "layout": "free",
+            "xColumn": "x",
+            "yColumn": "y",
+            "labelColumn": "label",
+            "widthColumn": "w",
+            "heightColumn": "h",
+            "colorColumn": "kind",
+            "colors": {
+              "seed": "amber",
+              "pit": "teal",
+              "store": "purple"
+            },
+            "action": {
+              "fn": "editRow"
+            },
+            "fillPhone": true
+          }
+        ]
+      }
+    },
+    "mancala_players": {
+      "title": "Players",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Rename yourselves and keep score across games. Tap a row to edit."
+          },
+          {
+            "type": "table",
+            "table": "mancala_players",
+            "columns": [
+              "name",
+              "side",
+              "score"
+            ],
+            "height": "fill",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "mancala_howto": {
+      "title": "How to play",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Mancala (Kalah)"
+          },
+          {
+            "type": "text",
+            "value": "1. Each device taps its seat once (Sit: Player A / Sit: Player B). Player A owns the bottom pits A1-A6 and STORE A (right); Player B owns the top pits B1-B6 and STORE B (left).\n2. On your turn pick up ALL seeds clustered in one of YOUR pits and sow them counter-clockwise, dragging one seed into each next pit: A1 toward A6, then into STORE A, then along the top row toward STORE B's side. Skip the opponent's store.\n3. If your last seed lands in your own store, take another turn.\n4. If your last seed lands in an empty pit on your side, capture: move that seed and all seeds in the opposite pit into your store.\n5. The game ends when one row of pits is empty; the other player moves their remaining seeds into their own store. Most seeds in store wins - count them and log it on the Players tab.\n6. Honor system: the board only keeps honest shared positions; you sow and capture by hand and follow the rules yourselves. Keep seeds loosely clustered inside their pit's label area.\n7. Press your Turn button after moving so everyone sees whose go it is."
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Pinch to zoom; drag empty space to pan. Share the applet's data via a room code (menu, Share by code) or play pass-and-play on one device."
+          }
+        ]
+      }
+    },
+    "battleship": {
+      "title": "Battleship",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": "My fleet",
+                "action": {
+                  "fn": "goto",
+                  "args": {
+                    "screen": "battleship_fleet"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "How to",
+                "action": {
+                  "fn": "goto",
+                  "args": {
+                    "screen": "battleship_howto"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Pick your seat once per device — that's what keeps your fleet invisible to the enemy. Then take turns recording shots; the defender marks each one hit or miss."
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "Sit: Player 1",
+                "action": {
+                  "fn": "setSetting",
+                  "args": {
+                    "key": "playerId",
+                    "value": "p1"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Sit: Player 2",
+                "action": {
+                  "fn": "setSetting",
+                  "args": {
+                    "key": "playerId",
+                    "value": "p2"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "P1 fires",
+                "icon": "add",
+                "action": {
+                  "fn": "addRow",
+                  "args": {
+                    "table": "battleship_shots",
+                    "values": {
+                      "by": "p1",
+                      "result": "pending"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "P2 fires",
+                "icon": "add",
+                "action": {
+                  "fn": "addRow",
+                  "args": {
+                    "table": "battleship_shots",
+                    "values": {
+                      "by": "p2",
+                      "result": "pending"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Shot log (defender: tap the result cell)"
+          },
+          {
+            "type": "table",
+            "table": "battleship_shots",
+            "columns": [
+              "by",
+              "x",
+              "y",
+              "result"
+            ],
+            "height": "fill"
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "stat",
+                "table": "battleship_shots",
+                "filter": {
+                  "column": "by",
+                  "value": "p1"
+                },
+                "label": "P1 shots",
+                "color": "blue"
+              },
+              {
+                "type": "stat",
+                "table": "battleship_shots",
+                "filter": {
+                  "column": "by",
+                  "value": "p2"
+                },
+                "label": "P2 shots",
+                "color": "red"
+              }
+            ]
+          },
+          {
+            "type": "barchart",
+            "table": "battleship_shots",
+            "groupColumn": "result",
+            "filter": {
+              "column": "by",
+              "value": "p1"
+            },
+            "colors": {
+              "hit": "red",
+              "sunk": "purple",
+              "miss": "blue",
+              "pending": "gray"
+            },
+            "label": "Player 1 accuracy"
+          },
+          {
+            "type": "barchart",
+            "table": "battleship_shots",
+            "groupColumn": "result",
+            "filter": {
+              "column": "by",
+              "value": "p2"
+            },
+            "colors": {
+              "hit": "red",
+              "sunk": "purple",
+              "miss": "blue",
+              "pending": "gray"
+            },
+            "label": "Player 2 accuracy"
+          }
+        ]
+      }
+    },
+    "battleship_fleet": {
+      "title": "My fleet",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Sit on the Battle tab first — after that, this list shows ONLY your own ships (the engine hides rows marked visible to the other player). Place each ship by editing its bow X/Y (1-10) and Horizontal flag: a ship covers 'length' cells to the right (horizontal = 1) or downward (horizontal = 0). Ships must stay on the 10x10 grid and may not overlap."
+          },
+          {
+            "type": "table",
+            "table": "battleship_ships",
+            "columns": [
+              "name",
+              "x",
+              "y",
+              "length",
+              "horizontal",
+              "sunk"
+            ]
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "When every cell of one of your ships has been hit, tick its Sunk box and announce it."
+          }
+        ]
+      }
+    },
+    "battleship_howto": {
+      "title": "How to play",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Battleship"
+          },
+          {
+            "type": "text",
+            "value": "1. Each device taps its seat ONCE (Sit: Player 1 / Player 2). Seating is what keeps each fleet secret — your ships are stored as rows only your seat can see.\n2. Place your fleet on the My fleet tab: 5 ships on a 10x10 grid (columns X 1-10, rows Y 1-10). Set each ship's bow X/Y and Horizontal (1 = extends right, 0 = extends down). Don't overlap ships; agree when placement is locked.\n3. Take turns. On your turn tap YOUR fires button, then type the target X and Y in the editor and save.\n4. The defender checks the shot against their fleet and taps the shot's result cell: hit, miss, or sunk (when that hit finishes a ship). Mark the ship Sunk on your fleet tab too.\n5. First player to sink all 5 enemy ships (17 hit cells in total) wins."
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Honor system: the board keeps shared honest state — only the shot log is public, and only the defender can truthfully judge a shot. No peeking at the other device, and never tap the other player's fires button. Play across devices by sharing this applet (menu, Share by code) or pass-and-play with a folded-paper grid each."
+          }
+        ]
+      }
+    },
+    "dots_boxes": {
+      "title": "Dots & Boxes",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": "Boxes",
+                "action": {
+                  "fn": "goto",
+                  "args": {
+                    "screen": "dots_boxes_boxes"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "How to",
+                "action": {
+                  "fn": "goto",
+                  "args": {
+                    "screen": "dots_boxes_howto"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Tap a line marker ( — or | ) between two dots, set 'Claimed by' to your player, and save. Your lines turn your color. Don't drag the markers — just tap."
+          },
+          {
+            "type": "canvas",
+            "nodesTable": "dots_boxes_spots",
+            "layout": "free",
+            "xColumn": "x",
+            "yColumn": "y",
+            "labelColumn": "label",
+            "colorColumn": "owner",
+            "colors": {
+              "dot": "gray",
+              "open": "teal",
+              "p1": "blue",
+              "p2": "red"
+            },
+            "action": {
+              "fn": "editRow"
+            },
+            "fillPhone": true
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "stat",
+                "table": "dots_boxes_spots",
+                "filter": {
+                  "column": "owner",
+                  "value": "p1"
+                },
+                "label": "P1 lines",
+                "color": "blue"
+              },
+              {
+                "type": "stat",
+                "table": "dots_boxes_spots",
+                "filter": {
+                  "column": "owner",
+                  "value": "p2"
+                },
+                "label": "P2 lines",
+                "color": "red"
+              },
+              {
+                "type": "stat",
+                "table": "dots_boxes_spots",
+                "filter": {
+                  "column": "owner",
+                  "value": "open"
+                },
+                "label": "Lines open",
+                "color": "gray"
+              }
+            ]
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "New game: clear lines",
+                "icon": "refresh",
+                "action": {
+                  "fn": "updateRows",
+                  "args": {
+                    "table": "dots_boxes_spots",
+                    "where": {
+                      "column": "kind",
+                      "value": "edge"
+                    },
+                    "set": {
+                      "owner": "open"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "New game: clear boxes",
+                "icon": "refresh",
+                "action": {
+                  "fn": "updateRows",
+                  "args": {
+                    "table": "dots_boxes_boxes",
+                    "set": {
+                      "owner": "open"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "dots_boxes_boxes": {
+      "title": "Boxes",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Closed the fourth side of a box? Tap its Owner cell and claim it — then take your extra turn."
+          },
+          {
+            "type": "table",
+            "table": "dots_boxes_boxes",
+            "columns": [
+              "name",
+              "owner"
+            ]
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "stat",
+                "table": "dots_boxes_boxes",
+                "filter": {
+                  "column": "owner",
+                  "value": "p1"
+                },
+                "label": "Player 1 boxes",
+                "color": "blue"
+              },
+              {
+                "type": "stat",
+                "table": "dots_boxes_boxes",
+                "filter": {
+                  "column": "owner",
+                  "value": "p2"
+                },
+                "label": "Player 2 boxes",
+                "color": "red"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "dots_boxes_howto": {
+      "title": "How to play",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Dots & Boxes"
+          },
+          {
+            "type": "text",
+            "value": "1. The board is a 4x4 grid of dots with a tappable line marker ( — or | ) sitting on every possible edge between neighboring dots.\n2. Take turns: tap one OPEN (teal) marker, set 'Claimed by' to your player (p1 = blue, p2 = red), and save. One line per turn.\n3. If your line completes the fourth side of a 1x1 box, claim that box on the Boxes tab (tap its Owner cell) — and take ANOTHER turn immediately.\n4. When all 24 lines are claimed, the player owning more boxes wins (9 boxes total, so no ties).\n5. New game: tap both reset buttons under the board to reopen the lines and clear the box owners."
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Honor system: the board is shared honest state — players enforce turn order, the extra-turn rule, and box claims. Mis-tapped something (or accidentally colored a dot)? Open it again and set it back."
+          }
+        ]
+      }
+    },
+    "tabletop": {
+      "title": "Tabletop",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": "Pieces",
+                "action": {
+                  "fn": "goto",
+                  "args": {
+                    "screen": "tabletop_list"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Drag pieces to move them; tap a piece to rename it or change owner (colour). Add pieces below. When signed in, everyone sharing this table sees moves within a few seconds — a shared, build-your-own tabletop."
+          },
+          {
+            "type": "button",
+            "label": "Add piece",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "tabletop_tokens",
+                "values": {
+                  "label": "Piece",
+                  "owner": "neutral",
+                  "x": 120,
+                  "y": 120
+                }
+              }
+            }
+          },
+          {
+            "type": "canvas",
+            "nodesTable": "tabletop_tokens",
+            "layout": "free",
+            "xColumn": "x",
+            "yColumn": "y",
+            "labelColumn": "label",
+            "colorColumn": "owner",
+            "colors": {
+              "p1": "blue",
+              "p2": "red",
+              "p3": "green",
+              "p4": "amber",
+              "neutral": "gray"
+            },
+            "action": {
+              "fn": "editRow"
+            },
+            "fillPhone": true
+          }
+        ]
+      }
+    },
+    "tabletop_list": {
+      "title": "Pieces",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Every piece. Tap to edit; add or remove pieces here too."
+          },
+          {
+            "type": "table",
+            "table": "tabletop_tokens",
+            "columns": [
+              "label",
+              "owner",
+              "x",
+              "y"
+            ],
+            "height": "fill",
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "button",
+            "label": "Add piece",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "tabletop_tokens",
+                "values": {
+                  "label": "Piece",
+                  "owner": "neutral",
+                  "x": 120,
+                  "y": 120
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "saboteur": {
+      "title": "The build",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": "My role",
+                "action": {
+                  "fn": "goto",
+                  "args": {
+                    "screen": "saboteur_myrole"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Players",
+                "action": {
+                  "fn": "goto",
+                  "args": {
+                    "screen": "saboteur_players"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "How to play",
+                "action": {
+                  "fn": "goto",
+                  "args": {
+                    "screen": "saboteur_how"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Build something together. Drag a piece to move it; tap a piece to edit it. The secret saboteur can quietly flip a piece to sabotaged (it turns red). When signed in, everyone sharing this board sees changes within a few seconds."
+          },
+          {
+            "type": "button",
+            "label": "Add piece",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "saboteur_pieces",
+                "values": {
+                  "label": "Piece",
+                  "sabotaged": false,
+                  "x": 140,
+                  "y": 140
+                }
+              }
+            }
+          },
+          {
+            "type": "canvas",
+            "nodesTable": "saboteur_pieces",
+            "layout": "free",
+            "xColumn": "x",
+            "yColumn": "y",
+            "labelColumn": "label",
+            "colorColumn": "sabotaged",
+            "colors": {
+              "true": "red",
+              "false": "green"
+            },
+            "action": {
+              "fn": "editRow"
+            },
+            "fillPhone": true
+          }
+        ]
+      }
+    },
+    "saboteur_myrole": {
+      "title": "My role",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Only you can see your secret role."
+          },
+          {
+            "type": "cards",
+            "table": "saboteur_roles",
+            "title": "role",
+            "subtitle": "player",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "saboteur_players": {
+      "title": "Players",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Who's at the table. Add yourself to join."
+          },
+          {
+            "type": "table",
+            "table": "saboteur_players",
+            "columns": [
+              "name",
+              "playerId"
+            ],
+            "height": "fill",
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "button",
+            "label": "Add player",
+            "icon": "person_add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "saboteur_players",
+                "values": {
+                  "name": "Player"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "saboteur_how": {
+      "title": "How to play",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Saboteur — a co-op hidden-role game"
+          },
+          {
+            "type": "text",
+            "value": "Builders cooperate to build something on the shared Board — add pieces, arrange them, make it work."
+          },
+          {
+            "type": "text",
+            "value": "One player is the secret saboteur. Each round they slip in or quietly mark a piece as sabotaged (it shows red). They want the build to fail without getting caught."
+          },
+          {
+            "type": "text",
+            "value": "Check 'My role' to learn your secret role — only you can see it. Builders don't know who the saboteur is."
+          },
+          {
+            "type": "text",
+            "value": "Discuss what's going wrong, point fingers, and accuse. Use the Votes table to tally accusations. Out the saboteur and the builders win; let the build collapse and the saboteur wins."
+          },
+          {
+            "type": "text",
+            "value": "This is an open game. Switch on Edit mode / Customize to change pieces, roles, colours, screens — make it your own. Export your applet and share it with friends, or import theirs. Your instance, your rules."
+          }
+        ]
+      }
+    },
+    "yahtzee": {
+      "title": "Yahtzee",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": "Scorecard",
+                "action": {
+                  "fn": "goto",
+                  "args": {
+                    "screen": "yahtzee_score"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "How to",
+                "action": {
+                  "fn": "goto",
+                  "args": {
+                    "screen": "yahtzee_howto"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Tap a die to roll just that one — or 'Roll all five'. Leave the dice you want to keep. Up to three rolls a turn, then write the score on the Scorecard tab."
+          },
+          {
+            "type": "dice",
+            "table": "yahtzee_dice",
+            "valueColumn": "value",
+            "dieSize": 72,
+            "onTap": {
+              "fn": "roll",
+              "args": {
+                "column": "value",
+                "sides": 6
+              }
+            }
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "Roll all five",
+                "icon": "refresh",
+                "action": {
+                  "chain": [
+                    {
+                      "fn": "roll",
+                      "args": {
+                        "table": "yahtzee_dice",
+                        "id": "d1",
+                        "column": "value",
+                        "sides": 6
+                      }
+                    },
+                    {
+                      "fn": "roll",
+                      "args": {
+                        "table": "yahtzee_dice",
+                        "id": "d2",
+                        "column": "value",
+                        "sides": 6
+                      }
+                    },
+                    {
+                      "fn": "roll",
+                      "args": {
+                        "table": "yahtzee_dice",
+                        "id": "d3",
+                        "column": "value",
+                        "sides": 6
+                      }
+                    },
+                    {
+                      "fn": "roll",
+                      "args": {
+                        "table": "yahtzee_dice",
+                        "id": "d4",
+                        "column": "value",
+                        "sides": 6
+                      }
+                    },
+                    {
+                      "fn": "roll",
+                      "args": {
+                        "table": "yahtzee_dice",
+                        "id": "d5",
+                        "column": "value",
+                        "sides": 6
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "stat",
+                "table": "yahtzee_dice",
+                "agg": "sum",
+                "valueColumn": "value",
+                "label": "Total",
+                "color": "amber"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Honor system: count your three rolls yourself, and never 'roll' a die you meant to keep."
+          }
+        ]
+      }
+    },
+    "yahtzee_score": {
+      "title": "Scorecard",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Tap a cell to type your score for that category. Each category is used exactly once; a wasted turn scores 0."
+          },
+          {
+            "type": "table",
+            "table": "yahtzee_scorecard",
+            "columns": [
+              "category",
+              "p1",
+              "p2"
+            ]
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "stat",
+                "table": "yahtzee_scorecard",
+                "agg": "sum",
+                "valueColumn": "p1",
+                "label": "Player 1 total",
+                "color": "blue"
+              },
+              {
+                "type": "stat",
+                "table": "yahtzee_scorecard",
+                "agg": "sum",
+                "valueColumn": "p2",
+                "label": "Player 2 total",
+                "color": "teal"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "yahtzee_howto": {
+      "title": "How to play",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Yahtzee"
+          },
+          {
+            "type": "text",
+            "value": "1. On your turn, roll all five dice (tap each Roll button), then re-roll any dice up to two more times. Dice you don't tap stay as they are.\n2. After your rolls, pick ONE unused category on the Scorecard and type your score into your column. Every category is used exactly once; if nothing fits, enter 0 somewhere.\n3. Upper section (Ones-Sixes): score the sum of matching dice only (e.g. three Fours = 12 in Fours). If your six upper scores total 63 or more, type 35 into the Upper bonus row.\n4. Lower section: Three/Four of a kind = sum of ALL five dice (needs 3/4 matching). Full house (a pair + a triple) = 25. Small straight (4 in a row) = 30. Large straight (5 in a row) = 40. Yahtzee (5 of a kind) = 50. Chance = sum of all dice, anytime.\n5. After 13 turns each, the highest total wins — totals are at the bottom of the Scorecard."
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Honor system: the app keeps shared, honest dice and an open scorecard — players enforce the three-roll limit and check each other's arithmetic."
+          }
+        ]
+      }
+    },
+    "runner": {
+      "title": "Neon Runner",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "sidescroller",
+            "scoresTable": "runs"
+          }
+        ]
+      }
+    },
+    "shop": {
+      "title": "Game Shop",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Tap a pack to install it — the game appears on your shelf immediately (its boards, pieces and screens ride in as data). Build your own in the Free board, or with edit mode."
+          },
+          {
+            "type": "cards",
+            "table": "shop",
+            "title": "name",
+            "subtitle": "tagline",
+            "tags": [
+              {
+                "column": "genre"
+              }
+            ],
+            "expandable": false,
+            "action": {
+              "fn": "installPack",
+              "args": {},
+              "confirm": "Installed — check your shelf"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

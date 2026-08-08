@@ -1,0 +1,12 @@
+{
+  "id": "design",
+  "name": "Design",
+  "category": "Creative",
+  "icon": "design_services",
+  "color": "#26A69A",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_design"
+  },
+  "seedVersion": "2026-06-17.preset"
+}

@@ -1,0 +1,5112 @@
+{
+ "app": {
+  "title": "Korea travel access",
+  "primaryColor": "#256abf",
+  "theme": "contrast",
+  "headerActions": [
+   {
+    "icon": "info_outline",
+    "tooltip": "About these estimates",
+    "action": {
+     "fn": "goto",
+     "args": {
+      "screen": "about"
+     }
+    }
+   }
+  ]
+ },
+ "nav": [
+  {
+   "id": "map",
+   "label": "Map",
+   "icon": "map",
+   "screen": "map"
+  },
+  {
+   "id": "reach",
+   "label": "Reach",
+   "icon": "speed",
+   "screen": "reach"
+  },
+  {
+   "id": "stations",
+   "label": "Stations",
+   "icon": "directions_subway",
+   "screen": "stations"
+  },
+  {
+   "id": "best_spots",
+   "label": "Best spots",
+   "icon": "star",
+   "screen": "best_spots"
+  },
+  {
+   "id": "timeline",
+   "label": "Timeline",
+   "icon": "event",
+   "screen": "timeline"
+  },
+  {
+   "id": "kr_stops",
+   "label": "Korea",
+   "icon": "train",
+   "screen": "kr_stops"
+  },
+  {
+   "id": "about",
+   "label": "About",
+   "icon": "menu_book",
+   "screen": "about"
+  }
+ ],
+ "screens": {
+  "map": {
+   "title": "Seoul travel access",
+   "body": {
+    "type": "glmap",
+    "id": "kr_glmap",
+    "height": "0.85fill",
+    "zoom": 11,
+    "center": [
+     37.5665,
+     126.978
+    ],
+    "action": {
+     "fn": "editRow"
+    },
+    "geojsonSources": {
+     "districts": "apps/krtravel/assets/seoul_districts.geojson",
+     "dong": "apps/krtravel/assets/seoul_dong.geojson",
+     "network": "apps/krtravel/assets/network.geojson",
+     "stations": "apps/krtravel/assets/stations.geojson",
+     "events": "apps/krtravel/assets/events.geojson",
+     "walk_fine": "apps/krtravel/assets/walk_access_fine.geojson",
+     "walk_coarse": "apps/krtravel/assets/walk_access_coarse.geojson"
+    },
+    "sourceLayers": [
+     {
+      "id": "walk_coarse_fill",
+      "source": "walk_coarse",
+      "kind": "fill",
+      "visible": false,
+      "maxzoom": 14,
+      "paint": {
+       "colorProp": "bucket",
+       "ramp": {
+        "<5": "#2b6cb0",
+        "5-10": "#3aa6a0",
+        "10-15": "#4caf50",
+        "15-20": "#c6d92e",
+        "20-25": "#f2a134",
+        "25-30": "#e2492d",
+        ">30": "#a01818"
+       },
+       "opacity": 0.6,
+       "outline": "#FFFFFF"
+      }
+     },
+     {
+      "id": "walk_fine_fill",
+      "source": "walk_fine",
+      "kind": "fill",
+      "visible": false,
+      "minzoom": 14,
+      "paint": {
+       "colorProp": "bucket",
+       "ramp": {
+        "<5": "#2b6cb0",
+        "5-10": "#3aa6a0",
+        "10-15": "#4caf50",
+        "15-20": "#c6d92e",
+        "20-25": "#f2a134",
+        "25-30": "#e2492d",
+        ">30": "#a01818"
+       },
+       "opacity": 0.7,
+       "outline": "#FFFFFF"
+      }
+     },
+     {
+      "id": "district_ease_fill",
+      "source": "districts",
+      "kind": "fill",
+      "maxzoom": 12.5,
+      "paint": {
+       "colorProp": "travel_ease_tier",
+       "ramp": {
+        "very-low": "#9ec5f4",
+        "low": "#6da7ec",
+        "mid": "#3987e5",
+        "high": "#1c5cab",
+        "very-high": "#0d366b",
+        "no-data": "#E6E4DC"
+       },
+       "opacity": 0.75,
+       "outline": "#FFFFFF"
+      }
+     },
+     {
+      "id": "district_access_fill",
+      "source": "districts",
+      "kind": "fill",
+      "visible": false,
+      "paint": {
+       "colorProp": "best_spots_tier",
+       "ramp": {
+        "very-low": "#9ec5f4",
+        "low": "#6da7ec",
+        "mid": "#3987e5",
+        "high": "#1c5cab",
+        "very-high": "#0d366b",
+        "no-data": "#E6E4DC"
+       },
+       "opacity": 0.75,
+       "outline": "#FFFFFF"
+      }
+     },
+     {
+      "id": "dong_ease_fill",
+      "source": "dong",
+      "kind": "fill",
+      "minzoom": 12.5,
+      "paint": {
+       "colorProp": "travel_ease_tier",
+       "ramp": {
+        "very-low": "#9ec5f4",
+        "low": "#6da7ec",
+        "mid": "#3987e5",
+        "high": "#1c5cab",
+        "very-high": "#0d366b",
+        "no-data": "#E6E4DC"
+       },
+       "opacity": 0.68,
+       "outline": "#FFFFFF"
+      }
+     },
+     {
+      "id": "district_centrality_fill",
+      "source": "districts",
+      "kind": "fill",
+      "visible": false,
+      "maxzoom": 12.5,
+      "paint": {
+       "colorProp": "area_centrality_tier",
+       "ramp": {
+        "very-low": "#9ec5f4",
+        "low": "#6da7ec",
+        "mid": "#3987e5",
+        "high": "#1c5cab",
+        "very-high": "#0d366b",
+        "no-data": "#E6E4DC"
+       },
+       "opacity": 0.75,
+       "outline": "#FFFFFF"
+      }
+     },
+     {
+      "id": "dong_centrality_fill",
+      "source": "dong",
+      "kind": "fill",
+      "visible": false,
+      "minzoom": 12.5,
+      "paint": {
+       "colorProp": "area_centrality_tier",
+       "ramp": {
+        "very-low": "#9ec5f4",
+        "low": "#6da7ec",
+        "mid": "#3987e5",
+        "high": "#1c5cab",
+        "very-high": "#0d366b",
+        "no-data": "#E6E4DC"
+       },
+       "opacity": 0.68,
+       "outline": "#FFFFFF"
+      }
+     },
+     {
+      "id": "district_lines",
+      "source": "districts",
+      "kind": "line",
+      "paint": {
+       "color": "#6B7280",
+       "width": 0.8,
+       "opacity": 0.25
+      }
+     },
+     {
+      "id": "network_lines",
+      "source": "network",
+      "kind": "line",
+      "visible": false,
+      "paint": {
+       "color": "#4a3aa7",
+       "width": 1.2,
+       "opacity": 0.7
+      }
+     },
+     {
+      "id": "station_halo",
+      "source": "stations",
+      "kind": "circle",
+      "visible": false,
+      "paint": {
+       "color": "#FFFFFF",
+       "radius": 7,
+       "opacity": 0.9
+      }
+     },
+     {
+      "id": "station_pins",
+      "source": "stations",
+      "kind": "circle",
+      "visible": false,
+      "paint": {
+       "colorProp": "transit_stress_tier",
+       "ramp": {
+        "very-low": "#F09C63",
+        "low": "#E8781F",
+        "mid": "#C55F0C",
+        "high": "#9C4A08",
+        "very-high": "#6E3405"
+       },
+       "radius": 4.5,
+       "opacity": 0.95
+      }
+     },
+     {
+      "id": "event_pins",
+      "source": "events",
+      "kind": "circle",
+      "visible": false,
+      "paint": {
+       "color": "#e87ba4",
+       "radius": 6,
+       "opacity": 0.9
+      }
+     }
+    ],
+    "tapLayers": [
+     "district_ease_fill",
+     "district_access_fill",
+     "dong_ease_fill",
+     "district_centrality_fill",
+     "dong_centrality_fill",
+     "station_pins",
+     "walk_coarse_fill",
+     "walk_fine_fill",
+     "event_pins"
+    ],
+    "tapLayerDetails": {
+     "district_ease_fill": {
+      "titleField": "gu",
+      "fields": [
+       "travel_ease_tier",
+       "area_centrality_tier",
+       "inbound_access_score",
+       "best_spots_rank",
+       "conn_tier"
+      ],
+      "labels": {
+       "travel_ease_tier": "Travel ease",
+       "area_centrality_tier": "Area centrality",
+       "inbound_access_score": "Destination access score",
+       "best_spots_rank": "Best spots rank",
+       "conn_tier": "Connectivity"
+      },
+      "meterFields": {
+       "travel_ease_score": 100,
+       "area_centrality_score": 100,
+       "inbound_access_score": 100
+      }
+     },
+     "district_access_fill": {
+      "titleField": "gu",
+      "fields": [
+       "inbound_access_score",
+       "area_centrality_tier",
+       "best_spots_rank",
+       "conn_tier"
+      ],
+      "labels": {
+       "travel_ease_tier": "Travel ease",
+       "area_centrality_tier": "Area centrality",
+       "inbound_access_score": "Destination access score",
+       "best_spots_rank": "Best spots rank",
+       "conn_tier": "Connectivity"
+      },
+      "meterFields": {
+       "inbound_access_score": 100,
+       "area_centrality_score": 100
+      }
+     },
+     "dong_ease_fill": {
+      "titleField": "dong",
+      "fields": [
+       "travel_ease_tier",
+       "area_centrality_tier",
+       "conn_tier"
+      ],
+      "labels": {
+       "travel_ease_tier": "Travel ease",
+       "area_centrality_tier": "Area centrality",
+       "conn_tier": "Connectivity"
+      },
+      "meterFields": {
+       "travel_ease_score": 100,
+       "area_centrality_score": 100
+      }
+     },
+     "district_centrality_fill": {
+      "titleField": "gu",
+      "fields": [
+       "area_centrality_tier",
+       "best_spots_rank",
+       "conn_tier"
+      ],
+      "labels": {
+       "travel_ease_tier": "Travel ease",
+       "area_centrality_tier": "Area centrality",
+       "inbound_access_score": "Destination access score",
+       "best_spots_rank": "Best spots rank",
+       "conn_tier": "Connectivity"
+      },
+      "meterFields": {
+       "area_centrality_score": 100
+      }
+     },
+     "dong_centrality_fill": {
+      "titleField": "dong",
+      "fields": [
+       "area_centrality_tier",
+       "conn_tier"
+      ],
+      "labels": {
+       "travel_ease_tier": "Travel ease",
+       "area_centrality_tier": "Area centrality",
+       "conn_tier": "Connectivity"
+      },
+      "meterFields": {
+       "area_centrality_score": 100
+      }
+     },
+     "station_pins": {
+      "titleField": "name",
+      "fields": [
+       "transit_stress_score",
+       "transit_stress_tier",
+       "walk_stress_score",
+       "walk_stress_tier",
+       "district"
+      ],
+      "labels": {
+       "transit_stress_score": "Transit stress score",
+       "transit_stress_tier": "Transit stress tier",
+       "walk_stress_score": "Walk stress score (proxy)",
+       "walk_stress_tier": "Walk stress tier (proxy)",
+       "district": "District"
+      },
+      "meterFields": {
+       "transit_stress_score": 100,
+       "walk_stress_score": 100
+      }
+     },
+     "walk_coarse_fill": {
+      "titleField": "walk_min",
+      "fields": [
+       "walk_min",
+       "bucket",
+       "nearest_station_id"
+      ],
+      "labels": {
+       "walk_min": "Walk to nearest station (min)",
+       "bucket": "Reach tier",
+       "nearest_station_id": "Nearest station id"
+      },
+      "valueSuffixes": {
+       "walk_min": " min"
+      }
+     },
+     "walk_fine_fill": {
+      "titleField": "walk_min",
+      "fields": [
+       "walk_min",
+       "bucket",
+       "nearest_station_id"
+      ],
+      "labels": {
+       "walk_min": "Walk to nearest station (min)",
+       "bucket": "Reach tier",
+       "nearest_station_id": "Nearest station id"
+      },
+      "valueSuffixes": {
+       "walk_min": " min"
+      }
+     },
+     "event_pins": {
+      "titleField": "title",
+      "fields": [
+       "start_date",
+       "end_date",
+       "month",
+       "city",
+       "genre"
+      ],
+      "labels": {
+       "start_date": "Starts",
+       "end_date": "Ends",
+       "month": "Month",
+       "city": "City",
+       "genre": "Genre"
+      }
+     }
+    },
+    "overlayAlign": "topStart",
+    "overlay": {
+     "type": "card",
+     "padding": 8,
+     "child": {
+      "type": "column",
+      "crossAxis": "start",
+      "children": [
+       {
+        "type": "row",
+        "wrap": true,
+        "spacing": 6,
+        "runSpacing": 2,
+        "children": [
+         {
+          "type": "text",
+          "style": "caption",
+          "value": "Model estimates, not measurements"
+         },
+         {
+          "type": "button",
+          "label": "Reach heat view",
+          "variant": "text",
+          "action": {
+           "fn": "goto",
+           "args": {
+            "screen": "reach"
+           }
+          }
+         }
+        ]
+       },
+       {
+        "type": "segments",
+        "chips": true,
+        "segments": [
+         {
+          "label": "Areas",
+          "child": {
+           "type": "column",
+           "crossAxis": "start",
+           "children": [
+            {
+             "type": "text",
+             "style": "caption",
+             "value": "One metric at a time. District below z12.5, neighborhood/dong above — same metric, detail swaps by zoom."
+            },
+            {
+             "type": "row",
+             "wrap": true,
+             "spacing": 6,
+             "runSpacing": 6,
+             "children": [
+              {
+               "type": "button",
+               "label": "Travel-ease",
+               "variant": "tonal",
+               "action": {
+                "chain": [
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "district_ease_fill",
+                   "visible": true
+                  }
+                 },
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "dong_ease_fill",
+                   "visible": true
+                  }
+                 },
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "district_centrality_fill",
+                   "visible": false
+                  }
+                 },
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "dong_centrality_fill",
+                   "visible": false
+                  }
+                 },
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "district_access_fill",
+                   "visible": false
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "type": "button",
+               "label": "Centrality",
+               "variant": "tonal",
+               "action": {
+                "chain": [
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "district_ease_fill",
+                   "visible": false
+                  }
+                 },
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "dong_ease_fill",
+                   "visible": false
+                  }
+                 },
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "district_centrality_fill",
+                   "visible": true
+                  }
+                 },
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "dong_centrality_fill",
+                   "visible": true
+                  }
+                 },
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "district_access_fill",
+                   "visible": false
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "type": "button",
+               "label": "Destination access",
+               "variant": "tonal",
+               "action": {
+                "chain": [
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "district_ease_fill",
+                   "visible": false
+                  }
+                 },
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "dong_ease_fill",
+                   "visible": false
+                  }
+                 },
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "district_centrality_fill",
+                   "visible": false
+                  }
+                 },
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "dong_centrality_fill",
+                   "visible": false
+                  }
+                 },
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "district_access_fill",
+                   "visible": true
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "type": "button",
+               "label": "None",
+               "variant": "outlined",
+               "action": {
+                "chain": [
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "district_ease_fill",
+                   "visible": false
+                  }
+                 },
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "dong_ease_fill",
+                   "visible": false
+                  }
+                 },
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "district_centrality_fill",
+                   "visible": false
+                  }
+                 },
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "dong_centrality_fill",
+                   "visible": false
+                  }
+                 },
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "district_access_fill",
+                   "visible": false
+                  }
+                 }
+                ]
+               }
+              }
+             ]
+            }
+           ]
+          }
+         },
+         {
+          "label": "Transit",
+          "child": {
+           "type": "column",
+           "crossAxis": "start",
+           "children": [
+            {
+             "type": "text",
+             "style": "caption",
+             "value": "Each button toggles its layer on or off. Tap any pin or line on the map for its detail."
+            },
+            {
+             "type": "row",
+             "wrap": true,
+             "spacing": 6,
+             "runSpacing": 6,
+             "children": [
+              {
+               "type": "button",
+               "label": "Stations",
+               "variant": "tonal",
+               "action": {
+                "chain": [
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "station_pins"
+                  }
+                 },
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "station_halo"
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "type": "button",
+               "label": "Subway",
+               "variant": "tonal",
+               "action": {
+                "fn": "mapSetLayerVisible",
+                "args": {
+                 "node": "kr_glmap",
+                 "layer": "network_lines"
+                }
+               }
+              },
+              {
+               "type": "button",
+               "label": "Events",
+               "variant": "tonal",
+               "action": {
+                "fn": "mapSetLayerVisible",
+                "args": {
+                 "node": "kr_glmap",
+                 "layer": "event_pins"
+                }
+               }
+              }
+             ]
+            }
+           ]
+          }
+         },
+         {
+          "label": "Walk",
+          "child": {
+           "type": "column",
+           "crossAxis": "start",
+           "children": [
+            {
+             "type": "text",
+             "style": "caption",
+             "value": "Walk minutes to the nearest station, on OSM footpaths. Auto = coarse cells out wide, fine cells past z14."
+            },
+            {
+             "type": "row",
+             "wrap": true,
+             "spacing": 6,
+             "runSpacing": 6,
+             "children": [
+              {
+               "type": "button",
+               "label": "Auto (by zoom)",
+               "variant": "tonal",
+               "action": {
+                "chain": [
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "walk_coarse_fill",
+                   "visible": true
+                  }
+                 },
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "walk_fine_fill",
+                   "visible": true
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "type": "button",
+               "label": "Neighborhood",
+               "variant": "tonal",
+               "action": {
+                "chain": [
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "walk_coarse_fill",
+                   "visible": true
+                  }
+                 },
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "walk_fine_fill",
+                   "visible": false
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "type": "button",
+               "label": "Street",
+               "variant": "tonal",
+               "action": {
+                "chain": [
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "walk_coarse_fill",
+                   "visible": false
+                  }
+                 },
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "walk_fine_fill",
+                   "visible": true
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "type": "button",
+               "label": "Off",
+               "variant": "outlined",
+               "action": {
+                "chain": [
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "walk_coarse_fill",
+                   "visible": false
+                  }
+                 },
+                 {
+                  "fn": "mapSetLayerVisible",
+                  "args": {
+                   "node": "kr_glmap",
+                   "layer": "walk_fine_fill",
+                   "visible": false
+                  }
+                 }
+                ]
+               }
+              }
+             ]
+            }
+           ]
+          }
+         },
+         {
+          "label": "Info",
+          "child": {
+           "type": "column",
+           "crossAxis": "start",
+           "children": [
+            {
+             "type": "text",
+             "style": "caption",
+             "value": "Every layer here is a model estimate, not a measurement."
+            },
+            {
+             "type": "text",
+             "style": "caption",
+             "value": "Travel-ease = 0.4 area-centrality + 0.3 destination-access + 0.3 walk-ease. Destination access = average minutes to reach a district from all 24 others (kr_district_od), blended 50/50 with centrality; districts only, and the Best spots input."
+            },
+            {
+             "type": "text",
+             "style": "caption",
+             "value": "Walk access: OSM footpaths at 4.8 km/h, no crossing delays; OSM vintage 2026-07-28; gray = no walkable path; central-Seoul bbox only (DATA_SOURCES.md)."
+            },
+            {
+             "type": "text",
+             "style": "caption",
+             "value": "Station walk-stress is a coordinate-only proxy. National KTX/SRT rail lives on the Korea screen. The Reach tab has the boundary-free heat view."
+            }
+           ]
+          }
+         }
+        ]
+       }
+      ]
+     }
+    }
+   }
+  },
+  "stations": {
+   "title": "Stations",
+   "body": {
+    "type": "segments",
+    "fill": true,
+    "chips": true,
+    "swipe": true,
+    "segments": [
+     {
+      "label": "Map",
+      "child": {
+       "type": "glmap",
+       "id": "stations_glmap",
+       "height": "0.88fill",
+       "zoom": 11,
+       "center": [
+        37.5665,
+        126.978
+       ],
+       "action": {
+        "fn": "editRow"
+       },
+       "geojsonSources": {
+        "districts": "apps/krtravel/assets/seoul_districts.geojson",
+        "stations": "apps/krtravel/assets/stations.geojson"
+       },
+       "sourceLayers": [
+        {
+         "id": "stations_screen_district_lines",
+         "source": "districts",
+         "kind": "line",
+         "paint": {
+          "color": "#6B7280",
+          "width": 0.8,
+          "opacity": 0.25
+         }
+        },
+        {
+         "id": "stations_screen_halo",
+         "source": "stations",
+         "kind": "circle",
+         "paint": {
+          "color": "#FFFFFF",
+          "radius": 7,
+          "opacity": 0.9
+         }
+        },
+        {
+         "id": "stations_screen_pins",
+         "source": "stations",
+         "kind": "circle",
+         "paint": {
+          "colorProp": "transit_stress_tier",
+          "ramp": {
+           "very-low": "#F09C63",
+           "low": "#E8781F",
+           "mid": "#C55F0C",
+           "high": "#9C4A08",
+           "very-high": "#6E3405"
+          },
+          "radius": 4.5,
+          "opacity": 0.95
+         }
+        }
+       ],
+       "tapLayers": [
+        "stations_screen_pins"
+       ],
+       "tapLayerDetails": {
+        "stations_screen_pins": {
+         "table": "stations",
+         "idProperty": "id",
+         "titleField": "name",
+         "fields": [
+          "transit_stress_score",
+          "transit_stress_tier",
+          "walk_stress_score",
+          "walk_stress_tier",
+          "district"
+         ],
+         "labels": {
+          "transit_stress_score": "Transit stress score",
+          "transit_stress_tier": "Transit stress tier",
+          "walk_stress_score": "Walk stress score (proxy)",
+          "walk_stress_tier": "Walk stress tier (proxy)",
+          "district": "District"
+         },
+         "meterFields": {
+          "transit_stress_score": 100,
+          "walk_stress_score": 100
+         }
+        }
+       },
+       "overlayAlign": "topStart",
+       "overlay": {
+        "type": "column",
+        "crossAxis": "start",
+        "background": "#F2FFFFFF",
+        "radius": 10,
+        "padding": 8,
+        "children": [
+         {
+          "type": "text",
+          "style": "caption",
+          "value": "471 stations · dot = stress tier"
+         },
+         {
+          "type": "text",
+          "style": "caption",
+          "value": "Estimate · tap a dot for scores"
+         },
+         {
+          "type": "row",
+          "wrap": true,
+          "spacing": 10,
+          "runSpacing": 2,
+          "children": [
+           {
+            "type": "text",
+            "style": "caption",
+            "value": "Stress:"
+           },
+           {
+            "type": "row",
+            "spacing": 3,
+            "children": [
+             {
+              "type": "text",
+              "style": "caption",
+              "color": "#F09C63",
+              "value": "●"
+             },
+             {
+              "type": "text",
+              "style": "caption",
+              "value": "very-low"
+             }
+            ]
+           },
+           {
+            "type": "row",
+            "spacing": 3,
+            "children": [
+             {
+              "type": "text",
+              "style": "caption",
+              "color": "#E8781F",
+              "value": "●"
+             },
+             {
+              "type": "text",
+              "style": "caption",
+              "value": "low"
+             }
+            ]
+           },
+           {
+            "type": "row",
+            "spacing": 3,
+            "children": [
+             {
+              "type": "text",
+              "style": "caption",
+              "color": "#C55F0C",
+              "value": "●"
+             },
+             {
+              "type": "text",
+              "style": "caption",
+              "value": "mid"
+             }
+            ]
+           },
+           {
+            "type": "row",
+            "spacing": 3,
+            "children": [
+             {
+              "type": "text",
+              "style": "caption",
+              "color": "#9C4A08",
+              "value": "●"
+             },
+             {
+              "type": "text",
+              "style": "caption",
+              "value": "high"
+             }
+            ]
+           },
+           {
+            "type": "row",
+            "spacing": 3,
+            "children": [
+             {
+              "type": "text",
+              "style": "caption",
+              "color": "#6E3405",
+              "value": "●"
+             },
+             {
+              "type": "text",
+              "style": "caption",
+              "value": "very-high"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "button",
+          "label": "District outlines",
+          "variant": "tonal",
+          "action": {
+           "fn": "mapSetLayerVisible",
+           "args": {
+            "node": "stations_glmap",
+            "layer": "stations_screen_district_lines"
+           }
+          }
+         }
+        ],
+        "maxWidth": 300
+       }
+      }
+     },
+     {
+      "label": "List",
+      "child": {
+       "type": "cards",
+       "table": "stations",
+       "title": "name",
+       "height": "fill",
+       "dotColumn": "transit_stress_tier",
+       "colors": {
+        "very-low": "gray",
+        "low": "teal",
+        "mid": "amber",
+        "high": "blue",
+        "very-high": "green"
+       },
+       "search": true,
+       "searchColumns": [
+        "name"
+       ],
+       "tags": [
+        {
+         "column": "transit_stress_score",
+         "positiveColor": "blue",
+         "negativeColor": "blue",
+         "prefix": "Stress "
+        },
+        {
+         "column": "walk_stress_score",
+         "positiveColor": "gray",
+         "negativeColor": "gray",
+         "prefix": "Walk~ "
+        }
+       ],
+       "tableView": false,
+       "action": {
+        "fn": "editRow"
+       }
+      }
+     }
+    ]
+   }
+  },
+  "best_spots": {
+   "title": "Best spots",
+   "body": {
+    "type": "column",
+    "crossAxis": "start",
+    "children": [
+     {
+      "type": "row",
+      "wrap": true,
+      "spacing": 6,
+      "runSpacing": 6,
+      "children": [
+       {
+        "type": "button",
+        "label": "All tiers",
+        "variant": "tonal",
+        "action": {
+         "chain": [
+          {
+           "fn": "setFilter",
+           "args": {
+            "table": "best_spots",
+            "column": "best_spots_tier",
+            "value": ""
+           }
+          },
+          {
+           "fn": "mapSetFilter",
+           "args": {
+            "node": "best_spots_glmap",
+            "layer": "best_spots_district_fill",
+            "filter": []
+           }
+          }
+         ]
+        }
+       },
+       {
+        "type": "button",
+        "label": "Very high",
+        "variant": "tonal",
+        "action": {
+         "chain": [
+          {
+           "fn": "setFilter",
+           "args": {
+            "table": "best_spots",
+            "column": "best_spots_tier",
+            "value": "very-high"
+           }
+          },
+          {
+           "fn": "mapSetFilter",
+           "args": {
+            "node": "best_spots_glmap",
+            "layer": "best_spots_district_fill",
+            "filter": [
+             "==",
+             "best_spots_tier",
+             "very-high"
+            ]
+           }
+          }
+         ]
+        }
+       },
+       {
+        "type": "button",
+        "label": "High",
+        "variant": "tonal",
+        "action": {
+         "chain": [
+          {
+           "fn": "setFilter",
+           "args": {
+            "table": "best_spots",
+            "column": "best_spots_tier",
+            "value": "high"
+           }
+          },
+          {
+           "fn": "mapSetFilter",
+           "args": {
+            "node": "best_spots_glmap",
+            "layer": "best_spots_district_fill",
+            "filter": [
+             "==",
+             "best_spots_tier",
+             "high"
+            ]
+           }
+          }
+         ]
+        }
+       },
+       {
+        "type": "button",
+        "label": "Mid",
+        "variant": "tonal",
+        "action": {
+         "chain": [
+          {
+           "fn": "setFilter",
+           "args": {
+            "table": "best_spots",
+            "column": "best_spots_tier",
+            "value": "mid"
+           }
+          },
+          {
+           "fn": "mapSetFilter",
+           "args": {
+            "node": "best_spots_glmap",
+            "layer": "best_spots_district_fill",
+            "filter": [
+             "==",
+             "best_spots_tier",
+             "mid"
+            ]
+           }
+          }
+         ]
+        }
+       },
+       {
+        "type": "button",
+        "label": "Low",
+        "variant": "tonal",
+        "action": {
+         "chain": [
+          {
+           "fn": "setFilter",
+           "args": {
+            "table": "best_spots",
+            "column": "best_spots_tier",
+            "value": "low"
+           }
+          },
+          {
+           "fn": "mapSetFilter",
+           "args": {
+            "node": "best_spots_glmap",
+            "layer": "best_spots_district_fill",
+            "filter": [
+             "==",
+             "best_spots_tier",
+             "low"
+            ]
+           }
+          }
+         ]
+        }
+       },
+       {
+        "type": "button",
+        "label": "Very low",
+        "variant": "tonal",
+        "action": {
+         "chain": [
+          {
+           "fn": "setFilter",
+           "args": {
+            "table": "best_spots",
+            "column": "best_spots_tier",
+            "value": "very-low"
+           }
+          },
+          {
+           "fn": "mapSetFilter",
+           "args": {
+            "node": "best_spots_glmap",
+            "layer": "best_spots_district_fill",
+            "filter": [
+             "==",
+             "best_spots_tier",
+             "very-low"
+            ]
+           }
+          }
+         ]
+        }
+       }
+      ]
+     },
+     {
+      "type": "segments",
+      "fill": true,
+      "chips": true,
+      "swipe": true,
+      "segments": [
+       {
+        "label": "Map",
+        "child": {
+         "type": "glmap",
+         "id": "best_spots_glmap",
+         "height": "0.88fill",
+         "zoom": 11,
+         "center": [
+          37.5665,
+          126.978
+         ],
+         "action": {
+          "fn": "editRow"
+         },
+         "geojsonSources": {
+          "districts": "apps/krtravel/assets/seoul_districts.geojson"
+         },
+         "sourceLayers": [
+          {
+           "id": "best_spots_district_fill",
+           "source": "districts",
+           "kind": "fill",
+           "paint": {
+            "colorProp": "best_spots_tier",
+            "ramp": {
+             "very-low": "#9ec5f4",
+             "low": "#6da7ec",
+             "mid": "#3987e5",
+             "high": "#1c5cab",
+             "very-high": "#0d366b",
+             "no-data": "#E6E4DC"
+            },
+            "opacity": 0.75,
+            "outline": "#FFFFFF"
+           }
+          },
+          {
+           "id": "best_spots_district_lines",
+           "source": "districts",
+           "kind": "line",
+           "paint": {
+            "color": "#6B7280",
+            "width": 0.8,
+            "opacity": 0.25
+           }
+          }
+         ],
+         "tapLayers": [
+          "best_spots_district_fill"
+         ],
+         "tapLayerDetails": {
+          "best_spots_district_fill": {
+           "titleField": "gu",
+           "fields": [
+            "best_spots_rank",
+            "best_spots_tier",
+            "best_spots_score",
+            "inbound_access_score",
+            "area_centrality_score",
+            "travel_ease_tier",
+            "conn_tier"
+           ],
+           "labels": {
+            "best_spots_rank": "Best-spots rank",
+            "best_spots_tier": "Best-spots tier",
+            "best_spots_score": "Best-spots score (est.)",
+            "inbound_access_score": "Destination-access score (est.)",
+            "area_centrality_score": "Area-centrality score (est.)",
+            "travel_ease_tier": "Travel-ease tier (est.)",
+            "conn_tier": "Connectivity"
+           },
+           "meterFields": {
+            "best_spots_score": 100,
+            "inbound_access_score": 100,
+            "area_centrality_score": 100
+           }
+          }
+         },
+         "overlayAlign": "topStart",
+         "overlay": {
+          "type": "column",
+          "crossAxis": "start",
+          "background": "#F2FBFBF9",
+          "radius": 12,
+          "padding": 8,
+          "children": [
+           {
+            "type": "text",
+            "style": "caption",
+            "maxLines": 2,
+            "color": "#52514E",
+            "value": "Score = 0.5×destination access + 0.5×centrality (estimate) · tap a district"
+           },
+           {
+            "type": "row",
+            "wrap": true,
+            "spacing": 10,
+            "runSpacing": 2,
+            "children": [
+             {
+              "type": "text",
+              "style": "caption",
+              "value": "Tier:"
+             },
+             {
+              "type": "row",
+              "spacing": 3,
+              "children": [
+               {
+                "type": "text",
+                "style": "caption",
+                "color": "#9ec5f4",
+                "value": "●"
+               },
+               {
+                "type": "text",
+                "style": "caption",
+                "value": "very-low"
+               }
+              ]
+             },
+             {
+              "type": "row",
+              "spacing": 3,
+              "children": [
+               {
+                "type": "text",
+                "style": "caption",
+                "color": "#6da7ec",
+                "value": "●"
+               },
+               {
+                "type": "text",
+                "style": "caption",
+                "value": "low"
+               }
+              ]
+             },
+             {
+              "type": "row",
+              "spacing": 3,
+              "children": [
+               {
+                "type": "text",
+                "style": "caption",
+                "color": "#3987e5",
+                "value": "●"
+               },
+               {
+                "type": "text",
+                "style": "caption",
+                "value": "mid"
+               }
+              ]
+             },
+             {
+              "type": "row",
+              "spacing": 3,
+              "children": [
+               {
+                "type": "text",
+                "style": "caption",
+                "color": "#1c5cab",
+                "value": "●"
+               },
+               {
+                "type": "text",
+                "style": "caption",
+                "value": "high"
+               }
+              ]
+             },
+             {
+              "type": "row",
+              "spacing": 3,
+              "children": [
+               {
+                "type": "text",
+                "style": "caption",
+                "color": "#0d366b",
+                "value": "●"
+               },
+               {
+                "type": "text",
+                "style": "caption",
+                "value": "very-high"
+               }
+              ]
+             },
+             {
+              "type": "row",
+              "spacing": 3,
+              "children": [
+               {
+                "type": "text",
+                "style": "caption",
+                "color": "#E6E4DC",
+                "value": "●"
+               },
+               {
+                "type": "text",
+                "style": "caption",
+                "value": "no-data"
+               }
+              ]
+             }
+            ]
+           }
+          ],
+          "maxWidth": 320
+         }
+        }
+       },
+       {
+        "label": "List",
+        "child": {
+         "type": "column",
+         "children": [
+          {
+           "type": "cards",
+           "table": "best_spots",
+           "title": "rank_label",
+           "height": "fill",
+           "sort": {
+            "column": "best_spots_rank_key",
+            "dir": "asc"
+           },
+           "search": true,
+           "searchColumns": [
+            "district"
+           ],
+           "tags": [
+            {
+             "column": "best_spots_tier",
+             "colors": {
+              "very-low": "gray",
+              "low": "teal",
+              "mid": "amber",
+              "high": "blue",
+              "very-high": "green"
+             }
+            },
+            {
+             "column": "best_spots_score",
+             "positiveColor": "blue",
+             "negativeColor": "blue",
+             "prefix": "Score "
+            }
+           ],
+           "accentColumn": "best_spots_tier",
+           "accentColors": {
+            "very-low": "gray",
+            "low": "teal",
+            "mid": "amber",
+            "high": "blue",
+            "very-high": "green"
+           },
+           "tableView": false,
+           "expandable": true,
+           "open": "Scores",
+           "expandFields": [
+            {
+             "column": "best_spots_rank",
+             "label": "Rank"
+            },
+            {
+             "column": "best_spots_score",
+             "label": "Best-spots score"
+            },
+            {
+             "column": "inbound_access_score",
+             "label": "Destination-access score"
+            },
+            {
+             "column": "inbound_mean_m",
+             "label": "Avg minutes arriving from elsewhere"
+            },
+            {
+             "column": "area_centrality_score",
+             "label": "Area-centrality score"
+            },
+            {
+             "column": "travel_ease_score",
+             "label": "Overall travel-ease score (for comparison)"
+            },
+            {
+             "column": "travel_ease_tier",
+             "label": "Overall travel-ease tier"
+            }
+           ],
+           "action": {
+            "fn": "editRow"
+           },
+           "expandSingle": true,
+           "expandChevron": true,
+           "openActions": [
+            {
+             "label": "Show on map",
+             "icon": "map",
+             "action": {
+              "chain": [
+               {
+                "fn": "focusRow"
+               },
+               {
+                "fn": "goto",
+                "args": {
+                 "screen": "best_spots_map"
+                }
+               }
+              ]
+             }
+            }
+           ]
+          },
+          {
+           "type": "button",
+           "label": "See all 25 on the map",
+           "icon": "map",
+           "action": {
+            "chain": [
+             {
+              "fn": "clearFocus",
+              "args": {
+               "table": "best_spots"
+              }
+             },
+             {
+              "fn": "goto",
+              "args": {
+               "screen": "best_spots_map"
+              }
+             }
+            ]
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "best_spots_map": {
+   "title": "Best spots on the map",
+   "body": {
+    "type": "column",
+    "crossAxis": "start",
+    "children": [
+     {
+      "type": "glmap",
+      "id": "kr_bestspots_map",
+      "height": "fill",
+      "zoom": 10.4,
+      "center": [
+       37.5665,
+       126.978
+      ],
+      "table": "best_spots",
+      "latColumn": "lat",
+      "lonColumn": "lon",
+      "labelColumn": "rank_label",
+      "colorColumn": "best_spots_tier",
+      "colors": {
+       "very-low": "gray",
+       "low": "teal",
+       "mid": "amber",
+       "high": "blue",
+       "very-high": "green"
+      },
+      "action": {
+       "fn": "editRow"
+      },
+      "geojsonSources": {
+       "districts": "apps/krtravel/assets/seoul_districts.geojson"
+      },
+      "sourceLayers": [
+       {
+        "id": "best_spots_tier_fill",
+        "source": "districts",
+        "kind": "fill",
+        "paint": {
+         "colorProp": "best_spots_tier",
+         "ramp": {
+          "very-low": "gray",
+          "low": "teal",
+          "mid": "amber",
+          "high": "blue",
+          "very-high": "green"
+         },
+         "opacity": 0.45
+        }
+       },
+       {
+        "id": "best_spots_tier_lines",
+        "source": "districts",
+        "kind": "line",
+        "paint": {
+         "color": "#FFFFFF",
+         "width": 1,
+         "opacity": 0.8
+        }
+       }
+      ],
+      "tapLayers": [
+       "best_spots_tier_fill"
+      ],
+      "tapLayerDetails": {
+       "best_spots_tier_fill": {
+        "titleField": "gu",
+        "fields": [
+         "best_spots_rank",
+         "best_spots_tier",
+         "inbound_access_score",
+         "area_centrality_score",
+         "conn_mean_m"
+        ],
+        "labels": {
+         "best_spots_rank": "Best spots rank",
+         "best_spots_tier": "Best spots tier",
+         "inbound_access_score": "Destination access score",
+         "area_centrality_score": "Area centrality score",
+         "conn_mean_m": "Avg minutes arriving from elsewhere"
+        },
+        "valueSuffixes": {
+         "conn_mean_m": " min"
+        },
+        "meterFields": {
+         "best_spots_score": 100,
+         "inbound_access_score": 100,
+         "area_centrality_score": 100
+        }
+       }
+      },
+      "legend": {
+       "layer": "best_spots_tier_fill",
+       "title": "Best-spots tier",
+       "collapsible": true
+      },
+      "overlayAlign": "topStart",
+      "overlay": {
+       "type": "row",
+       "wrap": true,
+       "spacing": 6,
+       "runSpacing": 6,
+       "children": [
+        {
+         "type": "button",
+         "label": "List",
+         "icon": "format_list_numbered",
+         "action": {
+          "fn": "goto",
+          "args": {
+           "screen": "best_spots"
+          }
+         }
+        },
+        {
+         "type": "button",
+         "label": "Show all 25",
+         "icon": "public",
+         "variant": "text",
+         "action": {
+          "fn": "clearFocus",
+          "args": {
+           "table": "best_spots"
+          }
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  "timeline": {
+   "title": "Events timeline",
+   "body": {
+    "type": "datacontrols",
+    "table": "events",
+    "dock": "auto",
+    "children": [
+     {
+      "type": "datasegment",
+      "table": "events",
+      "column": "genre",
+      "label": "Genre",
+      "max": 8
+     }
+    ],
+    "body": {
+     "type": "segments",
+     "fill": true,
+     "segments": [
+      {
+       "label": "Calendar",
+       "child": {
+        "type": "calendar",
+        "table": "events",
+        "dateColumns": [
+         "start_date"
+        ],
+        "titleColumn": "title",
+        "action": {
+         "fn": "editRow"
+        }
+       }
+      },
+      {
+       "label": "Map",
+       "child": {
+        "type": "glmap",
+        "id": "timeline_glmap",
+        "height": "0.9fill",
+        "zoom": 6.5,
+        "center": [
+         36.5,
+         127.8
+        ],
+        "action": {
+         "fn": "editRow"
+        },
+        "geojsonSources": {
+         "events": "apps/krtravel/assets/events.geojson"
+        },
+        "sourceLayers": [
+         {
+          "id": "timeline_event_pins",
+          "source": "events",
+          "kind": "circle",
+          "paint": {
+           "colorProp": "month",
+           "ramp": {
+            "aug": "#D97706",
+            "sep": "#0D9488",
+            "oct": "#EA580C"
+           },
+           "color": "#EA580C",
+           "radius": 6,
+           "opacity": 0.9
+          }
+         }
+        ],
+        "legend": {
+         "collapsible": false,
+         "entries": {
+          "Aug": "#D97706",
+          "Sep": "#0D9488",
+          "Oct": "#EA580C"
+         }
+        },
+        "overlayAlign": "topStart",
+        "overlay": {
+         "type": "card",
+         "child": {
+          "type": "row",
+          "wrap": true,
+          "spacing": 6,
+          "children": [
+           {
+            "type": "button",
+            "label": "All",
+            "variant": "tonal",
+            "action": {
+             "fn": "mapSetFilter",
+             "args": {
+              "node": "timeline_glmap",
+              "layer": "timeline_event_pins",
+              "filter": []
+             }
+            }
+           },
+           {
+            "type": "button",
+            "label": "Aug",
+            "variant": "tonal",
+            "action": {
+             "fn": "mapSetFilter",
+             "args": {
+              "node": "timeline_glmap",
+              "layer": "timeline_event_pins",
+              "filter": [
+               "==",
+               "month",
+               "aug"
+              ]
+             }
+            }
+           },
+           {
+            "type": "button",
+            "label": "Sep",
+            "variant": "tonal",
+            "action": {
+             "fn": "mapSetFilter",
+             "args": {
+              "node": "timeline_glmap",
+              "layer": "timeline_event_pins",
+              "filter": [
+               "==",
+               "month",
+               "sep"
+              ]
+             }
+            }
+           },
+           {
+            "type": "button",
+            "label": "Oct",
+            "variant": "tonal",
+            "action": {
+             "fn": "mapSetFilter",
+             "args": {
+              "node": "timeline_glmap",
+              "layer": "timeline_event_pins",
+              "filter": [
+               "==",
+               "month",
+               "oct"
+              ]
+             }
+            }
+           },
+           {
+            "type": "text",
+            "style": "caption",
+            "maxLines": 1,
+            "value": "Web-verified events · sources in each entry"
+           }
+          ]
+         }
+        },
+        "tapLayers": [
+         "timeline_event_pins"
+        ],
+        "tapLayerDetails": {
+         "timeline_event_pins": {
+          "table": "events",
+          "idProperty": "title",
+          "titleField": "title",
+          "fields": [
+           "start_date",
+           "end_date",
+           "month",
+           "city",
+           "genre"
+          ],
+          "labels": {
+           "start_date": "Starts",
+           "end_date": "Ends",
+           "month": "Month",
+           "city": "City",
+           "genre": "Genre"
+          }
+         }
+        }
+       }
+      },
+      {
+       "label": "List",
+       "child": {
+        "type": "cards",
+        "table": "events",
+        "height": "fill",
+        "title": "title",
+        "subtitle": "city",
+        "groupBy": "month",
+        "groupOrder": [
+         "aug",
+         "sep",
+         "oct"
+        ],
+        "sort": {
+         "column": "start_date",
+         "dir": "asc"
+        },
+        "search": true,
+        "searchColumns": [
+         "title",
+         "city",
+         "category"
+        ],
+        "filterable": true,
+        "tags": [
+         {
+          "column": "category"
+         },
+         {
+          "column": "genre"
+         },
+         {
+          "column": "start_display"
+         },
+         {
+          "column": "end_display"
+         }
+        ],
+        "accentColumn": "month",
+        "accentColors": {
+         "aug": "amber",
+         "sep": "teal",
+         "oct": "coral"
+        },
+        "tableView": false,
+        "expandable": true,
+        "open": "Details",
+        "expandFields": [
+         {
+          "column": "start_date",
+          "label": "Start date"
+         },
+         {
+          "column": "end_date",
+          "label": "End date"
+         },
+         {
+          "column": "category",
+          "label": "Category"
+         },
+         {
+          "column": "url",
+          "label": "Link"
+         },
+         {
+          "column": "source_note",
+          "label": "Source note"
+         }
+        ],
+        "action": {
+         "fn": "openLink"
+        },
+        "expandSingle": true,
+        "expandChevron": true,
+        "configSource": "board"
+       }
+      }
+     ]
+    }
+   }
+  },
+  "about": {
+   "title": "About & data",
+   "body": {
+    "type": "column",
+    "children": [
+     {
+      "type": "text",
+      "style": "eyebrow",
+      "value": "🗺️ How to read this map"
+     },
+     {
+      "type": "text",
+      "style": "caption",
+      "value": "Reach tab: pick an origin hub, a time budget and a mode; the map colors how far you can get. Colored fills are district/neighborhood scores — darker/warmer usually means higher on that score (each layer's own legend is on the Map tab's Show/Hide buttons). Colored dots are stations or events. Best spots, Stations and Timeline cards carry the SAME tier colors as a left-edge stripe or leading dot (gray → teal → amber → blue → green, low to high; Timeline uses amber/teal/coral for Aug/Sep/Oct) — so a glance tells you the tier without opening a card. Tap a layer's Show/Hide button on the Map tab to toggle it; tap a card to see its full scores. The Reach explorer's origin is one of 8 precomputed hub stations (tap a tab above the map to switch) — the underlying matrix is only computed from these 8, so there's no free-tap-anywhere origin in this build. The faint grey fill under every reach map is the full city extent: it never disappears, so when you pull the time-budget slider down, cells beyond your budget read as neutral grey instead of vanishing — only the colored (in-budget) cells are affected by the slider."
+     },
+     {
+      "type": "divider"
+     },
+     {
+      "type": "text",
+      "style": "eyebrow",
+      "value": "What this is"
+     },
+     {
+      "type": "text",
+      "style": "caption",
+      "value": "Estimated travel access across Seoul (471-station subway graph, 25 districts, 424 neighborhoods) plus a national KTX/SRT rail overview, an Aug-Oct 2026 events timeline, and a network-ROUTED walk-access-to-nearest-station heatmap (fine + coarse grid cells; the WALKING route to that station follows real OSM footpaths/streets, not straight-line rings — but which station counts as “nearest” for a given cell is a separate, straight-line/haversine pick, not the fastest-arriving one; see the honesty caveats below). All scores are model ESTIMATES built by tool/korea/build_krtravel.py + build_krtravel_assets.py + build_krtravel_content.py + build_hexwalk.py from the same OSM-derived graph the Urbanset (terrain) applet uses. Map, Stations and Timeline screens each offer a Map ⇄ List (⇄ Calendar on Timeline) view — same underlying data, different lens."
+     },
+     {
+      "type": "divider"
+     },
+     {
+      "type": "text",
+      "style": "eyebrow",
+      "value": "Formulas & honesty caveats"
+     },
+     {
+      "type": "text",
+      "style": "caption",
+      "value": "transit_stress_score = unweighted betweenness centrality on the 471-node/587-edge subway graph, min-max normalized, quintile tier. walk_stress_score is a HONEST PROXY (nearby-station density only — NOT sidewalks/terrain/pedestrian network), flagged walk_stress_is_proxy on every station. area_centrality_score = 0.5×mean member station transit-stress + 0.5×normalized closeness; zero-station areas get tier \"no-data\" and score null, never interpolated. inbound_access_score (destination-access) = normalized negative mean ETA arriving at a district from all 24 others (kr_district_od, 25x25 avg-minutes matrix) — district-level only, no dong-level OD matrix this round. best_spots_score = 0.5×destination-access + 0.5×area-centrality. travel_ease_score (district) = 0.4×area-centrality + 0.3×destination-access + 0.3×walk-ease; (dong, no OD table at this granularity) = 0.6×area-centrality + 0.4×walk-ease. National rail lines are SCHEMATIC straight-line edges between named-route stations, not real track alignment, with minutes derived from an assumed 160 km/h effective speed (matches real Seoul-Busan KTX/SRT scheduled run times, not the 305 km/h design top speed). Reach explorer minutes come from two precomputed 471x471 station matrices (subway-only, and subway + the schematic national-rail layer), Dijkstra at 33 km/h + 0.5 min dwell per hop, quantized to whole minutes and CAPPED at 120 — a \"120+\" station is at the cap or has no route at all, never a literal count beyond it. Rail-combo join assumption: a national station becomes a transfer hub only where it falls within 1.5 km of a subway station — only 7 of the 45 do (Seoul Station, Yongsan, Cheongnyangni, Suseo, Gwangmyeong, Sangbong, Yangpyeong); the other 38 (Busan, Daegu, Gwangju, all 20km+ away) are NOT joined and never interpolated. Crossing networks at a joined hub costs a flat 8-minute transfer penalty each way (stated assumption — walk + wait/interchange, schematic, not timetable-exact). Bus is not modeled at all and is never approximated from subway/rail. NEAREST-STATION ASSIGNMENT CAVEAT (plain words): every walk cell and reach cell boards the subway at the straight-line-nearest station to its center, which may not be the station a real walk would actually arrive at fastest — so a cell's shown walk/reach time can understate the real one when the true fastest station isn't the closest one. BUCKET-TIER CAVEAT (plain words): the Reach Explorer's map colors and time-budget slider use 8 coarse tiers (<10/10-20/20-30/30-45/45-60/60-90/90-120/120+), an ABSOLUTE reading from the origin (never relative to the slider position) with a NEUTRAL grey for the 120+/no-route tier so an unreachable cell never reads as fast -- not exact continuous minutes, to keep the cell data compact (full formula above). HEAT-VIEW CAVEAT (plain words): the Heat toggle renders the SAME 8-tier bucketed values as a spatially kernel-blended gradient (seoul-true-heat round) -- smoother to look at, matching the Walk Score aesthetic, but not higher-resolution data: it blends the same coarse tiers across neighboring cells, it does not reveal exact continuous minutes any more than Buckets does."
+     },
+     {
+      "type": "divider"
+     },
+     {
+      "type": "text",
+      "style": "eyebrow",
+      "value": "Sources & license"
+     },
+     {
+      "type": "text",
+      "style": "caption",
+      "value": "Seoul subway stations, subway network, districts and neighborhoods: © OpenStreetMap contributors, ODbL — reused from apps/terrain (same obligation applies here). Walk-access pedestrian network: © OpenStreetMap contributors, ODbL, fetched fresh 2026-07-28 for this round (tool/korea/build_hexwalk.py). National rail station identity/coordinates: Wikipedia, web-verified 2026-07-28 (not independently copyrightable). Events: web-verified 2026-07-28 against official/tourism-board/press/Wikipedia sources per event — see each card's source note. Full formulas + every honesty caveat: DATA_SOURCES.md, section \"terrain krtravel\"."
+     },
+     {
+      "type": "divider"
+     },
+     {
+      "type": "text",
+      "style": "eyebrow",
+      "value": "Seed vintage"
+     },
+     {
+      "type": "text",
+      "style": "caption",
+      "value": "Round 1 built 2026-07-28 (krtravel-0728): no re-fetch, reuses apps/terrain content.json (kr_stations, kr_district_od) and geometry (network.geojson, seoul_districts.geojson, seoul_dong.geojson). Round 2 (hexwalk-0728, seedVersion 2026-07-28.3): fresh OSM pedestrian-network fetch (tool/korea/build_hexwalk.py) for the walk-access-to-nearest-station heatmap. Round 3 (designpass-0728, seedVersion 2026-07-28.4): UX rebuild — zoom-paired area layers (travel-ease + area-centrality), a dedicated Stations screen (map/list), a calendar/map/list Timeline, best-spots rank+score display, trimmed captions. No new data fetched."
+     }
+    ]
+   }
+  },
+  "reach": {
+   "title": "Reach explorer",
+   "maxContentWidth": 0,
+   "body": {
+    "type": "glmap",
+    "id": "reach_glmap",
+    "height": "0.85fill",
+    "zoom": 11.5,
+    "center": [
+     37.54,
+     126.98
+    ],
+    "legend": {
+     "title": "Reach tiers (min)",
+     "collapsible": true,
+     "entries": {
+      "<10": "#0d366b",
+      "10-20": "#184f95",
+      "20-30": "#256abf",
+      "30-45": "#3987e5",
+      "45-60": "#6da7ec",
+      "60-90": "#9ec5f4",
+      "90+": "#CFCCC0"
+     }
+    },
+    "overlayAlign": "topStart",
+    "overlay": {
+     "type": "column",
+     "crossAxis": "start",
+     "background": "#F2FFFFFF",
+     "radius": 12,
+     "padding": 8,
+     "maxWidth": 340,
+     "children": [
+      {
+       "type": "segments",
+       "chips": true,
+       "segments": [
+        {
+         "label": "Map",
+         "child": {
+          "type": "row",
+          "wrap": true,
+          "spacing": 4,
+          "runSpacing": 2,
+          "children": [
+           {
+            "type": "switch",
+            "table": "reach_origins",
+            "id": "$selected:reach_origins",
+            "column": "label",
+            "cases": {
+             "Seoul Station": {
+              "type": "text",
+              "style": "caption",
+              "value": "From Seoul Station"
+             },
+             "City Hall": {
+              "type": "text",
+              "style": "caption",
+              "value": "From City Hall"
+             },
+             "Gangnam": {
+              "type": "text",
+              "style": "caption",
+              "value": "From Gangnam"
+             },
+             "Wangsimni": {
+              "type": "text",
+              "style": "caption",
+              "value": "From Wangsimni"
+             },
+             "Sadang": {
+              "type": "text",
+              "style": "caption",
+              "value": "From Sadang"
+             },
+             "Jamsil": {
+              "type": "text",
+              "style": "caption",
+              "value": "From Jamsil"
+             },
+             "Konkuk Univ": {
+              "type": "text",
+              "style": "caption",
+              "value": "From Konkuk Univ"
+             },
+             "Hongik Univ": {
+              "type": "text",
+              "style": "caption",
+              "value": "From Hongik Univ"
+             }
+            },
+            "default": {
+             "type": "text",
+             "style": "caption",
+             "value": "From Seoul Station"
+            }
+           },
+           {
+            "type": "switch",
+            "table": "reach_budgets",
+            "id": "$selected:reach_budgets",
+            "column": "label",
+            "cases": {
+             "10": {
+              "type": "text",
+              "style": "caption",
+              "value": "· within 10 min"
+             },
+             "20": {
+              "type": "text",
+              "style": "caption",
+              "value": "· within 20 min"
+             },
+             "30": {
+              "type": "text",
+              "style": "caption",
+              "value": "· within 30 min"
+             },
+             "45": {
+              "type": "text",
+              "style": "caption",
+              "value": "· within 45 min"
+             },
+             "60": {
+              "type": "text",
+              "style": "caption",
+              "value": "· within 60 min"
+             },
+             "90": {
+              "type": "text",
+              "style": "caption",
+              "value": "· within 90 min"
+             },
+             "120": {
+              "type": "text",
+              "style": "caption",
+              "value": "· within 120 min"
+             },
+             "All": {
+              "type": "text",
+              "style": "caption",
+              "value": "· all times"
+             }
+            },
+            "default": {
+             "type": "text",
+             "style": "caption",
+             "value": "· all times"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "label": "From",
+         "child": {
+          "type": "row",
+          "wrap": true,
+          "spacing": 6,
+          "runSpacing": 6,
+          "children": [
+           {
+            "type": "text",
+            "style": "caption",
+            "value": "From"
+           },
+           {
+            "type": "button",
+            "label": "Seoul Station",
+            "variant": "outlined",
+            "action": {
+             "chain": [
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_subway",
+                "prop": "colorProp",
+                "value": "A"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_subway",
+                "prop": "colorProp",
+                "value": "A"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_rail",
+                "prop": "colorProp",
+                "value": "B"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_rail",
+                "prop": "colorProp",
+                "value": "B"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_coarse_subway",
+                "prop": "weightProp",
+                "value": "a_inv"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_fine_subway",
+                "prop": "weightProp",
+                "value": "a_inv"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_coarse_rail",
+                "prop": "weightProp",
+                "value": "b_inv"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_fine_rail",
+                "prop": "weightProp",
+                "value": "b_inv"
+               }
+              },
+              {
+               "fn": "selectRow",
+               "args": {
+                "table": "reach_origins",
+                "id": "seoul_station"
+               }
+              }
+             ]
+            }
+           },
+           {
+            "type": "button",
+            "label": "City Hall",
+            "variant": "outlined",
+            "action": {
+             "chain": [
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_subway",
+                "prop": "colorProp",
+                "value": "C"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_subway",
+                "prop": "colorProp",
+                "value": "C"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_rail",
+                "prop": "colorProp",
+                "value": "D"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_rail",
+                "prop": "colorProp",
+                "value": "D"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_coarse_subway",
+                "prop": "weightProp",
+                "value": "c_inv"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_fine_subway",
+                "prop": "weightProp",
+                "value": "c_inv"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_coarse_rail",
+                "prop": "weightProp",
+                "value": "d_inv"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_fine_rail",
+                "prop": "weightProp",
+                "value": "d_inv"
+               }
+              },
+              {
+               "fn": "selectRow",
+               "args": {
+                "table": "reach_origins",
+                "id": "city_hall"
+               }
+              }
+             ]
+            }
+           },
+           {
+            "type": "button",
+            "label": "Gangnam",
+            "variant": "outlined",
+            "action": {
+             "chain": [
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_subway",
+                "prop": "colorProp",
+                "value": "E"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_subway",
+                "prop": "colorProp",
+                "value": "E"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_rail",
+                "prop": "colorProp",
+                "value": "F"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_rail",
+                "prop": "colorProp",
+                "value": "F"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_coarse_subway",
+                "prop": "weightProp",
+                "value": "e_inv"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_fine_subway",
+                "prop": "weightProp",
+                "value": "e_inv"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_coarse_rail",
+                "prop": "weightProp",
+                "value": "f_inv"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_fine_rail",
+                "prop": "weightProp",
+                "value": "f_inv"
+               }
+              },
+              {
+               "fn": "selectRow",
+               "args": {
+                "table": "reach_origins",
+                "id": "gangnam"
+               }
+              }
+             ]
+            }
+           },
+           {
+            "type": "button",
+            "label": "Wangsimni",
+            "variant": "outlined",
+            "action": {
+             "chain": [
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_subway",
+                "prop": "colorProp",
+                "value": "G"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_subway",
+                "prop": "colorProp",
+                "value": "G"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_rail",
+                "prop": "colorProp",
+                "value": "H"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_rail",
+                "prop": "colorProp",
+                "value": "H"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_coarse_subway",
+                "prop": "weightProp",
+                "value": "g_inv"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_fine_subway",
+                "prop": "weightProp",
+                "value": "g_inv"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_coarse_rail",
+                "prop": "weightProp",
+                "value": "h_inv"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_fine_rail",
+                "prop": "weightProp",
+                "value": "h_inv"
+               }
+              },
+              {
+               "fn": "selectRow",
+               "args": {
+                "table": "reach_origins",
+                "id": "wangsimni"
+               }
+              }
+             ]
+            }
+           },
+           {
+            "type": "button",
+            "label": "Sadang",
+            "variant": "outlined",
+            "action": {
+             "chain": [
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_subway",
+                "prop": "colorProp",
+                "value": "I"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_subway",
+                "prop": "colorProp",
+                "value": "I"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_rail",
+                "prop": "colorProp",
+                "value": "J"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_rail",
+                "prop": "colorProp",
+                "value": "J"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_coarse_subway",
+                "prop": "weightProp",
+                "value": "i_inv"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_fine_subway",
+                "prop": "weightProp",
+                "value": "i_inv"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_coarse_rail",
+                "prop": "weightProp",
+                "value": "j_inv"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_fine_rail",
+                "prop": "weightProp",
+                "value": "j_inv"
+               }
+              },
+              {
+               "fn": "selectRow",
+               "args": {
+                "table": "reach_origins",
+                "id": "sadang"
+               }
+              }
+             ]
+            }
+           },
+           {
+            "type": "button",
+            "label": "Jamsil",
+            "variant": "outlined",
+            "action": {
+             "chain": [
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_subway",
+                "prop": "colorProp",
+                "value": "K"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_subway",
+                "prop": "colorProp",
+                "value": "K"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_rail",
+                "prop": "colorProp",
+                "value": "L"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_rail",
+                "prop": "colorProp",
+                "value": "L"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_coarse_subway",
+                "prop": "weightProp",
+                "value": "k_inv"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_fine_subway",
+                "prop": "weightProp",
+                "value": "k_inv"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_coarse_rail",
+                "prop": "weightProp",
+                "value": "l_inv"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_fine_rail",
+                "prop": "weightProp",
+                "value": "l_inv"
+               }
+              },
+              {
+               "fn": "selectRow",
+               "args": {
+                "table": "reach_origins",
+                "id": "jamsil"
+               }
+              }
+             ]
+            }
+           },
+           {
+            "type": "button",
+            "label": "Konkuk Univ",
+            "variant": "outlined",
+            "action": {
+             "chain": [
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_subway",
+                "prop": "colorProp",
+                "value": "M"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_subway",
+                "prop": "colorProp",
+                "value": "M"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_rail",
+                "prop": "colorProp",
+                "value": "N"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_rail",
+                "prop": "colorProp",
+                "value": "N"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_coarse_subway",
+                "prop": "weightProp",
+                "value": "m_inv"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_fine_subway",
+                "prop": "weightProp",
+                "value": "m_inv"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_coarse_rail",
+                "prop": "weightProp",
+                "value": "n_inv"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_fine_rail",
+                "prop": "weightProp",
+                "value": "n_inv"
+               }
+              },
+              {
+               "fn": "selectRow",
+               "args": {
+                "table": "reach_origins",
+                "id": "konkuk"
+               }
+              }
+             ]
+            }
+           },
+           {
+            "type": "button",
+            "label": "Hongik Univ",
+            "variant": "outlined",
+            "action": {
+             "chain": [
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_subway",
+                "prop": "colorProp",
+                "value": "O"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_subway",
+                "prop": "colorProp",
+                "value": "O"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_rail",
+                "prop": "colorProp",
+                "value": "P"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_rail",
+                "prop": "colorProp",
+                "value": "P"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_coarse_subway",
+                "prop": "weightProp",
+                "value": "o_inv"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_fine_subway",
+                "prop": "weightProp",
+                "value": "o_inv"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_coarse_rail",
+                "prop": "weightProp",
+                "value": "p_inv"
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_fine_rail",
+                "prop": "weightProp",
+                "value": "p_inv"
+               }
+              },
+              {
+               "fn": "selectRow",
+               "args": {
+                "table": "reach_origins",
+                "id": "hongik"
+               }
+              }
+             ]
+            }
+           }
+          ]
+         }
+        },
+        {
+         "label": "Layers",
+         "child": {
+          "type": "row",
+          "wrap": true,
+          "spacing": 6,
+          "runSpacing": 6,
+          "children": [
+           {
+            "type": "button",
+            "label": "Subway",
+            "variant": "tonal",
+            "action": {
+             "chain": [
+              {
+               "fn": "mapSetLayerVisible",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_subway",
+                "visible": true
+               }
+              },
+              {
+               "fn": "mapSetLayerVisible",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_subway",
+                "visible": true
+               }
+              },
+              {
+               "fn": "mapSetLayerVisible",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_coarse_subway",
+                "visible": true
+               }
+              },
+              {
+               "fn": "mapSetLayerVisible",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_fine_subway",
+                "visible": true
+               }
+              },
+              {
+               "fn": "mapSetLayerVisible",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_rail",
+                "visible": false
+               }
+              },
+              {
+               "fn": "mapSetLayerVisible",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_rail",
+                "visible": false
+               }
+              },
+              {
+               "fn": "mapSetLayerVisible",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_coarse_rail",
+                "visible": false
+               }
+              },
+              {
+               "fn": "mapSetLayerVisible",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_fine_rail",
+                "visible": false
+               }
+              }
+             ]
+            }
+           },
+           {
+            "type": "button",
+            "label": "Subway + rail",
+            "variant": "tonal",
+            "action": {
+             "chain": [
+              {
+               "fn": "mapSetLayerVisible",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_subway",
+                "visible": false
+               }
+              },
+              {
+               "fn": "mapSetLayerVisible",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_subway",
+                "visible": false
+               }
+              },
+              {
+               "fn": "mapSetLayerVisible",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_coarse_subway",
+                "visible": false
+               }
+              },
+              {
+               "fn": "mapSetLayerVisible",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_fine_subway",
+                "visible": false
+               }
+              },
+              {
+               "fn": "mapSetLayerVisible",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_rail",
+                "visible": true
+               }
+              },
+              {
+               "fn": "mapSetLayerVisible",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_rail",
+                "visible": true
+               }
+              },
+              {
+               "fn": "mapSetLayerVisible",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_coarse_rail",
+                "visible": true
+               }
+              },
+              {
+               "fn": "mapSetLayerVisible",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_fine_rail",
+                "visible": true
+               }
+              }
+             ]
+            }
+           },
+           {
+            "type": "button",
+            "label": "Tiers",
+            "variant": "tonal",
+            "action": {
+             "chain": [
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_subway",
+                "prop": "opacity",
+                "value": 0.85
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_subway",
+                "prop": "opacity",
+                "value": 0.85
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_rail",
+                "prop": "opacity",
+                "value": 0.85
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_rail",
+                "prop": "opacity",
+                "value": 0.85
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_coarse_subway",
+                "prop": "opacity",
+                "value": 0
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_fine_subway",
+                "prop": "opacity",
+                "value": 0
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_coarse_rail",
+                "prop": "opacity",
+                "value": 0
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_fine_rail",
+                "prop": "opacity",
+                "value": 0
+               }
+              }
+             ]
+            }
+           },
+           {
+            "type": "button",
+            "label": "Heat",
+            "variant": "tonal",
+            "action": {
+             "chain": [
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_subway",
+                "prop": "opacity",
+                "value": 0
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_subway",
+                "prop": "opacity",
+                "value": 0
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_rail",
+                "prop": "opacity",
+                "value": 0
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_rail",
+                "prop": "opacity",
+                "value": 0
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_coarse_subway",
+                "prop": "opacity",
+                "value": 0.85
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_fine_subway",
+                "prop": "opacity",
+                "value": 0.85
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_coarse_rail",
+                "prop": "opacity",
+                "value": 0.85
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_heat_fine_rail",
+                "prop": "opacity",
+                "value": 0.85
+               }
+              }
+             ]
+            }
+           },
+           {
+            "type": "text",
+            "style": "caption",
+            "maxLines": 1,
+            "value": "Bus/frequency: no data yet."
+           }
+          ]
+         }
+        },
+        {
+         "label": "Within",
+         "child": {
+          "type": "row",
+          "wrap": true,
+          "spacing": 4,
+          "runSpacing": 4,
+          "padding": 6,
+          "children": [
+           {
+            "type": "text",
+            "value": "Within (min)",
+            "style": "caption"
+           },
+           {
+            "type": "button",
+            "label": "10",
+            "variant": "outlined",
+            "action": {
+             "chain": [
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_subway",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#CFCCC0",
+                 "20-30": "#CFCCC0",
+                 "30-45": "#CFCCC0",
+                 "45-60": "#CFCCC0",
+                 "60-90": "#CFCCC0",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_subway",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#CFCCC0",
+                 "20-30": "#CFCCC0",
+                 "30-45": "#CFCCC0",
+                 "45-60": "#CFCCC0",
+                 "60-90": "#CFCCC0",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_rail",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#CFCCC0",
+                 "20-30": "#CFCCC0",
+                 "30-45": "#CFCCC0",
+                 "45-60": "#CFCCC0",
+                 "60-90": "#CFCCC0",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_rail",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#CFCCC0",
+                 "20-30": "#CFCCC0",
+                 "30-45": "#CFCCC0",
+                 "45-60": "#CFCCC0",
+                 "60-90": "#CFCCC0",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "selectRow",
+               "args": {
+                "table": "reach_budgets",
+                "id": "b10"
+               }
+              }
+             ]
+            }
+           },
+           {
+            "type": "button",
+            "label": "20",
+            "variant": "outlined",
+            "action": {
+             "chain": [
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_subway",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#184f95",
+                 "20-30": "#CFCCC0",
+                 "30-45": "#CFCCC0",
+                 "45-60": "#CFCCC0",
+                 "60-90": "#CFCCC0",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_subway",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#184f95",
+                 "20-30": "#CFCCC0",
+                 "30-45": "#CFCCC0",
+                 "45-60": "#CFCCC0",
+                 "60-90": "#CFCCC0",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_rail",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#184f95",
+                 "20-30": "#CFCCC0",
+                 "30-45": "#CFCCC0",
+                 "45-60": "#CFCCC0",
+                 "60-90": "#CFCCC0",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_rail",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#184f95",
+                 "20-30": "#CFCCC0",
+                 "30-45": "#CFCCC0",
+                 "45-60": "#CFCCC0",
+                 "60-90": "#CFCCC0",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "selectRow",
+               "args": {
+                "table": "reach_budgets",
+                "id": "b20"
+               }
+              }
+             ]
+            }
+           },
+           {
+            "type": "button",
+            "label": "30",
+            "variant": "outlined",
+            "action": {
+             "chain": [
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_subway",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#184f95",
+                 "20-30": "#256abf",
+                 "30-45": "#CFCCC0",
+                 "45-60": "#CFCCC0",
+                 "60-90": "#CFCCC0",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_subway",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#184f95",
+                 "20-30": "#256abf",
+                 "30-45": "#CFCCC0",
+                 "45-60": "#CFCCC0",
+                 "60-90": "#CFCCC0",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_rail",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#184f95",
+                 "20-30": "#256abf",
+                 "30-45": "#CFCCC0",
+                 "45-60": "#CFCCC0",
+                 "60-90": "#CFCCC0",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_rail",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#184f95",
+                 "20-30": "#256abf",
+                 "30-45": "#CFCCC0",
+                 "45-60": "#CFCCC0",
+                 "60-90": "#CFCCC0",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "selectRow",
+               "args": {
+                "table": "reach_budgets",
+                "id": "b30"
+               }
+              }
+             ]
+            }
+           },
+           {
+            "type": "button",
+            "label": "45",
+            "variant": "outlined",
+            "action": {
+             "chain": [
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_subway",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#184f95",
+                 "20-30": "#256abf",
+                 "30-45": "#3987e5",
+                 "45-60": "#CFCCC0",
+                 "60-90": "#CFCCC0",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_subway",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#184f95",
+                 "20-30": "#256abf",
+                 "30-45": "#3987e5",
+                 "45-60": "#CFCCC0",
+                 "60-90": "#CFCCC0",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_rail",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#184f95",
+                 "20-30": "#256abf",
+                 "30-45": "#3987e5",
+                 "45-60": "#CFCCC0",
+                 "60-90": "#CFCCC0",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_rail",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#184f95",
+                 "20-30": "#256abf",
+                 "30-45": "#3987e5",
+                 "45-60": "#CFCCC0",
+                 "60-90": "#CFCCC0",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "selectRow",
+               "args": {
+                "table": "reach_budgets",
+                "id": "b45"
+               }
+              }
+             ]
+            }
+           },
+           {
+            "type": "button",
+            "label": "60",
+            "variant": "outlined",
+            "action": {
+             "chain": [
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_subway",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#184f95",
+                 "20-30": "#256abf",
+                 "30-45": "#3987e5",
+                 "45-60": "#6da7ec",
+                 "60-90": "#CFCCC0",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_subway",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#184f95",
+                 "20-30": "#256abf",
+                 "30-45": "#3987e5",
+                 "45-60": "#6da7ec",
+                 "60-90": "#CFCCC0",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_rail",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#184f95",
+                 "20-30": "#256abf",
+                 "30-45": "#3987e5",
+                 "45-60": "#6da7ec",
+                 "60-90": "#CFCCC0",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_rail",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#184f95",
+                 "20-30": "#256abf",
+                 "30-45": "#3987e5",
+                 "45-60": "#6da7ec",
+                 "60-90": "#CFCCC0",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "selectRow",
+               "args": {
+                "table": "reach_budgets",
+                "id": "b60"
+               }
+              }
+             ]
+            }
+           },
+           {
+            "type": "button",
+            "label": "90",
+            "variant": "outlined",
+            "action": {
+             "chain": [
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_subway",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#184f95",
+                 "20-30": "#256abf",
+                 "30-45": "#3987e5",
+                 "45-60": "#6da7ec",
+                 "60-90": "#9ec5f4",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_subway",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#184f95",
+                 "20-30": "#256abf",
+                 "30-45": "#3987e5",
+                 "45-60": "#6da7ec",
+                 "60-90": "#9ec5f4",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_rail",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#184f95",
+                 "20-30": "#256abf",
+                 "30-45": "#3987e5",
+                 "45-60": "#6da7ec",
+                 "60-90": "#9ec5f4",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_rail",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#184f95",
+                 "20-30": "#256abf",
+                 "30-45": "#3987e5",
+                 "45-60": "#6da7ec",
+                 "60-90": "#9ec5f4",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "selectRow",
+               "args": {
+                "table": "reach_budgets",
+                "id": "b90"
+               }
+              }
+             ]
+            }
+           },
+           {
+            "type": "button",
+            "label": "120",
+            "variant": "outlined",
+            "action": {
+             "chain": [
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_subway",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#184f95",
+                 "20-30": "#256abf",
+                 "30-45": "#3987e5",
+                 "45-60": "#6da7ec",
+                 "60-90": "#9ec5f4",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_subway",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#184f95",
+                 "20-30": "#256abf",
+                 "30-45": "#3987e5",
+                 "45-60": "#6da7ec",
+                 "60-90": "#9ec5f4",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_rail",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#184f95",
+                 "20-30": "#256abf",
+                 "30-45": "#3987e5",
+                 "45-60": "#6da7ec",
+                 "60-90": "#9ec5f4",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_rail",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#184f95",
+                 "20-30": "#256abf",
+                 "30-45": "#3987e5",
+                 "45-60": "#6da7ec",
+                 "60-90": "#9ec5f4",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "selectRow",
+               "args": {
+                "table": "reach_budgets",
+                "id": "b120"
+               }
+              }
+             ]
+            }
+           },
+           {
+            "type": "button",
+            "label": "All",
+            "variant": "outlined",
+            "action": {
+             "chain": [
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_subway",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#184f95",
+                 "20-30": "#256abf",
+                 "30-45": "#3987e5",
+                 "45-60": "#6da7ec",
+                 "60-90": "#9ec5f4",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_subway",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#184f95",
+                 "20-30": "#256abf",
+                 "30-45": "#3987e5",
+                 "45-60": "#6da7ec",
+                 "60-90": "#9ec5f4",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_coarse_rail",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#184f95",
+                 "20-30": "#256abf",
+                 "30-45": "#3987e5",
+                 "45-60": "#6da7ec",
+                 "60-90": "#9ec5f4",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "mapSetPaint",
+               "args": {
+                "node": "reach_glmap",
+                "layer": "reach_cells_fine_rail",
+                "prop": "ramp",
+                "value": {
+                 "<10": "#0d366b",
+                 "10-20": "#184f95",
+                 "20-30": "#256abf",
+                 "30-45": "#3987e5",
+                 "45-60": "#6da7ec",
+                 "60-90": "#9ec5f4",
+                 "90-120": "#CFCCC0",
+                 "120+": "#CFCCC0"
+                }
+               }
+              },
+              {
+               "fn": "selectRow",
+               "args": {
+                "table": "reach_budgets",
+                "id": "all"
+               }
+              }
+             ]
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    },
+    "geojsonSources": {
+     "districts": "apps/krtravel/assets/seoul_districts.geojson",
+     "stations": "apps/krtravel/assets/stations.geojson",
+     "reach_coarse": "apps/krtravel/assets/reach_cells_coarse.geojson",
+     "reach_fine": "apps/krtravel/assets/reach_cells_fine.geojson",
+     "reach_heat_coarse": "apps/krtravel/assets/reach_heat_coarse.geojson",
+     "reach_heat_fine": "apps/krtravel/assets/reach_heat_fine.geojson"
+    },
+    "sourceLayers": [
+     {
+      "id": "reach_base_coarse",
+      "source": "reach_coarse",
+      "kind": "fill",
+      "maxzoom": 13,
+      "paint": {
+       "color": "#9e9e9e",
+       "opacity": 0.16,
+       "outline": "#FFFFFF"
+      }
+     },
+     {
+      "id": "reach_base_fine",
+      "source": "reach_fine",
+      "kind": "fill",
+      "minzoom": 13,
+      "paint": {
+       "color": "#9e9e9e",
+       "opacity": 0.16,
+       "outline": "#FFFFFF"
+      }
+     },
+     {
+      "id": "reach_cells_coarse_subway",
+      "source": "reach_coarse",
+      "kind": "fill",
+      "visible": true,
+      "paint": {
+       "colorProp": "A",
+       "ramp": {
+        "<10": "#0d366b",
+        "10-20": "#184f95",
+        "20-30": "#256abf",
+        "30-45": "#3987e5",
+        "45-60": "#6da7ec",
+        "60-90": "#9ec5f4",
+        "90-120": "#CFCCC0",
+        "120+": "#CFCCC0"
+       },
+       "opacity": 0.85,
+       "outline": "#FFFFFF"
+      },
+      "maxzoom": 13
+     },
+     {
+      "id": "reach_cells_fine_subway",
+      "source": "reach_fine",
+      "kind": "fill",
+      "visible": true,
+      "paint": {
+       "colorProp": "A",
+       "ramp": {
+        "<10": "#0d366b",
+        "10-20": "#184f95",
+        "20-30": "#256abf",
+        "30-45": "#3987e5",
+        "45-60": "#6da7ec",
+        "60-90": "#9ec5f4",
+        "90-120": "#CFCCC0",
+        "120+": "#CFCCC0"
+       },
+       "opacity": 0.85,
+       "outline": "#FFFFFF"
+      },
+      "minzoom": 13
+     },
+     {
+      "id": "reach_cells_coarse_rail",
+      "source": "reach_coarse",
+      "kind": "fill",
+      "visible": false,
+      "paint": {
+       "colorProp": "B",
+       "ramp": {
+        "<10": "#0d366b",
+        "10-20": "#184f95",
+        "20-30": "#256abf",
+        "30-45": "#3987e5",
+        "45-60": "#6da7ec",
+        "60-90": "#9ec5f4",
+        "90-120": "#CFCCC0",
+        "120+": "#CFCCC0"
+       },
+       "opacity": 0.85,
+       "outline": "#FFFFFF"
+      },
+      "maxzoom": 13
+     },
+     {
+      "id": "reach_cells_fine_rail",
+      "source": "reach_fine",
+      "kind": "fill",
+      "visible": false,
+      "paint": {
+       "colorProp": "B",
+       "ramp": {
+        "<10": "#0d366b",
+        "10-20": "#184f95",
+        "20-30": "#256abf",
+        "30-45": "#3987e5",
+        "45-60": "#6da7ec",
+        "60-90": "#9ec5f4",
+        "90-120": "#CFCCC0",
+        "120+": "#CFCCC0"
+       },
+       "opacity": 0.85,
+       "outline": "#FFFFFF"
+      },
+      "minzoom": 13
+     },
+     {
+      "id": "reach_heat_coarse_subway",
+      "source": "reach_heat_coarse",
+      "kind": "heatmap",
+      "visible": true,
+      "paint": {
+       "weightProp": "a_inv",
+       "weightMax": 7,
+       "opacity": 0
+      },
+      "maxzoom": 13
+     },
+     {
+      "id": "reach_heat_fine_subway",
+      "source": "reach_heat_fine",
+      "kind": "heatmap",
+      "visible": true,
+      "paint": {
+       "weightProp": "a_inv",
+       "weightMax": 7,
+       "opacity": 0
+      },
+      "minzoom": 13
+     },
+     {
+      "id": "reach_heat_coarse_rail",
+      "source": "reach_heat_coarse",
+      "kind": "heatmap",
+      "visible": false,
+      "paint": {
+       "weightProp": "b_inv",
+       "weightMax": 7,
+       "opacity": 0
+      },
+      "maxzoom": 13
+     },
+     {
+      "id": "reach_heat_fine_rail",
+      "source": "reach_heat_fine",
+      "kind": "heatmap",
+      "visible": false,
+      "paint": {
+       "weightProp": "b_inv",
+       "weightMax": 7,
+       "opacity": 0
+      },
+      "minzoom": 13
+     },
+     {
+      "id": "reach_district_lines",
+      "source": "districts",
+      "kind": "line",
+      "paint": {
+       "color": "#6B7280",
+       "width": 0.8,
+       "opacity": 0.25
+      }
+     },
+     {
+      "id": "reach_station_dots",
+      "source": "stations",
+      "kind": "circle",
+      "paint": {
+       "color": "#616161",
+       "radius": 3,
+       "opacity": 0.4
+      }
+     }
+    ],
+    "tapLayers": [
+     "reach_cells_coarse_subway",
+     "reach_cells_fine_subway",
+     "reach_cells_coarse_rail",
+     "reach_cells_fine_rail",
+     "reach_station_dots"
+    ],
+    "tapLayerDetails": {
+     "reach_station_dots": {
+      "titleField": "name",
+      "fields": [
+       "name",
+       "district",
+       "reach_min_seoul_station_subway",
+       "reach_min_seoul_station_rail",
+       "reach_min_city_hall_subway",
+       "reach_min_city_hall_rail",
+       "reach_min_gangnam_subway",
+       "reach_min_gangnam_rail",
+       "reach_min_wangsimni_subway",
+       "reach_min_wangsimni_rail",
+       "reach_min_sadang_subway",
+       "reach_min_sadang_rail",
+       "reach_min_jamsil_subway",
+       "reach_min_jamsil_rail",
+       "reach_min_konkuk_subway",
+       "reach_min_konkuk_rail",
+       "reach_min_hongik_subway",
+       "reach_min_hongik_rail"
+      ],
+      "labels": {
+       "name": "Station",
+       "district": "District",
+       "reach_min_seoul_station_subway": "Seoul Station — subway",
+       "reach_min_seoul_station_rail": "Seoul Station — subway + rail",
+       "reach_min_city_hall_subway": "City Hall — subway",
+       "reach_min_city_hall_rail": "City Hall — subway + rail",
+       "reach_min_gangnam_subway": "Gangnam — subway",
+       "reach_min_gangnam_rail": "Gangnam — subway + rail",
+       "reach_min_wangsimni_subway": "Wangsimni — subway",
+       "reach_min_wangsimni_rail": "Wangsimni — subway + rail",
+       "reach_min_sadang_subway": "Sadang — subway",
+       "reach_min_sadang_rail": "Sadang — subway + rail",
+       "reach_min_jamsil_subway": "Jamsil — subway",
+       "reach_min_jamsil_rail": "Jamsil — subway + rail",
+       "reach_min_konkuk_subway": "Konkuk Univ — subway",
+       "reach_min_konkuk_rail": "Konkuk Univ — subway + rail",
+       "reach_min_hongik_subway": "Hongik Univ — subway",
+       "reach_min_hongik_rail": "Hongik Univ — subway + rail"
+      },
+      "valueSuffixes": {
+       "reach_min_seoul_station_subway": " min",
+       "reach_min_seoul_station_rail": " min",
+       "reach_min_city_hall_subway": " min",
+       "reach_min_city_hall_rail": " min",
+       "reach_min_gangnam_subway": " min",
+       "reach_min_gangnam_rail": " min",
+       "reach_min_wangsimni_subway": " min",
+       "reach_min_wangsimni_rail": " min",
+       "reach_min_sadang_subway": " min",
+       "reach_min_sadang_rail": " min",
+       "reach_min_jamsil_subway": " min",
+       "reach_min_jamsil_rail": " min",
+       "reach_min_konkuk_subway": " min",
+       "reach_min_konkuk_rail": " min",
+       "reach_min_hongik_subway": " min",
+       "reach_min_hongik_rail": " min"
+      }
+     },
+     "reach_cells_coarse_subway": {
+      "titleField": "nearest_station_name",
+      "fields": [
+       "nearest_station_name",
+       "walk_min",
+       "A",
+       "B",
+       "C",
+       "D",
+       "E",
+       "F",
+       "G",
+       "H",
+       "I",
+       "J",
+       "K",
+       "L",
+       "M",
+       "N",
+       "O",
+       "P"
+      ],
+      "labels": {
+       "nearest_station_name": "Nearest station",
+       "walk_min": "Walk to nearest station",
+       "A": "Seoul Station — subway",
+       "B": "Seoul Station — subway + rail",
+       "C": "City Hall — subway",
+       "D": "City Hall — subway + rail",
+       "E": "Gangnam — subway",
+       "F": "Gangnam — subway + rail",
+       "G": "Wangsimni — subway",
+       "H": "Wangsimni — subway + rail",
+       "I": "Sadang — subway",
+       "J": "Sadang — subway + rail",
+       "K": "Jamsil — subway",
+       "L": "Jamsil — subway + rail",
+       "M": "Konkuk Univ — subway",
+       "N": "Konkuk Univ — subway + rail",
+       "O": "Hongik Univ — subway",
+       "P": "Hongik Univ — subway + rail"
+      },
+      "valueSuffixes": {
+       "walk_min": " min"
+      }
+     },
+     "reach_cells_fine_subway": {
+      "titleField": "nearest_station_name",
+      "fields": [
+       "nearest_station_name",
+       "walk_min",
+       "A",
+       "B",
+       "C",
+       "D",
+       "E",
+       "F",
+       "G",
+       "H",
+       "I",
+       "J",
+       "K",
+       "L",
+       "M",
+       "N",
+       "O",
+       "P"
+      ],
+      "labels": {
+       "nearest_station_name": "Nearest station",
+       "walk_min": "Walk to nearest station",
+       "A": "Seoul Station — subway",
+       "B": "Seoul Station — subway + rail",
+       "C": "City Hall — subway",
+       "D": "City Hall — subway + rail",
+       "E": "Gangnam — subway",
+       "F": "Gangnam — subway + rail",
+       "G": "Wangsimni — subway",
+       "H": "Wangsimni — subway + rail",
+       "I": "Sadang — subway",
+       "J": "Sadang — subway + rail",
+       "K": "Jamsil — subway",
+       "L": "Jamsil — subway + rail",
+       "M": "Konkuk Univ — subway",
+       "N": "Konkuk Univ — subway + rail",
+       "O": "Hongik Univ — subway",
+       "P": "Hongik Univ — subway + rail"
+      },
+      "valueSuffixes": {
+       "walk_min": " min"
+      }
+     },
+     "reach_cells_coarse_rail": {
+      "titleField": "nearest_station_name",
+      "fields": [
+       "nearest_station_name",
+       "walk_min",
+       "A",
+       "B",
+       "C",
+       "D",
+       "E",
+       "F",
+       "G",
+       "H",
+       "I",
+       "J",
+       "K",
+       "L",
+       "M",
+       "N",
+       "O",
+       "P"
+      ],
+      "labels": {
+       "nearest_station_name": "Nearest station",
+       "walk_min": "Walk to nearest station",
+       "A": "Seoul Station — subway",
+       "B": "Seoul Station — subway + rail",
+       "C": "City Hall — subway",
+       "D": "City Hall — subway + rail",
+       "E": "Gangnam — subway",
+       "F": "Gangnam — subway + rail",
+       "G": "Wangsimni — subway",
+       "H": "Wangsimni — subway + rail",
+       "I": "Sadang — subway",
+       "J": "Sadang — subway + rail",
+       "K": "Jamsil — subway",
+       "L": "Jamsil — subway + rail",
+       "M": "Konkuk Univ — subway",
+       "N": "Konkuk Univ — subway + rail",
+       "O": "Hongik Univ — subway",
+       "P": "Hongik Univ — subway + rail"
+      },
+      "valueSuffixes": {
+       "walk_min": " min"
+      }
+     },
+     "reach_cells_fine_rail": {
+      "titleField": "nearest_station_name",
+      "fields": [
+       "nearest_station_name",
+       "walk_min",
+       "A",
+       "B",
+       "C",
+       "D",
+       "E",
+       "F",
+       "G",
+       "H",
+       "I",
+       "J",
+       "K",
+       "L",
+       "M",
+       "N",
+       "O",
+       "P"
+      ],
+      "labels": {
+       "nearest_station_name": "Nearest station",
+       "walk_min": "Walk to nearest station",
+       "A": "Seoul Station — subway",
+       "B": "Seoul Station — subway + rail",
+       "C": "City Hall — subway",
+       "D": "City Hall — subway + rail",
+       "E": "Gangnam — subway",
+       "F": "Gangnam — subway + rail",
+       "G": "Wangsimni — subway",
+       "H": "Wangsimni — subway + rail",
+       "I": "Sadang — subway",
+       "J": "Sadang — subway + rail",
+       "K": "Jamsil — subway",
+       "L": "Jamsil — subway + rail",
+       "M": "Konkuk Univ — subway",
+       "N": "Konkuk Univ — subway + rail",
+       "O": "Hongik Univ — subway",
+       "P": "Hongik Univ — subway + rail"
+      },
+      "valueSuffixes": {
+       "walk_min": " min"
+      }
+     }
+    },
+    "styleUrl": "https://basemaps.cartocdn.com/gl/positron-nolabels-gl-style/style.json"
+   }
+  },
+  "kr_stops": {
+   "title": "Korea",
+   "body": {
+    "type": "glmap",
+    "id": "kr_stops_map",
+    "height": "0.88fill",
+    "zoom": 6.3,
+    "center": [
+     36.4,
+     127.9
+    ],
+    "legend": {
+     "title": "Map key",
+     "collapsible": true,
+     "entries": {
+      "KTX": "#c0392b",
+      "Train": "#2f6fed",
+      "Subway": "#1a9850",
+      "Light rail": "#8e44ad",
+      "Bus stops": "#6b7280"
+     }
+    },
+    "overlayAlign": "topStart",
+    "overlay": {
+     "type": "column",
+     "background": "#F2FFFFFF",
+     "radius": 12,
+     "padding": 8,
+     "maxWidth": 340,
+     "children": [
+      {
+       "type": "segments",
+       "chips": true,
+       "segments": [
+        {
+         "label": "Rail",
+         "child": {
+          "type": "column",
+          "children": [
+           {
+            "type": "row",
+            "wrap": true,
+            "spacing": 6,
+            "runSpacing": 6,
+            "children": [
+             {
+              "type": "button",
+              "label": "KTX",
+              "variant": "tonal",
+              "action": {
+               "chain": [
+                {
+                 "fn": "mapSetLayerVisible",
+                 "args": {
+                  "node": "kr_stops_map",
+                  "layer": "kr_ktx_lines"
+                 }
+                },
+                {
+                 "fn": "mapSetLayerVisible",
+                 "args": {
+                  "node": "kr_stops_map",
+                  "layer": "kr_ktx_pins"
+                 }
+                }
+               ]
+              }
+             },
+             {
+              "type": "button",
+              "label": "Train",
+              "variant": "tonal",
+              "action": {
+               "chain": [
+                {
+                 "fn": "mapSetGeojsonSource",
+                 "args": {
+                  "node": "kr_stops_map",
+                  "source": "kr_train",
+                  "url": "https://167.233.64.97/t4/kr_rail_modes/train.json"
+                 }
+                },
+                {
+                 "fn": "mapSetLayerVisible",
+                 "args": {
+                  "node": "kr_stops_map",
+                  "layer": "kr_train_lines"
+                 }
+                },
+                {
+                 "fn": "mapSetLayerVisible",
+                 "args": {
+                  "node": "kr_stops_map",
+                  "layer": "kr_train_pins"
+                 }
+                }
+               ]
+              }
+             },
+             {
+              "type": "button",
+              "label": "Subway",
+              "variant": "tonal",
+              "action": {
+               "chain": [
+                {
+                 "fn": "mapSetGeojsonSource",
+                 "args": {
+                  "node": "kr_stops_map",
+                  "source": "kr_subway",
+                  "url": "https://167.233.64.97/t4/kr_rail_modes/subway.json"
+                 }
+                },
+                {
+                 "fn": "mapSetLayerVisible",
+                 "args": {
+                  "node": "kr_stops_map",
+                  "layer": "kr_subway_lines"
+                 }
+                },
+                {
+                 "fn": "mapSetLayerVisible",
+                 "args": {
+                  "node": "kr_stops_map",
+                  "layer": "kr_subway_pins"
+                 }
+                }
+               ]
+              }
+             },
+             {
+              "type": "button",
+              "label": "Light rail",
+              "variant": "tonal",
+              "action": {
+               "chain": [
+                {
+                 "fn": "mapSetLayerVisible",
+                 "args": {
+                  "node": "kr_stops_map",
+                  "layer": "kr_lrail_lines"
+                 }
+                },
+                {
+                 "fn": "mapSetLayerVisible",
+                 "args": {
+                  "node": "kr_stops_map",
+                  "layer": "kr_lrail_pins"
+                 }
+                }
+               ]
+              }
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "style": "caption",
+            "value": "Tap a mode to show or hide it. Lines from OpenStreetMap (ODbL); schedules/frequencies pending licensed data. Train and Subway are 1.5-2.3 MB and fetch on first tap."
+           }
+          ]
+         }
+        },
+        {
+         "label": "Stops",
+         "child": {
+          "type": "column",
+          "children": [
+           {
+            "type": "row",
+            "wrap": true,
+            "spacing": 6,
+            "runSpacing": 6,
+            "children": [
+             {
+              "type": "button",
+              "label": "Busan",
+              "variant": "tonal",
+              "action": {
+               "fn": "mapSetGeojsonSource",
+               "args": {
+                "node": "kr_stops_map",
+                "source": "kr_stops",
+                "url": "https://167.233.64.97/t4/kr_stop_slices/busan.json"
+               }
+              }
+             },
+             {
+              "type": "button",
+              "label": "Daejeon",
+              "variant": "tonal",
+              "action": {
+               "fn": "mapSetGeojsonSource",
+               "args": {
+                "node": "kr_stops_map",
+                "source": "kr_stops",
+                "url": "https://167.233.64.97/t4/kr_stop_slices/daejeon.json"
+               }
+              }
+             },
+             {
+              "type": "button",
+              "label": "Daegu",
+              "variant": "tonal",
+              "action": {
+               "fn": "mapSetGeojsonSource",
+               "args": {
+                "node": "kr_stops_map",
+                "source": "kr_stops",
+                "url": "https://167.233.64.97/t4/kr_stop_slices/daegu.json"
+               }
+              }
+             },
+             {
+              "type": "button",
+              "label": "Gangneung",
+              "variant": "tonal",
+              "action": {
+               "fn": "mapSetGeojsonSource",
+               "args": {
+                "node": "kr_stops_map",
+                "source": "kr_stops",
+                "url": "https://167.233.64.97/t4/kr_stop_slices/gangneung.json"
+               }
+              }
+             }
+            ]
+           },
+           {
+            "type": "cards",
+            "table": "kr_cities",
+            "title": "name_en",
+            "subtitle": "name_kr",
+            "density": "row",
+            "tags": [
+             {
+              "column": "n"
+             }
+            ],
+            "search": true,
+            "typeToSearch": true,
+            "searchColumns": [
+             "name_en",
+             "name_kr",
+             "slug"
+            ],
+            "sortBy": "n",
+            "sortDir": "desc",
+            "height": "0.22fill",
+            "minCardWidth": 160,
+            "emptyIcon": "search_off",
+            "emptyTitle": "Loading cities...",
+            "emptyText": "Still empty after a moment usually means the server is unreachable - tap Refresh to retry.",
+            "toolbarActions": [
+             {
+              "icon": "refresh",
+              "tooltip": "Refresh city list",
+              "action": {
+               "fn": "refreshTable",
+               "args": {
+                "table": "kr_cities"
+               }
+              }
+             }
+            ],
+            "action": {
+             "fn": "mapSetGeojsonSource",
+             "args": {
+              "node": "kr_stops_map",
+              "source": "kr_stops",
+              "urlColumn": "url"
+             }
+            }
+           },
+           {
+            "type": "row",
+            "wrap": true,
+            "spacing": 6,
+            "runSpacing": 6,
+            "children": [
+             {
+              "type": "button",
+              "label": "Points",
+              "variant": "tonal",
+              "action": {
+               "chain": [
+                {
+                 "fn": "mapSetLayerVisible",
+                 "args": {
+                  "node": "kr_stops_map",
+                  "layer": "kr_stops_points",
+                  "visible": true
+                 }
+                },
+                {
+                 "fn": "mapSetLayerVisible",
+                 "args": {
+                  "node": "kr_stops_map",
+                  "layer": "kr_stops_heat",
+                  "visible": false
+                 }
+                }
+               ]
+              }
+             },
+             {
+              "type": "button",
+              "label": "Density",
+              "variant": "tonal",
+              "action": {
+               "chain": [
+                {
+                 "fn": "mapSetLayerVisible",
+                 "args": {
+                  "node": "kr_stops_map",
+                  "layer": "kr_stops_points",
+                  "visible": false
+                 }
+                },
+                {
+                 "fn": "mapSetLayerVisible",
+                 "args": {
+                  "node": "kr_stops_map",
+                  "layer": "kr_stops_heat",
+                  "visible": true
+                 }
+                }
+               ]
+              }
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "style": "caption",
+            "value": "Stop locations (KOGL, data.go.kr). Routes & frequencies await licensed schedule data."
+           }
+          ]
+         }
+        },
+        {
+         "label": "Map",
+         "child": {
+          "type": "text",
+          "style": "caption",
+          "value": "Controls hidden. Tap Rail or Stops to bring them back."
+         }
+        }
+       ]
+      }
+     ]
+    },
+    "geojsonSources": {
+     "kr_stops": "apps/krtravel/assets/kr_stops_empty.geojson",
+     "kr_ktx": "https://167.233.64.97/t4/kr_rail_modes/ktx.json",
+     "kr_light_rail": "https://167.233.64.97/t4/kr_rail_modes/light_rail.json",
+     "kr_train": "apps/krtravel/assets/kr_stops_empty.geojson",
+     "kr_subway": "apps/krtravel/assets/kr_stops_empty.geojson"
+    },
+    "sourceLayers": [
+     {
+      "id": "kr_ktx_lines",
+      "source": "kr_ktx",
+      "kind": "line",
+      "paint": {
+       "color": "#c0392b",
+       "width": 4,
+       "opacity": 0.9
+      }
+     },
+     {
+      "id": "kr_ktx_pins",
+      "source": "kr_ktx",
+      "kind": "circle",
+      "minzoom": 7.5,
+      "paint": {
+       "color": "#c0392b",
+       "radius": 3,
+       "opacity": 0.9
+      }
+     },
+     {
+      "id": "kr_train_lines",
+      "source": "kr_train",
+      "kind": "line",
+      "visible": false,
+      "paint": {
+       "color": "#2f6fed",
+       "width": 2.5,
+       "opacity": 0.85
+      }
+     },
+     {
+      "id": "kr_train_pins",
+      "source": "kr_train",
+      "kind": "circle",
+      "visible": false,
+      "minzoom": 7.5,
+      "paint": {
+       "color": "#2f6fed",
+       "radius": 3,
+       "opacity": 0.85
+      }
+     },
+     {
+      "id": "kr_subway_lines",
+      "source": "kr_subway",
+      "kind": "line",
+      "visible": false,
+      "paint": {
+       "color": "#1a9850",
+       "width": 2,
+       "opacity": 0.85
+      }
+     },
+     {
+      "id": "kr_subway_pins",
+      "source": "kr_subway",
+      "kind": "circle",
+      "visible": false,
+      "minzoom": 7.5,
+      "paint": {
+       "color": "#1a9850",
+       "radius": 3,
+       "opacity": 0.85
+      }
+     },
+     {
+      "id": "kr_lrail_lines",
+      "source": "kr_light_rail",
+      "kind": "line",
+      "paint": {
+       "color": "#8e44ad",
+       "width": 2,
+       "opacity": 0.9
+      }
+     },
+     {
+      "id": "kr_lrail_pins",
+      "source": "kr_light_rail",
+      "kind": "circle",
+      "minzoom": 7.5,
+      "paint": {
+       "color": "#8e44ad",
+       "radius": 3,
+       "opacity": 0.9
+      }
+     },
+     {
+      "id": "kr_stops_points",
+      "source": "kr_stops",
+      "kind": "circle",
+      "paint": {
+       "color": "#6b7280",
+       "radius": 3,
+       "opacity": 0.85
+      }
+     },
+     {
+      "id": "kr_stops_heat",
+      "source": "kr_stops",
+      "kind": "heatmap",
+      "visible": false,
+      "paint": {
+       "radius": 18,
+       "opacity": 0.75
+      }
+     }
+    ],
+    "tapLayers": [
+     "kr_ktx_pins",
+     "kr_train_pins",
+     "kr_subway_pins",
+     "kr_lrail_pins",
+     "kr_stops_points"
+    ],
+    "tapLayerDetails": {
+     "kr_ktx_pins": {
+      "titleField": "name",
+      "fields": [
+       "operator",
+       "mode"
+      ],
+      "labels": {
+       "operator": "Operator",
+       "mode": "Mode"
+      }
+     },
+     "kr_train_pins": {
+      "titleField": "name",
+      "fields": [
+       "operator",
+       "mode"
+      ],
+      "labels": {
+       "operator": "Operator",
+       "mode": "Mode"
+      }
+     },
+     "kr_subway_pins": {
+      "titleField": "name",
+      "fields": [
+       "operator",
+       "mode"
+      ],
+      "labels": {
+       "operator": "Operator",
+       "mode": "Mode"
+      }
+     },
+     "kr_lrail_pins": {
+      "titleField": "name",
+      "fields": [
+       "operator",
+       "mode"
+      ],
+      "labels": {
+       "operator": "Operator",
+       "mode": "Mode"
+      }
+     },
+     "kr_stops_points": {
+      "titleField": "name"
+     }
+    }
+   }
+  }
+ }
+}

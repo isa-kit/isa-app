@@ -1,0 +1,11 @@
+{
+  "id": "exposure_check",
+  "name": "Exposure Check",
+  "category": "Security",
+  "icon": "shield",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_exposure"
+  },
+  "seedVersion": "2026-07-03.1"
+}

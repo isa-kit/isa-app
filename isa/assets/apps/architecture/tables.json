@@ -1,0 +1,46 @@
+{
+  "tables": [
+    {
+      "name": "nodes",
+      "label": "Packages",
+      "icon": "account_tree",
+      "description": "One node per package in the stack."
+    },
+    {
+      "name": "edges",
+      "label": "Dependencies",
+      "icon": "list",
+      "description": "Dependency arrows between packages."
+    },
+    {
+      "name": "wnodes",
+      "label": "Widget nodes",
+      "icon": "widgets",
+      "description": "flutterboard widget node types + package anchors for the dependency diagram."
+    },
+    {
+      "name": "wedges",
+      "label": "Widget links",
+      "icon": "link",
+      "description": "Which widget depends on which data layer / imported package."
+    },
+    {
+      "name": "catalog",
+      "label": "Widget reference",
+      "icon": "menu_book",
+      "description": "Readable list of every flutterboard widget and its options."
+    },
+    {
+      "name": "workflow",
+      "label": "Claude workflow",
+      "icon": "smart_toy",
+      "description": "How this app gets built — one task fanned across many AI agents, gated, then shipped."
+    },
+    {
+      "name": "updates",
+      "label": "What's new",
+      "icon": "auto_awesome",
+      "description": "Recent features and changes, grouped by area."
+    }
+  ]
+}

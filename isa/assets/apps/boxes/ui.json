@@ -1,0 +1,166 @@
+{
+  "app": {
+    "title": "Boxes",
+    "primaryColor": "#455A64",
+    "theme": "material"
+  },
+  "nav": [
+    {
+      "id": "boxes",
+      "label": "Boxes",
+      "icon": "inventory_2",
+      "screen": "boxes"
+    },
+    {
+      "id": "items",
+      "label": "Items",
+      "icon": "checklist",
+      "screen": "items"
+    }
+  ],
+  "screens": {
+    "boxes": {
+      "title": "Boxes",
+      "body": {
+        "type": "column",
+        "padding": 0,
+        "children": [
+          {
+            "type": "cards",
+            "table": "boxes",
+            "search": true,
+            "minCardWidth": 2000,
+            "toolbarActions": [
+              {
+                "icon": "add",
+                "tooltip": "New box",
+                "position": "trailing",
+                "action": {
+                  "fn": "addRow",
+                  "args": {
+                    "table": "boxes",
+                    "values": {
+                      "room": "Other",
+                      "status": "Pending packing",
+                      "fragile": false
+                    }
+                  }
+                }
+              }
+            ],
+            "emptyIcon": "inventory_2",
+            "emptyTitle": "No boxes yet",
+            "emptyText": "Add your first box — give it a number, a room, and a label so it's easy to find on the other end.",
+            "emptyAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "boxes",
+                "values": {
+                  "room": "Other",
+                  "status": "Pending packing",
+                  "fragile": false
+                }
+              }
+            },
+            "emptyActionLabel": "New box",
+            "filterable": true,
+            "sort": {
+              "column": "numberId",
+              "dir": "asc"
+            },
+            "title": "numberId",
+            "subtitle": "label",
+            "tags": [
+              {
+                "column": "status",
+                "colors": {
+                  "Pending packing": "gray",
+                  "Ongoing": "coral",
+                  "Packed": "amber",
+                  "Loaded": "blue",
+                  "Delivered": "green",
+                  "Unpacked": "teal"
+                }
+              }
+            ],
+            "expandable": false,
+            "open": "Open box",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "items": {
+      "title": "Items",
+      "body": {
+        "type": "column",
+        "padding": 0,
+        "children": [
+          {
+            "type": "cards",
+            "table": "items",
+            "search": true,
+            "toolbarActions": [
+              {
+                "icon": "add",
+                "tooltip": "New item",
+                "position": "trailing",
+                "action": {
+                  "fn": "addRow",
+                  "args": {
+                    "table": "items",
+                    "values": {
+                      "category": "Misc",
+                      "qty": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "emptyIcon": "checklist",
+            "emptyTitle": "No items logged yet",
+            "emptyText": "Add items as you pack each box — then search here anytime to find which box number something is in.",
+            "emptyAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "items",
+                "values": {
+                  "category": "Misc",
+                  "qty": 1
+                }
+              }
+            },
+            "emptyActionLabel": "New item",
+            "filterable": true,
+            "sort": {
+              "column": "boxRef",
+              "dir": "asc"
+            },
+            "title": "name",
+            "subtitle": "boxRef",
+            "tags": [
+              {
+                "column": "category",
+                "colors": {
+                  "Kitchen": "coral",
+                  "Clothes": "purple",
+                  "Books": "amber",
+                  "Electronics": "blue",
+                  "Docs": "gray",
+                  "Misc": "gray"
+                }
+              }
+            ],
+            "expandable": false,
+            "open": "Edit item",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

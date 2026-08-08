@@ -1,0 +1,83 @@
+{
+  "app": {
+    "title": "Wikipick",
+    "primaryColor": "#2F3E46",
+    "theme": "minimal"
+  },
+  "nav": [
+    { "id": "library", "label": "Library", "icon": "menu_book", "screen": "library" },
+    { "id": "queue", "label": "Crawl queue", "icon": "hourglass_bottom", "screen": "queue" }
+  ],
+  "screens": {
+    "library": {
+      "title": "Library",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Offline Wikipedia — text only, no images. v1 scaffold: article/link/queue storage is in place; fetching real Wikipedia articles and crawling links is not wired up yet, so Library starts empty."
+          },
+          {
+            "type": "row",
+            "children": [
+              { "type": "stat", "table": "articles", "agg": "count", "label": "Cached articles", "color": "blue" },
+              { "type": "stat", "table": "articles", "agg": "count", "filter": { "column": "seed", "value": true }, "label": "Seeds", "color": "green" }
+            ]
+          },
+          {
+            "type": "cards",
+            "table": "articles",
+            "search": true,
+            "searchColumns": ["title"],
+            "title": "title",
+            "subtitle": "canonicalUrl",
+            "expandable": true,
+            "expandFields": [
+              { "column": "depth", "label": "Degrees from nearest seed" },
+              { "column": "fetchedAt", "label": "Fetched" },
+              { "column": "revisionId", "label": "Revision" },
+              { "column": "extractText", "label": "Cached text" }
+            ]
+          }
+        ]
+      }
+    },
+    "queue": {
+      "title": "Crawl queue",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Articles discovered while crawling links, and their fetch status. Pause/resume and the crawl worker itself are a follow-up build unit — this screen shows the queue schema only."
+          },
+          {
+            "type": "row",
+            "children": [
+              { "type": "stat", "table": "crawl_queue", "agg": "count", "filter": { "column": "status", "value": "pending" }, "label": "Pending", "color": "amber" },
+              { "type": "stat", "table": "crawl_queue", "agg": "count", "filter": { "column": "status", "value": "fetched" }, "label": "Fetched", "color": "green" },
+              { "type": "stat", "table": "crawl_queue", "agg": "count", "filter": { "column": "status", "value": "failed" }, "label": "Failed", "color": "coral" }
+            ]
+          },
+          {
+            "type": "cards",
+            "table": "crawl_queue",
+            "search": true,
+            "searchColumns": ["title"],
+            "title": "title",
+            "subtitle": "status",
+            "expandable": true,
+            "expandFields": [
+              { "column": "depth", "label": "Depth" },
+              { "column": "discoveredAt", "label": "Discovered" },
+              { "column": "sourceCrawlId", "label": "Crawl" }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

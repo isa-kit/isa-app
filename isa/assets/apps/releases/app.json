@@ -1,0 +1,12 @@
+{
+  "id": "releases",
+  "name": "Releases",
+  "category": "Developer",
+  "icon": "rocket_launch",
+  "color": "#0F6E56",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_releases"
+  },
+  "seedVersion": "2026-08-07.isaalias"
+}

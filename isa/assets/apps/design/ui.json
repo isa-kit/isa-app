@@ -1,0 +1,557 @@
+{
+  "app": {
+    "title": "Design",
+    "primaryColor": "#546E7A",
+    "theme": "contrast"
+  },
+  "nav": [
+    {
+      "id": "wireframe",
+      "label": "Wireframe",
+      "icon": "dashboard_customize",
+      "screen": "wireframe"
+    },
+    {
+      "id": "flow",
+      "label": "Flowchart",
+      "icon": "account_tree",
+      "screen": "flow"
+    },
+    {
+      "id": "relationships",
+      "label": "Relationships",
+      "icon": "schema",
+      "screen": "relationships"
+    },
+    {
+      "id": "brief",
+      "label": "Brief",
+      "icon": "send",
+      "screen": "brief"
+    },
+    {
+      "id": "sketch",
+      "label": "Sketch",
+      "icon": "draw",
+      "screen": "sketch"
+    },
+    {
+      "id": "talk",
+      "label": "Notes",
+      "icon": "forum",
+      "screen": "talk"
+    },
+    {
+      "id": "data",
+      "label": "Data",
+      "icon": "table_rows",
+      "screen": "data"
+    }
+  ],
+  "screens": {
+    "relationships": {
+      "title": "Relationships",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Your data-table relationships \u2014 this whole view is the schema_map app embedded here (a nested applet). It's the same live data; edits sync back to schema_map."
+          },
+          {
+            "type": "embed",
+            "appletId": "schema_map",
+            "screen": "map",
+            "instanceId": "design",
+            "height": "fill"
+          }
+        ]
+      }
+    },
+    "brief": {
+      "title": "Brief for Claude",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Your request to Claude, in one place. Set what you want below, list features/changes, sketch the data model \u2014 then tap Prepare for Claude to bundle everything (this brief + your wireframe + flow + data model + notes) into one package on your clipboard. Paste it to Claude."
+          },
+          {
+            "type": "button",
+            "label": "Prepare for Claude",
+            "icon": "send",
+            "action": {
+              "fn": "hostCall",
+              "args": {
+                "name": "prepareBrief"
+              }
+            }
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "text",
+            "value": "What you want",
+            "style": "subtitle"
+          },
+          {
+            "type": "cards",
+            "table": "brief",
+            "title": "title",
+            "subtitle": "summary",
+            "tags": [
+              {
+                "column": "type"
+              }
+            ],
+            "emptyIcon": "lightbulb",
+            "emptyTitle": "What do you want built?",
+            "emptyText": "Spell out the goal of this design so Claude knows what you're after.",
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "text",
+            "value": "Features & changes",
+            "style": "subtitle"
+          },
+          {
+            "type": "button",
+            "label": "Add feature / change",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "features",
+                "values": {
+                  "kind": "feature",
+                  "priority": "should"
+                }
+              }
+            }
+          },
+          {
+            "type": "cards",
+            "table": "features",
+            "title": "title",
+            "subtitle": "detail",
+            "search": true,
+            "tags": [
+              {
+                "column": "kind",
+                "colors": {
+                  "feature": "blue",
+                  "change": "amber",
+                  "fix": "coral",
+                  "question": "purple",
+                  "note": "gray"
+                }
+              },
+              {
+                "column": "priority"
+              }
+            ],
+            "emptyIcon": "playlist_add",
+            "emptyTitle": "No features yet",
+            "emptyText": "List the features, changes and fixes you'd like \u2014 each one becomes a line in the brief.",
+            "emptyAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "features",
+                "values": {
+                  "kind": "feature",
+                  "priority": "should"
+                }
+              }
+            },
+            "emptyActionLabel": "Add feature / change",
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "text",
+            "value": "Data model",
+            "style": "subtitle"
+          },
+          {
+            "type": "button",
+            "label": "Add entity",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "data_model"
+              }
+            }
+          },
+          {
+            "type": "cards",
+            "table": "data_model",
+            "title": "entity",
+            "subtitle": "fields",
+            "emptyIcon": "schema",
+            "emptyTitle": "No entities yet",
+            "emptyText": "Sketch the data model \u2014 add the things your app stores, like User or Order, and their fields.",
+            "emptyAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "data_model"
+              }
+            },
+            "emptyActionLabel": "Add entity",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "wireframe": {
+      "title": "Wireframe",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Block out a UI: add a screen frame, then drop nav, buttons, inputs, text and images inside it. Drag to place, drag the corner handle to resize, tap to rename or add a note. When it's roughly right, tap Build app from wireframe to turn it into a real app you can open and edit."
+          },
+          {
+            "type": "button",
+            "label": "Build app from wireframe",
+            "icon": "auto_awesome",
+            "action": {
+              "fn": "hostCall",
+              "args": {
+                "name": "buildFromDesign",
+                "appId": "design_app",
+                "appName": "My design app"
+              }
+            }
+          },
+          {
+            "type": "canvas",
+            "nodesTable": "boxes",
+            "edgesTable": "links",
+            "labelColumn": "label",
+            "xColumn": "x",
+            "yColumn": "y",
+            "widthColumn": "w",
+            "heightColumn": "h",
+            "zColumn": "z",
+            "fromColumn": "from",
+            "toColumn": "to",
+            "edgeLabelColumn": "label",
+            "colorColumn": "kind",
+            "colors": {
+              "frame": "gray",
+              "nav": "coral",
+              "button": "blue",
+              "input": "teal",
+              "text": "green",
+              "image": "purple",
+              "list": "pink",
+              "section": "amber"
+            },
+            "fillPhone": true,
+            "fidelity": "themed",
+            "sketchTable": "sketch",
+            "sketchColumn": "strokes",
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "palette",
+            "table": "boxes",
+            "items": [
+              {
+                "label": "Screen",
+                "icon": "smartphone",
+                "values": {
+                  "kind": "frame",
+                  "label": "Screen",
+                  "w": 260,
+                  "h": 440
+                }
+              },
+              {
+                "label": "Section",
+                "icon": "crop_square",
+                "values": {
+                  "kind": "section",
+                  "label": "Section",
+                  "w": 220,
+                  "h": 120
+                }
+              },
+              {
+                "label": "Nav bar",
+                "icon": "menu",
+                "values": {
+                  "kind": "nav",
+                  "label": "Nav",
+                  "w": 240,
+                  "h": 44
+                }
+              },
+              {
+                "label": "Button",
+                "icon": "smart_button",
+                "values": {
+                  "kind": "button",
+                  "label": "Button",
+                  "w": 140,
+                  "h": 44
+                }
+              },
+              {
+                "label": "Input",
+                "icon": "text_fields",
+                "values": {
+                  "kind": "input",
+                  "label": "Input",
+                  "w": 200,
+                  "h": 44
+                }
+              },
+              {
+                "label": "Text",
+                "icon": "title",
+                "values": {
+                  "kind": "text",
+                  "label": "Text",
+                  "w": 200,
+                  "h": 36
+                }
+              },
+              {
+                "label": "Image",
+                "icon": "image",
+                "values": {
+                  "kind": "image",
+                  "label": "Image",
+                  "w": 180,
+                  "h": 120
+                }
+              },
+              {
+                "label": "List",
+                "icon": "list",
+                "values": {
+                  "kind": "list",
+                  "label": "List",
+                  "w": 220,
+                  "h": 160
+                }
+              }
+            ]
+          },
+          {
+            "type": "button",
+            "label": "Connect with arrow",
+            "icon": "arrow_forward",
+            "variant": "text",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "links"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "flow": {
+      "title": "Flowchart",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Map a process or data flow \u2014 this is the Diagram app embedded here (your own copy). Add steps and connect them with arrows; it's the same tool the standalone Diagram app uses."
+          },
+          {
+            "type": "embed",
+            "appletId": "diagram",
+            "screen": "canvas",
+            "instanceId": "design",
+            "height": "fill"
+          }
+        ]
+      }
+    },
+    "sketch": {
+      "title": "Freehand sketch",
+      "body": {
+        "type": "draw",
+        "table": "drawings",
+        "strokesColumn": "strokes",
+        "titleColumn": "title"
+      }
+    },
+    "talk": {
+      "title": "Notes",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Running notes about the design \u2014 both sides write here. Claude replies by writing rows with author = claude."
+          },
+          {
+            "type": "cards",
+            "table": "notes",
+            "title": "title",
+            "subtitle": "body",
+            "search": true,
+            "searchColumns": [
+              "title",
+              "body"
+            ],
+            "tags": [
+              {
+                "column": "author"
+              }
+            ],
+            "emptyIcon": "forum",
+            "emptyTitle": "No notes yet",
+            "emptyText": "Jot running notes about the design here \u2014 both you and Claude write back and forth in this thread.",
+            "emptyAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "notes",
+                "values": {
+                  "author": "you"
+                }
+              }
+            },
+            "emptyActionLabel": "New note",
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "button",
+            "label": "New note",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "notes",
+                "values": {
+                  "author": "you"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "data": {
+      "title": "Raw data",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "segments",
+            "segments": [
+              {
+                "label": "Blocks",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Wireframe blocks",
+                      "style": "subtitle"
+                    },
+                    {
+                      "type": "table",
+                      "table": "boxes",
+                      "columns": [
+                        "label",
+                        "kind",
+                        "note"
+                      ],
+                      "height": 220,
+                      "action": {
+                        "fn": "editRow"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Steps",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Flowchart steps",
+                      "style": "subtitle"
+                    },
+                    {
+                      "type": "table",
+                      "table": "flow_nodes",
+                      "columns": [
+                        "label",
+                        "kind",
+                        "note"
+                      ],
+                      "height": 200,
+                      "action": {
+                        "fn": "editRow"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Arrows",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Flowchart arrows",
+                      "style": "subtitle"
+                    },
+                    {
+                      "type": "table",
+                      "table": "flow_edges",
+                      "columns": [
+                        "from",
+                        "to",
+                        "label"
+                      ],
+                      "height": 180,
+                      "action": {
+                        "fn": "editRow"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

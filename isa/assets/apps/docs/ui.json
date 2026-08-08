@@ -1,0 +1,126 @@
+{
+  "app": {
+    "title": "Docs",
+    "primaryColor": "#3F51B5",
+    "theme": "warmshift"
+  },
+  "nav": [
+    {
+      "id": "files",
+      "label": "Files",
+      "icon": "folder",
+      "screen": "files"
+    },
+    {
+      "id": "pages",
+      "label": "Documents",
+      "icon": "menu_book",
+      "screen": "pages"
+    }
+  ],
+  "screens": {
+    "files": {
+      "title": "Files",
+      "body": {
+        "type": "explorer",
+        "table": "files",
+        "nameColumn": "name",
+        "orderColumn": "order",
+        "allowFolders": false,
+        "railMode": "collapsible",
+        "title": "Files",
+        "fileIcon": "folder",
+        "newFileLabel": "New file",
+        "autoSelectFirst": true,
+        "scopeTargets": [
+          { "table": "pages", "column": "file" }
+        ],
+        "detail": {
+          "type": "column",
+          "crossAxis": "stretch",
+          "children": [
+            {
+              "type": "text",
+              "style": "caption",
+              "value": "A file is its own tree of documents. Pick a file on the left to open just its pages. Tap + to start a new file, and a file's ⋮ menu to rename or delete it."
+            },
+            {
+              "type": "button",
+              "label": "Open this file",
+              "icon": "menu_book",
+              "action": { "fn": "goto", "args": { "screen": "pages" } }
+            },
+            {
+              "type": "text",
+              "style": "subtitle",
+              "value": "Documents in this file"
+            },
+            {
+              "type": "table",
+              "table": "pages",
+              "columns": ["title"],
+              "action": { "fn": "editRow" }
+            }
+          ]
+        }
+      }
+    },
+    "pages": {
+      "title": "Documents",
+      "body": {
+        "type": "explorer",
+        "railMode": "collapsible",
+        "table": "pages",
+        "nameColumn": "title",
+        "kindColumn": "kind",
+        "parentColumn": "parentId",
+        "scopeColumn": "file",
+        "title": "Documents",
+        "fileIcon": "doc",
+        "newFileLabel": "New document",
+        "newFolderLabel": "New folder",
+        "menuActions": [
+          {
+            "label": "Export a copy…",
+            "action": { "fn": "exportFileScope" }
+          }
+        ],
+        "detail": {
+          "type": "pages",
+          "table": "pages",
+          "nameColumn": "title",
+          "parentColumn": "parentId",
+          "orderColumn": "order",
+          "kindColumn": "kind",
+          "pageValue": "page",
+          "pageLabel": "Page",
+          "detail": {
+            "type": "richdoc",
+            "table": "pages",
+            "column": "body"
+          }
+        }
+      }
+    },
+    "solo": {
+      "title": "Document",
+      "body": {
+        "type": "explorer",
+        "table": "pages",
+        "nameColumn": "title",
+        "kindColumn": "kind",
+        "parentColumn": "parentId",
+        "fileIcon": "doc",
+        "newFileLabel": "New document",
+        "railMode": "none",
+        "autoSelectFirst": true,
+        "startBlank": true,
+        "detail": {
+          "type": "richdoc",
+          "table": "pages",
+          "column": "body"
+        }
+      }
+    }
+  }
+}

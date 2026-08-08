@@ -1,0 +1,58 @@
+{
+  "tables": [
+    {
+      "name": "districts",
+      "label": "Districts",
+      "icon": "map",
+      "description": "25 Seoul districts: travel-ease, area-centrality and destination-access composite scores."
+    },
+    {
+      "name": "dong",
+      "label": "Neighborhoods (dong)",
+      "icon": "location_city",
+      "description": "424 fine-grained Seoul neighborhoods: travel-ease and area-centrality; zero-station dong are honestly no-data, never interpolated."
+    },
+    {
+      "name": "stations",
+      "label": "Stations",
+      "icon": "directions_subway",
+      "description": "471 Seoul subway stations: transit-stress (betweenness centrality) and a coordinate-only walk-stress proxy."
+    },
+    {
+      "name": "best_spots",
+      "label": "Best spots",
+      "icon": "star",
+      "description": "25 districts ranked by best-spots score, with the destination-access and overall travel-ease framings side by side."
+    },
+    {
+      "name": "events",
+      "label": "Events",
+      "icon": "event",
+      "description": "41 web-verified South Korea festivals/events overlapping Aug-Oct 2026; each row's source note says whether its 2026 dates are confirmed, planned or an unannounced prior-year placeholder."
+    },
+    {
+      "name": "kr_cities",
+      "label": "Korea cities",
+      "icon": "location_city",
+      "description": "159 Korean cities/municipalities with a bus-stop count, fed live from transit4-server's KOGL-derived index (data.go.kr, no schedule/route data). Ships empty; loads on open, Refresh retries.",
+      "source": {
+        "type": "rest",
+        "url": "https://167.233.64.97/t4/kr_stop_slices/index.json",
+        "method": "GET",
+        "rowsPath": "cities"
+      }
+    },
+    {
+      "name": "reach_origins",
+      "label": "Reach origin hubs",
+      "icon": "place",
+      "description": "Reach-explorer UI state list: the 8 curated origin hubs the From picker selects between (drives the collapsed-card summary line; not analytic data)."
+    },
+    {
+      "name": "reach_budgets",
+      "label": "Reach time budgets",
+      "icon": "schedule",
+      "description": "Reach-explorer UI state list: the 8 Within-(min) time budgets (drives the collapsed-card summary line; not analytic data)."
+    }
+  ]
+}

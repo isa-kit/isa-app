@@ -1,0 +1,8 @@
+{
+  "stations": [
+    { "id": "s1", "name": "Cambridge St at Joy St",          "capacity": 19, "lat": 42.3613, "lon": -71.0656, "station_id": "1" },
+    { "id": "s2", "name": "Boylston St at Arlington St",      "capacity": 15, "lat": 42.3520, "lon": -71.0699, "station_id": "2" },
+    { "id": "s3", "name": "MIT at Mass Ave / Amherst St",     "capacity": 27, "lat": 42.3581, "lon": -71.0935, "station_id": "3" },
+    { "id": "s4", "name": "Harvard Square at Brattle St",     "capacity": 23, "lat": 42.3732, "lon": -71.1208, "station_id": "4" }
+  ]
+}

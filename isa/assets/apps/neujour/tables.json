@@ -1,0 +1,78 @@
+{
+  "tables": [
+    {
+      "name": "entries",
+      "label": "Entries",
+      "icon": "book",
+      "description": "Journal entries. Each entry has a date, body, mood, and may reference people, events, and tags — and can hold multiple independent parts.",
+      "childRelations": [
+        {
+          "childTable": "entry_parts",
+          "parentColumn": "entry",
+          "orderColumn": "order",
+          "label": "Parts"
+        }
+      ]
+    },
+    {
+      "name": "entry_parts",
+      "label": "Entry parts",
+      "icon": "segment",
+      "description": "Independent parts of a single entry (text, rich text, a measurement, a photo) — kept in order under their entry, not separate entries."
+    },
+    {
+      "name": "people",
+      "label": "People",
+      "icon": "people",
+      "description": "People referenced in journal entries."
+    },
+    {
+      "name": "events",
+      "label": "Events",
+      "icon": "event",
+      "description": "Events referenced in journal entries."
+    },
+    {
+      "name": "tags",
+      "label": "Tags",
+      "icon": "local_offer",
+      "description": "Tags used to categorise entries."
+    },
+    {
+      "name": "places",
+      "label": "Places",
+      "icon": "place",
+      "description": "Geolocations referenced in journal entries (name + coordinates)."
+    },
+    {
+      "name": "measurements",
+      "label": "Measurements",
+      "icon": "monitor_heart",
+      "description": "A number logged over time (energy, sleep, weight, …). The Trends screen fits a trend and forecasts future values."
+    },
+    {
+      "name": "connections",
+      "label": "Connections",
+      "icon": "link",
+      "description": "How people relate to each other — the edges of the People web (from, to, relationship)."
+    },
+    {
+      "name": "feelings",
+      "label": "Feelings",
+      "icon": "favorite",
+      "description": "Named scores you log whenever you like: sad 3.5/5, bored 1/5, motivated 10/10. Each can link to an entry — decode a day’s overall emotion into its parts."
+    },
+    {
+      "name": "prefs",
+      "label": "Preferences",
+      "icon": "settings",
+      "description": "Your defaults for Neujour — e.g. which day the calendar week starts on. A single row you tweak; not journal data."
+    },
+    {
+      "name": "days",
+      "label": "Days",
+      "icon": "today",
+      "description": "One row per day — an overall summary + mood for the whole day, separate from the individual moments. Entries stay their own rows; a day just gathers them."
+    }
+  ]
+}

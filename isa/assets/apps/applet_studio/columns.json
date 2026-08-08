@@ -1,0 +1,84 @@
+{
+  "projects": [
+    { "name": "name", "type": "text", "label": "Name", "required": true },
+    { "name": "tagline", "type": "text", "label": "One-line purpose" },
+    {
+      "name": "status",
+      "type": "enum",
+      "label": "Status",
+      "options": ["idea", "shaping", "building", "polishing", "shipped"]
+    },
+    { "name": "audience", "type": "text", "label": "Who it's for" },
+    {
+      "name": "style",
+      "type": "enum",
+      "label": "Design style",
+      "options": [
+        "clean",
+        "material",
+        "minimal",
+        "contrast",
+        "watercolor",
+        "pastel",
+        "sepia",
+        "neon"
+      ]
+    },
+    { "name": "accent", "type": "text", "label": "Accent color (#RRGGBB)" },
+    { "name": "icon", "type": "text", "label": "Icon name" },
+    { "name": "notes", "type": "text", "label": "Notes" }
+  ],
+  "steps": [
+    { "name": "title", "type": "text", "label": "Step", "required": true },
+    {
+      "name": "phase",
+      "type": "enum",
+      "label": "Phase",
+      "options": [
+        "1 · Define",
+        "2 · Data",
+        "3 · Screens",
+        "4 · Feel",
+        "5 · Ship"
+      ]
+    },
+    {
+      "name": "project",
+      "type": "ref",
+      "refTable": "projects",
+      "label": "Project"
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "label": "Status",
+      "options": ["todo", "done"]
+    },
+    { "name": "tip", "type": "text", "label": "Tip" },
+    { "name": "order", "type": "number", "label": "Order" }
+  ],
+  "playbook": [
+    { "name": "topic", "type": "text", "label": "Topic", "required": true },
+    {
+      "name": "phase",
+      "type": "enum",
+      "label": "Phase",
+      "options": [
+        "1 · Define",
+        "2 · Data",
+        "3 · Screens",
+        "4 · Feel",
+        "5 · Ship"
+      ]
+    },
+    { "name": "summary", "type": "text", "label": "Summary" },
+    { "name": "details", "type": "text", "label": "Details" },
+    { "name": "order", "type": "number", "label": "Order" }
+  ],
+  "styles": [
+    { "name": "name", "type": "text", "label": "Style", "required": true },
+    { "name": "vibe", "type": "text", "label": "Vibe" },
+    { "name": "bestFor", "type": "text", "label": "Best for" },
+    { "name": "pairWith", "type": "text", "label": "Accents that pair well" }
+  ]
+}

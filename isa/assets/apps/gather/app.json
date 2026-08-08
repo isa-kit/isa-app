@@ -1,0 +1,12 @@
+{
+  "id": "gather",
+  "name": "Gather",
+  "category": "Life",
+  "icon": "diversity_3",
+  "color": "purple",
+  "seedVersion": "1",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_gather"
+  }
+}

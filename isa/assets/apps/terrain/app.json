@@ -1,0 +1,16 @@
+{
+  "id": "terrain",
+  "name": "Urbanset",
+  "category": "Analytics",
+  "icon": "insights",
+  "color": "#2E6E5A",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_terrain"
+  },
+  "seedVersion": "2026-07-31.1-layer-controls",
+  "meta": {
+    "modelEndpoint": "https://167.233.64.97/model",
+    "modelEndpointNote": "transit4 model service: edge proxy /model/* -> forge :8080 over the tailnet. GET /health, POST /scenario {year}. Swap points: the five scenario http blocks + one health block in ui.json's runs screen, plus this meta. As of 2026-07-06 the route answers HTTP 403 at the edge (token lockdown); the applet ships wired and degrades honestly until the edge authorizes callers. Web builds additionally need CORS on /model/*. Reply mapping: into path 'summary', run columns named to the reply keys (n_zones, total_trips, transit_pct, avg_trip_mi); re-verify the single-object insert when the edge opens."
+  }
+}

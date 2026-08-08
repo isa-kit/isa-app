@@ -1,0 +1,29 @@
+{
+  "cities": [
+    {
+      "name": "id",
+      "type": "text"
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": "City"
+    },
+    {
+      "name": "pop",
+      "type": "number",
+      "label": "Population"
+    }
+  ],
+  "siegeSaves": [
+    {
+      "name": "id",
+      "type": "text"
+    },
+    {
+      "name": "data",
+      "type": "text",
+      "label": "Save data"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "tables": [
+    {
+      "name": "tasks",
+      "label": "Work items",
+      "icon": "checklist",
+      "description": "Shared work items between you and Claude. Status + owner show who is doing what; the data/ folder mirrors this so Claude can read and update it."
+    },
+    {
+      "name": "updates",
+      "label": "Activity",
+      "icon": "history",
+      "description": "Append-only log of status/progress updates per work item — the ongoing status and its history over time. Multiple tasks can be in progress at once, each accumulating its own updates."
+    },
+    {
+      "name": "settings",
+      "label": "Settings",
+      "icon": "settings",
+      "description": "Codev controls. The Autobuild switch lets Claude's watcher automatically run (build) items you set to status=current and assign to claude — toggle it on/off on demand."
+    }
+  ]
+}

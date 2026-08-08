@@ -1,0 +1,12 @@
+{
+  "id": "games",
+  "name": "Games",
+  "category": "Games",
+  "icon": "sports_esports",
+  "color": "#19E6C0",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_games"
+  },
+  "seedVersion": "2026-06-13.2"
+}

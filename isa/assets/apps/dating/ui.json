@@ -1,0 +1,365 @@
+{
+  "app": {
+    "title": "Dating (demo)",
+    "primaryColor": "#EC407A",
+    "theme": "pastel"
+  },
+  "nav": [
+    {
+      "id": "browse",
+      "label": "Browse",
+      "icon": "people",
+      "screen": "browse"
+    },
+    {
+      "id": "matches",
+      "label": "Matches",
+      "icon": "favorite",
+      "screen": "matches"
+    },
+    {
+      "id": "interests",
+      "label": "Interests",
+      "icon": "local_offer",
+      "screen": "interests"
+    }
+  ],
+  "screens": {
+    "browse": {
+      "title": "Browse",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "A single-device demo — these are sample profiles. Filter by interest, tap a card to read a bio, then open it to edit."
+          },
+          {
+            "type": "button",
+            "label": "New profile",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "profiles"
+              }
+            }
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "Hiking",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "profiles",
+                    "column": "interests",
+                    "value": "in_hiking"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Music",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "profiles",
+                    "column": "interests",
+                    "value": "in_music"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Cooking",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "profiles",
+                    "column": "interests",
+                    "value": "in_cooking"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Art",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "profiles",
+                    "column": "interests",
+                    "value": "in_art"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Travel",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "profiles",
+                    "column": "interests",
+                    "value": "in_travel"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "All",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "profiles",
+                    "column": "interests",
+                    "value": ""
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "table": "profiles",
+            "emptyIcon": "people",
+            "emptyTitle": "No profiles yet",
+            "emptyText": "Add your first profile to start browsing potential matches.",
+            "emptyAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "profiles"
+              }
+            },
+            "emptyActionLabel": "New profile",
+            "groupByOptions": [
+              {
+                "label": "Interest",
+                "column": "interests"
+              }
+            ],
+            "groupBy": "interests",
+            "sort": {
+              "column": "name",
+              "dir": "asc"
+            },
+            "title": "name",
+            "subtitle": "bio",
+            "tags": [
+              {
+                "column": "age"
+              },
+              {
+                "column": "interests",
+                "colors": {
+                  "in_hiking": "green",
+                  "in_music": "purple",
+                  "in_cooking": "amber",
+                  "in_art": "pink",
+                  "in_travel": "teal"
+                }
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              {
+                "column": "age",
+                "label": "Age"
+              },
+              {
+                "column": "interests",
+                "label": "Interests"
+              },
+              {
+                "column": "bio",
+                "label": "About"
+              }
+            ],
+            "open": "Open profile",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "matches": {
+      "title": "Matches",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Likes, mutual matches, and passes. Tap one to edit, or add a new pairing."
+          },
+          {
+            "type": "button",
+            "label": "New match",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "matches",
+                "values": {
+                  "status": "liked"
+                }
+              }
+            }
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "Liked",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "matches",
+                    "column": "status",
+                    "value": "liked"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Matched",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "matches",
+                    "column": "status",
+                    "value": "matched"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Passed",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "matches",
+                    "column": "status",
+                    "value": "passed"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "All",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "matches",
+                    "column": "status",
+                    "value": ""
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "table": "matches",
+            "emptyIcon": "favorite",
+            "emptyTitle": "No matches yet",
+            "emptyText": "Like a profile or add a pairing to track your matches here.",
+            "emptyAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "matches",
+                "values": {
+                  "status": "liked"
+                }
+              }
+            },
+            "emptyActionLabel": "New match",
+            "groupBy": "status",
+            "groupOrder": [
+              "matched",
+              "liked",
+              "passed"
+            ],
+            "title": "note",
+            "subtitle": "status",
+            "tags": [
+              {
+                "column": "status",
+                "colors": {
+                  "matched": "pink",
+                  "liked": "amber",
+                  "passed": "gray"
+                }
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              {
+                "column": "a",
+                "label": "Person A"
+              },
+              {
+                "column": "b",
+                "label": "Person B"
+              },
+              {
+                "column": "status",
+                "label": "Status"
+              },
+              {
+                "column": "note",
+                "label": "Note"
+              }
+            ],
+            "open": "Open match",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "interests": {
+      "title": "Interests",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "The interests profiles can list. Add one to expand the filter options on Browse."
+          },
+          {
+            "type": "button",
+            "label": "New interest",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "interests"
+              }
+            }
+          },
+          {
+            "type": "list",
+            "table": "interests",
+            "titleColumn": "name",
+            "sortColumn": "name",
+            "sortDir": "asc",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

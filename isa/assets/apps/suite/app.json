@@ -1,0 +1,12 @@
+{
+  "id": "suite",
+  "name": "Suite",
+  "category": "Productivity",
+  "icon": "folder_copy",
+  "color": "#3F51B5",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_suite"
+  },
+  "seedVersion": "2026-07-03.1"
+}

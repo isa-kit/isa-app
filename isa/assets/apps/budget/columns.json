@@ -1,0 +1,72 @@
+{
+  "transactions": [
+    { "name": "date", "type": "date", "label": "Date", "required": true, "default": "today" },
+    { "name": "month", "type": "text", "label": "Month (YYYY-MM)", "description": "Used to group the by-month chart; e.g. 2026-06." },
+    { "name": "amount", "type": "number", "label": "Amount", "required": true },
+    {
+      "name": "type",
+      "type": "enum",
+      "label": "Type",
+      "options": ["expense", "income"],
+      "default": "expense"
+    },
+    {
+      "name": "category",
+      "type": "enum",
+      "label": "Category",
+      "options": [
+        "groceries",
+        "dining",
+        "transport",
+        "housing",
+        "utilities",
+        "subscriptions",
+        "entertainment",
+        "health",
+        "shopping",
+        "travel",
+        "salary",
+        "other"
+      ],
+      "default": "other"
+    },
+    { "name": "payee", "type": "text", "label": "Payee / merchant" },
+    { "name": "account", "type": "text", "label": "Account" },
+    { "name": "note", "type": "text", "label": "Note" }
+  ],
+  "budgets": [
+    {
+      "name": "category",
+      "type": "enum",
+      "label": "Category",
+      "options": [
+        "groceries",
+        "dining",
+        "transport",
+        "housing",
+        "utilities",
+        "subscriptions",
+        "entertainment",
+        "health",
+        "shopping",
+        "travel",
+        "other"
+      ],
+      "required": true
+    },
+    { "name": "limit", "type": "number", "label": "Monthly limit", "required": true },
+    { "name": "note", "type": "text", "label": "Note" }
+  ],
+  "accounts": [
+    { "name": "name", "type": "text", "label": "Name", "required": true },
+    {
+      "name": "kind",
+      "type": "enum",
+      "label": "Kind",
+      "options": ["checking", "savings", "credit", "cash"],
+      "default": "checking"
+    },
+    { "name": "balance", "type": "number", "label": "Balance" },
+    { "name": "note", "type": "text", "label": "Note" }
+  ]
+}

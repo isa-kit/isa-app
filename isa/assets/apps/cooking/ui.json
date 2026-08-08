@@ -1,0 +1,287 @@
+{
+  "app": {
+    "title": "Cooking",
+    "primaryColor": "#C45D2C",
+    "theme": "sepia"
+  },
+  "nav": [
+    {
+      "id": "pantry",
+      "label": "Pantry",
+      "icon": "kitchen",
+      "screen": "pantry"
+    },
+    {
+      "id": "recipes",
+      "label": "Recipes",
+      "icon": "menu_book",
+      "screen": "recipes"
+    }
+  ],
+  "screens": {
+    "pantry": {
+      "title": "Pantry",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "What you have on hand. Add items as you shop, then ask for recipes you can make from your pantry."
+          },
+          {
+            "type": "barchart",
+            "table": "pantry",
+            "groupColumn": "category",
+            "label": "Pantry by category"
+          },
+          {
+            "type": "button",
+            "label": "New item",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "pantry",
+                "values": {
+                  "unit": "each",
+                  "quantity": 1
+                }
+              }
+            }
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "All",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "pantry",
+                    "column": "category",
+                    "value": ""
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Produce",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "pantry",
+                    "column": "category",
+                    "value": "produce"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Dairy",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "pantry",
+                    "column": "category",
+                    "value": "dairy"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Drinks",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "pantry",
+                    "column": "category",
+                    "value": "drinks"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "table": "pantry",
+            "groupBy": "category",
+            "groupByOptions": [
+              {
+                "label": "Category",
+                "column": "category"
+              },
+              {
+                "label": "Unit",
+                "column": "unit"
+              }
+            ],
+            "sort": {
+              "column": "name",
+              "dir": "asc"
+            },
+            "title": "name",
+            "subtitle": "category",
+            "tags": [
+              {
+                "column": "unit"
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              {
+                "column": "quantity",
+                "label": "Quantity"
+              },
+              {
+                "column": "unit",
+                "label": "Unit"
+              },
+              {
+                "column": "fraction",
+                "label": "Fraction left"
+              },
+              {
+                "column": "category",
+                "label": "Category"
+              }
+            ],
+            "open": "Edit item",
+            "emptyIcon": "kitchen",
+            "emptyTitle": "Your pantry is empty",
+            "emptyText": "Add what you have on hand, then get recipe ideas you can make right now.",
+            "emptyAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "pantry",
+                "values": {
+                  "unit": "each",
+                  "quantity": 1
+                }
+              }
+            },
+            "emptyActionLabel": "New item",
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "button",
+            "label": "Suggest from my fridge",
+            "icon": "tips_and_updates",
+            "action": {
+              "fn": "suggestRecipes",
+              "args": {
+                "recipesTable": "recipes",
+                "pantryTable": "pantry",
+                "usesColumn": "uses",
+                "pantryNameCol": "name",
+                "scoreColumn": "matchScore",
+                "suggestedColumn": "suggested"
+              }
+            }
+          },
+          {
+            "type": "button",
+            "label": "Suggest recipes from my pantry (AI)",
+            "icon": "auto_awesome",
+            "action": {
+              "fn": "callRest",
+              "args": {
+                "url": "${slmBaseUrl}/v1/chat/completions",
+                "method": "POST",
+                "body": {
+                  "model": "qwen2.5:3b-instruct",
+                  "temperature": 0.3,
+                  "response_format": {
+                    "type": "json_object"
+                  },
+                  "messages": [
+                    {
+                      "role": "system",
+                      "content": "You are a kitchen assistant. Suggest recipes makeable mostly from the user's pantry. Reply ONLY with JSON: {\"recipes\":[{\"name\":...,\"uses\":[...],\"missing\":[...],\"steps\":[...],\"minutes\":N}]}"
+                    },
+                    {
+                      "role": "user",
+                      "content": "Pantry: ${pantry}. Constraints: quick."
+                    }
+                  ]
+                },
+                "into": "recipes",
+                "parse": {
+                  "path": "choices[0].message.content",
+                  "json": true,
+                  "rows": "recipes"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "recipes": {
+      "title": "Recipes",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Recipe ideas ranked by how much you already have, best matches first. Tap Suggest from my fridge on the Pantry tab to rank these from your pantry, offline."
+          },
+          {
+            "type": "cards",
+            "table": "recipes",
+            "sort": {
+              "column": "matchScore",
+              "dir": "desc"
+            },
+            "title": "name",
+            "subtitle": "uses",
+            "tags": [
+              {
+                "column": "matchScore"
+              },
+              {
+                "column": "minutes"
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              {
+                "column": "matchScore",
+                "label": "Pantry matches"
+              },
+              {
+                "column": "suggested",
+                "label": "Suggested"
+              },
+              {
+                "column": "uses",
+                "label": "Uses"
+              },
+              {
+                "column": "missing",
+                "label": "You'd need"
+              },
+              {
+                "column": "steps",
+                "label": "Steps"
+              },
+              {
+                "column": "minutes",
+                "label": "Minutes"
+              }
+            ],
+            "open": "Open recipe",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

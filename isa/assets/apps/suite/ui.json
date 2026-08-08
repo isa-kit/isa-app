@@ -1,0 +1,75 @@
+{
+  "app": {
+    "title": "Suite",
+    "primaryColor": "#3F51B5",
+    "theme": "warmshift"
+  },
+  "nav": [
+    { "id": "files", "label": "Files", "icon": "folder", "screen": "files" }
+  ],
+  "screens": {
+    "files": {
+      "title": "Suite",
+      "body": {
+        "type": "explorer",
+        "table": "files",
+        "title": "Files",
+        "nameColumn": "name",
+        "kindColumn": "kind",
+        "folderValue": "folder",
+        "parentColumn": "parentId",
+        "fileIconByKind": true,
+        "railMode": "collapsible",
+        "alongside": true,
+        "emptyHome": true,
+        "homeTitle": "Your Suite",
+        "homeSubtitle": "Open a recent file, or start something new — nothing opens until you choose.",
+        "newFolderLabel": "New folder",
+        "addItems": [
+          { "label": "New doc", "icon": "menu_book", "values": { "kind": "doc", "name": "Untitled doc" } },
+          { "label": "New note", "icon": "sticky_note", "values": { "kind": "note", "name": "Untitled note" } },
+          { "label": "New sheet", "icon": "table_chart", "values": { "kind": "sheets", "name": "Untitled sheet" } },
+          { "label": "New wireframe", "icon": "dashboard_customize", "values": { "kind": "wireframe", "name": "Untitled wireframe" } },
+          { "label": "New idea board", "icon": "bubble_chart", "values": { "kind": "bublee", "name": "Untitled board" } }
+        ],
+        "detail": {
+          "type": "switch",
+          "column": "kind",
+          "cases": {
+            "doc": {
+              "type": "pages", "table": "files", "nameColumn": "name",
+              "parentColumn": "parentId", "orderColumn": "order",
+              "kindColumn": "kind", "pageValue": "page", "pageLabel": "Page",
+              "detail": { "type": "richdoc", "table": "files", "column": "body" }
+            },
+            "note": {
+              "type": "pages", "table": "files", "nameColumn": "name",
+              "parentColumn": "parentId", "orderColumn": "order",
+              "kindColumn": "kind", "pageValue": "page", "pageLabel": "Page",
+              "detail": { "type": "notepad", "table": "files", "column": "body", "toolbar": true, "liveFormat": true }
+            },
+            "sheets": {
+              "type": "pages", "table": "files", "nameColumn": "name",
+              "parentColumn": "parentId", "orderColumn": "order",
+              "kindColumn": "kind", "pageValue": "page", "pageLabel": "Sheet",
+              "detail": { "type": "embed", "appletId": "sheets", "instanceFromRow": true }
+            },
+            "wireframe": {
+              "type": "pages", "table": "files", "nameColumn": "name",
+              "parentColumn": "parentId", "orderColumn": "order",
+              "kindColumn": "kind", "pageValue": "page", "pageLabel": "Board",
+              "detail": { "type": "embed", "appletId": "wireframe", "instanceFromRow": true, "screen": "solo" }
+            },
+            "bublee": {
+              "type": "pages", "table": "files", "nameColumn": "name",
+              "parentColumn": "parentId", "orderColumn": "order",
+              "kindColumn": "kind", "pageValue": "page", "pageLabel": "Board",
+              "detail": { "type": "embed", "appletId": "bublee", "instanceFromRow": true, "screen": "board" }
+            }
+          },
+          "default": { "type": "notepad", "table": "files", "column": "body" }
+        }
+      }
+    }
+  }
+}

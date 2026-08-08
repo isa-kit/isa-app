@@ -1,0 +1,12 @@
+{
+  "prod": [
+    { "name": "commit", "type": "text", "label": "Commit" },
+    { "name": "build", "type": "text", "label": "Build" },
+    { "name": "builtAt", "type": "dateTime", "label": "Built at (UTC)" }
+  ],
+  "dev": [
+    { "name": "commit", "type": "text", "label": "Commit" },
+    { "name": "build", "type": "text", "label": "Build" },
+    { "name": "builtAt", "type": "dateTime", "label": "Built at (UTC)" }
+  ]
+}

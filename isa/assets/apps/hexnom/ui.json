@@ -1,0 +1,185 @@
+{
+  "app": {
+    "title": "Hexnom",
+    "primaryColor": "#6FA85A"
+  },
+  "nav": [
+    {
+      "id": "world",
+      "label": "City",
+      "icon": "hexagon",
+      "screen": "world"
+    },
+    {
+      "id": "siege",
+      "label": "Nomnoms",
+      "icon": "shield",
+      "screen": "siege"
+    },
+    {
+      "id": "how",
+      "label": "How to",
+      "icon": "info",
+      "screen": "how"
+    }
+  ],
+  "screens": {
+    "world": {
+      "title": "Hexnom",
+      "body": {
+        "type": "hexnom",
+        "cols": 24,
+        "rows": 18,
+        "fillPhone": true
+      }
+    },
+    "siege": {
+      "title": "Nomnoms",
+      "body": {
+        "type": "hexnom",
+        "cols": 24,
+        "rows": 18,
+        "mode": "siege",
+        "saveTable": "siegeSaves"
+      }
+    },
+    "how": {
+      "title": "How to play",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Build a hex city"
+          },
+          {
+            "type": "text",
+            "value": "Hexnom is a city game on a hexagonal world. The game opens on a menu — tap New game to jump in, or Custom game to pick the world size and seed. The 🍔 Menu button (top-left) takes you back any time."
+          },
+          {
+            "type": "text",
+            "value": "Just want to watch? Pick 🤖 Autoplay from the menu (or tap the 🤖 button in-game) and an auto-mayor builds the whole city itself — digging water, raising markets and houses, laying roads, running wagons, even taking loans. It plans smarter now: it spreads buildings out instead of clumping them, upgrades roads that jam, sets up 🚉 stations and runs 🚌 buses for passengers, and even 📈 invests spare coin when the treasury is flush. Tap 🤖 again any time to take over."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "First, food"
+          },
+          {
+            "type": "text",
+            "value": "⛏️ Dig from the blue spring so water spreads across the hexes. Watered soil grows 🌳 trees that bear food, and your 🟢 noms eat from them and multiply. Add a 💧 Spring anywhere you like more water."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Build the city — roads & rails"
+          },
+          {
+            "type": "text",
+            "value": "Lay a transport network and your noms (and vehicles) travel faster on it. Drag to paint roads:\n🛣️ Path — a simple track.\n🛣️ Street — two lanes, quicker.\n🛣️ Avenue — three lanes, fastest road.\n🚆 Rail — the fastest line, and it can even cross water."
+          },
+          {
+            "type": "text",
+            "value": "Place buildings: 🏠 House and 🌳 Park lift the mood of noms nearby; 🏪 Market is a hub for traffic. Then send vehicles down the network: 🛒 Wagon (any road), 🚗 Car (streets and up), 🚃 Train (rails only). They FOLLOW the roads between your buildings — a vehicle with no connected road (or a train with no rail) just parks until you link it up."
+          },
+          {
+            "type": "text",
+            "value": "Traffic is real: lanes have capacity, so a narrow path JAMS when it's busy (it glows red) while a 3-lane avenue keeps flowing. Build wider roads where traffic is heavy — your street plan decides how well the whole city moves."
+          },
+          {
+            "type": "text",
+            "value": "🧽 Erase removes a road or building. Pinch / mouse-wheel to zoom, two-finger drag or ✋ Pan to move the camera."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "The money flows like water"
+          },
+          {
+            "type": "text",
+            "value": "Your city has a living economy that rides the roads. 🏪 Markets turn nearby food into 🪙 coin; your vehicles physically CARRY that coin to 🏠 houses, where it lands as wealth (you'll see a gold ring grow around a prospering building). Because the coin travels by road, value only reaches the places your network connects — a house cut off from a market stays poor. A house that gets rich raises new noms, so the city grows where the money flows. Watch the 🪙 total in the top bar climb as trade gets moving."
+          },
+          {
+            "type": "text",
+            "value": "So your street plan is your economy: connect markets to houses with good roads, and keep them flowing (no jams), and wealth spreads across the whole city."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "People on the move"
+          },
+          {
+            "type": "text",
+            "value": "Your noms want to travel, not just your coin. Build a 🚉 Station and it gathers travel demand from the noms living nearby — a queue of people wanting to go somewhere. Then your 🚌 Buses (and 🚗 cars and 🚃 trains) BOARD them and carry them along the network, paying a 🎫 FARE into the city the moment they arrive. People move value just like freight does — only as fast as your roads and rails can carry them, so a well-linked, jam-free network earns more fares."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Money, costs and the bank"
+          },
+          {
+            "type": "text",
+            "value": "Building isn't free anymore: roads and buildings cost 🪙 coin from your city TREASURY (the number in the top bar), which fills up as trade pays taxes. So early on you build a little, get trade moving, and reinvest the taxes into more city."
+          },
+          {
+            "type": "text",
+            "value": "Want to build faster? Tap 🏦 to open the Bank and take a LOAN — coin now, paid back from your future taxes, with interest. It's how you front-load a big road network or a new district. Just don't borrow more than your trade can outgrow — interest keeps nibbling your treasury until the debt (💳) is cleared."
+          },
+          {
+            "type": "text",
+            "value": "Sitting on a healthy treasury? 📈 INVEST some of it into a market and it pays you ongoing DIVIDENDS that grow your money over time — a way to make your coin work FOR you. That's the opposite of a loan: a loan costs you interest to spend now, while a brokerage earns you a return for parking your surplus. Use it when you're flush and want steady growth rather than a quick splurge."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Reading your city"
+          },
+          {
+            "type": "text",
+            "value": "A few cues help you spot what to fix:\n🔌 A building marked with a plug has NO road carrying value to it — connect it up and it'll start prospering.\n🧭 A growth coach names your single biggest blocker right now, so you always know the next move.\n🚦 Jam markers show where traffic is snarled — widen those roads or reroute around them.\nAnd the bank's interest is now shown PER SECOND, so the cost of a loan reads true at a glance."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Start small, grow as big as you like"
+          },
+          {
+            "type": "text",
+            "value": "Begin with a few hexes and a single street, then grow your town into a sprawling city at your own pace — the world is yours to scale."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "⚔️ Nomnoms — a second way to play"
+          },
+          {
+            "type": "text",
+            "value": "Open the Nomnoms tab for a different game: defend a settlement. You protect a 🔥 Hearth from waves of wild animals and raiders. Between waves you build up, then it's a fight to hold the line — survive as long as you can."
+          },
+          {
+            "type": "text",
+            "value": "Feed your people: 💧 dig a canal from the river and the water FLOWS down it, so a 🌾 farm or 🏭 mill beside flowing water produces far more food. Trees give 🪵 wood when you place a 🪓 woodcutter next to them. Food and wood are what you spend to build everything else."
+          },
+          {
+            "type": "text",
+            "value": "Your settlement is ALIVE: little 👥 people swarm your work like specks of energy — you don't order them about, they just go. When you place anything it starts as a building SITE with a progress bar, and the more folk that gather on it the faster it goes up (they also make your farms and mills produce more). They can't fight and they scatter from danger — but keep them fed and housed, because too little 🏠 housing or food and families pack up and LEAVE. Tap 👥 to nudge whether they lean toward building or working."
+          },
+          {
+            "type": "text",
+            "value": "Hold the raiders off in creative ways: 🏹 Pebble archer flicks a fast pebble; 🟢 Goo slinger lobs a splat that slows a whole clump; ☀️ Sunray deathray burns a CONTINUAL beam into one target; 🧱 Palisades wall them off and force the long way round (you can't fully seal the Hearth in); 🔥 Totems sap their nerve until they turn and FLEE. And a 🛖 Shelter is special — a raider whose nerve breaks beside one is WON OVER and JOINS your settlement instead of dying."
+          },
+          {
+            "type": "text",
+            "value": "Tap Send to call the next wave early for a bonus. When the 🔥 Hearth falls, the run ends and you're told how many waves you held. Pinch to zoom, ✋ Pan or two-finger drag to move."
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Coming next (City): more vehicle types, deeper finance, specialised districts. Coming next (Nomnoms): electricity and rope lines, more enemies and defenses."
+          }
+        ]
+      }
+    }
+  }
+}

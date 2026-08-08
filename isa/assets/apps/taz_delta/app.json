@@ -1,0 +1,12 @@
+{
+  "id": "taz_delta",
+  "name": "TAZ Delta",
+  "category": "Maps",
+  "icon": "travel_explore",
+  "color": "#00695C",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_taz_delta"
+  },
+  "seedVersion": "2026-06-14.1-transit"
+}

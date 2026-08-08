@@ -1,0 +1,140 @@
+{
+  "app": {
+    "title": "Tabletop",
+    "primaryColor": "#0B6B3A",
+    "liveSeconds": 2
+  },
+  "nav": [
+    {
+      "id": "table",
+      "label": "Table",
+      "icon": "style",
+      "screen": "table"
+    },
+    {
+      "id": "rules",
+      "label": "House rules",
+      "icon": "rule",
+      "screen": "rules"
+    },
+    {
+      "id": "how",
+      "label": "How to",
+      "icon": "info",
+      "screen": "how"
+    }
+  ],
+  "screens": {
+    "table": {
+      "title": "Tabletop",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "Share table",
+                "icon": "group",
+                "action": {
+                  "fn": "shareBoard"
+                }
+              },
+              {
+                "type": "button",
+                "label": "New token",
+                "icon": "add_circle",
+                "action": {
+                  "fn": "addRow",
+                  "args": {
+                    "table": "items",
+                    "values": {
+                      "front": "★",
+                      "faceUp": true,
+                      "holder": "table",
+                      "kind": "token",
+                      "x": 180,
+                      "y": 180,
+                      "z": 99
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "tabletop",
+            "table": "items",
+            "fillPhone": true,
+            "cardWidth": 76
+          }
+        ]
+      }
+    },
+    "rules": {
+      "title": "House rules",
+      "body": {
+        "type": "notepad",
+        "table": "house",
+        "column": "rules",
+        "titleColumn": "title",
+        "placeholder": "Write your group's rules here — the app never enforces them. Rules may or may not be in play; that's up to the table."
+      }
+    },
+    "how": {
+      "title": "How to play",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": "It's just a table."
+          },
+          {
+            "type": "text",
+            "value": "There are no built-in rules. Drag cards anywhere, tap to flip, flick them across the felt, stack them up — exactly like sitting at a real table."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Dealing"
+          },
+          {
+            "type": "text",
+            "value": "Whoever is dealing simply drags cards from the deck to each player. Anyone can deal; no turns are enforced."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Make up your own game"
+          },
+          {
+            "type": "text",
+            "value": "Agree on rules together and jot them in House rules. The app keeps the note but never polices it — you do."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Keeping cards hidden"
+          },
+          {
+            "type": "text",
+            "value": "A face-down card shows only its back to everyone. Flip it up when you want to reveal it."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Play together"
+          },
+          {
+            "type": "text",
+            "value": "Tap Share table for a code; others join and act on the same table live."
+          }
+        ]
+      }
+    }
+  }
+}

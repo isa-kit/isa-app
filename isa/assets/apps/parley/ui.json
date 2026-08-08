@@ -1,0 +1,82 @@
+{
+  "app": {
+    "title": "Parley",
+    "primaryColor": "#2E7D6B",
+    "theme": "pastel",
+    "liveSeconds": 2
+  },
+  "nav": [
+    { "id": "chat", "label": "Chat", "icon": "forum", "screen": "chat" }
+  ],
+  "screens": {
+    "chat": {
+      "title": "Parley",
+      "body": {
+        "type": "column",
+        "crossAxis": "stretch",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Live chat that translates. Tap Copy share link — your chat opens and the link is copied. Send the link to one person; when they open it, you're talking, each in your own language. Tap your language below first."
+          },
+          {
+            "type": "button",
+            "label": "Copy share link",
+            "icon": "link",
+            "action": { "fn": "hostCall", "args": { "name": "copyParleyLink" } }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "I read and write in:"
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              { "type": "button", "label": "English", "action": { "fn": "hostCall", "args": { "name": "setMyLanguage", "lang": "en" } } },
+              { "type": "button", "label": "Español", "action": { "fn": "hostCall", "args": { "name": "setMyLanguage", "lang": "es" } } },
+              { "type": "button", "label": "Français", "action": { "fn": "hostCall", "args": { "name": "setMyLanguage", "lang": "fr" } } },
+              { "type": "button", "label": "Deutsch", "action": { "fn": "hostCall", "args": { "name": "setMyLanguage", "lang": "de" } } },
+              { "type": "button", "label": "Português", "action": { "fn": "hostCall", "args": { "name": "setMyLanguage", "lang": "pt" } } },
+              { "type": "button", "label": "Italiano", "action": { "fn": "hostCall", "args": { "name": "setMyLanguage", "lang": "it" } } },
+              { "type": "button", "label": "中文", "action": { "fn": "hostCall", "args": { "name": "setMyLanguage", "lang": "zh" } } },
+              { "type": "button", "label": "日本語", "action": { "fn": "hostCall", "args": { "name": "setMyLanguage", "lang": "ja" } } },
+              { "type": "button", "label": "한국어", "action": { "fn": "hostCall", "args": { "name": "setMyLanguage", "lang": "ko" } } },
+              { "type": "button", "label": "العربية", "action": { "fn": "hostCall", "args": { "name": "setMyLanguage", "lang": "ar" } } },
+              { "type": "button", "label": "हिन्दी", "action": { "fn": "hostCall", "args": { "name": "setMyLanguage", "lang": "hi" } } }
+            ]
+          },
+          { "type": "divider" },
+          {
+            "type": "list",
+            "emptyIcon": "forum",
+            "emptyTitle": "No messages yet",
+            "emptyText": "Connect with a code and say hello -- messages show up here.",
+            "table": "messages",
+            "titleColumn": "text",
+            "subtitleColumns": ["translated"],
+            "metaColumns": ["sender"],
+            "sortColumn": "sentAt",
+            "sortDir": "asc"
+          },
+          { "type": "divider" },
+          {
+            "type": "composer",
+            "table": "messages",
+            "column": "text",
+            "placeholder": "Type a message…",
+            "sendIcon": "send",
+            "values": {
+              "sender": "$playerId",
+              "sentAt": "now",
+              "id": "uuid"
+            },
+            "action": { "fn": "hostCall", "args": { "name": "translateMessage" } }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,1903 @@
+{
+  "app": {
+    "title": "Dispatch",
+    "primaryColor": "#0F766E",
+    "theme": "minimal",
+    "autosave": false,
+    "search": {
+      "placeholder": "Search comments…"
+    },
+    "headerActions": [
+      {
+        "kind": "explorerPanels",
+        "node": "threadExplorer",
+        "tooltip": "Panels"
+      },
+      {
+        "icon": "bubble_chart",
+        "tooltip": "Export to a real bublie board",
+        "action": {
+          "fn": "hostCall",
+          "args": {
+            "name": "mapDispatchToBublee"
+          }
+        }
+      }
+    ],
+    "settings": [
+      {
+        "label": "Generate a project spec",
+        "hint": "Pick a project → write its hand-off spec (.md)",
+        "icon": "description",
+        "action": "goto",
+        "args": {
+          "screen": "spec"
+        }
+      },
+      {
+        "label": "People on this board",
+        "hint": "Add, rename or remove the people you assign work to",
+        "icon": "group",
+        "action": "goto",
+        "args": {
+          "screen": "people"
+        }
+      },
+      {
+        "label": "How dispatch works",
+        "hint": "Projects, tasks, logs and attachments — a quick read",
+        "icon": "help_outline",
+        "action": "goto",
+        "args": {
+          "screen": "howto"
+        }
+      }
+    ]
+  },
+  "nav": [
+    {
+      "id": "thread",
+      "label": "Projects",
+      "icon": "account_tree",
+      "screen": "thread"
+    },
+    {
+      "id": "inbox",
+      "label": "Inbox",
+      "icon": "inbox",
+      "screen": "inbox"
+    },
+    {
+      "id": "priorities",
+      "label": "Priorities",
+      "icon": "low_priority",
+      "screen": "priorities"
+    },
+    {
+      "id": "tags",
+      "label": "Tags",
+      "icon": "local_offer",
+      "screen": "tags"
+    }
+  ],
+  "screens": {
+    "thread": {
+      "title": "Dispatch",
+      "body": {
+        "type": "explorer",
+        "id": "threadExplorer",
+        "panelChannel": true,
+        "table": "entries",
+        "nameColumn": "title",
+        "kindColumn": "type",
+        "folderValue": "group",
+        "fileValue": "task",
+        "edgesTable": "relations",
+        "edgeFrom": "fromId",
+        "edgeTo": "toId",
+        "edgeType": "type",
+        "containsType": "contains",
+        "sharedBadge": true,
+        "badgeColumn": "rulesInherited",
+        "dragReparent": true,
+        "recursive": true,
+        "orderColumn": "order",
+        "title": "Projects",
+        "filterable": true,
+        "twoLevel": true,
+        "expandUntilSelected": true,
+        "followSelection": true,
+        "dense": true,
+        "treeRail": true,
+        "rail2Folders": true,
+        "showChildCounts": true,
+        "showProgress": true,
+        "childCountLabel": "log entry|log entries",
+        "breadcrumb": true,
+        "detailedView": true,
+        "alwaysShowDetail": true,
+        "detailKindLabel": true,
+        "defaultContentsView": "detailed",
+        "rootDashboard": true,
+        "railWidth1": 230,
+        "railWidth2": 290,
+        "autoSelectFirstChild": false,
+        "settingsAction": {
+          "fn": "projectSettings",
+          "label": "Project settings"
+        },
+        "convertible": true,
+        "convertToFolderLabel": "Convert to project",
+        "convertToFileLabel": "Convert to task",
+        "menuActions": [
+          {
+            "label": "Settings…",
+            "folderOnly": true,
+            "action": { "fn": "projectSettings" }
+          }
+        ],
+        "railWidth": 300,
+        "railMode": "collapsible",
+        "autoSelectFirst": true,
+        "fileIconByKind": true,
+        "folderTapExpands": true,
+        "colorColumn": "color",
+        "emojiColumn": "icon",
+        "statusColumn": "status",
+        "statusOptions": [
+          "active",
+          "queued",
+          "done"
+        ],
+        "prioColumn": "prioLane",
+        "prioOptions": [
+          "now",
+          "next",
+          "queued",
+          "later"
+        ],
+        "prioLabels": {
+          "now": "Now",
+          "next": "Next",
+          "queued": "Queued",
+          "later": "Later"
+        },
+        "completedByColumn": "completedBy",
+        "finishedAtColumn": "finishedAt",
+        "doneStatus": "done",
+        "defaultActor": "u_you",
+        "newFileLabel": "New task",
+        "newFolderLabel": "New project",
+        "tags": [
+          {
+            "column": "status",
+            "colors": {
+              "active": "blue",
+              "queued": "amber",
+              "done": "green"
+            }
+          },
+          {
+            "column": "prompting"
+          },
+          {
+            "column": "bottleneck",
+            "colors": {
+              "true": "red"
+            }
+          },
+          {
+            "column": "blocked",
+            "colors": {
+              "true": "amber"
+            }
+          },
+          {
+            "column": "priority",
+            "colors": {
+              "urgent": "red",
+              "high": "amber",
+              "normal": "gray",
+              "low": "gray"
+            }
+          },
+          {
+            "column": "importance",
+            "colors": {
+              "high": "amber",
+              "normal": "gray",
+              "low": "gray"
+            }
+          },
+          {
+            "column": "due"
+          }
+        ],
+        "scopeTargets": [
+          {
+            "table": "relations",
+            "column": "fromId"
+          }
+        ],
+        "detail": {
+          "type": "column",
+          "bindRow": true,
+          "crossAxis": "stretch",
+          "scroll": true,
+          "children": [
+            {
+              "type": "record",
+              "table": "entries",
+              "compact": true,
+              "readOnly": true,
+              "layout": "chips",
+              "fields": [
+                "title",
+                "status",
+                "role",
+                "comment",
+                "createdBy",
+                "with",
+                "prompting",
+                "bottleneck",
+                "blocked",
+                "decisionKind",
+                "created",
+                "finishedAt",
+                "completedBy",
+                "editedAt",
+                "editedBy",
+                "estimateMins",
+                "priority",
+                "importance",
+                "scheduledStart",
+                "due",
+                "tags"
+              ],
+              "statusColumn": "status",
+              "completedByColumn": "completedBy",
+              "finishedAtColumn": "finishedAt",
+              "doneStatus": "done",
+              "defaultActor": "u_you",
+              "editedByColumn": "editedBy",
+              "editedAtColumn": "editedAt"
+            },
+            {
+              "type": "column",
+              "bindRow": true,
+              "crossAxis": "stretch",
+              "showIf": {
+                "table": "entries",
+                "id": "$rowId",
+                "column": "rulesActive",
+                "equals": "true"
+              },
+              "children": [
+                {
+                  "type": "divider"
+                },
+                {
+                  "type": "record",
+                  "table": "entries",
+                  "readOnly": true,
+                  "compact": true,
+                  "fields": [
+                    "rulesActive",
+                    "rulesVersion",
+                    "rules",
+                    "effectiveRules"
+                  ]
+                },
+                {
+                  "type": "button",
+                  "label": "Recompute rules",
+                  "icon": "refresh",
+                  "action": {
+                    "fn": "hostCall",
+                    "args": {
+                      "name": "recomputeRulesInheritance"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "column",
+              "bindRow": true,
+              "crossAxis": "stretch",
+              "showIf": {
+                "table": "entries",
+                "id": "$rowId",
+                "column": "rulesActive",
+                "notEquals": "true"
+              },
+              "children": [
+                {
+                  "type": "column",
+                  "bindRow": true,
+                  "crossAxis": "stretch",
+                  "showIf": {
+                    "table": "entries",
+                    "id": "$rowId",
+                    "column": "rulesInherited",
+                    "equals": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "divider"
+                    },
+                    {
+                      "type": "text",
+                      "style": "caption",
+                      "value": "Inherited rules (subtree regime) — advisory; Recompute rules refreshes. The authoritative check is the ancestor walk (protocols/dispatch-run.md)."
+                    }
+                  ]
+                },
+                {
+                  "type": "column",
+                  "bindRow": true,
+                  "crossAxis": "stretch",
+                  "showIf": {
+                    "table": "entries",
+                    "id": "$rowId",
+                    "column": "rulesInherited",
+                    "notEquals": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "divider"
+                    },
+                    {
+                      "type": "text",
+                      "style": "caption",
+                      "value": "No inherited rules in the last derivation — this is a DERIVED value and may be stale; tap Recompute rules to re-derive. Empty never means \"no rules apply\": the authoritative check is the ancestor walk (protocols/dispatch-run.md)."
+                    }
+                  ]
+                },
+                {
+                  "type": "record",
+                  "table": "entries",
+                  "readOnly": true,
+                  "compact": true,
+                  "fields": [
+                    "rulesActive",
+                    "rulesVersion",
+                    "rules",
+                    "effectiveRules"
+                  ]
+                },
+                {
+                  "type": "button",
+                  "label": "Recompute rules",
+                  "icon": "refresh",
+                  "action": {
+                    "fn": "hostCall",
+                    "args": {
+                      "name": "recomputeRulesInheritance"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "column",
+              "bindRow": true,
+              "crossAxis": "stretch",
+              "showIf": {
+                "table": "entries",
+                "id": "$rowId",
+                "column": "type",
+                "notEquals": "group"
+              },
+              "children": [
+                {
+                  "type": "entrythread",
+                  "surface": true,
+                  "caption": "Log — entries and attachments, newest work at the bottom. Add entry opens a card; Attach adds a file or a tool; Reply threads under an entry.",
+                  "table": "entries",
+                  "edgesTable": "relations",
+                  "edgeFrom": "fromId",
+                  "edgeTo": "toId",
+                  "edgeType": "type",
+                  "containsType": "contains",
+                  "titleColumn": "title",
+                  "subtitleColumn": "comment",
+                  "orderColumn": "order",
+                  "previewInline": true,
+                  "previewColumn": "attachment",
+                  "previewTypes": [
+                    "wireframe",
+                    "sheets",
+                    "docs",
+                    "sketchpad",
+                    "bublee"
+                  ],
+                  "appletColumn": "type",
+                  "peekHeight": 280,
+                  "editable": true,
+                  "allowAdd": true,
+                  "titleless": true,
+                  "timeColumn": "postedAt",
+                  "addHint": "Write a comment…",
+                  "emptyText": "No log yet — tap Add entry to start this task’s log.",
+                  "removeLabel": "Remove from this log",
+                  "authorColumn": "createdBy",
+                  "authorPicker": true,
+                  "defaultAuthor": "u_you",
+                  "promptingColumn": "prompting",
+                  "promptingPicker": true,
+                  "awaitingColumn": "awaiting",
+                  "authorTable": "users",
+                  "authorNameColumn": "name",
+                  "attachInline": true,
+                  "attachColumn": "attachment",
+                  "createTypes": [
+                    "wireframe",
+                    "sketchpad",
+                    "docs",
+                    "sheets",
+                    "bublee"
+                  ],
+                  "action": {
+                    "fn": "editRow",
+                    "args": {
+                      "table": "entries"
+                    }
+                  },
+                  "nested": true,
+                  "excludeTypes": [
+                    "task",
+                    "group",
+                    "goal",
+                    "milestone",
+                    "item",
+                    "decision"
+                  ],
+                  "attachmentTypes": [
+                    "image",
+                    "wireframe",
+                    "sheets",
+                    "docs",
+                    "sketchpad",
+                    "bublee"
+                  ],
+                  "composeCard": true,
+                  "addEntryLabel": "Add entry",
+                  "attachInlineEdit": true,
+                  "inlineEditTypes": [
+                    "wireframe",
+                    "docs",
+                    "bublee"
+                  ],
+                  "collapseToggle": true,
+                  "searchSource": "app",
+                  "editedByColumn": "editedBy",
+                  "editedAtColumn": "editedAt",
+                  "parentEditedAtColumn": "editedAt"
+                }
+              ]
+            },
+            {
+              "type": "column",
+              "bindRow": true,
+              "crossAxis": "stretch",
+              "showIf": {
+                "table": "entries",
+                "id": "$rowId",
+                "column": "type",
+                "equals": "group"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": "One glance answers: how is this project doing, and what's next. Actions: tap a Now item to jump to it, or tap a chip to deliberately open a lens (Bublie/List/Files/Priorities) — lenses no longer auto-stack."
+                },
+                {
+                  "type": "column",
+                  "bindRow": true,
+                  "crossAxis": "stretch",
+                  "showIf": {
+                    "table": "entries",
+                    "id": "$rowId",
+                    "column": "viewMode",
+                    "notEquals": "priorities"
+                  },
+                  "children": [
+                    {
+                      "type": "column",
+                      "bindRow": true,
+                      "crossAxis": "stretch",
+                      "showIf": {
+                        "table": "entries",
+                        "id": "$rowId",
+                        "column": "viewMode",
+                        "notEquals": "bublie"
+                      },
+                      "children": [
+                        {
+                          "type": "column",
+                          "bindRow": true,
+                          "crossAxis": "stretch",
+                          "showIf": {
+                            "table": "entries",
+                            "id": "$rowId",
+                            "column": "viewMode",
+                            "notEquals": "list"
+                          },
+                          "children": [
+                            {
+                              "type": "column",
+                              "bindRow": true,
+                              "crossAxis": "stretch",
+                              "showIf": {
+                                "table": "entries",
+                                "id": "$rowId",
+                                "column": "viewMode",
+                                "notEquals": "files"
+                              },
+                              "children": [
+                                {
+                                  "type": "column",
+                                  "bindRow": true,
+                                  "crossAxis": "stretch",
+                                  "showIf": {
+                                    "table": "entries",
+                                    "id": "$rowId",
+                                    "column": "viewMode",
+                                    "notEquals": "plan"
+                                  },
+                                  "children": [
+                                {
+                                  "type": "text",
+                                  "style": "caption",
+                                  "value": "This project's own status/role/people already show in the record above (title, status, comment, with, prompting…) — not duplicated here. The counts below are this project's OWN subtree, recomputed live: every task nested under it at any depth, and nothing from a sibling project."
+                                },
+                                {
+                                  "type": "progress",
+                                  "table": "entries",
+                                  "label": "Tasks done",
+                                  "statusColumn": "status",
+                                  "doneValue": "done",
+                                  "typeColumn": "type",
+                                  "excludeTypes": [
+                                    "group",
+                                    "note",
+                                    "image",
+                                    "wireframe",
+                                    "sheets",
+                                    "docs",
+                                    "sketchpad",
+                                    "bublee",
+                                    "goal",
+                                    "milestone",
+                                    "item",
+                                    "decision"
+                                  ],
+                                  "scopeRowId": "$rowId",
+                                  "scopeEdgesTable": "relations",
+                                  "scopeEdgeFrom": "fromId",
+                                  "scopeEdgeTo": "toId",
+                                  "scopeEdgeType": "type",
+                                  "scopeContainsType": "contains"
+                                },
+                                {
+                                  "type": "row",
+                                  "wrap": true,
+                                  "children": [
+                                    {
+                                      "type": "stat",
+                                      "table": "entries",
+                                      "agg": "count",
+                                      "label": "Done",
+                                      "filter": {
+                                        "column": "status",
+                                        "value": "done"
+                                      },
+                                      "typeColumn": "type",
+                                      "excludeTypes": [
+                                        "group",
+                                        "note",
+                                        "image",
+                                        "wireframe",
+                                        "sheets",
+                                        "docs",
+                                        "sketchpad",
+                                        "bublee",
+                                        "goal",
+                                        "milestone",
+                                        "item",
+                                        "decision"
+                                      ],
+                                      "scopeRowId": "$rowId",
+                                      "scopeEdgesTable": "relations",
+                                      "scopeEdgeFrom": "fromId",
+                                      "scopeEdgeTo": "toId",
+                                      "scopeEdgeType": "type",
+                                      "scopeContainsType": "contains"
+                                    },
+                                    {
+                                      "type": "stat",
+                                      "table": "entries",
+                                      "agg": "count",
+                                      "label": "Active",
+                                      "filter": {
+                                        "column": "status",
+                                        "value": "active"
+                                      },
+                                      "typeColumn": "type",
+                                      "excludeTypes": [
+                                        "group",
+                                        "note",
+                                        "image",
+                                        "wireframe",
+                                        "sheets",
+                                        "docs",
+                                        "sketchpad",
+                                        "bublee",
+                                        "goal",
+                                        "milestone",
+                                        "item",
+                                        "decision"
+                                      ],
+                                      "scopeRowId": "$rowId",
+                                      "scopeEdgesTable": "relations",
+                                      "scopeEdgeFrom": "fromId",
+                                      "scopeEdgeTo": "toId",
+                                      "scopeEdgeType": "type",
+                                      "scopeContainsType": "contains"
+                                    },
+                                    {
+                                      "type": "stat",
+                                      "table": "entries",
+                                      "agg": "count",
+                                      "label": "Queued",
+                                      "filter": {
+                                        "column": "status",
+                                        "value": "queued"
+                                      },
+                                      "typeColumn": "type",
+                                      "excludeTypes": [
+                                        "group",
+                                        "note",
+                                        "image",
+                                        "wireframe",
+                                        "sheets",
+                                        "docs",
+                                        "sketchpad",
+                                        "bublee",
+                                        "goal",
+                                        "milestone",
+                                        "item",
+                                        "decision"
+                                      ],
+                                      "scopeRowId": "$rowId",
+                                      "scopeEdgesTable": "relations",
+                                      "scopeEdgeFrom": "fromId",
+                                      "scopeEdgeTo": "toId",
+                                      "scopeEdgeType": "type",
+                                      "scopeContainsType": "contains"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "divider"
+                                },
+                                {
+                                  "type": "text",
+                                  "style": "caption",
+                                  "value": "Now — what's in motion for this project: the top 3 of each lane. Tap a card to jump straight to it, or open the full Priorities view below for everything."
+                                },
+                                {
+                                  "type": "priolanes",
+                                  "table": "entries",
+                                  "laneScroll": false,
+                                  "limit": 3,
+                                  "statusColumn": "status",
+                                  "prioColumn": "prioLane",
+                                  "typeColumn": "type",
+                                  "scopeRowId": "$rowId",
+                                  "excludeTypes": [
+                                    "group",
+                                    "note",
+                                    "image",
+                                    "wireframe",
+                                    "sheets",
+                                    "docs",
+                                    "sketchpad",
+                                    "bublee",
+                                    "goal",
+                                    "milestone",
+                                    "item",
+                                    "decision"
+                                  ],
+                                  "titleColumn": "title",
+                                  "subtitleColumn": "comment",
+                                  "edgesTable": "relations",
+                                  "edgeFrom": "fromId",
+                                  "edgeTo": "toId",
+                                  "edgeType": "type",
+                                  "containsType": "contains",
+                                  "projectType": "group",
+                                  "recencyColumns": ["postedAt", "editedAt"],
+                                  "orderColumn": "order",
+                                  "rankColumn": "prioRank",
+                                  "colorColumn": "color",
+                                  "emojiColumn": "icon",
+                                  "filterable": false,
+                                  "groupByToggle": false,
+                                  "pinnable": false,
+                                  "action": {
+                                    "fn": "editRow",
+                                    "args": {
+                                      "table": "entries"
+                                    }
+                                  }
+                                },
+                                {
+                                  "type": "button",
+                                  "label": "Open full Priorities view",
+                                  "icon": "low_priority",
+                                  "variant": "tonal",
+                                  "action": {
+                                    "fn": "setField",
+                                    "args": {
+                                      "table": "entries",
+                                      "id": "$selected:entries",
+                                      "column": "viewMode",
+                                      "value": "priorities"
+                                    }
+                                  }
+                                },
+                                {
+                                  "type": "divider"
+                                },
+                                {
+                                  "type": "text",
+                                  "style": "caption",
+                                  "value": "Open a lens on demand — it won't stack automatically."
+                                },
+                                {
+                                  "type": "row",
+                                  "wrap": true,
+                                  "children": [
+                                    {
+                                      "type": "button",
+                                      "label": "Plan",
+                                      "icon": "flag",
+                                      "variant": "tonal",
+                                      "action": {
+                                        "fn": "setField",
+                                        "args": {
+                                          "table": "entries",
+                                          "id": "$selected:entries",
+                                          "column": "viewMode",
+                                          "value": "plan"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "button",
+                                      "label": "Bublie",
+                                      "icon": "bubble_chart",
+                                      "variant": "tonal",
+                                      "action": {
+                                        "fn": "setField",
+                                        "args": {
+                                          "table": "entries",
+                                          "id": "$selected:entries",
+                                          "column": "viewMode",
+                                          "value": "bublie"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "button",
+                                      "label": "List",
+                                      "icon": "list",
+                                      "variant": "tonal",
+                                      "action": {
+                                        "fn": "setField",
+                                        "args": {
+                                          "table": "entries",
+                                          "id": "$selected:entries",
+                                          "column": "viewMode",
+                                          "value": "list"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "button",
+                                      "label": "Project files",
+                                      "icon": "folder",
+                                      "variant": "tonal",
+                                      "action": {
+                                        "fn": "setField",
+                                        "args": {
+                                          "table": "entries",
+                                          "id": "$selected:entries",
+                                          "column": "viewMode",
+                                          "value": "files"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "divider"
+                                },
+                                {
+                                  "type": "text",
+                                  "style": "caption",
+                                  "value": "People — Lead and With already show as chips in the record above; a second record widget on the same row is an engine key collision (see BOARD.md priorun-0804), so this reuses that surface rather than duplicating it. To see only your own projects: open Projects, tap Filter, set Lead = you, then save it as a named preset ('Mine') — one tap to reapply from then on (the engine's per-view saved-filter presets, wired on this explorer)."
+                                }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "column",
+                  "bindRow": true,
+                  "crossAxis": "stretch",
+                  "showIf": {
+                    "table": "entries",
+                    "id": "$rowId",
+                    "column": "viewMode",
+                    "equals": "plan"
+                  },
+                  "children": [
+                    {
+                      "type": "button",
+                      "label": "← Overview",
+                      "variant": "text",
+                      "action": {
+                        "fn": "setField",
+                        "args": {
+                          "table": "entries",
+                          "id": "$selected:entries",
+                          "column": "viewMode",
+                          "value": ""
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "style": "caption",
+                      "value": "What this project is aiming at and how far along — goals (end states), milestones (checkpoints), and decisions (settled, still open, or emergent), scoped to THIS project's own subtree only. Tap a card to open it."
+                    },
+                    {
+                      "type": "text",
+                      "style": "title",
+                      "value": "Goals"
+                    },
+                    {
+                      "type": "cards",
+                      "table": "entries",
+                      "title": "title",
+                      "subtitle": "comment",
+                      "iconColumn": "type",
+                      "tableView": false,
+                      "expandable": false,
+                      "scopeRowId": "$rowId",
+                      "scopeEdgesTable": "relations",
+                      "scopeEdgeFrom": "fromId",
+                      "scopeEdgeTo": "toId",
+                      "scopeContainsType": "contains",
+                      "filter": {
+                        "column": "role",
+                        "value": "goal"
+                      },
+                      "tags": [
+                        {
+                          "column": "status",
+                          "colors": {
+                            "active": "blue",
+                            "queued": "amber",
+                            "done": "green"
+                          }
+                        }
+                      ],
+                      "action": {
+                        "fn": "editRow",
+                        "args": {
+                          "table": "entries"
+                        }
+                      },
+                      "emptyTitle": "No goals yet",
+                      "emptyText": "A goal is the end state this project is aiming at. Add one (role: goal on a task) to hang milestones and items off it."
+                    },
+                    {
+                      "type": "text",
+                      "style": "title",
+                      "value": "Milestones"
+                    },
+                    {
+                      "type": "cards",
+                      "table": "entries",
+                      "title": "title",
+                      "subtitle": "comment",
+                      "iconColumn": "type",
+                      "tableView": false,
+                      "expandable": false,
+                      "scopeRowId": "$rowId",
+                      "scopeEdgesTable": "relations",
+                      "scopeEdgeFrom": "fromId",
+                      "scopeEdgeTo": "toId",
+                      "scopeContainsType": "contains",
+                      "filter": {
+                        "column": "role",
+                        "value": "milestone"
+                      },
+                      "tags": [
+                        {
+                          "column": "status",
+                          "colors": {
+                            "active": "blue",
+                            "queued": "amber",
+                            "done": "green"
+                          }
+                        }
+                      ],
+                      "action": {
+                        "fn": "editRow",
+                        "args": {
+                          "table": "entries"
+                        }
+                      },
+                      "emptyTitle": "No milestones yet",
+                      "emptyText": "A milestone is a checkpoint on the way to a goal."
+                    },
+                    {
+                      "type": "text",
+                      "style": "title",
+                      "value": "Decisions"
+                    },
+                    {
+                      "type": "cards",
+                      "table": "entries",
+                      "title": "title",
+                      "subtitle": "comment",
+                      "iconColumn": "type",
+                      "tableView": false,
+                      "expandable": false,
+                      "scopeRowId": "$rowId",
+                      "scopeEdgesTable": "relations",
+                      "scopeEdgeFrom": "fromId",
+                      "scopeEdgeTo": "toId",
+                      "scopeContainsType": "contains",
+                      "filter": {
+                        "column": "role",
+                        "value": "decision"
+                      },
+                      "tags": [
+                        {
+                          "column": "decisionKind",
+                          "colors": {
+                            "predetermined": "gray",
+                            "open": "amber",
+                            "emergent": "teal"
+                          }
+                        }
+                      ],
+                      "action": {
+                        "fn": "editRow",
+                        "args": {
+                          "table": "entries"
+                        }
+                      },
+                      "emptyTitle": "No decisions logged yet",
+                      "emptyText": "Record a choice here — settled (predetermined), still-to-answer (open), or one that only came up once the work was underway (emergent)."
+                    }
+                  ]
+                },
+                {
+                  "type": "column",
+                  "bindRow": true,
+                  "crossAxis": "stretch",
+                  "showIf": {
+                    "table": "entries",
+                    "id": "$rowId",
+                    "column": "viewMode",
+                    "equals": "priorities"
+                  },
+                  "children": [
+                    {
+                      "type": "button",
+                      "label": "← Overview",
+                      "variant": "text",
+                      "action": {
+                        "fn": "setField",
+                        "args": {
+                          "table": "entries",
+                          "id": "$selected:entries",
+                          "column": "viewMode",
+                          "value": ""
+                        }
+                      }
+                    },
+                    {
+                      "type": "priolanes",
+                      "table": "entries",
+                      "laneScroll": false,
+                      "statusColumn": "status",
+                      "prioColumn": "prioLane",
+                      "typeColumn": "type",
+                      "scopeRowId": "$rowId",
+                      "excludeTypes": [
+                        "group",
+                        "note",
+                        "image",
+                        "wireframe",
+                        "sheets",
+                        "docs",
+                        "sketchpad",
+                        "bublee",
+                        "goal",
+                        "milestone",
+                        "item",
+                        "decision"
+                      ],
+                      "titleColumn": "title",
+                      "subtitleColumn": "comment",
+                      "edgesTable": "relations",
+                      "edgeFrom": "fromId",
+                      "edgeTo": "toId",
+                      "edgeType": "type",
+                      "containsType": "contains",
+                      "projectType": "group",
+                      "recencyColumns": ["postedAt", "editedAt"],
+                      "orderColumn": "order",
+                      "rankColumn": "prioRank",
+                      "colorColumn": "color",
+                      "emojiColumn": "icon",
+                      "filterable": true,
+                      "action": {
+                        "fn": "editRow",
+                        "args": {
+                          "table": "entries"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "column",
+                  "bindRow": true,
+                  "crossAxis": "stretch",
+                  "showIf": {
+                    "table": "entries",
+                    "id": "$rowId",
+                    "column": "viewMode",
+                    "equals": "bublie"
+                  },
+                  "children": [
+                    {
+                      "type": "button",
+                      "label": "← Overview",
+                      "variant": "text",
+                      "action": {
+                        "fn": "setField",
+                        "args": {
+                          "table": "entries",
+                          "id": "$selected:entries",
+                          "column": "viewMode",
+                          "value": ""
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "style": "caption",
+                      "value": "This project's items as bubbles."
+                    },
+                    {
+                      "type": "embed",
+                      "appletId": "bublee",
+                      "screen": "boardEditable",
+                      "height": 500,
+                      "instanceId": "derived:dispatch-map",
+                      "scope": {
+                        "table": "boards",
+                        "rowId": "bd_dispatch_map"
+                      },
+                      "presetScope": {
+                        "table": "bubbles",
+                        "column": "projectPath",
+                        "value": "$rowId",
+                        "matchMode": "pathContains"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "column",
+                  "bindRow": true,
+                  "crossAxis": "stretch",
+                  "showIf": {
+                    "table": "entries",
+                    "id": "$rowId",
+                    "column": "viewMode",
+                    "equals": "list"
+                  },
+                  "children": [
+                    {
+                      "type": "button",
+                      "label": "← Overview",
+                      "variant": "text",
+                      "action": {
+                        "fn": "setField",
+                        "args": {
+                          "table": "entries",
+                          "id": "$selected:entries",
+                          "column": "viewMode",
+                          "value": ""
+                        }
+                      }
+                    },
+                    {
+                      "type": "entrythread",
+                      "surface": true,
+                      "caption": "Log — entries and attachments, newest work at the bottom. Add entry opens a card; Attach adds a file or a tool; Reply threads under an entry.",
+                      "table": "entries",
+                      "edgesTable": "relations",
+                      "edgeFrom": "fromId",
+                      "edgeTo": "toId",
+                      "edgeType": "type",
+                      "containsType": "contains",
+                      "titleColumn": "title",
+                      "subtitleColumn": "comment",
+                      "orderColumn": "order",
+                      "previewInline": true,
+                      "previewColumn": "attachment",
+                      "previewTypes": [
+                        "wireframe",
+                        "sheets",
+                        "docs",
+                        "sketchpad",
+                        "bublee"
+                      ],
+                      "appletColumn": "type",
+                      "peekHeight": 280,
+                      "editable": true,
+                      "allowAdd": true,
+                      "titleless": true,
+                      "timeColumn": "postedAt",
+                      "addHint": "Write a comment…",
+                      "emptyText": "No log yet — tap Add entry to start this project's log.",
+                      "removeLabel": "Remove from this log",
+                      "authorColumn": "createdBy",
+                      "authorPicker": true,
+                      "defaultAuthor": "u_you",
+                      "promptingColumn": "prompting",
+                      "promptingPicker": true,
+                      "awaitingColumn": "awaiting",
+                      "authorTable": "users",
+                      "authorNameColumn": "name",
+                      "attachInline": true,
+                      "attachColumn": "attachment",
+                      "createTypes": [
+                        "wireframe",
+                        "sketchpad",
+                        "docs",
+                        "sheets",
+                        "bublee"
+                      ],
+                      "action": {
+                        "fn": "editRow",
+                        "args": {
+                          "table": "entries"
+                        }
+                      },
+                      "nested": true,
+                      "excludeTypes": [
+                        "task",
+                        "group",
+                        "goal",
+                        "milestone",
+                        "item",
+                        "decision"
+                      ],
+                      "attachmentTypes": [
+                        "image",
+                        "wireframe",
+                        "sheets",
+                        "docs",
+                        "sketchpad",
+                        "bublee"
+                      ],
+                      "composeCard": true,
+                      "addEntryLabel": "Add entry",
+                      "attachInlineEdit": true,
+                      "inlineEditTypes": [
+                        "wireframe",
+                        "docs",
+                        "bublee"
+                      ],
+                      "collapseToggle": true,
+                      "searchSource": "app",
+                      "editedByColumn": "editedBy",
+                      "editedAtColumn": "editedAt",
+                      "parentEditedAtColumn": "editedAt"
+                    }
+                  ]
+                },
+                {
+                  "type": "column",
+                  "bindRow": true,
+                  "crossAxis": "stretch",
+                  "showIf": {
+                    "table": "entries",
+                    "id": "$rowId",
+                    "column": "viewMode",
+                    "equals": "files"
+                  },
+                  "children": [
+                    {
+                      "type": "button",
+                      "label": "← Overview",
+                      "variant": "text",
+                      "action": {
+                        "fn": "setField",
+                        "args": {
+                          "table": "entries",
+                          "id": "$selected:entries",
+                          "column": "viewMode",
+                          "value": ""
+                        }
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "label": "Generate spec (.md)",
+                      "icon": "description",
+                      "variant": "tonal",
+                      "action": {
+                        "fn": "exportSpec",
+                        "args": {
+                          "id": "$selected:entries",
+                          "table": "entries"
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "style": "caption",
+                      "value": "Generate spec writes an outline of this whole project — its tasks, sub-tasks, materials and notes — in a form a code session can read to carry out the work with agents. Copy or Download the .md from the dialog that opens."
+                    },
+                    {
+                      "type": "divider"
+                    },
+                    {
+                      "type": "entrythread",
+                      "surface": true,
+                      "caption": "Project files — rules docs, architecture diagrams and product-context artifacts that belong to this project itself, not any one task. Tap + tool to add a doc, wireframe, sheet, sketch, or bublee board here. Plain comments belong in the List tab and won't show in this section.",
+                      "table": "entries",
+                      "edgesTable": "relations",
+                      "edgeFrom": "fromId",
+                      "edgeTo": "toId",
+                      "edgeType": "type",
+                      "containsType": "contains",
+                      "titleColumn": "title",
+                      "subtitleColumn": "comment",
+                      "orderColumn": "order",
+                      "previewInline": true,
+                      "previewColumn": "attachment",
+                      "previewTypes": [
+                        "wireframe",
+                        "sheets",
+                        "docs",
+                        "sketchpad",
+                        "bublee"
+                      ],
+                      "appletColumn": "type",
+                      "peekHeight": 280,
+                      "editable": true,
+                      "allowAdd": true,
+                      "titleless": true,
+                      "timeColumn": "postedAt",
+                      "emptyText": "No project files yet — tap + tool to add a doc, wireframe, sheet, sketch, or bublee board.",
+                      "removeLabel": "Remove from project files",
+                      "authorColumn": "createdBy",
+                      "defaultAuthor": "u_you",
+                      "authorTable": "users",
+                      "authorNameColumn": "name",
+                      "attachColumn": "attachment",
+                      "createTypes": [
+                        "wireframe",
+                        "sketchpad",
+                        "docs",
+                        "sheets",
+                        "bublee"
+                      ],
+                      "action": {
+                        "fn": "editRow",
+                        "args": {
+                          "table": "entries"
+                        }
+                      },
+                      "excludeTypes": [
+                        "task",
+                        "group",
+                        "note",
+                        "goal",
+                        "milestone",
+                        "item",
+                        "decision"
+                      ],
+                      "attachmentTypes": [
+                        "image",
+                        "wireframe",
+                        "sheets",
+                        "docs",
+                        "sketchpad",
+                        "bublee"
+                      ],
+                      "attachInlineEdit": true,
+                      "inlineEditTypes": [
+                        "wireframe",
+                        "docs",
+                        "bublee"
+                      ],
+                      "collapseToggle": true,
+                      "editedByColumn": "editedBy",
+                      "editedAtColumn": "editedAt",
+                      "parentEditedAtColumn": "editedAt"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "leafChildKinds": [
+          "task"
+        ],
+        "newSubLeafLabel": "New sub-task here",
+        "viewToggle": false,
+        "searchSource": "app"
+      }
+    },
+    "map": {
+      "title": "Map",
+      "body": {
+        "type": "segments",
+        "fill": true,
+        "segments": [
+          {
+            "label": "Map",
+            "icon": "bubble_chart",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": "The full bublie board for your projects — drag, fold, zoom in, and rename right here (renames sync back to Dispatch). Add, delete, re-parent, or restyle tasks in Projects instead."
+                },
+                {
+                  "type": "embed",
+                  "appletId": "bublee",
+                  "screen": "boardEditable",
+                  "height": "fill",
+                  "instanceId": "derived:dispatch-map",
+                  "scope": {
+                    "table": "boards",
+                    "rowId": "bd_dispatch_map"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "task": {
+      "title": "Task",
+      "body": {
+        "type": "column",
+        "bindRow": true,
+        "rowId": "$selected:entries",
+        "crossAxis": "stretch",
+        "scroll": true,
+        "children": [
+          {
+            "type": "record",
+            "table": "entries",
+            "compact": true,
+            "readOnly": true,
+            "layout": "chips",
+            "fields": [
+              "title",
+              "status",
+              "role",
+              "comment",
+              "createdBy",
+              "with",
+              "prompting",
+              "bottleneck",
+              "blocked",
+              "decisionKind",
+              "created",
+              "finishedAt",
+              "completedBy",
+              "editedAt",
+              "editedBy",
+              "estimateMins",
+              "priority",
+              "importance",
+              "scheduledStart",
+              "due",
+              "tags"
+            ],
+            "statusColumn": "status",
+            "completedByColumn": "completedBy",
+            "finishedAtColumn": "finishedAt",
+            "doneStatus": "done",
+            "defaultActor": "u_you",
+            "editedByColumn": "editedBy",
+            "editedAtColumn": "editedAt"
+          },
+          {
+            "type": "entrythread",
+            "surface": true,
+            "caption": "Log — entries and attachments, newest work at the bottom. Add entry opens a card; Attach adds a file or a tool; Reply threads under an entry.",
+            "table": "entries",
+            "edgesTable": "relations",
+            "edgeFrom": "fromId",
+            "edgeTo": "toId",
+            "edgeType": "type",
+            "containsType": "contains",
+            "titleColumn": "title",
+            "subtitleColumn": "comment",
+            "orderColumn": "order",
+            "previewInline": true,
+            "previewColumn": "attachment",
+            "previewTypes": [
+              "wireframe",
+              "sheets",
+              "docs",
+              "sketchpad"
+            ],
+            "appletColumn": "type",
+            "peekHeight": 280,
+            "editable": true,
+            "allowAdd": true,
+            "titleless": true,
+            "timeColumn": "postedAt",
+            "addHint": "Write a comment…",
+            "emptyText": "No log yet — tap Add entry to start this task’s log.",
+            "removeLabel": "Remove from this log",
+            "authorColumn": "createdBy",
+            "authorPicker": true,
+            "defaultAuthor": "u_you",
+            "promptingColumn": "prompting",
+            "promptingPicker": true,
+            "awaitingColumn": "awaiting",
+            "authorTable": "users",
+            "authorNameColumn": "name",
+            "attachInline": true,
+            "attachColumn": "attachment",
+            "createTypes": [
+              "wireframe",
+              "sketchpad",
+              "docs",
+              "sheets"
+            ],
+            "action": {
+              "fn": "editRow",
+              "args": {
+                "table": "entries"
+              }
+            },
+            "nested": true,
+            "excludeTypes": [
+              "task",
+              "group",
+              "goal",
+              "milestone",
+              "item",
+              "decision"
+            ],
+            "attachmentTypes": [
+              "image",
+              "wireframe",
+              "sheets",
+              "docs",
+              "sketchpad"
+            ],
+            "composeCard": true,
+            "addEntryLabel": "Add entry",
+            "attachInlineEdit": true,
+            "inlineEditTypes": [
+              "wireframe",
+              "docs"
+            ],
+            "collapseToggle": true,
+            "searchSource": "app",
+            "editedByColumn": "editedBy",
+            "editedAtColumn": "editedAt",
+            "parentEditedAtColumn": "editedAt"
+          }
+        ]
+      }
+    },
+    "people": {
+      "title": "People",
+      "body": {
+        "type": "column",
+        "crossAxis": "stretch",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Everyone you can assign work to on this board. Add a person below; tap one to rename. They're the names behind an entry's Lead, With, Prompting, Completed-by and Edited-by chips. Removing a person does NOT rewrite the entries that already name them — those chips go blank until you reassign them, so rename an existing person rather than removing and re-adding when someone's name just changed."
+          },
+          {
+            "type": "composer",
+            "table": "users",
+            "column": "name",
+            "placeholder": "Add a person by name…",
+            "sendIcon": "person_add"
+          },
+          {
+            "type": "list",
+            "table": "users",
+            "height": "fill",
+            "titleColumn": "name",
+            "sortColumn": "name",
+            "sortDir": "asc",
+            "confirmDelete": true,
+            "emptyIcon": "group",
+            "emptyTitle": "No people yet",
+            "emptyText": "Add the people you assign work to — they become the options in every Lead / With / Prompting picker.",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "tags": {
+      "title": "Tags",
+      "body": {
+        "type": "column",
+        "crossAxis": "stretch",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "The tag vocabulary for this board — add, rename, or recolor a tag type below; every entry's Tags field and the Add-filter picker pick the change up live."
+          },
+          {
+            "type": "button",
+            "label": "New tag type",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "tag_types"
+              }
+            }
+          },
+          {
+            "type": "list",
+            "emptyIcon": "local_offer",
+            "emptyTitle": "No tag types yet",
+            "emptyText": "Create tag types so entries can be tagged.",
+            "emptyAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "tag_types"
+              }
+            },
+            "emptyActionLabel": "New tag type",
+            "confirmDelete": true,
+            "table": "tag_types",
+            "titleColumn": "name",
+            "metaColumns": [
+              "label",
+              "color"
+            ],
+            "sortColumn": "name",
+            "sortDir": "asc",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "howto": {
+      "title": "How dispatch works",
+      "body": {
+        "type": "column",
+        "scroll": true,
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Projects, tasks and logs"
+          },
+          {
+            "type": "text",
+            "value": "Dispatch tracks your team's work in three levels:\n\n• PROJECT — a folder of work. Projects can hold SUB-PROJECTS, so the left column is a directory you can expand like folders.\n• TASK — something to do inside a project (middle column). Tasks can hold SUB-TASKS — they nest right under their parent in the tasks column (⋮ on a task → New sub-task here).\n• LOG — a task's running conversation: comments and attachments (right panel).\n\nTo use it: pick a project in the directory, pick a task in the middle, then read or add to its log on the right. The directory never shows log comments — those live with their task.\n\nA project travels: its ⋮ menu can EXPORT the whole project (sub-projects, tasks, logs and attachments) as one file, and IMPORT such a file into another project — or another device."
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Logs can hold more than text"
+          },
+          {
+            "type": "text",
+            "value": "A log entry is a COMMENT — no title, just what you want to say. Each one shows who wrote it and when.\n\nComments THREAD: tap Reply on a comment to answer it, and replies are full comments too — they can hold their own replies and attachments, as deep as the conversation goes.\n\nATTACHMENTS are the things a comment (or the task itself) houses:\n• a file or image (paperclip),\n• a wireframe / sheet / doc / sketch — a live tool with its OWN data.\n\nAttachments show as small tiles. Tap one and it opens FULL-SCREEN — work in it, then come back to the log. Use Attach… on a comment's ⋮ menu, or the composer's tool button for the task."
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": "One task, more than one project"
+          },
+          {
+            "type": "text",
+            "value": "A task doesn't have to live in just one place. Drag a task onto another project to LINK it there too — it's the same task shown in both, so editing it once updates it everywhere. A little badge shows when a task lives in more than one project."
+          }
+        ]
+      }
+    },
+    "inbox": {
+      "title": "Inbox",
+      "body": {
+        "type": "column",
+        "scroll": true,
+        "crossAxis": "stretch",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Open turns — comments still waiting on a reply. The chip on each shows who it's directed at and who wrote it. Swipe (or use the ⋮ menu) to mark one answered; tap to open it."
+          },
+          {
+            "type": "cards",
+            "table": "entries",
+            "title": "comment",
+            "expandable": false,
+            "filter": {
+              "column": "awaiting",
+              "value": true
+            },
+            "tags": [
+              {
+                "column": "prompting"
+              },
+              {
+                "column": "createdBy"
+              }
+            ],
+            "swipeActions": [
+              {
+                "label": "Mark answered",
+                "icon": "check",
+                "action": {
+                  "fn": "toggleField",
+                  "args": {
+                    "table": "entries",
+                    "column": "awaiting"
+                  }
+                }
+              }
+            ],
+            "action": {
+              "fn": "editRow",
+              "args": {
+                "table": "entries"
+              }
+            },
+            "emptyTitle": "Nothing awaiting a reply",
+            "emptyText": "When you address a comment to someone (the “to:” chip on the composer), it lands here as an open turn until it’s marked answered."
+          }
+        ]
+      }
+    },
+    "priorities": {
+      "title": "Priorities",
+      "body": {
+        "type": "priolanes",
+        "table": "entries",
+        "scopeRowId": "$selected:entries",
+        "scopeOptional": true,
+        "statusColumn": "status",
+        "prioColumn": "prioLane",
+        "typeColumn": "type",
+        "excludeTypes": [
+          "group",
+          "note",
+          "image",
+          "wireframe",
+          "sheets",
+          "docs",
+          "sketchpad",
+          "bublee",
+          "goal",
+          "milestone",
+          "item",
+          "decision"
+        ],
+        "titleColumn": "title",
+        "subtitleColumn": "comment",
+        "edgesTable": "relations",
+        "edgeFrom": "fromId",
+        "edgeTo": "toId",
+        "edgeType": "type",
+        "containsType": "contains",
+        "projectType": "group",
+        "recencyColumns": ["postedAt", "editedAt"],
+        "orderColumn": "order",
+        "rankColumn": "prioRank",
+        "colorColumn": "color",
+        "emojiColumn": "icon",
+        "filterable": true,
+        "action": {
+          "fn": "editRow",
+          "args": {
+            "table": "entries"
+          }
+        }
+      }
+    },
+    "plan": {
+      "title": "Plan",
+      "body": {
+        "type": "column",
+        "scroll": true,
+        "crossAxis": "stretch",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "The shape of the work, apart from the day-to-day log. Goals are the end states a project drives at; milestones are the checkpoints on the way; decisions are the choices — settled, still open, or ones that only surfaced mid-flight. Tap any card to open it."
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Goals"
+          },
+          {
+            "type": "cards",
+            "table": "entries",
+            "title": "title",
+            "subtitle": "comment",
+            "iconColumn": "type",
+            "filter": {
+              "column": "role",
+              "value": "goal"
+            },
+            "tags": [
+              {
+                "column": "status",
+                "colors": {
+                  "active": "blue",
+                  "queued": "amber",
+                  "done": "green"
+                }
+              }
+            ],
+            "action": {
+              "fn": "editRow",
+              "args": {
+                "table": "entries"
+              }
+            },
+            "emptyTitle": "No goals yet",
+            "emptyText": "A goal is the end state a project is aiming at. Add one to a project, then hang the items and milestones it needs off it."
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Milestones"
+          },
+          {
+            "type": "cards",
+            "table": "entries",
+            "title": "title",
+            "subtitle": "comment",
+            "iconColumn": "type",
+            "filter": {
+              "column": "role",
+              "value": "milestone"
+            },
+            "tags": [
+              {
+                "column": "status",
+                "colors": {
+                  "active": "blue",
+                  "queued": "amber",
+                  "done": "green"
+                }
+              }
+            ],
+            "action": {
+              "fn": "editRow",
+              "args": {
+                "table": "entries"
+              }
+            },
+            "emptyTitle": "No milestones yet",
+            "emptyText": "A milestone is a checkpoint on the way to a goal."
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Decisions"
+          },
+          {
+            "type": "cards",
+            "table": "entries",
+            "title": "title",
+            "subtitle": "comment",
+            "iconColumn": "type",
+            "filter": {
+              "column": "role",
+              "value": "decision"
+            },
+            "tags": [
+              {
+                "column": "decisionKind",
+                "colors": {
+                  "predetermined": "gray",
+                  "open": "amber",
+                  "emergent": "teal"
+                }
+              }
+            ],
+            "action": {
+              "fn": "editRow",
+              "args": {
+                "table": "entries"
+              }
+            },
+            "emptyTitle": "No decisions logged yet",
+            "emptyText": "Record a choice here — settled (predetermined), still-to-answer (open), or one that only came up once the work was underway (emergent)."
+          }
+        ]
+      }
+    },
+    "spec": {
+      "title": "Project specs",
+      "body": {
+        "type": "column",
+        "scroll": true,
+        "crossAxis": "stretch",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "A spec is an auto-written outline of a whole project — its tasks, sub-tasks, the materials attached to each, and notes — in a form a code session can read to carry out the work with agents. Tap a project to generate its spec, then Copy or Download the .md."
+          },
+          {
+            "type": "cards",
+            "table": "entries",
+            "title": "title",
+            "subtitle": "comment",
+            "minCardWidth": 260,
+            "tableView": false,
+            "expandable": false,
+            "filter": {
+              "column": "type",
+              "value": "group"
+            },
+            "iconColumn": "type",
+            "action": {
+              "fn": "exportSpec"
+            },
+            "emptyTitle": "No projects yet — make one in the Projects tab."
+          }
+        ]
+      }
+    }
+  }
+}

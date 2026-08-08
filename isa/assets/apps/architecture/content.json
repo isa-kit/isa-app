@@ -1,0 +1,1435 @@
+{
+  "nodes": [
+    {
+      "id": "p_isan",
+      "label": "isan — host: launcher + per-app stores",
+      "x": 120,
+      "y": 440
+    },
+    {
+      "id": "p_flutterboard",
+      "label": "flutterboard — runtime: renderer, registry, editor",
+      "x": 120,
+      "y": 340
+    },
+    {
+      "id": "p_dbkit",
+      "label": "dbkit — load/unload: stores + REST sources",
+      "x": 120,
+      "y": 240
+    },
+    {
+      "id": "p_datakit",
+      "label": "datakit — typed dataframe (tables, schema, query)",
+      "x": 120,
+      "y": 140
+    },
+    {
+      "id": "p_isakit",
+      "label": "isa_kit — primitives: types + Record",
+      "x": 120,
+      "y": 40
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "p_isan",
+      "to": "p_flutterboard",
+      "label": "depends on"
+    },
+    {
+      "id": "e2",
+      "from": "p_flutterboard",
+      "to": "p_dbkit",
+      "label": "depends on"
+    },
+    {
+      "id": "e3",
+      "from": "p_dbkit",
+      "to": "p_datakit",
+      "label": "depends on"
+    },
+    {
+      "id": "e4",
+      "from": "p_datakit",
+      "to": "p_isakit",
+      "label": "depends on"
+    }
+  ],
+  "wnodes": [
+    {
+      "id": "a_datakit",
+      "label": "datakit · tables (data layer)",
+      "pkg": "datakit",
+      "x": 300,
+      "y": 30
+    },
+    {
+      "id": "a_fmap",
+      "label": "flutter_map · imported",
+      "pkg": "imported",
+      "x": 520,
+      "y": 30
+    },
+    {
+      "id": "a_mlib",
+      "label": "maplibre · imported (mobile)",
+      "pkg": "imported",
+      "x": 680,
+      "y": 30
+    },
+    {
+      "id": "w_column",
+      "label": "column",
+      "pkg": "flutterboard",
+      "x": 40,
+      "y": 150
+    },
+    {
+      "id": "w_row",
+      "label": "row",
+      "pkg": "flutterboard",
+      "x": 40,
+      "y": 208
+    },
+    {
+      "id": "w_card",
+      "label": "card",
+      "pkg": "flutterboard",
+      "x": 40,
+      "y": 266
+    },
+    {
+      "id": "w_padding",
+      "label": "padding",
+      "pkg": "flutterboard",
+      "x": 40,
+      "y": 324
+    },
+    {
+      "id": "w_text",
+      "label": "text",
+      "pkg": "flutterboard",
+      "x": 40,
+      "y": 382
+    },
+    {
+      "id": "w_button",
+      "label": "button",
+      "pkg": "flutterboard",
+      "x": 40,
+      "y": 440
+    },
+    {
+      "id": "w_divider",
+      "label": "divider",
+      "pkg": "flutterboard",
+      "x": 40,
+      "y": 498
+    },
+    {
+      "id": "w_spacer",
+      "label": "spacer",
+      "pkg": "flutterboard",
+      "x": 40,
+      "y": 556
+    },
+    {
+      "id": "w_segments",
+      "label": "segments",
+      "pkg": "flutterboard",
+      "x": 40,
+      "y": 614
+    },
+    {
+      "id": "w_draw",
+      "label": "draw",
+      "pkg": "flutterboard",
+      "x": 40,
+      "y": 672
+    },
+    {
+      "id": "w_list",
+      "label": "list",
+      "pkg": "flutterboard",
+      "x": 300,
+      "y": 150
+    },
+    {
+      "id": "w_tree",
+      "label": "tree",
+      "pkg": "flutterboard",
+      "x": 300,
+      "y": 208
+    },
+    {
+      "id": "w_agenda",
+      "label": "agenda",
+      "pkg": "flutterboard",
+      "x": 300,
+      "y": 266
+    },
+    {
+      "id": "w_calendar",
+      "label": "calendar",
+      "pkg": "flutterboard",
+      "x": 300,
+      "y": 324
+    },
+    {
+      "id": "w_buckets",
+      "label": "buckets",
+      "pkg": "flutterboard",
+      "x": 300,
+      "y": 382
+    },
+    {
+      "id": "w_cards",
+      "label": "cards",
+      "pkg": "flutterboard",
+      "x": 300,
+      "y": 440
+    },
+    {
+      "id": "w_table",
+      "label": "table",
+      "pkg": "flutterboard",
+      "x": 300,
+      "y": 498
+    },
+    {
+      "id": "w_dataview",
+      "label": "dataview",
+      "pkg": "flutterboard",
+      "x": 300,
+      "y": 556
+    },
+    {
+      "id": "w_map",
+      "label": "map",
+      "pkg": "flutterboard",
+      "x": 560,
+      "y": 150
+    },
+    {
+      "id": "w_glmap",
+      "label": "glmap",
+      "pkg": "flutterboard",
+      "x": 560,
+      "y": 230
+    },
+    {
+      "id": "w_annotate",
+      "label": "annotate",
+      "pkg": "flutterboard",
+      "x": 40,
+      "y": 730
+    }
+  ],
+  "wedges": [
+    {
+      "id": "e1",
+      "from": "w_list",
+      "to": "a_datakit",
+      "label": "reads"
+    },
+    {
+      "id": "e2",
+      "from": "w_tree",
+      "to": "a_datakit",
+      "label": "reads"
+    },
+    {
+      "id": "e3",
+      "from": "w_agenda",
+      "to": "a_datakit",
+      "label": "reads"
+    },
+    {
+      "id": "e4",
+      "from": "w_calendar",
+      "to": "a_datakit",
+      "label": "reads"
+    },
+    {
+      "id": "e5",
+      "from": "w_buckets",
+      "to": "a_datakit",
+      "label": "reads"
+    },
+    {
+      "id": "e6",
+      "from": "w_cards",
+      "to": "a_datakit",
+      "label": "reads"
+    },
+    {
+      "id": "e7",
+      "from": "w_table",
+      "to": "a_datakit",
+      "label": "reads"
+    },
+    {
+      "id": "e8",
+      "from": "w_dataview",
+      "to": "a_datakit",
+      "label": "reads"
+    },
+    {
+      "id": "e9",
+      "from": "w_map",
+      "to": "a_fmap",
+      "label": "renders via"
+    },
+    {
+      "id": "e10",
+      "from": "w_glmap",
+      "to": "a_mlib",
+      "label": "mobile"
+    },
+    {
+      "id": "e11",
+      "from": "w_glmap",
+      "to": "a_fmap",
+      "label": "web/desktop fallback"
+    }
+  ],
+  "catalog": [
+    {
+      "id": "c1",
+      "widget": "column",
+      "attr": "• overview",
+      "detail": "Layout — Vertical stack of children.",
+      "type": "Layout"
+    },
+    {
+      "id": "c2",
+      "widget": "column",
+      "attr": "children",
+      "detail": "Child nodes, top to bottom.",
+      "type": "node[]"
+    },
+    {
+      "id": "c3",
+      "widget": "column",
+      "attr": "crossAxis",
+      "detail": "Cross-axis alignment.  ·  options: start | center | end | stretch",
+      "type": "enum"
+    },
+    {
+      "id": "c4",
+      "widget": "row",
+      "attr": "• overview",
+      "detail": "Layout — Horizontal row of children.",
+      "type": "Layout"
+    },
+    {
+      "id": "c5",
+      "widget": "row",
+      "attr": "children",
+      "detail": "Child nodes, left to right.",
+      "type": "node[]"
+    },
+    {
+      "id": "c6",
+      "widget": "row",
+      "attr": "mainAxis",
+      "detail": "Main-axis alignment.  ·  options: start | center | end | spaceBetween | spaceAround | spaceEvenly",
+      "type": "enum"
+    },
+    {
+      "id": "c7",
+      "widget": "row",
+      "attr": "wrap",
+      "detail": "Reflow children instead of one line.  ·  options: true | false",
+      "type": "bool"
+    },
+    {
+      "id": "c8",
+      "widget": "row",
+      "attr": "spacing",
+      "detail": "Gap between wrapped children.",
+      "type": "number"
+    },
+    {
+      "id": "c9",
+      "widget": "row",
+      "attr": "runSpacing",
+      "detail": "Gap between wrapped rows.",
+      "type": "number"
+    },
+    {
+      "id": "c10",
+      "widget": "padding",
+      "attr": "• overview",
+      "detail": "Layout — Pads a single child.",
+      "type": "Layout"
+    },
+    {
+      "id": "c11",
+      "widget": "padding",
+      "attr": "all",
+      "detail": "Padding on every edge (default 12).",
+      "type": "number"
+    },
+    {
+      "id": "c12",
+      "widget": "padding",
+      "attr": "child",
+      "detail": "The padded child.",
+      "type": "node"
+    },
+    {
+      "id": "c13",
+      "widget": "card",
+      "attr": "• overview",
+      "detail": "Layout — Material card around one child.",
+      "type": "Layout"
+    },
+    {
+      "id": "c14",
+      "widget": "card",
+      "attr": "child",
+      "detail": "Content inside the card.",
+      "type": "node"
+    },
+    {
+      "id": "c15",
+      "widget": "text",
+      "attr": "• overview",
+      "detail": "Display — A line/paragraph of text.",
+      "type": "Display"
+    },
+    {
+      "id": "c16",
+      "widget": "text",
+      "attr": "value",
+      "detail": "The text to show.",
+      "type": "string"
+    },
+    {
+      "id": "c17",
+      "widget": "text",
+      "attr": "style",
+      "detail": "Text style.  ·  options: caption | subtitle | title | body",
+      "type": "enum"
+    },
+    {
+      "id": "c18",
+      "widget": "button",
+      "attr": "• overview",
+      "detail": "Action — Tappable button firing a function.",
+      "type": "Action"
+    },
+    {
+      "id": "c19",
+      "widget": "button",
+      "attr": "label",
+      "detail": "Button caption.",
+      "type": "string"
+    },
+    {
+      "id": "c20",
+      "widget": "button",
+      "attr": "icon",
+      "detail": "Material icon name.",
+      "type": "string"
+    },
+    {
+      "id": "c21",
+      "widget": "button",
+      "attr": "action.fn",
+      "detail": "Registry function to invoke.  ·  options: addRow | editRow | navigate | exportData | …",
+      "type": "string"
+    },
+    {
+      "id": "c22",
+      "widget": "button",
+      "attr": "action.args",
+      "detail": "Arguments for the function, e.g. {table}.",
+      "type": "object"
+    },
+    {
+      "id": "c23",
+      "widget": "divider",
+      "attr": "• overview",
+      "detail": "Display — A thin horizontal rule.",
+      "type": "Display"
+    },
+    {
+      "id": "c24",
+      "widget": "spacer",
+      "attr": "• overview",
+      "detail": "Layout — Fixed vertical gap.",
+      "type": "Layout"
+    },
+    {
+      "id": "c25",
+      "widget": "spacer",
+      "attr": "height",
+      "detail": "Gap height in px (default 12).",
+      "type": "number"
+    },
+    {
+      "id": "c26",
+      "widget": "segments",
+      "attr": "• overview",
+      "detail": "Container — Tabbed container of labelled sub-screens.",
+      "type": "Container"
+    },
+    {
+      "id": "c27",
+      "widget": "segments",
+      "attr": "segments",
+      "detail": "[{label, child}] — one toggle + subtree each.",
+      "type": "object[]"
+    },
+    {
+      "id": "c28",
+      "widget": "draw",
+      "attr": "• overview",
+      "detail": "Media — Freehand drawing surface (undo/redo, brush, zoom).",
+      "type": "Media"
+    },
+    {
+      "id": "c29",
+      "widget": "draw",
+      "attr": "table",
+      "detail": "Table that stores saved drawings.",
+      "type": "table"
+    },
+    {
+      "id": "c30",
+      "widget": "list",
+      "attr": "• overview",
+      "detail": "Data — Simple list of a table's rows.",
+      "type": "Data"
+    },
+    {
+      "id": "c31",
+      "widget": "list",
+      "attr": "table",
+      "detail": "Source table.",
+      "type": "table"
+    },
+    {
+      "id": "c32",
+      "widget": "list",
+      "attr": "titleColumn",
+      "detail": "Row title.",
+      "type": "column"
+    },
+    {
+      "id": "c33",
+      "widget": "list",
+      "attr": "subtitleColumns",
+      "detail": "Columns joined into the subtitle.",
+      "type": "column[]"
+    },
+    {
+      "id": "c34",
+      "widget": "list",
+      "attr": "metaColumns",
+      "detail": "Trailing meta columns.",
+      "type": "column[]"
+    },
+    {
+      "id": "c35",
+      "widget": "list",
+      "attr": "sortColumn",
+      "detail": "Sort column.",
+      "type": "column"
+    },
+    {
+      "id": "c36",
+      "widget": "list",
+      "attr": "sortDir",
+      "detail": "Sort direction.  ·  options: asc | desc",
+      "type": "enum"
+    },
+    {
+      "id": "c37",
+      "widget": "tree",
+      "attr": "• overview",
+      "detail": "Data — Parent/child hierarchy; collapse, drag-nest, reorder.",
+      "type": "Data"
+    },
+    {
+      "id": "c38",
+      "widget": "tree",
+      "attr": "table",
+      "detail": "Source table.",
+      "type": "table"
+    },
+    {
+      "id": "c39",
+      "widget": "tree",
+      "attr": "parentColumn",
+      "detail": "Ref column holding parent(s) (multi-parent aware).",
+      "type": "column"
+    },
+    {
+      "id": "c40",
+      "widget": "tree",
+      "attr": "titleColumn",
+      "detail": "Node label.",
+      "type": "column"
+    },
+    {
+      "id": "c41",
+      "widget": "tree",
+      "attr": "statusColumn",
+      "detail": "Column marking done.",
+      "type": "column"
+    },
+    {
+      "id": "c42",
+      "widget": "tree",
+      "attr": "doneValue",
+      "detail": "Value meaning done (default done).",
+      "type": "string"
+    },
+    {
+      "id": "c43",
+      "widget": "tree",
+      "attr": "orderColumn",
+      "detail": "Number column for sibling order/reorder.",
+      "type": "column"
+    },
+    {
+      "id": "c44",
+      "widget": "tree",
+      "attr": "reorder",
+      "detail": "Drag-to-nest interaction mode.  ·  options: hold | select | drag | off",
+      "type": "enum"
+    },
+    {
+      "id": "c45",
+      "widget": "tree",
+      "attr": "addChild",
+      "detail": "Show a + to add a child.  ·  options: true | false",
+      "type": "bool"
+    },
+    {
+      "id": "c46",
+      "widget": "tree",
+      "attr": "filterable",
+      "detail": "Show search + add-filter chips.  ·  options: true | false",
+      "type": "bool"
+    },
+    {
+      "id": "c47",
+      "widget": "tree",
+      "attr": "selectable",
+      "detail": "Allow multi-select.  ·  options: true | false",
+      "type": "bool"
+    },
+    {
+      "id": "c48",
+      "widget": "tree",
+      "attr": "onTap.fn",
+      "detail": "Function fired on tap.  ·  options: editRow",
+      "type": "string"
+    },
+    {
+      "id": "c49",
+      "widget": "agenda",
+      "attr": "• overview",
+      "detail": "Data — Date-grouped list (Today / Upcoming…).",
+      "type": "Data"
+    },
+    {
+      "id": "c50",
+      "widget": "agenda",
+      "attr": "table",
+      "detail": "Source table.",
+      "type": "table"
+    },
+    {
+      "id": "c51",
+      "widget": "agenda",
+      "attr": "dateColumns",
+      "detail": "Date columns scanned.",
+      "type": "column[]"
+    },
+    {
+      "id": "c52",
+      "widget": "agenda",
+      "attr": "titleColumn",
+      "detail": "Row title.",
+      "type": "column"
+    },
+    {
+      "id": "c53",
+      "widget": "agenda",
+      "attr": "statusColumn",
+      "detail": "Column marking done.",
+      "type": "column"
+    },
+    {
+      "id": "c54",
+      "widget": "agenda",
+      "attr": "doneValue",
+      "detail": "Value meaning done.",
+      "type": "string"
+    },
+    {
+      "id": "c55",
+      "widget": "agenda",
+      "attr": "filterable",
+      "detail": "Show search + add-filter chips.  ·  options: true | false",
+      "type": "bool"
+    },
+    {
+      "id": "c56",
+      "widget": "agenda",
+      "attr": "action.fn",
+      "detail": "Function fired on tap.  ·  options: editRow",
+      "type": "string"
+    },
+    {
+      "id": "c57",
+      "widget": "calendar",
+      "attr": "• overview",
+      "detail": "Data — Month grid of dated rows.",
+      "type": "Data"
+    },
+    {
+      "id": "c58",
+      "widget": "calendar",
+      "attr": "table",
+      "detail": "Source table.",
+      "type": "table"
+    },
+    {
+      "id": "c59",
+      "widget": "calendar",
+      "attr": "dateColumns",
+      "detail": "Date columns placed on days.",
+      "type": "column[]"
+    },
+    {
+      "id": "c60",
+      "widget": "calendar",
+      "attr": "titleColumn",
+      "detail": "Row title in the cell.",
+      "type": "column"
+    },
+    {
+      "id": "c61",
+      "widget": "calendar",
+      "attr": "statusColumn",
+      "detail": "Column marking done.",
+      "type": "column"
+    },
+    {
+      "id": "c62",
+      "widget": "calendar",
+      "attr": "doneValue",
+      "detail": "Value meaning done.",
+      "type": "string"
+    },
+    {
+      "id": "c63",
+      "widget": "calendar",
+      "attr": "action.fn",
+      "detail": "Function fired on tap.  ·  options: editRow",
+      "type": "string"
+    },
+    {
+      "id": "c64",
+      "widget": "buckets",
+      "attr": "• overview",
+      "detail": "Data — Kanban-like columns grouped by a category.",
+      "type": "Data"
+    },
+    {
+      "id": "c65",
+      "widget": "buckets",
+      "attr": "table",
+      "detail": "Source table.",
+      "type": "table"
+    },
+    {
+      "id": "c66",
+      "widget": "buckets",
+      "attr": "groupColumn",
+      "detail": "Column whose values become columns.",
+      "type": "column"
+    },
+    {
+      "id": "c67",
+      "widget": "buckets",
+      "attr": "groupOrder",
+      "detail": "Explicit column order.",
+      "type": "string[]"
+    },
+    {
+      "id": "c68",
+      "widget": "buckets",
+      "attr": "titleColumn",
+      "detail": "Card title.",
+      "type": "column"
+    },
+    {
+      "id": "c69",
+      "widget": "buckets",
+      "attr": "subtitleColumns",
+      "detail": "Columns under the title.",
+      "type": "column[]"
+    },
+    {
+      "id": "c70",
+      "widget": "buckets",
+      "attr": "statusColumn",
+      "detail": "Column marking done.",
+      "type": "column"
+    },
+    {
+      "id": "c71",
+      "widget": "buckets",
+      "attr": "doneValue",
+      "detail": "Value meaning done.",
+      "type": "string"
+    },
+    {
+      "id": "c72",
+      "widget": "cards",
+      "attr": "• overview",
+      "detail": "Data — Collapsible card view; group/search/sort/filter.",
+      "type": "Data"
+    },
+    {
+      "id": "c73",
+      "widget": "cards",
+      "attr": "table",
+      "detail": "Source table.",
+      "type": "table"
+    },
+    {
+      "id": "c74",
+      "widget": "cards",
+      "attr": "groupBy",
+      "detail": "Group cards under collapsible headers.",
+      "type": "column"
+    },
+    {
+      "id": "c75",
+      "widget": "cards",
+      "attr": "groupByOptions",
+      "detail": "Columns offered in the group-by switch.",
+      "type": "column[]"
+    },
+    {
+      "id": "c76",
+      "widget": "cards",
+      "attr": "groupFilter",
+      "detail": "{column,value}: only matching ref rows become headers.",
+      "type": "object"
+    },
+    {
+      "id": "c77",
+      "widget": "cards",
+      "attr": "collapsible",
+      "detail": "Expand/collapse group sections.  ·  options: true | false",
+      "type": "bool"
+    },
+    {
+      "id": "c78",
+      "widget": "cards",
+      "attr": "search",
+      "detail": "Show a text search box.  ·  options: true | false",
+      "type": "bool"
+    },
+    {
+      "id": "c79",
+      "widget": "cards",
+      "attr": "searchColumns",
+      "detail": "Columns the search box scans.",
+      "type": "column[]"
+    },
+    {
+      "id": "c80",
+      "widget": "cards",
+      "attr": "sort",
+      "detail": "Show runtime sort control.  ·  options: true | false",
+      "type": "bool"
+    },
+    {
+      "id": "c81",
+      "widget": "cards",
+      "attr": "recent",
+      "detail": "When collapsed, show only N newest per group.",
+      "type": "number"
+    },
+    {
+      "id": "c82",
+      "widget": "cards",
+      "attr": "title",
+      "detail": "Card title column.",
+      "type": "column"
+    },
+    {
+      "id": "c83",
+      "widget": "cards",
+      "attr": "subtitle",
+      "detail": "Card subtitle column.",
+      "type": "column"
+    },
+    {
+      "id": "c84",
+      "widget": "cards",
+      "attr": "tags",
+      "detail": "Pill tags: [{column, colors}].",
+      "type": "object[]"
+    },
+    {
+      "id": "c85",
+      "widget": "cards",
+      "attr": "expandable",
+      "detail": "Allow inline expand (default true).  ·  options: true | false",
+      "type": "bool"
+    },
+    {
+      "id": "c86",
+      "widget": "cards",
+      "attr": "expandFields",
+      "detail": "Extra label:value rows when expanded.",
+      "type": "object[]"
+    },
+    {
+      "id": "c87",
+      "widget": "cards",
+      "attr": "open",
+      "detail": "Label of a button on the expanded card.",
+      "type": "string"
+    },
+    {
+      "id": "c88",
+      "widget": "cards",
+      "attr": "tableView",
+      "detail": "Offer a table/export toggle.  ·  options: true | false",
+      "type": "bool"
+    },
+    {
+      "id": "c89",
+      "widget": "cards",
+      "attr": "action.fn",
+      "detail": "Function fired on open/tap.  ·  options: editRow",
+      "type": "string"
+    },
+    {
+      "id": "c90",
+      "widget": "table",
+      "attr": "• overview",
+      "detail": "Data — Scrollable grid; reorder columns, per-column filter.",
+      "type": "Data"
+    },
+    {
+      "id": "c91",
+      "widget": "table",
+      "attr": "table",
+      "detail": "Source table.",
+      "type": "table"
+    },
+    {
+      "id": "c92",
+      "widget": "table",
+      "attr": "columns",
+      "detail": "Columns to show, in order.",
+      "type": "column[]"
+    },
+    {
+      "id": "c93",
+      "widget": "table",
+      "attr": "height",
+      "detail": "Grid viewport height.",
+      "type": "number"
+    },
+    {
+      "id": "c94",
+      "widget": "table",
+      "attr": "action.fn",
+      "detail": "Function fired on row tap.  ·  options: editRow",
+      "type": "string"
+    },
+    {
+      "id": "c95",
+      "widget": "dataview",
+      "attr": "• overview",
+      "detail": "Data — Table switcher showing all columns of any table.",
+      "type": "Data"
+    },
+    {
+      "id": "c96",
+      "widget": "dataview",
+      "attr": "tables",
+      "detail": "Tables offered in the switcher.",
+      "type": "table[]"
+    },
+    {
+      "id": "c97",
+      "widget": "dataview",
+      "attr": "height",
+      "detail": "Grid viewport height.",
+      "type": "number"
+    },
+    {
+      "id": "c98",
+      "widget": "dataview",
+      "attr": "action.fn",
+      "detail": "Function fired on row tap.  ·  options: editRow",
+      "type": "string"
+    },
+    {
+      "id": "c99",
+      "widget": "canvas",
+      "attr": "• overview",
+      "detail": "Diagram — Draggable node/edge graph (free or auto layout).",
+      "type": "Diagram"
+    },
+    {
+      "id": "c100",
+      "widget": "canvas",
+      "attr": "nodesTable",
+      "detail": "Table of nodes (boxes).",
+      "type": "table"
+    },
+    {
+      "id": "c101",
+      "widget": "canvas",
+      "attr": "edgesTable",
+      "detail": "Table of edges (links).",
+      "type": "table"
+    },
+    {
+      "id": "c102",
+      "widget": "canvas",
+      "attr": "labelColumn",
+      "detail": "Node label.",
+      "type": "column"
+    },
+    {
+      "id": "c103",
+      "widget": "canvas",
+      "attr": "xColumn / yColumn",
+      "detail": "Node position (free layout).",
+      "type": "column"
+    },
+    {
+      "id": "c104",
+      "widget": "canvas",
+      "attr": "fromColumn / toColumn",
+      "detail": "Edge endpoints.",
+      "type": "column"
+    },
+    {
+      "id": "c105",
+      "widget": "canvas",
+      "attr": "edgeLabelColumn",
+      "detail": "Label drawn on an edge.",
+      "type": "column"
+    },
+    {
+      "id": "c106",
+      "widget": "canvas",
+      "attr": "colorColumn",
+      "detail": "Column whose value colours each node.",
+      "type": "column"
+    },
+    {
+      "id": "c107",
+      "widget": "canvas",
+      "attr": "colors",
+      "detail": "value → ramp name.  ·  options: blue | green | amber | teal | purple | gray | red | coral | pink",
+      "type": "object"
+    },
+    {
+      "id": "c108",
+      "widget": "canvas",
+      "attr": "layout",
+      "detail": "Layout strategy.  ·  options: free | graph",
+      "type": "enum"
+    },
+    {
+      "id": "c109",
+      "widget": "canvas",
+      "attr": "height",
+      "detail": "Canvas viewport height.",
+      "type": "number"
+    },
+    {
+      "id": "c110",
+      "widget": "canvas",
+      "attr": "action.fn",
+      "detail": "Function fired on node tap.  ·  options: editRow",
+      "type": "string"
+    },
+    {
+      "id": "c111",
+      "widget": "map",
+      "attr": "• overview",
+      "detail": "Geo — flutter_map view with markers from a table.",
+      "type": "Geo"
+    },
+    {
+      "id": "c112",
+      "widget": "map",
+      "attr": "table",
+      "detail": "Table of points.",
+      "type": "table"
+    },
+    {
+      "id": "c113",
+      "widget": "map",
+      "attr": "latColumn / lonColumn",
+      "detail": "Coordinates.",
+      "type": "column"
+    },
+    {
+      "id": "c114",
+      "widget": "map",
+      "attr": "labelColumn",
+      "detail": "Marker label.",
+      "type": "column"
+    },
+    {
+      "id": "c115",
+      "widget": "map",
+      "attr": "markerIcon",
+      "detail": "Marker icon name.",
+      "type": "string"
+    },
+    {
+      "id": "c116",
+      "widget": "map",
+      "attr": "height",
+      "detail": "Map viewport height.",
+      "type": "number"
+    },
+    {
+      "id": "c117",
+      "widget": "glmap",
+      "attr": "• overview",
+      "detail": "Geo — GL vector basemap (maplibre) on mobile; map fallback elsewhere.",
+      "type": "Geo"
+    },
+    {
+      "id": "c118",
+      "widget": "glmap",
+      "attr": "table",
+      "detail": "Table of points.",
+      "type": "table"
+    },
+    {
+      "id": "c119",
+      "widget": "glmap",
+      "attr": "latColumn / lonColumn",
+      "detail": "Coordinates.",
+      "type": "column"
+    },
+    {
+      "id": "c120",
+      "widget": "glmap",
+      "attr": "height",
+      "detail": "Map viewport height.",
+      "type": "number"
+    },
+    {
+      "id": "c121",
+      "widget": "linechart",
+      "attr": "• overview",
+      "detail": "Chart — Line + filled-area over numeric x/y columns (e.g. time/price).",
+      "type": "Chart"
+    },
+    {
+      "id": "c122",
+      "widget": "linechart",
+      "attr": "table, xColumn, yColumn",
+      "detail": "Source table and the two numeric columns; points sort by x.",
+      "type": "Chart"
+    },
+    {
+      "id": "c123",
+      "widget": "linechart",
+      "attr": "height, label",
+      "detail": "Chart height (default 180) and optional heading.",
+      "type": "Chart"
+    },
+    {
+      "id": "c124",
+      "widget": "barchart",
+      "attr": "• overview",
+      "detail": "Chart — Horizontal labelled bars; counts or sums rows per group. Reacts to active filters.",
+      "type": "Chart"
+    },
+    {
+      "id": "c125",
+      "widget": "barchart",
+      "attr": "groupColumn / labelColumn",
+      "detail": "Group rows by a column (one bar per value), or one bar PER ROW labelled by labelColumn.",
+      "type": "Chart"
+    },
+    {
+      "id": "c126",
+      "widget": "barchart",
+      "attr": "valueColumn, agg",
+      "detail": "Numeric column to aggregate: count (default) | sum | avg.",
+      "type": "Chart"
+    },
+    {
+      "id": "c127",
+      "widget": "barchart",
+      "attr": "colors, groupOrder, limit",
+      "detail": "value→ramp colors; pinned order; max bars (extras → \"other\").",
+      "type": "Chart"
+    },
+    {
+      "id": "c128",
+      "widget": "barchart",
+      "attr": "filter, label",
+      "detail": "Node-level {column, value/in} narrowing and optional heading.",
+      "type": "Chart"
+    },
+    {
+      "id": "c129",
+      "widget": "piechart",
+      "attr": "• overview",
+      "detail": "Chart — Donut/pie of a table's composition by one column, with legend + center total.",
+      "type": "Chart"
+    },
+    {
+      "id": "c130",
+      "widget": "piechart",
+      "attr": "groupColumn, valueColumn",
+      "detail": "Slice per distinct value; count rows or sum a numeric column.",
+      "type": "Chart"
+    },
+    {
+      "id": "c131",
+      "widget": "piechart",
+      "attr": "donut, colors, limit, height",
+      "detail": "Ring vs solid; value→ramp colors; max slices (default 8); height.",
+      "type": "Chart"
+    },
+    {
+      "id": "c132",
+      "widget": "progress",
+      "attr": "• overview",
+      "detail": "Chart — One rollup progress bar: done/total over a status column, or a sum vs a target.",
+      "type": "Chart"
+    },
+    {
+      "id": "c133",
+      "widget": "progress",
+      "attr": "statusColumn, doneValue",
+      "detail": "Defaults status/done — same semantics as tree/buckets rollups.",
+      "type": "Chart"
+    },
+    {
+      "id": "c134",
+      "widget": "progress",
+      "attr": "valueColumn, target",
+      "detail": "Alternative mode: sum valueColumn against a fixed goal.",
+      "type": "Chart"
+    },
+    {
+      "id": "c135",
+      "widget": "progress",
+      "attr": "color, filter, label",
+      "detail": "Ramp color for the bar; row narrowing; heading.",
+      "type": "Chart"
+    },
+    {
+      "id": "c136",
+      "widget": "stat",
+      "attr": "• overview",
+      "detail": "Chart — Big-number tile: count | sum | avg | min | max. Put several in a row for a dashboard.",
+      "type": "Chart"
+    },
+    {
+      "id": "c137",
+      "widget": "stat",
+      "attr": "agg, valueColumn",
+      "detail": "count (default) needs no column; sum/avg/min/max read valueColumn.",
+      "type": "Chart"
+    },
+    {
+      "id": "c138",
+      "widget": "stat",
+      "attr": "filter, unit, color, label",
+      "detail": "Row narrowing, suffix after the number, ramp color, caption.",
+      "type": "Chart"
+    },
+    {
+      "id": "nthm1",
+      "widget": "any node",
+      "attr": "theme",
+      "detail": "Subtree theme override: a BoardTheme preset name (standard / soft / sharp / paper) or an object {preset, listStyle, tableStyle, calendarStyle, headerStyle, density, cornerRadius, accent: \"#hex\"}. accent re-seeds the subtree ColorScheme. Applies to the node and everything inside it.",
+      "type": "String | Object"
+    },
+    {
+      "id": "nthm2",
+      "widget": "button",
+      "attr": "variant",
+      "detail": "Resting look: filled | tonal | outlined | text. Default keeps the classic behavior (filled; setFilter buttons go tonal until selected).",
+      "type": "String"
+    },
+    {
+      "id": "c139",
+      "widget": "annotate",
+      "attr": "• overview",
+      "detail": "Media — Screenshot markup pad: paste an image from the clipboard, ink/text over it, select a region and copy it back out (⌘V/⌘C).",
+      "type": "Media"
+    },
+    {
+      "id": "c140",
+      "widget": "annotate",
+      "attr": "table",
+      "detail": "Table that stores shots (default: shots).",
+      "type": "table"
+    },
+    {
+      "id": "c141",
+      "widget": "annotate",
+      "attr": "imageColumn",
+      "detail": "Column holding the pasted image as base64 PNG (default: image).",
+      "type": "column"
+    },
+    {
+      "id": "c142",
+      "widget": "annotate",
+      "attr": "marksColumn",
+      "detail": "Column holding ink strokes, text labels and pasted patches as JSON (default: marks).",
+      "type": "column"
+    },
+    {
+      "id": "c143",
+      "widget": "annotate",
+      "attr": "titleColumn",
+      "detail": "Shot name column (default: title).",
+      "type": "column"
+    },
+    {
+      "id": "c144",
+      "widget": "annotate",
+      "attr": "height",
+      "detail": "Optional fixed height; omitted = fill the screen.",
+      "type": "number"
+    }
+  ],
+  "workflow": [
+    {
+      "id": "w1",
+      "step": 1,
+      "phase": "Plan",
+      "title": "One task → many helpers",
+      "detail": "An orchestrator splits the goal into independent pieces and hands each to its own AI agent — many run at the same time."
+    },
+    {
+      "id": "w2",
+      "step": 2,
+      "phase": "Build",
+      "title": "Each agent works in isolation",
+      "detail": "Every agent takes a separate copy of the code so they never step on each other's work."
+    },
+    {
+      "id": "w3",
+      "step": 3,
+      "phase": "Build",
+      "title": "Small, scoped changes",
+      "detail": "Work lands in small, reviewable steps instead of one big risky change."
+    },
+    {
+      "id": "w4",
+      "step": 4,
+      "phase": "Ship",
+      "title": "The gate",
+      "detail": "Before anything can land it must pass automatic checks — code analysis plus the full test suite. A failure stops it cold."
+    },
+    {
+      "id": "w5",
+      "step": 5,
+      "phase": "Ship",
+      "title": "Merge to main",
+      "detail": "Only work that passed the gate joins the app's main line."
+    },
+    {
+      "id": "w6",
+      "step": 6,
+      "phase": "Ship",
+      "title": "Auto-deploy",
+      "detail": "A passing merge publishes to the live web app automatically — no manual step."
+    },
+    {
+      "id": "w7",
+      "step": 7,
+      "phase": "Ship",
+      "title": "Version stamp",
+      "detail": "Each build records its date, time and id, so you can always see exactly what's live (Account → View app version)."
+    }
+  ],
+  "updates": [
+    {
+      "id": "u1",
+      "area": "Visibility",
+      "title": "See your build",
+      "detail": "A version stamp inside the app plus a freshness file on the live site, so you can tell at a glance when it last changed."
+    },
+    {
+      "id": "u2",
+      "area": "App",
+      "title": "One tidy ⋮ menu",
+      "detail": "The home-screen header collapsed into a single overflow menu — store, appearance, account, version, and more."
+    },
+    {
+      "id": "u3",
+      "area": "No-code",
+      "title": "Action picker",
+      "detail": "Set what a button does by picking from menus — no JSON. Chain several steps with ‘+ then’."
+    },
+    {
+      "id": "u4",
+      "area": "No-code",
+      "title": "Automated rules (only if…)",
+      "detail": "Make the app react: when a condition is true, do one thing (and optionally something else otherwise)."
+    },
+    {
+      "id": "u5",
+      "area": "No-code",
+      "title": "Process templates",
+      "detail": "Save a task and its sub-steps as a template; tap to stamp out a fresh copy into your tasks."
+    },
+    {
+      "id": "u6",
+      "area": "No-code",
+      "title": "Visual condition builder",
+      "detail": "Build the ‘when…’ part of a rule with field / is / value rows — and/or/not — no typing JSON."
+    },
+    {
+      "id": "u7",
+      "area": "Tasks",
+      "title": "Recurring tasks",
+      "detail": "Give a task a repeat (daily, weekly, monthly); completing it automatically creates the next one."
+    },
+    {
+      "id": "u8",
+      "area": "Tasks",
+      "title": "Quick stage + undo",
+      "detail": "Tap a task to move it To do → Doing → Done (it stamps the date), with an Undo button."
+    },
+    {
+      "id": "u9",
+      "area": "Sharing",
+      "title": "Share by code or file",
+      "detail": "Copy a whole app to your clipboard, or save it to a file — and paste/import it on another device."
+    },
+    {
+      "id": "u10",
+      "area": "Engine",
+      "title": "New building blocks",
+      "detail": "Reusable pieces added across apps: nested apps, a file explorer, compare & tier-list views, and more."
+    }
+  ]
+}

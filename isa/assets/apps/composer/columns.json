@@ -1,0 +1,68 @@
+{
+  "boards": [
+    { "name": "id", "type": "text" },
+    { "name": "name", "type": "text", "label": "Name" },
+    { "name": "order", "type": "number", "label": "Order", "hidden": true }
+  ],
+  "screens": [
+    { "name": "id", "type": "text" },
+    { "name": "board", "type": "text", "label": "Board", "hidden": true },
+    { "name": "name", "type": "text", "label": "Name" },
+    {
+      "name": "device",
+      "type": "enum",
+      "label": "Device",
+      "options": ["phone", "tablet", "web"],
+      "default": "phone"
+    },
+    { "name": "x", "type": "number", "label": "X", "hidden": true, "default": 0 },
+    { "name": "y", "type": "number", "label": "Y", "hidden": true, "default": 0 },
+    {
+      "name": "variantOf",
+      "type": "text",
+      "label": "Variant of",
+      "hidden": true
+    }
+  ],
+  "widgets": [
+    { "name": "id", "type": "text" },
+    { "name": "screen", "type": "text", "label": "Screen", "hidden": true },
+    {
+      "name": "kind",
+      "type": "enum",
+      "label": "Kind",
+      "options": [
+        "titlebar", "searchbar", "tabs", "scrollview", "list", "settings",
+        "text", "card", "image", "buttonrow", "bottomnav", "fab"
+      ]
+    },
+    { "name": "label", "type": "text", "label": "Label" },
+    {
+      "name": "region",
+      "type": "enum",
+      "label": "Region",
+      "options": ["top", "body", "bottom", "overlay"]
+    },
+    { "name": "order", "type": "number", "label": "Order", "hidden": true, "default": 0 },
+    {
+      "name": "intent",
+      "type": "enum",
+      "label": "Size intent",
+      "options": ["fixed", "fill", "wrap"],
+      "hidden": true
+    }
+  ],
+  "flows": [
+    { "name": "id", "type": "text" },
+    { "name": "board", "type": "text", "label": "Board", "hidden": true },
+    { "name": "fromWidget", "type": "text", "label": "From widget", "hidden": true },
+    { "name": "toScreen", "type": "text", "label": "To screen", "hidden": true },
+    {
+      "name": "transition",
+      "type": "enum",
+      "label": "Transition",
+      "options": ["push", "fade", "sheet"],
+      "default": "push"
+    }
+  ]
+}

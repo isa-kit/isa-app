@@ -1,0 +1,96 @@
+{
+  "files": [
+    {
+      "name": "id",
+      "type": "text"
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": "File"
+    },
+    {
+      "name": "order",
+      "type": "integer",
+      "label": "Order",
+      "hidden": true
+    }
+  ],
+  "notes": [
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Title",
+      "required": true
+    },
+    {
+      "name": "body",
+      "type": "text",
+      "label": "Body"
+    },
+    {
+      "name": "color",
+      "type": "text",
+      "label": "Color",
+      "options": ["amber", "green", "blue", "pink", "purple", "coral"],
+      "default": "amber"
+    },
+    {
+      "name": "date",
+      "type": "date",
+      "label": "Date",
+      "default": "today"
+    },
+    {
+      "name": "pinned",
+      "type": "boolean",
+      "label": "Pinned",
+      "default": false
+    },
+    {
+      "name": "parentId",
+      "type": "text",
+      "label": "Folder"
+    },
+    {
+      "name": "kind",
+      "type": "text",
+      "label": "Kind"
+    },
+    {
+      "name": "pos",
+      "type": "text",
+      "label": "Position",
+      "hidden": true
+    },
+    {
+      "name": "file",
+      "type": "text",
+      "label": "File",
+      "hidden": true
+    }
+  ],
+  "links": [
+    {
+      "name": "fromId",
+      "type": "text",
+      "label": "From note",
+      "required": true
+    },
+    {
+      "name": "toId",
+      "type": "text",
+      "label": "To note"
+    },
+    {
+      "name": "toTitle",
+      "type": "text",
+      "label": "Raw target text"
+    },
+    {
+      "name": "fromTitle",
+      "type": "text",
+      "label": "From note title"
+    }
+  ]
+}

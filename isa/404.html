@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>isan</title>
+  <script>
+    // GitHub Pages serves this for any path with no real file. The only real
+    // sub-paths on the site are the deploy-generated standalone applet dirs
+    // (tool/write_standalone_apps.sh); anything else — a typo, a stale applet
+    // link — lands here. Bounce to the SITE ROOT (first path segment, works
+    // for both /isan-web/ and /isan-web-dev/) so the user gets the launcher
+    // instead of a dead end.
+    var seg = window.location.pathname.split('/').filter(Boolean)[0];
+    window.location.replace(seg ? '/' + seg + '/' : '/');
+  </script>
+</head>
+<body>
+  <p>Redirecting to <a href="../">isan</a>…</p>
+</body>
+</html>

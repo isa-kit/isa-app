@@ -1,0 +1,744 @@
+{
+  "app": {
+    "title": "bublie",
+    "primaryColor": "#3F51B5",
+    "theme": "warmshift",
+    "guide": "how",
+    "preferences": [
+      {
+        "key": "gentleFloat",
+        "label": "Floating animation",
+        "hint": "Bubbles bob softly on the water. Turn off to hold them perfectly still.",
+        "default": true,
+        "whenOn": {
+          "screens.board.body.segments.0.child.float": 5
+        },
+        "whenOff": {
+          "screens.board.body.segments.0.child.float": 0
+        }
+      },
+      {
+        "key": "waterPush",
+        "label": "Water pushes bubbles",
+        "hint": "Dragging a bubble gently nudges its neighbours aside like water, then they settle back. Turn off to keep the others still.",
+        "default": true,
+        "whenOn": {
+          "screens.board.body.segments.0.child.wave": true
+        },
+        "whenOff": {
+          "screens.board.body.segments.0.child.wave": false
+        }
+      },
+      {
+        "key": "showAddButton",
+        "label": "Show the + button",
+        "hint": "A floating + New idea button in the corner of the board.",
+        "default": true,
+        "whenOn": {
+          "screens.board.body.segments.0.child.showAddButton": true
+        },
+        "whenOff": {
+          "screens.board.body.segments.0.child.showAddButton": false
+        }
+      },
+      {
+        "key": "showNested",
+        "label": "Show nested bubbles",
+        "hint": "Show ideas tucked inside other bubbles right on the board. Turn off to calm a crowded board — parents wear a small +N badge and zooming in still reveals what's inside.",
+        "default": true,
+        "whenOn": {
+          "screens.board.body.segments.0.child.showNested": true
+        },
+        "whenOff": {
+          "screens.board.body.segments.0.child.showNested": false
+        }
+      }
+    ],
+    "headerActions": [
+      {
+        "icon": "account_tree",
+        "tooltip": "Send board to dispatch",
+        "action": {
+          "fn": "hostCall",
+          "args": {
+            "name": "sendBublieToDispatch"
+          }
+        }
+      }
+    ]
+  },
+  "nav": [
+    {
+      "id": "board",
+      "label": "Board",
+      "icon": "bubble_chart",
+      "screen": "board"
+    },
+    {
+      "id": "boards",
+      "label": "Boards",
+      "icon": "dashboard",
+      "screen": "boards"
+    },
+    {
+      "id": "files",
+      "label": "Files",
+      "icon": "folder",
+      "screen": "files"
+    },
+    {
+      "id": "ideas",
+      "label": "Ideas",
+      "icon": "format_list_bulleted",
+      "screen": "ideas"
+    }
+  ],
+  "screens": {
+    "files": {
+      "title": "Files",
+      "body": {
+        "type": "explorer",
+        "table": "files",
+        "nameColumn": "name",
+        "orderColumn": "order",
+        "allowFolders": false,
+        "railMode": "collapsible",
+        "title": "Files",
+        "fileIcon": "folder",
+        "newFileLabel": "New file",
+        "autoSelectFirst": true,
+        "scopeTargets": [
+          {
+            "table": "boards",
+            "column": "file"
+          }
+        ],
+        "detail": {
+          "type": "column",
+          "crossAxis": "stretch",
+          "bindRow": true,
+          "children": [
+            {
+              "type": "text",
+              "style": "caption",
+              "value": "A file is a whole bublie library — its own set of boards, each full of bubbles. Pick a file on the left to open just its boards. Tap + to start a new file, and a file's ⋮ menu to rename or delete it."
+            },
+            {
+              "type": "record",
+              "table": "files",
+              "fields": ["journal"]
+            },
+            {
+              "type": "text",
+              "style": "caption",
+              "value": "When on, renaming an idea or editing its Amount / status stamps who and when on that idea (see a board's Recent edits, from the Boards tab's ⋮ menu). Off by default; style/colour/position changes are never stamped."
+            },
+            {
+              "type": "button",
+              "label": "Open this file",
+              "icon": "dashboard",
+              "action": {
+                "fn": "goto",
+                "args": {
+                  "screen": "boards"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "style": "subtitle",
+              "value": "Boards in this file"
+            },
+            {
+              "type": "table",
+              "table": "boards",
+              "columns": [
+                "name"
+              ],
+              "action": {
+                "fn": "editRow"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "boards": {
+      "title": "Boards",
+      "body": {
+        "type": "explorer",
+        "table": "boards",
+        "nameColumn": "name",
+        "orderColumn": "order",
+        "allowFolders": false,
+        "railMode": "collapsible",
+        "title": "Boards",
+        "fileIcon": "bubble_chart",
+        "newFileLabel": "New board",
+        "autoSelectFirst": true,
+        "menuActions": [
+          {
+            "label": "Recent edits",
+            "action": {
+              "fn": "goto",
+              "args": { "screen": "history" }
+            }
+          }
+        ],
+        "scopeColumn": "file",
+        "scopeTargets": [
+          {
+            "table": "bubbles",
+            "column": "board"
+          },
+          {
+            "table": "links",
+            "column": "board"
+          }
+        ],
+        "detail": {
+          "type": "column",
+          "crossAxis": "stretch",
+          "children": [
+            {
+              "type": "text",
+              "style": "caption",
+              "value": "Each board is its own water of ideas, and lives inside whichever file is open (see the Files tab). Pick a board on the left to float just its bubbles — any idea you add joins whichever board is open. Tap + to start a new board, and a board's ⋮ menu to rename or delete it."
+            },
+            {
+              "type": "button",
+              "label": "Open this board",
+              "icon": "bubble_chart",
+              "action": {
+                "fn": "goto",
+                "args": {
+                  "screen": "board"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "style": "subtitle",
+              "value": "Ideas on this board"
+            },
+            {
+              "type": "text",
+              "style": "caption",
+              "value": "Every idea floating on the board you picked. Tap a row to rename it or edit its details; the list follows whichever board is open."
+            },
+            {
+              "type": "table",
+              "table": "bubbles",
+              "columns": [
+                "label",
+                "kind",
+                "qty"
+              ],
+              "action": {
+                "fn": "editRow"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "board": {
+      "title": "bublie",
+      "body": {
+        "type": "segments",
+        "fill": true,
+        "chips": true,
+        "swipe": true,
+        "segments": [
+          {
+            "label": "Bubbles",
+            "icon": "bubble_chart",
+            "child": {
+              "type": "bubl",
+              "look": "soft",
+              "holdMenu": true,
+              "zoomable": true,
+              "duplicable": true,
+              "fillPhone": true,
+              "table": "bubbles",
+              "scopeColumn": "board",
+              "labelColumn": "label",
+              "sublabelColumn": "qty",
+              "posColumn": "pos",
+              "parentColumn": "parent",
+              "collapsedColumn": "collapsed",
+              "bubbleSize": 48,
+              "linksTable": "links",
+              "linkFromColumn": "from",
+              "linkToColumn": "to",
+              "linkTypeColumn": "type",
+              "linkTypeValue": "flow",
+              "contain": true,
+              "maxBubbleRadius": 120,
+              "linksOnTop": true,
+              "doubleTapWaterAdds": true,
+              "tapBubbleSprouts": false,
+              "showAddButton": true,
+              "selectStyle": true,
+              "multiSelect": true,
+              "holdMultiSelect": true,
+              "feelSliders": true,
+              "rememberFolds": true,
+              "waveStrength": 1.0,
+              "chainThemes": [
+                "#3F51B5",
+                "#5FB8C4",
+                "#9D82D8",
+                "#DFAE66",
+                "#E08674",
+                "#7FBFA0"
+              ],
+              "linkColorColumn": "linkColor",
+              "linkWidthColumn": "linkWidth",
+              "linkStyleColumn": "linkStyle",
+              "linkShapeColumn": "linkShape",
+              "linkHeadsColumn": "linkHeads",
+              "fillColorColumn": "color",
+              "outlineColorColumn": "outlineColor",
+              "outlineWidthColumn": "outlineWidth",
+              "shapeColumn": "shape",
+              "roundedColumn": "rounded",
+              "aspectColumn": "aspect",
+              "rotationColumn": "rotation",
+              "customShapeColumn": "customShape",
+              "sizeColumn": "size",
+              "computeColumn": "calories",
+              "attrsColumn": "attrs",
+              "computePick": true,
+              "subPick": true,
+              "pinchZoom": true,
+              "doubleTapEdits": true,
+              "linkSelect": true,
+              "journalGate": {
+                "viaColumn": "board",
+                "parentTable": "boards",
+                "parentViaColumn": "file",
+                "grandTable": "files",
+                "toggleColumn": "journal"
+              }
+            }
+          },
+          {
+            "label": "Outline",
+            "icon": "format_list_bulleted",
+            "child": {
+              "type": "entrythread",
+              "table": "bubbles",
+              "roots": true,
+              "nested": true,
+              "anyEdgeType": true,
+              "edgesTable": "links",
+              "edgeFrom": "from",
+              "edgeTo": "to",
+              "edgeType": "type",
+              "containsType": "flow",
+              "titleColumn": "label",
+              "subtitleColumn": "qty",
+              "action": {
+                "fn": "editRow"
+              }
+            }
+          },
+          {
+            "label": "Diagram",
+            "icon": "account_tree",
+            "child": {
+              "type": "canvas",
+              "layout": "dag",
+              "nodesTable": "bubbles",
+              "scopeColumn": "board",
+              "labelColumn": "label",
+              "edgesTable": "links",
+              "fromColumn": "from",
+              "toColumn": "to",
+              "fillPhone": true,
+              "action": {
+                "fn": "editRow"
+              },
+              "parentColumn": "parent",
+              "collapsible": true
+            }
+          }
+        ]
+      }
+    },
+    "boardEditable": {
+      "title": "Map",
+      "body": {
+        "type": "segments",
+        "fill": true,
+        "segments": [
+          {
+            "label": "Map",
+            "icon": "bubble_chart",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "row",
+                  "mainAxis": "end",
+                  "children": [
+                    {
+                      "type": "button",
+                      "label": "Tidy",
+                      "icon": "auto_awesome_mosaic",
+                      "variant": "text",
+                      "action": {
+                        "fn": "bublArrange",
+                        "args": {
+                          "table": "bubbles",
+                          "posColumn": "pos",
+                          "parentColumn": "parent",
+                          "bubbleSize": 48
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "bubl",
+                  "look": "soft",
+                  "fillPhone": true,
+                  "height": "fill",
+                  "table": "bubbles",
+                  "scopeColumn": "projectPath",
+                  "scopeMatch": "pathContains",
+                  "labelColumn": "label",
+                  "sublabelColumn": "qty",
+                  "posColumn": "pos",
+                  "parentColumn": "parent",
+                  "collapsedColumn": "collapsed",
+                  "arrowCollapsedColumn": "arrowCollapsed",
+                  "bubbleSize": 48,
+                  "linksTable": "links",
+                  "linkFromColumn": "from",
+                  "linkToColumn": "to",
+                  "linkTypeColumn": "type",
+                  "linkTypeValue": "flow",
+                  "contain": true,
+                  "maxBubbleRadius": 120,
+                  "linksOnTop": true,
+                  "fillColorColumn": "color",
+                  "pinchZoom": true,
+                  "autoArrange": "radial",
+                  "tapMenu": [
+                    {
+                      "label": "Open task",
+                      "icon": "open_in_new",
+                      "action": {
+                        "fn": "hostCall",
+                        "args": {
+                          "name": "openDispatchTaskFromBubble"
+                        }
+                      }
+                    },
+                    {
+                      "label": "Collapse cascade",
+                      "icon": "account_tree",
+                      "action": {
+                        "fn": "toggleField",
+                        "args": {
+                          "column": "arrowCollapsed"
+                        }
+                      }
+                    }
+                  ],
+                  "holdMenu": true,
+                  "zoomable": true,
+                  "duplicable": true,
+                  "doubleTapWaterAdds": false,
+                  "tapBubbleSprouts": false,
+                  "showAddButton": false,
+                  "selectStyle": true,
+                  "multiSelect": true,
+                  "holdMultiSelect": true,
+                  "doubleTapEdits": true,
+                  "linkSelect": true,
+                  "journalGate": {
+                    "viaColumn": "board",
+                    "parentTable": "boards",
+                    "parentViaColumn": "file",
+                    "grandTable": "files",
+                    "toggleColumn": "journal"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "solo": {
+      "title": "Board",
+      "body": {
+        "type": "bubl",
+        "look": "soft",
+        "holdMenu": true,
+        "zoomable": true,
+        "duplicable": true,
+        "fillPhone": true,
+        "table": "bubbles",
+        "labelColumn": "label",
+        "sublabelColumn": "qty",
+        "posColumn": "pos",
+        "parentColumn": "parent",
+        "collapsedColumn": "collapsed",
+        "bubbleSize": 48,
+        "linksTable": "links",
+        "linkFromColumn": "from",
+        "linkToColumn": "to",
+        "linkTypeColumn": "type",
+        "linkTypeValue": "flow",
+        "contain": true,
+        "maxBubbleRadius": 120,
+        "linksOnTop": true,
+        "doubleTapWaterAdds": true,
+        "tapBubbleSprouts": false,
+        "showAddButton": true,
+        "selectStyle": true,
+        "multiSelect": true,
+        "fillColorColumn": "color",
+        "outlineColorColumn": "outlineColor",
+        "outlineWidthColumn": "outlineWidth",
+        "shapeColumn": "shape",
+        "roundedColumn": "rounded",
+        "aspectColumn": "aspect",
+        "rotationColumn": "rotation",
+        "customShapeColumn": "customShape",
+        "sizeColumn": "size",
+        "computeColumn": "calories",
+        "attrsColumn": "attrs",
+        "computePick": true,
+        "subPick": true,
+        "pinchZoom": true,
+        "doubleTapEdits": true,
+        "linkSelect": true
+      }
+    },
+    "history": {
+      "title": "Recent edits",
+      "body": {
+        "type": "column",
+        "crossAxis": "stretch",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Recent edits for this board — not a full history. Only the LAST rename or Amount / status edit to each idea is kept (who, when), and only while a file's Track edit history switch is on (Files tab → open the file). Colour, shape, position and other style tweaks are never recorded."
+          },
+          {
+            "type": "table",
+            "table": "bubbles",
+            "columns": ["label", "editedBy", "editedAt"]
+          }
+        ]
+      }
+    },
+    "ideas": {
+      "title": "Ideas",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Every idea on the board. Tap a row to rename it, change its Kind, or edit the amount / status — changes show on the bubbles right away. Open a row to delete an idea you don't want."
+          },
+          {
+            "type": "table",
+            "table": "bubbles",
+            "columns": [
+              "label",
+              "kind",
+              "qty"
+            ],
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "how": {
+      "title": "How to use bublie",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Float your ideas as bubbles"
+          },
+          {
+            "type": "text",
+            "value": "bublie is a calm place to float your ideas as bubbles — then connect and mature them. Every idea is a bubble drifting on water; there's no grid and no rules, just bubbles you push around and connect however you like."
+          },
+          {
+            "type": "text",
+            "value": "🔎 Nesting shows two ways: on the Bubbles board a tucked-in idea sits inside its parent, and in the Diagram it sits one column right of its parent, joined by a soft dashed line (distinct from the solid becomes-arrows). The Outline stays a clean becomes-list — each chain from its starting idea down. Switch between Bubbles, Outline and Diagram with the small icon chips up top, or just swipe left/right on the board."
+          },
+          {
+            "type": "text",
+            "value": "➖ In the Diagram, a bubble that holds others gets a little ⌄ toggle — fold its nested contents away (a +N badge shows how many are tucked) to keep a busy graph readable, and unfold it any time."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Adding ideas"
+          },
+          {
+            "type": "text",
+            "value": "💧 Tap the open water and it just ripples, like a stone dropped in — no bubble, so nothing appears by accident."
+          },
+          {
+            "type": "text",
+            "value": "👆👆 Double-tap the water to drop a fresh bubble right there."
+          },
+          {
+            "type": "text",
+            "value": "👆 Tap a bubble to SELECT it — a little style bar opens right on the water: change its colour, shape, outline and thickness, rename it, add a line of subtext, resize it, or erase it. Round its corners, stretch it wider or taller, rotate it (or drag the little dot floating above the shape — it turns in neat 15° steps), stretch really grows it wider or taller — and reset the size or rotation back to default any time. Drag the little handle at the top of the bar to move it out of the way, and scroll inside it if it's taller than the screen. All yours, no fixed categories."
+          },
+          {
+            "type": "text",
+            "value": "👆👆 Double-tap a bubble to edit its text right there — the name opens in place, type and confirm."
+          },
+          {
+            "type": "text",
+            "value": "🏷️ Add attribute… on the style bar lets you tag a bubble with ANY name/value pair you like — protein, price, minutes, mood, whatever your board needs (not just Calories). Add as many as you want; each is remembered on that bubble."
+          },
+          {
+            "type": "text",
+            "value": "🧮 Two small pickers ride along with your attributes: one lets you choose WHICH numeric attribute the Σ rollup totals (instead of always Calories), and the other lets you choose which attribute shows as the sublabel line under a bubble's name (instead of always Amount / status). Pick per board, change any time."
+          },
+          {
+            "type": "text",
+            "value": "🫧 Select MANY at once: drag across open water to lasso a box of bubbles, or shift-click to add one and ctrl/⌘-click to add or remove one. On touch, long-hold a bubble then tap others to add them to a selection. While more than one is selected, a colour/shape/size/rotation change applies to the WHOLE group, and dragging moves them all together."
+          },
+          {
+            "type": "text",
+            "value": "📦 Drag a whole selection ONTO another bubble to nest them all inside it at once (the target lights up as you hover). And with a group selected, press Delete or Backspace to erase them all — or use the trash button in the style bar."
+          },
+          {
+            "type": "text",
+            "value": "🤏 Pinch with two fingers to zoom the whole board in and out (drag with two fingers to pan around it). On a computer, scroll to pan and hold ⌃/⌘ while scrolling to zoom. Zooming pairs naturally with diving INTO a bubble to work on what's inside."
+          },
+          {
+            "type": "text",
+            "value": "🫣 A crowded board? Turn OFF Show nested bubbles in Preferences — ideas tucked inside others hide behind their parent (it wears a small +N badge), and zooming into the parent still shows everything inside."
+          },
+          {
+            "type": "text",
+            "value": "➕ Or tap the + button in the corner to drop a fresh idea in the middle and name it straight away."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Move, rename, connect"
+          },
+          {
+            "type": "text",
+            "value": "✋ Drag a bubble to move it — the water ripples in its wake, nearby bubbles are shouldered aside like the water is carrying them, then everything drifts gently back into place. (Turn this off with the Water pushes bubbles preference.)"
+          },
+          {
+            "type": "text",
+            "value": "✋ Hold a bubble and a little menu blooms right on the water: ✏️ rename it in place, 🔗 pull a link, ⧉ duplicate it, or 🔍 zoom in. Duplicate copies the bubble and everything nested inside it (and the links between them), dropped just beside the original. Keep holding and DRAG instead to pull a link thread straight to another bubble."
+          },
+          {
+            "type": "text",
+            "value": "⬇️ Drop one bubble dead-centre on another to NEST it — housing an idea inside a bigger one. The nested idea keeps its own size and just tucks inside (it only shrinks if the parent is too small); the parent grows a bright rim. Tapping a nested bubble selects that bubble (the one under your finger), not the parent around it."
+          },
+          {
+            "type": "text",
+            "value": "↔️ Overlap two bubbles edge-to-edge instead and they LINK — a flowing arrow shows the idea travelling from one to the next (origin → destination). Overlap them again to unlink."
+          },
+          {
+            "type": "text",
+            "value": "Tap an arrow to select it; hold+tap or shift-click to select several, or select bubbles and arrows together; a mixed selection offers just delete/duplicate. A lone arrow's bar reverses, deletes, or restyles the line (colour, width, dashed); arrows can bow into an arc and switch arrowheads (one end, both, none)."
+          },
+          {
+            "type": "text",
+            "value": "🔍 Zoom INTO any bubble to work inside it — its own inputs, outputs and sub-ideas live there; blow new bubbles inside, and use the ◀ chip to float back up."
+          },
+          {
+            "type": "text",
+            "value": "To pull a nested bubble back out, just drag it away — grabbing a bubble always frees it, and where you drop it decides its new home."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Chains: things that become other things"
+          },
+          {
+            "type": "text",
+            "value": "Bubbles can also tell a making story: milk becomes cream becomes butter becomes a croissant. The board starts with a little kitchen chain to show it — arrows mean \"turns into\"."
+          },
+          {
+            "type": "text",
+            "value": "🎨 Colour tells the making story however you like — select a bubble and paint it your own hue: a starting ingredient in cool blue-green, something half-made in purple, a finished product in warm gold, or any shades you please. No fixed categories; the starting kitchen chain comes pre-tinted so you can read it at a glance."
+          },
+          {
+            "type": "text",
+            "value": "🏷️ The small line under the name is the Amount / status field — in the Ideas list, write anything: \"2 L\", \"low\", \"out\", \"training\". A glance at the board shows what is flowing and what is stuck."
+          },
+          {
+            "type": "text",
+            "value": "🧮 Give ideas a Calories number (in the Ideas list) and a bubble that others flow INTO adds them up for you — an omelette shows the total of its eggs and onions (Σ). If you also type a total of your own that's bigger than the parts, the leftover is flagged (⚠) as unaccounted. Calories is just the board's default Σ attribute — use the Σ picker in the style bar to total any other numeric attribute you've added instead."
+          },
+          {
+            "type": "text",
+            "value": "The same trick maps any process — a data pipeline (raw data → cleaned → model → report), a workshop, a garden. Anything that transforms."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Make it yours (Preferences)"
+          },
+          {
+            "type": "text",
+            "value": "Open the ⋮ menu → Preferences to switch how bublie behaves. You can settle the gentle float, hide the + button, and switch tap-water-to-add on or off, so the water feels exactly how you like it."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Files, boards, bubbles"
+          },
+          {
+            "type": "text",
+            "value": "🗂️ Files sit above everything: a File is a whole little library — its own set of Boards, each full of bubbles. Most people only ever need one file, and bublie starts you with one (\"My board\"), but you can start a second file any time you want a completely separate library — a different project, a shared one, a scratch space — without your boards mixing together."
+          },
+          {
+            "type": "text",
+            "value": "Open the Files tab to see your library, add a new file, or rename/delete one. Tap a file to open it — that scopes the Boards tab to just that file's boards, exactly like tapping a board scopes the bubble board to just that board's ideas."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Move your board to another device"
+          },
+          {
+            "type": "text",
+            "value": "⋮ → Back up to file… saves the OPEN file — its boards, bubbles and links — as a file: on the web app it downloads straight to your computer; on phone or desktop it opens the share sheet (AirDrop, Quick Share, Drive, email, whatever you pick) or a save dialog."
+          },
+          {
+            "type": "text",
+            "value": "On the other device, open bublie there and ⋮ → Restore from file…, then pick that file. It MERGES in by id — bubbles and links you already have stay exactly as they are, anything new is added, and anything you edited on the other device updates here. Nothing is ever deleted by an import."
+          },
+          {
+            "type": "text",
+            "value": "🆕 To bring in someone ELSE's bublie file (or your own from a different library) as its own separate file instead of merging it into what you have open, use ⋮ → Add file to library… — it lands as a brand-new file, side by side with your others, never touching what's already open."
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Everything saves and syncs like your other apps. Coming later: tunable feel (drift, bounciness, nest grip) and colour-by-theme."
+          }
+        ]
+      }
+    }
+  }
+}

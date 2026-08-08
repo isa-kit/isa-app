@@ -1,0 +1,52 @@
+{
+  "boxes": [
+    { "name": "number", "type": "number", "label": "Number (legacy)", "rules": { "hidden": true } },
+    { "name": "numberId", "type": "text", "label": "Number", "required": true, "rules": { "singleLine": true } },
+    { "name": "label", "type": "text", "label": "Label", "rules": { "singleLine": true } },
+    {
+      "name": "room",
+      "type": "enum",
+      "label": "Room",
+      "options": ["Kitchen", "Bedroom", "Bathroom", "Living", "Office", "Garage", "Other"],
+      "default": "Other",
+      "rules": { "hidden": true }
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "label": "Status",
+      "options": ["Pending packing", "Ongoing", "Packed", "Loaded", "Delivered", "Unpacked"],
+      "default": "Pending packing"
+    },
+    { "name": "fragile", "type": "boolean", "label": "Fragile", "default": false, "rules": { "hidden": true } },
+    { "name": "notes", "type": "text", "label": "Notes", "rules": { "autoExpand": true } },
+    {
+      "name": "priority",
+      "type": "enum",
+      "label": "Opening priority",
+      "options": ["High", "Medium", "Low"],
+      "rules": { "hidden": true }
+    }
+  ],
+  "items": [
+    { "name": "name", "type": "text", "label": "Name", "required": true, "rules": { "singleLine": true } },
+    { "name": "box", "type": "number", "label": "Box # (legacy)", "rules": { "hidden": true } },
+    { "name": "boxId", "type": "text", "label": "Box # (text, legacy)", "rules": { "hidden": true } },
+    { "name": "boxRef", "type": "reference", "refTable": "boxes", "label": "Box #", "required": true },
+    {
+      "name": "category",
+      "type": "enum",
+      "label": "Category",
+      "options": ["Kitchen", "Clothes", "Books", "Electronics", "Docs", "Misc"],
+      "default": "Misc"
+    },
+    { "name": "qty", "type": "number", "label": "Quantity", "default": 1 },
+    {
+      "name": "priority",
+      "type": "enum",
+      "label": "Opening priority",
+      "options": ["High", "Medium", "Low"]
+    },
+    { "name": "notes", "type": "text", "label": "Notes", "rules": { "autoExpand": true } }
+  ]
+}

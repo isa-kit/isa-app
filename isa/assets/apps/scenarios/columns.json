@@ -1,0 +1,506 @@
+{
+  "datasets": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Dataset"
+    },
+    {
+      "name": "source",
+      "type": "text",
+      "label": "Source"
+    },
+    {
+      "name": "vintage",
+      "type": "text",
+      "label": "Vintage / year"
+    },
+    {
+      "name": "keyed",
+      "type": "enum",
+      "label": "Access",
+      "options": [
+        "keyless",
+        "api-key",
+        "license"
+      ],
+      "default": "keyless"
+    },
+    {
+      "name": "geography",
+      "type": "text",
+      "label": "Geography"
+    },
+    {
+      "name": "used_by",
+      "type": "text",
+      "label": "Used by"
+    },
+    {
+      "name": "kind",
+      "type": "enum",
+      "label": "Dataset kind",
+      "options": [
+        "census",
+        "gtfs",
+        "osm",
+        "survey",
+        "custom",
+        "derived"
+      ],
+      "default": "census"
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "label": "Status",
+      "options": [
+        "active",
+        "imported",
+        "scheduled",
+        "removed"
+      ],
+      "default": "active"
+    },
+    {
+      "name": "schedule",
+      "type": "text",
+      "label": "Refresh cadence (inert — phase 3)",
+      "default": ""
+    },
+    {
+      "name": "endpoint",
+      "type": "text",
+      "label": "Feed URL (e.g. GTFS zip)",
+      "default": ""
+    },
+    {
+      "name": "citation",
+      "type": "text",
+      "label": "URL / citation"
+    },
+    {
+      "name": "license",
+      "type": "text",
+      "label": "License"
+    },
+    {
+      "name": "doi",
+      "type": "text",
+      "label": "DOI / permanent ID"
+    },
+    {
+      "name": "permanent_url",
+      "type": "text",
+      "label": "Permanent URL"
+    }
+  ],
+  "standards": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "standard",
+      "type": "text",
+      "label": "Standard"
+    },
+    {
+      "name": "requires",
+      "type": "text",
+      "label": "Requires"
+    },
+    {
+      "name": "met",
+      "type": "enum",
+      "label": "Status",
+      "options": [
+        "yes",
+        "partial",
+        "planned"
+      ],
+      "default": "partial"
+    }
+  ],
+  "runs": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Run"
+    },
+    {
+      "name": "when",
+      "type": "dateTime",
+      "label": "Run at",
+      "default": "now"
+    },
+    {
+      "name": "city",
+      "type": "text",
+      "label": "City"
+    },
+    {
+      "name": "year",
+      "type": "text",
+      "label": "Scenario year"
+    },
+    {
+      "name": "scenario",
+      "type": "text",
+      "label": "Scenario"
+    },
+    {
+      "name": "model_version",
+      "type": "text",
+      "label": "Model version (git sha)"
+    },
+    {
+      "name": "zones",
+      "type": "number",
+      "label": "Zones"
+    },
+    {
+      "name": "total_trips",
+      "type": "number",
+      "label": "HBW trips/day"
+    },
+    {
+      "name": "transit_pct",
+      "type": "number",
+      "label": "Transit share %"
+    },
+    {
+      "name": "avg_trip_mi",
+      "type": "number",
+      "label": "Avg trip (mi)"
+    },
+    {
+      "name": "tier",
+      "type": "enum",
+      "label": "Confidence tier",
+      "options": [
+        "focused",
+        "exploratory"
+      ],
+      "default": "exploratory"
+    },
+    {
+      "name": "confidence_tier",
+      "type": "text",
+      "label": "Confidence tier"
+    },
+    {
+      "name": "pass_count",
+      "type": "integer",
+      "label": "Checks passed"
+    },
+    {
+      "name": "warn_count",
+      "type": "integer",
+      "label": "Checks warned"
+    },
+    {
+      "name": "fail_count",
+      "type": "integer",
+      "label": "Checks failed"
+    },
+    {
+      "name": "status",
+      "type": "text",
+      "label": "Provenance status",
+      "default": "precomputed"
+    },
+    {
+      "name": "note",
+      "type": "text",
+      "label": "Note"
+    }
+  ],
+  "soundness_checks": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "run_id",
+      "type": "text",
+      "label": "Run",
+      "hidden": true
+    },
+    {
+      "name": "ord",
+      "type": "integer",
+      "label": "#"
+    },
+    {
+      "name": "check",
+      "type": "text",
+      "label": "Check"
+    },
+    {
+      "name": "asserts",
+      "type": "text",
+      "label": "Asserts"
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "label": "Status",
+      "options": [
+        "pass",
+        "warn",
+        "fail"
+      ],
+      "default": "pass"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Detail"
+    },
+    {
+      "name": "standard",
+      "type": "text",
+      "label": "Standard"
+    },
+    {
+      "name": "applies_to",
+      "type": "text",
+      "label": "Applies to model"
+    },
+    {
+      "name": "standard_doc_url",
+      "type": "text",
+      "label": "Standard reference"
+    }
+  ],
+  "confidence_tiers": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "tier",
+      "type": "text",
+      "label": "Tier"
+    },
+    {
+      "name": "meaning",
+      "type": "text",
+      "label": "What it means"
+    },
+    {
+      "name": "earned_by",
+      "type": "text",
+      "label": "Earned by"
+    },
+    {
+      "name": "downgrades",
+      "type": "text",
+      "label": "What downgrades it"
+    },
+    {
+      "name": "decisions",
+      "type": "text",
+      "label": "Fit for"
+    },
+    {
+      "name": "cities",
+      "type": "text",
+      "label": "Example cities"
+    }
+  ],
+  "model_history": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "model_version",
+      "type": "text",
+      "label": "Version (git sha)"
+    },
+    {
+      "name": "date",
+      "type": "date",
+      "label": "Date"
+    },
+    {
+      "name": "what_changed",
+      "type": "text",
+      "label": "What changed"
+    },
+    {
+      "name": "by",
+      "type": "text",
+      "label": "By"
+    },
+    {
+      "name": "kind",
+      "type": "enum",
+      "label": "Kind",
+      "options": [
+        "schema",
+        "method",
+        "calibration",
+        "data",
+        "fix"
+      ],
+      "default": "method"
+    }
+  ],
+  "run_inputs": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "from",
+      "type": "text",
+      "label": "Run",
+      "hidden": true
+    },
+    {
+      "name": "to",
+      "type": "text",
+      "label": "Dataset",
+      "hidden": true
+    },
+    {
+      "name": "type",
+      "type": "text",
+      "label": "Edge type",
+      "hidden": true
+    }
+  ],
+  "run_checks": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "from",
+      "type": "text",
+      "label": "Run",
+      "hidden": true
+    },
+    {
+      "name": "to",
+      "type": "text",
+      "label": "Check",
+      "hidden": true
+    },
+    {
+      "name": "type",
+      "type": "text",
+      "label": "Edge type",
+      "hidden": true
+    }
+  ],
+  "run_config": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "run_label",
+      "type": "text",
+      "label": "Run button label",
+      "default": "Run scenario"
+    },
+    {
+      "name": "model",
+      "type": "text",
+      "label": "Model",
+      "default": "four-step"
+    },
+    {
+      "name": "model_version",
+      "type": "text",
+      "label": "Model version (git sha)",
+      "default": "7fa3c41"
+    },
+    {
+      "name": "city",
+      "type": "text",
+      "label": "City",
+      "default": "boston"
+    },
+    {
+      "name": "year",
+      "type": "text",
+      "label": "Scenario year",
+      "default": "2019"
+    },
+    {
+      "name": "beta",
+      "type": "number",
+      "label": "Distribution beta (override)"
+    },
+    {
+      "name": "calib",
+      "type": "text",
+      "label": "Calibration mode",
+      "default": "focused"
+    },
+    {
+      "name": "growth",
+      "type": "number",
+      "label": "Growth factor",
+      "default": 1
+    },
+    {
+      "name": "endpoint",
+      "type": "text",
+      "label": "Model endpoint",
+      "default": "https://167.233.64.97/model/scenario"
+    },
+    {
+      "name": "token",
+      "type": "text",
+      "label": "Token (recorded locally only)",
+      "default": ""
+    },
+    {
+      "name": "schedule",
+      "type": "text",
+      "label": "Schedule cadence (inert — phase 3)",
+      "default": ""
+    },
+    {
+      "name": "next_run",
+      "type": "text",
+      "label": "Next scheduled run",
+      "default": ""
+    },
+    {
+      "name": "last_status",
+      "type": "text",
+      "label": "Last status",
+      "default": "No run yet — /model is authorization-locked; the ledger shows precomputed runs."
+    },
+    {
+      "name": "last_run",
+      "type": "text",
+      "label": "Last run at",
+      "default": ""
+    }
+  ]
+}

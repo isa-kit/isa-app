@@ -1,0 +1,54 @@
+{
+  "bubbles": [
+    { "name": "id", "type": "text" },
+    { "name": "label", "type": "text", "label": "Idea" },
+    { "name": "kind", "type": "enum", "label": "Kind", "options": ["idea", "raw", "made", "final"], "default": "idea" },
+    { "name": "qty", "type": "text", "label": "Amount / status" },
+    { "name": "editedBy", "type": "text", "label": "Last edited by", "hidden": true },
+    { "name": "editedAt", "type": "text", "label": "Last edited", "hidden": true },
+    { "name": "pos", "type": "text", "label": "Position", "hidden": true },
+    { "name": "parent", "type": "text", "label": "Nested in", "hidden": true },
+    { "name": "rootProject", "type": "text", "label": "Root project", "hidden": true },
+    { "name": "projectPath", "type": "text", "label": "Project path", "hidden": true },
+    { "name": "color", "type": "text", "label": "Colour", "hidden": true },
+    { "name": "outlineColor", "type": "text", "label": "Outline colour", "hidden": true },
+    { "name": "outlineWidth", "type": "number", "label": "Outline width", "hidden": true },
+    { "name": "shape", "type": "text", "label": "Shape", "hidden": true },
+    { "name": "rounded", "type": "text", "label": "Rounded", "hidden": true },
+    { "name": "aspect", "type": "number", "label": "Stretch", "hidden": true },
+    { "name": "rotation", "type": "number", "label": "Rotation", "hidden": true },
+    { "name": "customShape", "type": "text", "label": "Custom shape", "hidden": true },
+    { "name": "size", "type": "number", "label": "Size", "hidden": true },
+    { "name": "calories", "type": "number", "label": "Calories" },
+    { "name": "attrs", "type": "text", "label": "Attributes (JSON)", "hidden": true },
+    { "name": "board", "type": "text", "label": "Board", "hidden": true },
+    { "name": "collapsed", "type": "boolean", "label": "Folded", "hidden": true, "default": false },
+    { "name": "arrowCollapsed", "type": "boolean", "label": "Cascade folded", "hidden": true, "default": false }
+  ],
+  "links": [
+    { "name": "id", "type": "text" },
+    { "name": "from", "type": "text", "hidden": true },
+    { "name": "to", "type": "text", "hidden": true },
+    { "name": "type", "type": "text", "label": "Type", "hidden": true },
+    { "name": "linkColor", "type": "text", "label": "Line colour", "hidden": true },
+    { "name": "linkWidth", "type": "number", "label": "Line width", "hidden": true },
+    { "name": "linkStyle", "type": "text", "label": "Line style", "hidden": true },
+    { "name": "linkShape", "type": "text", "label": "Line shape", "hidden": true },
+    { "name": "linkHeads", "type": "text", "label": "Arrowheads", "hidden": true },
+    { "name": "board", "type": "text", "label": "Board", "hidden": true }
+  ],
+  "boards": [
+    { "name": "id", "type": "text" },
+    { "name": "name", "type": "text", "label": "Board" },
+    { "name": "icon", "type": "text", "label": "Icon" },
+    { "name": "color", "type": "text", "label": "Colour" },
+    { "name": "order", "type": "integer", "label": "Order", "hidden": true },
+    { "name": "file", "type": "text", "label": "File", "hidden": true }
+  ],
+  "files": [
+    { "name": "id", "type": "text" },
+    { "name": "name", "type": "text", "label": "File" },
+    { "name": "order", "type": "integer", "label": "Order", "hidden": true },
+    { "name": "journal", "type": "boolean", "label": "Track edit history", "default": false }
+  ]
+}

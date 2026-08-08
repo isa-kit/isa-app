@@ -1,0 +1,429 @@
+{
+  "entries": [
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Title",
+      "description": "The entry's name (rename it in the tree, or here)."
+    },
+    {
+      "name": "comment",
+      "type": "text",
+      "label": "Comment",
+      "description": "The note / body of this entry — always available, whatever the type."
+    },
+    {
+      "name": "attachment",
+      "type": "attachments",
+      "label": "Image / file",
+      "description": "For an `image` entry: upload an image (or file); it's stored with the entry and can be downloaded or replaced."
+    },
+    {
+      "name": "type",
+      "type": "enum",
+      "label": "Type",
+      "options": [
+        "group",
+        "task",
+        "note",
+        "image",
+        "wireframe",
+        "sheets",
+        "docs",
+        "sketchpad",
+        "bublee",
+        "goal",
+        "milestone",
+        "item",
+        "decision"
+      ],
+      "default": "note",
+      "description": "group = project folder; task = a piece of work (tasks nest — sub-tasks show in the tasks column); note = a comment in a log (comments nest too — replies); image / wireframe / sheets / docs / sketchpad / bublee = an ATTACHMENT object housed by a task or a comment (its own isolated data; opens full-screen). PLAN objects, shown on the Plan screen rather than in a log: goal = an end state a project is driving at; milestone = a checkpoint on the way to a goal; item = something the goal needs (a `requires` edge points goal → item); decision = a choice, past or pending (see decisionKind)."
+    },
+    {
+      "name": "role",
+      "type": "enum",
+      "label": "Role",
+      "options": [
+        "task",
+        "goal",
+        "milestone",
+        "item",
+        "decision"
+      ],
+      "default": "task",
+      "description": "For a work-item (type=task): what it represents. task = work to do; goal = an end state a project drives at; milestone = a checkpoint toward a goal; item = something a goal needs; decision = a choice to make or record (see decisionKind). The Plan screen groups work-items by role."
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "label": "Status",
+      "options": [
+        "active",
+        "queued",
+        "discussed",
+        "done"
+      ],
+      "default": "active",
+      "description": "active · queued (backlog) · discussed (talked about, not yet queued — the Priorities tab's Future lane) · done"
+    },
+    {
+      "name": "decisionKind",
+      "type": "enum",
+      "label": "Decision kind",
+      "options": [
+        "predetermined",
+        "open",
+        "emergent"
+      ],
+      "description": "Only meaningful on a `decision` entry. predetermined = already settled, we know the answer going in. open = a known question still to be answered. emergent = a choice that only surfaced once the work was underway — kept separate from decisions taken earlier, so hindsight never rewrites the record."
+    },
+    {
+      "name": "order",
+      "type": "number",
+      "label": "Order",
+      "rules": {
+        "hidden": true
+      }
+    },
+    {
+      "name": "createdBy",
+      "type": "ref",
+      "label": "Lead",
+      "refTable": "users",
+      "default": "u_you",
+      "description": "Who started / owns this (the lead). Add collaborators in With."
+    },
+    {
+      "name": "prompting",
+      "type": "ref",
+      "label": "Prompting",
+      "refTable": "users",
+      "multi": true,
+      "description": "Who this is directed at / asked to respond."
+    },
+    {
+      "name": "with",
+      "type": "ref",
+      "label": "With",
+      "refTable": "users",
+      "multi": true,
+      "description": "Collaborators beyond the lead — associate multiple people (e.g. lead You, with Claude) instead of one merged person."
+    },
+    {
+      "name": "bottleneck",
+      "type": "boolean",
+      "label": "Bottleneck",
+      "description": "Mark a project or task that is holding others up. A marker, not a status."
+    },
+    {
+      "name": "blocked",
+      "type": "boolean",
+      "label": "Blocked",
+      "description": "Mark a project or task that can't proceed yet (waiting on something). A marker, orthogonal to status."
+    },
+    {
+      "name": "awaiting",
+      "type": "boolean",
+      "label": "Awaiting reply",
+      "description": "True while this is an OPEN turn waiting on a response — set automatically when a comment is addressed to someone, cleared when it's marked answered. Shown in the Inbox (open turns), separate from the work status (a task can be active AND awaiting)."
+    },
+    {
+      "name": "completedBy",
+      "type": "ref",
+      "label": "Completed by",
+      "refTable": "users",
+      "description": "Who actually finished it — set by the completing user, which is not always whoever created it."
+    },
+    {
+      "name": "created",
+      "type": "date",
+      "label": "Created",
+      "default": "now"
+    },
+    {
+      "name": "postedAt",
+      "type": "dateTime",
+      "label": "Posted",
+      "rules": {
+        "hidden": true
+      },
+      "description": "The log's precise post instant, stamped once when a comment is added and never touched again (unlike the engine's volatile `updatedAt`), so the '· 2h ago' clock stays accurate AND doesn't reset on edit. A dateTime (not a date) column so same-day comments can still read 'just now' / '5m ago'; `created` stays the honest day-level date shown on the record."
+    },
+    {
+      "name": "finishedAt",
+      "type": "date",
+      "label": "Finished",
+      "description": "The day the work was done. Left empty while it is unfinished — an empty finish date is a fact, not a gap to fill in."
+    },
+    {
+      "name": "editedAt",
+      "type": "date",
+      "label": "Edited",
+      "description": "Last day this was meaningfully revised. Distinct from the engine's own `updatedAt` stamp, which is rewritten on every save (and on import), so it can never carry a historical date."
+    },
+    {
+      "name": "editedBy",
+      "type": "ref",
+      "label": "Edited by",
+      "refTable": "users",
+      "description": "Who last meaningfully revised this — stamped on a save that actually changes a field (not on create, not on a no-op open)."
+    },
+    {
+      "name": "updatedAt",
+      "type": "text",
+      "label": "Updated",
+      "rules": {
+        "hidden": true
+      },
+      "description": "DEPRECATED — collides with the engine's reserved `updatedAt` (auto-rewritten every save), so it can't hold history; the log now shows `created` instead. Kept declared (never dropped in place) so existing rows' data is not orphaned."
+    },
+    {
+      "name": "pos",
+      "type": "text",
+      "label": "Map position",
+      "rules": {
+        "hidden": true
+      }
+    },
+    {
+      "name": "mapNest",
+      "type": "text",
+      "label": "Map nest",
+      "rules": {
+        "hidden": true
+      }
+    },
+    {
+      "name": "estimateMins",
+      "type": "number",
+      "label": "Estimate (min)",
+      "description": "Estimated effort in minutes. Empty = unestimated (not zero)."
+    },
+    {
+      "name": "priority",
+      "type": "enum",
+      "label": "Priority",
+      "options": [
+        "urgent",
+        "high",
+        "normal",
+        "low"
+      ],
+      "default": "normal",
+      "description": "Urgency axis — drives queue triage."
+    },
+    {
+      "name": "importance",
+      "type": "enum",
+      "label": "Importance",
+      "options": [
+        "high",
+        "normal",
+        "low"
+      ],
+      "default": "normal",
+      "description": "Importance axis (orthogonal to priority's urgency)."
+    },
+    {
+      "name": "prioLane",
+      "type": "enum",
+      "label": "Priority",
+      "options": [
+        "immediate",
+        "now",
+        "next",
+        "queued",
+        "later"
+      ],
+      "description": "Ordered triage lane (immediate > now > next > queued > later) — drives the Priorities view and the priority filter. Separate from the pre-existing urgency (priority) and importance axes above. Unset falls back to this row's `status` (active→Now, queued→Queued, discussed→Later); a row with no status set gets no lane at all. Not auto-written (a fresh board isn't forced to assign). Labels are placeholders, renameable when the tags feature ships."
+    },
+    {
+      "name": "prioRank",
+      "type": "number",
+      "label": "Rank",
+      "description": "Numeric ordering within a priority lane — lower = higher rank. Equal rank means an intended batch: rows meant to complete together. Not the same as the priority/importance axes above."
+    },
+    {
+      "name": "color",
+      "type": "text",
+      "label": "Color",
+      "description": "Optional edge-stripe color shown on tree/lane tiles: a ramp name (blue/teal/green/purple/gray/amber/coral/red) or a #RRGGBB / #AARRGGBB hex string — the SAME convention tag_types.color already uses. Typically set on a top-level project (group) row so its tasks read at a glance in any view; unset = no stripe."
+    },
+    {
+      "name": "icon",
+      "type": "text",
+      "label": "Icon",
+      "description": "Optional leading glyph shown on tree/lane tiles — a single emoji (e.g. 🚀). Typically set on a top-level project row alongside `color`. Unset = no glyph."
+    },
+    {
+      "name": "viewMode",
+      "type": "enum",
+      "label": "View mode",
+      "options": [
+        "",
+        "priorities",
+        "plan",
+        "bublie",
+        "list",
+        "files"
+      ],
+      "default": "",
+      "rules": {
+        "hidden": true
+      },
+      "description": "overview-0804: which detail-pane lens (type=group rows only) is currently open — Priorities/Plan/Bublie/List/Project files. Unset/\"\" = no lens open, the compact project OVERVIEW shows instead (stats/priorities-preview/chips/people). Written directly by ui.json's overview chips and each lens's '← Overview' button via setField — no segments-node engine hook needed (that limitation from the v1 note below no longer applies since this build stopped using the `segments` node for the group detail entirely). Default flipped from 'list' to '' so lenses open ONLY on deliberate tap, never auto-stacked. rehome-0804: 'plan' added — goals/milestones/decisions grouped by role, scoped to this project's subtree (the re-homed old dispatch Plan tab). v1 history: previously recorded intent only, never read back."
+    },
+    {
+      "name": "scheduledStart",
+      "type": "date",
+      "label": "Scheduled",
+      "description": "When work is planned to start."
+    },
+    {
+      "name": "due",
+      "type": "date",
+      "label": "Due",
+      "description": "Due / target date."
+    },
+    {
+      "name": "tags",
+      "type": "enum",
+      "label": "Tags",
+      "multi": true,
+      "rules": {
+        "optionsFrom": {
+          "table": "tag_types",
+          "value": "name",
+          "label": "label",
+          "color": "color"
+        }
+      },
+      "description": "User-editable tags — the option list is data, not a fixed schema: add/rename/recolor tag types on the Tags screen and every picker (this field, Add-filter) picks the change up live. No static options here on purpose; an empty/missing tag_types table just means no tags exist yet."
+    },
+    {
+      "name": "rulesActive",
+      "type": "boolean",
+      "label": "Rules active",
+      "rules": {
+        "hidden": true
+      },
+      "description": "Marker: true when this project (type=group) carries a Rules panel — set alongside rulesVersion/rules whenever rules content is written (data/import/sync, no in-app editor in v1). Absent/false hides the Rules panel entirely."
+    },
+    {
+      "name": "rulesVersion",
+      "type": "text",
+      "label": "Version",
+      "rules": {
+        "hidden": true
+      },
+      "description": "Short version stamp for this project's Rules panel, e.g. \"v1 (2026-08-01)\". Shown small above the rule lines."
+    },
+    {
+      "name": "rules",
+      "type": "text",
+      "label": "Rules",
+      "rules": {
+        "hidden": true
+      },
+      "description": "Project rules — metadata about how work happens under this project (\"respect these when working within this project\"), distinct from tasks/notes. One rule per line (plain multi-line text, newline-separated). Set via data/import/sync; no in-app editor in v1."
+    },
+    {
+      "name": "rulesInherited",
+      "type": "boolean",
+      "label": "Rules inherited",
+      "rules": {
+        "hidden": true
+      },
+      "description": "DERIVED (do not hand-edit): true when at least one ANCESTOR project's rules contribute to this row's effectiveRules — drives the badge on this row's explorer tile and the compact inherited-rules panel on rows with no rules of their own. SELECTIVE-INHERITANCE POLICY: the sole global root's own rules are global practice (visible at the root row itself) and are NEVER counted here or folded into effectiveRules for descendants — only a rules-carrying project BELOW the root propagates this flag/text to its subtree. This is what keeps recompute from stamping the root's rules onto every row in the tree (previously ~1,500 rows x ~573 chars). Auto-recomputed ~600ms after any board write while Dispatch is open (rulesauto-0807, debounced in app_screen.dart's `_onBoardChanged`); the Rules panel's \"Recompute rules\" button (hostCall recomputeRulesInheritance) still exists for an immediate/manual pass with a confirmation snackbar."
+    },
+    {
+      "name": "effectiveRules",
+      "type": "text",
+      "label": "Effective rules",
+      "rules": {
+        "hidden": true
+      },
+      "description": "DERIVED — ancestor contains-walk concatenation, own rules last; auto-recomputed ~600ms after any board write while Dispatch is open (rulesauto-0807), or on-demand via the Rules panel action. Excludes the sole global root's rules (see rulesInherited's selective-inheritance policy) — empty when the only contributing ancestor would have been the root."
+    }
+  ],
+  "relations": [
+    {
+      "name": "fromId",
+      "type": "ref",
+      "label": "From",
+      "refTable": "entries",
+      "required": true,
+      "description": "The source node of this relationship."
+    },
+    {
+      "name": "toId",
+      "type": "ref",
+      "label": "To",
+      "refTable": "entries",
+      "required": true,
+      "description": "The target node of this relationship."
+    },
+    {
+      "name": "type",
+      "type": "enum",
+      "label": "Relationship",
+      "options": [
+        "contains",
+        "references",
+        "depends_on",
+        "relates_to",
+        "blocks",
+        "requires",
+        "completes",
+        "supersedes"
+      ],
+      "default": "relates_to",
+      "description": "How the two nodes relate. `contains` is the structural parent→child (drives the tree); the rest are free cross-links (any direction, may be mutual). Plan edges: `requires` (goal → item it needs), `completes` (milestone/task → goal it advances), `supersedes` (a decision → the earlier one it overrides). Custom types allowed."
+    },
+    {
+      "name": "order",
+      "type": "number",
+      "label": "Order",
+      "rules": {
+        "hidden": true
+      },
+      "description": "Display order among a node's contained children."
+    },
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Label",
+      "description": "Optional note on the edge (e.g. 'blocked on the bug fix')."
+    }
+  ],
+  "users": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true
+    }
+  ],
+  "tag_types": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true,
+      "description": "The stored value written onto an entry's Tags field. Renaming here only changes the display going forward — existing entries keep the old stored value until re-tagged."
+    },
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Display label",
+      "description": "Optional friendlier text shown in chips and pickers instead of the raw name. Leave blank to just show name."
+    },
+    {
+      "name": "color",
+      "type": "text",
+      "label": "Color",
+      "description": "Optional chip color: a ramp name (blue/teal/green/purple/gray/amber/coral/red) or a #RRGGBB / #AARRGGBB hex string."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "crypto",
+  "name": "Crypto",
+  "category": "Finance",
+  "icon": "currency_bitcoin",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_crypto"
+  },
+  "seedVersion": "2026-06-09.1"
+}

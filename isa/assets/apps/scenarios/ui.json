@@ -1,0 +1,517 @@
+{
+  "app": {
+    "title": "Scenarios",
+    "primaryColor": "#2E6E5A"
+  },
+  "nav": [
+    {
+      "id": "runs",
+      "label": "Setup & runs",
+      "icon": "play_arrow",
+      "screen": "runs"
+    },
+    {
+      "id": "provenance",
+      "label": "Provenance",
+      "icon": "fact_check",
+      "screen": "provenance"
+    },
+    {
+      "id": "data",
+      "label": "Data",
+      "icon": "dataset",
+      "screen": "data"
+    },
+    {
+      "id": "about",
+      "label": "About",
+      "icon": "info",
+      "screen": "about"
+    }
+  ],
+  "screens": {
+    "runs": {
+      "title": "Setup & runs",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Set up a run here; the Pipeline screen explains each step's logic, and Provenance traces every finished run end to end."
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Confidence tiers at a glance: green FOCUSED = calibrated to real, sourced local targets — fit to inform decisions; amber EXPLORATORY = transferred anchors — coverage and comparison only, not a decision basis."
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "Model setup"
+          },
+          {
+            "type": "cards",
+            "table": "run_config",
+            "title": "run_label",
+            "subtitle": "last_status",
+            "expandable": true,
+            "open": "Model setup",
+            "expandFields": [
+              {
+                "column": "model",
+                "label": "Model"
+              },
+              {
+                "column": "model_version",
+                "label": "Model version (git sha)"
+              },
+              {
+                "column": "city",
+                "label": "City / region"
+              },
+              {
+                "column": "year",
+                "label": "Scenario year"
+              },
+              {
+                "column": "growth",
+                "label": "Growth factor"
+              },
+              {
+                "column": "beta",
+                "label": "Distribution β (override)"
+              },
+              {
+                "column": "calib",
+                "label": "Calibration mode"
+              },
+              {
+                "column": "endpoint",
+                "label": "Endpoint"
+              }
+            ],
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": "Run on server — coming soon",
+                "icon": "play_arrow",
+                "action": {
+                  "fn": "setFields",
+                  "args": {
+                    "table": "run_config",
+                    "id": "cfg",
+                    "set": {
+                      "last_run": "now",
+                      "last_status": "Run requested — recorded locally. Server compute is not yet authorized for this app."
+                    }
+                  },
+                  "confirm": "Records your run request locally — the server model endpoint is not yet authorized for this app."
+                }
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "table": "runs",
+            "title": "label",
+            "subtitle": "scenario",
+            "sortBy": "when",
+            "sortDir": "desc",
+            "expandable": true,
+            "open": "Open run record",
+            "tags": [
+              {
+                "column": "tier",
+                "colors": {
+                  "focused": "green",
+                  "exploratory": "amber"
+                }
+              },
+              {
+                "column": "status",
+                "colors": {
+                  "precomputed": "gray",
+                  "live model run": "teal",
+                  "imported": "blue"
+                }
+              }
+            ],
+            "expandFields": [
+              {
+                "column": "model_version",
+                "label": "Model version (git sha)"
+              },
+              {
+                "column": "total_trips",
+                "label": "HBW trips/day"
+              },
+              {
+                "column": "transit_pct",
+                "label": "Transit share %"
+              },
+              {
+                "column": "note",
+                "label": "Note"
+              }
+            ],
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": "See it on the map — Atlas",
+                "icon": "travel_explore",
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "openApplet",
+                    "appId": "atlas",
+                    "title": "Atlas — place analysis"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "The logic — Urbanset",
+                "icon": "account_tree",
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "openApplet",
+                    "appId": "terrain",
+                    "title": "Urbanset"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "provenance": {
+      "title": "Provenance",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Trace any number end to end: run → model version → input datasets → soundness checks → confidence tier."
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "Run record"
+          },
+          {
+            "type": "record",
+            "table": "runs",
+            "readOnly": true,
+            "fields": [
+              "label",
+              "city",
+              "year",
+              "scenario",
+              "model_version",
+              "tier",
+              "total_trips",
+              "transit_pct",
+              "avg_trip_mi",
+              "pass_count",
+              "warn_count",
+              "fail_count"
+            ]
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "Inputs"
+          },
+          {
+            "type": "table",
+            "table": "run_inputs",
+            "columns": [
+              "from",
+              "to",
+              "type"
+            ],
+            "height": 180
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "Soundness checks"
+          },
+          {
+            "type": "cards",
+            "table": "soundness_checks",
+            "title": "check",
+            "subtitle": "detail",
+            "sortBy": "ord",
+            "sortDir": "asc",
+            "expandable": true,
+            "open": "Open check",
+            "tags": [
+              {
+                "column": "status",
+                "colors": {
+                  "pass": "green",
+                  "warn": "amber",
+                  "fail": "coral"
+                }
+              },
+              {
+                "column": "standard"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "Confidence tier"
+          },
+          {
+            "type": "cards",
+            "table": "confidence_tiers",
+            "title": "tier",
+            "subtitle": "meaning",
+            "expandable": true,
+            "open": "What earns / downgrades this tier"
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "Version history"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Each model version is a git sha; every run pins the exact sha that produced it, so the same code state can be restored and re-run."
+          },
+          {
+            "type": "table",
+            "table": "model_history",
+            "columns": [
+              "model_version",
+              "date",
+              "kind",
+              "what_changed",
+              "by"
+            ],
+            "height": 220,
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "data": {
+      "title": "Data — sources, feeds, shapes, layers",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Everything the models read and paint, in one place — add, import, or take out any of it; every entry is an editable row with provenance."
+          },
+          {
+            "type": "segments",
+            "segments": [
+              {
+                "label": "Sources",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "row",
+                      "children": [
+                        {
+                          "type": "button",
+                          "label": "Add dataset",
+                          "icon": "add",
+                          "action": {
+                            "fn": "addRow",
+                            "args": {
+                              "table": "datasets"
+                            }
+                          }
+                        },
+                        {
+                          "type": "button",
+                          "label": "Import CSV",
+                          "icon": "upload",
+                          "action": {
+                            "fn": "hostCall",
+                            "args": {
+                              "name": "importCsv",
+                              "table": "datasets"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "style": "caption",
+                      "value": "Every dataset that feeds the model, with its source, vintage and access — the data-lineage spine."
+                    },
+                    {
+                      "type": "cards",
+                      "table": "datasets",
+                      "title": "name",
+                      "subtitle": "source",
+                      "search": true,
+                      "searchColumns": [
+                        "name",
+                        "source",
+                        "used_by"
+                      ],
+                      "collapsible": true,
+                      "groupByOptions": [
+                        {
+                          "label": "Access",
+                          "column": "keyed"
+                        }
+                      ],
+                      "tags": [
+                        {
+                          "column": "keyed",
+                          "colors": {
+                            "keyless": "green",
+                            "api-key": "amber",
+                            "license": "red"
+                          }
+                        }
+                      ],
+                      "expandable": true,
+                      "expandFields": [
+                        {
+                          "column": "source",
+                          "label": "Source"
+                        },
+                        {
+                          "column": "vintage",
+                          "label": "Vintage / year"
+                        },
+                        {
+                          "column": "used_by",
+                          "label": "Used by"
+                        },
+                        {
+                          "column": "citation",
+                          "label": "URL / citation"
+                        }
+                      ],
+                      "action": {
+                        "fn": "editRow"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "GTFS",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "row",
+                      "children": [
+                        {
+                          "type": "button",
+                          "label": "Add GTFS feed",
+                          "icon": "add",
+                          "action": {
+                            "fn": "addRow",
+                            "args": {
+                              "table": "datasets",
+                              "values": {
+                                "kind": "gtfs",
+                                "keyed": "keyless",
+                                "status": "active"
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "table",
+                      "table": "datasets",
+                      "filters": {
+                        "kind": "gtfs"
+                      },
+                      "columns": [
+                        "name",
+                        "source",
+                        "endpoint",
+                        "vintage",
+                        "status"
+                      ],
+                      "height": 300,
+                      "action": {
+                        "fn": "editRow"
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "label": "Run on server — coming soon",
+                      "icon": "cloud_download",
+                      "action": {
+                        "fn": "http",
+                        "onError": "continue",
+                        "confirm": "Intent recorded — feed refresh runs server-side once /model authorizes terrain.",
+                        "args": {
+                          "method": "POST",
+                          "url": "https://167.233.64.97/model/gtfs_refresh",
+                          "body": {
+                            "table": "datasets"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "about": {
+      "title": "About Scenarios",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Configure, run, and prove it"
+          },
+          {
+            "type": "text",
+            "value": "Scenarios is the run room of the urban-models suite: set up a model run, create scenarios, and keep the proof — every run pins its model version, its input data sources (including GTFS feeds), the 11-check soundness audit it passed, and a confidence tier. The map lives in Atlas; the logic lives in Urbanset; reports live in Model reports."
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Live server runs are authorization-locked today (the run button records the intent honestly); precomputed and imported runs carry the full trace."
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "transit_dashboard",
+  "name": "Transit dashboard",
+  "category": "Maps",
+  "icon": "public",
+  "color": "#1b7a4b",
+  "store": { "type": "sqflite", "namespace": "isan_transit_web" },
+  "seedVersion": "2026-06-18.1"
+}

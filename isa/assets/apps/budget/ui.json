@@ -1,0 +1,258 @@
+{
+  "app": {
+    "title": "Budget",
+    "primaryColor": "#15803D",
+    "theme": "minimal"
+  },
+  "nav": [
+    { "id": "dashboard", "label": "Overview", "icon": "dashboard", "screen": "dashboard" },
+    { "id": "transactions", "label": "Spending", "icon": "list", "screen": "transactions" },
+    { "id": "budgets", "label": "Budgets", "icon": "flag", "screen": "budgets" },
+    { "id": "accounts", "label": "Accounts", "icon": "table_rows", "screen": "accounts" }
+  ],
+  "screens": {
+    "dashboard": {
+      "title": "Overview",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Where the money goes. Log entries on the Spending tab; set limits on Budgets."
+          },
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "stat",
+                "table": "transactions",
+                "agg": "sum",
+                "valueColumn": "amount",
+                "filter": { "column": "type", "value": "expense" },
+                "label": "Spent",
+                "color": "coral"
+              },
+              {
+                "type": "stat",
+                "table": "transactions",
+                "agg": "sum",
+                "valueColumn": "amount",
+                "filter": { "column": "type", "value": "income" },
+                "label": "Income",
+                "color": "green"
+              },
+              {
+                "type": "stat",
+                "table": "transactions",
+                "agg": "count",
+                "filter": { "column": "type", "value": "expense" },
+                "label": "Expenses logged",
+                "color": "blue"
+              }
+            ]
+          },
+          {
+            "type": "piechart",
+            "table": "transactions",
+            "groupColumn": "category",
+            "valueColumn": "amount",
+            "filter": { "column": "type", "value": "expense" },
+            "label": "Spending by category"
+          },
+          {
+            "type": "barchart",
+            "table": "transactions",
+            "groupColumn": "month",
+            "valueColumn": "amount",
+            "agg": "sum",
+            "filter": { "column": "type", "value": "expense" },
+            "label": "Spending by month"
+          }
+        ]
+      }
+    },
+    "transactions": {
+      "title": "Spending",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Log expenses and income. Month is YYYY-MM (e.g. 2026-06) — it feeds the by-month chart. Bank CSV exports can be imported: ask Claude to convert a CSV into an applet update."
+          },
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": "Add expense",
+                "icon": "add",
+                "action": {
+                  "fn": "addRow",
+                  "args": { "table": "transactions", "values": { "type": "expense" } }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Add income",
+                "icon": "add",
+                "action": {
+                  "fn": "addRow",
+                  "args": { "table": "transactions", "values": { "type": "income", "category": "salary" } }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Clear samples",
+                "icon": "check",
+                "action": {
+                  "chain": [
+                    {
+                      "fn": "deleteRows",
+                      "args": {
+                        "table": "transactions",
+                        "where": { "column": "note", "value": "Sample row — delete me" }
+                      }
+                    },
+                    {
+                      "fn": "hostCall",
+                      "args": { "name": "toast", "message": "Sample rows cleared" }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "table": "transactions",
+            "emptyIcon": "attach_money",
+            "emptyTitle": "No transactions yet",
+            "emptyText": "Log your first expense or income to start tracking where the money goes.",
+            "emptyAction": { "fn": "addRow", "args": { "table": "transactions", "values": { "type": "expense" } } },
+            "emptyActionLabel": "Add expense",
+            "search": true,
+            "sort": { "column": "date", "dir": "desc" },
+            "title": "payee",
+            "subtitle": "amount",
+            "tags": [
+              {
+                "column": "category",
+                "colors": {
+                  "groceries": "green",
+                  "dining": "amber",
+                  "transport": "blue",
+                  "housing": "purple",
+                  "utilities": "teal",
+                  "subscriptions": "pink",
+                  "entertainment": "coral",
+                  "health": "red",
+                  "shopping": "gray",
+                  "travel": "blue",
+                  "salary": "green",
+                  "other": "gray"
+                }
+              },
+              {
+                "column": "type",
+                "colors": { "expense": "coral", "income": "green" }
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              { "column": "date", "label": "Date" },
+              { "column": "month", "label": "Month" },
+              { "column": "account", "label": "Account" },
+              { "column": "note", "label": "Note" }
+            ],
+            "open": "Edit",
+            "action": { "fn": "editRow" }
+          }
+        ]
+      }
+    },
+    "budgets": {
+      "title": "Budgets",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Monthly limit per category (top chart) vs what you've actually spent (bottom chart)."
+          },
+          {
+            "type": "button",
+            "label": "Add budget",
+            "icon": "add",
+            "action": { "fn": "addRow", "args": { "table": "budgets" } }
+          },
+          {
+            "type": "barchart",
+            "table": "budgets",
+            "labelColumn": "category",
+            "valueColumn": "limit",
+            "label": "Monthly limits"
+          },
+          {
+            "type": "barchart",
+            "table": "transactions",
+            "groupColumn": "category",
+            "valueColumn": "amount",
+            "agg": "sum",
+            "filter": { "column": "type", "value": "expense" },
+            "label": "Actually spent (all time)"
+          },
+          {
+            "type": "cards",
+            "table": "budgets",
+            "emptyIcon": "flag",
+            "emptyTitle": "No budgets set",
+            "emptyText": "Set a monthly limit for a category to track spending against your plan.",
+            "emptyAction": { "fn": "addRow", "args": { "table": "budgets" } },
+            "emptyActionLabel": "Add budget",
+            "title": "category",
+            "subtitle": "limit",
+            "open": "Edit",
+            "action": { "fn": "editRow" }
+          }
+        ]
+      }
+    },
+    "accounts": {
+      "title": "Accounts",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Where money lives. Balances are informational — transactions don't adjust them automatically (yet)."
+          },
+          {
+            "type": "button",
+            "label": "Add account",
+            "icon": "add",
+            "action": { "fn": "addRow", "args": { "table": "accounts" } }
+          },
+          {
+            "type": "cards",
+            "table": "accounts",
+            "title": "name",
+            "subtitle": "balance",
+            "tags": [
+              {
+                "column": "kind",
+                "colors": { "checking": "blue", "savings": "green", "credit": "coral", "cash": "amber" }
+              }
+            ],
+            "open": "Edit",
+            "action": { "fn": "editRow" }
+          }
+        ]
+      }
+    }
+  }
+}

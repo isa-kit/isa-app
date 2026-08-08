@@ -1,0 +1,11 @@
+{
+  "id": "hexnom",
+  "name": "Hexnom",
+  "category": "Games",
+  "icon": "hexagon",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_hexnom"
+  },
+  "seedVersion": "2026-07-03.protocols-v2"
+}

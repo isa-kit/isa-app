@@ -1,0 +1,40 @@
+{
+  "tables": [
+    {
+      "name": "pages",
+      "label": "Pages & folders",
+      "icon": "dashboard_customize",
+      "description": "The library: wireframe pages and the folders that organize them (folders nest; a page is one canvas)."
+    },
+    {
+      "name": "boxes",
+      "label": "Wireframe blocks",
+      "icon": "crop_square",
+      "description": "UI blocks (screen frame, nav, button, input, text, image, list, section): drag to place, resize from the corner, tap to edit label + note."
+    },
+    {
+      "name": "layers",
+      "label": "Layers",
+      "icon": "layers",
+      "description": "Sheets within a page that group blocks; each can be shown/hidden or locked."
+    },
+    {
+      "name": "links",
+      "label": "Wireframe links",
+      "icon": "link",
+      "description": "Optional arrows between wireframe blocks (navigation: 'tapping this goes to that')."
+    },
+    {
+      "name": "sketch",
+      "label": "Sketch",
+      "icon": "gesture",
+      "description": "Freehand annotations drawn over the wireframe (one row)."
+    },
+    {
+      "name": "customWidgets",
+      "label": "Saved widgets",
+      "icon": "bookmark_add",
+      "description": "Your reusable custom widgets: a saved group of blocks (and the links between them) you can drag back out of the drawer to drop a fresh copy."
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "tables": [
+    {
+      "name": "models",
+      "label": "Model stack",
+      "icon": "account_tree",
+      "description": "Every model + analysis layer in the transit4 stack: what it does, coverage, in/out summary, version, confidence tier."
+    },
+    {
+      "name": "cities",
+      "label": "Cities covered",
+      "icon": "location_city",
+      "description": "Registered places the model runs, with confidence tier and role (focused vs exploratory)."
+    },
+    {
+      "name": "model_steps",
+      "label": "Model steps",
+      "icon": "account_tree",
+      "description": "The four-step chain as editable bubble rows: inputs, generation, distribution, mode choice, assignment, outputs."
+    },
+    {
+      "name": "step_links",
+      "label": "Data flows",
+      "icon": "sync_alt",
+      "description": "One row per arrow between steps: what data flows, which dataset feeds it, flow vs calibration loop."
+    },
+    {
+      "name": "metric_families",
+      "label": "Metric families",
+      "icon": "category",
+      "description": "The registry of what terrain measures — one row per metric, grouped into families, with source dataset, model/layer, and honest status (live / planned / proxy)."
+    },
+    {
+      "name": "zone_systems",
+      "label": "Zone systems",
+      "icon": "grid_4x4",
+      "description": "Every shape the model can run on — from raw census blocks to custom polygons — each with its fidelity to the original data and the validated conversion (crosswalk) between them."
+    },
+    {
+      "name": "modes",
+      "label": "Modes",
+      "icon": "commute",
+      "description": "Travel modes across scales — local walk/bike/bus to national rail and flights — with honest status and like-for-like comparability notes."
+    },
+    {
+      "name": "wellbeing_factors",
+      "label": "Wellbeing factors",
+      "icon": "favorite",
+      "description": "The quality-of-life / happiness index registry: each factor cites the research it stands on, the data that measures it, why it is included, its cons, and a user-adjustable weight. Core factors are predetermined; everything is add/remove/re-weight as rows."
+    },
+    {
+      "name": "methods",
+      "label": "Methods & formulas",
+      "icon": "functions",
+      "description": "The modular algorithm registry: every statistical/geospatial method — what it does, when to use it, its cons, and the documentation it must carry when applied. Melting-tracts vs radius-averages both live here, documented."
+    },
+    {
+      "name": "model_layers",
+      "label": "Algorithm layers",
+      "icon": "layers",
+      "description": "The join that makes methods composable: one row per algorithm working inside a model — its role, whether it is active, selectable (calibration solvers), or planned. Add/swap/remove a layer as a row."
+    },
+    {
+      "name": "run_config",
+      "label": "Run setup",
+      "icon": "tune",
+      "description": "One row (cfg): the scenario the four-step model runs — model, tier, city, year — plus the recorded calibration snapshot fields. Tap it on the Runs screen to edit."
+    },
+    {
+      "name": "runs",
+      "label": "Model runs",
+      "icon": "history",
+      "description": "The cockpit ledger: launches recorded in-app plus curated real run reports. Snapshot fields (model version, tier, beta, calib, zone system) are stamped from the setup at insert.",
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "endpoint_info",
+      "label": "Endpoint",
+      "icon": "monitor_heart",
+      "description": "Latest /health reply from the model endpoint — replaced on every health check.",
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "data_inputs",
+      "label": "Data inputs",
+      "icon": "input",
+      "description": "Geofenced input registry: every dataset each model consumes — source, geography it covers, granularity, vintage, status, script, and what it joins with."
+    },
+    {
+      "name": "model_stacks",
+      "label": "Model stacks",
+      "icon": "layers",
+      "description": "How models separate, group, and combine: named compositions with the seams documented (what data crosses between members)."
+    },
+    {
+      "name": "kr_stations",
+      "label": "Seoul transit — model outputs",
+      "icon": "hub",
+      "description": "Real output of the Korea models: every Seoul subway station (471, from OpenStreetMap) with its network-centrality scores and travel time from Seoul Station. Reproducible via tool/korea/build_korea.py."
+    },
+    {
+      "name": "providers",
+      "label": "Providers",
+      "icon": "dns",
+      "description": "Where each model actually runs — device, forge servers, hosted, or browser — as honest labels only, no endpoints or credentials here."
+    },
+    {
+      "name": "routing_tiers",
+      "label": "Auto-router tiers",
+      "icon": "route",
+      "description": "The fleet's model-tier ladder for the Auto-router policy: which Claude tier handles which kind of task, ranked by relative cost."
+    },
+    {
+      "name": "kr_district_od",
+      "label": "Seoul district travel-time matrix",
+      "icon": "hub",
+      "description": "District-to-district (25x25) average travel time in minutes, one row per origin/destination gu pair — the district-level heatmap round-1 fallback (a full 471-station origin table would have pushed content.json over its size budget). Reproducible via tool/korea/build_district_od.py."
+    },
+    {
+      "name": "kr_district_conn",
+      "label": "Seoul district overall connectivity",
+      "icon": "hub",
+      "description": "One row per district (25): mean travel time to every OTHER district (no origin needed), plus a rank and a data-driven tercile tier (well-connected/mid/peripheral). Derived additively from the already-shipped kr_district_od table. Reproducible via a tool/korea/ build script — see DATA_SOURCES.md."
+    },
+    {
+      "name": "kr_dong_conn",
+      "label": "Seoul neighborhood (dong) connectivity",
+      "icon": "hub",
+      "description": "One row per Seoul legal-dong (424, admin_level=8 — finer than the 25-gu district layer): station-mean conn_score + a data-driven quintile tier, or an honest 'no-data' tier for the 216 dong with zero member subway stations (never interpolated from neighbors). Reproducible via tool/korea/build_seoul_dong.py + build_dong_conn.py — see DATA_SOURCES.md."
+    },
+    {
+      "name": "nav_pins",
+      "label": "Navigate — dropped pins",
+      "icon": "location_pin",
+      "description": "Ordered pins dropped on the Seoul glmap Navigate layer (seq/lat/lon), read by the engine's multi-pin routing to snap each pin to the nearest kr_stations node and route consecutive pins over network.geojson. Session scratch data, not seeded — starts empty, cleared via the Clear pins button."
+    }
+  ]
+}

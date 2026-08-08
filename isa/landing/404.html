@@ -1,0 +1,25 @@
+<!doctype html>
+<!--
+  Apex 404 page (devisant.com / dev.devisant.com). The static host serves this
+  for any unmatched path; without it visitors get the host's own branded
+  default, which names the host. Shares site.css with the landing so a
+  mistyped URL still looks like part of the site. No links into /isa/ or any
+  applet. Deploy copies this to the artifact root as 404.html
+  (tool/assemble_prod_artifact.sh).
+-->
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>devisant</title>
+<link rel="stylesheet" href="/site.css">
+</head>
+<body>
+<main class="centered">
+  <h1 class="wordmark">devisant</h1>
+  <p class="lede">Nothing at this address.</p>
+  <a class="back" href="/">Back</a>
+</main>
+</body>
+</html>

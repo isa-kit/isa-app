@@ -1,0 +1,733 @@
+{
+  "app": {
+    "title": "Tripboard",
+    "primaryColor": "#C2410C",
+    "theme": "neon"
+  },
+  "nav": [
+    { "id": "start", "label": "Start here", "icon": "waving_hand", "screen": "start" },
+    { "id": "trip", "label": "Trip", "icon": "flight_takeoff", "screen": "trip" },
+    { "id": "week", "label": "Week", "icon": "view_week", "screen": "week" },
+    { "id": "calendar", "label": "Calendar", "icon": "calendar_today", "screen": "calendar" },
+    { "id": "todo", "label": "Todo", "icon": "check_circle", "screen": "todo" },
+    { "id": "packing", "label": "Packing", "icon": "luggage", "screen": "packing" },
+    { "id": "map", "label": "Map", "icon": "map", "screen": "map" },
+    { "id": "notes", "label": "Notes", "icon": "sticky_note_2", "screen": "notes" },
+    { "id": "members", "label": "Members", "icon": "people", "screen": "members" },
+    { "id": "activity", "label": "Activity", "icon": "history", "screen": "activity" }
+  ],
+  "screens": {
+    "start": {
+      "title": "Start here",
+      "body": {
+        "type": "column",
+        "crossAxis": "start",
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": "👋 Welcome to Tripboard"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "A quick tour of every view. Tap a button below to jump straight there. Hint: you can always come back here from the Start here tab."
+          },
+          {
+            "type": "card",
+            "padding": 16,
+            "radius": 12,
+            "child": {
+              "type": "column",
+              "children": [
+                { "type": "row", "children": [
+                  { "type": "text", "style": "display", "value": "✈️" },
+                  { "type": "text", "style": "title", "value": "Trip — the big picture" }
+                ] },
+                { "type": "text", "style": "body", "value": "See the trip's name and notes, and share it with your travel companions." },
+                { "type": "text", "style": "caption", "value": "Hint: tap \"Share this trip\" to invite Ana and Sam." },
+                { "type": "button", "label": "Open the Trip screen", "icon": "flight_takeoff",
+                  "action": { "fn": "goto", "args": { "screen": "trip" } } }
+              ]
+            }
+          },
+          {
+            "type": "card",
+            "padding": 16,
+            "radius": 12,
+            "child": {
+              "type": "column",
+              "children": [
+                { "type": "row", "children": [
+                  { "type": "text", "style": "display", "value": "🗓️" },
+                  { "type": "text", "style": "title", "value": "Week — loose plans" }
+                ] },
+                { "type": "text", "style": "body", "value": "Ideas for each week of the trip, before they have an exact date." },
+                { "type": "text", "style": "caption", "value": "Hint: tap \"New plan\" to add one." },
+                { "type": "button", "label": "Open the Week board", "icon": "view_week",
+                  "action": { "fn": "goto", "args": { "screen": "week" } } }
+              ]
+            }
+          },
+          {
+            "type": "card",
+            "padding": 16,
+            "radius": 12,
+            "child": {
+              "type": "column",
+              "children": [
+                { "type": "row", "children": [
+                  { "type": "text", "style": "display", "value": "📅" },
+                  { "type": "text", "style": "title", "value": "Calendar — dated events" }
+                ] },
+                { "type": "text", "style": "body", "value": "Everything that has an exact date, laid out on a monthly grid." },
+                { "type": "text", "style": "caption", "value": "Hint: tap a day to add an event already dated to that day." },
+                { "type": "button", "label": "Open the Calendar", "icon": "calendar_today",
+                  "action": { "fn": "goto", "args": { "screen": "calendar" } } }
+              ]
+            }
+          },
+          {
+            "type": "card",
+            "padding": 16,
+            "radius": 12,
+            "child": {
+              "type": "column",
+              "children": [
+                { "type": "row", "children": [
+                  { "type": "text", "style": "display", "value": "✅" },
+                  { "type": "text", "style": "title", "value": "Todo — things to do" }
+                ] },
+                { "type": "text", "style": "body", "value": "A shared checklist for the trip." },
+                { "type": "text", "style": "caption", "value": "Hint: tap a todo to mark it done." },
+                { "type": "button", "label": "Open the Todo list", "icon": "check_circle",
+                  "action": { "fn": "goto", "args": { "screen": "todo" } } }
+              ]
+            }
+          },
+          {
+            "type": "card",
+            "padding": 16,
+            "radius": 12,
+            "child": {
+              "type": "column",
+              "children": [
+                { "type": "row", "children": [
+                  { "type": "text", "style": "display", "value": "🧳" },
+                  { "type": "text", "style": "title", "value": "Packing — what to bring" }
+                ] },
+                { "type": "text", "style": "body", "value": "A shared packing list, so nobody forgets the charger." },
+                { "type": "text", "style": "caption", "value": "Hint: tap an item to mark it packed." },
+                { "type": "button", "label": "Open the Packing list", "icon": "luggage",
+                  "action": { "fn": "goto", "args": { "screen": "packing" } } }
+              ]
+            }
+          },
+          {
+            "type": "card",
+            "padding": 16,
+            "radius": 12,
+            "child": {
+              "type": "column",
+              "children": [
+                { "type": "row", "children": [
+                  { "type": "text", "style": "display", "value": "🗺️" },
+                  { "type": "text", "style": "title", "value": "Map — everything with a pin" }
+                ] },
+                { "type": "text", "style": "body", "value": "Every event and note that has a location, on one map." },
+                { "type": "text", "style": "caption", "value": "Hint: tap a pin to open it." },
+                { "type": "button", "label": "Open the Map", "icon": "map",
+                  "action": { "fn": "goto", "args": { "screen": "map" } } }
+              ]
+            }
+          },
+          {
+            "type": "card",
+            "padding": 16,
+            "radius": 12,
+            "child": {
+              "type": "column",
+              "children": [
+                { "type": "row", "children": [
+                  { "type": "text", "style": "display", "value": "📝" },
+                  { "type": "text", "style": "title", "value": "Notes — freeform" }
+                ] },
+                { "type": "text", "style": "body", "value": "Anything worth writing down that isn't a todo or an event." },
+                { "type": "text", "style": "caption", "value": "Hint: tap \"New note\" to add one." },
+                { "type": "button", "label": "Open Notes", "icon": "sticky_note_2",
+                  "action": { "fn": "goto", "args": { "screen": "notes" } } }
+              ]
+            }
+          },
+          {
+            "type": "card",
+            "padding": 16,
+            "radius": 12,
+            "child": {
+              "type": "column",
+              "children": [
+                { "type": "row", "children": [
+                  { "type": "text", "style": "display", "value": "👥" },
+                  { "type": "text", "style": "title", "value": "Members — who's on the trip" }
+                ] },
+                { "type": "text", "style": "body", "value": "Add yourself as a member, then tap your own card to set it as you." },
+                { "type": "text", "style": "caption", "value": "Hint: tap \"Add a member card\" first, then tap it to become that member." },
+                { "type": "button", "label": "Open Members", "icon": "people",
+                  "action": { "fn": "goto", "args": { "screen": "members" } } }
+              ]
+            }
+          },
+          {
+            "type": "card",
+            "padding": 16,
+            "radius": 12,
+            "child": {
+              "type": "column",
+              "children": [
+                { "type": "row", "children": [
+                  { "type": "text", "style": "display", "value": "🕘" },
+                  { "type": "text", "style": "title", "value": "Activity — the audit trail" }
+                ] },
+                { "type": "text", "style": "body", "value": "Every row on the trip, most recently updated first." },
+                { "type": "text", "style": "caption", "value": "Hint: nothing to tap here yet — this fills in as the trip fills in." },
+                { "type": "button", "label": "Open Activity", "icon": "history",
+                  "action": { "fn": "goto", "args": { "screen": "activity" } } }
+              ]
+            }
+          },
+          { "type": "divider" },
+          {
+            "type": "card",
+            "padding": 16,
+            "radius": 12,
+            "child": {
+              "type": "column",
+              "children": [
+                { "type": "row", "children": [
+                  { "type": "text", "style": "display", "value": "🔗" },
+                  { "type": "text", "style": "title", "value": "How sharing works" }
+                ] },
+                {
+                  "type": "text",
+                  "style": "body",
+                  "value": "Sharing this trip requires signing in. Once you share it with Ana and Sam, they get their own copy that stays in sync — removing someone later stops NEW updates reaching them, but any copy they already synced stays on their device (it can't be recalled)."
+                },
+                { "type": "text", "style": "caption", "value": "Hint: tap \"Share this trip\" on the Trip screen when you're ready." },
+                { "type": "button", "label": "Open the Trip screen", "icon": "flight_takeoff",
+                  "action": { "fn": "goto", "args": { "screen": "trip" } } }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "trip": {
+      "title": "Trip",
+      "body": {
+        "type": "column",
+        "crossAxis": "start",
+        "children": [
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "✈️ Trip"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Sharing this trip requires signing in. Once you share it with Ana and Sam, they get their own copy that stays in sync — removing someone later stops NEW updates reaching them, but any copy they already synced stays on their device (it can't be recalled)."
+          },
+          {
+            "type": "cards",
+            "table": "entries",
+            "filter": { "column": "kind", "value": "trip" },
+            "title": "title",
+            "subtitle": "body",
+            "accentColumn": "kind",
+            "accentColors": { "trip": "purple" },
+            "expandable": true,
+            "expandChevron": true,
+            "expandFields": [
+              { "column": "body", "label": "Notes" }
+            ],
+            "action": { "fn": "editRow" },
+            "tableView": false
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "Share this trip",
+                "icon": "share",
+                "action": {
+                  "fn": "shareProject",
+                  "args": { "table": "entries", "id": "trip_root" }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Trip settings",
+                "icon": "settings",
+                "action": {
+                  "fn": "projectSettings",
+                  "args": { "table": "entries", "id": "trip_root" }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "week": {
+      "title": "Week board",
+      "body": {
+        "type": "column",
+        "crossAxis": "start",
+        "children": [
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "🗓️ Week plans"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Loose plans for the trip, grouped by week. Tap a card to open it."
+          },
+          {
+            "type": "button",
+            "label": "New plan",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "entries",
+                "values": { "kind": "plan", "author": "$setting:tripboardMemberId", "createdBy": "$playerId" },
+                "link": { "table": "relations", "fromId": "trip_root", "type": "contains" }
+              }
+            }
+          },
+          {
+            "type": "cards",
+            "table": "entries",
+            "filter": { "column": "kind", "value": "plan" },
+            "groupByOptions": [
+              { "label": "Week", "column": "weekLabel" }
+            ],
+            "groupBy": "weekLabel",
+            "title": "title",
+            "subtitle": "body",
+            "tags": [
+              { "column": "author" }
+            ],
+            "accentColumn": "kind",
+            "accentColors": { "plan": "amber" },
+            "expandable": true,
+            "expandChevron": true,
+            "expandFields": [
+              { "column": "weekLabel", "label": "Week" },
+              { "column": "body", "label": "Notes" },
+              { "column": "author", "label": "Added by" }
+            ],
+            "open": "Open",
+            "action": { "fn": "editRow" },
+            "swipeActions": ["edit", "delete"],
+            "tableView": false,
+            "emptyIcon": "view_week",
+            "emptyTitle": "No plans yet",
+            "emptyText": "Add a loose plan — a week label, a title, a note — and it'll land here.",
+            "emptyAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "entries",
+                "values": { "kind": "plan", "author": "$setting:tripboardMemberId", "createdBy": "$playerId" },
+                "link": { "table": "relations", "fromId": "trip_root", "type": "contains" }
+              }
+            },
+            "emptyActionLabel": "New plan"
+          }
+        ]
+      }
+    },
+    "calendar": {
+      "title": "Calendar",
+      "body": {
+        "type": "column",
+        "crossAxis": "start",
+        "children": [
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "📅 Calendar"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Dated events — tap a day or event to open it; also pinned on the Map."
+          },
+          {
+            "type": "calendar",
+            "table": "entries",
+            "titleColumn": "title",
+            "dateColumns": ["date"],
+            "dateColumn": "date",
+            "initialView": "firstWithData",
+            "action": { "fn": "editRow" },
+            "addAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "entries",
+                "values": { "kind": "event", "author": "$setting:tripboardMemberId", "createdBy": "$playerId" },
+                "link": { "table": "relations", "fromId": "trip_root", "type": "contains" }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "todo": {
+      "title": "Todo",
+      "body": {
+        "type": "column",
+        "crossAxis": "start",
+        "children": [
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "✅ Todo"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Tap a todo to check it off; swipe left to edit or delete (deleting shows an Undo)."
+          },
+          {
+            "type": "button",
+            "label": "New todo",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "entries",
+                "values": { "kind": "todo", "status": "todo", "author": "$setting:tripboardMemberId", "createdBy": "$playerId" },
+                "link": { "table": "relations", "fromId": "trip_root", "type": "contains" }
+              }
+            }
+          },
+          {
+            "type": "cards",
+            "table": "entries",
+            "filter": { "column": "kind", "value": "todo" },
+            "sortBy": "status",
+            "title": "title",
+            "subtitle": "assignee",
+            "density": "row",
+            "toggle": true,
+            "statusColumn": "status",
+            "doneValue": "done",
+            "openValue": "todo",
+            "tags": [{ "column": "assignee" }],
+            "accentColumn": "status",
+            "accentColors": { "todo": "blue", "done": "green" },
+            "action": {
+              "fn": "toggleField",
+              "args": { "column": "status", "onValue": "done", "offValue": "todo" }
+            },
+            "swipeActions": ["edit", "delete"],
+            "tableView": false,
+            "emptyIcon": "check_circle",
+            "emptyTitle": "Nothing to do yet",
+            "emptyText": "Add the first todo and it'll show up here.",
+            "emptyAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "entries",
+                "values": { "kind": "todo", "status": "todo", "author": "$setting:tripboardMemberId", "createdBy": "$playerId" },
+                "link": { "table": "relations", "fromId": "trip_root", "type": "contains" }
+              }
+            },
+            "emptyActionLabel": "New todo"
+          }
+        ]
+      }
+    },
+    "packing": {
+      "title": "Packing",
+      "body": {
+        "type": "column",
+        "crossAxis": "start",
+        "children": [
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "🧳 Packing"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Tap an item to mark it packed; swipe left to edit or delete (deleting shows an Undo)."
+          },
+          {
+            "type": "button",
+            "label": "New item",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "entries",
+                "values": { "kind": "packing", "status": "todo", "author": "$setting:tripboardMemberId", "createdBy": "$playerId" },
+                "link": { "table": "relations", "fromId": "trip_root", "type": "contains" }
+              }
+            }
+          },
+          {
+            "type": "cards",
+            "table": "entries",
+            "filter": { "column": "kind", "value": "packing" },
+            "sortBy": "status",
+            "title": "title",
+            "subtitle": "assignee",
+            "density": "row",
+            "toggle": true,
+            "statusColumn": "status",
+            "doneValue": "done",
+            "openValue": "todo",
+            "tags": [{ "column": "assignee" }],
+            "accentColumn": "status",
+            "accentColors": { "todo": "teal", "done": "green" },
+            "action": {
+              "fn": "toggleField",
+              "args": { "column": "status", "onValue": "done", "offValue": "todo" }
+            },
+            "swipeActions": ["edit", "delete"],
+            "tableView": false,
+            "emptyIcon": "luggage",
+            "emptyTitle": "Nothing packed yet",
+            "emptyText": "Add the first item and it'll show up here.",
+            "emptyAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "entries",
+                "values": { "kind": "packing", "status": "todo", "author": "$setting:tripboardMemberId", "createdBy": "$playerId" },
+                "link": { "table": "relations", "fromId": "trip_root", "type": "contains" }
+              }
+            },
+            "emptyActionLabel": "New item"
+          }
+        ]
+      }
+    },
+    "map": {
+      "title": "Map",
+      "body": {
+        "type": "column",
+        "crossAxis": "start",
+        "children": [
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "🗺️ Map"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Every event and note that has a location, on one map — the same rows shown on the Calendar and in Notes. Tap a pin to open it. Give a note a latitude/longitude on the Notes screen and it shows up here too."
+          },
+          {
+            "type": "glmap",
+            "id": "tripMap",
+            "table": "entries",
+            "latColumn": "lat",
+            "lonColumn": "lon",
+            "labelColumn": "title",
+            "height": "420",
+            "action": { "fn": "editRow" }
+          }
+        ]
+      }
+    },
+    "notes": {
+      "title": "Notes",
+      "body": {
+        "type": "column",
+        "crossAxis": "start",
+        "children": [
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "📝 Notes"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Freeform notes. Give a note a latitude/longitude and it shows as a pin on the Map; leave them blank for a plain note."
+          },
+          {
+            "type": "button",
+            "label": "New note",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "entries",
+                "values": { "kind": "note", "type": "note", "author": "$setting:tripboardMemberId", "createdBy": "$playerId" },
+                "link": { "table": "relations", "fromId": "trip_root", "type": "contains" }
+              }
+            }
+          },
+          {
+            "type": "cards",
+            "table": "entries",
+            "filter": { "column": "kind", "value": "note" },
+            "title": "title",
+            "subtitle": "body",
+            "tags": [{ "column": "author" }],
+            "accentColumn": "kind",
+            "accentColors": { "note": "pink" },
+            "sortBy": "updatedAt",
+            "sortDir": "desc",
+            "expandable": true,
+            "expandChevron": true,
+            "expandFields": [
+              { "column": "body", "label": "Full note" },
+              { "column": "author", "label": "Added by" }
+            ],
+            "action": { "fn": "editRow" },
+            "swipeActions": ["edit", "delete"],
+            "tableView": false,
+            "emptyIcon": "sticky_note_2",
+            "emptyTitle": "No notes yet",
+            "emptyText": "Add the first note and it'll show up here.",
+            "emptyAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "entries",
+                "values": { "kind": "note", "type": "note", "author": "$setting:tripboardMemberId", "createdBy": "$playerId" },
+                "link": { "table": "relations", "fromId": "trip_root", "type": "contains" }
+              }
+            },
+            "emptyActionLabel": "New note"
+          }
+        ]
+      }
+    },
+    "members": {
+      "title": "Members",
+      "body": {
+        "type": "column",
+        "crossAxis": "start",
+        "children": [
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "👥 Members"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Add yourself below, then tap a card to set it as you (creating doesn't auto-select — sharing needs signing in, see Trip)."
+          },
+          {
+            "type": "button",
+            "label": "Add a member card",
+            "icon": "person_add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "entries",
+                "values": { "kind": "member", "createdBy": "$playerId" },
+                "link": { "table": "relations", "fromId": "trip_root", "type": "contains" }
+              }
+            }
+          },
+          {
+            "type": "cards",
+            "table": "entries",
+            "filter": { "column": "kind", "value": "member" },
+            "title": "title",
+            "density": "row",
+            "dotColumn": "color",
+            "colors": {
+              "blue": "blue", "pink": "pink", "teal": "teal", "green": "green",
+              "purple": "purple", "gray": "gray", "amber": "amber", "coral": "coral", "red": "red"
+            },
+            "tags": [{ "column": "emoji" }],
+            "accentColumn": "color",
+            "accentColors": {
+              "blue": "blue", "pink": "pink", "teal": "teal", "green": "green",
+              "purple": "purple", "gray": "gray", "amber": "amber", "coral": "coral", "red": "red"
+            },
+            "action": {
+              "fn": "setSetting",
+              "args": { "key": "tripboardMemberId" }
+            },
+            "menuActions": [
+              { "label": "Edit", "action": { "fn": "editRow" } }
+            ],
+            "tableView": false,
+            "emptyIcon": "people",
+            "emptyTitle": "Nobody yet",
+            "emptyText": "Tap \"Add a member card\" above to add yourself.",
+            "emptyAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "entries",
+                "values": { "kind": "member", "createdBy": "$playerId" },
+                "link": { "table": "relations", "fromId": "trip_root", "type": "contains" }
+              }
+            },
+            "emptyActionLabel": "Add a member card"
+          }
+        ]
+      }
+    },
+    "activity": {
+      "title": "Activity",
+      "body": {
+        "type": "column",
+        "crossAxis": "start",
+        "children": [
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "🕘 Activity"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Every row, most recently updated first — no whole-board undo (unsafe with 2+ writers); per-row delete still gives an Undo toast."
+          },
+          {
+            "type": "cards",
+            "table": "entries",
+            "filter": {
+              "column": "kind",
+              "in": ["trip", "member", "plan", "event", "todo", "packing", "note"]
+            },
+            "title": "title",
+            "subtitle": "kind",
+            "density": "row",
+            "tags": [
+              { "column": "author" },
+              { "column": "updatedAt" }
+            ],
+            "accentColumn": "kind",
+            "accentColors": {
+              "trip": "purple", "member": "gray", "plan": "amber",
+              "event": "coral", "todo": "blue", "packing": "teal", "note": "pink"
+            },
+            "sortBy": "updatedAt",
+            "sortDir": "desc",
+            "action": { "fn": "editRow" },
+            "tableView": false,
+            "emptyIcon": "history",
+            "emptyTitle": "Nothing yet",
+            "emptyText": "Add a plan, event, todo, packing item, or note and it'll show up here."
+          }
+        ]
+      }
+    }
+  }
+}

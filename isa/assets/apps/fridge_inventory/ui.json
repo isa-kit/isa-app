@@ -1,0 +1,406 @@
+{
+  "app": {
+    "title": "Fridge Inventory",
+    "primaryColor": "#689F38",
+    "theme": "pastel"
+  },
+  "nav": [
+    {
+      "id": "items",
+      "label": "Items",
+      "icon": "kitchen",
+      "screen": "items"
+    },
+    {
+      "id": "low_stock",
+      "label": "Low stock",
+      "icon": "list",
+      "screen": "low_stock"
+    },
+    {
+      "id": "recipes",
+      "label": "Recipes",
+      "icon": "menu_book",
+      "screen": "recipes"
+    }
+  ],
+  "screens": {
+    "items": {
+      "title": "Items",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "button",
+            "label": "Scan receipt → add items",
+            "action": {
+              "fn": "hostCall",
+              "args": {
+                "name": "scanReceipt",
+                "table": "items",
+                "nameColumn": "name",
+                "quantityColumn": "quantity"
+              }
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Everything in your fridge, freezer, and pantry. Tap an item to update its count or flag it low. Group by where it lives or what it is."
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "stat",
+                "table": "items",
+                "label": "Items",
+                "color": "blue"
+              },
+              {
+                "type": "stat",
+                "table": "items",
+                "filter": {
+                  "column": "lowStock",
+                  "value": true
+                },
+                "label": "Running low",
+                "color": "coral"
+              }
+            ]
+          },
+          {
+            "type": "barchart",
+            "table": "items",
+            "groupColumn": "category",
+            "label": "Stock by category"
+          },
+          {
+            "type": "button",
+            "label": "New item",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "items",
+                "values": {
+                  "location": "fridge",
+                  "quantity": 1,
+                  "unit": "each",
+                  "updated": "2026-06-05"
+                }
+              }
+            }
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "All",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "items",
+                    "column": "location",
+                    "value": ""
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Fridge",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "items",
+                    "column": "location",
+                    "value": "fridge"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Freezer",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "items",
+                    "column": "location",
+                    "value": "freezer"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Pantry",
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "items",
+                    "column": "location",
+                    "value": "pantry"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "table": "items",
+            "emptyIcon": "kitchen",
+            "emptyTitle": "Your fridge is empty",
+            "emptyText": "Add what's in your fridge, freezer, and pantry to start tracking quantities and low stock.",
+            "emptyAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "items",
+                "values": {
+                  "location": "fridge",
+                  "quantity": 1,
+                  "unit": "each",
+                  "updated": "2026-06-05"
+                }
+              }
+            },
+            "emptyActionLabel": "New item",
+            "groupBy": "location",
+            "groupOrder": [
+              "fridge",
+              "freezer",
+              "pantry"
+            ],
+            "groupByOptions": [
+              {
+                "label": "Location",
+                "column": "location"
+              },
+              {
+                "label": "Category",
+                "column": "category"
+              }
+            ],
+            "sort": {
+              "column": "name",
+              "dir": "asc"
+            },
+            "title": "name",
+            "subtitle": "category",
+            "tags": [
+              {
+                "column": "lowStock",
+                "colors": {
+                  "true": "red",
+                  "false": "green"
+                }
+              },
+              {
+                "column": "category",
+                "colors": {
+                  "dairy": "blue",
+                  "produce": "green",
+                  "meat": "coral",
+                  "pantry": "amber",
+                  "frozen": "teal",
+                  "drinks": "purple",
+                  "other": "gray"
+                }
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              {
+                "column": "quantity",
+                "label": "Quantity"
+              },
+              {
+                "column": "unit",
+                "label": "Unit"
+              },
+              {
+                "column": "fraction",
+                "label": "Fraction left"
+              },
+              {
+                "column": "location",
+                "label": "Location"
+              },
+              {
+                "column": "lowStock",
+                "label": "Low stock"
+              },
+              {
+                "column": "updated",
+                "label": "Updated"
+              }
+            ],
+            "open": "Edit item",
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "button",
+            "label": "Suggest recipes from what I have",
+            "icon": "auto_awesome",
+            "action": {
+              "fn": "callRest",
+              "args": {
+                "url": "${slmBaseUrl}/v1/chat/completions",
+                "method": "POST",
+                "pantryTable": "items",
+                "body": {
+                  "model": "qwen2.5:3b-instruct",
+                  "temperature": 0.3,
+                  "response_format": {
+                    "type": "json_object"
+                  },
+                  "messages": [
+                    {
+                      "role": "system",
+                      "content": "You are a kitchen assistant. Suggest recipes makeable mostly from the user's fridge/pantry. Reply ONLY with JSON: {\"recipes\":[{\"name\":...,\"uses\":[...],\"missing\":[...],\"steps\":[...],\"minutes\":N}]}"
+                    },
+                    {
+                      "role": "user",
+                      "content": "On hand: ${pantry}. Constraints: quick, minimal extra shopping."
+                    }
+                  ]
+                },
+                "into": "recipes",
+                "parse": {
+                  "path": "choices[0].message.content",
+                  "json": true,
+                  "rows": "recipes"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "low_stock": {
+      "title": "Low stock",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Items running low — your shopping shortlist. Tap one to top it up, then untick Low stock."
+          },
+          {
+            "type": "cards",
+            "table": "items",
+            "emptyIcon": "check_circle",
+            "emptyTitle": "Nothing running low",
+            "emptyText": "You're fully stocked — items you flag as low will gather here as your shopping shortlist.",
+            "filter": {
+              "column": "lowStock",
+              "value": "true"
+            },
+            "groupBy": "location",
+            "groupOrder": [
+              "fridge",
+              "freezer",
+              "pantry"
+            ],
+            "sort": {
+              "column": "name",
+              "dir": "asc"
+            },
+            "title": "name",
+            "subtitle": "category",
+            "tags": [
+              {
+                "column": "category",
+                "colors": {
+                  "dairy": "blue",
+                  "produce": "green",
+                  "meat": "coral",
+                  "pantry": "amber",
+                  "frozen": "teal",
+                  "drinks": "purple",
+                  "other": "gray"
+                }
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              {
+                "column": "quantity",
+                "label": "Quantity"
+              },
+              {
+                "column": "unit",
+                "label": "Unit"
+              },
+              {
+                "column": "fraction",
+                "label": "Fraction left"
+              },
+              {
+                "column": "location",
+                "label": "Location"
+              }
+            ],
+            "open": "Edit item",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "recipes": {
+      "title": "Recipes",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Recipe ideas from what you already have, fastest first. Refresh from the Items tab."
+          },
+          {
+            "type": "cards",
+            "table": "recipes",
+            "emptyIcon": "restaurant_menu",
+            "emptyTitle": "No recipe ideas yet",
+            "emptyText": "Tap \"Suggest recipes from what I have\" on the Items tab to get ideas from your current stock.",
+            "sort": {
+              "column": "minutes",
+              "dir": "asc"
+            },
+            "title": "name",
+            "subtitle": "uses",
+            "expandable": true,
+            "expandFields": [
+              {
+                "column": "uses",
+                "label": "Uses"
+              },
+              {
+                "column": "missing",
+                "label": "You'd need"
+              },
+              {
+                "column": "steps",
+                "label": "Steps"
+              },
+              {
+                "column": "minutes",
+                "label": "Minutes"
+              }
+            ],
+            "open": "Open recipe",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

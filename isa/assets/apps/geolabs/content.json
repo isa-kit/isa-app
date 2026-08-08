@@ -1,0 +1,218 @@
+{
+  "records": [
+    {
+      "id": "r_boston_base",
+      "zone": "Boston",
+      "scenario": "Baseline",
+      "trips": 15900,
+      "cost_per_mi": 0.58,
+      "jobs": 412000,
+      "households": 285000
+    },
+    {
+      "id": "r_boston_plan",
+      "zone": "Boston",
+      "scenario": "Plan",
+      "trips": 18762,
+      "cost_per_mi": 0.54,
+      "jobs": 436720,
+      "households": 285000
+    },
+    {
+      "id": "r_cambridge_base",
+      "zone": "Cambridge",
+      "scenario": "Baseline",
+      "trips": 38300,
+      "cost_per_mi": 0.62,
+      "jobs": 198000,
+      "households": 47000
+    },
+    {
+      "id": "r_cambridge_plan",
+      "zone": "Cambridge",
+      "scenario": "Plan",
+      "trips": 45194,
+      "cost_per_mi": 0.58,
+      "jobs": 209880,
+      "households": 47000
+    },
+    {
+      "id": "r_somerville_base",
+      "zone": "Somerville",
+      "scenario": "Baseline",
+      "trips": 20400,
+      "cost_per_mi": 0.66,
+      "jobs": 61000,
+      "households": 35000
+    },
+    {
+      "id": "r_somerville_plan",
+      "zone": "Somerville",
+      "scenario": "Plan",
+      "trips": 24072,
+      "cost_per_mi": 0.61,
+      "jobs": 64660,
+      "households": 35000
+    },
+    {
+      "id": "r_brookline_base",
+      "zone": "Brookline",
+      "scenario": "Baseline",
+      "trips": 9800,
+      "cost_per_mi": 0.71,
+      "jobs": 32000,
+      "households": 26000
+    },
+    {
+      "id": "r_brookline_plan",
+      "zone": "Brookline",
+      "scenario": "Plan",
+      "trips": 11564,
+      "cost_per_mi": 0.66,
+      "jobs": 33920,
+      "households": 26000
+    },
+    {
+      "id": "r_revere_base",
+      "zone": "Revere",
+      "scenario": "Baseline",
+      "trips": 26000,
+      "cost_per_mi": 0.94,
+      "jobs": 18000,
+      "households": 22000
+    },
+    {
+      "id": "r_revere_plan",
+      "zone": "Revere",
+      "scenario": "Plan",
+      "trips": 30680,
+      "cost_per_mi": 0.87,
+      "jobs": 19080,
+      "households": 22000
+    },
+    {
+      "id": "r_quincy_base",
+      "zone": "Quincy",
+      "scenario": "Baseline",
+      "trips": 14200,
+      "cost_per_mi": 1.18,
+      "jobs": 54000,
+      "households": 42000
+    },
+    {
+      "id": "r_quincy_plan",
+      "zone": "Quincy",
+      "scenario": "Plan",
+      "trips": 16756,
+      "cost_per_mi": 1.1,
+      "jobs": 57240,
+      "households": 42000
+    },
+    {
+      "id": "r_woburn_base",
+      "zone": "Woburn",
+      "scenario": "Baseline",
+      "trips": 6100,
+      "cost_per_mi": 1.42,
+      "jobs": 46000,
+      "households": 16000
+    },
+    {
+      "id": "r_woburn_plan",
+      "zone": "Woburn",
+      "scenario": "Plan",
+      "trips": 7198,
+      "cost_per_mi": 1.32,
+      "jobs": 48760,
+      "households": 16000
+    }
+  ],
+  "zone_stats": [
+    {
+      "id": "zs_boston",
+      "zone": "Boston",
+      "trips": 34662,
+      "cost_per_mi": 0.56,
+      "jobs": 848720,
+      "households": 570000
+    },
+    {
+      "id": "zs_cambridge",
+      "zone": "Cambridge",
+      "trips": 83494,
+      "cost_per_mi": 0.6,
+      "jobs": 407880,
+      "households": 94000
+    },
+    {
+      "id": "zs_somerville",
+      "zone": "Somerville",
+      "trips": 44472,
+      "cost_per_mi": 0.64,
+      "jobs": 125660,
+      "households": 70000
+    },
+    {
+      "id": "zs_brookline",
+      "zone": "Brookline",
+      "trips": 21364,
+      "cost_per_mi": 0.69,
+      "jobs": 65920,
+      "households": 52000
+    },
+    {
+      "id": "zs_revere",
+      "zone": "Revere",
+      "trips": 56680,
+      "cost_per_mi": 0.91,
+      "jobs": 37080,
+      "households": 44000
+    },
+    {
+      "id": "zs_quincy",
+      "zone": "Quincy",
+      "trips": 30956,
+      "cost_per_mi": 1.14,
+      "jobs": 111240,
+      "households": 84000
+    },
+    {
+      "id": "zs_woburn",
+      "zone": "Woburn",
+      "trips": 13298,
+      "cost_per_mi": 1.37,
+      "jobs": 94760,
+      "households": 32000
+    }
+  ],
+  "slices": [
+    {
+      "id": "sl_delta",
+      "name": "Plan vs Baseline (%)",
+      "config": "{\"mode\": \"chart\", \"xAxis\": \"zone\", \"series\": \"scenario\", \"value\": \"trips\", \"pctDiff\": true, \"pctBase\": \"Baseline\"}"
+    }
+  ],
+  "panels": [
+    { "id": "ov_kpi", "name": "Headline numbers", "kind": "kpi", "weight": 0.5, "visible": true, "order": 1, "template": "overview" },
+    { "id": "ov_map", "name": "Map", "kind": "map", "weight": 1.4, "visible": true, "order": 2, "template": "overview" },
+    { "id": "ov_chart", "name": "Scenarios", "kind": "chart", "weight": 1, "visible": true, "order": 3, "template": "overview" },
+
+    { "id": "cmp_chart", "name": "Scenarios", "kind": "chart", "weight": 1, "visible": true, "order": 1, "template": "compare" },
+    { "id": "cmp_delta", "name": "% vs Baseline", "kind": "delta", "weight": 1, "visible": true, "order": 2, "template": "compare" },
+    { "id": "cmp_table", "name": "Rows", "kind": "table", "weight": 1, "visible": true, "order": 3, "template": "compare" },
+
+    { "id": "exp_explore", "name": "Explorer", "kind": "explore", "weight": 1.4, "visible": true, "order": 1, "template": "explore" },
+    { "id": "exp_table", "name": "Rows", "kind": "table", "weight": 1, "visible": true, "order": 2, "template": "explore" },
+    { "id": "exp_kpi", "name": "Headline", "kind": "kpi", "weight": 0.5, "visible": true, "order": 3, "template": "explore" },
+
+    { "id": "geo_map", "name": "Map", "kind": "map", "weight": 1.6, "visible": true, "order": 1, "template": "geo" },
+    { "id": "geo_kpi", "name": "Headline", "kind": "kpi", "weight": 0.5, "visible": true, "order": 2, "template": "geo" },
+    { "id": "geo_notes", "name": "Notes", "kind": "notes", "weight": 0.7, "visible": true, "order": 3, "template": "geo" }
+  ],
+  "notes": [
+    {
+      "id": "note1",
+      "body": "# Notes\n\nJot findings here — this panel travels with the report and its share code.\n\n- What changed between scenarios?\n- Which zones drive the result?"
+    }
+  ]
+}

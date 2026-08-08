@@ -1,0 +1,28 @@
+{
+  "tables": [
+    {
+      "name": "prod",
+      "label": "Production",
+      "icon": "public",
+      "description": "The build the PRODUCTION site is serving right now. Fetched live from devisant.com/isa/build_info.json on every Refresh (mode: replace, so a refresh overwrites rather than accumulates). Seeded empty and never hand-edited — a build stamp is only ever what a real site returned.",
+      "provenance": {
+        "source": "devisant.com/isa/build_info.json (Refresh action)"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "dev",
+      "label": "Dev",
+      "icon": "construction",
+      "description": "The build the DEV site is serving right now. Fetched live from dev.devisant.com/isa/build_info.json on every Refresh (mode: replace). Seeded empty for the same reason as prod.",
+      "provenance": {
+        "source": "dev.devisant.com/isa/build_info.json (Refresh action)"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    }
+  ]
+}
