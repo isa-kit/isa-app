@@ -1,0 +1,549 @@
+{
+  "board": {
+    "name": "Tripboard"
+  },
+  "screens": [
+    {
+      "id": "tripbo_0_start",
+      "name": "Start here",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "tripbo_1_trip",
+      "name": "Trip",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "tripbo_2_week",
+      "name": "Week board",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    },
+    {
+      "id": "tripbo_3_calendar",
+      "name": "Calendar",
+      "device": "phone",
+      "x": 1320,
+      "y": 0
+    },
+    {
+      "id": "tripbo_4_todo",
+      "name": "Todo",
+      "device": "phone",
+      "x": 0,
+      "y": 900
+    },
+    {
+      "id": "tripbo_5_packing",
+      "name": "Packing",
+      "device": "phone",
+      "x": 440,
+      "y": 900
+    },
+    {
+      "id": "tripbo_6_map",
+      "name": "Map",
+      "device": "phone",
+      "x": 880,
+      "y": 900
+    },
+    {
+      "id": "tripbo_7_notes",
+      "name": "Notes",
+      "device": "phone",
+      "x": 1320,
+      "y": 900
+    },
+    {
+      "id": "tripbo_8_members",
+      "name": "Members",
+      "device": "phone",
+      "x": 0,
+      "y": 1800
+    },
+    {
+      "id": "tripbo_9_activity",
+      "name": "Activity",
+      "device": "phone",
+      "x": 440,
+      "y": 1800
+    }
+  ],
+  "widgets": [
+    {
+      "id": "tripbo_0_start_title",
+      "screen": "tripbo_0_start",
+      "kind": "titlebar",
+      "label": "Start here",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "tripbo_0_start_w0",
+      "screen": "tripbo_0_start",
+      "kind": "text",
+      "label": "\ud83d\udc4b Welcome to Tripboard",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "tripbo_0_start_w1",
+      "screen": "tripbo_0_start",
+      "kind": "text",
+      "label": "A quick tour of every view.",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "tripbo_0_start_w2",
+      "screen": "tripbo_0_start",
+      "kind": "card",
+      "label": "card",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "tripbo_0_start_nav",
+      "screen": "tripbo_0_start",
+      "kind": "bottomnav",
+      "label": "Start here \u00b7 Trip \u00b7 Week \u00b7 Calendar \u00b7 Todo \u00b7 Packing \u00b7 Map \u00b7 Notes \u00b7 Members \u00b7 Activity",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "tripbo_1_trip_title",
+      "screen": "tripbo_1_trip",
+      "kind": "titlebar",
+      "label": "Trip",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "tripbo_1_trip_w0",
+      "screen": "tripbo_1_trip",
+      "kind": "text",
+      "label": "\u2708\ufe0f Trip",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "tripbo_1_trip_w1",
+      "screen": "tripbo_1_trip",
+      "kind": "text",
+      "label": "Sharing this trip requires signing in.",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "tripbo_1_trip_w2",
+      "screen": "tripbo_1_trip",
+      "kind": "list",
+      "label": "title",
+      "region": "body",
+      "order": 2,
+      "items": "[\"Start here\", \"Week board\", \"Calendar\"]"
+    },
+    {
+      "id": "tripbo_1_trip_nav",
+      "screen": "tripbo_1_trip",
+      "kind": "bottomnav",
+      "label": "Start here \u00b7 Trip \u00b7 Week \u00b7 Calendar \u00b7 Todo \u00b7 Packing \u00b7 Map \u00b7 Notes \u00b7 Members \u00b7 Activity",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "tripbo_2_week_title",
+      "screen": "tripbo_2_week",
+      "kind": "titlebar",
+      "label": "Week board",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "tripbo_2_week_w0",
+      "screen": "tripbo_2_week",
+      "kind": "text",
+      "label": "\ud83d\uddd3\ufe0f Week plans",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "tripbo_2_week_w1",
+      "screen": "tripbo_2_week",
+      "kind": "text",
+      "label": "Loose plans for the trip, grouped by week. Tap a card to open it.",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "tripbo_2_week_w2",
+      "screen": "tripbo_2_week",
+      "kind": "buttonrow",
+      "label": "New plan",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "tripbo_2_week_nav",
+      "screen": "tripbo_2_week",
+      "kind": "bottomnav",
+      "label": "Start here \u00b7 Trip \u00b7 Week \u00b7 Calendar \u00b7 Todo \u00b7 Packing \u00b7 Map \u00b7 Notes \u00b7 Members \u00b7 Activity",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "tripbo_3_calendar_title",
+      "screen": "tripbo_3_calendar",
+      "kind": "titlebar",
+      "label": "Calendar",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "tripbo_3_calendar_w0",
+      "screen": "tripbo_3_calendar",
+      "kind": "text",
+      "label": "\ud83d\udcc5 Calendar",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "tripbo_3_calendar_w1",
+      "screen": "tripbo_3_calendar",
+      "kind": "text",
+      "label": "Dated events \u2014 tap a day or event to open it; also pinned on the Map.",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "tripbo_3_calendar_w2",
+      "screen": "tripbo_3_calendar",
+      "kind": "card",
+      "label": "Calendar",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "tripbo_3_calendar_nav",
+      "screen": "tripbo_3_calendar",
+      "kind": "bottomnav",
+      "label": "Start here \u00b7 Trip \u00b7 Week \u00b7 Calendar \u00b7 Todo \u00b7 Packing \u00b7 Map \u00b7 Notes \u00b7 Members \u00b7 Activity",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "tripbo_4_todo_title",
+      "screen": "tripbo_4_todo",
+      "kind": "titlebar",
+      "label": "Todo",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "tripbo_4_todo_w0",
+      "screen": "tripbo_4_todo",
+      "kind": "text",
+      "label": "\u2705 Todo",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "tripbo_4_todo_w1",
+      "screen": "tripbo_4_todo",
+      "kind": "text",
+      "label": "Tap a todo to check it off; swipe left to edit or delete (deleting shows an Undo).",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "tripbo_4_todo_w2",
+      "screen": "tripbo_4_todo",
+      "kind": "buttonrow",
+      "label": "New todo",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "tripbo_4_todo_nav",
+      "screen": "tripbo_4_todo",
+      "kind": "bottomnav",
+      "label": "Start here \u00b7 Trip \u00b7 Week \u00b7 Calendar \u00b7 Todo \u00b7 Packing \u00b7 Map \u00b7 Notes \u00b7 Members \u00b7 Activity",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "tripbo_5_packing_title",
+      "screen": "tripbo_5_packing",
+      "kind": "titlebar",
+      "label": "Packing",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "tripbo_5_packing_w0",
+      "screen": "tripbo_5_packing",
+      "kind": "text",
+      "label": "\ud83e\uddf3 Packing",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "tripbo_5_packing_w1",
+      "screen": "tripbo_5_packing",
+      "kind": "text",
+      "label": "Tap an item to mark it packed; swipe left to edit or delete (deleting shows an Undo).",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "tripbo_5_packing_w2",
+      "screen": "tripbo_5_packing",
+      "kind": "buttonrow",
+      "label": "New item",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "tripbo_5_packing_nav",
+      "screen": "tripbo_5_packing",
+      "kind": "bottomnav",
+      "label": "Start here \u00b7 Trip \u00b7 Week \u00b7 Calendar \u00b7 Todo \u00b7 Packing \u00b7 Map \u00b7 Notes \u00b7 Members \u00b7 Activity",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "tripbo_6_map_title",
+      "screen": "tripbo_6_map",
+      "kind": "titlebar",
+      "label": "Map",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "tripbo_6_map_w0",
+      "screen": "tripbo_6_map",
+      "kind": "text",
+      "label": "\ud83d\uddfa\ufe0f Map",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "tripbo_6_map_w1",
+      "screen": "tripbo_6_map",
+      "kind": "text",
+      "label": "Every event and note that has a location, on one map \u2014",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "tripbo_6_map_w2",
+      "screen": "tripbo_6_map",
+      "kind": "card",
+      "label": "Map",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "tripbo_6_map_nav",
+      "screen": "tripbo_6_map",
+      "kind": "bottomnav",
+      "label": "Start here \u00b7 Trip \u00b7 Week \u00b7 Calendar \u00b7 Todo \u00b7 Packing \u00b7 Map \u00b7 Notes \u00b7 Members \u00b7 Activity",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "tripbo_7_notes_title",
+      "screen": "tripbo_7_notes",
+      "kind": "titlebar",
+      "label": "Notes",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "tripbo_7_notes_w0",
+      "screen": "tripbo_7_notes",
+      "kind": "text",
+      "label": "\ud83d\udcdd Notes",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "tripbo_7_notes_w1",
+      "screen": "tripbo_7_notes",
+      "kind": "text",
+      "label": "Freeform notes.",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "tripbo_7_notes_w2",
+      "screen": "tripbo_7_notes",
+      "kind": "buttonrow",
+      "label": "New note",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "tripbo_7_notes_nav",
+      "screen": "tripbo_7_notes",
+      "kind": "bottomnav",
+      "label": "Start here \u00b7 Trip \u00b7 Week \u00b7 Calendar \u00b7 Todo \u00b7 Packing \u00b7 Map \u00b7 Notes \u00b7 Members \u00b7 Activity",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "tripbo_8_members_title",
+      "screen": "tripbo_8_members",
+      "kind": "titlebar",
+      "label": "Members",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "tripbo_8_members_w0",
+      "screen": "tripbo_8_members",
+      "kind": "text",
+      "label": "\ud83d\udc65 Members",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "tripbo_8_members_w1",
+      "screen": "tripbo_8_members",
+      "kind": "text",
+      "label": "Add yourself below, then tap a card to set it as you (creating doesn't auto-select \u2014",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "tripbo_8_members_w2",
+      "screen": "tripbo_8_members",
+      "kind": "buttonrow",
+      "label": "Add a member card",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "tripbo_8_members_nav",
+      "screen": "tripbo_8_members",
+      "kind": "bottomnav",
+      "label": "Start here \u00b7 Trip \u00b7 Week \u00b7 Calendar \u00b7 Todo \u00b7 Packing \u00b7 Map \u00b7 Notes \u00b7 Members \u00b7 Activity",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "tripbo_9_activity_title",
+      "screen": "tripbo_9_activity",
+      "kind": "titlebar",
+      "label": "Activity",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "tripbo_9_activity_w0",
+      "screen": "tripbo_9_activity",
+      "kind": "text",
+      "label": "\ud83d\udd58 Activity",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "tripbo_9_activity_w1",
+      "screen": "tripbo_9_activity",
+      "kind": "text",
+      "label": "Every row, most recently updated first \u2014",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "tripbo_9_activity_w2",
+      "screen": "tripbo_9_activity",
+      "kind": "list",
+      "label": "title",
+      "region": "body",
+      "order": 2,
+      "items": "[\"Start here\", \"Trip\", \"Week board\"]"
+    },
+    {
+      "id": "tripbo_9_activity_nav",
+      "screen": "tripbo_9_activity",
+      "kind": "bottomnav",
+      "label": "Start here \u00b7 Trip \u00b7 Week \u00b7 Calendar \u00b7 Todo \u00b7 Packing \u00b7 Map \u00b7 Notes \u00b7 Members \u00b7 Activity",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "tripbo_flow_0",
+      "fromWidget": "tripbo_0_start_nav",
+      "toScreen": "tripbo_1_trip",
+      "transition": "push"
+    },
+    {
+      "id": "tripbo_flow_1",
+      "fromWidget": "tripbo_1_trip_nav",
+      "toScreen": "tripbo_2_week",
+      "transition": "push"
+    },
+    {
+      "id": "tripbo_flow_2",
+      "fromWidget": "tripbo_2_week_nav",
+      "toScreen": "tripbo_3_calendar",
+      "transition": "push"
+    },
+    {
+      "id": "tripbo_flow_3",
+      "fromWidget": "tripbo_3_calendar_nav",
+      "toScreen": "tripbo_4_todo",
+      "transition": "push"
+    },
+    {
+      "id": "tripbo_flow_4",
+      "fromWidget": "tripbo_4_todo_nav",
+      "toScreen": "tripbo_5_packing",
+      "transition": "push"
+    },
+    {
+      "id": "tripbo_flow_5",
+      "fromWidget": "tripbo_5_packing_nav",
+      "toScreen": "tripbo_6_map",
+      "transition": "push"
+    },
+    {
+      "id": "tripbo_flow_6",
+      "fromWidget": "tripbo_6_map_nav",
+      "toScreen": "tripbo_7_notes",
+      "transition": "push"
+    },
+    {
+      "id": "tripbo_flow_7",
+      "fromWidget": "tripbo_7_notes_nav",
+      "toScreen": "tripbo_8_members",
+      "transition": "push"
+    },
+    {
+      "id": "tripbo_flow_8",
+      "fromWidget": "tripbo_8_members_nav",
+      "toScreen": "tripbo_9_activity",
+      "transition": "push"
+    },
+    {
+      "id": "tripbo_flow_9",
+      "fromWidget": "tripbo_9_activity_nav",
+      "toScreen": "tripbo_0_start",
+      "transition": "push"
+    },
+    {
+      "id": "tripbo_flow_extra",
+      "fromWidget": "tripbo_1_trip_w2",
+      "toScreen": "tripbo_2_week",
+      "transition": "push"
+    }
+  ]
+}

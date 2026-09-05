@@ -1,0 +1,788 @@
+{
+  "app": {
+    "languages": ["en", "ko", "zh", "hi", "es", "fr", "ar", "pt", "ru", "de", "ja", "tr", "vi", "it", "fa", "pl", "uk", "nl", "sv", "cs", "el"],
+    "translatable": true,
+    "appDataTools": true,
+    "intro": {
+      "tour": [
+        {
+          "screen": "delta",
+          "label": "Delta",
+          "note": "How the new traffic-zone redesign compares to the old one, town by town."
+        },
+        {
+          "screen": "transit",
+          "label": "Transit",
+          "note": "Four-step transit demand under the new zones."
+        },
+        {
+          "screen": "new_taz",
+          "label": "New TAZ",
+          "note": "The redesigned traffic analysis zones."
+        },
+        {
+          "screen": "old_taz",
+          "label": "Old TAZ",
+          "note": "The original zones being replaced."
+        },
+        {
+          "screen": "review",
+          "label": "Review",
+          "note": "Flag or annotate zones that need a second look."
+        }
+      ]
+    },
+    "title": {
+      "en": "TAZ Delta",
+      "ko": "TAZ 델타",
+      "zh": "TAZ 差异",
+      "hi": "TAZ डेल्टा",
+      "es": "Delta de TAZ",
+      "fr": "Delta de TAZ",
+      "ar": "دلتا TAZ",
+      "pt": "Delta de TAZ",
+      "ru": "Дельта TAZ",
+      "de": "TAZ-Delta",
+      "ja": "TAZデルタ",
+      "tr": "TAZ Deltası",
+      "vi": "Delta TAZ",
+      "it": "Delta TAZ",
+      "fa": "دلتای TAZ",
+      "pl": "Delta TAZ",
+      "uk": "Дельта TAZ",
+      "nl": "TAZ-delta",
+      "sv": "TAZ-delta",
+      "cs": "Delta TAZ",
+      "el": "Δέλτα TAZ"
+    },
+    "primaryColor": "#00695C",
+    "theme": "contrast"
+  },
+  "nav": [
+    { "id": "delta", "label": { "en": "Delta", "ko": "델타", "zh": "差异", "hi": "डेल्टा", "es": "Delta", "fr": "Delta", "ar": "دلتا", "pt": "Delta", "ru": "Дельта", "de": "Delta", "ja": "デルタ", "tr": "Delta", "vi": "Delta", "it": "Delta", "fa": "دلتا", "pl": "Delta", "uk": "Дельта", "nl": "Delta", "sv": "Delta", "cs": "Delta", "el": "Δέλτα" }, "icon": "compare_arrows", "screen": "delta" },
+    { "id": "transit", "label": { "en": "Transit", "ko": "대중교통", "zh": "公交", "hi": "परिवहन", "es": "Transporte público", "fr": "Transport en commun", "ar": "النقل العام", "pt": "Transporte público", "ru": "Общественный транспорт", "de": "ÖPNV", "ja": "公共交通", "tr": "Toplu taşıma", "vi": "Giao thông công cộng", "it": "Trasporto pubblico", "fa": "حمل‌ونقل عمومی", "pl": "Transport publiczny", "uk": "Громадський транспорт", "nl": "Openbaar vervoer", "sv": "Kollektivtrafik", "cs": "MHD", "el": "Μέσα μαζικής μεταφοράς" }, "icon": "directions_transit", "screen": "transit" },
+    { "id": "new_taz", "label": { "en": "New TAZ", "ko": "신규 TAZ", "zh": "新 TAZ", "hi": "नया TAZ", "es": "TAZ nuevo", "fr": "Nouveau TAZ", "ar": "TAZ الجديد", "pt": "Novo TAZ", "ru": "Новый TAZ", "de": "Neues TAZ", "ja": "新TAZ", "tr": "Yeni TAZ", "vi": "TAZ mới", "it": "Nuovo TAZ", "fa": "TAZ جدید", "pl": "Nowy TAZ", "uk": "Новий TAZ", "nl": "Nieuwe TAZ", "sv": "Ny TAZ", "cs": "Nová TAZ", "el": "Νέο TAZ" }, "icon": "grid_on", "screen": "new_taz" },
+    { "id": "old_taz", "label": { "en": "Old TAZ", "ko": "기존 TAZ", "zh": "旧 TAZ", "hi": "पुराना TAZ", "es": "TAZ antiguo", "fr": "Ancien TAZ", "ar": "TAZ القديم", "pt": "TAZ antigo", "ru": "Старый TAZ", "de": "Altes TAZ", "ja": "旧TAZ", "tr": "Eski TAZ", "vi": "TAZ cũ", "it": "Vecchio TAZ", "fa": "TAZ قدیمی", "pl": "Stary TAZ", "uk": "Старий TAZ", "nl": "Oude TAZ", "sv": "Gammal TAZ", "cs": "Stará TAZ", "el": "Παλιό TAZ" }, "icon": "grid_off", "screen": "old_taz" },
+    { "id": "review", "label": { "en": "Review", "ko": "검토", "zh": "审核", "hi": "समीक्षा", "es": "Revisión", "fr": "Révision", "ar": "المراجعة", "pt": "Revisão", "ru": "Проверка", "de": "Überprüfung", "ja": "レビュー", "tr": "İnceleme", "vi": "Xem xét", "it": "Revisione", "fa": "بازبینی", "pl": "Przegląd", "uk": "Перегляд", "nl": "Beoordeling", "sv": "Granskning", "cs": "Kontrola", "el": "Επισκόπηση" }, "icon": "fact_check", "screen": "review" }
+  ],
+  "screens": {
+    "delta": {
+      "title": {
+        "en": "Old vs new TAZs by town",
+        "ko": "구시가지별 기존/신규 TAZ 비교",
+        "zh": "按城镇的新旧 TAZ 对比",
+        "hi": "शहर के अनुसार पुराने बनाम नए TAZ",
+        "es": "TAZ antiguos frente a nuevos por municipio",
+        "fr": "Anciens vs nouveaux TAZ par ville",
+        "ar": "TAZ القديمة مقابل الجديدة حسب البلدة",
+        "pt": "TAZ antigos vs. novos por município",
+        "ru": "Старые и новые TAZ по городам",
+        "de": "Alte vs. neue TAZ nach Stadt",
+        "ja": "町別の旧TAZと新TAZの比較",
+        "tr": "Kasabaya göre eski ve yeni TAZ",
+        "vi": "TAZ cũ so với mới theo thị trấn",
+        "it": "TAZ vecchi vs nuovi per comune",
+        "fa": "TAZهای قدیمی در برابر جدید به تفکیک شهر",
+        "pl": "Stare a nowe TAZ według miejscowości",
+        "uk": "Старі та нові TAZ за містами",
+        "nl": "Oude vs nieuwe TAZ per gemeente",
+        "sv": "Gamla vs nya TAZ per ort",
+        "cs": "Staré vs. nové TAZ podle obce",
+        "el": "Παλιά έναντι νέων TAZ ανά πόλη"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "CTPS Boston-region TAZ redesign review (imported from the TAZ Delta Tool). Each town pin compares its old (TDM23 2017g) and draft new TAZ counts — tap a pin or a card to open the full delta record. Zone geometry is reduced to centroids; demographics ride on the New TAZ tab.",
+              "ko": "CTPS 보스턴 지역 TAZ 재설계 검토(TAZ Delta Tool에서 가져옴). 각 도시 핀은 기존(TDM23 2017g)과 초안 신규 TAZ 개수를 비교합니다 — 핀이나 카드를 눌러 전체 델타 기록을 엽니다. 구역 지오메트리는 중심점으로 축소되며, 인구통계는 신규 TAZ 탭에 있습니다.",
+              "zh": "CTPS 波士顿地区 TAZ 重新设计审查（从 TAZ Delta Tool 导入）。每个城镇图钉比较其旧（TDM23 2017g）与草案新 TAZ 数量——点击图钉或卡片打开完整的差异记录。分区几何被简化为质心；人口统计位于新 TAZ 标签页。",
+              "hi": "CTPS बॉस्टन-क्षेत्र TAZ पुनर्रचना समीक्षा (TAZ Delta Tool से आयातित)। हर शहर पिन अपने पुराने (TDM23 2017g) और मसौदा नए TAZ काउंट की तुलना करता है — पूरा डेल्टा रिकॉर्ड खोलने के लिए पिन या कार्ड पर टैप करें। ज़ोन ज्यामिति केंद्रकों तक सीमित है; जनसांख्यिकी New TAZ टैब में है।",
+              "es": "Revisión del rediseño de TAZ de la región de Boston de CTPS (importado de la TAZ Delta Tool). Cada marcador de municipio compara sus recuentos de TAZ antiguos (TDM23 2017g) y nuevos en borrador — toca un marcador o una tarjeta para abrir el registro de delta completo. La geometría de zona se reduce a centroides; la demografía está en la pestaña TAZ nuevo.",
+              "fr": "Revue du redécoupage TAZ de la région de Boston par CTPS (importée depuis le TAZ Delta Tool). Chaque repère de ville compare ses effectifs TAZ anciens (TDM23 2017g) et nouveaux en projet — touchez un repère ou une carte pour ouvrir la fiche delta complète. La géométrie de zone est réduite aux centroïdes ; la démographie se trouve dans l'onglet Nouveau TAZ.",
+              "ar": "مراجعة إعادة تصميم TAZ لمنطقة بوسطن من CTPS (مستوردة من أداة TAZ Delta Tool). يقارن كل دبوس بلدة أعداد TAZ القديمة (TDM23 2017g) والجديدة المسودة — انقر على دبوس أو بطاقة لفتح سجل الفرق الكامل. تُختزل هندسة المنطقة إلى مراكز ثقل؛ تقع التركيبة السكانية في تبويب TAZ الجديد.",
+              "pt": "Revisão do redesenho de TAZ da região de Boston pela CTPS (importada da TAZ Delta Tool). Cada marcador de município compara suas contagens de TAZ antigas (TDM23 2017g) e novas em rascunho — toque em um marcador ou cartão para abrir o registro completo de delta. A geometria da zona é reduzida a centroides; a demografia fica na aba New TAZ.",
+              "ru": "Обзор редизайна TAZ региона Бостона от CTPS (импортировано из TAZ Delta Tool). Каждая метка города сравнивает старые (TDM23 2017g) и проектные новые количества TAZ — нажмите на метку или карточку, чтобы открыть полную запись дельты. Геометрия зон сведена к центроидам; демография — на вкладке New TAZ.",
+              "de": "CTPS-Überprüfung der TAZ-Neugestaltung der Region Boston (aus dem TAZ Delta Tool importiert). Jede Stadt-Markierung vergleicht ihre alten (TDM23 2017g) und geplanten neuen TAZ-Zahlen — tippe auf eine Markierung oder Karte, um den vollständigen Delta-Datensatz zu öffnen. Zonengeometrie ist auf Zentroiden reduziert; Demografie befindet sich im Tab Neues TAZ.",
+              "ja": "CTPSによるボストン地域TAZ再設計レビュー（TAZ Delta Toolからインポート）。各町ピンは旧（TDM23 2017g）と草案新TAZ数を比較します — ピンまたはカードをタップして完全な差分記録を開きます。ゾーン形状は重心に簡略化され、人口統計は新TAZタブにあります。",
+              "tr": "CTPS Boston bölgesi TAZ yeniden tasarım incelemesi (TAZ Delta Tool'dan içe aktarıldı). Her kasaba işareti, eski (TDM23 2017g) ve taslak yeni TAZ sayılarını karşılaştırır — tam delta kaydını açmak için bir işarete veya karta dokunun. Bölge geometrisi ağırlık merkezlerine indirgenmiştir; demografi Yeni TAZ sekmesinde yer alır.",
+              "vi": "Đánh giá thiết kế lại TAZ vùng Boston của CTPS (nhập từ TAZ Delta Tool). Mỗi ghim thị trấn so sánh số lượng TAZ cũ (TDM23 2017g) và dự thảo mới — chạm vào ghim hoặc thẻ để mở toàn bộ bản ghi chênh lệch. Hình học vùng được rút gọn thành trọng tâm; nhân khẩu học nằm ở tab New TAZ.",
+              "it": "Revisione del ridisegno TAZ della regione di Boston da parte di CTPS (importata dal TAZ Delta Tool). Ogni pin di comune confronta i conteggi TAZ vecchi (TDM23 2017g) e nuovi in bozza — tocca un pin o una scheda per aprire il record delta completo. La geometria delle zone è ridotta a centroidi; la demografia si trova nella scheda New TAZ.",
+              "fa": "بازبینی بازطراحی TAZ منطقه بوستون توسط CTPS (وارد‌شده از TAZ Delta Tool). هر پین شهر تعداد TAZهای قدیمی (TDM23 2017g) و پیش‌نویس جدید را مقایسه می‌کند — برای باز کردن رکورد کامل دلتا روی یک پین یا کارت ضربه بزنید. هندسه منطقه به مرکز ثقل کاهش یافته است؛ جمعیت‌شناسی در تب New TAZ قرار دارد.",
+              "pl": "Przegląd redesignu TAZ regionu Bostonu przez CTPS (zaimportowany z narzędzia TAZ Delta Tool). Każdy znacznik miejscowości porównuje jej stare (TDM23 2017g) i projektowane nowe liczby TAZ — dotknij znacznika lub karty, aby otworzyć pełny rekord różnicy. Geometria strefy jest zredukowana do centroidów; dane demograficzne znajdują się na karcie New TAZ.",
+              "uk": "Огляд редизайну TAZ регіону Бостона від CTPS (імпортовано з TAZ Delta Tool). Кожна мітка міста порівнює старі (TDM23 2017g) і проєктні нові кількості TAZ — торкніться мітки або картки, щоб відкрити повний запис дельти. Геометрія зони зведена до центроїдів; демографія — на вкладці New TAZ.",
+              "nl": "CTPS-beoordeling van het Boston-regio TAZ-herontwerp (geïmporteerd uit de TAZ Delta Tool). Elke plaatsmarkering vergelijkt zijn oude (TDM23 2017g) en concept-nieuwe TAZ-aantallen — tik op een markering of kaart om het volledige deltarecord te openen. Zonegeometrie is teruggebracht tot centroïden; demografie staat op het tabblad New TAZ.",
+              "sv": "CTPS granskning av TAZ-omdesign för Bostonregionen (importerad från TAZ Delta Tool). Varje ortsmarkering jämför sina gamla (TDM23 2017g) och utkast till nya TAZ-antal — tryck på en markering eller ett kort för att öppna hela deltaposten. Zongeometri är reducerad till centroider; demografi finns på fliken New TAZ.",
+              "cs": "Přehled přepracování TAZ oblasti Bostonu od CTPS (importováno z nástroje TAZ Delta Tool). Každý špendlík obce porovnává staré (TDM23 2017g) a navrhované nové počty TAZ — klepnutím na špendlík nebo kartu otevřete úplný záznam delty. Geometrie zóny je zredukována na centroidy; demografie je na kartě New TAZ.",
+              "el": "Επισκόπηση επανασχεδιασμού TAZ της περιοχής Βοστώνης από την CTPS (εισαγμένη από το TAZ Delta Tool). Κάθε καρφίτσα πόλης συγκρίνει τους παλιούς (TDM23 2017g) και τους νέους πρόχειρους αριθμούς TAZ — πατήστε μια καρφίτσα ή κάρτα για να ανοίξετε το πλήρες αρχείο διαφοράς. Η γεωμετρία ζώνης έχει μειωθεί σε κεντροειδή· τα δημογραφικά βρίσκονται στην καρτέλα New TAZ."
+            }
+          },
+          {
+            "type": "row",
+            "children": [
+              { "type": "stat", "table": "towns", "label": { "en": "Towns", "ko": "도시", "zh": "城镇", "hi": "शहर", "es": "Municipios", "fr": "Villes", "ar": "البلدات", "pt": "Municípios", "ru": "Города", "de": "Städte", "ja": "町", "tr": "Kasabalar", "vi": "Thị trấn", "it": "Comuni", "fa": "شهرها", "pl": "Miejscowości", "uk": "Міста", "nl": "Gemeenten", "sv": "Orter", "cs": "Obce", "el": "Πόλεις" }, "color": "teal" },
+              { "type": "stat", "table": "old_taz", "label": { "en": "Old TAZs", "ko": "기존 TAZ 수", "zh": "旧 TAZ 数", "hi": "पुराने TAZ", "es": "TAZ antiguos", "fr": "Anciens TAZ", "ar": "TAZ القديمة", "pt": "TAZ antigos", "ru": "Старые TAZ", "de": "Alte TAZ", "ja": "旧TAZ数", "tr": "Eski TAZ", "vi": "TAZ cũ", "it": "TAZ vecchi", "fa": "TAZهای قدیمی", "pl": "Stare TAZ", "uk": "Старі TAZ", "nl": "Oude TAZ", "sv": "Gamla TAZ", "cs": "Staré TAZ", "el": "Παλιά TAZ" }, "color": "gray" },
+              { "type": "stat", "table": "new_taz", "label": { "en": "New TAZs", "ko": "신규 TAZ 수", "zh": "新 TAZ 数", "hi": "नए TAZ", "es": "TAZ nuevos", "fr": "Nouveaux TAZ", "ar": "TAZ الجديدة", "pt": "TAZ novos", "ru": "Новые TAZ", "de": "Neue TAZ", "ja": "新TAZ数", "tr": "Yeni TAZ", "vi": "TAZ mới", "it": "TAZ nuovi", "fa": "TAZهای جدید", "pl": "Nowe TAZ", "uk": "Нові TAZ", "nl": "Nieuwe TAZ", "sv": "Nya TAZ", "cs": "Nové TAZ", "el": "Νέα TAZ" }, "color": "green" },
+              { "type": "stat", "table": "towns", "agg": "sum", "valueColumn": "delta", "label": { "en": "Net Δ zones", "ko": "구역 순증감(Δ)", "zh": "净 Δ 分区数", "hi": "शुद्ध Δ क्षेत्र", "es": "Zonas Δ netas", "fr": "Zones Δ nettes", "ar": "صافي Δ المناطق", "pt": "Zonas Δ líquidas", "ru": "Чистое Δ зон", "de": "Netto-Δ-Zonen", "ja": "純増減ゾーン(Δ)", "tr": "Net Δ bölge", "vi": "Vùng Δ ròng", "it": "Zone Δ nette", "fa": "منطقه خالص Δ", "pl": "Netto Δ stref", "uk": "Чисте Δ зон", "nl": "Netto Δ zones", "sv": "Netto Δ zoner", "cs": "Čistá Δ zón", "el": "Καθαρά Δ ζωνών" }, "color": "coral" }
+            ]
+          },
+          {
+            "type": "map",
+            "table": "towns",
+            "latColumn": "lat",
+            "lonColumn": "lon",
+            "labelColumn": "town",
+            "height": "0.55fill",
+            "geojsonAsset": "apps/taz_delta/taz_towns.geojson",
+            "fillOpacity": 0.55,
+            "strokeWidth": 0.6,
+            "action": { "fn": "editRow" }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Choropleth: gray = outside the draft redraw; warm (coral/red) = town lost TAZs; cool (teal/green) = gained. Tap a town pin to open its delta record.",
+              "ko": "단계구분도: 회색 = 초안 재구획 범위 밖; 난색(산호/빨강) = 도시가 TAZ를 잃음; 한색(청록/녹색) = 얻음. 도시 핀을 눌러 델타 기록을 엽니다.",
+              "zh": "分级设色图：灰色 = 草案重划范围之外；暖色（珊瑚色/红色）= 城镇失去 TAZ；冷色（青绿/绿色）= 获得。点击城镇图钉打开其差异记录。",
+              "hi": "क्षेत्रवर्ण मानचित्र: भूरा = मसौदा पुनर्आरेखन के बाहर; गर्म (मूंगा/लाल) = शहर ने TAZ खोए; ठंडा (टील/हरा) = प्राप्त किए। शहर पिन पर टैप करके इसका डेल्टा रिकॉर्ड खोलें।",
+              "es": "Coropleta: gris = fuera del rediseño en borrador; cálido (coral/rojo) = el municipio perdió TAZ; frío (verde azulado/verde) = ganó. Toca un marcador de municipio para abrir su registro de delta.",
+              "fr": "Carte choroplèthe : gris = hors du redécoupage en projet ; chaud (corail/rouge) = la ville a perdu des TAZ ; froid (sarcelle/vert) = a gagné. Touchez un repère de ville pour ouvrir sa fiche delta.",
+              "ar": "خريطة كوروبليث: الرمادي = خارج إعادة الرسم المسودة؛ الدافئ (مرجاني/أحمر) = فقدت البلدة TAZ؛ البارد (تركواز/أخضر) = اكتسبت. انقر على دبوس بلدة لفتح سجل الفرق الخاص بها.",
+              "pt": "Coroplético: cinza = fora do redesenho em rascunho; quente (coral/vermelho) = município perdeu TAZ; frio (azul-petróleo/verde) = ganhou. Toque em um marcador de município para abrir seu registro de delta.",
+              "ru": "Картограмма: серый = вне проектного перекроя; тёплый (коралловый/красный) = город потерял TAZ; холодный (бирюзовый/зелёный) = приобрёл. Нажмите на метку города, чтобы открыть его запись дельты.",
+              "de": "Choroplethenkarte: grau = außerhalb der geplanten Neugestaltung; warm (koralle/rot) = Stadt hat TAZ verloren; kühl (petrol/grün) = gewonnen. Tippe auf eine Stadt-Markierung, um ihren Delta-Datensatz zu öffnen.",
+              "ja": "コロプレスマップ: 灰色 = 草案再区画の対象外；暖色（コーラル/赤）= 町がTAZを失った；寒色（ティール/緑）= 獲得した。町ピンをタップして差分記録を開きます。",
+              "tr": "Koropletik harita: gri = taslak yeniden çizim dışında; sıcak (mercan/kırmızı) = kasaba TAZ kaybetti; soğuk (deniz mavisi/yeşil) = kazandı. Delta kaydını açmak için bir kasaba işaretine dokunun.",
+              "vi": "Bản đồ mật độ: xám = ngoài phạm vi vẽ lại dự thảo; ấm (san hô/đỏ) = thị trấn mất TAZ; lạnh (xanh lam ngọc/xanh lá) = được thêm. Chạm vào ghim thị trấn để mở bản ghi chênh lệch.",
+              "it": "Mappa coropletica: grigio = fuori dal ridisegno in bozza; caldo (corallo/rosso) = il comune ha perso TAZ; freddo (verde acqua/verde) = ha guadagnato. Tocca un pin di comune per aprire il suo record delta.",
+              "fa": "نقشه کروپلت: خاکستری = خارج از بازطراحی پیش‌نویس؛ گرم (مرجانی/قرمز) = شهر TAZ از دست داد؛ سرد (فیروزه‌ای/سبز) = به‌دست آورد. برای باز کردن رکورد دلتای شهر روی پین آن ضربه بزنید.",
+              "pl": "Mapa choropletyczna: szary = poza projektowanym przerysowaniem; ciepły (koralowy/czerwony) = miejscowość straciła TAZ; zimny (morski/zielony) = zyskała. Dotknij znacznika miejscowości, aby otworzyć jego rekord różnicy.",
+              "uk": "Хороплетна карта: сірий = поза межами проєктного перекрою; теплий (кораловий/червоний) = місто втратило TAZ; холодний (бірюзовий/зелений) = здобуло. Торкніться мітки міста, щоб відкрити його запис дельти.",
+              "nl": "Choropleetkaart: grijs = buiten de conceptherindeling; warm (koraal/rood) = gemeente verloor TAZ; koel (blauwgroen/groen) = won. Tik op een plaatsmarkering om het deltarecord te openen.",
+              "sv": "Koropletkarta: grå = utanför utkastet till omritning; varm (korall/röd) = orten förlorade TAZ; sval (blågrön/grön) = fick fler. Tryck på en ortsmarkering för att öppna dess deltapost.",
+              "cs": "Choropletická mapa: šedá = mimo návrh překreslení; teplá (korálová/červená) = obec ztratila TAZ; studená (petrolejová/zelená) = získala. Klepnutím na špendlík obce otevřete její záznam delty.",
+              "el": "Χοροπληθής χάρτης: γκρι = εκτός του πρόχειρου επανασχεδιασμού· θερμό (κοραλί/κόκκινο) = η πόλη έχασε TAZ· ψυχρό (γαλαζοπράσινο/πράσινο) = κέρδισε. Πατήστε μια καρφίτσα πόλης για να ανοίξετε το αρχείο διαφοράς της."
+            }
+          },
+          {
+            "type": "barchart",
+            "table": "towns",
+            "labelColumn": "town",
+            "valueColumn": "delta",
+            "agg": "sum",
+            "limit": 14,
+            "label": {
+              "en": "Largest TAZ-count changes (Δ new − old)",
+              "ko": "가장 큰 TAZ 수 변화(Δ 신규−기존)",
+              "zh": "最大 TAZ 数量变化（Δ 新−旧）",
+              "hi": "सबसे बड़े TAZ-गणना परिवर्तन (Δ नया − पुराना)",
+              "es": "Mayores cambios de recuento de TAZ (Δ nuevo − antiguo)",
+              "fr": "Plus grands changements de nombre de TAZ (Δ nouveau − ancien)",
+              "ar": "أكبر تغيرات في عدد TAZ (Δ الجديد − القديم)",
+              "pt": "Maiores mudanças na contagem de TAZ (Δ novo − antigo)",
+              "ru": "Крупнейшие изменения числа TAZ (Δ новое − старое)",
+              "de": "Größte TAZ-Zahl-Änderungen (Δ neu − alt)",
+              "ja": "最大のTAZ数変化(Δ新−旧)",
+              "tr": "En büyük TAZ sayısı değişimleri (Δ yeni − eski)",
+              "vi": "Thay đổi số lượng TAZ lớn nhất (Δ mới − cũ)",
+              "it": "Maggiori variazioni del conteggio TAZ (Δ nuovo − vecchio)",
+              "fa": "بزرگ‌ترین تغییرات تعداد TAZ (Δ جدید − قدیمی)",
+              "pl": "Największe zmiany liczby TAZ (Δ nowe − stare)",
+              "uk": "Найбільші зміни кількості TAZ (Δ нове − старе)",
+              "nl": "Grootste TAZ-aantalveranderingen (Δ nieuw − oud)",
+              "sv": "Största TAZ-antalsförändringar (Δ nytt − gammalt)",
+              "cs": "Největší změny počtu TAZ (Δ nové − staré)",
+              "el": "Μεγαλύτερες αλλαγές αριθμού TAZ (Δ νέο − παλιό)"
+            },
+            "filter": { "column": "covered", "value": "yes" }
+          },
+          {
+            "type": "cards",
+            "table": "towns",
+            "title": "town",
+            "subtitle": "delta",
+            "search": true,
+            "searchColumns": ["town"],
+            "sortBy": "delta",
+            "sortDir": "asc",
+            "expandable": true,
+            "open": "Open town record",
+            "tags": [ { "column": "covered", "colors": { "yes": "green", "no": "gray" } } ],
+            "action": { "fn": "editRow" }
+          }
+        ]
+      }
+    },
+    "transit": {
+      "title": {
+        "en": "Four-step transit demand",
+        "ko": "4단계 대중교통 수요 모델",
+        "zh": "四步交通需求模型",
+        "hi": "चार-चरण परिवहन मांग",
+        "es": "Demanda de transporte de cuatro pasos",
+        "fr": "Demande de transport en 4 étapes",
+        "ar": "الطلب على النقل رباعي الخطوات",
+        "pt": "Demanda de transporte de quatro etapas",
+        "ru": "Четырёхшаговая модель спроса на транспорт",
+        "de": "Vierstufige Verkehrsnachfrage",
+        "ja": "4段階交通需要モデル",
+        "tr": "Dört aşamalı ulaşım talebi",
+        "vi": "Nhu cầu giao thông bốn bước",
+        "it": "Domanda di trasporto a quattro fasi",
+        "fa": "تقاضای حمل‌ونقل چهار مرحله‌ای",
+        "pl": "Czteroetapowy popyt transportowy",
+        "uk": "Чотириетапний попит на транспорт",
+        "nl": "Vierstaps vervoersvraag",
+        "sv": "Fyrastegs transportbehov",
+        "cs": "Čtyřstupňová dopravní poptávka",
+        "el": "Ζήτηση μεταφορών τεσσάρων σταδίων"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Home-based-work travel demand from the classic four-step model (tools/transit4) run over the draft TAZs: trip generation (workers→jobs) → doubly-constrained gravity distribution → ACS journey-to-work mode choice → town-to-town assignment. Numbers are modeled planning estimates, not a calibrated forecast.",
+              "ko": "고전적 4단계 모델(tools/transit4)을 초안 TAZ에 적용해 산출한 통근(HBW) 통행 수요: 통행 발생(근로자→일자리) → 이중 제약 중력 분포 → ACS 통근 수단 선택 → 도시 간 배정. 수치는 계획용 모델 추정치이며 보정된 예측이 아닙니다.",
+              "zh": "在草案 TAZ 上运行经典四步模型（tools/transit4）得出的基于家庭的通勤出行需求：出行生成（工人→岗位）→ 双重约束重力分布 → ACS 通勤方式选择 → 城镇间分配。数字为规划建模估算，非经校准的预测。",
+              "hi": "मसौदा TAZ पर चलाए गए क्लासिक चार-चरण मॉडल (tools/transit4) से घर-आधारित-कार्य यात्रा मांग: यात्रा उत्पत्ति (कामगार→नौकरियां) → द्वि-प्रतिबंधित गुरुत्व वितरण → ACS यात्रा-से-कार्य मोड चयन → शहर-से-शहर आबंटन। संख्याएं मॉडलयुक्त योजना अनुमान हैं, कैलिब्रेटेड पूर्वानुमान नहीं।",
+              "es": "Demanda de viajes domicilio-trabajo del modelo clásico de cuatro pasos (tools/transit4) ejecutado sobre los TAZ en borrador: generación de viajes (trabajadores→empleos) → distribución gravitacional doblemente restringida → elección de modo de viaje al trabajo ACS → asignación municipio a municipio. Las cifras son estimaciones de planificación modeladas, no un pronóstico calibrado.",
+              "fr": "Demande de déplacements domicile-travail issue du modèle classique en quatre étapes (tools/transit4) appliqué aux TAZ en projet : génération des déplacements (travailleurs→emplois) → distribution gravitaire doublement contrainte → choix de mode de déplacement domicile-travail ACS → affectation ville à ville. Les chiffres sont des estimations de planification modélisées, pas une prévision calibrée.",
+              "ar": "الطلب على رحلات المنزل-العمل من النموذج الكلاسيكي رباعي الخطوات (tools/transit4) المطبَّق على TAZ المسودة: توليد الرحلات (العمال←الوظائف) ← توزيع جاذبي مزدوج التقييد ← اختيار وسيلة التنقل للعمل من ACS ← تخصيص بلدة إلى بلدة. الأرقام تقديرات تخطيط نموذجية، وليست توقعًا معايَرًا.",
+              "pt": "Demanda de viagens casa-trabalho do modelo clássico de quatro etapas (tools/transit4) executado sobre os TAZ em rascunho: geração de viagens (trabalhadores→empregos) → distribuição gravitacional duplamente restrita → escolha de modo de viagem ao trabalho ACS → alocação município a município. Os números são estimativas de planejamento modeladas, não uma previsão calibrada.",
+              "ru": "Спрос на поездки на работу из дома по классической четырёхшаговой модели (tools/transit4), выполненной по проектным TAZ: генерация поездок (работники→рабочие места) → дважды ограниченное гравитационное распределение → выбор способа поездки на работу ACS → распределение город-город. Цифры — плановые модельные оценки, а не откалиброванный прогноз.",
+              "de": "Home-based-work-Fahrtnachfrage aus dem klassischen Vierstufenmodell (tools/transit4), angewendet auf die geplanten TAZ: Wegeerzeugung (Arbeiter→Arbeitsplätze) → doppelt beschränkte Gravitationsverteilung → ACS-Verkehrsmittelwahl für Arbeitswege → Stadt-zu-Stadt-Zuordnung. Zahlen sind modellierte Planungsschätzungen, keine kalibrierte Prognose.",
+              "ja": "草案TAZに対して古典的4段階モデル(tools/transit4)を適用した通勤(HBW)交通需要: トリップ発生（労働者→雇用）→二重制約重力配分→ACS通勤手段選択→町間配分。数値は計画用モデル推定であり、較正された予測ではありません。",
+              "tr": "Taslak TAZ üzerinde çalıştırılan klasik dört aşamalı modelden (tools/transit4) ev tabanlı iş seyahat talebi: yolculuk üretimi (işçiler→işler) → çift kısıtlamalı yerçekimi dağılımı → ACS işe gidiş modu seçimi → kasabadan kasabaya atama. Rakamlar modellenmiş planlama tahminleridir, kalibre edilmiş bir öngörü değildir.",
+              "vi": "Nhu cầu đi lại từ nhà đến nơi làm việc từ mô hình bốn bước cổ điển (tools/transit4) chạy trên TAZ dự thảo: phát sinh chuyến đi (người lao động→việc làm) → phân phối trọng lực bị ràng buộc kép → lựa chọn phương thức đi làm ACS → phân bổ thị trấn-thị trấn. Các con số là ước tính lập kế hoạch theo mô hình, không phải dự báo đã hiệu chuẩn.",
+              "it": "Domanda di viaggi casa-lavoro dal classico modello a quattro fasi (tools/transit4) applicato ai TAZ in bozza: generazione dei viaggi (lavoratori→posti di lavoro) → distribuzione gravitazionale doppiamente vincolata → scelta della modalità di viaggio casa-lavoro ACS → assegnazione comune-comune. I numeri sono stime di pianificazione modellate, non una previsione calibrata.",
+              "fa": "تقاضای سفر خانه-محل کار از مدل کلاسیک چهار مرحله‌ای (tools/transit4) اجراشده روی TAZهای پیش‌نویس: تولید سفر (کارگران→مشاغل) → توزیع گرانشی دوگانه‌محدود → انتخاب شیوه سفر کار ACS → تخصیص شهر‌به‌شهر. اعداد تخمین‌های برنامه‌ریزی مدل‌سازی‌شده هستند، نه پیش‌بینی کالیبره‌شده.",
+              "pl": "Popyt na podróże z domu do pracy z klasycznego modelu czteroetapowego (tools/transit4) uruchomionego na projektowanych TAZ: generacja podróży (pracownicy→miejsca pracy) → podwójnie ograniczony rozkład grawitacyjny → wybór środka transportu do pracy ACS → przydział miasto-miasto. Liczby to modelowane szacunki planistyczne, nie skalibrowana prognoza.",
+              "uk": "Попит на поїздки з дому на роботу з класичної чотириетапної моделі (tools/transit4), застосованої до проєктних TAZ: генерація поїздок (працівники→робочі місця) → двічі обмежений гравітаційний розподіл → вибір способу поїздки на роботу ACS → розподіл місто-місто. Цифри — це модельовані планові оцінки, а не відкалібрований прогноз.",
+              "nl": "Home-based-work reisvraag uit het klassieke vierstapsmodel (tools/transit4) toegepast op de concept-TAZ: ritgeneratie (werknemers→banen) → dubbel beperkte zwaartekrachtverdeling → ACS-vervoerswijzekeuze voor woon-werkverkeer → gemeente-tot-gemeente toewijzing. Cijfers zijn gemodelleerde planningsschattingen, geen gekalibreerde prognose.",
+              "sv": "Bostadsbaserad arbetsreseefterfrågan från den klassiska fyrastegsmodellen (tools/transit4) körd på utkasts-TAZ: resegenerering (arbetare→jobb) → dubbelt begränsad gravitationsfördelning → ACS-val av färdsätt till jobbet → ort-till-ort-tilldelning. Siffrorna är modellerade planeringsuppskattningar, ingen kalibrerad prognos.",
+              "cs": "Poptávka po cestách z domova do práce z klasického čtyřstupňového modelu (tools/transit4) spuštěného na návrhových TAZ: generování cest (pracovníci→pracovní místa) → dvojitě omezená gravitační distribuce → volba způsobu dojíždění ACS → přiřazení obec-obec. Čísla jsou modelované plánovací odhady, nikoli kalibrovaná prognóza.",
+              "el": "Ζήτηση μετακινήσεων σπίτι-εργασία από το κλασικό μοντέλο τεσσάρων σταδίων (tools/transit4) που εκτελέστηκε στα πρόχειρα TAZ: παραγωγή διαδρομών (εργαζόμενοι→θέσεις εργασίας) → διπλά περιορισμένη κατανομή βαρύτητας → επιλογή τρόπου μετακίνησης προς εργασία ACS → κατανομή πόλης-πόλης. Οι αριθμοί είναι μοντελοποιημένες εκτιμήσεις σχεδιασμού, όχι βαθμονομημένη πρόβλεψη."
+            }
+          },
+          {
+            "type": "row",
+            "children": [
+              { "type": "stat", "table": "model_run", "agg": "sum", "valueColumn": "total_trips", "label": { "en": "HBW trips/day", "ko": "일일 통근 통행(HBW)", "zh": "每日通勤出行数(HBW)", "hi": "HBW यात्राएं/दिन", "es": "Viajes HBW/día", "fr": "Trajets domicile-travail/jour", "ar": "رحلات HBW/يوم", "pt": "Viagens HBW/dia", "ru": "Поездки на работу/день (HBW)", "de": "HBW-Wege/Tag", "ja": "HBW通勤トリップ/日", "tr": "Günlük HBW yolculuğu", "vi": "Chuyến HBW/ngày", "it": "Viaggi HBW/giorno", "fa": "سفرهای HBW/روز", "pl": "Podróże HBW/dzień", "uk": "Поїздки HBW/день", "nl": "HBW-ritten/dag", "sv": "HBW-resor/dag", "cs": "Cesty HBW/den", "el": "Μετακινήσεις HBW/ημέρα" }, "color": "blue" },
+              { "type": "stat", "table": "model_run", "agg": "sum", "valueColumn": "transit_trips", "label": { "en": "Transit trips", "ko": "대중교통 통행", "zh": "公交出行", "hi": "परिवहन यात्राएं", "es": "Viajes en transporte público", "fr": "Trajets en transport en commun", "ar": "رحلات النقل العام", "pt": "Viagens de transporte público", "ru": "Поездки на общественном транспорте", "de": "ÖPNV-Wege", "ja": "公共交通トリップ", "tr": "Toplu taşıma yolculukları", "vi": "Chuyến giao thông công cộng", "it": "Viaggi con trasporto pubblico", "fa": "سفرهای حمل‌ونقل عمومی", "pl": "Podróże transportem publicznym", "uk": "Поїздки громадським транспортом", "nl": "OV-ritten", "sv": "Kollektivtrafikresor", "cs": "Cesty MHD", "el": "Μετακινήσεις μέσων μαζικής μεταφοράς" }, "color": "teal" },
+              { "type": "stat", "table": "model_run", "agg": "sum", "valueColumn": "transit_pct", "label": { "en": "Region transit %", "ko": "지역 대중교통 분담률 %", "zh": "区域公交占比 %", "hi": "क्षेत्र परिवहन %", "es": "% de transporte público regional", "fr": "% de transport en commun régional", "ar": "نسبة النقل العام الإقليمي %", "pt": "% de transporte público regional", "ru": "Доля общественного транспорта в регионе, %", "de": "Regionaler ÖPNV-Anteil %", "ja": "地域公共交通比率 %", "tr": "Bölge toplu taşıma payı %", "vi": "% giao thông công cộng khu vực", "it": "% trasporto pubblico regionale", "fa": "درصد حمل‌ونقل عمومی منطقه", "pl": "% transportu publicznego w regionie", "uk": "Частка громадського транспорту в регіоні, %", "nl": "Regio-OV-aandeel %", "sv": "Regional kollektivtrafikandel %", "cs": "Regionální podíl MHD %", "el": "Ποσοστό μέσων μαζικής μεταφοράς περιοχής %" }, "color": "green" },
+              { "type": "stat", "table": "model_run", "agg": "sum", "valueColumn": "avg_transit_trip_mi", "label": { "en": "Avg transit mi", "ko": "평균 대중교통 거리(mi)", "zh": "平均公交距离（英里）", "hi": "औसत परिवहन मील", "es": "Millas promedio en transporte público", "fr": "Miles moyens en transport en commun", "ar": "متوسط أميال النقل العام", "pt": "Milhas médias de transporte público", "ru": "Средние мили на общественном транспорте", "de": "Durchschn. ÖPNV-Meilen", "ja": "平均公共交通距離（マイル）", "tr": "Ort. toplu taşıma mil", "vi": "Dặm giao thông công cộng trung bình", "it": "Miglia medie di trasporto pubblico", "fa": "مایل متوسط حمل‌ونقل عمومی", "pl": "Śr. mile transportu publicznego", "uk": "Середні милі громадського транспорту", "nl": "Gem. OV-mijlen", "sv": "Genomsnittliga kollektivtrafikmil", "cs": "Prům. míle MHD", "el": "Μέσα μίλια μέσων μαζικής μεταφοράς" }, "color": "amber" }
+            ]
+          },
+          {
+            "type": "map",
+            "table": "towns",
+            "latColumn": "lat",
+            "lonColumn": "lon",
+            "labelColumn": "town",
+            "height": "0.55fill",
+            "geojsonAsset": "apps/taz_delta/taz_towns_transit.geojson",
+            "fillOpacity": 0.6,
+            "strokeWidth": 0.6,
+            "action": { "fn": "editRow" }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Choropleth: deeper teal = higher residence-based transit commute share (ACS B08301). Tap a town pin to open its record — productions, attractions and modeled transit trips ride on the town fields.",
+              "ko": "단계구분도: 진한 청록 = 거주지 기준 대중교통 통근 비중이 높음(ACS B08301). 도시 핀을 눌러 기록을 엽니다 — 발생량, 흡인량, 모델링된 대중교통 통행이 도시 필드에 있습니다.",
+              "zh": "分级设色图：更深的青绿色 = 基于居住地的公交通勤占比更高（ACS B08301）。点击城镇图钉打开其记录——产生量、吸引量和模型化的公交出行都在城镇字段中。",
+              "hi": "क्षेत्रवर्ण मानचित्र: गहरा टील = उच्च निवास-आधारित परिवहन आवागमन हिस्सा (ACS B08301)। शहर पिन पर टैप करके इसका रिकॉर्ड खोलें — उत्पत्ति, आकर्षण और मॉडलयुक्त परिवहन यात्राएं शहर क्षेत्रों में हैं।",
+              "es": "Coropleta: verde azulado más intenso = mayor participación de desplazamiento en transporte público basado en residencia (ACS B08301). Toca un marcador de municipio para abrir su registro: producciones, atracciones y viajes en transporte público modelados están en los campos del municipio.",
+              "fr": "Carte choroplèthe : sarcelle plus foncé = part de navettage en transport en commun basée sur la résidence plus élevée (ACS B08301). Touchez un repère de ville pour ouvrir sa fiche — productions, attractions et trajets en transport en commun modélisés se trouvent dans les champs de la ville.",
+              "ar": "خريطة كوروبليث: تركواز أعمق = نسبة أعلى للتنقل بالنقل العام حسب مكان الإقامة (ACS B08301). انقر على دبوس بلدة لفتح سجلها — الإنتاجات والجذب ورحلات النقل العام النموذجية موجودة في حقول البلدة.",
+              "pt": "Coroplético: azul-petróleo mais profundo = maior participação de deslocamento por transporte público baseado na residência (ACS B08301). Toque em um marcador de município para abrir seu registro — produções, atrações e viagens de transporte público modeladas ficam nos campos do município.",
+              "ru": "Картограмма: более тёмный бирюзовый = более высокая доля поездок на работу на общественном транспорте по месту жительства (ACS B08301). Нажмите на метку города, чтобы открыть его запись — генерация, притяжение и модельные поездки на общественном транспорте находятся в полях города.",
+              "de": "Choroplethenkarte: dunkleres Petrol = höherer wohnortbasierter ÖPNV-Pendleranteil (ACS B08301). Tippe auf eine Stadt-Markierung, um ihren Datensatz zu öffnen — Erzeugung, Anziehung und modellierte ÖPNV-Wege befinden sich in den Stadtfeldern.",
+              "ja": "コロプレスマップ: 濃いティール = 居住地ベースの公共交通通勤比率が高い（ACS B08301）。町ピンをタップして記録を開きます — 発生量、吸引量、モデル化された公共交通トリップは町のフィールドにあります。",
+              "tr": "Koropletik harita: daha koyu deniz mavisi = ikamete dayalı daha yüksek toplu taşıma işe gidiş payı (ACS B08301). Kaydını açmak için bir kasaba işaretine dokunun — üretimler, çekimler ve modellenmiş toplu taşıma yolculukları kasaba alanlarında yer alır.",
+              "vi": "Bản đồ mật độ: xanh lam ngọc đậm hơn = tỷ lệ đi làm bằng giao thông công cộng theo nơi cư trú cao hơn (ACS B08301). Chạm vào ghim thị trấn để mở bản ghi — số phát sinh, thu hút và chuyến giao thông công cộng theo mô hình nằm trong các trường của thị trấn.",
+              "it": "Mappa coropletica: verde acqua più intenso = quota di pendolarismo con trasporto pubblico basata sulla residenza più alta (ACS B08301). Tocca un pin di comune per aprire il suo record — produzioni, attrazioni e viaggi con trasporto pubblico modellati si trovano nei campi del comune.",
+              "fa": "نقشه کروپلت: فیروزه‌ای تیره‌تر = سهم بالاتر جابجایی با حمل‌ونقل عمومی بر اساس محل سکونت (ACS B08301). برای باز کردن رکورد شهر روی پین آن ضربه بزنید — تولیدها، جذب‌ها و سفرهای حمل‌ونقل عمومی مدل‌سازی‌شده در فیلدهای شهر قرار دارند.",
+              "pl": "Mapa choropletyczna: głębszy morski = wyższy udział dojazdów transportem publicznym oparty na miejscu zamieszkania (ACS B08301). Dotknij znacznika miejscowości, aby otworzyć jej rekord — produkcje, atrakcje i modelowane podróże transportem publicznym znajdują się w polach miejscowości.",
+              "uk": "Хороплетна карта: глибший бірюзовий = вищий показник маятникових поїздок громадським транспортом за місцем проживання (ACS B08301). Торкніться мітки міста, щоб відкрити його запис — виробництва, тяжіння та модельовані поїздки громадським транспортом містяться в полях міста.",
+              "nl": "Choropleetkaart: dieper blauwgroen = hoger woonplaatsgebaseerd OV-forensenaandeel (ACS B08301). Tik op een plaatsmarkering om het record te openen — producties, attracties en gemodelleerde OV-ritten staan in de plaatsvelden.",
+              "sv": "Koropletkarta: djupare blågrön = högre bostadsbaserad kollektivtrafikpendlingsandel (ACS B08301). Tryck på en ortsmarkering för att öppna dess post — produktioner, attraktioner och modellerade kollektivtrafikresor finns i ortsfälten.",
+              "cs": "Choropletická mapa: hlubší petrolejová = vyšší podíl dojíždění MHD podle bydliště (ACS B08301). Klepnutím na špendlík obce otevřete její záznam — produkce, atrakce a modelované cesty MHD jsou v polích obce.",
+              "el": "Χοροπληθής χάρτης: βαθύτερο γαλαζοπράσινο = υψηλότερο ποσοστό μετακίνησης με μέσα μαζικής μεταφοράς βάσει κατοικίας (ACS B08301). Πατήστε μια καρφίτσα πόλης για να ανοίξετε το αρχείο της — παραγωγές, έλξεις και μοντελοποιημένες μετακινήσεις με μέσα μαζικής μεταφοράς βρίσκονται στα πεδία της πόλης."
+            }
+          },
+          {
+            "type": "barchart",
+            "table": "towns",
+            "labelColumn": "town",
+            "valueColumn": "transit_pct",
+            "agg": "max",
+            "limit": 14,
+            "label": {
+              "en": "Highest transit-share towns (%)",
+              "ko": "대중교통 분담률 최고 도시(%)",
+              "zh": "公交占比最高城镇(%)",
+              "hi": "सर्वाधिक परिवहन-हिस्सा शहर (%)",
+              "es": "Municipios con mayor participación de transporte público (%)",
+              "fr": "Villes à plus forte part de transport en commun (%)",
+              "ar": "أعلى البلدات في حصة النقل العام (%)",
+              "pt": "Municípios com maior participação de transporte público (%)",
+              "ru": "Города с наибольшей долей общественного транспорта (%)",
+              "de": "Städte mit höchstem ÖPNV-Anteil (%)",
+              "ja": "公共交通比率が最も高い町(%)",
+              "tr": "En yüksek toplu taşıma paylı kasabalar (%)",
+              "vi": "Thị trấn có tỷ lệ giao thông công cộng cao nhất (%)",
+              "it": "Comuni con la maggiore quota di trasporto pubblico (%)",
+              "fa": "شهرهای با بالاترین سهم حمل‌ونقل عمومی (%)",
+              "pl": "Miejscowości o najwyższym udziale transportu publicznego (%)",
+              "uk": "Міста з найвищою часткою громадського транспорту (%)",
+              "nl": "Gemeenten met hoogste OV-aandeel (%)",
+              "sv": "Orter med högst kollektivtrafikandel (%)",
+              "cs": "Obce s nejvyšším podílem MHD (%)",
+              "el": "Πόλεις με το υψηλότερο ποσοστό μέσων μαζικής μεταφοράς (%)"
+            },
+            "filter": { "column": "covered", "value": "yes" }
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": {
+              "en": "Top transit corridors (desire lines)",
+              "ko": "주요 대중교통 통행축(희망선)",
+              "zh": "主要公交走廊（意愿线）",
+              "hi": "शीर्ष परिवहन गलियारे (डिज़ायर लाइन)",
+              "es": "Principales corredores de transporte público (líneas de deseo)",
+              "fr": "Principaux corridors de transport en commun (lignes de désir)",
+              "ar": "أهم ممرات النقل العام (خطوط الرغبة)",
+              "pt": "Principais corredores de transporte público (linhas de desejo)",
+              "ru": "Основные транспортные коридоры (линии желаемых поездок)",
+              "de": "Wichtigste ÖPNV-Korridore (Wunschlinien)",
+              "ja": "主要公共交通回廊（希望線）",
+              "tr": "En yoğun toplu taşıma koridorları (istek çizgileri)",
+              "vi": "Hành lang giao thông công cộng hàng đầu (đường mong muốn)",
+              "it": "Principali corridoi di trasporto pubblico (linee di desiderio)",
+              "fa": "کریدورهای برتر حمل‌ونقل عمومی (خطوط تمایل)",
+              "pl": "Główne korytarze transportu publicznego (linie pragnień)",
+              "uk": "Основні транспортні коридори (лінії бажаних поїздок)",
+              "nl": "Belangrijkste OV-corridors (wenslijnen)",
+              "sv": "Främsta kollektivtrafikkorridorer (önskelinjer)",
+              "cs": "Hlavní koridory MHD (žádoucí linie)",
+              "el": "Κορυφαίοι διάδρομοι μέσων μαζικής μεταφοράς (γραμμές επιθυμίας)"
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "The strongest town-to-town home-based-work transit flows assigned by the model — the corridors that carry the most modeled riders.",
+              "ko": "모델이 배정한 가장 강한 도시 간 통근(HBW) 대중교통 흐름 — 모델링된 이용객이 가장 많은 통행축입니다.",
+              "zh": "模型分配的最强城镇间通勤(HBW)公交流量——承载最多模拟乘客的走廊。",
+              "hi": "मॉडल द्वारा आबंटित सबसे मज़बूत शहर-से-शहर घर-आधारित-कार्य परिवहन प्रवाह — वे गलियारे जो सबसे अधिक मॉडलयुक्त सवारों को ले जाते हैं।",
+              "es": "Los flujos de transporte público domicilio-trabajo municipio a municipio más fuertes asignados por el modelo: los corredores que transportan la mayor cantidad de pasajeros modelados.",
+              "fr": "Les flux de transport en commun domicile-travail ville à ville les plus forts assignés par le modèle — les corridors qui transportent le plus de voyageurs modélisés.",
+              "ar": "أقوى تدفقات النقل العام للعمل من المنزل بين البلدات التي خصصها النموذج — الممرات التي تحمل أكبر عدد من الركاب النموذجيين.",
+              "pt": "Os fluxos de transporte público casa-trabalho município a município mais fortes atribuídos pelo modelo — os corredores que transportam mais passageiros modelados.",
+              "ru": "Самые сильные потоки поездок на работу общественным транспортом город-город, распределённые моделью — коридоры с наибольшим модельным пассажиропотоком.",
+              "de": "Die stärksten von dem Modell zugeordneten Stadt-zu-Stadt-ÖPNV-Pendlerströme — die Korridore mit den meisten modellierten Fahrgästen.",
+              "ja": "モデルが割り当てた最も強い町間通勤(HBW)公共交通フロー — モデル化された乗客数が最も多い回廊です。",
+              "tr": "Model tarafından atanan en güçlü kasabadan kasabaya ev tabanlı iş toplu taşıma akışları — en fazla modellenmiş yolcu taşıyan koridorlar.",
+              "vi": "Các luồng giao thông công cộng đi làm từ nhà mạnh nhất giữa các thị trấn được mô hình phân bổ — các hành lang chở nhiều hành khách theo mô hình nhất.",
+              "it": "I flussi di trasporto pubblico casa-lavoro comune-comune più forti assegnati dal modello — i corridoi che trasportano il maggior numero di passeggeri modellati.",
+              "fa": "قوی‌ترین جریان‌های حمل‌ونقل عمومی کار از خانه بین شهرها که مدل تخصیص داده — کریدورهایی که بیشترین سرنشین مدل‌سازی‌شده را حمل می‌کنند.",
+              "pl": "Najsilniejsze przepływy transportu publicznego dojazdów do pracy miasto-miasto przydzielone przez model — korytarze przewożące najwięcej modelowanych pasażerów.",
+              "uk": "Найсильніші потоки поїздок на роботу громадським транспортом місто-місто, розподілені моделлю — коридори з найбільшою модельною кількістю пасажирів.",
+              "nl": "De sterkste stad-tot-stad woon-werk OV-stromen toegewezen door het model — de corridors die de meeste gemodelleerde reizigers vervoeren.",
+              "sv": "De starkaste ort-till-ort bostadsbaserade arbetsresor med kollektivtrafik som modellen tilldelat — korridorerna som bär flest modellerade resenärer.",
+              "cs": "Nejsilnější toky MHD z domova do práce mezi obcemi přiřazené modelem — koridory nesoucí nejvíce modelovaných cestujících.",
+              "el": "Οι ισχυρότερες ροές μέσων μαζικής μεταφοράς σπίτι-εργασία πόλης-πόλης που έχει εκχωρήσει το μοντέλο — οι διάδρομοι που μεταφέρουν τους περισσότερους μοντελοποιημένους επιβάτες."
+            }
+          },
+          {
+            "type": "table",
+            "overflow": "cards",
+            "table": "corridors",
+            "columns": ["rank", "corridor", "trips"],
+            "height": "fill",
+            "action": { "fn": "editRow" }
+          },
+          {
+            "type": "cards",
+            "table": "corridors",
+            "title": "corridor",
+            "subtitle": "trips",
+            "search": true,
+            "searchColumns": ["corridor", "from_town", "to_town"],
+            "sortBy": "trips",
+            "sortDir": "desc",
+            "expandable": true,
+            "open": "Open corridor",
+            "action": { "fn": "editRow" }
+          }
+        ]
+      }
+    },
+    "new_taz": {
+      "title": {
+        "en": "Draft new TAZs",
+        "ko": "초안 신규 TAZ",
+        "zh": "草案新 TAZ",
+        "hi": "मसौदा नए TAZ",
+        "es": "TAZ nuevos en borrador",
+        "fr": "Nouveaux TAZ en projet",
+        "ar": "TAZ الجديدة المسودة",
+        "pt": "TAZ novos em rascunho",
+        "ru": "Проектные новые TAZ",
+        "de": "Geplante neue TAZ",
+        "ja": "草案新TAZ",
+        "tr": "Taslak yeni TAZ",
+        "vi": "TAZ mới dự thảo",
+        "it": "TAZ nuovi in bozza",
+        "fa": "TAZهای پیش‌نویس جدید",
+        "pl": "Projektowane nowe TAZ",
+        "uk": "Проєктні нові TAZ",
+        "nl": "Concept-nieuwe TAZ",
+        "sv": "Utkast till nya TAZ",
+        "cs": "Návrh nových TAZ",
+        "el": "Πρόχειρα νέα TAZ"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "1,669 draft zones with 2019 demographics and 2049 projections. Tap a row to open the full record (and set its review status).",
+              "ko": "2019년 인구통계와 2049년 예측이 포함된 초안 구역 1,669개. 행을 눌러 전체 기록을 열고(검토 상태도 설정 가능).",
+              "zh": "1,669 个草案分区，含 2019 年人口统计和 2049 年预测。点击一行打开完整记录（并设置其审核状态）。",
+              "hi": "2019 जनसांख्यिकी और 2049 अनुमानों के साथ 1,669 मसौदा क्षेत्र। पूरा रिकॉर्ड खोलने के लिए (और उसकी समीक्षा स्थिति सेट करने के लिए) पंक्ति पर टैप करें।",
+              "es": "1669 zonas en borrador con demografía de 2019 y proyecciones de 2049. Toca una fila para abrir el registro completo (y establecer su estado de revisión).",
+              "fr": "1 669 zones en projet avec démographie de 2019 et projections de 2049. Touchez une ligne pour ouvrir la fiche complète (et définir son statut de révision).",
+              "ar": "1,669 منطقة مسودة مع التركيبة السكانية لعام 2019 وتوقعات 2049. انقر على صف لفتح السجل الكامل (وتعيين حالة مراجعته).",
+              "pt": "1.669 zonas em rascunho com demografia de 2019 e projeções de 2049. Toque em uma linha para abrir o registro completo (e definir seu status de revisão).",
+              "ru": "1669 проектных зон с демографией 2019 года и прогнозами на 2049 год. Нажмите на строку, чтобы открыть полную запись (и установить статус проверки).",
+              "de": "1.669 geplante Zonen mit Demografie von 2019 und Prognosen für 2049. Tippe auf eine Zeile, um den vollständigen Datensatz zu öffnen (und den Überprüfungsstatus festzulegen).",
+              "ja": "2019年の人口統計と2049年の予測を含む1,669の草案ゾーン。行をタップして完全な記録を開きます（レビュー状態の設定も可能）。",
+              "tr": "2019 demografisi ve 2049 projeksiyonlarıyla 1.669 taslak bölge. Tam kaydı açmak (ve inceleme durumunu ayarlamak) için bir satıra dokunun.",
+              "vi": "1.669 vùng dự thảo với nhân khẩu học 2019 và dự báo 2049. Chạm vào một hàng để mở bản ghi đầy đủ (và đặt trạng thái xem xét).",
+              "it": "1.669 zone in bozza con demografia 2019 e proiezioni 2049. Tocca una riga per aprire il record completo (e impostarne lo stato di revisione).",
+              "fa": "۱٬۶۶۹ منطقه پیش‌نویس با جمعیت‌شناسی ۲۰۱۹ و پیش‌بینی‌های ۲۰۴۹. برای باز کردن رکورد کامل (و تنظیم وضعیت بازبینی آن) روی یک ردیف ضربه بزنید.",
+              "pl": "1669 stref projektowanych z demografią z 2019 r. i prognozami na 2049 r. Dotknij wiersza, aby otworzyć pełny rekord (i ustawić jego status przeglądu).",
+              "uk": "1669 проєктних зон із демографією 2019 року та прогнозами на 2049 рік. Торкніться рядка, щоб відкрити повний запис (і встановити статус перегляду).",
+              "nl": "1.669 conceptzones met demografie van 2019 en projecties voor 2049. Tik op een rij om het volledige record te openen (en de beoordelingsstatus in te stellen).",
+              "sv": "1 669 utkastszoner med 2019-demografi och 2049-prognoser. Tryck på en rad för att öppna hela posten (och ställa in dess granskningsstatus).",
+              "cs": "1 669 návrhových zón s demografií z roku 2019 a prognózami na rok 2049. Klepnutím na řádek otevřete úplný záznam (a nastavte jeho stav kontroly).",
+              "el": "1.669 πρόχειρες ζώνες με δημογραφικά στοιχεία 2019 και προβλέψεις 2049. Πατήστε μια γραμμή για να ανοίξετε το πλήρες αρχείο (και να ορίσετε την κατάσταση επισκόπησής του)."
+            }
+          },
+          {
+            "type": "row",
+            "children": [
+              { "type": "stat", "table": "new_taz", "agg": "sum", "valueColumn": "persns19", "label": { "en": "Persons 2019", "ko": "인구 2019년", "zh": "人口 2019", "hi": "व्यक्ति 2019", "es": "Personas 2019", "fr": "Personnes 2019", "ar": "السكان 2019", "pt": "Pessoas 2019", "ru": "Население 2019", "de": "Personen 2019", "ja": "人口2019年", "tr": "Kişi 2019", "vi": "Người 2019", "it": "Persone 2019", "fa": "افراد ۲۰۱۹", "pl": "Osoby 2019", "uk": "Особи 2019", "nl": "Personen 2019", "sv": "Personer 2019", "cs": "Osoby 2019", "el": "Άτομα 2019" }, "color": "blue" },
+              { "type": "stat", "table": "new_taz", "agg": "sum", "valueColumn": "persns49", "label": { "en": "Persons 2049", "ko": "인구 2049년", "zh": "人口 2049", "hi": "व्यक्ति 2049", "es": "Personas 2049", "fr": "Personnes 2049", "ar": "السكان 2049", "pt": "Pessoas 2049", "ru": "Население 2049", "de": "Personen 2049", "ja": "人口2049年", "tr": "Kişi 2049", "vi": "Người 2049", "it": "Persone 2049", "fa": "افراد ۲۰۴۹", "pl": "Osoby 2049", "uk": "Особи 2049", "nl": "Personen 2049", "sv": "Personer 2049", "cs": "Osoby 2049", "el": "Άτομα 2049" }, "color": "teal" },
+              { "type": "stat", "table": "new_taz", "agg": "sum", "valueColumn": "emp19", "label": { "en": "Jobs 2019", "ko": "일자리 2019년", "zh": "岗位 2019", "hi": "नौकरियां 2019", "es": "Empleos 2019", "fr": "Emplois 2019", "ar": "الوظائف 2019", "pt": "Empregos 2019", "ru": "Рабочие места 2019", "de": "Arbeitsplätze 2019", "ja": "雇用2019年", "tr": "İş 2019", "vi": "Việc làm 2019", "it": "Posti di lavoro 2019", "fa": "مشاغل ۲۰۱۹", "pl": "Miejsca pracy 2019", "uk": "Робочі місця 2019", "nl": "Banen 2019", "sv": "Jobb 2019", "cs": "Pracovní místa 2019", "el": "Θέσεις εργασίας 2019" }, "color": "amber" },
+              { "type": "stat", "table": "new_taz", "agg": "sum", "valueColumn": "emp49", "label": { "en": "Jobs 2049", "ko": "일자리 2049년", "zh": "岗位 2049", "hi": "नौकरियां 2049", "es": "Empleos 2049", "fr": "Emplois 2049", "ar": "الوظائف 2049", "pt": "Empregos 2049", "ru": "Рабочие места 2049", "de": "Arbeitsplätze 2049", "ja": "雇用2049年", "tr": "İş 2049", "vi": "Việc làm 2049", "it": "Posti di lavoro 2049", "fa": "مشاغل ۲۰۴۹", "pl": "Miejsca pracy 2049", "uk": "Робочі місця 2049", "nl": "Banen 2049", "sv": "Jobb 2049", "cs": "Pracovní místa 2049", "el": "Θέσεις εργασίας 2049" }, "color": "green" }
+            ]
+          },
+          {
+            "type": "table",
+            "overflow": "cards",
+            "table": "new_taz",
+            "columns": ["taz_id", "town", "hh19", "hh49", "emp19", "emp49", "status"],
+            "height": "fill",
+            "action": { "fn": "editRow" }
+          },
+          {
+            "type": "barchart",
+            "table": "new_taz",
+            "groupColumn": "town",
+            "valueColumn": "emp49",
+            "agg": "sum",
+            "limit": 12,
+            "label": {
+              "en": "Projected 2049 employment — top towns",
+              "ko": "2049년 예상 고용 — 상위 도시",
+              "zh": "2049 预计就业量 — 前列城镇",
+              "hi": "अनुमानित 2049 रोजगार — शीर्ष शहर",
+              "es": "Empleo proyectado 2049: municipios principales",
+              "fr": "Emploi projeté 2049 — principales villes",
+              "ar": "التوظيف المتوقع 2049 — أهم البلدات",
+              "pt": "Emprego projetado 2049 — principais municípios",
+              "ru": "Прогнозируемая занятость 2049 — топ городов",
+              "de": "Prognostizierte Beschäftigung 2049 — Top-Städte",
+              "ja": "2049年予測雇用 — 上位町",
+              "tr": "2049 tahmini istihdam — en üst kasabalar",
+              "vi": "Việc làm dự báo 2049 — thị trấn hàng đầu",
+              "it": "Occupazione prevista 2049 — comuni principali",
+              "fa": "اشتغال پیش‌بینی‌شده ۲۰۴۹ — شهرهای برتر",
+              "pl": "Prognozowane zatrudnienie 2049 — czołowe miejscowości",
+              "uk": "Прогнозована зайнятість 2049 — топ міст",
+              "nl": "Geprojecteerde werkgelegenheid 2049 — topgemeenten",
+              "sv": "Prognostiserad sysselsättning 2049 — toppparter",
+              "cs": "Předpokládaná zaměstnanost 2049 — top obce",
+              "el": "Προβλεπόμενη απασχόληση 2049 — κορυφαίες πόλεις"
+            }
+          }
+        ]
+      }
+    },
+    "old_taz": {
+      "title": {
+        "en": "Current TDM23 TAZs",
+        "ko": "현재 TDM23 TAZ",
+        "zh": "当前 TDM23 TAZ",
+        "hi": "वर्तमान TDM23 TAZ",
+        "es": "TAZ actuales de TDM23",
+        "fr": "TAZ TDM23 actuels",
+        "ar": "TAZ TDM23 الحالية",
+        "pt": "TAZ TDM23 atuais",
+        "ru": "Текущие TAZ TDM23",
+        "de": "Aktuelle TDM23-TAZ",
+        "ja": "現行TDM23 TAZ",
+        "tr": "Mevcut TDM23 TAZ",
+        "vi": "TAZ TDM23 hiện tại",
+        "it": "TAZ TDM23 attuali",
+        "fa": "TAZهای فعلی TDM23",
+        "pl": "Bieżące TAZ TDM23",
+        "uk": "Поточні TAZ TDM23",
+        "nl": "Huidige TDM23-TAZ",
+        "sv": "Nuvarande TDM23 TAZ",
+        "cs": "Aktuální TAZ TDM23",
+        "el": "Τρέχοντα TAZ TDM23"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "2,057 zones in the current model (2017g). The old layer covers more towns than the draft new layer — the Delta tab shows which.",
+              "ko": "현재 모델(2017g)의 구역 2,057개. 기존 레이어는 초안 신규 레이어보다 더 많은 도시를 포함하며, 델타 탭에서 어느 도시인지 확인할 수 있습니다.",
+              "zh": "当前模型（2017g）中的 2,057 个分区。旧图层覆盖的城镇比草案新图层多——差异标签页显示具体是哪些。",
+              "hi": "वर्तमान मॉडल (2017g) में 2,057 क्षेत्र। पुरानी परत मसौदा नई परत की तुलना में अधिक शहरों को कवर करती है — डेल्टा टैब दिखाता है कौन से।",
+              "es": "2057 zonas en el modelo actual (2017g). La capa antigua cubre más municipios que la nueva en borrador — la pestaña Delta muestra cuáles.",
+              "fr": "2 057 zones dans le modèle actuel (2017g). L'ancienne couche couvre plus de villes que la nouvelle en projet — l'onglet Delta indique lesquelles.",
+              "ar": "2,057 منطقة في النموذج الحالي (2017g). تغطي الطبقة القديمة بلدات أكثر من الطبقة الجديدة المسودة — يوضح تبويب الفرق أيها.",
+              "pt": "2.057 zonas no modelo atual (2017g). A camada antiga cobre mais municípios do que a nova camada em rascunho — a aba Delta mostra quais.",
+              "ru": "2057 зон в текущей модели (2017g). Старый слой охватывает больше городов, чем новый проектный слой — вкладка «Дельта» показывает какие.",
+              "de": "2.057 Zonen im aktuellen Modell (2017g). Die alte Ebene deckt mehr Städte ab als die geplante neue Ebene — der Tab Delta zeigt welche.",
+              "ja": "現行モデル(2017g)の2,057ゾーン。旧レイヤーは草案新レイヤーよりも多くの町をカバーしています — どの町かはデルタタブに表示されます。",
+              "tr": "Mevcut modelde (2017g) 2.057 bölge. Eski katman, taslak yeni katmandan daha fazla kasabayı kapsar — hangileri olduğunu Delta sekmesi gösterir.",
+              "vi": "2.057 vùng trong mô hình hiện tại (2017g). Lớp cũ bao phủ nhiều thị trấn hơn lớp mới dự thảo — tab Delta cho biết những thị trấn nào.",
+              "it": "2.057 zone nel modello attuale (2017g). Il vecchio livello copre più comuni del nuovo livello in bozza — la scheda Delta mostra quali.",
+              "fa": "۲٬۰۵۷ منطقه در مدل فعلی (2017g). لایه قدیمی شهرهای بیشتری نسبت به لایه جدید پیش‌نویس پوشش می‌دهد — تب Delta نشان می‌دهد کدام‌ها.",
+              "pl": "2057 stref w bieżącym modelu (2017g). Stara warstwa obejmuje więcej miejscowości niż projektowana nowa warstwa — karta Delta pokazuje które.",
+              "uk": "2057 зон у поточній моделі (2017g). Старий шар охоплює більше міст, ніж новий проєктний шар — вкладка «Дельта» показує які.",
+              "nl": "2.057 zones in het huidige model (2017g). De oude laag bestrijkt meer gemeenten dan de nieuwe conceptlaag — het tabblad Delta laat zien welke.",
+              "sv": "2 057 zoner i den nuvarande modellen (2017g). Det gamla lagret täcker fler orter än det nya utkastslagret — fliken Delta visar vilka.",
+              "cs": "2 057 zón v aktuálním modelu (2017g). Stará vrstva pokrývá více obcí než navrhovaná nová vrstva — karta Delta ukazuje které.",
+              "el": "2.057 ζώνες στο τρέχον μοντέλο (2017g). Το παλιό επίπεδο καλύπτει περισσότερες πόλεις από το νέο πρόχειρο επίπεδο — η καρτέλα Δέλτα δείχνει ποιες."
+            }
+          },
+          {
+            "type": "table",
+            "overflow": "cards",
+            "table": "old_taz",
+            "columns": ["taz_id", "town", "subregion", "district", "land_area", "urban"],
+            "height": "fill",
+            "action": { "fn": "editRow" }
+          },
+          {
+            "type": "barchart",
+            "table": "old_taz",
+            "groupColumn": "subregion",
+            "limit": 12,
+            "label": {
+              "en": "Zones per subregion",
+              "ko": "소지역별 구역 수",
+              "zh": "各子区域分区数",
+              "hi": "उप-क्षेत्र के अनुसार क्षेत्र",
+              "es": "Zonas por subregión",
+              "fr": "Zones par sous-région",
+              "ar": "المناطق حسب المنطقة الفرعية",
+              "pt": "Zonas por sub-região",
+              "ru": "Зоны по подрайонам",
+              "de": "Zonen pro Teilregion",
+              "ja": "サブリージョン別ゾーン",
+              "tr": "Alt bölgeye göre bölgeler",
+              "vi": "Vùng theo phân khu",
+              "it": "Zone per sottoregione",
+              "fa": "مناطق به تفکیک زیرمنطقه",
+              "pl": "Strefy według podregionu",
+              "uk": "Зони за підрегіоном",
+              "nl": "Zones per subregio",
+              "sv": "Zoner per delregion",
+              "cs": "Zóny podle podregionu",
+              "el": "Ζώνες ανά υποπεριοχή"
+            }
+          }
+        ]
+      }
+    },
+    "review": {
+      "title": {
+        "en": "Zone review",
+        "ko": "구역 검토",
+        "zh": "分区审核",
+        "hi": "क्षेत्र समीक्षा",
+        "es": "Revisión de zonas",
+        "fr": "Révision de zone",
+        "ar": "مراجعة المنطقة",
+        "pt": "Revisão de zona",
+        "ru": "Проверка зон",
+        "de": "Zonenüberprüfung",
+        "ja": "ゾーンレビュー",
+        "tr": "Bölge incelemesi",
+        "vi": "Xem xét vùng",
+        "it": "Revisione zona",
+        "fa": "بازبینی منطقه",
+        "pl": "Przegląd stref",
+        "uk": "Перегляд зони",
+        "nl": "Zonebeoordeling",
+        "sv": "Zongranskning",
+        "cs": "Kontrola zóny",
+        "el": "Επισκόπηση ζώνης"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Work through the draft zones: open a TAZ, check its numbers, set status to approved or flagged and leave a note. Search by TAZ id or town.",
+              "ko": "초안 구역을 검토하세요: TAZ를 열어 수치를 확인하고, 상태를 승인 또는 표시로 설정한 뒤 메모를 남깁니다. TAZ ID나 도시명으로 검색할 수 있습니다.",
+              "zh": "逐一处理草案分区：打开某个 TAZ，检查其数据，将状态设为已批准或已标记并留言。可按 TAZ ID 或城镇搜索。",
+              "hi": "मसौदा क्षेत्रों पर काम करें: एक TAZ खोलें, उसके आंकड़े जांचें, स्थिति को स्वीकृत या फ़्लैग किया गया सेट करें और एक नोट छोड़ें। TAZ ID या शहर से खोजें।",
+              "es": "Trabaja con las zonas en borrador: abre un TAZ, verifica sus números, establece el estado como aprobado o marcado y deja una nota. Busca por ID de TAZ o municipio.",
+              "fr": "Parcourez les zones en projet : ouvrez un TAZ, vérifiez ses chiffres, définissez le statut approuvé ou signalé et laissez une note. Recherchez par ID de TAZ ou ville.",
+              "ar": "اعمل على المناطق المسودة: افتح TAZ، تحقق من أرقامها، عيّن الحالة إلى موافق عليها أو مُعلَّمة واترك ملاحظة. ابحث بمعرّف TAZ أو البلدة.",
+              "pt": "Trabalhe nas zonas em rascunho: abra um TAZ, verifique seus números, defina o status como aprovado ou sinalizado e deixe uma nota. Pesquise por ID de TAZ ou município.",
+              "ru": "Проработайте проектные зоны: откройте TAZ, проверьте его цифры, установите статус «одобрено» или «помечено» и оставьте примечание. Ищите по ID TAZ или городу.",
+              "de": "Arbeite die geplanten Zonen durch: öffne ein TAZ, prüfe seine Zahlen, setze den Status auf genehmigt oder markiert und hinterlasse eine Notiz. Suche nach TAZ-ID oder Stadt.",
+              "ja": "草案ゾーンを処理: TAZを開いて数値を確認し、承認済みまたはフラグ付きに状態を設定してメモを残します。TAZ IDまたは町名で検索できます。",
+              "tr": "Taslak bölgeler üzerinde çalışın: bir TAZ açın, rakamlarını kontrol edin, durumu onaylandı veya işaretlendi olarak ayarlayın ve bir not bırakın. TAZ kimliğine veya kasabaya göre arayın.",
+              "vi": "Xử lý các vùng dự thảo: mở một TAZ, kiểm tra số liệu, đặt trạng thái đã duyệt hoặc gắn cờ và để lại ghi chú. Tìm kiếm theo mã TAZ hoặc thị trấn.",
+              "it": "Lavora sulle zone in bozza: apri un TAZ, controlla i suoi numeri, imposta lo stato su approvato o segnalato e lascia una nota. Cerca per ID TAZ o comune.",
+              "fa": "روی مناطق پیش‌نویس کار کنید: یک TAZ را باز کنید، اعداد آن را بررسی کنید، وضعیت را تأییدشده یا علامت‌گذاری‌شده تنظیم کنید و یادداشتی بگذارید. با شناسه TAZ یا نام شهر جستجو کنید.",
+              "pl": "Pracuj nad projektowanymi strefami: otwórz TAZ, sprawdź jego liczby, ustaw status na zatwierdzone lub oflagowane i zostaw notatkę. Szukaj po ID TAZ lub miejscowości.",
+              "uk": "Опрацюйте проєктні зони: відкрийте TAZ, перевірте його цифри, встановіть статус «схвалено» або «позначено» та залиште примітку. Шукайте за ID TAZ або містом.",
+              "nl": "Werk de conceptzones door: open een TAZ, controleer de cijfers, stel status in op goedgekeurd of gemarkeerd en laat een notitie achter. Zoek op TAZ-ID of gemeente.",
+              "sv": "Gå igenom utkastszonerna: öppna en TAZ, kontrollera dess siffror, ställ in status till godkänd eller flaggad och lämna en anteckning. Sök på TAZ-id eller ort.",
+              "cs": "Projděte návrhové zóny: otevřete TAZ, zkontrolujte jeho čísla, nastavte stav na schváleno nebo označeno a zanechte poznámku. Vyhledávejte podle ID TAZ nebo obce.",
+              "el": "Επεξεργαστείτε τις πρόχειρες ζώνες: ανοίξτε ένα TAZ, ελέγξτε τους αριθμούς του, ορίστε την κατάσταση σε εγκεκριμένο ή επισημασμένο και αφήστε μια σημείωση. Αναζητήστε με βάση το ID TAZ ή την πόλη."
+            }
+          },
+          {
+            "type": "progress",
+            "table": "new_taz",
+            "statusColumn": "status",
+            "doneValue": "approved",
+            "color": "green",
+            "label": {
+              "en": "Approved",
+              "ko": "승인됨",
+              "zh": "已批准",
+              "hi": "स्वीकृत",
+              "es": "Aprobado",
+              "fr": "Approuvé",
+              "ar": "موافق عليه",
+              "pt": "Aprovado",
+              "ru": "Одобрено",
+              "de": "Genehmigt",
+              "ja": "承認済み",
+              "tr": "Onaylandı",
+              "vi": "Đã duyệt",
+              "it": "Approvato",
+              "fa": "تأییدشده",
+              "pl": "Zatwierdzone",
+              "uk": "Схвалено",
+              "nl": "Goedgekeurd",
+              "sv": "Godkänd",
+              "cs": "Schváleno",
+              "el": "Εγκρίθηκε"
+            }
+          },
+          {
+            "type": "row",
+            "children": [
+              { "type": "stat", "table": "new_taz", "filter": { "column": "status", "value": "todo" }, "label": { "en": "To review", "ko": "검토 대기", "zh": "待审核", "hi": "समीक्षा हेतु", "es": "Para revisar", "fr": "À réviser", "ar": "للمراجعة", "pt": "Para revisar", "ru": "На проверке", "de": "Zu überprüfen", "ja": "レビュー待ち", "tr": "İncelenecek", "vi": "Cần xem xét", "it": "Da rivedere", "fa": "برای بازبینی", "pl": "Do przeglądu", "uk": "На перегляді", "nl": "Te beoordelen", "sv": "Att granska", "cs": "K posouzení", "el": "Προς επισκόπηση" }, "color": "amber" },
+              { "type": "stat", "table": "new_taz", "filter": { "column": "status", "value": "flagged" }, "label": { "en": "Flagged", "ko": "표시됨", "zh": "已标记", "hi": "फ़्लैग किया गया", "es": "Marcado", "fr": "Signalé", "ar": "معلَّم", "pt": "Sinalizado", "ru": "Помечено", "de": "Markiert", "ja": "フラグ付き", "tr": "İşaretlendi", "vi": "Đã gắn cờ", "it": "Segnalato", "fa": "علامت‌گذاری‌شده", "pl": "Oflagowane", "uk": "Позначено", "nl": "Gemarkeerd", "sv": "Flaggad", "cs": "Označeno", "el": "Επισημασμένο" }, "color": "coral" },
+              { "type": "stat", "table": "new_taz", "filter": { "column": "status", "value": "approved" }, "label": { "en": "Approved", "ko": "승인됨", "zh": "已批准", "hi": "स्वीकृत", "es": "Aprobado", "fr": "Approuvé", "ar": "موافق عليه", "pt": "Aprovado", "ru": "Одобрено", "de": "Genehmigt", "ja": "承認済み", "tr": "Onaylandı", "vi": "Đã duyệt", "it": "Approvato", "fa": "تأییدشده", "pl": "Zatwierdzone", "uk": "Схвалено", "nl": "Goedgekeurd", "sv": "Godkänd", "cs": "Schváleno", "el": "Εγκρίθηκε" }, "color": "green" }
+            ]
+          },
+          {
+            "type": "cards",
+            "emptyIcon": "add_location_alt",
+            "emptyTitle": {
+              "en": "No zones yet",
+              "ko": "아직 구역 없음",
+              "zh": "暂无分区",
+              "hi": "अभी तक कोई क्षेत्र नहीं",
+              "es": "Aún no hay zonas",
+              "fr": "Aucune zone pour l'instant",
+              "ar": "لا توجد مناطق بعد",
+              "pt": "Ainda não há zonas",
+              "ru": "Пока нет зон",
+              "de": "Noch keine Zonen",
+              "ja": "まだゾーンがありません",
+              "tr": "Henüz bölge yok",
+              "vi": "Chưa có vùng nào",
+              "it": "Nessuna zona ancora",
+              "fa": "هنوز منطقه‌ای نیست",
+              "pl": "Brak stref",
+              "uk": "Ще немає зон",
+              "nl": "Nog geen zones",
+              "sv": "Inga zoner än",
+              "cs": "Zatím žádné zóny",
+              "el": "Δεν υπάρχουν ζώνες ακόμα"
+            },
+            "emptyText": {
+              "en": "Draw a new zone to start planning.",
+              "ko": "새 구역을 그려 계획을 시작하세요.",
+              "zh": "绘制新分区以开始规划。",
+              "hi": "योजना शुरू करने के लिए एक नया क्षेत्र बनाएं।",
+              "es": "Dibuja una nueva zona para empezar a planificar.",
+              "fr": "Dessinez une nouvelle zone pour commencer la planification.",
+              "ar": "ارسم منطقة جديدة لبدء التخطيط.",
+              "pt": "Desenhe uma nova zona para começar a planejar.",
+              "ru": "Нарисуйте новую зону, чтобы начать планирование.",
+              "de": "Zeichne eine neue Zone, um mit der Planung zu beginnen.",
+              "ja": "新しいゾーンを描いて計画を開始しましょう。",
+              "tr": "Planlamaya başlamak için yeni bir bölge çizin.",
+              "vi": "Vẽ một vùng mới để bắt đầu lập kế hoạch.",
+              "it": "Disegna una nuova zona per iniziare a pianificare.",
+              "fa": "برای شروع برنامه‌ریزی یک منطقه جدید رسم کنید.",
+              "pl": "Narysuj nową strefę, aby rozpocząć planowanie.",
+              "uk": "Намалюйте нову зону, щоб почати планування.",
+              "nl": "Teken een nieuwe zone om te beginnen met plannen.",
+              "sv": "Rita en ny zon för att börja planera.",
+              "cs": "Nakreslete novou zónu a začněte plánovat.",
+              "el": "Σχεδιάστε μια νέα ζώνη για να ξεκινήσετε τον σχεδιασμό."
+            },
+            "table": "new_taz",
+            "title": "name",
+            "subtitle": "town",
+            "groupBy": "status",
+            "groupOrder": ["flagged", "todo", "approved"],
+            "search": true,
+            "searchColumns": ["name", "town"],
+            "collapsible": true,
+            "open": "Open zone",
+            "tags": [ { "column": "status", "colors": { "todo": "amber", "flagged": "coral", "approved": "green" } } ],
+            "action": { "fn": "editRow" }
+          }
+        ]
+      }
+    }
+  }
+}

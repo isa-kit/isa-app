@@ -1,0 +1,137 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Downtown"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -71.425,
+       41.82
+      ],
+      [
+       -71.395,
+       41.82
+      ],
+      [
+       -71.395,
+       41.834
+      ],
+      [
+       -71.425,
+       41.834
+      ],
+      [
+       -71.425,
+       41.82
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Eastside"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -71.395,
+       41.826
+      ],
+      [
+       -71.365,
+       41.826
+      ],
+      [
+       -71.365,
+       41.85
+      ],
+      [
+       -71.395,
+       41.85
+      ],
+      [
+       -71.395,
+       41.826
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Westside"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -71.46,
+       41.808
+      ],
+      [
+       -71.425,
+       41.808
+      ],
+      [
+       -71.425,
+       41.83
+      ],
+      [
+       -71.46,
+       41.83
+      ],
+      [
+       -71.46,
+       41.808
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Northgate"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -71.432,
+       41.845
+      ],
+      [
+       -71.4,
+       41.845
+      ],
+      [
+       -71.4,
+       41.868
+      ],
+      [
+       -71.432,
+       41.868
+      ],
+      [
+       -71.432,
+       41.845
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,252 @@
+{
+  "board": {
+    "name": "Events"
+  },
+  "screens": [
+    {
+      "id": "events_0_files",
+      "name": "Files",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "events_1_upcoming",
+      "name": "Browse events",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "events_2_going",
+      "name": "You're going",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    },
+    {
+      "id": "events_3_calendar",
+      "name": "Calendar",
+      "device": "phone",
+      "x": 1320,
+      "y": 0
+    },
+    {
+      "id": "events_4_map",
+      "name": "Event map",
+      "device": "phone",
+      "x": 0,
+      "y": 900
+    }
+  ],
+  "widgets": [
+    {
+      "id": "events_0_files_title",
+      "screen": "events_0_files",
+      "kind": "titlebar",
+      "label": "Files",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "events_0_files_w0",
+      "screen": "events_0_files",
+      "kind": "list",
+      "label": "Files",
+      "region": "body",
+      "order": 0,
+      "items": "[\"Browse events\", \"You're going\", \"Calendar\"]"
+    },
+    {
+      "id": "events_0_files_nav",
+      "screen": "events_0_files",
+      "kind": "bottomnav",
+      "label": "Files \u00b7 Browse \u00b7 Going \u00b7 Calendar \u00b7 Map",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "events_1_upcoming_title",
+      "screen": "events_1_upcoming",
+      "kind": "titlebar",
+      "label": "Browse events",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "events_1_upcoming_w0",
+      "screen": "events_1_upcoming",
+      "kind": "text",
+      "label": "What's happening nearby.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "events_1_upcoming_w1",
+      "screen": "events_1_upcoming",
+      "kind": "buttonrow",
+      "label": "New event",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "events_1_upcoming_w2",
+      "screen": "events_1_upcoming",
+      "kind": "buttonrow",
+      "label": "Music",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "events_1_upcoming_nav",
+      "screen": "events_1_upcoming",
+      "kind": "bottomnav",
+      "label": "Files \u00b7 Browse \u00b7 Going \u00b7 Calendar \u00b7 Map",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "events_2_going_title",
+      "screen": "events_2_going",
+      "kind": "titlebar",
+      "label": "You're going",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "events_2_going_w0",
+      "screen": "events_2_going",
+      "kind": "text",
+      "label": "Events you've RSVP'd yes to, soonest first.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "events_2_going_w1",
+      "screen": "events_2_going",
+      "kind": "list",
+      "label": "title",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Files\", \"Browse events\", \"Calendar\"]"
+    },
+    {
+      "id": "events_2_going_nav",
+      "screen": "events_2_going",
+      "kind": "bottomnav",
+      "label": "Files \u00b7 Browse \u00b7 Going \u00b7 Calendar \u00b7 Map",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "events_3_calendar_title",
+      "screen": "events_3_calendar",
+      "kind": "titlebar",
+      "label": "Calendar",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "events_3_calendar_w0",
+      "screen": "events_3_calendar",
+      "kind": "text",
+      "label": "Events laid out by date. Tap a day to open that event.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "events_3_calendar_w1",
+      "screen": "events_3_calendar",
+      "kind": "card",
+      "label": "Calendar",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "events_3_calendar_nav",
+      "screen": "events_3_calendar",
+      "kind": "bottomnav",
+      "label": "Files \u00b7 Browse \u00b7 Going \u00b7 Calendar \u00b7 Map",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "events_4_map_title",
+      "screen": "events_4_map",
+      "kind": "titlebar",
+      "label": "Event map",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "events_4_map_w0",
+      "screen": "events_4_map",
+      "kind": "text",
+      "label": "Where each event is.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "events_4_map_w1",
+      "screen": "events_4_map",
+      "kind": "buttonrow",
+      "label": "Show all events",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "events_4_map_w2",
+      "screen": "events_4_map",
+      "kind": "card",
+      "label": "Map",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "events_4_map_nav",
+      "screen": "events_4_map",
+      "kind": "bottomnav",
+      "label": "Files \u00b7 Browse \u00b7 Going \u00b7 Calendar \u00b7 Map",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "events_flow_0",
+      "fromWidget": "events_0_files_nav",
+      "toScreen": "events_1_upcoming",
+      "transition": "push"
+    },
+    {
+      "id": "events_flow_1",
+      "fromWidget": "events_1_upcoming_nav",
+      "toScreen": "events_2_going",
+      "transition": "push"
+    },
+    {
+      "id": "events_flow_2",
+      "fromWidget": "events_2_going_nav",
+      "toScreen": "events_3_calendar",
+      "transition": "push"
+    },
+    {
+      "id": "events_flow_3",
+      "fromWidget": "events_3_calendar_nav",
+      "toScreen": "events_4_map",
+      "transition": "push"
+    },
+    {
+      "id": "events_flow_4",
+      "fromWidget": "events_4_map_nav",
+      "toScreen": "events_0_files",
+      "transition": "push"
+    },
+    {
+      "id": "events_flow_extra",
+      "fromWidget": "events_0_files_w0",
+      "toScreen": "events_1_upcoming",
+      "transition": "push"
+    }
+  ]
+}

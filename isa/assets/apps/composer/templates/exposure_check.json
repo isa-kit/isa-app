@@ -1,0 +1,275 @@
+{
+  "board": {
+    "name": "Exposure Check"
+  },
+  "screens": [
+    {
+      "id": "exposu_0_overview",
+      "name": "Overview",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "exposu_1_identifiers",
+      "name": "My details",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "exposu_2_protections",
+      "name": "Protections",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    },
+    {
+      "id": "exposu_3_brokers",
+      "name": "Data-broker opt-outs",
+      "device": "phone",
+      "x": 1320,
+      "y": 0
+    },
+    {
+      "id": "exposu_4_guides",
+      "name": "Guides",
+      "device": "phone",
+      "x": 0,
+      "y": 900
+    }
+  ],
+  "widgets": [
+    {
+      "id": "exposu_0_overview_title",
+      "screen": "exposu_0_overview",
+      "kind": "titlebar",
+      "label": "Overview",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "exposu_0_overview_w0",
+      "screen": "exposu_0_overview",
+      "kind": "text",
+      "label": "Your personal-exposure workbook.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "exposu_0_overview_w1",
+      "screen": "exposu_0_overview",
+      "kind": "card",
+      "label": "Protections done",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "exposu_0_overview_w2",
+      "screen": "exposu_0_overview",
+      "kind": "card",
+      "label": "Critical steps",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "exposu_0_overview_nav",
+      "screen": "exposu_0_overview",
+      "kind": "bottomnav",
+      "label": "Overview \u00b7 My details \u00b7 Protections \u00b7 Opt-outs \u00b7 Guides",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "exposu_1_identifiers_title",
+      "screen": "exposu_1_identifiers",
+      "kind": "titlebar",
+      "label": "My details",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "exposu_1_identifiers_w0",
+      "screen": "exposu_1_identifiers",
+      "kind": "text",
+      "label": "List the details you want to protect.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "exposu_1_identifiers_w1",
+      "screen": "exposu_1_identifiers",
+      "kind": "buttonrow",
+      "label": "Add email",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "exposu_1_identifiers_w2",
+      "screen": "exposu_1_identifiers",
+      "kind": "buttonrow",
+      "label": "Add website",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "exposu_1_identifiers_nav",
+      "screen": "exposu_1_identifiers",
+      "kind": "bottomnav",
+      "label": "Overview \u00b7 My details \u00b7 Protections \u00b7 Opt-outs \u00b7 Guides",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "exposu_2_protections_title",
+      "screen": "exposu_2_protections",
+      "kind": "titlebar",
+      "label": "Protections",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "exposu_2_protections_w0",
+      "screen": "exposu_2_protections",
+      "kind": "text",
+      "label": "The checklist that actually reduces your exposure, most important first.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "exposu_2_protections_w1",
+      "screen": "exposu_2_protections",
+      "kind": "card",
+      "label": "Done",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "exposu_2_protections_w2",
+      "screen": "exposu_2_protections",
+      "kind": "card",
+      "label": "To do",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "exposu_2_protections_nav",
+      "screen": "exposu_2_protections",
+      "kind": "bottomnav",
+      "label": "Overview \u00b7 My details \u00b7 Protections \u00b7 Opt-outs \u00b7 Guides",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "exposu_3_brokers_title",
+      "screen": "exposu_3_brokers",
+      "kind": "titlebar",
+      "label": "Data-broker opt-outs",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "exposu_3_brokers_w0",
+      "screen": "exposu_3_brokers",
+      "kind": "text",
+      "label": "People-search sites publish your name, address and phone.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "exposu_3_brokers_w1",
+      "screen": "exposu_3_brokers",
+      "kind": "card",
+      "label": "Confirmed",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "exposu_3_brokers_w2",
+      "screen": "exposu_3_brokers",
+      "kind": "card",
+      "label": "Requested",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "exposu_3_brokers_nav",
+      "screen": "exposu_3_brokers",
+      "kind": "bottomnav",
+      "label": "Overview \u00b7 My details \u00b7 Protections \u00b7 Opt-outs \u00b7 Guides",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "exposu_4_guides_title",
+      "screen": "exposu_4_guides",
+      "kind": "titlebar",
+      "label": "Guides",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "exposu_4_guides_w0",
+      "screen": "exposu_4_guides",
+      "kind": "text",
+      "label": "Plain-language explainers.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "exposu_4_guides_w1",
+      "screen": "exposu_4_guides",
+      "kind": "list",
+      "label": "topic",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Overview\", \"My details\", \"Protections\"]"
+    },
+    {
+      "id": "exposu_4_guides_nav",
+      "screen": "exposu_4_guides",
+      "kind": "bottomnav",
+      "label": "Overview \u00b7 My details \u00b7 Protections \u00b7 Opt-outs \u00b7 Guides",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "exposu_flow_0",
+      "fromWidget": "exposu_0_overview_nav",
+      "toScreen": "exposu_1_identifiers",
+      "transition": "push"
+    },
+    {
+      "id": "exposu_flow_1",
+      "fromWidget": "exposu_1_identifiers_nav",
+      "toScreen": "exposu_2_protections",
+      "transition": "push"
+    },
+    {
+      "id": "exposu_flow_2",
+      "fromWidget": "exposu_2_protections_nav",
+      "toScreen": "exposu_3_brokers",
+      "transition": "push"
+    },
+    {
+      "id": "exposu_flow_3",
+      "fromWidget": "exposu_3_brokers_nav",
+      "toScreen": "exposu_4_guides",
+      "transition": "push"
+    },
+    {
+      "id": "exposu_flow_4",
+      "fromWidget": "exposu_4_guides_nav",
+      "toScreen": "exposu_0_overview",
+      "transition": "push"
+    },
+    {
+      "id": "exposu_flow_extra",
+      "fromWidget": "exposu_4_guides_w1",
+      "toScreen": "exposu_0_overview",
+      "transition": "push"
+    }
+  ]
+}

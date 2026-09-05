@@ -1,0 +1,101 @@
+{
+  "board": {
+    "name": "Tetherfield"
+  },
+  "screens": [
+    {
+      "id": "spaceg_0_world",
+      "name": "Tetherfield",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "spaceg_1_how",
+      "name": "How to play",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "spaceg_0_world_title",
+      "screen": "spaceg_0_world",
+      "kind": "titlebar",
+      "label": "Tetherfield",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "spaceg_0_world_w0",
+      "screen": "spaceg_0_world",
+      "kind": "text",
+      "label": "spacegame",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "spaceg_0_world_nav",
+      "screen": "spaceg_0_world",
+      "kind": "bottomnav",
+      "label": "Play \u00b7 How to",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "spaceg_1_how_title",
+      "screen": "spaceg_1_how",
+      "kind": "titlebar",
+      "label": "How to play",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "spaceg_1_how_w0",
+      "screen": "spaceg_1_how",
+      "kind": "text",
+      "label": "Protect the hub: power up, mine the rocks, hold the line",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "spaceg_1_how_w1",
+      "screen": "spaceg_1_how",
+      "kind": "text",
+      "label": "Welcome to Tetherfield!",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "spaceg_1_how_w2",
+      "screen": "spaceg_1_how",
+      "kind": "text",
+      "label": "The core loop \u2014 make power, mine minerals",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "spaceg_1_how_nav",
+      "screen": "spaceg_1_how",
+      "kind": "bottomnav",
+      "label": "Play \u00b7 How to",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "spaceg_flow_0",
+      "fromWidget": "spaceg_0_world_nav",
+      "toScreen": "spaceg_1_how",
+      "transition": "push"
+    },
+    {
+      "id": "spaceg_flow_1",
+      "fromWidget": "spaceg_1_how_nav",
+      "toScreen": "spaceg_0_world",
+      "transition": "push"
+    }
+  ]
+}

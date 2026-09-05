@@ -1,0 +1,13 @@
+{
+  "id": "schema_map",
+  "name": "Schema Map",
+  "category": "Developer",
+  "description": "Every table and relationship in a board, mapped.",
+  "hidden": true,
+  "icon": "account_tree",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_schema_map"
+  },
+  "seedVersion": "2026-06-17.sketch"
+}

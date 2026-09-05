@@ -1,0 +1,13 @@
+{
+  "id": "vertier",
+  "name": "Vertier",
+  "category": "Games",
+  "description": "Discover, compare and tier-rank things into collections.",
+  "icon": "leaderboard",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_vertier"
+  },
+  "seedVersion": "2026-06-19.links.l10n-int-0903",
+  "seedContent": "initial-only"
+}

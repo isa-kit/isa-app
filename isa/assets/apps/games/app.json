@@ -1,0 +1,14 @@
+{
+  "id": "games",
+  "name": "Games",
+  "category": "Games",
+  "description": "Board, card and dice games — chess, checkers, backgammon, mancala, battleship, blackjack and more.",
+  "icon": "sports_esports",
+  "color": "#19E6C0",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_games"
+  },
+  "seedVersion": "2026-06-13.2.l10n-int-0903",
+  "seedContent": "initial-only"
+}

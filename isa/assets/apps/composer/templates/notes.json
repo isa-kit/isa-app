@@ -1,0 +1,193 @@
+{
+  "board": {
+    "name": "Notes"
+  },
+  "screens": [
+    {
+      "id": "nt_files",
+      "name": "Files",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "nt_edit",
+      "name": "Notes",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "nt_browse",
+      "name": "Browse",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    },
+    {
+      "id": "nt_graph",
+      "name": "Graph",
+      "device": "phone",
+      "x": 1320,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "nt_files_title",
+      "screen": "nt_files",
+      "kind": "titlebar",
+      "label": "Files",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "nt_files_list",
+      "screen": "nt_files",
+      "kind": "list",
+      "label": "Folders & note files",
+      "region": "body",
+      "order": 0,
+      "items": "[{\"text\": \"Projects\", \"children\": [{\"text\": \"Roadmap.md\"}, {\"text\": \"Ideas.md\"}]}, {\"text\": \"Reading list.md\"}, {\"text\": \"Meeting notes.md\"}]"
+    },
+    {
+      "id": "nt_files_nav",
+      "screen": "nt_files",
+      "kind": "bottomnav",
+      "label": "Files \u00b7 Notes \u00b7 Browse \u00b7 Graph",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "nt_edit_title",
+      "screen": "nt_edit",
+      "kind": "titlebar",
+      "label": "Notes",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "nt_edit_list",
+      "screen": "nt_edit",
+      "kind": "list",
+      "label": "Note editor \u2014 markdown body",
+      "region": "body",
+      "order": 0,
+      "items": "[\"# Roadmap\", \"Q3 goals\", \"- Ship v2\", \"- Write docs\"]"
+    },
+    {
+      "id": "nt_edit_nav",
+      "screen": "nt_edit",
+      "kind": "bottomnav",
+      "label": "Files \u00b7 Notes \u00b7 Browse \u00b7 Graph",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "nt_browse_title",
+      "screen": "nt_browse",
+      "kind": "titlebar",
+      "label": "Browse",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "nt_browse_jot",
+      "screen": "nt_browse",
+      "kind": "buttonrow",
+      "label": "Jot a note",
+      "region": "top",
+      "order": 1
+    },
+    {
+      "id": "nt_browse_sort",
+      "screen": "nt_browse",
+      "kind": "dropdown",
+      "label": "Sort",
+      "region": "top",
+      "order": 2,
+      "items": "[\"Newest first\", \"Oldest first\", \"A\\u2013Z\"]"
+    },
+    {
+      "id": "nt_browse_cards",
+      "screen": "nt_browse",
+      "kind": "list",
+      "label": "Notes, newest first",
+      "region": "body",
+      "order": 0,
+      "items": "[\"Reading list \\u2014 updated today\", \"Project ideas \\u2014 updated yesterday\", \"Meeting notes \\u2014 updated 3 days ago\"]"
+    },
+    {
+      "id": "nt_browse_nav",
+      "screen": "nt_browse",
+      "kind": "bottomnav",
+      "label": "Files \u00b7 Notes \u00b7 Browse \u00b7 Graph",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "nt_graph_title",
+      "screen": "nt_graph",
+      "kind": "titlebar",
+      "label": "Graph",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "nt_graph_tidy",
+      "screen": "nt_graph",
+      "kind": "buttonrow",
+      "label": "Tidy",
+      "region": "top",
+      "order": 1
+    },
+    {
+      "id": "nt_graph_card",
+      "screen": "nt_graph",
+      "kind": "card",
+      "label": "Link graph \u2014 notes as nodes, links as edges",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "nt_graph_nav",
+      "screen": "nt_graph",
+      "kind": "bottomnav",
+      "label": "Files \u00b7 Notes \u00b7 Browse \u00b7 Graph",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "nt_flow_0",
+      "fromWidget": "nt_files_nav",
+      "toScreen": "nt_edit",
+      "transition": "push"
+    },
+    {
+      "id": "nt_flow_1",
+      "fromWidget": "nt_edit_nav",
+      "toScreen": "nt_browse",
+      "transition": "push"
+    },
+    {
+      "id": "nt_flow_2",
+      "fromWidget": "nt_browse_nav",
+      "toScreen": "nt_graph",
+      "transition": "push"
+    },
+    {
+      "id": "nt_flow_3",
+      "fromWidget": "nt_graph_nav",
+      "toScreen": "nt_files",
+      "transition": "push"
+    },
+    {
+      "id": "nt_flow_4",
+      "fromWidget": "nt_browse_cards",
+      "toScreen": "nt_edit",
+      "transition": "push"
+    }
+  ]
+}

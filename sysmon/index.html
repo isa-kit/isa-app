@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/isa/">
+
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="System Monitor">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="System Monitor">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>System Monitor</title>
+  <link rel="manifest" href="manifest.json">
+
+  <script>
+    // STANDALONE per-applet identity. Each published applet has a dedicated
+    // URL (/isan-web/<id>/ — a real deploy-generated directory, see
+    // tool/write_standalone_apps.sh) that boots straight into the applet with
+    // no home launcher. Point the manifest link at that applet's own
+    // deploy-generated manifest (manifest_<id>.json: own name + start_url) so
+    // "install app" installs the APPLET as its own app, not Isa. Done in JS —
+    // not baked into the per-directory HTML copy — so the swap also holds when
+    // the service worker serves this cached shell for a /<id>/ navigation.
+    // The id rule mirrors lib/src/deeplink.dart standaloneIdFromUri: last
+    // non-empty path segment (ignoring index.html), ^[a-z0-9_]{1,64}$.
+    // It must NOT fire on the app's own page. Standalone copies keep the
+    // app's <base href> (they share its bundle), so the app is exactly the
+    // page whose last path segment equals the base segment — compare against
+    // the base rather than pattern-matching the site root, which silently
+    // broke when the base moved from the hyphenated "isan-web" to "isa"
+    // (the app then asked for a manifest_isa.json that does not exist).
+    //
+    // selfsuffB-0821: the manifest href is resolved against window.location
+    // (the page's OWN URL), not left as a bare relative string. A relative
+    // href on a <link> resolves against the document's <base> — which is
+    // still /isa/ on every standalone copy (see comment above) — so a bare
+    // 'manifest_taskly.json' asked the browser for /isa/manifest_taskly.json
+    // and 404'd in prod (confirmed live), even though the applet's own
+    // canonical copy already sits alongside this very page at
+    // /taskly/manifest_taskly.json (tool/assemble_prod_artifact.sh copies it
+    // there so the /<id>/ folder is self-contained). Anchoring to
+    // window.location instead of duplicating that file at /isa/ keeps ONE
+    // canonical manifest per applet.
+    (function () {
+      var base = document.querySelector('base');
+      var baseSegs = (base ? base.getAttribute('href') || '' : '')
+          .split('/').filter(Boolean);
+      var baseSeg = baseSegs[baseSegs.length - 1];
+      var segs = window.location.pathname.split('/').filter(function (s) {
+        return s && s !== 'index.html';
+      });
+      var id = segs[segs.length - 1];
+      if (id && id !== baseSeg && /^[a-z0-9_]{1,64}$/.test(id)) {
+        var link = document.querySelector('link[rel="manifest"]');
+        if (link) {
+          link.setAttribute('href',
+              new URL('manifest_' + id + '.json', window.location.href).toString());
+        }
+      }
+    })();
+  </script>
+
+  <!-- MapLibre GL JS + CSS — provides the global `maplibregl` for the glmap node. -->
+  <link href="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.css" rel="stylesheet" />
+  <script src="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.js"></script>
+
+  <script>
+    // OFFLINE APP SHELL. Flutter 3.44 deprecated its own caching service
+    // worker — flutter_service_worker.js is now a self-unregistering
+    // tombstone that caches nothing (see that file's generated contents, or
+    // flutter/flutter#156910), which left this app with no offline boot at
+    // all: "cached wikipick articles are inaccessible offline" traced back
+    // to the SHELL around them never loading with no network, not to the
+    // article cache itself (that's plain IndexedDB, already device-local and
+    // unaffected by any of this). web/app_shell_sw.js is a small hand-rolled
+    // replacement — network-first, cache-as-you-go, no manifest/versioning —
+    // registered here so ANY page built from this shell (the main app AND
+    // every standalone /<id>/ copy, since they share this <base href> and
+    // this script verbatim) gets the same offline capability. Deliberately
+    // NOT the old skipWaiting/clients.claim-on-a-caching-worker pattern this
+    // app used to lean on for freshness — that concern already has its own,
+    // separate, correct mechanism (build_info.json polling + the in-app
+    // "new version — Reload" prompt, whose Reload force-revalidates the
+    // shell). This worker never intercepts build_info.json/release_notes.json
+    // (see app_shell_sw.js), so it cannot make that freshness check stale.
+    // Feature-detected, fire-and-forget — never blocks or delays app boot.
+    //
+    // selfsuffB-0821: swUrl is resolved against window.location (the page's
+    // OWN url), not document.baseURI. baseURI stays /isa/ on every
+    // standalone copy (see the manifest-swap comment above), so this used to
+    // register the SAME /isa/app_shell_sw.js script for every page — giving
+    // every standalone page a controller SCOPE of /isa/, which never covers
+    // a /<id>/ page, so standalone applets never got offline boot at all
+    // (confirmed live: /app_shell_sw.js 404s, only /isa/app_shell_sw.js
+    // 200s). Registering page-relative, with no explicit `scope` option,
+    // defaults the scope to the registering page's own directory — so the
+    // framed page still gets /isa/ (unchanged) and each standalone page gets
+    // its own /<id>/ (new). This requires a real app_shell_sw.js file to
+    // exist at that path — tool/write_standalone_apps.sh now copies it into
+    // every generated /<id>/ dir. The worker's own fetch/cache logic already
+    // works off self.registration.scope (see app_shell_sw.js), so it needs
+    // no change once it is actually reachable and controls the right scope.
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        var swUrl = new URL('app_shell_sw.js', window.location.href).toString();
+        navigator.serviceWorker.register(swUrl).catch(function (err) {
+          console.warn('app_shell_sw registration failed (offline boot will not be available this session):', err);
+        });
+      });
+    }
+  </script>
+
+  <style>
+    /* App shell. The page must not bounce, pull-to-refresh, or navigate on an
+       overscroll: a vertical overscroll mid-design would reload (losing canvas
+       state), and a two-finger horizontal swipe on a Mac trackpad was
+       accidentally triggering the browser's back/forward navigation. Contain
+       BOTH axes (`overscroll-behavior: none`) — the clean CSS containment, not
+       the old popstate trap that was janky. The app owns its own scrolling. */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      overscroll-behavior: none;
+      /* Stop the browser's native text/element selection from hijacking a
+         click-drag. On a Mac a drag on the canvas used to start a "heavy"
+         browser selection (highlighting the page) and the wireframe's marquee
+         only registered on a hard press; suppressing user-select hands every
+         drag straight to the app, so a normal click-drag draws the selection
+         rectangle. (touch-action is left at the default so the horizontal
+         edge-swipe-back still works.) */
+      user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+    /* Belt-and-braces for the Flutter host element across engine versions. */
+    flutter-view, flt-glass-pane {
+      overscroll-behavior: none;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+  </style>
+
+  <script>
+    // App-shell gesture guards. The app owns its own scrolling and zoom.
+    // `overscroll-behavior:none` (above) contains BOTH pull-to-refresh and the
+    // horizontal swipe-to-navigate (which was accidentally going back a page on
+    // a Mac trackpad). This block only blocks PAGE pinch-zoom (1).
+    (function () {
+      // 1) Block the browser's PAGE pinch-zoom. Chrome/Edge surface a trackpad
+      //    pinch as a ctrl+wheel event; Safari uses gesture* events. The app's
+      //    own zoom (e.g. the sheet's zoom control) is unaffected.
+      window.addEventListener('wheel', function (e) {
+        if (e.ctrlKey) e.preventDefault();
+      }, { passive: false });
+      ['gesturestart', 'gesturechange', 'gestureend'].forEach(function (type) {
+        window.addEventListener(type, function (e) { e.preventDefault(); }, { passive: false });
+      });
+
+      // 2) Back/forward navigation is intentionally NOT trapped. The old
+      //    sentinel (pushState + re-assert on every popstate) was removed per
+      //    user request: on a phone the edge-swipe-back fired anyway and the
+      //    trap re-pushed the entry, leaving the back gesture stuck/janky. Let
+      //    the browser back-swipe navigate normally; the app still offers its
+      //    own on-screen back/exit.
+
+      // 3) REMOVED 2026-08-09: the `controllerchange` → auto-reload listener.
+      //    It was written for the era when Flutter shipped a CACHING service
+      //    worker and the deploy patched it with skipWaiting + clients.claim,
+      //    so a new build claiming this page was the signal to reload.
+      //    Two reasons it is gone:
+      //      a) Flutter 3.44 deprecated that worker. The generated
+      //         flutter_service_worker.js is now a TOMBSTONE that unregisters
+      //         itself on activate and caches nothing (confirmed by curling
+      //         the live site). It also navigates its own clients as part of
+      //         that teardown, so this listener was at best duplicating
+      //         Flutter's one-time migration reload.
+      //      b) On this app updates are DELIBERATE. A page that reloads itself
+      //         because a worker changed underneath is exactly the silent
+      //         mid-task update we do not want — a regression could land while
+      //         the user is in the middle of editing. Noticing a new build and
+      //         SAYING SO is the app's job (the launcher's build_info check →
+      //         a persistent "A new version of Isa is ready · Reload"
+      //         prompt); acting on it is the user's.
+      //    What remains here: nothing. SW registration is still the stock
+      //    flutter_bootstrap.js flow, and the real staleness today is the
+      //    plain HTTP cache on unhashed URLs — handled in Dart (applet config
+      //    is build-stamped, and the Reload action force-revalidates the shell
+      //    with `cache: 'reload'`). See lib/src/app_doc_url.dart and
+      //    lib/src/update/web_reload_web.dart.
+    })();
+  </script>
+
+  <script>
+    // Keyboard-flash fix on tab restore (user phone report, 2026-08-08). Repro:
+    // leave a text field focused, switch to another app (e.g. the phone
+    // keyboard for texting), switch back to this browser tab — the on-screen
+    // keyboard flashes open for a split second then immediately dismisses.
+    // Root cause: the field's Flutter FocusNode/DOM element is still "focused"
+    // from before backgrounding, so on restore some browsers briefly re-summon
+    // the virtual keyboard for it before Flutter's own focus/visibility
+    // handling settles, producing the push-up-then-snap-back flash.
+    // Fix: proactively blur the active element the moment the tab is hidden or
+    // paged out (NOT on any other event — must never fire during normal in-app
+    // typing, only on backgrounding transitions), so there is nothing focused
+    // left to re-summon the keyboard for when the tab is restored. Both events
+    // are wired because mobile Chrome/Safari tab-switch reliably fires
+    // visibilitychange, while pagehide is the belt-and-braces fallback some
+    // WebViews use instead (BFCache navigations, some Android flows).
+    (function () {
+      function blurActive() {
+        var el = document.activeElement;
+        if (el && typeof el.blur === 'function' && el !== document.body) {
+          el.blur();
+        }
+      }
+      document.addEventListener('visibilitychange', function () {
+        if (document.visibilityState === 'hidden') blurActive();
+      });
+      window.addEventListener('pagehide', blurActive);
+    })();
+  </script>
+
+  <script>
+    // Viewport-restore watchdog (D23, user phone screenshot 2026-08-09).
+    // Repro: Korea tab → Stops search → keyboard opens (visual viewport
+    // shrinks, Flutter resizes the app down) → dismiss the keyboard → the app
+    // stays squashed to the top ~45% of the screen with a dead black band
+    // below, persisting until some other resize (rotate, tab switch).
+    // Root cause: with Chrome's `resizes-visual` default (no viewport meta,
+    // see the note below) the Flutter engine sizes the app from
+    // window.visualViewport and listens to its `resize` event. On some mobile
+    // Chrome flows the restore event fires while focus/IME teardown is still
+    // in flight and the engine's re-measure is missed or computes stale
+    // values — the app never grows back. The blur-on-hide script above does
+    // NOT cover this: it only runs on tab backgrounding (visibilitychange/
+    // pagehide), never on in-app keyboard dismissal.
+    // Fix: when the visual viewport HEIGHT GROWS (keyboard closing) — and
+    // only then, never while the keyboard is opening or during typing —
+    // schedule a few delayed nudges that (a) re-assert scroll origin 0,0 if
+    // the browser left the page displaced, and (b) re-dispatch a synthetic
+    // `resize` on visualViewport itself. dispatchEvent invokes the engine's
+    // own listener synchronously, making it re-read the NOW-restored
+    // visualViewport.height — a no-op if the engine already resized
+    // correctly, a recovery if it missed the real event. `focusout` (capture)
+    // schedules the same nudges as belt-and-braces for dismissal paths where
+    // the field blurs (done/tap-away) in case the vv resize event itself is
+    // swallowed. Height-shrink events (keyboard opening) cancel any pending
+    // nudges so nothing fights the keyboard animation.
+    (function () {
+      var vv = window.visualViewport;
+      if (!vv) return;
+      var lastH = vv.height;
+      var timers = [];
+      function cancelNudges() {
+        timers.forEach(clearTimeout);
+        timers = [];
+      }
+      function nudge() {
+        if (vv.offsetTop > 0.5 || window.scrollY > 0.5) window.scrollTo(0, 0);
+        // Synthetic events do not recurse harmfully: our own listener sees an
+        // unchanged height and ignores it (neither grow nor shrink branch).
+        vv.dispatchEvent(new Event('resize'));
+      }
+      function scheduleNudges() {
+        cancelNudges();
+        [80, 300, 1000].forEach(function (ms) {
+          timers.push(setTimeout(nudge, ms));
+        });
+      }
+      vv.addEventListener('resize', function () {
+        var h = vv.height;
+        var prev = lastH;
+        lastH = h;
+        if (h < prev - 1) {
+          // Keyboard opening (or window truly shrinking) — stand down.
+          cancelNudges();
+        } else if (h > prev + 1) {
+          // Keyboard closing / viewport restoring — verify the restore took.
+          scheduleNudges();
+        }
+        // Unchanged height (our own synthetic dispatch lands here): ignore.
+      });
+      document.addEventListener('focusout', function () {
+        // A field losing focus usually precedes keyboard dismissal; schedule
+        // the same idempotent nudges in case the restore resize is swallowed.
+        scheduleNudges();
+      }, true);
+    })();
+  </script>
+
+  <!--
+    Evaluated and REJECTED: adding interactive-widget=resizes-content (or
+    overlays-content) to a viewport meta tag, as a second mitigation for the
+    keyboard-flash bug above.
+
+    This shell currently ships NO <meta name="viewport"> tag at all, so Chrome
+    108+ (interactive-widget shipped Chrome 108) already applies its default,
+    `resizes-visual` — the Visual Viewport resizes when the keyboard opens but
+    the Layout Viewport does not. Flutter web's own keyboard-inset detection
+    (used to scroll a focused TextField into view, EditableText's
+    ensureVisible-on-focus path) is driven by listening to
+    `window.visualViewport` resize/scroll events to compute the keyboard
+    inset height — i.e. it depends on exactly the behavior `resizes-visual`
+    already provides. Explicitly setting `resizes-content` would additionally
+    resize the Layout Viewport (relevant to `vh`/`svh`/`lvh` CSS units), which
+    this shell doesn't use for sizing the Flutter canvas (html/body are fixed
+    `height: 100%`, overflow hidden, see the app-shell CSS below) — so it adds
+    no benefit here, only an untested behavior change.
+
+    `overlays-content` would be actively harmful: it stops BOTH viewports from
+    resizing, so `visualViewport` never fires a resize event when the keyboard
+    opens, which breaks Flutter's inset detection outright — a focused text
+    field could end up hidden underneath the on-screen keyboard with no
+    automatic scroll to reveal it. That is a plain regression with no upside
+    for a CanvasKit/Flutter app, so it is not being added.
+
+    Net: the flash is fixed by the blur-on-hide script above; the viewport
+    meta tag is left as-is (i.e. absent, which yields Chrome's
+    `resizes-visual` default — already what Flutter web wants).
+    Source: interactive-widget spec + browser support —
+    https://www.htmhell.dev/adventcalendar/2024/4/ (resizes-visual is the
+    default; overlays-content resizes neither viewport; Chrome 108+/Firefox
+    132+ support; WebKit/Safari not yet supported as of this writing).
+  -->
+</head>
+<body>
+  <!--
+    You can customize the "flutter_bootstrap.js" script.
+    This is useful to provide a custom configuration to the Flutter loader
+    or to give the user feedback during the initialization process.
+
+    For more details:
+    * https://docs.flutter.dev/platform-integration/web/initialization
+  -->
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

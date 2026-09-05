@@ -1,0 +1,784 @@
+{
+  "users": [
+    {
+      "id": "u_you",
+      "name": "You"
+    },
+    {
+      "id": "u_claude",
+      "name": "Claude"
+    }
+  ],
+  "tag_types": [
+    {
+      "id": "tt_bug",
+      "name": "bug",
+      "label": "Bug",
+      "color": "red"
+    },
+    {
+      "id": "tt_feature",
+      "name": "feature",
+      "label": "Feature",
+      "color": "blue"
+    },
+    {
+      "id": "tt_infra",
+      "name": "infra",
+      "label": "Infra",
+      "color": "purple"
+    },
+    {
+      "id": "tt_docs",
+      "name": "docs",
+      "label": "Docs",
+      "color": "teal"
+    },
+    {
+      "id": "tt_followup",
+      "name": "followup",
+      "label": "Follow-up",
+      "color": "amber"
+    }
+  ],
+  "entries": [
+    {
+      "id": "p_roadmap",
+      "type": "group",
+      "title": "Spring launch",
+      "status": "active",
+      "order": 1,
+      "comment": "Projects and decisions live here. Open one to see its child entries.",
+      "rulesActive": true,
+      "rulesVersion": "2026-08-07",
+      "rules": "Manual only — no automatic edits inside this project or any sub-project of it. A person makes every change here."
+    },
+    {
+      "id": "n_howto",
+      "type": "task",
+      "title": "How this board works",
+      "status": "done",
+      "order": 1,
+      "comment": "Every entry is one node: it has a title and a comment, and a TYPE that decides its content — a note, a wireframe, a sheet, a doc, or a sketch (each keeps its own data). Nodes relate through the relations table, so ONE entry can live under many parents.",
+      "createdBy": "u_claude",
+      "prompting": [
+        "u_you"
+      ],
+      "estimateMins": 15,
+      "priority": "low",
+      "importance": "normal"
+    },
+    {
+      "id": "n_store",
+      "type": "group",
+      "title": "Pricing & packaging",
+      "status": "active",
+      "order": 2,
+      "comment": "Decisions, one at a time, each with a recommendation.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "n_store_req",
+      "type": "task",
+      "title": "Choose the launch pricing tiers",
+      "status": "active",
+      "order": 1,
+      "comment": "Walk me through pricing and packaging one question at a time, simply, with a recommendation for each.",
+      "createdBy": "u_you",
+      "prompting": [
+        "u_claude"
+      ],
+      "estimateMins": 30,
+      "priority": "normal",
+      "importance": "normal",
+      "due": "2026-07-15"
+    },
+    {
+      "id": "n_store_wf",
+      "type": "wireframe",
+      "title": "Pricing page — wireframe",
+      "status": "active",
+      "order": 2,
+      "createdBy": "u_you"
+    },
+    {
+      "id": "n_bridge",
+      "type": "task",
+      "title": "Finish the checkout flow",
+      "status": "queued",
+      "order": 3,
+      "comment": "Wire the new payment provider end to end and retire the old form.",
+      "createdBy": "u_you",
+      "estimateMins": 240,
+      "priority": "high",
+      "importance": "high",
+      "scheduledStart": "2026-07-20",
+      "due": "2026-08-15",
+      "blocked": true
+    },
+    {
+      "id": "p_inbox",
+      "type": "group",
+      "title": "Inbox",
+      "status": "active",
+      "order": 2,
+      "comment": "A place to drop new entries."
+    },
+    {
+      "id": "l_store_1",
+      "type": "note",
+      "comment": "Recommendation drafted — one decision per card; the pricing page ships first.",
+      "createdBy": "u_claude",
+      "created": "2026-07-01",
+      "postedAt": "2026-07-01T09:05:00"
+    },
+    {
+      "id": "l_store_2",
+      "type": "note",
+      "comment": "Sounds good — start with the tiers, then the terms.",
+      "createdBy": "u_you",
+      "created": "2026-07-01",
+      "postedAt": "2026-07-01T09:20:00"
+    },
+    {
+      "id": "t_store_wf",
+      "type": "task",
+      "title": "Pricing page",
+      "status": "done",
+      "createdBy": "u_you",
+      "comment": "The pricing page design — its wireframe is attached below.",
+      "finishedAt": "2026-07-10",
+      "completedBy": "u_you",
+      "estimateMins": 120,
+      "priority": "normal",
+      "importance": "normal",
+      "scheduledStart": "2026-07-08",
+      "due": "2026-07-10"
+    },
+    {
+      "id": "g_bublie_import_myboard",
+      "type": "group",
+      "title": "Launch-day catering",
+      "status": "active",
+      "order": 1,
+      "comment": "Imported from a bubble board. Structure and text only — the visual styling was not carried over."
+    },
+    {
+      "id": "b_milk",
+      "type": "task",
+      "role": "task",
+      "title": "milk",
+      "status": "queued",
+      "order": 1,
+      "comment": "2 L",
+      "pos": "70,250"
+    },
+    {
+      "id": "b_cream",
+      "type": "task",
+      "role": "task",
+      "title": "cream",
+      "status": "active",
+      "order": 2,
+      "comment": "350 ml",
+      "pos": "190,120"
+    },
+    {
+      "id": "b_butter",
+      "type": "task",
+      "role": "task",
+      "title": "butter",
+      "status": "active",
+      "order": 3,
+      "comment": "low",
+      "pos": "330,120"
+    },
+    {
+      "id": "b_crois",
+      "type": "task",
+      "role": "task",
+      "title": "croissant",
+      "status": "done",
+      "order": 4,
+      "comment": "6 baked",
+      "pos": "450,190"
+    },
+    {
+      "id": "b_ricotta",
+      "type": "task",
+      "role": "task",
+      "title": "ricotta",
+      "status": "active",
+      "order": 5,
+      "comment": "500 g",
+      "pos": "190,390"
+    },
+    {
+      "id": "b_cannoli",
+      "type": "task",
+      "role": "task",
+      "title": "cannoli",
+      "status": "done",
+      "order": 6,
+      "comment": "out",
+      "pos": "330,390"
+    },
+    {
+      "id": "b_cheese",
+      "type": "task",
+      "role": "task",
+      "title": "cheese",
+      "status": "done",
+      "order": 7,
+      "comment": "aging",
+      "pos": "335,255"
+    },
+    {
+      "id": "p_tetherfield",
+      "type": "group",
+      "title": "Website refresh",
+      "status": "active",
+      "order": 3,
+      "comment": "A full pass over the marketing site: templates, navigation, and the pages the launch will point at.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "t_tf_waves_abc",
+      "type": "task",
+      "title": "Phases A-C: content audit, sitemap, new copy",
+      "status": "done",
+      "order": 1,
+      "comment": "Every existing page inventoried, a new sitemap agreed, and first-draft copy written for the pages that survive.",
+      "createdBy": "u_you",
+      "completedBy": "u_you",
+      "finishedAt": "2026-07-10"
+    },
+    {
+      "id": "t_tf_d1_blueprints",
+      "type": "task",
+      "title": "Phase D1: page templates",
+      "status": "done",
+      "order": 2,
+      "comment": "One template per page shape (landing, feature, pricing, article) so new pages stop being one-offs.",
+      "createdBy": "u_you",
+      "completedBy": "u_you",
+      "finishedAt": "2026-07-11"
+    },
+    {
+      "id": "t_tf_d2_worldmap",
+      "type": "task",
+      "title": "Phase D2: home page layout",
+      "status": "done",
+      "order": 3,
+      "comment": "The new home page, assembled from the templates. Reviewed at full width and on a phone.",
+      "createdBy": "u_you",
+      "completedBy": "u_you",
+      "finishedAt": "2026-07-12"
+    },
+    {
+      "id": "t_tf_p01_unitclasses",
+      "type": "task",
+      "title": "P0.1 Component library (buttons, cards, forms)",
+      "status": "active",
+      "order": 4,
+      "comment": "The shared pieces every template is built from, with the states each one needs.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "t_tf_p02_patrolzones",
+      "type": "task",
+      "title": "P0.2 Navigation and footer",
+      "status": "queued",
+      "order": 5,
+      "comment": "Top navigation, mobile menu and footer — the same on every page, built once.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "t_tf_p03_convoys",
+      "type": "task",
+      "title": "P0.3 Search, filters and empty states",
+      "status": "queued",
+      "order": 6,
+      "comment": "Site search plus the copy people see when a search or filter returns nothing.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "t_tf_p1_asynccoop",
+      "type": "task",
+      "title": "P1 Blog and customer stories",
+      "status": "queued",
+      "order": 7,
+      "comment": "The article template and the first six stories, migrated from the old blog.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "t_tf_p2_livecoop",
+      "type": "task",
+      "title": "P2 Customer portal",
+      "status": "queued",
+      "order": 8,
+      "comment": "Sign-in, account and billing pages, once the public pages are settled.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "t_tf_p3_versus",
+      "type": "task",
+      "title": "P3 Translated pages",
+      "status": "queued",
+      "order": 9,
+      "comment": "The top twenty pages in the three languages the team already supports.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "t_tf_p4_systemgates",
+      "type": "task",
+      "title": "P4 Analytics and cookie consent",
+      "status": "queued",
+      "order": 10,
+      "comment": "Measurement and consent, re-scoped against whatever the privacy review concludes.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "e_rm_goal",
+      "type": "task",
+      "role": "goal",
+      "title": "Every lens answers one question",
+      "status": "active",
+      "order": 4,
+      "comment": "The end state: opening a project tells you how it is doing and what is next, without stacking every view at once.",
+      "createdBy": "u_you",
+      "prioLane": "now"
+    },
+    {
+      "id": "e_rm_milestone",
+      "type": "task",
+      "role": "milestone",
+      "title": "Launch scope is agreed",
+      "status": "active",
+      "order": 5,
+      "comment": "Checkpoint: the team has signed off on what ships in the first release and what waits.",
+      "createdBy": "u_you",
+      "prioLane": "next"
+    },
+    {
+      "id": "e_rm_decision",
+      "type": "task",
+      "role": "decision",
+      "title": "Launch with three plans, not five",
+      "status": "done",
+      "decisionKind": "predetermined",
+      "order": 6,
+      "comment": "Settled: a free plan, a team plan and a business plan. Fewer choices, clearer page.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "t_rm_preview",
+      "type": "task",
+      "title": "Draft the launch-day announcement",
+      "status": "active",
+      "order": 7,
+      "prioLane": "now",
+      "priority": "high",
+      "importance": "high",
+      "comment": "One short post and one email, both pointing at the new pricing page.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "l_rm_log",
+      "type": "note",
+      "title": "Launch log opener",
+      "order": 8,
+      "postedAt": "2026-08-07T09:00:00",
+      "comment": "Launch log opener - the first entry in this project's own log.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "f_rm_doc",
+      "type": "docs",
+      "title": "Launch checklist",
+      "order": 9,
+      "postedAt": "2026-08-07T09:05:00",
+      "comment": "Launch checklist - the project-level document, not any one task's.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "e_tf_goal",
+      "type": "task",
+      "role": "goal",
+      "title": "The refreshed site is live",
+      "status": "active",
+      "order": 11,
+      "comment": "The end state for this project: every page on the new templates, old URLs redirected.",
+      "createdBy": "u_you",
+      "prioLane": "next"
+    },
+    {
+      "id": "e_tf_milestone",
+      "type": "task",
+      "role": "milestone",
+      "title": "Home page layout signed off",
+      "status": "queued",
+      "order": 12,
+      "comment": "Checkpoint before the rest of the pages are built.",
+      "createdBy": "u_you",
+      "prioLane": "queued"
+    },
+    {
+      "id": "e_tf_decision",
+      "type": "task",
+      "role": "decision",
+      "title": "Stay on the current publishing tool",
+      "status": "done",
+      "decisionKind": "predetermined",
+      "order": 13,
+      "comment": "Settled: no platform migration during the refresh — one change at a time.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "t_tf_pacing",
+      "type": "task",
+      "title": "Rebalance the phase scope",
+      "status": "active",
+      "order": 14,
+      "prioLane": "now",
+      "comment": "Some phases are much larger than others; split the big ones so each is a week.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "l_tf_log",
+      "type": "note",
+      "title": "Website log opener",
+      "order": 15,
+      "postedAt": "2026-08-07T09:10:00",
+      "comment": "Website log opener - the first entry in this project's own log.",
+      "createdBy": "u_you"
+    },
+    {
+      "id": "f_tf_doc",
+      "type": "docs",
+      "title": "Home page layout spec",
+      "order": 16,
+      "postedAt": "2026-08-07T09:15:00",
+      "comment": "Home page layout spec - the project-level document for the refresh.",
+      "createdBy": "u_you"
+    }
+  ],
+  "relations": [
+    {
+      "id": "r1",
+      "fromId": "p_roadmap",
+      "toId": "n_howto",
+      "type": "contains",
+      "order": 1
+    },
+    {
+      "id": "r2",
+      "fromId": "p_roadmap",
+      "toId": "n_store",
+      "type": "contains",
+      "order": 2
+    },
+    {
+      "id": "r3",
+      "fromId": "n_store",
+      "toId": "n_store_req",
+      "type": "contains",
+      "order": 1
+    },
+    {
+      "id": "r4",
+      "fromId": "n_store",
+      "toId": "t_store_wf",
+      "type": "contains",
+      "order": 2
+    },
+    {
+      "id": "r5",
+      "fromId": "p_roadmap",
+      "toId": "n_bridge",
+      "type": "contains",
+      "order": 3
+    },
+    {
+      "id": "r6",
+      "fromId": "p_inbox",
+      "toId": "t_store_wf",
+      "type": "contains",
+      "order": 1,
+      "label": "same wireframe, tracked in Inbox too"
+    },
+    {
+      "id": "r7",
+      "fromId": "n_bridge",
+      "toId": "n_howto",
+      "type": "references",
+      "label": "see how entries work"
+    },
+    {
+      "id": "r8",
+      "fromId": "n_store_req",
+      "toId": "l_store_1",
+      "type": "contains",
+      "order": 1
+    },
+    {
+      "id": "r9",
+      "fromId": "n_store_req",
+      "toId": "l_store_2",
+      "type": "contains",
+      "order": 2
+    },
+    {
+      "id": "r10",
+      "fromId": "t_store_wf",
+      "toId": "n_store_wf",
+      "type": "contains",
+      "order": 1
+    },
+    {
+      "id": "r_g_bublie_import_myboard_b_milk",
+      "fromId": "g_bublie_import_myboard",
+      "toId": "b_milk",
+      "type": "contains",
+      "order": 1
+    },
+    {
+      "id": "r_g_bublie_import_myboard_b_cream",
+      "fromId": "g_bublie_import_myboard",
+      "toId": "b_cream",
+      "type": "contains",
+      "order": 2
+    },
+    {
+      "id": "r_g_bublie_import_myboard_b_butter",
+      "fromId": "g_bublie_import_myboard",
+      "toId": "b_butter",
+      "type": "contains",
+      "order": 3
+    },
+    {
+      "id": "r_g_bublie_import_myboard_b_crois",
+      "fromId": "g_bublie_import_myboard",
+      "toId": "b_crois",
+      "type": "contains",
+      "order": 4
+    },
+    {
+      "id": "r_g_bublie_import_myboard_b_ricotta",
+      "fromId": "g_bublie_import_myboard",
+      "toId": "b_ricotta",
+      "type": "contains",
+      "order": 5
+    },
+    {
+      "id": "r_g_bublie_import_myboard_b_cannoli",
+      "fromId": "g_bublie_import_myboard",
+      "toId": "b_cannoli",
+      "type": "contains",
+      "order": 6
+    },
+    {
+      "id": "r_g_bublie_import_myboard_b_cheese",
+      "fromId": "g_bublie_import_myboard",
+      "toId": "b_cheese",
+      "type": "contains",
+      "order": 7
+    },
+    {
+      "id": "rel_l_mcrm",
+      "fromId": "b_milk",
+      "toId": "b_cream",
+      "type": "references"
+    },
+    {
+      "id": "rel_l_mric",
+      "fromId": "b_milk",
+      "toId": "b_ricotta",
+      "type": "references"
+    },
+    {
+      "id": "rel_l_mchz",
+      "fromId": "b_milk",
+      "toId": "b_cheese",
+      "type": "references"
+    },
+    {
+      "id": "rel_l_crmb",
+      "fromId": "b_cream",
+      "toId": "b_butter",
+      "type": "references"
+    },
+    {
+      "id": "rel_l_bcro",
+      "fromId": "b_butter",
+      "toId": "b_crois",
+      "type": "references"
+    },
+    {
+      "id": "rel_l_rcan",
+      "fromId": "b_ricotta",
+      "toId": "b_cannoli",
+      "type": "references"
+    },
+    {
+      "id": "r_tf_1",
+      "fromId": "p_tetherfield",
+      "toId": "t_tf_waves_abc",
+      "type": "contains",
+      "order": 1
+    },
+    {
+      "id": "r_tf_2",
+      "fromId": "p_tetherfield",
+      "toId": "t_tf_d1_blueprints",
+      "type": "contains",
+      "order": 2
+    },
+    {
+      "id": "r_tf_3",
+      "fromId": "p_tetherfield",
+      "toId": "t_tf_d2_worldmap",
+      "type": "contains",
+      "order": 3
+    },
+    {
+      "id": "r_tf_4",
+      "fromId": "p_tetherfield",
+      "toId": "t_tf_p01_unitclasses",
+      "type": "contains",
+      "order": 4
+    },
+    {
+      "id": "r_tf_5",
+      "fromId": "p_tetherfield",
+      "toId": "t_tf_p02_patrolzones",
+      "type": "contains",
+      "order": 5
+    },
+    {
+      "id": "r_tf_6",
+      "fromId": "p_tetherfield",
+      "toId": "t_tf_p03_convoys",
+      "type": "contains",
+      "order": 6
+    },
+    {
+      "id": "r_tf_7",
+      "fromId": "p_tetherfield",
+      "toId": "t_tf_p1_asynccoop",
+      "type": "contains",
+      "order": 7
+    },
+    {
+      "id": "r_tf_8",
+      "fromId": "p_tetherfield",
+      "toId": "t_tf_p2_livecoop",
+      "type": "contains",
+      "order": 8
+    },
+    {
+      "id": "r_tf_9",
+      "fromId": "p_tetherfield",
+      "toId": "t_tf_p3_versus",
+      "type": "contains",
+      "order": 9
+    },
+    {
+      "id": "r_tf_10",
+      "fromId": "p_tetherfield",
+      "toId": "t_tf_p4_systemgates",
+      "type": "contains",
+      "order": 10
+    },
+    {
+      "id": "r_lp_1",
+      "fromId": "p_roadmap",
+      "toId": "e_rm_goal",
+      "type": "contains",
+      "order": 4
+    },
+    {
+      "id": "r_lp_2",
+      "fromId": "p_roadmap",
+      "toId": "e_rm_milestone",
+      "type": "contains",
+      "order": 5
+    },
+    {
+      "id": "r_lp_3",
+      "fromId": "p_roadmap",
+      "toId": "e_rm_decision",
+      "type": "contains",
+      "order": 6
+    },
+    {
+      "id": "r_lp_4",
+      "fromId": "p_roadmap",
+      "toId": "t_rm_preview",
+      "type": "contains",
+      "order": 7
+    },
+    {
+      "id": "r_lp_5",
+      "fromId": "p_roadmap",
+      "toId": "l_rm_log",
+      "type": "contains",
+      "order": 8
+    },
+    {
+      "id": "r_lp_6",
+      "fromId": "p_roadmap",
+      "toId": "f_rm_doc",
+      "type": "contains",
+      "order": 9
+    },
+    {
+      "id": "r_lp_7",
+      "fromId": "p_tetherfield",
+      "toId": "e_tf_goal",
+      "type": "contains",
+      "order": 11
+    },
+    {
+      "id": "r_lp_8",
+      "fromId": "p_tetherfield",
+      "toId": "e_tf_milestone",
+      "type": "contains",
+      "order": 12
+    },
+    {
+      "id": "r_lp_9",
+      "fromId": "p_tetherfield",
+      "toId": "e_tf_decision",
+      "type": "contains",
+      "order": 13
+    },
+    {
+      "id": "r_lp_10",
+      "fromId": "p_tetherfield",
+      "toId": "t_tf_pacing",
+      "type": "contains",
+      "order": 14
+    },
+    {
+      "id": "r_lp_11",
+      "fromId": "p_tetherfield",
+      "toId": "l_tf_log",
+      "type": "contains",
+      "order": 15
+    },
+    {
+      "id": "r_lp_12",
+      "fromId": "p_tetherfield",
+      "toId": "f_tf_doc",
+      "type": "contains",
+      "order": 16
+    }
+  ],
+  "dash_headline": [],
+  "dash_sessions": [],
+  "dash_by_model": [],
+  "dash_by_day": [],
+  "dash_by_applet": [],
+  "dash_timeline": []
+}

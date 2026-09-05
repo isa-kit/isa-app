@@ -1,0 +1,719 @@
+{
+  "app": {
+    "appDataTools": true,
+    "title": "Moku",
+    "primaryColor": "#3F51B5",
+    "theme": "warmshift",
+    "guide": "how"
+  },
+  "nav": [
+    {
+      "id": "board",
+      "label": "Board",
+      "icon": "dashboard_customize",
+      "screen": "board"
+    }
+  ],
+  "screens": {
+    "board": {
+      "title": "Moku",
+      "body": {
+        "type": "explorer",
+        "table": "boards",
+        "nameColumn": "name",
+        "orderColumn": "order",
+        "allowFolders": false,
+        "railMode": "collapsible",
+        "title": "Boards",
+        "fileIcon": "dashboard_customize",
+        "newFileLabel": "New board",
+        "followSelection": true,
+        "emptyHome": true,
+        "homeTitle": "Your boards",
+        "homeSubtitle": "Open a recent board, start a blank one, or begin from an example template.",
+        "addItems": [
+          {
+            "label": "New board",
+            "icon": "add",
+            "values": {}
+          },
+          {
+            "label": "New from template: Taskly",
+            "icon": "checklist",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/taskly.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Dispatch",
+            "icon": "account_tree",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/dispatch.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Korea travel access",
+            "icon": "map",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/krtravel.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Wikipick",
+            "icon": "public",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/wikipick.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Car-free access ranking",
+            "icon": "leaderboard",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/carfree.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Notes",
+            "icon": "edit_note",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/notes.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: bublie",
+            "icon": "bubble_chart",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/bublee.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Chronos",
+            "icon": "history",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/chronos.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Codev",
+            "icon": "handshake",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/codev.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Docs",
+            "icon": "menu_book",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/docs.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Sheets",
+            "icon": "table_chart",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/sheets.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Suite",
+            "icon": "folder_copy",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/suite.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Korea trip plan",
+            "icon": "map",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/krtravelplan.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Tripboard",
+            "icon": "flight_takeoff",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/tripboard.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Boxes",
+            "icon": "inventory_2",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/boxes.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Events",
+            "icon": "event",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/events.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Neujour",
+            "icon": "book",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/neujour.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Parley",
+            "icon": "translate",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/parley.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Budget",
+            "icon": "savings",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/budget.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Exposure Check",
+            "icon": "shield",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/exposure_check.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Campus directory & map",
+            "icon": "school",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/campus_directory.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Car-free college guide",
+            "icon": "school",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/college_livability.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: City Planner",
+            "icon": "location_city",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/city_planner.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Next service",
+            "icon": "departure_board",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/next_service.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Porchfest map",
+            "icon": "music_note",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/porchfest.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: RI Map (maplibre)",
+            "icon": "map",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/ri_map.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: TAZ Delta",
+            "icon": "travel_explore",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/taz_delta.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Transit forecasts",
+            "icon": "insights",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/transit_forecasts.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Atlas — place analysis",
+            "icon": "travel_explore",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/atlas.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Datalab",
+            "icon": "query_stats",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/datalens.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Geolabs",
+            "icon": "travel_explore",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/geolabs.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Model reports",
+            "icon": "leaderboard",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/modelreport.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Scenarios",
+            "icon": "play_circle",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/scenarios.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Shelplet",
+            "icon": "dashboard",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/shelplet.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Urbanset",
+            "icon": "insights",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/terrain.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Design",
+            "icon": "design_services",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/design.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Maker",
+            "icon": "auto_awesome",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/maker.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Sketchpad",
+            "icon": "brush",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/sketchpad.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Wireframe",
+            "icon": "dashboard_customize",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/wireframe.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Podcasts",
+            "icon": "podcasts",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/podcasts.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Watchlist",
+            "icon": "smart_display",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/watchlist.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Games",
+            "icon": "sports_esports",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/games.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Hesset",
+            "icon": "category",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/hesset.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Hexnom",
+            "icon": "hexagon",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/hexnom.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Noms",
+            "icon": "pets",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/noms.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Puzzles",
+            "icon": "grid_on",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/puzzles.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Tabletop",
+            "icon": "casino",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/tabletop.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Tetherfield",
+            "icon": "rocket_launch",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/spacegame.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Vertier",
+            "icon": "leaderboard",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/vertier.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Applet Studio",
+            "icon": "construction",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/applet_studio.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Architecture",
+            "icon": "account_tree",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/architecture.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Releases",
+            "icon": "rocket_launch",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/releases.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: System Monitor",
+            "icon": "monitor_heart",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/sysmon.json"
+              }
+            }
+          },
+          {
+            "label": "New from template: Workboard",
+            "icon": "dashboard",
+            "action": {
+              "fn": "instantiateTemplate",
+              "args": {
+                "asset": "apps/composer/templates/workboard.json"
+              }
+            }
+          }
+        ],
+        "scopeTargets": [
+          {
+            "table": "screens",
+            "column": "board"
+          },
+          {
+            "table": "flows",
+            "column": "board"
+          }
+        ],
+        "menuActions": [
+          {
+            "label": "Export a copy…",
+            "action": {
+              "fn": "exportFileScope"
+            }
+          }
+        ],
+        "detail": {
+          "type": "compose",
+          "screensTable": "screens",
+          "widgetsTable": "widgets",
+          "flowsTable": "flows",
+          "scope": "$selected:boards",
+          "screenNameColumn": "name",
+          "screenDeviceColumn": "device",
+          "screenXColumn": "x",
+          "screenYColumn": "y",
+          "screenVariantOfColumn": "variantOf",
+          "widgetScreenColumn": "screen",
+          "widgetKindColumn": "kind",
+          "widgetLabelColumn": "label",
+          "widgetRegionColumn": "region",
+          "widgetOrderColumn": "order",
+          "widgetIntentColumn": "intent",
+          "flowFromWidgetColumn": "fromWidget",
+          "flowToScreenColumn": "toScreen",
+          "flowTransitionColumn": "transition",
+          "showFlows": true,
+          "boardsTable": "boards",
+          "review": true,
+          "boardModeColumn": "mode",
+          "screenStatusColumn": "status",
+          "frameImagesTable": "frameImages",
+          "stickiesTable": "stickies",
+          "pinsTable": "pins"
+        }
+      }
+    },
+    "how": {
+      "title": "How to use Moku",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": "Plan real screens, not drawings"
+          },
+          {
+            "type": "text",
+            "value": "Moku is an auto-layout planner: drop a widget on a screen and the layout re-solves right there, the same way a scroll view actually expands to fill whatever space is left. It is not a freehand drawing tool — every frame you see is the real layout."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Starting from an example"
+          },
+          {
+            "type": "text",
+            "value": "The Boards screen opens on \"Your boards\" — a home view with a recent-boards list and a row of start buttons. Alongside a plain New board, one New from template button per shipped applet mints a ready-made board copied from that app's real screens, so you can study or remix a working design instead of starting blank. The first eight (Taskly, Dispatch, Korea travel access, Wikipick, Car-free access ranking, Notes, bublie, Chronos) stay pinned first; the rest are ordered by the applet's own catalog category (Productivity, Planning & lists, Life, Finance, Security, Maps & cities, Analytics, Creative, Media, Games, Developer) so applets in the same family sit next to each other in the button row. Once you have opened a board, the same New/template choices are always one tap away from the ▾ New menu above the board list."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Adding screens"
+          },
+          {
+            "type": "text",
+            "value": "Tap + Screen on the board to add a new device frame. Drag a frame by its header chip to move it around the board; pinch or use two fingers to pan and zoom the whole board."
+          },
+          {
+            "type": "text",
+            "value": "Tap + Component to add a frameless piece instead — a fixed-width block that sizes itself to whatever you drop on it, with no device frame around it. Useful for a reusable header, card, or nav strip you are mocking up on its own rather than inside a full screen."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Dropping widgets + fill behaviour"
+          },
+          {
+            "type": "text",
+            "value": "The widget strip along the top of the board holds all 13 kinds. Drag a chip onto a screen to insert it into the region under your drop point (top/body/bottom/overlay); tap a chip instead to add it to the end of the selected screen's default region."
+          },
+          {
+            "type": "text",
+            "value": "Each kind has a default size behaviour: fixed widgets (titlebar, searchbar, tabs, bottomnav, fab) keep a set height; wrap widgets (text, card, image, buttonrow) size to their content; fill widgets (scrollview, list, settings) stretch to share whatever vertical space is left in the body, splitting it evenly with any other fill widgets on the same screen. Tap a widget to select it and use the quick actions bar to rename, delete, reorder, cycle its region, or override its size intent."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Columns"
+          },
+          {
+            "type": "text",
+            "value": "Drop the Columns chip to add a two-column container — the block a sidebar-and-main layout, a header with a logo on one side and a nav on the other, or a row of cards needs. Drag any other chip into one of its columns to fill that cell; drag a block back out to return it to the screen's normal top-level flow. A column cannot hold another Columns block — nest one level only."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Variants"
+          },
+          {
+            "type": "text",
+            "value": "Use “Make variant” on a screen to project it to another device frame (phone/tablet/web). The variant starts as a copy of the widgets, laid out fresh at the new frame size, then lives independently — edits on one side do not sync to the other."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Flows and play mode"
+          },
+          {
+            "type": "text",
+            "value": "Select a widget and choose “link to screen…”, then tap a target screen to create a flow — shown as a light curved arrow on the board. Toggle Play to try it: tapping a linked widget animates the board over to its target screen and briefly highlights the frame."
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": "Design review"
+          },
+          {
+            "type": "text",
+            "value": "The review icon (top right) switches a board between Edit and design review. In review, every frame shows a status dot — approved, proposed, or changes — and a legend at the bottom counts them live. Tap a frame to open it full-screen: swipe between frames, tap a numbered pin to read its note, Approve with one tap, or Request changes (which asks for a note first, so a change request always says what needs to change). Tap the + note button, then tap a spot on the frame, to drop a new pin there. A design project can hold either kind of frame side by side — a captured image (for a mockup made elsewhere) or a live native Moku screen — and a live frame gets its own Edit button in the review screen that opens it straight in the ordinary editor: any edit you make there is a normal board change, so your edits are the design, not a separate copy of it. Sticky notes float on the board itself for anything that is not tied to one frame."
+          }
+        ]
+      }
+    }
+  }
+}

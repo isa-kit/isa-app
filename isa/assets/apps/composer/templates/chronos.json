@@ -1,0 +1,208 @@
+{
+  "board": {
+    "name": "Chronos \u2014 history timelapse"
+  },
+  "screens": [
+    {
+      "id": "cr_map",
+      "name": "Map",
+      "device": "phone",
+      "x": 0,
+      "y": 0,
+      "folder": "Explore"
+    },
+    {
+      "id": "cr_battles",
+      "name": "Battles",
+      "device": "phone",
+      "x": 440,
+      "y": 0,
+      "folder": "Explore"
+    },
+    {
+      "id": "cr_about",
+      "name": "About",
+      "device": "phone",
+      "x": 880,
+      "y": 0,
+      "folder": "Explore"
+    },
+    {
+      "id": "cr_cannae_battle",
+      "name": "Cannae \u2014 216 BC",
+      "device": "phone",
+      "x": 1320,
+      "y": 0,
+      "folder": "Battles"
+    }
+  ],
+  "widgets": [
+    {
+      "id": "cr_map_title",
+      "screen": "cr_map",
+      "kind": "titlebar",
+      "label": "Chronos",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "cr_map_card",
+      "screen": "cr_map",
+      "kind": "card",
+      "label": "Historical map \u2014 empires & borders over time",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "cr_map_eras",
+      "screen": "cr_map",
+      "kind": "buttonrow",
+      "label": "All time \u00b7 Bronze & Iron Age \u00b7 Classical \u00b7 Medieval \u00b7 Early modern \u00b7 Modern",
+      "region": "body",
+      "order": 1,
+      "items": "[\"All time\", \"Bronze & Iron Age\", \"Classical\", \"Medieval\", \"Early modern\", \"Modern\"]"
+    },
+    {
+      "id": "cr_map_nav",
+      "screen": "cr_map",
+      "kind": "bottomnav",
+      "label": "Map \u00b7 Battles \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "cr_battles_title",
+      "screen": "cr_battles",
+      "kind": "titlebar",
+      "label": "Battle recreations",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "cr_battles_text",
+      "screen": "cr_battles",
+      "kind": "text",
+      "label": "Recreated battles, walked through minute by minute",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "cr_battles_open_cannae",
+      "screen": "cr_battles",
+      "kind": "buttonrow",
+      "label": "Open Cannae",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "cr_battles_nav",
+      "screen": "cr_battles",
+      "kind": "bottomnav",
+      "label": "Map \u00b7 Battles \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "cr_about_title",
+      "screen": "cr_about",
+      "kind": "titlebar",
+      "label": "About",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "cr_about_text",
+      "screen": "cr_about",
+      "kind": "text",
+      "label": "What this map is (and isn't)",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "cr_about_table",
+      "screen": "cr_about",
+      "kind": "list",
+      "label": "Provenance table",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Terrain: SRTM digital elevation model\", \"Borders: Natural Earth historical boundaries\", \"Battle data: primary-source troop positions + phase captions\"]"
+    },
+    {
+      "id": "cr_about_nav",
+      "screen": "cr_about",
+      "kind": "bottomnav",
+      "label": "Map \u00b7 Battles \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "cr_cannae_title",
+      "screen": "cr_cannae_battle",
+      "kind": "titlebar",
+      "label": "Cannae \u2014 216 BC",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "cr_cannae_side",
+      "screen": "cr_cannae_battle",
+      "kind": "dropdown",
+      "label": "Side",
+      "region": "top",
+      "order": 1,
+      "items": "[\"Roman\", \"Carthaginian\", \"Both\"]"
+    },
+    {
+      "id": "cr_cannae_card",
+      "screen": "cr_cannae_battle",
+      "kind": "card",
+      "label": "Battle map \u2014 unit positions",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "cr_cannae_slider",
+      "screen": "cr_cannae_battle",
+      "kind": "text",
+      "label": "Battle time slider (minutes elapsed, 2 August 216 BC)",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Phase 1 \\u2014 Deployment: Hannibal's crescent forms\", \"Phase 2 \\u2014 Skirmish: velites trade missiles\", \"Phase 3 \\u2014 Advance: Roman infantry presses the centre\", \"Phase 4 \\u2014 Roman cavalry routed by the river\", \"Phase 5 \\u2014 Envelopment begins on both flanks\", \"Phase 6 \\u2014 Allied cavalry broken from behind\", \"Phase 7 \\u2014 Encirclement complete\"]"
+    },
+    {
+      "id": "cr_cannae_units",
+      "screen": "cr_cannae_battle",
+      "kind": "list",
+      "label": "Units",
+      "region": "body",
+      "order": 2,
+      "items": "[\"Roman citizen cavalry (right wing)\", \"Roman heavy infantry, block III (centre)\", \"Hasdrubal's heavy cavalry (Gallic/Iberian)\", \"Numidian light cavalry\", \"African veteran infantry (north flank)\"]"
+    }
+  ],
+  "flows": [
+    {
+      "id": "cr_flow_0",
+      "fromWidget": "cr_map_nav",
+      "toScreen": "cr_battles",
+      "transition": "push"
+    },
+    {
+      "id": "cr_flow_1",
+      "fromWidget": "cr_battles_nav",
+      "toScreen": "cr_about",
+      "transition": "push"
+    },
+    {
+      "id": "cr_flow_2",
+      "fromWidget": "cr_about_nav",
+      "toScreen": "cr_map",
+      "transition": "push"
+    },
+    {
+      "id": "cr_flow_3",
+      "fromWidget": "cr_battles_open_cannae",
+      "toScreen": "cr_cannae_battle",
+      "transition": "push"
+    }
+  ]
+}

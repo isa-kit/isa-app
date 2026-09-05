@@ -1,0 +1,421 @@
+{
+  "board": {
+    "name": "Transit forecasts"
+  },
+  "screens": [
+    {
+      "id": "transi_0_forecasts",
+      "name": "Boston transit forecasts",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "transi_1_cities",
+      "name": "Cities",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "transi_2_explorer",
+      "name": "Agent explorer",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    },
+    {
+      "id": "transi_3_crossfilter",
+      "name": "Cross-filter towns",
+      "device": "phone",
+      "x": 1320,
+      "y": 0
+    },
+    {
+      "id": "transi_4_fiscal",
+      "name": "Fiscal map",
+      "device": "phone",
+      "x": 0,
+      "y": 900
+    },
+    {
+      "id": "transi_5_livemap",
+      "name": "Live transit map",
+      "device": "phone",
+      "x": 440,
+      "y": 900
+    },
+    {
+      "id": "transi_6_invest",
+      "name": "Where should transit go?",
+      "device": "phone",
+      "x": 880,
+      "y": 900
+    },
+    {
+      "id": "transi_7_about",
+      "name": "About",
+      "device": "phone",
+      "x": 1320,
+      "y": 900
+    }
+  ],
+  "widgets": [
+    {
+      "id": "transi_0_forecasts_title",
+      "screen": "transi_0_forecasts",
+      "kind": "titlebar",
+      "label": "Boston transit forecasts",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "transi_0_forecasts_w0",
+      "screen": "transi_0_forecasts",
+      "kind": "text",
+      "label": "Census-anchored four-step model (LODES + decennial over CTPS zones), calibrated to\u2026",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "transi_0_forecasts_w1",
+      "screen": "transi_0_forecasts",
+      "kind": "list",
+      "label": "Table",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Cities\", \"Agent explorer\", \"Cross-filter towns\"]"
+    },
+    {
+      "id": "transi_0_forecasts_w2",
+      "screen": "transi_0_forecasts",
+      "kind": "text",
+      "label": "Allston vs 2040 control: jobs reachable by transit +4.5%, transit trips +8.2%, share\u2026",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "transi_0_forecasts_nav",
+      "screen": "transi_0_forecasts",
+      "kind": "bottomnav",
+      "label": "Forecasts \u00b7 Cities \u00b7 Agent explorer \u00b7 Cross-filter \u00b7 Fiscal map \u00b7 Transit map \u00b7 Where to invest \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "transi_1_cities_title",
+      "screen": "transi_1_cities",
+      "kind": "titlebar",
+      "label": "Cities",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "transi_1_cities_w0",
+      "screen": "transi_1_cities",
+      "kind": "text",
+      "label": "US metros \u2014",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "transi_1_cities_w1",
+      "screen": "transi_1_cities",
+      "kind": "card",
+      "label": "Chart \u2014 bar",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "transi_1_cities_w2",
+      "screen": "transi_1_cities",
+      "kind": "list",
+      "label": "Table",
+      "region": "body",
+      "order": 2,
+      "items": "[\"Boston transit forecasts\", \"Agent explorer\", \"Cross-filter towns\"]"
+    },
+    {
+      "id": "transi_1_cities_nav",
+      "screen": "transi_1_cities",
+      "kind": "bottomnav",
+      "label": "Forecasts \u00b7 Cities \u00b7 Agent explorer \u00b7 Cross-filter \u00b7 Fiscal map \u00b7 Transit map \u00b7 Where to invest \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "transi_2_explorer_title",
+      "screen": "transi_2_explorer",
+      "kind": "titlebar",
+      "label": "Agent explorer",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "transi_2_explorer_w0",
+      "screen": "transi_2_explorer",
+      "kind": "text",
+      "label": "2,998 synthetic travel agents (census income + vehicles).",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "transi_2_explorer_w1",
+      "screen": "transi_2_explorer",
+      "kind": "settings",
+      "label": "Cross-filter",
+      "region": "body",
+      "order": 1,
+      "items": "[{\"text\": \"Notifications\", \"toggle\": true}, {\"text\": \"Sync automatically\", \"toggle\": true}, {\"text\": \"Show details\", \"toggle\": false}]"
+    },
+    {
+      "id": "transi_2_explorer_w2",
+      "screen": "transi_2_explorer",
+      "kind": "text",
+      "label": "Mode choice is locally calibrated + validated out-of-sample (5-fold CV): R\u00b2=0.92,\u2026",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "transi_2_explorer_nav",
+      "screen": "transi_2_explorer",
+      "kind": "bottomnav",
+      "label": "Forecasts \u00b7 Cities \u00b7 Agent explorer \u00b7 Cross-filter \u00b7 Fiscal map \u00b7 Transit map \u00b7 Where to invest \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "transi_3_crossfilter_title",
+      "screen": "transi_3_crossfilter",
+      "kind": "titlebar",
+      "label": "Cross-filter towns",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "transi_3_crossfilter_w0",
+      "screen": "transi_3_crossfilter",
+      "kind": "text",
+      "label": "76 towns by income, vehicles, and municipal fiscal balance.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "transi_3_crossfilter_w1",
+      "screen": "transi_3_crossfilter",
+      "kind": "settings",
+      "label": "Cross-filter",
+      "region": "body",
+      "order": 1,
+      "items": "[{\"text\": \"Notifications\", \"toggle\": true}, {\"text\": \"Sync automatically\", \"toggle\": true}, {\"text\": \"Show details\", \"toggle\": false}]"
+    },
+    {
+      "id": "transi_3_crossfilter_nav",
+      "screen": "transi_3_crossfilter",
+      "kind": "bottomnav",
+      "label": "Forecasts \u00b7 Cities \u00b7 Agent explorer \u00b7 Cross-filter \u00b7 Fiscal map \u00b7 Transit map \u00b7 Where to invest \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "transi_4_fiscal_title",
+      "screen": "transi_4_fiscal",
+      "kind": "titlebar",
+      "label": "Fiscal map",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "transi_4_fiscal_w0",
+      "screen": "transi_4_fiscal",
+      "kind": "text",
+      "label": "Municipal net balance per household by town \u2014",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "transi_4_fiscal_w1",
+      "screen": "transi_4_fiscal",
+      "kind": "card",
+      "label": "Map",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "transi_4_fiscal_nav",
+      "screen": "transi_4_fiscal",
+      "kind": "bottomnav",
+      "label": "Forecasts \u00b7 Cities \u00b7 Agent explorer \u00b7 Cross-filter \u00b7 Fiscal map \u00b7 Transit map \u00b7 Where to invest \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "transi_5_livemap_title",
+      "screen": "transi_5_livemap",
+      "kind": "titlebar",
+      "label": "Live transit map",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "transi_5_livemap_w0",
+      "screen": "transi_5_livemap",
+      "kind": "text",
+      "label": "Real moving vehicles + transit stops on a live map.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "transi_5_livemap_w1",
+      "screen": "transi_5_livemap",
+      "kind": "text",
+      "label": "Live transit map",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "transi_5_livemap_nav",
+      "screen": "transi_5_livemap",
+      "kind": "bottomnav",
+      "label": "Forecasts \u00b7 Cities \u00b7 Agent explorer \u00b7 Cross-filter \u00b7 Fiscal map \u00b7 Transit map \u00b7 Where to invest \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "transi_6_invest_title",
+      "screen": "transi_6_invest",
+      "kind": "titlebar",
+      "label": "Where should transit go?",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "transi_6_invest_w0",
+      "screen": "transi_6_invest",
+      "kind": "text",
+      "label": "Optimizer: top towns to boost transit, by goal.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "transi_6_invest_w1",
+      "screen": "transi_6_invest",
+      "kind": "text",
+      "label": "Access \u2014 efficiency",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "transi_6_invest_w2",
+      "screen": "transi_6_invest",
+      "kind": "card",
+      "label": "Chart \u2014 bar",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "transi_6_invest_nav",
+      "screen": "transi_6_invest",
+      "kind": "bottomnav",
+      "label": "Forecasts \u00b7 Cities \u00b7 Agent explorer \u00b7 Cross-filter \u00b7 Fiscal map \u00b7 Transit map \u00b7 Where to invest \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "transi_7_about_title",
+      "screen": "transi_7_about",
+      "kind": "titlebar",
+      "label": "About",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "transi_7_about_w0",
+      "screen": "transi_7_about",
+      "kind": "text",
+      "label": "Census-anchored results for the Boston region with the full interactive filters.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "transi_7_about_w1",
+      "screen": "transi_7_about",
+      "kind": "buttonrow",
+      "label": "Open full web dashboard",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "transi_7_about_w2",
+      "screen": "transi_7_about",
+      "kind": "text",
+      "label": "Sources: US Census LODES + decennial + ACS, CTPS TAZ, NHTS, NTD.",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "transi_7_about_nav",
+      "screen": "transi_7_about",
+      "kind": "bottomnav",
+      "label": "Forecasts \u00b7 Cities \u00b7 Agent explorer \u00b7 Cross-filter \u00b7 Fiscal map \u00b7 Transit map \u00b7 Where to invest \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "transi_flow_0",
+      "fromWidget": "transi_0_forecasts_nav",
+      "toScreen": "transi_1_cities",
+      "transition": "push"
+    },
+    {
+      "id": "transi_flow_1",
+      "fromWidget": "transi_1_cities_nav",
+      "toScreen": "transi_2_explorer",
+      "transition": "push"
+    },
+    {
+      "id": "transi_flow_2",
+      "fromWidget": "transi_2_explorer_nav",
+      "toScreen": "transi_3_crossfilter",
+      "transition": "push"
+    },
+    {
+      "id": "transi_flow_3",
+      "fromWidget": "transi_3_crossfilter_nav",
+      "toScreen": "transi_4_fiscal",
+      "transition": "push"
+    },
+    {
+      "id": "transi_flow_4",
+      "fromWidget": "transi_4_fiscal_nav",
+      "toScreen": "transi_5_livemap",
+      "transition": "push"
+    },
+    {
+      "id": "transi_flow_5",
+      "fromWidget": "transi_5_livemap_nav",
+      "toScreen": "transi_6_invest",
+      "transition": "push"
+    },
+    {
+      "id": "transi_flow_6",
+      "fromWidget": "transi_6_invest_nav",
+      "toScreen": "transi_7_about",
+      "transition": "push"
+    },
+    {
+      "id": "transi_flow_7",
+      "fromWidget": "transi_7_about_nav",
+      "toScreen": "transi_0_forecasts",
+      "transition": "push"
+    },
+    {
+      "id": "transi_flow_extra",
+      "fromWidget": "transi_0_forecasts_w1",
+      "toScreen": "transi_1_cities",
+      "transition": "push"
+    }
+  ]
+}

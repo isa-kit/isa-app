@@ -1,0 +1,643 @@
+{
+ "boards": [
+  {
+   "id": "bd_myapp",
+   "name": "My app",
+   "order": 0
+  },
+  {
+   "id": "bd_wikipick_redesign",
+   "name": "Wikipick redesign",
+   "order": 1,
+   "style": "",
+   "accent": "",
+   "mode": "design",
+   "rev": 7
+  }
+ ],
+ "screens": [
+  {
+   "id": "sc_home",
+   "board": "bd_myapp",
+   "name": "Home",
+   "device": "phone",
+   "x": 0,
+   "y": 0,
+   "variantOf": null
+  },
+  {
+   "id": "sc_details",
+   "board": "bd_myapp",
+   "name": "Details",
+   "device": "phone",
+   "x": 480,
+   "y": 0,
+   "variantOf": null
+  },
+  {
+   "id": "sc_wr_home",
+   "board": "bd_wikipick_redesign",
+   "name": "Home",
+   "device": "phone",
+   "x": 0,
+   "y": 0,
+   "variantOf": null,
+   "width": null,
+   "folder": "",
+   "status": "approved"
+  },
+  {
+   "id": "sc_wr_searchresults",
+   "board": "bd_wikipick_redesign",
+   "name": "Search results",
+   "device": "phone",
+   "x": 470,
+   "y": 0,
+   "variantOf": null,
+   "width": null,
+   "folder": "",
+   "status": "approved"
+  },
+  {
+   "id": "sc_wr_main",
+   "board": "bd_wikipick_redesign",
+   "name": "Article reader",
+   "device": "phone",
+   "x": 940,
+   "y": 0,
+   "variantOf": null,
+   "width": null,
+   "folder": "",
+   "status": "approved"
+  },
+  {
+   "id": "sc_wr_disambiguation",
+   "board": "bd_wikipick_redesign",
+   "name": "Disambiguation",
+   "device": "phone",
+   "x": 1410,
+   "y": 0,
+   "variantOf": null,
+   "width": null,
+   "folder": "",
+   "status": "approved"
+  },
+  {
+   "id": "sc_wr_savingoffline",
+   "board": "bd_wikipick_redesign",
+   "name": "Saving offline",
+   "device": "phone",
+   "x": 1880,
+   "y": 0,
+   "variantOf": null,
+   "width": null,
+   "folder": "",
+   "status": "approved"
+  },
+  {
+   "id": "sc_wr_drawer",
+   "board": "bd_wikipick_redesign",
+   "name": "Drawer nav",
+   "device": "phone",
+   "x": 0,
+   "y": 1010,
+   "variantOf": null,
+   "width": null,
+   "folder": "",
+   "status": "approved"
+  },
+  {
+   "id": "sc_wr_topic",
+   "board": "bd_wikipick_redesign",
+   "name": "Topic detail",
+   "device": "phone",
+   "x": 470,
+   "y": 1010,
+   "variantOf": null,
+   "width": null,
+   "folder": "",
+   "status": "approved"
+  },
+  {
+   "id": "sc_wr_topicmode",
+   "board": "bd_wikipick_redesign",
+   "name": "Topic mode in search",
+   "device": "phone",
+   "x": 1040,
+   "y": 1010,
+   "variantOf": null,
+   "width": null,
+   "folder": "",
+   "status": "proposed"
+  },
+  {
+   "id": "sc_wr_topicbuilder",
+   "board": "bd_wikipick_redesign",
+   "name": "Topic capture",
+   "device": "phone",
+   "x": 1510,
+   "y": 1010,
+   "variantOf": null,
+   "width": null,
+   "folder": "",
+   "status": "proposed"
+  },
+  {
+   "id": "sc_wr_resultmenu",
+   "board": "bd_wikipick_redesign",
+   "name": "Long-press dropdown",
+   "device": "phone",
+   "x": 1980,
+   "y": 1010,
+   "variantOf": null,
+   "width": null,
+   "folder": "",
+   "status": "approved"
+  }
+ ],
+ "widgets": [
+  {
+   "id": "w_titlebar",
+   "screen": "sc_home",
+   "kind": "titlebar",
+   "label": "Home",
+   "region": "top",
+   "order": 0,
+   "intent": null
+  },
+  {
+   "id": "w_search",
+   "screen": "sc_home",
+   "kind": "searchbar",
+   "label": "Search",
+   "region": "top",
+   "order": 1,
+   "intent": null
+  },
+  {
+   "id": "w_scroll",
+   "screen": "sc_home",
+   "kind": "scrollview",
+   "label": "Feed",
+   "region": "body",
+   "order": 0,
+   "intent": null
+  },
+  {
+   "id": "w_bottomnav",
+   "screen": "sc_home",
+   "kind": "bottomnav",
+   "label": "Nav",
+   "region": "bottom",
+   "order": 0,
+   "intent": null
+  },
+  {
+   "id": "w_wr_home_title",
+   "screen": "sc_wr_home",
+   "kind": "titlebar",
+   "label": "Wikipick",
+   "region": "top",
+   "order": 0
+  },
+  {
+   "id": "w_wr_home_search",
+   "screen": "sc_wr_home",
+   "kind": "searchbar",
+   "label": "Search Wikipedia \u00b7 EN",
+   "region": "top",
+   "order": 1
+  },
+  {
+   "id": "w_wr_home_recent",
+   "screen": "sc_wr_home",
+   "kind": "list",
+   "label": "Recently read",
+   "region": "body",
+   "order": 0,
+   "items": "[\"Java Development Kit \\u00b7 2h ago\", \"SDL \\u00b7 3h ago\", {\"text\": \"Awesome Possum (RU) \\u00b7 1d ago\", \"icon\": \"language\"}]"
+  },
+  {
+   "id": "w_wr_home_saved",
+   "screen": "sc_wr_home",
+   "kind": "list",
+   "label": "Saved offline",
+   "region": "body",
+   "order": 1,
+   "items": "[\"Java Development Kit \\u00b7 2 layers \\u00b7 5.5 KB\", \"Verification \\u00b7 1 layer \\u00b7 3.0 KB\", \"Rome \\u00b7 2 layers \\u00b7 102 KB\"]"
+  },
+  {
+   "id": "w_wr_home_footer",
+   "screen": "sc_wr_home",
+   "kind": "text",
+   "label": "Donate to Wikipedia",
+   "region": "body",
+   "order": 2
+  },
+  {
+   "id": "w_wr_sr_title",
+   "screen": "sc_wr_searchresults",
+   "kind": "titlebar",
+   "label": "Wikipick",
+   "region": "top",
+   "order": 0
+  },
+  {
+   "id": "w_wr_sr_search",
+   "screen": "sc_wr_searchresults",
+   "kind": "searchbar",
+   "label": "jdk \u00b7 EN",
+   "region": "top",
+   "order": 1
+  },
+  {
+   "id": "w_wr_sr_list",
+   "screen": "sc_wr_searchresults",
+   "kind": "list",
+   "label": "Results",
+   "region": "body",
+   "order": 0,
+   "items": "[{\"text\": \"Java Development Kit \\u2014 Software development kit for Java\", \"icon\": \"bookmark\"}, {\"text\": \"JDK Flight Recorder \\u2014 Event recorder built into the Java runtime\", \"icon\": \"bookmark\"}, {\"text\": \"JDK Mission Control \\u2014 Profiling and diagnostics tool suite\", \"icon\": \"bookmark\"}, {\"text\": \"JDK Enhancement Proposal \\u2014 Process for collecting proposals for the JDK\", \"icon\": \"bookmark\"}, {\"text\": \"JDK 1.1 \\u2014 1997 release of the Java Development Kit\", \"icon\": \"bookmark\"}]"
+  },
+  {
+   "id": "w_wr_sr_footer",
+   "screen": "sc_wr_searchresults",
+   "kind": "text",
+   "label": "Tap a result to read it \u00b7 tap the bookmark to save it",
+   "region": "body",
+   "order": 1
+  },
+  {
+   "id": "w_wr_main_title",
+   "screen": "sc_wr_main",
+   "kind": "titlebar",
+   "label": "Java Development Kit",
+   "region": "top",
+   "order": 0
+  },
+  {
+   "id": "w_wr_main_body",
+   "screen": "sc_wr_main",
+   "kind": "text",
+   "label": "Java Development Kit",
+   "region": "body",
+   "order": 0,
+   "items": "[\"Java Development Kit\", \"Software development kit for the Java platform\", \"Contents \\u00b7 7 sections\", \"The Java Development Kit (JDK) is a software development kit for development of a Java platform application. It includes the Java Runtime Environment, an interpreter, a compiler, an archiver and a documentation generator.\", \"The JDK forms an extended subset of a software development kit. Oracle's implementation ships alongside OpenJDK, the free and open-source reference implementation adopted by most distributions.\", \"JDK contents\", \"The JDK has as its primary components a collection of programming tools, including javac, jar and the debugger\\u2026\", \"Cached today \\u00b7 rev 1370229260\"]"
+  },
+  {
+   "id": "w_wr_main_actions",
+   "screen": "sc_wr_main",
+   "kind": "buttonrow",
+   "label": "Actions",
+   "region": "bottom",
+   "order": 0,
+   "items": "[{\"text\": \"Save\", \"icon\": \"bookmark_add\"}, {\"text\": \"Bookmarks\", \"icon\": \"menu_book\"}, {\"text\": \"Search\", \"icon\": \"search\"}, {\"text\": \"Contents\", \"icon\": \"toc\"}, {\"text\": \"Export\", \"icon\": \"open_in_new\"}]"
+  },
+  {
+   "id": "w_wr_dis_title",
+   "screen": "sc_wr_disambiguation",
+   "kind": "titlebar",
+   "label": "SDL",
+   "region": "top",
+   "order": 0
+  },
+  {
+   "id": "w_wr_dis_intro",
+   "screen": "sc_wr_disambiguation",
+   "kind": "text",
+   "label": "SDL may refer to:",
+   "region": "body",
+   "order": 0
+  },
+  {
+   "id": "w_wr_dis_computing",
+   "screen": "sc_wr_disambiguation",
+   "kind": "list",
+   "label": "Computing",
+   "region": "body",
+   "order": 1,
+   "items": "[\"Simple DirectMedia Layer, a cross-platform multimedia library\", \"Specification and Description Language, for reactive systems\", \"Security Development Lifecycle, a Microsoft software process\", \"Simple Declarative Language, a data serialization format\"]"
+  },
+  {
+   "id": "w_wr_dis_orgs",
+   "screen": "sc_wr_disambiguation",
+   "kind": "list",
+   "label": "Organizations",
+   "region": "body",
+   "order": 2,
+   "items": "[\"SDL plc, a language-technology company\", \"Scottish Democratic League\"]"
+  },
+  {
+   "id": "w_wr_dis_other",
+   "screen": "sc_wr_disambiguation",
+   "kind": "list",
+   "label": "Other uses",
+   "region": "body",
+   "order": 3,
+   "items": "[\"Sasakawa African Association, formerly SDL\", \"Standard delay line, in electronics\"]"
+  },
+  {
+   "id": "w_wr_dis_footer",
+   "screen": "sc_wr_disambiguation",
+   "kind": "text",
+   "label": "Cached today \u00b7 rev 1306119194",
+   "region": "body",
+   "order": 4
+  },
+  {
+   "id": "w_wr_so_title",
+   "screen": "sc_wr_savingoffline",
+   "kind": "titlebar",
+   "label": "Saving offline",
+   "region": "top",
+   "order": 0
+  },
+  {
+   "id": "w_wr_so_progress",
+   "screen": "sc_wr_savingoffline",
+   "kind": "card",
+   "label": "Overall progress",
+   "region": "top",
+   "order": 1,
+   "items": "[\"34 of 78 pages \\u00b7 1.9 MB \\u00b7 44% done\", \"Fetching: Roman Republic\\u2026\"]"
+  },
+  {
+   "id": "w_wr_so_seeds",
+   "screen": "sc_wr_savingoffline",
+   "kind": "list",
+   "label": "Seeds",
+   "region": "body",
+   "order": 0,
+   "items": "[\"Roman Empire \\u2014 L2 \\u25be \\u00b7 25/25 pages \\u00b7 9/95 links \\u00b7 28% done\", \"Julius Caesar \\u2014 L1 \\u25be \\u00b7 12/25 \\u00b7 paused \\u00b7 48% done\", \"Java Development Kit \\u2014 L2 \\u25be \\u00b7 done \\u00b7 2 layers\"]"
+  },
+  {
+   "id": "w_wr_so_footer",
+   "screen": "sc_wr_savingoffline",
+   "kind": "text",
+   "label": "3 failed \u2014 rate limited \u00b7 Retry failed \u00b7 long-press a seed: delete",
+   "region": "body",
+   "order": 1
+  },
+  {
+   "id": "w_wr_dr_title",
+   "screen": "sc_wr_drawer",
+   "kind": "titlebar",
+   "label": "Wikipick",
+   "region": "top",
+   "order": 0
+  },
+  {
+   "id": "w_wr_dr_nav",
+   "screen": "sc_wr_drawer",
+   "kind": "list",
+   "label": "Wikipick",
+   "region": "body",
+   "order": 0,
+   "items": "[{\"text\": \"Home\", \"icon\": \"public\"}, \"Library \\u00b7 26\", \"Saving offline \\u00b7 12/25\", \"Topics \\u00b7 3\"]"
+  },
+  {
+   "id": "w_wr_dr_topics",
+   "screen": "sc_wr_drawer",
+   "kind": "list",
+   "label": "Topics",
+   "region": "body",
+   "order": 1,
+   "items": "[\"Roman History \\u00b7 212\", \"Java Ecosystem \\u00b7 88\"]"
+  },
+  {
+   "id": "w_wr_dr_settings",
+   "screen": "sc_wr_drawer",
+   "kind": "settings",
+   "label": "More",
+   "region": "bottom",
+   "order": 0,
+   "items": "[\"Preferences\", \"About & help\", \"Donate to Wikipedia\"]"
+  },
+  {
+   "id": "w_wr_top_title",
+   "screen": "sc_wr_topic",
+   "kind": "titlebar",
+   "label": "Topic",
+   "region": "top",
+   "order": 0
+  },
+  {
+   "id": "w_wr_top_head",
+   "screen": "sc_wr_topic",
+   "kind": "text",
+   "label": "Roman History",
+   "region": "body",
+   "order": 0,
+   "items": "[\"Roman History\", \"3 seeds \\u00b7 212 articles \\u00b7 1.9 MB\"]"
+  },
+  {
+   "id": "w_wr_top_synergy",
+   "screen": "sc_wr_topic",
+   "kind": "card",
+   "label": "Synergy \u2014 42% shared",
+   "region": "body",
+   "order": 1,
+   "items": "[\"89 of 212 articles are reached by 2+ seeds \\u2014 strong overlap. Every shared article was downloaded once.\", \"Layer 1 \\u00b7 18 of 64 shared\", \"Layer 2 \\u00b7 71 of 148 shared\"]"
+  },
+  {
+   "id": "w_wr_top_seeds",
+   "screen": "sc_wr_topic",
+   "kind": "list",
+   "label": "Seeds",
+   "region": "body",
+   "order": 2,
+   "items": "[\"Roman Empire \\u2014 L2 \\u25be \\u00b7 95 articles \\u00b7 43 shared with other seeds\", \"Julius Caesar \\u2014 L2 \\u25be \\u00b7 78 articles \\u00b7 48 shared with other seeds\", \"Punic Wars \\u2014 L1 \\u25be \\u00b7 39 articles \\u00b7 9 shared \\u2014 mostly new ground\"]"
+  },
+  {
+   "id": "w_wr_top_actions",
+   "screen": "sc_wr_topic",
+   "kind": "buttonrow",
+   "label": "Actions",
+   "region": "bottom",
+   "order": 0,
+   "items": "[{\"text\": \"Cache all\", \"icon\": \"download\"}, {\"text\": \"Add seed\", \"icon\": \"add\"}]"
+  },
+  {
+   "id": "w_wr_tm_title",
+   "screen": "sc_wr_topicmode",
+   "kind": "titlebar",
+   "label": "Wikipick",
+   "region": "top",
+   "order": 0
+  },
+  {
+   "id": "w_wr_tm_search",
+   "screen": "sc_wr_topicmode",
+   "kind": "searchbar",
+   "label": "rome \u00b7 EN",
+   "region": "top",
+   "order": 1
+  },
+  {
+   "id": "w_wr_tm_card",
+   "screen": "sc_wr_topicmode",
+   "kind": "card",
+   "label": "Capture \u201cRome\u201d as a topic",
+   "region": "top",
+   "order": 2,
+   "items": "[\"Rank these results by how tightly they interlink\"]"
+  },
+  {
+   "id": "w_wr_tm_list",
+   "screen": "sc_wr_topicmode",
+   "kind": "list",
+   "label": "Results",
+   "region": "body",
+   "order": 0,
+   "items": "[{\"text\": \"Rome \\u2014 Capital and largest city of Italy\", \"icon\": \"bookmark\"}, {\"text\": \"Roman Empire \\u2014 27 BC\\u2013476/1453 AD state and civilization\", \"icon\": \"bookmark\"}, {\"text\": \"Romeo and Juliet \\u2014 Tragedy by William Shakespeare\", \"icon\": \"bookmark\"}, {\"text\": \"Rome Fiumicino Airport \\u2014 Main airport serving Rome, Italy\", \"icon\": \"bookmark\"}, {\"text\": \"Romelu Lukaku \\u2014 Belgian footballer (born 1993)\", \"icon\": \"bookmark\"}]"
+  },
+  {
+   "id": "w_wr_tm_footer",
+   "screen": "sc_wr_topicmode",
+   "kind": "text",
+   "label": "The topic card appears whenever a search returns 5+ results",
+   "region": "body",
+   "order": 1
+  },
+  {
+   "id": "w_wr_tb_title",
+   "screen": "sc_wr_topicbuilder",
+   "kind": "titlebar",
+   "label": "Topic capture",
+   "region": "top",
+   "order": 0
+  },
+  {
+   "id": "w_wr_tb_head",
+   "screen": "sc_wr_topicbuilder",
+   "kind": "text",
+   "label": "Rome",
+   "region": "body",
+   "order": 0,
+   "items": "[\"Rome\", \"12 candidates \\u00b7 centrality from links between them \\u00b7 done in 6s\"]"
+  },
+  {
+   "id": "w_wr_tb_core",
+   "screen": "sc_wr_topicbuilder",
+   "kind": "list",
+   "label": "Core \u2014 saved as seeds",
+   "region": "body",
+   "order": 1,
+   "items": "[{\"text\": \"Rome \\u2014 11 of 11 link here\", \"toggle\": true}, {\"text\": \"Roman Empire \\u2014 9 of 11\", \"toggle\": true}, {\"text\": \"Ancient Rome \\u2014 8 of 11\", \"toggle\": true}, {\"text\": \"Roman Republic \\u2014 7 of 11\", \"toggle\": true}, {\"text\": \"Colosseum \\u2014 6 of 11\", \"toggle\": true}]"
+  },
+  {
+   "id": "w_wr_tb_peripheral",
+   "screen": "sc_wr_topicbuilder",
+   "kind": "list",
+   "label": "Peripheral \u2014 same name, different topic",
+   "region": "body",
+   "order": 2,
+   "items": "[{\"text\": \"Rome (TV series) \\u2014 2 of 11\", \"toggle\": false}, {\"text\": \"Romelu Lukaku \\u2014 0 of 11\", \"toggle\": false}, {\"text\": \"\\u00d3scar Romero \\u2014 0 of 11\", \"toggle\": false}]"
+  },
+  {
+   "id": "w_wr_tb_options",
+   "screen": "sc_wr_topicbuilder",
+   "kind": "buttonrow",
+   "label": "Options",
+   "region": "bottom",
+   "order": 0,
+   "items": "[\"Depth L1 \\u25be\", \"Images off \\u25be\", \"\\u2248 210 articles\"]"
+  },
+  {
+   "id": "w_wr_tb_create",
+   "screen": "sc_wr_topicbuilder",
+   "kind": "buttonrow",
+   "label": "Create",
+   "region": "bottom",
+   "order": 1,
+   "items": "[{\"text\": \"Create topic \\u00b7 cache 5 seeds\", \"icon\": \"download\"}]"
+  },
+  {
+   "id": "w_wr_rm_title",
+   "screen": "sc_wr_resultmenu",
+   "kind": "titlebar",
+   "label": "Wikipick",
+   "region": "top",
+   "order": 0
+  },
+  {
+   "id": "w_wr_rm_search",
+   "screen": "sc_wr_resultmenu",
+   "kind": "searchbar",
+   "label": "rome \u00b7 EN",
+   "region": "top",
+   "order": 1
+  },
+  {
+   "id": "w_wr_rm_row",
+   "screen": "sc_wr_resultmenu",
+   "kind": "list",
+   "label": "Result (long-pressed)",
+   "region": "body",
+   "order": 0,
+   "items": "[{\"text\": \"Rome \\u2014 Capital and largest city of Italy\", \"icon\": \"bookmark\"}]"
+  },
+  {
+   "id": "w_wr_rm_menu",
+   "screen": "sc_wr_resultmenu",
+   "kind": "popup",
+   "label": "Long-press menu",
+   "region": "overlay",
+   "order": 0,
+   "items": "[{\"text\": \"Read now\", \"icon\": \"search\"}, {\"text\": \"Save offline\", \"icon\": \"bookmark_add\", \"children\": [{\"text\": \"1 level deep (default)\"}, {\"text\": \"2 levels deep\"}, {\"text\": \"Include images\", \"toggle\": false}]}, {\"text\": \"Add to topic\\u2026\", \"icon\": \"add\"}, {\"text\": \"Open on Wikipedia\", \"icon\": \"open_in_new\"}]"
+  },
+  {
+   "id": "w_wr_rm_dim",
+   "screen": "sc_wr_resultmenu",
+   "kind": "list",
+   "label": "Below the fold",
+   "region": "body",
+   "order": 1,
+   "items": "[{\"text\": \"Roman Empire \\u2014 27 BC\\u2013476/1453 AD state and civilization\", \"icon\": \"bookmark\"}]"
+  },
+  {
+   "id": "w_wr_rm_footer",
+   "screen": "sc_wr_resultmenu",
+   "kind": "text",
+   "label": "Long-press a row \u2192 this dropdown opens at the finger (never a slide-up sheet). The pressed row stays highlighted while the menu is open. \u201cSave offline\u201d expands in place to the depth/images submenu shown. Every tappable card ripples on touch \u2014 hard requirement.",
+   "region": "body",
+   "order": 2
+  }
+ ],
+ "flows": [
+  {
+   "id": "fl_home_details",
+   "board": "bd_myapp",
+   "fromWidget": "w_scroll",
+   "toScreen": "sc_details",
+   "transition": "push"
+  }
+ ],
+ "frameImages": [],
+ "stickies": [
+  {
+   "id": "st_wr_empty_state_rule",
+   "board": "bd_wikipick_redesign",
+   "x": 0,
+   "y": -150,
+   "width": 320,
+   "text": "When both Home lists are empty: ONE small combined hint line replaces both sections \u2014 never two big icons. Bottom action bar in the reader auto-hides on scroll down, returns on scroll up."
+  },
+  {
+   "id": "st_wr_topic_mode_proposal",
+   "board": "bd_wikipick_redesign",
+   "x": 1040,
+   "y": 860,
+   "width": 320,
+   "text": "PROPOSAL (revision 5): Topic mode during search. Search -> a topic card appears under the field (5+ results). Tap -> topic capture: top 12 results ranked by CENTRALITY (how many other candidates link to each one). Majority-linked = CORE, pre-checked; PERIPHERAL = unchecked, tap to override. Depth + images chips reuse per-save options. Name is editable."
+  },
+  {
+   "id": "st_wr_result_menu_proposal",
+   "board": "bd_wikipick_redesign",
+   "x": 1980,
+   "y": 880,
+   "width": 320,
+   "text": "PROPOSAL (revision 6): LONG-PRESS a search result -> ANCHORED DROPDOWN at the finger \u2014 never a slide-up sheet. Rows: Read now / Save offline (submenu) / Add to topic / Open on Wikipedia. Tap still opens the article; bookmark icon stays quick-save. Ripple on every tappable row is required."
+  }
+ ]
+}

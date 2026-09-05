@@ -1,0 +1,100 @@
+{
+  "tables": [
+    {
+      "name": "entries",
+      "label": "Entries",
+      "icon": "account_tree",
+      "description": "The universal node — a project, task, comment, note, or embedded tool (wireframe / sheet / doc / sketch). Every entry has a title and a comment; its type decides its content. Nodes DON'T store a parent — they relate to each other through the `relations` table, so one node can live under many parents."
+    },
+    {
+      "name": "relations",
+      "label": "Relations",
+      "icon": "hub",
+      "description": "The edges of the graph. Each row links two entries: {fromId, toId, type}. type `contains` is structural parent→child (builds the tree); references / depends_on / relates_to / blocks (and custom) are free cross-links. A node can be linked under many parents (many-to-many)."
+    },
+    {
+      "name": "users",
+      "label": "People",
+      "icon": "group",
+      "description": "The people on this board. Defined here, addable any time; an entry's 'created by' and 'prompting' chips point at them."
+    },
+    {
+      "name": "tag_types",
+      "label": "Tag types",
+      "icon": "local_offer",
+      "description": "The tag vocabulary for this board — add, rename, or recolor a tag type here and it's live everywhere an entry can be tagged (the record editor, Add-filter). Defined here, addable any time."
+    },
+    {
+      "name": "dash_headline",
+      "label": "Dash headline",
+      "icon": "speed",
+      "description": "One row (id \"now\"): the fleet right now — waiting/running/blocked/done counts, agents live, today's output/cache tokens, and the current usage-window clock (start, reset, minutes left, output this window, busiest window in 30 days). Fetched on Refresh (mode: replace).",
+      "provenance": {
+        "source": "fleet-snapshot.sh on the Mac → https://167.233.64.97/fleet/aidev.json (Refresh action)"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "dash_sessions",
+      "label": "Dash sessions",
+      "icon": "forum",
+      "description": "One row per fleet session: title, session tag, lane (awaiting-user/running/blocked/done), timing, activity, applets touched, heaviest model and its output/cache tokens, agent counts. Powers the Now tab's lanes and the Applets tab's per-applet session list.",
+      "provenance": {
+        "source": "fleet-snapshot.sh (Claude Code transcripts) → /fleet/aidev.json"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "dash_by_model",
+      "label": "Dash tokens by model",
+      "icon": "bar_chart",
+      "description": "Output tokens, cache reads and turns per model per range (today/7d/30d) — Fable, Opus, Sonnet, Haiku, other. Powers the Tokens tab's bar charts.",
+      "provenance": {
+        "source": "fleet-snapshot.sh (per-model rollup) → /fleet/aidev.json"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "dash_by_day",
+      "label": "Dash tokens by day",
+      "icon": "show_chart",
+      "description": "Output tokens, cache reads and session count per day for the last 14 days. Powers the Tokens tab's daily chart.",
+      "provenance": {
+        "source": "fleet-snapshot.sh (daily rollup) → /fleet/aidev.json"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "dash_by_applet",
+      "label": "Dash tokens by applet",
+      "icon": "widgets",
+      "description": "Output tokens and session count per applet per range (today/7d/30d) — kind marks whether the row is a real applet, shared engine work, or fleet infra. Powers the Applets tab.",
+      "provenance": {
+        "source": "fleet-snapshot.sh (applet attribution from edited paths) → /fleet/aidev.json"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "dash_timeline",
+      "label": "Dash timeline",
+      "icon": "view_timeline",
+      "description": "One row per 15-minute activity bin per session — session, title, applet, start/end, output tokens, day and range (today/yesterday/7d). Powers the Timeline tab's gantt.",
+      "provenance": {
+        "source": "fleet-snapshot.sh (15-minute activity bins) → /fleet/aidev.json"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    }
+  ]
+}

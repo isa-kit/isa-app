@@ -1,0 +1,124 @@
+{
+  "board": {
+    "name": "RI Map (maplibre)"
+  },
+  "screens": [
+    {
+      "id": "rimap_0_map",
+      "name": "Rhode Island places",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "rimap_1_places",
+      "name": "All places",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "rimap_0_map_title",
+      "screen": "rimap_0_map",
+      "kind": "titlebar",
+      "label": "Rhode Island places",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "rimap_0_map_w0",
+      "screen": "rimap_0_map",
+      "kind": "text",
+      "label": "Notable places across Rhode Island on a tile basemap.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "rimap_0_map_w1",
+      "screen": "rimap_0_map",
+      "kind": "buttonrow",
+      "label": "Show all places",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "rimap_0_map_w2",
+      "screen": "rimap_0_map",
+      "kind": "card",
+      "label": "Map",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "rimap_0_map_nav",
+      "screen": "rimap_0_map",
+      "kind": "bottomnav",
+      "label": "Map \u00b7 Places",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "rimap_1_places_title",
+      "screen": "rimap_1_places",
+      "kind": "titlebar",
+      "label": "All places",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "rimap_1_places_w0",
+      "screen": "rimap_1_places",
+      "kind": "text",
+      "label": "Every place plotted on the map.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "rimap_1_places_w1",
+      "screen": "rimap_1_places",
+      "kind": "list",
+      "label": "Table",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Rhode Island places\"]"
+    },
+    {
+      "id": "rimap_1_places_w2",
+      "screen": "rimap_1_places",
+      "kind": "buttonrow",
+      "label": "New place",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "rimap_1_places_nav",
+      "screen": "rimap_1_places",
+      "kind": "bottomnav",
+      "label": "Map \u00b7 Places",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "rimap_flow_0",
+      "fromWidget": "rimap_0_map_nav",
+      "toScreen": "rimap_1_places",
+      "transition": "push"
+    },
+    {
+      "id": "rimap_flow_1",
+      "fromWidget": "rimap_1_places_nav",
+      "toScreen": "rimap_0_map",
+      "transition": "push"
+    },
+    {
+      "id": "rimap_flow_extra",
+      "fromWidget": "rimap_1_places_w1",
+      "toScreen": "rimap_0_map",
+      "transition": "push"
+    }
+  ]
+}

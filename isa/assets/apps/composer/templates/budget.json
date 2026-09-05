@@ -1,0 +1,230 @@
+{
+  "board": {
+    "name": "Budget"
+  },
+  "screens": [
+    {
+      "id": "budget_0_dashboard",
+      "name": "Overview",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "budget_1_transactions",
+      "name": "Spending",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "budget_2_budgets",
+      "name": "Budgets",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    },
+    {
+      "id": "budget_3_accounts",
+      "name": "Accounts",
+      "device": "phone",
+      "x": 1320,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "budget_0_dashboard_title",
+      "screen": "budget_0_dashboard",
+      "kind": "titlebar",
+      "label": "Overview",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "budget_0_dashboard_w0",
+      "screen": "budget_0_dashboard",
+      "kind": "text",
+      "label": "Where the money goes.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "budget_0_dashboard_w1",
+      "screen": "budget_0_dashboard",
+      "kind": "card",
+      "label": "Spent",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "budget_0_dashboard_w2",
+      "screen": "budget_0_dashboard",
+      "kind": "card",
+      "label": "Income",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "budget_0_dashboard_nav",
+      "screen": "budget_0_dashboard",
+      "kind": "bottomnav",
+      "label": "Overview \u00b7 Spending \u00b7 Budgets \u00b7 Accounts",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "budget_1_transactions_title",
+      "screen": "budget_1_transactions",
+      "kind": "titlebar",
+      "label": "Spending",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "budget_1_transactions_w0",
+      "screen": "budget_1_transactions",
+      "kind": "text",
+      "label": "Log expenses and income.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "budget_1_transactions_w1",
+      "screen": "budget_1_transactions",
+      "kind": "buttonrow",
+      "label": "Add expense",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "budget_1_transactions_w2",
+      "screen": "budget_1_transactions",
+      "kind": "buttonrow",
+      "label": "Add income",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "budget_1_transactions_nav",
+      "screen": "budget_1_transactions",
+      "kind": "bottomnav",
+      "label": "Overview \u00b7 Spending \u00b7 Budgets \u00b7 Accounts",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "budget_2_budgets_title",
+      "screen": "budget_2_budgets",
+      "kind": "titlebar",
+      "label": "Budgets",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "budget_2_budgets_w0",
+      "screen": "budget_2_budgets",
+      "kind": "text",
+      "label": "Monthly limit per category (top chart) vs what you've actually spent (bottom chart).",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "budget_2_budgets_w1",
+      "screen": "budget_2_budgets",
+      "kind": "buttonrow",
+      "label": "Add budget",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "budget_2_budgets_w2",
+      "screen": "budget_2_budgets",
+      "kind": "card",
+      "label": "Monthly limits",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "budget_2_budgets_nav",
+      "screen": "budget_2_budgets",
+      "kind": "bottomnav",
+      "label": "Overview \u00b7 Spending \u00b7 Budgets \u00b7 Accounts",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "budget_3_accounts_title",
+      "screen": "budget_3_accounts",
+      "kind": "titlebar",
+      "label": "Accounts",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "budget_3_accounts_w0",
+      "screen": "budget_3_accounts",
+      "kind": "text",
+      "label": "Where money lives.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "budget_3_accounts_w1",
+      "screen": "budget_3_accounts",
+      "kind": "buttonrow",
+      "label": "Add account",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "budget_3_accounts_w2",
+      "screen": "budget_3_accounts",
+      "kind": "list",
+      "label": "name",
+      "region": "body",
+      "order": 2,
+      "items": "[\"Overview\", \"Spending\", \"Budgets\"]"
+    },
+    {
+      "id": "budget_3_accounts_nav",
+      "screen": "budget_3_accounts",
+      "kind": "bottomnav",
+      "label": "Overview \u00b7 Spending \u00b7 Budgets \u00b7 Accounts",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "budget_flow_0",
+      "fromWidget": "budget_0_dashboard_nav",
+      "toScreen": "budget_1_transactions",
+      "transition": "push"
+    },
+    {
+      "id": "budget_flow_1",
+      "fromWidget": "budget_1_transactions_nav",
+      "toScreen": "budget_2_budgets",
+      "transition": "push"
+    },
+    {
+      "id": "budget_flow_2",
+      "fromWidget": "budget_2_budgets_nav",
+      "toScreen": "budget_3_accounts",
+      "transition": "push"
+    },
+    {
+      "id": "budget_flow_3",
+      "fromWidget": "budget_3_accounts_nav",
+      "toScreen": "budget_0_dashboard",
+      "transition": "push"
+    },
+    {
+      "id": "budget_flow_extra",
+      "fromWidget": "budget_3_accounts_w2",
+      "toScreen": "budget_0_dashboard",
+      "transition": "push"
+    }
+  ]
+}

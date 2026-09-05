@@ -1,0 +1,20 @@
+{
+ "id": "krtravelplan",
+ "name": "Korea trip plan",
+ "category": "Planning & lists",
+ "description": "Plan a Korea trip: schedule, research notes and who's coming.",
+ "icon": "map",
+ "color": "#0F766E",
+ "store": {
+ "type": "sqflite",
+ "namespace": "isan_krtravelplan"
+ },
+ "seedVersion": "2026-08-14.2.l10n-int-0903",
+ "seedContent": "initial-only",
+ "durableSettings": [
+ "krtravelplanMemberId"
+ ],
+ "meta": {
+ "note": "Consolidates trip SCHEDULE (dated plan items) and RESEARCH (notes/links/candidate places gathered while planning) into one applet, built 2026-08-13. Data shape and no-login identity pattern are deliberately copied from `tripboard` (ONE `entries` table, kind discriminator, `relations` contains-edges — the only table names the share pipeline syncs) rather than reinvented; see MIGRATION.md. Identity is a per-install `krtravelplanMemberId` setting picked via a member card (never sign-in, never $playerId) -- every content row's `author` is stamped `$setting:krtravelplanMemberId`. UPDATE 2026-08-14: the engine originally had no string-transform primitive, so the 'Badge' field shipped as a SECOND self-chosen text field typed alongside the name -- that gap is now closed. `flutterboard/lib/src/data/text_transforms.dart` adds a named `initials` transform (Latin: first letter per word, capped at 3; single CJK token e.g. Korean: last 2 characters, the given-name part for the common 1-syllable-surname shape; empty input -> ''), and `record_editor.dart` gained a generic cross-field `rules: {deriveFrom, deriveFn}` column rule (fill-only-while-empty, same shape as the existing completion-stamp reconcile) that any applet's column can opt into. `columns.json`'s `initials` column now declares `rules: {\"deriveFrom\": \"title\", \"deriveFn\": \"initials\"}`, so the Badge auto-fills from the typed name on save and stays overridable (type your own -> it sticks; clear it -> re-derives). Bilingual en/ko throughout via inline {en,ko} maps, matching krtravel's convention. A Research card can jump to krtravel's map via hostCall openApplet for a place lookup (updated 2026-08-16,, when krtravel2 was retired and krtravel restored to apps/apps.json); krtravel is NOT modified by this applet."
+ }
+}

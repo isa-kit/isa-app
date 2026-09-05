@@ -1,0 +1,14 @@
+{
+  "id": "malsori",
+  "name": "말소리",
+  "icon": "record_voice_over",
+  "category": "Reference",
+  "description": "실제 발음 그대로 배우는 영어 소리 가이드. 단어를 입력하면 미국식 영어의 진짜 소리를 한글 소리블록으로 보여줍니다 — 교과서 철자 표기가 아니라, 원어민이 실제로 내는 소리대로. (Type an English word, see it broken into Korean sound-blocks tuned to how it's ACTUALLY spoken — not textbook spelling-transliteration.)",
+  "color": "#E07A2F",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_malsori"
+  },
+  "seedVersion": "2026-09-02.malsori.1.l10n-int-0903",
+  "seedContent": "initial-only"
+}

@@ -1,0 +1,730 @@
+{
+  "days": [],
+  "prefs": [
+    {
+      "id": "prefs",
+      "weekStart": "monday"
+    }
+  ],
+  "tags": [
+    {
+      "id": "tag_reflection",
+      "name": "reflection",
+      "color": "#7E57C2",
+      "x": 110,
+      "y": 90
+    },
+    {
+      "id": "tag_work",
+      "name": "work",
+      "color": "#5C6BC0",
+      "x": 310,
+      "y": 90
+    },
+    {
+      "id": "tag_family",
+      "name": "family",
+      "color": "#EF5350",
+      "x": 510,
+      "y": 90
+    },
+    {
+      "id": "tag_travel",
+      "name": "travel",
+      "color": "#26A69A",
+      "x": 110,
+      "y": 220
+    },
+    {
+      "id": "tag_health",
+      "name": "health",
+      "color": "#66BB6A",
+      "x": 310,
+      "y": 220
+    },
+    {
+      "id": "tag_ideas",
+      "name": "ideas",
+      "color": "#FFA726",
+      "x": 510,
+      "y": 220
+    }
+  ],
+  "people": [
+    {
+      "id": "pp_alex",
+      "name": "Alex",
+      "relation": "Friend",
+      "x": 140,
+      "y": 120
+    },
+    {
+      "id": "pp_sam",
+      "name": "Sam",
+      "relation": "Colleague",
+      "x": 420,
+      "y": 90
+    },
+    {
+      "id": "pp_mom",
+      "name": "Mom",
+      "relation": "Family",
+      "x": 130,
+      "y": 320
+    },
+    {
+      "id": "pp_lena",
+      "name": "Lena",
+      "relation": "Manager",
+      "x": 430,
+      "y": 250
+    },
+    {
+      "id": "pp_dana",
+      "name": "Dana",
+      "relation": "Sister",
+      "x": 300,
+      "y": 380
+    },
+    {
+      "id": "pp_theo",
+      "name": "Theo",
+      "relation": "College friend",
+      "x": 560,
+      "y": 160
+    }
+  ],
+  "events": [
+    {
+      "id": "ev_team_offsite",
+      "name": "Team offsite",
+      "date": "2026-05-29",
+      "place": "Providence, RI"
+    },
+    {
+      "id": "ev_sunday_dinner",
+      "name": "Sunday dinner",
+      "date": "2026-05-31",
+      "place": "Home"
+    },
+    {
+      "id": "ev_quarterly_review",
+      "name": "Quarterly review",
+      "date": "2026-06-12",
+      "place": "Office"
+    },
+    {
+      "id": "ev_berlin_trip",
+      "name": "Berlin trip",
+      "date": "2026-06-19",
+      "place": "Berlin, Germany"
+    },
+    {
+      "id": "ev_alex_birthday",
+      "name": "Alex's birthday picnic",
+      "date": "2026-06-27",
+      "place": "Riverside Park"
+    }
+  ],
+  "entries": [
+    {
+      "id": "en_1",
+      "title": "A quiet start",
+      "date": "2026-05-30",
+      "body": "Spent the morning journaling and walking. Feeling settled and grateful for the slower pace.",
+      "mood": "good",
+      "people": [],
+      "events": [],
+      "tags": [
+        "tag_reflection"
+      ]
+    },
+    {
+      "id": "en_2",
+      "title": "Offsite recap",
+      "date": "2026-05-29",
+      "body": "Long day at the team offsite. Good conversations with Sam about the roadmap, but I'm wiped out.",
+      "mood": "ok",
+      "people": [
+        "pp_sam"
+      ],
+      "events": [
+        "ev_team_offsite"
+      ],
+      "tags": [
+        "tag_work"
+      ]
+    },
+    {
+      "id": "en_3",
+      "title": "Dinner with Mom",
+      "date": "2026-05-31",
+      "body": "Family dinner at home. Mom made her usual and Alex stopped by. Felt warm and easy.",
+      "mood": "great",
+      "people": [
+        "pp_mom",
+        "pp_alex"
+      ],
+      "events": [
+        "ev_sunday_dinner"
+      ],
+      "tags": [
+        "tag_family"
+      ]
+    },
+    {
+      "id": "en_4",
+      "title": "Rough Monday",
+      "date": "2026-06-01",
+      "body": "Hard to focus today. Too many context switches at work. Trying to be kind to myself about it.",
+      "mood": "low",
+      "people": [
+        "pp_sam"
+      ],
+      "events": [],
+      "tags": [
+        "tag_work",
+        "tag_reflection"
+      ]
+    },
+    {
+      "id": "en_5",
+      "title": "Coffee with Alex",
+      "date": "2026-06-02",
+      "body": "Caught up with Alex over coffee. We talked about the trip we keep almost planning. Left feeling lighter.",
+      "mood": "good",
+      "people": [
+        "pp_alex"
+      ],
+      "events": [],
+      "tags": [
+        "tag_reflection"
+      ]
+    },
+    {
+      "id": "en_6",
+      "title": "Shipped the feature",
+      "date": "2026-06-03",
+      "body": "Finally shipped the thing Sam and I have been grinding on. Tired but proud. Took a walk to celebrate.",
+      "mood": "great",
+      "people": [
+        "pp_sam"
+      ],
+      "events": [],
+      "tags": [
+        "tag_work"
+      ]
+    },
+    {
+      "id": "en_7",
+      "title": "Quiet evening",
+      "date": "2026-06-04",
+      "body": "Read on the porch for an hour with no phone. Small thing, but it reset my head.",
+      "mood": "good",
+      "people": [],
+      "events": [],
+      "tags": [
+        "tag_reflection"
+      ]
+    },
+    {
+      "id": "en_8",
+      "title": "Off day",
+      "date": "2026-06-05",
+      "body": "Didn't sleep well and it showed. Low energy all morning. Logging it so I notice the pattern.",
+      "mood": "rough",
+      "people": [],
+      "events": [],
+      "tags": [
+        "tag_reflection"
+      ]
+    },
+    {
+      "id": "en_9",
+      "title": "Lake trail run",
+      "date": "2026-06-06",
+      "body": "First proper run in two weeks. Took the lake loop with Dana — legs heavy at the start, great by the end.",
+      "mood": "good",
+      "quantity": 5.2,
+      "people": [
+        "pp_dana"
+      ],
+      "events": [],
+      "tags": [
+        "tag_health"
+      ],
+      "places": [
+        "place_lake_trail"
+      ]
+    },
+    {
+      "id": "en_10",
+      "title": "Berlin trip planning",
+      "date": "2026-06-07",
+      "body": "Alex and I finally sat down and turned the maybe-trip into a real one. Flights booked for the 19th. It's happening.",
+      "mood": "great",
+      "people": [
+        "pp_alex"
+      ],
+      "events": [
+        "ev_berlin_trip"
+      ],
+      "tags": [
+        "tag_travel",
+        "tag_ideas"
+      ],
+      "places": [
+        "place_berlin"
+      ]
+    },
+    {
+      "id": "en_11",
+      "title": "1:1 with Lena",
+      "date": "2026-06-08",
+      "body": "Monthly check-in with Lena. Talked through the quarterly review and what I want from the next six months.",
+      "mood": "ok",
+      "people": [
+        "pp_lena"
+      ],
+      "events": [
+        "ev_quarterly_review"
+      ],
+      "tags": [
+        "tag_work"
+      ]
+    },
+    {
+      "id": "en_12",
+      "title": "Tuesday reset",
+      "date": "2026-06-09",
+      "body": "Slow morning, tidy desk, short walk before lunch. Trying to make the small resets a habit instead of an emergency measure.",
+      "mood": "good",
+      "people": [],
+      "events": [],
+      "tags": [
+        "tag_reflection",
+        "tag_health"
+      ]
+    },
+    {
+      "id": "en_13",
+      "title": "Quarterly review prep",
+      "date": "2026-06-10",
+      "body": "Spent most of the day building the review deck with Sam. The numbers tell a better story than I feared. Friday should be fine.",
+      "mood": "ok",
+      "people": [
+        "pp_sam",
+        "pp_lena"
+      ],
+      "events": [
+        "ev_quarterly_review"
+      ],
+      "tags": [
+        "tag_work"
+      ]
+    },
+    {
+      "id": "en_14",
+      "title": "Berlin, day one",
+      "date": "2026-06-19",
+      "body": "Trip log placeholder — landing TXL replacement at 10:40, drop bags at the Kreuzberg flat, then walk until our legs give out.",
+      "mood": "great",
+      "people": [
+        "pp_alex"
+      ],
+      "events": [
+        "ev_berlin_trip"
+      ],
+      "tags": [
+        "tag_travel"
+      ],
+      "places": [
+        "place_berlin"
+      ]
+    },
+    {
+      "id": "en_15",
+      "title": "Alex's birthday picnic",
+      "date": "2026-06-27",
+      "body": "Planning entry — Theo is flying in, Dana's bringing the cake, I'm on blankets and the playlist. Want to write down what actually happens here afterward.",
+      "mood": "good",
+      "people": [
+        "pp_alex",
+        "pp_theo",
+        "pp_dana"
+      ],
+      "events": [
+        "ev_alex_birthday"
+      ],
+      "tags": [
+        "tag_family",
+        "tag_ideas"
+      ],
+      "places": [
+        "place_riverside_park"
+      ]
+    }
+  ],
+  "places": [
+    {
+      "id": "place_home",
+      "name": "Home",
+      "coords": "",
+      "notes": "",
+      "x": 120,
+      "y": 100
+    },
+    {
+      "id": "place_office",
+      "name": "Office",
+      "coords": "",
+      "notes": "",
+      "x": 340,
+      "y": 100
+    },
+    {
+      "id": "place_lake_trail",
+      "name": "Lake trail",
+      "coords": "41.8268, -71.4029",
+      "notes": "5.2 km loop around the reservoir; gravel, mostly shaded.",
+      "x": 560,
+      "y": 100
+    },
+    {
+      "id": "place_berlin",
+      "name": "Berlin",
+      "coords": "52.5200, 13.4050",
+      "notes": "June trip with Alex — staying in Kreuzberg.",
+      "x": 120,
+      "y": 260
+    },
+    {
+      "id": "place_riverside_park",
+      "name": "Riverside Park",
+      "coords": "41.8240, -71.4128",
+      "notes": "Good picnic lawn near the north entrance.",
+      "x": 340,
+      "y": 260
+    }
+  ],
+  "entry_parts": [
+    {
+      "id": "ep_1",
+      "title": "Roadmap discussion",
+      "kind": "rich",
+      "body": "## What we agreed\n\n- Q3 focus stays on **sync reliability**, not new surface area\n- Sam owns the migration plan, I own the rollout comms\n- Revisit the mobile editor *after* the quarterly review\n\nThe debate about scope got heated but landed somewhere sane.",
+      "entry": "en_2",
+      "order": 1
+    },
+    {
+      "id": "ep_2",
+      "title": "Action items",
+      "kind": "note",
+      "body": "- [ ] Send offsite summary to the team\n- [ ] Book follow-up with Sam on the migration plan\n- [x] Expense the train tickets",
+      "entry": "en_2",
+      "order": 2
+    },
+    {
+      "id": "ep_3",
+      "title": "Train ride home",
+      "kind": "note",
+      "body": "Watched the coastline go by and didn't open the laptop once. Best decision of the day.",
+      "entry": "en_2",
+      "order": 3
+    },
+    {
+      "id": "ep_4",
+      "title": "The evening",
+      "kind": "rich",
+      "body": "Mom made the lemon chicken with rosemary from the garden. Alex showed up with a terrible bottle of wine and a great story about his landlord. We stayed at the table until almost eleven.\n\n> \"You don't have to earn a slow Sunday.\" — Mom, mid-dishes",
+      "entry": "en_3",
+      "order": 1
+    },
+    {
+      "id": "ep_5",
+      "title": "Recipe to steal",
+      "kind": "note",
+      "body": "Lemon chicken: marinate 2h in lemon + garlic + rosemary, roast at 200C for 45 min, baste twice. Ask Mom about the pan sauce ratio.",
+      "entry": "en_3",
+      "order": 2
+    },
+    {
+      "id": "ep_6",
+      "title": "What shipped",
+      "kind": "rich",
+      "body": "## Release notes (internal)\n\n- Per-field **last-write-wins** merge on sync conflicts\n- Offline queue survives app restarts\n- New conflict badge in the record editor\n\nSix weeks of work compressed into three bullet points. Feels about right.",
+      "entry": "en_6",
+      "order": 1
+    },
+    {
+      "id": "ep_7",
+      "title": "Bugs closed this sprint",
+      "kind": "measurement",
+      "body": "Down from 31 open at the start of the sprint.",
+      "quantity": 14,
+      "entry": "en_6",
+      "order": 2
+    },
+    {
+      "id": "ep_8",
+      "title": "Retro thought",
+      "kind": "note",
+      "body": "The last 10% took 40% of the time, again. Next time: cut scope at the two-thirds mark instead of pretending the deadline will move.",
+      "entry": "en_6",
+      "order": 3
+    },
+    {
+      "id": "ep_9",
+      "title": "Distance (km)",
+      "kind": "measurement",
+      "body": "Lake loop, full circuit.",
+      "quantity": 5.2,
+      "entry": "en_9",
+      "order": 1
+    },
+    {
+      "id": "ep_10",
+      "title": "Time (min)",
+      "kind": "measurement",
+      "body": "About 6:00/km — slow, but it's a base to build on.",
+      "quantity": 31,
+      "entry": "en_9",
+      "order": 2
+    },
+    {
+      "id": "ep_11",
+      "title": "How it felt",
+      "kind": "note",
+      "body": "First 2 km were a negotiation, the rest was easy. Dana set the pace and talked the whole way, which helped. Knee was fine.",
+      "entry": "en_9",
+      "order": 3
+    },
+    {
+      "id": "ep_12",
+      "title": "Itinerary draft",
+      "kind": "rich",
+      "body": "## Berlin — 4 nights\n\n**Fri 19** — land 10:40, Kreuzberg flat, Markthalle Neun for lunch, evening walk along the canal\n\n**Sat 20** — Museum Island in the morning, Mauerpark if the weather holds\n\n**Sun 21** — day trip to Potsdam *or* a lazy Tempelhofer Feld day\n\n**Mon 22** — galleries + record shops, dinner with Alex's cousin\n\n**Tue 23** — fly home 14:20",
+      "entry": "en_10",
+      "order": 1
+    },
+    {
+      "id": "ep_13",
+      "title": "Nights booked",
+      "kind": "measurement",
+      "body": "Kreuzberg flat, confirmation in email.",
+      "quantity": 4,
+      "entry": "en_10",
+      "order": 2
+    },
+    {
+      "id": "ep_14",
+      "title": "Budget",
+      "kind": "note",
+      "body": "Flights 380, flat 460, daily ~80 x 5 = 400. Call it 1300 with a buffer. Fine.",
+      "entry": "en_10",
+      "order": 3
+    },
+    {
+      "id": "ep_15",
+      "title": "Packing list",
+      "kind": "note",
+      "body": "- [ ] Rain shell (Berlin in June, you never know)\n- [ ] Camera + spare battery\n- [ ] Comfortable shoes, broken in\n- [ ] EU plug adapter\n- [ ] One nice shirt for the cousin dinner",
+      "entry": "en_10",
+      "order": 4
+    },
+    {
+      "id": "ep_16",
+      "title": "Agenda",
+      "kind": "rich",
+      "body": "1. Quarterly review — what story are we telling?\n2. Growth: I want to own a project end-to-end next half\n3. The on-call rotation is too thin (again)",
+      "entry": "en_11",
+      "order": 1
+    },
+    {
+      "id": "ep_17",
+      "title": "Decisions",
+      "kind": "note",
+      "body": "Lena agreed I present the sync section at the review myself. On-call: she'll raise headcount with the directors, no promises.",
+      "entry": "en_11",
+      "order": 2
+    },
+    {
+      "id": "ep_18",
+      "title": "Follow-ups",
+      "kind": "note",
+      "body": "- [ ] Draft the sync section slides by Wednesday\n- [ ] Send Lena the incident summary from May\n- [ ] Think about what \"end-to-end\" project I'd actually pitch",
+      "entry": "en_11",
+      "order": 3
+    },
+    {
+      "id": "ep_19",
+      "title": "Three good things",
+      "kind": "note",
+      "body": "1. Coffee on the steps before anyone else was up\n2. Inbox zero by noon (briefly, but still)\n3. Dana sent a photo from the trail — we're making the run a weekly thing",
+      "entry": "en_12",
+      "order": 1
+    },
+    {
+      "id": "ep_20",
+      "title": "Sleep (h)",
+      "kind": "measurement",
+      "body": "Best night in two weeks. The no-phone-after-ten rule seems to be the variable.",
+      "quantity": 7.5,
+      "entry": "en_12",
+      "order": 2
+    },
+    {
+      "id": "ep_21",
+      "title": "Deck outline",
+      "kind": "rich",
+      "body": "## Quarterly review — sync section\n\n1. **Where we started** — 31 open sync bugs, weekly conflict complaints\n2. **What we shipped** — per-field LWW, offline queue, conflict badge\n3. **The numbers** — conflict reports down 70%, support tickets halved\n4. **Next quarter** — delta pushes, schema reconciliation",
+      "entry": "en_13",
+      "order": 1
+    },
+    {
+      "id": "ep_22",
+      "title": "Slides drafted",
+      "kind": "measurement",
+      "body": "Out of a planned 11. The two missing ones are the hard ones, obviously.",
+      "quantity": 9,
+      "entry": "en_13",
+      "order": 2
+    },
+    {
+      "id": "ep_23",
+      "title": "Open questions",
+      "kind": "note",
+      "body": "Do we show the May incident or bury it? Sam says show it — the recovery is the story. He's probably right.",
+      "entry": "en_13",
+      "order": 3
+    },
+    {
+      "id": "ep_24",
+      "title": "Morning",
+      "kind": "note",
+      "body": "Landed early, flat is better than the photos. First döner within the hour, as is law.",
+      "entry": "en_14",
+      "order": 1
+    },
+    {
+      "id": "ep_25",
+      "title": "Canal walk",
+      "kind": "photo",
+      "body": "Golden hour along the Landwehrkanal — swans, swing dancers, someone selling records off a blanket.",
+      "entry": "en_14",
+      "order": 2
+    },
+    {
+      "id": "ep_26",
+      "title": "Steps",
+      "kind": "measurement",
+      "body": "New personal record for a travel day.",
+      "quantity": 18400,
+      "entry": "en_14",
+      "order": 3
+    },
+    {
+      "id": "ep_27",
+      "title": "Dinner notes",
+      "kind": "note",
+      "body": "Tiny Vietnamese place off Oranienstraße, no menu in English, best meal in months. Write down the name tomorrow before I forget — it's the one with the green door.",
+      "entry": "en_14",
+      "order": 4
+    }
+  ],
+  "measurements": [
+    {
+      "id": "m1",
+      "date": "2026-05-26",
+      "metric": "energy",
+      "value": 4
+    },
+    {
+      "id": "m2",
+      "date": "2026-05-28",
+      "metric": "energy",
+      "value": 5
+    },
+    {
+      "id": "m3",
+      "date": "2026-05-30",
+      "metric": "energy",
+      "value": 4
+    },
+    {
+      "id": "m4",
+      "date": "2026-06-01",
+      "metric": "energy",
+      "value": 6
+    },
+    {
+      "id": "m5",
+      "date": "2026-06-03",
+      "metric": "energy",
+      "value": 7
+    },
+    {
+      "id": "m6",
+      "date": "2026-06-05",
+      "metric": "energy",
+      "value": 6
+    },
+    {
+      "id": "m7",
+      "date": "2026-06-07",
+      "metric": "energy",
+      "value": 8
+    },
+    {
+      "id": "m8",
+      "date": "2026-06-09",
+      "metric": "energy",
+      "value": 7
+    },
+    {
+      "id": "m9",
+      "date": "2026-06-11",
+      "metric": "energy",
+      "value": 9
+    }
+  ],
+  "connections": [
+    {
+      "id": "cn_mom_dana",
+      "from": "pp_mom",
+      "to": "pp_dana",
+      "label": "mother → daughter"
+    },
+    {
+      "id": "cn_alex_theo",
+      "from": "pp_alex",
+      "to": "pp_theo",
+      "label": "college friends"
+    }
+  ],
+  "feelings": [
+    {
+      "id": "fl_sad_0612",
+      "name": "sad",
+      "score": 3.5,
+      "outOf": "5",
+      "date": "2026-06-12",
+      "note": "Heavier than usual this afternoon."
+    },
+    {
+      "id": "fl_bored_0612",
+      "name": "bored",
+      "score": 1,
+      "outOf": "5",
+      "date": "2026-06-12"
+    },
+    {
+      "id": "fl_motivated_0612",
+      "name": "motivated",
+      "score": 10,
+      "outOf": "10",
+      "date": "2026-06-12",
+      "note": "New project energy."
+    }
+  ]
+}

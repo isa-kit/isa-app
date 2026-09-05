@@ -1,0 +1,14 @@
+{
+  "id": "podcasts",
+  "name": "Podcasts",
+  "icon": "podcasts",
+  "color": "#8E24AA",
+  "category": "Media",
+  "description": "Subscribe to shows, queue episodes and discover new ones.",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_podcasts"
+  },
+  "seedVersion": "2026-07-20.files.l10n-int-0903",
+  "seedContent": "initial-only"
+}

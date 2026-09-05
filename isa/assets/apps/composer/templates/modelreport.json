@@ -1,0 +1,321 @@
+{
+  "board": {
+    "name": "Model reports"
+  },
+  "screens": [
+    {
+      "id": "modelr_0_dashboard",
+      "name": "Report dashboard",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "modelr_1_metrics",
+      "name": "Cached metrics",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "modelr_2_compare",
+      "name": "Compare model runs",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    },
+    {
+      "id": "modelr_3_mapview",
+      "name": "Map (add-on)",
+      "device": "phone",
+      "x": 1320,
+      "y": 0
+    },
+    {
+      "id": "modelr_4_data",
+      "name": "Data",
+      "device": "phone",
+      "x": 0,
+      "y": 900
+    },
+    {
+      "id": "modelr_5_about",
+      "name": "About",
+      "device": "phone",
+      "x": 440,
+      "y": 900
+    }
+  ],
+  "widgets": [
+    {
+      "id": "modelr_0_dashboard_title",
+      "screen": "modelr_0_dashboard",
+      "kind": "titlebar",
+      "label": "Report dashboard",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "modelr_0_dashboard_w0",
+      "screen": "modelr_0_dashboard",
+      "kind": "text",
+      "label": "The full report workbench: chart or table, filters, sorts, group-by rollups, and saved\u2026",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "modelr_0_dashboard_w1",
+      "screen": "modelr_0_dashboard",
+      "kind": "card",
+      "label": "Model outputs",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "modelr_0_dashboard_w2",
+      "screen": "modelr_0_dashboard",
+      "kind": "text",
+      "label": "Rows in the current selection:",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "modelr_0_dashboard_nav",
+      "screen": "modelr_0_dashboard",
+      "kind": "bottomnav",
+      "label": "Dashboard \u00b7 Metrics \u00b7 Compare \u00b7 Map \u00b7 Data \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "modelr_1_metrics_title",
+      "screen": "modelr_1_metrics",
+      "kind": "titlebar",
+      "label": "Cached metrics",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "modelr_1_metrics_w0",
+      "screen": "modelr_1_metrics",
+      "kind": "text",
+      "label": "Derived numbers computed ONCE and stored as rows \u2014",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "modelr_1_metrics_w1",
+      "screen": "modelr_1_metrics",
+      "kind": "buttonrow",
+      "label": "Recalculate metrics",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "modelr_1_metrics_w2",
+      "screen": "modelr_1_metrics",
+      "kind": "buttonrow",
+      "label": "Recalculate district totals",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "modelr_1_metrics_nav",
+      "screen": "modelr_1_metrics",
+      "kind": "bottomnav",
+      "label": "Dashboard \u00b7 Metrics \u00b7 Compare \u00b7 Map \u00b7 Data \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "modelr_2_compare_title",
+      "screen": "modelr_2_compare",
+      "kind": "titlebar",
+      "label": "Compare model runs",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "modelr_2_compare_w0",
+      "screen": "modelr_2_compare",
+      "kind": "text",
+      "label": "Percent difference vs the base run: each bar is a scenario's change from Baseline on\u2026",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "modelr_2_compare_w1",
+      "screen": "modelr_2_compare",
+      "kind": "card",
+      "label": "% change vs Baseline",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "modelr_2_compare_w2",
+      "screen": "modelr_2_compare",
+      "kind": "text",
+      "label": "Totals side by side (a locked, table-only report \u2014",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "modelr_2_compare_nav",
+      "screen": "modelr_2_compare",
+      "kind": "bottomnav",
+      "label": "Dashboard \u00b7 Metrics \u00b7 Compare \u00b7 Map \u00b7 Data \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "modelr_3_mapview_title",
+      "screen": "modelr_3_mapview",
+      "kind": "titlebar",
+      "label": "Map (add-on)",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "modelr_3_mapview_w0",
+      "screen": "modelr_3_mapview",
+      "kind": "text",
+      "label": "The geospatial ADD-ON.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "modelr_3_mapview_w1",
+      "screen": "modelr_3_mapview",
+      "kind": "card",
+      "label": "Map",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "modelr_3_mapview_nav",
+      "screen": "modelr_3_mapview",
+      "kind": "bottomnav",
+      "label": "Dashboard \u00b7 Metrics \u00b7 Compare \u00b7 Map \u00b7 Data \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "modelr_4_data_title",
+      "screen": "modelr_4_data",
+      "kind": "titlebar",
+      "label": "Data",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "modelr_4_data_w0",
+      "screen": "modelr_4_data",
+      "kind": "text",
+      "label": "The seeded rows are a fictional demo of the report STRUCTURE \u2014",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "modelr_4_data_w1",
+      "screen": "modelr_4_data",
+      "kind": "buttonrow",
+      "label": "Import CSV (merge)",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "modelr_4_data_w2",
+      "screen": "modelr_4_data",
+      "kind": "buttonrow",
+      "label": "Import CSV (replace)",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "modelr_4_data_nav",
+      "screen": "modelr_4_data",
+      "kind": "bottomnav",
+      "label": "Dashboard \u00b7 Metrics \u00b7 Compare \u00b7 Map \u00b7 Data \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "modelr_5_about_title",
+      "screen": "modelr_5_about",
+      "kind": "titlebar",
+      "label": "About",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "modelr_5_about_w0",
+      "screen": "modelr_5_about",
+      "kind": "text",
+      "label": "Part of the urban-models suite \u2014",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "modelr_5_about_w1",
+      "screen": "modelr_5_about",
+      "kind": "text",
+      "label": "Model reports",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "modelr_5_about_w2",
+      "screen": "modelr_5_about",
+      "kind": "text",
+      "label": "A report dashboard for comparing model outputs \u2014",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "modelr_5_about_nav",
+      "screen": "modelr_5_about",
+      "kind": "bottomnav",
+      "label": "Dashboard \u00b7 Metrics \u00b7 Compare \u00b7 Map \u00b7 Data \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "modelr_flow_0",
+      "fromWidget": "modelr_0_dashboard_nav",
+      "toScreen": "modelr_1_metrics",
+      "transition": "push"
+    },
+    {
+      "id": "modelr_flow_1",
+      "fromWidget": "modelr_1_metrics_nav",
+      "toScreen": "modelr_2_compare",
+      "transition": "push"
+    },
+    {
+      "id": "modelr_flow_2",
+      "fromWidget": "modelr_2_compare_nav",
+      "toScreen": "modelr_3_mapview",
+      "transition": "push"
+    },
+    {
+      "id": "modelr_flow_3",
+      "fromWidget": "modelr_3_mapview_nav",
+      "toScreen": "modelr_4_data",
+      "transition": "push"
+    },
+    {
+      "id": "modelr_flow_4",
+      "fromWidget": "modelr_4_data_nav",
+      "toScreen": "modelr_5_about",
+      "transition": "push"
+    },
+    {
+      "id": "modelr_flow_5",
+      "fromWidget": "modelr_5_about_nav",
+      "toScreen": "modelr_0_dashboard",
+      "transition": "push"
+    }
+  ]
+}

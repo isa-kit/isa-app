@@ -1,0 +1,208 @@
+{
+  "board": {
+    "name": "Geolabs"
+  },
+  "screens": [
+    {
+      "id": "geolab_0_report",
+      "name": "Databoard \u2014 data controls beside your panels",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "geolab_1_controls",
+      "name": "Controls \u2014 build your report",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "geolab_2_data",
+      "name": "Data \u2014 read it in, look at it",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    },
+    {
+      "id": "geolab_3_about",
+      "name": "About Geolabs",
+      "device": "phone",
+      "x": 1320,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "geolab_0_report_title",
+      "screen": "geolab_0_report",
+      "kind": "titlebar",
+      "label": "Databoard \u2014 data controls beside your panels",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "geolab_0_report_w0",
+      "screen": "geolab_0_report",
+      "kind": "settings",
+      "label": "Data controls",
+      "region": "body",
+      "order": 0,
+      "items": "[{\"text\": \"Notifications\", \"toggle\": true}, {\"text\": \"Sync automatically\", \"toggle\": true}, {\"text\": \"Show details\", \"toggle\": false}]"
+    },
+    {
+      "id": "geolab_0_report_nav",
+      "screen": "geolab_0_report",
+      "kind": "bottomnav",
+      "label": "Databoard \u00b7 Controls \u00b7 Data \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "geolab_1_controls_title",
+      "screen": "geolab_1_controls",
+      "kind": "titlebar",
+      "label": "Controls \u2014 build your report",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "geolab_1_controls_w0",
+      "screen": "geolab_1_controls",
+      "kind": "text",
+      "label": "Build the databoard: each panel is a row here \u2014",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "geolab_1_controls_w1",
+      "screen": "geolab_1_controls",
+      "kind": "buttonrow",
+      "label": "Add panel",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "geolab_1_controls_w2",
+      "screen": "geolab_1_controls",
+      "kind": "buttonrow",
+      "label": "Export report (HTML)",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "geolab_1_controls_nav",
+      "screen": "geolab_1_controls",
+      "kind": "bottomnav",
+      "label": "Databoard \u00b7 Controls \u00b7 Data \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "geolab_2_data_title",
+      "screen": "geolab_2_data",
+      "kind": "titlebar",
+      "label": "Data \u2014 read it in, look at it",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "geolab_2_data_w0",
+      "screen": "geolab_2_data",
+      "kind": "text",
+      "label": "The dataset behind every view: one row per zone \u00d7 scenario.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "geolab_2_data_w1",
+      "screen": "geolab_2_data",
+      "kind": "buttonrow",
+      "label": "Import CSV (merge)",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "geolab_2_data_w2",
+      "screen": "geolab_2_data",
+      "kind": "buttonrow",
+      "label": "Import CSV (replace)",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "geolab_2_data_nav",
+      "screen": "geolab_2_data",
+      "kind": "bottomnav",
+      "label": "Databoard \u00b7 Controls \u00b7 Data \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "geolab_3_about_title",
+      "screen": "geolab_3_about",
+      "kind": "titlebar",
+      "label": "About Geolabs",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "geolab_3_about_w0",
+      "screen": "geolab_3_about",
+      "kind": "text",
+      "label": "The geo databoard: your data on charts, tables \u2014 and the map.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "geolab_3_about_w1",
+      "screen": "geolab_3_about",
+      "kind": "text",
+      "label": "Geolabs is Datalab's geospatial sibling \u2014",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "geolab_3_about_w2",
+      "screen": "geolab_3_about",
+      "kind": "text",
+      "label": "Filters are type-checked against their columns and can be saved as named slices.",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "geolab_3_about_nav",
+      "screen": "geolab_3_about",
+      "kind": "bottomnav",
+      "label": "Databoard \u00b7 Controls \u00b7 Data \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "geolab_flow_0",
+      "fromWidget": "geolab_0_report_nav",
+      "toScreen": "geolab_1_controls",
+      "transition": "push"
+    },
+    {
+      "id": "geolab_flow_1",
+      "fromWidget": "geolab_1_controls_nav",
+      "toScreen": "geolab_2_data",
+      "transition": "push"
+    },
+    {
+      "id": "geolab_flow_2",
+      "fromWidget": "geolab_2_data_nav",
+      "toScreen": "geolab_3_about",
+      "transition": "push"
+    },
+    {
+      "id": "geolab_flow_3",
+      "fromWidget": "geolab_3_about_nav",
+      "toScreen": "geolab_0_report",
+      "transition": "push"
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "board": {
+    "name": "System Monitor"
+  },
+  "screens": [
+    {
+      "id": "sysmon_0_now",
+      "name": "Now",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "sysmon_1_cost",
+      "name": "Prompt cost",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "sysmon_2_history",
+      "name": "History",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    },
+    {
+      "id": "sysmon_3_about",
+      "name": "About",
+      "device": "phone",
+      "x": 1320,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "sysmon_0_now_title",
+      "screen": "sysmon_0_now",
+      "kind": "titlebar",
+      "label": "Now",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "sysmon_0_now_w0",
+      "screen": "sysmon_0_now",
+      "kind": "text",
+      "label": "Can it take more work right now?",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "sysmon_0_now_w1",
+      "screen": "sysmon_0_now",
+      "kind": "buttonrow",
+      "label": "Refresh",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "sysmon_0_now_w2",
+      "screen": "sysmon_0_now",
+      "kind": "card",
+      "label": "Spare cores",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "sysmon_0_now_nav",
+      "screen": "sysmon_0_now",
+      "kind": "bottomnav",
+      "label": "Now \u00b7 Prompt cost \u00b7 History \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "sysmon_1_cost_title",
+      "screen": "sysmon_1_cost",
+      "kind": "titlebar",
+      "label": "Prompt cost",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "sysmon_1_cost_w0",
+      "screen": "sysmon_1_cost",
+      "kind": "text",
+      "label": "What did each prompt actually cost?",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "sysmon_1_cost_w1",
+      "screen": "sysmon_1_cost",
+      "kind": "card",
+      "label": "Tokens written per prompt (largest first)",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "sysmon_1_cost_w2",
+      "screen": "sysmon_1_cost",
+      "kind": "list",
+      "label": "Table",
+      "region": "body",
+      "order": 2,
+      "items": "[\"Now\", \"History\", \"About\"]"
+    },
+    {
+      "id": "sysmon_1_cost_nav",
+      "screen": "sysmon_1_cost",
+      "kind": "bottomnav",
+      "label": "Now \u00b7 Prompt cost \u00b7 History \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "sysmon_2_history_title",
+      "screen": "sysmon_2_history",
+      "kind": "titlebar",
+      "label": "History",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "sysmon_2_history_w0",
+      "screen": "sysmon_2_history",
+      "kind": "text",
+      "label": "Is the machine getting more or less crowded?",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "sysmon_2_history_w1",
+      "screen": "sysmon_2_history",
+      "kind": "list",
+      "label": "Table",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Now\", \"Prompt cost\", \"About\"]"
+    },
+    {
+      "id": "sysmon_2_history_w2",
+      "screen": "sysmon_2_history",
+      "kind": "text",
+      "label": "This is the light tail of the log \u2014",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "sysmon_2_history_nav",
+      "screen": "sysmon_2_history",
+      "kind": "bottomnav",
+      "label": "Now \u00b7 Prompt cost \u00b7 History \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "sysmon_3_about_title",
+      "screen": "sysmon_3_about",
+      "kind": "titlebar",
+      "label": "About",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "sysmon_3_about_w0",
+      "screen": "sysmon_3_about",
+      "kind": "text",
+      "label": "A snapshot the Mac pushes, not a probe of the Mac",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "sysmon_3_about_w1",
+      "screen": "sysmon_3_about",
+      "kind": "text",
+      "label": "Where the numbers come from",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "sysmon_3_about_w2",
+      "screen": "sysmon_3_about",
+      "kind": "text",
+      "label": "A Claude session on the Mac runs a scheduled snapshot script.",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "sysmon_3_about_nav",
+      "screen": "sysmon_3_about",
+      "kind": "bottomnav",
+      "label": "Now \u00b7 Prompt cost \u00b7 History \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "sysmon_flow_0",
+      "fromWidget": "sysmon_0_now_nav",
+      "toScreen": "sysmon_1_cost",
+      "transition": "push"
+    },
+    {
+      "id": "sysmon_flow_1",
+      "fromWidget": "sysmon_1_cost_nav",
+      "toScreen": "sysmon_2_history",
+      "transition": "push"
+    },
+    {
+      "id": "sysmon_flow_2",
+      "fromWidget": "sysmon_2_history_nav",
+      "toScreen": "sysmon_3_about",
+      "transition": "push"
+    },
+    {
+      "id": "sysmon_flow_3",
+      "fromWidget": "sysmon_3_about_nav",
+      "toScreen": "sysmon_0_now",
+      "transition": "push"
+    },
+    {
+      "id": "sysmon_flow_extra",
+      "fromWidget": "sysmon_1_cost_w2",
+      "toScreen": "sysmon_2_history",
+      "transition": "push"
+    }
+  ]
+}

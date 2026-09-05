@@ -1,0 +1,93 @@
+{
+  "board": {
+    "name": "Boxes"
+  },
+  "screens": [
+    {
+      "id": "boxes_0_boxes",
+      "name": "Boxes",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "boxes_1_items",
+      "name": "Items",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "boxes_0_boxes_title",
+      "screen": "boxes_0_boxes",
+      "kind": "titlebar",
+      "label": "Boxes",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "boxes_0_boxes_w0",
+      "screen": "boxes_0_boxes",
+      "kind": "list",
+      "label": "numberId",
+      "region": "body",
+      "order": 0,
+      "items": "[\"Items\"]"
+    },
+    {
+      "id": "boxes_0_boxes_nav",
+      "screen": "boxes_0_boxes",
+      "kind": "bottomnav",
+      "label": "Boxes \u00b7 Items",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "boxes_1_items_title",
+      "screen": "boxes_1_items",
+      "kind": "titlebar",
+      "label": "Items",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "boxes_1_items_w0",
+      "screen": "boxes_1_items",
+      "kind": "list",
+      "label": "name",
+      "region": "body",
+      "order": 0,
+      "items": "[\"Boxes\"]"
+    },
+    {
+      "id": "boxes_1_items_nav",
+      "screen": "boxes_1_items",
+      "kind": "bottomnav",
+      "label": "Boxes \u00b7 Items",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "boxes_flow_0",
+      "fromWidget": "boxes_0_boxes_nav",
+      "toScreen": "boxes_1_items",
+      "transition": "push"
+    },
+    {
+      "id": "boxes_flow_1",
+      "fromWidget": "boxes_1_items_nav",
+      "toScreen": "boxes_0_boxes",
+      "transition": "push"
+    },
+    {
+      "id": "boxes_flow_extra",
+      "fromWidget": "boxes_0_boxes_w0",
+      "toScreen": "boxes_1_items",
+      "transition": "push"
+    }
+  ]
+}

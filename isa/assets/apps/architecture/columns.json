@@ -1,0 +1,814 @@
+{
+  "nodes": [
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Package",
+      "required": true
+    },
+    {
+      "name": "x",
+      "type": "number",
+      "label": "X"
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "label": "Y"
+    }
+  ],
+  "edges": [
+    {
+      "name": "from",
+      "type": "ref",
+      "label": "From",
+      "refTable": "nodes"
+    },
+    {
+      "name": "to",
+      "type": "ref",
+      "label": "To",
+      "refTable": "nodes"
+    },
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Dependency"
+    }
+  ],
+  "wnodes": [
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Widget",
+      "required": true
+    },
+    {
+      "name": "pkg",
+      "type": "text",
+      "label": "Package"
+    },
+    {
+      "name": "x",
+      "type": "number",
+      "label": "X"
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "label": "Y"
+    }
+  ],
+  "wedges": [
+    {
+      "name": "from",
+      "type": "ref",
+      "label": "From",
+      "refTable": "wnodes"
+    },
+    {
+      "name": "to",
+      "type": "ref",
+      "label": "To",
+      "refTable": "wnodes"
+    },
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Relationship"
+    }
+  ],
+  "catalog": [
+    {
+      "name": "widget",
+      "type": "text",
+      "label": "Widget"
+    },
+    {
+      "name": "attr",
+      "type": "text",
+      "label": "Option"
+    },
+    {
+      "name": "type",
+      "type": "text",
+      "label": "Type"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Details"
+    }
+  ],
+  "workflow": [
+    {
+      "name": "step",
+      "type": "number",
+      "label": "Step"
+    },
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Title",
+      "required": true
+    },
+    {
+      "name": "summary",
+      "type": "text",
+      "label": "Summary"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "What happens"
+    },
+    {
+      "name": "phase",
+      "type": "enum",
+      "label": "Phase",
+      "options": [
+        "Plan",
+        "Build",
+        "Ship"
+      ]
+    }
+  ],
+  "updates": [
+    {
+      "name": "area",
+      "type": "enum",
+      "label": "Area",
+      "options": [
+        "Visibility",
+        "App",
+        "No-code",
+        "Tasks",
+        "Sharing",
+        "Engine"
+      ]
+    },
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Title",
+      "required": true
+    },
+    {
+      "name": "summary",
+      "type": "text",
+      "label": "Summary"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Detail"
+    },
+    {
+      "name": "date",
+      "type": "date",
+      "label": "Date"
+    },
+    {
+      "name": "dateLabel",
+      "type": "text",
+      "label": "Date (display)"
+    }
+  ],
+  "sys_process": [
+    {
+      "name": "lane",
+      "type": "text",
+      "label": "Lane",
+      "required": true
+    },
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Phase",
+      "required": true
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "What happens"
+    },
+    {
+      "name": "gate",
+      "type": "boolean",
+      "label": "\u2691 GATE"
+    },
+    {
+      "name": "author",
+      "type": "text",
+      "label": "\u2460 author (unused)"
+    },
+    {
+      "name": "land",
+      "type": "text",
+      "label": "\u2461 land (unused)"
+    },
+    {
+      "name": "integrated",
+      "type": "text",
+      "label": "\u2462 integrated (unused)"
+    },
+    {
+      "name": "promote",
+      "type": "text",
+      "label": "\u2463 promote / publish (unused)"
+    },
+    {
+      "name": "ci",
+      "type": "text",
+      "label": "\u2464 CI (unused)"
+    },
+    {
+      "name": "live",
+      "type": "text",
+      "label": "\u2465 live (unused)"
+    }
+  ],
+  "sys_ci": [
+    {
+      "name": "aspect",
+      "type": "text",
+      "label": "Aspect",
+      "required": true
+    },
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Side",
+      "required": true
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "In full"
+    },
+    {
+      "name": "gate",
+      "type": "boolean",
+      "label": "\u2691 GATE"
+    },
+    {
+      "name": "spans",
+      "type": "boolean",
+      "label": "\u21c4 spans both"
+    },
+    {
+      "name": "local",
+      "type": "text",
+      "label": "Local gates \u2014 your machine (unused)"
+    },
+    {
+      "name": "ci",
+      "type": "text",
+      "label": "GitHub CI \u2014 deploy-web (unused)"
+    }
+  ],
+  "sys_history": [
+    {
+      "name": "domain",
+      "type": "text",
+      "label": "Domain",
+      "required": true
+    },
+    {
+      "name": "title",
+      "type": "text",
+      "label": "When",
+      "required": true
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "In full"
+    },
+    {
+      "name": "incident",
+      "type": "boolean",
+      "label": "\u26a1 incident"
+    },
+    {
+      "name": "rule",
+      "type": "boolean",
+      "label": "\u2192 rule adopted"
+    },
+    {
+      "name": "partial",
+      "type": "boolean",
+      "label": "\u25d0 partly recorded"
+    },
+    {
+      "name": "jun",
+      "type": "text",
+      "label": "June 2026 (unused)"
+    },
+    {
+      "name": "jul",
+      "type": "text",
+      "label": "July 2026 (unused)"
+    },
+    {
+      "name": "aug",
+      "type": "text",
+      "label": "August 2026 (unused)"
+    }
+  ],
+  "sys_structure": [
+    {
+      "name": "place",
+      "type": "text",
+      "label": "Place",
+      "required": true
+    },
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Lifecycle stage",
+      "required": true
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "In full"
+    },
+    {
+      "name": "gate",
+      "type": "boolean",
+      "label": "\u2691 GATE"
+    },
+    {
+      "name": "spans",
+      "type": "boolean",
+      "label": "\u21c4 spans"
+    },
+    {
+      "name": "spansWith",
+      "type": "text",
+      "label": "Spans with"
+    },
+    {
+      "name": "build",
+      "type": "text",
+      "label": "build (unused)"
+    },
+    {
+      "name": "ship",
+      "type": "text",
+      "label": "ship (unused)"
+    },
+    {
+      "name": "run",
+      "type": "text",
+      "label": "run (unused)"
+    },
+    {
+      "name": "govern",
+      "type": "text",
+      "label": "govern (unused)"
+    }
+  ],
+  "repo_overview": [
+    {
+      "name": "repo",
+      "type": "text",
+      "label": "Repo",
+      "required": true
+    },
+    {
+      "name": "latestPromotes",
+      "type": "text",
+      "label": "Latest prod promotes"
+    },
+    {
+      "name": "aheadCount",
+      "type": "number",
+      "label": "Dev ahead of main"
+    },
+    {
+      "name": "aheadTitles",
+      "type": "text",
+      "label": "Dev-only commits"
+    },
+    {
+      "name": "publishState",
+      "type": "text",
+      "label": "Dev-site publish state"
+    },
+    {
+      "name": "asOf",
+      "type": "text",
+      "label": "As of"
+    }
+  ],
+  "timeline_items": [
+    {
+      "name": "lane",
+      "type": "text",
+      "label": "Lane",
+      "required": true
+    },
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Title",
+      "required": true
+    },
+    {
+      "name": "parentId",
+      "type": "ref",
+      "label": "Lane row",
+      "refTable": "timeline_items"
+    },
+    {
+      "name": "scheduledStart",
+      "type": "date",
+      "label": "Start"
+    },
+    {
+      "name": "endDate",
+      "type": "date",
+      "label": "End"
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "label": "Status",
+      "options": [
+        "landed",
+        "inFlight",
+        "waiting"
+      ]
+    },
+    {
+      "name": "sessionTag",
+      "type": "text",
+      "label": "Session"
+    },
+    {
+      "name": "landedAt",
+      "type": "text",
+      "label": "Where it landed"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Detail"
+    },
+    {
+      "name": "asOf",
+      "type": "text",
+      "label": "As of"
+    }
+  ],
+  "sys_map_parts": [
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Part",
+      "required": true
+    },
+    {
+      "name": "order",
+      "type": "number",
+      "label": "Order"
+    },
+    {
+      "name": "summary",
+      "type": "text",
+      "label": "Summary"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Recent work"
+    },
+    {
+      "name": "touchedCount",
+      "type": "number",
+      "label": "Touched this week"
+    },
+    {
+      "name": "asOf",
+      "type": "text",
+      "label": "As of"
+    }
+  ],
+  "release_stories": [
+    {
+      "name": "date",
+      "type": "date",
+      "label": "Date"
+    },
+    {
+      "name": "dateLabel",
+      "type": "text",
+      "label": "Date (display)"
+    },
+    {
+      "name": "commit",
+      "type": "text",
+      "label": "Commit"
+    },
+    {
+      "name": "repo",
+      "type": "text",
+      "label": "Repo"
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Release name"
+    },
+    {
+      "name": "summary",
+      "type": "text",
+      "label": "What it added up to"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "What it contained"
+    },
+    {
+      "name": "asOf",
+      "type": "text",
+      "label": "As of"
+    }
+  ],
+  "house_rules": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Rule",
+      "required": true
+    },
+    {
+      "name": "date",
+      "type": "date",
+      "label": "Date"
+    },
+    {
+      "name": "dateLabel",
+      "type": "text",
+      "label": "Date (display)"
+    },
+    {
+      "name": "statement",
+      "type": "text",
+      "label": "The user's words"
+    },
+    {
+      "name": "enforcement",
+      "type": "enum",
+      "label": "Enforcement",
+      "options": [
+        "enforced",
+        "rolling out",
+        "standing"
+      ]
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Full story"
+    }
+  ],
+  "versions_matrix": [
+    {
+      "name": "component",
+      "type": "text",
+      "label": "Component",
+      "required": true
+    },
+    {
+      "name": "order",
+      "type": "number",
+      "label": "Order"
+    },
+    {
+      "name": "channel",
+      "type": "text",
+      "label": "Channel"
+    },
+    {
+      "name": "channelOrder",
+      "type": "number",
+      "label": "Channel order"
+    },
+    {
+      "name": "stamp",
+      "type": "text",
+      "label": "Build stamp"
+    },
+    {
+      "name": "freshness",
+      "type": "text",
+      "label": "Freshness"
+    },
+    {
+      "name": "freshnessColor",
+      "type": "text",
+      "label": "Freshness color"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Source"
+    },
+    {
+      "name": "asOf",
+      "type": "text",
+      "label": "As of"
+    }
+  ],
+  "versions_pipeline": [
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Title",
+      "required": true
+    },
+    {
+      "name": "kind",
+      "type": "enum",
+      "label": "Kind",
+      "options": [
+        "processing",
+        "queued"
+      ]
+    },
+    {
+      "name": "part",
+      "type": "text",
+      "label": "Part"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Detail"
+    },
+    {
+      "name": "asOf",
+      "type": "text",
+      "label": "As of"
+    }
+  ],
+  "ci_devops": [
+    {
+      "name": "item",
+      "type": "text",
+      "label": "Item",
+      "required": true
+    },
+    {
+      "name": "order",
+      "type": "number",
+      "label": "Order"
+    },
+    {
+      "name": "repo",
+      "type": "text",
+      "label": "Repo / channel"
+    },
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Title"
+    },
+    {
+      "name": "status",
+      "type": "text",
+      "label": "Status"
+    },
+    {
+      "name": "when",
+      "type": "text",
+      "label": "When"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Detail"
+    },
+    {
+      "name": "asOf",
+      "type": "text",
+      "label": "As of"
+    }
+  ],
+  "applets_board": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Applet",
+      "required": true
+    },
+    {
+      "name": "theme",
+      "type": "text",
+      "label": "Theme"
+    },
+    {
+      "name": "status",
+      "type": "text",
+      "label": "Status"
+    },
+    {
+      "name": "lastWork",
+      "type": "text",
+      "label": "Last real work"
+    },
+    {
+      "name": "lastWorkDate",
+      "type": "date",
+      "label": "Last work date"
+    },
+    {
+      "name": "envChip",
+      "type": "text",
+      "label": "Env presence"
+    },
+    {
+      "name": "envDetail",
+      "type": "text",
+      "label": "Env detail"
+    },
+    {
+      "name": "asOf",
+      "type": "text",
+      "label": "As of"
+    }
+  ],
+  "big_picture_waiting": [
+    {
+      "name": "count",
+      "type": "number",
+      "label": "Count",
+      "required": true
+    },
+    {
+      "name": "labels",
+      "type": "text",
+      "label": "Generic labels"
+    },
+    {
+      "name": "asOf",
+      "type": "text",
+      "label": "As of"
+    }
+  ],
+  "overview_summary": [
+    {
+      "name": "headline",
+      "type": "text",
+      "label": "Headline",
+      "required": true
+    },
+    {
+      "name": "asOf",
+      "type": "text",
+      "label": "As of"
+    }
+  ],
+  "big_picture_flow": [
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Stage",
+      "required": true
+    },
+    {
+      "name": "order",
+      "type": "number",
+      "label": "Order"
+    },
+    {
+      "name": "summary",
+      "type": "text",
+      "label": "Summary"
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": "Detail"
+    },
+    {
+      "name": "flag",
+      "type": "text",
+      "label": "Flag"
+    },
+    {
+      "name": "targetScreen",
+      "type": "text",
+      "label": "Related screen"
+    },
+    {
+      "name": "asOf",
+      "type": "text",
+      "label": "As of"
+    }
+  ]
+}

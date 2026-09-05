@@ -1,0 +1,4184 @@
+{
+  "nodes": [
+    {
+      "id": "p_isan",
+      "label": "isan — host: launcher + per-app stores",
+      "x": 120,
+      "y": 340
+    },
+    {
+      "id": "p_flutterboard",
+      "label": "flutterboard — runtime: renderer, registry, editor",
+      "x": 120,
+      "y": 240
+    },
+    {
+      "id": "p_isakit",
+      "label": "isa_kit — primitives, typed dataframe + schema (frame.dart), load/store + REST sources (store.dart)",
+      "x": 120,
+      "y": 140
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "p_isan",
+      "to": "p_flutterboard",
+      "label": "depends on"
+    },
+    {
+      "id": "e2",
+      "from": "p_flutterboard",
+      "to": "p_isakit",
+      "label": "depends on"
+    }
+  ],
+  "wnodes": [
+    {
+      "id": "a_datakit",
+      "label": "isa_kit · tables (data layer)",
+      "pkg": "isa_kit",
+      "x": 300,
+      "y": 30
+    },
+    {
+      "id": "a_fmap",
+      "label": "flutter_map · imported",
+      "pkg": "imported",
+      "x": 520,
+      "y": 30
+    },
+    {
+      "id": "a_mlib",
+      "label": "maplibre · imported (mobile)",
+      "pkg": "imported",
+      "x": 680,
+      "y": 30
+    },
+    {
+      "id": "w_column",
+      "label": "column",
+      "pkg": "flutterboard",
+      "x": 40,
+      "y": 150
+    },
+    {
+      "id": "w_row",
+      "label": "row",
+      "pkg": "flutterboard",
+      "x": 40,
+      "y": 208
+    },
+    {
+      "id": "w_card",
+      "label": "card",
+      "pkg": "flutterboard",
+      "x": 40,
+      "y": 266
+    },
+    {
+      "id": "w_padding",
+      "label": "padding",
+      "pkg": "flutterboard",
+      "x": 40,
+      "y": 324
+    },
+    {
+      "id": "w_text",
+      "label": "text",
+      "pkg": "flutterboard",
+      "x": 40,
+      "y": 382
+    },
+    {
+      "id": "w_button",
+      "label": "button",
+      "pkg": "flutterboard",
+      "x": 40,
+      "y": 440
+    },
+    {
+      "id": "w_divider",
+      "label": "divider",
+      "pkg": "flutterboard",
+      "x": 40,
+      "y": 498
+    },
+    {
+      "id": "w_spacer",
+      "label": "spacer",
+      "pkg": "flutterboard",
+      "x": 40,
+      "y": 556
+    },
+    {
+      "id": "w_segments",
+      "label": "segments",
+      "pkg": "flutterboard",
+      "x": 40,
+      "y": 614
+    },
+    {
+      "id": "w_draw",
+      "label": "draw",
+      "pkg": "flutterboard",
+      "x": 40,
+      "y": 672
+    },
+    {
+      "id": "w_list",
+      "label": "list",
+      "pkg": "flutterboard",
+      "x": 300,
+      "y": 150
+    },
+    {
+      "id": "w_tree",
+      "label": "tree",
+      "pkg": "flutterboard",
+      "x": 300,
+      "y": 208
+    },
+    {
+      "id": "w_agenda",
+      "label": "agenda",
+      "pkg": "flutterboard",
+      "x": 300,
+      "y": 266
+    },
+    {
+      "id": "w_calendar",
+      "label": "calendar",
+      "pkg": "flutterboard",
+      "x": 300,
+      "y": 324
+    },
+    {
+      "id": "w_buckets",
+      "label": "buckets",
+      "pkg": "flutterboard",
+      "x": 300,
+      "y": 382
+    },
+    {
+      "id": "w_cards",
+      "label": "cards",
+      "pkg": "flutterboard",
+      "x": 300,
+      "y": 440
+    },
+    {
+      "id": "w_table",
+      "label": "table",
+      "pkg": "flutterboard",
+      "x": 300,
+      "y": 498
+    },
+    {
+      "id": "w_dataview",
+      "label": "dataview",
+      "pkg": "flutterboard",
+      "x": 300,
+      "y": 556
+    },
+    {
+      "id": "w_map",
+      "label": "map",
+      "pkg": "flutterboard",
+      "x": 560,
+      "y": 150
+    },
+    {
+      "id": "w_glmap",
+      "label": "glmap",
+      "pkg": "flutterboard",
+      "x": 560,
+      "y": 230
+    },
+    {
+      "id": "w_annotate",
+      "label": "annotate",
+      "pkg": "flutterboard",
+      "x": 40,
+      "y": 730
+    }
+  ],
+  "wedges": [
+    {
+      "id": "e1",
+      "from": "w_list",
+      "to": "a_datakit",
+      "label": "reads"
+    },
+    {
+      "id": "e2",
+      "from": "w_tree",
+      "to": "a_datakit",
+      "label": "reads"
+    },
+    {
+      "id": "e3",
+      "from": "w_agenda",
+      "to": "a_datakit",
+      "label": "reads"
+    },
+    {
+      "id": "e4",
+      "from": "w_calendar",
+      "to": "a_datakit",
+      "label": "reads"
+    },
+    {
+      "id": "e5",
+      "from": "w_buckets",
+      "to": "a_datakit",
+      "label": "reads"
+    },
+    {
+      "id": "e6",
+      "from": "w_cards",
+      "to": "a_datakit",
+      "label": "reads"
+    },
+    {
+      "id": "e7",
+      "from": "w_table",
+      "to": "a_datakit",
+      "label": "reads"
+    },
+    {
+      "id": "e8",
+      "from": "w_dataview",
+      "to": "a_datakit",
+      "label": "reads"
+    },
+    {
+      "id": "e9",
+      "from": "w_map",
+      "to": "a_fmap",
+      "label": "renders via"
+    },
+    {
+      "id": "e10",
+      "from": "w_glmap",
+      "to": "a_mlib",
+      "label": "mobile"
+    },
+    {
+      "id": "e11",
+      "from": "w_glmap",
+      "to": "a_fmap",
+      "label": "web/desktop fallback"
+    }
+  ],
+  "catalog": [
+    {
+      "id": "c1",
+      "widget": "column",
+      "attr": "• overview",
+      "detail": "Layout — Vertical stack of children.",
+      "type": "Layout"
+    },
+    {
+      "id": "c2",
+      "widget": "column",
+      "attr": "children",
+      "detail": "Child nodes, top to bottom.",
+      "type": "node[]"
+    },
+    {
+      "id": "c3",
+      "widget": "column",
+      "attr": "crossAxis",
+      "detail": "Cross-axis alignment.  ·  options: start | center | end | stretch",
+      "type": "enum"
+    },
+    {
+      "id": "c4",
+      "widget": "row",
+      "attr": "• overview",
+      "detail": "Layout — Horizontal row of children.",
+      "type": "Layout"
+    },
+    {
+      "id": "c5",
+      "widget": "row",
+      "attr": "children",
+      "detail": "Child nodes, left to right.",
+      "type": "node[]"
+    },
+    {
+      "id": "c6",
+      "widget": "row",
+      "attr": "mainAxis",
+      "detail": "Main-axis alignment.  ·  options: start | center | end | spaceBetween | spaceAround | spaceEvenly",
+      "type": "enum"
+    },
+    {
+      "id": "c7",
+      "widget": "row",
+      "attr": "wrap",
+      "detail": "Reflow children instead of one line.  ·  options: true | false",
+      "type": "bool"
+    },
+    {
+      "id": "c8",
+      "widget": "row",
+      "attr": "spacing",
+      "detail": "Gap between wrapped children.",
+      "type": "number"
+    },
+    {
+      "id": "c9",
+      "widget": "row",
+      "attr": "runSpacing",
+      "detail": "Gap between wrapped rows.",
+      "type": "number"
+    },
+    {
+      "id": "c10",
+      "widget": "padding",
+      "attr": "• overview",
+      "detail": "Layout — Pads a single child.",
+      "type": "Layout"
+    },
+    {
+      "id": "c11",
+      "widget": "padding",
+      "attr": "all",
+      "detail": "Padding on every edge (default 12).",
+      "type": "number"
+    },
+    {
+      "id": "c12",
+      "widget": "padding",
+      "attr": "child",
+      "detail": "The padded child.",
+      "type": "node"
+    },
+    {
+      "id": "c13",
+      "widget": "card",
+      "attr": "• overview",
+      "detail": "Layout — Material card around one child.",
+      "type": "Layout"
+    },
+    {
+      "id": "c14",
+      "widget": "card",
+      "attr": "child",
+      "detail": "Content inside the card.",
+      "type": "node"
+    },
+    {
+      "id": "c15",
+      "widget": "text",
+      "attr": "• overview",
+      "detail": "Display — A line/paragraph of text.",
+      "type": "Display"
+    },
+    {
+      "id": "c16",
+      "widget": "text",
+      "attr": "value",
+      "detail": "The text to show.",
+      "type": "string"
+    },
+    {
+      "id": "c17",
+      "widget": "text",
+      "attr": "style",
+      "detail": "Text style.  ·  options: caption | subtitle | title | body",
+      "type": "enum"
+    },
+    {
+      "id": "c18",
+      "widget": "button",
+      "attr": "• overview",
+      "detail": "Action — Tappable button firing a function.",
+      "type": "Action"
+    },
+    {
+      "id": "c19",
+      "widget": "button",
+      "attr": "label",
+      "detail": "Button caption.",
+      "type": "string"
+    },
+    {
+      "id": "c20",
+      "widget": "button",
+      "attr": "icon",
+      "detail": "Material icon name.",
+      "type": "string"
+    },
+    {
+      "id": "c21",
+      "widget": "button",
+      "attr": "action.fn",
+      "detail": "Registry function to invoke.  ·  options: addRow | editRow | navigate | exportData | …",
+      "type": "string"
+    },
+    {
+      "id": "c22",
+      "widget": "button",
+      "attr": "action.args",
+      "detail": "Arguments for the function, e.g. {table}.",
+      "type": "object"
+    },
+    {
+      "id": "c23",
+      "widget": "divider",
+      "attr": "• overview",
+      "detail": "Display — A thin horizontal rule.",
+      "type": "Display"
+    },
+    {
+      "id": "c24",
+      "widget": "spacer",
+      "attr": "• overview",
+      "detail": "Layout — Fixed vertical gap.",
+      "type": "Layout"
+    },
+    {
+      "id": "c25",
+      "widget": "spacer",
+      "attr": "height",
+      "detail": "Gap height in px (default 12).",
+      "type": "number"
+    },
+    {
+      "id": "c26",
+      "widget": "segments",
+      "attr": "• overview",
+      "detail": "Container — Tabbed container of labelled sub-screens.",
+      "type": "Container"
+    },
+    {
+      "id": "c27",
+      "widget": "segments",
+      "attr": "segments",
+      "detail": "[{label, child}] — one toggle + subtree each.",
+      "type": "object[]"
+    },
+    {
+      "id": "c28",
+      "widget": "draw",
+      "attr": "• overview",
+      "detail": "Media — Freehand drawing surface (undo/redo, brush, zoom).",
+      "type": "Media"
+    },
+    {
+      "id": "c29",
+      "widget": "draw",
+      "attr": "table",
+      "detail": "Table that stores saved drawings.",
+      "type": "table"
+    },
+    {
+      "id": "c30",
+      "widget": "list",
+      "attr": "• overview",
+      "detail": "Data — Simple list of a table's rows.",
+      "type": "Data"
+    },
+    {
+      "id": "c31",
+      "widget": "list",
+      "attr": "table",
+      "detail": "Source table.",
+      "type": "table"
+    },
+    {
+      "id": "c32",
+      "widget": "list",
+      "attr": "titleColumn",
+      "detail": "Row title.",
+      "type": "column"
+    },
+    {
+      "id": "c33",
+      "widget": "list",
+      "attr": "subtitleColumns",
+      "detail": "Columns joined into the subtitle.",
+      "type": "column[]"
+    },
+    {
+      "id": "c34",
+      "widget": "list",
+      "attr": "metaColumns",
+      "detail": "Trailing meta columns.",
+      "type": "column[]"
+    },
+    {
+      "id": "c35",
+      "widget": "list",
+      "attr": "sortColumn",
+      "detail": "Sort column.",
+      "type": "column"
+    },
+    {
+      "id": "c36",
+      "widget": "list",
+      "attr": "sortDir",
+      "detail": "Sort direction.  ·  options: asc | desc",
+      "type": "enum"
+    },
+    {
+      "id": "c37",
+      "widget": "tree",
+      "attr": "• overview",
+      "detail": "Data — Parent/child hierarchy; collapse, drag-nest, reorder.",
+      "type": "Data"
+    },
+    {
+      "id": "c38",
+      "widget": "tree",
+      "attr": "table",
+      "detail": "Source table.",
+      "type": "table"
+    },
+    {
+      "id": "c39",
+      "widget": "tree",
+      "attr": "parentColumn",
+      "detail": "Ref column holding parent(s) (multi-parent aware).",
+      "type": "column"
+    },
+    {
+      "id": "c40",
+      "widget": "tree",
+      "attr": "titleColumn",
+      "detail": "Node label.",
+      "type": "column"
+    },
+    {
+      "id": "c41",
+      "widget": "tree",
+      "attr": "statusColumn",
+      "detail": "Column marking done.",
+      "type": "column"
+    },
+    {
+      "id": "c42",
+      "widget": "tree",
+      "attr": "doneValue",
+      "detail": "Value meaning done (default done).",
+      "type": "string"
+    },
+    {
+      "id": "c43",
+      "widget": "tree",
+      "attr": "orderColumn",
+      "detail": "Number column for sibling order/reorder.",
+      "type": "column"
+    },
+    {
+      "id": "c44",
+      "widget": "tree",
+      "attr": "reorder",
+      "detail": "Drag-to-nest interaction mode.  ·  options: hold | select | drag | off",
+      "type": "enum"
+    },
+    {
+      "id": "c45",
+      "widget": "tree",
+      "attr": "addChild",
+      "detail": "Show a + to add a child.  ·  options: true | false",
+      "type": "bool"
+    },
+    {
+      "id": "c46",
+      "widget": "tree",
+      "attr": "filterable",
+      "detail": "Show search + add-filter chips.  ·  options: true | false",
+      "type": "bool"
+    },
+    {
+      "id": "c47",
+      "widget": "tree",
+      "attr": "selectable",
+      "detail": "Allow multi-select.  ·  options: true | false",
+      "type": "bool"
+    },
+    {
+      "id": "c48",
+      "widget": "tree",
+      "attr": "onTap.fn",
+      "detail": "Function fired on tap.  ·  options: editRow",
+      "type": "string"
+    },
+    {
+      "id": "c49",
+      "widget": "agenda",
+      "attr": "• overview",
+      "detail": "Data — Date-grouped list (Today / Upcoming…).",
+      "type": "Data"
+    },
+    {
+      "id": "c50",
+      "widget": "agenda",
+      "attr": "table",
+      "detail": "Source table.",
+      "type": "table"
+    },
+    {
+      "id": "c51",
+      "widget": "agenda",
+      "attr": "dateColumns",
+      "detail": "Date columns scanned.",
+      "type": "column[]"
+    },
+    {
+      "id": "c52",
+      "widget": "agenda",
+      "attr": "titleColumn",
+      "detail": "Row title.",
+      "type": "column"
+    },
+    {
+      "id": "c53",
+      "widget": "agenda",
+      "attr": "statusColumn",
+      "detail": "Column marking done.",
+      "type": "column"
+    },
+    {
+      "id": "c54",
+      "widget": "agenda",
+      "attr": "doneValue",
+      "detail": "Value meaning done.",
+      "type": "string"
+    },
+    {
+      "id": "c55",
+      "widget": "agenda",
+      "attr": "filterable",
+      "detail": "Show search + add-filter chips.  ·  options: true | false",
+      "type": "bool"
+    },
+    {
+      "id": "c56",
+      "widget": "agenda",
+      "attr": "action.fn",
+      "detail": "Function fired on tap.  ·  options: editRow",
+      "type": "string"
+    },
+    {
+      "id": "c57",
+      "widget": "calendar",
+      "attr": "• overview",
+      "detail": "Data — Month grid of dated rows.",
+      "type": "Data"
+    },
+    {
+      "id": "c58",
+      "widget": "calendar",
+      "attr": "table",
+      "detail": "Source table.",
+      "type": "table"
+    },
+    {
+      "id": "c59",
+      "widget": "calendar",
+      "attr": "dateColumns",
+      "detail": "Date columns placed on days.",
+      "type": "column[]"
+    },
+    {
+      "id": "c60",
+      "widget": "calendar",
+      "attr": "titleColumn",
+      "detail": "Row title in the cell.",
+      "type": "column"
+    },
+    {
+      "id": "c61",
+      "widget": "calendar",
+      "attr": "statusColumn",
+      "detail": "Column marking done.",
+      "type": "column"
+    },
+    {
+      "id": "c62",
+      "widget": "calendar",
+      "attr": "doneValue",
+      "detail": "Value meaning done.",
+      "type": "string"
+    },
+    {
+      "id": "c63",
+      "widget": "calendar",
+      "attr": "action.fn",
+      "detail": "Function fired on tap.  ·  options: editRow",
+      "type": "string"
+    },
+    {
+      "id": "c64",
+      "widget": "buckets",
+      "attr": "• overview",
+      "detail": "Data — Kanban-like columns grouped by a category.",
+      "type": "Data"
+    },
+    {
+      "id": "c65",
+      "widget": "buckets",
+      "attr": "table",
+      "detail": "Source table.",
+      "type": "table"
+    },
+    {
+      "id": "c66",
+      "widget": "buckets",
+      "attr": "groupColumn",
+      "detail": "Column whose values become columns.",
+      "type": "column"
+    },
+    {
+      "id": "c67",
+      "widget": "buckets",
+      "attr": "groupOrder",
+      "detail": "Explicit column order.",
+      "type": "string[]"
+    },
+    {
+      "id": "c68",
+      "widget": "buckets",
+      "attr": "titleColumn",
+      "detail": "Card title.",
+      "type": "column"
+    },
+    {
+      "id": "c69",
+      "widget": "buckets",
+      "attr": "subtitleColumns",
+      "detail": "Columns under the title.",
+      "type": "column[]"
+    },
+    {
+      "id": "c70",
+      "widget": "buckets",
+      "attr": "statusColumn",
+      "detail": "Column marking done.",
+      "type": "column"
+    },
+    {
+      "id": "c71",
+      "widget": "buckets",
+      "attr": "doneValue",
+      "detail": "Value meaning done.",
+      "type": "string"
+    },
+    {
+      "id": "c72",
+      "widget": "cards",
+      "attr": "• overview",
+      "detail": "Data — Collapsible card view; group/search/sort/filter.",
+      "type": "Data"
+    },
+    {
+      "id": "c73",
+      "widget": "cards",
+      "attr": "table",
+      "detail": "Source table.",
+      "type": "table"
+    },
+    {
+      "id": "c74",
+      "widget": "cards",
+      "attr": "groupBy",
+      "detail": "Group cards under collapsible headers.",
+      "type": "column"
+    },
+    {
+      "id": "c75",
+      "widget": "cards",
+      "attr": "groupByOptions",
+      "detail": "Columns offered in the group-by switch.",
+      "type": "column[]"
+    },
+    {
+      "id": "c76",
+      "widget": "cards",
+      "attr": "groupFilter",
+      "detail": "{column,value}: only matching ref rows become headers.",
+      "type": "object"
+    },
+    {
+      "id": "c77",
+      "widget": "cards",
+      "attr": "collapsible",
+      "detail": "Expand/collapse group sections.  ·  options: true | false",
+      "type": "bool"
+    },
+    {
+      "id": "c78",
+      "widget": "cards",
+      "attr": "search",
+      "detail": "Show a text search box.  ·  options: true | false",
+      "type": "bool"
+    },
+    {
+      "id": "c79",
+      "widget": "cards",
+      "attr": "searchColumns",
+      "detail": "Columns the search box scans.",
+      "type": "column[]"
+    },
+    {
+      "id": "c80",
+      "widget": "cards",
+      "attr": "sort",
+      "detail": "Show runtime sort control.  ·  options: true | false",
+      "type": "bool"
+    },
+    {
+      "id": "c81",
+      "widget": "cards",
+      "attr": "recent",
+      "detail": "When collapsed, show only N newest per group.",
+      "type": "number"
+    },
+    {
+      "id": "c82",
+      "widget": "cards",
+      "attr": "title",
+      "detail": "Card title column.",
+      "type": "column"
+    },
+    {
+      "id": "c83",
+      "widget": "cards",
+      "attr": "subtitle",
+      "detail": "Card subtitle column.",
+      "type": "column"
+    },
+    {
+      "id": "c84",
+      "widget": "cards",
+      "attr": "tags",
+      "detail": "Pill tags: [{column, colors}].",
+      "type": "object[]"
+    },
+    {
+      "id": "c85",
+      "widget": "cards",
+      "attr": "expandable",
+      "detail": "Allow inline expand (default true).  ·  options: true | false",
+      "type": "bool"
+    },
+    {
+      "id": "c86",
+      "widget": "cards",
+      "attr": "expandFields",
+      "detail": "Extra label:value rows when expanded.",
+      "type": "object[]"
+    },
+    {
+      "id": "c87",
+      "widget": "cards",
+      "attr": "open",
+      "detail": "Label of a button on the expanded card.",
+      "type": "string"
+    },
+    {
+      "id": "c88",
+      "widget": "cards",
+      "attr": "tableView",
+      "detail": "Offer a table/export toggle.  ·  options: true | false",
+      "type": "bool"
+    },
+    {
+      "id": "c89",
+      "widget": "cards",
+      "attr": "action.fn",
+      "detail": "Function fired on open/tap.  ·  options: editRow",
+      "type": "string"
+    },
+    {
+      "id": "c90",
+      "widget": "table",
+      "attr": "• overview",
+      "detail": "Data — Scrollable grid; reorder columns, per-column filter.",
+      "type": "Data"
+    },
+    {
+      "id": "c91",
+      "widget": "table",
+      "attr": "table",
+      "detail": "Source table.",
+      "type": "table"
+    },
+    {
+      "id": "c92",
+      "widget": "table",
+      "attr": "columns",
+      "detail": "Columns to show, in order.",
+      "type": "column[]"
+    },
+    {
+      "id": "c93",
+      "widget": "table",
+      "attr": "height",
+      "detail": "Grid viewport height.",
+      "type": "number"
+    },
+    {
+      "id": "c94",
+      "widget": "table",
+      "attr": "action.fn",
+      "detail": "Function fired on row tap.  ·  options: editRow",
+      "type": "string"
+    },
+    {
+      "id": "c95",
+      "widget": "dataview",
+      "attr": "• overview",
+      "detail": "Data — Table switcher showing all columns of any table.",
+      "type": "Data"
+    },
+    {
+      "id": "c96",
+      "widget": "dataview",
+      "attr": "tables",
+      "detail": "Tables offered in the switcher.",
+      "type": "table[]"
+    },
+    {
+      "id": "c97",
+      "widget": "dataview",
+      "attr": "height",
+      "detail": "Grid viewport height.",
+      "type": "number"
+    },
+    {
+      "id": "c98",
+      "widget": "dataview",
+      "attr": "action.fn",
+      "detail": "Function fired on row tap.  ·  options: editRow",
+      "type": "string"
+    },
+    {
+      "id": "c99",
+      "widget": "canvas",
+      "attr": "• overview",
+      "detail": "Diagram — Draggable node/edge graph (free or auto layout).",
+      "type": "Diagram"
+    },
+    {
+      "id": "c100",
+      "widget": "canvas",
+      "attr": "nodesTable",
+      "detail": "Table of nodes (boxes).",
+      "type": "table"
+    },
+    {
+      "id": "c101",
+      "widget": "canvas",
+      "attr": "edgesTable",
+      "detail": "Table of edges (links).",
+      "type": "table"
+    },
+    {
+      "id": "c102",
+      "widget": "canvas",
+      "attr": "labelColumn",
+      "detail": "Node label.",
+      "type": "column"
+    },
+    {
+      "id": "c103",
+      "widget": "canvas",
+      "attr": "xColumn / yColumn",
+      "detail": "Node position (free layout).",
+      "type": "column"
+    },
+    {
+      "id": "c104",
+      "widget": "canvas",
+      "attr": "fromColumn / toColumn",
+      "detail": "Edge endpoints.",
+      "type": "column"
+    },
+    {
+      "id": "c105",
+      "widget": "canvas",
+      "attr": "edgeLabelColumn",
+      "detail": "Label drawn on an edge.",
+      "type": "column"
+    },
+    {
+      "id": "c106",
+      "widget": "canvas",
+      "attr": "colorColumn",
+      "detail": "Column whose value colours each node.",
+      "type": "column"
+    },
+    {
+      "id": "c107",
+      "widget": "canvas",
+      "attr": "colors",
+      "detail": "value → ramp name.  ·  options: blue | green | amber | teal | purple | gray | red | coral | pink",
+      "type": "object"
+    },
+    {
+      "id": "c108",
+      "widget": "canvas",
+      "attr": "layout",
+      "detail": "Layout strategy.  ·  options: free | graph",
+      "type": "enum"
+    },
+    {
+      "id": "c109",
+      "widget": "canvas",
+      "attr": "height",
+      "detail": "Canvas viewport height.",
+      "type": "number"
+    },
+    {
+      "id": "c110",
+      "widget": "canvas",
+      "attr": "action.fn",
+      "detail": "Function fired on node tap.  ·  options: editRow",
+      "type": "string"
+    },
+    {
+      "id": "c111",
+      "widget": "map",
+      "attr": "• overview",
+      "detail": "Geo — flutter_map view with markers from a table.",
+      "type": "Geo"
+    },
+    {
+      "id": "c112",
+      "widget": "map",
+      "attr": "table",
+      "detail": "Table of points.",
+      "type": "table"
+    },
+    {
+      "id": "c113",
+      "widget": "map",
+      "attr": "latColumn / lonColumn",
+      "detail": "Coordinates.",
+      "type": "column"
+    },
+    {
+      "id": "c114",
+      "widget": "map",
+      "attr": "labelColumn",
+      "detail": "Marker label.",
+      "type": "column"
+    },
+    {
+      "id": "c115",
+      "widget": "map",
+      "attr": "markerIcon",
+      "detail": "Marker icon name.",
+      "type": "string"
+    },
+    {
+      "id": "c116",
+      "widget": "map",
+      "attr": "height",
+      "detail": "Map viewport height.",
+      "type": "number"
+    },
+    {
+      "id": "c117",
+      "widget": "glmap",
+      "attr": "• overview",
+      "detail": "Geo — GL vector basemap (maplibre) on mobile; map fallback elsewhere.",
+      "type": "Geo"
+    },
+    {
+      "id": "c118",
+      "widget": "glmap",
+      "attr": "table",
+      "detail": "Table of points.",
+      "type": "table"
+    },
+    {
+      "id": "c119",
+      "widget": "glmap",
+      "attr": "latColumn / lonColumn",
+      "detail": "Coordinates.",
+      "type": "column"
+    },
+    {
+      "id": "c120",
+      "widget": "glmap",
+      "attr": "height",
+      "detail": "Map viewport height.",
+      "type": "number"
+    },
+    {
+      "id": "c121",
+      "widget": "linechart",
+      "attr": "• overview",
+      "detail": "Chart — Line + filled-area over numeric x/y columns (e.g. time/price).",
+      "type": "Chart"
+    },
+    {
+      "id": "c122",
+      "widget": "linechart",
+      "attr": "table, xColumn, yColumn",
+      "detail": "Source table and the two numeric columns; points sort by x.",
+      "type": "Chart"
+    },
+    {
+      "id": "c123",
+      "widget": "linechart",
+      "attr": "height, label",
+      "detail": "Chart height (default 180) and optional heading.",
+      "type": "Chart"
+    },
+    {
+      "id": "c124",
+      "widget": "barchart",
+      "attr": "• overview",
+      "detail": "Chart — Horizontal labelled bars; counts or sums rows per group. Reacts to active filters.",
+      "type": "Chart"
+    },
+    {
+      "id": "c125",
+      "widget": "barchart",
+      "attr": "groupColumn / labelColumn",
+      "detail": "Group rows by a column (one bar per value), or one bar PER ROW labelled by labelColumn.",
+      "type": "Chart"
+    },
+    {
+      "id": "c126",
+      "widget": "barchart",
+      "attr": "valueColumn, agg",
+      "detail": "Numeric column to aggregate: count (default) | sum | avg.",
+      "type": "Chart"
+    },
+    {
+      "id": "c127",
+      "widget": "barchart",
+      "attr": "colors, groupOrder, limit",
+      "detail": "value→ramp colors; pinned order; max bars (extras → \"other\").",
+      "type": "Chart"
+    },
+    {
+      "id": "c128",
+      "widget": "barchart",
+      "attr": "filter, label",
+      "detail": "Node-level {column, value/in} narrowing and optional heading.",
+      "type": "Chart"
+    },
+    {
+      "id": "c129",
+      "widget": "piechart",
+      "attr": "• overview",
+      "detail": "Chart — Donut/pie of a table's composition by one column, with legend + center total.",
+      "type": "Chart"
+    },
+    {
+      "id": "c130",
+      "widget": "piechart",
+      "attr": "groupColumn, valueColumn",
+      "detail": "Slice per distinct value; count rows or sum a numeric column.",
+      "type": "Chart"
+    },
+    {
+      "id": "c131",
+      "widget": "piechart",
+      "attr": "donut, colors, limit, height",
+      "detail": "Ring vs solid; value→ramp colors; max slices (default 8); height.",
+      "type": "Chart"
+    },
+    {
+      "id": "c132",
+      "widget": "progress",
+      "attr": "• overview",
+      "detail": "Chart — One rollup progress bar: done/total over a status column, or a sum vs a target.",
+      "type": "Chart"
+    },
+    {
+      "id": "c133",
+      "widget": "progress",
+      "attr": "statusColumn, doneValue",
+      "detail": "Defaults status/done — same semantics as tree/buckets rollups.",
+      "type": "Chart"
+    },
+    {
+      "id": "c134",
+      "widget": "progress",
+      "attr": "valueColumn, target",
+      "detail": "Alternative mode: sum valueColumn against a fixed goal.",
+      "type": "Chart"
+    },
+    {
+      "id": "c135",
+      "widget": "progress",
+      "attr": "color, filter, label",
+      "detail": "Ramp color for the bar; row narrowing; heading.",
+      "type": "Chart"
+    },
+    {
+      "id": "c136",
+      "widget": "stat",
+      "attr": "• overview",
+      "detail": "Chart — Big-number tile: count | sum | avg | min | max. Put several in a row for a dashboard.",
+      "type": "Chart"
+    },
+    {
+      "id": "c137",
+      "widget": "stat",
+      "attr": "agg, valueColumn",
+      "detail": "count (default) needs no column; sum/avg/min/max read valueColumn.",
+      "type": "Chart"
+    },
+    {
+      "id": "c138",
+      "widget": "stat",
+      "attr": "filter, unit, color, label",
+      "detail": "Row narrowing, suffix after the number, ramp color, caption.",
+      "type": "Chart"
+    },
+    {
+      "id": "nthm1",
+      "widget": "any node",
+      "attr": "theme",
+      "detail": "Subtree theme override: a BoardTheme preset name (standard / soft / sharp / paper) or an object {preset, listStyle, tableStyle, calendarStyle, headerStyle, density, cornerRadius, accent: \"#hex\"}. accent re-seeds the subtree ColorScheme. Applies to the node and everything inside it.",
+      "type": "String | Object"
+    },
+    {
+      "id": "nthm2",
+      "widget": "button",
+      "attr": "variant",
+      "detail": "Resting look: filled | tonal | outlined | text. Default keeps the classic behavior (filled; setFilter buttons go tonal until selected).",
+      "type": "String"
+    },
+    {
+      "id": "c139",
+      "widget": "annotate",
+      "attr": "• overview",
+      "detail": "Media — Screenshot markup pad: paste an image from the clipboard, ink/text over it, select a region and copy it back out (⌘V/⌘C).",
+      "type": "Media"
+    },
+    {
+      "id": "c140",
+      "widget": "annotate",
+      "attr": "table",
+      "detail": "Table that stores shots (default: shots).",
+      "type": "table"
+    },
+    {
+      "id": "c141",
+      "widget": "annotate",
+      "attr": "imageColumn",
+      "detail": "Column holding the pasted image as base64 PNG (default: image).",
+      "type": "column"
+    },
+    {
+      "id": "c142",
+      "widget": "annotate",
+      "attr": "marksColumn",
+      "detail": "Column holding ink strokes, text labels and pasted patches as JSON (default: marks).",
+      "type": "column"
+    },
+    {
+      "id": "c143",
+      "widget": "annotate",
+      "attr": "titleColumn",
+      "detail": "Shot name column (default: title).",
+      "type": "column"
+    },
+    {
+      "id": "c144",
+      "widget": "annotate",
+      "attr": "height",
+      "detail": "Optional fixed height; omitted = fill the screen.",
+      "type": "number"
+    }
+  ],
+  "workflow": [
+    {
+      "id": "w1",
+      "step": 1,
+      "phase": "Plan",
+      "title": "One task → many helpers",
+      "summary": "Split the goal across many agents",
+      "detail": "An orchestrator splits the goal into independent pieces and hands each to its own AI agent — many run at the same time."
+    },
+    {
+      "id": "w2",
+      "step": 2,
+      "phase": "Build",
+      "title": "Each agent works in isolation",
+      "summary": "Each agent works on its own copy",
+      "detail": "Every agent takes a separate copy of the code so they never step on each other's work."
+    },
+    {
+      "id": "w3",
+      "step": 3,
+      "phase": "Build",
+      "title": "Small, scoped changes",
+      "summary": "Small steps, not one big change",
+      "detail": "Work lands in small, reviewable steps instead of one big risky change."
+    },
+    {
+      "id": "w4",
+      "step": 4,
+      "phase": "Ship",
+      "title": "The gate",
+      "summary": "Analysis + full tests, or it stops",
+      "detail": "Before anything can land it must pass automatic checks — code analysis plus the full test suite. A failure stops it cold."
+    },
+    {
+      "id": "w5",
+      "step": 5,
+      "phase": "Ship",
+      "title": "Land on dev",
+      "summary": "Only gate-passed work reaches dev",
+      "detail": "Only work that passed the gate joins the shared dev line. main only ever moves forward from dev, on a deliberate promote."
+    },
+    {
+      "id": "w6",
+      "step": 6,
+      "phase": "Ship",
+      "title": "Auto-deploy",
+      "summary": "A promote to main deploys itself",
+      "detail": "Once promoted to main, the change publishes to the live web app automatically — no manual deploy step."
+    },
+    {
+      "id": "w7",
+      "step": 7,
+      "phase": "Ship",
+      "title": "Version stamp",
+      "summary": "Every build is dated and traceable",
+      "detail": "Each build records its date, time and id, so you can always see exactly what's live (Account → View app version)."
+    }
+  ],
+  "updates": [
+    {
+      "id": "u13",
+      "area": "Engine",
+      "title": "Faster scrolling through long reads",
+      "summary": "Engine · a fast-scroll edge strip jumps you through a long article instead of endless flicking.",
+      "detail": "A draggable strip along the right edge of any long read (Wikipick's article reader is first) lets you jump anywhere in the document — drag it and a floating bubble shows which section you're passing. It fades away when you're not using it, so it never gets in the way of reading.",
+      "date": "2026-09-01T09:00:00",
+      "dateLabel": "Sep 1, 2026"
+    },
+    {
+      "id": "u12",
+      "area": "App",
+      "title": "One consistent spacing rhythm",
+      "summary": "App · buttons, cards, and sections space themselves the same way everywhere.",
+      "detail": "The launcher, appearance, about, release-status, store, and get-the-app screens now share one spacing standard instead of each screen inventing its own gaps — and the overflow menu regrouped into clearer sections (Apps / Look / Your data / App).",
+      "date": "2026-09-01T09:30:00",
+      "dateLabel": "Sep 1, 2026"
+    },
+    {
+      "id": "u11",
+      "area": "Engine",
+      "title": "Popups instead of empty pages",
+      "summary": "Engine · short details now open in a small popup, not a mostly-empty full page.",
+      "detail": "Builds on the full-screen-push standard from late August: for a short detail — a couple of lines, not a whole document — a full page was mostly empty space. Those surfaces (this app's own What's-new cards, Claude-workflow steps, and System boards among them) now open a small centered popup instead, dismissed with a tap outside or the ×. Never a bottom sheet, either way.",
+      "date": "2026-09-01T10:00:00",
+      "dateLabel": "Sep 1, 2026"
+    },
+    {
+      "id": "u1",
+      "area": "Visibility",
+      "title": "See your build",
+      "summary": "Version stamp + freshness check",
+      "detail": "A version stamp inside the app plus a freshness file on the live site, so you can tell at a glance when it last changed.",
+      "date": "2026-06-24",
+      "dateLabel": "Jun 24, 2026"
+    },
+    {
+      "id": "u2",
+      "area": "App",
+      "title": "One tidy ⋮ menu",
+      "summary": "Header collapsed to one menu",
+      "detail": "The home-screen header collapsed into a single overflow menu — store, appearance, account, version, and more.",
+      "date": "2026-06-24",
+      "dateLabel": "Jun 24, 2026"
+    },
+    {
+      "id": "u3",
+      "area": "No-code",
+      "title": "Action picker",
+      "summary": "Wire actions without JSON",
+      "detail": "Set what a button does by picking from menus — no JSON. Chain several steps with ‘+ then’.",
+      "date": "2026-06-24",
+      "dateLabel": "Jun 24, 2026"
+    },
+    {
+      "id": "u4",
+      "area": "No-code",
+      "title": "Automated rules (only if…)",
+      "summary": "If-this-then-that automation",
+      "detail": "Make the app react: when a condition is true, do one thing (and optionally something else otherwise).",
+      "date": "2026-06-24",
+      "dateLabel": "Jun 24, 2026"
+    },
+    {
+      "id": "u5",
+      "area": "No-code",
+      "title": "Process templates",
+      "summary": "Stamp out a saved task template",
+      "detail": "Save a task and its sub-steps as a template; tap to stamp out a fresh copy into your tasks.",
+      "date": "2026-06-24",
+      "dateLabel": "Jun 24, 2026"
+    },
+    {
+      "id": "u6",
+      "area": "No-code",
+      "title": "Visual condition builder",
+      "summary": "Build conditions with menus",
+      "detail": "Build the ‘when…’ part of a rule with field / is / value rows — and/or/not — no typing JSON.",
+      "date": "2026-06-24",
+      "dateLabel": "Jun 24, 2026"
+    },
+    {
+      "id": "u7",
+      "area": "Tasks",
+      "title": "Recurring tasks",
+      "summary": "Repeat a task automatically",
+      "detail": "Give a task a repeat (daily, weekly, monthly); completing it automatically creates the next one.",
+      "date": "2026-06-24",
+      "dateLabel": "Jun 24, 2026"
+    },
+    {
+      "id": "u8",
+      "area": "Tasks",
+      "title": "Quick stage + undo",
+      "summary": "Tap to advance a task's stage",
+      "detail": "Tap a task to move it To do → Doing → Done (it stamps the date), with an Undo button.",
+      "date": "2026-06-24",
+      "dateLabel": "Jun 24, 2026"
+    },
+    {
+      "id": "u9",
+      "area": "Sharing",
+      "title": "Share by code or file",
+      "summary": "Copy or export a whole app",
+      "detail": "Copy a whole app to your clipboard, or save it to a file — and paste/import it on another device.",
+      "date": "2026-06-24",
+      "dateLabel": "Jun 24, 2026"
+    },
+    {
+      "id": "u10",
+      "area": "Engine",
+      "title": "New building blocks",
+      "summary": "Shared engine building blocks",
+      "detail": "Reusable pieces added across apps: nested apps, a file explorer, compare & tier-list views, and more.",
+      "date": "2026-06-24",
+      "dateLabel": "Jun 24, 2026"
+    }
+  ],
+  "sys_process": [
+    {
+      "id": "sp1",
+      "lane": "Your machine",
+      "title": "① author — feature branch, isolated copy",
+      "detail": "Scoped commits on a feature branch, never on main.",
+      "gate": false
+    },
+    {
+      "id": "sp2",
+      "lane": "Your machine",
+      "title": "② land — the merge queue",
+      "detail": "Worktree → merge main → GATE (analyze + full tests) → push, retry on race.",
+      "gate": true
+    },
+    {
+      "id": "sp3",
+      "lane": "Your machine",
+      "title": "③ integrated — n/a",
+      "detail": "No action here; the change already landed on dev in the previous phase.",
+      "gate": false
+    },
+    {
+      "id": "sp4",
+      "lane": "Your machine",
+      "title": "④ promote — waiting on a decision",
+      "detail": "Nothing ships to main or the live pointer branch without an explicit go-ahead.",
+      "gate": false
+    },
+    {
+      "id": "sp5",
+      "lane": "Your machine",
+      "title": "⑤ CI — ship + publish",
+      "detail": "GATE → classify major/minor → merge in an isolated copy → push.",
+      "gate": true
+    },
+    {
+      "id": "sp6",
+      "lane": "Your machine",
+      "title": "⑥ live — hands off",
+      "detail": "CI takes over from here; nothing more happens on your machine.",
+      "gate": false
+    },
+    {
+      "id": "sp7",
+      "lane": "Git branches",
+      "title": "① author — feature branch",
+      "detail": "Develop-only; never written to directly.",
+      "gate": false
+    },
+    {
+      "id": "sp8",
+      "lane": "Git branches",
+      "title": "③ integrated — dev",
+      "detail": "Merge-only; superset of main. Landing here is free — no CI runs.",
+      "gate": false
+    },
+    {
+      "id": "sp9",
+      "lane": "Git branches",
+      "title": "⑤ CI — main · the live pointer",
+      "detail": "Promote-only; fast-forward pointer branches, never rewritten.",
+      "gate": false
+    },
+    {
+      "id": "sp10",
+      "lane": "Git branches",
+      "title": "⑥ live — invariant held",
+      "detail": "main ⊂ dev is checked on every land and promote.",
+      "gate": false
+    },
+    {
+      "id": "sp11",
+      "lane": "GitHub CI",
+      "title": "①–④ — silent",
+      "detail": "Dev pushes trigger nothing at all; CI stays silent until phase ⑤.",
+      "gate": false
+    },
+    {
+      "id": "sp12",
+      "lane": "GitHub CI",
+      "title": "⑤ CI — deploy-web",
+      "detail": "Full checkout → re-gate → build → deploy → verify the live site.",
+      "gate": true
+    },
+    {
+      "id": "sp13",
+      "lane": "Live surfaces",
+      "title": "①–④ — unchanged",
+      "detail": "Nothing changes on any live surface until CI's verify step passes.",
+      "gate": false
+    },
+    {
+      "id": "sp14",
+      "lane": "Live surfaces",
+      "title": "⑤ CI — green ≠ deployed",
+      "detail": "A green run alone doesn't prove the site actually updated; verify-live does.",
+      "gate": false
+    },
+    {
+      "id": "sp15",
+      "lane": "Live surfaces",
+      "title": "⑥ live — devisant.com · dev site · downloads",
+      "detail": "The site serves the pushed commit; native zips refresh on major promotes.",
+      "gate": false
+    }
+  ],
+  "sys_ci": [
+    {
+      "id": "sc1a",
+      "aspect": "When it runs",
+      "title": "Local — every land & promote",
+      "detail": "Many times a day; dev pushes trigger no CI at all.",
+      "gate": false,
+      "spans": false
+    },
+    {
+      "id": "sc1b",
+      "aspect": "When it runs",
+      "title": "CI — only promote / publish pushes",
+      "detail": "Rare and deliberate: a promote or an explicit publish.",
+      "gate": false,
+      "spans": false
+    },
+    {
+      "id": "sc2a",
+      "aspect": "Its job",
+      "title": "Local — prove it's correct",
+      "detail": "analyze → GATE ~3,000 tests → GATE schema guard → topology check.",
+      "gate": true,
+      "spans": false
+    },
+    {
+      "id": "sc2b",
+      "aspect": "Its job",
+      "title": "CI — prove it shipped",
+      "detail": "re-gate once → build → deploy → GATE verify live.",
+      "gate": true,
+      "spans": false
+    },
+    {
+      "id": "sc3a",
+      "aspect": "Where",
+      "title": "Local — the maintainer's machine",
+      "detail": "One machine-wide test slot, load-checked first; rc=137 means the machine, not the code.",
+      "gate": false,
+      "spans": false
+    },
+    {
+      "id": "sc3b",
+      "aspect": "Where",
+      "title": "CI — a clean cloud runner",
+      "detail": "Rebuilds the whole source layout from scratch, read-only.",
+      "gate": false,
+      "spans": false
+    },
+    {
+      "id": "sc4a",
+      "aspect": "Cost",
+      "title": "Local — free & unlimited",
+      "detail": "Which is why the gate lives here.",
+      "gate": false,
+      "spans": false
+    },
+    {
+      "id": "sc4b",
+      "aspect": "Cost",
+      "title": "CI — scarce minutes",
+      "detail": "Re-gating in CI would spend scarce minutes for zero information — one run per green push.",
+      "gate": false,
+      "spans": false
+    },
+    {
+      "id": "sc5a",
+      "aspect": "On red",
+      "title": "Local — nothing leaves the machine",
+      "detail": "Fix and retry freely; a red here costs nobody anything.",
+      "gate": false,
+      "spans": false
+    },
+    {
+      "id": "sc5b",
+      "aspect": "On red",
+      "title": "CI — a fleet event",
+      "detail": "Red main = broadcast + hold pushes; the site stays on the last good build.",
+      "gate": false,
+      "spans": false
+    },
+    {
+      "id": "sc6a",
+      "aspect": "Same rules?",
+      "title": "Local — aligned by decree",
+      "detail": "One exclude selector on both sides: golden / render / env-flaky tests excluded identically (aligned Aug 7 after CI was found accidentally stricter).",
+      "gate": false,
+      "spans": true
+    },
+    {
+      "id": "sc6b",
+      "aspect": "Same rules?",
+      "title": "CI — aligned by decree",
+      "detail": "Same exclude selector as the local gate — a test the local gate calls non-blocking can never redden main again.",
+      "gate": false,
+      "spans": true
+    },
+    {
+      "id": "sc7a",
+      "aspect": "Blind spot",
+      "title": "Local — can't prove the site updated",
+      "detail": "A green land says nothing about deployment.",
+      "gate": false,
+      "spans": false
+    },
+    {
+      "id": "sc7b",
+      "aspect": "Blind spot",
+      "title": "CI — can't run per-change",
+      "detail": "Too slow and too costly to gate every land.",
+      "gate": false,
+      "spans": false
+    }
+  ],
+  "sys_history": [
+    {
+      "id": "sh1",
+      "domain": "Deploy & publish",
+      "title": "Jun — auto-deploy on green",
+      "detail": "Prod follows green main.",
+      "incident": false,
+      "rule": false,
+      "partial": false
+    },
+    {
+      "id": "sh2",
+      "domain": "Deploy & publish",
+      "title": "Jun 28 ⚡ → Jul rule adopted",
+      "detail": "Clobber war: 3 dev-site overwrites in a day → CI = deploy not gate · lock-free queue · pointer branch — still the law today.",
+      "incident": true,
+      "rule": true,
+      "partial": false
+    },
+    {
+      "id": "sh3",
+      "domain": "Deploy & publish",
+      "title": "Aug ⚡ sync-ordering incident (open)",
+      "detail": "A client update shipped ahead of its server-side counterpart — since addressed by the human-gated server schedule.",
+      "incident": true,
+      "rule": false,
+      "partial": false
+    },
+    {
+      "id": "sh4",
+      "domain": "Branching",
+      "title": "Jul ⚡ → rule adopted",
+      "detail": "Main written directly → landings blocked for hours → fixed roles, machine-checked (main ⊂ dev on every land, engine promotes first).",
+      "incident": true,
+      "rule": true,
+      "partial": false
+    },
+    {
+      "id": "sh5",
+      "domain": "Test honesty",
+      "title": "Jul 12 ⚡ → rule adopted",
+      "detail": "Load > 40, six gates at once → one machine-wide slot + quarantine lanes (named, expiring debt).",
+      "incident": true,
+      "rule": true,
+      "partial": false
+    },
+    {
+      "id": "sh6",
+      "domain": "Test honesty",
+      "title": "Aug 7 ⚡ exclude-flag scar",
+      "detail": "9 red runs → collapsed to one combined selector.",
+      "incident": true,
+      "rule": true,
+      "partial": false
+    },
+    {
+      "id": "sh7",
+      "domain": "Releases",
+      "title": "Jun — deliberate-only native",
+      "detail": "\"Most updates need no new APK\" — original reasoning now survives only in git history.",
+      "incident": false,
+      "rule": false,
+      "partial": true
+    },
+    {
+      "id": "sh8",
+      "domain": "Releases",
+      "title": "Aug 17 — reversed to auto-refresh",
+      "detail": "Latest download now always matches prod.",
+      "incident": false,
+      "rule": true,
+      "partial": false
+    },
+    {
+      "id": "sh9",
+      "domain": "Server & access",
+      "title": "Jul — human-only prod plane",
+      "detail": "A narrow data API.",
+      "incident": false,
+      "rule": true,
+      "partial": true
+    },
+    {
+      "id": "sh10",
+      "domain": "Server & access",
+      "title": "Aug — sharing hardening",
+      "detail": "Server-side changes ship on a human-gated schedule, by design.",
+      "incident": false,
+      "rule": false,
+      "partial": false
+    },
+    {
+      "id": "sh11",
+      "domain": "Data & schema",
+      "title": "Aug ⚡ priolanes → seed guard",
+      "detail": "Installs went silently stale → seed guard, CI + local, no bypass exists.",
+      "incident": true,
+      "rule": true,
+      "partial": false
+    },
+    {
+      "id": "sh12",
+      "domain": "Data & schema",
+      "title": "Aug — input hardening",
+      "detail": "Two branches, T3 review ×2.",
+      "incident": false,
+      "rule": true,
+      "partial": false
+    }
+  ],
+  "sys_structure": [
+    {
+      "id": "ss1",
+      "place": "Your machine",
+      "title": "Build — isolated copies, code, applet JSON",
+      "detail": "isolated working copies · engine + app code · applet JSON.",
+      "gate": false,
+      "spans": false,
+      "spansWith": ""
+    },
+    {
+      "id": "ss2",
+      "place": "Your machine",
+      "title": "Ship — land + promote scripts",
+      "detail": "Land script · promote script · publish script · gate slot lock.",
+      "gate": true,
+      "spans": false,
+      "spansWith": ""
+    },
+    {
+      "id": "ss3",
+      "place": "Your machine",
+      "title": "Run — local dev server",
+      "detail": "Local dev server · scratch PB (validation).",
+      "gate": false,
+      "spans": false,
+      "spansWith": ""
+    },
+    {
+      "id": "ss4",
+      "place": "Your machine",
+      "title": "Govern — the ledgers",
+      "detail": "The governance record — one set of rules and logs, two homes (here + GitHub).",
+      "gate": false,
+      "spans": true,
+      "spansWith": "GitHub / govern"
+    },
+    {
+      "id": "ss5",
+      "place": "GitHub",
+      "title": "Build — 11 source repos",
+      "detail": "The source repos.",
+      "gate": false,
+      "spans": false,
+      "spansWith": ""
+    },
+    {
+      "id": "ss6",
+      "place": "GitHub",
+      "title": "Ship — deploy-web CI",
+      "detail": "deploy-web CI → Pages artifact repos → devisant.com · dev site · native releases.",
+      "gate": true,
+      "spans": true,
+      "spansWith": "GitHub / run"
+    },
+    {
+      "id": "ss7",
+      "place": "GitHub",
+      "title": "Run — Pages hosting",
+      "detail": "Ship and run share one substrate: the artifact repo IS the hosting.",
+      "gate": false,
+      "spans": true,
+      "spansWith": "GitHub / ship"
+    },
+    {
+      "id": "ss8",
+      "place": "GitHub",
+      "title": "Govern — commit history, CI logs",
+      "detail": "Commit history · CI run logs.",
+      "gate": false,
+      "spans": true,
+      "spansWith": "Your machine / govern"
+    },
+    {
+      "id": "ss9",
+      "place": "The one server",
+      "title": "Build — nothing here, by design",
+      "detail": "Nothing builds here — by design.",
+      "gate": false,
+      "spans": false,
+      "spansWith": ""
+    },
+    {
+      "id": "ss10",
+      "place": "The one server",
+      "title": "Ship — human-only server steps",
+      "detail": "Human-only server steps · app builds · map tiles.",
+      "gate": true,
+      "spans": false,
+      "spansWith": ""
+    },
+    {
+      "id": "ss11",
+      "place": "The one server",
+      "title": "Run — the live services",
+      "detail": "One front door · app data · translation · map tiles · compute.",
+      "gate": false,
+      "spans": false,
+      "spansWith": ""
+    },
+    {
+      "id": "ss12",
+      "place": "The one server",
+      "title": "Govern — rules snapshot, backups",
+      "detail": "Rules snapshot · scheduled cleanup · nightly backups.",
+      "gate": false,
+      "spans": false,
+      "spansWith": ""
+    },
+    {
+      "id": "ss13",
+      "place": "User's device",
+      "title": "Build — Applet Studio",
+      "detail": "Users build applets in Applet Studio.",
+      "gate": false,
+      "spans": true,
+      "spansWith": "User's device / ship"
+    },
+    {
+      "id": "ss14",
+      "place": "User's device",
+      "title": "Ship — share codes, links",
+      "detail": "Share codes + links · send-to-phone — users create and share on the same board as the infrastructure.",
+      "gate": false,
+      "spans": true,
+      "spansWith": "User's device / build"
+    },
+    {
+      "id": "ss15",
+      "place": "User's device",
+      "title": "Run — the app itself",
+      "detail": "The app (web · mac · APK) · one DB per applet.",
+      "gate": false,
+      "spans": false,
+      "spansWith": ""
+    },
+    {
+      "id": "ss16",
+      "place": "User's device",
+      "title": "Govern — store, releases, settings",
+      "detail": "Store (pause, not erase) · releases module · settings.",
+      "gate": false,
+      "spans": false,
+      "spansWith": ""
+    }
+  ],
+  "repo_overview": [
+    {
+      "id": "isan",
+      "repo": "isan",
+      "latestPromotes": "431 promotes recently",
+      "aheadCount": 0,
+      "aheadTitles": "(none)",
+      "publishState": "live pointer in sync with dev",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "flutterboard",
+      "repo": "flutterboard",
+      "latestPromotes": "250 promotes recently",
+      "aheadCount": 11,
+      "aheadTitles": "11 commit(s) ahead, not yet promoted",
+      "publishState": "n/a",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    }
+  ],
+  "timeline_items": [
+    {
+      "id": "lane-Architecture_applet",
+      "lane": "Architecture applet",
+      "title": "Architecture applet",
+      "scheduledStart": "",
+      "endDate": "",
+      "status": "",
+      "sessionTag": "",
+      "landedAt": "",
+      "detail": "",
+      "asOf": ""
+    },
+    {
+      "id": "lane-Engine",
+      "lane": "Engine",
+      "title": "Engine",
+      "scheduledStart": "",
+      "endDate": "",
+      "status": "",
+      "sessionTag": "",
+      "landedAt": "",
+      "detail": "",
+      "asOf": ""
+    },
+    {
+      "id": "lane-Other",
+      "lane": "Other",
+      "title": "Other",
+      "scheduledStart": "",
+      "endDate": "",
+      "status": "",
+      "sessionTag": "",
+      "landedAt": "",
+      "detail": "",
+      "asOf": ""
+    },
+    {
+      "id": "lane-Per-applet",
+      "lane": "Per-applet",
+      "title": "Per-applet",
+      "scheduledStart": "",
+      "endDate": "",
+      "status": "",
+      "sessionTag": "",
+      "landedAt": "",
+      "detail": "",
+      "asOf": ""
+    },
+    {
+      "id": "lane-Server/sync",
+      "lane": "Server/sync",
+      "title": "Server/sync",
+      "scheduledStart": "",
+      "endDate": "",
+      "status": "",
+      "sessionTag": "",
+      "landedAt": "",
+      "detail": "",
+      "asOf": ""
+    },
+    {
+      "id": "lane-Settings",
+      "lane": "Settings",
+      "title": "Settings",
+      "scheduledStart": "",
+      "endDate": "",
+      "status": "",
+      "sessionTag": "",
+      "landedAt": "",
+      "detail": "",
+      "asOf": ""
+    },
+    {
+      "id": "lane-Shared_ecosystem",
+      "lane": "Shared ecosystem",
+      "title": "Shared ecosystem",
+      "scheduledStart": "",
+      "endDate": "",
+      "status": "",
+      "sessionTag": "",
+      "landedAt": "",
+      "detail": "",
+      "asOf": ""
+    },
+    {
+      "id": "land-Other-2026-08-21",
+      "parentId": "lane-Other",
+      "lane": "Other",
+      "title": "11 landed",
+      "scheduledStart": "2026-08-21",
+      "endDate": "2026-08-21",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-21",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Shared_ecosystem-2026-08-21",
+      "parentId": "lane-Shared_ecosystem",
+      "lane": "Shared ecosystem",
+      "title": "18 landed",
+      "scheduledStart": "2026-08-21",
+      "endDate": "2026-08-21",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-21",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Per-applet-2026-08-21",
+      "parentId": "lane-Per-applet",
+      "lane": "Per-applet",
+      "title": "9 landed",
+      "scheduledStart": "2026-08-21",
+      "endDate": "2026-08-21",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-21",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Engine-2026-08-21",
+      "parentId": "lane-Engine",
+      "lane": "Engine",
+      "title": "13 landed",
+      "scheduledStart": "2026-08-21",
+      "endDate": "2026-08-21",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-21",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Other-2026-08-22",
+      "parentId": "lane-Other",
+      "lane": "Other",
+      "title": "8 landed",
+      "scheduledStart": "2026-08-22",
+      "endDate": "2026-08-22",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-22",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Shared_ecosystem-2026-08-22",
+      "parentId": "lane-Shared_ecosystem",
+      "lane": "Shared ecosystem",
+      "title": "8 landed",
+      "scheduledStart": "2026-08-22",
+      "endDate": "2026-08-22",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-22",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Per-applet-2026-08-22",
+      "parentId": "lane-Per-applet",
+      "lane": "Per-applet",
+      "title": "15 landed",
+      "scheduledStart": "2026-08-22",
+      "endDate": "2026-08-22",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-22",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Server/sync-2026-08-22",
+      "parentId": "lane-Server/sync",
+      "lane": "Server/sync",
+      "title": "3 landed",
+      "scheduledStart": "2026-08-22",
+      "endDate": "2026-08-22",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-22",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Settings-2026-08-22",
+      "parentId": "lane-Settings",
+      "lane": "Settings",
+      "title": "5 landed",
+      "scheduledStart": "2026-08-22",
+      "endDate": "2026-08-22",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-22",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Engine-2026-08-22",
+      "parentId": "lane-Engine",
+      "lane": "Engine",
+      "title": "25 landed",
+      "scheduledStart": "2026-08-22",
+      "endDate": "2026-08-22",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-22",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Per-applet-2026-08-23",
+      "parentId": "lane-Per-applet",
+      "lane": "Per-applet",
+      "title": "15 landed",
+      "scheduledStart": "2026-08-23",
+      "endDate": "2026-08-23",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-23",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Other-2026-08-23",
+      "parentId": "lane-Other",
+      "lane": "Other",
+      "title": "4 landed",
+      "scheduledStart": "2026-08-23",
+      "endDate": "2026-08-23",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-23",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Shared_ecosystem-2026-08-23",
+      "parentId": "lane-Shared_ecosystem",
+      "lane": "Shared ecosystem",
+      "title": "2 landed",
+      "scheduledStart": "2026-08-23",
+      "endDate": "2026-08-23",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-23",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Engine-2026-08-23",
+      "parentId": "lane-Engine",
+      "lane": "Engine",
+      "title": "21 landed",
+      "scheduledStart": "2026-08-23",
+      "endDate": "2026-08-23",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-23",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Per-applet-2026-08-24",
+      "parentId": "lane-Per-applet",
+      "lane": "Per-applet",
+      "title": "4 landed",
+      "scheduledStart": "2026-08-24",
+      "endDate": "2026-08-24",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-24",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Settings-2026-08-24",
+      "parentId": "lane-Settings",
+      "lane": "Settings",
+      "title": "2 landed",
+      "scheduledStart": "2026-08-24",
+      "endDate": "2026-08-24",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-24",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Other-2026-08-24",
+      "parentId": "lane-Other",
+      "lane": "Other",
+      "title": "3 landed",
+      "scheduledStart": "2026-08-24",
+      "endDate": "2026-08-24",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-24",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Engine-2026-08-24",
+      "parentId": "lane-Engine",
+      "lane": "Engine",
+      "title": "20 landed",
+      "scheduledStart": "2026-08-24",
+      "endDate": "2026-08-24",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-24",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Shared_ecosystem-2026-08-25",
+      "parentId": "lane-Shared_ecosystem",
+      "lane": "Shared ecosystem",
+      "title": "5 landed",
+      "scheduledStart": "2026-08-25",
+      "endDate": "2026-08-25",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-25",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Other-2026-08-25",
+      "parentId": "lane-Other",
+      "lane": "Other",
+      "title": "5 landed",
+      "scheduledStart": "2026-08-25",
+      "endDate": "2026-08-25",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-25",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Per-applet-2026-08-25",
+      "parentId": "lane-Per-applet",
+      "lane": "Per-applet",
+      "title": "9 landed",
+      "scheduledStart": "2026-08-25",
+      "endDate": "2026-08-25",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-25",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Engine-2026-08-25",
+      "parentId": "lane-Engine",
+      "lane": "Engine",
+      "title": "11 landed",
+      "scheduledStart": "2026-08-25",
+      "endDate": "2026-08-25",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-25",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Shared_ecosystem-2026-08-26",
+      "parentId": "lane-Shared_ecosystem",
+      "lane": "Shared ecosystem",
+      "title": "8 landed",
+      "scheduledStart": "2026-08-26",
+      "endDate": "2026-08-26",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-26",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Other-2026-08-26",
+      "parentId": "lane-Other",
+      "lane": "Other",
+      "title": "10 landed",
+      "scheduledStart": "2026-08-26",
+      "endDate": "2026-08-26",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-26",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Per-applet-2026-08-26",
+      "parentId": "lane-Per-applet",
+      "lane": "Per-applet",
+      "title": "11 landed",
+      "scheduledStart": "2026-08-26",
+      "endDate": "2026-08-26",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-26",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Settings-2026-08-26",
+      "parentId": "lane-Settings",
+      "lane": "Settings",
+      "title": "6 landed",
+      "scheduledStart": "2026-08-26",
+      "endDate": "2026-08-26",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-26",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Server/sync-2026-08-26",
+      "parentId": "lane-Server/sync",
+      "lane": "Server/sync",
+      "title": "2 landed",
+      "scheduledStart": "2026-08-26",
+      "endDate": "2026-08-26",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-26",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Engine-2026-08-26",
+      "parentId": "lane-Engine",
+      "lane": "Engine",
+      "title": "24 landed",
+      "scheduledStart": "2026-08-26",
+      "endDate": "2026-08-26",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-26",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Shared_ecosystem-2026-08-27",
+      "parentId": "lane-Shared_ecosystem",
+      "lane": "Shared ecosystem",
+      "title": "14 landed",
+      "scheduledStart": "2026-08-27",
+      "endDate": "2026-08-27",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-27",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Other-2026-08-27",
+      "parentId": "lane-Other",
+      "lane": "Other",
+      "title": "13 landed",
+      "scheduledStart": "2026-08-27",
+      "endDate": "2026-08-27",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-27",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Architecture_applet-2026-08-27",
+      "parentId": "lane-Architecture_applet",
+      "lane": "Architecture applet",
+      "title": "1 landed",
+      "scheduledStart": "2026-08-27",
+      "endDate": "2026-08-27",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-27",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Engine-2026-08-27",
+      "parentId": "lane-Engine",
+      "lane": "Engine",
+      "title": "14 landed",
+      "scheduledStart": "2026-08-27",
+      "endDate": "2026-08-27",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-27",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Shared_ecosystem-2026-08-28",
+      "parentId": "lane-Shared_ecosystem",
+      "lane": "Shared ecosystem",
+      "title": "2 landed",
+      "scheduledStart": "2026-08-28",
+      "endDate": "2026-08-28",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-28",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Other-2026-08-28",
+      "parentId": "lane-Other",
+      "lane": "Other",
+      "title": "1 landed",
+      "scheduledStart": "2026-08-28",
+      "endDate": "2026-08-28",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-28",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Engine-2026-08-28",
+      "parentId": "lane-Engine",
+      "lane": "Engine",
+      "title": "4 landed",
+      "scheduledStart": "2026-08-28",
+      "endDate": "2026-08-28",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-28",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Shared_ecosystem-2026-08-29",
+      "parentId": "lane-Shared_ecosystem",
+      "lane": "Shared ecosystem",
+      "title": "10 landed",
+      "scheduledStart": "2026-08-29",
+      "endDate": "2026-08-29",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-29",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Server/sync-2026-08-29",
+      "parentId": "lane-Server/sync",
+      "lane": "Server/sync",
+      "title": "3 landed",
+      "scheduledStart": "2026-08-29",
+      "endDate": "2026-08-29",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-29",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Per-applet-2026-08-29",
+      "parentId": "lane-Per-applet",
+      "lane": "Per-applet",
+      "title": "6 landed",
+      "scheduledStart": "2026-08-29",
+      "endDate": "2026-08-29",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-29",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Settings-2026-08-29",
+      "parentId": "lane-Settings",
+      "lane": "Settings",
+      "title": "2 landed",
+      "scheduledStart": "2026-08-29",
+      "endDate": "2026-08-29",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-29",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Other-2026-08-29",
+      "parentId": "lane-Other",
+      "lane": "Other",
+      "title": "9 landed",
+      "scheduledStart": "2026-08-29",
+      "endDate": "2026-08-29",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-29",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Architecture_applet-2026-08-29",
+      "parentId": "lane-Architecture_applet",
+      "lane": "Architecture applet",
+      "title": "1 landed",
+      "scheduledStart": "2026-08-29",
+      "endDate": "2026-08-29",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-29",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Engine-2026-08-29",
+      "parentId": "lane-Engine",
+      "lane": "Engine",
+      "title": "12 landed",
+      "scheduledStart": "2026-08-29",
+      "endDate": "2026-08-29",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-29",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Shared_ecosystem-2026-08-30",
+      "parentId": "lane-Shared_ecosystem",
+      "lane": "Shared ecosystem",
+      "title": "11 landed",
+      "scheduledStart": "2026-08-30",
+      "endDate": "2026-08-30",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-30",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Architecture_applet-2026-08-30",
+      "parentId": "lane-Architecture_applet",
+      "lane": "Architecture applet",
+      "title": "5 landed",
+      "scheduledStart": "2026-08-30",
+      "endDate": "2026-08-30",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-30",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Other-2026-08-30",
+      "parentId": "lane-Other",
+      "lane": "Other",
+      "title": "7 landed",
+      "scheduledStart": "2026-08-30",
+      "endDate": "2026-08-30",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-30",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Settings-2026-08-30",
+      "parentId": "lane-Settings",
+      "lane": "Settings",
+      "title": "3 landed",
+      "scheduledStart": "2026-08-30",
+      "endDate": "2026-08-30",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-30",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Per-applet-2026-08-30",
+      "parentId": "lane-Per-applet",
+      "lane": "Per-applet",
+      "title": "12 landed",
+      "scheduledStart": "2026-08-30",
+      "endDate": "2026-08-30",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-30",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Engine-2026-08-30",
+      "parentId": "lane-Engine",
+      "lane": "Engine",
+      "title": "28 landed",
+      "scheduledStart": "2026-08-30",
+      "endDate": "2026-08-30",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-30",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Per-applet-2026-08-31",
+      "parentId": "lane-Per-applet",
+      "lane": "Per-applet",
+      "title": "11 landed",
+      "scheduledStart": "2026-08-31",
+      "endDate": "2026-08-31",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-31",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Shared_ecosystem-2026-08-31",
+      "parentId": "lane-Shared_ecosystem",
+      "lane": "Shared ecosystem",
+      "title": "9 landed",
+      "scheduledStart": "2026-08-31",
+      "endDate": "2026-08-31",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-31",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Other-2026-08-31",
+      "parentId": "lane-Other",
+      "lane": "Other",
+      "title": "3 landed",
+      "scheduledStart": "2026-08-31",
+      "endDate": "2026-08-31",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-31",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Architecture_applet-2026-08-31",
+      "parentId": "lane-Architecture_applet",
+      "lane": "Architecture applet",
+      "title": "3 landed",
+      "scheduledStart": "2026-08-31",
+      "endDate": "2026-08-31",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-31",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Engine-2026-08-31",
+      "parentId": "lane-Engine",
+      "lane": "Engine",
+      "title": "29 landed",
+      "scheduledStart": "2026-08-31",
+      "endDate": "2026-08-31",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-08-31",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Architecture_applet-2026-09-01",
+      "parentId": "lane-Architecture_applet",
+      "lane": "Architecture applet",
+      "title": "6 landed",
+      "scheduledStart": "2026-09-01",
+      "endDate": "2026-09-01",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-09-01",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Shared_ecosystem-2026-09-01",
+      "parentId": "lane-Shared_ecosystem",
+      "lane": "Shared ecosystem",
+      "title": "6 landed",
+      "scheduledStart": "2026-09-01",
+      "endDate": "2026-09-01",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-09-01",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Other-2026-09-01",
+      "parentId": "lane-Other",
+      "lane": "Other",
+      "title": "5 landed",
+      "scheduledStart": "2026-09-01",
+      "endDate": "2026-09-01",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-09-01",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Per-applet-2026-09-01",
+      "parentId": "lane-Per-applet",
+      "lane": "Per-applet",
+      "title": "10 landed",
+      "scheduledStart": "2026-09-01",
+      "endDate": "2026-09-01",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-09-01",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Settings-2026-09-01",
+      "parentId": "lane-Settings",
+      "lane": "Settings",
+      "title": "1 landed",
+      "scheduledStart": "2026-09-01",
+      "endDate": "2026-09-01",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-09-01",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Engine-2026-09-01",
+      "parentId": "lane-Engine",
+      "lane": "Engine",
+      "title": "11 landed",
+      "scheduledStart": "2026-09-01",
+      "endDate": "2026-09-01",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-09-01",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Architecture_applet-2026-09-02",
+      "parentId": "lane-Architecture_applet",
+      "lane": "Architecture applet",
+      "title": "6 landed",
+      "scheduledStart": "2026-09-02",
+      "endDate": "2026-09-02",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-09-02",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Shared_ecosystem-2026-09-02",
+      "parentId": "lane-Shared_ecosystem",
+      "lane": "Shared ecosystem",
+      "title": "15 landed",
+      "scheduledStart": "2026-09-02",
+      "endDate": "2026-09-02",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-09-02",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Other-2026-09-02",
+      "parentId": "lane-Other",
+      "lane": "Other",
+      "title": "15 landed",
+      "scheduledStart": "2026-09-02",
+      "endDate": "2026-09-02",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-09-02",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Per-applet-2026-09-02",
+      "parentId": "lane-Per-applet",
+      "lane": "Per-applet",
+      "title": "6 landed",
+      "scheduledStart": "2026-09-02",
+      "endDate": "2026-09-02",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-09-02",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Engine-2026-09-02",
+      "parentId": "lane-Engine",
+      "lane": "Engine",
+      "title": "17 landed",
+      "scheduledStart": "2026-09-02",
+      "endDate": "2026-09-02",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-09-02",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Shared_ecosystem-2026-09-03",
+      "parentId": "lane-Shared_ecosystem",
+      "lane": "Shared ecosystem",
+      "title": "16 landed",
+      "scheduledStart": "2026-09-03",
+      "endDate": "2026-09-03",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-09-03",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Other-2026-09-03",
+      "parentId": "lane-Other",
+      "lane": "Other",
+      "title": "12 landed",
+      "scheduledStart": "2026-09-03",
+      "endDate": "2026-09-03",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-09-03",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Per-applet-2026-09-03",
+      "parentId": "lane-Per-applet",
+      "lane": "Per-applet",
+      "title": "42 landed",
+      "scheduledStart": "2026-09-03",
+      "endDate": "2026-09-03",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-09-03",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Architecture_applet-2026-09-03",
+      "parentId": "lane-Architecture_applet",
+      "lane": "Architecture applet",
+      "title": "14 landed",
+      "scheduledStart": "2026-09-03",
+      "endDate": "2026-09-03",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-09-03",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Settings-2026-09-03",
+      "parentId": "lane-Settings",
+      "lane": "Settings",
+      "title": "2 landed",
+      "scheduledStart": "2026-09-03",
+      "endDate": "2026-09-03",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-09-03",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Server/sync-2026-09-03",
+      "parentId": "lane-Server/sync",
+      "lane": "Server/sync",
+      "title": "3 landed",
+      "scheduledStart": "2026-09-03",
+      "endDate": "2026-09-03",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-09-03",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Engine-2026-09-03",
+      "parentId": "lane-Engine",
+      "lane": "Engine",
+      "title": "35 landed",
+      "scheduledStart": "2026-09-03",
+      "endDate": "2026-09-03",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-09-03",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Per-applet-2026-09-04",
+      "parentId": "lane-Per-applet",
+      "lane": "Per-applet",
+      "title": "1 landed",
+      "scheduledStart": "2026-09-04",
+      "endDate": "2026-09-04",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-09-04",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Other-2026-09-04",
+      "parentId": "lane-Other",
+      "lane": "Other",
+      "title": "5 landed",
+      "scheduledStart": "2026-09-04",
+      "endDate": "2026-09-04",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-09-04",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Shared_ecosystem-2026-09-04",
+      "parentId": "lane-Shared_ecosystem",
+      "lane": "Shared ecosystem",
+      "title": "7 landed",
+      "scheduledStart": "2026-09-04",
+      "endDate": "2026-09-04",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-09-04",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Engine-2026-09-04",
+      "parentId": "lane-Engine",
+      "lane": "Engine",
+      "title": "2 landed",
+      "scheduledStart": "2026-09-04",
+      "endDate": "2026-09-04",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-09-04",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Shared_ecosystem-2026-09-05",
+      "parentId": "lane-Shared_ecosystem",
+      "lane": "Shared ecosystem",
+      "title": "2 landed",
+      "scheduledStart": "2026-09-05",
+      "endDate": "2026-09-05",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-09-05",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Per-applet-2026-09-05",
+      "parentId": "lane-Per-applet",
+      "lane": "Per-applet",
+      "title": "3 landed",
+      "scheduledStart": "2026-09-05",
+      "endDate": "2026-09-05",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-09-05",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Other-2026-09-05",
+      "parentId": "lane-Other",
+      "lane": "Other",
+      "title": "1 landed",
+      "scheduledStart": "2026-09-05",
+      "endDate": "2026-09-05",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-09-05",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Server/sync-2026-09-05",
+      "parentId": "lane-Server/sync",
+      "lane": "Server/sync",
+      "title": "1 landed",
+      "scheduledStart": "2026-09-05",
+      "endDate": "2026-09-05",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-09-05",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "land-Engine-2026-09-05",
+      "parentId": "lane-Engine",
+      "lane": "Engine",
+      "title": "2 landed",
+      "scheduledStart": "2026-09-05",
+      "endDate": "2026-09-05",
+      "status": "landed",
+      "sessionTag": "",
+      "landedAt": "2026-09-05",
+      "detail": "",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    }
+  ],
+  "house_rules": [
+    {
+      "id": "hr-no-slideup",
+      "name": "No slide-up views",
+      "date": "2026-09-01",
+      "dateLabel": "Sep 1, 2026",
+      "statement": "popup or navigation — slide up should not be so common",
+      "enforcement": "rolling out",
+      "detail": "Detail views never slide up from the bottom. A small amount of detail opens as a popup over the current screen; anything substantial pushes to its own full-screen page. This applet is fully compliant. App-wide, a showModalBottomSheet inventory sweep is still open — other applets are migrated one at a time, not all at once."
+    },
+    {
+      "id": "hr-tap-opens",
+      "name": "Tap opens, never expands",
+      "date": "2026-08-30",
+      "dateLabel": "Aug 30, 2026",
+      "statement": "tap = open detail, never expand-in-place",
+      "enforcement": "enforced",
+      "detail": "Tapping a row always opens its detail view (popup or push) — it never expands the row in place, and it never toggles. One tap, one predictable outcome, everywhere the engine renders a tappable row."
+    },
+    {
+      "id": "hr-narrative",
+      "name": "Views tell a story, never flat lists",
+      "date": "2026-09-01",
+      "dateLabel": "Sep 1, 2026",
+      "statement": "just a list that gives no visual direction of narrative",
+      "enforcement": "rolling out",
+      "detail": "A screen that just enumerates rows leaves the visitor to guess at meaning. Views are designed with a shape that carries the story — a time spine, a flow of stages, a grouped structure — not a flat unordered list. What's-new (time spine) and Timeline (lanes across days) already carry this; more views are converted as they're touched."
+    },
+    {
+      "id": "hr-spacing",
+      "name": "One spacing rhythm",
+      "date": "2026-09-01",
+      "dateLabel": "Sep 1, 2026",
+      "statement": "one consistent spacing rhythm across the app",
+      "enforcement": "enforced",
+      "detail": "Every screen spaces itself from the same AppSpacing token set instead of inventing its own gaps — launcher, appearance, about, release-status, store, and get-the-app screens were the first sweep; the token set is now the only sanctioned way to space anything new."
+    },
+    {
+      "id": "hr-orient",
+      "name": "Entry views orient",
+      "date": "2026-08-26",
+      "dateLabel": "Aug 26, 2026",
+      "statement": "entry views orient, never blindside",
+      "enforcement": "enforced",
+      "detail": "The first screen a visitor lands on always carries a one-line purpose header — what this is, in plain words — before any data. The applet lint gates this as an ERROR now: an entry screen with no orienting header fails the gate, not just a style note."
+    },
+    {
+      "id": "hr-realestate",
+      "name": "Design real-estate efficiency",
+      "date": "2026-08-22",
+      "dateLabel": "Aug 22, 2026",
+      "statement": "condense, hide, expand — don't waste the screen",
+      "enforcement": "standing",
+      "detail": "Screen space is scarce, phone-first. Prefer condensing, hiding behind a clear affordance, or expanding on demand over spreading content thin. Phone width (375px) is the acceptance test for every layout."
+    },
+    {
+      "id": "hr-layout-integrity",
+      "name": "Layout integrity: states never squeeze content",
+      "date": "2026-09-01",
+      "dateLabel": "Sep 1, 2026",
+      "statement": "spacing tokens only; states never squeeze content; 375px one-line tests",
+      "enforcement": "standing",
+      "detail": "Loading, empty, and error states reserve their own space — they never compress or reflow the real content around them. Every layout is checked at 375px for accidental wraps or overflow before it ships."
+    },
+    {
+      "id": "hr-v1-1",
+      "name": "House design rules — v1.1",
+      "date": "2026-09-01",
+      "dateLabel": "Sep 1, 2026",
+      "statement": "orientation→About, rules→architecture app",
+      "enforcement": "enforced",
+      "detail": "The full v1.1 rulebook, applied at design review before build and re-checked at 375px before any promote. Canonical copy kept in the team's internal rules doc. Origin: Parley product-polish arc + the user's 0901 direction.\n\n1. Orient in About, not popups. Every applet has a standard ⓘ About section holding what-is-this and how-to; working screens stay clean — no floating banners. Check: ⓘ reachable from the top bar on every applet; no dismissible banner on any working screen.\n2. Say it once. No screen delivers the same message twice in different clothes. Check: read every visible string aloud — no two say the same thing.\n3. Space is content. No dead bands. Condense → hide → expand, in that order, before adding scroll. Check: at 375px, no empty region taller than 24px that isn't deliberate breathing room around a focal element.\n4. Controls show state. A picker displays its current value, not its category — \"English ▾\", never \"Language ▾\". Check: no control labeled only by what it selects when a selection exists.\n5. One accent, layered darks. Colors come from the applet's token set; the accent marks exactly: primary action, active destination, own contributions. Check: every fill traces to a token; accent in those three roles only.\n6. Three text sizes per screen (app bar may add a fourth). Hierarchy from size + weight, not more sizes. Check: distinct body font sizes ≤ 4.\n7. Popup or push, never slide-up. Tap opens detail as a centered dialog or full-screen push; bottom sheets are retired. Check: nothing slides from the bottom edge; every tap has one outcome.\n8. Visible async. Every wait names what is happening and where it came from; no bare spinners. Check: any state > 1s carries a sentence; failures say what failed and what to do.\n9. 44px targets, token spacing (4/8/12/16/24). Check: measure the smallest control; grep for off-scale values.\n10. Examples say so, empties teach. Demo content is visibly labeled; an empty view states the next action. Check: seed rows carry an example marker; every empty state contains a verb."
+    },
+    {
+      "id": "hr-v1-2",
+      "name": "House design rules — v1.2",
+      "date": "2026-09-02",
+      "dateLabel": "Sep 2, 2026",
+      "statement": "dense grabbable menus; one shared board grammar",
+      "enforcement": "rolling out",
+      "detail": "Two additions folding in the design-language work since v1.1.\n\n11. Menus are dense and grabbable. One shared menu sheet everywhere: compact rows, groups separated by a hairline only, every item visible without scrolling at default height, a visible handle that both expands and dismisses. Check: no padded section band in any menu; the last item is visible with zero scroll; the handle does both.\n12. Boards speak one grammar. Structural/system data views use a fenced-axes board: axes carry meaning, each fence owns its contents, a span is used only when one thing truly lives in both, rigid outside and organic inside, one page never mixes diagram styles. Check: every axis labeled; every span justified in one sentence; no second diagram style on the same surface."
+    }
+  ],
+  "sys_map_parts": [
+    {
+      "id": "part-applets",
+      "title": "Applets",
+      "order": 1,
+      "summary": "56 installed experiences — bodytomy, wikipick, taskly, and the rest — each described as JSON, rendered by the engine.",
+      "detail": "Every applet is a set of JSON documents (app/ui/tables/columns/content) — no Dart code per applet. The engine below reads and renders them.",
+      "touchedCount": 126,
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "part-engine",
+      "title": "Engine",
+      "order": 2,
+      "summary": "the shared node library every applet is built from — hosted inside the app shell.",
+      "detail": "flutterboard — the shared widget/node library (cards, canvas, gantt, segments, and the rest) that turns an applet's JSON into a real screen.",
+      "touchedCount": 131,
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "part-shell",
+      "title": "App shell",
+      "order": 3,
+      "summary": "launcher, settings, updates, sharing — syncs through the server.",
+      "detail": "The isan app itself: the launcher, appearance/settings, the in-app updater, and the store — everything that isn't a specific applet.",
+      "touchedCount": 80,
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "part-server",
+      "title": "Server",
+      "order": 4,
+      "summary": "sync + shares + rooms",
+      "detail": "sync + shares + rooms — server-side changes deploy on a human-gated schedule, by design.",
+      "touchedCount": 7,
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    }
+  ],
+  "release_stories": [
+    {
+      "id": "rel-isan-20dd838a8d",
+      "date": "2026-09-01",
+      "dateLabel": "2026-09-01",
+      "commit": "20dd838a",
+      "repo": "isan",
+      "name": "The calmer-navigation release",
+      "summary": "popups over empty pages · one spacing rhythm · faster long reads · timeline tab",
+      "detail": "popups over empty pages · one spacing rhythm · faster long reads · timeline tab",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "rel-isan-264f005950",
+      "date": "2026-09-01",
+      "dateLabel": "2026-09-01",
+      "commit": "264f0059",
+      "repo": "isan",
+      "name": "The sync-reliability release",
+      "summary": "hardening the local key/value sync path",
+      "detail": "hardening the local key/value sync path",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "rel-isan-66dcb823aa",
+      "date": "2026-08-30",
+      "dateLabel": "2026-08-30",
+      "commit": "66dcb823",
+      "repo": "isan",
+      "name": "The downloads release",
+      "summary": "Get-the-app popup restored · dev-channel builds stay fresh",
+      "detail": "Get-the-app popup restored · dev-channel builds stay fresh",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "rel-isan-45aafe42f0",
+      "date": "2026-08-30",
+      "dateLabel": "2026-08-30",
+      "commit": "45aafe42",
+      "repo": "isan",
+      "name": "The wikipick picture release",
+      "summary": "drawer, tap-chrome, topics",
+      "detail": "drawer, tap-chrome, topics",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    }
+  ],
+  "versions_matrix": [
+    {
+      "id": "v-web-dev",
+      "component": "Web",
+      "order": 1,
+      "channel": "Dev",
+      "channelOrder": 1,
+      "stamp": "199ba2d7",
+      "freshness": "current",
+      "freshnessColor": "green",
+      "detail": "dev.devisant.com/isa/build_info.json — the reference for the dev channel.",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "v-web-prod",
+      "component": "Web",
+      "order": 1,
+      "channel": "Prod",
+      "channelOrder": 2,
+      "stamp": "1306ee2d",
+      "freshness": "current",
+      "freshnessColor": "green",
+      "detail": "devisant.com/isa/build_info.json — the reference for the prod channel.",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "v-android-dev",
+      "component": "Android app",
+      "order": 2,
+      "channel": "Dev",
+      "channelOrder": 1,
+      "stamp": "2026-09-05.0716-199ba2d7",
+      "freshness": "matches web",
+      "freshnessColor": "green",
+      "detail": "isa-kit/isan-releases, tag dev-latest.",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "v-android-prod",
+      "component": "Android app",
+      "order": 2,
+      "channel": "Prod",
+      "channelOrder": 2,
+      "stamp": "2026-09-04.2013-1306ee2d",
+      "freshness": "matches web",
+      "freshnessColor": "green",
+      "detail": "isa-kit/isan-releases, tag 2026-09-04.2013-1306ee2d.",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "v-macos-dev",
+      "component": "macOS app",
+      "order": 3,
+      "channel": "Dev",
+      "channelOrder": 1,
+      "stamp": "2026-09-05.0716-199ba2d7",
+      "freshness": "matches web",
+      "freshnessColor": "green",
+      "detail": "isa-kit/isan-web, tag dev-latest.",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "v-macos-prod",
+      "component": "macOS app",
+      "order": 3,
+      "channel": "Prod",
+      "channelOrder": 2,
+      "stamp": "2026-09-04.2013-1306ee2d",
+      "freshness": "matches web",
+      "freshnessColor": "green",
+      "detail": "isa-kit/isan-web, tag 2026-09-04.2013-1306ee2d.",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "v-engine-dev",
+      "component": "Engine",
+      "order": 4,
+      "channel": "Dev",
+      "channelOrder": 1,
+      "stamp": "c8d2c64",
+      "freshness": "matches web",
+      "freshnessColor": "green",
+      "detail": "flutterboard commit baked into the dev web build.",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "v-engine-prod",
+      "component": "Engine",
+      "order": 4,
+      "channel": "Prod",
+      "channelOrder": 2,
+      "stamp": "c26201c",
+      "freshness": "matches web",
+      "freshnessColor": "green",
+      "detail": "flutterboard commit baked into the prod web build.",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    }
+  ],
+  "versions_pipeline": [],
+  "ci_devops": [
+    {
+      "id": "ci-isan",
+      "order": 1,
+      "item": "CI workflow",
+      "repo": "isan",
+      "title": "deploy-web",
+      "status": "in_progress",
+      "when": "14m ago",
+      "detail": "Latest deploy-web run on isan: in_progress.",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "ci-engine",
+      "order": 2,
+      "item": "CI workflow",
+      "repo": "engine",
+      "title": "ci",
+      "status": "success",
+      "when": "1d ago",
+      "detail": "Latest ci run on engine: success.",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "web-dev",
+      "order": 3,
+      "item": "Web deploy",
+      "repo": "Dev",
+      "title": "Dev channel",
+      "status": "healthy",
+      "when": "31m ago",
+      "detail": "build_info.json reachable — built 31m ago.",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "web-prod",
+      "order": 4,
+      "item": "Web deploy",
+      "repo": "Prod",
+      "title": "Prod channel",
+      "status": "healthy",
+      "when": "10h ago",
+      "detail": "build_info.json reachable — built 10h ago.",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "native-android",
+      "order": 5,
+      "item": "Native release",
+      "repo": "Android",
+      "title": "Android release feed",
+      "status": "healthy",
+      "when": "11h ago",
+      "detail": "Latest Android release published 11h ago.",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "native-macos",
+      "order": 6,
+      "item": "Native release",
+      "repo": "macOS",
+      "title": "macOS release feed",
+      "status": "healthy",
+      "when": "11h ago",
+      "detail": "Latest macOS release published 11h ago.",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    }
+  ],
+  "applets_board": [
+    {
+      "id": "chronos",
+      "name": "Chronos",
+      "theme": "knowledge & language",
+      "status": "in work",
+      "lastWork": "last touched 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-08-17 · prod seedVersion 2026-08-17",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "diagram",
+      "name": "Diagram",
+      "theme": "knowledge & language",
+      "status": "in work",
+      "lastWork": "last touched 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-08-01 · prod seedVersion 2026-08-01",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "malsori",
+      "name": "Malsori",
+      "theme": "knowledge & language",
+      "status": "in work",
+      "lastWork": "last touched 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-09-02 · prod seedVersion 2026-09-02",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "parley",
+      "name": "Parley",
+      "theme": "knowledge & language",
+      "status": "in work",
+      "lastWork": "last touched 2026-09-05",
+      "lastWorkDate": "2026-09-05",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-09-03 · prod seedVersion 2026-09-03",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "wikipick",
+      "name": "Wikipick",
+      "theme": "knowledge & language",
+      "status": "in work",
+      "lastWork": "last touched 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-09-03 · prod seedVersion 2026-09-03",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "docs",
+      "name": "Docs",
+      "theme": "knowledge & language",
+      "status": "fresh",
+      "lastWork": "last touched 2026-08-26",
+      "lastWorkDate": "2026-08-26",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-08-01 · prod seedVersion 2026-08-01",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "notes",
+      "name": "Notes",
+      "theme": "knowledge & language",
+      "status": "fresh",
+      "lastWork": "last touched 2026-08-26",
+      "lastWorkDate": "2026-08-26",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-08-01 · prod seedVersion 2026-08-01",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "sheets",
+      "name": "Sheets",
+      "theme": "knowledge & language",
+      "status": "fresh",
+      "lastWork": "last touched 2026-08-26",
+      "lastWorkDate": "2026-08-26",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-07-20 · prod seedVersion 2026-07-20",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "schema_map",
+      "name": "Schema Map",
+      "theme": "knowledge & language",
+      "status": "stable",
+      "lastWork": "only fleet-wide sweep commits lately — last 2026-08-20",
+      "lastWorkDate": "2026-08-20",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-06-17 · prod seedVersion 2026-06-17",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "composer",
+      "name": "Composer",
+      "theme": "maker & dev tools",
+      "status": "in work",
+      "lastWork": "last touched 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-09-04 · prod seedVersion 2026-09-04",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "datalens",
+      "name": "Datalens",
+      "theme": "maker & dev tools",
+      "status": "in work",
+      "lastWork": "last touched 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-07-20 · prod seedVersion 2026-07-20",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "design",
+      "name": "Design",
+      "theme": "maker & dev tools",
+      "status": "in work",
+      "lastWork": "last touched 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-06-17 · prod seedVersion 2026-06-17",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "geolabs",
+      "name": "Geolabs",
+      "theme": "maker & dev tools",
+      "status": "in work",
+      "lastWork": "last touched 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-07-20 · prod seedVersion 2026-07-20",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "maker",
+      "name": "Maker",
+      "theme": "maker & dev tools",
+      "status": "in work",
+      "lastWork": "last touched 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-08-01 · prod seedVersion 2026-08-01",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "wireframe",
+      "name": "Wireframe",
+      "theme": "maker & dev tools",
+      "status": "in work",
+      "lastWork": "last touched 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-08-18 · prod seedVersion 2026-08-18",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "iconbuilder",
+      "name": "Iconbuilder",
+      "theme": "maker & dev tools",
+      "status": "fresh",
+      "lastWork": "last touched 2026-08-22",
+      "lastWorkDate": "2026-08-22",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-08-22 · prod seedVersion 2026-08-22",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "sketchpad",
+      "name": "Sketchpad",
+      "theme": "maker & dev tools",
+      "status": "fresh",
+      "lastWork": "last touched 2026-08-22",
+      "lastWorkDate": "2026-08-22",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-06-15 · prod seedVersion 2026-06-15",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "applet_studio",
+      "name": "Applet Studio",
+      "theme": "docs & work",
+      "status": "in work",
+      "lastWork": "last touched 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-06-12 · prod seedVersion 2026-06-12",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "bublee",
+      "name": "Bublee",
+      "theme": "docs & work",
+      "status": "in work",
+      "lastWork": "last touched 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-08-22 · prod seedVersion 2026-08-22",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "gather",
+      "name": "Gather",
+      "theme": "docs & work",
+      "status": "in work",
+      "lastWork": "last touched 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion custom · prod seedVersion custom",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "releases",
+      "name": "Releases",
+      "theme": "docs & work",
+      "status": "fresh",
+      "lastWork": "last touched 2026-08-29",
+      "lastWorkDate": "2026-08-29",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-08-29 · prod seedVersion 2026-08-29",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "suite",
+      "name": "Suite",
+      "theme": "docs & work",
+      "status": "fresh",
+      "lastWork": "last touched 2026-08-26",
+      "lastWorkDate": "2026-08-26",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-07-03 · prod seedVersion 2026-07-03",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "taskly",
+      "name": "Taskly",
+      "theme": "docs & work",
+      "status": "fresh",
+      "lastWork": "last touched 2026-08-26",
+      "lastWorkDate": "2026-08-26",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-08-22 · prod seedVersion 2026-08-22",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "boxes",
+      "name": "Boxes",
+      "theme": "docs & work",
+      "status": "stable",
+      "lastWork": "last touched 2026-08-08",
+      "lastWorkDate": "2026-08-08",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-07-27 · prod seedVersion 2026-07-27",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "budget",
+      "name": "Budget",
+      "theme": "docs & work",
+      "status": "stable",
+      "lastWork": "only fleet-wide sweep commits lately — last 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-06-13 · prod seedVersion 2026-06-13",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "scenarios",
+      "name": "Scenarios",
+      "theme": "docs & work",
+      "status": "stable",
+      "lastWork": "only fleet-wide sweep commits lately — last 2026-09-05",
+      "lastWorkDate": "2026-09-05",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-07-14 · prod seedVersion 2026-07-14",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "shelplet",
+      "name": "Shelplet",
+      "theme": "docs & work",
+      "status": "stable",
+      "lastWork": "only fleet-wide sweep commits lately — last 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-07-05 · prod seedVersion 2026-07-05",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "workboard",
+      "name": "Workboard",
+      "theme": "docs & work",
+      "status": "stable",
+      "lastWork": "only fleet-wide sweep commits lately — last 2026-09-05",
+      "lastWorkDate": "2026-09-05",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-06-15 · prod seedVersion 2026-06-15",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "cooking",
+      "name": "Cooking",
+      "theme": "home & life",
+      "status": "in work",
+      "lastWork": "last touched 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-06-05 · prod seedVersion 2026-06-05",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "dating",
+      "name": "Dating",
+      "theme": "home & life",
+      "status": "in work",
+      "lastWork": "last touched 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-06-05 · prod seedVersion 2026-06-05",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "fridge_inventory",
+      "name": "Fridge Inventory",
+      "theme": "home & life",
+      "status": "in work",
+      "lastWork": "last touched 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-06-05 · prod seedVersion 2026-06-05",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "vertier",
+      "name": "Vertier",
+      "theme": "home & life",
+      "status": "in work",
+      "lastWork": "last touched 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-06-19 · prod seedVersion 2026-06-19",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "crypto",
+      "name": "Crypto",
+      "theme": "home & life",
+      "status": "stable",
+      "lastWork": "only fleet-wide sweep commits lately — last 2026-08-20",
+      "lastWorkDate": "2026-08-20",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-06-09 · prod seedVersion 2026-06-09",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "events",
+      "name": "Events",
+      "theme": "home & life",
+      "status": "stable",
+      "lastWork": "only fleet-wide sweep commits lately — last 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-07-20 · prod seedVersion 2026-07-20",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "neujour",
+      "name": "Neujour",
+      "theme": "home & life",
+      "status": "stable",
+      "lastWork": "only fleet-wide sweep commits lately — last 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-06-25 · prod seedVersion 2026-06-25",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "moveset",
+      "name": "Moveset",
+      "theme": "body & health",
+      "status": "in work",
+      "lastWork": "last touched 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-08-31 · prod seedVersion 2026-08-31",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "bodytomy",
+      "name": "Bodytomy",
+      "theme": "body & health",
+      "status": "fresh",
+      "lastWork": "last touched 2026-09-01",
+      "lastWorkDate": "2026-09-01",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-09-01 · prod seedVersion 2026-09-01",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "zootomy",
+      "name": "Zootomy",
+      "theme": "body & health",
+      "status": "fresh",
+      "lastWork": "last touched 2026-09-01",
+      "lastWorkDate": "2026-09-01",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-09-01 · prod seedVersion 2026-09-01",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "krtravel",
+      "name": "Krtravel",
+      "theme": "places & transit",
+      "status": "in work",
+      "lastWork": "last touched 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-08-09 · prod seedVersion 2026-08-09",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "terrain",
+      "name": "Terrain",
+      "theme": "places & transit",
+      "status": "in work",
+      "lastWork": "last touched 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-08-01 · prod seedVersion 2026-08-01",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "atlas",
+      "name": "Atlas",
+      "theme": "places & transit",
+      "status": "fresh",
+      "lastWork": "last touched 2026-08-23",
+      "lastWorkDate": "2026-08-23",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-07-14 · prod seedVersion 2026-07-14",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "bike_share",
+      "name": "Bike Share",
+      "theme": "places & transit",
+      "status": "stable",
+      "lastWork": "only fleet-wide sweep commits lately — last 2026-08-20",
+      "lastWorkDate": "2026-08-20",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-06-05 · prod seedVersion 2026-06-05",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "campus_directory",
+      "name": "Campus Directory",
+      "theme": "places & transit",
+      "status": "stable",
+      "lastWork": "last touched 2026-08-14",
+      "lastWorkDate": "2026-08-14",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-07-03 · prod seedVersion 2026-07-03",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "carfree",
+      "name": "Carfree",
+      "theme": "places & transit",
+      "status": "stable",
+      "lastWork": "only fleet-wide sweep commits lately — last 2026-09-05",
+      "lastWorkDate": "2026-09-05",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-08-04 · prod seedVersion 2026-08-04",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "college_livability",
+      "name": "College Livability",
+      "theme": "places & transit",
+      "status": "stable",
+      "lastWork": "only fleet-wide sweep commits lately — last 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-07-02 · prod seedVersion 2026-07-02",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "krtravel2",
+      "name": "Krtravel2",
+      "theme": "places & transit",
+      "status": "stable",
+      "lastWork": "last touched 2026-08-16",
+      "lastWorkDate": "2026-08-16",
+      "envChip": "unknown",
+      "envDetail": "presence unknown — dev seedVersion n/a",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "krtravelplan",
+      "name": "Krtravelplan",
+      "theme": "places & transit",
+      "status": "stable",
+      "lastWork": "last touched 2026-08-16",
+      "lastWorkDate": "2026-08-16",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-08-14 · prod seedVersion 2026-08-14",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "next_service",
+      "name": "Next Service",
+      "theme": "places & transit",
+      "status": "stable",
+      "lastWork": "last touched 2026-08-08",
+      "lastWorkDate": "2026-08-08",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-07-10 · prod seedVersion 2026-07-10",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "ri_map",
+      "name": "Ri Map",
+      "theme": "places & transit",
+      "status": "stable",
+      "lastWork": "only fleet-wide sweep commits lately — last 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-06-05 · prod seedVersion 2026-06-05",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "transit_dashboard",
+      "name": "Transit Dashboard",
+      "theme": "places & transit",
+      "status": "stable",
+      "lastWork": "only fleet-wide sweep commits lately — last 2026-08-20",
+      "lastWorkDate": "2026-08-20",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-06-18 · prod seedVersion 2026-06-18",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "transit_forecasts",
+      "name": "Transit Forecasts",
+      "theme": "places & transit",
+      "status": "stable",
+      "lastWork": "only fleet-wide sweep commits lately — last 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-06-23 · prod seedVersion 2026-06-23",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "tripboard",
+      "name": "Tripboard",
+      "theme": "places & transit",
+      "status": "stable",
+      "lastWork": "last touched 2026-08-08",
+      "lastWorkDate": "2026-08-08",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-07-28 · prod seedVersion 2026-07-28",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "city_planner",
+      "name": "City Planner",
+      "theme": "games",
+      "status": "in work",
+      "lastWork": "last touched 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-06-09 · prod seedVersion 2026-06-09",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "puzzles",
+      "name": "Puzzles",
+      "theme": "games",
+      "status": "in work",
+      "lastWork": "last touched 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-06-15 · prod seedVersion 2026-06-15",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "games",
+      "name": "Games",
+      "theme": "games",
+      "status": "stable",
+      "lastWork": "last touched 2026-08-08",
+      "lastWorkDate": "2026-08-08",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-06-13 · prod seedVersion 2026-06-13",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "spacegame",
+      "name": "Spacegame",
+      "theme": "games",
+      "status": "stable",
+      "lastWork": "only fleet-wide sweep commits lately — last 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-07-05 · prod seedVersion 2026-07-05",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "tabletop",
+      "name": "Tabletop",
+      "theme": "games",
+      "status": "stable",
+      "lastWork": "last touched 2026-08-14",
+      "lastWorkDate": "2026-08-14",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-06-20 · prod seedVersion 2026-06-20",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "hesset",
+      "name": "Hesset",
+      "theme": "games",
+      "status": "parked",
+      "lastWork": "Deliberately paused.",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-07-04 · prod seedVersion 2026-07-04",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "hexnom",
+      "name": "Hexnom",
+      "theme": "games",
+      "status": "parked",
+      "lastWork": "Deliberately paused.",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-07-03 · prod seedVersion 2026-07-03",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "noms",
+      "name": "Noms",
+      "theme": "games",
+      "status": "parked",
+      "lastWork": "Deliberately paused.",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-06-15 · prod seedVersion 2026-06-15",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "podcasts",
+      "name": "Podcasts",
+      "theme": "media",
+      "status": "in work",
+      "lastWork": "last touched 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-07-20 · prod seedVersion 2026-07-20",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "watchlist",
+      "name": "Watchlist",
+      "theme": "media",
+      "status": "in work",
+      "lastWork": "last touched 2026-09-03",
+      "lastWorkDate": "2026-09-03",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-07-20 · prod seedVersion 2026-07-20",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "porchfest",
+      "name": "Porchfest",
+      "theme": "media",
+      "status": "stable",
+      "lastWork": "only fleet-wide sweep commits lately — last 2026-09-05",
+      "lastWorkDate": "2026-09-05",
+      "envChip": "same",
+      "envDetail": "prod ✓ · dev ✓ same — dev seedVersion 2026-07-31 · prod seedVersion 2026-07-31",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    }
+  ],
+  "big_picture_waiting": [
+    {
+      "id": "waiting-count",
+      "count": 1,
+      "labels": "1 other next step",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    }
+  ],
+  "overview_summary": [
+    {
+      "id": "headline",
+      "headline": "All lanes green · 1 thing wait on the maintainer.",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    }
+  ],
+  "big_picture_flow": [
+    {
+      "id": "work-in-flight",
+      "order": 1,
+      "title": "Work in flight",
+      "summary": "88 branch(es) open",
+      "detail": "Each open branch lands on the dev channel after its tests pass.",
+      "flag": "",
+      "targetScreen": "system",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "dev-channel",
+      "order": 2,
+      "title": "Dev channel",
+      "summary": "Web current, Android app matches web, macOS app matches web",
+      "detail": "live pointer in sync with dev",
+      "flag": "",
+      "targetScreen": "system",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "prod-channel",
+      "order": 3,
+      "title": "Prod channel",
+      "summary": "Web current, Android app matches web, macOS app matches web",
+      "detail": "431 promotes recently",
+      "flag": "",
+      "targetScreen": "system",
+      "asOf": "as of 2026-09-05 08:00 UTC"
+    },
+    {
+      "id": "your-devices",
+      "title": "Your devices",
+      "summary": "web · Android · macOS",
+      "detail": "The web app updates itself on load; the Android and macOS apps check the in-app updater on the channel installed. See Versions & pipeline for exact build stamps per device.",
+      "flag": "",
+      "targetScreen": "",
+      "asOf": "as of 2026-09-05 08:00 UTC",
+      "order": 4
+    }
+  ]
+}

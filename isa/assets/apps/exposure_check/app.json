@@ -1,0 +1,13 @@
+{
+  "id": "exposure_check",
+  "name": "Exposure Check",
+  "category": "Security",
+  "description": "Check what personal data is exposed about you, and work through opt-outs.",
+  "icon": "shield",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_exposure"
+  },
+  "seedVersion": "2026-07-03.1.l10n-int-0903",
+  "seedContent": "initial-only"
+}

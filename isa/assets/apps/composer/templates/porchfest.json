@@ -1,0 +1,154 @@
+{
+  "board": {
+    "name": "Porchfest map"
+  },
+  "screens": [
+    {
+      "id": "porchf_0_map",
+      "name": "Porchfest map",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "porchf_1_schedule",
+      "name": "Schedule",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "porchf_2_about",
+      "name": "About this map",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "porchf_0_map_title",
+      "screen": "porchf_0_map",
+      "kind": "titlebar",
+      "label": "Porchfest map",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "porchf_0_map_w0",
+      "screen": "porchf_0_map",
+      "kind": "text",
+      "label": "Cambridge Porchfest, July 11\u201312, 2026.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "porchf_0_map_w1",
+      "screen": "porchf_0_map",
+      "kind": "settings",
+      "label": "Data controls",
+      "region": "body",
+      "order": 1,
+      "items": "[{\"text\": \"Notifications\", \"toggle\": true}, {\"text\": \"Sync automatically\", \"toggle\": true}, {\"text\": \"Show details\", \"toggle\": false}]"
+    },
+    {
+      "id": "porchf_0_map_nav",
+      "screen": "porchf_0_map",
+      "kind": "bottomnav",
+      "label": "Map \u00b7 Schedule \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "porchf_1_schedule_title",
+      "screen": "porchf_1_schedule",
+      "kind": "titlebar",
+      "label": "Schedule",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "porchf_1_schedule_w0",
+      "screen": "porchf_1_schedule",
+      "kind": "list",
+      "label": "artist",
+      "region": "body",
+      "order": 0,
+      "items": "[\"Porchfest map\", \"About this map\"]"
+    },
+    {
+      "id": "porchf_1_schedule_nav",
+      "screen": "porchf_1_schedule",
+      "kind": "bottomnav",
+      "label": "Map \u00b7 Schedule \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "porchf_2_about_title",
+      "screen": "porchf_2_about",
+      "kind": "titlebar",
+      "label": "About this map",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "porchf_2_about_w0",
+      "screen": "porchf_2_about",
+      "kind": "text",
+      "label": "Cambridgeport Porchfest",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "porchf_2_about_w1",
+      "screen": "porchf_2_about",
+      "kind": "text",
+      "label": "A two-day event.",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "porchf_2_about_w2",
+      "screen": "porchf_2_about",
+      "kind": "text",
+      "label": "Where the data comes from",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "porchf_2_about_nav",
+      "screen": "porchf_2_about",
+      "kind": "bottomnav",
+      "label": "Map \u00b7 Schedule \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "porchf_flow_0",
+      "fromWidget": "porchf_0_map_nav",
+      "toScreen": "porchf_1_schedule",
+      "transition": "push"
+    },
+    {
+      "id": "porchf_flow_1",
+      "fromWidget": "porchf_1_schedule_nav",
+      "toScreen": "porchf_2_about",
+      "transition": "push"
+    },
+    {
+      "id": "porchf_flow_2",
+      "fromWidget": "porchf_2_about_nav",
+      "toScreen": "porchf_0_map",
+      "transition": "push"
+    },
+    {
+      "id": "porchf_flow_extra",
+      "fromWidget": "porchf_1_schedule_w0",
+      "toScreen": "porchf_2_about",
+      "transition": "push"
+    }
+  ]
+}

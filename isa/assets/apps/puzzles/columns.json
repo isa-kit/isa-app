@@ -1,0 +1,245 @@
+{
+  "pieces": [
+    {
+      "name": "label",
+      "type": "text",
+      "label": {
+        "en": "Tile",
+        "ko": "타일",
+        "zh": "方块",
+        "hi": "टाइल",
+        "es": "Ficha",
+        "fr": "Tuile",
+        "ar": "القطعة",
+        "pt": "Peça",
+        "ru": "Плитка",
+        "de": "Kachel",
+        "ja": "タイル",
+        "tr": "Karo",
+        "vi": "Ô",
+        "it": "Tessera",
+        "fa": "کاشی",
+        "pl": "Kafelek",
+        "uk": "Плитка",
+        "nl": "Tegel",
+        "sv": "Bricka",
+        "cs": "Dlaždice",
+        "el": "Πλακίδιο"
+      }
+    },
+    {
+      "name": "x",
+      "type": "number",
+      "label": "X"
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "label": "Y"
+    }
+  ],
+  "pattern": [
+    {
+      "name": "label",
+      "type": "text",
+      "label": {
+        "en": "Gem",
+        "ko": "보석",
+        "zh": "宝石",
+        "hi": "रत्न",
+        "es": "Gema",
+        "fr": "Gemme",
+        "ar": "الجوهرة",
+        "pt": "Gema",
+        "ru": "Камень",
+        "de": "Edelstein",
+        "ja": "宝石",
+        "tr": "Mücevher",
+        "vi": "Đá quý",
+        "it": "Gemma",
+        "fa": "جواهر",
+        "pl": "Klejnot",
+        "uk": "Коштовний камінь",
+        "nl": "Edelsteen",
+        "sv": "Ädelsten",
+        "cs": "Drahokam",
+        "el": "Πετράδι"
+      }
+    },
+    {
+      "name": "kind",
+      "type": "text",
+      "label": {
+        "en": "Kind",
+        "ko": "종류",
+        "zh": "类型",
+        "hi": "प्रकार",
+        "es": "Tipo",
+        "fr": "Genre",
+        "ar": "النوع",
+        "pt": "Tipo",
+        "ru": "Тип",
+        "de": "Art",
+        "ja": "種類",
+        "tr": "Tür",
+        "vi": "Loại",
+        "it": "Tipo",
+        "fa": "نوع",
+        "pl": "Rodzaj",
+        "uk": "Тип",
+        "nl": "Soort",
+        "sv": "Typ",
+        "cs": "Typ",
+        "el": "Είδος"
+      }
+    },
+    {
+      "name": "x",
+      "type": "number",
+      "label": "X"
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "label": "Y"
+    },
+    {
+      "name": "targetX",
+      "type": "number",
+      "label": {
+        "en": "Home X",
+        "ko": "홈 X",
+        "zh": "目标X",
+        "hi": "होम X",
+        "es": "X inicial",
+        "fr": "X d'origine",
+        "ar": "X الأصلي",
+        "pt": "X de origem",
+        "ru": "Целевой X",
+        "de": "Ziel-X",
+        "ja": "ホームX",
+        "tr": "Ana X",
+        "vi": "X gốc",
+        "it": "X iniziale",
+        "fa": "X مبدا",
+        "pl": "X docelowy",
+        "uk": "Домашній X",
+        "nl": "Thuis-X",
+        "sv": "Hem-X",
+        "cs": "Domácí X",
+        "el": "Αρχικό X"
+      }
+    },
+    {
+      "name": "targetY",
+      "type": "number",
+      "label": {
+        "en": "Home Y",
+        "ko": "홈 Y",
+        "zh": "目标Y",
+        "hi": "होम Y",
+        "es": "Y inicial",
+        "fr": "Y d'origine",
+        "ar": "Y الأصلي",
+        "pt": "Y de origem",
+        "ru": "Целевой Y",
+        "de": "Ziel-Y",
+        "ja": "ホームY",
+        "tr": "Ana Y",
+        "vi": "Y gốc",
+        "it": "Y iniziale",
+        "fa": "Y مبدا",
+        "pl": "Y docelowy",
+        "uk": "Домашній Y",
+        "nl": "Thuis-Y",
+        "sv": "Hem-Y",
+        "cs": "Domácí Y",
+        "el": "Αρχικό Y"
+      }
+    }
+  ],
+  "results": [
+    {
+      "name": "moves",
+      "type": "number",
+      "label": {
+        "en": "Moves",
+        "ko": "이동 횟수",
+        "zh": "步数",
+        "hi": "चालें",
+        "es": "Movimientos",
+        "fr": "Coups",
+        "ar": "الحركات",
+        "pt": "Movimentos",
+        "ru": "Ходы",
+        "de": "Züge",
+        "ja": "手数",
+        "tr": "Hamle",
+        "vi": "Nước đi",
+        "it": "Mosse",
+        "fa": "حرکت‌ها",
+        "pl": "Ruchy",
+        "uk": "Ходи",
+        "nl": "Zetten",
+        "sv": "Drag",
+        "cs": "Tahy",
+        "el": "Κινήσεις"
+      }
+    },
+    {
+      "name": "seconds",
+      "type": "number",
+      "label": {
+        "en": "Seconds",
+        "ko": "초",
+        "zh": "秒",
+        "hi": "सेकंड",
+        "es": "Segundos",
+        "fr": "Secondes",
+        "ar": "الثواني",
+        "pt": "Segundos",
+        "ru": "Секунды",
+        "de": "Sekunden",
+        "ja": "秒",
+        "tr": "Saniye",
+        "vi": "Giây",
+        "it": "Secondi",
+        "fa": "ثانیه",
+        "pl": "Sekundy",
+        "uk": "Секунди",
+        "nl": "Seconden",
+        "sv": "Sekunder",
+        "cs": "Sekundy",
+        "el": "Δευτερόλεπτα"
+      }
+    },
+    {
+      "name": "at",
+      "type": "date",
+      "label": {
+        "en": "When",
+        "ko": "시간",
+        "zh": "时间",
+        "hi": "कब",
+        "es": "Cuándo",
+        "fr": "Quand",
+        "ar": "الوقت",
+        "pt": "Quando",
+        "ru": "Когда",
+        "de": "Wann",
+        "ja": "日時",
+        "tr": "Ne zaman",
+        "vi": "Khi nào",
+        "it": "Quando",
+        "fa": "زمان",
+        "pl": "Kiedy",
+        "uk": "Коли",
+        "nl": "Wanneer",
+        "sv": "När",
+        "cs": "Kdy",
+        "el": "Πότε"
+      },
+      "default": "today"
+    }
+  ]
+}

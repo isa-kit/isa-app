@@ -1,0 +1,203 @@
+{
+  "app": {
+    "appDataTools": true,
+    "title": "Parley",
+    "primaryColor": "#2E7D6B",
+    "theme": "pastel",
+    "liveSeconds": 2,
+    "intro": {
+      "purpose": "A chat that translates as you type — pick your language above, and every message is shown in both languages.",
+      "show": "never",
+      "actions": [
+        {
+          "label": "Show example conversation again",
+          "icon": "visibility",
+          "action": { "fn": "hostCall", "args": { "name": "hideParleyExamples", "hidden": false } }
+        }
+      ]
+    }
+  },
+  "nav": [
+    { "id": "chat", "label": "Chat", "icon": "forum", "screen": "chat" },
+    { "id": "learn", "label": "Learn", "icon": "school", "screen": "learn" }
+  ],
+  "screens": {
+    "chat": {
+      "title": "Parley",
+      "body": {
+        "type": "column",
+        "crossAxis": "stretch",
+        "children": [
+          {
+            "type": "row",
+            "wrap": false,
+            "mainAxis": "spaceBetween",
+            "children": [
+              {
+                "type": "pick",
+                "table": "participants",
+                "rowId": "$playerId",
+                "column": "lang",
+                "dragSelect": true,
+                "label": "Language",
+                "options": [
+                  { "value": "en", "label": "English", "action": { "fn": "hostCall", "args": { "name": "setMyLanguage", "lang": "en" } } },
+                  { "value": "es", "label": "Español", "action": { "fn": "hostCall", "args": { "name": "setMyLanguage", "lang": "es" } } },
+                  { "value": "fr", "label": "Français", "action": { "fn": "hostCall", "args": { "name": "setMyLanguage", "lang": "fr" } } },
+                  { "value": "de", "label": "Deutsch", "action": { "fn": "hostCall", "args": { "name": "setMyLanguage", "lang": "de" } } },
+                  { "value": "pt", "label": "Português", "action": { "fn": "hostCall", "args": { "name": "setMyLanguage", "lang": "pt" } } },
+                  { "value": "it", "label": "Italiano", "action": { "fn": "hostCall", "args": { "name": "setMyLanguage", "lang": "it" } } },
+                  { "value": "zh", "label": "中文", "action": { "fn": "hostCall", "args": { "name": "setMyLanguage", "lang": "zh" } } },
+                  { "value": "ja", "label": "日本語", "action": { "fn": "hostCall", "args": { "name": "setMyLanguage", "lang": "ja" } } },
+                  { "value": "ko", "label": "한국어", "action": { "fn": "hostCall", "args": { "name": "setMyLanguage", "lang": "ko" } } },
+                  { "value": "ar", "label": "العربية", "action": { "fn": "hostCall", "args": { "name": "setMyLanguage", "lang": "ar" } } },
+                  { "value": "hi", "label": "हिन्दी", "action": { "fn": "hostCall", "args": { "name": "setMyLanguage", "lang": "hi" } } }
+                ]
+              },
+              {
+                "type": "button",
+                "label": "Share",
+                "icon": "link",
+                "variant": "text",
+                "dense": true,
+                "action": { "fn": "hostCall", "args": { "name": "copyParleyLink" } }
+              }
+            ]
+          },
+          { "type": "divider" },
+          {
+            "type": "list",
+            "emptyIcon": "forum",
+            "emptyTitle": "No messages yet",
+            "emptyText": "Connect with a code and say hello -- messages show up here.",
+            "table": "messages",
+            "titleColumn": "text",
+            "subtitleColumns": [
+              { "fromSetting": "parleyViewCol", "fallback": "display" }
+            ],
+            "metaColumns": ["sender", "status"],
+            "sortColumn": "sentAt",
+            "sortDir": "asc",
+            "example": {
+              "ids": ["m1", "m2", "m3"],
+              "label": "EXAMPLE CONVERSATION",
+              "hideLabel": "Hide",
+              "chipLabel": "Example",
+              "hiddenFromSetting": "parleyExamplesHidden",
+              "onHide": { "fn": "hostCall", "args": { "name": "hideParleyExamples", "hidden": true } }
+            },
+            "bubbles": {
+              "byColumn": "senderId",
+              "selfValue": "$playerId",
+              "example": {
+                "ids": ["m1", "m2", "m3"],
+                "label": "EXAMPLE CONVERSATION",
+                "hideLabel": "Hide",
+                "chipLabel": "Example",
+                "hiddenFromSetting": "parleyExamplesHidden",
+                "onHide": { "fn": "hostCall", "args": { "name": "hideParleyExamples", "hidden": true } }
+              }
+            },
+            "onTap": { "fn": "hostCall", "args": { "name": "breakdownMessage" } },
+            "swipeActions": [
+              { "label": "Save phrase", "icon": "bookmark_add", "action": { "fn": "hostCall", "args": { "name": "savePhrase" } } }
+            ]
+          },
+          { "type": "divider" },
+          {
+            "type": "composer",
+            "table": "messages",
+            "column": "text",
+            "placeholder": "Type a message…",
+            "sendIcon": "send",
+            "values": {
+              "sender": "$playerId",
+              "senderId": "$playerId",
+              "sentAt": "now",
+              "id": "uuid",
+              "status": "Sending…",
+              "display": "",
+              "original": "",
+              "translated": ""
+            },
+            "action": { "fn": "hostCall", "args": { "name": "translateMessage" } },
+            "helperIcon": "translate",
+            "helperTooltip": "Preview in their language",
+            "helperAction": { "fn": "hostCall", "args": { "name": "composeHelperPreview" } }
+          }
+        ]
+      }
+    },
+    "learn": {
+      "title": "Learn",
+      "body": {
+        "type": "column",
+        "crossAxis": "stretch",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Phrases you've saved from chat, and a quick way to practice them."
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              { "type": "stat", "dense": true, "table": "phrases", "agg": "count", "label": "saved" },
+              { "type": "text", "style": "caption", "padding": 0, "value": " · " },
+              { "type": "stat", "dense": true, "table": "phrases", "agg": "count", "filter": { "column": "due", "value": "1" }, "label": "due now" },
+              { "type": "text", "style": "caption", "padding": 0, "value": " · " },
+              { "type": "stat", "dense": true, "table": "phrases", "agg": "count", "filter": { "column": "reviewedToday", "value": "1" }, "label": "reviewed today" }
+            ]
+          },
+          { "type": "divider" },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Practice — tap a card to reveal the translation, then swipe to say how it went."
+          },
+          {
+            "type": "cards",
+            "table": "phrases",
+            "title": "original",
+            "filter": { "column": "due", "value": "1" },
+            "tapBehavior": "expand",
+            "expandFields": [
+              { "column": "translation", "label": "Translation" }
+            ],
+            "expandPeek": { "call": "practicePeek", "tapCall": "practicePeekOpen" },
+            "sortBy": "dueRank",
+            "sortDir": "asc",
+            "swipeActions": [
+              { "label": "Again", "icon": "refresh", "action": { "fn": "hostCall", "args": { "name": "reviewPhrase", "outcome": "again" } } },
+              { "label": "Got it", "icon": "check_circle", "action": { "fn": "hostCall", "args": { "name": "reviewPhrase", "outcome": "gotIt" } } }
+            ],
+            "emptyIcon": "school",
+            "emptyTitle": "Nothing due to practice",
+            "emptyText": "Open the chat and save a phrase, or come back once a reviewed phrase is due again."
+          },
+          { "type": "divider" },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Phrasebook"
+          },
+          {
+            "type": "list",
+            "table": "phrases",
+            "titleColumn": "original",
+            "subtitleColumns": ["translation"],
+            "metaColumns": ["srcLang", "dstLang", "rootsCount"],
+            "sortColumn": "savedAt",
+            "sortDir": "desc",
+            "emptyIcon": "bookmark",
+            "emptyTitle": "Nothing saved",
+            "emptyText": "Swipe a chat message and tap \"Save phrase\" — or tap it and use \"Save to phrasebook\" — to add it here.",
+            "swipeActions": ["delete"],
+            "onTap": { "fn": "hostCall", "args": { "name": "openWordCard" } }
+          }
+        ]
+      }
+    }
+  }
+}

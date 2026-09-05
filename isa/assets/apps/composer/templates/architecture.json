@@ -1,0 +1,507 @@
+{
+  "board": {
+    "name": "Architecture"
+  },
+  "screens": [
+    {
+      "id": "archit_1_bigpicture",
+      "name": "Big picture",
+      "device": "phone",
+      "x": 0,
+      "y": 0,
+      "folder": "Now"
+    },
+    {
+      "id": "archit_2_whatsnew",
+      "name": "What's new",
+      "device": "phone",
+      "x": 440,
+      "y": 0,
+      "folder": "Story"
+    },
+    {
+      "id": "archit_3_timeline",
+      "name": "Timeline",
+      "device": "phone",
+      "x": 880,
+      "y": 0,
+      "folder": "Story"
+    },
+    {
+      "id": "archit_4_releases",
+      "name": "Releases",
+      "device": "phone",
+      "x": 1320,
+      "y": 0,
+      "folder": "Story"
+    },
+    {
+      "id": "archit_5_sysmap",
+      "name": "System map",
+      "device": "phone",
+      "x": 1760,
+      "y": 0,
+      "folder": "System"
+    },
+    {
+      "id": "archit_6_versions",
+      "name": "Versions & pipeline",
+      "device": "phone",
+      "x": 0,
+      "y": 900,
+      "folder": "System"
+    },
+    {
+      "id": "archit_7_applets",
+      "name": "Applets board",
+      "device": "phone",
+      "x": 440,
+      "y": 900,
+      "folder": "System"
+    },
+    {
+      "id": "archit_8_process",
+      "name": "Process",
+      "device": "phone",
+      "x": 880,
+      "y": 900,
+      "folder": "System"
+    },
+    {
+      "id": "archit_9_houserules",
+      "name": "House rules",
+      "device": "phone",
+      "x": 1320,
+      "y": 900,
+      "folder": "System"
+    },
+    {
+      "id": "archit_10_reference",
+      "name": "Reference",
+      "device": "phone",
+      "x": 1760,
+      "y": 900,
+      "folder": "Reference"
+    }
+  ],
+  "widgets": [
+    {
+      "id": "archit_1_bigpicture_title",
+      "screen": "archit_1_bigpicture",
+      "kind": "titlebar",
+      "label": "Big picture",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "archit_1_bigpicture_w0",
+      "screen": "archit_1_bigpicture",
+      "kind": "text",
+      "label": "How this app ships, one glance: what's in flight, what's live where, and what's serving your devices.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "archit_1_bigpicture_flow",
+      "screen": "archit_1_bigpicture",
+      "kind": "list",
+      "label": "Ship flow: work in flight · dev channel · prod channel · your devices",
+      "region": "body",
+      "order": 1,
+      "items": "[{\"text\": \"Work in flight\", \"icon\": \"build\"}, {\"text\": \"\\u2193 lands after tests pass\"}, {\"text\": \"Dev channel\", \"icon\": \"science\"}, {\"text\": \"\\u2193 promoted by the maintainer\"}, {\"text\": \"Prod channel\", \"icon\": \"public\"}, {\"text\": \"\\u2193 serves\"}, {\"text\": \"Your devices\", \"icon\": \"devices\"}]"
+    },
+    {
+      "id": "archit_1_bigpicture_waiting",
+      "screen": "archit_1_bigpicture",
+      "kind": "list",
+      "label": "Waiting on a decision",
+      "region": "body",
+      "order": 2,
+      "items": "[\"Nothing waiting\"]"
+    },
+    {
+      "id": "archit_1_bigpicture_nav",
+      "screen": "archit_1_bigpicture",
+      "kind": "bottomnav",
+      "label": "Now · Story · System · Reference",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "archit_2_whatsnew_title",
+      "screen": "archit_2_whatsnew",
+      "kind": "titlebar",
+      "label": "What's new",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "archit_2_whatsnew_w0",
+      "screen": "archit_2_whatsnew",
+      "kind": "text",
+      "label": "This week adds up to: popups instead of empty pages, one consistent spacing rhythm across the app, and faster scrolling through long reads.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "archit_2_whatsnew_list",
+      "screen": "archit_2_whatsnew",
+      "kind": "list",
+      "label": "Newest first",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Popups instead of empty pages\", \"One consistent spacing rhythm\", \"Faster scrolling through long reads\"]"
+    },
+    {
+      "id": "archit_2_whatsnew_nav",
+      "screen": "archit_2_whatsnew",
+      "kind": "bottomnav",
+      "label": "Now · Story · System · Reference",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "archit_3_timeline_title",
+      "screen": "archit_3_timeline",
+      "kind": "titlebar",
+      "label": "Timeline",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "archit_3_timeline_w0",
+      "screen": "archit_3_timeline",
+      "kind": "text",
+      "label": "Six weeks of work, by area. Bars: solid green = landed, dashed blue = in flight, amber = waiting on you. Swipe sideways — the HERE line marks today.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "archit_3_timeline_chart",
+      "screen": "archit_3_timeline",
+      "kind": "card",
+      "label": "Timeline chart",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "archit_3_timeline_legend",
+      "screen": "archit_3_timeline",
+      "kind": "list",
+      "label": "Legend",
+      "region": "body",
+      "order": 2,
+      "items": "[\"landed\", \"in flight\", \"waiting on you\"]"
+    },
+    {
+      "id": "archit_3_timeline_nav",
+      "screen": "archit_3_timeline",
+      "kind": "bottomnav",
+      "label": "Now · Story · System · Reference",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "archit_4_releases_title",
+      "screen": "archit_4_releases",
+      "kind": "titlebar",
+      "label": "Releases",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "archit_4_releases_w0",
+      "screen": "archit_4_releases",
+      "kind": "text",
+      "label": "Every prod promote, newest first — date, a plain-words name, and what it added up to.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "archit_4_releases_list",
+      "screen": "archit_4_releases",
+      "kind": "list",
+      "label": "Prod promotes",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Latest release\", \"Previous release\", \"Earlier release\"]"
+    },
+    {
+      "id": "archit_4_releases_nav",
+      "screen": "archit_4_releases",
+      "kind": "bottomnav",
+      "label": "Now · Story · System · Reference",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "archit_5_sysmap_title",
+      "screen": "archit_5_sysmap",
+      "kind": "titlebar",
+      "label": "System map",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "archit_5_sysmap_w0",
+      "screen": "archit_5_sysmap",
+      "kind": "text",
+      "label": "The structural map, top to bottom — every applet is JSON, rendered by the engine, hosted inside the app shell, synced through the server.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "archit_5_sysmap_list",
+      "screen": "archit_5_sysmap",
+      "kind": "list",
+      "label": "Structural parts",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Applet JSON\", \"Rendering engine\", \"App shell\", \"Sync server\"]"
+    },
+    {
+      "id": "archit_5_sysmap_nav",
+      "screen": "archit_5_sysmap",
+      "kind": "bottomnav",
+      "label": "Now · Story · System · Reference",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "archit_6_versions_title",
+      "screen": "archit_6_versions",
+      "kind": "titlebar",
+      "label": "Versions & pipeline",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "archit_6_versions_w0",
+      "screen": "archit_6_versions",
+      "kind": "text",
+      "label": "Web / Android app / macOS app / Engine, each on Dev and Prod — real build stamps, plain freshness.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "archit_6_versions_overview",
+      "screen": "archit_6_versions",
+      "kind": "list",
+      "label": "Dev & prod overview",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Web\", \"Android app\", \"macOS app\", \"Engine\"]"
+    },
+    {
+      "id": "archit_6_versions_pipeline",
+      "screen": "archit_6_versions",
+      "kind": "list",
+      "label": "Processing now / queued next",
+      "region": "body",
+      "order": 2,
+      "items": "[\"Processing now\", \"Queued next\"]"
+    },
+    {
+      "id": "archit_6_versions_nav",
+      "screen": "archit_6_versions",
+      "kind": "bottomnav",
+      "label": "Now · Story · System · Reference",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "archit_7_applets_title",
+      "screen": "archit_7_applets",
+      "kind": "titlebar",
+      "label": "Applets board",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "archit_7_applets_w0",
+      "screen": "archit_7_applets",
+      "kind": "text",
+      "label": "Every installed applet, grouped by theme (most-active groups first) — status, last real work, and which environment carries which version.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "archit_7_applets_list",
+      "screen": "archit_7_applets",
+      "kind": "list",
+      "label": "Applets by theme",
+      "region": "body",
+      "order": 1,
+      "items": "[{\"text\": \"Body & health\", \"children\": [{\"text\": \"in work\"}, {\"text\": \"fresh\"}]}, {\"text\": \"Knowledge\", \"children\": [{\"text\": \"stable\"}]}, {\"text\": \"Places\", \"children\": [{\"text\": \"parked\"}]}]"
+    },
+    {
+      "id": "archit_7_applets_nav",
+      "screen": "archit_7_applets",
+      "kind": "bottomnav",
+      "label": "Now · Story · System · Reference",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "archit_8_process_title",
+      "screen": "archit_8_process",
+      "kind": "titlebar",
+      "label": "Process",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "archit_8_process_w0",
+      "screen": "archit_8_process",
+      "kind": "text",
+      "label": "A change ships — tap a lane to open its phases, tap a row for the full step.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "archit_8_process_list",
+      "screen": "archit_8_process",
+      "kind": "list",
+      "label": "Lanes",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Plan\", \"Build\", \"Gate\", \"Land\", \"Promote\"]"
+    },
+    {
+      "id": "archit_8_process_nav",
+      "screen": "archit_8_process",
+      "kind": "bottomnav",
+      "label": "Now · Story · System · Reference",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "archit_9_houserules_title",
+      "screen": "archit_9_houserules",
+      "kind": "titlebar",
+      "label": "House rules",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "archit_9_houserules_w0",
+      "screen": "archit_9_houserules",
+      "kind": "text",
+      "label": "The user's binding design rules — dated, in their own words, with an honest enforcement chip.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "archit_9_houserules_list",
+      "screen": "archit_9_houserules",
+      "kind": "list",
+      "label": "Rules",
+      "region": "body",
+      "order": 1,
+      "items": "[{\"text\": \"About, not banners\", \"toggle\": true}, {\"text\": \"Dialogs, not sheets\", \"toggle\": true}, {\"text\": \"Tap opens detail\", \"toggle\": true}]"
+    },
+    {
+      "id": "archit_9_houserules_nav",
+      "screen": "archit_9_houserules",
+      "kind": "bottomnav",
+      "label": "Now · Story · System · Reference",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "archit_10_reference_title",
+      "screen": "archit_10_reference",
+      "kind": "titlebar",
+      "label": "Reference",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "archit_10_reference_w0",
+      "screen": "archit_10_reference",
+      "kind": "text",
+      "label": "How this app is built: the Claude workflow, the widget map, the widget reference, and the package stack.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "archit_10_reference_list",
+      "screen": "archit_10_reference",
+      "kind": "list",
+      "label": "Reference pages",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Claude workflow\", \"Widget map\", \"Widget reference\", \"Packages\"]"
+    },
+    {
+      "id": "archit_10_reference_nav",
+      "screen": "archit_10_reference",
+      "kind": "bottomnav",
+      "label": "Now · Story · System · Reference",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "archit_flow_now_story",
+      "fromWidget": "archit_1_bigpicture_nav",
+      "toScreen": "archit_2_whatsnew",
+      "transition": "push"
+    },
+    {
+      "id": "archit_flow_story_system",
+      "fromWidget": "archit_4_releases_nav",
+      "toScreen": "archit_5_sysmap",
+      "transition": "push"
+    },
+    {
+      "id": "archit_flow_system_reference",
+      "fromWidget": "archit_9_houserules_nav",
+      "toScreen": "archit_10_reference",
+      "transition": "push"
+    },
+    {
+      "id": "archit_flow_reference_now",
+      "fromWidget": "archit_10_reference_nav",
+      "toScreen": "archit_1_bigpicture",
+      "transition": "push"
+    },
+    {
+      "id": "archit_flow_whatsnew_timeline",
+      "fromWidget": "archit_2_whatsnew_nav",
+      "toScreen": "archit_3_timeline",
+      "transition": "push"
+    },
+    {
+      "id": "archit_flow_timeline_releases",
+      "fromWidget": "archit_3_timeline_nav",
+      "toScreen": "archit_4_releases",
+      "transition": "push"
+    },
+    {
+      "id": "archit_flow_sysmap_versions",
+      "fromWidget": "archit_5_sysmap_nav",
+      "toScreen": "archit_6_versions",
+      "transition": "push"
+    },
+    {
+      "id": "archit_flow_versions_applets",
+      "fromWidget": "archit_6_versions_nav",
+      "toScreen": "archit_7_applets",
+      "transition": "push"
+    },
+    {
+      "id": "archit_flow_applets_process",
+      "fromWidget": "archit_7_applets_nav",
+      "toScreen": "archit_8_process",
+      "transition": "push"
+    },
+    {
+      "id": "archit_flow_process_houserules",
+      "fromWidget": "archit_8_process_nav",
+      "toScreen": "archit_9_houserules",
+      "transition": "push"
+    }
+  ]
+}

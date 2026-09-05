@@ -1,0 +1,111 @@
+{
+  "app": { "title": "Bike Share", "primaryColor": "#00897B",
+    "theme": "material", "appDataTools": true },
+  "nav": [
+    { "id": "map", "label": "Map", "icon": "map", "screen": "map" },
+    { "id": "stations", "label": "Stations", "icon": "list", "screen": "stations" },
+    { "id": "data", "label": "Data", "icon": "table_rows", "screen": "data" }
+  ],
+  "screens": {
+    "map": {
+      "title": "Boston bike-share",
+      "body": {
+        "type": "column",
+        "children": [
+          { "type": "text", "style": "caption", "value": "Bike-share stations around Boston. Tap a pin or a row below to open a station. In Stations, tap a station and press \"Show on map\" to open it here, centered on its spot. Tap \"Show all stations\" to zoom back out. Pull fresh data anytime." },
+          {
+            "type": "button",
+            "label": "Refresh from network",
+            "icon": "refresh",
+            "action": { "fn": "refreshTable", "args": { "table": "stations" } }
+          },
+          {
+            "type": "button",
+            "label": "Show all stations",
+            "icon": "public",
+            "action": { "fn": "clearFocus", "args": { "table": "stations" } }
+          },
+          {
+            "type": "glmap",
+            "table": "stations",
+            "latColumn": "lat",
+            "lonColumn": "lon",
+            "labelColumn": "name",
+            "markerIcon": "bike",
+            "fillPhone": true,
+            "action": { "fn": "editRow" }
+          }
+        ]
+      }
+    },
+    "stations": {
+      "title": "Stations",
+      "body": {
+        "type": "column",
+        "children": [
+          { "type": "text", "style": "caption", "value": "Every station, largest first by dock capacity. Tap one to view or edit its details." },
+          {
+            "type": "button",
+            "label": "Refresh from network",
+            "icon": "refresh",
+            "action": { "fn": "refreshTable", "args": { "table": "stations" } }
+          },
+          {
+            "type": "cards",
+            "table": "stations",
+            "sort": { "column": "capacity", "dir": "desc" },
+            "title": "name",
+            "subtitle": "station_id",
+            "tags": [ { "column": "capacity" } ],
+            "expandable": true,
+            "expandFields": [
+              { "column": "capacity", "label": "Capacity" },
+              { "column": "lat", "label": "Latitude" },
+              { "column": "lon", "label": "Longitude" },
+              { "column": "station_id", "label": "Station ID" }
+            ],
+            "open": "Open station",
+            "emptyIcon": "pedal_bike",
+            "emptyTitle": "No stations loaded",
+            "emptyText": "Tap Refresh from network to pull the latest bike-share stations.",
+            "action": { "fn": "editRow" },
+            "openActions": [
+              {
+                "label": "Show on map",
+                "icon": "map",
+                "action": {
+                  "chain": [
+                    { "fn": "focusRow" },
+                    { "fn": "goto", "args": { "screen": "map" } }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "data": {
+      "title": "Station data",
+      "body": {
+        "type": "column",
+        "children": [
+          { "type": "text", "style": "caption", "value": "The raw station feed as a grid. Scroll both ways; tap the row handle to edit." },
+          {
+            "type": "table",
+            "table": "stations",
+            "columns": ["name", "capacity", "lat", "lon", "station_id"],
+            "height": "fill",
+            "action": { "fn": "editRow" }
+          },
+          {
+            "type": "button",
+            "label": "Refresh from network",
+            "icon": "refresh",
+            "action": { "fn": "refreshTable", "args": { "table": "stations" } }
+          }
+        ]
+      }
+    }
+  }
+}

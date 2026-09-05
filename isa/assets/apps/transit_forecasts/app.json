@@ -1,0 +1,13 @@
+{
+  "id": "transit_forecasts",
+  "name": "Transit forecasts",
+  "category": "Maps & cities",
+  "description": "Transit forecasts by city, with cross-filtering and fiscal maps.",
+  "icon": "insights",
+  "color": "#00695C",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_transit_forecasts"
+  },
+  "seedVersion": "2026-06-23.1.l10n-int-0903"
+}

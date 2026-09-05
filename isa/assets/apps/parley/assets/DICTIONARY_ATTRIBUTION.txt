@@ -1,0 +1,1 @@
+Korean dictionary content is derived from Wiktionary (en.wiktionary.org), extracted via kaikki.org/Wiktextract, and is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0) and the GNU Free Documentation License (GFDL). Word-frequency ranking derived from hermitdave/FrequencyWords (OpenSubtitles-2018), licensed CC BY-SA 4.0.

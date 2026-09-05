@@ -1,0 +1,328 @@
+{
+  "board": {
+    "name": "Korea travel access"
+  },
+  "screens": [
+    {
+      "id": "kt_map",
+      "name": "Map",
+      "device": "phone",
+      "x": 0,
+      "y": 0,
+      "folder": "Maps"
+    },
+    {
+      "id": "kt_reach",
+      "name": "Reach",
+      "device": "phone",
+      "x": 440,
+      "y": 0,
+      "folder": "Maps"
+    },
+    {
+      "id": "kt_stations",
+      "name": "Stations",
+      "device": "phone",
+      "x": 880,
+      "y": 0,
+      "folder": "Maps"
+    },
+    {
+      "id": "kt_best_spots",
+      "name": "Best spots",
+      "device": "phone",
+      "x": 1320,
+      "y": 0,
+      "folder": "Maps"
+    },
+    {
+      "id": "kt_timeline",
+      "name": "Timeline",
+      "device": "phone",
+      "x": 0,
+      "y": 900,
+      "folder": "Events"
+    },
+    {
+      "id": "kt_kr_stops",
+      "name": "Korea",
+      "device": "phone",
+      "x": 440,
+      "y": 900,
+      "folder": "Data"
+    },
+    {
+      "id": "kt_about",
+      "name": "About",
+      "device": "phone",
+      "x": 880,
+      "y": 900,
+      "folder": "Data"
+    }
+  ],
+  "widgets": [
+    {
+      "id": "kt_map_title",
+      "screen": "kt_map",
+      "kind": "titlebar",
+      "label": "Seoul travel access",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "kt_map_card",
+      "screen": "kt_map",
+      "kind": "card",
+      "label": "Map \u2014 access-ease choropleth + subway network layers",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "kt_map_nav",
+      "screen": "kt_map",
+      "kind": "bottomnav",
+      "label": "Map \u00b7 Reach \u00b7 Stations \u00b7 Best spots \u00b7 Timeline \u00b7 Korea \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "kt_reach_title",
+      "screen": "kt_reach",
+      "kind": "titlebar",
+      "label": "Reach explorer",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "kt_reach_budget",
+      "screen": "kt_reach",
+      "kind": "dropdown",
+      "label": "Travel-time budget",
+      "region": "top",
+      "order": 1,
+      "items": "[\"10 min\", \"20 min\", \"30 min\", \"45 min\", \"60 min\", \"90 min\"]"
+    },
+    {
+      "id": "kt_reach_card",
+      "screen": "kt_reach",
+      "kind": "card",
+      "label": "Reach map \u2014 travel-time bands from a picked point",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "kt_reach_nav",
+      "screen": "kt_reach",
+      "kind": "bottomnav",
+      "label": "Map \u00b7 Reach \u00b7 Stations \u00b7 Best spots \u00b7 Timeline \u00b7 Korea \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "kt_stations_title",
+      "screen": "kt_stations",
+      "kind": "titlebar",
+      "label": "Stations",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "kt_stations_card",
+      "screen": "kt_stations",
+      "kind": "card",
+      "label": "Stations map \u2014 subway stop markers + walk-access rings",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "kt_stations_list",
+      "screen": "kt_stations",
+      "kind": "list",
+      "label": "Nearby stations",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Seoul Station\", \"Express Bus Terminal\", \"Yeongdeungpo\", \"Dongdaemun History & Culture Park Station (DDP)\"]"
+    },
+    {
+      "id": "kt_stations_nav",
+      "screen": "kt_stations",
+      "kind": "bottomnav",
+      "label": "Map \u00b7 Reach \u00b7 Stations \u00b7 Best spots \u00b7 Timeline \u00b7 Korea \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "kt_best_spots_title",
+      "screen": "kt_best_spots",
+      "kind": "titlebar",
+      "label": "Best spots",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "kt_best_spots_card",
+      "screen": "kt_best_spots",
+      "kind": "card",
+      "label": "Best spots map \u2014 recommended-area layer",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "kt_best_spots_list",
+      "screen": "kt_best_spots",
+      "kind": "list",
+      "label": "Top-ranked districts",
+      "region": "body",
+      "order": 1,
+      "items": "[\"1. Jung-gu\", \"2. Yongsan-gu\", \"3. Jongno-gu\", \"4. Seocho-gu\"]"
+    },
+    {
+      "id": "kt_best_spots_nav",
+      "screen": "kt_best_spots",
+      "kind": "bottomnav",
+      "label": "Map \u00b7 Reach \u00b7 Stations \u00b7 Best spots \u00b7 Timeline \u00b7 Korea \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "kt_timeline_title",
+      "screen": "kt_timeline",
+      "kind": "titlebar",
+      "label": "Events timeline",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "kt_timeline_filters",
+      "screen": "kt_timeline",
+      "kind": "buttonrow",
+      "label": "All \u00b7 Music \u00b7 Culture \u00b7 Food \u00b7 Film \u00b7 Fireworks \u00b7 Sport \u00b7 Seasonal \u00b7 Other",
+      "region": "top",
+      "order": 1,
+      "items": "[\"All\", \"Music\", \"Culture\", \"Food\", \"Film\", \"Fireworks\", \"Sport\", \"Seasonal\", \"Other\"]"
+    },
+    {
+      "id": "kt_timeline_list",
+      "screen": "kt_timeline",
+      "kind": "list",
+      "label": "Timeline (event segments)",
+      "region": "body",
+      "order": 0,
+      "items": "[{\"text\": \"Semiwon Lotus Flower Festival\", \"icon\": \"local_florist\"}, {\"text\": \"Boryeong Mud Festival\", \"icon\": \"water_drop\"}, {\"text\": \"Seoul Han River Summer Festival\", \"icon\": \"waves\"}, {\"text\": \"Seoul Fringe Festival\", \"icon\": \"theater_comedy\"}]"
+    },
+    {
+      "id": "kt_timeline_nav",
+      "screen": "kt_timeline",
+      "kind": "bottomnav",
+      "label": "Map \u00b7 Reach \u00b7 Stations \u00b7 Best spots \u00b7 Timeline \u00b7 Korea \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "kt_kr_stops_title",
+      "screen": "kt_kr_stops",
+      "kind": "titlebar",
+      "label": "Korea",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "kt_kr_stops_card",
+      "screen": "kt_kr_stops",
+      "kind": "card",
+      "label": "National map \u2014 KR station coverage",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "kt_kr_stops_nav",
+      "screen": "kt_kr_stops",
+      "kind": "bottomnav",
+      "label": "Map \u00b7 Reach \u00b7 Stations \u00b7 Best spots \u00b7 Timeline \u00b7 Korea \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "kt_about_title",
+      "screen": "kt_about",
+      "kind": "titlebar",
+      "label": "About & data",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "kt_about_text1",
+      "screen": "kt_about",
+      "kind": "text",
+      "label": "Estimates methodology & sources",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "kt_about_text2",
+      "screen": "kt_about",
+      "kind": "text",
+      "label": "Data provenance & licensing",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "kt_about_nav",
+      "screen": "kt_about",
+      "kind": "bottomnav",
+      "label": "Map \u00b7 Reach \u00b7 Stations \u00b7 Best spots \u00b7 Timeline \u00b7 Korea \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "kt_flow_0",
+      "fromWidget": "kt_map_nav",
+      "toScreen": "kt_reach",
+      "transition": "push"
+    },
+    {
+      "id": "kt_flow_1",
+      "fromWidget": "kt_reach_nav",
+      "toScreen": "kt_stations",
+      "transition": "push"
+    },
+    {
+      "id": "kt_flow_2",
+      "fromWidget": "kt_stations_nav",
+      "toScreen": "kt_best_spots",
+      "transition": "push"
+    },
+    {
+      "id": "kt_flow_3",
+      "fromWidget": "kt_best_spots_nav",
+      "toScreen": "kt_timeline",
+      "transition": "push"
+    },
+    {
+      "id": "kt_flow_4",
+      "fromWidget": "kt_timeline_nav",
+      "toScreen": "kt_kr_stops",
+      "transition": "push"
+    },
+    {
+      "id": "kt_flow_5",
+      "fromWidget": "kt_kr_stops_nav",
+      "toScreen": "kt_about",
+      "transition": "push"
+    },
+    {
+      "id": "kt_flow_6",
+      "fromWidget": "kt_about_nav",
+      "toScreen": "kt_map",
+      "transition": "push"
+    },
+    {
+      "id": "kt_flow_7",
+      "fromWidget": "kt_map_card",
+      "toScreen": "kt_about",
+      "transition": "push"
+    }
+  ]
+}

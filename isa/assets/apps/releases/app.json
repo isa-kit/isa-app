@@ -1,0 +1,13 @@
+{
+  "id": "releases",
+  "name": "Releases",
+  "category": "Developer",
+  "description": "What is live where: the production site, the dev site and both app downloads, plus which applets each site ships.",
+  "icon": "rocket_launch",
+  "color": "#0F6E56",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_releases"
+  },
+  "seedVersion": "2026-08-29.statusdash.l10n-int-0903"
+}

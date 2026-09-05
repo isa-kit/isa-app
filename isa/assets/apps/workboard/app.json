@@ -1,0 +1,12 @@
+{
+  "id": "workboard",
+  "name": "Workboard",
+  "category": "Developer",
+  "description": "Tasks, plan, people, a table view and a worklog.",
+  "icon": "dashboard",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_workboard"
+  },
+  "seedVersion": "2026-06-15.roadmap3.l10n-int-0903"
+}

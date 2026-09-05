@@ -1,0 +1,34 @@
+{
+  "board": {
+    "name": "Suite"
+  },
+  "screens": [
+    {
+      "id": "suite_0_files",
+      "name": "Suite",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "suite_0_files_title",
+      "screen": "suite_0_files",
+      "kind": "titlebar",
+      "label": "Suite",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "suite_0_files_w0",
+      "screen": "suite_0_files",
+      "kind": "list",
+      "label": "Files",
+      "region": "body",
+      "order": 0,
+      "items": "[\"Project brief.docx\", \"Q3 budget.xlsx\", \"Roadmap deck.pptx\"]"
+    }
+  ],
+  "flows": []
+}

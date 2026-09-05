@@ -1,0 +1,19 @@
+{
+  "id": "atlas",
+  "name": "Atlas — place analysis",
+  "category": "Analytics",
+  "description": "Place analysis: map layers, model runs and results for a location.",
+  "icon": "travel_explore",
+  "color": "#1F5C48",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_atlas"
+  },
+  "seedVersion": "2026-07-14.1-provenance-labels.l10n-int-0903",
+  "meta": {
+    "tileEndpoint": "https://167.233.64.97/tiles/atlas/{z}/{x}/{y}.mvt",
+    "tileEndpointNote": "DEV-LOCAL tiles (pmtiles serve on this machine). Swap point for the hosted endpoint: the map screen's glmap tiles.urls entry in ui.json — one URL, one line. Keep this meta in sync when it moves.",
+    "modelEndpoint": "https://167.233.64.97/model",
+    "modelEndpointNote": "transit4 model service: edge proxy /model/* → backend :8080 over the tailnet. GET /health, POST /scenario {year}. Swap points: the two URLs in the Run screen's chains (ui.json) + this meta. As of 2026-07-02 the route is 403-locked at the edge (token lockdown); the applet ships wired and degrades honestly until the edge authorizes callers. Web builds additionally need CORS on /model/*."
+  }
+}

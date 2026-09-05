@@ -1,0 +1,199 @@
+{
+  "board": {
+    "name": "Games"
+  },
+  "screens": [
+    {
+      "id": "games_0_home",
+      "name": "Games",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "games_1_runner",
+      "name": "Neon Runner",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "games_2_chess",
+      "name": "Chess",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    },
+    {
+      "id": "games_3_skirmish",
+      "name": "Skirmish",
+      "device": "phone",
+      "x": 1320,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "games_0_home_title",
+      "screen": "games_0_home",
+      "kind": "titlebar",
+      "label": "Games",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "games_0_home_w0",
+      "screen": "games_0_home",
+      "kind": "text",
+      "label": "Pick a game. Share the room from below to play live with friends.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "games_0_home_w1",
+      "screen": "games_0_home",
+      "kind": "text",
+      "label": "console",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "games_0_home_w2",
+      "screen": "games_0_home",
+      "kind": "buttonrow",
+      "label": "Share \u2014 live room",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "games_0_home_nav",
+      "screen": "games_0_home",
+      "kind": "bottomnav",
+      "label": "Home \u00b7 Runner \u00b7 Chess \u00b7 Skirmish",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "games_1_runner_title",
+      "screen": "games_1_runner",
+      "kind": "titlebar",
+      "label": "Neon Runner",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "games_1_runner_w0",
+      "screen": "games_1_runner",
+      "kind": "text",
+      "label": "sidescroller",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "games_1_runner_nav",
+      "screen": "games_1_runner",
+      "kind": "bottomnav",
+      "label": "Home \u00b7 Runner \u00b7 Chess \u00b7 Skirmish",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "games_2_chess_title",
+      "screen": "games_2_chess",
+      "kind": "titlebar",
+      "label": "Chess",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "games_2_chess_w0",
+      "screen": "games_2_chess",
+      "kind": "text",
+      "label": "Full-rules chess: tap a piece, then a highlighted square.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "games_2_chess_w1",
+      "screen": "games_2_chess",
+      "kind": "text",
+      "label": "chessboard",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "games_2_chess_nav",
+      "screen": "games_2_chess",
+      "kind": "bottomnav",
+      "label": "Home \u00b7 Runner \u00b7 Chess \u00b7 Skirmish",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "games_3_skirmish_title",
+      "screen": "games_3_skirmish",
+      "kind": "titlebar",
+      "label": "Skirmish",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "games_3_skirmish_w0",
+      "screen": "games_3_skirmish",
+      "kind": "text",
+      "label": "A tiny turn-based wargame, tabletop style.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "games_3_skirmish_w1",
+      "screen": "games_3_skirmish",
+      "kind": "card",
+      "label": "Turn",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "games_3_skirmish_w2",
+      "screen": "games_3_skirmish",
+      "kind": "card",
+      "label": "Blue gold",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "games_3_skirmish_nav",
+      "screen": "games_3_skirmish",
+      "kind": "bottomnav",
+      "label": "Home \u00b7 Runner \u00b7 Chess \u00b7 Skirmish",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "games_flow_0",
+      "fromWidget": "games_0_home_nav",
+      "toScreen": "games_1_runner",
+      "transition": "push"
+    },
+    {
+      "id": "games_flow_1",
+      "fromWidget": "games_1_runner_nav",
+      "toScreen": "games_2_chess",
+      "transition": "push"
+    },
+    {
+      "id": "games_flow_2",
+      "fromWidget": "games_2_chess_nav",
+      "toScreen": "games_3_skirmish",
+      "transition": "push"
+    },
+    {
+      "id": "games_flow_3",
+      "fromWidget": "games_3_skirmish_nav",
+      "toScreen": "games_0_home",
+      "transition": "push"
+    }
+  ]
+}

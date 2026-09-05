@@ -1,0 +1,9 @@
+{
+  "tables": [
+    {
+      "name": "colleges",
+      "label": "Colleges",
+      "icon": "school"
+    }
+  ]
+}

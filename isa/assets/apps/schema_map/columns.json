@@ -1,0 +1,15 @@
+{
+  "nodes": [
+    { "name": "label", "type": "text",   "label": "Table", "required": true },
+    { "name": "x",     "type": "number", "label": "X" },
+    { "name": "y",     "type": "number", "label": "Y" }
+  ],
+  "edges": [
+    { "name": "from",  "type": "ref",  "label": "From", "refTable": "nodes" },
+    { "name": "to",    "type": "ref",  "label": "To",   "refTable": "nodes" },
+    { "name": "label", "type": "text", "label": "Relationship" }
+  ],
+  "sketch": [
+    { "name": "strokes", "type": "text", "label": "Strokes" }
+  ]
+}

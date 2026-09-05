@@ -1,0 +1,13 @@
+{
+  "id": "tabletop",
+  "name": "Tabletop",
+  "category": "Games",
+  "description": "A shared table for playing board games, with house rules.",
+  "icon": "casino",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_tabletop"
+  },
+  "seedVersion": "2026-06-20.inline.l10n-int-0903",
+  "seedContent": "initial-only"
+}

@@ -1,0 +1,117 @@
+{
+  "board": {
+    "name": "Releases"
+  },
+  "screens": [
+    {
+      "id": "releas_0_status",
+      "name": "Releases",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "releas_1_about",
+      "name": "About",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "releas_0_status_title",
+      "screen": "releas_0_status",
+      "kind": "titlebar",
+      "label": "Releases",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "releas_0_status_w0",
+      "screen": "releas_0_status",
+      "kind": "text",
+      "label": "What each site is serving",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "releas_0_status_w1",
+      "screen": "releas_0_status",
+      "kind": "buttonrow",
+      "label": "Refresh",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "releas_0_status_w2",
+      "screen": "releas_0_status",
+      "kind": "text",
+      "label": "Both cards stay empty until you tap Refresh \u2014",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "releas_0_status_nav",
+      "screen": "releas_0_status",
+      "kind": "bottomnav",
+      "label": "Status \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "releas_1_about_title",
+      "screen": "releas_1_about",
+      "kind": "titlebar",
+      "label": "About",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "releas_1_about_w0",
+      "screen": "releas_1_about",
+      "kind": "text",
+      "label": "Read-only release dashboard",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "releas_1_about_w1",
+      "screen": "releas_1_about",
+      "kind": "text",
+      "label": "Where the numbers come from",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "releas_1_about_w2",
+      "screen": "releas_1_about",
+      "kind": "text",
+      "label": "Production reads https://devisant.com/isa/build_info.json \u2014",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "releas_1_about_nav",
+      "screen": "releas_1_about",
+      "kind": "bottomnav",
+      "label": "Status \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "releas_flow_0",
+      "fromWidget": "releas_0_status_nav",
+      "toScreen": "releas_1_about",
+      "transition": "push"
+    },
+    {
+      "id": "releas_flow_1",
+      "fromWidget": "releas_1_about_nav",
+      "toScreen": "releas_0_status",
+      "transition": "push"
+    }
+  ]
+}

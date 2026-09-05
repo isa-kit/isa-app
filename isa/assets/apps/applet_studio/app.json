@@ -1,0 +1,13 @@
+{
+  "id": "applet_studio",
+  "name": "Applet Studio",
+  "category": "Developer",
+  "description": "Plan, check off and design applets before you build them.",
+  "icon": "construction",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_studio"
+  },
+  "seedVersion": "2026-06-12.1.l10n-int-0903",
+  "seedContent": "initial-only"
+}

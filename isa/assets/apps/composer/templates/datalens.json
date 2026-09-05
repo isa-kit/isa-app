@@ -1,0 +1,208 @@
+{
+  "board": {
+    "name": "Datalab"
+  },
+  "screens": [
+    {
+      "id": "datale_0_report",
+      "name": "Databoard \u2014 data controls beside your panels",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "datale_1_controls",
+      "name": "Controls \u2014 build your report",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "datale_2_data",
+      "name": "Data \u2014 read it in, look at it",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    },
+    {
+      "id": "datale_3_about",
+      "name": "About Datalab",
+      "device": "phone",
+      "x": 1320,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "datale_0_report_title",
+      "screen": "datale_0_report",
+      "kind": "titlebar",
+      "label": "Databoard \u2014 data controls beside your panels",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "datale_0_report_w0",
+      "screen": "datale_0_report",
+      "kind": "settings",
+      "label": "Data controls",
+      "region": "body",
+      "order": 0,
+      "items": "[{\"text\": \"Notifications\", \"toggle\": true}, {\"text\": \"Sync automatically\", \"toggle\": true}, {\"text\": \"Show details\", \"toggle\": false}]"
+    },
+    {
+      "id": "datale_0_report_nav",
+      "screen": "datale_0_report",
+      "kind": "bottomnav",
+      "label": "Databoard \u00b7 Controls \u00b7 Data \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "datale_1_controls_title",
+      "screen": "datale_1_controls",
+      "kind": "titlebar",
+      "label": "Controls \u2014 build your report",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "datale_1_controls_w0",
+      "screen": "datale_1_controls",
+      "kind": "text",
+      "label": "Build the databoard: each panel is a row here \u2014",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "datale_1_controls_w1",
+      "screen": "datale_1_controls",
+      "kind": "buttonrow",
+      "label": "Add panel",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "datale_1_controls_w2",
+      "screen": "datale_1_controls",
+      "kind": "buttonrow",
+      "label": "Export report (HTML)",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "datale_1_controls_nav",
+      "screen": "datale_1_controls",
+      "kind": "bottomnav",
+      "label": "Databoard \u00b7 Controls \u00b7 Data \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "datale_2_data_title",
+      "screen": "datale_2_data",
+      "kind": "titlebar",
+      "label": "Data \u2014 read it in, look at it",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "datale_2_data_w0",
+      "screen": "datale_2_data",
+      "kind": "text",
+      "label": "The dataset behind every view: one row per zone \u00d7 scenario.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "datale_2_data_w1",
+      "screen": "datale_2_data",
+      "kind": "buttonrow",
+      "label": "Import CSV (merge)",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "datale_2_data_w2",
+      "screen": "datale_2_data",
+      "kind": "buttonrow",
+      "label": "Import CSV (replace)",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "datale_2_data_nav",
+      "screen": "datale_2_data",
+      "kind": "bottomnav",
+      "label": "Databoard \u00b7 Controls \u00b7 Data \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "datale_3_about_title",
+      "screen": "datale_3_about",
+      "kind": "titlebar",
+      "label": "About Datalab",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "datale_3_about_w0",
+      "screen": "datale_3_about",
+      "kind": "text",
+      "label": "Read data. Build the report. Take it with you.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "datale_3_about_w1",
+      "screen": "datale_3_about",
+      "kind": "text",
+      "label": "Datalab is a report builder over one dataset \u2014",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "datale_3_about_w2",
+      "screen": "datale_3_about",
+      "kind": "text",
+      "label": "Filters are type-checked against their columns and can be saved as named slices.",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "datale_3_about_nav",
+      "screen": "datale_3_about",
+      "kind": "bottomnav",
+      "label": "Databoard \u00b7 Controls \u00b7 Data \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "datale_flow_0",
+      "fromWidget": "datale_0_report_nav",
+      "toScreen": "datale_1_controls",
+      "transition": "push"
+    },
+    {
+      "id": "datale_flow_1",
+      "fromWidget": "datale_1_controls_nav",
+      "toScreen": "datale_2_data",
+      "transition": "push"
+    },
+    {
+      "id": "datale_flow_2",
+      "fromWidget": "datale_2_data_nav",
+      "toScreen": "datale_3_about",
+      "transition": "push"
+    },
+    {
+      "id": "datale_flow_3",
+      "fromWidget": "datale_3_about_nav",
+      "toScreen": "datale_0_report",
+      "transition": "push"
+    }
+  ]
+}

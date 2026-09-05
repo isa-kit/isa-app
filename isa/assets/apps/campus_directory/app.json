@@ -1,0 +1,12 @@
+{
+  "id": "campus_directory",
+  "name": "Campus directory & map",
+  "category": "Maps & cities",
+  "description": "Campus maps and building directories for 14 US universities.",
+  "icon": "school",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_campus_directory"
+  },
+  "seedVersion": "2026-07-03.3-typeahead.l10n-int-0903"
+}

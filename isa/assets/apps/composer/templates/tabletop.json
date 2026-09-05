@@ -1,0 +1,154 @@
+{
+  "board": {
+    "name": "Tabletop"
+  },
+  "screens": [
+    {
+      "id": "tablet_0_table",
+      "name": "Tabletop",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "tablet_1_rules",
+      "name": "House rules",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "tablet_2_how",
+      "name": "How to play",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "tablet_0_table_title",
+      "screen": "tablet_0_table",
+      "kind": "titlebar",
+      "label": "Tabletop",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "tablet_0_table_w0",
+      "screen": "tablet_0_table",
+      "kind": "buttonrow",
+      "label": "Share table",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "tablet_0_table_w1",
+      "screen": "tablet_0_table",
+      "kind": "buttonrow",
+      "label": "New token",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "tablet_0_table_w2",
+      "screen": "tablet_0_table",
+      "kind": "text",
+      "label": "tabletop",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "tablet_0_table_nav",
+      "screen": "tablet_0_table",
+      "kind": "bottomnav",
+      "label": "Table \u00b7 House rules \u00b7 How to",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "tablet_1_rules_title",
+      "screen": "tablet_1_rules",
+      "kind": "titlebar",
+      "label": "House rules",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "tablet_1_rules_w0",
+      "screen": "tablet_1_rules",
+      "kind": "text",
+      "label": "Notes",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "tablet_1_rules_nav",
+      "screen": "tablet_1_rules",
+      "kind": "bottomnav",
+      "label": "Table \u00b7 House rules \u00b7 How to",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "tablet_2_how_title",
+      "screen": "tablet_2_how",
+      "kind": "titlebar",
+      "label": "How to play",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "tablet_2_how_w0",
+      "screen": "tablet_2_how",
+      "kind": "text",
+      "label": "It's just a table.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "tablet_2_how_w1",
+      "screen": "tablet_2_how",
+      "kind": "text",
+      "label": "There are no built-in rules.",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "tablet_2_how_w2",
+      "screen": "tablet_2_how",
+      "kind": "text",
+      "label": "Dealing",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "tablet_2_how_nav",
+      "screen": "tablet_2_how",
+      "kind": "bottomnav",
+      "label": "Table \u00b7 House rules \u00b7 How to",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "tablet_flow_0",
+      "fromWidget": "tablet_0_table_nav",
+      "toScreen": "tablet_1_rules",
+      "transition": "push"
+    },
+    {
+      "id": "tablet_flow_1",
+      "fromWidget": "tablet_1_rules_nav",
+      "toScreen": "tablet_2_how",
+      "transition": "push"
+    },
+    {
+      "id": "tablet_flow_2",
+      "fromWidget": "tablet_2_how_nav",
+      "toScreen": "tablet_0_table",
+      "transition": "push"
+    }
+  ]
+}

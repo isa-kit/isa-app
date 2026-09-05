@@ -1,0 +1,16 @@
+{
+  "tables": [
+    {
+      "name": "cities",
+      "label": "Cities",
+      "icon": "location_city",
+      "description": "One row per modeled city — the single seeded feed for both the ranking cards and the embedded map. Append rows here to add more cities; nothing else needs to change."
+    },
+    {
+      "name": "citymode",
+      "label": "City x mode",
+      "icon": "alt_route",
+      "description": "One row per (city, mode) — mode in {all,bus,tram,subway,rail}. `all` rows carry the whole-network job-access ranking (transit_job_access_percapita etc, same numbers as the `cities` table); per-mode rows carry GTFS-derived NETWORK COVERAGE + FREQUENCY stats only (stops/routes/network_km/span_hrs/trips_per_hr_peak/median_headway_min/area_km2/stops_per_km2) — never a per-mode access/jobs number. Drives both the Ranking cards and the inline map via the board-level mode filter."
+    }
+  ]
+}

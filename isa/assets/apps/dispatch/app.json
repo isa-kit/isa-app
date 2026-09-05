@@ -1,0 +1,24 @@
+{
+  "id": "dispatch",
+  "name": "Dispatch",
+  "category": "Productivity",
+  "description": "Project work board: inbox, priorities, plan, spec, people and tags.",
+  "icon": "forum",
+  "color": "#3AA8C1",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_dispatch"
+  },
+  "seedVersion": "2026-09-03.aidev-dash.l10n-int-0903",
+  "seedContent": "initial-only",
+  "changeJournal": [
+    "entries",
+    "relations"
+  ],
+  "uiVariants": {
+    "2": {
+      "file": "ui.v2.json",
+      "title": "New"
+    }
+  }
+}

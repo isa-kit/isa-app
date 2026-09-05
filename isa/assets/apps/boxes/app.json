@@ -1,0 +1,13 @@
+{
+  "id": "boxes",
+  "name": "Boxes",
+  "category": "Life",
+  "description": "Track what you packed in which box, and find it again.",
+  "icon": "inventory_2",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_boxes"
+  },
+  "seedVersion": "2026-07-27.4.l10n-int-0903",
+  "seedContent": "initial-only"
+}

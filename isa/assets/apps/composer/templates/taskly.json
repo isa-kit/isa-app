@@ -1,0 +1,409 @@
+{
+  "board": {
+    "name": "Taskly"
+  },
+  "screens": [
+    {
+      "id": "t_today",
+      "name": "Today",
+      "device": "phone",
+      "x": 0,
+      "y": 0,
+      "folder": "Plan"
+    },
+    {
+      "id": "t_upcoming",
+      "name": "Upcoming",
+      "device": "phone",
+      "x": 440,
+      "y": 0,
+      "folder": "Plan"
+    },
+    {
+      "id": "t_calendar",
+      "name": "Calendar",
+      "device": "phone",
+      "x": 880,
+      "y": 0,
+      "folder": "Plan"
+    },
+    {
+      "id": "t_map",
+      "name": "Map",
+      "device": "phone",
+      "x": 1320,
+      "y": 0,
+      "folder": "Plan"
+    },
+    {
+      "id": "t_notes",
+      "name": "Notes",
+      "device": "phone",
+      "x": 0,
+      "y": 900,
+      "folder": "Collaborate"
+    },
+    {
+      "id": "t_boards",
+      "name": "Boards",
+      "device": "phone",
+      "x": 440,
+      "y": 900,
+      "folder": "Collaborate"
+    },
+    {
+      "id": "t_people",
+      "name": "People",
+      "device": "phone",
+      "x": 880,
+      "y": 900,
+      "folder": "Collaborate"
+    },
+    {
+      "id": "t_activity",
+      "name": "Activity",
+      "device": "phone",
+      "x": 1320,
+      "y": 900,
+      "folder": "Collaborate"
+    },
+    {
+      "id": "t_settings",
+      "name": "Settings",
+      "device": "phone",
+      "x": 0,
+      "y": 1800,
+      "folder": ""
+    }
+  ],
+  "widgets": [
+    {
+      "id": "t_today_title",
+      "screen": "t_today",
+      "kind": "titlebar",
+      "label": "Today",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "t_today_add",
+      "screen": "t_today",
+      "kind": "buttonrow",
+      "label": "Add task \u00b7 Add event",
+      "region": "top",
+      "order": 1
+    },
+    {
+      "id": "t_today_agenda",
+      "screen": "t_today",
+      "kind": "list",
+      "label": "Today's agenda",
+      "region": "body",
+      "order": 0,
+      "items": "[{\"text\":\"Stand-up call\",\"toggle\":true},{\"text\":\"Review pull request\",\"toggle\":false},{\"text\":\"Send weekly recap\",\"toggle\":false},{\"text\":\"Pick up groceries\",\"toggle\":false,\"children\":[{\"text\":\"Milk\"},{\"text\":\"Eggs\"}]}]"
+    },
+    {
+      "id": "t_today_nav",
+      "screen": "t_today",
+      "kind": "bottomnav",
+      "label": "Today \u00b7 Upcoming \u00b7 Calendar \u00b7 Map \u00b7 Notes \u00b7 Boards \u00b7 People \u00b7 Activity \u00b7 Settings",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "t_upcoming_title",
+      "screen": "t_upcoming",
+      "kind": "titlebar",
+      "label": "Upcoming",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "t_upcoming_list",
+      "screen": "t_upcoming",
+      "kind": "list",
+      "label": "This week \u00b7 Next week \u00b7 Later",
+      "region": "body",
+      "order": 0,
+      "items": "[{\"text\": \"This week\", \"children\": [{\"text\": \"Dentist appointment\"}, {\"text\": \"Team retro\"}]}, {\"text\": \"Next week\", \"children\": [{\"text\": \"Quarterly review\"}]}, {\"text\": \"Later\"}]"
+    },
+    {
+      "id": "t_upcoming_nav",
+      "screen": "t_upcoming",
+      "kind": "bottomnav",
+      "label": "Today \u00b7 Upcoming \u00b7 Calendar \u00b7 Map \u00b7 Notes \u00b7 Boards \u00b7 People \u00b7 Activity \u00b7 Settings",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "t_cal_title",
+      "screen": "t_calendar",
+      "kind": "titlebar",
+      "label": "Calendar",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "t_cal_grid",
+      "screen": "t_calendar",
+      "kind": "card",
+      "label": "Month grid",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "t_cal_list",
+      "screen": "t_calendar",
+      "kind": "list",
+      "label": "Selected day's items",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Stand-up call \\u00b7 9:00\", \"Dentist appointment \\u00b7 2:30\"]"
+    },
+    {
+      "id": "t_calendar_nav",
+      "screen": "t_calendar",
+      "kind": "bottomnav",
+      "label": "Today \u00b7 Upcoming \u00b7 Calendar \u00b7 Map \u00b7 Notes \u00b7 Boards \u00b7 People \u00b7 Activity \u00b7 Settings",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "t_map_title",
+      "screen": "t_map",
+      "kind": "titlebar",
+      "label": "Map",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "t_map_search",
+      "screen": "t_map",
+      "kind": "searchbar",
+      "label": "Search places",
+      "region": "top",
+      "order": 1
+    },
+    {
+      "id": "t_map_canvas",
+      "screen": "t_map",
+      "kind": "image",
+      "label": "Map canvas",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "t_map_nav",
+      "screen": "t_map",
+      "kind": "bottomnav",
+      "label": "Today \u00b7 Upcoming \u00b7 Calendar \u00b7 Map \u00b7 Notes \u00b7 Boards \u00b7 People \u00b7 Activity \u00b7 Settings",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "t_notes_title",
+      "screen": "t_notes",
+      "kind": "titlebar",
+      "label": "Notes",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "t_notes_add",
+      "screen": "t_notes",
+      "kind": "buttonrow",
+      "label": "Jot a note",
+      "region": "top",
+      "order": 1
+    },
+    {
+      "id": "t_notes_grid",
+      "screen": "t_notes",
+      "kind": "list",
+      "label": "Sticky notes grid",
+      "region": "body",
+      "order": 0,
+      "items": "[\"Grocery list\", \"Trip packing list\", \"Book recommendations\"]"
+    },
+    {
+      "id": "t_notes_nav",
+      "screen": "t_notes",
+      "kind": "bottomnav",
+      "label": "Today \u00b7 Upcoming \u00b7 Calendar \u00b7 Map \u00b7 Notes \u00b7 Boards \u00b7 People \u00b7 Activity \u00b7 Settings",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "t_boards_title",
+      "screen": "t_boards",
+      "kind": "titlebar",
+      "label": "Boards",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "t_boards_add",
+      "screen": "t_boards",
+      "kind": "buttonrow",
+      "label": "New board",
+      "region": "top",
+      "order": 1
+    },
+    {
+      "id": "t_boards_list",
+      "screen": "t_boards",
+      "kind": "list",
+      "label": "Your boards",
+      "region": "body",
+      "order": 0,
+      "items": "[\"Home renovation\", \"Family trip planning\", \"Work sprint board\"]"
+    },
+    {
+      "id": "t_boards_nav",
+      "screen": "t_boards",
+      "kind": "bottomnav",
+      "label": "Today \u00b7 Upcoming \u00b7 Calendar \u00b7 Map \u00b7 Notes \u00b7 Boards \u00b7 People \u00b7 Activity \u00b7 Settings",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "t_people_title",
+      "screen": "t_people",
+      "kind": "titlebar",
+      "label": "People",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "t_people_search",
+      "screen": "t_people",
+      "kind": "searchbar",
+      "label": "Search people",
+      "region": "top",
+      "order": 1
+    },
+    {
+      "id": "t_people_list",
+      "screen": "t_people",
+      "kind": "list",
+      "label": "Household / team",
+      "region": "body",
+      "order": 0,
+      "items": "[\"You\", \"Partner\", \"Roommate\"]"
+    },
+    {
+      "id": "t_people_nav",
+      "screen": "t_people",
+      "kind": "bottomnav",
+      "label": "Today \u00b7 Upcoming \u00b7 Calendar \u00b7 Map \u00b7 Notes \u00b7 Boards \u00b7 People \u00b7 Activity \u00b7 Settings",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "t_activity_title",
+      "screen": "t_activity",
+      "kind": "titlebar",
+      "label": "Activity",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "t_activity_list",
+      "screen": "t_activity",
+      "kind": "list",
+      "label": "Recent activity",
+      "region": "body",
+      "order": 0,
+      "items": "[\"You completed \\\"Send weekly recap\\\"\", \"Partner added \\\"Book recommendations\\\" note\", \"You created board \\\"Family trip planning\\\"\"]"
+    },
+    {
+      "id": "t_activity_nav",
+      "screen": "t_activity",
+      "kind": "bottomnav",
+      "label": "Today \u00b7 Upcoming \u00b7 Calendar \u00b7 Map \u00b7 Notes \u00b7 Boards \u00b7 People \u00b7 Activity \u00b7 Settings",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "t_settings_title",
+      "screen": "t_settings",
+      "kind": "titlebar",
+      "label": "Settings",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "t_settings_list",
+      "screen": "t_settings",
+      "kind": "settings",
+      "label": "Account \u00b7 Sharing \u00b7 Notifications \u00b7 Data & safety",
+      "region": "body",
+      "order": 0,
+      "items": "[{\"text\": \"Account\"}, {\"text\": \"Sharing\"}, {\"text\": \"Notifications\", \"toggle\": true}, {\"text\": \"Data & safety\"}]"
+    },
+    {
+      "id": "t_settings_nav",
+      "screen": "t_settings",
+      "kind": "bottomnav",
+      "label": "Today \u00b7 Upcoming \u00b7 Calendar \u00b7 Map \u00b7 Notes \u00b7 Boards \u00b7 People \u00b7 Activity \u00b7 Settings",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "t_flow_today",
+      "fromWidget": "t_today_nav",
+      "toScreen": "t_upcoming",
+      "transition": "push"
+    },
+    {
+      "id": "t_flow_upcoming",
+      "fromWidget": "t_upcoming_nav",
+      "toScreen": "t_calendar",
+      "transition": "push"
+    },
+    {
+      "id": "t_flow_calendar",
+      "fromWidget": "t_calendar_nav",
+      "toScreen": "t_map",
+      "transition": "push"
+    },
+    {
+      "id": "t_flow_map",
+      "fromWidget": "t_map_nav",
+      "toScreen": "t_notes",
+      "transition": "push"
+    },
+    {
+      "id": "t_flow_notes",
+      "fromWidget": "t_notes_nav",
+      "toScreen": "t_boards",
+      "transition": "push"
+    },
+    {
+      "id": "t_flow_boards",
+      "fromWidget": "t_boards_nav",
+      "toScreen": "t_people",
+      "transition": "push"
+    },
+    {
+      "id": "t_flow_people",
+      "fromWidget": "t_people_nav",
+      "toScreen": "t_activity",
+      "transition": "push"
+    },
+    {
+      "id": "t_flow_activity",
+      "fromWidget": "t_activity_nav",
+      "toScreen": "t_settings",
+      "transition": "push"
+    },
+    {
+      "id": "t_flow_settings",
+      "fromWidget": "t_settings_nav",
+      "toScreen": "t_today",
+      "transition": "push"
+    }
+  ]
+}

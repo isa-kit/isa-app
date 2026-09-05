@@ -1,0 +1,93 @@
+{
+  "board": {
+    "name": "Sheets"
+  },
+  "screens": [
+    {
+      "id": "sheets_0_files",
+      "name": "Files",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "sheets_1_sheets",
+      "name": "Sheets",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "sheets_0_files_title",
+      "screen": "sheets_0_files",
+      "kind": "titlebar",
+      "label": "Files",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "sheets_0_files_w0",
+      "screen": "sheets_0_files",
+      "kind": "list",
+      "label": "Files",
+      "region": "body",
+      "order": 0,
+      "items": "[\"Sheets\"]"
+    },
+    {
+      "id": "sheets_0_files_nav",
+      "screen": "sheets_0_files",
+      "kind": "bottomnav",
+      "label": "Files \u00b7 Sheets",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "sheets_1_sheets_title",
+      "screen": "sheets_1_sheets",
+      "kind": "titlebar",
+      "label": "Sheets",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "sheets_1_sheets_w0",
+      "screen": "sheets_1_sheets",
+      "kind": "settings",
+      "label": "Data view controls",
+      "region": "body",
+      "order": 0,
+      "items": "[{\"text\": \"Notifications\", \"toggle\": true}, {\"text\": \"Sync automatically\", \"toggle\": true}, {\"text\": \"Show details\", \"toggle\": false}]"
+    },
+    {
+      "id": "sheets_1_sheets_nav",
+      "screen": "sheets_1_sheets",
+      "kind": "bottomnav",
+      "label": "Files \u00b7 Sheets",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "sheets_flow_0",
+      "fromWidget": "sheets_0_files_nav",
+      "toScreen": "sheets_1_sheets",
+      "transition": "push"
+    },
+    {
+      "id": "sheets_flow_1",
+      "fromWidget": "sheets_1_sheets_nav",
+      "toScreen": "sheets_0_files",
+      "transition": "push"
+    },
+    {
+      "id": "sheets_flow_extra",
+      "fromWidget": "sheets_0_files_w0",
+      "toScreen": "sheets_1_sheets",
+      "transition": "push"
+    }
+  ]
+}

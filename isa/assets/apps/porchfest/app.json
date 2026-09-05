@@ -1,0 +1,12 @@
+{
+  "id": "porchfest",
+  "name": "Porchfest map",
+  "category": "Maps & cities",
+  "description": "Porchfest performances on a map, with the day's schedule.",
+  "icon": "music_note",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_porchfest"
+  },
+  "seedVersion": "2026-07-31.wave1.l10n-int-0903"
+}

@@ -1,0 +1,202 @@
+{
+  "board": {
+    "name": "Wikipick"
+  },
+  "screens": [
+    {
+      "id": "wp_search",
+      "name": "Home",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "wp_library",
+      "name": "Library",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "wp_queue",
+      "name": "Crawl queue",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    },
+    {
+      "id": "wp_reader",
+      "name": "Article",
+      "device": "phone",
+      "x": 1320,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "wp_search_title",
+      "screen": "wp_search",
+      "kind": "titlebar",
+      "label": "Wikipick",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "wp_search_bar",
+      "screen": "wp_search",
+      "kind": "searchbar",
+      "label": "Search Wikipedia (10 languages)",
+      "region": "top",
+      "order": 1
+    },
+    {
+      "id": "wp_search_lang",
+      "screen": "wp_search",
+      "kind": "dropdown",
+      "label": "Language",
+      "region": "top",
+      "order": 2,
+      "items": "[\"English\", \"Spanish\", \"French\", \"German\", \"Japanese\", \"Korean\", \"Chinese\", \"Portuguese\", \"Russian\", \"Arabic\"]"
+    },
+    {
+      "id": "wp_search_results",
+      "screen": "wp_search",
+      "kind": "list",
+      "label": "Results / recent / trending",
+      "region": "body",
+      "order": 0,
+      "items": "[{\"text\": \"Byzantine Empire\", \"icon\": \"history\"}, {\"text\": \"Constantinople\", \"icon\": \"account_balance\"}, {\"text\": \"Trending: Total solar eclipse\", \"icon\": \"trending_up\"}]"
+    },
+    {
+      "id": "wp_search_nav",
+      "screen": "wp_search",
+      "kind": "bottomnav",
+      "label": "Home \u00b7 Library \u00b7 Crawl queue",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "wp_library_title",
+      "screen": "wp_library",
+      "kind": "titlebar",
+      "label": "Library",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "wp_library_stats",
+      "screen": "wp_library",
+      "kind": "buttonrow",
+      "label": "Cached articles \u00b7 Seeds \u00b7 Cache size (of 20 MB)",
+      "region": "top",
+      "order": 1
+    },
+    {
+      "id": "wp_library_list",
+      "screen": "wp_library",
+      "kind": "list",
+      "label": "Cached articles",
+      "region": "body",
+      "order": 0,
+      "items": "[\"Byzantine Empire\", \"Constantinople\", \"Hagia Sophia\"]"
+    },
+    {
+      "id": "wp_library_nav",
+      "screen": "wp_library",
+      "kind": "bottomnav",
+      "label": "Home \u00b7 Library \u00b7 Crawl queue",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "wp_queue_title",
+      "screen": "wp_queue",
+      "kind": "titlebar",
+      "label": "Crawl queue",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "wp_queue_stats",
+      "screen": "wp_queue",
+      "kind": "buttonrow",
+      "label": "Pending \u00b7 Fetched \u00b7 Failed",
+      "region": "top",
+      "order": 1
+    },
+    {
+      "id": "wp_queue_list",
+      "screen": "wp_queue",
+      "kind": "list",
+      "label": "Queued pages",
+      "region": "body",
+      "order": 0,
+      "items": "[{\"text\": \"Ottoman Empire\", \"toggle\": false}, {\"text\": \"Fall of Constantinople\", \"toggle\": false}, {\"text\": \"Justinian I\", \"toggle\": true}]"
+    },
+    {
+      "id": "wp_queue_nav",
+      "screen": "wp_queue",
+      "kind": "bottomnav",
+      "label": "Home \u00b7 Library \u00b7 Crawl queue",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "wp_reader_title",
+      "screen": "wp_reader",
+      "kind": "titlebar",
+      "label": "Article",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "wp_reader_body",
+      "screen": "wp_reader",
+      "kind": "text",
+      "label": "Article body (cached, offline-readable)",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "wp_reader_actions",
+      "screen": "wp_reader",
+      "kind": "buttonrow",
+      "label": "Save offline \u00b7 Cache linked pages \u00b7 Check for updates \u00b7 Open on Wikipedia \u00b7 Remove from Library",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Save offline\", \"Cache linked pages\", \"Check for updates\", \"Open on Wikipedia\", \"Remove from Library\"]"
+    }
+  ],
+  "flows": [
+    {
+      "id": "wp_flow_0",
+      "fromWidget": "wp_search_nav",
+      "toScreen": "wp_library",
+      "transition": "push"
+    },
+    {
+      "id": "wp_flow_1",
+      "fromWidget": "wp_library_nav",
+      "toScreen": "wp_queue",
+      "transition": "push"
+    },
+    {
+      "id": "wp_flow_2",
+      "fromWidget": "wp_queue_nav",
+      "toScreen": "wp_search",
+      "transition": "push"
+    },
+    {
+      "id": "wp_flow_3",
+      "fromWidget": "wp_search_results",
+      "toScreen": "wp_reader",
+      "transition": "push"
+    },
+    {
+      "id": "wp_flow_4",
+      "fromWidget": "wp_library_list",
+      "toScreen": "wp_reader",
+      "transition": "push"
+    }
+  ]
+}

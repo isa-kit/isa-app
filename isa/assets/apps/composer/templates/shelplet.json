@@ -1,0 +1,219 @@
+{
+  "board": {
+    "name": "Shelplet"
+  },
+  "screens": [
+    {
+      "id": "shelpl_0_atlas",
+      "name": "Atlas \u2014 map dashboard",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "shelpl_1_scenarios",
+      "name": "Scenarios \u2014 run & prove",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "shelpl_2_models",
+      "name": "Models \u2014 the logic",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    },
+    {
+      "id": "shelpl_3_reports",
+      "name": "Model reports",
+      "device": "phone",
+      "x": 1320,
+      "y": 0
+    },
+    {
+      "id": "shelpl_4_decision",
+      "name": "Decision \u2014 the 5-minute read",
+      "device": "phone",
+      "x": 0,
+      "y": 900
+    }
+  ],
+  "widgets": [
+    {
+      "id": "shelpl_0_atlas_title",
+      "screen": "shelpl_0_atlas",
+      "kind": "titlebar",
+      "label": "Atlas \u2014 map dashboard",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "shelpl_0_atlas_w0",
+      "screen": "shelpl_0_atlas",
+      "kind": "card",
+      "label": "Embed",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "shelpl_0_atlas_nav",
+      "screen": "shelpl_0_atlas",
+      "kind": "bottomnav",
+      "label": "Atlas \u00b7 Scenarios \u00b7 Models \u00b7 Reports \u00b7 Decision",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "shelpl_1_scenarios_title",
+      "screen": "shelpl_1_scenarios",
+      "kind": "titlebar",
+      "label": "Scenarios \u2014 run & prove",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "shelpl_1_scenarios_w0",
+      "screen": "shelpl_1_scenarios",
+      "kind": "card",
+      "label": "Embed",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "shelpl_1_scenarios_nav",
+      "screen": "shelpl_1_scenarios",
+      "kind": "bottomnav",
+      "label": "Atlas \u00b7 Scenarios \u00b7 Models \u00b7 Reports \u00b7 Decision",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "shelpl_2_models_title",
+      "screen": "shelpl_2_models",
+      "kind": "titlebar",
+      "label": "Models \u2014 the logic",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "shelpl_2_models_w0",
+      "screen": "shelpl_2_models",
+      "kind": "card",
+      "label": "Embed",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "shelpl_2_models_nav",
+      "screen": "shelpl_2_models",
+      "kind": "bottomnav",
+      "label": "Atlas \u00b7 Scenarios \u00b7 Models \u00b7 Reports \u00b7 Decision",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "shelpl_3_reports_title",
+      "screen": "shelpl_3_reports",
+      "kind": "titlebar",
+      "label": "Model reports",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "shelpl_3_reports_w0",
+      "screen": "shelpl_3_reports",
+      "kind": "card",
+      "label": "Embed",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "shelpl_3_reports_nav",
+      "screen": "shelpl_3_reports",
+      "kind": "bottomnav",
+      "label": "Atlas \u00b7 Scenarios \u00b7 Models \u00b7 Reports \u00b7 Decision",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "shelpl_4_decision_title",
+      "screen": "shelpl_4_decision",
+      "kind": "titlebar",
+      "label": "Decision \u2014 the 5-minute read",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "shelpl_4_decision_w0",
+      "screen": "shelpl_4_decision",
+      "kind": "text",
+      "label": "What changed, what it costs, how confident, and what the auditors said \u2014",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "shelpl_4_decision_w1",
+      "screen": "shelpl_4_decision",
+      "kind": "list",
+      "label": "headline",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Atlas \\u2014 map dashboard\", \"Scenarios \\u2014 run & prove\", \"Models \\u2014 the logic\"]"
+    },
+    {
+      "id": "shelpl_4_decision_w2",
+      "screen": "shelpl_4_decision",
+      "kind": "text",
+      "label": "Confidence: green FOCUSED = calibrated to real, sourced local targets.",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "shelpl_4_decision_nav",
+      "screen": "shelpl_4_decision",
+      "kind": "bottomnav",
+      "label": "Atlas \u00b7 Scenarios \u00b7 Models \u00b7 Reports \u00b7 Decision",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "shelpl_flow_0",
+      "fromWidget": "shelpl_0_atlas_nav",
+      "toScreen": "shelpl_1_scenarios",
+      "transition": "push"
+    },
+    {
+      "id": "shelpl_flow_1",
+      "fromWidget": "shelpl_1_scenarios_nav",
+      "toScreen": "shelpl_2_models",
+      "transition": "push"
+    },
+    {
+      "id": "shelpl_flow_2",
+      "fromWidget": "shelpl_2_models_nav",
+      "toScreen": "shelpl_3_reports",
+      "transition": "push"
+    },
+    {
+      "id": "shelpl_flow_3",
+      "fromWidget": "shelpl_3_reports_nav",
+      "toScreen": "shelpl_4_decision",
+      "transition": "push"
+    },
+    {
+      "id": "shelpl_flow_4",
+      "fromWidget": "shelpl_4_decision_nav",
+      "toScreen": "shelpl_0_atlas",
+      "transition": "push"
+    },
+    {
+      "id": "shelpl_flow_extra",
+      "fromWidget": "shelpl_4_decision_w1",
+      "toScreen": "shelpl_0_atlas",
+      "transition": "push"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "notes",
+  "name": "Notes",
+  "category": "Productivity",
+  "description": "Linked notes as files, with browse and a graph view.",
+  "icon": "sticky_note",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_notes"
+  },
+  "seedVersion": "2026-08-01.wikilinks-files.l10n-int-0903",
+  "seedContent": "initial-only"
+}

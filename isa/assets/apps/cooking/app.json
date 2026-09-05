@@ -1,0 +1,13 @@
+{
+  "id": "cooking",
+  "name": "Cooking",
+  "category": "Life",
+  "description": "A pantry list and the recipes you can make from it.",
+  "hidden": true,
+  "icon": "restaurant",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_cooking"
+  },
+  "seedVersion": "2026-06-05.2"
+}

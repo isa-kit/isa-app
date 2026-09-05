@@ -1,0 +1,12 @@
+{
+  "id": "noms",
+  "name": "Noms",
+  "category": "Games",
+  "description": "Feed and grow noms in a small world.",
+  "icon": "pets",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_noms"
+  },
+  "seedVersion": "2026-06-15.1.l10n-int-0903"
+}

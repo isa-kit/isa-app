@@ -1,0 +1,269 @@
+{
+  "board": {
+    "name": "Watchlist"
+  },
+  "screens": [
+    {
+      "id": "watchl_0_files",
+      "name": "Files",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "watchl_1_watch",
+      "name": "Watch",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "watchl_2_bychannel",
+      "name": "By channel",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    },
+    {
+      "id": "watchl_3_watched",
+      "name": "Watched",
+      "device": "phone",
+      "x": 1320,
+      "y": 0
+    },
+    {
+      "id": "watchl_4_recs",
+      "name": "Recommendations",
+      "device": "phone",
+      "x": 0,
+      "y": 900
+    }
+  ],
+  "widgets": [
+    {
+      "id": "watchl_0_files_title",
+      "screen": "watchl_0_files",
+      "kind": "titlebar",
+      "label": "Files",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "watchl_0_files_w0",
+      "screen": "watchl_0_files",
+      "kind": "list",
+      "label": "Files",
+      "region": "body",
+      "order": 0,
+      "items": "[\"Watch\", \"By channel\", \"Watched\"]"
+    },
+    {
+      "id": "watchl_0_files_nav",
+      "screen": "watchl_0_files",
+      "kind": "bottomnav",
+      "label": "Files \u00b7 Watch \u00b7 By channel \u00b7 Watched \u00b7 Recommendations",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "watchl_1_watch_title",
+      "screen": "watchl_1_watch",
+      "kind": "titlebar",
+      "label": "Watch",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "watchl_1_watch_w0",
+      "screen": "watchl_1_watch",
+      "kind": "text",
+      "label": "Everything queued up, sorted into Must / Maybe / Someday.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "watchl_1_watch_w1",
+      "screen": "watchl_1_watch",
+      "kind": "card",
+      "label": "To watch",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "watchl_1_watch_w2",
+      "screen": "watchl_1_watch",
+      "kind": "card",
+      "label": "Must-watch",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "watchl_1_watch_nav",
+      "screen": "watchl_1_watch",
+      "kind": "bottomnav",
+      "label": "Files \u00b7 Watch \u00b7 By channel \u00b7 Watched \u00b7 Recommendations",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "watchl_2_bychannel_title",
+      "screen": "watchl_2_bychannel",
+      "kind": "titlebar",
+      "label": "By channel",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "watchl_2_bychannel_w0",
+      "screen": "watchl_2_bychannel",
+      "kind": "text",
+      "label": "Your channels, then every video grouped under the channel it came from.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "watchl_2_bychannel_w1",
+      "screen": "watchl_2_bychannel",
+      "kind": "buttonrow",
+      "label": "Add a channel",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "watchl_2_bychannel_w2",
+      "screen": "watchl_2_bychannel",
+      "kind": "list",
+      "label": "List",
+      "region": "body",
+      "order": 2,
+      "items": "[\"Files\", \"Watch\", \"Watched\"]"
+    },
+    {
+      "id": "watchl_2_bychannel_nav",
+      "screen": "watchl_2_bychannel",
+      "kind": "bottomnav",
+      "label": "Files \u00b7 Watch \u00b7 By channel \u00b7 Watched \u00b7 Recommendations",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "watchl_3_watched_title",
+      "screen": "watchl_3_watched",
+      "kind": "titlebar",
+      "label": "Watched",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "watchl_3_watched_w0",
+      "screen": "watchl_3_watched",
+      "kind": "text",
+      "label": "Everything you've finished, your highest-rated first.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "watchl_3_watched_w1",
+      "screen": "watchl_3_watched",
+      "kind": "card",
+      "label": "Watched by topic",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "watchl_3_watched_w2",
+      "screen": "watchl_3_watched",
+      "kind": "list",
+      "label": "title",
+      "region": "body",
+      "order": 2,
+      "items": "[\"Files\", \"Watch\", \"By channel\"]"
+    },
+    {
+      "id": "watchl_3_watched_nav",
+      "screen": "watchl_3_watched",
+      "kind": "bottomnav",
+      "label": "Files \u00b7 Watch \u00b7 By channel \u00b7 Watched \u00b7 Recommendations",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "watchl_4_recs_title",
+      "screen": "watchl_4_recs",
+      "kind": "titlebar",
+      "label": "Recommendations",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "watchl_4_recs_w0",
+      "screen": "watchl_4_recs",
+      "kind": "text",
+      "label": "Bridges \u2014 discover across your interests",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "watchl_4_recs_w1",
+      "screen": "watchl_4_recs",
+      "kind": "text",
+      "label": "Computed on your device from how your videos connect \u2014",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "watchl_4_recs_w2",
+      "screen": "watchl_4_recs",
+      "kind": "buttonrow",
+      "label": "Find my bridges",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "watchl_4_recs_nav",
+      "screen": "watchl_4_recs",
+      "kind": "bottomnav",
+      "label": "Files \u00b7 Watch \u00b7 By channel \u00b7 Watched \u00b7 Recommendations",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "watchl_flow_0",
+      "fromWidget": "watchl_0_files_nav",
+      "toScreen": "watchl_1_watch",
+      "transition": "push"
+    },
+    {
+      "id": "watchl_flow_1",
+      "fromWidget": "watchl_1_watch_nav",
+      "toScreen": "watchl_2_bychannel",
+      "transition": "push"
+    },
+    {
+      "id": "watchl_flow_2",
+      "fromWidget": "watchl_2_bychannel_nav",
+      "toScreen": "watchl_3_watched",
+      "transition": "push"
+    },
+    {
+      "id": "watchl_flow_3",
+      "fromWidget": "watchl_3_watched_nav",
+      "toScreen": "watchl_4_recs",
+      "transition": "push"
+    },
+    {
+      "id": "watchl_flow_4",
+      "fromWidget": "watchl_4_recs_nav",
+      "toScreen": "watchl_0_files",
+      "transition": "push"
+    },
+    {
+      "id": "watchl_flow_extra",
+      "fromWidget": "watchl_0_files_w0",
+      "toScreen": "watchl_1_watch",
+      "transition": "push"
+    }
+  ]
+}

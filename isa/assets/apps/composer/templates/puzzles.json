@@ -1,0 +1,153 @@
+{
+  "board": {
+    "name": "Puzzles"
+  },
+  "screens": [
+    {
+      "id": "puzzle_0_slide",
+      "name": "Slide 15",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "puzzle_1_pattern",
+      "name": "Pattern",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "puzzle_2_records",
+      "name": "Records",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "puzzle_0_slide_title",
+      "screen": "puzzle_0_slide",
+      "kind": "titlebar",
+      "label": "Slide 15",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "puzzle_0_slide_w0",
+      "screen": "puzzle_0_slide",
+      "kind": "text",
+      "label": "Tap a tile beside the gap to slide it; order 1\u201315 to win.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "puzzle_0_slide_w1",
+      "screen": "puzzle_0_slide",
+      "kind": "text",
+      "label": "puzzlegrid",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "puzzle_0_slide_nav",
+      "screen": "puzzle_0_slide",
+      "kind": "bottomnav",
+      "label": "Slide \u00b7 Pattern \u00b7 Records",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "puzzle_1_pattern_title",
+      "screen": "puzzle_1_pattern",
+      "kind": "titlebar",
+      "label": "Pattern",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "puzzle_1_pattern_w0",
+      "screen": "puzzle_1_pattern",
+      "kind": "text",
+      "label": "Co-op: tap a gem, then tap an empty cell to move it.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "puzzle_1_pattern_w1",
+      "screen": "puzzle_1_pattern",
+      "kind": "text",
+      "label": "puzzlegrid",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "puzzle_1_pattern_nav",
+      "screen": "puzzle_1_pattern",
+      "kind": "bottomnav",
+      "label": "Slide \u00b7 Pattern \u00b7 Records",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "puzzle_2_records_title",
+      "screen": "puzzle_2_records",
+      "kind": "titlebar",
+      "label": "Records",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "puzzle_2_records_w0",
+      "screen": "puzzle_2_records",
+      "kind": "text",
+      "label": "Fewest moves wins. Solves from every device in the room land here.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "puzzle_2_records_w1",
+      "screen": "puzzle_2_records",
+      "kind": "list",
+      "label": "moves",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Slide 15\", \"Pattern\"]"
+    },
+    {
+      "id": "puzzle_2_records_nav",
+      "screen": "puzzle_2_records",
+      "kind": "bottomnav",
+      "label": "Slide \u00b7 Pattern \u00b7 Records",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "puzzle_flow_0",
+      "fromWidget": "puzzle_0_slide_nav",
+      "toScreen": "puzzle_1_pattern",
+      "transition": "push"
+    },
+    {
+      "id": "puzzle_flow_1",
+      "fromWidget": "puzzle_1_pattern_nav",
+      "toScreen": "puzzle_2_records",
+      "transition": "push"
+    },
+    {
+      "id": "puzzle_flow_2",
+      "fromWidget": "puzzle_2_records_nav",
+      "toScreen": "puzzle_0_slide",
+      "transition": "push"
+    },
+    {
+      "id": "puzzle_flow_extra",
+      "fromWidget": "puzzle_2_records_w1",
+      "toScreen": "puzzle_0_slide",
+      "transition": "push"
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "board": {
+    "name": "Scenarios"
+  },
+  "screens": [
+    {
+      "id": "scenar_0_runs",
+      "name": "Setup & runs",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "scenar_1_provenance",
+      "name": "Provenance",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "scenar_2_data",
+      "name": "Data \u2014 sources, feeds, shapes, layers",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    },
+    {
+      "id": "scenar_3_about",
+      "name": "About Scenarios",
+      "device": "phone",
+      "x": 1320,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "scenar_0_runs_title",
+      "screen": "scenar_0_runs",
+      "kind": "titlebar",
+      "label": "Setup & runs",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "scenar_0_runs_w0",
+      "screen": "scenar_0_runs",
+      "kind": "text",
+      "label": "Set up a run here; the Pipeline screen explains each step's logic, and Provenance\u2026",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "scenar_0_runs_w1",
+      "screen": "scenar_0_runs",
+      "kind": "text",
+      "label": "Confidence tiers at a glance: green FOCUSED = calibrated to real, sourced local targets \u2014",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "scenar_0_runs_w2",
+      "screen": "scenar_0_runs",
+      "kind": "text",
+      "label": "Model setup",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "scenar_0_runs_nav",
+      "screen": "scenar_0_runs",
+      "kind": "bottomnav",
+      "label": "Setup & runs \u00b7 Provenance \u00b7 Data \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "scenar_1_provenance_title",
+      "screen": "scenar_1_provenance",
+      "kind": "titlebar",
+      "label": "Provenance",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "scenar_1_provenance_w0",
+      "screen": "scenar_1_provenance",
+      "kind": "text",
+      "label": "Trace any number end to end: run \u2192 model version \u2192 input datasets \u2192 soundness checks \u2192\u2026",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "scenar_1_provenance_w1",
+      "screen": "scenar_1_provenance",
+      "kind": "text",
+      "label": "Run record",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "scenar_1_provenance_w2",
+      "screen": "scenar_1_provenance",
+      "kind": "list",
+      "label": "Record",
+      "region": "body",
+      "order": 2,
+      "items": "[\"Setup & runs\", \"Data \\u2014 sources, feeds, shapes, layers\", \"About Scenarios\"]"
+    },
+    {
+      "id": "scenar_1_provenance_nav",
+      "screen": "scenar_1_provenance",
+      "kind": "bottomnav",
+      "label": "Setup & runs \u00b7 Provenance \u00b7 Data \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "scenar_2_data_title",
+      "screen": "scenar_2_data",
+      "kind": "titlebar",
+      "label": "Data \u2014 sources, feeds, shapes, layers",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "scenar_2_data_w0",
+      "screen": "scenar_2_data",
+      "kind": "text",
+      "label": "Everything the models read and paint, in one place \u2014",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "scenar_2_data_w1",
+      "screen": "scenar_2_data",
+      "kind": "buttonrow",
+      "label": "Segmented control",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "scenar_2_data_nav",
+      "screen": "scenar_2_data",
+      "kind": "bottomnav",
+      "label": "Setup & runs \u00b7 Provenance \u00b7 Data \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "scenar_3_about_title",
+      "screen": "scenar_3_about",
+      "kind": "titlebar",
+      "label": "About Scenarios",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "scenar_3_about_w0",
+      "screen": "scenar_3_about",
+      "kind": "text",
+      "label": "Configure, run, and prove it",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "scenar_3_about_w1",
+      "screen": "scenar_3_about",
+      "kind": "text",
+      "label": "Scenarios is the run room of the urban-models suite: set up a model run, create\u2026",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "scenar_3_about_w2",
+      "screen": "scenar_3_about",
+      "kind": "text",
+      "label": "Live server runs are authorization-locked today (the run button records the intent\u2026",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "scenar_3_about_nav",
+      "screen": "scenar_3_about",
+      "kind": "bottomnav",
+      "label": "Setup & runs \u00b7 Provenance \u00b7 Data \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "scenar_flow_0",
+      "fromWidget": "scenar_0_runs_nav",
+      "toScreen": "scenar_1_provenance",
+      "transition": "push"
+    },
+    {
+      "id": "scenar_flow_1",
+      "fromWidget": "scenar_1_provenance_nav",
+      "toScreen": "scenar_2_data",
+      "transition": "push"
+    },
+    {
+      "id": "scenar_flow_2",
+      "fromWidget": "scenar_2_data_nav",
+      "toScreen": "scenar_3_about",
+      "transition": "push"
+    },
+    {
+      "id": "scenar_flow_3",
+      "fromWidget": "scenar_3_about_nav",
+      "toScreen": "scenar_0_runs",
+      "transition": "push"
+    },
+    {
+      "id": "scenar_flow_extra",
+      "fromWidget": "scenar_1_provenance_w2",
+      "toScreen": "scenar_2_data",
+      "transition": "push"
+    }
+  ]
+}

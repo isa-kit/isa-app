@@ -1,0 +1,138 @@
+{
+  "board": {
+    "name": "Hexnom"
+  },
+  "screens": [
+    {
+      "id": "hexnom_0_world",
+      "name": "Hexnom",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "hexnom_1_siege",
+      "name": "Nomnoms",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "hexnom_2_how",
+      "name": "How to play",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "hexnom_0_world_title",
+      "screen": "hexnom_0_world",
+      "kind": "titlebar",
+      "label": "Hexnom",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "hexnom_0_world_w0",
+      "screen": "hexnom_0_world",
+      "kind": "card",
+      "label": "Hex grid",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "hexnom_0_world_nav",
+      "screen": "hexnom_0_world",
+      "kind": "bottomnav",
+      "label": "City \u00b7 Nomnoms \u00b7 How to",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "hexnom_1_siege_title",
+      "screen": "hexnom_1_siege",
+      "kind": "titlebar",
+      "label": "Nomnoms",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "hexnom_1_siege_w0",
+      "screen": "hexnom_1_siege",
+      "kind": "card",
+      "label": "Hex grid",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "hexnom_1_siege_nav",
+      "screen": "hexnom_1_siege",
+      "kind": "bottomnav",
+      "label": "City \u00b7 Nomnoms \u00b7 How to",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "hexnom_2_how_title",
+      "screen": "hexnom_2_how",
+      "kind": "titlebar",
+      "label": "How to play",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "hexnom_2_how_w0",
+      "screen": "hexnom_2_how",
+      "kind": "text",
+      "label": "Build a hex city",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "hexnom_2_how_w1",
+      "screen": "hexnom_2_how",
+      "kind": "text",
+      "label": "Hexnom is a city game on a hexagonal world.",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "hexnom_2_how_w2",
+      "screen": "hexnom_2_how",
+      "kind": "text",
+      "label": "Just want to watch?",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "hexnom_2_how_nav",
+      "screen": "hexnom_2_how",
+      "kind": "bottomnav",
+      "label": "City \u00b7 Nomnoms \u00b7 How to",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "hexnom_flow_0",
+      "fromWidget": "hexnom_0_world_nav",
+      "toScreen": "hexnom_1_siege",
+      "transition": "push"
+    },
+    {
+      "id": "hexnom_flow_1",
+      "fromWidget": "hexnom_1_siege_nav",
+      "toScreen": "hexnom_2_how",
+      "transition": "push"
+    },
+    {
+      "id": "hexnom_flow_2",
+      "fromWidget": "hexnom_2_how_nav",
+      "toScreen": "hexnom_0_world",
+      "transition": "push"
+    }
+  ]
+}

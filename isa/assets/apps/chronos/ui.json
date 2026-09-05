@@ -1,0 +1,1788 @@
+{
+  "app": {
+    "languages": ["en", "ko", "zh", "hi", "es", "fr", "ar", "pt", "ru", "de", "ja", "tr", "vi", "it", "fa", "pl", "uk", "nl", "sv", "cs", "el"],
+    "translatable": true,
+    "appDataTools": true,
+    "intro": {
+      "purpose": {
+        "en": "Chronos plays history across time — empire borders shift by year and famous battles replay step by step, all on one map.",
+        "ko": "Chronos는 시간에 따라 역사를 재생합니다 — 제국의 국경이 연도별로 변하고, 유명한 전투가 단계별로 재현됩니다. 모두 하나의 지도에서.",
+        "zh": "Chronos 在时间维度上演绎历史——帝国疆界逐年变化,著名战役逐步重演,一切都在一张地图上呈现。",
+        "hi": "Chronos समय के साथ इतिहास को दिखाता है — साम्राज्यों की सीमाएं साल-दर-साल बदलती हैं और प्रसिद्ध लड़ाइयाँ चरण-दर-चरण दोहराई जाती हैं, सब एक ही मैप पर।",
+        "es": "Chronos recorre la historia a través del tiempo: las fronteras imperiales cambian año a año y las batallas famosas se repiten paso a paso, todo en un solo mapa.",
+        "fr": "Chronos fait défiler l'histoire dans le temps — les frontières des empires évoluent année après année et les batailles célèbres se rejouent étape par étape, le tout sur une seule carte.",
+        "ar": "‏Chronos يعرض التاريخ عبر الزمن — تتغيّر حدود الإمبراطوريات عامًا بعد عام، وتُعاد المعارك الشهيرة خطوة بخطوة، كل ذلك على خريطة واحدة.",
+        "pt": "O Chronos percorre a história ao longo do tempo — as fronteiras dos impérios mudam ano a ano e batalhas famosas são reencenadas passo a passo, tudo num único mapa.",
+        "ru": "Chronos воспроизводит историю во времени — границы империй меняются год за годом, а знаменитые сражения повторяются шаг за шагом, всё на одной карте.",
+        "de": "Chronos spielt Geschichte durch die Zeit ab — Reichsgrenzen verschieben sich Jahr für Jahr, und berühmte Schlachten werden Schritt für Schritt nachgespielt, alles auf einer Karte.",
+        "ja": "Chronos は時間を通じて歴史を再生します -- 帝国の国境は年ごとに変化し、有名な戦いは一歩ずつ再現されます。すべて1枚の地図上で。",
+        "tr": "Chronos, zaman içinde tarihi canlandırır — imparatorluk sınırları yıldan yıla değişir ve ünlü savaşlar adım adım yeniden canlanır, hepsi tek bir haritada.",
+        "vi": "Chronos tái hiện lịch sử theo thời gian — biên giới các đế chế thay đổi theo từng năm và các trận đánh nổi tiếng được diễn lại từng bước, tất cả trên một bản đồ.",
+        "it": "Chronos mette in scena la storia nel tempo — i confini degli imperi cambiano di anno in anno e le battaglie famose si rigiocano passo dopo passo, tutto su un'unica mappa.",
+        "fa": "‏Chronos تاریخ را در طول زمان به نمایش می‌گذارد — مرزهای امپراتوری‌ها سال به سال تغییر می‌کند و نبردهای مشهور گام به گام بازسازی می‌شوند، همه روی یک نقشه.",
+        "pl": "Chronos odtwarza historię w czasie — granice imperiów zmieniają się rok po roku, a słynne bitwy są odtwarzane krok po kroku, wszystko na jednej mapie.",
+        "uk": "Chronos відтворює історію в часі — кордони імперій змінюються рік за роком, а знамениті битви відтворюються крок за кроком, усе на одній карті.",
+        "nl": "Chronos speelt de geschiedenis af door de tijd heen — rijksgrenzen verschuiven jaar na jaar en beroemde veldslagen worden stap voor stap opnieuw afgespeeld, allemaal op één kaart.",
+        "sv": "Chronos spelar upp historien genom tiden — imperiegränser förskjuts år för år och berömda slag spelas upp steg för steg, allt på en karta.",
+        "cs": "Chronos přehrává historii napříč časem — hranice říší se rok od roku posouvají a slavné bitvy se přehrávají krok za krokem, vše na jedné mapě.",
+        "el": "Το Chronos αναπαράγει την ιστορία μέσα στον χρόνο — τα σύνορα αυτοκρατοριών μετατοπίζονται ανά έτος και διάσημες μάχες αναπαράγονται βήμα προς βήμα, όλα σε έναν χάρτη."
+      },
+      "tour": [
+        {
+          "screen": "map",
+          "label": "Map",
+          "note": "Drag the year slider to watch territories change; layers toggle on the left."
+        },
+        {
+          "screen": "battles",
+          "label": "Battles",
+          "note": "Pick a battle to replay its formations and moves turn by turn."
+        },
+        {
+          "screen": "about",
+          "label": "About",
+          "note": "What the map is drawing from and how to read it."
+        }
+      ],
+      "guide": "about"
+    },
+    "title": {
+      "en": "Chronos — history timelapse",
+      "ko": "Chronos — 역사 타임랩스",
+      "zh": "Chronos — 历史延时影像",
+      "hi": "Chronos — इतिहास टाइमलैप्स",
+      "es": "Chronos: lapso histórico",
+      "fr": "Chronos — chronologie historique en accéléré",
+      "ar": "‏Chronos — لقطة زمنية للتاريخ",
+      "pt": "Chronos — timelapse da história",
+      "ru": "Chronos — таймлапс истории",
+      "de": "Chronos — Geschichts-Zeitraffer",
+      "ja": "Chronos — 歴史タイムラプス",
+      "tr": "Chronos — tarih zaman atlamalı",
+      "vi": "Chronos — dòng thời gian lịch sử",
+      "it": "Chronos — time-lapse storico",
+      "fa": "‏Chronos — دوره‌گذر تاریخی",
+      "pl": "Chronos — historia w przyspieszeniu",
+      "uk": "Chronos — таймлапс історії",
+      "nl": "Chronos — geschiedenistijdlapse",
+      "sv": "Chronos — historisk tidsraff",
+      "cs": "Chronos — historický časosběr",
+      "el": "Chronos — ιστορική χρονοσειρά"
+    },
+    "primaryColor": "#7A4B3A",
+    "theme": "material"
+  },
+  "nav": [
+    {
+      "id": "map",
+      "label": {
+        "en": "Map",
+        "ko": "지도",
+        "zh": "地图",
+        "hi": "मैप",
+        "es": "Mapa",
+        "fr": "Carte",
+        "ar": "الخريطة",
+        "pt": "Mapa",
+        "ru": "Карта",
+        "de": "Karte",
+        "ja": "地図",
+        "tr": "Harita",
+        "vi": "Bản đồ",
+        "it": "Mappa",
+        "fa": "نقشه",
+        "pl": "Mapa",
+        "uk": "Карта",
+        "nl": "Kaart",
+        "sv": "Karta",
+        "cs": "Mapa",
+        "el": "Χάρτης"
+      },
+      "icon": "public",
+      "screen": "map"
+    },
+    {
+      "id": "battles",
+      "label": {
+        "en": "Battles",
+        "ko": "전투",
+        "zh": "战役",
+        "hi": "लड़ाइयाँ",
+        "es": "Batallas",
+        "fr": "Batailles",
+        "ar": "المعارك",
+        "pt": "Batalhas",
+        "ru": "Сражения",
+        "de": "Schlachten",
+        "ja": "戦闘",
+        "tr": "Savaşlar",
+        "vi": "Trận đánh",
+        "it": "Battaglie",
+        "fa": "نبردها",
+        "pl": "Bitwy",
+        "uk": "Битви",
+        "nl": "Veldslagen",
+        "sv": "Slag",
+        "cs": "Bitvy",
+        "el": "Μάχες"
+      },
+      "icon": "history",
+      "screen": "battles"
+    },
+    {
+      "id": "about",
+      "label": {
+        "en": "About",
+        "ko": "정보",
+        "zh": "关于",
+        "hi": "जानकारी",
+        "es": "Acerca de",
+        "fr": "À propos",
+        "ar": "حول",
+        "pt": "Sobre",
+        "ru": "О приложении",
+        "de": "Über",
+        "ja": "概要",
+        "tr": "Hakkında",
+        "vi": "Giới thiệu",
+        "it": "Informazioni",
+        "fa": "دربارهٔ برنامه",
+        "pl": "O aplikacji",
+        "uk": "Про додаток",
+        "nl": "Over",
+        "sv": "Om",
+        "cs": "O aplikaci",
+        "el": "Σχετικά"
+      },
+      "icon": "info",
+      "screen": "about"
+    }
+  ],
+  "screens": {
+    "map": {
+      "title": {
+        "en": "Chronos",
+        "ko": "Chronos",
+        "zh": "Chronos",
+        "hi": "Chronos",
+        "es": "Chronos",
+        "fr": "Chronos",
+        "ar": "Chronos",
+        "pt": "Chronos",
+        "ru": "Chronos",
+        "de": "Chronos",
+        "ja": "Chronos",
+        "tr": "Chronos",
+        "vi": "Chronos",
+        "it": "Chronos",
+        "fa": "Chronos",
+        "pl": "Chronos",
+        "uk": "Chronos",
+        "nl": "Chronos",
+        "sv": "Chronos",
+        "cs": "Chronos",
+        "el": "Chronos"
+      },
+      "maxContentWidth": 900,
+      "body": {
+        "type": "column",
+        "scroll": true,
+        "children": [
+          {
+            "type": "glmap",
+            "id": "chronos_map",
+            "height": 460,
+            "fillPhone": false,
+            "zoom": 2,
+            "center": [
+              20,
+              10
+            ],
+            "geojsonSources": {
+              "empires": "apps/chronos/empires_overview.geojson",
+              "battles": "apps/chronos/battles.geojson"
+            },
+            "sourceLayers": [
+              {
+                "id": "empire_fill",
+                "source": "empires",
+                "kind": "fill",
+                "title": "Territories",
+                "filter": [
+                  "all",
+                  [
+                    "<=",
+                    "yearFrom",
+                    1000
+                  ],
+                  [
+                    ">",
+                    "yearTo",
+                    1000
+                  ]
+                ],
+                "paint": {
+                  "colorProp": "color_key",
+                  "ramp": {
+                    "c0": "#B33951",
+                    "c1": "#3D5A80",
+                    "c2": "#E09F3E",
+                    "c3": "#588157",
+                    "c4": "#8338EC",
+                    "c5": "#FF6B6B",
+                    "c6": "#4CC9F0",
+                    "c7": "#F4A261",
+                    "c8": "#2A9D8F",
+                    "c9": "#9B5DE5",
+                    "c10": "#F15BB5",
+                    "c11": "#00BBF9",
+                    "c12": "#FEE440",
+                    "c13": "#606C38",
+                    "c14": "#BC6C25",
+                    "c15": "#6A4C93",
+                    "c16": "#EF476F",
+                    "c17": "#118AB2",
+                    "c18": "#FFD166",
+                    "c19": "#073B4C"
+                  },
+                  "opacity": 0.55,
+                  "antialias": false
+                },
+                "crossfadeMs": 600
+              },
+              {
+                "id": "empire_border",
+                "source": "empires",
+                "kind": "line",
+                "title": "Territory borders",
+                "filter": [
+                  "all",
+                  [
+                    "<=",
+                    "yearFrom",
+                    1000
+                  ],
+                  [
+                    ">",
+                    "yearTo",
+                    1000
+                  ]
+                ],
+                "paint": {
+                  "color": "#20201f",
+                  "width": 0.6,
+                  "opacity": 0.45
+                },
+                "crossfadeMs": 600
+              },
+              {
+                "id": "battle_points",
+                "source": "battles",
+                "kind": "circle",
+                "title": "Battles",
+                "filter": [
+                  "all",
+                  [
+                    "<=",
+                    "yearFrom",
+                    1000
+                  ],
+                  [
+                    ">",
+                    "yearTo",
+                    1000
+                  ]
+                ],
+                "paint": {
+                  "color": "#B33951",
+                  "radius": 5,
+                  "opacity": 0.9,
+                  "outline": "#ffffff"
+                }
+              }
+            ],
+            "layerPanel": {
+              "align": "topStart",
+              "title": "Layers"
+            },
+            "legend": {
+              "entries": {
+                "Territory (color = polity)": "#8338EC",
+                "Battle": "#B33951"
+              },
+              "title": "Legend",
+              "collapsible": true,
+              "startCollapsed": true
+            },
+            "tapLayers": [
+              "empire_fill",
+              "battle_points"
+            ],
+            "tapLayerDetails": {
+              "empire_fill": {
+                "titleField": "name",
+                "fields": [
+                  "name",
+                  "year"
+                ],
+                "labels": {
+                  "name": "Territory",
+                  "year": "Map snapshot year"
+                },
+                "note": "Approximate historical border — scholarly-approximate, not an authoritative boundary claim."
+              },
+              "battle_points": {
+                "titleField": "name",
+                "fields": [
+                  "name",
+                  "year",
+                  "war"
+                ],
+                "labels": {
+                  "name": "Battle",
+                  "year": "Year",
+                  "war": "Part of"
+                },
+                "note": "A curated sample of notable battles, not a complete record."
+              }
+            }
+          },
+          {
+            "type": "spacer",
+            "height": 8
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Era zones — jump the slider's range, then press play to sweep just that era:",
+              "ko": "시대 구간 — 슬라이더 범위를 이동한 뒤 재생을 눌러 해당 시대만 재생하세요:",
+              "zh": "时代区间 —— 跳转滑块范围,然后按播放只播放该时代:",
+              "hi": "युग क्षेत्र — स्लाइडर की रेंज पर जाएं, फिर उस युग को चलाने के लिए प्ले दबाएं:",
+              "es": "Zonas de época: salta al rango del control deslizante y pulsa reproducir para recorrer solo esa época:",
+              "fr": "Zones d'époque — sautez à la plage du curseur, puis appuyez sur lecture pour parcourir uniquement cette époque :",
+              "ar": "مناطق العصور — انتقل إلى نطاق شريط التمرير، ثم اضغط تشغيل لعرض ذلك العصر فقط:",
+              "pt": "Zonas de época — pule para o intervalo do controle deslizante, depois pressione reproduzir para percorrer só essa época:",
+              "ru": "Зоны эпох — перейдите к диапазону ползунка, затем нажмите воспроизведение, чтобы прокрутить только эту эпоху:",
+              "de": "Epochenzonen — springe zum Bereich des Schiebereglers und drücke Play, um nur diese Epoche abzuspielen:",
+              "ja": "時代ゾーン -- スライダーの範囲にジャンプし、再生を押してその時代だけを再生します:",
+              "tr": "Dönem bölgeleri — kaydırıcının aralığına atlayın, ardından yalnızca o dönemi taramak için oynat'a basın:",
+              "vi": "Vùng thời đại — nhảy đến phạm vi của thanh trượt, sau đó nhấn phát để chỉ chạy qua thời đại đó:",
+              "it": "Zone d'epoca — salta all'intervallo del cursore, poi premi play per scorrere solo quell'epoca:",
+              "fa": "مناطق دوره‌ای — به بازهٔ لغزنده بپرید، سپس پخش را بزنید تا فقط آن دوره پیموده شود:",
+              "pl": "Strefy epok — przeskocz do zakresu suwaka, a następnie naciśnij odtwórz, aby przewinąć tylko tę epokę:",
+              "uk": "Зони епох — перейдіть до діапазону повзунка, потім натисніть відтворення, щоб прокрутити лише цю епоху:",
+              "nl": "Tijdperkzones — spring naar het bereik van de schuifregelaar en druk op afspelen om alleen dat tijdperk af te spelen:",
+              "sv": "Epokzoner — hoppa till skjutreglagets intervall och tryck sedan på spela upp för att svepa genom bara den epoken:",
+              "cs": "Zóny epoch — přeskočte na rozsah posuvníku a poté stiskněte přehrát pro procházení pouze této epochy:",
+              "el": "Ζώνες εποχής — μεταβείτε στο εύρος του ρυθμιστικού, έπειτα πατήστε αναπαραγωγή για να διατρέξετε μόνο αυτήν την εποχή:"
+            }
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "spacing": 4,
+            "runSpacing": 4,
+            "children": [
+              {
+                "type": "button",
+                "label": {
+                  "en": "All time",
+                  "ko": "전체 기간",
+                  "zh": "全部时间",
+                  "hi": "पूरा समय",
+                  "es": "Todo el tiempo",
+                  "fr": "Toute la période",
+                  "ar": "كل الأوقات",
+                  "pt": "Todo o período",
+                  "ru": "Всё время",
+                  "de": "Gesamter Zeitraum",
+                  "ja": "全期間",
+                  "tr": "Tüm zamanlar",
+                  "vi": "Toàn thời gian",
+                  "it": "Tutto il periodo",
+                  "fa": "همهٔ دوران‌ها",
+                  "pl": "Cały okres",
+                  "uk": "Увесь час",
+                  "nl": "Alle tijd",
+                  "sv": "Hela tiden",
+                  "cs": "Celé období",
+                  "el": "Όλη η περίοδος"
+                },
+                "variant": "outlined",
+                "dense": true,
+                "action": {
+                  "chain": [
+                    {
+                      "fn": "mapSetGeojsonSource",
+                      "args": {
+                        "node": "chronos_map",
+                        "source": "empires",
+                        "url": "apps/chronos/empires_overview.geojson"
+                      }
+                    },
+                    {
+                      "fn": "sliderSetRange",
+                      "args": {
+                        "node": "chronos_year_slider"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "Bronze & Iron Age",
+                  "ko": "청동기·철기 시대",
+                  "zh": "青铜与铁器时代",
+                  "hi": "कांस्य और लौह युग",
+                  "es": "Edad del Bronce y del Hierro",
+                  "fr": "Âge du bronze et du fer",
+                  "ar": "العصر البرونزي والحديدي",
+                  "pt": "Idade do Bronze e do Ferro",
+                  "ru": "Бронзовый и железный век",
+                  "de": "Bronze- & Eisenzeit",
+                  "ja": "青銅器・鉄器時代",
+                  "tr": "Bronz ve Demir Çağı",
+                  "vi": "Thời đại đồ đồng và đồ sắt",
+                  "it": "Età del bronzo e del ferro",
+                  "fa": "عصر برنز و آهن",
+                  "pl": "Epoka brązu i żelaza",
+                  "uk": "Бронзова та залізна доба",
+                  "nl": "Brons- en ijzertijd",
+                  "sv": "Brons- och järnåldern",
+                  "cs": "Doba bronzová a železná",
+                  "el": "Εποχή του Χαλκού και του Σιδήρου"
+                },
+                "variant": "outlined",
+                "dense": true,
+                "action": {
+                  "chain": [
+                    {
+                      "fn": "mapSetGeojsonSource",
+                      "args": {
+                        "node": "chronos_map",
+                        "source": "empires",
+                        "url": "apps/chronos/era_bronze.geojson"
+                      }
+                    },
+                    {
+                      "fn": "sliderSetRange",
+                      "args": {
+                        "node": "chronos_year_slider",
+                        "min": -2000,
+                        "max": -500
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "Classical",
+                  "ko": "고전 시대",
+                  "zh": "古典时代",
+                  "hi": "शास्त्रीय काल",
+                  "es": "Clásica",
+                  "fr": "Antiquité classique",
+                  "ar": "العصر الكلاسيكي",
+                  "pt": "Clássica",
+                  "ru": "Античность",
+                  "de": "Antike",
+                  "ja": "古典期",
+                  "tr": "Klasik Dönem",
+                  "vi": "Thời cổ điển",
+                  "it": "Classica",
+                  "fa": "دوران کلاسیک",
+                  "pl": "Okres klasyczny",
+                  "uk": "Античність",
+                  "nl": "Klassieke oudheid",
+                  "sv": "Antiken",
+                  "cs": "Klasické období",
+                  "el": "Κλασική εποχή"
+                },
+                "variant": "outlined",
+                "dense": true,
+                "action": {
+                  "chain": [
+                    {
+                      "fn": "mapSetGeojsonSource",
+                      "args": {
+                        "node": "chronos_map",
+                        "source": "empires",
+                        "url": "apps/chronos/era_classical.geojson"
+                      }
+                    },
+                    {
+                      "fn": "sliderSetRange",
+                      "args": {
+                        "node": "chronos_year_slider",
+                        "min": -500,
+                        "max": 500
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "Medieval",
+                  "ko": "중세",
+                  "zh": "中世纪",
+                  "hi": "मध्यकाल",
+                  "es": "Medieval",
+                  "fr": "Médiéval",
+                  "ar": "العصور الوسطى",
+                  "pt": "Medieval",
+                  "ru": "Средневековье",
+                  "de": "Mittelalter",
+                  "ja": "中世",
+                  "tr": "Orta Çağ",
+                  "vi": "Trung cổ",
+                  "it": "Medievale",
+                  "fa": "قرون وسطی",
+                  "pl": "Średniowiecze",
+                  "uk": "Середньовіччя",
+                  "nl": "Middeleeuwen",
+                  "sv": "Medeltiden",
+                  "cs": "Středověk",
+                  "el": "Μεσαίωνας"
+                },
+                "variant": "outlined",
+                "dense": true,
+                "action": {
+                  "chain": [
+                    {
+                      "fn": "mapSetGeojsonSource",
+                      "args": {
+                        "node": "chronos_map",
+                        "source": "empires",
+                        "url": "apps/chronos/era_medieval.geojson"
+                      }
+                    },
+                    {
+                      "fn": "sliderSetRange",
+                      "args": {
+                        "node": "chronos_year_slider",
+                        "min": 500,
+                        "max": 1500
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "Early modern",
+                  "ko": "근세",
+                  "zh": "近代早期",
+                  "hi": "आधुनिक पूर्व काल",
+                  "es": "Moderna temprana",
+                  "fr": "Époque moderne",
+                  "ar": "مطلع العصر الحديث",
+                  "pt": "Início da Idade Moderna",
+                  "ru": "Раннее Новое время",
+                  "de": "Frühe Neuzeit",
+                  "ja": "近世",
+                  "tr": "Erken Modern Dönem",
+                  "vi": "Cận đại sớm",
+                  "it": "Prima età moderna",
+                  "fa": "آغاز دوران مدرن",
+                  "pl": "Wczesna nowożytność",
+                  "uk": "Раннє Новий час",
+                  "nl": "Vroegmoderne tijd",
+                  "sv": "Tidigmodern tid",
+                  "cs": "Raný novověk",
+                  "el": "Πρώιμη νεωτερική εποχή"
+                },
+                "variant": "outlined",
+                "dense": true,
+                "action": {
+                  "chain": [
+                    {
+                      "fn": "mapSetGeojsonSource",
+                      "args": {
+                        "node": "chronos_map",
+                        "source": "empires",
+                        "url": "apps/chronos/era_earlymodern.geojson"
+                      }
+                    },
+                    {
+                      "fn": "sliderSetRange",
+                      "args": {
+                        "node": "chronos_year_slider",
+                        "min": 1400,
+                        "max": 1800
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "Modern",
+                  "ko": "근현대",
+                  "zh": "现代",
+                  "hi": "आधुनिक काल",
+                  "es": "Moderna",
+                  "fr": "Moderne",
+                  "ar": "العصر الحديث",
+                  "pt": "Moderna",
+                  "ru": "Новое и новейшее время",
+                  "de": "Neuzeit",
+                  "ja": "近現代",
+                  "tr": "Modern Dönem",
+                  "vi": "Hiện đại",
+                  "it": "Moderna",
+                  "fa": "دوران مدرن",
+                  "pl": "Współczesność",
+                  "uk": "Новітній час",
+                  "nl": "Moderne tijd",
+                  "sv": "Modern tid",
+                  "cs": "Novověk",
+                  "el": "Σύγχρονη εποχή"
+                },
+                "variant": "outlined",
+                "dense": true,
+                "action": {
+                  "chain": [
+                    {
+                      "fn": "mapSetGeojsonSource",
+                      "args": {
+                        "node": "chronos_map",
+                        "source": "empires",
+                        "url": "apps/chronos/era_modern.geojson"
+                      }
+                    },
+                    {
+                      "fn": "sliderSetRange",
+                      "args": {
+                        "node": "chronos_year_slider",
+                        "min": 1800,
+                        "max": 2010
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "type": "spacer",
+            "height": 4
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Custom zone — pick a century-wide window (engine limitation: two picker values can't yet compose into one action, so this is century-granularity rather than free-typed years; see the build script ENGINE NOTE):",
+              "ko": "사용자 지정 구간 — 세기 단위 범위를 선택하세요 (엔진 제약: 두 개의 선택 값을 하나의 동작으로 합칠 수 없어 자유 입력 연도가 아닌 세기 단위입니다. 빌드 스크립트의 ENGINE NOTE 참고):",
+              "zh": "自定义区间 —— 选择以世纪为单位的窗口(引擎限制:两个选择器值目前无法组合为一个操作,因此这里是世纪粒度而非自由输入年份;参见 构建脚本 的 ENGINE NOTE):",
+              "hi": "कस्टम ज़ोन — सदी-चौड़ी विंडो चुनें (इंजन सीमा: दो पिकर मान अभी एक कार्रवाई में नहीं जोड़े जा सकते, इसलिए यह मुक्त-टाइप वर्षों के बजाय सदी-दानेदारी है; बिल्ड स्क्रिप्ट का ENGINE NOTE देखें):",
+              "es": "Zona personalizada: elige una ventana de un siglo de ancho (limitación del motor: dos valores de selector aún no pueden combinarse en una sola acción, por lo que es granularidad de siglo en vez de años de escritura libre; consulta ENGINE NOTE en el script de compilación):",
+              "fr": "Zone personnalisée — choisissez une fenêtre de la largeur d'un siècle (limitation du moteur : deux valeurs de sélecteur ne peuvent pas encore se combiner en une seule action, d'où une granularité par siècle plutôt qu'une saisie libre des années ; voir ENGINE NOTE dans le script de build) :",
+              "ar": "منطقة مخصّصة — اختر نافذة بعرض قرن (قيد المحرّك: لا يمكن لقيمتَي منتقٍ أن تتركّبا بعد في إجراء واحد، لذا هذه دقة قرن لا سنوات حرة الكتابة؛ راجع ENGINE NOTE في سكربت البناء):",
+              "pt": "Zona personalizada — escolha uma janela do tamanho de um século (limitação do motor: dois valores de seletor ainda não podem se combinar numa única ação, por isso é granularidade de século, não anos digitados livremente; veja ENGINE NOTE em o script de build):",
+              "ru": "Произвольная зона — выберите окно шириной в столетие (ограничение движка: два значения селектора пока нельзя объединить в одно действие, поэтому это гранулярность по столетиям, а не свободный ввод годов; см. ENGINE NOTE в скрипт сборки):",
+              "de": "Benutzerdefinierte Zone — wähle ein jahrhundertbreites Fenster (Engine-Einschränkung: zwei Auswahlwerte lassen sich noch nicht zu einer Aktion kombinieren, daher Jahrhundertgranularität statt frei eingegebener Jahre; siehe ENGINE NOTE in das Build-Skript):",
+              "ja": "カスタムゾーン -- 1世紀幅のウィンドウを選択します(エンジンの制約: 2つの選択値を1つの操作にまだ組み合わせられないため、自由入力の年ではなく世紀単位です。ビルドスクリプト の ENGINE NOTE 参照):",
+              "tr": "Özel bölge — yüzyıl genişliğinde bir pencere seçin (motor kısıtlaması: iki seçici değeri henüz tek bir eylemde birleştirilemiyor, bu yüzden serbest yazılan yıllar yerine yüzyıl ayrıntı düzeyi kullanılıyor; derleme betiği içindeki ENGINE NOTE'a bakın):",
+              "vi": "Vùng tùy chỉnh — chọn một cửa sổ rộng một thế kỷ (giới hạn của engine: hai giá trị bộ chọn chưa thể kết hợp thành một hành động, nên đây là độ chi tiết theo thế kỷ thay vì năm nhập tự do; xem ENGINE NOTE trong script build):",
+              "it": "Zona personalizzata — scegli una finestra ampia un secolo (limite del motore: due valori del selettore non possono ancora comporsi in un'unica azione, quindi è una granularità per secolo anziché anni digitati liberamente; vedi ENGINE NOTE in lo script di build):",
+              "fa": "منطقهٔ سفارشی — پنجره‌ای به‌اندازهٔ یک قرن انتخاب کنید (محدودیت موتور: دو مقدار انتخابگر هنوز نمی‌توانند در یک عمل ترکیب شوند، پس این دانه‌بندی بر اساس قرن است نه سال‌های آزادانه؛ به ENGINE NOTE در اسکریپت بیلد مراجعه کنید):",
+              "pl": "Strefa niestandardowa — wybierz okno o szerokości wieku (ograniczenie silnika: dwie wartości selektora nie mogą jeszcze połączyć się w jedno działanie, więc jest to granulacja co wiek, a nie swobodnie wpisywane lata; zobacz ENGINE NOTE w skrypt budujący):",
+              "uk": "Довільна зона — виберіть вікно шириною в століття (обмеження рушія: два значення селектора ще не можуть об'єднатися в одну дію, тому це деталізація по століттях, а не вільно введені роки; див. ENGINE NOTE у скрипт збірки):",
+              "nl": "Aangepaste zone — kies een venster ter grootte van een eeuw (engine-beperking: twee kiezerwaarden kunnen nog niet tot één actie worden gecombineerd, dus dit is eeuw-granulariteit in plaats van vrij getypte jaren; zie ENGINE NOTE in het buildscript):",
+              "sv": "Anpassad zon — välj ett sekelbrett fönster (motorbegränsning: två väljarvärden kan ännu inte kombineras till en åtgärd, så detta är sekelgranularitet snarare än fritt inskrivna år; se ENGINE NOTE i byggskriptet):",
+              "cs": "Vlastní zóna — vyberte okno o šířce jednoho století (omezení enginu: dvě hodnoty výběru zatím nelze zkombinovat do jedné akce, takže jde o granularitu po stoletích, ne o volně zadaná léta; viz ENGINE NOTE v sestavovací skript):",
+              "el": "Προσαρμοσμένη ζώνη — επιλέξτε ένα παράθυρο πλάτους ενός αιώνα (περιορισμός μηχανής: δύο τιμές επιλογέα δεν μπορούν ακόμη να συνδυαστούν σε μία ενέργεια, άρα πρόκειται για κοκκομετρία ανά αιώνα αντί για ελεύθερα πληκτρολογημένα έτη· δείτε ENGINE NOTE στο το σενάριο κατασκευής):"
+            }
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "spacing": 4,
+            "runSpacing": 4,
+            "children": [
+              {
+                "type": "button",
+                "label": {
+                  "en": "2000-1900 BCE",
+                  "ko": "기원전 2000-1900년",
+                  "zh": "公元前2000-1900年",
+                  "hi": "2000-1900 ईसा पूर्व",
+                  "es": "2000-1900 a. C.",
+                  "fr": "2000-1900 av. J.-C.",
+                  "ar": "2000-1900 ق.م",
+                  "pt": "2000-1900 a.C.",
+                  "ru": "2000–1900 до н.э.",
+                  "de": "2000–1900 v. Chr.",
+                  "ja": "紀元前2000-1900年",
+                  "tr": "MÖ 2000-1900",
+                  "vi": "2000-1900 TCN",
+                  "it": "2000-1900 a.C.",
+                  "fa": "۲۰۰۰ تا ۱۹۰۰ پیش از میلاد",
+                  "pl": "2000-1900 p.n.e.",
+                  "uk": "2000-1900 до н.е.",
+                  "nl": "2000-1900 v.Chr.",
+                  "sv": "2000-1900 f.Kr.",
+                  "cs": "2000-1900 př. n. l.",
+                  "el": "2000-1900 π.Χ."
+                },
+                "variant": "text",
+                "dense": true,
+                "action": {
+                  "chain": [
+                    { "fn": "mapSetGeojsonSource", "args": { "node": "chronos_map", "source": "empires", "url": "apps/chronos/era_bronze.geojson" } },
+                    { "fn": "sliderSetRange", "args": { "node": "chronos_year_slider", "min": -2000, "max": -1900 } }
+                  ]
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "1500-1400 BCE",
+                  "ko": "기원전 1500-1400년",
+                  "zh": "公元前1500-1400年",
+                  "hi": "1500-1400 ईसा पूर्व",
+                  "es": "1500-1400 a. C.",
+                  "fr": "1500-1400 av. J.-C.",
+                  "ar": "1500-1400 ق.م",
+                  "pt": "1500-1400 a.C.",
+                  "ru": "1500–1400 до н.э.",
+                  "de": "1500–1400 v. Chr.",
+                  "ja": "紀元前1500-1400年",
+                  "tr": "MÖ 1500-1400",
+                  "vi": "1500-1400 TCN",
+                  "it": "1500-1400 a.C.",
+                  "fa": "۱۵۰۰ تا ۱۴۰۰ پیش از میلاد",
+                  "pl": "1500-1400 p.n.e.",
+                  "uk": "1500-1400 до н.е.",
+                  "nl": "1500-1400 v.Chr.",
+                  "sv": "1500-1400 f.Kr.",
+                  "cs": "1500-1400 př. n. l.",
+                  "el": "1500-1400 π.Χ."
+                },
+                "variant": "text",
+                "dense": true,
+                "action": {
+                  "chain": [
+                    { "fn": "mapSetGeojsonSource", "args": { "node": "chronos_map", "source": "empires", "url": "apps/chronos/era_bronze.geojson" } },
+                    { "fn": "sliderSetRange", "args": { "node": "chronos_year_slider", "min": -1500, "max": -1400 } }
+                  ]
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "1000-900 BCE",
+                  "ko": "기원전 1000-900년",
+                  "zh": "公元前1000-900年",
+                  "hi": "1000-900 ईसा पूर्व",
+                  "es": "1000-900 a. C.",
+                  "fr": "1000-900 av. J.-C.",
+                  "ar": "1000-900 ق.م",
+                  "pt": "1000-900 a.C.",
+                  "ru": "1000–900 до н.э.",
+                  "de": "1000–900 v. Chr.",
+                  "ja": "紀元前1000-900年",
+                  "tr": "MÖ 1000-900",
+                  "vi": "1000-900 TCN",
+                  "it": "1000-900 a.C.",
+                  "fa": "۱۰۰۰ تا ۹۰۰ پیش از میلاد",
+                  "pl": "1000-900 p.n.e.",
+                  "uk": "1000-900 до н.е.",
+                  "nl": "1000-900 v.Chr.",
+                  "sv": "1000-900 f.Kr.",
+                  "cs": "1000-900 př. n. l.",
+                  "el": "1000-900 π.Χ."
+                },
+                "variant": "text",
+                "dense": true,
+                "action": {
+                  "chain": [
+                    { "fn": "mapSetGeojsonSource", "args": { "node": "chronos_map", "source": "empires", "url": "apps/chronos/era_bronze.geojson" } },
+                    { "fn": "sliderSetRange", "args": { "node": "chronos_year_slider", "min": -1000, "max": -900 } }
+                  ]
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "500-400 BCE",
+                  "ko": "기원전 500-400년",
+                  "zh": "公元前500-400年",
+                  "hi": "500-400 ईसा पूर्व",
+                  "es": "500-400 a. C.",
+                  "fr": "500-400 av. J.-C.",
+                  "ar": "500-400 ق.م",
+                  "pt": "500-400 a.C.",
+                  "ru": "500–400 до н.э.",
+                  "de": "500–400 v. Chr.",
+                  "ja": "紀元前500-400年",
+                  "tr": "MÖ 500-400",
+                  "vi": "500-400 TCN",
+                  "it": "500-400 a.C.",
+                  "fa": "۵۰۰ تا ۴۰۰ پیش از میلاد",
+                  "pl": "500-400 p.n.e.",
+                  "uk": "500-400 до н.е.",
+                  "nl": "500-400 v.Chr.",
+                  "sv": "500-400 f.Kr.",
+                  "cs": "500-400 př. n. l.",
+                  "el": "500-400 π.Χ."
+                },
+                "variant": "text",
+                "dense": true,
+                "action": {
+                  "chain": [
+                    { "fn": "mapSetGeojsonSource", "args": { "node": "chronos_map", "source": "empires", "url": "apps/chronos/era_classical.geojson" } },
+                    { "fn": "sliderSetRange", "args": { "node": "chronos_year_slider", "min": -500, "max": -400 } }
+                  ]
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "1-100 CE",
+                  "ko": "서기 1-100년",
+                  "zh": "公元1-100年",
+                  "hi": "1-100 ईस्वी",
+                  "es": "1-100 d. C.",
+                  "fr": "1-100 apr. J.-C.",
+                  "ar": "1-100 م",
+                  "pt": "1-100 d.C.",
+                  "ru": "1–100 н.э.",
+                  "de": "1–100 n. Chr.",
+                  "ja": "西暦1-100年",
+                  "tr": "MS 1-100",
+                  "vi": "1-100 SCN",
+                  "it": "1-100 d.C.",
+                  "fa": "۱ تا ۱۰۰ پس از میلاد",
+                  "pl": "1-100 n.e.",
+                  "uk": "1-100 н.е.",
+                  "nl": "1-100 n.Chr.",
+                  "sv": "1-100 e.Kr.",
+                  "cs": "1-100 n. l.",
+                  "el": "1-100 μ.Χ."
+                },
+                "variant": "text",
+                "dense": true,
+                "action": {
+                  "chain": [
+                    { "fn": "mapSetGeojsonSource", "args": { "node": "chronos_map", "source": "empires", "url": "apps/chronos/era_classical.geojson" } },
+                    { "fn": "sliderSetRange", "args": { "node": "chronos_year_slider", "min": 1, "max": 100 } }
+                  ]
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "500-600 CE",
+                  "ko": "서기 500-600년",
+                  "zh": "公元500-600年",
+                  "hi": "500-600 ईस्वी",
+                  "es": "500-600 d. C.",
+                  "fr": "500-600 apr. J.-C.",
+                  "ar": "500-600 م",
+                  "pt": "500-600 d.C.",
+                  "ru": "500–600 н.э.",
+                  "de": "500–600 n. Chr.",
+                  "ja": "西暦500-600年",
+                  "tr": "MS 500-600",
+                  "vi": "500-600 SCN",
+                  "it": "500-600 d.C.",
+                  "fa": "۵۰۰ تا ۶۰۰ پس از میلاد",
+                  "pl": "500-600 n.e.",
+                  "uk": "500-600 н.е.",
+                  "nl": "500-600 n.Chr.",
+                  "sv": "500-600 e.Kr.",
+                  "cs": "500-600 n. l.",
+                  "el": "500-600 μ.Χ."
+                },
+                "variant": "text",
+                "dense": true,
+                "action": {
+                  "chain": [
+                    { "fn": "mapSetGeojsonSource", "args": { "node": "chronos_map", "source": "empires", "url": "apps/chronos/era_medieval.geojson" } },
+                    { "fn": "sliderSetRange", "args": { "node": "chronos_year_slider", "min": 500, "max": 600 } }
+                  ]
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "1000-1100 CE",
+                  "ko": "서기 1000-1100년",
+                  "zh": "公元1000-1100年",
+                  "hi": "1000-1100 ईस्वी",
+                  "es": "1000-1100 d. C.",
+                  "fr": "1000-1100 apr. J.-C.",
+                  "ar": "1000-1100 م",
+                  "pt": "1000-1100 d.C.",
+                  "ru": "1000–1100 н.э.",
+                  "de": "1000–1100 n. Chr.",
+                  "ja": "西暦1000-1100年",
+                  "tr": "MS 1000-1100",
+                  "vi": "1000-1100 SCN",
+                  "it": "1000-1100 d.C.",
+                  "fa": "۱۰۰۰ تا ۱۱۰۰ پس از میلاد",
+                  "pl": "1000-1100 n.e.",
+                  "uk": "1000-1100 н.е.",
+                  "nl": "1000-1100 n.Chr.",
+                  "sv": "1000-1100 e.Kr.",
+                  "cs": "1000-1100 n. l.",
+                  "el": "1000-1100 μ.Χ."
+                },
+                "variant": "text",
+                "dense": true,
+                "action": {
+                  "chain": [
+                    { "fn": "mapSetGeojsonSource", "args": { "node": "chronos_map", "source": "empires", "url": "apps/chronos/era_medieval.geojson" } },
+                    { "fn": "sliderSetRange", "args": { "node": "chronos_year_slider", "min": 1000, "max": 1100 } }
+                  ]
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "1400-1500 CE",
+                  "ko": "서기 1400-1500년",
+                  "zh": "公元1400-1500年",
+                  "hi": "1400-1500 ईस्वी",
+                  "es": "1400-1500 d. C.",
+                  "fr": "1400-1500 apr. J.-C.",
+                  "ar": "1400-1500 م",
+                  "pt": "1400-1500 d.C.",
+                  "ru": "1400–1500 н.э.",
+                  "de": "1400–1500 n. Chr.",
+                  "ja": "西暦1400-1500年",
+                  "tr": "MS 1400-1500",
+                  "vi": "1400-1500 SCN",
+                  "it": "1400-1500 d.C.",
+                  "fa": "۱۴۰۰ تا ۱۵۰۰ پس از میلاد",
+                  "pl": "1400-1500 n.e.",
+                  "uk": "1400-1500 н.е.",
+                  "nl": "1400-1500 n.Chr.",
+                  "sv": "1400-1500 e.Kr.",
+                  "cs": "1400-1500 n. l.",
+                  "el": "1400-1500 μ.Χ."
+                },
+                "variant": "text",
+                "dense": true,
+                "action": {
+                  "chain": [
+                    { "fn": "mapSetGeojsonSource", "args": { "node": "chronos_map", "source": "empires", "url": "apps/chronos/era_earlymodern.geojson" } },
+                    { "fn": "sliderSetRange", "args": { "node": "chronos_year_slider", "min": 1400, "max": 1500 } }
+                  ]
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "1700-1800 CE",
+                  "ko": "서기 1700-1800년",
+                  "zh": "公元1700-1800年",
+                  "hi": "1700-1800 ईस्वी",
+                  "es": "1700-1800 d. C.",
+                  "fr": "1700-1800 apr. J.-C.",
+                  "ar": "1700-1800 م",
+                  "pt": "1700-1800 d.C.",
+                  "ru": "1700–1800 н.э.",
+                  "de": "1700–1800 n. Chr.",
+                  "ja": "西暦1700-1800年",
+                  "tr": "MS 1700-1800",
+                  "vi": "1700-1800 SCN",
+                  "it": "1700-1800 d.C.",
+                  "fa": "۱۷۰۰ تا ۱۸۰۰ پس از میلاد",
+                  "pl": "1700-1800 n.e.",
+                  "uk": "1700-1800 н.е.",
+                  "nl": "1700-1800 n.Chr.",
+                  "sv": "1700-1800 e.Kr.",
+                  "cs": "1700-1800 n. l.",
+                  "el": "1700-1800 μ.Χ."
+                },
+                "variant": "text",
+                "dense": true,
+                "action": {
+                  "chain": [
+                    { "fn": "mapSetGeojsonSource", "args": { "node": "chronos_map", "source": "empires", "url": "apps/chronos/era_earlymodern.geojson" } },
+                    { "fn": "sliderSetRange", "args": { "node": "chronos_year_slider", "min": 1700, "max": 1800 } }
+                  ]
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "1900-2010 CE",
+                  "ko": "서기 1900-2010년",
+                  "zh": "公元1900-2010年",
+                  "hi": "1900-2010 ईस्वी",
+                  "es": "1900-2010 d. C.",
+                  "fr": "1900-2010 apr. J.-C.",
+                  "ar": "1900-2010 م",
+                  "pt": "1900-2010 d.C.",
+                  "ru": "1900–2010 н.э.",
+                  "de": "1900–2010 n. Chr.",
+                  "ja": "西暦1900-2010年",
+                  "tr": "MS 1900-2010",
+                  "vi": "1900-2010 SCN",
+                  "it": "1900-2010 d.C.",
+                  "fa": "۱۹۰۰ تا ۲۰۱۰ پس از میلاد",
+                  "pl": "1900-2010 n.e.",
+                  "uk": "1900-2010 н.е.",
+                  "nl": "1900-2010 n.Chr.",
+                  "sv": "1900-2010 e.Kr.",
+                  "cs": "1900-2010 n. l.",
+                  "el": "1900-2010 μ.Χ."
+                },
+                "variant": "text",
+                "dense": true,
+                "action": {
+                  "chain": [
+                    { "fn": "mapSetGeojsonSource", "args": { "node": "chronos_map", "source": "empires", "url": "apps/chronos/era_modern.geojson" } },
+                    { "fn": "sliderSetRange", "args": { "node": "chronos_year_slider", "min": 1900, "max": 2010 } }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "type": "slider",
+            "id": "chronos_year_slider",
+            "min": -2000,
+            "max": 2010,
+            "step": 10,
+            "value": 1000,
+            "defaultValue": 1000,
+            "label": "Year",
+            "showValue": true,
+            "setting": "chronos_year",
+            "play": true,
+            "playIntervalMs": 900,
+            "playLoop": false,
+            "action": {
+              "chain": [
+                {
+                  "fn": "mapSetFilter",
+                  "args": {
+                    "node": "chronos_map",
+                    "layer": "empire_fill",
+                    "filter": [
+                      "all",
+                      [
+                        "<=",
+                        "yearFrom",
+                        "$value"
+                      ],
+                      [
+                        ">",
+                        "yearTo",
+                        "$value"
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "fn": "mapSetFilter",
+                  "args": {
+                    "node": "chronos_map",
+                    "layer": "empire_border",
+                    "filter": [
+                      "all",
+                      [
+                        "<=",
+                        "yearFrom",
+                        "$value"
+                      ],
+                      [
+                        ">",
+                        "yearTo",
+                        "$value"
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "fn": "mapSetFilter",
+                  "args": {
+                    "node": "chronos_map",
+                    "layer": "battle_points",
+                    "filter": [
+                      "all",
+                      [
+                        "<=",
+                        "yearFrom",
+                        "$value"
+                      ],
+                      [
+                        ">",
+                        "yearTo",
+                        "$value"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Borders and battles both shift with the slider — territories swap to the nearest mapped snapshot year, battles show within ±25 years of the selected year. Press play to auto-sweep the slider's current range; a manual drag pauses playback.",
+              "ko": "슬라이더에 따라 국경과 전투가 함께 이동합니다 — 영토는 가장 가까운 스냅샷 연도로 전환되고, 전투는 선택한 연도 기준 ±25년 이내에 표시됩니다. 재생을 누르면 슬라이더의 현재 범위를 자동 재생하며, 수동으로 드래그하면 재생이 일시정지됩니다.",
+              "zh": "疆界与战役都会随滑块移动——领土切换到最接近的映射快照年份,战役显示在所选年份的前后25年内。按播放可自动播放滑块当前范围;手动拖动会暂停播放。",
+              "hi": "स्लाइडर के साथ सीमाएं और लड़ाइयाँ दोनों बदलती हैं — क्षेत्र निकटतम मैप किए गए स्नैपशॉट वर्ष में बदल जाते हैं, लड़ाइयाँ चुने गए वर्ष के ±25 वर्ष के भीतर दिखाई देती हैं। स्लाइडर की मौजूदा रेंज को स्वतः चलाने के लिए प्ले दबाएं; मैन्युअल खींचने से प्लेबैक रुक जाता है।",
+              "es": "Tanto las fronteras como las batallas cambian con el control deslizante: los territorios cambian al año de instantánea más cercano, y las batallas se muestran dentro de ±25 años del año seleccionado. Pulsa reproducir para recorrer automáticamente el rango actual del control; arrastrar manualmente pausa la reproducción.",
+              "fr": "Les frontières et les batailles évoluent toutes deux avec le curseur — les territoires basculent vers l'année de référence la plus proche, les batailles s'affichent dans une fenêtre de ±25 ans autour de l'année sélectionnée. Appuyez sur lecture pour parcourir automatiquement la plage actuelle du curseur ; un glissement manuel met la lecture en pause.",
+              "ar": "تتغيّر الحدود والمعارك مع شريط التمرير — تتبدّل الأقاليم إلى أقرب سنة لقطة مُعيَّنة، وتُعرض المعارك ضمن ±25 عامًا من السنة المحددة. اضغط تشغيل لعرض نطاق شريط التمرير الحالي تلقائيًا؛ السحب اليدوي يوقف التشغيل مؤقتًا.",
+              "pt": "Fronteiras e batalhas mudam com o controle deslizante — os territórios trocam para o ano de instantâneo mais próximo, e as batalhas aparecem dentro de ±25 anos do ano selecionado. Pressione reproduzir para percorrer automaticamente o intervalo atual do controle; arrastar manualmente pausa a reprodução.",
+              "ru": "Границы и сражения меняются вместе с ползунком — территории переключаются на ближайший год снимка, сражения показываются в пределах ±25 лет от выбранного года. Нажмите воспроизведение для автопрокрутки текущего диапазона ползунка; ручное перетаскивание ставит воспроизведение на паузу.",
+              "de": "Grenzen und Schlachten ändern sich beide mit dem Schieberegler — Territorien wechseln zum nächstgelegenen erfassten Schnappschussjahr, Schlachten werden innerhalb von ±25 Jahren des gewählten Jahres angezeigt. Play drücken, um den aktuellen Bereich des Reglers automatisch abzuspielen; manuelles Ziehen pausiert die Wiedergabe.",
+              "ja": "国境と戦闘はどちらもスライダーに応じて変化します -- 領土は最も近いスナップショット年に切り替わり、戦闘は選択した年の前後25年以内で表示されます。再生を押すとスライダーの現在の範囲が自動再生され、手動でドラッグすると再生が一時停止します。",
+              "tr": "Sınırlar ve savaşlar kaydırıcıyla birlikte değişir — bölgeler en yakın eşlenen anlık görüntü yılına geçer, savaşlar seçilen yılın ±25 yıl içinde gösterilir. Kaydırıcının mevcut aralığını otomatik taramak için oynat'a basın; elle sürükleme oynatmayı duraklatır.",
+              "vi": "Ranh giới và trận đánh đều thay đổi theo thanh trượt — lãnh thổ chuyển sang năm ảnh chụp gần nhất, trận đánh hiển thị trong khoảng ±25 năm quanh năm đã chọn. Nhấn phát để tự động chạy qua phạm vi hiện tại của thanh trượt; kéo thủ công sẽ tạm dừng phát.",
+              "it": "Confini e battaglie cambiano entrambi con il cursore — i territori passano all'anno istantanea mappato più vicino, le battaglie appaiono entro ±25 anni dall'anno selezionato. Premi play per scorrere automaticamente l'intervallo attuale del cursore; un trascinamento manuale mette in pausa la riproduzione.",
+              "fa": "مرزها و نبردها هر دو با لغزنده تغییر می‌کنند — قلمروها به نزدیک‌ترین سال عکس‌ثابت نگاشته‌شده تغییر می‌کنند، نبردها در بازهٔ ±۲۵ سال از سال انتخابی نمایش داده می‌شوند. برای پیمایش خودکار بازهٔ فعلی لغزنده، پخش را بزنید؛ کشیدن دستی پخش را متوقف می‌کند.",
+              "pl": "Granice i bitwy zmieniają się razem z suwakiem — terytoria przełączają się na najbliższy zmapowany rok migawki, bitwy pokazują się w zakresie ±25 lat od wybranego roku. Naciśnij odtwórz, aby automatycznie przewinąć bieżący zakres suwaka; ręczne przeciągnięcie wstrzymuje odtwarzanie.",
+              "uk": "Кордони й битви змінюються разом із повзунком — території перемикаються на найближчий рік знімка, битви показуються в межах ±25 років від обраного року. Натисніть відтворення, щоб автоматично прокрутити поточний діапазон повзунка; ручне перетягування ставить відтворення на паузу.",
+              "nl": "Grenzen en veldslagen veranderen beide mee met de schuifregelaar — gebieden wisselen naar het dichtstbijzijnde in kaart gebrachte momentopnamejaar, veldslagen worden getoond binnen ±25 jaar van het geselecteerde jaar. Druk op afspelen om het huidige bereik van de schuifregelaar automatisch af te spelen; handmatig slepen pauzeert het afspelen.",
+              "sv": "Både gränser och slag ändras med skjutreglaget — territorier byter till närmaste kartlagda ögonblicksbildsår, slag visas inom ±25 år från det valda året. Tryck på spela upp för att automatiskt svepa skjutreglagets aktuella intervall; manuell dragning pausar uppspelningen.",
+              "cs": "Hranice i bitvy se mění spolu s posuvníkem — území se přepnou na nejbližší zmapovaný rok snímku, bitvy se zobrazují v rozsahu ±25 let od vybraného roku. Stisknutím přehrát automaticky projedete aktuální rozsah posuvníku; ruční přetažení pozastaví přehrávání.",
+              "el": "Τα σύνορα και οι μάχες μετατοπίζονται μαζί με το ρυθμιστικό — τα εδάφη αλλάζουν στο πλησιέστερο χαρτογραφημένο έτος στιγμιότυπου, οι μάχες εμφανίζονται εντός ±25 ετών από το επιλεγμένο έτος. Πατήστε αναπαραγωγή για αυτόματη διάτρεξη του τρέχοντος εύρους του ρυθμιστικού· το χειροκίνητο σύρσιμο θέτει σε παύση την αναπαραγωγή."
+            }
+          }
+        ]
+      }
+    },
+    "battles": {
+      "title": {
+        "en": "Battles",
+        "ko": "전투",
+        "zh": "战役",
+        "hi": "लड़ाइयाँ",
+        "es": "Batallas",
+        "fr": "Batailles",
+        "ar": "المعارك",
+        "pt": "Batalhas",
+        "ru": "Сражения",
+        "de": "Schlachten",
+        "ja": "戦闘",
+        "tr": "Savaşlar",
+        "vi": "Trận đánh",
+        "it": "Battaglie",
+        "fa": "نبردها",
+        "pl": "Bitwy",
+        "uk": "Битви",
+        "nl": "Veldslagen",
+        "sv": "Slag",
+        "cs": "Bitvy",
+        "el": "Μάχες"
+      },
+      "maxContentWidth": 900,
+      "body": {
+        "type": "column",
+        "scroll": true,
+        "children": [
+          {
+            "type": "header",
+            "eyebrow": {
+              "en": "Recreations",
+              "ko": "재현",
+              "zh": "重现",
+              "hi": "पुनर्रचनाएं",
+              "es": "Recreaciones",
+              "fr": "Reconstitutions",
+              "ar": "إعادة تمثيل",
+              "pt": "Recriações",
+              "ru": "Реконструкции",
+              "de": "Nachstellungen",
+              "ja": "再現",
+              "tr": "Canlandırmalar",
+              "vi": "Tái hiện",
+              "it": "Ricostruzioni",
+              "fa": "بازسازی‌ها",
+              "pl": "Rekonstrukcje",
+              "uk": "Реконструкції",
+              "nl": "Reconstructies",
+              "sv": "Återskapanden",
+              "cs": "Rekonstrukce",
+              "el": "Αναπαραστάσεις"
+            },
+            "title": {
+              "en": "Battle recreations",
+              "ko": "전투 재현",
+              "zh": "战役重现",
+              "hi": "लड़ाई की पुनर्रचनाएं",
+              "es": "Recreaciones de batallas",
+              "fr": "Reconstitutions de batailles",
+              "ar": "إعادة تمثيل المعارك",
+              "pt": "Recriações de batalhas",
+              "ru": "Реконструкции сражений",
+              "de": "Schlachten-Nachstellungen",
+              "ja": "戦闘再現",
+              "tr": "Savaş canlandırmaları",
+              "vi": "Tái hiện trận đánh",
+              "it": "Ricostruzioni di battaglie",
+              "fa": "بازسازی نبردها",
+              "pl": "Rekonstrukcje bitew",
+              "uk": "Реконструкції битв",
+              "nl": "Veldslagreconstructies",
+              "sv": "Slagåterskapanden",
+              "cs": "Rekonstrukce bitev",
+              "el": "Αναπαραστάσεις μαχών"
+            },
+            "subtitle": {
+              "en": "Micro battle playback with terrain-aware unit movement — the first of a planned series.",
+              "ko": "지형을 반영한 부대 이동으로 재현하는 소규모 전투 재생 — 예정된 시리즈의 첫 작품입니다.",
+              "zh": "带地形感知单位移动的微观战役回放——计划系列的第一部。",
+              "hi": "भूभाग-अनुकूल यूनिट मूवमेंट के साथ माइक्रो बैटल प्लेबैक — नियोजित श्रृंखला की पहली कड़ी।",
+              "es": "Reproducción de microbatallas con movimiento de unidades consciente del terreno: la primera de una serie planificada.",
+              "fr": "Rejeu de micro-batailles avec mouvement des unités sensible au terrain — la première d'une série prévue.",
+              "ar": "إعادة تشغيل معارك مصغّرة بحركة وحدات واعية بالتضاريس -- أول سلسلة مخطَّطة.",
+              "pt": "Reprodução de micro batalhas com movimento de unidades sensível ao terreno — a primeira de uma série planejada.",
+              "ru": "Воспроизведение мини-сражений с учётом рельефа при перемещении отрядов — первое в запланированной серии.",
+              "de": "Mikroschlacht-Wiedergabe mit geländebewusster Einheitenbewegung — die erste einer geplanten Serie.",
+              "ja": "地形を考慮した部隊移動によるミニ戦闘再生 -- 予定シリーズの第1弾です。",
+              "tr": "Araziye duyarlı birim hareketiyle mikro savaş oynatımı — planlanan serinin ilki.",
+              "vi": "Phát lại trận đánh nhỏ với chuyển động đơn vị nhận biết địa hình -- trận đầu tiên trong loạt dự kiến.",
+              "it": "Riproduzione di micro-battaglie con movimento delle unità sensibile al terreno — la prima di una serie pianificata.",
+              "fa": "پخش نبردهای کوچک با حرکت واحدهای آگاه از زمین — نخستین مورد از یک مجموعهٔ برنامه‌ریزی‌شده.",
+              "pl": "Odtwarzanie mikrobitew z ruchem jednostek uwzględniającym teren — pierwsza z planowanej serii.",
+              "uk": "Відтворення мінібитв з рухом підрозділів з урахуванням рельєфу — перша в запланованій серії.",
+              "nl": "Microveldslag-weergave met terreinbewuste eenheidsbeweging — de eerste in een geplande reeks.",
+              "sv": "Mikroslagsuppspelning med terrängmedveten enhetsrörelse — den första i en planerad serie.",
+              "cs": "Přehrávání mikrobitev s pohybem jednotek zohledňujícím terén — první ze plánované série.",
+              "el": "Αναπαραγωγή μικρομαχών με κίνηση μονάδων ευαίσθητη στο έδαφος — η πρώτη μιας προγραμματισμένης σειράς."
+            },
+            "icon": "history",
+            "size": "compact"
+          },
+          {
+            "type": "text",
+            "value": {
+              "en": "Battle of Cannae — 2 August 216 BC. On the plain of the Aufidus (modern Ofanto) near Apulia, Hannibal's smaller Carthaginian army executed a double envelopment that annihilated a much larger Roman force — one of history's most studied tactical defeats.",
+              "ko": "칸나이 전투 — 기원전 216년 8월 2일. 아풀리아 인근 아우피두스강(현재의 오판토강) 평원에서, 병력이 더 적었던 한니발의 카르타고군은 이중 포위 전술로 훨씬 큰 규모의 로마군을 궤멸시켰습니다 — 역사상 가장 많이 연구된 전술적 패배 중 하나입니다.",
+              "zh": "坎尼会战 —— 公元前216年8月2日。在阿普利亚附近奥菲杜斯河(今奥凡托河)平原上,兵力较少的汉尼拔迦太基军队执行了双重包围战术,歼灭了规模大得多的罗马军队——历史上被研究最多的战术性溃败之一。",
+              "hi": "कैने की लड़ाई — 2 अगस्त 216 ईसा पूर्व। अपुलिया के पास ऑफिडस (आधुनिक ओफ़ान्टो) के मैदान में, हैनिबल की छोटी कार्थेजियन सेना ने दोहरा घेराव करके कहीं बड़ी रोमन सेना का सफाया कर दिया — इतिहास की सबसे अधिक अध्ययन की गई सामरिक हार में से एक।",
+              "es": "Batalla de Cannas — 2 de agosto de 216 a. C. En la llanura del Aufido (actual Ofanto), cerca de Apulia, el ejército cartaginés más pequeño de Aníbal ejecutó un doble envolvimiento que aniquiló a una fuerza romana mucho mayor: una de las derrotas tácticas más estudiadas de la historia.",
+              "fr": "Bataille de Cannes — 2 août 216 av. J.-C. Dans la plaine de l'Aufide (l'actuel Ofanto), près des Pouilles, la plus petite armée carthaginoise d'Hannibal réalisa un double enveloppement qui anéantit une force romaine bien plus importante — l'une des défaites tactiques les plus étudiées de l'histoire.",
+              "ar": "معركة كاناي — 2 أغسطس 216 ق.م. على سهل الأوفيدوس (أوفانتو الحالي) قرب أبوليا، نفّذ جيش هانيبال القرطاجي الأصغر عددًا حركة تطويق مزدوجة أبادت قوة رومانية أكبر بكثير -- واحدة من أكثر الهزائم التكتيكية دراسةً في التاريخ.",
+              "pt": "Batalha de Canas — 2 de agosto de 216 a.C. Na planície do Áufido (atual Ofanto), perto da Apúlia, o exército cartaginês menor de Aníbal executou um duplo envolvimento que aniquilou uma força romana muito maior — uma das derrotas táticas mais estudadas da história.",
+              "ru": "Битва при Каннах — 2 августа 216 г. до н. э. На равнине реки Ауфид (совр. Офанто) близ Апулии меньшая по численности карфагенская армия Ганнибала осуществила двойное окружение, уничтожившее гораздо более крупные римские силы — одно из самых изучаемых тактических поражений в истории.",
+              "de": "Schlacht von Cannae — 2. August 216 v. Chr. Auf der Ebene des Aufidus (heute Ofanto) bei Apulien führte Hannibals kleineres karthagisches Heer eine doppelte Umfassung durch, die eine weit größere römische Streitmacht vernichtete — eine der meiststudierten taktischen Niederlagen der Geschichte.",
+              "ja": "カンナエの戦い -- 紀元前216年8月2日。アプリア近郊のアウフィドゥス川(現オファント川)の平原で、ハンニバル率いる小規模なカルタゴ軍が二重包囲を実行し、はるかに大きなローマ軍を殲滅しました -- 歴史上最も研究されている戦術的敗北の一つです。",
+              "tr": "Cannae Muharebesi — 2 Ağustos MÖ 216. Apulia yakınlarındaki Aufidus (bugünkü Ofanto) ovasında, Hannibal'in daha küçük Kartaca ordusu çok daha büyük bir Roma kuvvetini yok eden çifte kuşatma uyguladı — tarihin en çok incelenen taktik yenilgilerinden biri.",
+              "vi": "Trận Cannae — ngày 2 tháng 8 năm 216 TCN. Trên đồng bằng sông Aufidus (nay là Ofanto) gần Apulia, đội quân Carthage nhỏ hơn của Hannibal thực hiện thế bao vây kép tiêu diệt lực lượng La Mã lớn hơn nhiều — một trong những thất bại chiến thuật được nghiên cứu nhiều nhất trong lịch sử.",
+              "it": "Battaglia di Canne — 2 agosto 216 a.C. Nella pianura dell'Aufido (l'odierno Ofanto), vicino alla Puglia, il più piccolo esercito cartaginese di Annibale eseguì un doppio accerchiamento che annientò una forza romana molto più grande — una delle sconfitte tattiche più studiate della storia.",
+              "fa": "نبرد کانه — دوم اوت ۲۱۶ پیش از میلاد. در دشت رود آئوفیدوس (اوفانتوی امروزی) نزدیک آپولیا، ارتش کوچک‌تر کارتاژی هانیبال با محاصرهٔ دوگانه نیرویی رومی بسیار بزرگ‌تر را نابود کرد — یکی از پرمطالعه‌ترین شکست‌های تاکتیکی تاریخ.",
+              "pl": "Bitwa pod Kannami — 2 sierpnia 216 p.n.e. Na równinie rzeki Aufidus (dziś Ofanto) w pobliżu Apulii mniejsza armia kartagińska Hannibala przeprowadziła podwójne okrążenie, które unicestwiło znacznie większe siły rzymskie — jedna z najczęściej badanych taktycznych porażek w historii.",
+              "uk": "Битва при Каннах — 2 серпня 216 р. до н.е. На рівнині річки Ауфід (сучасне Офанто) поблизу Апулії менша карфагенська армія Ганнібала здійснила подвійне оточення, що знищило значно більші римські сили — одна з найбільш вивчених тактичних поразок в історії.",
+              "nl": "Slag bij Cannae — 2 augustus 216 v.Chr. Op de vlakte van de Aufidus (het huidige Ofanto) bij Apulië voerde Hannibals kleinere Carthaagse leger een dubbele omsingeling uit die een veel grotere Romeinse macht vernietigde — een van de meest bestudeerde tactische nederlagen uit de geschiedenis.",
+              "sv": "Slaget vid Cannae — 2 augusti 216 f.Kr. På slätten vid Aufidus (nuvarande Ofanto) nära Apulien utförde Hannibals mindre karthagiska armé en dubbel omslutning som förintade en mycket större romersk styrka — ett av historiens mest studerade taktiska nederlag.",
+              "cs": "Bitva u Kann — 2. srpna 216 př. n. l. Na pláni řeky Aufidus (dnešní Ofanto) poblíž Apulie provedla menší kartaginská armáda Hannibala dvojité obklíčení, které zničilo mnohem větší římskou sílu — jedna z nejvíce studovaných taktických porážek v historii.",
+              "el": "Μάχη των Καννών — 2 Αυγούστου 216 π.Χ. Στην πεδιάδα του Αυφίδου (σημερινός Οφάντο) κοντά στην Απουλία, ο μικρότερος καρχηδονιακός στρατός του Αννίβα εκτέλεσε διπλή περικύκλωση που εξολόθρευσε μια πολύ μεγαλύτερη ρωμαϊκή δύναμη -- μία από τις πιο μελετημένες τακτικές ήττες στην ιστορία."
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Reconstruction, not a record: positions and paths are approximate and disputed by historians. See the battle screen for the full provenance caveat and sources.",
+              "ko": "재구성이며 정확한 기록이 아닙니다: 위치와 경로는 근사치이며 역사가들 사이에서 이견이 있습니다. 전체 출처 유의사항과 자료는 전투 화면을 참고하세요.",
+              "zh": "这是重建,而非记录:位置和路径为近似值,历史学家对此存在争议。完整的来源说明和资料请见战役页面。",
+              "hi": "यह पुनर्रचना है, रिकॉर्ड नहीं: स्थितियां और मार्ग अनुमानित हैं और इतिहासकारों के बीच विवादित हैं। पूरी स्रोत जानकारी और चेतावनी के लिए युद्ध स्क्रीन देखें।",
+              "es": "Es una reconstrucción, no un registro: las posiciones y trayectorias son aproximadas y están en disputa entre historiadores. Consulta la pantalla de la batalla para ver el aviso de procedencia completo y las fuentes.",
+              "fr": "Reconstitution, pas un enregistrement : les positions et trajectoires sont approximatives et contestées par les historiens. Voir l'écran de la bataille pour l'avertissement complet sur la provenance et les sources.",
+              "ar": "إعادة تمثيل، لا سجل: المواقع والمسارات تقريبية ومتنازع عليها بين المؤرخين. راجع شاشة المعركة للاطلاع على تنويه المصدر الكامل والمراجع.",
+              "pt": "Reconstrução, não um registro: posições e trajetórias são aproximadas e contestadas por historiadores. Veja a tela da batalha para o aviso completo de procedência e as fontes.",
+              "ru": "Реконструкция, а не документальная запись: позиции и маршруты приблизительны и оспариваются историками. Полное примечание о происхождении данных и источники см. на экране сражения.",
+              "de": "Rekonstruktion, keine Aufzeichnung: Positionen und Wege sind Näherungen und werden von Historikern kontrovers diskutiert. Den vollständigen Herkunftshinweis und die Quellen findest du auf dem Schlachtbildschirm.",
+              "ja": "これは再構成であり、記録そのものではありません:位置や経路は概算であり、歴史家の間で見解が分かれています。出典に関する完全な注意事項と資料は戦闘画面をご覧ください。",
+              "tr": "Bu bir yeniden inşadır, kayıt değil: konumlar ve rotalar yaklaşıktır ve tarihçiler arasında tartışmalıdır. Tam kaynak uyarısı ve kaynaklar için savaş ekranına bakın.",
+              "vi": "Đây là tái dựng, không phải bản ghi chép: vị trí và đường di chuyển là ước lượng và còn gây tranh cãi giữa các sử gia. Xem màn hình trận đánh để biết cảnh báo nguồn gốc đầy đủ và các nguồn tham khảo.",
+              "it": "Ricostruzione, non un resoconto: posizioni e percorsi sono approssimativi e contestati dagli storici. Vedi la schermata della battaglia per l'avvertenza completa sulla provenienza e le fonti.",
+              "fa": "بازسازی است، نه سندی دقیق: موقعیت‌ها و مسیرها تقریبی‌اند و مورد اختلاف مورخان هستند. برای هشدار کامل دربارهٔ منابع، صفحهٔ نبرد را ببینید.",
+              "pl": "Rekonstrukcja, nie zapis: pozycje i trasy są przybliżone i sporne wśród historyków. Pełne zastrzeżenie dotyczące pochodzenia i źródła znajdziesz na ekranie bitwy.",
+              "uk": "Це реконструкція, а не документальний запис: позиції та маршрути приблизні й оспорювані істориками. Повне застереження щодо походження даних і джерела дивіться на екрані битви.",
+              "nl": "Reconstructie, geen vastlegging: posities en paden zijn bij benadering en worden betwist door historici. Zie het slagveldscherm voor de volledige herkomstwaarschuwing en bronnen.",
+              "sv": "Rekonstruktion, inte ett protokoll: positioner och vägar är ungefärliga och omtvistade bland historiker. Se slagvyn för den fullständiga proveniensvarningen och källorna.",
+              "cs": "Rekonstrukce, ne záznam: pozice a trasy jsou přibližné a mezi historiky sporné. Úplné upozornění na původ a zdroje najdete na obrazovce bitvy.",
+              "el": "Αναπαράσταση, όχι καταγραφή: οι θέσεις και οι διαδρομές είναι κατά προσέγγιση και αμφισβητούνται από ιστορικούς. Δείτε την οθόνη μάχης για την πλήρη επιφύλαξη προέλευσης και τις πηγές."
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "Open Cannae",
+              "ko": "칸나이 열기",
+              "zh": "打开坎尼",
+              "hi": "कैने खोलें",
+              "es": "Abrir Cannas",
+              "fr": "Ouvrir Cannes",
+              "ar": "فتح كاناي",
+              "pt": "Abrir Canas",
+              "ru": "Открыть Канны",
+              "de": "Cannae öffnen",
+              "ja": "カンナエを開く",
+              "tr": "Cannae'yi aç",
+              "vi": "Mở Cannae",
+              "it": "Apri Canne",
+              "fa": "باز کردن کانه",
+              "pl": "Otwórz Kanny",
+              "uk": "Відкрити Канни",
+              "nl": "Cannae openen",
+              "sv": "Öppna Cannae",
+              "cs": "Otevřít Kanny",
+              "el": "Άνοιγμα Καννών"
+            },
+            "variant": "filled",
+            "action": {"fn": "goto", "args": {"screen": "cannae_battle"}}
+          }
+        ]
+      }
+    },
+    "cannae_battle": {
+      "title": {
+        "en": "Cannae — 216 BC",
+        "ko": "칸나이 — 기원전 216년",
+        "zh": "坎尼 — 公元前216年",
+        "hi": "कैने — 216 ईसा पूर्व",
+        "es": "Cannas — 216 a. C.",
+        "fr": "Cannes — 216 av. J.-C.",
+        "ar": "كاناي — 216 ق.م",
+        "pt": "Canas — 216 a.C.",
+        "ru": "Канны — 216 г. до н. э.",
+        "de": "Cannae — 216 v. Chr.",
+        "ja": "カンナエ — 紀元前216年",
+        "tr": "Cannae — MÖ 216",
+        "vi": "Cannae — 216 TCN",
+        "it": "Canne — 216 a.C.",
+        "fa": "کانه — ۲۱۶ پیش از میلاد",
+        "pl": "Kanny — 216 p.n.e.",
+        "uk": "Канни — 216 до н.е.",
+        "nl": "Cannae — 216 v.Chr.",
+        "sv": "Cannae — 216 f.Kr.",
+        "cs": "Kanny — 216 př. n. l.",
+        "el": "Κάννες — 216 π.Χ."
+      },
+      "maxContentWidth": 900,
+      "body": {
+        "type": "column",
+        "scroll": true,
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Reconstruction based on Polybius and Livy — positions and unit paths are approximate, disputed by historians, and simplified for legibility. The river shown is a hand-authored trace of the modern valley, not the disputed 216 BC channel.",
+              "ko": "폴리비오스와 리비우스의 기록을 바탕으로 재구성했습니다 — 위치와 부대 이동 경로는 근사치이며 역사가들 사이에서 이견이 있고, 가독성을 위해 단순화했습니다. 표시된 강은 현대 계곡을 손으로 그린 궤적이며, 논쟁이 있는 기원전 216년 당시 물길이 아닙니다.",
+              "zh": "重建依据波利比乌斯和李维的记载 —— 位置和部队路径为近似值,历史学家对此存在争议,并为清晰起见做了简化。图中所示河流是根据现代河谷手绘的轨迹,并非公元前216年那条有争议的河道。",
+              "hi": "पॉलिबियस और लिवी पर आधारित पुनर्रचना — स्थितियां और यूनिट के मार्ग अनुमानित हैं, इतिहासकारों के बीच विवादित हैं, और स्पष्टता के लिए सरल बनाए गए हैं। दिखाई गई नदी आधुनिक घाटी की हाथ से बनाई गई रेखा है, न कि विवादित 216 ईसा पूर्व की धारा।",
+              "es": "Reconstrucción basada en Polibio y Livio: las posiciones y trayectorias de las unidades son aproximadas, están en disputa entre historiadores y se han simplificado para mayor claridad. El río mostrado es un trazo elaborado a mano del valle actual, no el cauce disputado del 216 a. C.",
+              "fr": "Reconstitution fondée sur Polybe et Tite-Live — les positions et trajectoires des unités sont approximatives, contestées par les historiens et simplifiées pour plus de lisibilité. La rivière représentée est un tracé dessiné à la main de la vallée actuelle, pas le lit contesté de 216 av. J.-C.",
+              "ar": "إعادة تمثيل استنادًا إلى بوليبيوس وليفي -- المواقع ومسارات الوحدات تقريبية ومتنازع عليها بين المؤرخين، وبُسِّطت لتحسين الوضوح. النهر المعروض هو خط مرسوم يدويًا للوادي الحديث، لا القناة المتنازع عليها لعام 216 ق.م.",
+              "pt": "Reconstrução baseada em Políbio e Tito Lívio — posições e trajetórias das unidades são aproximadas, contestadas por historiadores e simplificadas para legibilidade. O rio mostrado é um traçado desenhado à mão do vale moderno, não o canal disputado de 216 a.C.",
+              "ru": "Реконструкция на основе Полибия и Тита Ливия — позиции и маршруты отрядов приблизительны, оспариваются историками и упрощены для наглядности. Показанная река — вручную нарисованный контур современной долины, а не спорное русло 216 г. до н. э.",
+              "de": "Rekonstruktion basierend auf Polybios und Livius — Positionen und Einheitenwege sind Näherungen, von Historikern umstritten und zur besseren Lesbarkeit vereinfacht. Der gezeigte Fluss ist eine handgezeichnete Spur des heutigen Tals, nicht das umstrittene Flussbett von 216 v. Chr.",
+              "ja": "ポリュビオスとリウィウスの記述に基づく再構成です -- 位置と部隊の経路は概算であり、歴史家の間で見解が分かれ、見やすさのために簡略化されています。表示されている川は現代の谷を手作業でなぞったものであり、論争のある紀元前216年当時の川筋ではありません。",
+              "tr": "Polybius ve Livius'a dayanan bir yeniden inşa — konumlar ve birim rotaları yaklaşıktır, tarihçiler arasında tartışmalıdır ve okunabilirlik için basitleştirilmiştir. Gösterilen nehir, tartışmalı MÖ 216 kanalı değil, modern vadinin elle çizilmiş bir izidir.",
+              "vi": "Tái dựng dựa trên Polybius và Livy -- vị trí và đường di chuyển của các đơn vị là ước lượng, còn gây tranh cãi giữa các sử gia, và được đơn giản hóa để dễ đọc. Dòng sông hiển thị là đường vẽ thủ công của thung lũng hiện đại, không phải lòng sông gây tranh cãi năm 216 TCN.",
+              "it": "Ricostruzione basata su Polibio e Livio — posizioni e percorsi delle unità sono approssimativi, contestati dagli storici e semplificati per leggibilità. Il fiume mostrato è un tracciato disegnato a mano della valle moderna, non il canale contestato del 216 a.C.",
+              "fa": "بازسازی بر پایهٔ پولیبیوس و لیوی — موقعیت‌ها و مسیرهای واحدها تقریبی‌اند، مورد اختلاف مورخان هستند و برای خوانایی ساده‌سازی شده‌اند. رودخانهٔ نمایش‌داده‌شده ردی دستی از درهٔ امروزی است، نه مجرای مورد اختلاف سال ۲۱۶ پیش از میلاد.",
+              "pl": "Rekonstrukcja oparta na Polibiuszu i Liwiuszu — pozycje i trasy jednostek są przybliżone, sporne wśród historyków i uproszczone dla czytelności. Pokazana rzeka to ręcznie odwzorowany przebieg współczesnej doliny, a nie sporne koryto z 216 r. p.n.e.",
+              "uk": "Реконструкція на основі Полібія та Тита Лівія — позиції та маршрути підрозділів приблизні, оспорювані істориками і спрощені для наочності. Показана річка — вручну намальований контур сучасної долини, а не спірне русло 216 р. до н.е.",
+              "nl": "Reconstructie gebaseerd op Polybios en Livius — posities en eenheidsroutes zijn bij benadering, betwist door historici en vereenvoudigd voor leesbaarheid. De getoonde rivier is een met de hand getekend spoor van de moderne vallei, niet de betwiste bedding uit 216 v.Chr.",
+              "sv": "Rekonstruktion baserad på Polybios och Livius — positioner och enheters vägar är ungefärliga, omtvistade bland historiker och förenklade för läsbarhet. Floden som visas är ett handritat spår av den moderna dalen, inte den omtvistade fåran från 216 f.Kr.",
+              "cs": "Rekonstrukce založená na Polybiovi a Liviovi — pozice a trasy jednotek jsou přibližné, mezi historiky sporné a zjednodušené pro srozumitelnost. Zobrazená řeka je ručně vytvořená stopa moderního údolí, ne sporné koryto z roku 216 př. n. l.",
+              "el": "Αναπαράσταση βασισμένη στον Πολύβιο και τον Λίβιο — οι θέσεις και οι διαδρομές μονάδων είναι κατά προσέγγιση, αμφισβητούνται από ιστορικούς και έχουν απλοποιηθεί για ευανάγνωστη απεικόνιση. Ο ποταμός που εμφανίζεται είναι ένα χειροποίητο ίχνος της σύγχρονης κοιλάδας, όχι η αμφισβητούμενη κοίτη του 216 π.Χ."
+            }
+          },
+          {
+            "type": "glmap",
+            "id": "cannae_map",
+            "height": 520,
+            "fillPhone": false,
+            "zoom": 13.3,
+            "center": [41.30, 16.13],
+            "geojsonSources": {
+              "cannae_bands": "apps/chronos/battles/cannae/terrain_bands.geojson",
+              "cannae_contours": "apps/chronos/battles/cannae/terrain_contours.geojson",
+              "cannae_river": "apps/chronos/battles/cannae/river.geojson",
+              "cannae_trails": "apps/chronos/battles/cannae/movement_trails.geojson",
+              "cannae_units": "apps/chronos/battles/cannae/units_ticks.geojson",
+              "cannae_captions": "apps/chronos/battles/cannae/phase_captions.geojson"
+            },
+            "sourceLayers": [
+              {
+                "id": "cannae_bands_fill",
+                "source": "cannae_bands",
+                "kind": "fill",
+                "title": "Elevation",
+                "paint": {
+                  "colorProp": "band",
+                  "ramp": {"c0": "#E8E0C8", "c1": "#D9CC9E", "c2": "#C6B378", "c3": "#AD9457"},
+                  "opacity": 0.35,
+                  "antialias": false
+                }
+              },
+              {
+                "id": "cannae_contour_lines",
+                "source": "cannae_contours",
+                "kind": "line",
+                "title": "Contours (10m)",
+                "paint": {"color": "#6B5A3A", "width": 0.5, "opacity": 0.35}
+              },
+              {
+                "id": "cannae_river_line",
+                "source": "cannae_river",
+                "kind": "line",
+                "title": "River (Ofanto)",
+                "paint": {"color": "#2E6F95", "width": 2.2, "opacity": 0.85}
+              },
+              {
+                "id": "cannae_trail_rome",
+                "source": "cannae_trails",
+                "kind": "line",
+                "title": "Rome movement",
+                "filter": ["all", ["==", "side", "rome"], ["<=", "tFrom", 0], [">", "tTo", 0]],
+                "paint": {"color": "#B33951", "width": 2, "opacity": 0.55},
+                "crossfadeMs": 500
+              },
+              {
+                "id": "cannae_trail_carthage",
+                "source": "cannae_trails",
+                "kind": "line",
+                "title": "Carthage movement",
+                "filter": ["all", ["==", "side", "carthage"], ["<=", "tFrom", 0], [">", "tTo", 0]],
+                "paint": {"color": "#3D5A80", "width": 2, "opacity": 0.55},
+                "crossfadeMs": 500
+              },
+              {
+                "id": "cannae_units_rome_infantry",
+                "source": "cannae_units",
+                "kind": "circle",
+                "title": "Rome infantry",
+                "filter": ["all", ["==", "side", "rome"], ["in", "type", "heavy_infantry", "light_infantry"], ["<=", "tFrom", 0], [">", "tTo", 0]],
+                "paint": {"color": "#B33951", "radius": 8, "opacity": 0.92, "outline": "#ffffff"}
+              },
+              {
+                "id": "cannae_units_rome_cavalry",
+                "source": "cannae_units",
+                "kind": "circle",
+                "title": "Rome cavalry",
+                "filter": ["all", ["==", "side", "rome"], ["in", "type", "heavy_cavalry", "light_cavalry"], ["<=", "tFrom", 0], [">", "tTo", 0]],
+                "paint": {"color": "#B33951", "radius": 6, "opacity": 0.92, "outline": "#ffffff"}
+              },
+              {
+                "id": "cannae_units_carthage_infantry",
+                "source": "cannae_units",
+                "kind": "circle",
+                "title": "Carthage infantry",
+                "filter": ["all", ["==", "side", "carthage"], ["in", "type", "heavy_infantry", "light_infantry"], ["<=", "tFrom", 0], [">", "tTo", 0]],
+                "paint": {"color": "#3D5A80", "radius": 8, "opacity": 0.92, "outline": "#ffffff"}
+              },
+              {
+                "id": "cannae_units_carthage_cavalry",
+                "source": "cannae_units",
+                "kind": "circle",
+                "title": "Carthage cavalry",
+                "filter": ["all", ["==", "side", "carthage"], ["in", "type", "heavy_cavalry", "light_cavalry"], ["<=", "tFrom", 0], [">", "tTo", 0]],
+                "paint": {"color": "#3D5A80", "radius": 6, "opacity": 0.92, "outline": "#ffffff"}
+              },
+              {
+                "id": "cannae_captions_label",
+                "source": "cannae_captions",
+                "kind": "symbol",
+                "title": "Phase captions",
+                "minzoom": 10,
+                "filter": ["all", ["<=", "tFrom", 0], [">", "tTo", 0]],
+                "label": "caption",
+                "paint": {
+                  "textSize": 11,
+                  "textColor": {"light": "#1F2937", "dark": "#F1F5F9"},
+                  "haloColor": {"light": "#FFFFFF", "dark": "#0B1220"},
+                  "haloWidth": 1.6
+                }
+              }
+            ],
+            "layerPanel": {"align": "topStart", "title": "Layers"},
+            "legend": {
+              "entries": {"Rome": "#B33951", "Carthage": "#3D5A80"},
+              "title": "Legend",
+              "collapsible": true,
+              "startCollapsed": true
+            },
+            "tapLayers": [
+              "cannae_units_rome_infantry",
+              "cannae_units_rome_cavalry",
+              "cannae_units_carthage_infantry",
+              "cannae_units_carthage_cavalry"
+            ],
+            "tapLayerDetails": {
+              "cannae_units_rome_infantry": {
+                "titleField": "name",
+                "fields": ["name", "side", "type", "strength"],
+                "labels": {"name": "Unit", "side": "Side", "type": "Class", "strength": "Estimated strength"},
+                "note": "Reconstruction — position and strength are approximate."
+              },
+              "cannae_units_rome_cavalry": {
+                "titleField": "name",
+                "fields": ["name", "side", "type", "strength"],
+                "labels": {"name": "Unit", "side": "Side", "type": "Class", "strength": "Estimated strength"},
+                "note": "Reconstruction — position and strength are approximate."
+              },
+              "cannae_units_carthage_infantry": {
+                "titleField": "name",
+                "fields": ["name", "side", "type", "strength"],
+                "labels": {"name": "Unit", "side": "Side", "type": "Class", "strength": "Estimated strength"},
+                "note": "Reconstruction — position and strength are approximate."
+              },
+              "cannae_units_carthage_cavalry": {
+                "titleField": "name",
+                "fields": ["name", "side", "type", "strength"],
+                "labels": {"name": "Unit", "side": "Side", "type": "Class", "strength": "Estimated strength"},
+                "note": "Reconstruction — position and strength are approximate."
+              }
+            }
+          },
+          {
+            "type": "slider",
+            "id": "cannae_time_slider",
+            "min": 0,
+            "max": 300,
+            "step": 2,
+            "value": 0,
+            "defaultValue": 0,
+            "label": "Battle time (minutes elapsed, 2 August 216 BC)",
+            "showValue": true,
+            "setting": "cannae_time",
+            "play": true,
+            "playIntervalMs": 700,
+            "playLoop": false,
+            "action": {
+              "chain": [
+                {"fn": "mapSetFilter", "args": {"node": "cannae_map", "layer": "cannae_trail_rome",
+                  "filter": ["all", ["==", "side", "rome"], ["<=", "tFrom", "$value"], [">", "tTo", "$value"]]}},
+                {"fn": "mapSetFilter", "args": {"node": "cannae_map", "layer": "cannae_trail_carthage",
+                  "filter": ["all", ["==", "side", "carthage"], ["<=", "tFrom", "$value"], [">", "tTo", "$value"]]}},
+                {"fn": "mapSetFilter", "args": {"node": "cannae_map", "layer": "cannae_units_rome_infantry",
+                  "filter": ["all", ["==", "side", "rome"], ["in", "type", "heavy_infantry", "light_infantry"], ["<=", "tFrom", "$value"], [">", "tTo", "$value"]]}},
+                {"fn": "mapSetFilter", "args": {"node": "cannae_map", "layer": "cannae_units_rome_cavalry",
+                  "filter": ["all", ["==", "side", "rome"], ["in", "type", "heavy_cavalry", "light_cavalry"], ["<=", "tFrom", "$value"], [">", "tTo", "$value"]]}},
+                {"fn": "mapSetFilter", "args": {"node": "cannae_map", "layer": "cannae_units_carthage_infantry",
+                  "filter": ["all", ["==", "side", "carthage"], ["in", "type", "heavy_infantry", "light_infantry"], ["<=", "tFrom", "$value"], [">", "tTo", "$value"]]}},
+                {"fn": "mapSetFilter", "args": {"node": "cannae_map", "layer": "cannae_units_carthage_cavalry",
+                  "filter": ["all", ["==", "side", "carthage"], ["in", "type", "heavy_cavalry", "light_cavalry"], ["<=", "tFrom", "$value"], [">", "tTo", "$value"]]}},
+                {"fn": "mapSetFilter", "args": {"node": "cannae_map", "layer": "cannae_captions_label",
+                  "filter": ["all", ["<=", "tFrom", "$value"], [">", "tTo", "$value"]]}}
+              ]
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Press play to watch the double envelopment unfold — Hasdrubal's cavalry routs the Roman right by the river, then rides behind the Roman line while the African veterans wheel onto both flanks. Tap a unit for detail; scrub the slider to replay any moment.",
+              "ko": "재생을 눌러 이중 포위가 펼쳐지는 과정을 확인하세요 — 하스드루발의 기병대가 강가에서 로마군 우익을 격파한 뒤 로마 전열 후방으로 돌아가고, 아프리카 정예 보병은 양 측면으로 방향을 틉니다. 부대를 눌러 상세 정보를 보고, 슬라이더를 움직여 원하는 순간을 다시 재생하세요.",
+              "zh": "按播放观看双重包围战术展开 —— 哈斯德鲁巴的骑兵在河边击溃罗马军右翼,随后绕到罗马战线后方,而非洲老兵则转向包抄两翼。点按单位查看详情;拖动滑块可重播任意时刻。",
+              "hi": "डबल एनवेलपमेंट को खुलते देखने के लिए प्ले दबाएं — हैस्ड्रुबल की घुड़सवार सेना नदी के पास रोमन दाहिने हिस्से को हराती है, फिर अफ्रीकी अनुभवी सैनिकों के दोनों तरफ मुड़ने के साथ रोमन लाइन के पीछे जाती है। विवरण के लिए किसी यूनिट को टैप करें; किसी भी क्षण को दोबारा चलाने के लिए स्लाइडर को खींचें।",
+              "es": "Pulsa reproducir para ver desplegarse el doble envolvimiento: la caballería de Asdrúbal pone en fuga al ala derecha romana junto al río, luego rodea la línea romana mientras los veteranos africanos giran sobre ambos flancos. Toca una unidad para ver detalles; arrastra el control deslizante para repetir cualquier momento.",
+              "fr": "Appuyez sur lecture pour voir le double enveloppement se dérouler — la cavalerie d'Hasdrubal met en déroute l'aile droite romaine près de la rivière, puis contourne la ligne romaine par l'arrière tandis que les vétérans africains pivotent sur les deux flancs. Touchez une unité pour plus de détails ; faites glisser le curseur pour rejouer un instant.",
+              "ar": "اضغط تشغيل لمشاهدة التطويق المزدوج يتكشّف -- سلاح فرسان هاسدروبال يهزم الجناح الروماني الأيمن بجانب النهر، ثم يلتف خلف الخط الروماني بينما يدور المحاربون الأفارقة المخضرمون على كلا الجناحين. اضغط على وحدة لمعرفة التفاصيل؛ اسحب شريط التمرير لإعادة تشغيل أي لحظة.",
+              "pt": "Pressione reproduzir para ver o duplo envolvimento se desenrolar — a cavalaria de Asdrúbal derrota o flanco direito romano perto do rio, depois cavalga atrás da linha romana enquanto os veteranos africanos giram sobre ambos os flancos. Toque numa unidade para detalhes; arraste o controle deslizante para reproduzir qualquer momento.",
+              "ru": "Нажмите воспроизведение, чтобы увидеть, как разворачивается двойное окружение — конница Гасдрубала обращает в бегство правый фланг римлян у реки, затем заходит в тыл римскому строю, пока африканские ветераны разворачиваются на оба фланга. Нажмите на отряд для подробностей; перетащите ползунок, чтобы повторить любой момент.",
+              "de": "Drücke Play, um zu sehen, wie sich die doppelte Umfassung entfaltet — Hasdrubals Reiterei schlägt den römischen rechten Flügel am Fluss in die Flucht und reitet dann hinter die römische Linie, während die afrikanischen Veteranen auf beide Flanken schwenken. Tippe auf eine Einheit für Details; ziehe den Schieberegler, um jeden Moment erneut abzuspielen.",
+              "ja": "再生を押して二重包囲が展開する様子を見てください -- ハスドルバルの騎兵が川沿いでローマ軍右翼を敗走させ、その後ローマ戦列の背後に回り込み、その間にアフリカの精鋭歩兵が両翼に展開します。部隊をタップすると詳細が表示され、スライダーを動かせば任意の瞬間を再生できます。",
+              "tr": "Çifte kuşatmanın nasıl geliştiğini izlemek için oynat'a basın — Hasdrubal'ın süvarileri nehir kıyısında Roma sağ kanadını bozguna uğratır, ardından Afrikalı gaziler her iki kanada dönerken Roma hattının arkasına geçer. Ayrıntı için bir birime dokunun; herhangi bir anı yeniden oynatmak için kaydırıcıyı sürükleyin.",
+              "vi": "Nhấn phát để xem thế bao vây kép diễn ra -- kỵ binh của Hasdrubal đánh bại cánh phải quân La Mã bên bờ sông, sau đó vòng ra sau đội hình La Mã trong khi các cựu binh châu Phi xoay vào cả hai bên sườn. Chạm vào một đơn vị để xem chi tiết; kéo thanh trượt để phát lại bất kỳ thời điểm nào.",
+              "it": "Premi play per vedere svolgersi il doppio accerchiamento — la cavalleria di Asdrubale mette in fuga l'ala destra romana presso il fiume, poi aggira la linea romana mentre i veterani africani ruotano su entrambi i fianchi. Tocca un'unità per i dettagli; trascina il cursore per rivedere qualsiasi momento.",
+              "fa": "پخش را بزنید تا شکل‌گیری محاصرهٔ دوگانه را ببینید — سواره‌نظام هاسدروبال بال راست رومی را کنار رودخانه شکست می‌دهد، سپس پشت صف رومی می‌رود در حالی که کهنه‌سربازان آفریقایی به هر دو جناح می‌چرخند. برای جزئیات روی یک واحد ضربه بزنید؛ برای پخش دوبارهٔ هر لحظه لغزنده را بکشید.",
+              "pl": "Naciśnij odtwórz, aby zobaczyć rozwijanie się podwójnego okrążenia — kawaleria Hazdrubala rozbija rzymskie prawe skrzydło przy rzece, po czym objeżdża linię rzymską od tyłu, gdy afrykańscy weterani zawracają na oba skrzydła. Dotknij jednostki, aby zobaczyć szczegóły; przeciągnij suwak, aby odtworzyć dowolny moment.",
+              "uk": "Натисніть відтворення, щоб побачити, як розгортається подвійне оточення — кіннота Гасдрубала обертає на втечу правий фланг римлян біля річки, потім заходить у тил римському строю, поки африканські ветерани розвертаються на обидва фланги. Торкніться підрозділу для деталей; перетягніть повзунок, щоб повторити будь-яку мить.",
+              "nl": "Druk op afspelen om de dubbele omsingeling te zien ontvouwen — Hasdrubals cavalerie verslaat de Romeinse rechterflank bij de rivier, rijdt dan achter de Romeinse linie terwijl de Afrikaanse veteranen naar beide flanken zwenken. Tik op een eenheid voor details; sleep de schuifregelaar om elk moment opnieuw af te spelen.",
+              "sv": "Tryck på spela upp för att se den dubbla omslutningen utspela sig — Hasdrubals kavalleri driver den romerska högerflygeln på flykten vid floden, rider sedan bakom den romerska linjen medan de afrikanska veteranerna svänger in mot båda flankerna. Tryck på en enhet för detaljer; dra i skjutreglaget för att spela upp valfritt ögonblick igen.",
+              "cs": "Stiskněte přehrát a sledujte, jak se rozvíjí dvojité obklíčení — Hasdrubalova jízda zažene na útěk římské pravé křídlo u řeky a poté obejde římskou linii zezadu, zatímco afričtí veteráni se stáčejí na obě křídla. Klepnutím na jednotku zobrazíte podrobnosti; přetažením posuvníku přehrajete znovu libovolný okamžik.",
+              "el": "Πατήστε αναπαραγωγή για να δείτε την διπλή περικύκλωση να ξετυλίγεται — το ιππικό του Ασδρούβα τρέπει σε φυγή τη ρωμαϊκή δεξιά πτέρυγα δίπλα στο ποτάμι, έπειτα περνά πίσω από τη ρωμαϊκή γραμμή ενώ οι Αφρικανοί βετεράνοι στρέφονται και στις δύο πτέρυγες. Πατήστε μια μονάδα για λεπτομέρειες· σύρετε το ρυθμιστικό για επανάληψη οποιασδήποτε στιγμής."
+            }
+          }
+        ]
+      }
+    },
+    "about": {
+      "title": {
+        "en": "About",
+        "ko": "정보",
+        "zh": "关于",
+        "hi": "जानकारी",
+        "es": "Acerca de",
+        "fr": "À propos",
+        "ar": "حول",
+        "pt": "Sobre",
+        "ru": "О приложении",
+        "de": "Über",
+        "ja": "概要",
+        "tr": "Hakkında",
+        "vi": "Giới thiệu",
+        "it": "Informazioni",
+        "fa": "دربارهٔ برنامه",
+        "pl": "O aplikacji",
+        "uk": "Про додаток",
+        "nl": "Over",
+        "sv": "Om",
+        "cs": "O aplikaci",
+        "el": "Σχετικά"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "header",
+            "eyebrow": {
+              "en": "Provenance",
+              "ko": "출처",
+              "zh": "来源",
+              "hi": "स्रोत",
+              "es": "Procedencia",
+              "fr": "Provenance",
+              "ar": "المصدر",
+              "pt": "Procedência",
+              "ru": "Происхождение",
+              "de": "Herkunft",
+              "ja": "出典",
+              "tr": "Kaynak",
+              "vi": "Nguồn gốc",
+              "it": "Provenienza",
+              "fa": "منشأ",
+              "pl": "Pochodzenie",
+              "uk": "Походження",
+              "nl": "Herkomst",
+              "sv": "Ursprung",
+              "cs": "Původ",
+              "el": "Προέλευση"
+            },
+            "title": {
+              "en": "What this map is (and isn't)",
+              "ko": "이 지도가 무엇인지 (그리고 무엇이 아닌지)",
+              "zh": "这张地图是什么(以及不是什么)",
+              "hi": "यह मैप क्या है (और क्या नहीं है)",
+              "es": "Qué es este mapa (y qué no es)",
+              "fr": "Ce qu'est cette carte (et ce qu'elle n'est pas)",
+              "ar": "ما هي هذه الخريطة (وما ليست عليه)",
+              "pt": "O que este mapa é (e o que não é)",
+              "ru": "Что представляет собой эта карта (и чем она не является)",
+              "de": "Was diese Karte ist (und was nicht)",
+              "ja": "この地図が何であるか(そして何でないか)",
+              "tr": "Bu harita nedir (ve ne değildir)",
+              "vi": "Bản đồ này là gì (và không phải là gì)",
+              "it": "Cos'è questa mappa (e cosa non è)",
+              "fa": "این نقشه چیست (و چه نیست)",
+              "pl": "Czym jest ta mapa (a czym nie jest)",
+              "uk": "Що це за карта (і чим вона не є)",
+              "nl": "Wat deze kaart is (en niet is)",
+              "sv": "Vad den här kartan är (och inte är)",
+              "cs": "Co tato mapa je (a co není)",
+              "el": "Τι είναι αυτός ο χάρτης (και τι δεν είναι)"
+            },
+            "subtitle": {
+              "en": "Two open datasets, scrubbed live — illustrative history, not a legal atlas.",
+              "ko": "두 개의 공개 데이터셋을 실시간으로 재생합니다 — 참고용 역사 자료이며, 법적 효력을 가진 지도책이 아닙니다.",
+              "zh": "两个开放数据集,实时可拖动播放——仅作历史示意,并非法律意义上的地图集。",
+              "hi": "दो ओपन डेटासेट, लाइव स्क्रब किए गए — यह उदाहरणात्मक इतिहास है, कानूनी एटलस नहीं।",
+              "es": "Dos conjuntos de datos abiertos, desplazables en vivo: historia ilustrativa, no un atlas legal.",
+              "fr": "Deux ensembles de données ouverts, parcourus en direct — une histoire illustrative, pas un atlas juridique.",
+              "ar": "مجموعتا بيانات مفتوحتان تُستعرضان حيًا -- تاريخ توضيحي، لا أطلس قانوني.",
+              "pt": "Dois conjuntos de dados abertos, navegáveis ao vivo — história ilustrativa, não um atlas legal.",
+              "ru": "Два открытых набора данных с интерактивной прокруткой — иллюстративная история, а не юридический атлас.",
+              "de": "Zwei offene Datensätze, live durchsuchbar — illustrative Geschichte, kein rechtsverbindlicher Atlas.",
+              "ja": "2つのオープンデータセットをライブでスクラブ表示 -- あくまで説明的な歴史であり、法的な地図帳ではありません。",
+              "tr": "Canlı olarak taranan iki açık veri kümesi — bu betimsel bir tarihtir, yasal bir atlas değildir.",
+              "vi": "Hai bộ dữ liệu mở, tua trực tiếp -- lịch sử minh họa, không phải tập bản đồ pháp lý.",
+              "it": "Due set di dati aperti, scorribili dal vivo — storia illustrativa, non un atlante legale.",
+              "fa": "دو مجموعه‌دادهٔ باز، قابل پیمایش زنده — تاریخی توضیحی است، نه اطلسی حقوقی.",
+              "pl": "Dwa otwarte zbiory danych, przewijane na żywo — historia poglądowa, nie atlas prawny.",
+              "uk": "Два відкриті набори даних, прокручувані наживо — ілюстративна історія, не юридичний атлас.",
+              "nl": "Twee open datasets, live doorbladerbaar — illustratieve geschiedenis, geen juridische atlas.",
+              "sv": "Två öppna dataset, skrubbbara live — illustrativ historia, inte en juridisk atlas.",
+              "cs": "Dva otevřené datové soubory, procházené naživo — ilustrativní historie, ne právní atlas.",
+              "el": "Δύο ανοιχτά σύνολα δεδομένων, με ζωντανή περιήγηση — εικονογραφική ιστορία, όχι νομικός άτλαντας."
+            },
+            "icon": "history",
+            "size": "compact"
+          },
+          {
+            "type": "text",
+            "value": {
+              "en": "Territories: 25 world-map snapshots from 2000 BCE to 2010 CE, merged into one file the year slider filters live — each shape is a coarse, scholarly-approximate border, not an authoritative or legally recognized boundary. Battles: a curated sample of notable battles from Wikidata, each tagged to a named war/conflict and ranked by how many Wikipedia language editions cover it — not a complete record of every battle in history.",
+              "ko": "영토: 기원전 2000년부터 서기 2010년까지 세계지도 스냅샷 25개를 하나의 파일로 병합하여 연도 슬라이더로 실시간 필터링합니다 — 각 모양은 학술적으로 대략적인 국경이며, 공식적이거나 법적으로 인정된 경계가 아닙니다. 전투: Wikidata에서 선별한 주요 전투 표본으로, 각각 명명된 전쟁/분쟁에 태그되어 있으며 위키백과 언어판 수록 편수에 따라 순위가 매겨집니다 — 역사상 모든 전투의 완전한 기록이 아닙니다.",
+              "zh": "疆域:25份世界地图快照,时间跨度公元前2000年至公元2010年,合并为一个文件,由年份滑块实时筛选——每个形状都是粗略的、学术性近似的边界,并非权威或具有法律效力的边界。战役:精选自 Wikidata 的著名战役样本,每场都标记了具体战争/冲突,并按维基百科语言版本收录数量排序——并非历史上每场战役的完整记录。",
+              "hi": "क्षेत्र: 2000 ईसा पूर्व से 2010 ईस्वी तक 25 विश्व-मानचित्र स्नैपशॉट, एक फ़ाइल में मिलाए गए जिन्हें वर्ष स्लाइडर लाइव फ़िल्टर करता है — प्रत्येक आकृति एक मोटी, विद्वत्तापूर्ण अनुमानित सीमा है, न कि आधिकारिक या कानूनी रूप से मान्यता प्राप्त सीमा। लड़ाइयाँ: Wikidata से चुनी गई प्रमुख लड़ाइयों का नमूना, हर एक किसी नामित युद्ध/संघर्ष से टैग की गई और यह कितने विकिपीडिया भाषा संस्करणों में शामिल है उसके अनुसार रैंक की गई — इतिहास की हर लड़ाई का संपूर्ण रिकॉर्ड नहीं।",
+              "es": "Territorios: 25 instantáneas del mapa mundial desde el 2000 a. C. hasta el 2010 d. C., combinadas en un archivo que el control deslizante de año filtra en vivo; cada forma es una frontera aproximada de tipo académico, no un límite oficial o legalmente reconocido. Batallas: una muestra seleccionada de batallas notables de Wikidata, cada una etiquetada con una guerra/conflicto nombrado y clasificada según cuántas ediciones de idiomas de Wikipedia la cubren; no es un registro completo de todas las batallas de la historia.",
+              "fr": "Territoires : 25 instantanés de carte mondiale de 2000 av. J.-C. à 2010 apr. J.-C., fusionnés en un fichier que le curseur d'année filtre en direct — chaque forme est une frontière grossière et académique approximative, pas une frontière officielle ou juridiquement reconnue. Batailles : un échantillon sélectionné de batailles notables issu de Wikidata, chacune associée à une guerre/un conflit nommé et classée selon le nombre d'éditions linguistiques de Wikipédia qui la couvrent — pas un registre complet de chaque bataille de l'histoire.",
+              "ar": "الأقاليم: 25 لقطة لخريطة العالم من 2000 ق.م إلى 2010 م، مدمجة في ملف واحد يُصفّيه شريط تمرير السنة حيًّا -- كل شكل هو حدود تقريبية أكاديمية خشنة، لا حدود رسمية أو معترف بها قانونيًا. المعارك: عيّنة منتقاة من معارك بارزة من Wikidata، وُسِمت كل منها بحرب/نزاع مسمّى وصُنِّفت حسب عدد إصدارات لغات ويكيبيديا التي تغطيها -- ليست سجلًا كاملًا لكل معركة في التاريخ.",
+              "pt": "Territórios: 25 instantâneos do mapa-múndi de 2000 a.C. a 2010 d.C., mesclados num único arquivo que o controle deslizante de ano filtra ao vivo — cada forma é uma fronteira acadêmica aproximada, não uma fronteira oficial ou legalmente reconhecida. Batalhas: uma amostra selecionada de batalhas notáveis do Wikidata, cada uma marcada a uma guerra/conflito nomeado e classificada por quantas edições de idioma da Wikipédia a cobrem — não é um registro completo de toda batalha da história.",
+              "ru": "Территории: 25 снимков карты мира с 2000 г. до н. э. по 2010 г. н. э., объединённых в один файл, который фильтруется ползунком года в реальном времени — каждая форма является грубой, научно-приблизительной границей, а не официальной или юридически признанной границей. Сражения: подобранная выборка заметных сражений из Wikidata, каждое привязано к названной войне/конфликту и ранжировано по числу языковых версий Википедии, освещающих его — не полная запись каждого сражения в истории.",
+              "de": "Territorien: 25 Weltkarten-Schnappschüsse von 2000 v. Chr. bis 2010 n. Chr., zusammengeführt in einer Datei, die der Jahresregler live filtert — jede Form ist eine grobe, wissenschaftlich angenäherte Grenze, keine offizielle oder rechtlich anerkannte Grenze. Schlachten: eine kuratierte Auswahl bemerkenswerter Schlachten aus Wikidata, jede einem benannten Krieg/Konflikt zugeordnet und danach eingestuft, wie viele Wikipedia-Sprachversionen sie behandeln — keine vollständige Aufzeichnung jeder Schlacht der Geschichte.",
+              "ja": "領土: 紀元前2000年から西暦2010年までの世界地図スナップショット25点を1つのファイルに統合し、年スライダーでライブにフィルタリングします -- 各形状は学術的な大まかな近似境界であり、公式または法的に認められた境界ではありません。戦闘: Wikidataから選ばれた著名な戦闘のサンプルで、それぞれ名前の付いた戦争/紛争に紐づけられ、ウィキペディアの言語版でどれだけ取り上げられているかでランク付けされています -- 歴史上のすべての戦闘の完全な記録ではありません。",
+              "tr": "Bölgeler: MÖ 2000'den MS 2010'a kadar 25 dünya haritası anlık görüntüsü, yıl kaydırıcısının canlı filtrelediği tek bir dosyada birleştirilmiştir — her şekil kaba, akademik bir yaklaşık sınırdır, resmi veya yasal olarak tanınan bir sınır değildir. Savaşlar: Wikidata'dan seçilmiş dikkat çekici savaşların bir örneği, her biri adlandırılmış bir savaş/çatışmaya etiketlenmiş ve kaç Wikipedia dil sürümünde yer aldığına göre sıralanmıştır — tarihteki her savaşın eksiksiz bir kaydı değildir.",
+              "vi": "Lãnh thổ: 25 ảnh chụp bản đồ thế giới từ năm 2000 TCN đến 2010 SCN, được hợp nhất vào một tệp mà thanh trượt năm lọc trực tiếp -- mỗi hình dạng là một ranh giới học thuật ước lượng thô, không phải ranh giới chính thức hay được công nhận về mặt pháp lý. Trận đánh: mẫu tuyển chọn các trận đánh nổi bật từ Wikidata, mỗi trận được gắn với một cuộc chiến/xung đột có tên và xếp hạng theo số phiên bản ngôn ngữ Wikipedia đề cập đến nó -- không phải bản ghi đầy đủ của mọi trận đánh trong lịch sử.",
+              "it": "Territori: 25 istantanee della mappa mondiale dal 2000 a.C. al 2010 d.C., unite in un unico file che il cursore dell'anno filtra dal vivo — ogni forma è un confine accademico approssimativo grossolano, non un confine ufficiale o legalmente riconosciuto. Battaglie: un campione curato di battaglie notevoli da Wikidata, ciascuna etichettata con una guerra/conflitto nominato e classificata in base a quante edizioni linguistiche di Wikipedia la trattano — non un registro completo di ogni battaglia della storia.",
+              "fa": "قلمروها: ۲۵ عکس‌ثابت از نقشهٔ جهان از سال ۲۰۰۰ پیش از میلاد تا ۲۰۱۰ پس از میلاد، در یک فایل ادغام شده که لغزندهٔ سال آن را زنده فیلتر می‌کند — هر شکل مرزی تقریبی و دانشگاهی است، نه مرزی رسمی یا به‌رسمیت‌شناخته‌شدهٔ حقوقی. نبردها: نمونه‌ای گزیده از نبردهای برجسته از Wikidata، هرکدام برچسب‌خورده به یک جنگ/درگیریِ نام‌دار و رتبه‌بندی‌شده بر اساس تعداد نسخه‌های زبانی ویکی‌پدیا که آن را پوشش می‌دهند — نه سندی کامل از هر نبرد در تاریخ.",
+              "pl": "Terytoria: 25 migawek mapy świata od 2000 p.n.e. do 2010 n.e., połączonych w jeden plik filtrowany na żywo suwakiem roku — każdy kształt to zgrubna, akademicka przybliżona granica, a nie oficjalna lub prawnie uznana granica. Bitwy: wyselekcjonowana próbka znaczących bitew z Wikidata, każda oznaczona nazwaną wojną/konfliktem i uszeregowana według liczby wersji językowych Wikipedii, które ją opisują — nie jest to kompletny zapis każdej bitwy w historii.",
+              "uk": "Території: 25 знімків карти світу з 2000 р. до н.е. до 2010 р. н.е., об'єднаних в один файл, який фільтрує повзунок року наживо — кожна форма — груба, науково-приблизна межа, а не офіційний чи юридично визнаний кордон. Битви: підібрана вибірка помітних битв із Wikidata, кожна позначена названою війною/конфліктом і ранжована за кількістю мовних версій Вікіпедії, що її висвітлюють — не повний запис кожної битви в історії.",
+              "nl": "Gebieden: 25 wereldkaart-momentopnamen van 2000 v.Chr. tot 2010 n.Chr., samengevoegd in één bestand dat de jaarschuifregelaar live filtert — elke vorm is een grove, academisch benaderde grens, geen officiële of wettelijk erkende grens. Veldslagen: een samengestelde selectie van opmerkelijke veldslagen uit Wikidata, elk getagd aan een genoemde oorlog/conflict en gerangschikt op hoeveel taalversies van Wikipedia erover berichten — geen volledige registratie van elke veldslag in de geschiedenis.",
+              "sv": "Territorier: 25 världskartsögonblicksbilder från 2000 f.Kr. till 2010 e.Kr., sammanslagna i en fil som årsreglaget filtrerar live — varje form är en grov, akademiskt uppskattad gräns, inte en officiell eller juridiskt erkänd gräns. Slag: ett kurerat urval av anmärkningsvärda slag från Wikidata, vart och ett taggat till ett namngivet krig/konflikt och rangordnat efter hur många Wikipedia-språkversioner som täcker det — inte en fullständig redogörelse för varje slag i historien.",
+              "cs": "Území: 25 snímků světové mapy od roku 2000 př. n. l. do roku 2010 n. l., sloučených do jednoho souboru, který posuvník roku filtruje naživo — každý tvar je hrubá, akademicky přibližná hranice, ne úřední nebo právně uznaná hranice. Bitvy: kurátorský výběr pozoruhodných bitev z Wikidata, každá označená pojmenovanou válkou/konfliktem a seřazená podle toho, kolik jazykových verzí Wikipedie ji pokrývá — ne úplný záznam každé bitvy v historii.",
+              "el": "Εδάφη: 25 στιγμιότυπα παγκόσμιου χάρτη από το 2000 π.Χ. έως το 2010 μ.Χ., συγχωνευμένα σε ένα αρχείο που το ρυθμιστικό έτους φιλτράρει ζωντανά — κάθε σχήμα είναι ένα χονδρικό, ακαδημαϊκά προσεγγιστικό σύνορο, όχι επίσημο ή νομικά αναγνωρισμένο όριο. Μάχες: ένα επιμελημένο δείγμα αξιοσημείωτων μαχών από το Wikidata, καθεμία επισημασμένη σε έναν ονομαστικό πόλεμο/σύγκρουση και κατατεταγμένη ανάλογα με το πόσες γλωσσικές εκδόσεις της Wikipedia την καλύπτουν — όχι πλήρες αρχείο κάθε μάχης στην ιστορία."
+            }
+          },
+          {
+            "type": "table",
+            "table": "sources",
+            "overflow": "cards",
+            "columns": [
+              "layer",
+              "what",
+              "source",
+              "license",
+              "note"
+            ],
+            "height": 320
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "No external links are shown in-app; the table above is seeded data you can inspect like any other applet table. Reproduce both datasets from scratch via the build script.",
+              "ko": "앱 안에는 외부 링크가 표시되지 않습니다. 위 표는 다른 애플릿 표와 마찬가지로 살펴볼 수 있는 시드 데이터입니다. 빌드 스크립트를 통해 두 데이터셋을 처음부터 다시 생성할 수 있습니다.",
+              "zh": "应用内不显示外部链接;上表是可像任何其他应用表格一样查看的种子数据。可通过 构建脚本 从头重新生成这两个数据集。",
+              "hi": "ऐप में कोई बाहरी लिंक नहीं दिखाया जाता; ऊपर दी गई टेबल सीडेड डेटा है जिसे आप किसी भी अन्य ऐपलेट टेबल की तरह देख सकते हैं। बिल्ड स्क्रिप्ट के ज़रिए दोनों डेटासेट को शुरू से फिर से बनाएं।",
+              "es": "No se muestran enlaces externos dentro de la app; la tabla anterior son datos iniciales que puedes inspeccionar como cualquier otra tabla de una app. Reproduce ambos conjuntos de datos desde cero mediante el script de compilación.",
+              "fr": "Aucun lien externe n'est affiché dans l'appli ; le tableau ci-dessus contient des données d'amorçage que vous pouvez inspecter comme n'importe quel autre tableau d'appli. Reproduisez les deux ensembles de données depuis zéro via le script de build.",
+              "ar": "لا تُعرض روابط خارجية داخل التطبيق؛ الجدول أعلاه هو بيانات أولية يمكنك فحصها كأي جدول تطبيق آخر. أعد إنتاج كلتا مجموعتَي البيانات من الصفر عبر سكربت البناء.",
+              "pt": "Nenhum link externo é exibido no app; a tabela acima é dado semeado que você pode inspecionar como qualquer outra tabela de aplicativo. Reproduza ambos os conjuntos de dados do zero via o script de build.",
+              "ru": "Внешние ссылки в приложении не показаны; таблица выше — исходные данные, которые можно просматривать, как и любую другую таблицу приложения. Воспроизведите оба набора данных с нуля через скрипт сборки.",
+              "de": "Im App werden keine externen Links angezeigt; die obige Tabelle sind Seed-Daten, die du wie jede andere Applet-Tabelle einsehen kannst. Reproduziere beide Datensätze von Grund auf über das Build-Skript.",
+              "ja": "アプリ内には外部リンクは表示されません。上の表は、他のアプレットの表と同様に確認できるシードデータです。ビルドスクリプト を使って両方のデータセットをゼロから再現できます。",
+              "tr": "Uygulama içinde harici bağlantı gösterilmez; yukarıdaki tablo, diğer uygulama tabloları gibi inceleyebileceğiniz tohum verisidir. Her iki veri kümesini de derleme betiği ile sıfırdan yeniden oluşturun.",
+              "vi": "Không có liên kết bên ngoài nào hiển thị trong ứng dụng; bảng trên là dữ liệu khởi tạo mà bạn có thể kiểm tra như bất kỳ bảng ứng dụng nào khác. Tái tạo cả hai bộ dữ liệu từ đầu qua script build.",
+              "it": "Nessun link esterno viene mostrato nell'app; la tabella sopra è dati seed che puoi ispezionare come qualsiasi altra tabella dell'app. Riproduci entrambi i set di dati da zero tramite lo script di build.",
+              "fa": "هیچ پیوند خارجی داخل برنامه نمایش داده نمی‌شود؛ جدول بالا داده‌ای اولیه است که می‌توانید مانند هر جدول دیگر برنامه بررسی کنید. هر دو مجموعه‌داده را از ابتدا از طریق اسکریپت بیلد بازتولید کنید.",
+              "pl": "W aplikacji nie są pokazywane linki zewnętrzne; powyższa tabela to dane początkowe, które można sprawdzić jak każdą inną tabelę aplikacji. Odtwórz oba zbiory danych od zera za pomocą skrypt budujący.",
+              "uk": "У застосунку не показано зовнішніх посилань; таблиця вище — початкові дані, які можна переглянути, як і будь-яку іншу таблицю застосунку. Відтворіть обидва набори даних з нуля через скрипт збірки.",
+              "nl": "Er worden geen externe links getoond in de app; de tabel hierboven is seed-data die je kunt inspecteren zoals elke andere app-tabel. Reproduceer beide datasets vanaf nul via het buildscript.",
+              "sv": "Inga externa länkar visas i appen; tabellen ovan är fördata som du kan inspektera som vilken annan apptabell som helst. Återskapa båda dataseten från grunden via byggskriptet.",
+              "cs": "V aplikaci se nezobrazují žádné externí odkazy; tabulka výše jsou počáteční data, která můžete prozkoumat jako jakoukoli jinou tabulku aplikace. Oba datové soubory znovu vytvořte od nuly pomocí sestavovací skript.",
+              "el": "Δεν εμφανίζονται εξωτερικοί σύνδεσμοι εντός της εφαρμογής· ο παραπάνω πίνακας είναι αρχικά δεδομένα που μπορείτε να επιθεωρήσετε όπως κάθε άλλον πίνακα εφαρμογής. Αναπαράγετε και τα δύο σύνολα δεδομένων από την αρχή μέσω το σενάριο κατασκευής."
+            }
+          }
+        ]
+      }
+    }
+  }
+}

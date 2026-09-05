@@ -1,0 +1,16 @@
+{
+ "id": "wikipick",
+ "name": "Wikipick",
+ "category": "Reference",
+ "description": "Read Wikipedia offline: a local library plus a crawl queue.",
+ "icon": "public",
+ "color": "#7A2E1D",
+ "store": {
+ "type": "sqflite",
+ "namespace": "isan_wikipick"
+ },
+ "seedVersion": "2026-09-03.topicthresh.l10n-int-0903.rowmenu2-0903",
+ "durableSettings": [
+ "wikipickWifiOnly"
+ ]
+}

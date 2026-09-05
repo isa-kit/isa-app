@@ -1,0 +1,13 @@
+{
+  "id": "puzzles",
+  "name": "Puzzles",
+  "category": "Games",
+  "description": "Slide and pattern puzzles, with your records.",
+  "icon": "grid_on",
+  "color": "#7C4DFF",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_puzzles"
+  },
+  "seedVersion": "2026-06-15.1.l10n-int-0903"
+}

@@ -1,0 +1,93 @@
+{
+  "board": {
+    "name": "Docs"
+  },
+  "screens": [
+    {
+      "id": "docs_0_files",
+      "name": "Files",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "docs_1_pages",
+      "name": "Documents",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "docs_0_files_title",
+      "screen": "docs_0_files",
+      "kind": "titlebar",
+      "label": "Files",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "docs_0_files_w0",
+      "screen": "docs_0_files",
+      "kind": "list",
+      "label": "Files",
+      "region": "body",
+      "order": 0,
+      "items": "[\"Documents\"]"
+    },
+    {
+      "id": "docs_0_files_nav",
+      "screen": "docs_0_files",
+      "kind": "bottomnav",
+      "label": "Files \u00b7 Documents",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "docs_1_pages_title",
+      "screen": "docs_1_pages",
+      "kind": "titlebar",
+      "label": "Documents",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "docs_1_pages_w0",
+      "screen": "docs_1_pages",
+      "kind": "list",
+      "label": "Documents",
+      "region": "body",
+      "order": 0,
+      "items": "[\"Files\"]"
+    },
+    {
+      "id": "docs_1_pages_nav",
+      "screen": "docs_1_pages",
+      "kind": "bottomnav",
+      "label": "Files \u00b7 Documents",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "docs_flow_0",
+      "fromWidget": "docs_0_files_nav",
+      "toScreen": "docs_1_pages",
+      "transition": "push"
+    },
+    {
+      "id": "docs_flow_1",
+      "fromWidget": "docs_1_pages_nav",
+      "toScreen": "docs_0_files",
+      "transition": "push"
+    },
+    {
+      "id": "docs_flow_extra",
+      "fromWidget": "docs_0_files_w0",
+      "toScreen": "docs_1_pages",
+      "transition": "push"
+    }
+  ]
+}

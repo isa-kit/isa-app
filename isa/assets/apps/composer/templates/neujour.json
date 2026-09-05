@@ -1,0 +1,357 @@
+{
+  "board": {
+    "name": "Neujour"
+  },
+  "screens": [
+    {
+      "id": "neujou_0_journal",
+      "name": "Journal",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "neujou_1_feelings",
+      "name": "Feelings",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "neujou_2_calendar",
+      "name": "Calendar",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    },
+    {
+      "id": "neujou_3_timeline",
+      "name": "Timeline",
+      "device": "phone",
+      "x": 1320,
+      "y": 0
+    },
+    {
+      "id": "neujou_4_trends",
+      "name": "Trends",
+      "device": "phone",
+      "x": 0,
+      "y": 900
+    },
+    {
+      "id": "neujou_5_atlas",
+      "name": "Atlas",
+      "device": "phone",
+      "x": 440,
+      "y": 900
+    },
+    {
+      "id": "neujou_6_customize",
+      "name": "Customize",
+      "device": "phone",
+      "x": 880,
+      "y": 900
+    }
+  ],
+  "widgets": [
+    {
+      "id": "neujou_0_journal_title",
+      "screen": "neujou_0_journal",
+      "kind": "titlebar",
+      "label": "Journal",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "neujou_0_journal_w0",
+      "screen": "neujou_0_journal",
+      "kind": "text",
+      "label": "Your journal \u2014",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "neujou_0_journal_w1",
+      "screen": "neujou_0_journal",
+      "kind": "buttonrow",
+      "label": "New entry",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "neujou_0_journal_w2",
+      "screen": "neujou_0_journal",
+      "kind": "buttonrow",
+      "label": "Reflection",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "neujou_0_journal_nav",
+      "screen": "neujou_0_journal",
+      "kind": "bottomnav",
+      "label": "Entries \u00b7 Feelings \u00b7 Calendar \u00b7 Timeline \u00b7 Trends \u00b7 Atlas \u00b7 Customize",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "neujou_1_feelings_title",
+      "screen": "neujou_1_feelings",
+      "kind": "titlebar",
+      "label": "Feelings",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "neujou_1_feelings_w0",
+      "screen": "neujou_1_feelings",
+      "kind": "text",
+      "label": "Named scores, on your own scale: sad 3.5/5, bored 1/5, motivated 10/10.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "neujou_1_feelings_w1",
+      "screen": "neujou_1_feelings",
+      "kind": "card",
+      "label": "Logged",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "neujou_1_feelings_w2",
+      "screen": "neujou_1_feelings",
+      "kind": "card",
+      "label": "Average score",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "neujou_1_feelings_nav",
+      "screen": "neujou_1_feelings",
+      "kind": "bottomnav",
+      "label": "Entries \u00b7 Feelings \u00b7 Calendar \u00b7 Timeline \u00b7 Trends \u00b7 Atlas \u00b7 Customize",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "neujou_2_calendar_title",
+      "screen": "neujou_2_calendar",
+      "kind": "titlebar",
+      "label": "Calendar",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "neujou_2_calendar_w0",
+      "screen": "neujou_2_calendar",
+      "kind": "text",
+      "label": "Your entries by date.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "neujou_2_calendar_w1",
+      "screen": "neujou_2_calendar",
+      "kind": "text",
+      "label": "Week starts on:",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "neujou_2_calendar_w2",
+      "screen": "neujou_2_calendar",
+      "kind": "buttonrow",
+      "label": "Monday",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "neujou_2_calendar_nav",
+      "screen": "neujou_2_calendar",
+      "kind": "bottomnav",
+      "label": "Entries \u00b7 Feelings \u00b7 Calendar \u00b7 Timeline \u00b7 Trends \u00b7 Atlas \u00b7 Customize",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "neujou_3_timeline_title",
+      "screen": "neujou_3_timeline",
+      "kind": "titlebar",
+      "label": "Timeline",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "neujou_3_timeline_w0",
+      "screen": "neujou_3_timeline",
+      "kind": "text",
+      "label": "Your days.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "neujou_3_timeline_w1",
+      "screen": "neujou_3_timeline",
+      "kind": "buttonrow",
+      "label": "Day note",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "neujou_3_timeline_w2",
+      "screen": "neujou_3_timeline",
+      "kind": "list",
+      "label": "date",
+      "region": "body",
+      "order": 2,
+      "items": "[\"Journal\", \"Feelings\", \"Calendar\"]"
+    },
+    {
+      "id": "neujou_3_timeline_nav",
+      "screen": "neujou_3_timeline",
+      "kind": "bottomnav",
+      "label": "Entries \u00b7 Feelings \u00b7 Calendar \u00b7 Timeline \u00b7 Trends \u00b7 Atlas \u00b7 Customize",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "neujou_4_trends_title",
+      "screen": "neujou_4_trends",
+      "kind": "titlebar",
+      "label": "Trends",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "neujou_4_trends_w0",
+      "screen": "neujou_4_trends",
+      "kind": "text",
+      "label": "Two lenses: WHAT MOVES YOU \u2014",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "neujou_4_trends_w1",
+      "screen": "neujou_4_trends",
+      "kind": "buttonrow",
+      "label": "Segmented control",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "neujou_4_trends_nav",
+      "screen": "neujou_4_trends",
+      "kind": "bottomnav",
+      "label": "Entries \u00b7 Feelings \u00b7 Calendar \u00b7 Timeline \u00b7 Trends \u00b7 Atlas \u00b7 Customize",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "neujou_5_atlas_title",
+      "screen": "neujou_5_atlas",
+      "kind": "titlebar",
+      "label": "Atlas",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "neujou_5_atlas_w0",
+      "screen": "neujou_5_atlas",
+      "kind": "buttonrow",
+      "label": "Segmented control",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "neujou_5_atlas_nav",
+      "screen": "neujou_5_atlas",
+      "kind": "bottomnav",
+      "label": "Entries \u00b7 Feelings \u00b7 Calendar \u00b7 Timeline \u00b7 Trends \u00b7 Atlas \u00b7 Customize",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "neujou_6_customize_title",
+      "screen": "neujou_6_customize",
+      "kind": "titlebar",
+      "label": "Customize",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "neujou_6_customize_w0",
+      "screen": "neujou_6_customize",
+      "kind": "text",
+      "label": "Shape Neujour to fit you.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "neujou_6_customize_w1",
+      "screen": "neujou_6_customize",
+      "kind": "text",
+      "label": "Schema editor",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "neujou_6_customize_nav",
+      "screen": "neujou_6_customize",
+      "kind": "bottomnav",
+      "label": "Entries \u00b7 Feelings \u00b7 Calendar \u00b7 Timeline \u00b7 Trends \u00b7 Atlas \u00b7 Customize",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "neujou_flow_0",
+      "fromWidget": "neujou_0_journal_nav",
+      "toScreen": "neujou_1_feelings",
+      "transition": "push"
+    },
+    {
+      "id": "neujou_flow_1",
+      "fromWidget": "neujou_1_feelings_nav",
+      "toScreen": "neujou_2_calendar",
+      "transition": "push"
+    },
+    {
+      "id": "neujou_flow_2",
+      "fromWidget": "neujou_2_calendar_nav",
+      "toScreen": "neujou_3_timeline",
+      "transition": "push"
+    },
+    {
+      "id": "neujou_flow_3",
+      "fromWidget": "neujou_3_timeline_nav",
+      "toScreen": "neujou_4_trends",
+      "transition": "push"
+    },
+    {
+      "id": "neujou_flow_4",
+      "fromWidget": "neujou_4_trends_nav",
+      "toScreen": "neujou_5_atlas",
+      "transition": "push"
+    },
+    {
+      "id": "neujou_flow_5",
+      "fromWidget": "neujou_5_atlas_nav",
+      "toScreen": "neujou_6_customize",
+      "transition": "push"
+    },
+    {
+      "id": "neujou_flow_6",
+      "fromWidget": "neujou_6_customize_nav",
+      "toScreen": "neujou_0_journal",
+      "transition": "push"
+    },
+    {
+      "id": "neujou_flow_extra",
+      "fromWidget": "neujou_3_timeline_w2",
+      "toScreen": "neujou_4_trends",
+      "transition": "push"
+    }
+  ]
+}

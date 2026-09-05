@@ -1,0 +1,177 @@
+{
+  "board": {
+    "name": "Car-free college guide"
+  },
+  "screens": [
+    {
+      "id": "colleg_0_rankings",
+      "name": "Colleges ranked",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "colleg_1_map",
+      "name": "Colleges on the map",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "colleg_2_about",
+      "name": "About this guide",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "colleg_0_rankings_title",
+      "screen": "colleg_0_rankings",
+      "kind": "titlebar",
+      "label": "Colleges ranked",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "colleg_0_rankings_w0",
+      "screen": "colleg_0_rankings",
+      "kind": "text",
+      "label": "Every US college (real data) plus a curated set of major world cities, ranked by how\u2026",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "colleg_0_rankings_w1",
+      "screen": "colleg_0_rankings",
+      "kind": "list",
+      "label": "name",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Colleges on the map\", \"About this guide\"]"
+    },
+    {
+      "id": "colleg_0_rankings_w2",
+      "screen": "colleg_0_rankings",
+      "kind": "buttonrow",
+      "label": "Add a college",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "colleg_0_rankings_nav",
+      "screen": "colleg_0_rankings",
+      "kind": "bottomnav",
+      "label": "Rankings \u00b7 Map \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "colleg_1_map_title",
+      "screen": "colleg_1_map",
+      "kind": "titlebar",
+      "label": "Colleges on the map",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "colleg_1_map_w0",
+      "screen": "colleg_1_map",
+      "kind": "text",
+      "label": "Colleges plotted worldwide.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "colleg_1_map_w1",
+      "screen": "colleg_1_map",
+      "kind": "buttonrow",
+      "label": "Show all colleges",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "colleg_1_map_w2",
+      "screen": "colleg_1_map",
+      "kind": "card",
+      "label": "Map",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "colleg_1_map_nav",
+      "screen": "colleg_1_map",
+      "kind": "bottomnav",
+      "label": "Rankings \u00b7 Map \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "colleg_2_about_title",
+      "screen": "colleg_2_about",
+      "kind": "titlebar",
+      "label": "About this guide",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "colleg_2_about_w0",
+      "screen": "colleg_2_about",
+      "kind": "text",
+      "label": "Who this is for",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "colleg_2_about_w1",
+      "screen": "colleg_2_about",
+      "kind": "text",
+      "label": "Students choosing a college who don't have a car and don't have much money.",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "colleg_2_about_w2",
+      "screen": "colleg_2_about",
+      "kind": "text",
+      "label": "Built on real data (US)",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "colleg_2_about_nav",
+      "screen": "colleg_2_about",
+      "kind": "bottomnav",
+      "label": "Rankings \u00b7 Map \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "colleg_flow_0",
+      "fromWidget": "colleg_0_rankings_nav",
+      "toScreen": "colleg_1_map",
+      "transition": "push"
+    },
+    {
+      "id": "colleg_flow_1",
+      "fromWidget": "colleg_1_map_nav",
+      "toScreen": "colleg_2_about",
+      "transition": "push"
+    },
+    {
+      "id": "colleg_flow_2",
+      "fromWidget": "colleg_2_about_nav",
+      "toScreen": "colleg_0_rankings",
+      "transition": "push"
+    },
+    {
+      "id": "colleg_flow_extra",
+      "fromWidget": "colleg_0_rankings_w1",
+      "toScreen": "colleg_1_map",
+      "transition": "push"
+    }
+  ]
+}

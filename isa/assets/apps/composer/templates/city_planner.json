@@ -1,0 +1,214 @@
+{
+  "board": {
+    "name": "City Planner"
+  },
+  "screens": [
+    {
+      "id": "citypl_0_map",
+      "name": "City Planner",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "citypl_1_stats",
+      "name": "City stats",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "citypl_2_residents",
+      "name": "Residents",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    },
+    {
+      "id": "citypl_3_guide",
+      "name": "How to play",
+      "device": "phone",
+      "x": 1320,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "citypl_0_map_title",
+      "screen": "citypl_0_map",
+      "kind": "titlebar",
+      "label": "City Planner",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "citypl_0_map_w0",
+      "screen": "citypl_0_map",
+      "kind": "text",
+      "label": "Zone the lots, then end the turn.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "citypl_0_map_w1",
+      "screen": "citypl_0_map",
+      "kind": "list",
+      "label": "Table",
+      "region": "body",
+      "order": 1,
+      "items": "[\"City stats\", \"Residents\", \"How to play\"]"
+    },
+    {
+      "id": "citypl_0_map_w2",
+      "screen": "citypl_0_map",
+      "kind": "buttonrow",
+      "label": "End turn",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "citypl_0_map_nav",
+      "screen": "citypl_0_map",
+      "kind": "bottomnav",
+      "label": "Map \u00b7 Stats \u00b7 Residents \u00b7 How to play",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "citypl_1_stats_title",
+      "screen": "citypl_1_stats",
+      "kind": "titlebar",
+      "label": "City stats",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "citypl_1_stats_w0",
+      "screen": "citypl_1_stats",
+      "kind": "text",
+      "label": "Residents' happiness and what drives it.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "citypl_1_stats_w1",
+      "screen": "citypl_1_stats",
+      "kind": "buttonrow",
+      "label": "Segmented control",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "citypl_1_stats_nav",
+      "screen": "citypl_1_stats",
+      "kind": "bottomnav",
+      "label": "Map \u00b7 Stats \u00b7 Residents \u00b7 How to play",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "citypl_2_residents_title",
+      "screen": "citypl_2_residents",
+      "kind": "titlebar",
+      "label": "Residents",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "citypl_2_residents_w0",
+      "screen": "citypl_2_residents",
+      "kind": "text",
+      "label": "Every resident has their own happiness, driven by what's physically NEARBY.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "citypl_2_residents_w1",
+      "screen": "citypl_2_residents",
+      "kind": "buttonrow",
+      "label": "Show all residents",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "citypl_2_residents_w2",
+      "screen": "citypl_2_residents",
+      "kind": "buttonrow",
+      "label": "Recompute happiness",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "citypl_2_residents_nav",
+      "screen": "citypl_2_residents",
+      "kind": "bottomnav",
+      "label": "Map \u00b7 Stats \u00b7 Residents \u00b7 How to play",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "citypl_3_guide_title",
+      "screen": "citypl_3_guide",
+      "kind": "titlebar",
+      "label": "How to play",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "citypl_3_guide_w0",
+      "screen": "citypl_3_guide",
+      "kind": "text",
+      "label": "Goal: maximise residents' happiness while staying solvent.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "citypl_3_guide_w1",
+      "screen": "citypl_3_guide",
+      "kind": "text",
+      "label": "Zones & effects:\n\u2022 Residential \u2014",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "citypl_3_guide_nav",
+      "screen": "citypl_3_guide",
+      "kind": "bottomnav",
+      "label": "Map \u00b7 Stats \u00b7 Residents \u00b7 How to play",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "citypl_flow_0",
+      "fromWidget": "citypl_0_map_nav",
+      "toScreen": "citypl_1_stats",
+      "transition": "push"
+    },
+    {
+      "id": "citypl_flow_1",
+      "fromWidget": "citypl_1_stats_nav",
+      "toScreen": "citypl_2_residents",
+      "transition": "push"
+    },
+    {
+      "id": "citypl_flow_2",
+      "fromWidget": "citypl_2_residents_nav",
+      "toScreen": "citypl_3_guide",
+      "transition": "push"
+    },
+    {
+      "id": "citypl_flow_3",
+      "fromWidget": "citypl_3_guide_nav",
+      "toScreen": "citypl_0_map",
+      "transition": "push"
+    },
+    {
+      "id": "citypl_flow_extra",
+      "fromWidget": "citypl_0_map_w1",
+      "toScreen": "citypl_1_stats",
+      "transition": "push"
+    }
+  ]
+}

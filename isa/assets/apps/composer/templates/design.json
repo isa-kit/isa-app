@@ -1,0 +1,341 @@
+{
+  "board": {
+    "name": "Design"
+  },
+  "screens": [
+    {
+      "id": "design_0_wireframe",
+      "name": "Wireframe",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "design_1_flow",
+      "name": "Flowchart",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "design_2_relationships",
+      "name": "Relationships",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    },
+    {
+      "id": "design_3_brief",
+      "name": "Brief for Claude",
+      "device": "phone",
+      "x": 1320,
+      "y": 0
+    },
+    {
+      "id": "design_4_sketch",
+      "name": "Freehand sketch",
+      "device": "phone",
+      "x": 0,
+      "y": 900
+    },
+    {
+      "id": "design_5_talk",
+      "name": "Notes",
+      "device": "phone",
+      "x": 440,
+      "y": 900
+    },
+    {
+      "id": "design_6_data",
+      "name": "Raw data",
+      "device": "phone",
+      "x": 880,
+      "y": 900
+    }
+  ],
+  "widgets": [
+    {
+      "id": "design_0_wireframe_title",
+      "screen": "design_0_wireframe",
+      "kind": "titlebar",
+      "label": "Wireframe",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "design_0_wireframe_w0",
+      "screen": "design_0_wireframe",
+      "kind": "text",
+      "label": "Block out a UI: add a screen frame, then drop nav, buttons, inputs, text and images\u2026",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "design_0_wireframe_w1",
+      "screen": "design_0_wireframe",
+      "kind": "buttonrow",
+      "label": "Build app from wireframe",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "design_0_wireframe_w2",
+      "screen": "design_0_wireframe",
+      "kind": "card",
+      "label": "Canvas",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "design_0_wireframe_nav",
+      "screen": "design_0_wireframe",
+      "kind": "bottomnav",
+      "label": "Wireframe \u00b7 Flowchart \u00b7 Relationships \u00b7 Brief \u00b7 Sketch \u00b7 Notes \u00b7 Data",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "design_1_flow_title",
+      "screen": "design_1_flow",
+      "kind": "titlebar",
+      "label": "Flowchart",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "design_1_flow_w0",
+      "screen": "design_1_flow",
+      "kind": "text",
+      "label": "Map a process or data flow \u2014",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "design_1_flow_w1",
+      "screen": "design_1_flow",
+      "kind": "card",
+      "label": "Embed",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "design_1_flow_nav",
+      "screen": "design_1_flow",
+      "kind": "bottomnav",
+      "label": "Wireframe \u00b7 Flowchart \u00b7 Relationships \u00b7 Brief \u00b7 Sketch \u00b7 Notes \u00b7 Data",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "design_2_relationships_title",
+      "screen": "design_2_relationships",
+      "kind": "titlebar",
+      "label": "Relationships",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "design_2_relationships_w0",
+      "screen": "design_2_relationships",
+      "kind": "text",
+      "label": "Your data-table relationships \u2014",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "design_2_relationships_w1",
+      "screen": "design_2_relationships",
+      "kind": "card",
+      "label": "Embed",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "design_2_relationships_nav",
+      "screen": "design_2_relationships",
+      "kind": "bottomnav",
+      "label": "Wireframe \u00b7 Flowchart \u00b7 Relationships \u00b7 Brief \u00b7 Sketch \u00b7 Notes \u00b7 Data",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "design_3_brief_title",
+      "screen": "design_3_brief",
+      "kind": "titlebar",
+      "label": "Brief for Claude",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "design_3_brief_w0",
+      "screen": "design_3_brief",
+      "kind": "text",
+      "label": "Your request to Claude, in one place.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "design_3_brief_w1",
+      "screen": "design_3_brief",
+      "kind": "buttonrow",
+      "label": "Prepare for Claude",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "design_3_brief_w2",
+      "screen": "design_3_brief",
+      "kind": "text",
+      "label": "What you want",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "design_3_brief_nav",
+      "screen": "design_3_brief",
+      "kind": "bottomnav",
+      "label": "Wireframe \u00b7 Flowchart \u00b7 Relationships \u00b7 Brief \u00b7 Sketch \u00b7 Notes \u00b7 Data",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "design_4_sketch_title",
+      "screen": "design_4_sketch",
+      "kind": "titlebar",
+      "label": "Freehand sketch",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "design_4_sketch_w0",
+      "screen": "design_4_sketch",
+      "kind": "card",
+      "label": "Drawing canvas",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "design_4_sketch_nav",
+      "screen": "design_4_sketch",
+      "kind": "bottomnav",
+      "label": "Wireframe \u00b7 Flowchart \u00b7 Relationships \u00b7 Brief \u00b7 Sketch \u00b7 Notes \u00b7 Data",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "design_5_talk_title",
+      "screen": "design_5_talk",
+      "kind": "titlebar",
+      "label": "Notes",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "design_5_talk_w0",
+      "screen": "design_5_talk",
+      "kind": "text",
+      "label": "Running notes about the design \u2014",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "design_5_talk_w1",
+      "screen": "design_5_talk",
+      "kind": "list",
+      "label": "title",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Wireframe\", \"Flowchart\", \"Relationships\"]"
+    },
+    {
+      "id": "design_5_talk_w2",
+      "screen": "design_5_talk",
+      "kind": "buttonrow",
+      "label": "New note",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "design_5_talk_nav",
+      "screen": "design_5_talk",
+      "kind": "bottomnav",
+      "label": "Wireframe \u00b7 Flowchart \u00b7 Relationships \u00b7 Brief \u00b7 Sketch \u00b7 Notes \u00b7 Data",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "design_6_data_title",
+      "screen": "design_6_data",
+      "kind": "titlebar",
+      "label": "Raw data",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "design_6_data_w0",
+      "screen": "design_6_data",
+      "kind": "buttonrow",
+      "label": "Segmented control",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "design_6_data_nav",
+      "screen": "design_6_data",
+      "kind": "bottomnav",
+      "label": "Wireframe \u00b7 Flowchart \u00b7 Relationships \u00b7 Brief \u00b7 Sketch \u00b7 Notes \u00b7 Data",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "design_flow_0",
+      "fromWidget": "design_0_wireframe_nav",
+      "toScreen": "design_1_flow",
+      "transition": "push"
+    },
+    {
+      "id": "design_flow_1",
+      "fromWidget": "design_1_flow_nav",
+      "toScreen": "design_2_relationships",
+      "transition": "push"
+    },
+    {
+      "id": "design_flow_2",
+      "fromWidget": "design_2_relationships_nav",
+      "toScreen": "design_3_brief",
+      "transition": "push"
+    },
+    {
+      "id": "design_flow_3",
+      "fromWidget": "design_3_brief_nav",
+      "toScreen": "design_4_sketch",
+      "transition": "push"
+    },
+    {
+      "id": "design_flow_4",
+      "fromWidget": "design_4_sketch_nav",
+      "toScreen": "design_5_talk",
+      "transition": "push"
+    },
+    {
+      "id": "design_flow_5",
+      "fromWidget": "design_5_talk_nav",
+      "toScreen": "design_6_data",
+      "transition": "push"
+    },
+    {
+      "id": "design_flow_6",
+      "fromWidget": "design_6_data_nav",
+      "toScreen": "design_0_wireframe",
+      "transition": "push"
+    },
+    {
+      "id": "design_flow_extra",
+      "fromWidget": "design_5_talk_w1",
+      "toScreen": "design_6_data",
+      "transition": "push"
+    }
+  ]
+}

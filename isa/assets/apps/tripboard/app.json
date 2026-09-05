@@ -1,0 +1,20 @@
+{
+  "id": "tripboard",
+  "name": "Tripboard",
+  "category": "Planning & lists",
+  "description": "Plan a trip together: week board, calendar, todo, packing and map.",
+  "icon": "flight_takeoff",
+  "color": "#C2410C",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_tripboard"
+  },
+  "seedVersion": "2026-07-28.6.l10n-int-0903",
+  "seedContent": "initial-only",
+  "durableSettings": [
+    "tripboardMemberId"
+  ],
+  "meta": {
+    "note": "Multiuser trip-planning applet, REBUILT 2026-07-28 after an adversarial review rejected the first cut. Everything lives in ONE `entries` table (kind: trip|member|plan|event|todo|packing|note) plus a `relations` table (trip-root -> item `contains` edges) — the ONLY table names the share pipeline actually syncs, so inviting someone no longer hands them an empty trip. Identity is a per-install `tripboardMemberId` board SETTING (never $playerId, never sign-in identity) picked via a member card; every content row's `author` is stamped `$setting:tripboardMemberId` at creation. No historybar anywhere (multi-writer-unsafe whole-board undo) — Activity is the audit trail; per-row delete still gets a normal Undo toast. Built per the internal design notes; see MIGRATION.md for what changed and the honest gaps this v1 still doesn't solve."
+  }
+}

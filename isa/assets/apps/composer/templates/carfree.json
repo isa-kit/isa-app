@@ -1,0 +1,350 @@
+{
+  "board": {
+    "name": "Car-free access ranking"
+  },
+  "screens": [
+    {
+      "id": "cf_model",
+      "name": "Ranking \u00b7 log",
+      "device": "phone",
+      "x": 0,
+      "y": 0,
+      "folder": "Rankings"
+    },
+    {
+      "id": "cf_model_linear",
+      "name": "Ranking \u00b7 linear",
+      "device": "phone",
+      "x": 440,
+      "y": 0,
+      "folder": "Rankings"
+    },
+    {
+      "id": "cf_network_frequency",
+      "name": "Frequency",
+      "device": "phone",
+      "x": 880,
+      "y": 0,
+      "folder": "Network"
+    },
+    {
+      "id": "cf_network_density",
+      "name": "Density",
+      "device": "phone",
+      "x": 1320,
+      "y": 0,
+      "folder": "Network"
+    },
+    {
+      "id": "cf_network_coverage",
+      "name": "Coverage",
+      "device": "phone",
+      "x": 0,
+      "y": 900,
+      "folder": "Network"
+    },
+    {
+      "id": "cf_map",
+      "name": "Map",
+      "device": "phone",
+      "x": 440,
+      "y": 900,
+      "folder": "Map"
+    },
+    {
+      "id": "cf_about",
+      "name": "About",
+      "device": "phone",
+      "x": 880,
+      "y": 900,
+      "folder": "About"
+    }
+  ],
+  "widgets": [
+    {
+      "id": "cf_model_title",
+      "screen": "cf_model",
+      "kind": "titlebar",
+      "label": "Car-free job access, ranked (log scale)",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "cf_model_modes",
+      "screen": "cf_model",
+      "kind": "buttonrow",
+      "label": "All \u00b7 Bus \u00b7 Tram \u00b7 Subway \u00b7 Rail \u00b7 Every mode",
+      "region": "top",
+      "order": 1,
+      "items": "[\"All\", \"Bus\", \"Tram\", \"Subway\", \"Rail\", \"Every mode\"]"
+    },
+    {
+      "id": "cf_model_scale",
+      "screen": "cf_model",
+      "kind": "dropdown",
+      "label": "Scale",
+      "region": "top",
+      "order": 2,
+      "items": "[\"Log scale\", \"Linear scale\"]"
+    },
+    {
+      "id": "cf_model_cards",
+      "screen": "cf_model",
+      "kind": "list",
+      "label": "City ranking cards",
+      "region": "body",
+      "order": 0,
+      "items": "[\"1. New York (score 100.0)\", \"2. London (96.7)\", \"3. Washington (69.9)\", \"4. Montreal (67.1)\", \"5. San Francisco (65.2)\"]"
+    },
+    {
+      "id": "cf_model_nav",
+      "screen": "cf_model",
+      "kind": "bottomnav",
+      "label": "Ranking \u00b7 log \u00b7 Ranking \u00b7 linear \u00b7 Frequency \u00b7 Density \u00b7 Coverage \u00b7 Map \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "cf_model_linear_title",
+      "screen": "cf_model_linear",
+      "kind": "titlebar",
+      "label": "Car-free job access, ranked (linear scale)",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "cf_model_linear_modes",
+      "screen": "cf_model_linear",
+      "kind": "buttonrow",
+      "label": "All \u00b7 Bus \u00b7 Tram \u00b7 Subway \u00b7 Rail \u00b7 Every mode",
+      "region": "top",
+      "order": 1,
+      "items": "[\"All\", \"Bus\", \"Tram\", \"Subway\", \"Rail\", \"Every mode\"]"
+    },
+    {
+      "id": "cf_model_linear_cards",
+      "screen": "cf_model_linear",
+      "kind": "list",
+      "label": "City ranking cards",
+      "region": "body",
+      "order": 0,
+      "items": "[\"1. New York (score 100.0)\", \"2. London (96.7)\", \"3. Washington (69.9)\", \"4. Montreal (67.1)\", \"5. San Francisco (65.2)\"]"
+    },
+    {
+      "id": "cf_model_linear_nav",
+      "screen": "cf_model_linear",
+      "kind": "bottomnav",
+      "label": "Ranking \u00b7 log \u00b7 Ranking \u00b7 linear \u00b7 Frequency \u00b7 Density \u00b7 Coverage \u00b7 Map \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "cf_network_frequency_title",
+      "screen": "cf_network_frequency",
+      "kind": "titlebar",
+      "label": "Network ranking \u00b7 frequency",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "cf_network_frequency_modes",
+      "screen": "cf_network_frequency",
+      "kind": "buttonrow",
+      "label": "All \u00b7 Bus \u00b7 Tram \u00b7 Subway \u00b7 Rail \u00b7 Every mode",
+      "region": "top",
+      "order": 1,
+      "items": "[\"All\", \"Bus\", \"Tram\", \"Subway\", \"Rail\", \"Every mode\"]"
+    },
+    {
+      "id": "cf_network_frequency_cards",
+      "screen": "cf_network_frequency",
+      "kind": "list",
+      "label": "City ranking cards",
+      "region": "body",
+      "order": 0,
+      "items": "[\"1. New York (score 100.0)\", \"2. London (96.7)\", \"3. Washington (69.9)\", \"4. Montreal (67.1)\", \"5. San Francisco (65.2)\"]"
+    },
+    {
+      "id": "cf_network_frequency_nav",
+      "screen": "cf_network_frequency",
+      "kind": "bottomnav",
+      "label": "Ranking \u00b7 log \u00b7 Ranking \u00b7 linear \u00b7 Frequency \u00b7 Density \u00b7 Coverage \u00b7 Map \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "cf_network_density_title",
+      "screen": "cf_network_density",
+      "kind": "titlebar",
+      "label": "Network ranking \u00b7 density",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "cf_network_density_modes",
+      "screen": "cf_network_density",
+      "kind": "buttonrow",
+      "label": "All \u00b7 Bus \u00b7 Tram \u00b7 Subway \u00b7 Rail \u00b7 Every mode",
+      "region": "top",
+      "order": 1,
+      "items": "[\"All\", \"Bus\", \"Tram\", \"Subway\", \"Rail\", \"Every mode\"]"
+    },
+    {
+      "id": "cf_network_density_cards",
+      "screen": "cf_network_density",
+      "kind": "list",
+      "label": "City ranking cards",
+      "region": "body",
+      "order": 0,
+      "items": "[\"1. New York (score 100.0)\", \"2. London (96.7)\", \"3. Washington (69.9)\", \"4. Montreal (67.1)\", \"5. San Francisco (65.2)\"]"
+    },
+    {
+      "id": "cf_network_density_nav",
+      "screen": "cf_network_density",
+      "kind": "bottomnav",
+      "label": "Ranking \u00b7 log \u00b7 Ranking \u00b7 linear \u00b7 Frequency \u00b7 Density \u00b7 Coverage \u00b7 Map \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "cf_network_coverage_title",
+      "screen": "cf_network_coverage",
+      "kind": "titlebar",
+      "label": "Network ranking \u00b7 coverage",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "cf_network_coverage_modes",
+      "screen": "cf_network_coverage",
+      "kind": "buttonrow",
+      "label": "All \u00b7 Bus \u00b7 Tram \u00b7 Subway \u00b7 Rail \u00b7 Every mode",
+      "region": "top",
+      "order": 1,
+      "items": "[\"All\", \"Bus\", \"Tram\", \"Subway\", \"Rail\", \"Every mode\"]"
+    },
+    {
+      "id": "cf_network_coverage_cards",
+      "screen": "cf_network_coverage",
+      "kind": "list",
+      "label": "City ranking cards",
+      "region": "body",
+      "order": 0,
+      "items": "[\"1. New York (score 100.0)\", \"2. London (96.7)\", \"3. Washington (69.9)\", \"4. Montreal (67.1)\", \"5. San Francisco (65.2)\"]"
+    },
+    {
+      "id": "cf_network_coverage_nav",
+      "screen": "cf_network_coverage",
+      "kind": "bottomnav",
+      "label": "Ranking \u00b7 log \u00b7 Ranking \u00b7 linear \u00b7 Frequency \u00b7 Density \u00b7 Coverage \u00b7 Map \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "cf_map_title",
+      "screen": "cf_map",
+      "kind": "titlebar",
+      "label": "Cities on the map",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "cf_map_card",
+      "screen": "cf_map",
+      "kind": "card",
+      "label": "Map \u2014 ranked cities plotted",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "cf_map_nav",
+      "screen": "cf_map",
+      "kind": "bottomnav",
+      "label": "Ranking \u00b7 log \u00b7 Ranking \u00b7 linear \u00b7 Frequency \u00b7 Density \u00b7 Coverage \u00b7 Map \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "cf_about_title",
+      "screen": "cf_about",
+      "kind": "titlebar",
+      "label": "About this ranking",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "cf_about_text1",
+      "screen": "cf_about",
+      "kind": "text",
+      "label": "Methodology \u2014 how the score is built",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "cf_about_text2",
+      "screen": "cf_about",
+      "kind": "text",
+      "label": "Data sources & caveats",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "cf_about_nav",
+      "screen": "cf_about",
+      "kind": "bottomnav",
+      "label": "Ranking \u00b7 log \u00b7 Ranking \u00b7 linear \u00b7 Frequency \u00b7 Density \u00b7 Coverage \u00b7 Map \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "cf_flow_0",
+      "fromWidget": "cf_model_nav",
+      "toScreen": "cf_model_linear",
+      "transition": "push"
+    },
+    {
+      "id": "cf_flow_1",
+      "fromWidget": "cf_model_linear_nav",
+      "toScreen": "cf_network_frequency",
+      "transition": "push"
+    },
+    {
+      "id": "cf_flow_2",
+      "fromWidget": "cf_network_frequency_nav",
+      "toScreen": "cf_network_density",
+      "transition": "push"
+    },
+    {
+      "id": "cf_flow_3",
+      "fromWidget": "cf_network_density_nav",
+      "toScreen": "cf_network_coverage",
+      "transition": "push"
+    },
+    {
+      "id": "cf_flow_4",
+      "fromWidget": "cf_network_coverage_nav",
+      "toScreen": "cf_map",
+      "transition": "push"
+    },
+    {
+      "id": "cf_flow_5",
+      "fromWidget": "cf_map_nav",
+      "toScreen": "cf_about",
+      "transition": "push"
+    },
+    {
+      "id": "cf_flow_6",
+      "fromWidget": "cf_about_nav",
+      "toScreen": "cf_model",
+      "transition": "push"
+    },
+    {
+      "id": "cf_flow_7",
+      "fromWidget": "cf_model_cards",
+      "toScreen": "cf_map",
+      "transition": "push"
+    }
+  ]
+}

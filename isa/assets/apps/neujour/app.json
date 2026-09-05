@@ -1,0 +1,13 @@
+{
+  "id": "neujour",
+  "name": "Neujour",
+  "category": "Life",
+  "description": "A journal with feelings, calendar, timeline, trends and an atlas.",
+  "icon": "book",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_neujour"
+  },
+  "seedVersion": "2026-06-25.timezone.l10n-int-0903",
+  "seedContent": "initial-only"
+}

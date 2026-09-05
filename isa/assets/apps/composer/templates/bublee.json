@@ -1,0 +1,209 @@
+{
+  "board": {
+    "name": "bublie"
+  },
+  "screens": [
+    {
+      "id": "bl_board",
+      "name": "Board",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "bl_boards",
+      "name": "Boards",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "bl_files",
+      "name": "Files",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    },
+    {
+      "id": "bl_ideas",
+      "name": "Ideas",
+      "device": "phone",
+      "x": 1320,
+      "y": 0
+    },
+    {
+      "id": "bl_history",
+      "name": "History",
+      "device": "phone",
+      "x": 0,
+      "y": 900
+    }
+  ],
+  "widgets": [
+    {
+      "id": "bl_board_title",
+      "screen": "bl_board",
+      "kind": "titlebar",
+      "label": "bublie",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "bl_board_card",
+      "screen": "bl_board",
+      "kind": "card",
+      "label": "Board canvas \u2014 bubbles & connections",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "bl_board_recent",
+      "screen": "bl_board",
+      "kind": "list",
+      "label": "Recent edits",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Added \\\"Onboarding flow\\\" bubble\", \"Connected \\\"Pricing\\\" to \\\"Launch\\\"\", \"Renamed board to \\\"Q3 roadmap\\\"\"]"
+    },
+    {
+      "id": "bl_board_nav",
+      "screen": "bl_board",
+      "kind": "bottomnav",
+      "label": "Board \u00b7 Boards \u00b7 Files \u00b7 Ideas",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "bl_boards_title",
+      "screen": "bl_boards",
+      "kind": "titlebar",
+      "label": "Boards",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "bl_boards_list",
+      "screen": "bl_boards",
+      "kind": "list",
+      "label": "Boards & folders",
+      "region": "body",
+      "order": 0,
+      "items": "[{\"text\": \"Product\", \"children\": [{\"text\": \"Q3 roadmap\"}, {\"text\": \"Onboarding flow\"}]}, {\"text\": \"Marketing\"}, {\"text\": \"Archive\"}]"
+    },
+    {
+      "id": "bl_boards_nav",
+      "screen": "bl_boards",
+      "kind": "bottomnav",
+      "label": "Board \u00b7 Boards \u00b7 Files \u00b7 Ideas",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "bl_files_title",
+      "screen": "bl_files",
+      "kind": "titlebar",
+      "label": "Files",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "bl_files_list",
+      "screen": "bl_files",
+      "kind": "list",
+      "label": "Board files",
+      "region": "body",
+      "order": 0,
+      "items": "[\"Q3 roadmap.bubl\", \"Onboarding flow.bubl\", \"Pricing brainstorm.bubl\"]"
+    },
+    {
+      "id": "bl_files_nav",
+      "screen": "bl_files",
+      "kind": "bottomnav",
+      "label": "Board \u00b7 Boards \u00b7 Files \u00b7 Ideas",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "bl_ideas_title",
+      "screen": "bl_ideas",
+      "kind": "titlebar",
+      "label": "Ideas",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "bl_ideas_text",
+      "screen": "bl_ideas",
+      "kind": "text",
+      "label": "Idea backlog",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "bl_ideas_table",
+      "screen": "bl_ideas",
+      "kind": "list",
+      "label": "Idea rows (table)",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Dark mode toggle\", \"Export board as image\", \"Keyboard shortcuts for zoom\"]"
+    },
+    {
+      "id": "bl_ideas_nav",
+      "screen": "bl_ideas",
+      "kind": "bottomnav",
+      "label": "Board \u00b7 Boards \u00b7 Files \u00b7 Ideas",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "bl_history_title",
+      "screen": "bl_history",
+      "kind": "titlebar",
+      "label": "Recent edits",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "bl_history_table",
+      "screen": "bl_history",
+      "kind": "list",
+      "label": "Edit history (table)",
+      "region": "body",
+      "order": 0,
+      "items": "[\"Added \\\"Onboarding flow\\\" bubble \\u2014 2m ago\", \"Connected \\\"Pricing\\\" to \\\"Launch\\\" \\u2014 1h ago\", \"Renamed board to \\\"Q3 roadmap\\\" \\u2014 yesterday\"]"
+    }
+  ],
+  "flows": [
+    {
+      "id": "bl_flow_0",
+      "fromWidget": "bl_board_nav",
+      "toScreen": "bl_boards",
+      "transition": "push"
+    },
+    {
+      "id": "bl_flow_1",
+      "fromWidget": "bl_boards_nav",
+      "toScreen": "bl_files",
+      "transition": "push"
+    },
+    {
+      "id": "bl_flow_2",
+      "fromWidget": "bl_files_nav",
+      "toScreen": "bl_ideas",
+      "transition": "push"
+    },
+    {
+      "id": "bl_flow_3",
+      "fromWidget": "bl_ideas_nav",
+      "toScreen": "bl_board",
+      "transition": "push"
+    },
+    {
+      "id": "bl_flow_4",
+      "fromWidget": "bl_board_recent",
+      "toScreen": "bl_history",
+      "transition": "push"
+    }
+  ]
+}

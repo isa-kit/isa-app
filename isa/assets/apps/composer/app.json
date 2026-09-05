@@ -1,0 +1,15 @@
+{
+  "id": "composer",
+  "name": "Moku",
+  "category": "Creative",
+  "description": "Sketch app screens as mockups on a board.",
+  "icon": "dashboard_customize",
+  "color": "#3F51B5",
+  "hidden": false,
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_composer"
+  },
+  "seedVersion": "2026-09-04.native-wikipick-frames",
+  "seedContent": "initial-only"
+}

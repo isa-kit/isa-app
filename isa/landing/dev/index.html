@@ -1,0 +1,100 @@
+<!doctype html>
+<!--
+  DEV-CHANNEL root landing (dev.devisant.com only — never the apex). Overlays
+  web/landing/index.html for a dev-channel artifact assembly: this file (and
+  dev/404.html) replace the decoy landing/404 for this build; site.css,
+  robots.txt, about.html, faq.html stay shared from web/landing/ (see
+  tool/assemble_prod_artifact.sh's optional 4th CHANNEL_DIR arg). Unlike the
+  apex decoy, this page is meant to be found and to say exactly what it is —
+  it is unlinked from the real site, so honesty here costs nothing.
+-->
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="devisant dev — the workshop, not the shop.">
+<title>devisant — dev</title>
+<link rel="stylesheet" href="/site.css">
+<style>
+  /* Small additions on top of the shared theme — same tokens, no new system. */
+  .tag {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 0.2rem 0.6rem;
+  }
+  ul.plain {
+    margin: 0;
+    padding-left: 1.1rem;
+  }
+  ul.plain li {
+    margin-bottom: 0.5rem;
+  }
+  ul.plain li:last-child {
+    margin-bottom: 0;
+  }
+  .stamp {
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<main>
+  <span class="tag">dev channel</span>
+  <h1 class="wordmark">You've found the workshop.</h1>
+  <p class="lede">Everything here is wet paint.</p>
+
+  <section>
+    <h2>What this is</h2>
+    <p>
+      This is where features audition before they make it to the real site.
+      Things here may be half-built, break mid-click, or quietly vanish
+      overnight while someone rebuilds them. Nothing here is a promise.
+    </p>
+  </section>
+
+  <section>
+    <h2>What to expect</h2>
+    <ul class="plain">
+      <li>Data you put in here can be reset without warning — don't keep anything you'd miss.</li>
+      <li>The bugs are real bugs, not a demo of what bugs look like.</li>
+      <li>If it's broken, it's probably known. If it's not, tell us and it will be.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Where to actually go</h2>
+    <p>
+      The stable, finished site lives at <a href="https://devisant.com">devisant.com</a>.
+      The app running on <em>this</em> build is at <a href="/isa/">/isa/</a> —
+      go there to poke at what's currently under construction.
+    </p>
+  </section>
+
+  <section>
+    <p class="stamp" id="build-stamp">last broken: checking…</p>
+  </section>
+</main>
+<script>
+(function () {
+  var el = document.getElementById('build-stamp');
+  fetch('isa/build_info.json', { cache: 'no-store' })
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+    .then(function (info) {
+      var when = info.builtAt || info.committedAt || info.build;
+      el.textContent = when ? ('last broken: ' + when) : 'last broken: unknown (as always)';
+    })
+    .catch(function () {
+      el.textContent = 'last broken: could not check — fitting, honestly';
+    });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+{
+  "tables": [
+    {
+      "name": "icons",
+      "label": {
+        "en": "Icons",
+        "zh": "图标",
+        "hi": "आइकन",
+        "es": "Iconos",
+        "fr": "Icônes",
+        "ar": "الأيقونات",
+        "pt": "Ícones",
+        "ru": "Значки",
+        "de": "Symbole",
+        "ja": "アイコン",
+        "tr": "Simgeler",
+        "vi": "Biểu tượng",
+        "ko": "아이콘",
+        "it": "Icone",
+        "fa": "آیکون‌ها",
+        "pl": "Ikony",
+        "uk": "Піктограми",
+        "nl": "Iconen",
+        "sv": "Ikoner",
+        "cs": "Ikony",
+        "el": "Εικονίδια"
+      },
+      "icon": "apps",
+      "description": {
+        "en": "Square icon artboards, stored as vector strokes so they reopen and stay editable.",
+        "zh": "方形图标画板，以矢量笔画存储，可随时重新打开并继续编辑。",
+        "hi": "वर्गाकार आइकन आर्टबोर्ड, वेक्टर स्ट्रोक के रूप में संग्रहीत ताकि वे फिर से खुलें और संपादन योग्य रहें।",
+        "es": "Mesas de trabajo cuadradas para iconos, guardadas como trazos vectoriales para que se reabran y sigan siendo editables.",
+        "fr": "Plans de travail carrés pour icônes, enregistrés en tracés vectoriels afin de rester réouvrables et modifiables.",
+        "ar": "ألواح رسم مربعة للأيقونات، تُحفظ كضربات متجهية لتظل قابلة لإعادة الفتح والتعديل.",
+        "pt": "Pranchetas quadradas de ícones, salvas como traços vetoriais para reabrir e continuar editáveis.",
+        "ru": "Квадратные монтажные области значков, сохраняются как векторные штрихи, поэтому их можно снова открыть и редактировать.",
+        "de": "Quadratische Icon-Zeichenflächen, als Vektorstriche gespeichert, damit sie erneut geöffnet und bearbeitet werden können.",
+        "ja": "正方形のアイコン用アートボード。ベクターストロークとして保存されるため、再度開いて編集できます。",
+        "tr": "Kare simge çalışma yüzeyleri; vektör çizgileri olarak saklanır, böylece yeniden açılıp düzenlenebilir.",
+        "vi": "Bảng vẽ biểu tượng vuông, lưu dưới dạng nét vector nên mở lại và chỉnh sửa được.",
+        "ko": "정사각형 아이콘 아트보드. 벡터 획으로 저장되어 다시 열어 계속 편집할 수 있습니다.",
+        "it": "Tavole da disegno quadrate per icone, salvate come tratti vettoriali così restano riapribili e modificabili.",
+        "fa": "تخته‌های طراحی مربعی آیکون، به‌صورت ضربه‌های برداری ذخیره می‌شوند تا دوباره باز و ویرایش شوند.",
+        "pl": "Kwadratowe obszary robocze ikon, zapisywane jako wektorowe pociągnięcia, więc pozostają otwieralne i edytowalne.",
+        "uk": "Квадратні монтажні області піктограм, зберігаються як векторні штрихи, тож їх можна знову відкрити й редагувати.",
+        "nl": "Vierkante werkbladen voor iconen, opgeslagen als vectorstreken zodat ze opnieuw te openen en te bewerken blijven.",
+        "sv": "Kvadratiska ritytor för ikoner, sparade som vektordrag så att de kan öppnas och redigeras igen.",
+        "cs": "Čtvercová kreslicí plátna ikon, uložená jako vektorové tahy, takže je lze znovu otevřít a upravovat.",
+        "el": "Τετράγωνοι πίνακες σχεδίασης εικονιδίων, αποθηκευμένοι ως διανυσματικές πινελιές ώστε να ανοίγουν ξανά και να παραμένουν επεξεργάσιμοι."
+      }
+    }
+  ]
+}

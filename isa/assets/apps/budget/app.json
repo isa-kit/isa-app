@@ -1,0 +1,14 @@
+{
+  "id": "budget",
+  "name": "Budget",
+  "category": "Finance",
+  "description": "Accounts, spending and budgets in one overview.",
+  "icon": "savings",
+  "color": "#15803D",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_budget"
+  },
+  "seedVersion": "2026-06-13.1.l10n-int-0903",
+  "seedContent": "initial-only"
+}

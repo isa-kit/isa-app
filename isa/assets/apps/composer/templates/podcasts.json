@@ -1,0 +1,268 @@
+{
+  "board": {
+    "name": "Podcasts"
+  },
+  "screens": [
+    {
+      "id": "podcas_0_files",
+      "name": "Files",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "podcas_1_shows",
+      "name": "Shows",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "podcas_2_queue",
+      "name": "Queue",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    },
+    {
+      "id": "podcas_3_episodes",
+      "name": "Episodes",
+      "device": "phone",
+      "x": 1320,
+      "y": 0
+    },
+    {
+      "id": "podcas_4_search",
+      "name": "Discover",
+      "device": "phone",
+      "x": 0,
+      "y": 900
+    }
+  ],
+  "widgets": [
+    {
+      "id": "podcas_0_files_title",
+      "screen": "podcas_0_files",
+      "kind": "titlebar",
+      "label": "Files",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "podcas_0_files_w0",
+      "screen": "podcas_0_files",
+      "kind": "list",
+      "label": "Files",
+      "region": "body",
+      "order": 0,
+      "items": "[\"Shows\", \"Queue\", \"Episodes\"]"
+    },
+    {
+      "id": "podcas_0_files_nav",
+      "screen": "podcas_0_files",
+      "kind": "bottomnav",
+      "label": "Files \u00b7 Shows \u00b7 Queue \u00b7 Episodes \u00b7 Discover",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "podcas_1_shows_title",
+      "screen": "podcas_1_shows",
+      "kind": "titlebar",
+      "label": "Shows",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "podcas_1_shows_w0",
+      "screen": "podcas_1_shows",
+      "kind": "text",
+      "label": "Podcasts you follow or want to try.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "podcas_1_shows_w1",
+      "screen": "podcas_1_shows",
+      "kind": "card",
+      "label": "Shows",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "podcas_1_shows_w2",
+      "screen": "podcas_1_shows",
+      "kind": "card",
+      "label": "Following",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "podcas_1_shows_nav",
+      "screen": "podcas_1_shows",
+      "kind": "bottomnav",
+      "label": "Files \u00b7 Shows \u00b7 Queue \u00b7 Episodes \u00b7 Discover",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "podcas_2_queue_title",
+      "screen": "podcas_2_queue",
+      "kind": "titlebar",
+      "label": "Queue",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "podcas_2_queue_w0",
+      "screen": "podcas_2_queue",
+      "kind": "text",
+      "label": "Episodes you lined up to listen to.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "podcas_2_queue_w1",
+      "screen": "podcas_2_queue",
+      "kind": "list",
+      "label": "title",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Files\", \"Shows\", \"Episodes\"]"
+    },
+    {
+      "id": "podcas_2_queue_w2",
+      "screen": "podcas_2_queue",
+      "kind": "text",
+      "label": "Mark progress",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "podcas_2_queue_nav",
+      "screen": "podcas_2_queue",
+      "kind": "bottomnav",
+      "label": "Files \u00b7 Shows \u00b7 Queue \u00b7 Episodes \u00b7 Discover",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "podcas_3_episodes_title",
+      "screen": "podcas_3_episodes",
+      "kind": "titlebar",
+      "label": "Episodes",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "podcas_3_episodes_w0",
+      "screen": "podcas_3_episodes",
+      "kind": "text",
+      "label": "Every episode, grouped by show, newest first.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "podcas_3_episodes_w1",
+      "screen": "podcas_3_episodes",
+      "kind": "buttonrow",
+      "label": "Add episode",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "podcas_3_episodes_w2",
+      "screen": "podcas_3_episodes",
+      "kind": "buttonrow",
+      "label": "All",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "podcas_3_episodes_nav",
+      "screen": "podcas_3_episodes",
+      "kind": "bottomnav",
+      "label": "Files \u00b7 Shows \u00b7 Queue \u00b7 Episodes \u00b7 Discover",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "podcas_4_search_title",
+      "screen": "podcas_4_search",
+      "kind": "titlebar",
+      "label": "Discover",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "podcas_4_search_w0",
+      "screen": "podcas_4_search",
+      "kind": "text",
+      "label": "Discover \u2014 shows that bridge your interests",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "podcas_4_search_w1",
+      "screen": "podcas_4_search",
+      "kind": "text",
+      "label": "Computed on your device from the shows you follow \u2014",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "podcas_4_search_w2",
+      "screen": "podcas_4_search",
+      "kind": "buttonrow",
+      "label": "Find shows for you",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "podcas_4_search_nav",
+      "screen": "podcas_4_search",
+      "kind": "bottomnav",
+      "label": "Files \u00b7 Shows \u00b7 Queue \u00b7 Episodes \u00b7 Discover",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "podcas_flow_0",
+      "fromWidget": "podcas_0_files_nav",
+      "toScreen": "podcas_1_shows",
+      "transition": "push"
+    },
+    {
+      "id": "podcas_flow_1",
+      "fromWidget": "podcas_1_shows_nav",
+      "toScreen": "podcas_2_queue",
+      "transition": "push"
+    },
+    {
+      "id": "podcas_flow_2",
+      "fromWidget": "podcas_2_queue_nav",
+      "toScreen": "podcas_3_episodes",
+      "transition": "push"
+    },
+    {
+      "id": "podcas_flow_3",
+      "fromWidget": "podcas_3_episodes_nav",
+      "toScreen": "podcas_4_search",
+      "transition": "push"
+    },
+    {
+      "id": "podcas_flow_4",
+      "fromWidget": "podcas_4_search_nav",
+      "toScreen": "podcas_0_files",
+      "transition": "push"
+    },
+    {
+      "id": "podcas_flow_extra",
+      "fromWidget": "podcas_0_files_w0",
+      "toScreen": "podcas_1_shows",
+      "transition": "push"
+    }
+  ]
+}

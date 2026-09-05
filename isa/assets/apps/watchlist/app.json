@@ -1,0 +1,14 @@
+{
+  "id": "watchlist",
+  "name": "Watchlist",
+  "icon": "smart_display",
+  "color": "#E53935",
+  "category": "Media",
+  "description": "What to watch, by channel, plus what you've watched and recommendations.",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_watchlist"
+  },
+  "seedVersion": "2026-07-20.files.l10n-int-0903",
+  "seedContent": "initial-only"
+}

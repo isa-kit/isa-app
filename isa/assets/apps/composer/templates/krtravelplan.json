@@ -1,0 +1,223 @@
+{
+  "board": {
+    "name": "Korea trip plan"
+  },
+  "screens": [
+    {
+      "id": "krtrav_0_start",
+      "name": "Start here",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "krtrav_1_schedule",
+      "name": "Schedule",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "krtrav_2_research",
+      "name": "Research",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    },
+    {
+      "id": "krtrav_3_members",
+      "name": "Who's here",
+      "device": "phone",
+      "x": 1320,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "krtrav_0_start_title",
+      "screen": "krtrav_0_start",
+      "kind": "titlebar",
+      "label": "Start here",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "krtrav_0_start_w0",
+      "screen": "krtrav_0_start",
+      "kind": "text",
+      "label": "Korea trip plan",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "krtrav_0_start_w1",
+      "screen": "krtrav_0_start",
+      "kind": "text",
+      "label": "One place for the trip's SCHEDULE (dated plan items) and RESEARCH (notes, links, and\u2026",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "krtrav_0_start_w2",
+      "screen": "krtrav_0_start",
+      "kind": "card",
+      "label": "card",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "krtrav_0_start_nav",
+      "screen": "krtrav_0_start",
+      "kind": "bottomnav",
+      "label": "Start here \u00b7 Schedule \u00b7 Research \u00b7 Who's here",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "krtrav_1_schedule_title",
+      "screen": "krtrav_1_schedule",
+      "kind": "titlebar",
+      "label": "Schedule",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "krtrav_1_schedule_w0",
+      "screen": "krtrav_1_schedule",
+      "kind": "text",
+      "label": "Schedule",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "krtrav_1_schedule_w1",
+      "screen": "krtrav_1_schedule",
+      "kind": "text",
+      "label": "Dated and timed plan items.",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "krtrav_1_schedule_w2",
+      "screen": "krtrav_1_schedule",
+      "kind": "card",
+      "label": "Calendar",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "krtrav_1_schedule_nav",
+      "screen": "krtrav_1_schedule",
+      "kind": "bottomnav",
+      "label": "Start here \u00b7 Schedule \u00b7 Research \u00b7 Who's here",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "krtrav_2_research_title",
+      "screen": "krtrav_2_research",
+      "kind": "titlebar",
+      "label": "Research",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "krtrav_2_research_w0",
+      "screen": "krtrav_2_research",
+      "kind": "text",
+      "label": "Research",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "krtrav_2_research_w1",
+      "screen": "krtrav_2_research",
+      "kind": "text",
+      "label": "Notes, links, and candidate places you're weighing -- routes, stations, food, lodging.",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "krtrav_2_research_w2",
+      "screen": "krtrav_2_research",
+      "kind": "buttonrow",
+      "label": "New research item",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "krtrav_2_research_nav",
+      "screen": "krtrav_2_research",
+      "kind": "bottomnav",
+      "label": "Start here \u00b7 Schedule \u00b7 Research \u00b7 Who's here",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "krtrav_3_members_title",
+      "screen": "krtrav_3_members",
+      "kind": "titlebar",
+      "label": "Who's here",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "krtrav_3_members_w0",
+      "screen": "krtrav_3_members",
+      "kind": "text",
+      "label": "Who's here",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "krtrav_3_members_w1",
+      "screen": "krtrav_3_members",
+      "kind": "text",
+      "label": "No sign-in, no account -- add a card, then tap it to become that person.",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "krtrav_3_members_w2",
+      "screen": "krtrav_3_members",
+      "kind": "text",
+      "label": "The Badge fills in on its own from your name (e.g.",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "krtrav_3_members_nav",
+      "screen": "krtrav_3_members",
+      "kind": "bottomnav",
+      "label": "Start here \u00b7 Schedule \u00b7 Research \u00b7 Who's here",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "krtrav_flow_0",
+      "fromWidget": "krtrav_0_start_nav",
+      "toScreen": "krtrav_1_schedule",
+      "transition": "push"
+    },
+    {
+      "id": "krtrav_flow_1",
+      "fromWidget": "krtrav_1_schedule_nav",
+      "toScreen": "krtrav_2_research",
+      "transition": "push"
+    },
+    {
+      "id": "krtrav_flow_2",
+      "fromWidget": "krtrav_2_research_nav",
+      "toScreen": "krtrav_3_members",
+      "transition": "push"
+    },
+    {
+      "id": "krtrav_flow_3",
+      "fromWidget": "krtrav_3_members_nav",
+      "toScreen": "krtrav_0_start",
+      "transition": "push"
+    }
+  ]
+}

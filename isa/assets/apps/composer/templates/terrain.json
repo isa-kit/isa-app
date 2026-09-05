@@ -1,0 +1,253 @@
+{
+  "board": {
+    "name": "Urbanset"
+  },
+  "screens": [
+    {
+      "id": "terrai_0_overview",
+      "name": "Urbanset",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "terrai_1_runs",
+      "name": "Runs",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "terrai_2_outputs",
+      "name": "Model outputs \u2014 Seoul transit",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    },
+    {
+      "id": "terrai_3_catalog",
+      "name": "Registries",
+      "device": "phone",
+      "x": 1320,
+      "y": 0
+    },
+    {
+      "id": "terrai_4_about",
+      "name": "About Terrain",
+      "device": "phone",
+      "x": 0,
+      "y": 900
+    }
+  ],
+  "widgets": [
+    {
+      "id": "terrai_0_overview_title",
+      "screen": "terrai_0_overview",
+      "kind": "titlebar",
+      "label": "Urbanset",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "terrai_0_overview_w0",
+      "screen": "terrai_0_overview",
+      "kind": "list",
+      "label": "name",
+      "region": "body",
+      "order": 0,
+      "items": "[\"Runs\", \"Model outputs \\u2014 Seoul transit\", \"Registries\"]"
+    },
+    {
+      "id": "terrai_0_overview_nav",
+      "screen": "terrai_0_overview",
+      "kind": "bottomnav",
+      "label": "Urbanset \u00b7 Runs \u00b7 Outputs \u00b7 Registries \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "terrai_1_runs_title",
+      "screen": "terrai_1_runs",
+      "kind": "titlebar",
+      "label": "Runs",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "terrai_1_runs_w0",
+      "screen": "terrai_1_runs",
+      "kind": "list",
+      "label": "run_label",
+      "region": "body",
+      "order": 0,
+      "items": "[\"Urbanset\", \"Model outputs \\u2014 Seoul transit\", \"Registries\"]"
+    },
+    {
+      "id": "terrai_1_runs_w1",
+      "screen": "terrai_1_runs",
+      "kind": "list",
+      "label": "List",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Urbanset\", \"Model outputs \\u2014 Seoul transit\", \"Registries\"]"
+    },
+    {
+      "id": "terrai_1_runs_w2",
+      "screen": "terrai_1_runs",
+      "kind": "text",
+      "label": "Runs record locally with a full setup snapshot \u2014",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "terrai_1_runs_nav",
+      "screen": "terrai_1_runs",
+      "kind": "bottomnav",
+      "label": "Urbanset \u00b7 Runs \u00b7 Outputs \u00b7 Registries \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "terrai_2_outputs_title",
+      "screen": "terrai_2_outputs",
+      "kind": "titlebar",
+      "label": "Model outputs \u2014 Seoul transit",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "terrai_2_outputs_w0",
+      "screen": "terrai_2_outputs",
+      "kind": "text",
+      "label": "Real output of the two Korea models: 471 Seoul subway stations pulled live from\u2026",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "terrai_2_outputs_w1",
+      "screen": "terrai_2_outputs",
+      "kind": "card",
+      "label": "Map",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "terrai_2_outputs_w2",
+      "screen": "terrai_2_outputs",
+      "kind": "buttonrow",
+      "label": "Segmented control",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "terrai_2_outputs_nav",
+      "screen": "terrai_2_outputs",
+      "kind": "bottomnav",
+      "label": "Urbanset \u00b7 Runs \u00b7 Outputs \u00b7 Registries \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "terrai_3_catalog_title",
+      "screen": "terrai_3_catalog",
+      "kind": "titlebar",
+      "label": "Registries",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "terrai_3_catalog_w0",
+      "screen": "terrai_3_catalog",
+      "kind": "buttonrow",
+      "label": "Segmented control",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "terrai_3_catalog_nav",
+      "screen": "terrai_3_catalog",
+      "kind": "bottomnav",
+      "label": "Urbanset \u00b7 Runs \u00b7 Outputs \u00b7 Registries \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "terrai_4_about_title",
+      "screen": "terrai_4_about",
+      "kind": "titlebar",
+      "label": "About Terrain",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "terrai_4_about_w0",
+      "screen": "terrai_4_about",
+      "kind": "text",
+      "label": "Terrain is a reproducible observatory over the transit model stack.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "terrai_4_about_w1",
+      "screen": "terrai_4_about",
+      "kind": "text",
+      "label": "What is real",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "terrai_4_about_w2",
+      "screen": "terrai_4_about",
+      "kind": "text",
+      "label": "Real now: composed views, CSV imports, and the full reproducibility trail.",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "terrai_4_about_nav",
+      "screen": "terrai_4_about",
+      "kind": "bottomnav",
+      "label": "Urbanset \u00b7 Runs \u00b7 Outputs \u00b7 Registries \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "terrai_flow_0",
+      "fromWidget": "terrai_0_overview_nav",
+      "toScreen": "terrai_1_runs",
+      "transition": "push"
+    },
+    {
+      "id": "terrai_flow_1",
+      "fromWidget": "terrai_1_runs_nav",
+      "toScreen": "terrai_2_outputs",
+      "transition": "push"
+    },
+    {
+      "id": "terrai_flow_2",
+      "fromWidget": "terrai_2_outputs_nav",
+      "toScreen": "terrai_3_catalog",
+      "transition": "push"
+    },
+    {
+      "id": "terrai_flow_3",
+      "fromWidget": "terrai_3_catalog_nav",
+      "toScreen": "terrai_4_about",
+      "transition": "push"
+    },
+    {
+      "id": "terrai_flow_4",
+      "fromWidget": "terrai_4_about_nav",
+      "toScreen": "terrai_0_overview",
+      "transition": "push"
+    },
+    {
+      "id": "terrai_flow_extra",
+      "fromWidget": "terrai_0_overview_w0",
+      "toScreen": "terrai_1_runs",
+      "transition": "push"
+    }
+  ]
+}

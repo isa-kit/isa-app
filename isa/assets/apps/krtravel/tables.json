@@ -1,0 +1,142 @@
+{
+ "tables": [
+  {
+   "name": "districts",
+   "label": {
+    "en": "Districts",
+    "ko": "자치구"
+   },
+   "icon": "map",
+   "description": {
+    "en": "25 Seoul districts: travel-ease, area-centrality and destination-access composite scores.",
+    "ko": "서울 25개 자치구: 여행 편의성, 지역 중심성, 목적지 접근성 종합 점수."
+   }
+  },
+  {
+   "name": "dong",
+   "label": {
+    "en": "Neighborhoods (dong)",
+    "ko": "동"
+   },
+   "icon": "location_city",
+   "description": {
+    "en": "424 fine-grained Seoul neighborhoods: travel-ease and area-centrality; zero-station dong are honestly no-data, never interpolated.",
+    "ko": "서울의 세부 동 424곳: 여행 편의성과 지역 중심성. 역이 없는 동은 보간하지 않고 정직하게 '자료 없음'으로 둡니다."
+   }
+  },
+  {
+   "name": "stations",
+   "label": {
+    "en": "Stations",
+    "ko": "역"
+   },
+   "icon": "directions_subway",
+   "description": {
+    "en": "471 Seoul subway stations: transit-stress (betweenness centrality) and a coordinate-only walk-stress proxy.",
+    "ko": "서울 지하철역 471개: 교통 스트레스(매개 중심성)와 좌표 기반 도보 스트레스 대리 지표."
+   }
+  },
+  {
+   "name": "best_spots",
+   "label": {
+    "en": "Best spots",
+    "ko": "추천 지역"
+   },
+   "icon": "star",
+   "description": {
+    "en": "25 districts ranked by best-spots score, with the destination-access and overall travel-ease framings side by side.",
+    "ko": "추천 지역 점수로 순위를 매긴 25개 자치구. 목적지 접근성과 종합 여행 편의성 관점을 나란히 보여줍니다."
+   }
+  },
+  {
+   "name": "events",
+   "label": {
+    "en": "Events",
+    "ko": "행사"
+   },
+   "icon": "event",
+   "description": {
+    "en": "41 web-verified South Korea festivals/events overlapping Aug-Oct 2026; each row's source note says whether its 2026 dates are confirmed, planned or an unannounced prior-year placeholder.",
+    "ko": "2026년 8-10월과 겹치는, 웹으로 검증한 한국 축제·행사 41건. 각 행의 출처 메모에 2026년 일정이 확정인지, 계획 단계인지, 미발표 상태의 전년도 기준인지 적혀 있습니다."
+   }
+  },
+  {
+   "name": "kr_cities",
+   "label": {
+    "en": "Korea cities",
+    "ko": "전국 도시"
+   },
+   "icon": "location_city",
+   "description": {
+    "en": "159 Korean cities/municipalities with a bus-stop count, fed live from transit4-server's KOGL-derived index (data.go.kr, no schedule/route data). Ships empty; loads on open, Refresh retries.",
+    "ko": "버스 정류장 수를 가진 한국 시·군 159곳. transit4-server의 공공누리(KOGL) 기반 색인(data.go.kr, 시간표·노선 데이터 없음)에서 실시간으로 불러옵니다. 빈 상태로 배포되며, 열 때 로드하고 새로고침으로 재시도합니다."
+   },
+   "source": {
+    "type": "rest",
+    "url": "https://167.233.64.97/t4/kr_stop_slices/index.json",
+    "method": "GET",
+    "rowsPath": "cities"
+   }
+  },
+  {
+   "name": "reach_origins",
+   "label": {
+    "en": "Reach origin hubs",
+    "ko": "도달 범위 출발 거점"
+   },
+   "icon": "place",
+   "description": {
+    "en": "Reach-explorer UI state list: the 8 curated origin hubs the From picker selects between (drives the collapsed-card summary line; not analytic data).",
+    "ko": "도달 범위 탐색기 UI 상태 목록: 출발지 선택기가 고르는 8개 지정 거점(접힌 카드의 요약 줄을 구동. 분석 데이터 아님)."
+   }
+  },
+  {
+   "name": "reach_budgets",
+   "label": {
+    "en": "Reach time budgets",
+    "ko": "도달 범위 시간 예산"
+   },
+   "icon": "schedule",
+   "description": {
+    "en": "Reach-explorer UI state list: the 8 Within-(min) time budgets (drives the collapsed-card summary line; not analytic data).",
+    "ko": "도달 범위 탐색기 UI 상태 목록: 8개의 '이내(분)' 시간 예산(접힌 카드의 요약 줄을 구동. 분석 데이터 아님)."
+   }
+  },
+  {
+   "name": "reach_shapes",
+   "label": {
+    "en": "Reach cell shapes",
+    "ko": "도달 범위 셀 모양"
+   },
+   "icon": "category",
+   "description": {
+    "en": "Reach-explorer UI state list: the 5 render modes the Shape picker selects between (squares/triangles/hexagons/heat/dots) — drives the collapsed-chip summary and the Size picker; not analytic data.",
+    "ko": "도달 범위 탐색기 UI 상태 목록: 모양 선택기가 고르는 5가지 표시 방식(사각형/삼각형/육각형/히트맵/점) — 접힌 칩 요약과 크기 선택기를 구동. 분석 데이터 아님."
+   }
+  },
+  {
+   "name": "reach_sizes",
+   "label": {
+    "en": "Reach cell sizes",
+    "ko": "도달 범위 셀 크기"
+   },
+   "icon": "grid_view",
+   "description": {
+    "en": "Reach-explorer UI state list: the 4 granularity choices (Auto follows zoom; Coarse/Mid/Fine pin one grid at every zoom) — drives the collapsed-chip summary; not analytic data.",
+    "ko": "도달 범위 탐색기 UI 상태 목록: 4가지 상세도 선택(자동은 확대 수준에 따름, 성김/중간/촘촘은 모든 확대 수준에서 하나의 격자로 고정) — 접힌 칩 요약을 구동. 분석 데이터 아님."
+   }
+  },
+  {
+   "name": "map_cards",
+   "label": {
+    "en": "Map card states",
+    "ko": "지도 카드 상태"
+   },
+   "icon": "unfold_less",
+   "description": {
+    "en": "UI state list: one row per map screen. `state` is that screen's control level — 'min' (the L0 chip, the default), 'card' (the L1 summary card) or 'edit' (the L2 full attribute surface). The remaining columns persist that screen's L1 quick choice so the card can state it back in plain language. Not analytic data.",
+    "ko": "UI 상태 목록: 지도 화면마다 한 행. `state`는 컨트롤 단계 — 'min'(L0 칩, 기본값), 'card'(L1 요약 카드), 'edit'(L2 전체 설정 화면). 나머지 열은 각 화면의 L1 빠른 선택을 저장해 카드가 현재 상태를 문장으로 보여줄 수 있게 합니다. 분석 데이터 아님."
+   }
+  }
+ ]
+}

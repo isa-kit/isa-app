@@ -1,0 +1,13 @@
+{
+  "id": "datalens",
+  "name": "Datalab",
+  "category": "Analytics",
+  "description": "Build a data report: read data in, add panels, put controls beside them.",
+  "icon": "query_stats",
+  "color": "#2E6E5A",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_datalens"
+  },
+  "seedVersion": "2026-07-20.1-p3.l10n-int-0903"
+}

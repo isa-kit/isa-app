@@ -1,0 +1,85 @@
+{
+  "board": {
+    "name": "Maker"
+  },
+  "screens": [
+    {
+      "id": "maker_0_designmode",
+      "name": "Design",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "maker_1_developmode",
+      "name": "Develop",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "maker_0_designmode_title",
+      "screen": "maker_0_designmode",
+      "kind": "titlebar",
+      "label": "Design",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "maker_0_designmode_w0",
+      "screen": "maker_0_designmode",
+      "kind": "buttonrow",
+      "label": "Segmented control",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "maker_0_designmode_nav",
+      "screen": "maker_0_designmode",
+      "kind": "bottomnav",
+      "label": "Design \u00b7 Develop",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "maker_1_developmode_title",
+      "screen": "maker_1_developmode",
+      "kind": "titlebar",
+      "label": "Develop",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "maker_1_developmode_w0",
+      "screen": "maker_1_developmode",
+      "kind": "buttonrow",
+      "label": "Segmented control",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "maker_1_developmode_nav",
+      "screen": "maker_1_developmode",
+      "kind": "bottomnav",
+      "label": "Design \u00b7 Develop",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "maker_flow_0",
+      "fromWidget": "maker_0_designmode_nav",
+      "toScreen": "maker_1_developmode",
+      "transition": "push"
+    },
+    {
+      "id": "maker_flow_1",
+      "fromWidget": "maker_1_developmode_nav",
+      "toScreen": "maker_0_designmode",
+      "transition": "push"
+    }
+  ]
+}

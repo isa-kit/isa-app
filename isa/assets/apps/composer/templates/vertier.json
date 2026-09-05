@@ -1,0 +1,49 @@
+{
+  "board": {
+    "name": "Vertier"
+  },
+  "screens": [
+    {
+      "id": "vertie_0_discover",
+      "name": "Discover",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "vertie_0_discover_title",
+      "screen": "vertie_0_discover",
+      "kind": "titlebar",
+      "label": "Discover",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "vertie_0_discover_w0",
+      "screen": "vertie_0_discover",
+      "kind": "text",
+      "label": "Share what you find, what you think, an idea.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "vertie_0_discover_w1",
+      "screen": "vertie_0_discover",
+      "kind": "buttonrow",
+      "label": "Share a link",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "vertie_0_discover_w2",
+      "screen": "vertie_0_discover",
+      "kind": "buttonrow",
+      "label": "Write a post",
+      "region": "body",
+      "order": 2
+    }
+  ],
+  "flows": []
+}

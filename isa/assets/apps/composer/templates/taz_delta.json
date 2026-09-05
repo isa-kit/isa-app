@@ -1,0 +1,283 @@
+{
+  "board": {
+    "name": "TAZ Delta"
+  },
+  "screens": [
+    {
+      "id": "tazdel_0_delta",
+      "name": "Old vs new TAZs by town",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "tazdel_1_transit",
+      "name": "Four-step transit demand",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "tazdel_2_newtaz",
+      "name": "Draft new TAZs",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    },
+    {
+      "id": "tazdel_3_oldtaz",
+      "name": "Current TDM23 TAZs",
+      "device": "phone",
+      "x": 1320,
+      "y": 0
+    },
+    {
+      "id": "tazdel_4_review",
+      "name": "Zone review",
+      "device": "phone",
+      "x": 0,
+      "y": 900
+    }
+  ],
+  "widgets": [
+    {
+      "id": "tazdel_0_delta_title",
+      "screen": "tazdel_0_delta",
+      "kind": "titlebar",
+      "label": "Old vs new TAZs by town",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "tazdel_0_delta_w0",
+      "screen": "tazdel_0_delta",
+      "kind": "text",
+      "label": "CTPS Boston-region TAZ redesign review (imported from the TAZ Delta Tool).",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "tazdel_0_delta_w1",
+      "screen": "tazdel_0_delta",
+      "kind": "card",
+      "label": "Towns",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "tazdel_0_delta_w2",
+      "screen": "tazdel_0_delta",
+      "kind": "card",
+      "label": "Old TAZs",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "tazdel_0_delta_nav",
+      "screen": "tazdel_0_delta",
+      "kind": "bottomnav",
+      "label": "Delta \u00b7 Transit \u00b7 New TAZ \u00b7 Old TAZ \u00b7 Review",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "tazdel_1_transit_title",
+      "screen": "tazdel_1_transit",
+      "kind": "titlebar",
+      "label": "Four-step transit demand",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "tazdel_1_transit_w0",
+      "screen": "tazdel_1_transit",
+      "kind": "text",
+      "label": "Home-based-work travel demand from the classic four-step model (tools/transit4) run\u2026",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "tazdel_1_transit_w1",
+      "screen": "tazdel_1_transit",
+      "kind": "card",
+      "label": "HBW trips/day",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "tazdel_1_transit_w2",
+      "screen": "tazdel_1_transit",
+      "kind": "card",
+      "label": "Transit trips",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "tazdel_1_transit_nav",
+      "screen": "tazdel_1_transit",
+      "kind": "bottomnav",
+      "label": "Delta \u00b7 Transit \u00b7 New TAZ \u00b7 Old TAZ \u00b7 Review",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "tazdel_2_newtaz_title",
+      "screen": "tazdel_2_newtaz",
+      "kind": "titlebar",
+      "label": "Draft new TAZs",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "tazdel_2_newtaz_w0",
+      "screen": "tazdel_2_newtaz",
+      "kind": "text",
+      "label": "1,669 draft zones with 2019 demographics and 2049 projections.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "tazdel_2_newtaz_w1",
+      "screen": "tazdel_2_newtaz",
+      "kind": "card",
+      "label": "Persons 2019",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "tazdel_2_newtaz_w2",
+      "screen": "tazdel_2_newtaz",
+      "kind": "card",
+      "label": "Persons 2049",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "tazdel_2_newtaz_nav",
+      "screen": "tazdel_2_newtaz",
+      "kind": "bottomnav",
+      "label": "Delta \u00b7 Transit \u00b7 New TAZ \u00b7 Old TAZ \u00b7 Review",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "tazdel_3_oldtaz_title",
+      "screen": "tazdel_3_oldtaz",
+      "kind": "titlebar",
+      "label": "Current TDM23 TAZs",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "tazdel_3_oldtaz_w0",
+      "screen": "tazdel_3_oldtaz",
+      "kind": "text",
+      "label": "2,057 zones in the current model (2017g).",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "tazdel_3_oldtaz_w1",
+      "screen": "tazdel_3_oldtaz",
+      "kind": "list",
+      "label": "Table",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Old vs new TAZs by town\", \"Four-step transit demand\", \"Draft new TAZs\"]"
+    },
+    {
+      "id": "tazdel_3_oldtaz_w2",
+      "screen": "tazdel_3_oldtaz",
+      "kind": "card",
+      "label": "Zones per subregion",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "tazdel_3_oldtaz_nav",
+      "screen": "tazdel_3_oldtaz",
+      "kind": "bottomnav",
+      "label": "Delta \u00b7 Transit \u00b7 New TAZ \u00b7 Old TAZ \u00b7 Review",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "tazdel_4_review_title",
+      "screen": "tazdel_4_review",
+      "kind": "titlebar",
+      "label": "Zone review",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "tazdel_4_review_w0",
+      "screen": "tazdel_4_review",
+      "kind": "text",
+      "label": "Work through the draft zones: open a TAZ, check its numbers, set status to approved or\u2026",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "tazdel_4_review_w1",
+      "screen": "tazdel_4_review",
+      "kind": "text",
+      "label": "Approved",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "tazdel_4_review_w2",
+      "screen": "tazdel_4_review",
+      "kind": "card",
+      "label": "To review",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "tazdel_4_review_nav",
+      "screen": "tazdel_4_review",
+      "kind": "bottomnav",
+      "label": "Delta \u00b7 Transit \u00b7 New TAZ \u00b7 Old TAZ \u00b7 Review",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "tazdel_flow_0",
+      "fromWidget": "tazdel_0_delta_nav",
+      "toScreen": "tazdel_1_transit",
+      "transition": "push"
+    },
+    {
+      "id": "tazdel_flow_1",
+      "fromWidget": "tazdel_1_transit_nav",
+      "toScreen": "tazdel_2_newtaz",
+      "transition": "push"
+    },
+    {
+      "id": "tazdel_flow_2",
+      "fromWidget": "tazdel_2_newtaz_nav",
+      "toScreen": "tazdel_3_oldtaz",
+      "transition": "push"
+    },
+    {
+      "id": "tazdel_flow_3",
+      "fromWidget": "tazdel_3_oldtaz_nav",
+      "toScreen": "tazdel_4_review",
+      "transition": "push"
+    },
+    {
+      "id": "tazdel_flow_4",
+      "fromWidget": "tazdel_4_review_nav",
+      "toScreen": "tazdel_0_delta",
+      "transition": "push"
+    },
+    {
+      "id": "tazdel_flow_extra",
+      "fromWidget": "tazdel_3_oldtaz_w1",
+      "toScreen": "tazdel_4_review",
+      "transition": "push"
+    }
+  ]
+}

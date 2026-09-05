@@ -1,0 +1,14 @@
+{
+  "id": "suite",
+  "name": "Suite",
+  "category": "Productivity",
+  "description": "The office bundle — opens your documents, sheets and notes as files.",
+  "icon": "folder_copy",
+  "color": "#3F51B5",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_suite"
+  },
+  "seedVersion": "2026-07-03.1.l10n-int-0903",
+  "seedContent": "initial-only"
+}

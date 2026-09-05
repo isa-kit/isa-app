@@ -1,0 +1,285 @@
+{
+  "board": {
+    "name": "Atlas \u2014 place analysis"
+  },
+  "screens": [
+    {
+      "id": "atlas_0_dashboard",
+      "name": "Dashboard \u2014 map layers + calculations",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "atlas_1_map",
+      "name": "Atlas \u2014 place analysis",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "atlas_2_run",
+      "name": "Run the model",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    },
+    {
+      "id": "atlas_3_results",
+      "name": "Results",
+      "device": "phone",
+      "x": 1320,
+      "y": 0
+    },
+    {
+      "id": "atlas_4_about",
+      "name": "About",
+      "device": "phone",
+      "x": 0,
+      "y": 900
+    }
+  ],
+  "widgets": [
+    {
+      "id": "atlas_0_dashboard_title",
+      "screen": "atlas_0_dashboard",
+      "kind": "titlebar",
+      "label": "Dashboard \u2014 map layers + calculations",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "atlas_0_dashboard_w0",
+      "screen": "atlas_0_dashboard",
+      "kind": "text",
+      "label": "The integrated view: calculations painted on the map as layers, charts on the same\u2026",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "atlas_0_dashboard_w1",
+      "screen": "atlas_0_dashboard",
+      "kind": "buttonrow",
+      "label": "Segmented control",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "atlas_0_dashboard_w2",
+      "screen": "atlas_0_dashboard",
+      "kind": "text",
+      "label": "Charts on the same data",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "atlas_0_dashboard_nav",
+      "screen": "atlas_0_dashboard",
+      "kind": "bottomnav",
+      "label": "Dashboard \u00b7 Deep map \u00b7 Run \u00b7 Results \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "atlas_1_map_title",
+      "screen": "atlas_1_map",
+      "kind": "titlebar",
+      "label": "Atlas \u2014 place analysis",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "atlas_1_map_w0",
+      "screen": "atlas_1_map",
+      "kind": "text",
+      "label": "One map, every scale: national metro/county dots (zoom out), Massachusetts tracts,\u2026",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "atlas_1_map_w1",
+      "screen": "atlas_1_map",
+      "kind": "buttonrow",
+      "label": "Transit '19",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "atlas_1_map_w2",
+      "screen": "atlas_1_map",
+      "kind": "buttonrow",
+      "label": "Car-free",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "atlas_1_map_nav",
+      "screen": "atlas_1_map",
+      "kind": "bottomnav",
+      "label": "Dashboard \u00b7 Deep map \u00b7 Run \u00b7 Results \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "atlas_2_run_title",
+      "screen": "atlas_2_run",
+      "kind": "titlebar",
+      "label": "Run the model",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "atlas_2_run_w0",
+      "screen": "atlas_2_run",
+      "kind": "text",
+      "label": "Configure \u00b7 set up \u00b7 run",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "atlas_2_run_w1",
+      "screen": "atlas_2_run",
+      "kind": "text",
+      "label": "1 \u00b7 CONFIGURE \u2014",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "atlas_2_run_w2",
+      "screen": "atlas_2_run",
+      "kind": "list",
+      "label": "run_label",
+      "region": "body",
+      "order": 2,
+      "items": "[\"Dashboard \\u2014 map layers + calculations\", \"Atlas \\u2014 place analysis\", \"Results\"]"
+    },
+    {
+      "id": "atlas_2_run_nav",
+      "screen": "atlas_2_run",
+      "kind": "bottomnav",
+      "label": "Dashboard \u00b7 Deep map \u00b7 Run \u00b7 Results \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "atlas_3_results_title",
+      "screen": "atlas_3_results",
+      "kind": "titlebar",
+      "label": "Results",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "atlas_3_results_w0",
+      "screen": "atlas_3_results",
+      "kind": "text",
+      "label": "Run ledger + comparison",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "atlas_3_results_w1",
+      "screen": "atlas_3_results",
+      "kind": "text",
+      "label": "Output \u2014",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "atlas_3_results_w2",
+      "screen": "atlas_3_results",
+      "kind": "list",
+      "label": "Table",
+      "region": "body",
+      "order": 2,
+      "items": "[\"Dashboard \\u2014 map layers + calculations\", \"Atlas \\u2014 place analysis\", \"Run the model\"]"
+    },
+    {
+      "id": "atlas_3_results_nav",
+      "screen": "atlas_3_results",
+      "kind": "bottomnav",
+      "label": "Dashboard \u00b7 Deep map \u00b7 Run \u00b7 Results \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "atlas_4_about_title",
+      "screen": "atlas_4_about",
+      "kind": "titlebar",
+      "label": "About",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "atlas_4_about_w0",
+      "screen": "atlas_4_about",
+      "kind": "text",
+      "label": "Where every dot comes from",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "atlas_4_about_w1",
+      "screen": "atlas_4_about",
+      "kind": "text",
+      "label": "Sources: US Census LODES (jobs) + ACS (2019 and 2022 \u2014",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "atlas_4_about_w2",
+      "screen": "atlas_4_about",
+      "kind": "list",
+      "label": "Table",
+      "region": "body",
+      "order": 2,
+      "items": "[\"Dashboard \\u2014 map layers + calculations\", \"Atlas \\u2014 place analysis\", \"Run the model\"]"
+    },
+    {
+      "id": "atlas_4_about_nav",
+      "screen": "atlas_4_about",
+      "kind": "bottomnav",
+      "label": "Dashboard \u00b7 Deep map \u00b7 Run \u00b7 Results \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "atlas_flow_0",
+      "fromWidget": "atlas_0_dashboard_nav",
+      "toScreen": "atlas_1_map",
+      "transition": "push"
+    },
+    {
+      "id": "atlas_flow_1",
+      "fromWidget": "atlas_1_map_nav",
+      "toScreen": "atlas_2_run",
+      "transition": "push"
+    },
+    {
+      "id": "atlas_flow_2",
+      "fromWidget": "atlas_2_run_nav",
+      "toScreen": "atlas_3_results",
+      "transition": "push"
+    },
+    {
+      "id": "atlas_flow_3",
+      "fromWidget": "atlas_3_results_nav",
+      "toScreen": "atlas_4_about",
+      "transition": "push"
+    },
+    {
+      "id": "atlas_flow_4",
+      "fromWidget": "atlas_4_about_nav",
+      "toScreen": "atlas_0_dashboard",
+      "transition": "push"
+    },
+    {
+      "id": "atlas_flow_extra",
+      "fromWidget": "atlas_2_run_w2",
+      "toScreen": "atlas_3_results",
+      "transition": "push"
+    }
+  ]
+}

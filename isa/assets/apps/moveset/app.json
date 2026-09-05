@@ -1,0 +1,13 @@
+{
+  "id": "moveset",
+  "name": "Stretch & Strengthen",
+  "category": "Health",
+  "description": "Pick the muscles you want to work — on the real body, by tapping them — and get the exercises and stretches that actually cover them. Rank by how much of your pick a move hits, or flip to the most focused move that hits your pick and little else. Every move carries plain-language how-to, what kit it needs, and its targets light up on the body. Educational reference, not medical or personal training advice.",
+  "icon": "fitness_center",
+  "color": "#2E7D6B",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_moveset"
+  },
+  "seedVersion": "2026-08-31.moveset.1.l10n-int-0903"
+}

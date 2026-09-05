@@ -1,0 +1,17 @@
+{
+ "id": "krtravel",
+ "name": "Korea travel access",
+ "category": "Maps & cities",
+ "description": "Korea travel access: reach maps, stations, best spots and a timeline.",
+ "icon": "train",
+ "color": "#256abf",
+ "store": {
+ "type": "sqflite",
+ "namespace": "isan_krtravel"
+ },
+ "seedVersion": "2026-08-09.rawmin1+threelevel+panelcompact+dropdownsections+walkmode-segmented-0811+flyto-columns-0814.l10n-int-0903",
+ "seedContent": "initial-only",
+ "meta": {
+ "note": "Travel-ease / area-centrality / best-spots proxy scores over the 471-station Seoul subway graph, plus national KTX/SRT rail, 41 web-verified Aug-Oct 2026 events (genre-classified), a network-routed walk-access-to-nearest-station heatmap (fine+coarse grid, real OSM footpaths, now joined to its nearest station for reach-explorer use), a Reach Explorer screen (8 curated origin hubs x subway/subway+rail mode x time-budget slider, cool-to-red sequential recolor, plus a true MapLibre kernel-density Heat mode alongside the discrete Buckets view — seoul-true-heat round), tap-to-justify detail on every colored map layer, meter-bar component scores on every numeric score column, and a Best-spots map view: every best_spots row carries lat/lon, the area-weighted centroid of its own district polygon in seoul_districts.geojson (derived, no new fetch), so the shipped focusRow/goto camera-follow primitive can centre the map on a tapped ranked district. Built by the build script. See the data-sources ledger 'terrain krtravel' section for every formula and honesty caveat."
+ }
+}

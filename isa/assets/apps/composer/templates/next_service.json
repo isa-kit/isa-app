@@ -1,0 +1,108 @@
+{
+  "board": {
+    "name": "Next service"
+  },
+  "screens": [
+    {
+      "id": "nextse_0_eta",
+      "name": "Next service near you",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "nextse_1_settings",
+      "name": "Data sources",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "nextse_0_eta_title",
+      "screen": "nextse_0_eta",
+      "kind": "titlebar",
+      "label": "Next service near you",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "nextse_0_eta_w0",
+      "screen": "nextse_0_eta",
+      "kind": "text",
+      "label": "transit_eta",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "nextse_0_eta_nav",
+      "screen": "nextse_0_eta",
+      "kind": "bottomnav",
+      "label": "Departures \u00b7 Settings",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "nextse_1_settings_title",
+      "screen": "nextse_1_settings",
+      "kind": "titlebar",
+      "label": "Data sources",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "nextse_1_settings_w0",
+      "screen": "nextse_1_settings",
+      "kind": "text",
+      "label": "Every transit agency this app reads.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "nextse_1_settings_w1",
+      "screen": "nextse_1_settings",
+      "kind": "list",
+      "label": "Table",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Next service near you\"]"
+    },
+    {
+      "id": "nextse_1_settings_w2",
+      "screen": "nextse_1_settings",
+      "kind": "buttonrow",
+      "label": "Add source",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "nextse_1_settings_nav",
+      "screen": "nextse_1_settings",
+      "kind": "bottomnav",
+      "label": "Departures \u00b7 Settings",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "nextse_flow_0",
+      "fromWidget": "nextse_0_eta_nav",
+      "toScreen": "nextse_1_settings",
+      "transition": "push"
+    },
+    {
+      "id": "nextse_flow_1",
+      "fromWidget": "nextse_1_settings_nav",
+      "toScreen": "nextse_0_eta",
+      "transition": "push"
+    },
+    {
+      "id": "nextse_flow_extra",
+      "fromWidget": "nextse_1_settings_w1",
+      "toScreen": "nextse_0_eta",
+      "transition": "push"
+    }
+  ]
+}

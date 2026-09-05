@@ -1,0 +1,49 @@
+{
+  "board": {
+    "name": "Parley"
+  },
+  "screens": [
+    {
+      "id": "parley_0_chat",
+      "name": "Parley",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "parley_0_chat_title",
+      "screen": "parley_0_chat",
+      "kind": "titlebar",
+      "label": "Parley",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "parley_0_chat_w0",
+      "screen": "parley_0_chat",
+      "kind": "text",
+      "label": "Live chat that translates.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "parley_0_chat_w1",
+      "screen": "parley_0_chat",
+      "kind": "buttonrow",
+      "label": "Copy share link",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "parley_0_chat_w2",
+      "screen": "parley_0_chat",
+      "kind": "text",
+      "label": "I read and write in:",
+      "region": "body",
+      "order": 2
+    }
+  ],
+  "flows": []
+}

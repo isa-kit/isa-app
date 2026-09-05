@@ -1,0 +1,261 @@
+{
+  "board": {
+    "name": "Applet Studio"
+  },
+  "screens": [
+    {
+      "id": "applet_0_projects",
+      "name": "Projects",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "applet_1_checklist",
+      "name": "Checklist",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "applet_2_playbook",
+      "name": "Playbook",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    },
+    {
+      "id": "applet_3_design",
+      "name": "Design",
+      "device": "phone",
+      "x": 1320,
+      "y": 0
+    },
+    {
+      "id": "applet_4_customize",
+      "name": "Customize",
+      "device": "phone",
+      "x": 0,
+      "y": 900
+    }
+  ],
+  "widgets": [
+    {
+      "id": "applet_0_projects_title",
+      "screen": "applet_0_projects",
+      "kind": "titlebar",
+      "label": "Projects",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "applet_0_projects_w0",
+      "screen": "applet_0_projects",
+      "kind": "text",
+      "label": "Every applet you're making, from spark to shipped.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "applet_0_projects_w1",
+      "screen": "applet_0_projects",
+      "kind": "buttonrow",
+      "label": "New applet project",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "applet_0_projects_w2",
+      "screen": "applet_0_projects",
+      "kind": "list",
+      "label": "name",
+      "region": "body",
+      "order": 2,
+      "items": "[\"Checklist\", \"Playbook\", \"Design\"]"
+    },
+    {
+      "id": "applet_0_projects_nav",
+      "screen": "applet_0_projects",
+      "kind": "bottomnav",
+      "label": "Projects \u00b7 Checklist \u00b7 Playbook \u00b7 Design \u00b7 Customize",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "applet_1_checklist_title",
+      "screen": "applet_1_checklist",
+      "kind": "titlebar",
+      "label": "Checklist",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "applet_1_checklist_w0",
+      "screen": "applet_1_checklist",
+      "kind": "text",
+      "label": "The path from idea to shipped applet, in five phases.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "applet_1_checklist_w1",
+      "screen": "applet_1_checklist",
+      "kind": "buttonrow",
+      "label": "New step",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "applet_1_checklist_w2",
+      "screen": "applet_1_checklist",
+      "kind": "card",
+      "label": "Buckets",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "applet_1_checklist_nav",
+      "screen": "applet_1_checklist",
+      "kind": "bottomnav",
+      "label": "Projects \u00b7 Checklist \u00b7 Playbook \u00b7 Design \u00b7 Customize",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "applet_2_playbook_title",
+      "screen": "applet_2_playbook",
+      "kind": "titlebar",
+      "label": "Playbook",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "applet_2_playbook_w0",
+      "screen": "applet_2_playbook",
+      "kind": "text",
+      "label": "Everything the checklist assumes you know, explained properly.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "applet_2_playbook_w1",
+      "screen": "applet_2_playbook",
+      "kind": "list",
+      "label": "topic",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Projects\", \"Checklist\", \"Design\"]"
+    },
+    {
+      "id": "applet_2_playbook_nav",
+      "screen": "applet_2_playbook",
+      "kind": "bottomnav",
+      "label": "Projects \u00b7 Checklist \u00b7 Playbook \u00b7 Design \u00b7 Customize",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "applet_3_design_title",
+      "screen": "applet_3_design",
+      "kind": "titlebar",
+      "label": "Design",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "applet_3_design_w0",
+      "screen": "applet_3_design",
+      "kind": "text",
+      "label": "An applet's feel is its accent color plus one of these eight styles.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "applet_3_design_w1",
+      "screen": "applet_3_design",
+      "kind": "list",
+      "label": "name",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Projects\", \"Checklist\", \"Playbook\"]"
+    },
+    {
+      "id": "applet_3_design_nav",
+      "screen": "applet_3_design",
+      "kind": "bottomnav",
+      "label": "Projects \u00b7 Checklist \u00b7 Playbook \u00b7 Design \u00b7 Customize",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "applet_4_customize_title",
+      "screen": "applet_4_customize",
+      "kind": "titlebar",
+      "label": "Customize",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "applet_4_customize_w0",
+      "screen": "applet_4_customize",
+      "kind": "text",
+      "label": "Reshape the Studio itself: add or remove tables and attributes \u2014",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "applet_4_customize_w1",
+      "screen": "applet_4_customize",
+      "kind": "text",
+      "label": "Schema editor",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "applet_4_customize_nav",
+      "screen": "applet_4_customize",
+      "kind": "bottomnav",
+      "label": "Projects \u00b7 Checklist \u00b7 Playbook \u00b7 Design \u00b7 Customize",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "applet_flow_0",
+      "fromWidget": "applet_0_projects_nav",
+      "toScreen": "applet_1_checklist",
+      "transition": "push"
+    },
+    {
+      "id": "applet_flow_1",
+      "fromWidget": "applet_1_checklist_nav",
+      "toScreen": "applet_2_playbook",
+      "transition": "push"
+    },
+    {
+      "id": "applet_flow_2",
+      "fromWidget": "applet_2_playbook_nav",
+      "toScreen": "applet_3_design",
+      "transition": "push"
+    },
+    {
+      "id": "applet_flow_3",
+      "fromWidget": "applet_3_design_nav",
+      "toScreen": "applet_4_customize",
+      "transition": "push"
+    },
+    {
+      "id": "applet_flow_4",
+      "fromWidget": "applet_4_customize_nav",
+      "toScreen": "applet_0_projects",
+      "transition": "push"
+    },
+    {
+      "id": "applet_flow_extra",
+      "fromWidget": "applet_0_projects_w2",
+      "toScreen": "applet_1_checklist",
+      "transition": "push"
+    }
+  ]
+}

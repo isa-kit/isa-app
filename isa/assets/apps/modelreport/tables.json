@@ -1,0 +1,34 @@
+{
+ "tables": [
+  {
+   "name": "results",
+   "label": "Model outputs",
+   "icon": "leaderboard",
+   "description": "One row per scenario \u00d7 route \u2014 replace with your own model outputs (CSV import on the Data tab)",
+   "provenance": {
+    "source": "Imported CSV (importCsv action, Data tab)"
+   },
+   "source": {
+    "type": "importCsv"
+   }
+  },
+  {
+   "name": "slices",
+   "label": "Saved views",
+   "icon": "star",
+   "description": "Named report configurations saved from the dashboard"
+  },
+  {
+   "name": "metrics",
+   "label": "Scenario metrics",
+   "icon": "leaderboard",
+   "description": "Cached calculations \u2014 derived once from Model outputs, stored here"
+  },
+  {
+   "name": "district_stats",
+   "label": "District totals",
+   "icon": "map",
+   "description": "Cached per-district rollup feeding the map shading"
+  }
+ ]
+}

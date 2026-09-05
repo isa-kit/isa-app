@@ -1,0 +1,879 @@
+{
+  "board": {
+    "name": "Campus directory & map"
+  },
+  "screens": [
+    {
+      "id": "campus_0_mit",
+      "name": "MIT campus",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "campus_1_harvard",
+      "name": "Harvard campus",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "campus_2_yale",
+      "name": "Yale campus",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    },
+    {
+      "id": "campus_3_columbia",
+      "name": "Columbia campus",
+      "device": "phone",
+      "x": 1320,
+      "y": 0
+    },
+    {
+      "id": "campus_4_stanford",
+      "name": "Stanford campus",
+      "device": "phone",
+      "x": 0,
+      "y": 900
+    },
+    {
+      "id": "campus_5_berkeley",
+      "name": "UC Berkeley campus",
+      "device": "phone",
+      "x": 440,
+      "y": 900
+    },
+    {
+      "id": "campus_6_ucla",
+      "name": "UCLA campus",
+      "device": "phone",
+      "x": 880,
+      "y": 900
+    },
+    {
+      "id": "campus_7_uw",
+      "name": "U. Washington campus",
+      "device": "phone",
+      "x": 1320,
+      "y": 900
+    },
+    {
+      "id": "campus_8_umich",
+      "name": "U. Michigan campus",
+      "device": "phone",
+      "x": 0,
+      "y": 1800
+    },
+    {
+      "id": "campus_9_osu",
+      "name": "Ohio State campus",
+      "device": "phone",
+      "x": 440,
+      "y": 1800
+    },
+    {
+      "id": "campus_10_gatech",
+      "name": "Georgia Tech campus",
+      "device": "phone",
+      "x": 880,
+      "y": 1800
+    },
+    {
+      "id": "campus_11_utexas",
+      "name": "UT Austin campus",
+      "device": "phone",
+      "x": 1320,
+      "y": 1800
+    },
+    {
+      "id": "campus_12_asu",
+      "name": "Arizona State campus",
+      "device": "phone",
+      "x": 0,
+      "y": 2700
+    },
+    {
+      "id": "campus_13_wisc",
+      "name": "UW-Madison campus",
+      "device": "phone",
+      "x": 440,
+      "y": 2700
+    },
+    {
+      "id": "campus_14_legend",
+      "name": "Map legend",
+      "device": "phone",
+      "x": 880,
+      "y": 2700
+    },
+    {
+      "id": "campus_15_about",
+      "name": "About this map",
+      "device": "phone",
+      "x": 1320,
+      "y": 2700
+    }
+  ],
+  "widgets": [
+    {
+      "id": "campus_0_mit_title",
+      "screen": "campus_0_mit",
+      "kind": "titlebar",
+      "label": "MIT campus",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "campus_0_mit_w0",
+      "screen": "campus_0_mit",
+      "kind": "text",
+      "label": "MIT: green = campus area, amber = parking lots (113 lots, 0.15 km2 paved).",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "campus_0_mit_w1",
+      "screen": "campus_0_mit",
+      "kind": "card",
+      "label": "Map",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "campus_0_mit_w2",
+      "screen": "campus_0_mit",
+      "kind": "list",
+      "label": "name",
+      "region": "body",
+      "order": 2,
+      "items": "[\"Harvard campus\", \"Yale campus\", \"Columbia campus\"]"
+    },
+    {
+      "id": "campus_0_mit_nav",
+      "screen": "campus_0_mit",
+      "kind": "bottomnav",
+      "label": "MIT \u00b7 Harvard \u00b7 Yale \u00b7 Columbia \u00b7 Stanford \u00b7 UC Berkeley \u00b7 UCLA \u00b7 U. Washington \u00b7 U. Michigan \u00b7 Ohio State \u00b7 Georgia Tech \u00b7 UT Austin \u00b7 Arizona State \u00b7 UW-Madison \u00b7 Legend \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "campus_1_harvard_title",
+      "screen": "campus_1_harvard",
+      "kind": "titlebar",
+      "label": "Harvard campus",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "campus_1_harvard_w0",
+      "screen": "campus_1_harvard",
+      "kind": "text",
+      "label": "Harvard: green = campus area, amber = parking lots (194 lots, 0.13 km2 paved).",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "campus_1_harvard_w1",
+      "screen": "campus_1_harvard",
+      "kind": "card",
+      "label": "Map",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "campus_1_harvard_w2",
+      "screen": "campus_1_harvard",
+      "kind": "list",
+      "label": "name",
+      "region": "body",
+      "order": 2,
+      "items": "[\"MIT campus\", \"Yale campus\", \"Columbia campus\"]"
+    },
+    {
+      "id": "campus_1_harvard_nav",
+      "screen": "campus_1_harvard",
+      "kind": "bottomnav",
+      "label": "MIT \u00b7 Harvard \u00b7 Yale \u00b7 Columbia \u00b7 Stanford \u00b7 UC Berkeley \u00b7 UCLA \u00b7 U. Washington \u00b7 U. Michigan \u00b7 Ohio State \u00b7 Georgia Tech \u00b7 UT Austin \u00b7 Arizona State \u00b7 UW-Madison \u00b7 Legend \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "campus_2_yale_title",
+      "screen": "campus_2_yale",
+      "kind": "titlebar",
+      "label": "Yale campus",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "campus_2_yale_w0",
+      "screen": "campus_2_yale",
+      "kind": "text",
+      "label": "Yale: green = campus area, amber = parking lots (210 lots, 0.26 km2 paved).",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "campus_2_yale_w1",
+      "screen": "campus_2_yale",
+      "kind": "card",
+      "label": "Map",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "campus_2_yale_w2",
+      "screen": "campus_2_yale",
+      "kind": "list",
+      "label": "name",
+      "region": "body",
+      "order": 2,
+      "items": "[\"MIT campus\", \"Harvard campus\", \"Columbia campus\"]"
+    },
+    {
+      "id": "campus_2_yale_nav",
+      "screen": "campus_2_yale",
+      "kind": "bottomnav",
+      "label": "MIT \u00b7 Harvard \u00b7 Yale \u00b7 Columbia \u00b7 Stanford \u00b7 UC Berkeley \u00b7 UCLA \u00b7 U. Washington \u00b7 U. Michigan \u00b7 Ohio State \u00b7 Georgia Tech \u00b7 UT Austin \u00b7 Arizona State \u00b7 UW-Madison \u00b7 Legend \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "campus_3_columbia_title",
+      "screen": "campus_3_columbia",
+      "kind": "titlebar",
+      "label": "Columbia campus",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "campus_3_columbia_w0",
+      "screen": "campus_3_columbia",
+      "kind": "text",
+      "label": "Columbia: green = campus area, amber = parking lots (4 lots, 0.00 km2 paved).",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "campus_3_columbia_w1",
+      "screen": "campus_3_columbia",
+      "kind": "card",
+      "label": "Map",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "campus_3_columbia_w2",
+      "screen": "campus_3_columbia",
+      "kind": "list",
+      "label": "name",
+      "region": "body",
+      "order": 2,
+      "items": "[\"MIT campus\", \"Harvard campus\", \"Yale campus\"]"
+    },
+    {
+      "id": "campus_3_columbia_nav",
+      "screen": "campus_3_columbia",
+      "kind": "bottomnav",
+      "label": "MIT \u00b7 Harvard \u00b7 Yale \u00b7 Columbia \u00b7 Stanford \u00b7 UC Berkeley \u00b7 UCLA \u00b7 U. Washington \u00b7 U. Michigan \u00b7 Ohio State \u00b7 Georgia Tech \u00b7 UT Austin \u00b7 Arizona State \u00b7 UW-Madison \u00b7 Legend \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "campus_4_stanford_title",
+      "screen": "campus_4_stanford",
+      "kind": "titlebar",
+      "label": "Stanford campus",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "campus_4_stanford_w0",
+      "screen": "campus_4_stanford",
+      "kind": "text",
+      "label": "Stanford: green = campus area, amber = parking lots (206 lots, 0.61 km2 paved).",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "campus_4_stanford_w1",
+      "screen": "campus_4_stanford",
+      "kind": "card",
+      "label": "Map",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "campus_4_stanford_w2",
+      "screen": "campus_4_stanford",
+      "kind": "list",
+      "label": "name",
+      "region": "body",
+      "order": 2,
+      "items": "[\"MIT campus\", \"Harvard campus\", \"Yale campus\"]"
+    },
+    {
+      "id": "campus_4_stanford_nav",
+      "screen": "campus_4_stanford",
+      "kind": "bottomnav",
+      "label": "MIT \u00b7 Harvard \u00b7 Yale \u00b7 Columbia \u00b7 Stanford \u00b7 UC Berkeley \u00b7 UCLA \u00b7 U. Washington \u00b7 U. Michigan \u00b7 Ohio State \u00b7 Georgia Tech \u00b7 UT Austin \u00b7 Arizona State \u00b7 UW-Madison \u00b7 Legend \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "campus_5_berkeley_title",
+      "screen": "campus_5_berkeley",
+      "kind": "titlebar",
+      "label": "UC Berkeley campus",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "campus_5_berkeley_w0",
+      "screen": "campus_5_berkeley",
+      "kind": "text",
+      "label": "UC Berkeley: green = campus area, amber = parking lots (252 lots, 0.17 km2 paved).",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "campus_5_berkeley_w1",
+      "screen": "campus_5_berkeley",
+      "kind": "card",
+      "label": "Map",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "campus_5_berkeley_w2",
+      "screen": "campus_5_berkeley",
+      "kind": "list",
+      "label": "name",
+      "region": "body",
+      "order": 2,
+      "items": "[\"MIT campus\", \"Harvard campus\", \"Yale campus\"]"
+    },
+    {
+      "id": "campus_5_berkeley_nav",
+      "screen": "campus_5_berkeley",
+      "kind": "bottomnav",
+      "label": "MIT \u00b7 Harvard \u00b7 Yale \u00b7 Columbia \u00b7 Stanford \u00b7 UC Berkeley \u00b7 UCLA \u00b7 U. Washington \u00b7 U. Michigan \u00b7 Ohio State \u00b7 Georgia Tech \u00b7 UT Austin \u00b7 Arizona State \u00b7 UW-Madison \u00b7 Legend \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "campus_6_ucla_title",
+      "screen": "campus_6_ucla",
+      "kind": "titlebar",
+      "label": "UCLA campus",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "campus_6_ucla_w0",
+      "screen": "campus_6_ucla",
+      "kind": "text",
+      "label": "UCLA: green = campus area, amber = parking lots (39 lots, 0.14 km2 paved).",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "campus_6_ucla_w1",
+      "screen": "campus_6_ucla",
+      "kind": "card",
+      "label": "Map",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "campus_6_ucla_w2",
+      "screen": "campus_6_ucla",
+      "kind": "list",
+      "label": "name",
+      "region": "body",
+      "order": 2,
+      "items": "[\"MIT campus\", \"Harvard campus\", \"Yale campus\"]"
+    },
+    {
+      "id": "campus_6_ucla_nav",
+      "screen": "campus_6_ucla",
+      "kind": "bottomnav",
+      "label": "MIT \u00b7 Harvard \u00b7 Yale \u00b7 Columbia \u00b7 Stanford \u00b7 UC Berkeley \u00b7 UCLA \u00b7 U. Washington \u00b7 U. Michigan \u00b7 Ohio State \u00b7 Georgia Tech \u00b7 UT Austin \u00b7 Arizona State \u00b7 UW-Madison \u00b7 Legend \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "campus_7_uw_title",
+      "screen": "campus_7_uw",
+      "kind": "titlebar",
+      "label": "U. Washington campus",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "campus_7_uw_w0",
+      "screen": "campus_7_uw",
+      "kind": "text",
+      "label": "U.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "campus_7_uw_w1",
+      "screen": "campus_7_uw",
+      "kind": "card",
+      "label": "Map",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "campus_7_uw_w2",
+      "screen": "campus_7_uw",
+      "kind": "list",
+      "label": "name",
+      "region": "body",
+      "order": 2,
+      "items": "[\"MIT campus\", \"Harvard campus\", \"Yale campus\"]"
+    },
+    {
+      "id": "campus_7_uw_nav",
+      "screen": "campus_7_uw",
+      "kind": "bottomnav",
+      "label": "MIT \u00b7 Harvard \u00b7 Yale \u00b7 Columbia \u00b7 Stanford \u00b7 UC Berkeley \u00b7 UCLA \u00b7 U. Washington \u00b7 U. Michigan \u00b7 Ohio State \u00b7 Georgia Tech \u00b7 UT Austin \u00b7 Arizona State \u00b7 UW-Madison \u00b7 Legend \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "campus_8_umich_title",
+      "screen": "campus_8_umich",
+      "kind": "titlebar",
+      "label": "U. Michigan campus",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "campus_8_umich_w0",
+      "screen": "campus_8_umich",
+      "kind": "text",
+      "label": "U.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "campus_8_umich_w1",
+      "screen": "campus_8_umich",
+      "kind": "card",
+      "label": "Map",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "campus_8_umich_w2",
+      "screen": "campus_8_umich",
+      "kind": "list",
+      "label": "name",
+      "region": "body",
+      "order": 2,
+      "items": "[\"MIT campus\", \"Harvard campus\", \"Yale campus\"]"
+    },
+    {
+      "id": "campus_8_umich_nav",
+      "screen": "campus_8_umich",
+      "kind": "bottomnav",
+      "label": "MIT \u00b7 Harvard \u00b7 Yale \u00b7 Columbia \u00b7 Stanford \u00b7 UC Berkeley \u00b7 UCLA \u00b7 U. Washington \u00b7 U. Michigan \u00b7 Ohio State \u00b7 Georgia Tech \u00b7 UT Austin \u00b7 Arizona State \u00b7 UW-Madison \u00b7 Legend \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "campus_9_osu_title",
+      "screen": "campus_9_osu",
+      "kind": "titlebar",
+      "label": "Ohio State campus",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "campus_9_osu_w0",
+      "screen": "campus_9_osu",
+      "kind": "text",
+      "label": "Ohio State: green = campus area, amber = parking lots (271 lots, 0.90 km2 paved).",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "campus_9_osu_w1",
+      "screen": "campus_9_osu",
+      "kind": "card",
+      "label": "Map",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "campus_9_osu_w2",
+      "screen": "campus_9_osu",
+      "kind": "list",
+      "label": "name",
+      "region": "body",
+      "order": 2,
+      "items": "[\"MIT campus\", \"Harvard campus\", \"Yale campus\"]"
+    },
+    {
+      "id": "campus_9_osu_nav",
+      "screen": "campus_9_osu",
+      "kind": "bottomnav",
+      "label": "MIT \u00b7 Harvard \u00b7 Yale \u00b7 Columbia \u00b7 Stanford \u00b7 UC Berkeley \u00b7 UCLA \u00b7 U. Washington \u00b7 U. Michigan \u00b7 Ohio State \u00b7 Georgia Tech \u00b7 UT Austin \u00b7 Arizona State \u00b7 UW-Madison \u00b7 Legend \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "campus_10_gatech_title",
+      "screen": "campus_10_gatech",
+      "kind": "titlebar",
+      "label": "Georgia Tech campus",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "campus_10_gatech_w0",
+      "screen": "campus_10_gatech",
+      "kind": "text",
+      "label": "Georgia Tech: green = campus area, amber = parking lots (125 lots, 0.26 km2 paved).",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "campus_10_gatech_w1",
+      "screen": "campus_10_gatech",
+      "kind": "card",
+      "label": "Map",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "campus_10_gatech_w2",
+      "screen": "campus_10_gatech",
+      "kind": "list",
+      "label": "name",
+      "region": "body",
+      "order": 2,
+      "items": "[\"MIT campus\", \"Harvard campus\", \"Yale campus\"]"
+    },
+    {
+      "id": "campus_10_gatech_nav",
+      "screen": "campus_10_gatech",
+      "kind": "bottomnav",
+      "label": "MIT \u00b7 Harvard \u00b7 Yale \u00b7 Columbia \u00b7 Stanford \u00b7 UC Berkeley \u00b7 UCLA \u00b7 U. Washington \u00b7 U. Michigan \u00b7 Ohio State \u00b7 Georgia Tech \u00b7 UT Austin \u00b7 Arizona State \u00b7 UW-Madison \u00b7 Legend \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "campus_11_utexas_title",
+      "screen": "campus_11_utexas",
+      "kind": "titlebar",
+      "label": "UT Austin campus",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "campus_11_utexas_w0",
+      "screen": "campus_11_utexas",
+      "kind": "text",
+      "label": "UT Austin: green = campus area, amber = parking lots (166 lots, 0.28 km2 paved).",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "campus_11_utexas_w1",
+      "screen": "campus_11_utexas",
+      "kind": "card",
+      "label": "Map",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "campus_11_utexas_w2",
+      "screen": "campus_11_utexas",
+      "kind": "list",
+      "label": "name",
+      "region": "body",
+      "order": 2,
+      "items": "[\"MIT campus\", \"Harvard campus\", \"Yale campus\"]"
+    },
+    {
+      "id": "campus_11_utexas_nav",
+      "screen": "campus_11_utexas",
+      "kind": "bottomnav",
+      "label": "MIT \u00b7 Harvard \u00b7 Yale \u00b7 Columbia \u00b7 Stanford \u00b7 UC Berkeley \u00b7 UCLA \u00b7 U. Washington \u00b7 U. Michigan \u00b7 Ohio State \u00b7 Georgia Tech \u00b7 UT Austin \u00b7 Arizona State \u00b7 UW-Madison \u00b7 Legend \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "campus_12_asu_title",
+      "screen": "campus_12_asu",
+      "kind": "titlebar",
+      "label": "Arizona State campus",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "campus_12_asu_w0",
+      "screen": "campus_12_asu",
+      "kind": "text",
+      "label": "Arizona State: green = campus area, amber = parking lots (151 lots, 0.47 km2 paved).",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "campus_12_asu_w1",
+      "screen": "campus_12_asu",
+      "kind": "card",
+      "label": "Map",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "campus_12_asu_w2",
+      "screen": "campus_12_asu",
+      "kind": "list",
+      "label": "name",
+      "region": "body",
+      "order": 2,
+      "items": "[\"MIT campus\", \"Harvard campus\", \"Yale campus\"]"
+    },
+    {
+      "id": "campus_12_asu_nav",
+      "screen": "campus_12_asu",
+      "kind": "bottomnav",
+      "label": "MIT \u00b7 Harvard \u00b7 Yale \u00b7 Columbia \u00b7 Stanford \u00b7 UC Berkeley \u00b7 UCLA \u00b7 U. Washington \u00b7 U. Michigan \u00b7 Ohio State \u00b7 Georgia Tech \u00b7 UT Austin \u00b7 Arizona State \u00b7 UW-Madison \u00b7 Legend \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "campus_13_wisc_title",
+      "screen": "campus_13_wisc",
+      "kind": "titlebar",
+      "label": "UW-Madison campus",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "campus_13_wisc_w0",
+      "screen": "campus_13_wisc",
+      "kind": "text",
+      "label": "UW-Madison: green = campus area, amber = parking lots (211 lots, 0.27 km2 paved).",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "campus_13_wisc_w1",
+      "screen": "campus_13_wisc",
+      "kind": "card",
+      "label": "Map",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "campus_13_wisc_w2",
+      "screen": "campus_13_wisc",
+      "kind": "list",
+      "label": "name",
+      "region": "body",
+      "order": 2,
+      "items": "[\"MIT campus\", \"Harvard campus\", \"Yale campus\"]"
+    },
+    {
+      "id": "campus_13_wisc_nav",
+      "screen": "campus_13_wisc",
+      "kind": "bottomnav",
+      "label": "MIT \u00b7 Harvard \u00b7 Yale \u00b7 Columbia \u00b7 Stanford \u00b7 UC Berkeley \u00b7 UCLA \u00b7 U. Washington \u00b7 U. Michigan \u00b7 Ohio State \u00b7 Georgia Tech \u00b7 UT Austin \u00b7 Arizona State \u00b7 UW-Madison \u00b7 Legend \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "campus_14_legend_title",
+      "screen": "campus_14_legend",
+      "kind": "titlebar",
+      "label": "Map legend",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "campus_14_legend_w0",
+      "screen": "campus_14_legend",
+      "kind": "text",
+      "label": "How to read each campus map",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "campus_14_legend_w1",
+      "screen": "campus_14_legend",
+      "kind": "text",
+      "label": "Green area = the campus boundary (OpenStreetMap university outline, or the hull of its\u2026",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "campus_14_legend_w2",
+      "screen": "campus_14_legend",
+      "kind": "text",
+      "label": "Amber shapes = parking lots.",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "campus_14_legend_nav",
+      "screen": "campus_14_legend",
+      "kind": "bottomnav",
+      "label": "MIT \u00b7 Harvard \u00b7 Yale \u00b7 Columbia \u00b7 Stanford \u00b7 UC Berkeley \u00b7 UCLA \u00b7 U. Washington \u00b7 U. Michigan \u00b7 Ohio State \u00b7 Georgia Tech \u00b7 UT Austin \u00b7 Arizona State \u00b7 UW-Madison \u00b7 Legend \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "campus_15_about_title",
+      "screen": "campus_15_about",
+      "kind": "titlebar",
+      "label": "About this map",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "campus_15_about_w0",
+      "screen": "campus_15_about",
+      "kind": "text",
+      "label": "What this is",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "campus_15_about_w1",
+      "screen": "campus_15_about",
+      "kind": "text",
+      "label": "A standalone campus directory and map for 14 US universities: the campus outline, its\u2026",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "campus_15_about_w2",
+      "screen": "campus_15_about",
+      "kind": "text",
+      "label": "Where the data comes from",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "campus_15_about_nav",
+      "screen": "campus_15_about",
+      "kind": "bottomnav",
+      "label": "MIT \u00b7 Harvard \u00b7 Yale \u00b7 Columbia \u00b7 Stanford \u00b7 UC Berkeley \u00b7 UCLA \u00b7 U. Washington \u00b7 U. Michigan \u00b7 Ohio State \u00b7 Georgia Tech \u00b7 UT Austin \u00b7 Arizona State \u00b7 UW-Madison \u00b7 Legend \u00b7 About",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "campus_flow_0",
+      "fromWidget": "campus_0_mit_nav",
+      "toScreen": "campus_1_harvard",
+      "transition": "push"
+    },
+    {
+      "id": "campus_flow_1",
+      "fromWidget": "campus_1_harvard_nav",
+      "toScreen": "campus_2_yale",
+      "transition": "push"
+    },
+    {
+      "id": "campus_flow_2",
+      "fromWidget": "campus_2_yale_nav",
+      "toScreen": "campus_3_columbia",
+      "transition": "push"
+    },
+    {
+      "id": "campus_flow_3",
+      "fromWidget": "campus_3_columbia_nav",
+      "toScreen": "campus_4_stanford",
+      "transition": "push"
+    },
+    {
+      "id": "campus_flow_4",
+      "fromWidget": "campus_4_stanford_nav",
+      "toScreen": "campus_5_berkeley",
+      "transition": "push"
+    },
+    {
+      "id": "campus_flow_5",
+      "fromWidget": "campus_5_berkeley_nav",
+      "toScreen": "campus_6_ucla",
+      "transition": "push"
+    },
+    {
+      "id": "campus_flow_6",
+      "fromWidget": "campus_6_ucla_nav",
+      "toScreen": "campus_7_uw",
+      "transition": "push"
+    },
+    {
+      "id": "campus_flow_7",
+      "fromWidget": "campus_7_uw_nav",
+      "toScreen": "campus_8_umich",
+      "transition": "push"
+    },
+    {
+      "id": "campus_flow_8",
+      "fromWidget": "campus_8_umich_nav",
+      "toScreen": "campus_9_osu",
+      "transition": "push"
+    },
+    {
+      "id": "campus_flow_9",
+      "fromWidget": "campus_9_osu_nav",
+      "toScreen": "campus_10_gatech",
+      "transition": "push"
+    },
+    {
+      "id": "campus_flow_10",
+      "fromWidget": "campus_10_gatech_nav",
+      "toScreen": "campus_11_utexas",
+      "transition": "push"
+    },
+    {
+      "id": "campus_flow_11",
+      "fromWidget": "campus_11_utexas_nav",
+      "toScreen": "campus_12_asu",
+      "transition": "push"
+    },
+    {
+      "id": "campus_flow_12",
+      "fromWidget": "campus_12_asu_nav",
+      "toScreen": "campus_13_wisc",
+      "transition": "push"
+    },
+    {
+      "id": "campus_flow_13",
+      "fromWidget": "campus_13_wisc_nav",
+      "toScreen": "campus_14_legend",
+      "transition": "push"
+    },
+    {
+      "id": "campus_flow_14",
+      "fromWidget": "campus_14_legend_nav",
+      "toScreen": "campus_15_about",
+      "transition": "push"
+    },
+    {
+      "id": "campus_flow_15",
+      "fromWidget": "campus_15_about_nav",
+      "toScreen": "campus_0_mit",
+      "transition": "push"
+    },
+    {
+      "id": "campus_flow_extra",
+      "fromWidget": "campus_0_mit_w2",
+      "toScreen": "campus_1_harvard",
+      "transition": "push"
+    }
+  ]
+}

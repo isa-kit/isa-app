@@ -1,0 +1,14 @@
+{
+  "id": "iconbuilder",
+  "name": "Icon Builder",
+  "category": "Creative",
+  "description": "Draw app icons on a square artboard and export .icns, .ico, PNG sets and PDF.",
+  "icon": "apps",
+  "color": "#0EA5E9",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_iconbuilder"
+  },
+  "seedVersion": "2026-08-22.iconbuilder.1",
+  "seedContent": "initial-only"
+}

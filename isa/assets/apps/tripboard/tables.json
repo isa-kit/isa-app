@@ -1,0 +1,16 @@
+{
+  "tables": [
+    {
+      "name": "entries",
+      "label": "Entries",
+      "icon": "flight_takeoff",
+      "description": "The universal node for this trip — the trip itself (kind=trip, one root row), a member (kind=member), or a piece of content (plan/event/todo/packing/note). One table so multiuser SHARING actually works: the share pipeline only syncs tables literally named `entries`/`relations`/`users` (custom table names are silently dropped on invite) — see MIGRATION.md."
+    },
+    {
+      "name": "relations",
+      "label": "Relations",
+      "icon": "hub",
+      "description": "The edges of the graph — mirrors Dispatch's shape exactly: each row links two entries {fromId, toId, type}. type `contains` is the structural trip-root -> item edge the share pipeline's subtree walk follows to pull in everything on the trip; there are no other edge types in v1."
+    }
+  ]
+}

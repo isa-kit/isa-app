@@ -1,0 +1,101 @@
+{
+  "board": {
+    "name": "Hesset"
+  },
+  "screens": [
+    {
+      "id": "hesset_0_play",
+      "name": "Hesset",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "hesset_1_how",
+      "name": "How to play",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "hesset_0_play_title",
+      "screen": "hesset_0_play",
+      "kind": "titlebar",
+      "label": "Hesset",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "hesset_0_play_w0",
+      "screen": "hesset_0_play",
+      "kind": "text",
+      "label": "hesset",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "hesset_0_play_nav",
+      "screen": "hesset_0_play",
+      "kind": "bottomnav",
+      "label": "Play \u00b7 How to",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "hesset_1_how_title",
+      "screen": "hesset_1_how",
+      "kind": "titlebar",
+      "label": "How to play",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "hesset_1_how_w0",
+      "screen": "hesset_1_how",
+      "kind": "text",
+      "label": "Draw living geometry. Protect your Core.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "hesset_1_how_w1",
+      "screen": "hesset_1_how",
+      "kind": "text",
+      "label": "Welcome to Hesset!",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "hesset_1_how_w2",
+      "screen": "hesset_1_how",
+      "kind": "text",
+      "label": "Controls \u2014 place, connect, close the loop",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "hesset_1_how_nav",
+      "screen": "hesset_1_how",
+      "kind": "bottomnav",
+      "label": "Play \u00b7 How to",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "hesset_flow_0",
+      "fromWidget": "hesset_0_play_nav",
+      "toScreen": "hesset_1_how",
+      "transition": "push"
+    },
+    {
+      "id": "hesset_flow_1",
+      "fromWidget": "hesset_1_how_nav",
+      "toScreen": "hesset_0_play",
+      "transition": "push"
+    }
+  ]
+}

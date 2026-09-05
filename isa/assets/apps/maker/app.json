@@ -1,0 +1,14 @@
+{
+  "id": "maker",
+  "name": "Maker",
+  "category": "Creative",
+  "description": "Design an applet, then develop it.",
+  "icon": "auto_awesome",
+  "color": "#7E57C2",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_maker"
+  },
+  "seedVersion": "2026-08-01.1-flow-drawio-buttons.l10n-int-0903",
+  "seedContent": "initial-only"
+}

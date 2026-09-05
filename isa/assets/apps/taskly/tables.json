@@ -1,0 +1,60 @@
+{
+  "tables": [
+    {
+      "name": "entries",
+      "label": {
+        "en": "Entries",
+        "ko": "항목",
+        "zh": "条目",
+        "hi": "प्रविष्टियाँ",
+        "es": "Entradas",
+        "fr": "Entrées",
+        "ar": "الإدخالات",
+        "pt": "Entradas",
+        "ru": "Записи",
+        "de": "Einträge",
+        "ja": "項目",
+        "tr": "Kayıtlar",
+        "vi": "Mục",
+        "it": "Voci",
+        "fa": "ورودی‌ها",
+        "pl": "Wpisy",
+        "uk": "Записи",
+        "nl": "Items",
+        "sv": "Poster",
+        "cs": "Položky",
+        "el": "Καταχωρίσεις"
+      },
+      "icon": "check_circle",
+      "description": "The universal node for this agenda — the agenda itself (kind=board, one root row), a person (kind=member), a task, an event, or a note. ONE table because the multiuser share pipeline only syncs tables literally named `entries`/`relations`/`users` (isan lib/src/sync/share_scope.dart; custom table names are silently dropped on invite), so v1's tasks/notes/profiles/templates tables could never be shared. Shape copied from `tripboard`/`krtravelplan` rather than reinvented. This table is FIRST on purpose: the host's ICS-import menu item picks its target table by sniffing for a `scheduledStart` column and falls back to the first table."
+    },
+    {
+      "name": "relations",
+      "label": {
+        "en": "Relations",
+        "ko": "연결",
+        "zh": "关联",
+        "hi": "संबंध सूची",
+        "es": "Relaciones",
+        "fr": "Relations",
+        "ar": "العلاقات",
+        "pt": "Relações",
+        "ru": "Связи",
+        "de": "Beziehungen",
+        "ja": "関係一覧",
+        "tr": "İlişkiler",
+        "vi": "Các quan hệ",
+        "it": "Relazioni",
+        "fa": "روابط",
+        "pl": "Relacje",
+        "uk": "Зв'язки",
+        "nl": "Relaties",
+        "sv": "Relationer",
+        "cs": "Vztahy",
+        "el": "Σχέσεις"
+      },
+      "icon": "hub",
+      "description": "The edges of the graph, mirroring tripboard/krtravelplan/Dispatch exactly: each row links two entries {fromId, toId, type}. type `contains` is the structural agenda-root -> item edge that the share pipeline's subtree closure walks; there are no other edge types."
+    }
+  ]
+}

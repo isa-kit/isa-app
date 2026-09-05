@@ -1,0 +1,225 @@
+{
+  "board": {
+    "name": "Codev"
+  },
+  "screens": [
+    {
+      "id": "codev_0_board",
+      "name": "Codev \u2014 shared work board",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "codev_1_activity",
+      "name": "Activity \u2014 ongoing status + history",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "codev_2_table",
+      "name": "All work items",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    },
+    {
+      "id": "codev_3_settings",
+      "name": "Codev settings",
+      "device": "phone",
+      "x": 1320,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "codev_0_board_title",
+      "screen": "codev_0_board",
+      "kind": "titlebar",
+      "label": "Codev \u2014 shared work board",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "codev_0_board_w0",
+      "screen": "codev_0_board",
+      "kind": "text",
+      "label": "Next batch pickup",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "codev_0_board_w1",
+      "screen": "codev_0_board",
+      "kind": "text",
+      "label": "Shared work items between you and Claude.",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "codev_0_board_w2",
+      "screen": "codev_0_board",
+      "kind": "list",
+      "label": "title",
+      "region": "body",
+      "order": 2,
+      "items": "[\"Activity \\u2014 ongoing status + history\", \"All work items\", \"Codev settings\"]"
+    },
+    {
+      "id": "codev_0_board_nav",
+      "screen": "codev_0_board",
+      "kind": "bottomnav",
+      "label": "Board \u00b7 Activity \u00b7 All \u00b7 Settings",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "codev_1_activity_title",
+      "screen": "codev_1_activity",
+      "kind": "titlebar",
+      "label": "Activity \u2014 ongoing status + history",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "codev_1_activity_w0",
+      "screen": "codev_1_activity",
+      "kind": "text",
+      "label": "Live status updates AND the question/answer thread per work item \u2014",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "codev_1_activity_w1",
+      "screen": "codev_1_activity",
+      "kind": "list",
+      "label": "message",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Codev \\u2014 shared work board\", \"All work items\", \"Codev settings\"]"
+    },
+    {
+      "id": "codev_1_activity_w2",
+      "screen": "codev_1_activity",
+      "kind": "buttonrow",
+      "label": "Ask / reply",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "codev_1_activity_nav",
+      "screen": "codev_1_activity",
+      "kind": "bottomnav",
+      "label": "Board \u00b7 Activity \u00b7 All \u00b7 Settings",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "codev_2_table_title",
+      "screen": "codev_2_table",
+      "kind": "titlebar",
+      "label": "All work items",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "codev_2_table_w0",
+      "screen": "codev_2_table",
+      "kind": "text",
+      "label": "Every work item with all fields. Tap a row to edit.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "codev_2_table_w1",
+      "screen": "codev_2_table",
+      "kind": "list",
+      "label": "Table",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Codev \\u2014 shared work board\", \"Activity \\u2014 ongoing status + history\", \"Codev settings\"]"
+    },
+    {
+      "id": "codev_2_table_w2",
+      "screen": "codev_2_table",
+      "kind": "buttonrow",
+      "label": "New work item",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "codev_2_table_nav",
+      "screen": "codev_2_table",
+      "kind": "bottomnav",
+      "label": "Board \u00b7 Activity \u00b7 All \u00b7 Settings",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "codev_3_settings_title",
+      "screen": "codev_3_settings",
+      "kind": "titlebar",
+      "label": "Codev settings",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "codev_3_settings_w0",
+      "screen": "codev_3_settings",
+      "kind": "text",
+      "label": "Autobuild: when ON, Claude's watcher automatically RUNS (builds) any item you set to\u2026",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "codev_3_settings_w1",
+      "screen": "codev_3_settings",
+      "kind": "list",
+      "label": "name",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Codev \\u2014 shared work board\", \"Activity \\u2014 ongoing status + history\", \"All work items\"]"
+    },
+    {
+      "id": "codev_3_settings_nav",
+      "screen": "codev_3_settings",
+      "kind": "bottomnav",
+      "label": "Board \u00b7 Activity \u00b7 All \u00b7 Settings",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "codev_flow_0",
+      "fromWidget": "codev_0_board_nav",
+      "toScreen": "codev_1_activity",
+      "transition": "push"
+    },
+    {
+      "id": "codev_flow_1",
+      "fromWidget": "codev_1_activity_nav",
+      "toScreen": "codev_2_table",
+      "transition": "push"
+    },
+    {
+      "id": "codev_flow_2",
+      "fromWidget": "codev_2_table_nav",
+      "toScreen": "codev_3_settings",
+      "transition": "push"
+    },
+    {
+      "id": "codev_flow_3",
+      "fromWidget": "codev_3_settings_nav",
+      "toScreen": "codev_0_board",
+      "transition": "push"
+    },
+    {
+      "id": "codev_flow_extra",
+      "fromWidget": "codev_0_board_w2",
+      "toScreen": "codev_1_activity",
+      "transition": "push"
+    }
+  ]
+}

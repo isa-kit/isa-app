@@ -1,0 +1,501 @@
+{
+  "board": {
+    "name": "Dispatch"
+  },
+  "screens": [
+    {
+      "id": "d_thread",
+      "name": "Projects",
+      "device": "web",
+      "x": 0,
+      "y": 0,
+      "folder": "Board"
+    },
+    {
+      "id": "d_inbox",
+      "name": "Inbox",
+      "device": "phone",
+      "x": 0,
+      "y": 900,
+      "folder": "Board"
+    },
+    {
+      "id": "d_priorities",
+      "name": "Priorities",
+      "device": "web",
+      "x": 1250,
+      "y": 0,
+      "folder": "Board"
+    },
+    {
+      "id": "d_plan",
+      "name": "Plan",
+      "device": "phone",
+      "x": 440,
+      "y": 900,
+      "folder": "Delivery"
+    },
+    {
+      "id": "d_spec",
+      "name": "Spec",
+      "device": "phone",
+      "x": 880,
+      "y": 900,
+      "folder": "Delivery"
+    },
+    {
+      "id": "d_map",
+      "name": "Map",
+      "device": "phone",
+      "x": 1320,
+      "y": 900,
+      "folder": "Delivery"
+    },
+    {
+      "id": "d_people",
+      "name": "People",
+      "device": "phone",
+      "x": 0,
+      "y": 1800,
+      "folder": "Team"
+    },
+    {
+      "id": "d_tags",
+      "name": "Tags",
+      "device": "phone",
+      "x": 440,
+      "y": 1800,
+      "folder": "Team"
+    },
+    {
+      "id": "d_howto",
+      "name": "How",
+      "device": "phone",
+      "x": 880,
+      "y": 1800,
+      "folder": "Team"
+    }
+  ],
+  "widgets": [
+    {
+      "id": "d_thread_title",
+      "screen": "d_thread",
+      "kind": "titlebar",
+      "label": "Projects",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "d_thread_row",
+      "screen": "d_thread",
+      "kind": "row",
+      "label": "",
+      "region": "body",
+      "order": 0,
+      "cols": 3,
+      "weights": [
+        1,
+        1.3,
+        1.7
+      ]
+    },
+    {
+      "id": "d_thread_tree",
+      "screen": "d_thread",
+      "kind": "list",
+      "label": "Project tree",
+      "region": "body",
+      "order": 0,
+      "parent": "d_thread_row",
+      "cell": 0,
+      "items": "[\"Spring launch\", \"Website refresh\", \"Launch-day catering\"]"
+    },
+    {
+      "id": "d_thread_contents",
+      "screen": "d_thread",
+      "kind": "list",
+      "label": "Contents (tasks)",
+      "region": "body",
+      "order": 0,
+      "parent": "d_thread_row",
+      "cell": 1,
+      "items": "[{\"text\": \"Choose the launch pricing tiers\", \"toggle\": false}, {\"text\": \"Finish the checkout flow\", \"toggle\": false}, {\"text\": \"Draft the launch-day announcement\", \"toggle\": true}]"
+    },
+    {
+      "id": "d_thread_detail",
+      "screen": "d_thread",
+      "kind": "card",
+      "label": "Task detail",
+      "region": "body",
+      "order": 0,
+      "parent": "d_thread_row",
+      "cell": 2
+    },
+    {
+      "id": "d_thread_nav",
+      "screen": "d_thread",
+      "kind": "bottomnav",
+      "label": "Projects \u00b7 Inbox \u00b7 Priorities \u00b7 Plan \u00b7 Spec \u00b7 Map \u00b7 People \u00b7 Tags \u00b7 How",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "d_inbox_title",
+      "screen": "d_inbox",
+      "kind": "titlebar",
+      "label": "Inbox",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "d_inbox_list",
+      "screen": "d_inbox",
+      "kind": "list",
+      "label": "Unread / unassigned entries",
+      "region": "body",
+      "order": 0,
+      "items": "[\"Inbox\", \"Pricing page \\u2014 wireframe\", \"Launch log opener\"]"
+    },
+    {
+      "id": "d_inbox_nav",
+      "screen": "d_inbox",
+      "kind": "bottomnav",
+      "label": "Projects \u00b7 Inbox \u00b7 Priorities \u00b7 Plan \u00b7 Spec \u00b7 Map \u00b7 People \u00b7 Tags \u00b7 How",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "d_prio_title",
+      "screen": "d_priorities",
+      "kind": "titlebar",
+      "label": "Priorities",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "d_prio_filter",
+      "screen": "d_priorities",
+      "kind": "dropdown",
+      "label": "Status",
+      "region": "top",
+      "order": 1,
+      "items": "[\"Active\", \"Queued\", \"Done\"]"
+    },
+    {
+      "id": "d_prio_row",
+      "screen": "d_priorities",
+      "kind": "row",
+      "label": "",
+      "region": "body",
+      "order": 0,
+      "cols": 3,
+      "weights": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "d_prio_now",
+      "screen": "d_priorities",
+      "kind": "list",
+      "label": "Now",
+      "region": "body",
+      "order": 0,
+      "parent": "d_prio_row",
+      "cell": 0,
+      "items": "[\"Finish the checkout flow\"]"
+    },
+    {
+      "id": "d_prio_next",
+      "screen": "d_priorities",
+      "kind": "list",
+      "label": "Next",
+      "region": "body",
+      "order": 0,
+      "parent": "d_prio_row",
+      "cell": 1,
+      "items": "[\"Choose the launch pricing tiers\", \"Home page layout spec\"]"
+    },
+    {
+      "id": "d_prio_later",
+      "screen": "d_priorities",
+      "kind": "list",
+      "label": "Later",
+      "region": "body",
+      "order": 0,
+      "parent": "d_prio_row",
+      "cell": 2,
+      "items": "[\"P2 Customer portal\", \"P3 Translated pages\"]"
+    },
+    {
+      "id": "d_priorities_nav",
+      "screen": "d_priorities",
+      "kind": "bottomnav",
+      "label": "Projects \u00b7 Inbox \u00b7 Priorities \u00b7 Plan \u00b7 Spec \u00b7 Map \u00b7 People \u00b7 Tags \u00b7 How",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "d_plan_title",
+      "screen": "d_plan",
+      "kind": "titlebar",
+      "label": "Plan",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "d_plan_now",
+      "screen": "d_plan",
+      "kind": "list",
+      "label": "This sprint",
+      "region": "body",
+      "order": 0,
+      "items": "[\"P0.1 Component library (buttons, cards, forms)\", \"P0.2 Navigation and footer\"]"
+    },
+    {
+      "id": "d_plan_next",
+      "screen": "d_plan",
+      "kind": "list",
+      "label": "Next up",
+      "region": "body",
+      "order": 1,
+      "items": "[\"P0.3 Search, filters and empty states\", \"P1 Blog and customer stories\"]"
+    },
+    {
+      "id": "d_plan_later",
+      "screen": "d_plan",
+      "kind": "list",
+      "label": "Later",
+      "region": "body",
+      "order": 2,
+      "items": "[\"P3 Translated pages\", \"P4 Analytics and cookie consent\"]"
+    },
+    {
+      "id": "d_plan_nav",
+      "screen": "d_plan",
+      "kind": "bottomnav",
+      "label": "Projects \u00b7 Inbox \u00b7 Priorities \u00b7 Plan \u00b7 Spec \u00b7 Map \u00b7 People \u00b7 Tags \u00b7 How",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "d_spec_title",
+      "screen": "d_spec",
+      "kind": "titlebar",
+      "label": "Spec",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "d_spec_text",
+      "screen": "d_spec",
+      "kind": "text",
+      "label": "Spec document",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "d_spec_cards",
+      "screen": "d_spec",
+      "kind": "list",
+      "label": "Linked tasks",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Pricing page\", \"Home page layout signed off\"]"
+    },
+    {
+      "id": "d_spec_nav",
+      "screen": "d_spec",
+      "kind": "bottomnav",
+      "label": "Projects \u00b7 Inbox \u00b7 Priorities \u00b7 Plan \u00b7 Spec \u00b7 Map \u00b7 People \u00b7 Tags \u00b7 How",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "d_map_title",
+      "screen": "d_map",
+      "kind": "titlebar",
+      "label": "Map",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "d_map_tabs",
+      "screen": "d_map",
+      "kind": "tabs",
+      "label": "Bubbles \u00b7 Diagram \u00b7 Outline",
+      "region": "top",
+      "order": 1,
+      "items": "[\"Bubbles\", \"Diagram\", \"Outline\"]"
+    },
+    {
+      "id": "d_map_canvas",
+      "screen": "d_map",
+      "kind": "image",
+      "label": "Map canvas",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "d_map_nav",
+      "screen": "d_map",
+      "kind": "bottomnav",
+      "label": "Projects \u00b7 Inbox \u00b7 Priorities \u00b7 Plan \u00b7 Spec \u00b7 Map \u00b7 People \u00b7 Tags \u00b7 How",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "d_people_title",
+      "screen": "d_people",
+      "kind": "titlebar",
+      "label": "People",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "d_people_search",
+      "screen": "d_people",
+      "kind": "searchbar",
+      "label": "Search people",
+      "region": "top",
+      "order": 1
+    },
+    {
+      "id": "d_people_list",
+      "screen": "d_people",
+      "kind": "list",
+      "label": "Team",
+      "region": "body",
+      "order": 0,
+      "items": "[\"You\", \"Claude\"]"
+    },
+    {
+      "id": "d_people_nav",
+      "screen": "d_people",
+      "kind": "bottomnav",
+      "label": "Projects \u00b7 Inbox \u00b7 Priorities \u00b7 Plan \u00b7 Spec \u00b7 Map \u00b7 People \u00b7 Tags \u00b7 How",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "d_tags_title",
+      "screen": "d_tags",
+      "kind": "titlebar",
+      "label": "Tags",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "d_tags_add",
+      "screen": "d_tags",
+      "kind": "buttonrow",
+      "label": "New tag",
+      "region": "top",
+      "order": 1
+    },
+    {
+      "id": "d_tags_list",
+      "screen": "d_tags",
+      "kind": "list",
+      "label": "Tags",
+      "region": "body",
+      "order": 0,
+      "items": "[{\"text\": \"Bug\", \"icon\": \"bug_report\"}, {\"text\": \"Feature\", \"icon\": \"star\"}, {\"text\": \"Infra\", \"icon\": \"dns\"}, {\"text\": \"Docs\", \"icon\": \"description\"}, {\"text\": \"Follow-up\", \"icon\": \"schedule\"}]"
+    },
+    {
+      "id": "d_tags_nav",
+      "screen": "d_tags",
+      "kind": "bottomnav",
+      "label": "Projects \u00b7 Inbox \u00b7 Priorities \u00b7 Plan \u00b7 Spec \u00b7 Map \u00b7 People \u00b7 Tags \u00b7 How",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "d_howto_title",
+      "screen": "d_howto",
+      "kind": "titlebar",
+      "label": "How",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "d_howto_text",
+      "screen": "d_howto",
+      "kind": "text",
+      "label": "How to use Dispatch",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "d_howto_nav",
+      "screen": "d_howto",
+      "kind": "bottomnav",
+      "label": "Projects \u00b7 Inbox \u00b7 Priorities \u00b7 Plan \u00b7 Spec \u00b7 Map \u00b7 People \u00b7 Tags \u00b7 How",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "d_flow_thread",
+      "fromWidget": "d_thread_nav",
+      "toScreen": "d_inbox",
+      "transition": "push"
+    },
+    {
+      "id": "d_flow_inbox",
+      "fromWidget": "d_inbox_nav",
+      "toScreen": "d_priorities",
+      "transition": "push"
+    },
+    {
+      "id": "d_flow_priorities",
+      "fromWidget": "d_priorities_nav",
+      "toScreen": "d_plan",
+      "transition": "push"
+    },
+    {
+      "id": "d_flow_plan",
+      "fromWidget": "d_plan_nav",
+      "toScreen": "d_spec",
+      "transition": "push"
+    },
+    {
+      "id": "d_flow_spec",
+      "fromWidget": "d_spec_nav",
+      "toScreen": "d_map",
+      "transition": "push"
+    },
+    {
+      "id": "d_flow_map",
+      "fromWidget": "d_map_nav",
+      "toScreen": "d_people",
+      "transition": "push"
+    },
+    {
+      "id": "d_flow_people",
+      "fromWidget": "d_people_nav",
+      "toScreen": "d_tags",
+      "transition": "push"
+    },
+    {
+      "id": "d_flow_tags",
+      "fromWidget": "d_tags_nav",
+      "toScreen": "d_howto",
+      "transition": "push"
+    },
+    {
+      "id": "d_flow_howto",
+      "fromWidget": "d_howto_nav",
+      "toScreen": "d_thread",
+      "transition": "push"
+    },
+    {
+      "id": "d_flow_thread_spec",
+      "fromWidget": "d_thread_contents",
+      "toScreen": "d_spec",
+      "transition": "push"
+    }
+  ]
+}

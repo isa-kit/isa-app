@@ -1,0 +1,128 @@
+{
+  "boards": [
+    { "name": "id", "type": "text" },
+    { "name": "name", "type": "text", "label": "Name" },
+    { "name": "order", "type": "number", "label": "Order", "hidden": true },
+    { "name": "style", "type": "text", "label": "Style", "hidden": true, "default": "" },
+    { "name": "accent", "type": "text", "label": "Accent", "hidden": true, "default": "" },
+    {
+      "name": "mode",
+      "type": "enum",
+      "label": "Mode",
+      "options": ["edit", "design"],
+      "default": "edit",
+      "hidden": true
+    },
+    { "name": "rev", "type": "number", "label": "Revision", "hidden": true, "default": 1 }
+  ],
+  "screens": [
+    { "name": "id", "type": "text" },
+    { "name": "board", "type": "text", "label": "Board", "hidden": true },
+    { "name": "name", "type": "text", "label": "Name" },
+    {
+      "name": "device",
+      "type": "enum",
+      "label": "Device",
+      "options": ["phone", "tablet", "web", "fragment"],
+      "default": "phone"
+    },
+    { "name": "x", "type": "number", "label": "X", "hidden": true, "default": 0 },
+    { "name": "y", "type": "number", "label": "Y", "hidden": true, "default": 0 },
+    { "name": "width", "type": "number", "label": "Width", "hidden": true },
+    {
+      "name": "variantOf",
+      "type": "text",
+      "label": "Variant of",
+      "hidden": true
+    },
+    {
+      "name": "folder",
+      "type": "text",
+      "label": "Folder",
+      "hidden": true,
+      "default": ""
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "label": "Status",
+      "options": ["proposed", "approved", "changes"],
+      "default": "proposed",
+      "hidden": true
+    }
+  ],
+  "widgets": [
+    { "name": "id", "type": "text" },
+    { "name": "screen", "type": "text", "label": "Screen", "hidden": true },
+    {
+      "name": "kind",
+      "type": "enum",
+      "label": "Kind",
+      "options": [
+        "titlebar", "searchbar", "tabs", "scrollview", "list", "settings",
+        "text", "card", "image", "buttonrow", "bottomnav", "fab", "row",
+        "dropdown", "popup"
+      ]
+    },
+    { "name": "label", "type": "text", "label": "Label" },
+    {
+      "name": "region",
+      "type": "enum",
+      "label": "Region",
+      "options": ["top", "body", "bottom", "overlay"]
+    },
+    { "name": "order", "type": "number", "label": "Order", "hidden": true, "default": 0 },
+    {
+      "name": "intent",
+      "type": "enum",
+      "label": "Size intent",
+      "options": ["fixed", "fill", "wrap"],
+      "hidden": true
+    },
+    { "name": "behavior", "type": "text", "label": "Behavior", "hidden": true, "default": "" },
+    { "name": "parent",  "type": "text",   "label": "Parent",  "hidden": true },
+    { "name": "cell",    "type": "number", "label": "Cell",    "hidden": true, "default": 0 },
+    { "name": "cols",    "type": "number", "label": "Columns", "hidden": true, "default": 2 },
+    { "name": "weights", "type": "text",   "label": "Weights", "hidden": true },
+    { "name": "items",   "type": "text",   "label": "Items",   "hidden": true, "default": "" }
+  ],
+  "flows": [
+    { "name": "id", "type": "text" },
+    { "name": "board", "type": "text", "label": "Board", "hidden": true },
+    { "name": "fromWidget", "type": "text", "label": "From widget", "hidden": true },
+    { "name": "toScreen", "type": "text", "label": "To screen", "hidden": true },
+    {
+      "name": "transition",
+      "type": "enum",
+      "label": "Transition",
+      "options": ["push", "fade", "sheet"],
+      "default": "push"
+    }
+  ],
+  "stickies": [
+    { "name": "id", "type": "text" },
+    { "name": "board", "type": "text", "label": "Board", "hidden": true },
+    { "name": "x", "type": "number", "label": "X", "hidden": true, "default": 0 },
+    { "name": "y", "type": "number", "label": "Y", "hidden": true, "default": 0 },
+    { "name": "width", "type": "number", "label": "Width", "hidden": true, "default": 220 },
+    { "name": "text", "type": "text", "label": "Note" }
+  ],
+  "pins": [
+    { "name": "id", "type": "text" },
+    { "name": "screen", "type": "text", "label": "Screen", "hidden": true },
+    { "name": "x", "type": "number", "label": "X", "hidden": true, "default": 0.5 },
+    { "name": "y", "type": "number", "label": "Y", "hidden": true, "default": 0.5 },
+    { "name": "order", "type": "number", "label": "Order", "hidden": true, "default": 0 },
+    { "name": "title", "type": "text", "label": "Title" },
+    { "name": "text", "type": "text", "label": "Note" },
+    { "name": "author", "type": "text", "label": "Author", "hidden": true, "default": "you" }
+  ],
+  "frameImages": [
+    { "name": "id", "type": "text" },
+    { "name": "screen", "type": "text", "label": "Screen", "hidden": true },
+    { "name": "mime", "type": "text", "label": "MIME type", "hidden": true, "default": "image/png" },
+    { "name": "b64", "type": "richtext", "label": "Image data (base64)", "hidden": true },
+    { "name": "w", "type": "number", "label": "Width", "hidden": true },
+    { "name": "h", "type": "number", "label": "Height", "hidden": true }
+  ]
+}

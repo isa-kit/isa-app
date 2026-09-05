@@ -1,0 +1,5115 @@
+{
+ "app": {
+ "title": {
+ "en": "Wikipick",
+ "ko": "위키픽",
+ "zh": "维基选",
+ "hi": "विकिपिक",
+ "es": "Wikipick",
+ "fr": "Wikipick",
+ "ar": "ويكيبيك",
+ "pt": "Wikipick",
+ "ru": "Википик",
+ "de": "Wikipick",
+ "ja": "ウィキピック",
+ "tr": "Wikipick",
+ "vi": "Wikipick",
+ "it": "Wikipick",
+ "fa": "ویکی‌پیک",
+ "pl": "Wikipick",
+ "uk": "Вікіпік",
+ "nl": "Wikipick",
+ "sv": "Wikipick",
+ "cs": "Wikipick",
+ "el": "Wikipick"
+ },
+ "primaryColor": "#7A2E1D",
+ "theme": "sepia",
+ "font": "Lora",
+ "_openAt_comment": "opt OUT of the host's default cold-start behavior (restore the last-active nav destination via last_screen_prefs.dart) — a fresh open must land on Home, not wherever the user left off (in-session Back/forward via _navHistory is unaffected; this only skips the BOOT-time restore in app_screen.dart's `_load`). Engine-wide default is left alone since other applets may depend on restore-last-screen; this is a per-app opt-in.",
+ "openAt": "home",
+ "languages": ["en", "ko", "zh", "hi", "es", "fr", "ar", "pt", "ru", "de", "ja", "tr", "vi", "it", "fa", "pl", "uk", "nl", "sv", "cs", "el"],
+ "translatable": true,
+ "sync": {
+ "pocketbase": false,
+ "drive": false,
+ "room": false,
+ "mesh": false
+ },
+ "appDataTools": true,
+ "preferences": [
+ {
+ "key": "autoCacheLinks",
+ "label": {
+ "en": "Auto-save linked pages (1 layer)",
+ "ko": "연결된 문서 자동 저장 (1단계)",
+ "zh": "自动保存链接页面（1层）",
+ "hi": "लिंक किए गए पेज स्वतः सहेजें (1 परत)",
+ "es": "Guardar automáticamente páginas enlazadas (1 nivel)",
+ "fr": "Enregistrer automatiquement les pages liées (1 niveau)",
+ "ar": "حفظ الصفحات المرتبطة تلقائيًا (طبقة واحدة)",
+ "pt": "Salvar automaticamente páginas vinculadas (1 camada)",
+ "ru": "Автосохранение связанных страниц (1 уровень)",
+ "de": "Verknüpfte Seiten automatisch speichern (1 Ebene)",
+ "ja": "リンク先ページを自動保存（1層）",
+ "tr": "Bağlantılı sayfaları otomatik kaydet (1 katman)",
+ "vi": "Tự động lưu các trang liên kết (1 lớp)",
+ "it": "Salva automaticamente le pagine collegate (1 livello)",
+ "fa": "ذخیره خودکار صفحات پیوندی (۱ لایه)",
+ "pl": "Automatycznie zapisuj powiązane strony (1 poziom)",
+ "uk": "Автозбереження пов'язаних сторінок (1 рівень)",
+ "nl": "Gekoppelde pagina's automatisch opslaan (1 laag)",
+ "sv": "Spara länkade sidor automatiskt (1 nivå)",
+ "cs": "Automaticky ukládat propojené stránky (1 vrstva)",
+ "el": "Αυτόματη αποθήκευση συνδεδεμένων σελίδων (1 επίπεδο)"
+ },
+ "hint": {
+ "en": "When on, saving an article offline also saves its direct links automatically (bounded to 25 pages / 2 MB per run). Turn off to only save linked pages with the \"Save linked pages\" button.",
+ "ko": "켜면 문서를 오프라인으로 저장할 때 직접 연결된 문서도 자동으로 저장합니다 (실행당 25개 문서 / 2MB 제한). 끄면 \"연결된 문서 저장\" 버튼으로만 저장합니다.",
+ "zh": "开启后，离线保存文章时会自动保存其直接链接的页面（每次运行上限25个页面/2MB）。关闭后仅通过\"保存链接页面\"按钮保存链接页面。",
+ "hi": "चालू होने पर, लेख को ऑफ़लाइन सहेजने से उसके सीधे लिंक भी अपने आप सहेजे जाते हैं (प्रति रन 25 पेज / 2 MB तक सीमित)। बंद करने पर केवल \"लिंक किए गए पेज सहेजें\" बटन से ही लिंक किए गए पेज सहेजे जाएंगे।",
+ "es": "Al activarlo, guardar un artículo sin conexión también guarda automáticamente sus enlaces directos (limitado a 25 páginas / 2 MB por ejecución). Desactívalo para guardar páginas enlazadas solo con el botón \"Guardar páginas enlazadas\".",
+ "fr": "Lorsque activé, enregistrer un article hors ligne enregistre aussi automatiquement ses liens directs (limité à 25 pages / 2 Mo par exécution). Désactivez pour ne les enregistrer qu'avec le bouton « Enregistrer les pages liées ».",
+ "ar": "عند التفعيل، يؤدي حفظ مقالة دون اتصال إلى حفظ روابطها المباشرة تلقائيًا أيضًا (بحد أقصى 25 صفحة / 2 ميغابايت لكل تشغيل). أوقف التشغيل لحفظ الصفحات المرتبطة فقط باستخدام زر \"حفظ الصفحات المرتبطة\".",
+ "pt": "Quando ativado, salvar um artigo offline também salva automaticamente seus links diretos (limitado a 25 páginas / 2 MB por execução). Desative para salvar páginas vinculadas apenas com o botão \"Salvar páginas vinculadas\".",
+ "ru": "При включении сохранение статьи офлайн также автоматически сохраняет её прямые ссылки (не более 25 страниц / 2 МБ за один запуск). Отключите, чтобы сохранять связанные страницы только кнопкой «Сохранить связанные страницы».",
+ "de": "Wenn aktiviert, werden beim Offline-Speichern eines Artikels auch dessen direkte Links automatisch gespeichert (begrenzt auf 25 Seiten / 2 MB pro Durchlauf). Deaktivieren, um verknüpfte Seiten nur über die Schaltfläche „Verknüpfte Seiten speichern“ zu speichern.",
+ "ja": "オンにすると、記事をオフライン保存する際に直接リンク先も自動的に保存されます（実行あたり25ページ/2MBまで）。オフにすると「リンク先ページを保存」ボタンでのみ保存されます。",
+ "tr": "Açıkken, bir makaleyi çevrimdışı kaydetmek doğrudan bağlantılarını da otomatik olarak kaydeder (çalıştırma başına 25 sayfa / 2 MB ile sınırlı). Yalnızca \"Bağlantılı sayfaları kaydet\" düğmesiyle kaydetmek için kapatın.",
+ "vi": "Khi bật, lưu một bài viết ngoại tuyến cũng tự động lưu các liên kết trực tiếp của nó (giới hạn 25 trang / 2 MB mỗi lần chạy). Tắt để chỉ lưu các trang liên kết bằng nút \"Lưu trang liên kết\".",
+ "it": "Se attivo, salvare un articolo offline salva automaticamente anche i suoi link diretti (limitato a 25 pagine / 2 MB per esecuzione). Disattiva per salvare le pagine collegate solo con il pulsante \"Salva pagine collegate\".",
+ "fa": "در صورت روشن بودن، ذخیره یک مقاله به‌صورت آفلاین پیوندهای مستقیم آن را نیز به‌طور خودکار ذخیره می‌کند (حداکثر ۲۵ صفحه / ۲ مگابایت در هر اجرا). برای ذخیره صفحات پیوندی فقط با دکمه «ذخیره صفحات پیوندی» آن را خاموش کنید.",
+ "pl": "Gdy włączone, zapisanie artykułu offline automatycznie zapisuje też jego bezpośrednie odnośniki (limit 25 stron / 2 MB na uruchomienie). Wyłącz, aby zapisywać powiązane strony tylko przyciskiem „Zapisz powiązane strony”.",
+ "uk": "Коли увімкнено, збереження статті офлайн також автоматично зберігає її прямі посилання (не більше 25 сторінок / 2 МБ за один запуск). Вимкніть, щоб зберігати пов'язані сторінки лише кнопкою «Зберегти пов'язані сторінки».",
+ "nl": "Indien ingeschakeld, worden bij het offline opslaan van een artikel ook de directe links automatisch opgeslagen (max. 25 pagina's / 2 MB per run). Schakel uit om gekoppelde pagina's alleen op te slaan met de knop \"Gekoppelde pagina's opslaan\".",
+ "sv": "När det är på sparas även artikelns direkta länkar automatiskt när du sparar den offline (begränsat till 25 sidor/2 MB per körning). Stäng av för att bara spara länkade sidor med knappen \"Spara länkade sidor\".",
+ "cs": "Když je zapnuto, uložení článku offline automaticky uloží i jeho přímé odkazy (max. 25 stránek / 2 MB na běh). Vypněte, chcete-li propojené stránky ukládat pouze tlačítkem „Uložit propojené stránky“.",
+ "el": "Όταν είναι ενεργό, η αποθήκευση ενός άρθρου εκτός σύνδεσης αποθηκεύει αυτόματα και τους άμεσους συνδέσμους του (έως 25 σελίδες / 2 MB ανά εκτέλεση). Απενεργοποιήστε το για αποθήκευση συνδεδεμένων σελίδων μόνο με το κουμπί «Αποθήκευση συνδεδεμένων σελίδων»."
+ },
+ "default": true,
+ "_comment": "the ON/OFF text substitution used to target the on-screen instruction paragraphs on Library/Home directly (screens.library.body.children.0.value / screens.search.body.children.4.value). Both paragraphs moved into the ⋮ menu's Preferences info (app.prefsInfo) as part of the declutter — the substitution now targets THAT single caption (app.prefsInfo.1.value) instead, so the toggle still keeps its wording honest wherever the text now lives.",
+ "whenOn": {
+ "app.prefsInfo.1.value": {
+ "en": "Offline Wikipedia. Search and tap a result to read it right away — nothing is saved until you tap \"Save offline\" (in the reader) or \"+ Save\" (on a result); images are optional per save. Saving also saves its linked pages automatically, bounded to 25 pages / 2 MB per run — turn \"Auto-save linked pages\" off above to only save linked pages with the \"Save linked pages\" button instead. Your offline library holds up to 200 articles or 20 MB, whichever comes first, and nothing is ever deleted automatically. Saving offline (⋮ menu) tracks pages found while saving links — pending, saved or failed — and can resume an interrupted run. Your library is your own — export it as one file to back it up or move it to another device, or import a file to merge one in.",
+ "ko": "오프라인 위키백과. 검색 결과를 탭하면 바로 읽을 수 있습니다 — 리더에서 \"오프라인 저장\"을, 또는 검색 결과에서 \"+ 저장\"을 탭하기 전까지는 아무것도 저장되지 않습니다. 저장할 때 이미지 포함 여부를 선택할 수 있습니다. 저장하면 연결된 문서도 자동으로 저장됩니다 (실행당 25개 문서 / 2MB 제한) — 위의 \"연결된 문서 자동 저장\"을 끄면 \"연결된 문서 저장\" 버튼으로만 저장합니다. 오프라인 라이브러리는 문서 200개 또는 20MB 중 먼저 도달하는 기준까지 저장되며, 자동으로 삭제되는 문서는 없습니다. 오프라인 저장(⋮ 메뉴)은 링크를 저장하는 동안 찾은 문서의 상태(대기 중/저장됨/실패)를 추적하며 중단된 실행을 다시 시작할 수 있습니다. 라이브러리는 당신의 것입니다 — 파일 하나로 내보내 백업하거나 다른 기기로 옮기고, 파일을 가져와 병합할 수 있습니다."
+ }
+ },
+ "whenOff": {
+ "app.prefsInfo.1.value": {
+ "en": "Offline Wikipedia. Search and tap a result to read it right away — nothing is saved until you tap \"Save offline\" (in the reader) or \"+ Save\" (on a result); images are optional per save. Auto-saving linked pages is off — use \"Save linked pages\" on a saved article instead, without ever re-downloading a page already saved from another article. Your offline library holds up to 200 articles or 20 MB, whichever comes first, and nothing is ever deleted automatically. Saving offline (⋮ menu) tracks pages found while saving links — pending, saved or failed — and can resume an interrupted run. Your library is your own — export it as one file to back it up or move it to another device, or import a file to merge one in.",
+ "ko": "오프라인 위키백과. 검색 결과를 탭하면 바로 읽을 수 있습니다 — 리더에서 \"오프라인 저장\"을, 또는 검색 결과에서 \"+ 저장\"을 탭하기 전까지는 아무것도 저장되지 않습니다. 저장할 때 이미지 포함 여부를 선택할 수 있습니다. 연결된 문서 자동 저장이 꺼져 있습니다 — 저장된 문서에서 \"연결된 문서 저장\"을 사용하세요. 다른 문서에서 이미 저장된 문서는 다시 내려받지 않습니다. 오프라인 라이브러리는 문서 200개 또는 20MB 중 먼저 도달하는 기준까지 저장되며, 자동으로 삭제되는 문서는 없습니다. 오프라인 저장(⋮ 메뉴)은 링크를 저장하는 동안 찾은 문서의 상태(대기 중/저장됨/실패)를 추적하며 중단된 실행을 다시 시작할 수 있습니다. 라이브러리는 당신의 것입니다 — 파일 하나로 내보내 백업하거나 다른 기기로 옮기고, 파일을 가져와 병합할 수 있습니다."
+ }
+ }
+ }
+ ],
+ "prefsInfo": [
+ {
+ "type": "row",
+ "children": [
+ {
+ "type": "stat",
+ "table": "articles",
+ "agg": "count",
+ "label": {
+ "en": "Saved articles",
+ "ko": "저장된 문서",
+ "zh": "已保存的文章",
+ "hi": "सहेजे गए लेख",
+ "es": "Artículos guardados",
+ "fr": "Articles enregistrés",
+ "ar": "المقالات المحفوظة",
+ "pt": "Artigos salvos",
+ "ru": "Сохранённые статьи",
+ "de": "Gespeicherte Artikel",
+ "ja": "保存済みの記事",
+ "tr": "Kaydedilen makaleler",
+ "vi": "Bài viết đã lưu",
+ "it": "Articoli salvati",
+ "fa": "مقاله‌های ذخیره‌شده",
+ "pl": "Zapisane artykuły",
+ "uk": "Збережені статті",
+ "nl": "Opgeslagen artikelen",
+ "sv": "Sparade artiklar",
+ "cs": "Uložené články",
+ "el": "Αποθηκευμένα άρθρα"
+ },
+ "color": "blue"
+ },
+ {
+ "type": "stat",
+ "raw": true,
+ "table": "searchStatus",
+ "scopeRowId": "s1",
+ "valueColumn": "librarySizeLabel",
+ "label": {
+ "en": "saved size (text + images)",
+ "ko": "저장 용량 (텍스트 + 이미지)",
+ "zh": "保存大小（文本+图片）",
+ "hi": "सहेजा गया आकार (टेक्स्ट + चित्र)",
+ "es": "tamaño guardado (texto + imágenes)",
+ "fr": "taille enregistrée (texte + images)",
+ "ar": "الحجم المحفوظ (نص + صور)",
+ "pt": "tamanho salvo (texto + imagens)",
+ "ru": "сохранённый размер (текст + изображения)",
+ "de": "gespeicherte Größe (Text + Bilder)",
+ "ja": "保存サイズ（テキスト+画像）",
+ "tr": "kaydedilen boyut (metin + görseller)",
+ "vi": "dung lượng đã lưu (văn bản + hình ảnh)",
+ "it": "dimensione salvata (testo + immagini)",
+ "fa": "حجم ذخیره‌شده (متن + تصاویر)",
+ "pl": "zapisany rozmiar (tekst + obrazy)",
+ "uk": "збережений розмір (текст + зображення)",
+ "nl": "opgeslagen grootte (tekst + afbeeldingen)",
+ "sv": "sparad storlek (text + bilder)",
+ "cs": "uložená velikost (text + obrázky)",
+ "el": "αποθηκευμένο μέγεθος (κείμενο + εικόνες)"
+ },
+ "color": "amber"
+ }
+ ]
+ },
+ {
+ "type": "text",
+ "style": "caption",
+ "value": {
+ "en": "Offline Wikipedia. Search and tap a result to read it right away — nothing is saved until you tap \"Save offline\" (in the reader) or \"+ Save\" (on a result); images are optional per save. Saving also saves its linked pages automatically, bounded to 25 pages / 2 MB per run — turn \"Auto-save linked pages\" off above to only save linked pages with the \"Save linked pages\" button instead. Your offline library holds up to 200 articles or 20 MB, whichever comes first, and nothing is ever deleted automatically. Saving offline (⋮ menu) tracks pages found while saving links — pending, saved or failed — and can resume an interrupted run. Your library is your own — export it as one file to back it up or move it to another device, or import a file to merge one in.",
+ "ko": "오프라인 위키백과. 검색 결과를 탭하면 바로 읽을 수 있습니다 — 리더에서 \"오프라인 저장\"을, 또는 검색 결과에서 \"+ 저장\"을 탭하기 전까지는 아무것도 저장되지 않습니다. 저장할 때 이미지 포함 여부를 선택할 수 있습니다. 저장하면 연결된 문서도 자동으로 저장됩니다 (실행당 25개 문서 / 2MB 제한) — 위의 \"연결된 문서 자동 저장\"을 끄면 \"연결된 문서 저장\" 버튼으로만 저장합니다. 오프라인 라이브러리는 문서 200개 또는 20MB 중 먼저 도달하는 기준까지 저장되며, 자동으로 삭제되는 문서는 없습니다. 오프라인 저장(⋮ 메뉴)은 링크를 저장하는 동안 찾은 문서의 상태(대기 중/저장됨/실패)를 추적하며 중단된 실행을 다시 시작할 수 있습니다. 라이브러리는 당신의 것입니다 — 파일 하나로 내보내 백업하거나 다른 기기로 옮기고, 파일을 가져와 병합할 수 있습니다.",
+ "zh": "离线维基百科。搜索并点击结果即可立即阅读——在点击阅读器中的\"离线保存\"或结果上的\"+保存\"之前不会保存任何内容；每次保存可选择是否包含图片。保存时也会自动保存其链接页面，每次运行上限25页/2MB——如需仅用\"保存链接页面\"按钮保存链接页面，请在上方关闭\"自动保存链接页面\"。离线库最多保存200篇文章或20MB（以先达到者为准），且不会自动删除任何内容。离线保存（⋮菜单）会跟踪保存链接时发现的页面状态——待处理、已保存或失败——并可恢复中断的运行。您的资料库完全属于您——可导出为单个文件进行备份或转移到其他设备，或导入文件进行合并。",
+ "hi": "ऑफ़लाइन विकिपीडिया। खोजें और परिणाम पर टैप करके तुरंत पढ़ें — जब तक आप (रीडर में) \"ऑफ़लाइन सहेजें\" या (परिणाम पर) \"+ सहेजें\" टैप नहीं करते तब तक कुछ भी सहेजा नहीं जाता; प्रत्येक सेव के लिए चित्र वैकल्पिक हैं। सहेजने पर इसके लिंक किए गए पेज भी अपने आप सहेजे जाते हैं, प्रति रन 25 पेज / 2 MB तक सीमित — केवल \"लिंक किए गए पेज सहेजें\" बटन से सहेजने के लिए ऊपर \"लिंक किए गए पेज स्वतः सहेजें\" बंद करें। आपकी ऑफ़लाइन लाइब्रेरी अधिकतम 200 लेख या 20 MB रखती है, जो भी पहले हो, और कुछ भी अपने आप हटाया नहीं जाता। ऑफ़लाइन सहेजना (⋮ मेनू) लिंक सहेजते समय मिले पेजों को ट्रैक करता है — लंबित, सहेजा गया या विफल — और बाधित रन को फिर से शुरू कर सकता है। आपकी लाइब्रेरी आपकी अपनी है — इसे बैकअप के लिए या किसी अन्य डिवाइस पर ले जाने के लिए एक फ़ाइल के रूप में निर्यात करें, या मर्ज करने के लिए फ़ाइल आयात करें।",
+ "es": "Wikipedia sin conexión. Busca y toca un resultado para leerlo de inmediato: no se guarda nada hasta que toques \"Guardar sin conexión\" (en el lector) o \"+ Guardar\" (en un resultado); las imágenes son opcionales por cada guardado. Guardar también guarda automáticamente sus páginas enlazadas, limitado a 25 páginas / 2 MB por ejecución; desactiva \"Guardar automáticamente páginas enlazadas\" arriba para guardarlas solo con el botón \"Guardar páginas enlazadas\". Tu biblioteca sin conexión guarda hasta 200 artículos o 20 MB, lo que ocurra primero, y nunca se elimina nada automáticamente. Guardar sin conexión (menú ⋮) rastrea las páginas encontradas al guardar enlaces (pendiente, guardada o fallida) y puede reanudar una ejecución interrumpida. Tu biblioteca es tuya: expórtala como un archivo para respaldarla o moverla a otro dispositivo, o importa un archivo para fusionarla.",
+ "fr": "Wikipédia hors ligne. Recherchez et appuyez sur un résultat pour le lire immédiatement — rien n'est enregistré tant que vous n'appuyez pas sur « Enregistrer hors ligne » (dans le lecteur) ou « + Enregistrer » (sur un résultat); les images sont facultatives à chaque enregistrement. L'enregistrement enregistre aussi automatiquement ses pages liées, limité à 25 pages / 2 Mo par exécution — désactivez « Enregistrer automatiquement les pages liées » ci-dessus pour ne les enregistrer qu'avec le bouton « Enregistrer les pages liées ». Votre bibliothèque hors ligne conserve jusqu'à 200 articles ou 20 Mo, selon la limite atteinte en premier, et rien n'est jamais supprimé automatiquement. L'enregistrement hors ligne (menu ⋮) suit les pages trouvées lors de l'enregistrement des liens — en attente, enregistrées ou échouées — et peut reprendre une exécution interrompue. Votre bibliothèque vous appartient — exportez-la en un seul fichier pour la sauvegarder ou la transférer sur un autre appareil, ou importez un fichier pour la fusionner.",
+ "ar": "ويكيبيديا دون اتصال. ابحث واضغط على نتيجة لقراءتها فورًا — لن يُحفظ شيء حتى تضغط \"حفظ دون اتصال\" (في القارئ) أو \"+ حفظ\" (على نتيجة)؛ الصور اختيارية لكل عملية حفظ. يحفظ الحفظ أيضًا صفحاتها المرتبطة تلقائيًا، بحد أقصى 25 صفحة / 2 ميغابايت لكل تشغيل — أوقف \"حفظ الصفحات المرتبطة تلقائيًا\" أعلاه لحفظ الصفحات المرتبطة فقط بزر \"حفظ الصفحات المرتبطة\". تحتفظ مكتبتك دون اتصال بما يصل إلى 200 مقالة أو 20 ميغابايت، أيهما أولاً، ولا يُحذف شيء تلقائيًا أبدًا. يتتبع الحفظ دون اتصال (قائمة ⋮) الصفحات التي تم العثور عليها أثناء حفظ الروابط — قيد الانتظار أو محفوظة أو فاشلة — ويمكنه استئناف تشغيل متوقف. مكتبتك ملك لك — صدّرها كملف واحد لنسخها احتياطيًا أو نقلها إلى جهاز آخر، أو استورد ملفًا لدمجه.",
+ "pt": "Wikipédia offline. Pesquise e toque em um resultado para lê-lo imediatamente — nada é salvo até você tocar em \"Salvar offline\" (no leitor) ou \"+ Salvar\" (em um resultado); as imagens são opcionais em cada salvamento. Salvar também salva automaticamente suas páginas vinculadas, limitado a 25 páginas / 2 MB por execução — desative \"Salvar automaticamente páginas vinculadas\" acima para salvar páginas vinculadas apenas com o botão \"Salvar páginas vinculadas\". Sua biblioteca offline armazena até 200 artigos ou 20 MB, o que ocorrer primeiro, e nada é excluído automaticamente. Salvar offline (menu ⋮) rastreia páginas encontradas ao salvar links — pendente, salva ou falhou — e pode retomar uma execução interrompida. Sua biblioteca é sua — exporte-a como um único arquivo para backup ou para movê-la para outro dispositivo, ou importe um arquivo para mesclar.",
+ "ru": "Офлайн-Википедия. Ищите и нажимайте результат, чтобы сразу его прочитать — ничего не сохраняется, пока вы не нажмёте «Сохранить офлайн» (в режиме чтения) или «+ Сохранить» (на результате); изображения выбираются отдельно при каждом сохранении. Сохранение также автоматически сохраняет связанные страницы, не более 25 страниц / 2 МБ за запуск — отключите «Автосохранение связанных страниц» выше, чтобы сохранять их только кнопкой «Сохранить связанные страницы». Ваша офлайн-библиотека вмещает до 200 статей или 20 МБ, смотря что наступит раньше, и ничего никогда не удаляется автоматически. Офлайн-сохранение (меню ⋮) отслеживает страницы, найденные при сохранении ссылок — ожидающие, сохранённые или неудачные — и может возобновить прерванный запуск. Библиотека принадлежит вам — экспортируйте её в один файл для резервной копии или переноса на другое устройство, или импортируйте файл для объединения.",
+ "de": "Offline-Wikipedia. Suchen und ein Ergebnis antippen, um es sofort zu lesen — es wird nichts gespeichert, bis Sie „Offline speichern“ (im Reader) oder „+ Speichern“ (bei einem Ergebnis) antippen; Bilder sind pro Speicherung optional. Beim Speichern werden auch automatisch die verknüpften Seiten gespeichert, begrenzt auf 25 Seiten / 2 MB pro Durchlauf — deaktivieren Sie oben „Verknüpfte Seiten automatisch speichern“, um verknüpfte Seiten nur über die Schaltfläche „Verknüpfte Seiten speichern“ zu sichern. Ihre Offline-Bibliothek fasst bis zu 200 Artikel oder 20 MB, je nachdem, was zuerst erreicht wird, und nichts wird je automatisch gelöscht. Offline speichern (⋮-Menü) verfolgt beim Speichern von Links gefundene Seiten — ausstehend, gespeichert oder fehlgeschlagen — und kann einen unterbrochenen Durchlauf fortsetzen. Ihre Bibliothek gehört Ihnen — exportieren Sie sie als eine Datei zur Sicherung oder zum Verschieben auf ein anderes Gerät, oder importieren Sie eine Datei, um sie zusammenzuführen.",
+ "ja": "オフライン版ウィキペディア。検索して結果をタップするとすぐに読めます — リーダーで「オフライン保存」、または検索結果で「+ 保存」をタップするまで何も保存されません。画像を含めるかは保存ごとに選べます。保存すると、リンク先ページも自動的に保存されます（実行あたり25ページ/2MBまで）— 「リンク先ページを保存」ボタンでのみ保存したい場合は、上の「リンク先ページを自動保存」をオフにしてください。オフラインライブラリは記事200件または20MBのいずれか早い方まで保存でき、自動的に削除されることはありません。オフライン保存（⋮メニュー）はリンク保存中に見つかったページの状態（保留中/保存済み/失敗）を追跡し、中断した実行を再開できます。ライブラリはあなたのものです — 1つのファイルとしてエクスポートしてバックアップしたり別の端末に移したり、ファイルをインポートして統合できます。",
+ "tr": "Çevrimdışı Wikipedia. Bir sonuca dokunarak hemen okuyun — okuyucuda \"Çevrimdışı kaydet\" veya bir sonuçta \"+ Kaydet\"e dokunmadan hiçbir şey kaydedilmez; görseller her kayıtta isteğe bağlıdır. Kaydetmek, bağlantılı sayfalarını da otomatik olarak kaydeder, çalıştırma başına 25 sayfa / 2 MB ile sınırlı — yalnızca \"Bağlantılı sayfaları kaydet\" düğmesiyle kaydetmek için yukarıdaki \"Bağlantılı sayfaları otomatik kaydet\"i kapatın. Çevrimdışı kitaplığınız en fazla 200 makale veya 20 MB tutar, hangisi önce dolarsa, ve hiçbir şey otomatik olarak silinmez. Çevrimdışı kaydetme (⋮ menüsü) bağlantıları kaydederken bulunan sayfaları izler — beklemede, kaydedildi veya başarısız — ve yarıda kalan bir çalıştırmayı devam ettirebilir. Kitaplığınız size aittir — yedeklemek veya başka bir cihaza taşımak için tek dosya olarak dışa aktarın veya birleştirmek için bir dosya içe aktarın.",
+ "vi": "Wikipedia ngoại tuyến. Tìm kiếm và nhấn vào một kết quả để đọc ngay — không có gì được lưu cho đến khi bạn nhấn \"Lưu ngoại tuyến\" (trong trình đọc) hoặc \"+ Lưu\" (trên một kết quả); hình ảnh là tùy chọn cho mỗi lần lưu. Lưu cũng tự động lưu các trang liên kết của nó, giới hạn 25 trang / 2 MB mỗi lần chạy — tắt \"Tự động lưu các trang liên kết\" ở trên để chỉ lưu các trang liên kết bằng nút \"Lưu trang liên kết\". Thư viện ngoại tuyến của bạn chứa tối đa 200 bài viết hoặc 20 MB, tùy điều kiện nào đến trước, và không có gì bị xóa tự động. Lưu ngoại tuyến (menu ⋮) theo dõi các trang được tìm thấy khi lưu liên kết — đang chờ, đã lưu hoặc thất bại — và có thể tiếp tục một lần chạy bị gián đoạn. Thư viện là của riêng bạn — xuất nó thành một tệp để sao lưu hoặc chuyển sang thiết bị khác, hoặc nhập một tệp để hợp nhất.",
+ "it": "Wikipedia offline. Cerca e tocca un risultato per leggerlo subito — non viene salvato nulla finché non tocchi \"Salva offline\" (nel lettore) o \"+ Salva\" (su un risultato); le immagini sono facoltative per ogni salvataggio. Il salvataggio salva anche automaticamente le pagine collegate, limitato a 25 pagine / 2 MB per esecuzione — disattiva sopra \"Salva automaticamente le pagine collegate\" per salvarle solo con il pulsante \"Salva pagine collegate\". La tua libreria offline contiene fino a 200 articoli o 20 MB, a seconda di quale limite viene raggiunto prima, e nulla viene mai eliminato automaticamente. Il salvataggio offline (menu ⋮) tiene traccia delle pagine trovate durante il salvataggio dei link — in attesa, salvate o non riuscite — e può riprendere un'esecuzione interrotta. La tua libreria è tua — esportala come un unico file per eseguirne il backup o spostarla su un altro dispositivo, oppure importa un file per unirlo.",
+ "fa": "ویکی‌پدیای آفلاین. جستجو کنید و روی یک نتیجه ضربه بزنید تا بلافاصله آن را بخوانید — تا زمانی که روی «ذخیره آفلاین» (در خواننده) یا «+ ذخیره» (روی یک نتیجه) ضربه نزنید چیزی ذخیره نمی‌شود؛ تصاویر برای هر ذخیره اختیاری هستند. ذخیره‌سازی همچنین صفحات پیوندی آن را به‌طور خودکار ذخیره می‌کند، حداکثر ۲۵ صفحه / ۲ مگابایت در هر اجرا — «ذخیره خودکار صفحات پیوندی» را در بالا خاموش کنید تا فقط با دکمه «ذخیره صفحات پیوندی» ذخیره شوند. کتابخانه آفلاین شما حداکثر ۲۰۰ مقاله یا ۲۰ مگابایت را نگه می‌دارد، هر کدام زودتر برسد، و هیچ‌چیز هرگز به‌طور خودکار حذف نمی‌شود. ذخیره آفلاین (منوی ⋮) صفحات یافت‌شده هنگام ذخیره پیوندها را ردیابی می‌کند — در انتظار، ذخیره‌شده یا ناموفق — و می‌تواند یک اجرای متوقف‌شده را از سر بگیرد. کتابخانه شما متعلق به شماست — آن را به‌صورت یک فایل برای پشتیبان‌گیری یا انتقال به دستگاه دیگر صادر کنید، یا یک فایل را برای ادغام وارد کنید.",
+ "pl": "Offline Wikipedia. Wyszukaj i dotknij wyniku, aby przeczytać go od razu — nic nie jest zapisywane, dopóki nie dotkniesz \"Zapisz offline\" (w czytniku) lub \"+ Zapisz\" (przy wyniku); obrazy są opcjonalne przy każdym zapisie. Zapisywanie automatycznie zapisuje też powiązane strony, ograniczone do 25 stron / 2 MB na uruchomienie — wyłącz powyżej \"Automatycznie zapisuj powiązane strony\", aby zapisywać je tylko przyciskiem \"Zapisz powiązane strony\". Twoja biblioteka offline mieści do 200 artykułów lub 20 MB, w zależności od tego, co nastąpi pierwsze, i nic nigdy nie jest usuwane automatycznie. Zapisywanie offline (menu ⋮) śledzi strony znalezione podczas zapisywania linków — oczekujące, zapisane lub nieudane — i może wznowić przerwane uruchomienie. Twoja biblioteka jest twoja — eksportuj ją jako jeden plik, aby ją zabezpieczyć lub przenieść na inne urządzenie, albo zaimportuj plik, aby ją scalić.",
+ "uk": "Офлайн-Вікіпедія. Шукайте й натискайте результат, щоб одразу прочитати — нічого не зберігається, доки ви не натиснете «Зберегти офлайн» (у режимі читання) або «+ Зберегти» (на результаті); зображення вибираються окремо при кожному збереженні. Збереження також автоматично зберігає пов'язані сторінки, не більше 25 сторінок / 2 МБ за запуск — вимкніть «Автозбереження пов'язаних сторінок» вище, щоб зберігати їх лише кнопкою «Зберегти пов'язані сторінки». Ваша офлайн-бібліотека вміщує до 200 статей або 20 МБ, залежно від того, що настане раніше, і нічого ніколи не видаляється автоматично. Офлайн-збереження (меню ⋮) відстежує сторінки, знайдені під час збереження посилань — в очікуванні, збережено або невдало — і може відновити перерваний запуск. Бібліотека належить вам — експортуйте її в один файл для резервної копії чи перенесення на інший пристрій, або імпортуйте файл для об'єднання.",
+ "nl": "Offline Wikipedia. Zoek en tik op een resultaat om het direct te lezen — er wordt niets opgeslagen totdat je op \"Offline opslaan\" (in de lezer) of \"+ Opslaan\" (bij een resultaat) tikt; afbeeldingen zijn optioneel per opslag. Opslaan slaat ook automatisch de gekoppelde pagina's op, beperkt tot 25 pagina's / 2 MB per run — schakel hierboven \"Gekoppelde pagina's automatisch opslaan\" uit om ze alleen met de knop \"Gekoppelde pagina's opslaan\" op te slaan. Je offline bibliotheek biedt ruimte voor maximaal 200 artikelen of 20 MB, wat het eerst wordt bereikt, en er wordt nooit automatisch iets verwijderd. Offline opslaan (⋮-menu) volgt pagina's die worden gevonden tijdens het opslaan van links — in behandeling, opgeslagen of mislukt — en kan een onderbroken run hervatten. Je bibliotheek is van jou — exporteer hem als één bestand om te back-uppen of naar een ander apparaat te verplaatsen, of importeer een bestand om samen te voegen.",
+ "sv": "Wikipedia offline. Sök och tryck på ett resultat för att läsa det direkt — inget sparas förrän du trycker på \"Spara offline\" (i läsaren) eller \"+ Spara\" (på ett resultat); bilder är valfria per sparning. Att spara sparar även automatiskt dess länkade sidor, begränsat till 25 sidor/2 MB per körning — stäng av \"Spara länkade sidor automatiskt\" ovan för att bara spara länkade sidor med knappen \"Spara länkade sidor\". Ditt offline-bibliotek rymmer upp till 200 artiklar eller 20 MB, beroende på vad som nås först, och inget raderas någonsin automatiskt. Offlinesparande (⋮-menyn) spårar sidor som hittas medan länkar sparas — väntande, sparade eller misslyckade — och kan återuppta en avbruten körning. Ditt bibliotek är ditt eget — exportera det som en fil för säkerhetskopiering eller flytt till en annan enhet, eller importera en fil för att slå samman.",
+ "cs": "Offline Wikipedie. Vyhledejte a klepnutím na výsledek si jej ihned přečtěte — nic se neuloží, dokud neklepnete na \"Uložit offline\" (ve čtečce) nebo \"+ Uložit\" (u výsledku); obrázky jsou u každého uložení volitelné. Uložení automaticky uloží i přímo propojené stránky, max. 25 stránek / 2 MB na běh — vypněte výše \"Automaticky ukládat propojené stránky\", chcete-li propojené stránky ukládat pouze tlačítkem \"Uložit propojené stránky\". Vaše offline knihovna pojme až 200 článků nebo 20 MB, podle toho, co nastane dřív, a nic se nikdy automaticky nemaže. Offline ukládání (nabídka ⋮) sleduje stránky nalezené při ukládání odkazů — čekající, uložené nebo neúspěšné — a může obnovit přerušený běh. Knihovna je vaše — exportujte ji jako jeden soubor pro zálohu nebo přesun na jiné zařízení, nebo importujte soubor pro sloučení.",
+ "el": "Εκτός σύνδεσης Wikipedia. Αναζητήστε και πατήστε ένα αποτέλεσμα για να το διαβάσετε αμέσως — τίποτα δεν αποθηκεύεται μέχρι να πατήσετε «Αποθήκευση εκτός σύνδεσης» (στον αναγνώστη) ή «+ Αποθήκευση» (σε αποτέλεσμα)· οι εικόνες είναι προαιρετικές σε κάθε αποθήκευση. Η αποθήκευση αποθηκεύει επίσης αυτόματα τις συνδεδεμένες σελίδες της, έως 25 σελίδες / 2 MB ανά εκτέλεση — απενεργοποιήστε παραπάνω την «Αυτόματη αποθήκευση συνδεδεμένων σελίδων» για αποθήκευση μόνο με το κουμπί «Αποθήκευση συνδεδεμένων σελίδων». Η βιβλιοθήκη σας εκτός σύνδεσης χωράει έως 200 άρθρα ή 20 MB, όποιο έρθει πρώτο, και τίποτα δεν διαγράφεται ποτέ αυτόματα. Η αποθήκευση εκτός σύνδεσης (μενού ⋮) παρακολουθεί τις σελίδες που βρέθηκαν κατά την αποθήκευση συνδέσμων — σε εκκρεμότητα, αποθηκευμένες ή αποτυχημένες — και μπορεί να συνεχίσει μια διακοπείσα εκτέλεση. Η βιβλιοθήκη σας είναι δική σας — εξαγάγετέ την ως ένα αρχείο για αντίγραφο ασφαλείας ή μεταφορά σε άλλη συσκευή, ή εισαγάγετε ένα αρχείο για συγχώνευση."
+ }
+ }
+ ],
+ "prefsLink": {
+ "label": {
+ "en": "Open Saving offline",
+ "ko": "오프라인 저장 열기"
+ },
+ "screen": "queue"
+ },
+ "settings": [
+ {
+ "label": {
+ "en": "Saving offline",
+ "ko": "오프라인 저장",
+ "zh": "离线保存",
+ "hi": "ऑफ़लाइन सहेजना",
+ "es": "Guardado sin conexión",
+ "fr": "Enregistrement hors ligne",
+ "ar": "الحفظ دون اتصال",
+ "pt": "Salvamento offline",
+ "ru": "Офлайн-сохранение",
+ "de": "Offline speichern",
+ "ja": "オフライン保存",
+ "tr": "Çevrimdışı kaydetme",
+ "vi": "Lưu ngoại tuyến",
+ "it": "Salvataggio offline",
+ "fa": "ذخیره آفلاین",
+ "pl": "Zapisywanie offline",
+ "uk": "Офлайн-збереження",
+ "nl": "Offline opslaan",
+ "sv": "Sparande offline",
+ "cs": "Ukládání offline",
+ "el": "Αποθήκευση εκτός σύνδεσης"
+ },
+ "hint": {
+ "en": "How much to download when you save an article, and what is still downloading.",
+ "ko": "문서를 저장할 때 내려받을 범위와 현재 내려받는 중인 항목입니다.",
+ "zh": "保存文章时下载的内容范围，以及正在下载的内容。",
+ "hi": "लेख सहेजते समय कितना डाउनलोड होगा, और अभी क्या डाउनलोड हो रहा है।",
+ "es": "Cuánto descargar al guardar un artículo, y qué se está descargando aún.",
+ "fr": "Ce qui est téléchargé lors de l'enregistrement d'un article, et ce qui se télécharge encore.",
+ "ar": "كمية التنزيل عند حفظ مقالة، وما الذي لا يزال قيد التنزيل.",
+ "pt": "Quanto baixar ao salvar um artigo, e o que ainda está sendo baixado.",
+ "ru": "Сколько скачивать при сохранении статьи и что ещё скачивается.",
+ "de": "Wie viel beim Speichern eines Artikels heruntergeladen wird und was noch heruntergeladen wird.",
+ "ja": "記事を保存する際にどれだけダウンロードするか、また現在ダウンロード中の項目です。",
+ "tr": "Bir makaleyi kaydederken ne kadar indirileceği ve hâlâ neyin indirildiği.",
+ "vi": "Tải bao nhiêu khi lưu một bài viết, và những gì vẫn đang tải.",
+ "it": "Quanto scaricare quando salvi un articolo e cosa si sta ancora scaricando.",
+ "fa": "هنگام ذخیره یک مقاله چقدر دانلود می‌شود و چه چیزی هنوز در حال دانلود است.",
+ "pl": "Ile pobrać przy zapisywaniu artykułu i co jest jeszcze pobierane.",
+ "uk": "Скільки завантажувати при збереженні статті і що ще завантажується.",
+ "nl": "Hoeveel er wordt gedownload bij het opslaan van een artikel, en wat er nog wordt gedownload.",
+ "sv": "Hur mycket som laddas ned när du sparar en artikel, och vad som fortfarande laddas ned.",
+ "cs": "Kolik se stáhne při uložení článku a co se ještě stahuje.",
+ "el": "Πόσα κατεβαίνουν όταν αποθηκεύετε ένα άρθρο και τι κατεβαίνει ακόμη."
+ },
+ "icon": "cloud_download",
+ "action": "goto",
+ "args": {
+ "screen": "queue"
+ }
+ }
+ ],
+ "intro": {
+ "purpose": {
+ "en": "Read Wikipedia offline: search and save articles to a local library, then read them without a connection.",
+ "ko": "위키백과를 오프라인으로 읽으세요: 문서를 검색해 로컬 라이브러리에 저장한 뒤 연결 없이 읽을 수 있습니다.",
+ "zh": "离线阅读维基百科：搜索并将文章保存到本地资料库，然后无需联网即可阅读。",
+ "hi": "विकिपीडिया को ऑफ़लाइन पढ़ें: लेख खोजें और उन्हें स्थानीय लाइब्रेरी में सहेजें, फिर बिना कनेक्शन के पढ़ें।",
+ "es": "Lee Wikipedia sin conexión: busca y guarda artículos en una biblioteca local, luego léelos sin conexión.",
+ "fr": "Lisez Wikipédia hors ligne: recherchez et enregistrez des articles dans une bibliothèque locale, puis lisez-les sans connexion.",
+ "ar": "اقرأ ويكيبيديا دون اتصال: ابحث واحفظ المقالات في مكتبة محلية، ثم اقرأها بدون اتصال.",
+ "pt": "Leia a Wikipédia offline: pesquise e salve artigos em uma biblioteca local, depois leia-os sem conexão.",
+ "ru": "Читайте Википедию офлайн: ищите и сохраняйте статьи в локальную библиотеку, затем читайте их без подключения.",
+ "de": "Wikipedia offline lesen: Artikel suchen und in einer lokalen Bibliothek speichern, dann ohne Verbindung lesen.",
+ "ja": "ウィキペディアをオフラインで読む: 記事を検索してローカルライブラリに保存し、接続なしで読めます。",
+ "tr": "Wikipedia'yı çevrimdışı okuyun: makaleleri arayıp yerel kitaplığa kaydedin, sonra bağlantı olmadan okuyun.",
+ "vi": "Đọc Wikipedia ngoại tuyến: tìm kiếm và lưu bài viết vào thư viện cục bộ, sau đó đọc mà không cần kết nối.",
+ "it": "Leggi Wikipedia offline: cerca e salva articoli in una libreria locale, poi leggili senza connessione.",
+ "fa": "ویکی‌پدیا را به‌صورت آفلاین بخوانید: مقالات را جستجو و در کتابخانه محلی ذخیره کنید، سپس بدون اتصال بخوانید.",
+ "pl": "Czytaj Wikipedię offline: wyszukuj i zapisuj artykuły w lokalnej bibliotece, a potem czytaj je bez połączenia.",
+ "uk": "Читайте Вікіпедію офлайн: шукайте й зберігайте статті в локальній бібліотеці, потім читайте їх без з'єднання.",
+ "nl": "Lees Wikipedia offline: zoek en sla artikelen op in een lokale bibliotheek, lees ze daarna zonder verbinding.",
+ "sv": "Läs Wikipedia offline: sök och spara artiklar i ett lokalt bibliotek, läs dem sedan utan anslutning.",
+ "cs": "Čtěte Wikipedii offline: vyhledávejte a ukládejte články do místní knihovny a pak je čtěte bez připojení.",
+ "el": "Διαβάστε τη Wikipedia εκτός σύνδεσης: αναζητήστε και αποθηκεύστε άρθρα σε τοπική βιβλιοθήκη, μετά διαβάστε τα χωρίς σύνδεση."
+ }
+ },
+ "_navComment": "NAVIGATION = ONE SIDE PANEL, no bottom nav anywhere — 'drawer' pinned explicitly rather than left to the width/tab-count default. Topics (seed_groups, W12) now wired as the 4th nav destination + an inline sub-list (Drawer.dc.html's \"TOPICS\" section, app_screen.dart's NavSidePanel subItems wiring) listing each topic by name with its live article count, tapping straight into that topic's detail screen.",
+ "nav": "drawer",
+ "guide": "about",
+ "navSubList": {
+ "table": "seed_groups",
+ "labelColumn": "name",
+ "countColumn": "articleCount",
+ "sectionLabel": { "en": "TOPICS", "ko": "토픽" },
+ "openFn": "wikiOpenTopic"
+ },
+ "navExtras": [
+ {
+ "label": {
+ "en": "Preferences",
+ "ko": "환경설정",
+ "zh": "偏好设置",
+ "hi": "प्राथमिकताएं",
+ "es": "Preferencias",
+ "fr": "Préférences",
+ "ar": "التفضيلات",
+ "pt": "Preferências",
+ "ru": "Настройки",
+ "de": "Einstellungen",
+ "ja": "環境設定",
+ "tr": "Tercihler",
+ "vi": "Tùy chọn",
+ "it": "Preferenze",
+ "fa": "ترجیحات",
+ "pl": "Preferencje",
+ "uk": "Налаштування",
+ "nl": "Voorkeuren",
+ "sv": "Inställningar",
+ "cs": "Předvolby",
+ "el": "Προτιμήσεις"
+ },
+ "icon": "tune",
+ "action": { "fn": "openAppletPreferences" }
+ },
+ {
+ "label": {
+ "en": "About & help",
+ "ko": "정보 및 도움말",
+ "zh": "关于与帮助",
+ "hi": "परिचय और सहायता",
+ "es": "Acerca de y ayuda",
+ "fr": "À propos et aide",
+ "ar": "حول والمساعدة",
+ "pt": "Sobre e ajuda",
+ "ru": "О программе и справка",
+ "de": "Über & Hilfe",
+ "ja": "このアプリについて＆ヘルプ",
+ "tr": "Hakkında ve yardım",
+ "vi": "Giới thiệu & trợ giúp",
+ "it": "Informazioni e aiuto",
+ "fa": "درباره و راهنما",
+ "pl": "O aplikacji i pomoc",
+ "uk": "Про застосунок і довідка",
+ "nl": "Over en hulp",
+ "sv": "Om och hjälp",
+ "cs": "O aplikaci a nápověda",
+ "el": "Σχετικά & βοήθεια"
+ },
+ "icon": "help_outline",
+ "action": { "fn": "openAppletGuide" }
+ },
+ {
+ "label": {
+ "en": "Donate to Wikipedia",
+ "ko": "위키백과에 기부",
+ "zh": "捐赠给维基百科",
+ "hi": "विकिपीडिया को दान करें",
+ "es": "Donar a Wikipedia",
+ "fr": "Faire un don à Wikipédia",
+ "ar": "التبرع لويكيبيديا",
+ "pt": "Doar para a Wikipédia",
+ "ru": "Пожертвовать Википедии",
+ "de": "An Wikipedia spenden",
+ "ja": "ウィキペディアに寄付",
+ "tr": "Wikipedia'ya bağış yap",
+ "vi": "Quyên góp cho Wikipedia",
+ "it": "Dona a Wikipedia",
+ "fa": "اهدا به ویکی‌پدیا",
+ "pl": "Wesprzyj Wikipedię",
+ "uk": "Пожертвувати Вікіпедії",
+ "nl": "Doneren aan Wikipedia",
+ "sv": "Donera till Wikipedia",
+ "cs": "Přispět Wikipedii",
+ "el": "Δωρεά στη Wikipedia"
+ },
+ "icon": "volunteer_activism",
+ "action": { "fn": "openLink", "args": { "url": "https://donate.wikimedia.org/" } }
+ }
+ ]
+ },
+ "nav": [
+ {
+ "id": "home",
+ "label": {
+ "en": "Home",
+ "ko": "홈",
+ "zh": "首页",
+ "hi": "होम",
+ "es": "Inicio",
+ "fr": "Accueil",
+ "ar": "الرئيسية",
+ "pt": "Início",
+ "ru": "Главная",
+ "de": "Start",
+ "ja": "ホーム",
+ "tr": "Ana Sayfa",
+ "vi": "Trang chủ",
+ "it": "Home",
+ "fa": "خانه",
+ "pl": "Strona główna",
+ "uk": "Головна",
+ "nl": "Start",
+ "sv": "Hem",
+ "cs": "Domů",
+ "el": "Αρχική"
+ },
+ "icon": "public",
+ "screen": "search"
+ },
+ {
+ "id": "library",
+ "label": {
+ "en": "Library",
+ "ko": "라이브러리",
+ "zh": "资料库",
+ "hi": "लाइब्रेरी",
+ "es": "Biblioteca",
+ "fr": "Bibliothèque",
+ "ar": "المكتبة",
+ "pt": "Biblioteca",
+ "ru": "Библиотека",
+ "de": "Bibliothek",
+ "ja": "ライブラリ",
+ "tr": "Kitaplık",
+ "vi": "Thư viện",
+ "it": "Libreria",
+ "fa": "کتابخانه",
+ "pl": "Biblioteka",
+ "uk": "Бібліотека",
+ "nl": "Bibliotheek",
+ "sv": "Bibliotek",
+ "cs": "Knihovna",
+ "el": "Βιβλιοθήκη"
+ },
+ "icon": "menu_book",
+ "screen": "library",
+ "navInfo": { "table": "searchStatus", "column": "libraryCount", "id": "s1" }
+ },
+ {
+ "id": "queue",
+ "label": {
+ "en": "Saving offline",
+ "ko": "오프라인 저장",
+ "zh": "离线保存",
+ "hi": "ऑफ़लाइन सहेजना",
+ "es": "Guardado sin conexión",
+ "fr": "Enregistrement hors ligne",
+ "ar": "الحفظ دون اتصال",
+ "pt": "Salvamento offline",
+ "ru": "Офлайн-сохранение",
+ "de": "Offline speichern",
+ "ja": "オフライン保存",
+ "tr": "Çevrimdışı kaydetme",
+ "vi": "Lưu ngoại tuyến",
+ "it": "Salvataggio offline",
+ "fa": "ذخیره آفلاین",
+ "pl": "Zapisywanie offline",
+ "uk": "Офлайн-збереження",
+ "nl": "Offline opslaan",
+ "sv": "Sparande offline",
+ "cs": "Ukládání offline",
+ "el": "Αποθήκευση εκτός σύνδεσης"
+ },
+ "icon": "cloud_download",
+ "screen": "queue",
+ "navInfo": {
+ "table": "queueStatus",
+ "column": "navLabel",
+ "id": "q1",
+ "dotColumn": "navActive"
+ }
+ },
+ {
+ "id": "topics",
+ "label": {
+ "en": "Topics",
+ "ko": "토픽",
+ "zh": "主题",
+ "hi": "विषय",
+ "es": "Temas",
+ "fr": "Sujets",
+ "ar": "المواضيع",
+ "pt": "Tópicos",
+ "ru": "Темы",
+ "de": "Themen",
+ "ja": "トピック",
+ "tr": "Konular",
+ "vi": "Chủ đề",
+ "it": "Argomenti",
+ "fa": "موضوعات",
+ "pl": "Tematy",
+ "uk": "Теми",
+ "nl": "Onderwerpen",
+ "sv": "Ämnen",
+ "cs": "Témata",
+ "el": "Θέματα"
+ },
+ "icon": "workspaces",
+ "screen": "topics",
+ "navInfo": { "table": "searchStatus", "column": "groupCount", "id": "s1" }
+ }
+ ],
+ "screens": {
+ "library": {
+ "title": {
+ "en": "Library",
+ "ko": "라이브러리",
+ "zh": "资料库",
+ "hi": "लाइब्रेरी",
+ "es": "Biblioteca",
+ "fr": "Bibliothèque",
+ "ar": "المكتبة",
+ "pt": "Biblioteca",
+ "ru": "Библиотека",
+ "de": "Bibliothek",
+ "ja": "ライブラリ",
+ "tr": "Kitaplık",
+ "vi": "Thư viện",
+ "it": "Libreria",
+ "fa": "کتابخانه",
+ "pl": "Biblioteka",
+ "uk": "Бібліотека",
+ "nl": "Bibliotheek",
+ "sv": "Bibliotek",
+ "cs": "Knihovna",
+ "el": "Βιβλιοθήκη"
+ },
+ "body": {
+ "type": "column",
+ "children": [
+ {
+ "_comment": "the old top instruction paragraph moved to the ⋮ menu's Preferences info (app.prefsInfo) — this screen opens straight into the numbers. The 3 former stat TILES are now one compact single-line row via the engine's `dense: true` stat variant (chart_render.dart _StatView), joined by plain · separators — e.g. \"26 articles · 2 seeds · 1.2M B of 20 MB\".",
+ "type": "row",
+ "wrap": true,
+ "children": [
+ {
+ "type": "stat",
+ "dense": true,
+ "table": "articles",
+ "agg": "count",
+ "label": {
+ "en": "articles",
+ "ko": "개 문서",
+ "zh": "篇文章",
+ "hi": "लेख",
+ "es": "artículos",
+ "fr": "articles",
+ "ar": "مقالات",
+ "pt": "artigos",
+ "ru": "статей",
+ "de": "Artikel",
+ "ja": "件の記事",
+ "tr": "makale",
+ "vi": "bài viết",
+ "it": "articoli",
+ "fa": "مقاله",
+ "pl": "artykułów",
+ "uk": "статей",
+ "nl": "artikelen",
+ "sv": "artiklar",
+ "cs": "článků",
+ "el": "άρθρα"
+ },
+ "color": "blue"
+ },
+ {
+ "type": "text",
+ "style": "caption",
+ "value": {
+ "en": "·",
+ "ko": "·",
+ "zh": "·",
+ "hi": "·",
+ "es": "·",
+ "fr": "·",
+ "ar": "·",
+ "pt": "·",
+ "ru": "·",
+ "de": "·",
+ "ja": "・",
+ "tr": "·",
+ "vi": "·",
+ "it": "·",
+ "fa": "·",
+ "pl": "·",
+ "uk": "·",
+ "nl": "·",
+ "sv": "·",
+ "cs": "·",
+ "el": "·"
+ }
+ },
+ {
+ "type": "stat",
+ "dense": true,
+ "table": "articles",
+ "agg": "count",
+ "filter": {
+ "column": "seed",
+ "value": true
+ },
+ "label": {
+ "en": "seeds",
+ "ko": "개 직접 저장",
+ "zh": "个种子",
+ "hi": "बीज",
+ "es": "semillas",
+ "fr": "graines",
+ "ar": "بذور",
+ "pt": "sementes",
+ "ru": "исходных",
+ "de": "Startseiten",
+ "ja": "件のシード",
+ "tr": "tohum",
+ "vi": "hạt giống",
+ "it": "semi",
+ "fa": "بذر",
+ "pl": "ziaren",
+ "uk": "джерел",
+ "nl": "zaden",
+ "sv": "frön",
+ "cs": "výchozích",
+ "el": "σπόροι"
+ },
+ "color": "green"
+ },
+ {
+ "type": "text",
+ "style": "caption",
+ "value": {
+ "en": "·",
+ "ko": "·",
+ "zh": "·",
+ "hi": "·",
+ "es": "·",
+ "fr": "·",
+ "ar": "·",
+ "pt": "·",
+ "ru": "·",
+ "de": "·",
+ "ja": "・",
+ "tr": "·",
+ "vi": "·",
+ "it": "·",
+ "fa": "·",
+ "pl": "·",
+ "uk": "·",
+ "nl": "·",
+ "sv": "·",
+ "cs": "·",
+ "el": "·"
+ }
+ },
+ {
+ "type": "stat",
+ "raw": true,
+ "dense": true,
+ "table": "searchStatus",
+ "scopeRowId": "s1",
+ "valueColumn": "librarySizeLabel",
+ "label": {
+ "en": "of 20 MB",
+ "ko": "/ 20MB 한도",
+ "zh": "/ 共20MB",
+ "hi": "/ 20 MB में से",
+ "es": "de 20 MB",
+ "fr": "sur 20 Mo",
+ "ar": "من 20 ميغابايت",
+ "pt": "de 20 MB",
+ "ru": "из 20 МБ",
+ "de": "von 20 MB",
+ "ja": "/ 20MB中",
+ "tr": "/ 20 MB",
+ "vi": "/ 20 MB",
+ "it": "di 20 MB",
+ "fa": "از ۲۰ مگابایت",
+ "pl": "z 20 MB",
+ "uk": "з 20 МБ",
+ "nl": "van 20 MB",
+ "sv": "av 20 MB",
+ "cs": "z 20 MB",
+ "el": "από 20 MB"
+ },
+ "color": "amber"
+ }
+ ]
+ },
+ {
+ "_comment": "one line + one action, dismissible per session (staleBannerVisible already folds in the >=5 threshold AND the dismiss — see columns.json's doc). Never auto-triggered; this tap is the only path to the batch network pass.",
+ "type": "row",
+ "wrap": true,
+ "showIf": {
+ "table": "searchStatus",
+ "id": "s1",
+ "column": "staleBannerVisible",
+ "equals": true
+ },
+ "children": [
+ {
+ "type": "stat",
+ "dense": true,
+ "table": "searchStatus",
+ "filter": { "column": "id", "value": "s1" },
+ "agg": "sum",
+ "valueColumn": "staleCount",
+ "label": {
+ "en": "pages haven't been checked in over 30 days",
+ "ko": "개 문서가 30일 넘게 확인되지 않았습니다",
+ "zh": "个页面已超过30天未检查更新",
+ "hi": "पेज 30 दिन से अधिक समय से जांचे नहीं गए हैं",
+ "es": "páginas no se han comprobado en más de 30 días",
+ "fr": "pages n'ont pas été vérifiées depuis plus de 30 jours",
+ "ar": "صفحات لم يتم التحقق منها منذ أكثر من 30 يومًا",
+ "pt": "páginas não foram verificadas há mais de 30 dias",
+ "ru": "страниц не проверялись более 30 дней",
+ "de": "Seiten wurden seit über 30 Tagen nicht geprüft",
+ "ja": "件のページが30日以上確認されていません",
+ "tr": "sayfa 30 günden fazladır kontrol edilmedi",
+ "vi": "trang chưa được kiểm tra trong hơn 30 ngày",
+ "it": "pagine non sono state controllate da oltre 30 giorni",
+ "fa": "صفحه بیش از ۳۰ روز است بررسی نشده‌اند",
+ "pl": "stron nie sprawdzono od ponad 30 dni",
+ "uk": "сторінок не перевірялися понад 30 днів",
+ "nl": "pagina's zijn al meer dan 30 dagen niet gecontroleerd",
+ "sv": "sidor har inte kontrollerats på över 30 dagar",
+ "cs": "stránek nebylo zkontrolováno déle než 30 dní",
+ "el": "σελίδες δεν έχουν ελεγχθεί εδώ και πάνω από 30 ημέρες"
+ },
+ "color": "amber"
+ },
+ {
+ "type": "button",
+ "dense": true,
+ "variant": "tonal",
+ "icon": "sync",
+ "label": {
+ "en": "Check for updates",
+ "ko": "업데이트 확인",
+ "zh": "检查更新",
+ "hi": "अपडेट के लिए जांचें",
+ "es": "Buscar actualizaciones",
+ "fr": "Vérifier les mises à jour",
+ "ar": "التحقق من التحديثات",
+ "pt": "Verificar atualizações",
+ "ru": "Проверить обновления",
+ "de": "Nach Updates suchen",
+ "ja": "更新を確認",
+ "tr": "Güncellemeleri kontrol et",
+ "vi": "Kiểm tra cập nhật",
+ "it": "Controlla aggiornamenti",
+ "fa": "بررسی به‌روزرسانی‌ها",
+ "pl": "Sprawdź aktualizacje",
+ "uk": "Перевірити оновлення",
+ "nl": "Controleren op updates",
+ "sv": "Sök efter uppdateringar",
+ "cs": "Zkontrolovat aktualizace",
+ "el": "Έλεγχος για ενημερώσεις"
+ },
+ "action": { "fn": "wikiCheckStaleBatch" }
+ },
+ {
+ "type": "button",
+ "dense": true,
+ "variant": "text",
+ "icon": "close",
+ "label": {
+ "en": "Dismiss",
+ "ko": "닫기",
+ "zh": "关闭",
+ "hi": "खारिज करें",
+ "es": "Descartar",
+ "fr": "Ignorer",
+ "ar": "تجاهل",
+ "pt": "Dispensar",
+ "ru": "Скрыть",
+ "de": "Verwerfen",
+ "ja": "閉じる",
+ "tr": "Kapat",
+ "vi": "Bỏ qua",
+ "it": "Ignora",
+ "fa": "نادیده گرفتن",
+ "pl": "Odrzuć",
+ "uk": "Відхилити",
+ "nl": "Negeren",
+ "sv": "Ignorera",
+ "cs": "Zavřít",
+ "el": "Παράβλεψη"
+ },
+ "action": { "fn": "wikiDismissStaleBanner" }
+ }
+ ]
+ },
+ {
+ "type": "text",
+ "style": "caption",
+ "showIf": {
+ "table": "searchStatus",
+ "id": "s1",
+ "column": "state",
+ "equals": "libraryFull"
+ },
+ "value": {
+ "en": "Offline library is full (200 articles or 20 MB, whichever comes first) — remove some saved articles before saving more. Nothing was deleted automatically.",
+ "ko": "오프라인 라이브러리가 가득 찼습니다 (문서 200개 또는 20MB 중 먼저 도달하는 기준) — 더 저장하려면 기존 문서를 먼저 삭제하세요. 자동으로 삭제된 문서는 없습니다.",
+ "zh": "离线资料库已满（200篇文章或20MB，以先达到者为准）——请先删除部分已保存文章再继续保存。系统不会自动删除任何内容。",
+ "hi": "ऑफ़लाइन लाइब्रेरी भर गई है (200 लेख या 20 MB, जो भी पहले हो) — अधिक सहेजने से पहले कुछ सहेजे गए लेख हटाएं। कुछ भी अपने आप हटाया नहीं गया।",
+ "es": "La biblioteca sin conexión está llena (200 artículos o 20 MB, lo que ocurra primero) — elimina algunos artículos guardados antes de guardar más. No se eliminó nada automáticamente.",
+ "fr": "La bibliothèque hors ligne est pleine (200 articles ou 20 Mo, selon la limite atteinte en premier) — supprimez des articles enregistrés avant d'en enregistrer d'autres. Rien n'a été supprimé automatiquement.",
+ "ar": "مكتبتك دون اتصال ممتلئة (200 مقالة أو 20 ميغابايت، أيهما أولاً) — احذف بعض المقالات المحفوظة قبل حفظ المزيد. لم يُحذف شيء تلقائيًا.",
+ "pt": "A biblioteca offline está cheia (200 artigos ou 20 MB, o que ocorrer primeiro) — remova alguns artigos salvos antes de salvar mais. Nada foi excluído automaticamente.",
+ "ru": "Офлайн-библиотека заполнена (200 статей или 20 МБ, смотря что раньше) — удалите некоторые сохранённые статьи, прежде чем сохранять новые. Ничего не было удалено автоматически.",
+ "de": "Die Offline-Bibliothek ist voll (200 Artikel oder 20 MB, je nachdem, was zuerst erreicht wird) — löschen Sie einige gespeicherte Artikel, bevor Sie weitere speichern. Es wurde nichts automatisch gelöscht.",
+ "ja": "オフラインライブラリが満杯です（記事200件または20MBのいずれか早い方）— さらに保存する前に保存済みの記事を削除してください。自動的に削除されたものはありません。",
+ "tr": "Çevrimdışı kitaplık dolu (200 makale veya 20 MB, hangisi önce dolarsa) — daha fazla kaydetmeden önce bazı kayıtlı makaleleri kaldırın. Hiçbir şey otomatik olarak silinmedi.",
+ "vi": "Thư viện ngoại tuyến đã đầy (200 bài viết hoặc 20 MB, tùy điều kiện nào đến trước) — xóa bớt một số bài viết đã lưu trước khi lưu thêm. Không có gì bị xóa tự động.",
+ "it": "La libreria offline è piena (200 articoli o 20 MB, a seconda di cosa avviene prima) — rimuovi alcuni articoli salvati prima di salvarne altri. Nulla è stato eliminato automaticamente.",
+ "fa": "کتابخانه آفلاین پر است (۲۰۰ مقاله یا ۲۰ مگابایت، هر کدام زودتر برسد) — قبل از ذخیره بیشتر، برخی مقالات ذخیره‌شده را حذف کنید. هیچ‌چیز به‌طور خودکار حذف نشد.",
+ "pl": "Biblioteka offline jest pełna (200 artykułów lub 20 MB, zależnie co pierwsze) — usuń część zapisanych artykułów przed zapisaniem kolejnych. Nic nie zostało usunięte automatycznie.",
+ "uk": "Офлайн-бібліотека заповнена (200 статей або 20 МБ, залежно що раніше) — видаліть деякі збережені статті, перш ніж зберігати нові. Нічого не було видалено автоматично.",
+ "nl": "De offline bibliotheek is vol (200 artikelen of 20 MB, wat het eerst wordt bereikt) — verwijder enkele opgeslagen artikelen voordat je er meer opslaat. Er is niets automatisch verwijderd.",
+ "sv": "Offline-biblioteket är fullt (200 artiklar eller 20 MB, beroende på vad som nås först) — ta bort några sparade artiklar innan du sparar fler. Inget togs bort automatiskt.",
+ "cs": "Offline knihovna je plná (200 článků nebo 20 MB, podle toho, co nastane dřív) — před dalším ukládáním odstraňte některé uložené články. Nic nebylo automaticky smazáno.",
+ "el": "Η βιβλιοθήκη εκτός σύνδεσης είναι γεμάτη (200 άρθρα ή 20 MB, όποιο έρθει πρώτο) — αφαιρέστε κάποια αποθηκευμένα άρθρα πριν αποθηκεύσετε άλλα. Τίποτα δεν διαγράφηκε αυτόματα."
+ }
+ },
+ {
+ "_comment": "same tiny live-crawl chip as the Home screen (see its comment there) — visible from Home + Library, hidden when idle, taps through to Saving offline. wikipick-also visible while genuinely blocked waiting for Wi-Fi (state=='waitingWifi', distinct from 'running') so the pause is never silent (progress-visibility-first) — the trailing stat below only renders during 'running'; the sibling text row right after it covers 'waitingWifi'.",
+ "type": "row",
+ "wrap": true,
+ "showIf": { "table": "queueStatus", "id": "q1", "column": "state", "in": ["running", "waitingWifi"] },
+ "children": [
+ {
+ "type": "button",
+ "dense": true,
+ "variant": "tonal",
+ "icon": "cloud_download",
+ "label": {
+ "en": "Saving",
+ "ko": "저장 중",
+ "zh": "正在保存",
+ "hi": "सहेजा जा रहा है",
+ "es": "Guardando",
+ "fr": "Enregistrement",
+ "ar": "جارٍ الحفظ",
+ "pt": "Salvando",
+ "ru": "Сохранение",
+ "de": "Wird gespeichert",
+ "ja": "保存中",
+ "tr": "Kaydediliyor",
+ "vi": "Đang lưu",
+ "it": "Salvataggio",
+ "fa": "در حال ذخیره",
+ "pl": "Zapisywanie",
+ "uk": "Збереження",
+ "nl": "Opslaan",
+ "sv": "Sparar",
+ "cs": "Ukládání",
+ "el": "Αποθήκευση"
+ },
+ "action": { "fn": "goto", "args": { "screen": "queue" } }
+ },
+ {
+ "type": "stat",
+ "dense": true,
+ "table": "queueStatus",
+ "filter": { "column": "id", "value": "q1" },
+ "agg": "sum",
+ "valueColumn": "fetchedCount",
+ "label": {
+ "en": "of 25",
+ "ko": "/ 25",
+ "zh": "/ 25",
+ "hi": "/ 25 में से",
+ "es": "de 25",
+ "fr": "sur 25",
+ "ar": "من 25",
+ "pt": "de 25",
+ "ru": "из 25",
+ "de": "von 25",
+ "ja": "/ 25",
+ "tr": "/ 25",
+ "vi": "/ 25",
+ "it": "di 25",
+ "fa": "از ۲۵",
+ "pl": "z 25",
+ "uk": "з 25",
+ "nl": "van 25",
+ "sv": "av 25",
+ "cs": "z 25",
+ "el": "από 25"
+ },
+ "color": "blue",
+ "showIf": { "table": "queueStatus", "id": "q1", "column": "state", "equals": "running" }
+ },
+ {
+ "type": "text",
+ "style": "caption",
+ "showIf": { "table": "queueStatus", "id": "q1", "column": "state", "equals": "waitingWifi" },
+ "value": {
+ "en": "Waiting for Wi-Fi",
+ "ko": "Wi-Fi 대기 중",
+ "zh": "等待 Wi-Fi",
+ "hi": "Wi-Fi की प्रतीक्षा में",
+ "es": "Esperando Wi-Fi",
+ "fr": "En attente du Wi-Fi",
+ "ar": "في انتظار الواي فاي",
+ "pt": "Aguardando Wi-Fi",
+ "ru": "Ожидание Wi-Fi",
+ "de": "Warten auf WLAN",
+ "ja": "Wi-Fi待機中",
+ "tr": "Wi-Fi bekleniyor",
+ "vi": "Đang chờ Wi-Fi",
+ "it": "In attesa del Wi-Fi",
+ "fa": "در انتظار وای‌فای",
+ "pl": "Oczekiwanie na Wi-Fi",
+ "uk": "Очікування Wi-Fi",
+ "nl": "Wachten op wifi",
+ "sv": "Väntar på Wi-Fi",
+ "cs": "Čekání na Wi-Fi",
+ "el": "Αναμονή για Wi-Fi"
+ }
+ }
+ ]
+ },
+ {
+ "type": "text",
+ "style": "caption",
+ "showIf": {
+ "table": "searchStatus",
+ "id": "s1",
+ "column": "keptBucket",
+ "equals": "1"
+ },
+ "value": {
+ "en": "Kept — also in 1 other collection.",
+ "ko": "보관됨 — 다른 컬렉션 1개에도 있습니다.",
+ "zh": "已保留 — 也存在于另外1个收藏中。",
+ "hi": "रखा गया — 1 अन्य संग्रह में भी है।",
+ "es": "Conservado — también en 1 otra colección.",
+ "fr": "Conservé — aussi dans 1 autre collection.",
+ "ar": "محتفظ به — موجود أيضًا في مجموعة أخرى واحدة.",
+ "pt": "Mantido — também em 1 outra coleção.",
+ "ru": "Сохранено — также в 1 другой коллекции.",
+ "de": "Behalten — auch in 1 weiterer Sammlung.",
+ "ja": "保持 — 他の1件のコレクションにもあります。",
+ "tr": "Tutuldu — başka 1 koleksiyonda da var.",
+ "vi": "Đã giữ — cũng có trong 1 bộ sưu tập khác.",
+ "it": "Mantenuto — anche in un'altra raccolta.",
+ "fa": "نگه‌داشته‌شده — همچنین در ۱ مجموعه دیگر.",
+ "pl": "Zachowano — także w 1 innej kolekcji.",
+ "uk": "Збережено — також в 1 іншій колекції.",
+ "nl": "Bewaard — ook in 1 andere verzameling.",
+ "sv": "Behållen — även i 1 annan samling.",
+ "cs": "Ponecháno — také v 1 jiné kolekci.",
+ "el": "Διατηρήθηκε — επίσης σε 1 άλλη συλλογή."
+ }
+ },
+ {
+ "type": "text",
+ "style": "caption",
+ "showIf": {
+ "table": "searchStatus",
+ "id": "s1",
+ "column": "keptBucket",
+ "equals": "2"
+ },
+ "value": {
+ "en": "Kept — also in 2 other collections.",
+ "ko": "보관됨 — 다른 컬렉션 2개에도 있습니다.",
+ "zh": "已保留 — 也存在于另外2个收藏中。",
+ "hi": "रखा गया — 2 अन्य संग्रहों में भी है।",
+ "es": "Conservado — también en 2 otras colecciones.",
+ "fr": "Conservé — aussi dans 2 autres collections.",
+ "ar": "محتفظ به — موجود أيضًا في مجموعتين أخريين.",
+ "pt": "Mantido — também em 2 outras coleções.",
+ "ru": "Сохранено — также в 2 других коллекциях.",
+ "de": "Behalten — auch in 2 weiteren Sammlungen.",
+ "ja": "保持 — 他の2件のコレクションにもあります。",
+ "tr": "Tutuldu — başka 2 koleksiyonda da var.",
+ "vi": "Đã giữ — cũng có trong 2 bộ sưu tập khác.",
+ "it": "Mantenuto — anche in altre 2 raccolte.",
+ "fa": "نگه‌داشته‌شده — همچنین در ۲ مجموعه دیگر.",
+ "pl": "Zachowano — także w 2 innych kolekcjach.",
+ "uk": "Збережено — також в 2 інших колекціях.",
+ "nl": "Bewaard — ook in 2 andere verzamelingen.",
+ "sv": "Behållen — även i 2 andra samlingar.",
+ "cs": "Ponecháno — také ve 2 jiných kolekcích.",
+ "el": "Διατηρήθηκε — επίσης σε 2 άλλες συλλογές."
+ }
+ },
+ {
+ "type": "text",
+ "style": "caption",
+ "showIf": {
+ "table": "searchStatus",
+ "id": "s1",
+ "column": "keptBucket",
+ "equals": "3"
+ },
+ "value": {
+ "en": "Kept — also in 3 other collections.",
+ "ko": "보관됨 — 다른 컬렉션 3개에도 있습니다.",
+ "zh": "已保留 — 也存在于另外3个收藏中。",
+ "hi": "रखा गया — 3 अन्य संग्रहों में भी है।",
+ "es": "Conservado — también en 3 otras colecciones.",
+ "fr": "Conservé — aussi dans 3 autres collections.",
+ "ar": "محتفظ به — موجود أيضًا في ثلاث مجموعات أخرى.",
+ "pt": "Mantido — também em 3 outras coleções.",
+ "ru": "Сохранено — также в 3 других коллекциях.",
+ "de": "Behalten — auch in 3 weiteren Sammlungen.",
+ "ja": "保持 — 他の3件のコレクションにもあります。",
+ "tr": "Tutuldu — başka 3 koleksiyonda da var.",
+ "vi": "Đã giữ — cũng có trong 3 bộ sưu tập khác.",
+ "it": "Mantenuto — anche in altre 3 raccolte.",
+ "fa": "نگه‌داشته‌شده — همچنین در ۳ مجموعه دیگر.",
+ "pl": "Zachowano — także w 3 innych kolekcjach.",
+ "uk": "Збережено — також в 3 інших колекціях.",
+ "nl": "Bewaard — ook in 3 andere verzamelingen.",
+ "sv": "Behållen — även i 3 andra samlingar.",
+ "cs": "Ponecháno — také ve 3 jiných kolekcích.",
+ "el": "Διατηρήθηκε — επίσης σε 3 άλλες συλλογές."
+ }
+ },
+ {
+ "type": "text",
+ "style": "caption",
+ "showIf": {
+ "table": "searchStatus",
+ "id": "s1",
+ "column": "keptBucket",
+ "equals": "many"
+ },
+ "value": {
+ "en": "Kept — also in several other collections.",
+ "ko": "보관됨 — 여러 다른 컬렉션에도 있습니다.",
+ "zh": "已保留 — 也存在于其他多个收藏中。",
+ "hi": "रखा गया — कई अन्य संग्रहों में भी है।",
+ "es": "Conservado — también en varias otras colecciones.",
+ "fr": "Conservé — aussi dans plusieurs autres collections.",
+ "ar": "محتفظ به — موجود أيضًا في عدة مجموعات أخرى.",
+ "pt": "Mantido — também em várias outras coleções.",
+ "ru": "Сохранено — также в нескольких других коллекциях.",
+ "de": "Behalten — auch in mehreren weiteren Sammlungen.",
+ "ja": "保持 — 他の複数のコレクションにもあります。",
+ "tr": "Tutuldu — başka birkaç koleksiyonda da var.",
+ "vi": "Đã giữ — cũng có trong nhiều bộ sưu tập khác.",
+ "it": "Mantenuto — anche in diverse altre raccolte.",
+ "fa": "نگه‌داشته‌شده — همچنین در چند مجموعه دیگر.",
+ "pl": "Zachowano — także w kilku innych kolekcjach.",
+ "uk": "Збережено — також у кількох інших колекціях.",
+ "nl": "Bewaard — ook in meerdere andere verzamelingen.",
+ "sv": "Behållen — även i flera andra samlingar.",
+ "cs": "Ponecháno — také v několika jiných kolekcích.",
+ "el": "Διατηρήθηκε — επίσης σε πολλές άλλες συλλογές."
+ }
+ },
+ {
+ "type": "text",
+ "style": "caption",
+ "showIf": {
+ "table": "searchStatus",
+ "id": "s1",
+ "column": "keptBucket",
+ "equals": "seed1"
+ },
+ "value": {
+ "en": "Kept as article — its own collection was removed (still in 1 other collection).",
+ "ko": "문서로 보관됨 — 자체 컬렉션은 삭제되었습니다 (다른 컬렉션 1개에는 여전히 있습니다).",
+ "zh": "以文章形式保留 — 其自身收藏已被删除（仍在另外1个收藏中）。",
+ "hi": "लेख के रूप में रखा गया — इसका अपना संग्रह हटा दिया गया था (फिर भी 1 अन्य संग्रह में है)।",
+ "es": "Conservado como artículo — se eliminó su propia colección (aún en 1 otra colección).",
+ "fr": "Conservé en tant qu'article — sa propre collection a été supprimée (encore dans 1 autre collection).",
+ "ar": "محتفظ به كمقالة — تمت إزالة مجموعته الخاصة (لا يزال في مجموعة أخرى واحدة).",
+ "pt": "Mantido como artigo — sua própria coleção foi removida (ainda em 1 outra coleção).",
+ "ru": "Сохранено как статья — собственная коллекция удалена (всё ещё в 1 другой коллекции).",
+ "de": "Als Artikel behalten — eigene Sammlung wurde entfernt (noch in 1 weiterer Sammlung).",
+ "ja": "記事として保持 — 自身のコレクションは削除されました（他の1件のコレクションにはまだあります）。",
+ "tr": "Makale olarak tutuldu — kendi koleksiyonu kaldırıldı (hâlâ başka 1 koleksiyonda).",
+ "vi": "Đã giữ dưới dạng bài viết — bộ sưu tập riêng của nó đã bị xóa (vẫn còn trong 1 bộ sưu tập khác).",
+ "it": "Mantenuto come articolo — la sua raccolta è stata rimossa (ancora in un'altra raccolta).",
+ "fa": "به‌عنوان مقاله نگه‌داشته‌شده — مجموعه خودش حذف شد (هنوز در ۱ مجموعه دیگر است).",
+ "pl": "Zachowano jako artykuł — jego własna kolekcja została usunięta (nadal w 1 innej kolekcji).",
+ "uk": "Збережено як статтю — власну колекцію видалено (все ще в 1 іншій колекції).",
+ "nl": "Bewaard als artikel — de eigen verzameling is verwijderd (nog steeds in 1 andere verzameling).",
+ "sv": "Behållen som artikel — dess egen samling togs bort (fortfarande i 1 annan samling).",
+ "cs": "Ponecháno jako článek — jeho vlastní kolekce byla odstraněna (stále v 1 jiné kolekci).",
+ "el": "Διατηρήθηκε ως άρθρο — η δική του συλλογή αφαιρέθηκε (ακόμα σε 1 άλλη συλλογή)."
+ }
+ },
+ {
+ "type": "text",
+ "style": "caption",
+ "showIf": {
+ "table": "searchStatus",
+ "id": "s1",
+ "column": "keptBucket",
+ "equals": "seed2"
+ },
+ "value": {
+ "en": "Kept as article — its own collection was removed (still in 2 other collections).",
+ "ko": "문서로 보관됨 — 자체 컬렉션은 삭제되었습니다 (다른 컬렉션 2개에는 여전히 있습니다).",
+ "zh": "以文章形式保留 — 其自身收藏已被删除（仍在另外2个收藏中）。",
+ "hi": "लेख के रूप में रखा गया — इसका अपना संग्रह हटा दिया गया था (फिर भी 2 अन्य संग्रहों में है)।",
+ "es": "Conservado como artículo — se eliminó su propia colección (aún en 2 otras colecciones).",
+ "fr": "Conservé en tant qu'article — sa propre collection a été supprimée (encore dans 2 autres collections).",
+ "ar": "محتفظ به كمقالة — تمت إزالة مجموعته الخاصة (لا يزال في مجموعتين أخريين).",
+ "pt": "Mantido como artigo — sua própria coleção foi removida (ainda em 2 outras coleções).",
+ "ru": "Сохранено как статья — собственная коллекция удалена (всё ещё в 2 других коллекциях).",
+ "de": "Als Artikel behalten — eigene Sammlung wurde entfernt (noch in 2 weiteren Sammlungen).",
+ "ja": "記事として保持 — 自身のコレクションは削除されました（他の2件のコレクションにはまだあります）。",
+ "tr": "Makale olarak tutuldu — kendi koleksiyonu kaldırıldı (hâlâ başka 2 koleksiyonda).",
+ "vi": "Đã giữ dưới dạng bài viết — bộ sưu tập riêng của nó đã bị xóa (vẫn còn trong 2 bộ sưu tập khác).",
+ "it": "Mantenuto come articolo — la sua raccolta è stata rimossa (ancora in altre 2 raccolte).",
+ "fa": "به‌عنوان مقاله نگه‌داشته‌شده — مجموعه خودش حذف شد (هنوز در ۲ مجموعه دیگر است).",
+ "pl": "Zachowano jako artykuł — jego własna kolekcja została usunięta (nadal w 2 innych kolekcjach).",
+ "uk": "Збережено як статтю — власну колекцію видалено (все ще в 2 інших колекціях).",
+ "nl": "Bewaard als artikel — de eigen verzameling is verwijderd (nog steeds in 2 andere verzamelingen).",
+ "sv": "Behållen som artikel — dess egen samling togs bort (fortfarande i 2 andra samlingar).",
+ "cs": "Ponecháno jako článek — jeho vlastní kolekce byla odstraněna (stále ve 2 jiných kolekcích).",
+ "el": "Διατηρήθηκε ως άρθρο — η δική του συλλογή αφαιρέθηκε (ακόμα σε 2 άλλες συλλογές)."
+ }
+ },
+ {
+ "type": "text",
+ "style": "caption",
+ "showIf": {
+ "table": "searchStatus",
+ "id": "s1",
+ "column": "keptBucket",
+ "equals": "seed3"
+ },
+ "value": {
+ "en": "Kept as article — its own collection was removed (still in 3 other collections).",
+ "ko": "문서로 보관됨 — 자체 컬렉션은 삭제되었습니다 (다른 컬렉션 3개에는 여전히 있습니다).",
+ "zh": "以文章形式保留 — 其自身收藏已被删除（仍在另外3个收藏中）。",
+ "hi": "लेख के रूप में रखा गया — इसका अपना संग्रह हटा दिया गया था (फिर भी 3 अन्य संग्रहों में है)।",
+ "es": "Conservado como artículo — se eliminó su propia colección (aún en 3 otras colecciones).",
+ "fr": "Conservé en tant qu'article — sa propre collection a été supprimée (encore dans 3 autres collections).",
+ "ar": "محتفظ به كمقالة — تمت إزالة مجموعته الخاصة (لا يزال في ثلاث مجموعات أخرى).",
+ "pt": "Mantido como artigo — sua própria coleção foi removida (ainda em 3 outras coleções).",
+ "ru": "Сохранено как статья — собственная коллекция удалена (всё ещё в 3 других коллекциях).",
+ "de": "Als Artikel behalten — eigene Sammlung wurde entfernt (noch in 3 weiteren Sammlungen).",
+ "ja": "記事として保持 — 自身のコレクションは削除されました（他の3件のコレクションにはまだあります）。",
+ "tr": "Makale olarak tutuldu — kendi koleksiyonu kaldırıldı (hâlâ başka 3 koleksiyonda).",
+ "vi": "Đã giữ dưới dạng bài viết — bộ sưu tập riêng của nó đã bị xóa (vẫn còn trong 3 bộ sưu tập khác).",
+ "it": "Mantenuto come articolo — la sua raccolta è stata rimossa (ancora in altre 3 raccolte).",
+ "fa": "به‌عنوان مقاله نگه‌داشته‌شده — مجموعه خودش حذف شد (هنوز در ۳ مجموعه دیگر است).",
+ "pl": "Zachowano jako artykuł — jego własna kolekcja została usunięta (nadal w 3 innych kolekcjach).",
+ "uk": "Збережено як статтю — власну колекцію видалено (все ще в 3 інших колекціях).",
+ "nl": "Bewaard als artikel — de eigen verzameling is verwijderd (nog steeds in 3 andere verzamelingen).",
+ "sv": "Behållen som artikel — dess egen samling togs bort (fortfarande i 3 andra samlingar).",
+ "cs": "Ponecháno jako článek — jeho vlastní kolekce byla odstraněna (stále ve 3 jiných kolekcích).",
+ "el": "Διατηρήθηκε ως άρθρο — η δική του συλλογή αφαιρέθηκε (ακόμα σε 3 άλλες συλλογές)."
+ }
+ },
+ {
+ "type": "text",
+ "style": "caption",
+ "showIf": {
+ "table": "searchStatus",
+ "id": "s1",
+ "column": "keptBucket",
+ "equals": "seedmany"
+ },
+ "value": {
+ "en": "Kept as article — its own collection was removed (still in several other collections).",
+ "ko": "문서로 보관됨 — 자체 컬렉션은 삭제되었습니다 (여러 다른 컬렉션에는 여전히 있습니다).",
+ "zh": "以文章形式保留 — 其自身收藏已被删除（仍在其他多个收藏中）。",
+ "hi": "लेख के रूप में रखा गया — इसका अपना संग्रह हटा दिया गया था (फिर भी कई अन्य संग्रहों में है)।",
+ "es": "Conservado como artículo — se eliminó su propia colección (aún en varias otras colecciones).",
+ "fr": "Conservé en tant qu'article — sa propre collection a été supprimée (encore dans plusieurs autres collections).",
+ "ar": "محتفظ به كمقالة — تمت إزالة مجموعته الخاصة (لا يزال في عدة مجموعات أخرى).",
+ "pt": "Mantido como artigo — sua própria coleção foi removida (ainda em várias outras coleções).",
+ "ru": "Сохранено как статья — собственная коллекция удалена (всё ещё в нескольких других коллекциях).",
+ "de": "Als Artikel behalten — eigene Sammlung wurde entfernt (noch in mehreren weiteren Sammlungen).",
+ "ja": "記事として保持 — 自身のコレクションは削除されました（他の複数のコレクションにはまだあります）。",
+ "tr": "Makale olarak tutuldu — kendi koleksiyonu kaldırıldı (hâlâ başka birkaç koleksiyonda).",
+ "vi": "Đã giữ dưới dạng bài viết — bộ sưu tập riêng của nó đã bị xóa (vẫn còn trong nhiều bộ sưu tập khác).",
+ "it": "Mantenuto come articolo — la sua raccolta è stata rimossa (ancora in diverse altre raccolte).",
+ "fa": "به‌عنوان مقاله نگه‌داشته‌شده — مجموعه خودش حذف شد (هنوز در چند مجموعه دیگر است).",
+ "pl": "Zachowano jako artykuł — jego własna kolekcja została usunięta (nadal w kilku innych kolekcjach).",
+ "uk": "Збережено як статтю — власну колекцію видалено (все ще у кількох інших колекціях).",
+ "nl": "Bewaard als artikel — de eigen verzameling is verwijderd (nog steeds in meerdere andere verzamelingen).",
+ "sv": "Behållen som artikel — dess egen samling togs bort (fortfarande i flera andra samlingar).",
+ "cs": "Ponecháno jako článek — jeho vlastní kolekce byla odstraněna (stále v několika jiných kolekcích).",
+ "el": "Διατηρήθηκε ως άρθρο — η δική του συλλογή αφαιρέθηκε (ακόμα σε πολλές άλλες συλλογές)."
+ }
+ },
+ {
+ "type": "cards",
+ "table": "articles",
+ "search": true,
+ "searchColumns": [
+ "title"
+ ],
+ "title": "title",
+ "subtitle": "description",
+ "imageColumn": "thumbnailUrl",
+ "expandable": false,
+ "sortBy": "fetchedAt",
+ "sortDir": "desc",
+ "tableView": false,
+ "valueLabels": {
+ "depth": {
+ "0": {
+ "en": "",
+ "ko": ""
+ },
+ "1": "1 layer",
+ "2": "2 layers"
+ },
+ "seedLayersCached": {
+ "0": {
+ "en": "",
+ "ko": ""
+ },
+ "1": "1 layer saved",
+ "2": "2 layers saved"
+ }
+ },
+ "tags": [
+ {
+ "column": "wiki"
+ },
+ {
+ "column": "seed",
+ "colors": {
+ "true": "green",
+ "false": "gray"
+ }
+ },
+ {
+ "column": "depth",
+ "colors": {
+ "1": "blue",
+ "2": "purple"
+ }
+ },
+ {
+ "column": "seedLayersCached",
+ "colors": {
+ "1": "blue",
+ "2": "purple"
+ }
+ },
+ {
+ "column": "sizeLabel"
+ }
+ ],
+ "action": {
+ "fn": "wikiOpenSaved"
+ },
+ "cardActions": [
+ {
+ "label": { "en": "Add to topic…", "ko": "토픽에 추가…" },
+ "icon": "workspaces",
+ "action": { "fn": "wikiOpenTopicPicker" },
+ "column": "seed",
+ "equals": true
+ }
+ ]
+ },
+ {
+ "type": "row",
+ "children": [
+ {
+ "type": "button",
+ "variant": "outlined",
+ "icon": "upload",
+ "label": {
+ "en": "Export library",
+ "ko": "라이브러리 내보내기",
+ "zh": "导出资料库",
+ "hi": "लाइब्रेरी निर्यात करें",
+ "es": "Exportar biblioteca",
+ "fr": "Exporter la bibliothèque",
+ "ar": "تصدير المكتبة",
+ "pt": "Exportar biblioteca",
+ "ru": "Экспортировать библиотеку",
+ "de": "Bibliothek exportieren",
+ "ja": "ライブラリをエクスポート",
+ "tr": "Kitaplığı dışa aktar",
+ "vi": "Xuất thư viện",
+ "it": "Esporta libreria",
+ "fa": "خروجی گرفتن از کتابخانه",
+ "pl": "Eksportuj bibliotekę",
+ "uk": "Експортувати бібліотеку",
+ "nl": "Bibliotheek exporteren",
+ "sv": "Exportera bibliotek",
+ "cs": "Exportovat knihovnu",
+ "el": "Εξαγωγή βιβλιοθήκης"
+ },
+ "action": {
+ "fn": "wikiExportLibrary"
+ }
+ },
+ {
+ "type": "button",
+ "variant": "outlined",
+ "icon": "file_download",
+ "label": {
+ "en": "Import library",
+ "ko": "라이브러리 가져오기",
+ "zh": "导入资料库",
+ "hi": "लाइब्रेरी आयात करें",
+ "es": "Importar biblioteca",
+ "fr": "Importer la bibliothèque",
+ "ar": "استيراد المكتبة",
+ "pt": "Importar biblioteca",
+ "ru": "Импортировать библиотеку",
+ "de": "Bibliothek importieren",
+ "ja": "ライブラリをインポート",
+ "tr": "Kitaplığı içe aktar",
+ "vi": "Nhập thư viện",
+ "it": "Importa libreria",
+ "fa": "وارد کردن کتابخانه",
+ "pl": "Importuj bibliotekę",
+ "uk": "Імпортувати бібліотеку",
+ "nl": "Bibliotheek importeren",
+ "sv": "Importera bibliotek",
+ "cs": "Importovat knihovnu",
+ "el": "Εισαγωγή βιβλιοθήκης"
+ },
+ "action": {
+ "fn": "wikiImportLibrary"
+ }
+ }
+ ]
+ }
+ ]
+ }
+ },
+ "search": {
+ "title": {
+ "en": "Wikipick",
+ "ko": "위키픽",
+ "zh": "维基选",
+ "hi": "विकिपिक",
+ "es": "Wikipick",
+ "fr": "Wikipick",
+ "ar": "ويكيبيك",
+ "pt": "Wikipick",
+ "ru": "Википик",
+ "de": "Wikipick",
+ "ja": "ウィキピック",
+ "tr": "Wikipick",
+ "vi": "Wikipick",
+ "it": "Wikipick",
+ "fa": "ویکی‌پیک",
+ "pl": "Wikipick",
+ "uk": "Вікіпік",
+ "nl": "Wikipick",
+ "sv": "Wikipick",
+ "cs": "Wikipick",
+ "el": "Wikipick"
+ },
+ "body": {
+ "type": "column",
+ "children": [
+ {
+ "_comment": "the search+language row was a bare `row` with NO default horizontal inset (unlike `cards`/list rows below, which carry a built-in 16px screen padding) — it sat flush against both screen edges. Wrapped in a `padding` node leaving `left`/`right` UNSET so they inherit the engine's token default (`spaceLg`, 16 — the same inset the rows below use) rather than a hardcoded literal, with `top`/`bottom` pinned to 0 so no extra vertical gap is introduced.",
+ "type": "padding",
+ "top": 0,
+ "bottom": 0,
+ "child": {
+ "_comment": "the free-entry field used to stand permanently below this row (redundant next to the EN dropdown — real-user feedback: 'a bit unintuitive and bloated'). Folded into the dropdown itself instead: an \"Other…\" entry at the end of `options` (engine `noWrite:true` — its own action fires WITHOUT first writing its sentinel value into searchStatus.lang) reveals the free-entry field just below, which stays hidden the rest of the time. wikiSetLang closes the reveal again once a code is actually set, so the compact row is the resting state.",
+ "type": "row",
+ "wrap": false,
+ "children": [
+ {
+ "type": "textinput",
+ "expand": true,
+ "hint": {
+ "en": "Search Wikipedia…",
+ "ko": "위키백과 검색…",
+ "zh": "搜索维基百科…",
+ "hi": "विकिपीडिया खोजें…",
+ "es": "Buscar en Wikipedia…",
+ "fr": "Rechercher sur Wikipédia…",
+ "ar": "ابحث في ويكيبيديا…",
+ "pt": "Pesquisar na Wikipédia…",
+ "ru": "Поиск в Википедии…",
+ "de": "Wikipedia durchsuchen…",
+ "ja": "ウィキペディアを検索…",
+ "tr": "Wikipedia'da ara…",
+ "vi": "Tìm kiếm Wikipedia…",
+ "it": "Cerca su Wikipedia…",
+ "fa": "جستجو در ویکی‌پدیا…",
+ "pl": "Szukaj w Wikipedii…",
+ "uk": "Пошук у Вікіпедії…",
+ "nl": "Zoeken op Wikipedia…",
+ "sv": "Sök på Wikipedia…",
+ "cs": "Hledat na Wikipedii…",
+ "el": "Αναζήτηση στη Wikipedia…"
+ },
+ "debounceMs": 350,
+ "action": {
+ "fn": "wikiSearch",
+ "args": {
+ "query": "$value"
+ }
+ }
+ },
+ {
+ "type": "pick",
+ "dragSelect": true,
+ "table": "searchStatus",
+ "rowId": "s1",
+ "column": "lang",
+ "defaultValue": "en",
+ "label": {
+ "en": "Language",
+ "ko": "언어",
+ "zh": "语言",
+ "hi": "भाषा",
+ "es": "Idioma",
+ "fr": "Langue",
+ "ar": "اللغة",
+ "pt": "Idioma",
+ "ru": "Язык",
+ "de": "Sprache",
+ "ja": "言語",
+ "tr": "Dil",
+ "vi": "Ngôn ngữ",
+ "it": "Lingua",
+ "fa": "زبان",
+ "pl": "Język",
+ "uk": "Мова",
+ "nl": "Taal",
+ "sv": "Språk",
+ "cs": "Jazyk",
+ "el": "Γλώσσα"
+ },
+ "options": [
+ { "value": "en", "label": { "en": "EN", "ko": "EN" } },
+ { "value": "ko", "label": { "en": "KO", "ko": "KO" } },
+ { "value": "ja", "label": { "en": "JA", "ko": "JA" } },
+ { "value": "es", "label": { "en": "ES", "ko": "ES" } },
+ { "value": "fr", "label": { "en": "FR", "ko": "FR" } },
+ { "value": "de", "label": { "en": "DE", "ko": "DE" } },
+ { "value": "zh", "label": { "en": "ZH", "ko": "ZH" } },
+ { "value": "ru", "label": { "en": "RU", "ko": "RU" } },
+ { "value": "ar", "label": { "en": "AR", "ko": "AR" } },
+ { "value": "pt", "label": { "en": "PT", "ko": "PT" } },
+ {
+ "value": "_other",
+ "label": { "en": "Other…", "ko": "기타…" },
+ "noWrite": true,
+ "action": { "fn": "wikiOpenOtherLang" }
+ }
+ ]
+ }
+ ]
+ }
+ },
+ {
+ "type": "textinput",
+ "showIf": {
+ "table": "searchStatus",
+ "id": "s1",
+ "column": "langCustomOpen",
+ "equals": true
+ },
+ "hint": {
+ "en": "Wikipedia language code (e.g. it, nl, sv)",
+ "ko": "위키백과 언어 코드 (예: it, nl, sv)",
+ "zh": "维基百科语言代码（例如 it、nl、sv）",
+ "hi": "विकिपीडिया भाषा कोड (उदा. it, nl, sv)",
+ "es": "Código de idioma de Wikipedia (p. ej., it, nl, sv)",
+ "fr": "Code de langue Wikipédia (p. ex. it, nl, sv)",
+ "ar": "رمز لغة ويكيبيديا (مثل it أو nl أو sv)",
+ "pt": "Código de idioma da Wikipédia (ex.: it, nl, sv)",
+ "ru": "Код языка Википедии (напр., it, nl, sv)",
+ "de": "Wikipedia-Sprachcode (z. B. it, nl, sv)",
+ "ja": "ウィキペディア言語コード（例: it, nl, sv）",
+ "tr": "Wikipedia dil kodu (örn. it, nl, sv)",
+ "vi": "Mã ngôn ngữ Wikipedia (vd. it, nl, sv)",
+ "it": "Codice lingua Wikipedia (es. it, nl, sv)",
+ "fa": "کد زبان ویکی‌پدیا (مثلاً it, nl, sv)",
+ "pl": "Kod języka Wikipedii (np. it, nl, sv)",
+ "uk": "Код мови Вікіпедії (напр., it, nl, sv)",
+ "nl": "Wikipedia-taalcode (bijv. it, nl, sv)",
+ "sv": "Wikipedia-språkkod (t.ex. it, nl, sv)",
+ "cs": "Kód jazyka Wikipedie (např. it, nl, sv)",
+ "el": "Κωδικός γλώσσας Wikipedia (π.χ. it, nl, sv)"
+ },
+ "debounceMs": 600,
+ "action": {
+ "fn": "wikiSetLang",
+ "args": {
+ "lang": "$value"
+ }
+ }
+ },
+ {
+ "_comment": "tiny unobtrusive live status while pages are saving offline in the background — visible from Home + Library, hidden the instant the run ends (showIf on queueStatus.state=='running'). Tapping the chip goes to the Saving-offline screen, which carries the full determinate progress bar. wikipick-also visible while genuinely blocked waiting for Wi-Fi (state=='waitingWifi') — never a silent stall.",
+ "type": "row",
+ "wrap": true,
+ "showIf": { "table": "queueStatus", "id": "q1", "column": "state", "in": ["running", "waitingWifi"] },
+ "children": [
+ {
+ "type": "button",
+ "dense": true,
+ "variant": "tonal",
+ "icon": "cloud_download",
+ "label": {
+ "en": "Saving",
+ "ko": "저장 중",
+ "zh": "正在保存",
+ "hi": "सहेजा जा रहा है",
+ "es": "Guardando",
+ "fr": "Enregistrement",
+ "ar": "جارٍ الحفظ",
+ "pt": "Salvando",
+ "ru": "Сохранение",
+ "de": "Wird gespeichert",
+ "ja": "保存中",
+ "tr": "Kaydediliyor",
+ "vi": "Đang lưu",
+ "it": "Salvataggio",
+ "fa": "در حال ذخیره",
+ "pl": "Zapisywanie",
+ "uk": "Збереження",
+ "nl": "Opslaan",
+ "sv": "Sparar",
+ "cs": "Ukládání",
+ "el": "Αποθήκευση"
+ },
+ "action": { "fn": "goto", "args": { "screen": "queue" } }
+ },
+ {
+ "type": "stat",
+ "dense": true,
+ "table": "queueStatus",
+ "filter": { "column": "id", "value": "q1" },
+ "agg": "sum",
+ "valueColumn": "fetchedCount",
+ "label": {
+ "en": "of 25",
+ "ko": "/ 25",
+ "zh": "/ 25",
+ "hi": "/ 25 में से",
+ "es": "de 25",
+ "fr": "sur 25",
+ "ar": "من 25",
+ "pt": "de 25",
+ "ru": "из 25",
+ "de": "von 25",
+ "ja": "/ 25",
+ "tr": "/ 25",
+ "vi": "/ 25",
+ "it": "di 25",
+ "fa": "از ۲۵",
+ "pl": "z 25",
+ "uk": "з 25",
+ "nl": "van 25",
+ "sv": "av 25",
+ "cs": "z 25",
+ "el": "από 25"
+ },
+ "color": "blue",
+ "showIf": { "table": "queueStatus", "id": "q1", "column": "state", "equals": "running" }
+ },
+ {
+ "type": "text",
+ "style": "caption",
+ "showIf": { "table": "queueStatus", "id": "q1", "column": "state", "equals": "waitingWifi" },
+ "value": {
+ "en": "Waiting for Wi-Fi",
+ "ko": "Wi-Fi 대기 중",
+ "zh": "等待 Wi-Fi",
+ "hi": "Wi-Fi की प्रतीक्षा में",
+ "es": "Esperando Wi-Fi",
+ "fr": "En attente du Wi-Fi",
+ "ar": "في انتظار الواي فاي",
+ "pt": "Aguardando Wi-Fi",
+ "ru": "Ожидание Wi-Fi",
+ "de": "Warten auf WLAN",
+ "ja": "Wi-Fi待機中",
+ "tr": "Wi-Fi bekleniyor",
+ "vi": "Đang chờ Wi-Fi",
+ "it": "In attesa del Wi-Fi",
+ "fa": "در انتظار وای‌فای",
+ "pl": "Oczekiwanie na Wi-Fi",
+ "uk": "Очікування Wi-Fi",
+ "nl": "Wachten op wifi",
+ "sv": "Väntar på Wi-Fi",
+ "cs": "Čekání na Wi-Fi",
+ "el": "Αναμονή για Wi-Fi"
+ }
+ }
+ ]
+ },
+ {
+ "type": "text",
+ "style": "caption",
+ "showIf": {
+ "table": "searchStatus",
+ "id": "s1",
+ "column": "state",
+ "equals": "loading"
+ },
+ "value": {
+ "en": "Searching…",
+ "ko": "검색 중…",
+ "zh": "搜索中…",
+ "hi": "खोजा जा रहा है…",
+ "es": "Buscando…",
+ "fr": "Recherche…",
+ "ar": "جارٍ البحث…",
+ "pt": "Pesquisando…",
+ "ru": "Поиск…",
+ "de": "Wird gesucht…",
+ "ja": "検索中…",
+ "tr": "Aranıyor…",
+ "vi": "Đang tìm kiếm…",
+ "it": "Ricerca in corso…",
+ "fa": "در حال جستجو…",
+ "pl": "Szukanie…",
+ "uk": "Пошук…",
+ "nl": "Zoeken…",
+ "sv": "Söker…",
+ "cs": "Hledání…",
+ "el": "Αναζήτηση…"
+ }
+ },
+ {
+ "type": "text",
+ "style": "caption",
+ "showIf": {
+ "table": "searchStatus",
+ "id": "s1",
+ "column": "state",
+ "equals": "empty"
+ },
+ "value": {
+ "en": "No results — try a different search or language.",
+ "ko": "검색 결과가 없습니다 — 다른 검색어나 언어를 시도해 보세요.",
+ "zh": "没有结果 — 请尝试其他搜索词或语言。",
+ "hi": "कोई परिणाम नहीं — कोई अलग खोज या भाषा आज़माएं।",
+ "es": "Sin resultados — prueba otra búsqueda o idioma.",
+ "fr": "Aucun résultat — essayez une autre recherche ou langue.",
+ "ar": "لا توجد نتائج — جرّب بحثًا أو لغة مختلفة.",
+ "pt": "Sem resultados — tente outra pesquisa ou idioma.",
+ "ru": "Нет результатов — попробуйте другой запрос или язык.",
+ "de": "Keine Ergebnisse — versuchen Sie eine andere Suche oder Sprache.",
+ "ja": "結果がありません — 別の検索語や言語をお試しください。",
+ "tr": "Sonuç yok — farklı bir arama veya dil deneyin.",
+ "vi": "Không có kết quả — hãy thử tìm kiếm hoặc ngôn ngữ khác.",
+ "it": "Nessun risultato — prova una ricerca o una lingua diversa.",
+ "fa": "نتیجه‌ای یافت نشد — جستجو یا زبان دیگری را امتحان کنید.",
+ "pl": "Brak wyników — spróbuj innego wyszukiwania lub języka.",
+ "uk": "Немає результатів — спробуйте інший пошук або мову.",
+ "nl": "Geen resultaten — probeer een andere zoekopdracht of taal.",
+ "sv": "Inga resultat — prova en annan sökning eller ett annat språk.",
+ "cs": "Žádné výsledky — zkuste jiné hledání nebo jazyk.",
+ "el": "Δεν υπάρχουν αποτελέσματα — δοκιμάστε διαφορετική αναζήτηση ή γλώσσα."
+ }
+ },
+ {
+ "type": "text",
+ "style": "caption",
+ "showIf": {
+ "table": "searchStatus",
+ "id": "s1",
+ "column": "state",
+ "equals": "libraryFull"
+ },
+ "value": {
+ "en": "Offline library is full (200 articles or 20 MB, whichever comes first) — remove some saved articles in your Library before saving another. Nothing was deleted automatically.",
+ "ko": "오프라인 라이브러리가 가득 찼습니다 (문서 200개 또는 20MB 중 먼저 도달하는 기준) — 새 문서를 저장하려면 라이브러리에서 기존 문서를 먼저 삭제하세요. 자동으로 삭제된 문서는 없습니다.",
+ "zh": "离线资料库已满（200篇文章或20MB，以先达到者为准）——请先在资料库中删除部分已保存文章再继续保存。系统不会自动删除任何内容。",
+ "hi": "ऑफ़लाइन लाइब्रेरी भर गई है (200 लेख या 20 MB, जो भी पहले हो) — दूसरा सहेजने से पहले अपनी लाइब्रेरी में से कुछ सहेजे गए लेख हटाएं। कुछ भी अपने आप हटाया नहीं गया।",
+ "es": "La biblioteca sin conexión está llena (200 artículos o 20 MB, lo que ocurra primero) — elimina algunos artículos guardados en tu biblioteca antes de guardar otro. No se eliminó nada automáticamente.",
+ "fr": "La bibliothèque hors ligne est pleine (200 articles ou 20 Mo, selon la limite atteinte en premier) — supprimez des articles enregistrés dans votre bibliothèque avant d'en enregistrer un autre. Rien n'a été supprimé automatiquement.",
+ "ar": "مكتبتك دون اتصال ممتلئة (200 مقالة أو 20 ميغابايت، أيهما أولاً) — احذف بعض المقالات المحفوظة في مكتبتك قبل حفظ مقالة أخرى. لم يُحذف شيء تلقائيًا.",
+ "pt": "A biblioteca offline está cheia (200 artigos ou 20 MB, o que ocorrer primeiro) — remova alguns artigos salvos na sua biblioteca antes de salvar outro. Nada foi excluído automaticamente.",
+ "ru": "Офлайн-библиотека заполнена (200 статей или 20 МБ, смотря что раньше) — удалите некоторые сохранённые статьи в библиотеке, прежде чем сохранять ещё одну. Ничего не было удалено автоматически.",
+ "de": "Die Offline-Bibliothek ist voll (200 Artikel oder 20 MB, je nachdem, was zuerst erreicht wird) — löschen Sie einige gespeicherte Artikel in Ihrer Bibliothek, bevor Sie einen weiteren speichern. Es wurde nichts automatisch gelöscht.",
+ "ja": "オフラインライブラリが満杯です（記事200件または20MBのいずれか早い方）— さらに保存する前にライブラリの保存済み記事を削除してください。自動的に削除されたものはありません。",
+ "tr": "Çevrimdışı kitaplık dolu (200 makale veya 20 MB, hangisi önce dolarsa) — başka bir tane kaydetmeden önce kitaplığınızdaki bazı kayıtlı makaleleri kaldırın. Hiçbir şey otomatik olarak silinmedi.",
+ "vi": "Thư viện ngoại tuyến đã đầy (200 bài viết hoặc 20 MB, tùy điều kiện nào đến trước) — xóa bớt một số bài viết đã lưu trong Thư viện trước khi lưu thêm. Không có gì bị xóa tự động.",
+ "it": "La libreria offline è piena (200 articoli o 20 MB, a seconda di cosa avviene prima) — rimuovi alcuni articoli salvati nella tua libreria prima di salvarne un altro. Nulla è stato eliminato automaticamente.",
+ "fa": "کتابخانه آفلاین پر است (۲۰۰ مقاله یا ۲۰ مگابایت، هر کدام زودتر برسد) — قبل از ذخیره مقاله دیگری، برخی مقالات ذخیره‌شده در کتابخانه خود را حذف کنید. هیچ‌چیز به‌طور خودکار حذف نشد.",
+ "pl": "Biblioteka offline jest pełna (200 artykułów lub 20 MB, zależnie co pierwsze) — usuń część zapisanych artykułów w bibliotece przed zapisaniem kolejnego. Nic nie zostało usunięte automatycznie.",
+ "uk": "Офлайн-бібліотека заповнена (200 статей або 20 МБ, залежно що раніше) — видаліть деякі збережені статті у бібліотеці, перш ніж зберігати нову. Нічого не було видалено автоматично.",
+ "nl": "De offline bibliotheek is vol (200 artikelen of 20 MB, wat het eerst wordt bereikt) — verwijder enkele opgeslagen artikelen in je bibliotheek voordat je er nog een opslaat. Er is niets automatisch verwijderd.",
+ "sv": "Offline-biblioteket är fullt (200 artiklar eller 20 MB, beroende på vad som nås först) — ta bort några sparade artiklar i ditt bibliotek innan du sparar en till. Inget togs bort automatiskt.",
+ "cs": "Offline knihovna je plná (200 článků nebo 20 MB, podle toho, co nastane dřív) — než uložíte další, odstraňte v knihovně některé uložené články. Nic nebylo automaticky smazáno.",
+ "el": "Η βιβλιοθήκη εκτός σύνδεσης είναι γεμάτη (200 άρθρα ή 20 MB, όποιο έρθει πρώτο) — αφαιρέστε κάποια αποθηκευμένα άρθρα στη βιβλιοθήκη σας πριν αποθηκεύσετε άλλο. Τίποτα δεν διαγράφηκε αυτόματα."
+ }
+ },
+ {
+ "_comment": "'Capture as a topic' card — visible only once a search has 5+ results (searchStatus.canCaptureTopic, stamped by wikiSearch; no aggregate-count showIf primitive exists, see renderer.dart's _passesShowIf). Uses `cards` bound to the single searchStatus row (not a bare `card`, which has no tap/action support at all — see basic_render.dart's _buildNode_card) so the whole row is tappable, gets a leading icon (iconColumn) and a proper title+subtitle tile. `title` reads captureCardTitle, composed server-side in wikiSearch with the live term embedded (a cards title has no prefix/suffix templating for a raw value); `subtitle` reads a FIXED sentinel column through valueLabels so the static bilingual hint line still localizes normally. Tap fires wikiOpenTopicCapture (app_screen.dart callback: seeds capture state + pushes the topicCapture screen in one call).",
+ "type": "cards",
+ "table": "searchStatus",
+ "filter": { "column": "id", "value": "s1" },
+ "showIf": { "table": "searchStatus", "id": "s1", "column": "canCaptureTopic", "equals": true },
+ "title": "captureCardTitle",
+ "subtitle": "captureCardHintKey",
+ "iconColumn": "captureCardIcon",
+ "density": "row",
+ "expandable": false,
+ "windowed": false,
+ "tableView": false,
+ "valueLabels": {
+ "captureCardHintKey": {
+ "hint": {
+ "en": "Rank these results by how tightly they interlink",
+ "ko": "이 결과들을 서로 얼마나 밀접하게 연결되어 있는지로 순위화합니다"
+ }
+ }
+ },
+ "action": { "fn": "wikiOpenTopicCapture" }
+ },
+ {
+ "_comment": "compact row density (same primitive Recently-read/Saved-offline already use, ) — tall one-title-one-chip cards were the biggest single offender in the bloat feedback. `hideWhenEquals` suppresses the wiki-language chip when it's just the active search language repeated on every row (noise once everything reads \"en\"); it still shows for a result from a DIFFERENT wiki (interlanguage/cross-wiki results), the case it's actually useful for.",
+ "type": "cards",
+ "table": "searchResults",
+ "title": "title",
+ "subtitle": "snippet",
+ "density": "row",
+ "imageColumn": "thumbnailUrl",
+ "expandable": false,
+ "windowed": false,
+ "tableView": false,
+ "showIf": {
+ "table": "searchStatus",
+ "id": "s1",
+ "column": "state",
+ "equals": "results"
+ },
+ "tags": [
+ {
+ "column": "wiki",
+ "hideWhenEquals": {
+ "table": "searchStatus",
+ "id": "s1",
+ "column": "lang"
+ }
+ },
+ {
+ "column": "cached",
+ "colors": {
+ "true": "green"
+ }
+ }
+ ],
+ "_cardActions_comment": "`density:\"row\"` tiles used to render NO cardActions at all (dead config — the engine's _rowTile only rendered pills; fixed engine-side in flutterboard's round) — this list was already authored but silently never appeared, the trailing bookmark the picture mockup shows. Two entries make it an ALWAYS-visible toggle (outline = tap to save, filled = already saved) rather than a button that vanishes once the row is saved, matching SearchResults.dc.html.",
+ "cardActions": [
+ {
+ "label": {
+ "en": "Save",
+ "ko": "저장"
+ },
+ "icon": "bookmark_add",
+ "action": {
+ "fn": "wikiQuickSave"
+ },
+ "column": "cached",
+ "notEquals": true
+ },
+ {
+ "label": {
+ "en": "Saved",
+ "ko": "저장됨"
+ },
+ "icon": "bookmark",
+ "action": {
+ "fn": "wikiQuickSave"
+ },
+ "column": "cached",
+ "equals": true
+ }
+ ],
+ "swipeActions": [
+ {
+ "label": {
+ "en": "+ Save",
+ "ko": "+ 저장"
+ },
+ "icon": "bookmark_add",
+ "action": {
+ "fn": "wikiQuickSave"
+ }
+ }
+ ],
+ "_longPressActions_comment": " (ResultMenu.dc.html, converted to the engine's anchored-popup pattern per the 2026-08-31 design change — no slide-up sheet): long-press a search result row. Read now opens the reader (same as tap); Save offline is two plain rows (1 level default / 2 levels+images) rather than a new depth-picker chip primitive; Add to topic reuses the Library row's own picker flow; Open on Wikipedia is the canonical external link.",
+ "longPressActions": [
+ {
+ "label": { "en": "Read now", "ko": "지금 읽기" },
+ "icon": "visibility",
+ "action": { "fn": "wikiOpenSearchResult" }
+ },
+ {
+ "label": { "en": "Save offline — 1 level", "ko": "오프라인 저장 — 1단계" },
+ "icon": "bookmark_add",
+ "action": { "fn": "wikiQuickSave", "args": { "depth": 1, "images": false } }
+ },
+ {
+ "label": { "en": "Save — 2 levels + images", "ko": "저장 — 2단계 + 이미지" },
+ "icon": "download",
+ "action": { "fn": "wikiQuickSave", "args": { "depth": 2, "images": true } }
+ },
+ {
+ "label": { "en": "Add to topic…", "ko": "토픽에 추가…" },
+ "icon": "workspaces",
+ "action": { "fn": "wikiOpenTopicPickerForResult" }
+ },
+ {
+ "label": { "en": "Open on Wikipedia", "ko": "위키백과에서 열기" },
+ "icon": "open_in_new",
+ "action": { "fn": "wikiOpenSearchResultExternal" }
+ }
+ ],
+ "action": {
+ "fn": "wikiOpenSearchResult"
+ }
+ },
+ {
+ "_comment": "the two eyebrow header text nodes that used to sit above these lists are gone — `sectionLabel` is now owned by the `cards` node itself and only renders while that list actually HAS rows (design-real-estate-efficiency: 'keep section headers only when they have content'). Still `density:\"row\"` per (compact resume rows once populated).",
+ "type": "cards",
+ "table": "recentReads",
+ "title": "title",
+ "density": "row",
+ "sectionLabel": {
+ "en": "Recently read",
+ "ko": "최근 읽음",
+ "zh": "最近阅读",
+ "hi": "हाल ही में पढ़ा गया",
+ "es": "Leído recientemente",
+ "fr": "Lu récemment",
+ "ar": "تمت قراءته مؤخرًا",
+ "pt": "Lido recentemente",
+ "ru": "Недавно прочитано",
+ "de": "Kürzlich gelesen",
+ "ja": "最近読んだ",
+ "tr": "Son okunanlar",
+ "vi": "Đọc gần đây",
+ "it": "Letti di recente",
+ "fa": "اخیراً خوانده‌شده",
+ "pl": "Ostatnio czytane",
+ "uk": "Нещодавно прочитано",
+ "nl": "Recent gelezen",
+ "sv": "Nyligen läst",
+ "cs": "Nedávno čtené",
+ "el": "Πρόσφατα διαβασμένα"
+ },
+ "expandable": false,
+ "sortBy": "when",
+ "sortDir": "desc",
+ "windowed": false,
+ "tableView": false,
+ "showIf": {
+ "table": "searchStatus",
+ "id": "s1",
+ "column": "state",
+ "notEquals": "results"
+ },
+ "tags": [
+ {
+ "column": "wiki"
+ }
+ ],
+ "action": {
+ "fn": "wikiOpenRecent"
+ }
+ },
+ {
+ "_comment": "when BOTH lists are empty this card's authored empty* props are the ONLY empty notice shown (`combineEmptyAlsoEmptyTable` gates it on `recentReads` also being empty) — one compact icon + one line, not two giant hand-icon panels stacked (real-user feedback: 'a bit unintuitive and bloated'). When only recentReads is empty but this list has rows, this card just shows its rows (no notice); when only THIS list is empty but recentReads has rows, this card renders nothing at all — the combine gate suppresses its own empty view since the sibling already gave the screen content.",
+ "type": "cards",
+ "table": "articles",
+ "title": "title",
+ "density": "row",
+ "sectionLabel": {
+ "en": "Saved offline",
+ "ko": "오프라인 저장됨",
+ "zh": "已离线保存",
+ "hi": "ऑफ़लाइन सहेजा गया",
+ "es": "Guardado sin conexión",
+ "fr": "Enregistré hors ligne",
+ "ar": "محفوظ دون اتصال",
+ "pt": "Salvo offline",
+ "ru": "Сохранено офлайн",
+ "de": "Offline gespeichert",
+ "ja": "オフライン保存済み",
+ "tr": "Çevrimdışı kaydedildi",
+ "vi": "Đã lưu ngoại tuyến",
+ "it": "Salvato offline",
+ "fa": "ذخیره‌شده آفلاین",
+ "pl": "Zapisano offline",
+ "uk": "Збережено офлайн",
+ "nl": "Offline opgeslagen",
+ "sv": "Sparad offline",
+ "cs": "Uloženo offline",
+ "el": "Αποθηκεύτηκε εκτός σύνδεσης"
+ },
+ "imageColumn": "thumbnailUrl",
+ "expandable": false,
+ "sortBy": "fetchedAt",
+ "sortDir": "desc",
+ "windowed": false,
+ "tableView": false,
+ "showIf": {
+ "table": "searchStatus",
+ "id": "s1",
+ "column": "state",
+ "notEquals": "results"
+ },
+ "tags": [
+ {
+ "column": "sizeLabel"
+ },
+ {
+ "column": "wiki"
+ }
+ ],
+ "_comment": "per-seed 'Change depth…' on the long-press menu, appended to the built-in Open/Edit/Delete (not replacing it — `rowMenuExtras`, not `longPressActions`) so Edit (now read-only via columns.json's `readOnlyIf`, DEFECT 2) and Delete stay. Gated `seed == true` — non-seed saved articles don't get it. Reuses the EXISTING depth-picker callback verbatim (the Topic screen's own L1/L2 sheet, current-depth radio-marked, same re-queue semantics as its existing depth-change action) — app_screen.dart's seed-depth-picker handler gained one more id-resolution branch (an `articles` row id -> its matching queue-table row by wiki+seedTitle) rather than duplicating the sheet. Label matches the existing 'Change depth' wording already used on the Queue/Topic screens for this action.",
+ "rowMenuExtras": [
+ {
+ "label": {
+ "en": "Change depth…",
+ "ko": "깊이 변경…",
+ "zh": "更改深度…",
+ "hi": "गहराई बदलें…",
+ "es": "Cambiar profundidad…",
+ "fr": "Modifier la profondeur…",
+ "ar": "تغيير العمق…",
+ "pt": "Alterar profundidade…",
+ "ru": "Изменить глубину…",
+ "de": "Tiefe ändern…",
+ "ja": "深さを変更…",
+ "tr": "Derinliği değiştir…",
+ "vi": "Thay đổi độ sâu…",
+ "it": "Cambia profondità…",
+ "fa": "تغییر عمق…",
+ "pl": "Zmień głębokość…",
+ "uk": "Змінити глибину…",
+ "nl": "Diepte wijzigen…",
+ "sv": "Ändra djup…",
+ "cs": "Změnit hloubku…",
+ "el": "Αλλαγή βάθους…"
+ },
+ "icon": "layers",
+ "column": "seed",
+ "equals": true,
+ "action": { "fn": "wikiOpenSeedDepthPicker" }
+ }
+ ],
+ "combineEmptyAlsoEmptyTable": "recentReads",
+ "emptyIcon": "auto_stories",
+ "emptyTitle": {
+ "en": "Nothing here yet — search above and open or save an article",
+ "ko": "아직 없습니다 — 위에서 검색해 문서를 열거나 저장해 보세요",
+ "zh": "这里还没有内容 — 请在上方搜索并打开或保存一篇文章",
+ "hi": "अभी यहां कुछ नहीं है — ऊपर खोजें और कोई लेख खोलें या सहेजें",
+ "es": "Nada aquí todavía — busca arriba y abre o guarda un artículo",
+ "fr": "Rien ici pour l'instant — recherchez ci-dessus et ouvrez ou enregistrez un article",
+ "ar": "لا يوجد شيء هنا بعد — ابحث أعلاه وافتح مقالة أو احفظها",
+ "pt": "Nada aqui ainda — pesquise acima e abra ou salve um artigo",
+ "ru": "Здесь пока пусто — воспользуйтесь поиском выше и откройте или сохраните статью",
+ "de": "Hier ist noch nichts — suchen Sie oben und öffnen oder speichern Sie einen Artikel",
+ "ja": "まだ何もありません — 上で検索して記事を開くか保存してください",
+ "tr": "Burada henüz bir şey yok — yukarıdan arama yapıp bir makale açın veya kaydedin",
+ "vi": "Chưa có gì ở đây — tìm kiếm ở trên rồi mở hoặc lưu một bài viết",
+ "it": "Ancora niente qui — cerca sopra e apri o salva un articolo",
+ "fa": "هنوز چیزی اینجا نیست — در بالا جستجو کنید و مقاله‌ای را باز یا ذخیره کنید",
+ "pl": "Nic tu jeszcze nie ma — wyszukaj powyżej i otwórz lub zapisz artykuł",
+ "uk": "Тут ще нічого немає — скористайтеся пошуком вище та відкрийте чи збережіть статтю",
+ "nl": "Hier nog niets — zoek hierboven en open of sla een artikel op",
+ "sv": "Inget här än — sök ovan och öppna eller spara en artikel",
+ "cs": "Zatím tu nic není — vyhledejte výše a otevřete nebo uložte článek",
+ "el": "Δεν υπάρχει τίποτα ακόμα — αναζητήστε παραπάνω και ανοίξτε ή αποθηκεύστε ένα άρθρο"
+ },
+ "action": {
+ "fn": "wikiOpenSaved"
+ }
+ }
+ ]
+ }
+ },
+ "queue": {
+ "title": {
+ "en": "Saving offline",
+ "ko": "오프라인 저장",
+ "zh": "离线保存",
+ "hi": "ऑफ़लाइन सहेजना",
+ "es": "Guardado sin conexión",
+ "fr": "Enregistrement hors ligne",
+ "ar": "الحفظ دون اتصال",
+ "pt": "Salvamento offline",
+ "ru": "Офлайн-сохранение",
+ "de": "Offline speichern",
+ "ja": "オフライン保存",
+ "tr": "Çevrimdışı kaydetme",
+ "vi": "Lưu ngoại tuyến",
+ "it": "Salvataggio offline",
+ "fa": "ذخیره آفلاین",
+ "pl": "Zapisywanie offline",
+ "uk": "Офлайн-збереження",
+ "nl": "Offline opslaan",
+ "sv": "Sparande offline",
+ "cs": "Ukládání offline",
+ "el": "Αποθήκευση εκτός σύνδεσης"
+ },
+ "body": {
+ "type": "column",
+ "children": [
+ {
+ "_comment": "thin OVERALL bar across every seed's crawl_queue rows (done/total-by-status mode — no fixed 25-cap denominator like the old per-run bar) + total saved size, replacing the old status-header/3-stat-row/flat-queue-list ops view. P2 (progress always visible): this renders regardless of state, at 0/0 on a totally fresh install.",
+ "type": "progress",
+ "table": "crawl_queue",
+ "statusColumn": "status",
+ "doneValue": "fetched",
+ "label": {
+ "en": "Saving offline",
+ "ko": "오프라인 저장",
+ "zh": "离线保存",
+ "hi": "ऑफ़लाइन सहेजना",
+ "es": "Guardado sin conexión",
+ "fr": "Enregistrement hors ligne",
+ "ar": "الحفظ دون اتصال",
+ "pt": "Salvamento offline",
+ "ru": "Офлайн-сохранение",
+ "de": "Offline speichern",
+ "ja": "オフライン保存",
+ "tr": "Çevrimdışı kaydetme",
+ "vi": "Lưu ngoại tuyến",
+ "it": "Salvataggio offline",
+ "fa": "ذخیره آفلاین",
+ "pl": "Zapisywanie offline",
+ "uk": "Офлайн-збереження",
+ "nl": "Offline opslaan",
+ "sv": "Sparande offline",
+ "cs": "Ukládání offline",
+ "el": "Αποθήκευση εκτός σύνδεσης"
+ },
+ "color": "blue"
+ },
+ {
+ "type": "row",
+ "wrap": true,
+ "children": [
+ {
+ "type": "stat",
+ "raw": true,
+ "dense": true,
+ "table": "searchStatus",
+ "scopeRowId": "s1",
+ "valueColumn": "librarySizeLabel",
+ "label": {
+ "en": "saved",
+ "ko": "저장됨",
+ "zh": "已保存",
+ "hi": "सहेजा गया",
+ "es": "guardado",
+ "fr": "enregistré",
+ "ar": "محفوظ",
+ "pt": "salvo",
+ "ru": "сохранено",
+ "de": "gespeichert",
+ "ja": "保存済み",
+ "tr": "kaydedildi",
+ "vi": "đã lưu",
+ "it": "salvato",
+ "fa": "ذخیره‌شده",
+ "pl": "zapisano",
+ "uk": "збережено",
+ "nl": "opgeslagen",
+ "sv": "sparad",
+ "cs": "uloženo",
+ "el": "αποθηκεύτηκε"
+ },
+ "color": "blue"
+ }
+ ]
+ },
+ {
+ "_comment": "the live \"Fetching: <title>… n/m\" line — stat's new raw:true mode (single-row RAW TEXT passthrough) shows queueStatus.currentFetchTitle verbatim; showIf gates the whole row on state=='running' so it only ever appears during an actual drain (an empty currentFetchTitle between fetches would otherwise flash a bare 'Fetching:' label).",
+ "type": "row",
+ "wrap": true,
+ "showIf": { "table": "queueStatus", "id": "q1", "column": "state", "equals": "running" },
+ "children": [
+ {
+ "type": "text",
+ "style": "caption",
+ "value": {
+ "en": "Downloading:",
+ "ko": "다운로드 중:",
+ "zh": "正在下载：",
+ "hi": "डाउनलोड हो रहा है:",
+ "es": "Descargando:",
+ "fr": "Téléchargement:",
+ "ar": "جارٍ التنزيل:",
+ "pt": "Baixando:",
+ "ru": "Загрузка:",
+ "de": "Wird heruntergeladen:",
+ "ja": "ダウンロード中:",
+ "tr": "İndiriliyor:",
+ "vi": "Đang tải:",
+ "it": "Download in corso:",
+ "fa": "در حال دانلود:",
+ "pl": "Pobieranie:",
+ "uk": "Завантаження:",
+ "nl": "Downloaden:",
+ "sv": "Laddar ned:",
+ "cs": "Stahování:",
+ "el": "Λήψη:"
+ }
+ },
+ {
+ "type": "stat",
+ "raw": true,
+ "dense": true,
+ "table": "queueStatus",
+ "filter": { "column": "id", "value": "q1" },
+ "valueColumn": "currentFetchTitle"
+ },
+ {
+ "type": "stat",
+ "dense": true,
+ "table": "queueStatus",
+ "filter": { "column": "id", "value": "q1" },
+ "agg": "sum",
+ "valueColumn": "fetchedCount"
+ },
+ {
+ "type": "text",
+ "style": "caption",
+ "value": {
+ "en": "/",
+ "ko": "/",
+ "zh": "/",
+ "hi": "/",
+ "es": "/",
+ "fr": "/",
+ "ar": "/",
+ "pt": "/",
+ "ru": "/",
+ "de": "/",
+ "ja": "/",
+ "tr": "/",
+ "vi": "/",
+ "it": "/",
+ "fa": "/",
+ "pl": "/",
+ "uk": "/",
+ "nl": "/",
+ "sv": "/",
+ "cs": "/",
+ "el": "/"
+ }
+ },
+ {
+ "type": "stat",
+ "dense": true,
+ "table": "queueStatus",
+ "filter": { "column": "id", "value": "q1" },
+ "agg": "sum",
+ "valueColumn": "targetCount"
+ }
+ ]
+ },
+ {
+ "_comment": "wikipick-crawl drain genuinely paused because \"Download over Wi-Fi only\" is on and the device is currently on cellular/metered — never a silent stall (progress-visibility-first). Pending rows stay queued and the drain auto-resumes the instant Wi-Fi returns (wikiResumeCrawlsWaitingForWifi, wired off Connectivity().onConnectivityChanged). Distinct queueStatus.state value from 'running' so this row and the one above are mutually exclusive.",
+ "type": "row",
+ "wrap": true,
+ "showIf": { "table": "queueStatus", "id": "q1", "column": "state", "equals": "waitingWifi" },
+ "children": [
+ {
+ "type": "text",
+ "style": "caption",
+ "value": {
+ "en": "Waiting for Wi-Fi — will resume automatically",
+ "ko": "Wi-Fi 대기 중 — 연결되면 자동으로 재개됩니다",
+ "zh": "等待 Wi-Fi — 将自动恢复",
+ "hi": "Wi-Fi की प्रतीक्षा में — यह अपने आप फिर से शुरू होगा",
+ "es": "Esperando Wi-Fi — se reanudará automáticamente",
+ "fr": "En attente du Wi-Fi — reprendra automatiquement",
+ "ar": "في انتظار الواي فاي — سيُستأنف تلقائيًا",
+ "pt": "Aguardando Wi-Fi — retomará automaticamente",
+ "ru": "Ожидание Wi-Fi — возобновится автоматически",
+ "de": "Warten auf WLAN — wird automatisch fortgesetzt",
+ "ja": "Wi-Fi待機中 — 自動的に再開します",
+ "tr": "Wi-Fi bekleniyor — otomatik olarak devam edecek",
+ "vi": "Đang chờ Wi-Fi — sẽ tự động tiếp tục",
+ "it": "In attesa del Wi-Fi — riprenderà automaticamente",
+ "fa": "در انتظار وای‌فای — به‌طور خودکار از سر گرفته می‌شود",
+ "pl": "Oczekiwanie na Wi-Fi — wznowi się automatycznie",
+ "uk": "Очікування Wi-Fi — відновиться автоматично",
+ "nl": "Wachten op wifi — wordt automatisch hervat",
+ "sv": "Väntar på Wi-Fi — återupptas automatiskt",
+ "cs": "Čekání na Wi-Fi — automaticky se obnoví",
+ "el": "Αναμονή για Wi-Fi — θα συνεχιστεί αυτόματα"
+ }
+ }
+ ]
+ },
+ {
+ "_comment": "wikipick-the \"Download over Wi-Fi only\" setting (durableSettings key wikipickWifiOnly, board.settings-backed so wikiFetchLayer can read it directly at drain time — distinct from ui.app.preferences, which is UI-local ThemeSettings state and not reachable from board-level engine logic). Default OFF (cellular allowed, matching pre-existing behavior — no surprise blocking). Current state shown as a caption; the ONE action available is \"turn it the other way\" (same pattern as the Other…-language reveal elsewhere in this file) rather than two always-visible buttons where only one ever does anything.",
+ "type": "row",
+ "wrap": true,
+ "children": [
+ {
+ "type": "text",
+ "style": "caption",
+ "showIf": { "setting": "wikipickWifiOnly", "notEquals": "true" },
+ "value": {
+ "en": "Download over Wi-Fi only: Off (cellular allowed)",
+ "ko": "Wi-Fi에서만 다운로드: 꺼짐 (셀룰러 허용)",
+ "zh": "仅通过 Wi-Fi 下载：关闭（允许使用蜂窝网络）",
+ "hi": "केवल Wi-Fi पर डाउनलोड करें: बंद (सेलुलर की अनुमति)",
+ "es": "Descargar solo por Wi-Fi: Desactivado (datos móviles permitidos)",
+ "fr": "Télécharger uniquement en Wi-Fi: désactivé (données mobiles autorisées)",
+ "ar": "التنزيل عبر الواي فاي فقط: متوقف (يُسمح بالبيانات الخلوية)",
+ "pt": "Baixar somente via Wi-Fi: Desativado (dados móveis permitidos)",
+ "ru": "Скачивать только по Wi-Fi: выкл. (сотовая связь разрешена)",
+ "de": "Nur über WLAN herunterladen: Aus (Mobilfunk erlaubt)",
+ "ja": "Wi-Fiのみでダウンロード: オフ（モバイル通信を許可）",
+ "tr": "Yalnızca Wi-Fi ile indir: Kapalı (hücresel izinli)",
+ "vi": "Chỉ tải qua Wi-Fi: Tắt (cho phép dữ liệu di động)",
+ "it": "Scarica solo tramite Wi-Fi: Disattivato (dati cellulare consentiti)",
+ "fa": "دانلود فقط با وای‌فای: خاموش (داده تلفن همراه مجاز)",
+ "pl": "Pobieraj tylko przez Wi-Fi: Wyłączone (dane komórkowe dozwolone)",
+ "uk": "Завантажувати лише через Wi-Fi: вимкнено (мобільні дані дозволено)",
+ "nl": "Alleen downloaden via wifi: Uit (mobiele data toegestaan)",
+ "sv": "Ladda ned endast via Wi-Fi: Av (mobildata tillåtet)",
+ "cs": "Stahovat pouze přes Wi-Fi: Vypnuto (mobilní data povolena)",
+ "el": "Λήψη μόνο μέσω Wi-Fi: Ανενεργό (επιτρέπονται δεδομένα κινητής)"
+ }
+ },
+ {
+ "type": "button",
+ "dense": true,
+ "variant": "text",
+ "showIf": { "setting": "wikipickWifiOnly", "notEquals": "true" },
+ "label": {
+ "en": "Turn on",
+ "ko": "켜기",
+ "zh": "开启",
+ "hi": "चालू करें",
+ "es": "Activar",
+ "fr": "Activer",
+ "ar": "تشغيل",
+ "pt": "Ativar",
+ "ru": "Включить",
+ "de": "Einschalten",
+ "ja": "オンにする",
+ "tr": "Aç",
+ "vi": "Bật",
+ "it": "Attiva",
+ "fa": "روشن کردن",
+ "pl": "Włącz",
+ "uk": "Увімкнути",
+ "nl": "Inschakelen",
+ "sv": "Slå på",
+ "cs": "Zapnout",
+ "el": "Ενεργοποίηση"
+ },
+ "action": { "fn": "setSetting", "args": { "key": "wikipickWifiOnly", "value": true } }
+ },
+ {
+ "type": "text",
+ "style": "caption",
+ "showIf": { "setting": "wikipickWifiOnly", "equals": "true" },
+ "value": {
+ "en": "Download over Wi-Fi only: On",
+ "ko": "Wi-Fi에서만 다운로드: 켜짐",
+ "zh": "仅通过 Wi-Fi 下载：开启",
+ "hi": "केवल Wi-Fi पर डाउनलोड करें: चालू",
+ "es": "Descargar solo por Wi-Fi: Activado",
+ "fr": "Télécharger uniquement en Wi-Fi: activé",
+ "ar": "التنزيل عبر الواي فاي فقط: مفعّل",
+ "pt": "Baixar somente via Wi-Fi: Ativado",
+ "ru": "Скачивать только по Wi-Fi: вкл.",
+ "de": "Nur über WLAN herunterladen: An",
+ "ja": "Wi-Fiのみでダウンロード: オン",
+ "tr": "Yalnızca Wi-Fi ile indir: Açık",
+ "vi": "Chỉ tải qua Wi-Fi: Bật",
+ "it": "Scarica solo tramite Wi-Fi: Attivato",
+ "fa": "دانلود فقط با وای‌فای: روشن",
+ "pl": "Pobieraj tylko przez Wi-Fi: Włączone",
+ "uk": "Завантажувати лише через Wi-Fi: увімкнено",
+ "nl": "Alleen downloaden via wifi: Aan",
+ "sv": "Ladda ned endast via Wi-Fi: På",
+ "cs": "Stahovat pouze přes Wi-Fi: Zapnuto",
+ "el": "Λήψη μόνο μέσω Wi-Fi: Ενεργό"
+ }
+ },
+ {
+ "type": "button",
+ "dense": true,
+ "variant": "tonal",
+ "showIf": { "setting": "wikipickWifiOnly", "equals": "true" },
+ "label": {
+ "en": "Turn off",
+ "ko": "끄기",
+ "zh": "关闭",
+ "hi": "बंद करें",
+ "es": "Desactivar",
+ "fr": "Désactiver",
+ "ar": "إيقاف",
+ "pt": "Desativar",
+ "ru": "Выключить",
+ "de": "Ausschalten",
+ "ja": "オフにする",
+ "tr": "Kapat",
+ "vi": "Tắt",
+ "it": "Disattiva",
+ "fa": "خاموش کردن",
+ "pl": "Wyłącz",
+ "uk": "Вимкнути",
+ "nl": "Uitschakelen",
+ "sv": "Stäng av",
+ "cs": "Vypnout",
+ "el": "Απενεργοποίηση"
+ },
+ "action": { "fn": "setSetting", "args": { "key": "wikipickWifiOnly", "value": false } }
+ }
+ ]
+ },
+ {
+ "_comment": "PER-SEED cards (W11) — one row per crawl (running/paused/done alike), title=seed, subtitle=progressLabel (digits-only \"L1 f/t · L2 f/t\", i18n-safe per columns.json's doc), depth + status tags, pause/resume cardActions gated by this row's own status, a depth-picker cardAction (see app_screen.dart's _openSeedDepthPicker — W13's L1▾/L2▾ chip, deliberately a sheet rather than an inline dropdown since cards has no per-row inline-control primitive), swipe-to-delete (long-press is not a cards affordance — swipe is the supported equivalent; see the cards-menuActions-never-render SCAR). splitBar renders a real mini progress bar (l1Fetched/l1Total, blue) under the subtitle using the cards' new per-row splitBar primitive — the digits-only progressLabel subtitle stays too (redundant but harmless, and covers the L2 numbers the single bar doesn't).",
+ "type": "cards",
+ "table": "crawls",
+ "title": "seedTitle",
+ "subtitle": "progressLabel",
+ "expandable": false,
+ "tableView": false,
+ "sortBy": "startedAt",
+ "sortDir": "desc",
+ "splitBar": {
+ "partColumn": "l1Fetched",
+ "totalColumn": "l1Total",
+ "color": "blue"
+ },
+ "valueLabels": {
+ "depthCap": { "1": "L1", "2": "L2" },
+ "status": {
+ "running": { "en": "saving", "ko": "저장 중" },
+ "paused": { "en": "paused", "ko": "일시 중지" },
+ "done": { "en": "done", "ko": "완료" },
+ "failed": { "en": "failed", "ko": "실패" }
+ }
+ },
+ "tags": [
+ { "column": "depthCap", "colors": { "1": "gray", "2": "purple" } },
+ { "column": "status", "colors": { "running": "blue", "paused": "amber", "done": "green", "failed": "coral" } },
+ { "column": "wiki" }
+ ],
+ "cardActions": [
+ {
+ "label": { "en": "Pause", "ko": "일시 중지" },
+ "icon": "pause",
+ "action": { "fn": "wikiPauseCrawl" },
+ "column": "status",
+ "equals": "running"
+ },
+ {
+ "label": { "en": "Resume", "ko": "다시 시작" },
+ "icon": "play_arrow",
+ "action": { "fn": "wikiResumeCrawl" },
+ "column": "status",
+ "equals": "paused"
+ },
+ {
+ "label": { "en": "Change depth", "ko": "깊이 변경" },
+ "icon": "unfold_more",
+ "action": { "fn": "wikiOpenSeedDepthPicker" }
+ }
+ ],
+ "swipeActions": [
+ {
+ "label": { "en": "Delete", "ko": "삭제" },
+ "icon": "delete_outline",
+ "action": { "fn": "wikiDeleteSeed" }
+ }
+ ],
+ "emptyIcon": "cloud_download",
+ "emptyTitle": {
+ "en": "Nothing saving yet",
+ "ko": "저장 중인 항목이 없습니다",
+ "zh": "尚无正在保存的内容",
+ "hi": "अभी कुछ भी सहेजा नहीं जा रहा",
+ "es": "Nada guardándose todavía",
+ "fr": "Rien n'est en cours d'enregistrement",
+ "ar": "لا يوجد شيء قيد الحفظ بعد",
+ "pt": "Nada sendo salvo ainda",
+ "ru": "Пока ничего не сохраняется",
+ "de": "Es wird noch nichts gespeichert",
+ "ja": "保存中の項目はまだありません",
+ "tr": "Henüz kaydedilen bir şey yok",
+ "vi": "Chưa có gì đang được lưu",
+ "it": "Ancora nulla in salvataggio",
+ "fa": "هنوز چیزی در حال ذخیره نیست",
+ "pl": "Nic jeszcze się nie zapisuje",
+ "uk": "Поки нічого не зберігається",
+ "nl": "Nog niets aan het opslaan",
+ "sv": "Inget sparas ännu",
+ "cs": "Zatím se nic neukládá",
+ "el": "Δεν αποθηκεύεται τίποτα ακόμα"
+ },
+ "emptyText": {
+ "en": "Open an article in the reader and save it (or its linked pages) to see it here.",
+ "ko": "리더에서 문서를 열어 저장하거나 연결된 문서를 저장하면 여기에 표시됩니다.",
+ "zh": "在阅读器中打开文章并保存它（或其链接页面），即可显示在这里。",
+ "hi": "रीडर में कोई लेख खोलें और उसे (या उसके लिंक किए गए पेजों को) सहेजें ताकि यह यहां दिखे।",
+ "es": "Abre un artículo en el lector y guárdalo (o sus páginas enlazadas) para verlo aquí.",
+ "fr": "Ouvrez un article dans le lecteur et enregistrez-le (ou ses pages liées) pour le voir ici.",
+ "ar": "افتح مقالة في القارئ واحفظها (أو صفحاتها المرتبطة) لرؤيتها هنا.",
+ "pt": "Abra um artigo no leitor e salve-o (ou suas páginas vinculadas) para vê-lo aqui.",
+ "ru": "Откройте статью в режиме чтения и сохраните её (или её связанные страницы), чтобы увидеть их здесь.",
+ "de": "Öffnen Sie einen Artikel im Reader und speichern Sie ihn (oder dessen verknüpfte Seiten), um ihn hier zu sehen.",
+ "ja": "リーダーで記事を開いて保存する（またはそのリンク先ページを保存する）と、ここに表示されます。",
+ "tr": "Burada görmek için okuyucuda bir makale açın ve kaydedin (veya bağlantılı sayfalarını kaydedin).",
+ "vi": "Mở một bài viết trong trình đọc và lưu nó (hoặc các trang liên kết của nó) để xem ở đây.",
+ "it": "Apri un articolo nel lettore e salvalo (o le sue pagine collegate) per vederlo qui.",
+ "fa": "یک مقاله را در خواننده باز کنید و آن (یا صفحات پیوندی آن) را ذخیره کنید تا اینجا نمایش داده شود.",
+ "pl": "Otwórz artykuł w czytniku i zapisz go (lub jego powiązane strony), aby zobaczyć go tutaj.",
+ "uk": "Відкрийте статтю в режимі читання і збережіть її (або її пов'язані сторінки), щоб побачити їх тут.",
+ "nl": "Open een artikel in de lezer en sla het op (of de gekoppelde pagina's ervan) om het hier te zien.",
+ "sv": "Öppna en artikel i läsaren och spara den (eller dess länkade sidor) för att se den här.",
+ "cs": "Otevřete článek ve čtečce a uložte jej (nebo jeho propojené stránky), abyste je viděli zde.",
+ "el": "Ανοίξτε ένα άρθρο στον αναγνώστη και αποθηκεύστε το (ή τις συνδεδεμένες σελίδες του) για να το δείτε εδώ."
+ }
+ },
+ {
+ "_comment": "the manual retry escape hatch for transient rateLimited/networkError failures — deliberately a single global count+action rather than a per-seed reason breakdown, matching the mockup's one-line failed summary.",
+ "type": "row",
+ "wrap": true,
+ "showIf": { "table": "queueStatus", "id": "q1", "column": "failedCount", "notEquals": "0" },
+ "children": [
+ {
+ "type": "stat",
+ "dense": true,
+ "table": "crawl_queue",
+ "agg": "count",
+ "filter": { "column": "status", "value": "failed" },
+ "label": {
+ "en": "failed",
+ "ko": "개 실패",
+ "zh": "个失败",
+ "hi": "विफल",
+ "es": "fallidos",
+ "fr": "échoués",
+ "ar": "فشل",
+ "pt": "falharam",
+ "ru": "ошибок",
+ "de": "fehlgeschlagen",
+ "ja": "件失敗",
+ "tr": "başarısız",
+ "vi": "thất bại",
+ "it": "falliti",
+ "fa": "ناموفق",
+ "pl": "nieudanych",
+ "uk": "невдалих",
+ "nl": "mislukt",
+ "sv": "misslyckade",
+ "cs": "neúspěšných",
+ "el": "απέτυχαν"
+ },
+ "color": "coral"
+ },
+ {
+ "type": "button",
+ "dense": true,
+ "variant": "text",
+ "icon": "refresh",
+ "label": {
+ "en": "Retry failed",
+ "ko": "실패 항목 다시 시도",
+ "zh": "重试失败项",
+ "hi": "विफल पुनः प्रयास करें",
+ "es": "Reintentar fallidos",
+ "fr": "Réessayer les échecs",
+ "ar": "إعادة محاولة الفاشلة",
+ "pt": "Repetir falhas",
+ "ru": "Повторить неудачные",
+ "de": "Fehlgeschlagene wiederholen",
+ "ja": "失敗を再試行",
+ "tr": "Başarısızları yeniden dene",
+ "vi": "Thử lại mục thất bại",
+ "it": "Riprova quelli falliti",
+ "fa": "تلاش مجدد ناموفق‌ها",
+ "pl": "Ponów nieudane",
+ "uk": "Повторити невдалі",
+ "nl": "Mislukte opnieuw proberen",
+ "sv": "Försök igen med misslyckade",
+ "cs": "Zopakovat neúspěšné",
+ "el": "Επανάληψη αποτυχημένων"
+ },
+ "action": { "fn": "wikiRetryFailedQueue" }
+ }
+ ]
+ },
+ {
+ "type": "text",
+ "style": "caption",
+ "align": "center",
+ "value": {
+ "en": "Swipe a seed to delete it — tap the depth icon to change how many layers it saves.",
+ "ko": "저장 항목을 스와이프하면 삭제할 수 있습니다 — 깊이 아이콘을 탭하면 저장 깊이를 바꿀 수 있습니다.",
+ "zh": "滑动某个种子即可删除 — 点击深度图标可更改其保存的层数。",
+ "hi": "किसी सीड को स्वाइप करके हटाएं — कितनी परतें सहेजनी हैं यह बदलने के लिए डेप्थ आइकन टैप करें।",
+ "es": "Desliza una semilla para eliminarla — toca el icono de profundidad para cambiar cuántas capas guarda.",
+ "fr": "Balayez une graine pour la supprimer — appuyez sur l'icône de profondeur pour changer le nombre de niveaux enregistrés.",
+ "ar": "اسحب لحذف بذرة — اضغط على أيقونة العمق لتغيير عدد الطبقات التي تحفظها.",
+ "pt": "Deslize uma semente para excluí-la — toque no ícone de profundidade para mudar quantas camadas ela salva.",
+ "ru": "Смахните исходную статью, чтобы удалить её — нажмите значок глубины, чтобы изменить число сохраняемых уровней.",
+ "de": "Wischen Sie eine Startseite weg, um sie zu löschen — tippen Sie auf das Tiefensymbol, um die Anzahl der gespeicherten Ebenen zu ändern.",
+ "ja": "シードをスワイプして削除 — 深度アイコンをタップすると保存する層数を変更できます。",
+ "tr": "Silmek için bir tohumu kaydırın — kaç katman kaydedeceğini değiştirmek için derinlik simgesine dokunun.",
+ "vi": "Vuốt một hạt giống để xóa — nhấn biểu tượng độ sâu để thay đổi số lớp nó lưu.",
+ "it": "Scorri un seme per eliminarlo — tocca l'icona di profondità per cambiare quanti livelli salva.",
+ "fa": "یک بذر را برای حذف آن بکشید — روی نماد عمق ضربه بزنید تا تعداد لایه‌های ذخیره‌شده را تغییر دهید.",
+ "pl": "Przesuń ziarno, aby je usunąć — dotknij ikony głębokości, aby zmienić liczbę zapisywanych poziomów.",
+ "uk": "Проведіть по джерелу, щоб видалити його — торкніться значка глибини, щоб змінити кількість рівнів збереження.",
+ "nl": "Veeg een zaad om het te verwijderen — tik op het diepte-icoon om het aantal opgeslagen lagen te wijzigen.",
+ "sv": "Svep bort ett frö för att ta bort det — tryck på djupikonen för att ändra hur många nivåer som sparas.",
+ "cs": "Přejetím semínko smažete — klepnutím na ikonu hloubky změníte počet ukládaných vrstev.",
+ "el": "Σύρετε έναν σπόρο για να τον διαγράψετε — πατήστε το εικονίδιο βάθους για να αλλάξετε πόσα επίπεδα αποθηκεύει."
+ }
+ },
+ {
+ "type": "divider"
+ },
+ {
+ "type": "text",
+ "style": "caption",
+ "value": {
+ "en": "Next save:",
+ "ko": "다음 저장:",
+ "zh": "下次保存：",
+ "hi": "अगला सेव:",
+ "es": "Próximo guardado:",
+ "fr": "Prochain enregistrement:",
+ "ar": "الحفظ التالي:",
+ "pt": "Próximo salvamento:",
+ "ru": "Следующее сохранение:",
+ "de": "Nächste Speicherung:",
+ "ja": "次の保存:",
+ "tr": "Sonraki kayıt:",
+ "vi": "Lần lưu tiếp theo:",
+ "it": "Prossimo salvataggio:",
+ "fa": "ذخیره بعدی:",
+ "pl": "Następny zapis:",
+ "uk": "Наступне збереження:",
+ "nl": "Volgende opslag:",
+ "sv": "Nästa sparning:",
+ "cs": "Další uložení:",
+ "el": "Επόμενη αποθήκευση:"
+ }
+ },
+ {
+ "type": "row",
+ "wrap": true,
+ "children": [
+ {
+ "type": "pick",
+ "table": "saveOptions",
+ "rowId": "opt1",
+ "column": "includeImages",
+ "variant": "segmented",
+ "options": [
+ {
+ "value": false,
+ "label": {
+ "en": "No images",
+ "ko": "이미지 없음"
+ }
+ },
+ {
+ "value": true,
+ "label": {
+ "en": "Images",
+ "ko": "이미지 포함"
+ }
+ }
+ ]
+ },
+ {
+ "type": "pick",
+ "table": "saveOptions",
+ "rowId": "opt1",
+ "column": "cacheDepth",
+ "variant": "segmented",
+ "options": [
+ {
+ "value": 1,
+ "label": {
+ "en": "1 layer",
+ "ko": "1단계"
+ }
+ },
+ {
+ "value": 2,
+ "label": {
+ "en": "2 layers",
+ "ko": "2단계"
+ }
+ }
+ ]
+ }
+ ]
+ }
+ ]
+ }
+ },
+ "topics": {
+ "title": {
+ "en": "Topics",
+ "ko": "토픽",
+ "zh": "主题",
+ "hi": "विषय",
+ "es": "Temas",
+ "fr": "Sujets",
+ "ar": "المواضيع",
+ "pt": "Tópicos",
+ "ru": "Темы",
+ "de": "Themen",
+ "ja": "トピック",
+ "tr": "Konular",
+ "vi": "Chủ đề",
+ "it": "Argomenti",
+ "fa": "موضوعات",
+ "pl": "Tematy",
+ "uk": "Теми",
+ "nl": "Onderwerpen",
+ "sv": "Ämnen",
+ "cs": "Témata",
+ "el": "Θέματα"
+ },
+ "body": {
+ "type": "column",
+ "children": [
+ {
+ "_comment": "a topic is a named GROUP of seeds sharing one link pool — user framing \"a topic contains multiple seed articles\". articleCount mirrors topic_stats (kept on this row too, see columns.json's doc) so the subtitle needs no join.",
+ "type": "cards",
+ "table": "seed_groups",
+ "title": "name",
+ "subtitle": "articleCount",
+ "expandable": false,
+ "tableView": false,
+ "sortBy": "createdAt",
+ "sortDir": "desc",
+ "expandFields": [
+ { "column": "articleCount", "label": { "en": "articles", "ko": "개 문서" } }
+ ],
+ "action": { "fn": "wikiOpenTopic" },
+ "swipeActions": [
+ {
+ "label": { "en": "Delete", "ko": "삭제" },
+ "icon": "delete_outline",
+ "action": { "fn": "wikiDeleteTopic" }
+ }
+ ],
+ "emptyIcon": "workspaces",
+ "emptyTitle": {
+ "en": "No topics yet",
+ "ko": "아직 토픽이 없습니다",
+ "zh": "尚无主题",
+ "hi": "अभी कोई विषय नहीं",
+ "es": "Aún no hay temas",
+ "fr": "Aucun sujet pour l'instant",
+ "ar": "لا توجد مواضيع بعد",
+ "pt": "Ainda não há tópicos",
+ "ru": "Пока нет тем",
+ "de": "Noch keine Themen",
+ "ja": "まだトピックがありません",
+ "tr": "Henüz konu yok",
+ "vi": "Chưa có chủ đề nào",
+ "it": "Ancora nessun argomento",
+ "fa": "هنوز موضوعی نیست",
+ "pl": "Brak jeszcze tematów",
+ "uk": "Поки немає тем",
+ "nl": "Nog geen onderwerpen",
+ "sv": "Inga ämnen ännu",
+ "cs": "Zatím žádná témata",
+ "el": "Δεν υπάρχουν θέματα ακόμα"
+ },
+ "emptyText": {
+ "en": "Group seeds that share a subject to see how much they overlap. Add a saved seed to a topic from its ⋮ menu in Library, or start one here.",
+ "ko": "주제가 겹치는 저장 항목을 묶어 서로 얼마나 겹치는지 확인하세요. 라이브러리에서 저장 항목의 ⋮ 메뉴로 토픽에 추가하거나, 여기서 새로 시작할 수 있습니다.",
+ "zh": "将主题相同的种子归为一组，查看它们的重叠程度。可在资料库中通过种子的⋮菜单将其加入主题，或在此处新建。",
+ "hi": "विषय साझा करने वाले सीड्स को समूहित करें ताकि पता चले वे कितने ओवरलैप करते हैं। लाइब्रेरी में सहेजे गए सीड के ⋮ मेनू से इसे किसी विषय में जोड़ें, या यहां से शुरू करें।",
+ "es": "Agrupa semillas que comparten un tema para ver cuánto se superponen. Añade una semilla guardada a un tema desde su menú ⋮ en la Biblioteca, o crea uno aquí.",
+ "fr": "Regroupez des graines qui partagent un sujet pour voir leur chevauchement. Ajoutez une graine enregistrée à un sujet depuis son menu ⋮ dans la Bibliothèque, ou créez-en un ici.",
+ "ar": "اجمع البذور التي تشترك في موضوع لترى مقدار التداخل بينها. أضف بذرة محفوظة إلى موضوع من قائمة ⋮ الخاصة بها في المكتبة، أو ابدأ واحدًا هنا.",
+ "pt": "Agrupe sementes que compartilham um assunto para ver quanto se sobrepõem. Adicione uma semente salva a um tópico pelo menu ⋮ na Biblioteca, ou inicie um aqui.",
+ "ru": "Сгруппируйте исходные статьи по общей теме, чтобы увидеть их пересечение. Добавьте сохранённую статью в тему через её меню ⋮ в библиотеке или создайте тему здесь.",
+ "de": "Gruppieren Sie Startseiten mit gemeinsamem Thema, um ihre Überschneidung zu sehen. Fügen Sie eine gespeicherte Startseite über ihr ⋮-Menü in der Bibliothek zu einem Thema hinzu, oder beginnen Sie hier eines.",
+ "ja": "共通の主題を持つシードをグループ化して、どれだけ重なるか確認しましょう。ライブラリのシードの⋮メニューからトピックに追加するか、ここで新規作成できます。",
+ "tr": "Ne kadar örtüştüklerini görmek için bir konuyu paylaşan tohumları gruplandırın. Kitaplıktaki bir tohumun ⋮ menüsünden bir konuya ekleyin veya burada başlatın.",
+ "vi": "Nhóm các hạt giống có chung chủ đề để xem chúng trùng lặp bao nhiêu. Thêm một hạt giống đã lưu vào chủ đề từ menu ⋮ trong Thư viện, hoặc bắt đầu ở đây.",
+ "it": "Raggruppa i semi che condividono un argomento per vedere quanto si sovrappongono. Aggiungi un seme salvato a un argomento dal suo menu ⋮ nella Libreria, o iniziane uno qui.",
+ "fa": "بذرهایی که موضوع مشترک دارند را گروه‌بندی کنید تا میزان هم‌پوشانی آن‌ها را ببینید. یک بذر ذخیره‌شده را از منوی ⋮ آن در کتابخانه به یک موضوع اضافه کنید یا از اینجا شروع کنید.",
+ "pl": "Grupuj ziarna o wspólnym temacie, aby zobaczyć, jak bardzo się pokrywają. Dodaj zapisane ziarno do tematu z jego menu ⋮ w Bibliotece albo rozpocznij nowy tutaj.",
+ "uk": "Групуйте джерела зі спільною темою, щоб побачити, наскільки вони перетинаються. Додайте збережене джерело до теми з його меню ⋮ у бібліотеці або створіть нову тут.",
+ "nl": "Groepeer zaden die een onderwerp delen om te zien hoeveel ze overlappen. Voeg een opgeslagen zaad toe aan een onderwerp via het ⋮-menu in de Bibliotheek, of begin er hier een.",
+ "sv": "Gruppera frön som delar ett ämne för att se hur mycket de överlappar. Lägg till ett sparat frö i ett ämne via dess ⋮-meny i biblioteket, eller starta ett här.",
+ "cs": "Seskupte semínka se společným tématem, abyste viděli, jak moc se překrývají. Přidejte uložené semínko do tématu z jeho nabídky ⋮ v knihovně, nebo jej založte zde.",
+ "el": "Ομαδοποιήστε σπόρους που μοιράζονται ένα θέμα για να δείτε πόσο επικαλύπτονται. Προσθέστε έναν αποθηκευμένο σπόρο σε ένα θέμα από το μενού ⋮ του στη Βιβλιοθήκη, ή ξεκινήστε ένα εδώ."
+ }
+ },
+ {
+ "type": "row",
+ "children": [
+ {
+ "type": "button",
+ "variant": "outlined",
+ "icon": "add",
+ "label": {
+ "en": "New topic",
+ "ko": "새 토픽",
+ "zh": "新建主题",
+ "hi": "नया विषय",
+ "es": "Nuevo tema",
+ "fr": "Nouveau sujet",
+ "ar": "موضوع جديد",
+ "pt": "Novo tópico",
+ "ru": "Новая тема",
+ "de": "Neues Thema",
+ "ja": "新しいトピック",
+ "tr": "Yeni konu",
+ "vi": "Chủ đề mới",
+ "it": "Nuovo argomento",
+ "fa": "موضوع جدید",
+ "pl": "Nowy temat",
+ "uk": "Нова тема",
+ "nl": "Nieuw onderwerp",
+ "sv": "Nytt ämne",
+ "cs": "Nové téma",
+ "el": "Νέο θέμα"
+ },
+ "action": { "fn": "wikiOpenNewTopicDialog" }
+ }
+ ]
+ }
+ ]
+ }
+ },
+ "topic": {
+ "title": {
+ "en": "Topic",
+ "ko": "토픽",
+ "zh": "主题",
+ "hi": "विषय",
+ "es": "Tema",
+ "fr": "Sujet",
+ "ar": "الموضوع",
+ "pt": "Tópico",
+ "ru": "Тема",
+ "de": "Thema",
+ "ja": "トピック",
+ "tr": "Konu",
+ "vi": "Chủ đề",
+ "it": "Argomento",
+ "fa": "موضوع",
+ "pl": "Temat",
+ "uk": "Тема",
+ "nl": "Onderwerp",
+ "sv": "Ämne",
+ "cs": "Téma",
+ "el": "Θέμα"
+ },
+ "body": {
+ "type": "column",
+ "children": [
+ {
+ "_comment": "the mockup's top bar shows the generic word \"Topic\" (this screen's static title above), the ACTUAL name rendered here in the body — stat's new raw:true mode, scoped to the selected seed_groups row.",
+ "type": "stat",
+ "raw": true,
+ "table": "seed_groups",
+ "scopeRowId": "$selected:seed_groups",
+ "valueColumn": "name",
+ "color": "coral"
+ },
+ {
+ "type": "row",
+ "wrap": true,
+ "children": [
+ {
+ "type": "stat",
+ "dense": true,
+ "table": "topic_stats",
+ "scopeRowId": "$selected:seed_groups",
+ "agg": "sum",
+ "valueColumn": "seedCount",
+ "label": {
+ "en": "seeds",
+ "ko": "개 직접 저장",
+ "zh": "个种子",
+ "hi": "बीज",
+ "es": "semillas",
+ "fr": "graines",
+ "ar": "بذور",
+ "pt": "sementes",
+ "ru": "исходных",
+ "de": "Startseiten",
+ "ja": "件のシード",
+ "tr": "tohum",
+ "vi": "hạt giống",
+ "it": "semi",
+ "fa": "بذر",
+ "pl": "ziaren",
+ "uk": "джерел",
+ "nl": "zaden",
+ "sv": "frön",
+ "cs": "výchozích",
+ "el": "σπόροι"
+ },
+ "color": "green"
+ },
+ { "type": "text", "style": "caption", "value": { "en": "·", "ko": "·", "zh": "·", "hi": "·", "es": "·", "fr": "·", "ar": "·", "pt": "·", "ru": "·", "de": "·", "ja": "・", "tr": "·", "vi": "·", "it": "·", "fa": "·", "pl": "·", "uk": "·", "nl": "·", "sv": "·", "cs": "·", "el": "·" } },
+ {
+ "type": "stat",
+ "dense": true,
+ "table": "topic_stats",
+ "scopeRowId": "$selected:seed_groups",
+ "agg": "sum",
+ "valueColumn": "articleCount",
+ "label": {
+ "en": "articles",
+ "ko": "개 문서",
+ "zh": "篇文章",
+ "hi": "लेख",
+ "es": "artículos",
+ "fr": "articles",
+ "ar": "مقالات",
+ "pt": "artigos",
+ "ru": "статей",
+ "de": "Artikel",
+ "ja": "件の記事",
+ "tr": "makale",
+ "vi": "bài viết",
+ "it": "articoli",
+ "fa": "مقاله",
+ "pl": "artykułów",
+ "uk": "статей",
+ "nl": "artikelen",
+ "sv": "artiklar",
+ "cs": "článků",
+ "el": "άρθρα"
+ },
+ "color": "blue"
+ },
+ { "type": "text", "style": "caption", "value": { "en": "·", "ko": "·", "zh": "·", "hi": "·", "es": "·", "fr": "·", "ar": "·", "pt": "·", "ru": "·", "de": "·", "ja": "・", "tr": "·", "vi": "·", "it": "·", "fa": "·", "pl": "·", "uk": "·", "nl": "·", "sv": "·", "cs": "·", "el": "·" } },
+ {
+ "type": "stat",
+ "raw": true,
+ "dense": true,
+ "table": "topic_stats",
+ "scopeRowId": "$selected:seed_groups",
+ "valueColumn": "sizeLabel"
+ }
+ ]
+ },
+ {
+ "_comment": "resolves the picture-b2 disclosed deviation (MIGRATION.md '2026-08-31.pictureb2') — the topic-level SYNERGY bar and the per-layer L1/L2 breakout bars now render the engine's new standalone `splitbar` node (single-row two-segment proportion bar, same visual as cards' per-row splitBar) in place of the prior numbers-only stat rows. The descriptive count row and per-layer digit rows stay alongside each bar for the same live wording as before.",
+ "type": "card",
+ "child": {
+ "type": "column",
+ "children": [
+ {
+ "type": "row",
+ "children": [
+ {
+ "type": "text",
+ "style": "eyebrow",
+ "value": {
+ "en": "Synergy",
+ "ko": "시너지",
+ "zh": "协同度",
+ "hi": "तालमेल",
+ "es": "Sinergia",
+ "fr": "Synergie",
+ "ar": "التآزر",
+ "pt": "Sinergia",
+ "ru": "Синергия",
+ "de": "Synergie",
+ "ja": "シナジー",
+ "tr": "Sinerji",
+ "vi": "Hiệp lực",
+ "it": "Sinergia",
+ "fa": "هم‌افزایی",
+ "pl": "Synergia",
+ "uk": "Синергія",
+ "nl": "Synergie",
+ "sv": "Synergi",
+ "cs": "Synergie",
+ "el": "Συνέργεια"
+ },
+ "expand": true
+ },
+ {
+ "type": "stat",
+ "raw": true,
+ "dense": true,
+ "table": "topic_stats",
+ "scopeRowId": "$selected:seed_groups",
+ "valueColumn": "sharedPct",
+ "unit": "%",
+ "color": "coral"
+ }
+ ]
+ },
+ {
+ "type": "splitbar",
+ "table": "topic_stats",
+ "scopeRowId": "$selected:seed_groups",
+ "partColumn": "sharedCount",
+ "totalColumn": "articleCount",
+ "color": "coral",
+ "height": 8
+ },
+ {
+ "type": "row",
+ "wrap": true,
+ "children": [
+ {
+ "type": "stat",
+ "dense": true,
+ "table": "topic_stats",
+ "scopeRowId": "$selected:seed_groups",
+ "agg": "sum",
+ "valueColumn": "sharedCount",
+ "color": "coral"
+ },
+ { "type": "text", "style": "caption", "value": { "en": "of", "ko": "/", "zh": "/", "hi": "में से", "es": "de", "fr": "sur", "ar": "من", "pt": "de", "ru": "из", "de": "von", "ja": "/", "tr": "/", "vi": "/", "it": "di", "fa": "از", "pl": "z", "uk": "з", "nl": "van", "sv": "av", "cs": "z", "el": "από" } },
+ {
+ "type": "stat",
+ "dense": true,
+ "table": "topic_stats",
+ "scopeRowId": "$selected:seed_groups",
+ "agg": "sum",
+ "valueColumn": "articleCount",
+ "label": {
+ "en": "articles reached by 2+ seeds — each downloaded once",
+ "ko": "개 문서가 2개 이상의 저장 항목에서 도달했으며, 각각 한 번만 내려받았습니다",
+ "zh": "个文章由2个以上种子到达 — 各自仅下载一次",
+ "hi": "2+ सीड्स से पहुंचे लेख — प्रत्येक केवल एक बार डाउनलोड हुआ",
+ "es": "artículos alcanzados por 2+ semillas — cada uno descargado una vez",
+ "fr": "articles atteints par 2+ graines — chacun téléchargé une fois",
+ "ar": "مقالات تم الوصول إليها بواسطة بذرتين أو أكثر — تم تنزيل كل منها مرة واحدة فقط",
+ "pt": "artigos alcançados por 2+ sementes — cada um baixado uma vez",
+ "ru": "статей, достигнутых 2+ исходными — каждая скачана один раз",
+ "de": "Artikel, die von 2+ Startseiten erreicht wurden — jeweils einmal heruntergeladen",
+ "ja": "2件以上のシードから到達した記事 — それぞれ1回のみダウンロード",
+ "tr": "2+ tohum tarafından ulaşılan makale — her biri bir kez indirildi",
+ "vi": "bài viết được tiếp cận bởi 2+ hạt giống — mỗi bài chỉ tải một lần",
+ "it": "articoli raggiunti da 2+ semi — ciascuno scaricato una sola volta",
+ "fa": "مقاله دستیافته توسط ۲+ بذر — هرکدام فقط یک بار دانلود شد",
+ "pl": "artykułów osiągniętych przez 2+ ziarna — każdy pobrany raz",
+ "uk": "статей, досягнутих 2+ джерелами — кожна завантажена один раз",
+ "nl": "artikelen bereikt door 2+ zaden — elk één keer gedownload",
+ "sv": "artiklar som nås av 2+ frön — var och en nedladdad en gång",
+ "cs": "článků dosažených 2+ semínky — každý stažen jednou",
+ "el": "άρθρα που προσεγγίστηκαν από 2+ σπόρους — το καθένα κατέβηκε μία φορά"
+ }
+ }
+ ]
+ },
+ { "type": "divider" },
+ {
+ "type": "row",
+ "children": [
+ { "type": "text", "style": "caption", "value": { "en": "Layer 1", "ko": "1단계", "zh": "第1层", "hi": "परत 1", "es": "Capa 1", "fr": "Niveau 1", "ar": "الطبقة 1", "pt": "Camada 1", "ru": "Уровень 1", "de": "Ebene 1", "ja": "レイヤー1", "tr": "Katman 1", "vi": "Lớp 1", "it": "Livello 1", "fa": "لایه ۱", "pl": "Poziom 1", "uk": "Рівень 1", "nl": "Laag 1", "sv": "Nivå 1", "cs": "Vrstva 1", "el": "Επίπεδο 1" } },
+ {
+ "type": "splitbar",
+ "table": "topic_stats",
+ "scopeRowId": "$selected:seed_groups",
+ "partColumn": "l1Shared",
+ "totalColumn": "l1Total",
+ "color": "coral",
+ "height": 5,
+ "label": {
+ "en": "shared",
+ "ko": "개 공유",
+ "zh": "个共享",
+ "hi": "साझा",
+ "es": "compartidos",
+ "fr": "partagés",
+ "ar": "مشترك",
+ "pt": "compartilhados",
+ "ru": "общих",
+ "de": "geteilt",
+ "ja": "件共有",
+ "tr": "paylaşılan",
+ "vi": "chung",
+ "it": "condivisi",
+ "fa": "مشترک",
+ "pl": "wspólnych",
+ "uk": "спільних",
+ "nl": "gedeeld",
+ "sv": "delade",
+ "cs": "sdílených",
+ "el": "κοινά"
+ },
+ "expand": true
+ }
+ ]
+ },
+ {
+ "type": "row",
+ "children": [
+ { "type": "text", "style": "caption", "value": { "en": "Layer 2", "ko": "2단계", "zh": "第2层", "hi": "परत 2", "es": "Capa 2", "fr": "Niveau 2", "ar": "الطبقة 2", "pt": "Camada 2", "ru": "Уровень 2", "de": "Ebene 2", "ja": "レイヤー2", "tr": "Katman 2", "vi": "Lớp 2", "it": "Livello 2", "fa": "لایه ۲", "pl": "Poziom 2", "uk": "Рівень 2", "nl": "Laag 2", "sv": "Nivå 2", "cs": "Vrstva 2", "el": "Επίπεδο 2" } },
+ {
+ "type": "splitbar",
+ "table": "topic_stats",
+ "scopeRowId": "$selected:seed_groups",
+ "partColumn": "l2Shared",
+ "totalColumn": "l2Total",
+ "color": "coral",
+ "height": 5,
+ "label": {
+ "en": "shared",
+ "ko": "개 공유",
+ "zh": "个共享",
+ "hi": "साझा",
+ "es": "compartidos",
+ "fr": "partagés",
+ "ar": "مشترك",
+ "pt": "compartilhados",
+ "ru": "общих",
+ "de": "geteilt",
+ "ja": "件共有",
+ "tr": "paylaşılan",
+ "vi": "chung",
+ "it": "condivisi",
+ "fa": "مشترک",
+ "pl": "wspólnych",
+ "uk": "спільних",
+ "nl": "gedeeld",
+ "sv": "delade",
+ "cs": "sdílených",
+ "el": "κοινά"
+ },
+ "expand": true
+ }
+ ]
+ }
+ ]
+ }
+ },
+ {
+ "type": "text",
+ "style": "eyebrow",
+ "value": {
+ "en": "Seeds",
+ "ko": "저장 항목",
+ "zh": "种子",
+ "hi": "सीड्स",
+ "es": "Semillas",
+ "fr": "Graines",
+ "ar": "البذور",
+ "pt": "Sementes",
+ "ru": "Исходные",
+ "de": "Startseiten",
+ "ja": "シード",
+ "tr": "Tohumlar",
+ "vi": "Hạt giống",
+ "it": "Semi",
+ "fa": "بذرها",
+ "pl": "Ziarna",
+ "uk": "Джерела",
+ "nl": "Zaden",
+ "sv": "Frön",
+ "cs": "Výchozí",
+ "el": "Σπόροι"
+ }
+ },
+ {
+ "_comment": "per-seed cards scoped to THIS topic's membership rows — splitBar is the real shared-vs-exclusive proportion bar the mockup shows per seed (accent=shared, muted=exclusive, per the SCAR-avoiding two-segment convention this round's cards primitive uses).",
+ "type": "cards",
+ "table": "seed_group_members",
+ "filter": { "column": "groupId", "value": "$selected:seed_groups" },
+ "title": "seedTitle",
+ "subtitle": "progressLabel",
+ "expandable": false,
+ "tableView": false,
+ "splitBar": {
+ "partColumn": "sharedCount",
+ "totalColumn": "articleCount",
+ "color": "coral",
+ "label": { "en": "shared", "ko": "개 공유" }
+ },
+ "valueLabels": {
+ "depthCap": { "1": "L1", "2": "L2" },
+ "status": {
+ "running": { "en": "saving", "ko": "저장 중" },
+ "paused": { "en": "paused", "ko": "일시 중지" },
+ "done": { "en": "done", "ko": "완료" },
+ "failed": { "en": "failed", "ko": "실패" }
+ }
+ },
+ "tags": [
+ { "column": "depthCap", "colors": { "1": "gray", "2": "purple" } },
+ { "column": "status", "colors": { "running": "blue", "paused": "amber", "done": "green", "failed": "coral" } },
+ { "column": "wiki" }
+ ],
+ "cardActions": [
+ {
+ "label": { "en": "Change depth", "ko": "깊이 변경" },
+ "icon": "unfold_more",
+ "action": { "fn": "wikiOpenSeedDepthPicker" }
+ }
+ ],
+ "swipeActions": [
+ {
+ "label": { "en": "Remove from topic", "ko": "토픽에서 제거" },
+ "icon": "remove_circle_outline",
+ "action": { "fn": "wikiRemoveSeedFromTopic" }
+ }
+ ],
+ "emptyIcon": "cloud_download",
+ "emptyTitle": {
+ "en": "No seeds in this topic yet",
+ "ko": "이 토픽에는 아직 저장 항목이 없습니다",
+ "zh": "此主题尚无种子",
+ "hi": "इस विषय में अभी कोई सीड नहीं है",
+ "es": "Aún no hay semillas en este tema",
+ "fr": "Aucune graine dans ce sujet pour l'instant",
+ "ar": "لا توجد بذور في هذا الموضوع بعد",
+ "pt": "Ainda não há sementes neste tópico",
+ "ru": "В этой теме пока нет исходных статей",
+ "de": "Noch keine Startseiten in diesem Thema",
+ "ja": "このトピックにはまだシードがありません",
+ "tr": "Bu konuda henüz tohum yok",
+ "vi": "Chưa có hạt giống nào trong chủ đề này",
+ "it": "Ancora nessun seme in questo argomento",
+ "fa": "هنوز بذری در این موضوع نیست",
+ "pl": "Brak jeszcze ziaren w tym temacie",
+ "uk": "У цій темі поки немає джерел",
+ "nl": "Nog geen zaden in dit onderwerp",
+ "sv": "Inga frön i detta ämne än",
+ "cs": "Zatím žádná semínka v tomto tématu",
+ "el": "Δεν υπάρχουν σπόροι σε αυτό το θέμα ακόμα"
+ },
+ "emptyText": {
+ "en": "Add seed below to search Wikipedia and join a result to this topic.",
+ "ko": "아래 \"저장 항목 추가\"로 위키백과를 검색하고 결과를 이 토픽에 추가하세요.",
+ "zh": "在下方添加种子以搜索维基百科并将结果加入此主题。",
+ "hi": "विकिपीडिया खोजने और परिणाम को इस विषय से जोड़ने के लिए नीचे सीड जोड़ें।",
+ "es": "Añade una semilla abajo para buscar en Wikipedia y unir un resultado a este tema.",
+ "fr": "Ajoutez une graine ci-dessous pour rechercher sur Wikipédia et associer un résultat à ce sujet.",
+ "ar": "أضف بذرة أدناه للبحث في ويكيبيديا وضم نتيجة إلى هذا الموضوع.",
+ "pt": "Adicione uma semente abaixo para pesquisar na Wikipédia e unir um resultado a este tópico.",
+ "ru": "Добавьте исходную статью ниже, чтобы найти в Википедии и присоединить результат к этой теме.",
+ "de": "Fügen Sie unten eine Startseite hinzu, um Wikipedia zu durchsuchen und ein Ergebnis diesem Thema zuzuordnen.",
+ "ja": "下でシードを追加してウィキペディアを検索し、結果をこのトピックに結び付けます。",
+ "tr": "Wikipedia'da arama yapıp bir sonucu bu konuya bağlamak için aşağıya tohum ekleyin.",
+ "vi": "Thêm hạt giống bên dưới để tìm kiếm Wikipedia và gắn một kết quả vào chủ đề này.",
+ "it": "Aggiungi un seme qui sotto per cercare su Wikipedia e unire un risultato a questo argomento.",
+ "fa": "یک بذر در زیر اضافه کنید تا ویکی‌پدیا را جستجو کرده و یک نتیجه را به این موضوع بپیوندید.",
+ "pl": "Dodaj ziarno poniżej, aby wyszukać w Wikipedii i dołączyć wynik do tego tematu.",
+ "uk": "Додайте джерело нижче, щоб шукати у Вікіпедії та приєднати результат до цієї теми.",
+ "nl": "Voeg hieronder een zaad toe om Wikipedia te doorzoeken en een resultaat aan dit onderwerp te koppelen.",
+ "sv": "Lägg till ett frö nedan för att söka på Wikipedia och koppla ett resultat till detta ämne.",
+ "cs": "Přidejte níže semínko a vyhledejte na Wikipedii výsledek, který k tomuto tématu připojíte.",
+ "el": "Προσθέστε έναν σπόρο παρακάτω για αναζήτηση στη Wikipedia και σύνδεση ενός αποτελέσματος με αυτό το θέμα."
+ }
+ },
+ {
+ "type": "row",
+ "wrap": true,
+ "children": [
+ {
+ "type": "button",
+ "variant": "tonal",
+ "icon": "cloud_download",
+ "label": {
+ "en": "Save all",
+ "ko": "전체 저장",
+ "zh": "全部保存",
+ "hi": "सभी सहेजें",
+ "es": "Guardar todo",
+ "fr": "Tout enregistrer",
+ "ar": "حفظ الكل",
+ "pt": "Salvar tudo",
+ "ru": "Сохранить всё",
+ "de": "Alles speichern",
+ "ja": "すべて保存",
+ "tr": "Tümünü kaydet",
+ "vi": "Lưu tất cả",
+ "it": "Salva tutto",
+ "fa": "ذخیره همه",
+ "pl": "Zapisz wszystko",
+ "uk": "Зберегти все",
+ "nl": "Alles opslaan",
+ "sv": "Spara allt",
+ "cs": "Uložit vše",
+ "el": "Αποθήκευση όλων"
+ },
+ "action": { "fn": "wikiCacheAllTopic" }
+ },
+ {
+ "type": "button",
+ "variant": "outlined",
+ "icon": "add",
+ "label": {
+ "en": "Add seed",
+ "ko": "저장 항목 추가",
+ "zh": "添加种子",
+ "hi": "सीड जोड़ें",
+ "es": "Añadir semilla",
+ "fr": "Ajouter une graine",
+ "ar": "إضافة بذرة",
+ "pt": "Adicionar semente",
+ "ru": "Добавить исходную",
+ "de": "Startseite hinzufügen",
+ "ja": "シードを追加",
+ "tr": "Tohum ekle",
+ "vi": "Thêm hạt giống",
+ "it": "Aggiungi seme",
+ "fa": "افزودن بذر",
+ "pl": "Dodaj ziarno",
+ "uk": "Додати джерело",
+ "nl": "Zaad toevoegen",
+ "sv": "Lägg till frö",
+ "cs": "Přidat semínko",
+ "el": "Προσθήκη σπόρου"
+ },
+ "action": { "fn": "wikiOpenAddSeedToTopic" }
+ }
+ ]
+ }
+ ]
+ }
+ },
+ "topicCapture": {
+ "_comment": "reached only from the search screen's 'Capture as a topic' card (wikiOpenTopicCapture). Centrality analysis over topicCandidates (top-12 same-language search results for the term), CORE (linked by a majority of the others, pre-checked) vs PERIPHERAL (the rest, unchecked) — see wikipick_net.dart's _runTopicCentralityCapture doc for the derivation. CREATE reuses the exact existing W12 topic/save flow (wikiCommitTopicCapture).",
+ "title": {
+ "en": "New topic",
+ "ko": "새 토픽",
+ "zh": "新建主题",
+ "hi": "नया विषय",
+ "es": "Nuevo tema",
+ "fr": "Nouveau sujet",
+ "ar": "موضوع جديد",
+ "pt": "Novo tópico",
+ "ru": "Новая тема",
+ "de": "Neues Thema",
+ "ja": "新しいトピック",
+ "tr": "Yeni konu",
+ "vi": "Chủ đề mới",
+ "it": "Nuovo argomento",
+ "fa": "موضوع جدید",
+ "pl": "Nowy temat",
+ "uk": "Нова тема",
+ "nl": "Nieuw onderwerp",
+ "sv": "Nytt ämne",
+ "cs": "Nové téma",
+ "el": "Νέο θέμα"
+ },
+ "body": {
+ "type": "column",
+ "children": [
+ {
+ "_comment": "Serif title + pencil — editable name (title-cased search term by default), same rename-dialog shape as New topic's own name prompt (wikiRenameTopicCapture reuses _openNewTopicDialog's TextField pattern, just writing back onto topicCaptureStatus.name instead of creating a topic directly).",
+ "type": "row",
+ "children": [
+ {
+ "type": "stat",
+ "raw": true,
+ "expand": true,
+ "table": "topicCaptureStatus",
+ "filter": { "column": "id", "value": "tc1" },
+ "valueColumn": "name",
+ "color": "coral"
+ },
+ {
+ "type": "button",
+ "variant": "text",
+ "icon": "edit",
+ "dense": true,
+ "action": { "fn": "wikiRenameTopicCapture" }
+ }
+ ]
+ },
+ {
+ "_comment": "'12 candidates · centrality from links between them · done in Ns' once analysis finishes.",
+ "type": "row",
+ "wrap": true,
+ "showIf": { "table": "topicCaptureStatus", "id": "tc1", "column": "state", "equals": "done" },
+ "children": [
+ {
+ "type": "stat",
+ "dense": true,
+ "raw": true,
+ "table": "topicCaptureStatus",
+ "filter": { "column": "id", "value": "tc1" },
+ "valueColumn": "totalCount",
+ "label": {
+ "en": "candidates",
+ "ko": "개 후보",
+ "zh": "个候选",
+ "hi": "उम्मीदवार",
+ "es": "candidatos",
+ "fr": "candidats",
+ "ar": "مرشحون",
+ "pt": "candidatos",
+ "ru": "кандидатов",
+ "de": "Kandidaten",
+ "ja": "件の候補",
+ "tr": "aday",
+ "vi": "ứng viên",
+ "it": "candidati",
+ "fa": "نامزد",
+ "pl": "kandydatów",
+ "uk": "кандидатів",
+ "nl": "kandidaten",
+ "sv": "kandidater",
+ "cs": "kandidátů",
+ "el": "υποψήφια"
+ }
+ },
+ { "type": "text", "style": "caption", "value": { "en": "·", "ko": "·", "zh": "·", "hi": "·", "es": "·", "fr": "·", "ar": "·", "pt": "·", "ru": "·", "de": "·", "ja": "・", "tr": "·", "vi": "·", "it": "·", "fa": "·", "pl": "·", "uk": "·", "nl": "·", "sv": "·", "cs": "·", "el": "·" } },
+ {
+ "type": "text",
+ "style": "caption",
+ "value": {
+ "en": "centrality from links between them",
+ "ko": "후보 간 링크로 계산한 중심성",
+ "zh": "根据它们之间的链接计算的中心度",
+ "hi": "उनके बीच लिंक से केंद्रीयता",
+ "es": "centralidad por los enlaces entre ellos",
+ "fr": "centralité selon les liens entre eux",
+ "ar": "المركزية من الروابط بينها",
+ "pt": "centralidade pelos links entre eles",
+ "ru": "центральность по связям между ними",
+ "de": "Zentralität anhand der Links zwischen ihnen",
+ "ja": "候補間のリンクによる中心性",
+ "tr": "aralarındaki bağlantılardan merkezilik",
+ "vi": "độ trung tâm từ các liên kết giữa chúng",
+ "it": "centralità dai link tra loro",
+ "fa": "مرکزیت بر اساس پیوندهای میان آن‌ها",
+ "pl": "centralność na podstawie odnośników między nimi",
+ "uk": "центральність за посиланнями між ними",
+ "nl": "centraliteit op basis van links ertussen",
+ "sv": "centralitet baserat på länkar mellan dem",
+ "cs": "centralita podle odkazů mezi nimi",
+ "el": "κεντρικότητα από τους συνδέσμους μεταξύ τους"
+ }
+ },
+ { "type": "text", "style": "caption", "value": { "en": "·", "ko": "·", "zh": "·", "hi": "·", "es": "·", "fr": "·", "ar": "·", "pt": "·", "ru": "·", "de": "·", "ja": "・", "tr": "·", "vi": "·", "it": "·", "fa": "·", "pl": "·", "uk": "·", "nl": "·", "sv": "·", "cs": "·", "el": "·" } },
+ {
+ "type": "text",
+ "style": "caption",
+ "value": {
+ "en": "done in",
+ "ko": "소요 시간",
+ "zh": "用时",
+ "hi": "में पूर्ण",
+ "es": "completado en",
+ "fr": "terminé en",
+ "ar": "تم في",
+ "pt": "concluído em",
+ "ru": "выполнено за",
+ "de": "fertig in",
+ "ja": "所要時間",
+ "tr": "tamamlanma süresi",
+ "vi": "hoàn thành trong",
+ "it": "completato in",
+ "fa": "انجام‌شده در",
+ "pl": "ukończono w",
+ "uk": "виконано за",
+ "nl": "voltooid in",
+ "sv": "klart på",
+ "cs": "dokončeno za",
+ "el": "ολοκληρώθηκε σε"
+ }
+ },
+ {
+ "type": "stat",
+ "dense": true,
+ "raw": true,
+ "table": "topicCaptureStatus",
+ "filter": { "column": "id", "value": "tc1" },
+ "valueColumn": "elapsedLabel"
+ }
+ ]
+ },
+ {
+ "_comment": "progress-visibility-first: live 'Analyzing k of N…' line while the fetch loop runs — never a silent stall, and still meaningful if an API failure mid-run left the count short of totalCount (wikiCommitTopicCapture still works off whatever landed).",
+ "type": "row",
+ "wrap": true,
+ "showIf": { "table": "topicCaptureStatus", "id": "tc1", "column": "state", "equals": "analyzing" },
+ "children": [
+ {
+ "type": "text",
+ "value": {
+ "en": "Analyzing",
+ "ko": "분석 중",
+ "zh": "正在分析",
+ "hi": "विश्लेषण किया जा रहा है",
+ "es": "Analizando",
+ "fr": "Analyse",
+ "ar": "جارٍ التحليل",
+ "pt": "Analisando",
+ "ru": "Анализ",
+ "de": "Wird analysiert",
+ "ja": "分析中",
+ "tr": "Analiz ediliyor",
+ "vi": "Đang phân tích",
+ "it": "Analisi in corso",
+ "fa": "در حال تحلیل",
+ "pl": "Analizowanie",
+ "uk": "Аналіз",
+ "nl": "Analyseren",
+ "sv": "Analyserar",
+ "cs": "Analyzování",
+ "el": "Ανάλυση"
+ }
+ },
+ {
+ "type": "stat",
+ "dense": true,
+ "raw": true,
+ "table": "topicCaptureStatus",
+ "filter": { "column": "id", "value": "tc1" },
+ "valueColumn": "analyzedCount"
+ },
+ { "type": "text", "value": { "en": "of", "ko": "/", "zh": "/", "hi": "में से", "es": "de", "fr": "sur", "ar": "من", "pt": "de", "ru": "из", "de": "von", "ja": "/", "tr": "/", "vi": "/", "it": "di", "fa": "از", "pl": "z", "uk": "з", "nl": "van", "sv": "av", "cs": "z", "el": "από" } },
+ {
+ "type": "stat",
+ "dense": true,
+ "raw": true,
+ "table": "topicCaptureStatus",
+ "filter": { "column": "id", "value": "tc1" },
+ "valueColumn": "totalCount"
+ },
+ { "type": "text", "value": { "en": "…", "ko": "…", "zh": "…", "hi": "…", "es": "…", "fr": "…", "ar": "…", "pt": "…", "ru": "…", "de": "…", "ja": "…", "tr": "…", "vi": "…", "it": "…", "fa": "…", "pl": "…", "uk": "…", "nl": "…", "sv": "…", "cs": "…", "el": "…" } }
+ ]
+ },
+ {
+ "_comment": "emptyCore==false is the normal path — CORE (relative-centrality threshold, see wikipick_net.dart's _isCoreCandidate) + PERIPHERAL, exactly as before.",
+ "type": "column",
+ "showIf": { "table": "topicCaptureStatus", "id": "tc1", "column": "emptyCore", "equals": false },
+ "children": [
+ {
+ "type": "text",
+ "style": "eyebrow",
+ "color": "coral",
+ "value": {
+ "en": "CORE",
+ "ko": "핵심",
+ "zh": "核心",
+ "hi": "मुख्य",
+ "es": "NÚCLEO",
+ "fr": "CŒUR",
+ "ar": "أساسي",
+ "pt": "NÚCLEO",
+ "ru": "ЯДРО",
+ "de": "KERN",
+ "ja": "コア",
+ "tr": "ÇEKİRDEK",
+ "vi": "LÕI",
+ "it": "NUCLEO",
+ "fa": "هسته",
+ "pl": "RDZEŃ",
+ "uk": "ЯДРО",
+ "nl": "KERN",
+ "sv": "KÄRNA",
+ "cs": "JÁDRO",
+ "el": "ΠΥΡΗΝΑΣ"
+ }
+ },
+ {
+ "_comment": "CORE = linkedByCount >= max(2, ceil(topScore/2)) of this run's own most-linked candidate — pre-checked. Checkboxes toggle via tap-the-row (wikiToggleTopicCandidate); cards has no native checkbox primitive (cards-menuActions-never-render SCAR), so the filled/outline check glyph (iconColumn, checkIcon) IS the checkbox. splitBar shows the real 'N of M' linked-by proportion per candidate.",
+ "type": "cards",
+ "table": "topicCandidates",
+ "filter": { "column": "isCore", "value": true },
+ "title": "title",
+ "subtitle": "linkedByCount",
+ "iconColumn": "checkIcon",
+ "sortBy": "rank",
+ "sortDir": "asc",
+ "density": "row",
+ "expandable": false,
+ "windowed": false,
+ "tableView": false,
+ "action": { "fn": "wikiToggleTopicCandidate" },
+ "splitBar": {
+ "partColumn": "linkedByCount",
+ "totalColumn": "otherCount",
+ "color": "coral",
+ "label": { "en": "linked", "ko": "개 연결" }
+ },
+ "emptyIcon": "hub",
+ "emptyTitle": {
+ "en": "Analyzing…",
+ "ko": "분석 중…",
+ "zh": "正在分析…",
+ "hi": "विश्लेषण किया जा रहा है…",
+ "es": "Analizando…",
+ "fr": "Analyse…",
+ "ar": "جارٍ التحليل…",
+ "pt": "Analisando…",
+ "ru": "Анализ…",
+ "de": "Wird analysiert…",
+ "ja": "分析中…",
+ "tr": "Analiz ediliyor…",
+ "vi": "Đang phân tích…",
+ "it": "Analisi in corso…",
+ "fa": "در حال تحلیل…",
+ "pl": "Analizowanie…",
+ "uk": "Аналіз…",
+ "nl": "Analyseren…",
+ "sv": "Analyserar…",
+ "cs": "Analyzování…",
+ "el": "Ανάλυση…"
+ }
+ },
+ {
+ "type": "text",
+ "style": "eyebrow",
+ "showIf": { "table": "topicCaptureStatus", "id": "tc1", "column": "peripheralCount", "notEquals": 0 },
+ "value": {
+ "en": "PERIPHERAL — SAME NAME, DIFFERENT TOPIC",
+ "ko": "주변부 — 이름은 같지만 다른 주제",
+ "zh": "边缘 — 同名但不同主题",
+ "hi": "परिधीय — नाम समान, विषय अलग",
+ "es": "PERIFÉRICO — MISMO NOMBRE, TEMA DISTINTO",
+ "fr": "PÉRIPHÉRIQUE — MÊME NOM, SUJET DIFFÉRENT",
+ "ar": "هامشي — نفس الاسم، موضوع مختلف",
+ "pt": "PERIFÉRICO — MESMO NOME, TÓPICO DIFERENTE",
+ "ru": "ПЕРИФЕРИЙНОЕ — ТО ЖЕ ИМЯ, ДРУГАЯ ТЕМА",
+ "de": "RANDBEREICH — GLEICHER NAME, ANDERES THEMA",
+ "ja": "周辺 — 同名だが異なるトピック",
+ "tr": "ÇEVRESEL — AYNI AD, FARKLI KONU",
+ "vi": "NGOẠI VI — CÙNG TÊN, KHÁC CHỦ ĐỀ",
+ "it": "PERIFERICO — STESSO NOME, ARGOMENTO DIVERSO",
+ "fa": "پیرامونی — نام یکسان، موضوع متفاوت",
+ "pl": "PERYFERYJNE — TA SAMA NAZWA, INNY TEMAT",
+ "uk": "ПЕРИФЕРІЙНЕ — ТЕ САМЕ ІМ'Я, ІНША ТЕМА",
+ "nl": "PERIFEER — ZELFDE NAAM, ANDER ONDERWERP",
+ "sv": "PERIFER — SAMMA NAMN, ANNAT ÄMNE",
+ "cs": "OKRAJOVÉ — STEJNÝ NÁZEV, JINÉ TÉMA",
+ "el": "ΠΕΡΙΦΕΡΕΙΑΚΟ — ΙΔΙΟ ΟΝΟΜΑ, ΔΙΑΦΟΡΕΤΙΚΟ ΘΕΜΑ"
+ }
+ }
+ ]
+ },
+ {
+ "_comment": "the honest degenerate state — analysis finished but nothing in the pool meaningfully interlinks (topScore <= 1), so an absolute CORE pick would be fabricated. Shown instead of a fake CORE section; every candidate below still lists, unchecked, for the user to pick by hand.",
+ "type": "column",
+ "showIf": { "table": "topicCaptureStatus", "id": "tc1", "column": "emptyCore", "equals": true },
+ "children": [
+ {
+ "type": "text",
+ "style": "eyebrow",
+ "value": {
+ "en": "THESE RESULTS DON'T INTERLINK — PICK SEEDS BY HAND",
+ "ko": "결과가 서로 연결되지 않습니다 — 직접 선택하세요",
+ "zh": "这些结果彼此不互联——请手动挑选种子",
+ "hi": "ये परिणाम आपस में जुड़े नहीं हैं — बीज स्वयं चुनें",
+ "es": "ESTOS RESULTADOS NO SE INTERCONECTAN — ELIGE LAS SEMILLAS A MANO",
+ "fr": "CES RÉSULTATS NE SE RELIENT PAS ENTRE EUX — CHOISISSEZ LES GRAINES À LA MAIN",
+ "ar": "هذه النتائج لا تترابط — اختر البذور يدويًا",
+ "pt": "ESTES RESULTADOS NÃO SE INTERLIGAM — ESCOLHA AS SEMENTES MANUALMENTE",
+ "ru": "ЭТИ РЕЗУЛЬТАТЫ НЕ СВЯЗАНЫ МЕЖДУ СОБОЙ — ВЫБЕРИТЕ ЗЁРНА ВРУЧНУЮ",
+ "de": "DIESE ERGEBNISSE VERLINKEN SICH NICHT UNTEREINANDER — WÄHLE DIE STARTPUNKTE MANUELL",
+ "ja": "これらの結果は互いにリンクしていません — 手動でシードを選んでください",
+ "tr": "BU SONUÇLAR BİRBİRİYLE BAĞLANTILI DEĞİL — TOHUMLARI ELLE SEÇİN",
+ "vi": "CÁC KẾT QUẢ NÀY KHÔNG LIÊN KẾT VỚI NHAU — HÃY CHỌN HẠT GIỐNG THỦ CÔNG",
+ "it": "QUESTI RISULTATI NON SI INTERCOLLEGANO — SCEGLI I SEMI MANUALMENTE",
+ "fa": "این نتایج به هم پیوند ندارند — دانه‌ها را دستی انتخاب کنید",
+ "pl": "TE WYNIKI NIE ŁĄCZĄ SIĘ ZE SOBĄ — WYBIERZ ZALĄŻKI RĘCZNIE",
+ "uk": "ЦІ РЕЗУЛЬТАТИ НЕ ПОВ'ЯЗАНІ МІЖ СОБОЮ — ОБЕРІТЬ ЗЕРНА ВРУЧНУ",
+ "nl": "DEZE RESULTATEN VERBINDEN NIET MET ELKAAR — KIES DE STARTPUNTEN HANDMATIG",
+ "sv": "DESSA RESULTAT LÄNKAR INTE TILL VARANDRA — VÄLJ FRÖN MANUELLT",
+ "cs": "TYTO VÝSLEDKY SE NAVZÁJEM NEPROPOJUJÍ — VYBERTE SEMENA RUČNĚ",
+ "el": "ΑΥΤΑ ΤΑ ΑΠΟΤΕΛΕΣΜΑΤΑ ΔΕΝ ΔΙΑΣΥΝΔΕΟΝΤΑΙ — ΕΠΙΛΕΞΤΕ ΣΠΟΡΟΥΣ ΧΕΙΡΟΚΙΝΗΤΑ"
+ }
+ }
+ ]
+ },
+ {
+ "_comment": "PERIPHERAL = the rest — unchecked by default, dimmed via the engine's opacity styling. Same toggle + splitBar as the CORE list above. Also the ONLY candidate list shown in the emptyCore degenerate state (every candidate is isCore==false there), listing everyone unchecked for manual picking.",
+ "type": "cards",
+ "table": "topicCandidates",
+ "filter": { "column": "isCore", "value": false },
+ "title": "title",
+ "subtitle": "linkedByCount",
+ "iconColumn": "checkIcon",
+ "sortBy": "rank",
+ "sortDir": "asc",
+ "density": "row",
+ "expandable": false,
+ "windowed": false,
+ "tableView": false,
+ "action": { "fn": "wikiToggleTopicCandidate" },
+ "splitBar": {
+ "partColumn": "linkedByCount",
+ "totalColumn": "otherCount",
+ "color": "gray",
+ "label": { "en": "linked", "ko": "개 연결" }
+ },
+ "emptyIcon": "hub",
+ "emptyTitle": {
+ "en": "None — every candidate is core",
+ "ko": "없음 — 모든 후보가 핵심입니다",
+ "zh": "无 — 所有候选都是核心",
+ "hi": "कोई नहीं — सभी उम्मीदवार मुख्य हैं",
+ "es": "Ninguno — todos los candidatos son núcleo",
+ "fr": "Aucun — tous les candidats sont au cœur",
+ "ar": "لا شيء — كل المرشحين أساسيون",
+ "pt": "Nenhum — todos os candidatos são núcleo",
+ "ru": "Нет — все кандидаты являются ядром",
+ "de": "Keine — alle Kandidaten sind Kern",
+ "ja": "なし — すべての候補がコアです",
+ "tr": "Yok — tüm adaylar çekirdek",
+ "vi": "Không có — mọi ứng viên đều là lõi",
+ "it": "Nessuno — tutti i candidati sono nucleo",
+ "fa": "هیچ‌کدام — همه نامزدها هسته هستند",
+ "pl": "Brak — wszyscy kandydaci to rdzeń",
+ "uk": "Немає — усі кандидати є ядром",
+ "nl": "Geen — alle kandidaten zijn kern",
+ "sv": "Inga — alla kandidater är kärna",
+ "cs": "Žádné — všichni kandidáti jsou jádro",
+ "el": "Κανένα — όλοι οι υποψήφιοι είναι πυρήνας"
+ }
+ },
+ { "type": "divider" },
+ {
+ "_comment": "Depth/images chips reuse the EXACT per-save options every other save path reads (saveOptions/opt1) — CREATE's per-candidate save uses _readSaveOptions, same as wikiAddSeedToTopic.",
+ "type": "row",
+ "wrap": true,
+ "children": [
+ {
+ "type": "column",
+ "children": [
+ { "type": "text", "style": "eyebrow", "value": { "en": "Depth", "ko": "깊이", "zh": "深度", "hi": "गहराई", "es": "Profundidad", "fr": "Profondeur", "ar": "العمق", "pt": "Profundidade", "ru": "Глубина", "de": "Tiefe", "ja": "深度", "tr": "Derinlik", "vi": "Độ sâu", "it": "Profondità", "fa": "عمق", "pl": "Głębokość", "uk": "Глибина", "nl": "Diepte", "sv": "Djup", "cs": "Hloubka", "el": "Βάθος" } },
+ {
+ "type": "pick",
+ "dense": true,
+ "table": "saveOptions",
+ "rowId": "opt1",
+ "column": "cacheDepth",
+ "variant": "segmented",
+ "options": [
+ { "value": 1, "label": { "en": "L1", "ko": "L1" } },
+ { "value": 2, "label": { "en": "L2", "ko": "L2" } }
+ ]
+ }
+ ]
+ },
+ {
+ "type": "column",
+ "children": [
+ { "type": "text", "style": "eyebrow", "value": { "en": "Images", "ko": "이미지", "zh": "图片", "hi": "चित्र", "es": "Imágenes", "fr": "Images", "ar": "الصور", "pt": "Imagens", "ru": "Изображения", "de": "Bilder", "ja": "画像", "tr": "Görseller", "vi": "Hình ảnh", "it": "Immagini", "fa": "تصاویر", "pl": "Obrazy", "uk": "Зображення", "nl": "Afbeeldingen", "sv": "Bilder", "cs": "Obrázky", "el": "Εικόνες" } },
+ {
+ "type": "pick",
+ "dense": true,
+ "table": "saveOptions",
+ "rowId": "opt1",
+ "column": "includeImages",
+ "variant": "segmented",
+ "options": [
+ { "value": false, "label": { "en": "Off", "ko": "끄기" } },
+ { "value": true, "label": { "en": "On", "ko": "켜기" } }
+ ]
+ }
+ ]
+ }
+ ]
+ },
+ {
+ "type": "row",
+ "wrap": true,
+ "children": [
+ { "type": "text", "style": "caption", "value": { "en": "≈", "ko": "약", "zh": "约", "hi": "लगभग", "es": "≈", "fr": "≈", "ar": "≈", "pt": "≈", "ru": "≈", "de": "≈", "ja": "約", "tr": "≈", "vi": "≈", "it": "≈", "fa": "≈", "pl": "≈", "uk": "≈", "nl": "≈", "sv": "≈", "cs": "≈", "el": "≈" } },
+ {
+ "type": "stat",
+ "raw": true,
+ "dense": true,
+ "table": "topicCaptureStatus",
+ "filter": { "column": "id", "value": "tc1" },
+ "valueColumn": "estimateArticles",
+ "label": {
+ "en": "articles",
+ "ko": "개 문서 (추정)",
+ "zh": "篇文章",
+ "hi": "लेख",
+ "es": "artículos",
+ "fr": "articles",
+ "ar": "مقالات",
+ "pt": "artigos",
+ "ru": "статей",
+ "de": "Artikel",
+ "ja": "件の記事",
+ "tr": "makale",
+ "vi": "bài viết",
+ "it": "articoli",
+ "fa": "مقاله",
+ "pl": "artykułów",
+ "uk": "статей",
+ "nl": "artikelen",
+ "sv": "artiklar",
+ "cs": "článků",
+ "el": "άρθρα"
+ }
+ }
+ ]
+ },
+ {
+ "type": "row",
+ "wrap": true,
+ "children": [
+ {
+ "type": "button",
+ "variant": "filled",
+ "icon": "workspaces",
+ "label": {
+ "en": "Create topic",
+ "ko": "토픽 만들기",
+ "zh": "创建主题",
+ "hi": "विषय बनाएं",
+ "es": "Crear tema",
+ "fr": "Créer un sujet",
+ "ar": "إنشاء موضوع",
+ "pt": "Criar tópico",
+ "ru": "Создать тему",
+ "de": "Thema erstellen",
+ "ja": "トピックを作成",
+ "tr": "Konu oluştur",
+ "vi": "Tạo chủ đề",
+ "it": "Crea argomento",
+ "fa": "ایجاد موضوع",
+ "pl": "Utwórz temat",
+ "uk": "Створити тему",
+ "nl": "Onderwerp maken",
+ "sv": "Skapa ämne",
+ "cs": "Vytvořit téma",
+ "el": "Δημιουργία θέματος"
+ },
+ "action": { "fn": "wikiCommitTopicCapture" }
+ }
+ ]
+ }
+ ]
+ }
+ },
+ "reader": {
+ "title": {
+ "en": "Article",
+ "ko": "문서",
+ "zh": "文章",
+ "hi": "लेख",
+ "es": "Artículo",
+ "fr": "Article",
+ "ar": "مقالة",
+ "pt": "Artigo",
+ "ru": "Статья",
+ "de": "Artikel",
+ "ja": "記事",
+ "tr": "Makale",
+ "vi": "Bài viết",
+ "it": "Articolo",
+ "fa": "مقاله",
+ "pl": "Artykuł",
+ "uk": "Стаття",
+ "nl": "Artikel",
+ "sv": "Artikel",
+ "cs": "Článek",
+ "el": "Άρθρο"
+ },
+ "titleFrom": {
+ "table": "liveArticle",
+ "id": "lr1",
+ "column": "title"
+ },
+ "body": {
+ "type": "column",
+ "children": [
+ {
+ "type": "text",
+ "style": "caption",
+ "showIf": {
+ "table": "readerStatus",
+ "id": "r1",
+ "column": "state",
+ "equals": "stale"
+ },
+ "value": {
+ "en": "Saved over 30 days ago — check for updates?",
+ "ko": "30일 넘게 지난 저장본입니다 — 업데이트를 확인할까요?",
+ "zh": "保存已超过30天 — 是否检查更新？",
+ "hi": "30 दिन पहले सहेजा गया — अपडेट की जांच करें?",
+ "es": "Guardado hace más de 30 días — ¿comprobar actualizaciones?",
+ "fr": "Enregistré il y a plus de 30 jours — vérifier les mises à jour ?",
+ "ar": "محفوظ منذ أكثر من 30 يومًا — هل تريد التحقق من التحديثات؟",
+ "pt": "Salvo há mais de 30 dias — verificar atualizações?",
+ "ru": "Сохранено более 30 дней назад — проверить обновления?",
+ "de": "Vor über 30 Tagen gespeichert — nach Updates suchen?",
+ "ja": "30日以上前に保存されました — 更新を確認しますか？",
+ "tr": "30 günden fazla önce kaydedildi — güncellemeler kontrol edilsin mi?",
+ "vi": "Đã lưu hơn 30 ngày trước — kiểm tra cập nhật?",
+ "it": "Salvato più di 30 giorni fa — controllare aggiornamenti?",
+ "fa": "بیش از ۳۰ روز پیش ذخیره شد — بررسی به‌روزرسانی‌ها؟",
+ "pl": "Zapisano ponad 30 dni temu — sprawdzić aktualizacje?",
+ "uk": "Збережено понад 30 днів тому — перевірити оновлення?",
+ "nl": "Meer dan 30 dagen geleden opgeslagen — controleren op updates?",
+ "sv": "Sparad för över 30 dagar sedan — sök efter uppdateringar?",
+ "cs": "Uloženo před více než 30 dny — zkontrolovat aktualizace?",
+ "el": "Αποθηκεύτηκε πριν από πάνω από 30 ημέρες — έλεγχος για ενημερώσεις;"
+ }
+ },
+ {
+ "type": "button",
+ "dense": true,
+ "variant": "tonal",
+ "icon": "sync",
+ "showIf": {
+ "table": "readerStatus",
+ "id": "r1",
+ "column": "state",
+ "equals": "stale"
+ },
+ "label": {
+ "en": "Check for updates",
+ "ko": "업데이트 확인",
+ "zh": "检查更新",
+ "hi": "अपडेट के लिए जांचें",
+ "es": "Buscar actualizaciones",
+ "fr": "Vérifier les mises à jour",
+ "ar": "التحقق من التحديثات",
+ "pt": "Verificar atualizações",
+ "ru": "Проверить обновления",
+ "de": "Nach Updates suchen",
+ "ja": "更新を確認",
+ "tr": "Güncellemeleri kontrol et",
+ "vi": "Kiểm tra cập nhật",
+ "it": "Controlla aggiornamenti",
+ "fa": "بررسی به‌روزرسانی‌ها",
+ "pl": "Sprawdź aktualizacje",
+ "uk": "Перевірити оновлення",
+ "nl": "Controleren op updates",
+ "sv": "Sök efter uppdateringar",
+ "cs": "Zkontrolovat aktualizace",
+ "el": "Έλεγχος για ενημερώσεις"
+ },
+ "action": {
+ "fn": "wikiCheckForUpdates"
+ }
+ },
+ {
+ "_comment": "the disclosure is wrapped in `padding`, NOT a bare `column`. The engine's root fill-column path (renderer.dart `_rootFillColumn` / `_fillChromeTypes`) only fills the notepad when every OTHER top-level child of the screen's root column is a cheap chrome type — text/divider/spacer/button/row/padding. `column` is not in that set, so a bare column here silently drops the whole reader onto the page-scroll path and the notepad's Expanded lands under an unbounded height (caught red by wikipick_reader_scroll_test.dart's 900x460 case). Keep this wrapper a chrome type.",
+ "type": "padding",
+ "padding": 0,
+ "showIf": {
+ "table": "liveArticle",
+ "id": "lr1",
+ "column": "optionsOpen",
+ "equals": true
+ },
+ "child": {
+ "type": "column",
+ "children": [
+ {
+ "type": "text",
+ "style": "caption",
+ "showIf": {
+ "table": "liveArticle",
+ "id": "lr1",
+ "column": "formatVersion",
+ "equals": 1
+ },
+ "value": {
+ "en": "Saved in an older format — update for links & formatting?",
+ "ko": "이전 형식으로 저장되었습니다 — 링크와 서식을 업데이트할까요?",
+ "zh": "以旧格式保存 — 是否更新链接和格式？",
+ "hi": "पुराने फ़ॉर्मेट में सहेजा गया — लिंक और फ़ॉर्मेटिंग अपडेट करें?",
+ "es": "Guardado en un formato antiguo — ¿actualizar enlaces y formato?",
+ "fr": "Enregistré dans un ancien format — mettre à jour les liens et la mise en forme ?",
+ "ar": "محفوظ بتنسيق قديم — هل تريد تحديث الروابط والتنسيق؟",
+ "pt": "Salvo em um formato antigo — atualizar links e formatação?",
+ "ru": "Сохранено в старом формате — обновить ссылки и форматирование?",
+ "de": "Im alten Format gespeichert — Links & Formatierung aktualisieren?",
+ "ja": "古い形式で保存されています — リンクと書式を更新しますか？",
+ "tr": "Eski bir biçimde kaydedildi — bağlantılar ve biçimlendirme güncellensin mi?",
+ "vi": "Đã lưu ở định dạng cũ — cập nhật liên kết & định dạng?",
+ "it": "Salvato in un formato precedente — aggiornare link e formattazione?",
+ "fa": "با قالب قدیمی ذخیره شده — پیوندها و قالب‌بندی به‌روزرسانی شود؟",
+ "pl": "Zapisano w starszym formacie — zaktualizować linki i formatowanie?",
+ "uk": "Збережено у старому форматі — оновити посилання та форматування?",
+ "nl": "Opgeslagen in een ouder formaat — links en opmaak bijwerken?",
+ "sv": "Sparad i ett äldre format — uppdatera länkar och formatering?",
+ "cs": "Uloženo ve starším formátu — aktualizovat odkazy a formátování?",
+ "el": "Αποθηκεύτηκε σε παλαιότερη μορφή — ενημέρωση συνδέσμων και μορφοποίησης;"
+ }
+ },
+ {
+ "type": "button",
+ "dense": true,
+ "variant": "tonal",
+ "icon": "auto_fix_high",
+ "showIf": {
+ "table": "liveArticle",
+ "id": "lr1",
+ "column": "formatVersion",
+ "equals": 1
+ },
+ "label": {
+ "en": "Update formatting",
+ "ko": "서식 업데이트",
+ "zh": "更新格式",
+ "hi": "फ़ॉर्मेटिंग अपडेट करें",
+ "es": "Actualizar formato",
+ "fr": "Mettre à jour la mise en forme",
+ "ar": "تحديث التنسيق",
+ "pt": "Atualizar formatação",
+ "ru": "Обновить форматирование",
+ "de": "Formatierung aktualisieren",
+ "ja": "書式を更新",
+ "tr": "Biçimlendirmeyi güncelle",
+ "vi": "Cập nhật định dạng",
+ "it": "Aggiorna formattazione",
+ "fa": "به‌روزرسانی قالب‌بندی",
+ "pl": "Zaktualizuj formatowanie",
+ "uk": "Оновити форматування",
+ "nl": "Opmaak bijwerken",
+ "sv": "Uppdatera formatering",
+ "cs": "Aktualizovat formátování",
+ "el": "Ενημέρωση μορφοποίησης"
+ },
+ "action": {
+ "fn": "wikiUpgradeFormat"
+ }
+ },
+ {
+ "type": "text",
+ "style": "caption",
+ "showIf": {
+ "table": "readerStatus",
+ "id": "r1",
+ "column": "state",
+ "equals": "upToDate"
+ },
+ "value": {
+ "en": "Up to date.",
+ "ko": "최신 상태입니다.",
+ "zh": "已是最新。",
+ "hi": "अद्यतित है।",
+ "es": "Actualizado.",
+ "fr": "À jour.",
+ "ar": "محدّث.",
+ "pt": "Atualizado.",
+ "ru": "Актуально.",
+ "de": "Aktuell.",
+ "ja": "最新の状態です。",
+ "tr": "Güncel.",
+ "vi": "Đã cập nhật.",
+ "it": "Aggiornato.",
+ "fa": "به‌روز است.",
+ "pl": "Aktualne.",
+ "uk": "Актуально.",
+ "nl": "Up-to-date.",
+ "sv": "Uppdaterad.",
+ "cs": "Aktuální.",
+ "el": "Ενημερωμένο."
+ }
+ },
+ {
+ "type": "text",
+ "style": "caption",
+ "showIf": {
+ "table": "readerStatus",
+ "id": "r1",
+ "column": "state",
+ "equals": "updated"
+ },
+ "value": {
+ "en": "Updated to the latest revision.",
+ "ko": "최신 리비전으로 업데이트했습니다.",
+ "zh": "已更新到最新修订版。",
+ "hi": "नवीनतम संशोधन में अपडेट किया गया।",
+ "es": "Actualizado a la última revisión.",
+ "fr": "Mis à jour vers la dernière révision.",
+ "ar": "تم التحديث إلى أحدث مراجعة.",
+ "pt": "Atualizado para a revisão mais recente.",
+ "ru": "Обновлено до последней редакции.",
+ "de": "Auf die neueste Version aktualisiert.",
+ "ja": "最新のリビジョンに更新しました。",
+ "tr": "En son sürüme güncellendi.",
+ "vi": "Đã cập nhật lên phiên bản mới nhất.",
+ "it": "Aggiornato all'ultima revisione.",
+ "fa": "به آخرین بازبینی به‌روزرسانی شد.",
+ "pl": "Zaktualizowano do najnowszej wersji.",
+ "uk": "Оновлено до останньої редакції.",
+ "nl": "Bijgewerkt naar de nieuwste revisie.",
+ "sv": "Uppdaterad till senaste revisionen.",
+ "cs": "Aktualizováno na nejnovější revizi.",
+ "el": "Ενημερώθηκε στην τελευταία αναθεώρηση."
+ }
+ },
+ {
+ "type": "text",
+ "style": "caption",
+ "showIf": {
+ "table": "liveArticle",
+ "id": "lr1",
+ "column": "isSaved",
+ "equals": false
+ },
+ "value": {
+ "en": "Reading live — not saved.",
+ "ko": "실시간으로 읽는 중 — 저장되지 않음.",
+ "zh": "正在实时阅读 — 未保存。",
+ "hi": "लाइव पढ़ रहे हैं — सहेजा नहीं गया।",
+ "es": "Leyendo en vivo — no guardado.",
+ "fr": "Lecture en direct — non enregistré.",
+ "ar": "القراءة مباشرة — غير محفوظ.",
+ "pt": "Lendo ao vivo — não salvo.",
+ "ru": "Чтение вживую — не сохранено.",
+ "de": "Live-Lesen — nicht gespeichert.",
+ "ja": "ライブで読んでいます — 未保存。",
+ "tr": "Canlı okunuyor — kaydedilmedi.",
+ "vi": "Đang đọc trực tiếp — chưa lưu.",
+ "it": "Lettura in diretta — non salvato.",
+ "fa": "خواندن زنده — ذخیره نشده.",
+ "pl": "Czytanie na żywo — niezapisane.",
+ "uk": "Читання наживо — не збережено.",
+ "nl": "Live lezen — niet opgeslagen.",
+ "sv": "Läser live — inte sparad.",
+ "cs": "Živé čtení — neuloženo.",
+ "el": "Ζωντανή ανάγνωση — δεν αποθηκεύτηκε."
+ }
+ },
+ {
+ "type": "row",
+ "wrap": true,
+ "showIf": {
+ "table": "liveArticle",
+ "id": "lr1",
+ "column": "isSaved",
+ "equals": false
+ },
+ "children": [
+ {
+ "type": "column",
+ "children": [
+ {
+ "type": "text",
+ "style": "eyebrow",
+ "value": {
+ "en": "Include images",
+ "ko": "이미지 포함",
+ "zh": "包含图片",
+ "hi": "चित्र शामिल करें",
+ "es": "Incluir imágenes",
+ "fr": "Inclure les images",
+ "ar": "تضمين الصور",
+ "pt": "Incluir imagens",
+ "ru": "Включить изображения",
+ "de": "Bilder einschließen",
+ "ja": "画像を含める",
+ "tr": "Görselleri dahil et",
+ "vi": "Bao gồm hình ảnh",
+ "it": "Includi immagini",
+ "fa": "شامل تصاویر",
+ "pl": "Uwzględnij obrazy",
+ "uk": "Включити зображення",
+ "nl": "Afbeeldingen opnemen",
+ "sv": "Inkludera bilder",
+ "cs": "Zahrnout obrázky",
+ "el": "Συμπερίληψη εικόνων"
+ }
+ },
+ {
+ "type": "pick",
+ "table": "saveOptions",
+ "rowId": "opt1",
+ "column": "includeImages",
+ "variant": "segmented",
+ "options": [
+ {
+ "value": false,
+ "label": {
+ "en": "Off",
+ "ko": "끄기"
+ }
+ },
+ {
+ "value": true,
+ "label": {
+ "en": "On",
+ "ko": "켜기"
+ }
+ }
+ ]
+ }
+ ]
+ },
+ {
+ "type": "column",
+ "children": [
+ {
+ "type": "text",
+ "style": "eyebrow",
+ "value": {
+ "en": "Save depth",
+ "ko": "저장 깊이",
+ "zh": "保存深度",
+ "hi": "सेव की गहराई",
+ "es": "Profundidad de guardado",
+ "fr": "Profondeur d'enregistrement",
+ "ar": "عمق الحفظ",
+ "pt": "Profundidade de salvamento",
+ "ru": "Глубина сохранения",
+ "de": "Speichertiefe",
+ "ja": "保存の深さ",
+ "tr": "Kayıt derinliği",
+ "vi": "Độ sâu lưu",
+ "it": "Profondità di salvataggio",
+ "fa": "عمق ذخیره",
+ "pl": "Głębokość zapisu",
+ "uk": "Глибина збереження",
+ "nl": "Opslagdiepte",
+ "sv": "Spardjup",
+ "cs": "Hloubka uložení",
+ "el": "Βάθος αποθήκευσης"
+ }
+ },
+ {
+ "type": "pick",
+ "table": "saveOptions",
+ "rowId": "opt1",
+ "column": "cacheDepth",
+ "variant": "segmented",
+ "options": [
+ {
+ "value": 1,
+ "label": {
+ "en": "1 layer",
+ "ko": "1단계"
+ }
+ },
+ {
+ "value": 2,
+ "label": {
+ "en": "2 layers",
+ "ko": "2단계"
+ }
+ }
+ ]
+ }
+ ]
+ }
+ ]
+ },
+ {
+ "type": "row",
+ "children": [
+ {
+ "type": "stat",
+ "table": "liveArticle",
+ "agg": "max",
+ "valueColumn": "fetchedAt",
+ "format": "relative",
+ "label": {
+ "en": "Saved",
+ "ko": "저장됨",
+ "zh": "已保存",
+ "hi": "सहेजा गया",
+ "es": "Guardado",
+ "fr": "Enregistré",
+ "ar": "محفوظ",
+ "pt": "Salvo",
+ "ru": "Сохранено",
+ "de": "Gespeichert",
+ "ja": "保存済み",
+ "tr": "Kaydedildi",
+ "vi": "Đã lưu",
+ "it": "Salvato",
+ "fa": "ذخیره‌شده",
+ "pl": "Zapisano",
+ "uk": "Збережено",
+ "nl": "Opgeslagen",
+ "sv": "Sparad",
+ "cs": "Uloženo",
+ "el": "Αποθηκεύτηκε"
+ },
+ "color": "blue",
+ "showIf": {
+ "table": "liveArticle",
+ "id": "lr1",
+ "column": "isSaved",
+ "equals": true
+ }
+ }
+ ]
+ },
+ {
+ "type": "row",
+ "wrap": true,
+ "children": [
+ {
+ "type": "row",
+ "showIf": {
+ "table": "liveArticle",
+ "id": "lr1",
+ "column": "isSaved",
+ "equals": true
+ },
+ "children": [
+ {
+ "type": "button",
+ "dense": true,
+ "variant": "outlined",
+ "icon": "cloud_download",
+ "showIf": {
+ "table": "liveArticle",
+ "id": "lr1",
+ "column": "depthCap",
+ "notEquals": "2"
+ },
+ "label": {
+ "en": "Save linked pages — 1 layer",
+ "ko": "연결된 문서 저장 — 1단계",
+ "zh": "保存链接页面 — 1层",
+ "hi": "लिंक किए गए पेज सहेजें — 1 परत",
+ "es": "Guardar páginas enlazadas — 1 nivel",
+ "fr": "Enregistrer les pages liées — 1 niveau",
+ "ar": "حفظ الصفحات المرتبطة — طبقة واحدة",
+ "pt": "Salvar páginas vinculadas — 1 camada",
+ "ru": "Сохранить связанные страницы — 1 уровень",
+ "de": "Verknüpfte Seiten speichern — 1 Ebene",
+ "ja": "リンク先ページを保存 — 1層",
+ "tr": "Bağlantılı sayfaları kaydet — 1 katman",
+ "vi": "Lưu trang liên kết — 1 lớp",
+ "it": "Salva pagine collegate — 1 livello",
+ "fa": "ذخیره صفحات پیوندی — ۱ لایه",
+ "pl": "Zapisz powiązane strony — 1 poziom",
+ "uk": "Зберегти пов'язані сторінки — 1 рівень",
+ "nl": "Gekoppelde pagina's opslaan — 1 laag",
+ "sv": "Spara länkade sidor — 1 nivå",
+ "cs": "Uložit propojené stránky — 1 vrstva",
+ "el": "Αποθήκευση συνδεδεμένων σελίδων — 1 επίπεδο"
+ },
+ "action": {
+ "fn": "wikiFetchLayer",
+ "args": {
+ "table": "liveArticle",
+ "id": "lr1"
+ }
+ }
+ },
+ {
+ "type": "button",
+ "dense": true,
+ "variant": "outlined",
+ "icon": "cloud_download",
+ "showIf": {
+ "table": "liveArticle",
+ "id": "lr1",
+ "column": "depthCap",
+ "equals": "2"
+ },
+ "label": {
+ "en": "Save linked pages — 2 layers",
+ "ko": "연결된 문서 저장 — 2단계",
+ "zh": "保存链接页面 — 2层",
+ "hi": "लिंक किए गए पेज सहेजें — 2 परतें",
+ "es": "Guardar páginas enlazadas — 2 niveles",
+ "fr": "Enregistrer les pages liées — 2 niveaux",
+ "ar": "حفظ الصفحات المرتبطة — طبقتان",
+ "pt": "Salvar páginas vinculadas — 2 camadas",
+ "ru": "Сохранить связанные страницы — 2 уровня",
+ "de": "Verknüpfte Seiten speichern — 2 Ebenen",
+ "ja": "リンク先ページを保存 — 2層",
+ "tr": "Bağlantılı sayfaları kaydet — 2 katman",
+ "vi": "Lưu trang liên kết — 2 lớp",
+ "it": "Salva pagine collegate — 2 livelli",
+ "fa": "ذخیره صفحات پیوندی — ۲ لایه",
+ "pl": "Zapisz powiązane strony — 2 poziomy",
+ "uk": "Зберегти пов'язані сторінки — 2 рівні",
+ "nl": "Gekoppelde pagina's opslaan — 2 lagen",
+ "sv": "Spara länkade sidor — 2 nivåer",
+ "cs": "Uložit propojené stránky — 2 vrstvy",
+ "el": "Αποθήκευση συνδεδεμένων σελίδων — 2 επίπεδα"
+ },
+ "action": {
+ "fn": "wikiFetchLayer",
+ "args": {
+ "table": "liveArticle",
+ "id": "lr1"
+ }
+ }
+ }
+ ]
+ },
+ {
+ "type": "button",
+ "dense": true,
+ "variant": "text",
+ "icon": "delete_outline",
+ "showIf": {
+ "table": "liveArticle",
+ "id": "lr1",
+ "column": "isSaved",
+ "equals": true
+ },
+ "label": {
+ "en": "Remove from Library",
+ "ko": "라이브러리에서 제거",
+ "zh": "从资料库中移除",
+ "hi": "लाइब्रेरी से हटाएं",
+ "es": "Quitar de la biblioteca",
+ "fr": "Retirer de la bibliothèque",
+ "ar": "إزالة من المكتبة",
+ "pt": "Remover da biblioteca",
+ "ru": "Удалить из библиотеки",
+ "de": "Aus Bibliothek entfernen",
+ "ja": "ライブラリから削除",
+ "tr": "Kitaplıktan kaldır",
+ "vi": "Xóa khỏi Thư viện",
+ "it": "Rimuovi dalla libreria",
+ "fa": "حذف از کتابخانه",
+ "pl": "Usuń z biblioteki",
+ "uk": "Видалити з бібліотеки",
+ "nl": "Verwijderen uit bibliotheek",
+ "sv": "Ta bort från biblioteket",
+ "cs": "Odebrat z knihovny",
+ "el": "Αφαίρεση από τη βιβλιοθήκη"
+ },
+ "action": {
+ "fn": "wikiRemoveArticle"
+ }
+ },
+ {
+ "type": "button",
+ "dense": true,
+ "variant": "text",
+ "icon": "volunteer_activism",
+ "label": {
+ "en": "Donate to Wikipedia",
+ "ko": "위키백과에 기부",
+ "zh": "捐赠给维基百科",
+ "hi": "विकिपीडिया को दान करें",
+ "es": "Donar a Wikipedia",
+ "fr": "Faire un don à Wikipédia",
+ "ar": "التبرع لويكيبيديا",
+ "pt": "Doar para a Wikipédia",
+ "ru": "Пожертвовать Википедии",
+ "de": "An Wikipedia spenden",
+ "ja": "ウィキペディアに寄付",
+ "tr": "Wikipedia'ya bağış yap",
+ "vi": "Quyên góp cho Wikipedia",
+ "it": "Dona a Wikipedia",
+ "fa": "اهدا به ویکی‌پدیا",
+ "pl": "Wesprzyj Wikipedię",
+ "uk": "Пожертвувати Вікіпедії",
+ "nl": "Doneren aan Wikipedia",
+ "sv": "Donera till Wikipedia",
+ "cs": "Přispět Wikipedii",
+ "el": "Δωρεά στη Wikipedia"
+ },
+ "action": {
+ "fn": "openLink",
+ "args": {
+ "url": "https://donate.wikimedia.org/"
+ }
+ }
+ }
+ ]
+ }
+ ]
+ }
+ },
+ {
+ "_comment": "bookreader replaces the readOnly notepad as the book-page reader — SAME binding contract (table/rowId/column read every build, rewrite-under-stable-rowId safe), SAME onLinkTap/jumpToSectionSetting convention, SAME imagesTable/imageSrcColumn local:<id> resolution as the notepad it replaces. `column` stays `displayText`, NOT raw `extractText`: composeReaderMarkdown (wikipick_net.dart) already writes title/description/back-breadcrumb/TOC INTO displayText as the document's own leading blocks ( S1-A/S1-B — deliberately NOT a separate fixed title header, both so the title scrolls away with the article at short window heights and so `_jumpToArticleTop`'s `jumpToSectionSetting` trick (\"scroll to the heading named <title>\" == \"scroll to block index 0\") keeps resolving. bookreader's own `titleColumn`/`subtitleColumn` are DELIBERATELY left unset here — setting them would duplicate the title (once as the node's head block, once as displayText's own leading '# Title' heading) and is unnecessary: the SAME parseDocBlocks grammar bookreader shares with notepad still sees that heading as block 0, so the jump-to-top anchor is unaffected by the node swap. footerColumn shows provenance under a rule at the foot of the page — unlike the old fixed title header this is a single line, but it is NOT part of the scrolling ListView (see bookreader.dart _page: Column[Expanded(ListView), footer]), so it eats a little of the viewport at short window heights the same shape (smaller) as the S1-B defect the embedded-title design was built to avoid. was liveArticle.canonicalUrl (the bare source URL, real-user feedback: it added nothing next to the bottom bar's own \"Open on Wikipedia\" action) — now liveArticle.footerCaption, a derived \"Cached N days ago · rev <id>\" line computed by _refreshDerived; the tail's live click-through should re-run the S1-B short-window check (900x460) with a real article that has a footerCaption showing. `[[Title]]` bracket wikilinks are NOT a concern: wikipick's converter already emits standard `[label](target)` markdown links (see wikipick_html.dart), which is what onLinkTap requires. `findEnabledSetting` PARITY RESTORED — bookreader gained the same opt-in (flutterboard ), so this reads `wikiReaderFindOpen` exactly like notepad's find did before the reskin; the matching find (magnifier) button pair is restored below, toggling that setting via plain `setSetting` boolean writes (NOT a table-column toggle like wikiToggleToc — findEnabledSetting is read as a real board.settings boolean, per bookreader.dart's `_findOpenLocal` check). opted into `scopedSubscription` (flutterboard fb-main 5a02804) — crawl-time bookkeeping writes to unrelated tables (progress/settings, NOT `liveArticle`/`articleImages`) no longer force this node to re-parse the article while the reader is open.",
+ "type": "bookreader",
+ "table": "liveArticle",
+ "rowId": "lr1",
+ "column": "displayText",
+ "jumpToSectionSetting": "wikiReaderJump",
+ "findEnabledSetting": "wikiReaderFindOpen",
+ "onLinkTap": {
+ "fn": "wikiLinkTap",
+ "args": {
+ "target": "$value"
+ }
+ },
+ "imagesTable": "articleImages",
+ "imageSrcColumn": "b64",
+ "footerColumn": "footerCaption",
+ "dropCaps": true,
+ "sectionRules": true,
+ "accent": "#7A2E1D",
+ "displayFont": "IM Fell English",
+ "bodyFont": "Lora",
+ "maxWidth": 680,
+ "scopedSubscription": true,
+ "tapChrome": true,
+ "fastScroll": true
+ },
+ {
+ "_comment": "the whole action bar is now the TAP-SUMMONED footer — hidden by default (`showIf` on the bookreader node's own `tapChrome` setting, default key `bookreaderChrome:liveArticle` since `chromeSetting` is unset above), reading is full-bleed until the page is tapped, exactly like mobile-browser chrome. `wrap:false` (coordinator-flagged requirement, was `true`): the mockup is ONE row that must never wrap to two lines even at a narrow 360px phone — Save (labeled) + 4 icon-only (44x44) buttons total well under 300px, so this is a real guarantee, not a risk. Button contents/actions below are otherwise UNCHANGED from except the 'Saved' button fix noted on it directly.",
+ "type": "row",
+ "wrap": false,
+ "showIf": { "setting": "bookreaderChrome:liveArticle", "equals": "true" },
+ "children": [
+ {
+ "type": "button",
+ "dense": true,
+ "variant": "tonal",
+ "icon": "bookmark_add",
+ "showIf": {
+ "table": "liveArticle",
+ "id": "lr1",
+ "column": "isSaved",
+ "equals": false
+ },
+ "label": {
+ "en": "Save",
+ "ko": "저장",
+ "zh": "保存",
+ "hi": "सहेजें",
+ "es": "Guardar",
+ "fr": "Enregistrer",
+ "ar": "حفظ",
+ "pt": "Salvar",
+ "ru": "Сохранить",
+ "de": "Speichern",
+ "ja": "保存",
+ "tr": "Kaydet",
+ "vi": "Lưu",
+ "it": "Salva",
+ "fa": "ذخیره",
+ "pl": "Zapisz",
+ "uk": "Зберегти",
+ "nl": "Opslaan",
+ "sv": "Spara",
+ "cs": "Uložit",
+ "el": "Αποθήκευση"
+ },
+ "action": {
+ "fn": "wikiSaveOffline"
+ }
+ },
+ {
+ "_comment": "fixes the logged nit (BOARD ) — this button was wired to wikiToggleToc/optionsOpen, a copy-paste leftover from the adjacent Reading-options button that made 'Saved' silently duplicate it. Tapping a saved-state indicator should relate to being saved, not toggle an unrelated disclosure — it now opens the Library, where this article already lives.",
+ "type": "button",
+ "dense": true,
+ "iconOnly": true,
+ "variant": "text",
+ "icon": "bookmark",
+ "showIf": {
+ "table": "liveArticle",
+ "id": "lr1",
+ "column": "isSaved",
+ "equals": true
+ },
+ "label": {
+ "en": "Saved",
+ "ko": "저장됨",
+ "zh": "已保存",
+ "hi": "सहेजा गया",
+ "es": "Guardado",
+ "fr": "Enregistré",
+ "ar": "محفوظ",
+ "pt": "Salvo",
+ "ru": "Сохранено",
+ "de": "Gespeichert",
+ "ja": "保存済み",
+ "tr": "Kaydedildi",
+ "vi": "Đã lưu",
+ "it": "Salvato",
+ "fa": "ذخیره‌شده",
+ "pl": "Zapisano",
+ "uk": "Збережено",
+ "nl": "Opgeslagen",
+ "sv": "Sparad",
+ "cs": "Uloženo",
+ "el": "Αποθηκεύτηκε"
+ },
+ "action": {
+ "fn": "goto",
+ "args": {
+ "screen": "library"
+ }
+ }
+ },
+ {
+ "type": "button",
+ "dense": true,
+ "iconOnly": true,
+ "variant": "text",
+ "icon": "language",
+ "showIf": {
+ "table": "liveArticle",
+ "id": "lr1",
+ "column": "title",
+ "notEquals": ""
+ },
+ "label": {
+ "en": "Language",
+ "ko": "언어",
+ "zh": "语言",
+ "hi": "भाषा",
+ "es": "Idioma",
+ "fr": "Langue",
+ "ar": "اللغة",
+ "pt": "Idioma",
+ "ru": "Язык",
+ "de": "Sprache",
+ "ja": "言語",
+ "tr": "Dil",
+ "vi": "Ngôn ngữ",
+ "it": "Lingua",
+ "fa": "زبان",
+ "pl": "Język",
+ "uk": "Мова",
+ "nl": "Taal",
+ "sv": "Språk",
+ "cs": "Jazyk",
+ "el": "Γλώσσα"
+ },
+ "action": {
+ "fn": "openLink",
+ "args": {
+ "table": "liveArticle",
+ "id": "lr1",
+ "urlColumn": "canonicalUrl"
+ }
+ }
+ },
+ {
+ "_comment": "restores the 'Find' action removed in — bookreader's findEnabledSetting now exists (flutterboard ), so this button pair reopens the exact feature the old readOnly-notepad reader had, wired to the SAME `wikiReaderFindOpen` key set on the bookreader node above. Plain `setSetting` with a literal JSON boolean `value` (NOT `wikiToggleToc`, which flips a TABLE COLUMN — findEnabledSetting reads `board.settings[key] == true`, a real boolean, exactly like `jumpToSectionSetting`'s sibling settings are board-level, not row-level). The mockup's magnifier icon is `search`/`search_off` — distinct from the two `tune` (Reading options) buttons later in this row, which are a different, unrelated toggle and were never meant to double as find.",
+ "type": "button",
+ "dense": true,
+ "iconOnly": true,
+ "variant": "text",
+ "icon": "search",
+ "showIf": { "setting": "wikiReaderFindOpen", "notEquals": "true" },
+ "label": {
+ "en": "Find in article",
+ "ko": "문서에서 찾기",
+ "zh": "在文章中查找",
+ "hi": "लेख में खोजें",
+ "es": "Buscar en el artículo",
+ "fr": "Rechercher dans l'article",
+ "ar": "ابحث في المقالة",
+ "pt": "Buscar no artigo",
+ "ru": "Поиск по статье",
+ "de": "Im Artikel suchen",
+ "ja": "記事内を検索",
+ "tr": "Makalede ara",
+ "vi": "Tìm trong bài viết",
+ "it": "Cerca nell'articolo",
+ "fa": "جستجو در مقاله",
+ "pl": "Szukaj w artykule",
+ "uk": "Пошук у статті",
+ "nl": "Zoeken in artikel",
+ "sv": "Sök i artikeln",
+ "cs": "Hledat v článku",
+ "el": "Αναζήτηση στο άρθρο"
+ },
+ "action": {
+ "fn": "setSetting",
+ "args": {
+ "key": "wikiReaderFindOpen",
+ "value": true
+ }
+ }
+ },
+ {
+ "type": "button",
+ "dense": true,
+ "iconOnly": true,
+ "variant": "tonal",
+ "icon": "search_off",
+ "showIf": { "setting": "wikiReaderFindOpen", "equals": "true" },
+ "label": {
+ "en": "Close find",
+ "ko": "찾기 닫기",
+ "zh": "关闭查找",
+ "hi": "खोज बंद करें",
+ "es": "Cerrar búsqueda",
+ "fr": "Fermer la recherche",
+ "ar": "إغلاق البحث",
+ "pt": "Fechar busca",
+ "ru": "Закрыть поиск",
+ "de": "Suche schließen",
+ "ja": "検索を閉じる",
+ "tr": "Aramayı kapat",
+ "vi": "Đóng tìm kiếm",
+ "it": "Chiudi ricerca",
+ "fa": "بستن جستجو",
+ "pl": "Zamknij wyszukiwanie",
+ "uk": "Закрити пошук",
+ "nl": "Zoeken sluiten",
+ "sv": "Stäng sökning",
+ "cs": "Zavřít hledání",
+ "el": "Κλείσιμο αναζήτησης"
+ },
+ "action": {
+ "fn": "setSetting",
+ "args": {
+ "key": "wikiReaderFindOpen",
+ "value": false
+ }
+ }
+ },
+ {
+ "type": "button",
+ "dense": true,
+ "iconOnly": true,
+ "variant": "text",
+ "icon": "toc",
+ "showIf": {
+ "table": "liveArticle",
+ "id": "lr1",
+ "column": "tocOpen",
+ "equals": true
+ },
+ "label": {
+ "en": "Hide contents",
+ "ko": "목차 숨기기",
+ "zh": "隐藏目录",
+ "hi": "सामग्री छिपाएं",
+ "es": "Ocultar contenido",
+ "fr": "Masquer le sommaire",
+ "ar": "إخفاء المحتويات",
+ "pt": "Ocultar sumário",
+ "ru": "Скрыть содержание",
+ "de": "Inhalt ausblenden",
+ "ja": "目次を非表示",
+ "tr": "İçindekileri gizle",
+ "vi": "Ẩn mục lục",
+ "it": "Nascondi sommario",
+ "fa": "پنهان کردن فهرست",
+ "pl": "Ukryj spis treści",
+ "uk": "Приховати зміст",
+ "nl": "Inhoud verbergen",
+ "sv": "Dölj innehåll",
+ "cs": "Skrýt obsah",
+ "el": "Απόκρυψη περιεχομένων"
+ },
+ "action": {
+ "fn": "wikiToggleToc"
+ }
+ },
+ {
+ "type": "button",
+ "dense": true,
+ "iconOnly": true,
+ "variant": "text",
+ "icon": "toc",
+ "showIf": {
+ "table": "liveArticle",
+ "id": "lr1",
+ "column": "tocOpen",
+ "equals": false
+ },
+ "label": {
+ "en": "Contents",
+ "ko": "목차",
+ "zh": "目录",
+ "hi": "सामग्री",
+ "es": "Contenido",
+ "fr": "Sommaire",
+ "ar": "المحتويات",
+ "pt": "Sumário",
+ "ru": "Содержание",
+ "de": "Inhalt",
+ "ja": "目次",
+ "tr": "İçindekiler",
+ "vi": "Mục lục",
+ "it": "Sommario",
+ "fa": "فهرست",
+ "pl": "Spis treści",
+ "uk": "Зміст",
+ "nl": "Inhoud",
+ "sv": "Innehåll",
+ "cs": "Obsah",
+ "el": "Περιεχόμενα"
+ },
+ "action": {
+ "fn": "wikiToggleToc"
+ }
+ },
+ {
+ "type": "button",
+ "dense": true,
+ "iconOnly": true,
+ "variant": "text",
+ "icon": "open_in_new",
+ "showIf": {
+ "table": "liveArticle",
+ "id": "lr1",
+ "column": "title",
+ "notEquals": ""
+ },
+ "label": {
+ "en": "Open on Wikipedia",
+ "ko": "위키백과에서 열기",
+ "zh": "在维基百科中打开",
+ "hi": "विकिपीडिया पर खोलें",
+ "es": "Abrir en Wikipedia",
+ "fr": "Ouvrir sur Wikipédia",
+ "ar": "فتح في ويكيبيديا",
+ "pt": "Abrir na Wikipédia",
+ "ru": "Открыть в Википедии",
+ "de": "Auf Wikipedia öffnen",
+ "ja": "ウィキペディアで開く",
+ "tr": "Wikipedia'da aç",
+ "vi": "Mở trên Wikipedia",
+ "it": "Apri su Wikipedia",
+ "fa": "باز کردن در ویکی‌پدیا",
+ "pl": "Otwórz w Wikipedii",
+ "uk": "Відкрити у Вікіпедії",
+ "nl": "Openen op Wikipedia",
+ "sv": "Öppna på Wikipedia",
+ "cs": "Otevřít na Wikipedii",
+ "el": "Άνοιγμα στη Wikipedia"
+ },
+ "action": {
+ "fn": "openLink",
+ "args": {
+ "table": "liveArticle",
+ "id": "lr1",
+ "urlColumn": "canonicalUrl"
+ }
+ }
+ },
+ {
+ "type": "button",
+ "dense": true,
+ "iconOnly": true,
+ "variant": "text",
+ "icon": "tune",
+ "showIf": {
+ "table": "liveArticle",
+ "id": "lr1",
+ "column": "optionsOpen",
+ "equals": false
+ },
+ "label": {
+ "en": "Reading options",
+ "ko": "읽기 옵션",
+ "zh": "阅读选项",
+ "hi": "पठन विकल्प",
+ "es": "Opciones de lectura",
+ "fr": "Options de lecture",
+ "ar": "خيارات القراءة",
+ "pt": "Opções de leitura",
+ "ru": "Параметры чтения",
+ "de": "Leseoptionen",
+ "ja": "読書オプション",
+ "tr": "Okuma seçenekleri",
+ "vi": "Tùy chọn đọc",
+ "it": "Opzioni di lettura",
+ "fa": "گزینه‌های خواندن",
+ "pl": "Opcje czytania",
+ "uk": "Параметри читання",
+ "nl": "Leesopties",
+ "sv": "Läsalternativ",
+ "cs": "Možnosti čtení",
+ "el": "Επιλογές ανάγνωσης"
+ },
+ "action": {
+ "fn": "wikiToggleToc",
+ "args": {
+ "column": "optionsOpen"
+ }
+ }
+ },
+ {
+ "type": "button",
+ "dense": true,
+ "iconOnly": true,
+ "variant": "tonal",
+ "icon": "tune",
+ "showIf": {
+ "table": "liveArticle",
+ "id": "lr1",
+ "column": "optionsOpen",
+ "equals": true
+ },
+ "label": {
+ "en": "Hide options",
+ "ko": "옵션 숨기기",
+ "zh": "隐藏选项",
+ "hi": "विकल्प छिपाएं",
+ "es": "Ocultar opciones",
+ "fr": "Masquer les options",
+ "ar": "إخفاء الخيارات",
+ "pt": "Ocultar opções",
+ "ru": "Скрыть параметры",
+ "de": "Optionen ausblenden",
+ "ja": "オプションを非表示",
+ "tr": "Seçenekleri gizle",
+ "vi": "Ẩn tùy chọn",
+ "it": "Nascondi opzioni",
+ "fa": "پنهان کردن گزینه‌ها",
+ "pl": "Ukryj opcje",
+ "uk": "Приховати параметри",
+ "nl": "Opties verbergen",
+ "sv": "Dölj alternativ",
+ "cs": "Skrýt možnosti",
+ "el": "Απόκρυψη επιλογών"
+ },
+ "action": {
+ "fn": "wikiToggleToc",
+ "args": {
+ "column": "optionsOpen"
+ }
+ }
+ }
+ ]
+ }
+ ]
+ }
+ },
+ "linkChoice": {
+ "title": {
+ "en": "Open this article?",
+ "ko": "이 문서를 열까요?",
+ "zh": "打开此文章？",
+ "hi": "यह लेख खोलें?",
+ "es": "¿Abrir este artículo?",
+ "fr": "Ouvrir cet article ?",
+ "ar": "فتح هذه المقالة؟",
+ "pt": "Abrir este artigo?",
+ "ru": "Открыть эту статью?",
+ "de": "Diesen Artikel öffnen?",
+ "ja": "この記事を開きますか？",
+ "tr": "Bu makale açılsın mı?",
+ "vi": "Mở bài viết này?",
+ "it": "Aprire questo articolo?",
+ "fa": "این مقاله باز شود؟",
+ "pl": "Otworzyć ten artykuł?",
+ "uk": "Відкрити цю статтю?",
+ "nl": "Dit artikel openen?",
+ "sv": "Öppna denna artikel?",
+ "cs": "Otevřít tento článek?",
+ "el": "Άνοιγμα αυτού του άρθρου;"
+ },
+ "body": {
+ "type": "column",
+ "scroll": true,
+ "children": [
+ {
+ "type": "cards",
+ "table": "linkChoiceStatus",
+ "title": "title",
+ "expandable": false,
+ "windowed": false,
+ "tableView": false,
+ "tags": [
+ {
+ "column": "wiki"
+ }
+ ]
+ },
+ {
+ "type": "text",
+ "style": "caption",
+ "value": {
+ "en": "Not saved for offline yet. Reading it downloads it from Wikipedia now; you can save it once it opens.",
+ "ko": "아직 오프라인으로 저장되지 않았습니다. 지금 읽으면 위키백과에서 내려받으며, 열린 뒤 저장할 수 있습니다.",
+ "zh": "尚未离线保存。阅读它会立即从维基百科下载；打开后即可保存。",
+ "hi": "अभी ऑफ़लाइन सहेजा नहीं गया। इसे पढ़ने पर यह अभी विकिपीडिया से डाउनलोड होगा; खुलने के बाद आप इसे सहेज सकते हैं।",
+ "es": "Aún no está guardado sin conexión. Leerlo lo descarga de Wikipedia ahora; podrás guardarlo una vez que se abra.",
+ "fr": "Pas encore enregistré hors ligne. Le lire le télécharge maintenant depuis Wikipédia; vous pourrez l'enregistrer une fois ouvert.",
+ "ar": "لم يُحفظ بعد للاستخدام دون اتصال. قراءته الآن تُنزّله من ويكيبيديا؛ يمكنك حفظه بعد فتحه.",
+ "pt": "Ainda não salvo offline. Lê-lo faz o download da Wikipédia agora; você pode salvá-lo depois que abrir.",
+ "ru": "Пока не сохранено офлайн. Чтение загрузит его из Википедии сейчас; вы сможете сохранить его после открытия.",
+ "de": "Noch nicht offline gespeichert. Das Lesen lädt ihn jetzt von Wikipedia herunter; Sie können ihn nach dem Öffnen speichern.",
+ "ja": "まだオフライン保存されていません。読むと今すぐウィキペディアからダウンロードされ、開いた後に保存できます。",
+ "tr": "Henüz çevrimdışı kaydedilmedi. Okumak onu şimdi Wikipedia'dan indirir; açıldıktan sonra kaydedebilirsiniz.",
+ "vi": "Chưa lưu ngoại tuyến. Đọc nó sẽ tải xuống từ Wikipedia ngay bây giờ; bạn có thể lưu sau khi mở.",
+ "it": "Non ancora salvato offline. Leggerlo lo scarica ora da Wikipedia; potrai salvarlo una volta aperto.",
+ "fa": "هنوز آفلاین ذخیره نشده. خواندن آن اکنون آن را از ویکی‌پدیا دانلود می‌کند؛ پس از باز شدن می‌توانید آن را ذخیره کنید.",
+ "pl": "Jeszcze nie zapisano offline. Czytanie pobierze go teraz z Wikipedii; będzie można go zapisać po otwarciu.",
+ "uk": "Ще не збережено офлайн. Читання завантажить її зараз з Вікіпедії; ви зможете зберегти після відкриття.",
+ "nl": "Nog niet offline opgeslagen. Het lezen ervan downloadt het nu van Wikipedia; je kunt het opslaan zodra het geopend is.",
+ "sv": "Inte sparad offline än. Att läsa den laddar ned den från Wikipedia nu; du kan spara den när den öppnats.",
+ "cs": "Zatím není uloženo offline. Přečtením se nyní stáhne z Wikipedie; uložit jej můžete po otevření.",
+ "el": "Δεν έχει αποθηκευτεί ακόμα εκτός σύνδεσης. Η ανάγνωσή του το κατεβάζει τώρα από τη Wikipedia· μπορείτε να το αποθηκεύσετε μόλις ανοίξει."
+ }
+ },
+ {
+ "type": "spacer"
+ },
+ {
+ "type": "button",
+ "variant": "filled",
+ "icon": "auto_stories",
+ "label": {
+ "en": "Read now",
+ "ko": "지금 읽기",
+ "zh": "立即阅读",
+ "hi": "अभी पढ़ें",
+ "es": "Leer ahora",
+ "fr": "Lire maintenant",
+ "ar": "اقرأ الآن",
+ "pt": "Ler agora",
+ "ru": "Читать сейчас",
+ "de": "Jetzt lesen",
+ "ja": "今すぐ読む",
+ "tr": "Şimdi oku",
+ "vi": "Đọc ngay",
+ "it": "Leggi ora",
+ "fa": "اکنون بخوانید",
+ "pl": "Czytaj teraz",
+ "uk": "Читати зараз",
+ "nl": "Nu lezen",
+ "sv": "Läs nu",
+ "cs": "Číst nyní",
+ "el": "Ανάγνωση τώρα"
+ },
+ "action": {
+ "chain": [
+ {
+ "fn": "wikiChoiceReadNow"
+ },
+ {
+ "fn": "wikiComputeFreshness"
+ }
+ ]
+ }
+ },
+ {
+ "type": "button",
+ "variant": "outlined",
+ "icon": "hourglass_bottom",
+ "label": {
+ "en": "Save for later",
+ "ko": "나중을 위해 저장",
+ "zh": "稍后保存",
+ "hi": "बाद के लिए सहेजें",
+ "es": "Guardar para más tarde",
+ "fr": "Enregistrer pour plus tard",
+ "ar": "حفظ لوقت لاحق",
+ "pt": "Salvar para depois",
+ "ru": "Сохранить на потом",
+ "de": "Für später speichern",
+ "ja": "後で読むために保存",
+ "tr": "Sonra için kaydet",
+ "vi": "Lưu để đọc sau",
+ "it": "Salva per dopo",
+ "fa": "ذخیره برای بعد",
+ "pl": "Zapisz na później",
+ "uk": "Зберегти на потім",
+ "nl": "Opslaan voor later",
+ "sv": "Spara till senare",
+ "cs": "Uložit na později",
+ "el": "Αποθήκευση για αργότερα"
+ },
+ "action": {
+ "chain": [
+ {
+ "fn": "wikiChoiceQueue"
+ }
+ ]
+ }
+ },
+ {
+ "type": "button",
+ "variant": "text",
+ "icon": "open_in_new",
+ "label": {
+ "en": "Open on Wikipedia",
+ "ko": "위키백과에서 열기",
+ "zh": "在维基百科中打开",
+ "hi": "विकिपीडिया पर खोलें",
+ "es": "Abrir en Wikipedia",
+ "fr": "Ouvrir sur Wikipédia",
+ "ar": "فتح في ويكيبيديا",
+ "pt": "Abrir na Wikipédia",
+ "ru": "Открыть в Википедии",
+ "de": "Auf Wikipedia öffnen",
+ "ja": "ウィキペディアで開く",
+ "tr": "Wikipedia'da aç",
+ "vi": "Mở trên Wikipedia",
+ "it": "Apri su Wikipedia",
+ "fa": "باز کردن در ویکی‌پدیا",
+ "pl": "Otwórz w Wikipedii",
+ "uk": "Відкрити у Вікіпедії",
+ "nl": "Openen op Wikipedia",
+ "sv": "Öppna på Wikipedia",
+ "cs": "Otevřít na Wikipedii",
+ "el": "Άνοιγμα στη Wikipedia"
+ },
+ "action": {
+ "fn": "openLink",
+ "args": {
+ "table": "linkChoiceStatus",
+ "id": "lc1",
+ "urlColumn": "sourceUrl"
+ }
+ }
+ }
+ ]
+ }
+ },
+ "about": {
+ "_comment": "app.guide target for the drawer's 'About & help' row (kept OUT of nav, opened as a sheet via _openGuide — same convention as atlas/chronos's own 'about' guide screens).",
+ "title": {
+ "en": "About & help",
+ "ko": "정보 및 도움말",
+ "zh": "关于与帮助",
+ "hi": "परिचय और सहायता",
+ "es": "Acerca de y ayuda",
+ "fr": "À propos et aide",
+ "ar": "حول والمساعدة",
+ "pt": "Sobre e ajuda",
+ "ru": "О программе и справка",
+ "de": "Über & Hilfe",
+ "ja": "このアプリについて＆ヘルプ",
+ "tr": "Hakkında ve yardım",
+ "vi": "Giới thiệu & trợ giúp",
+ "it": "Informazioni e aiuto",
+ "fa": "درباره و راهنما",
+ "pl": "O aplikacji i pomoc",
+ "uk": "Про застосунок і довідка",
+ "nl": "Over en hulp",
+ "sv": "Om och hjälp",
+ "cs": "O aplikaci a nápověda",
+ "el": "Σχετικά & βοήθεια"
+ },
+ "body": {
+ "type": "column",
+ "scroll": true,
+ "children": [
+ {
+ "type": "text",
+ "style": "body",
+ "value": {
+ "en": "Wikipick reads Wikipedia articles offline. Search, tap a result to read it right away, then save it (and, optionally, its linked pages) for offline reading later. Nothing is saved until you tap \"Save\".",
+ "ko": "위키픽은 위키백과 문서를 오프라인으로 읽습니다. 검색 후 결과를 탭하면 바로 읽을 수 있으며, 이후 오프라인 읽기를 위해 저장(원하면 연결된 문서도 함께)할 수 있습니다. \"저장\"을 탭하기 전까지는 아무것도 저장되지 않습니다.",
+ "zh": "Wikipick 让您离线阅读维基百科文章。搜索后点击结果即可立即阅读，然后可以保存（可选包含链接页面）以便日后离线阅读。在点击\"保存\"之前不会保存任何内容。",
+ "hi": "विकिपिक विकिपीडिया लेखों को ऑफ़लाइन पढ़ता है। खोजें, परिणाम पर तुरंत पढ़ने के लिए टैप करें, फिर बाद में ऑफ़लाइन पढ़ने के लिए इसे (और वैकल्पिक रूप से इसके लिंक किए गए पेजों को) सहेजें। जब तक आप \"सहेजें\" टैप नहीं करते तब तक कुछ भी सहेजा नहीं जाता।",
+ "es": "Wikipick lee artículos de Wikipedia sin conexión. Busca, toca un resultado para leerlo de inmediato, luego guárdalo (y, opcionalmente, sus páginas enlazadas) para leerlo sin conexión más tarde. No se guarda nada hasta que toques \"Guardar\".",
+ "fr": "Wikipick lit les articles de Wikipédia hors ligne. Recherchez, appuyez sur un résultat pour le lire immédiatement, puis enregistrez-le (et, éventuellement, ses pages liées) pour une lecture hors ligne ultérieure. Rien n'est enregistré tant que vous n'appuyez pas sur « Enregistrer ».",
+ "ar": "يقرأ ويكيبيك مقالات ويكيبيديا دون اتصال. ابحث، واضغط على نتيجة لقراءتها فورًا، ثم احفظها (واختياريًا صفحاتها المرتبطة) للقراءة دون اتصال لاحقًا. لن يُحفظ شيء حتى تضغط \"حفظ\".",
+ "pt": "O Wikipick lê artigos da Wikipédia offline. Pesquise, toque em um resultado para lê-lo imediatamente, depois salve-o (e, opcionalmente, suas páginas vinculadas) para leitura offline posterior. Nada é salvo até você tocar em \"Salvar\".",
+ "ru": "Wikipick читает статьи Википедии офлайн. Ищите, нажимайте результат, чтобы сразу его прочитать, затем сохраните его (и, при желании, его связанные страницы) для последующего офлайн-чтения. Ничего не сохраняется, пока вы не нажмёте «Сохранить».",
+ "de": "Wikipick liest Wikipedia-Artikel offline. Suchen, ein Ergebnis antippen, um es sofort zu lesen, dann speichern (und optional dessen verknüpfte Seiten) für späteres Offline-Lesen. Es wird nichts gespeichert, bis Sie „Speichern“ antippen.",
+ "ja": "Wikipickはウィキペディアの記事をオフラインで読めるようにします。検索して結果をタップするとすぐに読め、後でオフライン閲覧するために保存（オプションでリンク先ページも）できます。「保存」をタップするまで何も保存されません。",
+ "tr": "Wikipick, Wikipedia makalelerini çevrimdışı okur. Arama yapın, hemen okumak için bir sonuca dokunun, ardından daha sonra çevrimdışı okumak için kaydedin (isteğe bağlı olarak bağlantılı sayfalarıyla birlikte). \"Kaydet\"e dokunana kadar hiçbir şey kaydedilmez.",
+ "vi": "Wikipick đọc các bài viết Wikipedia ngoại tuyến. Tìm kiếm, nhấn vào một kết quả để đọc ngay, sau đó lưu nó (và tùy chọn cả các trang liên kết) để đọc ngoại tuyến sau này. Không có gì được lưu cho đến khi bạn nhấn \"Lưu\".",
+ "it": "Wikipick legge gli articoli di Wikipedia offline. Cerca, tocca un risultato per leggerlo subito, poi salvalo (e, facoltativamente, le sue pagine collegate) per la lettura offline successiva. Non viene salvato nulla finché non tocchi \"Salva\".",
+ "fa": "ویکی‌پیک مقالات ویکی‌پدیا را به‌صورت آفلاین می‌خواند. جستجو کنید، روی یک نتیجه ضربه بزنید تا بلافاصله آن را بخوانید، سپس آن را (و اختیاری، صفحات پیوندی آن را) برای خواندن آفلاین بعداً ذخیره کنید. تا زمانی که روی «ذخیره» ضربه نزنید چیزی ذخیره نمی‌شود.",
+ "pl": "Wikipick czyta artykuły Wikipedii offline. Wyszukaj, dotknij wyniku, aby przeczytać go od razu, a następnie zapisz go (opcjonalnie razem z powiązanymi stronami) do późniejszego czytania offline. Nic nie jest zapisywane, dopóki nie dotkniesz \"Zapisz\".",
+ "uk": "Wikipick читає статті Вікіпедії офлайн. Шукайте, натискайте результат, щоб одразу прочитати, потім збережіть його (і, за бажанням, пов'язані сторінки) для подальшого офлайн-читання. Нічого не зберігається, доки ви не натиснете «Зберегти».",
+ "nl": "Wikipick leest Wikipedia-artikelen offline. Zoek, tik op een resultaat om het direct te lezen, en sla het daarna op (en optioneel de gekoppelde pagina's) om later offline te lezen. Er wordt niets opgeslagen totdat je op \"Opslaan\" tikt.",
+ "sv": "Wikipick läser Wikipedia-artiklar offline. Sök, tryck på ett resultat för att läsa det direkt, spara det sedan (och eventuellt dess länkade sidor) för senare offlineläsning. Inget sparas förrän du trycker på \"Spara\".",
+ "cs": "Wikipick čte články Wikipedie offline. Vyhledejte, klepnutím na výsledek si jej ihned přečtěte, poté jej uložte (a případně jeho propojené stránky) pro pozdější offline čtení. Nic se neuloží, dokud neklepnete na \"Uložit\".",
+ "el": "Το Wikipick διαβάζει άρθρα της Wikipedia εκτός σύνδεσης. Αναζητήστε, πατήστε ένα αποτέλεσμα για να το διαβάσετε αμέσως, μετά αποθηκεύστε το (και, προαιρετικά, τις συνδεδεμένες σελίδες του) για μελλοντική ανάγνωση εκτός σύνδεσης. Τίποτα δεν αποθηκεύεται μέχρι να πατήσετε «Αποθήκευση»."
+ }
+ },
+ {
+ "type": "text",
+ "style": "body",
+ "value": {
+ "en": "Content comes directly from Wikipedia (wikipedia.org) under its own license — Wikipick does not modify article text beyond converting it for offline display.",
+ "ko": "콘텐츠는 위키백과(wikipedia.org)에서 자체 라이선스로 직접 제공됩니다 — 위키픽은 오프라인 표시를 위한 변환 외에 문서 내용을 수정하지 않습니다.",
+ "zh": "内容直接来自维基百科（wikipedia.org），遵循其自有许可证 — Wikipick 除为离线显示进行转换外不会修改文章文本。",
+ "hi": "सामग्री सीधे विकिपीडिया (wikipedia.org) से उसके अपने लाइसेंस के तहत आती है — विकिपिक ऑफ़लाइन प्रदर्शन के लिए रूपांतरण के अलावा लेख के पाठ में कोई बदलाव नहीं करता।",
+ "es": "El contenido proviene directamente de Wikipedia (wikipedia.org) bajo su propia licencia — Wikipick no modifica el texto del artículo más allá de convertirlo para su visualización sin conexión.",
+ "fr": "Le contenu provient directement de Wikipédia (wikipedia.org) sous sa propre licence — Wikipick ne modifie pas le texte de l'article au-delà de sa conversion pour l'affichage hors ligne.",
+ "ar": "يأتي المحتوى مباشرة من ويكيبيديا (wikipedia.org) بموجب ترخيصها الخاص — لا يقوم ويكيبيك بتعديل نص المقالة سوى تحويله للعرض دون اتصال.",
+ "pt": "O conteúdo vem diretamente da Wikipédia (wikipedia.org) sob sua própria licença — o Wikipick não modifica o texto do artigo além de convertê-lo para exibição offline.",
+ "ru": "Контент поступает напрямую из Википедии (wikipedia.org) по её собственной лицензии — Wikipick не изменяет текст статьи, кроме преобразования для офлайн-отображения.",
+ "de": "Inhalte stammen direkt von Wikipedia (wikipedia.org) unter deren eigener Lizenz — Wikipick verändert den Artikeltext nicht, außer ihn für die Offline-Anzeige zu konvertieren.",
+ "ja": "コンテンツはウィキペディア（wikipedia.org）から独自のライセンスの下で直接提供されます — Wikipickはオフライン表示用の変換以外に記事のテキストを変更しません。",
+ "tr": "İçerik doğrudan Wikipedia'dan (wikipedia.org) kendi lisansı altında gelir — Wikipick, çevrimdışı görüntüleme için dönüştürmenin ötesinde makale metnini değiştirmez.",
+ "vi": "Nội dung đến trực tiếp từ Wikipedia (wikipedia.org) theo giấy phép riêng của nó — Wikipick không sửa đổi văn bản bài viết ngoài việc chuyển đổi để hiển thị ngoại tuyến.",
+ "it": "I contenuti provengono direttamente da Wikipedia (wikipedia.org) secondo la sua licenza — Wikipick non modifica il testo dell'articolo se non per convertirlo per la visualizzazione offline.",
+ "fa": "محتوا مستقیماً از ویکی‌پدیا (wikipedia.org) تحت مجوز خودش می‌آید — ویکی‌پیک متن مقاله را جز برای تبدیل به نمایش آفلاین تغییر نمی‌دهد.",
+ "pl": "Treść pochodzi bezpośrednio z Wikipedii (wikipedia.org) na jej własnej licencji — Wikipick nie modyfikuje tekstu artykułu poza konwersją do wyświetlania offline.",
+ "uk": "Контент надходить безпосередньо з Вікіпедії (wikipedia.org) за її власною ліцензією — Wikipick не змінює текст статті, окрім перетворення для офлайн-показу.",
+ "nl": "Inhoud komt rechtstreeks van Wikipedia (wikipedia.org) onder haar eigen licentie — Wikipick wijzigt de artikeltekst niet, behalve om deze te converteren voor offline weergave.",
+ "sv": "Innehållet kommer direkt från Wikipedia (wikipedia.org) under dess egen licens — Wikipick ändrar inte artikeltexten utöver att konvertera den för offlinevisning.",
+ "cs": "Obsah pochází přímo z Wikipedie (wikipedia.org) pod její vlastní licencí — Wikipick neupravuje text článku kromě jeho převodu pro offline zobrazení.",
+ "el": "Το περιεχόμενο προέρχεται απευθείας από τη Wikipedia (wikipedia.org) υπό τη δική της άδεια — το Wikipick δεν τροποποιεί το κείμενο του άρθρου πέρα από τη μετατροπή του για προβολή εκτός σύνδεσης."
+ }
+ },
+ {
+ "type": "button",
+ "variant": "text",
+ "icon": "volunteer_activism",
+ "label": {
+ "en": "Donate to Wikipedia",
+ "ko": "위키백과에 기부",
+ "zh": "捐赠给维基百科",
+ "hi": "विकिपीडिया को दान करें",
+ "es": "Donar a Wikipedia",
+ "fr": "Faire un don à Wikipédia",
+ "ar": "التبرع لويكيبيديا",
+ "pt": "Doar para a Wikipédia",
+ "ru": "Пожертвовать Википедии",
+ "de": "An Wikipedia spenden",
+ "ja": "ウィキペディアに寄付",
+ "tr": "Wikipedia'ya bağış yap",
+ "vi": "Quyên góp cho Wikipedia",
+ "it": "Dona a Wikipedia",
+ "fa": "اهدا به ویکی‌پدیا",
+ "pl": "Wesprzyj Wikipedię",
+ "uk": "Пожертвувати Вікіпедії",
+ "nl": "Doneren aan Wikipedia",
+ "sv": "Donera till Wikipedia",
+ "cs": "Přispět Wikipedii",
+ "el": "Δωρεά στη Wikipedia"
+ },
+ "action": { "fn": "openLink", "args": { "url": "https://donate.wikimedia.org/" } }
+ }
+ ]
+ }
+ }
+ }
+}

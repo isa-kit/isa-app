@@ -1,0 +1,211 @@
+{
+  "board": {
+    "name": "Workboard"
+  },
+  "screens": [
+    {
+      "id": "workbo_0_home",
+      "name": "Tasks",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "workbo_1_plan",
+      "name": "Plan",
+      "device": "phone",
+      "x": 440,
+      "y": 0
+    },
+    {
+      "id": "workbo_2_people",
+      "name": "People",
+      "device": "phone",
+      "x": 880,
+      "y": 0
+    },
+    {
+      "id": "workbo_3_table",
+      "name": "Table",
+      "device": "phone",
+      "x": 1320,
+      "y": 0
+    },
+    {
+      "id": "workbo_4_worklog",
+      "name": "Worklog",
+      "device": "phone",
+      "x": 0,
+      "y": 900
+    }
+  ],
+  "widgets": [
+    {
+      "id": "workbo_0_home_title",
+      "screen": "workbo_0_home",
+      "kind": "titlebar",
+      "label": "Tasks",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "workbo_0_home_w0",
+      "screen": "workbo_0_home",
+      "kind": "buttonrow",
+      "label": "Segmented control",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "workbo_0_home_nav",
+      "screen": "workbo_0_home",
+      "kind": "bottomnav",
+      "label": "Tasks \u00b7 Plan \u00b7 People \u00b7 Table \u00b7 Worklog",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "workbo_1_plan_title",
+      "screen": "workbo_1_plan",
+      "kind": "titlebar",
+      "label": "Plan",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "workbo_1_plan_w0",
+      "screen": "workbo_1_plan",
+      "kind": "buttonrow",
+      "label": "Segmented control",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "workbo_1_plan_nav",
+      "screen": "workbo_1_plan",
+      "kind": "bottomnav",
+      "label": "Tasks \u00b7 Plan \u00b7 People \u00b7 Table \u00b7 Worklog",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "workbo_2_people_title",
+      "screen": "workbo_2_people",
+      "kind": "titlebar",
+      "label": "People",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "workbo_2_people_w0",
+      "screen": "workbo_2_people",
+      "kind": "buttonrow",
+      "label": "Segmented control",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "workbo_2_people_nav",
+      "screen": "workbo_2_people",
+      "kind": "bottomnav",
+      "label": "Tasks \u00b7 Plan \u00b7 People \u00b7 Table \u00b7 Worklog",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "workbo_3_table_title",
+      "screen": "workbo_3_table",
+      "kind": "titlebar",
+      "label": "Table",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "workbo_3_table_w0",
+      "screen": "workbo_3_table",
+      "kind": "buttonrow",
+      "label": "Segmented control",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "workbo_3_table_nav",
+      "screen": "workbo_3_table",
+      "kind": "bottomnav",
+      "label": "Tasks \u00b7 Plan \u00b7 People \u00b7 Table \u00b7 Worklog",
+      "region": "bottom",
+      "order": 0
+    },
+    {
+      "id": "workbo_4_worklog_title",
+      "screen": "workbo_4_worklog",
+      "kind": "titlebar",
+      "label": "Worklog",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "workbo_4_worklog_w0",
+      "screen": "workbo_4_worklog",
+      "kind": "text",
+      "label": "What I did each run, newest first.",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "workbo_4_worklog_w1",
+      "screen": "workbo_4_worklog",
+      "kind": "list",
+      "label": "summary",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Tasks\", \"Plan\", \"People\"]"
+    },
+    {
+      "id": "workbo_4_worklog_nav",
+      "screen": "workbo_4_worklog",
+      "kind": "bottomnav",
+      "label": "Tasks \u00b7 Plan \u00b7 People \u00b7 Table \u00b7 Worklog",
+      "region": "bottom",
+      "order": 0
+    }
+  ],
+  "flows": [
+    {
+      "id": "workbo_flow_0",
+      "fromWidget": "workbo_0_home_nav",
+      "toScreen": "workbo_1_plan",
+      "transition": "push"
+    },
+    {
+      "id": "workbo_flow_1",
+      "fromWidget": "workbo_1_plan_nav",
+      "toScreen": "workbo_2_people",
+      "transition": "push"
+    },
+    {
+      "id": "workbo_flow_2",
+      "fromWidget": "workbo_2_people_nav",
+      "toScreen": "workbo_3_table",
+      "transition": "push"
+    },
+    {
+      "id": "workbo_flow_3",
+      "fromWidget": "workbo_3_table_nav",
+      "toScreen": "workbo_4_worklog",
+      "transition": "push"
+    },
+    {
+      "id": "workbo_flow_4",
+      "fromWidget": "workbo_4_worklog_nav",
+      "toScreen": "workbo_0_home",
+      "transition": "push"
+    },
+    {
+      "id": "workbo_flow_extra",
+      "fromWidget": "workbo_4_worklog_w1",
+      "toScreen": "workbo_0_home",
+      "transition": "push"
+    }
+  ]
+}

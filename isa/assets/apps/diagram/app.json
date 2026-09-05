@@ -1,0 +1,13 @@
+{
+  "id": "diagram",
+  "name": "Diagram",
+  "category": "Creative",
+  "description": "Flowchart files built from nodes and edges.",
+  "hidden": true,
+  "icon": "account_tree",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_diagram"
+  },
+  "seedVersion": "2026-08-01.1-drawio-buttons"
+}

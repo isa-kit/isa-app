@@ -1,0 +1,34 @@
+{
+  "board": {
+    "name": "Sketchpad"
+  },
+  "screens": [
+    {
+      "id": "sketch_0_files",
+      "name": "Sketchpad",
+      "device": "phone",
+      "x": 0,
+      "y": 0
+    }
+  ],
+  "widgets": [
+    {
+      "id": "sketch_0_files_title",
+      "screen": "sketch_0_files",
+      "kind": "titlebar",
+      "label": "Sketchpad",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "sketch_0_files_w0",
+      "screen": "sketch_0_files",
+      "kind": "list",
+      "label": "Drawings",
+      "region": "body",
+      "order": 0,
+      "items": "[\"Character study\", \"Storm sky study\", \"Untitled sketch\"]"
+    }
+  ],
+  "flows": []
+}
