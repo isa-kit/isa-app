@@ -1,0 +1,302 @@
+{
+  "collections": [
+    {
+      "id": "football",
+      "name": "Footballers",
+      "domain": "Football",
+      "icon": "sports_soccer",
+      "description": "Modern football greats. Public, approximate stats \u2014 edit freely.",
+      "attributes": "[{\"key\": \"goals\", \"label\": \"Career goals\", \"type\": \"number\", \"higherIsBetter\": true}, {\"key\": \"apps\", \"label\": \"Appearances\", \"type\": \"number\", \"higherIsBetter\": true}, {\"key\": \"height\", \"label\": \"Height\", \"type\": \"number\", \"unit\": \"cm\"}, {\"key\": \"position\", \"label\": \"Position\", \"type\": \"text\"}, {\"key\": \"club\", \"label\": \"Club\", \"type\": \"text\"}, {\"key\": \"country\", \"label\": \"Country\", \"type\": \"text\"}]"
+    }
+  ],
+  "items": [
+    {
+      "id": "p1",
+      "collectionId": "football",
+      "name": "Lionel Messi",
+      "image": "",
+      "attrs": "{\"goals\": 860, \"apps\": 1080, \"height\": 169, \"position\": \"Forward\", \"club\": \"Inter Miami\", \"country\": \"Argentina\"}"
+    },
+    {
+      "id": "p2",
+      "collectionId": "football",
+      "name": "Cristiano Ronaldo",
+      "image": "",
+      "attrs": "{\"goals\": 895, \"apps\": 1230, \"height\": 187, \"position\": \"Forward\", \"club\": \"Al Nassr\", \"country\": \"Portugal\"}"
+    },
+    {
+      "id": "p3",
+      "collectionId": "football",
+      "name": "Robert Lewandowski",
+      "image": "",
+      "attrs": "{\"goals\": 660, \"apps\": 960, \"height\": 185, \"position\": \"Forward\", \"club\": \"Barcelona\", \"country\": \"Poland\"}"
+    },
+    {
+      "id": "p4",
+      "collectionId": "football",
+      "name": "Karim Benzema",
+      "image": "",
+      "attrs": "{\"goals\": 430, \"apps\": 1000, \"height\": 185, \"position\": \"Forward\", \"club\": \"Al Ittihad\", \"country\": \"France\"}"
+    },
+    {
+      "id": "p5",
+      "collectionId": "football",
+      "name": "Neymar",
+      "image": "",
+      "attrs": "{\"goals\": 440, \"apps\": 720, \"height\": 175, \"position\": \"Forward\", \"club\": \"Al Hilal\", \"country\": \"Brazil\"}"
+    },
+    {
+      "id": "p6",
+      "collectionId": "football",
+      "name": "Harry Kane",
+      "image": "",
+      "attrs": "{\"goals\": 400, \"apps\": 640, \"height\": 188, \"position\": \"Forward\", \"club\": \"Bayern\", \"country\": \"England\"}"
+    },
+    {
+      "id": "p7",
+      "collectionId": "football",
+      "name": "Mohamed Salah",
+      "image": "",
+      "attrs": "{\"goals\": 360, \"apps\": 650, \"height\": 175, \"position\": \"Forward\", \"club\": \"Liverpool\", \"country\": \"Egypt\"}"
+    },
+    {
+      "id": "p8",
+      "collectionId": "football",
+      "name": "Kylian Mbappe",
+      "image": "",
+      "attrs": "{\"goals\": 330, \"apps\": 420, \"height\": 178, \"position\": \"Forward\", \"club\": \"Real Madrid\", \"country\": \"France\"}"
+    },
+    {
+      "id": "p9",
+      "collectionId": "football",
+      "name": "Erling Haaland",
+      "image": "",
+      "attrs": "{\"goals\": 290, \"apps\": 390, \"height\": 195, \"position\": \"Forward\", \"club\": \"Man City\", \"country\": \"Norway\"}"
+    },
+    {
+      "id": "p10",
+      "collectionId": "football",
+      "name": "Kevin De Bruyne",
+      "image": "",
+      "attrs": "{\"goals\": 160, \"apps\": 640, \"height\": 181, \"position\": \"Midfielder\", \"club\": \"Man City\", \"country\": \"Belgium\"}"
+    },
+    {
+      "id": "p11",
+      "collectionId": "football",
+      "name": "Vinicius Junior",
+      "image": "",
+      "attrs": "{\"goals\": 140, \"apps\": 340, \"height\": 176, \"position\": \"Forward\", \"club\": \"Real Madrid\", \"country\": \"Brazil\"}"
+    },
+    {
+      "id": "p12",
+      "collectionId": "football",
+      "name": "Luka Modric",
+      "image": "",
+      "attrs": "{\"goals\": 110, \"apps\": 860, \"height\": 172, \"position\": \"Midfielder\", \"club\": \"Real Madrid\", \"country\": \"Croatia\"}"
+    },
+    {
+      "id": "p13",
+      "collectionId": "football",
+      "name": "Jude Bellingham",
+      "image": "",
+      "attrs": "{\"goals\": 90, \"apps\": 300, \"height\": 186, \"position\": \"Midfielder\", \"club\": \"Real Madrid\", \"country\": \"England\"}"
+    },
+    {
+      "id": "p14",
+      "collectionId": "football",
+      "name": "Virgil van Dijk",
+      "image": "",
+      "attrs": "{\"goals\": 60, \"apps\": 560, \"height\": 195, \"position\": \"Defender\", \"club\": \"Liverpool\", \"country\": \"Netherlands\"}"
+    }
+  ],
+  "tierlists": [
+    {
+      "id": "tl_football",
+      "collectionId": "football",
+      "title": "My football tiers",
+      "placements": "{}"
+    }
+  ],
+  "creations": [
+    {
+      "id": "cr1",
+      "type": "tier list",
+      "title": "Top strikers, ranked",
+      "author": "Mia",
+      "payload": "{\"placements\": {\"S\": [\"p1\", \"p2\"], \"A\": [\"p6\", \"p7\"]}}",
+      "publishedAt": "2026-06-14T10:00:00Z",
+      "upvotes": 0,
+      "downvotes": 0,
+      "score": 0,
+      "collId": "football",
+      "authorName": "Mia"
+    },
+    {
+      "id": "cr2",
+      "type": "comparison",
+      "title": "Who's the GOAT \u2014 by the numbers",
+      "author": "Theo",
+      "payload": "{\"note\": \"career goals + apps\"}",
+      "publishedAt": "2026-06-15T09:00:00Z",
+      "upvotes": 0,
+      "downvotes": 0,
+      "score": 0,
+      "collId": "football",
+      "authorName": "Theo"
+    },
+    {
+      "id": "cr3",
+      "type": "tier list",
+      "title": "Most overrated XI (fight me)",
+      "author": "Dee",
+      "payload": "{\"placements\": {\"S\": [\"p11\"]}}",
+      "publishedAt": "2026-06-15T12:00:00Z",
+      "upvotes": 0,
+      "downvotes": 0,
+      "score": 0,
+      "collId": "football",
+      "authorName": "Dee"
+    },
+    {
+      "id": "crl1",
+      "type": "link",
+      "kind": "link",
+      "collId": "football",
+      "title": "",
+      "url": "https://en.wikipedia.org/wiki/Lionel_Messi",
+      "safety": "safe",
+      "author": "",
+      "authorName": "Ana",
+      "payload": "",
+      "publishedAt": "2026-06-18T10:00:00Z",
+      "upvotes": 0,
+      "downvotes": 0,
+      "score": 0
+    },
+    {
+      "id": "crl2",
+      "type": "link",
+      "kind": "link",
+      "collId": "football",
+      "title": "Best goals of the season",
+      "url": "http://example.com/goals",
+      "safety": "caution",
+      "author": "",
+      "authorName": "Rob",
+      "payload": "",
+      "publishedAt": "2026-06-18T12:00:00Z",
+      "upvotes": 0,
+      "downvotes": 0,
+      "score": 0
+    }
+  ],
+  "votes": [
+    {
+      "id": "v1",
+      "creationId": "cr1",
+      "voter": "u1",
+      "value": 1,
+      "votedAt": "2026-06-14T11:00:00Z"
+    },
+    {
+      "id": "v2",
+      "creationId": "cr1",
+      "voter": "u2",
+      "value": 1,
+      "votedAt": "2026-06-14T11:00:00Z"
+    },
+    {
+      "id": "v3",
+      "creationId": "cr1",
+      "voter": "u3",
+      "value": 1,
+      "votedAt": "2026-06-14T11:00:00Z"
+    },
+    {
+      "id": "v4",
+      "creationId": "cr1",
+      "voter": "u4",
+      "value": 1,
+      "votedAt": "2026-06-14T11:00:00Z"
+    },
+    {
+      "id": "v5",
+      "creationId": "cr1",
+      "voter": "u5",
+      "value": 1,
+      "votedAt": "2026-06-14T11:00:00Z"
+    },
+    {
+      "id": "v6",
+      "creationId": "cr1",
+      "voter": "u6",
+      "value": -1,
+      "votedAt": "2026-06-14T11:00:00Z"
+    },
+    {
+      "id": "v7",
+      "creationId": "cr2",
+      "voter": "u1",
+      "value": 1,
+      "votedAt": "2026-06-15T11:00:00Z"
+    },
+    {
+      "id": "v8",
+      "creationId": "cr2",
+      "voter": "u2",
+      "value": 1,
+      "votedAt": "2026-06-15T11:00:00Z"
+    },
+    {
+      "id": "v9",
+      "creationId": "cr2",
+      "voter": "u3",
+      "value": 1,
+      "votedAt": "2026-06-15T11:00:00Z"
+    },
+    {
+      "id": "v10",
+      "creationId": "cr3",
+      "voter": "u1",
+      "value": 1,
+      "votedAt": "2026-06-15T11:00:00Z"
+    },
+    {
+      "id": "v11",
+      "creationId": "cr3",
+      "voter": "u2",
+      "value": -1,
+      "votedAt": "2026-06-15T11:00:00Z"
+    },
+    {
+      "id": "v12",
+      "creationId": "cr3",
+      "voter": "u3",
+      "value": -1,
+      "votedAt": "2026-06-15T11:00:00Z"
+    }
+  ],
+  "posts": [],
+  "contacts": [
+    {
+      "id": "ana",
+      "name": "Ana"
+    },
+    {
+      "id": "ben",
+      "name": "Ben"
+    },
+    {
+      "id": "cara",
+      "name": "Cara"
+    }
+  ],
+  "circles": [
+    {
+      "id": "friends",
+      "name": "Friends",
+      "memberIds": "[\"ana\",\"ben\"]"
+    }
+  ],
+  "postvotes": []
+}

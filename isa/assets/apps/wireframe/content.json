@@ -1,0 +1,50 @@
+{
+  "pages": [
+    { "id": "home", "name": "Example: Profile", "kind": "page", "order": 0 },
+    { "id": "login", "name": "Login", "kind": "page", "order": 1 },
+    { "id": "list_detail", "name": "List + detail", "kind": "page", "order": 2 },
+    { "id": "settings", "name": "Settings", "kind": "page", "order": 3 }
+  ],
+  "boxes": [
+    { "id": "ex_frame", "label": "Screen", "kind": "frame", "note": "A worked example: nav bar, avatar, heading, paragraph, a list and a button — try dragging any block, or resizing the frame.", "pageId": "home", "x": 0, "y": 0, "w": 390, "h": 780, "z": 0 },
+    { "id": "ex_nav", "label": "Nav", "kind": "nav", "note": "Screen title bar.", "pageId": "home", "x": 0, "y": 0, "w": 390, "h": 44, "z": 1 },
+    { "id": "ex_avatar", "label": "Avatar", "kind": "image", "note": "Profile photo.", "pageId": "home", "x": 20, "y": 68, "w": 64, "h": 64, "z": 1 },
+    { "id": "ex_heading", "label": "Jordan Lee", "kind": "text", "note": "Name / heading.", "pageId": "home", "x": 96, "y": 68, "w": 260, "h": 28, "z": 1 },
+    { "id": "ex_para", "label": "Product designer. Building small tools that respect your time.", "kind": "text", "note": "Bio paragraph.", "pageId": "home", "x": 20, "y": 148, "w": 350, "h": 60, "z": 1 },
+    { "id": "ex_section", "label": "Activity", "kind": "section", "note": "Groups the list below.", "pageId": "home", "x": 20, "y": 220, "w": 350, "h": 260, "z": 1 },
+    { "id": "ex_list", "label": "Recent activity", "kind": "list", "note": "Scrollable rows.", "pageId": "home", "x": 32, "y": 256, "w": 326, "h": 210, "z": 2 },
+    { "id": "ex_button", "label": "Edit profile", "kind": "button", "note": "Primary action.", "pageId": "home", "x": 20, "y": 500, "w": 160, "h": 44, "z": 1 },
+
+    { "id": "lg_frame", "label": "Screen", "kind": "frame", "note": "Login template.", "pageId": "login", "x": 0, "y": 0, "w": 390, "h": 780, "z": 0 },
+    { "id": "lg_heading", "label": "Log in", "kind": "text", "note": "Screen title.", "pageId": "login", "x": 20, "y": 80, "w": 200, "h": 36, "z": 1 },
+    { "id": "lg_email", "label": "Email", "kind": "input", "note": "Email field.", "pageId": "login", "x": 20, "y": 140, "w": 350, "h": 44, "z": 1 },
+    { "id": "lg_password", "label": "Password", "kind": "input", "note": "Password field.", "pageId": "login", "x": 20, "y": 196, "w": 350, "h": 44, "z": 1 },
+    { "id": "lg_forgot", "label": "Forgot password?", "kind": "text", "note": "Link-style caption.", "pageId": "login", "x": 20, "y": 248, "w": 200, "h": 24, "z": 1 },
+    { "id": "lg_button", "label": "Log in", "kind": "button", "note": "Submit.", "pageId": "login", "x": 20, "y": 292, "w": 160, "h": 44, "z": 1 },
+
+    { "id": "ld_list_frame", "label": "Screen", "kind": "frame", "note": "List screen — tap a row to open the detail screen alongside it.", "pageId": "list_detail", "x": 0, "y": 0, "w": 390, "h": 780, "z": 0 },
+    { "id": "ld_list_nav", "label": "Items", "kind": "nav", "note": "Screen title bar.", "pageId": "list_detail", "x": 0, "y": 0, "w": 390, "h": 44, "z": 1 },
+    { "id": "ld_search", "label": "Search", "kind": "input", "note": "Filter the list.", "pageId": "list_detail", "x": 20, "y": 56, "w": 350, "h": 44, "z": 1 },
+    { "id": "ld_list", "label": "Items list", "kind": "list", "note": "Tap a row → opens Detail (see the arrow).", "pageId": "list_detail", "x": 20, "y": 112, "w": 350, "h": 600, "z": 1 },
+
+    { "id": "ld_detail_frame", "label": "Screen", "kind": "frame", "note": "Detail screen for a selected item.", "pageId": "list_detail", "x": 450, "y": 0, "w": 390, "h": 780, "z": 0 },
+    { "id": "ld_detail_nav", "label": "Detail", "kind": "nav", "note": "Screen title bar with back arrow.", "pageId": "list_detail", "x": 450, "y": 0, "w": 390, "h": 44, "z": 1 },
+    { "id": "ld_detail_image", "label": "Image", "kind": "image", "note": "Hero image.", "pageId": "list_detail", "x": 470, "y": 64, "w": 350, "h": 180, "z": 1 },
+    { "id": "ld_detail_heading", "label": "Item name", "kind": "text", "note": "Detail title.", "pageId": "list_detail", "x": 470, "y": 260, "w": 350, "h": 32, "z": 1 },
+    { "id": "ld_detail_para", "label": "Full description goes here.", "kind": "text", "note": "Body copy.", "pageId": "list_detail", "x": 470, "y": 300, "w": 350, "h": 80, "z": 1 },
+    { "id": "ld_detail_button", "label": "Take action", "kind": "button", "note": "Primary action.", "pageId": "list_detail", "x": 470, "y": 400, "w": 160, "h": 44, "z": 1 },
+
+    { "id": "st_frame", "label": "Screen", "kind": "frame", "note": "Settings template.", "pageId": "settings", "x": 0, "y": 0, "w": 390, "h": 780, "z": 0 },
+    { "id": "st_nav", "label": "Settings", "kind": "nav", "note": "Screen title bar.", "pageId": "settings", "x": 0, "y": 0, "w": 390, "h": 44, "z": 1 },
+    { "id": "st_section_account", "label": "Account", "kind": "section", "note": "Groups account rows.", "pageId": "settings", "x": 20, "y": 64, "w": 350, "h": 140, "z": 1 },
+    { "id": "st_list_account", "label": "Name, email, password", "kind": "list", "note": "Account rows.", "pageId": "settings", "x": 32, "y": 100, "w": 326, "h": 90, "z": 2 },
+    { "id": "st_section_prefs", "label": "Preferences", "kind": "section", "note": "Groups preference rows.", "pageId": "settings", "x": 20, "y": 220, "w": 350, "h": 140, "z": 1 },
+    { "id": "st_toggle_notifs", "label": "Notifications", "kind": "input", "note": "On/off row.", "pageId": "settings", "x": 32, "y": 256, "w": 326, "h": 44, "z": 2 },
+    { "id": "st_toggle_dark", "label": "Dark mode", "kind": "input", "note": "On/off row.", "pageId": "settings", "x": 32, "y": 304, "w": 326, "h": 44, "z": 2 },
+    { "id": "st_signout", "label": "Sign out", "kind": "button", "note": "Destructive action.", "pageId": "settings", "x": 20, "y": 400, "w": 160, "h": 44, "z": 1 }
+  ],
+  "links": [
+    { "id": "ld_link", "from": "ld_list", "to": "ld_detail_frame", "label": "Tap a row", "pageId": "list_detail" }
+  ],
+  "sketch": []
+}

@@ -1,0 +1,22 @@
+{
+  "tables": [
+    {
+      "name": "files",
+      "label": "Files",
+      "icon": "folder",
+      "description": "A library of note files. Each file holds its own set of notes."
+    },
+    {
+      "name": "notes",
+      "label": "Notes",
+      "icon": "sticky_note",
+      "description": "Free-form notes. Each note has a title, a body, an optional date, and a pinned flag."
+    },
+    {
+      "name": "links",
+      "label": "Links",
+      "icon": "link",
+      "description": "Wiki-link edges parsed from note bodies by the engine: fromId -> toId, one row per [[target]] found in a note's body. toId is the resolved target note id (empty when unresolved); toTitle keeps the raw [[target]] text so a later rename can re-resolve the link."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "shelplet",
+  "name": "Shelplet",
+  "category": "Analytics",
+  "description": "Bundles Atlas, Scenarios, Models and Reports into one decision read.",
+  "icon": "dashboard",
+  "color": "#2E6E5A",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_shelplet"
+  },
+  "seedVersion": "2026-07-05.2-decision.l10n-int-0903"
+}

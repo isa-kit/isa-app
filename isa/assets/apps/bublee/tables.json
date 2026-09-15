@@ -1,0 +1,8 @@
+{
+  "tables": [
+    { "name": "files", "label": "Files" },
+    { "name": "boards", "label": "Boards" },
+    { "name": "bubbles", "label": "Ideas" },
+    { "name": "links", "label": "Links" }
+  ]
+}

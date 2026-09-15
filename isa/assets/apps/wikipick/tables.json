@@ -1,0 +1,124 @@
+{
+  "tables": [
+    {
+      "name": "articles",
+      "label": "Library",
+      "icon": "menu_book",
+      "description": "Wikipedia articles cached for offline reading — images are optional per save. Includes seeds you picked directly and articles reached by crawling links."
+    },
+    {
+      "name": "links",
+      "label": "Links",
+      "icon": "link",
+      "description": "Outgoing links discovered on a cached article, and whether the target article has been fetched yet."
+    },
+    {
+      "name": "crawl_queue",
+      "label": "Crawl queue",
+      "icon": "hourglass_bottom",
+      "description": "Articles discovered by a crawl and their fetch status — pending, fetched or failed. Lets a crawl pause and resume."
+    },
+    {
+      "name": "crawls",
+      "label": "Crawls",
+      "icon": "route",
+      "description": "One row per crawl run — its seed article, wiki, depth cap and status. Multiple crawls can overlap the same cached pages; see crawl_members."
+    },
+    {
+      "name": "crawl_members",
+      "label": "Crawl membership",
+      "icon": "workspaces",
+      "description": "Which pages belong to which crawl, and at what depth — the shared-cache join: one articles row can be a member of several crawls without being re-downloaded."
+    },
+    {
+      "name": "searchResults",
+      "label": "Search results",
+      "icon": "search",
+      "description": "Live Wikipedia search results for the current query — transient, cleared and replaced on every search. Tap a row to save it into Library."
+    },
+    {
+      "name": "searchStatus",
+      "label": "Search status",
+      "icon": "hourglass_empty",
+      "description": "Single-row status flag (idle/loading/empty/results) driving the search screen's loading and empty states."
+    },
+    {
+      "name": "readerStatus",
+      "label": "Reader status",
+      "icon": "menu_book",
+      "description": "Single-row scratch state for the reader screen — which article is open, and whether its cache is stale enough to prompt a check for updates."
+    },
+    {
+      "name": "liveArticle",
+      "label": "Reading now",
+      "icon": "auto_stories",
+      "description": "Reader v2 (R5, read-first): single-row scratch holding whatever is CURRENTLY open in the reader — a live (unsaved) fetch, or a copy of a saved Library row. Nothing here is Library content; only an explicit \"Save offline\" tap ever inserts into articles."
+    },
+    {
+      "name": "sections",
+      "label": "Sections",
+      "icon": "toc",
+      "description": "Reader v2 (R3): the heading outline of whatever liveArticle currently holds — recomputed every time liveArticle changes. Drives the reader's sections index chip row."
+    },
+    {
+      "name": "linkChoiceStatus",
+      "label": "Link choice",
+      "icon": "link",
+      "description": "Reader v2 (R2): single-row scratch holding an in-article wikilink's target while the reader shows the \"not cached yet\" choice screen (Save & read / Queue for caching / Open on Wikipedia)."
+    },
+    {
+      "name": "recentReads",
+      "label": "Recently read",
+      "icon": "history",
+      "description": "v3a (W1): a short trail of articles opened in the reader, live or cached, most recent first — feeds the home screen's \"Recently read\" list. Not the Library; nothing here implies the article is saved offline."
+    },
+    {
+      "name": "queueStatus",
+      "label": "Queue status",
+      "icon": "hourglass_bottom",
+      "description": "polish1-0818: single-row scratch state driving the Crawl queue screen's Resume control. \"interrupted\" only ever appears once per boot — pending rows found already queued before this session ever touched them, since a crawl run is an in-memory fiber that cannot survive a page reload."
+    },
+    {
+      "name": "articleImages",
+      "label": "Article images",
+      "icon": "image",
+      "description": "W2 (v3b design of record): one lead-image payload per saved article, local base64 bytes only, never fetched over the network at render time — an article's extractText references its row as `![alt](local:<id>)`. Never re-encoded or re-fetched; deleted together with its owning article."
+    },
+    {
+      "name": "seed_groups",
+      "label": "Topics",
+      "icon": "workspaces",
+      "description": "wikipick-picture-b2-0831 (W12): a named collection of seeds sharing one link pool — user framing is \"Topic\" (a topic contains multiple seed articles); the id stays `seed_groups`. A VIEW over the existing shared cache — grouping never changes fetch/dedup mechanics."
+    },
+    {
+      "name": "seed_group_members",
+      "label": "Topic membership",
+      "icon": "link",
+      "description": "wikipick-picture-b2-0831: which seed (wiki, seedTitle) belongs to which seed_groups row — a seed may belong to several topics. Carries denormalized per-seed display fields (progress/depth/status/shared counts) mirrored from crawls/crawl_members so the Topic screen's per-seed cards need no cross-table join at render time."
+    },
+    {
+      "name": "topic_stats",
+      "label": "Topic stats",
+      "icon": "insights",
+      "description": "wikipick-picture-b2-0831: one precomputed summary row per seed_groups row (same id) — seed/article counts, size, and the SYNERGY overlap numbers (shared-vs-exclusive, overall and per layer), all derived from crawl_members grouped by depth. Recomputed by _refreshTopicStats whenever the topic's membership or any member crawl's progress changes."
+    },
+    {
+      "name": "saveOptions",
+      "label": "Save options",
+      "icon": "tune",
+      "description": "W7: single-row scratch holding the CURRENT per-save choices (include images, cache depth) — read by the save action at the moment \"Save offline\"/\"+ Save\" is tapped, not stored per-article afterward."
+    },
+    {
+      "name": "topicCandidates",
+      "label": "Topic capture candidates",
+      "icon": "hub",
+      "description": "topic-capture-0902: transient scratch table — one row per candidate article while analyzing a search term's top 12 same-language results for centrality (how many of the OTHER candidates link to it). Cleared and replaced on every capture run, and cleared again once the topic is created."
+    },
+    {
+      "name": "topicCaptureStatus",
+      "label": "Topic capture status",
+      "icon": "hub",
+      "description": "topic-capture-0902: single-row (id tc1) scratch state driving the topic-capture screen — the search term, an editable default name, live \"analyzed k of N\" progress + elapsed time, core/peripheral counts, and the rough article estimate."
+    }
+  ]
+}

@@ -1,0 +1,913 @@
+{
+  "app": {
+    "languages": ["en", "ko", "zh", "hi", "es", "fr", "ar", "pt", "ru", "de", "ja", "tr", "vi", "it", "fa", "pl", "uk", "nl", "sv", "cs", "el"],
+    "translatable": true,
+    "appDataTools": true,
+    "intro": {
+      "tour": [
+        {
+          "screen": "map",
+          "label": "Map",
+          "note": "Porches on the map, colored by which time block they're playing."
+        },
+        {
+          "screen": "schedule",
+          "label": "Schedule",
+          "note": "Every performance, listed by time."
+        },
+        {
+          "screen": "about",
+          "label": "About",
+          "note": "How the event and this map work."
+        }
+      ],
+      "guide": "about"
+    },
+    "title": {
+      "en": "Porchfest map",
+      "ko": "포치페스트 지도",
+      "zh": "Porchfest 地图",
+      "hi": "पोर्चफेस्ट मानचित्र",
+      "es": "Mapa de Porchfest",
+      "fr": "Carte du Porchfest",
+      "ar": "خريطة بورشفست",
+      "pt": "Mapa do Porchfest",
+      "ru": "Карта Porchfest",
+      "de": "Porchfest-Karte",
+      "ja": "ポーチフェスト マップ",
+      "tr": "Porchfest haritası",
+      "vi": "Bản đồ Porchfest",
+      "it": "Mappa del Porchfest",
+      "fa": "نقشه پورچ‌فست",
+      "pl": "Mapa Porchfest",
+      "uk": "Карта Porchfest",
+      "nl": "Porchfest-kaart",
+      "sv": "Porchfest-karta",
+      "cs": "Mapa Porchfestu",
+      "el": "Χάρτης Porchfest"
+    },
+    "primaryColor": "#3F7DD9",
+    "theme": "contrast"
+  },
+  "nav": [
+    {
+      "id": "map",
+      "label": {
+        "en": "Map",
+        "ko": "지도",
+        "zh": "地图",
+        "hi": "मानचित्र",
+        "es": "Mapa",
+        "fr": "Carte",
+        "ar": "الخريطة",
+        "pt": "Mapa",
+        "ru": "Карта",
+        "de": "Karte",
+        "ja": "マップ",
+        "tr": "Harita",
+        "vi": "Bản đồ",
+        "it": "Mappa",
+        "fa": "نقشه",
+        "pl": "Mapa",
+        "uk": "Карта",
+        "nl": "Kaart",
+        "sv": "Karta",
+        "cs": "Mapa",
+        "el": "Χάρτης"
+      },
+      "icon": "map",
+      "screen": "map"
+    },
+    {
+      "id": "schedule",
+      "label": {
+        "en": "Schedule",
+        "ko": "일정",
+        "zh": "日程",
+        "hi": "अनुसूची",
+        "es": "Horario",
+        "fr": "Programme",
+        "ar": "الجدول",
+        "pt": "Programação",
+        "ru": "Расписание",
+        "de": "Zeitplan",
+        "ja": "スケジュール",
+        "tr": "Program",
+        "vi": "Lịch trình",
+        "it": "Programma",
+        "fa": "برنامه زمانی",
+        "pl": "Harmonogram",
+        "uk": "Розклад",
+        "nl": "Schema",
+        "sv": "Schema",
+        "cs": "Program",
+        "el": "Πρόγραμμα"
+      },
+      "icon": "event_note",
+      "screen": "schedule"
+    },
+    {
+      "id": "about",
+      "label": {
+        "en": "About",
+        "ko": "정보",
+        "zh": "关于",
+        "hi": "जानकारी",
+        "es": "Acerca de",
+        "fr": "À propos",
+        "ar": "حول",
+        "pt": "Sobre",
+        "ru": "О приложении",
+        "de": "Info",
+        "ja": "アプリについて",
+        "tr": "Hakkında",
+        "vi": "Giới thiệu",
+        "it": "Info",
+        "fa": "درباره",
+        "pl": "Informacje",
+        "uk": "Про застосунок",
+        "nl": "Over",
+        "sv": "Om",
+        "cs": "O aplikaci",
+        "el": "Σχετικά"
+      },
+      "icon": "menu_book",
+      "screen": "about"
+    }
+  ],
+  "screens": {
+    "map": {
+      "title": {
+        "en": "Porchfest map",
+        "ko": "포치페스트 지도",
+        "zh": "Porchfest 地图",
+        "hi": "पोर्चफेस्ट मानचित्र",
+        "es": "Mapa de Porchfest",
+        "fr": "Carte du Porchfest",
+        "ar": "خريطة بورشفست",
+        "pt": "Mapa do Porchfest",
+        "ru": "Карта Porchfest",
+        "de": "Porchfest-Karte",
+        "ja": "ポーチフェスト マップ",
+        "tr": "Porchfest haritası",
+        "vi": "Bản đồ Porchfest",
+        "it": "Mappa del Porchfest",
+        "fa": "نقشه پورچ‌فست",
+        "pl": "Mapa Porchfest",
+        "uk": "Карта Porchfest",
+        "nl": "Porchfest-kaart",
+        "sv": "Porchfest-karta",
+        "cs": "Mapa Porchfestu",
+        "el": "Χάρτης Porchfest"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Cambridge Porchfest, July 11–12, 2026. Porches colored by time block — blue = 12–2 PM, green = 2–4 PM, amber = 4–6 PM. Tap or drag across the day/time strip and filter by genre in the control panel, or press ▶ to sweep the day one slot at a time — matching pins gently pulse. Tap a pin or list row to zoom in and see the performer's start time, genre and website.",
+              "ko": "케임브리지 포치페스트, 2026년 7월 11–12일. 시간대별로 포치 색상이 다릅니다 — 파랑 = 오후 12–2시, 초록 = 오후 2–4시, 호박색 = 오후 4–6시. 요일/시간 스트립을 탭하거나 드래그하고 제어판에서 장르로 필터링하세요. ▶를 눌러 하루를 한 슬롯씩 훑어보면 일치하는 핀이 부드럽게 깜빡입니다. 핀이나 목록 행을 탭하면 확대되어 공연자의 시작 시간, 장르, 웹사이트를 볼 수 있습니다.",
+              "zh": "剑桥 Porchfest，2026 年 7 月 11–12 日。门廊按时间段着色——蓝色 = 中午 12 点–下午 2 点，绿色 = 下午 2–4 点，琥珀色 = 下午 4–6 点。点击或拖动日期/时间条，并在控制面板中按类型筛选，或按 ▶ 逐个时段扫描当天——匹配的图钉会轻轻脉动。点击图钉或列表行可放大查看表演者的开始时间、类型和网站。",
+              "hi": "कैम्ब्रिज पोर्चफेस्ट, 11–12 जुलाई, 2026। पोर्च समय-खंड के अनुसार रंगीन हैं — नीला = दोपहर 12–2 बजे, हरा = दोपहर 2–4 बजे, एम्बर = शाम 4–6 बजे। दिन/समय पट्टी पर टैप या ड्रैग करें और नियंत्रण पैनल में शैली द्वारा फ़िल्टर करें, या ▶ दबाकर एक समय में दिन को एक स्लॉट स्वीप करें — मिलान वाले पिन धीरे-धीरे स्पंदित होते हैं। कलाकार का प्रारंभ समय, शैली और वेबसाइट देखने के लिए किसी पिन या सूची पंक्ति को टैप करें।",
+              "es": "Cambridge Porchfest, 11–12 de julio de 2026. Los porches están coloreados por franja horaria: azul = 12–2 pm, verde = 2–4 pm, ámbar = 4–6 pm. Toca o arrastra en la franja de día/hora y filtra por género en el panel de control, o presiona ▶ para recorrer el día un intervalo a la vez; los pines coincidentes pulsan suavemente. Toca un pin o una fila de la lista para acercarte y ver la hora de inicio, el género y el sitio web del artista.",
+              "fr": "Cambridge Porchfest, 11–12 juillet 2026. Les porches sont colorés par créneau horaire — bleu = 12h–14h, vert = 14h–16h, ambre = 16h–18h. Appuyez ou faites glisser sur la bande jour/heure et filtrez par genre dans le panneau de contrôle, ou appuyez sur ▶ pour parcourir la journée créneau par créneau — les épingles correspondantes pulsent doucement. Appuyez sur une épingle ou une ligne de liste pour zoomer et voir l'heure de début, le genre et le site web de l'artiste.",
+              "ar": "بورشفست كامبريدج، 11–12 يوليو 2026. الشرفات ملونة حسب الفترة الزمنية — أزرق = 12–2 ظهرًا، أخضر = 2–4 عصرًا، كهرماني = 4–6 مساءً. اضغط أو اسحب عبر شريط اليوم/الوقت وصفِّ حسب النوع في لوحة التحكم، أو اضغط ▶ لمسح اليوم فترة تلو الأخرى — تنبض الدبابيس المطابقة بلطف. اضغط على دبوس أو صف قائمة للتكبير ورؤية وقت بدء الفنان ونوعه وموقعه.",
+              "pt": "Cambridge Porchfest, 11–12 de julho de 2026. As varandas são coloridas por faixa horária — azul = 12h–14h, verde = 14h–16h, âmbar = 16h–18h. Toque ou arraste na faixa de dia/hora e filtre por gênero no painel de controle, ou pressione ▶ para percorrer o dia um intervalo por vez — os pinos correspondentes pulsam suavemente. Toque em um pino ou linha da lista para ampliar e ver o horário de início, gênero e site do artista.",
+              "ru": "Cambridge Porchfest, 11–12 июля 2026 г. Крыльца окрашены по временным блокам — синий = 12–14, зелёный = 14–16, янтарный = 16–18. Нажмите или проведите по полосе дня/времени и отфильтруйте по жанру на панели управления, либо нажмите ▶, чтобы просматривать день по одному интервалу — подходящие метки мягко пульсируют. Нажмите на метку или строку списка, чтобы приблизить и увидеть время начала, жанр и сайт исполнителя.",
+              "de": "Cambridge Porchfest, 11.–12. Juli 2026. Veranden sind nach Zeitblock eingefärbt — blau = 12–14 Uhr, grün = 14–16 Uhr, bernstein = 16–18 Uhr. Tippe oder ziehe über die Tag/Zeit-Leiste und filtere im Bedienfeld nach Genre, oder drücke ▶, um den Tag Slot für Slot zu durchlaufen — passende Pins pulsieren sanft. Tippe auf einen Pin oder eine Listenzeile, um heranzuzoomen und Startzeit, Genre und Website des Künstlers zu sehen.",
+              "ja": "ケンブリッジ・ポーチフェスト、2026年7月11〜12日。ポーチは時間帯ごとに色分けされています——青＝12〜14時、緑＝14〜16時、琥珀＝16〜18時。日付/時間バーをタップまたはドラッグし、コントロールパネルでジャンルを絞り込むか、▶を押して1コマずつ一日をスイープできます——一致するピンが緩やかに点滅します。ピンやリストの行をタップすると拡大し、出演者の開始時刻、ジャンル、ウェブサイトが表示されます。",
+              "tr": "Cambridge Porchfest, 11–12 Temmuz 2026. Verandalar zaman dilimine göre renklendirilir — mavi = 12–14, yeşil = 14–16, kehribar = 16–18. Gün/saat şeridinde dokunun veya sürükleyin ve kontrol panelinde türe göre filtreleyin, ya da günü tek tek dilimlerle taramak için ▶'a basın — eşleşen iğneler hafifçe titrer. Sanatçının başlangıç saatini, türünü ve web sitesini görmek için bir iğneye veya liste satırına dokunun.",
+              "vi": "Cambridge Porchfest, 11–12 tháng 7 năm 2026. Các mái hiên được tô màu theo khung giờ — xanh dương = 12–14 giờ, xanh lá = 14–16 giờ, hổ phách = 16–18 giờ. Chạm hoặc kéo trên dải ngày/giờ và lọc theo thể loại trong bảng điều khiển, hoặc nhấn ▶ để quét qua từng khung giờ trong ngày — các ghim khớp sẽ nhấp nháy nhẹ. Chạm vào một ghim hoặc dòng danh sách để phóng to và xem giờ bắt đầu, thể loại và trang web của nghệ sĩ.",
+              "it": "Cambridge Porchfest, 11–12 luglio 2026. I portici sono colorati per fascia oraria — blu = 12–14, verde = 14–16, ambra = 16–18. Tocca o trascina sulla barra giorno/ora e filtra per genere nel pannello di controllo, oppure premi ▶ per scorrere la giornata una fascia alla volta — i pin corrispondenti pulsano leggermente. Tocca un pin o una riga dell'elenco per ingrandire e vedere l'orario di inizio, il genere e il sito web dell'artista.",
+              "fa": "پورچ‌فست کمبریج، ۱۱–۱۲ ژوئیه ۲۰۲۶. ایوان‌ها بر اساس بازه زمانی رنگ‌بندی شده‌اند — آبی = ۱۲–۲ بعدازظهر، سبز = ۲–۴ بعدازظهر، کهربایی = ۴–۶ بعدازظهر. روی نوار روز/زمان ضربه بزنید یا بکشید و در پنل کنترل بر اساس ژانر فیلتر کنید، یا برای مرور روز یک بازه در هر بار ▶ را فشار دهید — پین‌های منطبق به‌آرامی می‌تپند. برای بزرگ‌نمایی و دیدن زمان شروع، ژانر و وب‌سایت هنرمند، روی یک پین یا ردیف فهرست ضربه بزنید.",
+              "pl": "Cambridge Porchfest, 11–12 lipca 2026. Ganki są kolorowane wg przedziału czasowego — niebieski = 12–14, zielony = 14–16, bursztynowy = 16–18. Dotknij lub przeciągnij pasek dnia/godziny i filtruj wg gatunku w panelu sterowania, albo naciśnij ▶, aby przechodzić przez dzień slot po slocie — pasujące pinezki delikatnie pulsują. Dotknij pinezki lub wiersza listy, aby przybliżyć i zobaczyć godzinę rozpoczęcia, gatunek i stronę wykonawcy.",
+              "uk": "Cambridge Porchfest, 11–12 липня 2026 р. Ганки забарвлені за часовим блоком — синій = 12–14, зелений = 14–16, бурштиновий = 16–18. Торкніться або перетягніть смугу дня/часу та відфільтруйте за жанром на панелі керування, або натисніть ▶, щоб переглядати день по одному слоту — відповідні мітки м'яко пульсують. Торкніться мітки або рядка списку, щоб наблизити й побачити час початку, жанр та сайт виконавця.",
+              "nl": "Cambridge Porchfest, 11–12 juli 2026. Veranda's zijn gekleurd per tijdsblok — blauw = 12–14 uur, groen = 14–16 uur, amber = 16–18 uur. Tik of sleep over de dag/tijd-balk en filter op genre in het bedieningspaneel, of druk op ▶ om de dag slot voor slot te doorlopen — bijpassende pins pulseren zachtjes. Tik op een pin of lijstregel om in te zoomen en de starttijd, het genre en de website van de artiest te zien.",
+              "sv": "Cambridge Porchfest, 11–12 juli 2026. Verandor är färgade efter tidsblock — blå = 12–14, grön = 14–16, bärnsten = 16–18. Tryck eller dra över dag/tid-remsan och filtrera efter genre i kontrollpanelen, eller tryck på ▶ för att svepa dagen ett intervall i taget — matchande nålar pulserar mjukt. Tryck på en nål eller listrad för att zooma in och se artistens starttid, genre och webbplats.",
+              "cs": "Cambridge Porchfest, 11.–12. července 2026. Verandy jsou barevně odlišeny podle časového bloku — modrá = 12–14, zelená = 14–16, jantarová = 16–18. Klepněte nebo přejeďte prstem po pruhu dne/času a filtrujte podle žánru v ovládacím panelu, nebo stiskněte ▶ a procházejte den po jednotlivých slotech — odpovídající piny jemně pulzují. Klepnutím na pin nebo řádek seznamu přiblížíte a zobrazíte čas začátku, žánr a web interpreta.",
+              "el": "Cambridge Porchfest, 11–12 Ιουλίου 2026. Οι βεράντες χρωματίζονται ανά χρονική ζώνη — μπλε = 12–2 μ.μ., πράσινο = 2–4 μ.μ., κεχριμπαρί = 4–6 μ.μ. Πατήστε ή σύρετε στη λωρίδα ημέρας/ώρας και φιλτράρετε κατά είδος στον πίνακα ελέγχου, ή πατήστε ▶ για να σαρώσετε την ημέρα μία θέση τη φορά — οι αντίστοιχες καρφίτσες πάλλονται απαλά. Πατήστε μια καρφίτσα ή γραμμή λίστας για ζουμ και για να δείτε την ώρα έναρξης, το είδος και τον ιστότοπο του καλλιτέχνη."
+            }
+          },
+          {
+            "type": "datacontrols",
+            "table": "events",
+            "dock": "auto",
+            "children": [
+              {
+                "type": "databars",
+                "table": "events",
+                "column": "slot",
+                "sectionColumn": "day",
+                "colors": {
+                  "Sat 12 PM": "blue",
+                  "Sat 1 PM": "blue",
+                  "Sat 2 PM": "green",
+                  "Sat 3 PM": "green",
+                  "Sat 4 PM": "amber",
+                  "Sat 5 PM": "amber",
+                  "Sun 12 PM": "blue",
+                  "Sun 1 PM": "blue",
+                  "Sun 2 PM": "green",
+                  "Sun 3 PM": "green",
+                  "Sun 4 PM": "amber",
+                  "Sun 5 PM": "amber"
+                },
+                "play": true
+              },
+              {
+                "type": "datasegment",
+                "table": "events",
+                "column": "genreTag",
+                "label": "Genre",
+                "max": 12
+              }
+            ],
+            "body": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "pick",
+                  "table": "viewPrefs",
+                  "rowId": "v1",
+                  "column": "view",
+                  "variant": "segmented",
+                  "options": [
+                    {
+                      "value": "map",
+                      "label": "Map"
+                    },
+                    {
+                      "value": "table",
+                      "label": "Table"
+                    }
+                  ]
+                },
+                {
+                  "type": "switch",
+                  "table": "viewPrefs",
+                  "rowId": "v1",
+                  "column": "view",
+                  "cases": {
+                    "map": {
+                      "type": "column",
+                      "children": [
+                        {
+                          "type": "map",
+                          "table": "events",
+                          "latColumn": "lat",
+                          "lonColumn": "lon",
+                          "labelColumn": "artist",
+                          "colorColumn": "zone",
+                          "colors": {
+                            "12\u20132 PM": "blue",
+                            "2\u20134 PM": "green",
+                            "4\u20136 PM": "amber"
+                          },
+                          "configSource": "board",
+                          "cluster": true,
+                          "markerPulse": true,
+                          "userLocation": true,
+                          "zoom": 15,
+                          "height": "520",
+                          "action": {
+                            "fn": "openLink"
+                          },
+                          "listSubtitleColumn": "start",
+                          "listTagColumn": "genreTag",
+                          "detailPopup": true,
+                          "detailFields": [
+                            "start",
+                            "genreTag"
+                          ],
+                          "linkColumn": "url"
+                        },
+                        {
+                          "type": "row",
+                          "wrap": true,
+                          "spacing": 16,
+                          "children": [
+                            {
+                              "type": "row",
+                              "spacing": 4,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "\u25cf",
+                                  "color": "blue"
+                                },
+                                {
+                                  "type": "text",
+                                  "value": {
+                                    "en": "12–2 PM",
+                                    "ko": "오후 12–2시",
+                                    "zh": "中午12点–下午2点",
+                                    "hi": "दोपहर 12–2 बजे",
+                                    "es": "12–2 pm",
+                                    "fr": "12h–14h",
+                                    "ar": "12–2 ظهرًا",
+                                    "pt": "12h–14h",
+                                    "ru": "12:00–14:00",
+                                    "de": "12–14 Uhr",
+                                    "ja": "12〜14時",
+                                    "tr": "12–14",
+                                    "vi": "12–14 giờ",
+                                    "it": "12–14",
+                                    "fa": "۱۲–۲ بعدازظهر",
+                                    "pl": "12–14",
+                                    "uk": "12–14",
+                                    "nl": "12–14 uur",
+                                    "sv": "12–14",
+                                    "cs": "12–14",
+                                    "el": "12–2 μ.μ."
+                                  },
+                                  "style": "caption"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "row",
+                              "spacing": 4,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "\u25cf",
+                                  "color": "green"
+                                },
+                                {
+                                  "type": "text",
+                                  "value": {
+                                    "en": "2–4 PM",
+                                    "ko": "오후 2–4시",
+                                    "zh": "下午2–4点",
+                                    "hi": "दोपहर 2–4 बजे",
+                                    "es": "2–4 pm",
+                                    "fr": "14h–16h",
+                                    "ar": "2–4 عصرًا",
+                                    "pt": "14h–16h",
+                                    "ru": "14:00–16:00",
+                                    "de": "14–16 Uhr",
+                                    "ja": "14〜16時",
+                                    "tr": "14–16",
+                                    "vi": "14–16 giờ",
+                                    "it": "14–16",
+                                    "fa": "۲–۴ بعدازظهر",
+                                    "pl": "14–16",
+                                    "uk": "14–16",
+                                    "nl": "14–16 uur",
+                                    "sv": "14–16",
+                                    "cs": "14–16",
+                                    "el": "2–4 μ.μ."
+                                  },
+                                  "style": "caption"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "row",
+                              "spacing": 4,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "\u25cf",
+                                  "color": "amber"
+                                },
+                                {
+                                  "type": "text",
+                                  "value": {
+                                    "en": "4–6 PM",
+                                    "ko": "오후 4–6시",
+                                    "zh": "下午4–6点",
+                                    "hi": "शाम 4–6 बजे",
+                                    "es": "4–6 pm",
+                                    "fr": "16h–18h",
+                                    "ar": "4–6 مساءً",
+                                    "pt": "16h–18h",
+                                    "ru": "16:00–18:00",
+                                    "de": "16–18 Uhr",
+                                    "ja": "16〜18時",
+                                    "tr": "16–18",
+                                    "vi": "16–18 giờ",
+                                    "it": "16–18",
+                                    "fa": "۴–۶ بعدازظهر",
+                                    "pl": "16–18",
+                                    "uk": "16–18",
+                                    "nl": "16–18 uur",
+                                    "sv": "16–18",
+                                    "cs": "16–18",
+                                    "el": "4–6 μ.μ."
+                                  },
+                                  "style": "caption"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "table": {
+                      "type": "cards",
+                      "table": "events",
+                      "title": "artist",
+                      "subtitle": "address",
+                      "groupBy": "slot",
+                      "tags": [
+                        {
+                          "column": "start"
+                        },
+                        {
+                          "column": "genreTag"
+                        }
+                      ],
+                      "configSource": "board",
+                      "search": true,
+                      "typeToSearch": true,
+                      "filterable": true,
+                      "filterableColumns": [
+                        "artist",
+                        "day",
+                        "start",
+                        "hour",
+                        "genreTag",
+                        "address",
+                        "slot"
+                      ],
+                      "collapsible": true,
+                      "sortBy": "startMin",
+                      "height": 520,
+                      "action": {
+                        "fn": "editRow"
+                      }
+                    }
+                  },
+                  "default": {
+                    "type": "column",
+                    "children": [
+                      {
+                        "type": "map",
+                        "table": "events",
+                        "latColumn": "lat",
+                        "lonColumn": "lon",
+                        "labelColumn": "artist",
+                        "colorColumn": "zone",
+                        "colors": {
+                          "12\u20132 PM": "blue",
+                          "2\u20134 PM": "green",
+                          "4\u20136 PM": "amber"
+                        },
+                        "configSource": "board",
+                        "cluster": true,
+                        "markerPulse": true,
+                        "userLocation": true,
+                        "zoom": 15,
+                        "height": "520",
+                        "action": {
+                          "fn": "openLink"
+                        },
+                        "listSubtitleColumn": "start",
+                        "listTagColumn": "genreTag",
+                        "detailPopup": true,
+                        "detailFields": [
+                          "start",
+                          "genreTag"
+                        ],
+                        "linkColumn": "url"
+                      },
+                      {
+                        "type": "row",
+                        "wrap": true,
+                        "spacing": 16,
+                        "children": [
+                          {
+                            "type": "row",
+                            "spacing": 4,
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "\u25cf",
+                                "color": "blue"
+                              },
+                              {
+                                "type": "text",
+                                "value": {
+                                  "en": "12–2 PM",
+                                  "ko": "오후 12–2시",
+                                  "zh": "中午12点–下午2点",
+                                  "hi": "दोपहर 12–2 बजे",
+                                  "es": "12–2 pm",
+                                  "fr": "12h–14h",
+                                  "ar": "12–2 ظهرًا",
+                                  "pt": "12h–14h",
+                                  "ru": "12:00–14:00",
+                                  "de": "12–14 Uhr",
+                                  "ja": "12〜14時",
+                                  "tr": "12–14",
+                                  "vi": "12–14 giờ",
+                                  "it": "12–14",
+                                  "fa": "۱۲–۲ بعدازظهر",
+                                  "pl": "12–14",
+                                  "uk": "12–14",
+                                  "nl": "12–14 uur",
+                                  "sv": "12–14",
+                                  "cs": "12–14",
+                                  "el": "12–2 μ.μ."
+                                },
+                                "style": "caption"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "row",
+                            "spacing": 4,
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "\u25cf",
+                                "color": "green"
+                              },
+                              {
+                                "type": "text",
+                                "value": {
+                                  "en": "2–4 PM",
+                                  "ko": "오후 2–4시",
+                                  "zh": "下午2–4点",
+                                  "hi": "दोपहर 2–4 बजे",
+                                  "es": "2–4 pm",
+                                  "fr": "14h–16h",
+                                  "ar": "2–4 عصرًا",
+                                  "pt": "14h–16h",
+                                  "ru": "14:00–16:00",
+                                  "de": "14–16 Uhr",
+                                  "ja": "14〜16時",
+                                  "tr": "14–16",
+                                  "vi": "14–16 giờ",
+                                  "it": "14–16",
+                                  "fa": "۲–۴ بعدازظهر",
+                                  "pl": "14–16",
+                                  "uk": "14–16",
+                                  "nl": "14–16 uur",
+                                  "sv": "14–16",
+                                  "cs": "14–16",
+                                  "el": "2–4 μ.μ."
+                                },
+                                "style": "caption"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "row",
+                            "spacing": 4,
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "\u25cf",
+                                "color": "amber"
+                              },
+                              {
+                                "type": "text",
+                                "value": {
+                                  "en": "4–6 PM",
+                                  "ko": "오후 4–6시",
+                                  "zh": "下午4–6点",
+                                  "hi": "शाम 4–6 बजे",
+                                  "es": "4–6 pm",
+                                  "fr": "16h–18h",
+                                  "ar": "4–6 مساءً",
+                                  "pt": "16h–18h",
+                                  "ru": "16:00–18:00",
+                                  "de": "16–18 Uhr",
+                                  "ja": "16〜18時",
+                                  "tr": "16–18",
+                                  "vi": "16–18 giờ",
+                                  "it": "16–18",
+                                  "fa": "۴–۶ بعدازظهر",
+                                  "pl": "16–18",
+                                  "uk": "16–18",
+                                  "nl": "16–18 uur",
+                                  "sv": "16–18",
+                                  "cs": "16–18",
+                                  "el": "4–6 μ.μ."
+                                },
+                                "style": "caption"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "schedule": {
+      "title": {
+        "en": "Schedule",
+        "ko": "일정",
+        "zh": "日程",
+        "hi": "अनुसूची",
+        "es": "Horario",
+        "fr": "Programme",
+        "ar": "الجدول",
+        "pt": "Programação",
+        "ru": "Расписание",
+        "de": "Zeitplan",
+        "ja": "スケジュール",
+        "tr": "Program",
+        "vi": "Lịch trình",
+        "it": "Programma",
+        "fa": "برنامه زمانی",
+        "pl": "Harmonogram",
+        "uk": "Розклад",
+        "nl": "Schema",
+        "sv": "Schema",
+        "cs": "Program",
+        "el": "Πρόγραμμα"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "cards",
+            "table": "events",
+            "title": "artist",
+            "subtitle": "address",
+            "groupBy": "hour",
+            "tags": [
+              {
+                "column": "start"
+              },
+              {
+                "column": "day"
+              }
+            ],
+            "search": true,
+            "typeToSearch": true,
+            "filterable": true,
+            "filterableColumns": [
+              "artist",
+              "day",
+              "start",
+              "hour",
+              "genreTag",
+              "address",
+              "slot"
+            ],
+            "collapsible": true,
+            "sortBy": "startMin",
+            "height": 480,
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "about": {
+      "title": {
+        "en": "About this map",
+        "ko": "이 지도 정보",
+        "zh": "关于此地图",
+        "hi": "इस मानचित्र के बारे में",
+        "es": "Acerca de este mapa",
+        "fr": "À propos de cette carte",
+        "ar": "حول هذه الخريطة",
+        "pt": "Sobre este mapa",
+        "ru": "Об этой карте",
+        "de": "Über diese Karte",
+        "ja": "このマップについて",
+        "tr": "Bu harita hakkında",
+        "vi": "Giới thiệu bản đồ này",
+        "it": "Informazioni su questa mappa",
+        "fa": "درباره این نقشه",
+        "pl": "O tej mapie",
+        "uk": "Про цю карту",
+        "nl": "Over deze kaart",
+        "sv": "Om den här kartan",
+        "cs": "O této mapě",
+        "el": "Σχετικά με αυτόν τον χάρτη"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": {
+              "en": "Cambridgeport Porchfest",
+              "ko": "케임브리지포트 포치페스트",
+              "zh": "Cambridgeport Porchfest",
+              "hi": "कैम्ब्रिजपोर्ट पोर्चफेस्ट",
+              "es": "Cambridgeport Porchfest",
+              "fr": "Cambridgeport Porchfest",
+              "ar": "كامبريدجبورت بورشفست",
+              "pt": "Cambridgeport Porchfest",
+              "ru": "Cambridgeport Porchfest",
+              "de": "Cambridgeport Porchfest",
+              "ja": "ケンブリッジポート・ポーチフェスト",
+              "tr": "Cambridgeport Porchfest",
+              "vi": "Cambridgeport Porchfest",
+              "it": "Cambridgeport Porchfest",
+              "fa": "پورچ‌فست کمبریج‌پورت",
+              "pl": "Cambridgeport Porchfest",
+              "uk": "Cambridgeport Porchfest",
+              "nl": "Cambridgeport Porchfest",
+              "sv": "Cambridgeport Porchfest",
+              "cs": "Cambridgeport Porchfest",
+              "el": "Cambridgeport Porchfest"
+            }
+          },
+          {
+            "type": "text",
+            "value": {
+              "en": "A two-day event. Saturday, July 11, 2026, 12:00 PM – 6:00 PM, in the Cambridgeport neighborhood — a neighborhood-wide day of free porch concerts. Sunday, July 12, 2026, performances continue at restaurants and cafes along Mass Ave, in Central Square and Harvard Square, Cambridge MA.",
+              "ko": "이틀간 열리는 행사입니다. 2026년 7월 11일 토요일 오후 12시–6시, 케임브리지포트 지역에서 열리는 무료 포치 콘서트의 날입니다. 2026년 7월 12일 일요일에는 매사추세츠 애비뉴, 센트럴 스퀘어, 하버드 스퀘어(케임브리지, 매사추세츠주)의 식당과 카페에서 공연이 이어집니다.",
+              "zh": "为期两天的活动。2026年7月11日星期六，中午12点至下午6点，在Cambridgeport社区举行——一整个社区的免费门廊音乐会日。2026年7月12日星期日，演出在马萨诸塞大道沿线、中央广场和哈佛广场（马萨诸塞州剑桥市）的餐厅和咖啡馆继续。",
+              "hi": "यह दो दिवसीय आयोजन है। शनिवार, 11 जुलाई 2026, दोपहर 12:00 – शाम 6:00 बजे, कैम्ब्रिजपोर्ट पड़ोस में — मुफ़्त पोर्च कॉन्सर्ट का पूरे पड़ोस का दिन। रविवार, 12 जुलाई 2026, मास एवेन्यू, सेंट्रल स्क्वायर और हार्वर्ड स्क्वायर, कैम्ब्रिज एमए के रेस्तराँ और कैफ़े में प्रदर्शन जारी रहते हैं।",
+              "es": "Un evento de dos días. Sábado 11 de julio de 2026, de 12:00 a 18:00, en el vecindario de Cambridgeport, un día de conciertos gratuitos en porches para todo el vecindario. Domingo 12 de julio de 2026, las actuaciones continúan en restaurantes y cafés a lo largo de Mass Ave, en Central Square y Harvard Square, Cambridge MA.",
+              "fr": "Un événement de deux jours. Samedi 11 juillet 2026, de 12h à 18h, dans le quartier de Cambridgeport — une journée de concerts de porches gratuits pour tout le quartier. Dimanche 12 juillet 2026, les spectacles se poursuivent dans les restaurants et cafés le long de Mass Ave, à Central Square et Harvard Square, Cambridge MA.",
+              "ar": "فعالية تستمر يومين. السبت 11 يوليو 2026، من 12:00 ظهرًا حتى 6:00 مساءً، في حي كامبريدجبورت — يوم من حفلات الشرفات المجانية لكل الحي. الأحد 12 يوليو 2026، تستمر العروض في المطاعم والمقاهي على طول Mass Ave، في Central Square وHarvard Square، كامبريدج، ماساتشوستس.",
+              "pt": "Um evento de dois dias. Sábado, 11 de julho de 2026, das 12h às 18h, no bairro de Cambridgeport — um dia de shows gratuitos em varandas para todo o bairro. Domingo, 12 de julho de 2026, as apresentações continuam em restaurantes e cafés ao longo da Mass Ave, na Central Square e Harvard Square, Cambridge MA.",
+              "ru": "Двухдневное мероприятие. Суббота, 11 июля 2026 г., 12:00–18:00, в районе Cambridgeport — день бесплатных концертов на крыльцах для всего района. Воскресенье, 12 июля 2026 г., выступления продолжаются в ресторанах и кафе вдоль Mass Ave, на Central Square и Harvard Square, Кембридж, Массачусетс.",
+              "de": "Eine zweitägige Veranstaltung. Samstag, 11. Juli 2026, 12:00–18:00 Uhr, im Stadtteil Cambridgeport — ein stadtteilweiter Tag kostenloser Veranda-Konzerte. Sonntag, 12. Juli 2026, gehen die Auftritte in Restaurants und Cafés entlang der Mass Ave, am Central Square und Harvard Square, Cambridge MA weiter.",
+              "ja": "2日間にわたるイベントです。2026年7月11日（土）12:00〜18:00、ケンブリッジポート地区で——地区全体を挙げた無料ポーチコンサートの日です。2026年7月12日（日）は、マサチューセッツ・アベニュー沿い、セントラル・スクエア、ハーバード・スクエア（マサチューセッツ州ケンブリッジ）のレストランやカフェで演奏が続きます。",
+              "tr": "İki günlük bir etkinlik. Cumartesi, 11 Temmuz 2026, 12:00–18:00, Cambridgeport mahallesinde — tüm mahalleyi kapsayan ücretsiz veranda konserleri günü. Pazar, 12 Temmuz 2026, gösteriler Mass Ave boyunca, Central Square ve Harvard Square'deki restoran ve kafelerde (Cambridge, MA) devam ediyor.",
+              "vi": "Sự kiện kéo dài hai ngày. Thứ Bảy, 11 tháng 7 năm 2026, 12:00 – 18:00, tại khu Cambridgeport — một ngày hòa nhạc mái hiên miễn phí trên toàn khu phố. Chủ Nhật, 12 tháng 7 năm 2026, các buổi biểu diễn tiếp tục tại các nhà hàng và quán cà phê dọc Mass Ave, tại Central Square và Harvard Square, Cambridge MA.",
+              "it": "Un evento di due giorni. Sabato 11 luglio 2026, dalle 12:00 alle 18:00, nel quartiere di Cambridgeport — una giornata di concerti gratuiti sui portici per tutto il quartiere. Domenica 12 luglio 2026, le esibizioni continuano in ristoranti e caffè lungo Mass Ave, a Central Square e Harvard Square, Cambridge MA.",
+              "fa": "رویدادی دو روزه. شنبه، ۱۱ ژوئیه ۲۰۲۶، از ساعت ۱۲ تا ۶ بعدازظهر، در محله کمبریج‌پورت — روزی سراسر محله از کنسرت‌های رایگان ایوان. یکشنبه، ۱۲ ژوئیه ۲۰۲۶، اجراها در رستوران‌ها و کافه‌های امتداد مس اونیو، در سنترال اسکوئر و هاروارد اسکوئر، کمبریج ماساچوست ادامه می‌یابد.",
+              "pl": "Dwudniowe wydarzenie. Sobota, 11 lipca 2026, 12:00–18:00, w dzielnicy Cambridgeport — dzień bezpłatnych koncertów na gankach dla całej dzielnicy. Niedziela, 12 lipca 2026, występy trwają dalej w restauracjach i kawiarniach wzdłuż Mass Ave, na Central Square i Harvard Square, Cambridge MA.",
+              "uk": "Дводенна подія. Субота, 11 липня 2026 р., 12:00–18:00, у районі Cambridgeport — день безкоштовних концертів на ганках для всього району. Неділя, 12 липня 2026 р., виступи тривають у ресторанах і кафе вздовж Mass Ave, на Central Square та Harvard Square, Кембридж, Массачусетс.",
+              "nl": "Een evenement van twee dagen. Zaterdag 11 juli 2026, 12:00–18:00 uur, in de wijk Cambridgeport — een dag met gratis veranda-concerten voor de hele buurt. Zondag 12 juli 2026 gaan de optredens verder bij restaurants en cafés langs Mass Ave, op Central Square en Harvard Square, Cambridge MA.",
+              "sv": "Ett tvådagarsevenemang. Lördag 11 juli 2026, 12:00–18:00, i stadsdelen Cambridgeport — en dag med gratis verandakonserter för hela stadsdelen. Söndag 12 juli 2026 fortsätter föreställningarna på restauranger och kaféer längs Mass Ave, på Central Square och Harvard Square, Cambridge MA.",
+              "cs": "Dvoudenní akce. Sobota 11. července 2026, 12:00–18:00, ve čtvrti Cambridgeport — den bezplatných koncertů na verandách pro celou čtvrť. Neděle 12. července 2026, vystoupení pokračují v restauracích a kavárnách podél Mass Ave, na Central Square a Harvard Square, Cambridge MA.",
+              "el": "Μια διήμερη εκδήλωση. Σάββατο, 11 Ιουλίου 2026, 12:00–18:00, στη γειτονιά Cambridgeport — μια μέρα δωρεάν συναυλιών σε βεράντες για όλη τη γειτονιά. Κυριακή, 12 Ιουλίου 2026, οι παραστάσεις συνεχίζονται σε εστιατόρια και καφέ κατά μήκος της Mass Ave, στην Central Square και την Harvard Square, Cambridge MA."
+            }
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": {
+              "en": "Where the data comes from",
+              "ko": "데이터 출처",
+              "zh": "数据来源",
+              "hi": "डेटा कहाँ से आता है",
+              "es": "De dónde vienen los datos",
+              "fr": "D'où viennent les données",
+              "ar": "من أين تأتي البيانات",
+              "pt": "De onde vêm os dados",
+              "ru": "Откуда данные",
+              "de": "Woher die Daten stammen",
+              "ja": "データの出所",
+              "tr": "Veriler nereden geliyor",
+              "vi": "Dữ liệu đến từ đâu",
+              "it": "Da dove provengono i dati",
+              "fa": "داده‌ها از کجا می‌آیند",
+              "pl": "Skąd pochodzą dane",
+              "uk": "Звідки дані",
+              "nl": "Waar de gegevens vandaan komen",
+              "sv": "Var data kommer ifrån",
+              "cs": "Odkud pocházejí data",
+              "el": "Από πού προέρχονται τα δεδομένα"
+            }
+          },
+          {
+            "type": "text",
+            "value": {
+              "en": "Scraped today from cambridgeport.org/porchfestmaps and the City of Cambridge's public ArcGIS Porchfest dashboard feature layer, which carries exact GPS points for each performance on both days. Regenerate with the build script.",
+              "ko": "오늘 cambridgeport.org/porchfestmaps와 케임브리지시의 공개 ArcGIS 포치페스트 대시보드 피처 레이어에서 스크래핑했으며, 이틀간의 각 공연에 대한 정확한 GPS 좌표를 포함합니다. 빌드 스크립트로 재생성할 수 있습니다.",
+              "zh": "今日抓取自 cambridgeport.org/porchfestmaps 及剑桥市公开的 ArcGIS Porchfest 仪表板要素图层，其中包含两天每场演出的精确 GPS 坐标。可使用 构建脚本 重新生成。",
+              "hi": "आज cambridgeport.org/porchfestmaps और कैम्ब्रिज शहर के सार्वजनिक ArcGIS पोर्चफेस्ट डैशबोर्ड फ़ीचर लेयर से स्क्रैप किया गया, जिसमें दोनों दिनों के हर प्रदर्शन के सटीक GPS पॉइंट हैं। बिल्ड स्क्रिप्ट से पुनः जनरेट करें।",
+              "es": "Extraído hoy de cambridgeport.org/porchfestmaps y de la capa pública del panel ArcGIS Porchfest de la ciudad de Cambridge, que contiene puntos GPS exactos para cada actuación en ambos días. Regenerar con el script de compilación.",
+              "fr": "Extrait aujourd'hui de cambridgeport.org/porchfestmaps et de la couche publique du tableau de bord ArcGIS Porchfest de la ville de Cambridge, qui contient les points GPS exacts de chaque représentation sur les deux jours. Régénérer avec le script de build.",
+              "ar": "تم الاستخلاص اليوم من cambridgeport.org/porchfestmaps وطبقة لوحة معلومات ArcGIS Porchfest العامة لمدينة كامبريدج، والتي تحمل نقاط GPS دقيقة لكل عرض في اليومين. أعد التوليد باستخدام سكربت البناء.",
+              "pt": "Extraído hoje de cambridgeport.org/porchfestmaps e da camada pública do painel ArcGIS Porchfest da cidade de Cambridge, que traz pontos GPS exatos para cada apresentação nos dois dias. Regenerar com o script de build.",
+              "ru": "Собрано сегодня с cambridgeport.org/porchfestmaps и публичного слоя данных ArcGIS Porchfest панели города Кембридж, содержащего точные GPS-координаты каждого выступления за оба дня. Пересоздайте с помощью скрипт сборки.",
+              "de": "Heute von cambridgeport.org/porchfestmaps und der öffentlichen ArcGIS-Porchfest-Dashboard-Feature-Layer der Stadt Cambridge abgerufen, die exakte GPS-Punkte für jeden Auftritt an beiden Tagen enthält. Mit das Build-Skript neu generieren.",
+              "ja": "本日、cambridgeport.org/porchfestmaps およびケンブリッジ市公開の ArcGIS Porchfest ダッシュボード フィーチャレイヤーから取得したもので、両日それぞれの公演の正確なGPS座標を含みます。ビルドスクリプト で再生成できます。",
+              "tr": "Bugün cambridgeport.org/porchfestmaps ve Cambridge Şehri'nin her iki gündeki her gösterinin tam GPS noktalarını içeren genel ArcGIS Porchfest gösterge paneli katmanından toplandı. derleme betiği ile yeniden oluşturun.",
+              "vi": "Được thu thập hôm nay từ cambridgeport.org/porchfestmaps và lớp dữ liệu bảng điều khiển ArcGIS Porchfest công khai của Thành phố Cambridge, chứa các điểm GPS chính xác cho mỗi buổi biểu diễn trong cả hai ngày. Tái tạo bằng script build.",
+              "it": "Estratto oggi da cambridgeport.org/porchfestmaps e dal livello pubblico del dashboard ArcGIS Porchfest della città di Cambridge, che contiene i punti GPS esatti di ogni esibizione in entrambi i giorni. Rigenerare con lo script di build.",
+              "fa": "امروز از cambridgeport.org/porchfestmaps و لایه عمومی داشبورد ArcGIS Porchfest شهر کمبریج استخراج شده که مختصات دقیق GPS هر اجرا در هر دو روز را دارد. با اسکریپت بیلد دوباره تولید کنید.",
+              "pl": "Pobrane dzisiaj z cambridgeport.org/porchfestmaps oraz publicznej warstwy funkcji pulpitu ArcGIS Porchfest miasta Cambridge, która zawiera dokładne punkty GPS dla każdego występu w oba dni. Odtwórz za pomocą skrypt budujący.",
+              "uk": "Зібрано сьогодні з cambridgeport.org/porchfestmaps та публічного шару даних панелі ArcGIS Porchfest міста Кембридж, який містить точні GPS-координати кожного виступу за обидва дні. Перегенеруйте за допомогою скрипт збірки.",
+              "nl": "Vandaag opgehaald van cambridgeport.org/porchfestmaps en de openbare ArcGIS Porchfest-dashboardlaag van de gemeente Cambridge, die exacte GPS-punten bevat voor elk optreden op beide dagen. Opnieuw genereren met het buildscript.",
+              "sv": "Hämtat idag från cambridgeport.org/porchfestmaps och stadens Cambridges offentliga ArcGIS Porchfest-dashboardlager, som innehåller exakta GPS-punkter för varje föreställning under båda dagarna. Återskapa med byggskriptet.",
+              "cs": "Dnes staženo z cambridgeport.org/porchfestmaps a veřejné vrstvy funkcí dashboardu ArcGIS Porchfest města Cambridge, která obsahuje přesné GPS body pro každé vystoupení oba dny. Znovu vygenerujte pomocí sestavovací skript.",
+              "el": "Συλλέχθηκε σήμερα από το cambridgeport.org/porchfestmaps και το δημόσιο επίπεδο του πίνακα ArcGIS Porchfest του Δήμου Cambridge, το οποίο περιέχει ακριβή σημεία GPS για κάθε παράσταση και τις δύο ημέρες. Αναδημιουργήστε με το σενάριο κατασκευής."
+            }
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": {
+              "en": "On accuracy",
+              "ko": "정확도에 대하여",
+              "zh": "关于准确性",
+              "hi": "सटीकता के बारे में",
+              "es": "Sobre la precisión",
+              "fr": "À propos de la précision",
+              "ar": "حول الدقة",
+              "pt": "Sobre a precisão",
+              "ru": "О точности",
+              "de": "Zur Genauigkeit",
+              "ja": "精度について",
+              "tr": "Doğruluk hakkında",
+              "vi": "Về độ chính xác",
+              "it": "Sulla precisione",
+              "fa": "درباره دقت",
+              "pl": "O dokładności",
+              "uk": "Про точність",
+              "nl": "Over nauwkeurigheid",
+              "sv": "Om noggrannhet",
+              "cs": "O přesnosti",
+              "el": "Σχετικά με την ακρίβεια"
+            }
+          },
+          {
+            "type": "text",
+            "value": {
+              "en": "Coordinates are the ArcGIS dashboard's own points, published by the organizers for this event — not independently geocoded, so a few porches may sit slightly off if the source point does. A handful of slots may be missing a pin if a row didn't carry a location.",
+              "ko": "좌표는 이 행사를 위해 주최측이 게시한 ArcGIS 대시보드 자체 좌표로, 독립적으로 지오코딩된 것이 아니므로 원본 좌표가 어긋나면 일부 포치 위치도 다소 어긋날 수 있습니다. 위치 정보가 없는 행이 있으면 몇몇 슬롯에는 핀이 표시되지 않을 수 있습니다.",
+              "zh": "坐标是主办方为本次活动发布的 ArcGIS 仪表板自带坐标点——并非独立地理编码，因此如果源坐标有偏差，个别门廊位置也可能略有偏差。若某行缺少位置信息，少数时段可能没有图钉。",
+              "hi": "निर्देशांक इस आयोजन के लिए आयोजकों द्वारा प्रकाशित ArcGIS डैशबोर्ड के अपने पॉइंट हैं — स्वतंत्र रूप से जियोकोड नहीं किए गए, इसलिए यदि स्रोत पॉइंट में विचलन हो तो कुछ पोर्च थोड़े इधर-उधर दिख सकते हैं। यदि किसी पंक्ति में स्थान न हो तो कुछ स्लॉट में पिन नहीं दिखेगा।",
+              "es": "Las coordenadas son los propios puntos del panel de ArcGIS, publicados por los organizadores para este evento; no están geocodificadas de forma independiente, así que algunos porches pueden estar ligeramente desviados si el punto de origen lo está. Es posible que a algunos intervalos les falte un pin si una fila no tenía ubicación.",
+              "fr": "Les coordonnées sont les points propres du tableau de bord ArcGIS, publiés par les organisateurs pour cet événement — non géocodés indépendamment, donc quelques porches peuvent être légèrement décalés si le point source l'est. Il se peut qu'il manque une épingle pour quelques créneaux si une ligne n'avait pas de localisation.",
+              "ar": "الإحداثيات هي نقاط لوحة معلومات ArcGIS الخاصة، التي نشرها المنظمون لهذه الفعالية — لم يتم ترميزها جغرافيًا بشكل مستقل، لذا قد تكون بعض الشرفات مائلة قليلًا إذا كانت النقطة المصدر كذلك. قد تفتقر بعض الفترات إلى دبوس إذا لم يحمل الصف موقعًا.",
+              "pt": "As coordenadas são os próprios pontos do painel ArcGIS, publicados pelos organizadores para este evento — não geocodificados de forma independente, então algumas varandas podem estar levemente deslocadas se o ponto de origem estiver. Alguns intervalos podem não ter pino se uma linha não trouxer localização.",
+              "ru": "Координаты — это собственные точки панели ArcGIS, опубликованные организаторами для этого мероприятия, а не независимо геокодированные, поэтому некоторые крыльца могут быть слегка смещены, если смещена исходная точка. У нескольких слотов может не быть метки, если в строке не было указано местоположение.",
+              "de": "Die Koordinaten sind die eigenen Punkte des ArcGIS-Dashboards, veröffentlicht von den Organisatoren dieser Veranstaltung — nicht unabhängig geokodiert, sodass einige Veranden leicht abweichen können, wenn der Quellpunkt es tut. Bei einigen Slots fehlt möglicherweise ein Pin, wenn eine Zeile keinen Standort hatte.",
+              "ja": "座標はこのイベントのために主催者が公開したArcGISダッシュボード独自の座標であり、独立してジオコーディングされたものではないため、元の座標がずれていると一部のポーチも若干ずれることがあります。行に位置情報がない場合、一部のスロットにピンが表示されないことがあります。",
+              "tr": "Koordinatlar, organizatörler tarafından bu etkinlik için yayınlanan ArcGIS panosunun kendi noktalarıdır — bağımsız olarak coğrafi kodlanmamıştır, bu nedenle kaynak nokta öyleyse birkaç veranda hafifçe kayık olabilir. Bir satırda konum yoksa birkaç slotta iğne bulunmayabilir.",
+              "vi": "Tọa độ là các điểm riêng của bảng điều khiển ArcGIS, do ban tổ chức công bố cho sự kiện này — không được mã hóa địa lý độc lập, vì vậy một vài mái hiên có thể lệch một chút nếu điểm nguồn cũng lệch. Một số khung giờ có thể thiếu ghim nếu một dòng không có vị trí.",
+              "it": "Le coordinate sono i punti propri del dashboard ArcGIS, pubblicati dagli organizzatori per questo evento — non geocodificati in modo indipendente, quindi alcuni portici potrebbero essere leggermente fuori posizione se lo è il punto di origine. Alcuni slot potrebbero non avere un pin se una riga non aveva una posizione.",
+              "fa": "مختصات همان نقاط داشبورد ArcGIS است که برگزارکنندگان برای این رویداد منتشر کرده‌اند — به‌طور مستقل جغرافیایی‌کدگذاری نشده، بنابراین اگر نقطه منبع دقیق نباشد، ممکن است چند ایوان کمی جابه‌جا نمایش داده شوند. اگر ردیفی موقعیت نداشته باشد، ممکن است چند بازه بدون پین بمانند.",
+              "pl": "Współrzędne to własne punkty pulpitu ArcGIS, opublikowane przez organizatorów tego wydarzenia — nie geokodowane niezależnie, więc kilka ganków może być lekko przesuniętych, jeśli przesunięty jest punkt źródłowy. Kilka slotów może nie mieć pinezki, jeśli wiersz nie zawierał lokalizacji.",
+              "uk": "Координати — це власні точки панелі ArcGIS, опубліковані організаторами цієї події — не геокодовані незалежно, тож кілька ганків можуть бути трохи зміщені, якщо зміщена вихідна точка. У кількох слотів може не бути мітки, якщо в рядку не було місцезнаходження.",
+              "nl": "Coördinaten zijn de eigen punten van het ArcGIS-dashboard, gepubliceerd door de organisatoren van dit evenement — niet onafhankelijk gegeocodeerd, dus een paar veranda's kunnen iets afwijken als het bronpunt dat ook doet. Voor een handvol tijdslots ontbreekt mogelijk een pin als een rij geen locatie had.",
+              "sv": "Koordinaterna är ArcGIS-dashboardens egna punkter, publicerade av arrangörerna för detta evenemang — inte oberoende geokodade, så några verandor kan vara något förskjutna om källpunkten är det. Några intervall kan sakna en nål om en rad saknade en plats.",
+              "cs": "Souřadnice jsou vlastní body dashboardu ArcGIS, zveřejněné organizátory pro tuto akci — nejsou nezávisle geokódovány, takže několik verand může být mírně mimo, pokud je mimo zdrojový bod. U několika slotů může chybět pin, pokud řádek neobsahoval polohu.",
+              "el": "Οι συντεταγμένες είναι τα δικά σημεία του πίνακα ArcGIS, που δημοσιεύτηκαν από τους διοργανωτές για αυτήν την εκδήλωση — δεν έχουν γεωκωδικοποιηθεί ανεξάρτητα, οπότε μερικές βεράντες ενδέχεται να είναι ελαφρώς μετατοπισμένες αν είναι το σημείο προέλευσης. Σε ορισμένες θέσεις μπορεί να λείπει καρφίτσα αν μια γραμμή δεν είχε τοποθεσία."
+            }
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": {
+              "en": "Map color legend",
+              "ko": "지도 색상 범례",
+              "zh": "地图颜色图例",
+              "hi": "मानचित्र रंग लीजेंड",
+              "es": "Leyenda de colores del mapa",
+              "fr": "Légende des couleurs de la carte",
+              "ar": "مفتاح ألوان الخريطة",
+              "pt": "Legenda de cores do mapa",
+              "ru": "Цветовая легенда карты",
+              "de": "Kartenfarblegende",
+              "ja": "マップの色分け凡例",
+              "tr": "Harita renk açıklaması",
+              "vi": "Chú giải màu bản đồ",
+              "it": "Legenda colori mappa",
+              "fa": "راهنمای رنگ نقشه",
+              "pl": "Legenda kolorów mapy",
+              "uk": "Кольорова легенда карти",
+              "nl": "Kaartkleurenlegenda",
+              "sv": "Kartans färgförklaring",
+              "cs": "Legenda barev mapy",
+              "el": "Υπόμνημα χρωμάτων χάρτη"
+            }
+          },
+          {
+            "type": "text",
+            "value": {
+              "en": "Blue = 12–2 PM · green = 2–4 PM · amber = 4–6 PM. Use the Map tab's control panel to filter by date (Saturday/Sunday), time block, or genre — the map, legend and pin colors all update together. Tap a pin or list row to zoom in on that performer and see a card with their start time, genre and an \"Open website\" button (when they listed one).",
+              "ko": "파랑 = 오후 12–2시 · 초록 = 오후 2–4시 · 호박색 = 오후 4–6시. 지도 탭의 제어판을 사용해 날짜(토/일), 시간대, 장르로 필터링하세요 — 지도, 범례, 핀 색상이 함께 업데이트됩니다. 핀이나 목록 행을 탭하면 해당 공연자로 확대되어 시작 시간, 장르, \"웹사이트 열기\" 버튼(등록된 경우)이 있는 카드를 볼 수 있습니다.",
+              "zh": "蓝色 = 中午12点–下午2点 · 绿色 = 下午2–4点 · 琪珀色 = 下午4–6点。使用地图标签页的控制面板按日期（周六/周日）、时段或类型筛选——地图、图例和图钉颜色会同步更新。点击图钉或列表行可放大查看该表演者，并看到包含开始时间、类型和“打开网站”按钮（如果已提供）的卡片。",
+              "hi": "नीला = दोपहर 12–2 बजे · हरा = दोपहर 2–4 बजे · एम्बर = शाम 4–6 बजे। मानचित्र टैब के नियंत्रण पैनल का उपयोग करके तारीख (शनिवार/रविवार), समय-खंड या शैली द्वारा फ़िल्टर करें — मानचित्र, लीजेंड और पिन के रंग सब साथ अपडेट होते हैं। किसी पिन या सूची पंक्ति को टैप करने पर उस कलाकार पर ज़ूम होकर उनके प्रारंभ समय, शैली और (यदि सूचीबद्ध हो तो) \"वेबसाइट खोलें\" बटन वाला कार्ड दिखेगा।",
+              "es": "Azul = 12–2 pm · verde = 2–4 pm · ámbar = 4–6 pm. Usa el panel de control de la pestaña Mapa para filtrar por fecha (sábado/domingo), franja horaria o género; el mapa, la leyenda y los colores de los pines se actualizan juntos. Toca un pin o una fila de la lista para acercarte a ese artista y ver una tarjeta con su hora de inicio, género y un botón \"Abrir sitio web\" (si lo indicó).",
+              "fr": "Bleu = 12h–14h · vert = 14h–16h · ambre = 16h–18h. Utilisez le panneau de contrôle de l'onglet Carte pour filtrer par date (samedi/dimanche), créneau horaire ou genre — la carte, la légende et les couleurs des épingles se mettent à jour ensemble. Appuyez sur une épingle ou une ligne de liste pour zoomer sur cet artiste et voir une fiche avec son heure de début, son genre et un bouton « Ouvrir le site web » (s'il en a indiqué un).",
+              "ar": "أزرق = 12–2 ظهرًا · أخضر = 2–4 عصرًا · كهرماني = 4–6 مساءً. استخدم لوحة تحكم علامة تبويب الخريطة للتصفية حسب التاريخ (السبت/الأحد)، الفترة الزمنية، أو النوع — تتحدث الخريطة والمفتاح وألوان الدبابيس معًا. اضغط على دبوس أو صف قائمة للتكبير على ذلك الفنان ورؤية بطاقة بوقت بدايته ونوعه وزر \"فتح الموقع\" (إن وجد).",
+              "pt": "Azul = 12h–14h · verde = 14h–16h · âmbar = 16h–18h. Use o painel de controle da aba Mapa para filtrar por data (sábado/domingo), faixa horária ou gênero — o mapa, a legenda e as cores dos pinos são atualizados juntos. Toque em um pino ou linha da lista para ampliar esse artista e ver um cartão com o horário de início, gênero e um botão \"Abrir site\" (quando informado).",
+              "ru": "Синий = 12–14 · зелёный = 14–16 · янтарный = 16–18. Используйте панель управления вкладки «Карта», чтобы фильтровать по дате (суббота/воскресенье), временному блоку или жанру — карта, легенда и цвета меток обновляются вместе. Нажмите на метку или строку списка, чтобы приблизить исполнителя и увидеть карточку с временем начала, жанром и кнопкой «Открыть сайт» (если указан).",
+              "de": "Blau = 12–14 Uhr · grün = 14–16 Uhr · bernstein = 16–18 Uhr. Nutze das Bedienfeld des Karten-Tabs, um nach Datum (Samstag/Sonntag), Zeitblock oder Genre zu filtern — Karte, Legende und Pin-Farben werden gemeinsam aktualisiert. Tippe auf einen Pin oder eine Listenzeile, um zu diesem Künstler heranzuzoomen und eine Karte mit Startzeit, Genre und einer Schaltfläche „Website öffnen“ zu sehen (falls angegeben).",
+              "ja": "青＝12～14時・緑＝14～16時・琥珀＝16～18時。マップタブのコントロールパネルで日付（土曜/日曜）、時間帯、ジャンルで絞り込めます——マップ、凡例、ピンの色はすべて連動して更新されます。ピンやリストの行をタップするとその出演者にズームし、開始時刻、ジャンル、（登録があれば）「ウェブサイトを開く」ボタン付きのカードが表示されます。",
+              "tr": "Mavi = 12–14 · yeşil = 14–16 · kehribar = 16–18. Tarihe (Cumartesi/Pazar), zaman dilimine veya türe göre filtrelemek için Harita sekmesinin kontrol panelini kullanın — harita, açıklama ve iğne renkleri birlikte güncellenir. Bir sanatçıya yakınlaşmak ve başlangıç saati, tür ve (vars) \"Web sitesini aç\" düğmesi olan bir kart görmek için bir iğneye veya liste satırına dokunun.",
+              "vi": "Xanh dương = 12–14 giờ · xanh lá = 14–16 giờ · hổ phách = 16–18 giờ. Dùng bảng điều khiển của tab Bản đồ để lọc theo ngày (Thứ Bảy/Chủ Nhật), khung giờ hoặc thể loại — bản đồ, chú giải và màu ghim đều cập nhật cùng nhau. Chạm vào một ghim hoặc dòng danh sách để phóng to nghệ sĩ đó và xem thẻ thông tin gồm giờ bắt đầu, thể loại và nút \"Mở trang web\" (nếu có).",
+              "it": "Blu = 12–14 · verde = 14–16 · ambra = 16–18. Usa il pannello di controllo della scheda Mappa per filtrare per data (sabato/domenica), fascia oraria o genere — mappa, legenda e colori dei pin si aggiornano insieme. Tocca un pin o una riga dell'elenco per ingrandire quell'artista e vedere una scheda con l'orario di inizio, il genere e un pulsante \"Apri sito web\" (se indicato).",
+              "fa": "آبی = ۱۲–۲ بعدازظهر · سبز = ۲–۴ بعدازظهر · کهربایی = ۴–۶ بعدازظهر. از پنل کنترل زبانه نقشه برای فیلتر بر اساس تاریخ (شنبه/یکشنبه)، بازه زمانی یا ژانر استفاده کنید — نقشه، راهنما و رنگ پین‌ها همگی با هم به‌روز می‌شوند. برای بزرگ‌نمایی روی آن هنرمند و دیدن کارتی با زمان شروع، ژانر و دکمه «باز کردن وب‌سایت» (در صورت وجود)، روی یک پین یا ردیف فهرست ضربه بزنید.",
+              "pl": "Niebieski = 12–14 · zielony = 14–16 · bursztynowy = 16–18. Użyj panelu sterowania karty Mapa, aby filtrować według daty (sobota/niedziela), przedziału czasowego lub gatunku — mapa, legenda i kolory pinezek aktualizują się razem. Dotknij pinezki lub wiersza listy, aby przybliżyć tego wykonawcę i zobaczyć kartę z godziną rozpoczęcia, gatunkiem i przyciskiem „Otwórz stronę” (jeśli podano).",
+              "uk": "Синій = 12–14 · зелений = 14–16 · бурштиновий = 16–18. Використовуйте панель керування вкладки «Карта», щоб фільтрувати за датою (субота/неділя), часовим блоком або жанром — карта, легенда та кольори міток оновлюються разом. Торкніться мітки або рядка списку, щоб наблизити цього виконавця й побачити картку з часом початку, жанром та кнопкою «Відкрити сайт» (якщо вказано).",
+              "nl": "Blauw = 12–14 uur · groen = 14–16 uur · amber = 16–18 uur. Gebruik het bedieningspaneel van het tabblad Kaart om te filteren op datum (zaterdag/zondag), tijdsblok of genre — kaart, legenda en pinkleuren worden samen bijgewerkt. Tik op een pin of lijstregel om in te zoomen op die artiest en een kaart te zien met starttijd, genre en een knop \"Website openen\" (indien vermeld).",
+              "sv": "Blå = 12–14 · grön = 14–16 · bärnsten = 16–18. Använd kontrollpanelen på fliken Karta för att filtrera efter datum (lördag/söndag), tidsblock eller genre — kartan, förklaringen och nålfärgerna uppdateras tillsammans. Tryck på en nål eller listrad för att zooma in på den artisten och se ett kort med startid, genre och en knapp \"Öppna webbplats\" (om angiven).",
+              "cs": "Modrá = 12–14 · zelená = 14–16 · jantarová = 16–18. Pomocí ovládacího panelu na kartě Mapa filtrujte podle data (sobota/neděle), časového bloku nebo žánru — mapa, legenda a barvy pinů se aktualizují společně. Klepnutím na pin nebo řádek seznamu přiblížite daného interpreta a zobrazíte kartu s časem začátku, žánrem a tlačítkem \"Otevřít web\" (pokud jej uvedl).",
+              "el": "Μπλε = 12–2 μ.μ. · πράσινο = 2–4 μ.μ. · κεχριμπαρί = 4–6 μ.μ. Χρησιμοποιήστε τον πίνακα ελέγχου της καρτέλας Χάρτης για φιλτράρισμα κατά ημερομηνία (Σάββατο/Κυριακή), χρονική ζώνη ή είδος — ο χάρτης, το υπόμνημα και τα χρώματα των καρφιτσών ενημερώνονται όλα μαζί. Πατήστε μια καρφίτσα ή γραμμή λίστας για ζούμ και για να δείτε την ώρα έναρξης, το είδος και ένα κουμπί «Άνοιγμα ιστότοπου» (όταν υπάρχει)."
+            }
+          }
+        ]
+      }
+    }
+  }
+}

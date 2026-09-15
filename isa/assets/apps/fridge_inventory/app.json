@@ -1,0 +1,13 @@
+{
+  "id": "fridge_inventory",
+  "name": "Fridge Inventory",
+  "category": "Life",
+  "description": "What's in the fridge, what's running low, what you can cook.",
+  "hidden": true,
+  "icon": "kitchen",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_fridge"
+  },
+  "seedVersion": "2026-06-05.2"
+}

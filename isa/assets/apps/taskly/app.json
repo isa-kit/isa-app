@@ -1,0 +1,36 @@
+{
+ "id": "taskly",
+ "name": "Taskly",
+ "category": "Productivity",
+ "description": "Multi-board agenda: today, upcoming, calendar, map, notes and people.",
+ "icon": "task",
+ "color": "#1D2B4F",
+ "store": {
+ "type": "sqflite",
+ "namespace": "isan_taskly"
+ },
+ "seedVersion": "2026-08-22.l10n21.1",
+ "seedContent": "initial-only",
+ "durableSettings": [
+ "tasklyMemberId",
+ "sel:tasklyMemberId",
+ "tasklyCurrentBoard",
+ "sel:tasklyCurrentBoard"
+ ],
+ "icsImport": {
+ "table": "entries",
+ "link": {
+ "table": "relations",
+ "fromId": "$setting:tasklyCurrentBoard",
+ "type": "contains"
+ },
+ "values": {
+ "kind": "event",
+ "source": "ics",
+ "board": "$setting:tasklyCurrentBoard"
+ }
+ },
+ "meta": {
+ "note": "v2 REBUILD (2026-08-16, session ). Taskly is now an agenda/calendar/todo product rather than a task list: an agenda-first home with relative day headers and time-of-day ordering, month calendar, workload buckets, a long-term timeline, a map of anything with a location, per-person attribution without accounts, and an activity log. The applet id (`taskly`) and store namespace (`isan_taskly`) are UNCHANGED and must never change. The data shape moved from four private tables (tasks/notes/profiles/templates) to the shareable `entries`+`relations` graph, because the share pipeline only syncs tables literally named entries/relations/users — v1 was structurally unshareable. Old saved rows stay inert via schema_merge; a Reset gives a clean start. Identity is a per-install `tasklyMemberId` setting picked by tapping a member card (never sign-in, never $playerId); every content row's `author` is stamped `$setting:tasklyMemberId`. Date column NAMES are dictated by the engine, not by taste: toggleDone's recurrence shifts only columns literally named `scheduledStart`/`endDate`/`due`, and the host's ICS-import menu item calls importIcs with no column overrides so it writes those same default names — a column called `date` would silently break both. MULTI-BOARD (2026-08-17, session ): taskly now holds SEVERAL `kind: board` roots (a personal agenda plus user-created boards like a trip board, plus any board joined from someone else's share). `tasklyCurrentBoard` (+ its `sel:` twin, written together by the Boards screen's setSetting+selectRow chain) names the board in view; every task/event/note creation path stamps BOTH a `board` column value and a `contains` edge from that same token (column = view scoping, edge = sharing scope — two mechanisms, both stamped at write time because the engine has no derived fields), and every task view filters on the pair {kind, board}. Comment/log rows and member rows deliberately carry NO board value, which keeps them out of every board-filtered view exactly as the old kind-only filter did. The setting must never be empty: an unresolved `$setting:` token fails OPEN in filters (all boards mixed) and SKIPS the link on add (an item in no board at all), so `migrateTasklyBoards` (isan lib/src/taskly_migration.dart) re-asserts it on EVERY boot, not once."
+ }
+}
