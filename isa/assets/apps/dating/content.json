@@ -1,0 +1,38 @@
+{
+  "interests": [
+    { "id": "in_hiking", "name": "hiking" },
+    { "id": "in_music", "name": "music" },
+    { "id": "in_cooking", "name": "cooking" },
+    { "id": "in_travel", "name": "travel" },
+    { "id": "in_art", "name": "art" },
+    { "id": "in_film", "name": "film" },
+    { "id": "in_climbing", "name": "climbing" },
+    { "id": "in_running", "name": "running" },
+    { "id": "in_books", "name": "books" },
+    { "id": "in_coffee", "name": "coffee" }
+  ],
+  "profiles": [
+    { "id": "pr_jordan", "name": "Jordan", "age": 29, "bio": "Weekend trail hiker and amateur photographer. Always chasing a good view.", "interests": ["in_hiking", "in_travel"], "photo": "" },
+    { "id": "pr_riley", "name": "Riley", "age": 31, "bio": "Plays in a local band and cooks way too much pasta. Looking for a duet partner.", "interests": ["in_music", "in_cooking"], "photo": "" },
+    { "id": "pr_casey", "name": "Casey", "age": 27, "bio": "Gallery hopper and slow traveler. Will talk about color theory for hours.", "interests": ["in_art", "in_travel"], "photo": "" },
+    { "id": "pr_morgan", "name": "Morgan", "age": 34, "bio": "Home cook, hiker, and weekend museum wanderer.", "interests": ["in_cooking", "in_hiking", "in_art"], "photo": "" },
+    { "id": "pr_taylor", "name": "Taylor", "age": 26, "bio": "Vinyl collector and aspiring world traveler. Recommend me a record.", "interests": ["in_music", "in_travel"], "photo": "" },
+    { "id": "pr_avery", "name": "Avery", "age": 30, "bio": "Half-marathoner training for a full. My ideal first date involves espresso and a long walk to nowhere in particular.", "interests": ["in_running", "in_coffee"], "photo": "" },
+    { "id": "pr_quinn", "name": "Quinn", "age": 33, "bio": "Film school dropout, now a barista with strong opinions on both pour-overs and third acts. Tuesday matinees are sacred.", "interests": ["in_film", "in_coffee", "in_art"], "photo": "" },
+    { "id": "pr_rowan", "name": "Rowan", "age": 28, "bio": "Found bouldering during the pandemic and never looked back. Will belay you through your first top-rope climb, promise.", "interests": ["in_climbing", "in_hiking"], "photo": "" },
+    { "id": "pr_sage", "name": "Sage", "age": 35, "bio": "Librarian by day, book club tyrant by night. Currently reading three novels at once and finishing none of them.", "interests": ["in_books", "in_film"], "photo": "" },
+    { "id": "pr_emery", "name": "Emery", "age": 25, "bio": "Pastry cook at a small bakery — yes, I will bring croissants on the second date. Runner, but only when it's under 25 degrees.", "interests": ["in_cooking", "in_running", "in_coffee"], "photo": "" },
+    { "id": "pr_blake", "name": "Blake", "age": 38, "bio": "Touring jazz bassist settling back home. Looking for someone to drag to live shows and tiny noodle bars.", "interests": ["in_music", "in_books"], "photo": "" },
+    { "id": "pr_hayden", "name": "Hayden", "age": 32, "bio": "Backpacked four continents, now planning the fifth. Fluent in three languages and bad puns in all of them.", "interests": ["in_travel", "in_climbing", "in_books"], "photo": "" }
+  ],
+  "matches": [
+    { "id": "m_1", "a": "pr_jordan", "b": "pr_morgan", "status": "matched", "note": "Both love hiking." },
+    { "id": "m_2", "a": "pr_riley", "b": "pr_taylor", "status": "liked", "note": "Music in common." },
+    { "id": "m_3", "a": "pr_casey", "b": "pr_jordan", "status": "passed", "note": "Different schedules." },
+    { "id": "m_4", "a": "pr_avery", "b": "pr_emery", "status": "matched", "note": "Runners who both rank coffee shops by espresso quality. First date set for Saturday." },
+    { "id": "m_5", "a": "pr_quinn", "b": "pr_sage", "status": "matched", "note": "Argued about a film adaptation for an hour and loved it." },
+    { "id": "m_6", "a": "pr_rowan", "b": "pr_hayden", "status": "liked", "note": "Rowan liked the climbing photos from Kalymnos." },
+    { "id": "m_7", "a": "pr_blake", "b": "pr_sage", "status": "liked", "note": "Bonded over jazz biographies in the prompts." },
+    { "id": "m_8", "a": "pr_taylor", "b": "pr_quinn", "status": "passed", "note": "Vinyl vs. film schedules never lined up." }
+  ]
+}

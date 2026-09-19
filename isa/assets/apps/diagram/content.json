@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    { "id": "n1", "label": "Start",         "kind": "start",    "x": 40,  "y": 20 },
+    { "id": "n2", "label": "Collect input", "kind": "step",     "x": 220, "y": 30 },
+    { "id": "n3", "label": "Valid?",        "kind": "decision", "x": 400, "y": 150 },
+    { "id": "n4", "label": "Save record",   "kind": "step",     "x": 220, "y": 270 },
+    { "id": "n5", "label": "Show error",    "kind": "step",     "x": 560, "y": 270 },
+    { "id": "n6", "label": "End",           "kind": "end",      "x": 40,  "y": 270 },
+    { "id": "n7",  "label": "Queue sync",        "kind": "step",     "x": 220, "y": 390 },
+    { "id": "n8",  "label": "Online?",           "kind": "decision", "x": 400, "y": 390 },
+    { "id": "n9",  "label": "Push to peers",     "kind": "step",     "x": 580, "y": 390 },
+    { "id": "n10", "label": "Ack received?",     "kind": "decision", "x": 760, "y": 390 },
+    { "id": "n11", "label": "Mark synced",       "kind": "step",     "x": 400, "y": 500 },
+    { "id": "n12", "label": "Backoff & retry",   "kind": "step",     "x": 760, "y": 500 },
+    { "id": "n13", "label": "Store offline",     "kind": "step",     "x": 220, "y": 500 },
+    { "id": "n14", "label": "Merge remote (LWW)","kind": "step",     "x": 580, "y": 500 }
+  ],
+  "edges": [
+    { "id": "e1", "from": "n1", "to": "n2", "label": "begin" },
+    { "id": "e2", "from": "n2", "to": "n3", "label": "check" },
+    { "id": "e3", "from": "n3", "to": "n4", "label": "yes" },
+    { "id": "e4", "from": "n3", "to": "n5", "label": "no" },
+    { "id": "e5", "from": "n4", "to": "n6", "label": "done" },
+    { "id": "e6", "from": "n5", "to": "n2", "label": "retry" },
+    { "id": "e7",  "from": "n4",  "to": "n7",  "label": "queued" },
+    { "id": "e8",  "from": "n7",  "to": "n8",  "label": "check link" },
+    { "id": "e9",  "from": "n8",  "to": "n9",  "label": "yes" },
+    { "id": "e10", "from": "n8",  "to": "n13", "label": "no" },
+    { "id": "e11", "from": "n13", "to": "n7",  "label": "back online" },
+    { "id": "e12", "from": "n9",  "to": "n10", "label": "await ack" },
+    { "id": "e13", "from": "n10", "to": "n12", "label": "timeout" },
+    { "id": "e14", "from": "n12", "to": "n9",  "label": "retry" },
+    { "id": "e15", "from": "n10", "to": "n14", "label": "acked" },
+    { "id": "e16", "from": "n14", "to": "n11", "label": "merged" },
+    { "id": "e17", "from": "n11", "to": "n6",  "label": "synced" }
+  ]
+}

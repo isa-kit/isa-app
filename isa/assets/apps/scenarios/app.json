@@ -1,0 +1,13 @@
+{
+  "id": "scenarios",
+  "name": "Scenarios",
+  "category": "Analytics",
+  "description": "Set up and run scenarios, with the provenance of every data source.",
+  "icon": "play_circle",
+  "color": "#2E6E5A",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_scenarios"
+  },
+  "seedVersion": "2026-07-14.1-provenance-labels.l10n-int-0903"
+}

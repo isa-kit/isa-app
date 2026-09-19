@@ -1,0 +1,12 @@
+{
+  "id": "hexnom",
+  "name": "Hexnom",
+  "category": "Games",
+  "description": "Grow a hex-grid city and feed its nomnoms.",
+  "icon": "hexagon",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_hexnom"
+  },
+  "seedVersion": "2026-07-03.protocols-v2.l10n-int-0903"
+}

@@ -1,0 +1,249 @@
+{
+  "app": {
+    "languages": ["en", "ko", "zh", "hi", "es", "fr", "ar", "pt", "ru", "de", "ja", "tr", "vi", "it", "fa", "pl", "uk", "nl", "sv", "cs", "el"],
+    "translatable": true,
+    "appDataTools": true,
+    "intro": {
+      "purpose": {
+        "en": "Sketchpad is a freehand drawing surface — start a blank page and draw with your finger, mouse, or stylus, then keep every drawing as its own file.",
+        "ko": "스케치패드는 자유롭게 그릴 수 있는 그리기 도구입니다 — 빈 페이지에서 손가락, 마우스, 스타일러스로 그리고, 각 그림을 하나의 파일로 보관하세요.",
+        "zh": "Sketchpad 是一个自由绘画的画板——从空白页面开始，用手指、鼠标或触控笔作画，每幅画都保存为独立文件。",
+        "hi": "स्केचपैड एक फ्रीहैंड ड्रॉइंग सतह है — एक खाली पेज से शुरू करें और अपनी उंगली, माउस या स्टाइलस से बनाएं, फिर हर ड्रॉइंग को अपनी अलग फ़ाइल के रूप में रखें.",
+        "es": "Sketchpad es una superficie de dibujo libre: empieza con una página en blanco y dibuja con el dedo, el ratón o un lápiz óptico; cada dibujo se guarda como su propio archivo.",
+        "fr": "Sketchpad est une surface de dessin libre — commencez avec une page vierge et dessinez avec le doigt, la souris ou un stylet, puis gardez chaque dessin comme son propre fichier.",
+        "ar": "Sketchpad هو سطح رسم حر — ابدأ بصفحة فارغة وارسم بإصبعك أو الفأرة أو القلم الرقمي، ثم احتفظ بكل رسمة كملف مستقل.",
+        "pt": "O Sketchpad é uma superfície de desenho livre — comece com uma página em branco e desenhe com o dedo, o mouse ou uma caneta, e mantenha cada desenho como seu próprio arquivo.",
+        "ru": "Sketchpad — это поверхность для свободного рисования: начните с чистой страницы и рисуйте пальцем, мышью или стилусом, каждый рисунок сохраняется как отдельный файл.",
+        "de": "Sketchpad ist eine Freihand-Zeichenfläche — beginne mit einer leeren Seite und zeichne mit dem Finger, der Maus oder einem Stift, jede Zeichnung wird als eigene Datei gespeichert.",
+        "ja": "Sketchpadは自由に描けるお絵かきツールです — 白紙のページから指、マウス、スタイラスで描き始め、描いた絵をそれぞれ独立したファイルとして保存します。",
+        "tr": "Sketchpad, serbest çizim yapabileceğiniz bir yüzeydir — boş bir sayfayla başlayın, parmağınız, farenizle veya kalemle çizin, her çizimi kendi dosyası olarak saklayın.",
+        "vi": "Sketchpad là một mặt vẽ tự do — bắt đầu với một trang trắng và vẽ bằng ngón tay, chuột hoặc bút cảm ứng, mỗi bản vẽ được lưu thành tệp riêng.",
+        "it": "Sketchpad è una superficie di disegno libero: inizia da una pagina vuota e disegna con il dito, il mouse o una penna, mantenendo ogni disegno come file a sé.",
+        "fa": "Sketchpad یک سطح نقاشی آزاد است — از یک صفحه خالی شروع کنید و با انگشت، ماوس یا قلم نوری نقاشی بکشید، سپس هر نقاشی را به‌صورت فایل جداگانه نگه دارید.",
+        "pl": "Sketchpad to powierzchnia do rysowania odręcznego — zacznij od pustej strony i rysuj palcem, myszą lub rysikiem, a każdy rysunek zachowuj jako osobny plik.",
+        "uk": "Sketchpad — це поверхня для вільного малювання: почніть із чистої сторінки та малюйте пальцем, мишею або стилусом, кожен малюнок зберігається як окремий файл.",
+        "nl": "Sketchpad is een vrij tekenoppervlak — begin met een lege pagina en teken met je vinger, muis of stylus, en bewaar elke tekening als eigen bestand.",
+        "sv": "Sketchpad är en frihandsritningsyta — börja med en tom sida och rita med fingret, musen eller en penna, och spara varje ritning som en egen fil.",
+        "cs": "Sketchpad je plocha pro volné kreslení — začněte na prázdné stránce a kreslete prstem, myší nebo stylusem, každý výkres zůstává jako vlastní soubor.",
+        "el": "Το Sketchpad είναι μια επιφάνεια ελεύθερου σχεδίου — ξεκινήστε από μια κενή σελίδα και σχεδιάστε με το δάχτυλο, το ποντίκι ή τη γραφίδα σας, κρατώντας κάθε σχέδιο ως δικό του αρχείο."
+      },
+      "actions": [
+        {
+          "label": {
+            "en": "New drawing",
+            "ko": "새 그림",
+            "zh": "新建绘图",
+            "hi": "नई ड्रॉइंग",
+            "es": "Nuevo dibujo",
+            "fr": "Nouveau dessin",
+            "ar": "رسمة جديدة",
+            "pt": "Novo desenho",
+            "ru": "Новый рисунок",
+            "de": "Neue Zeichnung",
+            "ja": "新しい描画",
+            "tr": "Yeni çizim",
+            "vi": "Bản vẽ mới",
+            "it": "Nuovo disegno",
+            "fa": "نقاشی جدید",
+            "pl": "Nowy rysunek",
+            "uk": "Новий малюнок",
+            "nl": "Nieuwe tekening",
+            "sv": "Ny ritning",
+            "cs": "Nová kresba",
+            "el": "Νέο σχέδιο"
+          },
+          "icon": "add",
+          "action": {
+            "fn": "addRow",
+            "args": {
+              "table": "drawings",
+              "values": {
+                "title": "Untitled drawing"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "title": {
+      "en": "Sketchpad",
+      "ko": "스케치패드",
+      "zh": "Sketchpad",
+      "hi": "स्केचपैड",
+      "es": "Sketchpad",
+      "fr": "Sketchpad",
+      "ar": "Sketchpad",
+      "pt": "Sketchpad",
+      "ru": "Sketchpad",
+      "de": "Sketchpad",
+      "ja": "Sketchpad",
+      "tr": "Sketchpad",
+      "vi": "Sketchpad",
+      "it": "Sketchpad",
+      "fa": "اسکچ‌پد",
+      "pl": "Sketchpad",
+      "uk": "Sketchpad",
+      "nl": "Sketchpad",
+      "sv": "Sketchpad",
+      "cs": "Sketchpad",
+      "el": "Sketchpad"
+    },
+    "primaryColor": "#6D28D9",
+    "theme": "watercolor"
+  },
+  "nav": [
+    {
+      "id": "files",
+      "label": {
+        "en": "Sketchpad",
+        "ko": "스케치패드",
+        "zh": "Sketchpad",
+        "hi": "स्केचपैड",
+        "es": "Sketchpad",
+        "fr": "Sketchpad",
+        "ar": "Sketchpad",
+        "pt": "Sketchpad",
+        "ru": "Sketchpad",
+        "de": "Sketchpad",
+        "ja": "Sketchpad",
+        "tr": "Sketchpad",
+        "vi": "Sketchpad",
+        "it": "Sketchpad",
+        "fa": "اسکچ‌پد",
+        "pl": "Sketchpad",
+        "uk": "Sketchpad",
+        "nl": "Sketchpad",
+        "sv": "Sketchpad",
+        "cs": "Sketchpad",
+        "el": "Sketchpad"
+      },
+      "icon": "brush",
+      "screen": "files"
+    }
+  ],
+  "screens": {
+    "files": {
+      "title": {
+        "en": "Sketchpad",
+        "ko": "스케치패드",
+        "zh": "Sketchpad",
+        "hi": "स्केचपैड",
+        "es": "Sketchpad",
+        "fr": "Sketchpad",
+        "ar": "Sketchpad",
+        "pt": "Sketchpad",
+        "ru": "Sketchpad",
+        "de": "Sketchpad",
+        "ja": "Sketchpad",
+        "tr": "Sketchpad",
+        "vi": "Sketchpad",
+        "it": "Sketchpad",
+        "fa": "اسکچ‌پد",
+        "pl": "Sketchpad",
+        "uk": "Sketchpad",
+        "nl": "Sketchpad",
+        "sv": "Sketchpad",
+        "cs": "Sketchpad",
+        "el": "Sketchpad"
+      },
+      "body": {
+        "type": "explorer",
+        "table": "drawings",
+        "nameColumn": "title",
+        "kindColumn": "kind",
+        "parentColumn": "parentId",
+        "trashColumn": "trashed",
+        "title": {
+          "en": "Drawings",
+          "ko": "그림",
+          "zh": "绘图",
+          "hi": "ड्रॉइंग्स",
+          "es": "Dibujos",
+          "fr": "Dessins",
+          "ar": "الرسومات",
+          "pt": "Desenhos",
+          "ru": "Рисунки",
+          "de": "Zeichnungen",
+          "ja": "描画",
+          "tr": "Çizimler",
+          "vi": "Bản vẽ",
+          "it": "Disegni",
+          "fa": "نقاشی‌ها",
+          "pl": "Rysunki",
+          "uk": "Малюнки",
+          "nl": "Tekeningen",
+          "sv": "Ritningar",
+          "cs": "Kresby",
+          "el": "Σχέδια"
+        },
+        "fileIcon": "draw",
+        "newFileLabel": {
+          "en": "New drawing",
+          "ko": "새 그림",
+          "zh": "新建绘图",
+          "hi": "नई ड्रॉइंग",
+          "es": "Nuevo dibujo",
+          "fr": "Nouveau dessin",
+          "ar": "رسمة جديدة",
+          "pt": "Novo desenho",
+          "ru": "Новый рисунок",
+          "de": "Neue Zeichnung",
+          "ja": "新しい描画",
+          "tr": "Yeni çizim",
+          "vi": "Bản vẽ mới",
+          "it": "Nuovo disegno",
+          "fa": "نقاشی جدید",
+          "pl": "Nowy rysunek",
+          "uk": "Новий малюнок",
+          "nl": "Nieuwe tekening",
+          "sv": "Ny ritning",
+          "cs": "Nová kresba",
+          "el": "Νέο σχέδιο"
+        },
+        "newFolderLabel": {
+          "en": "New folder",
+          "ko": "새 폴더",
+          "zh": "新建文件夹",
+          "hi": "नया फ़ोल्डर",
+          "es": "Nueva carpeta",
+          "fr": "Nouveau dossier",
+          "ar": "مجلد جديد",
+          "pt": "Nova pasta",
+          "ru": "Новая папка",
+          "de": "Neuer Ordner",
+          "ja": "新しいフォルダ",
+          "tr": "Yeni klasör",
+          "vi": "Thư mục mới",
+          "it": "Nuova cartella",
+          "fa": "پوشه جدید",
+          "pl": "Nowy folder",
+          "uk": "Нова папка",
+          "nl": "Nieuwe map",
+          "sv": "Ny mapp",
+          "cs": "Nová složka",
+          "el": "Νέος φάκελος"
+        },
+        "railMode": "drawer",
+        "startBlank": true,
+        "menuActions": [
+          {
+            "label": "Export a copy…",
+            "action": {
+              "fn": "exportFileScope"
+            }
+          }
+        ],
+        "detail": {
+          "type": "draw",
+          "table": "drawings",
+          "strokesColumn": "strokes",
+          "titleColumn": "title",
+          "imageColumn": "image",
+          "manualSave": true,
+          "twoFingerHoldMs": 250,
+          "fillPhone": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2401 @@
+{
+  "app": {
+    "languages": ["en", "ko", "zh", "hi", "es", "fr", "ar", "pt", "ru", "de", "ja", "tr", "vi", "it", "fa", "pl", "uk", "nl", "sv", "cs", "el"],
+    "translatable": true,
+    "appDataTools": true,
+    "title": {
+      "en": "Workboard",
+      "ko": "워크보드",
+      "zh": "工作板",
+      "hi": "वर्कबोर्ड",
+      "es": "Workboard",
+      "fr": "Workboard",
+      "ar": "لوحة العمل",
+      "pt": "Workboard",
+      "ru": "Workboard",
+      "de": "Workboard",
+      "ja": "ワークボード",
+      "tr": "Workboard",
+      "vi": "Workboard",
+      "it": "Workboard",
+      "fa": "تخته کار",
+      "pl": "Workboard",
+      "uk": "Workboard",
+      "nl": "Workboard",
+      "sv": "Workboard",
+      "cs": "Workboard",
+      "el": "Workboard"
+    },
+    "primaryColor": "#455A64",
+    "theme": "contrast",
+    "intro": {
+      "purpose": {
+        "en": "Tasks, plan, people, a table view and a worklog — everything for running one piece of work.",
+        "ko": "작업, 계획, 인원, 테이블 보기, 작업 기록 — 하나의 작업을 운영하는 데 필요한 모든 것.",
+        "zh": "任务、计划、人员、表格视图和工作日志——运营一项工作所需的一切。",
+        "hi": "कार्य, योजना, लोग, एक तालिका दृश्य और एक वर्कलॉग — एक काम को चलाने के लिए सब कुछ।",
+        "es": "Tareas, plan, personas, una vista de tabla y un registro de trabajo: todo para gestionar una pieza de trabajo.",
+        "fr": "Tâches, plan, personnes, une vue tableau et un journal de travail — tout pour gérer un projet.",
+        "ar": "المهام والخطة والأشخاص وعرض الجدول وسجل العمل — كل ما تحتاجه لإدارة قطعة عمل واحدة.",
+        "pt": "Tarefas, plano, pessoas, uma visão de tabela e um registro de trabalho — tudo para conduzir um trabalho.",
+        "ru": "Задачи, план, люди, табличное представление и журнал работы — всё для ведения одного проекта.",
+        "de": "Aufgaben, Plan, Personen, eine Tabellenansicht und ein Arbeitsprotokoll – alles, um ein Arbeitsstück zu führen.",
+        "ja": "タスク、プラン、メンバー、テーブル表示、作業ログ——ひとつの仕事を運営するために必要なすべて。",
+        "tr": "Görevler, plan, kişiler, bir tablo görünümü ve bir çalışma günlüğü — tek bir işi yürütmek için gereken her şey.",
+        "vi": "Nhiệm vụ, kế hoạch, mọi người, chế độ xem bảng và nhật ký công việc — mọi thứ để điều hành một công việc.",
+        "it": "Attività, piano, persone, una vista tabella e un registro lavori — tutto per gestire un lavoro.",
+        "fa": "وظایف، برنامه، افراد، نمای جدول و گزارش کار — همه چیز برای اداره یک کار.",
+        "pl": "Zadania, plan, osoby, widok tabeli i dziennik pracy — wszystko do prowadzenia jednego przedsięwzięcia.",
+        "uk": "Завдання, план, люди, табличний перегляд і журнал роботи — усе для ведення однієї роботи.",
+        "nl": "Taken, plan, personen, een tabelweergave en een werklog — alles om één werkstuk te beheren.",
+        "sv": "Uppgifter, plan, personer, en tabellvy och en arbetslogg — allt för att driva ett arbete.",
+        "cs": "Úkoly, plán, lidé, zobrazení tabulky a deník práce — vše pro vedení jedné práce.",
+        "el": "Εργασίες, σχέδιο, άτομα, προβολή πίνακα και αρχείο εργασίας — όλα όσα χρειάζονται για τη διαχείριση ενός έργου."
+      },
+      "actions": [
+        {
+          "label": {
+            "en": "Add task",
+            "ko": "작업 추가",
+            "zh": "添加任务",
+            "hi": "कार्य जोड़ें",
+            "es": "Añadir tarea",
+            "fr": "Ajouter une tâche",
+            "ar": "إضافة مهمة",
+            "pt": "Adicionar tarefa",
+            "ru": "Добавить задачу",
+            "de": "Aufgabe hinzufügen",
+            "ja": "タスクを追加",
+            "tr": "Görev ekle",
+            "vi": "Thêm nhiệm vụ",
+            "it": "Aggiungi attività",
+            "fa": "افزودن وظیفه",
+            "pl": "Dodaj zadanie",
+            "uk": "Додати завдання",
+            "nl": "Taak toevoegen",
+            "sv": "Lägg till uppgift",
+            "cs": "Přidat úkol",
+            "el": "Προσθήκη εργασίας"
+          },
+          "icon": "add",
+          "action": {
+            "fn": "addRow",
+            "args": {
+              "table": "tasks",
+              "values": {
+                "phase": "future",
+                "priority": "normal"
+              }
+            }
+          }
+        }
+      ],
+      "tour": [
+        {
+          "screen": "plan",
+          "label": "Plan",
+          "note": "The roadmap and milestones."
+        },
+        {
+          "screen": "people",
+          "label": "People",
+          "note": "Who's on this."
+        },
+        {
+          "screen": "table",
+          "label": "Table",
+          "note": "Every task as rows, for filtering and bulk edits."
+        },
+        {
+          "screen": "worklog",
+          "label": "Worklog",
+          "note": "A running log of what happened."
+        }
+      ]
+    }
+  },
+  "nav": [
+    {
+      "id": "home",
+      "label": {
+        "en": "Tasks",
+        "ko": "작업",
+        "zh": "任务",
+        "hi": "कार्य",
+        "es": "Tareas",
+        "fr": "Tâches",
+        "ar": "المهام",
+        "pt": "Tarefas",
+        "ru": "Задачи",
+        "de": "Aufgaben",
+        "ja": "タスク",
+        "tr": "Görevler",
+        "vi": "Nhiệm vụ",
+        "it": "Attività",
+        "fa": "وظایف",
+        "pl": "Zadania",
+        "uk": "Завдання",
+        "nl": "Taken",
+        "sv": "Uppgifter",
+        "cs": "Úkoly",
+        "el": "Εργασίες"
+      },
+      "icon": "checklist",
+      "screen": "home"
+    },
+    {
+      "id": "plan",
+      "label": {
+        "en": "Plan",
+        "ko": "계획",
+        "zh": "计划",
+        "hi": "योजना",
+        "es": "Plan",
+        "fr": "Plan",
+        "ar": "الخطة",
+        "pt": "Plano",
+        "ru": "План",
+        "de": "Plan",
+        "ja": "プラン",
+        "tr": "Plan",
+        "vi": "Kế hoạch",
+        "it": "Piano",
+        "fa": "برنامه",
+        "pl": "Plan",
+        "uk": "План",
+        "nl": "Plan",
+        "sv": "Plan",
+        "cs": "Plán",
+        "el": "Σχέδιο"
+      },
+      "icon": "layout_grid",
+      "screen": "plan"
+    },
+    {
+      "id": "people",
+      "label": {
+        "en": "People",
+        "ko": "인원",
+        "zh": "人员",
+        "hi": "लोग",
+        "es": "Personas",
+        "fr": "Personnes",
+        "ar": "الأشخاص",
+        "pt": "Pessoas",
+        "ru": "Люди",
+        "de": "Personen",
+        "ja": "メンバー",
+        "tr": "Kişiler",
+        "vi": "Mọi người",
+        "it": "Persone",
+        "fa": "افراد",
+        "pl": "Osoby",
+        "uk": "Люди",
+        "nl": "Personen",
+        "sv": "Personer",
+        "cs": "Lidé",
+        "el": "Άτομα"
+      },
+      "icon": "person",
+      "screen": "people"
+    },
+    {
+      "id": "table",
+      "label": {
+        "en": "Table",
+        "ko": "테이블",
+        "zh": "表格",
+        "hi": "तालिका",
+        "es": "Tabla",
+        "fr": "Tableau",
+        "ar": "الجدول",
+        "pt": "Tabela",
+        "ru": "Таблица",
+        "de": "Tabelle",
+        "ja": "テーブル",
+        "tr": "Tablo",
+        "vi": "Bảng",
+        "it": "Tabella",
+        "fa": "جدول",
+        "pl": "Tabela",
+        "uk": "Таблиця",
+        "nl": "Tabel",
+        "sv": "Tabell",
+        "cs": "Tabulka",
+        "el": "Πίνακας"
+      },
+      "icon": "table_rows",
+      "screen": "table"
+    },
+    {
+      "id": "worklog",
+      "label": {
+        "en": "Worklog",
+        "ko": "작업 기록",
+        "zh": "工作日志",
+        "hi": "वर्कलॉग",
+        "es": "Registro de trabajo",
+        "fr": "Journal de travail",
+        "ar": "سجل العمل",
+        "pt": "Registro de trabalho",
+        "ru": "Журнал работы",
+        "de": "Arbeitsprotokoll",
+        "ja": "作業ログ",
+        "tr": "Çalışma günlüğü",
+        "vi": "Nhật ký công việc",
+        "it": "Registro lavori",
+        "fa": "گزارش کار",
+        "pl": "Dziennik pracy",
+        "uk": "Журнал роботи",
+        "nl": "Werklog",
+        "sv": "Arbetslogg",
+        "cs": "Deník práce",
+        "el": "Αρχείο εργασίας"
+      },
+      "icon": "check_circle",
+      "screen": "worklog"
+    }
+  ],
+  "screens": {
+    "home": {
+      "title": {
+        "en": "Tasks",
+        "ko": "작업",
+        "zh": "任务",
+        "hi": "कार्य",
+        "es": "Tareas",
+        "fr": "Tâches",
+        "ar": "المهام",
+        "pt": "Tarefas",
+        "ru": "Задачи",
+        "de": "Aufgaben",
+        "ja": "タスク",
+        "tr": "Görevler",
+        "vi": "Nhiệm vụ",
+        "it": "Attività",
+        "fa": "وظایف",
+        "pl": "Zadania",
+        "uk": "Завдання",
+        "nl": "Taken",
+        "sv": "Uppgifter",
+        "cs": "Úkoly",
+        "el": "Εργασίες"
+      },
+      "body": {
+        "type": "segments",
+        "segments": [
+          {
+            "label": "Now",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "text",
+                  "value": {
+                    "en": "In progress",
+                    "ko": "진행 중",
+                    "zh": "进行中",
+                    "hi": "प्रगति में",
+                    "es": "En curso",
+                    "fr": "En cours",
+                    "ar": "قيد التنفيذ",
+                    "pt": "Em andamento",
+                    "ru": "В процессе",
+                    "de": "In Bearbeitung",
+                    "ja": "進行中",
+                    "tr": "Devam ediyor",
+                    "vi": "Đang thực hiện",
+                    "it": "In corso",
+                    "fa": "در حال انجام",
+                    "pl": "W toku",
+                    "uk": "У процесі",
+                    "nl": "Bezig",
+                    "sv": "Pågår",
+                    "cs": "Probíhá",
+                    "el": "Σε εξέλιξη"
+                  },
+                  "style": "title"
+                },
+                {
+                  "type": "cards",
+                  "emptyIcon": "add_task",
+                  "emptyTitle": {
+                    "en": "No tasks yet",
+                    "ko": "아직 작업이 없습니다",
+                    "zh": "暂无任务",
+                    "hi": "अभी कोई कार्य नहीं",
+                    "es": "Aún no hay tareas",
+                    "fr": "Aucune tâche pour l'instant",
+                    "ar": "لا توجد مهام بعد",
+                    "pt": "Nenhuma tarefa ainda",
+                    "ru": "Пока нет задач",
+                    "de": "Noch keine Aufgaben",
+                    "ja": "まだタスクがありません",
+                    "tr": "Henüz görev yok",
+                    "vi": "Chưa có nhiệm vụ nào",
+                    "it": "Nessuna attività ancora",
+                    "fa": "هنوز وظیفه‌ای نیست",
+                    "pl": "Brak zadań",
+                    "uk": "Ще немає завдань",
+                    "nl": "Nog geen taken",
+                    "sv": "Inga uppgifter än",
+                    "cs": "Zatím žádné úkoly",
+                    "el": "Δεν υπάρχουν εργασίες ακόμα"
+                  },
+                  "emptyText": {
+                    "en": "Add your first task to the board.",
+                    "ko": "보드에 첫 작업을 추가하세요.",
+                    "zh": "在看板中添加第一个任务。",
+                    "hi": "बोर्ड में अपना पहला कार्य जोड़ें।",
+                    "es": "Agrega tu primera tarea al tablero.",
+                    "fr": "Ajoutez votre première tâche au tableau.",
+                    "ar": "أضف مهمتك الأولى إلى اللوحة.",
+                    "pt": "Adicione sua primeira tarefa ao quadro.",
+                    "ru": "Добавьте первую задачу на доску.",
+                    "de": "Füge deine erste Aufgabe zum Board hinzu.",
+                    "ja": "ボードに最初のタスクを追加しましょう。",
+                    "tr": "Panoya ilk görevinizi ekleyin.",
+                    "vi": "Thêm nhiệm vụ đầu tiên vào bảng.",
+                    "it": "Aggiungi la tua prima attività alla bacheca.",
+                    "fa": "اولین وظیفه خود را به تخته اضافه کنید.",
+                    "pl": "Dodaj pierwsze zadanie do tablicy.",
+                    "uk": "Додайте своє перше завдання до дошки.",
+                    "nl": "Voeg je eerste taak toe aan het bord.",
+                    "sv": "Lägg till din första uppgift på tavlan.",
+                    "cs": "Přidejte svůj první úkol na nástěnku.",
+                    "el": "Προσθέστε την πρώτη σας εργασία στον πίνακα."
+                  },
+                  "emptyAction": {"fn": "addRow", "args": {"table": "tasks", "values": {"phase": "future", "priority": "normal"}}},
+                  "emptyActionLabel": {
+                    "en": "Add task",
+                    "ko": "작업 추가",
+                    "zh": "添加任务",
+                    "hi": "कार्य जोड़ें",
+                    "es": "Añadir tarea",
+                    "fr": "Ajouter une tâche",
+                    "ar": "إضافة مهمة",
+                    "pt": "Adicionar tarefa",
+                    "ru": "Добавить задачу",
+                    "de": "Aufgabe hinzufügen",
+                    "ja": "タスクを追加",
+                    "tr": "Görev ekle",
+                    "vi": "Thêm nhiệm vụ",
+                    "it": "Aggiungi attività",
+                    "fa": "افزودن وظیفه",
+                    "pl": "Dodaj zadanie",
+                    "uk": "Додати завдання",
+                    "nl": "Taak toevoegen",
+                    "sv": "Lägg till uppgift",
+                    "cs": "Přidat úkol",
+                    "el": "Προσθήκη εργασίας"
+                  },
+                  "table": "tasks",
+                  "filter": {
+                    "column": "phase",
+                    "value": "current"
+                  },
+                  "title": "title",
+                  "subtitle": "detail",
+                  "tags": [
+                    {
+                      "column": "track",
+                      "colors": {
+                        "engine": "blue",
+                        "apps": "pink",
+                        "sync": "teal",
+                        "product": "green"
+                      }
+                    }
+                  ],
+                  "open": "Open task",
+                  "action": {
+                    "fn": "editRow"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "en": "Needs your decision",
+                    "ko": "결정이 필요합니다",
+                    "zh": "需要你决定",
+                    "hi": "आपके निर्णय की आवश्यकता है",
+                    "es": "Necesita tu decisión",
+                    "fr": "Nécessite votre décision",
+                    "ar": "يحتاج إلى قرارك",
+                    "pt": "Precisa da sua decisão",
+                    "ru": "Требует вашего решения",
+                    "de": "Braucht deine Entscheidung",
+                    "ja": "あなたの決定が必要です",
+                    "tr": "Kararınız gerekiyor",
+                    "vi": "Cần bạn quyết định",
+                    "it": "Richiede la tua decisione",
+                    "fa": "نیاز به تصمیم شما دارد",
+                    "pl": "Wymaga Twojej decyzji",
+                    "uk": "Потребує вашого рішення",
+                    "nl": "Vereist jouw beslissing",
+                    "sv": "Behöver ditt beslut",
+                    "cs": "Vyžaduje vaše rozhodnutí",
+                    "el": "Χρειάζεται την απόφασή σας"
+                  },
+                  "style": "title"
+                },
+                {
+                  "type": "cards",
+                  "emptyIcon": "gavel",
+                  "emptyTitle": {
+                    "en": "No decisions yet",
+                    "ko": "아직 결정이 없습니다",
+                    "zh": "暂无决定",
+                    "hi": "अभी कोई निर्णय नहीं",
+                    "es": "Aún no hay decisiones",
+                    "fr": "Aucune décision pour l'instant",
+                    "ar": "لا توجد قرارات بعد",
+                    "pt": "Nenhuma decisão ainda",
+                    "ru": "Пока нет решений",
+                    "de": "Noch keine Entscheidungen",
+                    "ja": "まだ決定がありません",
+                    "tr": "Henüz karar yok",
+                    "vi": "Chưa có quyết định nào",
+                    "it": "Nessuna decisione ancora",
+                    "fa": "هنوز تصمیمی نیست",
+                    "pl": "Brak decyzji",
+                    "uk": "Ще немає рішень",
+                    "nl": "Nog geen beslissingen",
+                    "sv": "Inga beslut än",
+                    "cs": "Zatím žádná rozhodnutí",
+                    "el": "Δεν υπάρχουν αποφάσεις ακόμα"
+                  },
+                  "emptyText": {
+                    "en": "Log a decision or an open question.",
+                    "ko": "결정이나 미해결 질문을 기록하세요.",
+                    "zh": "记录一个决定或未解决的问题。",
+                    "hi": "एक निर्णय या खुला प्रश्न दर्ज करें।",
+                    "es": "Registra una decisión o una pregunta abierta.",
+                    "fr": "Enregistrez une décision ou une question ouverte.",
+                    "ar": "سجّل قرارًا أو سؤالًا مفتوحًا.",
+                    "pt": "Registre uma decisão ou uma pergunta em aberto.",
+                    "ru": "Запишите решение или открытый вопрос.",
+                    "de": "Halte eine Entscheidung oder eine offene Frage fest.",
+                    "ja": "決定事項や未解決の質問を記録しましょう。",
+                    "tr": "Bir kararı veya açık bir soruyu kaydedin.",
+                    "vi": "Ghi lại một quyết định hoặc câu hỏi chưa có lời giải.",
+                    "it": "Registra una decisione o una domanda aperta.",
+                    "fa": "یک تصمیم یا سؤال باز را ثبت کنید.",
+                    "pl": "Zapisz decyzję lub otwarte pytanie.",
+                    "uk": "Запишіть рішення або відкрите питання.",
+                    "nl": "Leg een beslissing of een open vraag vast.",
+                    "sv": "Logga ett beslut eller en öppen fråga.",
+                    "cs": "Zaznamenejte rozhodnutí nebo otevřenou otázku.",
+                    "el": "Καταγράψτε μια απόφαση ή μια ανοιχτή ερώτηση."
+                  },
+                  "emptyAction": {"fn": "addRow", "args": {"table": "decisions", "values": {"status": "open", "kind": "question"}}},
+                  "emptyActionLabel": {
+                    "en": "Add",
+                    "ko": "추가",
+                    "zh": "添加",
+                    "hi": "जोड़ें",
+                    "es": "Añadir",
+                    "fr": "Ajouter",
+                    "ar": "إضافة",
+                    "pt": "Adicionar",
+                    "ru": "Добавить",
+                    "de": "Hinzufügen",
+                    "ja": "追加",
+                    "tr": "Ekle",
+                    "vi": "Thêm",
+                    "it": "Aggiungi",
+                    "fa": "افزودن",
+                    "pl": "Dodaj",
+                    "uk": "Додати",
+                    "nl": "Toevoegen",
+                    "sv": "Lägg till",
+                    "cs": "Přidat",
+                    "el": "Προσθήκη"
+                  },
+                  "table": "decisions",
+                  "filter": {
+                    "column": "status",
+                    "value": "open"
+                  },
+                  "title": "title",
+                  "subtitle": "context",
+                  "tags": [
+                    {
+                      "column": "priority",
+                      "colors": {
+                        "high": "red",
+                        "normal": "amber",
+                        "low": "gray"
+                      }
+                    },
+                    {
+                      "column": "kind",
+                      "colors": {
+                        "question": "blue",
+                        "decision": "purple"
+                      }
+                    }
+                  ],
+                  "open": "Open / answer",
+                  "action": {
+                    "fn": "editRow"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "en": "Up next",
+                    "ko": "다음 예정",
+                    "zh": "接下来",
+                    "hi": "अगला",
+                    "es": "A continuación",
+                    "fr": "À venir",
+                    "ar": "القادم",
+                    "pt": "A seguir",
+                    "ru": "Далее",
+                    "de": "Als Nächstes",
+                    "ja": "次の予定",
+                    "tr": "Sıradaki",
+                    "vi": "Tiếp theo",
+                    "it": "Prossimo",
+                    "fa": "بعدی",
+                    "pl": "Następne",
+                    "uk": "Наступне",
+                    "nl": "Volgende",
+                    "sv": "Härnäst",
+                    "cs": "Další na řadě",
+                    "el": "Επόμενο"
+                  },
+                  "style": "title"
+                },
+                {
+                  "type": "cards",
+                  "table": "tasks",
+                  "filter": {
+                    "column": "phase",
+                    "value": "future"
+                  },
+                  "title": "title",
+                  "subtitle": "detail",
+                  "tags": [
+                    {
+                      "column": "track",
+                      "colors": {
+                        "engine": "blue",
+                        "apps": "pink",
+                        "sync": "teal",
+                        "product": "green"
+                      }
+                    }
+                  ],
+                  "open": "Open task",
+                  "action": {
+                    "fn": "editRow"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "en": "Recently decided",
+                    "ko": "최근 결정됨",
+                    "zh": "最近已决定",
+                    "hi": "हाल ही में तय किया गया",
+                    "es": "Decidido recientemente",
+                    "fr": "Récemment décidé",
+                    "ar": "تم اتخاذ القرار مؤخرًا",
+                    "pt": "Decidido recentemente",
+                    "ru": "Недавно решено",
+                    "de": "Kürzlich entschieden",
+                    "ja": "最近決定した項目",
+                    "tr": "Son karar verilenler",
+                    "vi": "Vừa quyết định gần đây",
+                    "it": "Deciso di recente",
+                    "fa": "اخیراً تصمیم‌گیری‌شده",
+                    "pl": "Ostatnio zdecydowane",
+                    "uk": "Нещодавно вирішено",
+                    "nl": "Recent beslist",
+                    "sv": "Nyligen beslutat",
+                    "cs": "Nedávno rozhodnuto",
+                    "el": "Πρόσφατα αποφασισμένα"
+                  },
+                  "style": "title"
+                },
+                {
+                  "type": "cards",
+                  "table": "decisions",
+                  "filter": {
+                    "column": "status",
+                    "value": "answered"
+                  },
+                  "title": "title",
+                  "subtitle": "answer",
+                  "tags": [
+                    {
+                      "column": "kind",
+                      "colors": {
+                        "question": "blue",
+                        "decision": "purple"
+                      }
+                    }
+                  ],
+                  "open": "Open / answer",
+                  "action": {
+                    "fn": "editRow"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "label": "Tasks",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": {
+                    "en": "Active work — current and upcoming. Search or group as needed.",
+                    "ko": "진행 중인 작업 — 현재와 예정. 필요에 따라 검색하거나 그룹화하세요.",
+                    "zh": "进行中的工作——当前和即将开始的。可按需搜索或分组。",
+                    "hi": "सक्रिय कार्य — वर्तमान और आगामी। आवश्यकतानुसार खोजें या समूहित करें।",
+                    "es": "Trabajo activo: actual y próximo. Busca o agrupa según lo necesites.",
+                    "fr": "Travail actif — actuel et à venir. Recherchez ou regroupez selon le besoin.",
+                    "ar": "العمل النشط — الحالي والقادم. ابحث أو جمّع حسب الحاجة.",
+                    "pt": "Trabalho ativo — atual e futuro. Pesquise ou agrupe conforme necessário.",
+                    "ru": "Активная работа — текущая и предстоящая. Ищите или группируйте по необходимости.",
+                    "de": "Aktive Arbeit – aktuell und bevorstehend. Bei Bedarf suchen oder gruppieren.",
+                    "ja": "進行中の作業——現在と今後の予定。必要に応じて検索やグループ化ができます。",
+                    "tr": "Etkin çalışma — mevcut ve yaklaşan. Gerektiğinde arama veya gruplama yapın.",
+                    "vi": "Công việc đang hoạt động — hiện tại và sắp tới. Tìm kiếm hoặc nhóm theo nhu cầu.",
+                    "it": "Lavoro attivo — attuale e imminente. Cerca o raggruppa secondo necessità.",
+                    "fa": "کار فعال — کنونی و پیش رو. در صورت نیاز جستجو یا گروه‌بندی کنید.",
+                    "pl": "Aktywna praca — bieżąca i nadchodząca. Wyszukuj lub grupuj według potrzeb.",
+                    "uk": "Активна робота — поточна та майбутня. Шукайте або групуйте за потреби.",
+                    "nl": "Actief werk — huidig en aankomend. Zoek of groepeer naar wens.",
+                    "sv": "Aktivt arbete — pågående och kommande. Sök eller gruppera vid behov.",
+                    "cs": "Aktivní práce — aktuální a nadcházející. Podle potřeby vyhledávejte nebo seskupujte.",
+                    "el": "Ενεργή εργασία — τρέχουσα και επερχόμενη. Αναζητήστε ή ομαδοποιήστε όπως χρειάζεται."
+                  }
+                },
+                {
+                  "type": "button",
+                  "label": {
+                    "en": "New task",
+                    "ko": "새 작업",
+                    "zh": "新任务",
+                    "hi": "नया कार्य",
+                    "es": "Nueva tarea",
+                    "fr": "Nouvelle tâche",
+                    "ar": "مهمة جديدة",
+                    "pt": "Nova tarefa",
+                    "ru": "Новая задача",
+                    "de": "Neue Aufgabe",
+                    "ja": "新規タスク",
+                    "tr": "Yeni görev",
+                    "vi": "Nhiệm vụ mới",
+                    "it": "Nuova attività",
+                    "fa": "وظیفه جدید",
+                    "pl": "Nowe zadanie",
+                    "uk": "Нове завдання",
+                    "nl": "Nieuwe taak",
+                    "sv": "Ny uppgift",
+                    "cs": "Nový úkol",
+                    "el": "Νέα εργασία"
+                  },
+                  "icon": "add",
+                  "action": {
+                    "fn": "addRow",
+                    "args": {
+                      "table": "tasks",
+                      "values": {
+                        "phase": "future",
+                        "priority": "normal"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "cards",
+                  "table": "tasks",
+                  "search": true,
+                  "filterable": true,
+                  "groupBy": "phase",
+                  "groupOrder": [
+                    "current",
+                    "future"
+                  ],
+                  "groupByOptions": [
+                    {
+                      "label": "Phase",
+                      "column": "phase"
+                    },
+                    {
+                      "label": "Priority",
+                      "column": "priority"
+                    },
+                    {
+                      "label": "Track",
+                      "column": "track"
+                    },
+                    {
+                      "label": "Project",
+                      "column": "units"
+                    }
+                  ],
+                  "title": "title",
+                  "subtitle": "detail",
+                  "tags": [
+                    {
+                      "column": "priority",
+                      "colors": {
+                        "urgent": "red",
+                        "high": "amber",
+                        "normal": "gray",
+                        "low": "teal"
+                      }
+                    },
+                    {
+                      "column": "phase",
+                      "colors": {
+                        "future": "blue",
+                        "current": "amber",
+                        "past": "gray"
+                      }
+                    },
+                    {
+                      "column": "track",
+                      "colors": {
+                        "engine": "blue",
+                        "apps": "pink",
+                        "sync": "teal",
+                        "product": "green"
+                      }
+                    }
+                  ],
+                  "collapsible": true,
+                  "recent": 5,
+                  "expandFields": [
+                    {
+                      "column": "context",
+                      "label": "Context"
+                    },
+                    {
+                      "column": "phase",
+                      "label": "Phase"
+                    },
+                    {
+                      "column": "priority",
+                      "label": "Priority"
+                    },
+                    {
+                      "column": "milestone",
+                      "label": "Milestone"
+                    },
+                    {
+                      "column": "units",
+                      "label": "Units"
+                    },
+                    {
+                      "column": "labels",
+                      "label": "Labels"
+                    },
+                    {
+                      "column": "notes",
+                      "label": "My notes"
+                    }
+                  ],
+                  "open": "Open task",
+                  "action": {
+                    "fn": "editRow"
+                  },
+                  "filter": {
+                    "column": "phase",
+                    "in": [
+                      "current",
+                      "future"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "label": "Schedule",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": {
+                    "en": "Tasks with a scheduled or due date, grouped by day. Set Scheduled (pending) or Due to see a task here.",
+                    "ko": "예정일 또는 마감일이 있는 작업으로, 날짜별로 그룹화됩니다. 여기서 보려면 예정(대기) 또는 마감을 설정하세요.",
+                    "zh": "具有计划日期或截止日期的任务，按天分组。设置“计划（待定）”或“截止”即可在此显示任务。",
+                    "hi": "निर्धारित या नियत तिथि वाले कार्य, दिन के अनुसार समूहीकृत। यहाँ देखने के लिए निर्धारित (लंबित) या नियत सेट करें।",
+                    "es": "Tareas con fecha programada o de vencimiento, agrupadas por día. Establece Programada (pendiente) o Vencimiento para ver una tarea aquí.",
+                    "fr": "Tâches avec une date planifiée ou d'échéance, regroupées par jour. Définissez Planifiée (en attente) ou Échéance pour voir une tâche ici.",
+                    "ar": "المهام ذات تاريخ مجدول أو تاريخ استحقاق، مجمّعة حسب اليوم. اضبط مجدول (معلّق) أو الاستحقاق لرؤية مهمة هنا.",
+                    "pt": "Tarefas com data agendada ou de vencimento, agrupadas por dia. Defina Agendada (pendente) ou Vencimento para ver uma tarefa aqui.",
+                    "ru": "Задачи с запланированной или крайней датой, сгруппированные по дням. Установите «Запланировано (в ожидании)» или «Срок», чтобы увидеть задачу здесь.",
+                    "de": "Aufgaben mit geplantem oder fälligem Datum, nach Tag gruppiert. Setze Geplant (ausstehend) oder Fällig, um eine Aufgabe hier zu sehen.",
+                    "ja": "予定日または期限がある、日ごとにグループ化されたタスク。ここに表示するには「予定（保留中）」または「期限」を設定してください。",
+                    "tr": "Zamanlanmış veya son tarihi olan görevler, güne göre gruplandırılmıştır. Burada bir görev görmek için Zamanlanmış (beklemede) veya Son Tarih ayarlayın.",
+                    "vi": "Các nhiệm vụ có ngày lên lịch hoặc ngày đến hạn, được nhóm theo ngày. Đặt Đã lên lịch (đang chờ) hoặc Đến hạn để thấy nhiệm vụ ở đây.",
+                    "it": "Attività con data pianificata o di scadenza, raggruppate per giorno. Imposta Pianificata (in sospeso) o Scadenza per vedere un'attività qui.",
+                    "fa": "وظایف با تاریخ زمان‌بندی‌شده یا سررسید، گروه‌بندی‌شده بر اساس روز. برای دیدن وظیفه اینجا، زمان‌بندی‌شده (در انتظار) یا سررسید را تنظیم کنید.",
+                    "pl": "Zadania z zaplanowaną datą lub terminem, pogrupowane wg dnia. Ustaw Zaplanowane (oczekujące) lub Termin, aby zobaczyć tu zadanie.",
+                    "uk": "Завдання із запланованою датою або терміном, згруповані за днем. Встановіть «Заплановано (очікує)» або «Термін», щоб побачити завдання тут.",
+                    "nl": "Taken met een geplande of vervaldatum, gegroepeerd per dag. Stel Gepland (in behandeling) of Vervaldatum in om hier een taak te zien.",
+                    "sv": "Uppgifter med ett schemalagt datum eller förfallodatum, grupperade per dag. Ange Schemalagd (väntande) eller Förfaller för att se en uppgift här.",
+                    "cs": "Úkoly s naplánovaným nebo termínovaným datem, seskupené podle dne. Nastavte Naplánováno (čeká) nebo Termín, abyste zde viděli úkol.",
+                    "el": "Εργασίες με προγραμματισμένη ή προθεσμιακή ημερομηνία, ομαδοποιημένες ανά ημέρα. Ορίστε Προγραμματισμένο (εκκρεμεί) ή Προθεσμία για να δείτε μια εργασία εδώ."
+                  }
+                },
+                {
+                  "type": "row",
+                  "wrap": true,
+                  "children": [
+                    {
+                      "type": "button",
+                      "label": {
+                        "en": "Incomplete",
+                        "ko": "미완료",
+                        "zh": "未完成",
+                        "hi": "अधूरा",
+                        "es": "Incompleta",
+                        "fr": "Incomplète",
+                        "ar": "غير مكتملة",
+                        "pt": "Incompleta",
+                        "ru": "Незавершено",
+                        "de": "Unvollständig",
+                        "ja": "未完了",
+                        "tr": "Tamamlanmadı",
+                        "vi": "Chưa hoàn thành",
+                        "it": "Incompleta",
+                        "fa": "ناتمام",
+                        "pl": "Niekompletne",
+                        "uk": "Незавершено",
+                        "nl": "Onvolledig",
+                        "sv": "Ofullständig",
+                        "cs": "Nedokončeno",
+                        "el": "Ημιτελές"
+                      },
+                      "action": {
+                        "fn": "setPresence",
+                        "args": {
+                          "table": "tasks",
+                          "column": "completed",
+                          "mode": "empty"
+                        }
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "label": {
+                        "en": "Done",
+                        "ko": "완료",
+                        "zh": "已完成",
+                        "hi": "पूर्ण",
+                        "es": "Completada",
+                        "fr": "Terminée",
+                        "ar": "مكتملة",
+                        "pt": "Concluída",
+                        "ru": "Завершено",
+                        "de": "Erledigt",
+                        "ja": "完了",
+                        "tr": "Tamamlandı",
+                        "vi": "Đã hoàn thành",
+                        "it": "Completata",
+                        "fa": "انجام‌شده",
+                        "pl": "Ukończone",
+                        "uk": "Завершено",
+                        "nl": "Voltooid",
+                        "sv": "Klar",
+                        "cs": "Hotovo",
+                        "el": "Ολοκληρώθηκε"
+                      },
+                      "action": {
+                        "fn": "setPresence",
+                        "args": {
+                          "table": "tasks",
+                          "column": "completed",
+                          "mode": "set"
+                        }
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "label": {
+                        "en": "All",
+                        "ko": "전체",
+                        "zh": "全部",
+                        "hi": "सभी",
+                        "es": "Todo",
+                        "fr": "Tout",
+                        "ar": "الكل",
+                        "pt": "Todas",
+                        "ru": "Все",
+                        "de": "Alle",
+                        "ja": "すべて",
+                        "tr": "Tümü",
+                        "vi": "Tất cả",
+                        "it": "Tutte",
+                        "fa": "همه",
+                        "pl": "Wszystkie",
+                        "uk": "Усі",
+                        "nl": "Alle",
+                        "sv": "Alla",
+                        "cs": "Vše",
+                        "el": "Όλα"
+                      },
+                      "action": {
+                        "fn": "setPresence",
+                        "args": {
+                          "table": "tasks",
+                          "column": "completed",
+                          "mode": ""
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "agenda",
+                  "table": "tasks",
+                  "filterable": true,
+                  "dateColumns": [
+                    "scheduledStart",
+                    "due"
+                  ],
+                  "titleColumn": "title",
+                  "statusColumn": "phase",
+                  "doneValue": "past",
+                  "action": {
+                    "fn": "editRow"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "label": "Sub-tasks",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": {
+                    "en": "Parent/child task tree. Set a task's Parent to nest it (make a bigger task to house subtasks), or use + to add a subtask. Drag to nest/reorder; tap to open.",
+                    "ko": "상위/하위 작업 트리입니다. 작업을 중첩하려면(하위 작업을 담을 큰 작업 만들기) 상위를 설정하거나, +를 사용해 하위 작업을 추가하세요. 드래그로 중첩/재정렬, 탭으로 열기.",
+                    "zh": "父/子任务树。设置任务的“父级”即可嵌套（创建一个更大的任务来容纳子任务），或使用 + 添加子任务。拖动以嵌套/重新排序；点击以打开。",
+                    "hi": "मूल/उप कार्य ट्री। किसी कार्य को नेस्ट करने के लिए उसका मूल सेट करें (उप-कार्यों को रखने के लिए एक बड़ा कार्य बनाएं), या उप-कार्य जोड़ने के लिए + का उपयोग करें। नेस्ट/पुनःक्रमित करने के लिए ड्रैग करें; खोलने के लिए टैप करें।",
+                    "es": "Árbol de tareas padre/hijo. Establece el Padre de una tarea para anidarla (crea una tarea mayor para albergar subtareas), o usa + para agregar una subtarea. Arrastra para anidar/reordenar; toca para abrir.",
+                    "fr": "Arbre de tâches parent/enfant. Définissez le Parent d'une tâche pour l'imbriquer (créez une tâche plus grande pour héberger des sous-tâches), ou utilisez + pour ajouter une sous-tâche. Faites glisser pour imbriquer/réorganiser ; appuyez pour ouvrir.",
+                    "ar": "شجرة مهام أصل/فرع. اضبط أصل المهمة لتضمينها (أنشئ مهمة أكبر لاستضافة مهام فرعية)، أو استخدم + لإضافة مهمة فرعية. اسحب للتضمين/إعادة الترتيب؛ اضغط للفتح.",
+                    "pt": "Árvore de tarefas pai/filho. Defina o Pai de uma tarefa para aninhá-la (crie uma tarefa maior para abrigar subtarefas), ou use + para adicionar uma subtarefa. Arraste para aninhar/reordenar; toque para abrir.",
+                    "ru": "Дерево родительских/дочерних задач. Установите родителя задачи, чтобы вложить её (создайте более крупную задачу для подзадач), или используйте + для добавления подзадачи. Перетащите для вложения/переупорядочивания; нажмите, чтобы открыть.",
+                    "de": "Übergeordnete/untergeordnete Aufgabenstruktur. Lege das Übergeordnete einer Aufgabe fest, um sie zu verschachteln (erstelle eine größere Aufgabe für Unteraufgaben), oder nutze +, um eine Unteraufgabe hinzuzufügen. Ziehen zum Verschachteln/Neuanordnen; tippen zum Öffnen.",
+                    "ja": "親子タスクツリーです。タスクの「親」を設定してネストしたり（サブタスクを収める大きなタスクを作る）、+でサブタスクを追加できます。ドラッグでネスト/並べ替え、タップで開きます。",
+                    "tr": "Üst/alt görev ağacı. Bir görevi iç içe yerleştirmek için Üst öğesini ayarlayın (alt görevleri barındıracak daha büyük bir görev oluşturun) veya alt görev eklemek için + kullanın. İç içe yerleştirmek/yeniden sıralamak için sürükleyin; açmak için dokunun.",
+                    "vi": "Cây nhiệm vụ cha/con. Đặt Cha của một nhiệm vụ để lồng nó vào (tạo một nhiệm vụ lớn hơn để chứa các nhiệm vụ con), hoặc dùng + để thêm nhiệm vụ con. Kéo để lồng/sắp xếp lại; chạm để mở.",
+                    "it": "Albero di attività genitore/figlio. Imposta il Genitore di un'attività per annidarla (crea un'attività più grande per contenere le sottoattività), oppure usa + per aggiungere una sottoattività. Trascina per annidare/riordinare; tocca per aprire.",
+                    "fa": "درخت وظیفه والد/فرزند. برای تودرتو کردن یک وظیفه، والد آن را تنظیم کنید (وظیفه بزرگ‌تری برای جای دادن زیروظایف بسازید)، یا از + برای افزودن زیروظیفه استفاده کنید. برای تودرتو کردن/ترتیب‌دهی مجدد بکشید؛ برای باز کردن ضربه بزنید.",
+                    "pl": "Drzewo zadań nadrzędnych/podrzędnych. Ustaw Nadrzędne zadania, aby je zagnieździć (utwórz większe zadanie, aby pomieścić podzadania), lub użyj +, aby dodać podzadanie. Przeciągnij, aby zagnieździć/zmienić kolejność; dotknij, aby otworzyć.",
+                    "uk": "Дерево батьківських/дочірніх завдань. Встановіть Батьківське для завдання, щоб вкласти його (створіть більше завдання для підзавдань), або використайте +, щоб додати підзавдання. Перетягніть, щоб вкласти/перевпорядкувати; торкніться, щоб відкрити.",
+                    "nl": "Boomstructuur van bovenliggende/onderliggende taken. Stel de Bovenliggende taak in om te nesten (maak een grotere taak om subtaken te huisvesten), of gebruik + om een subtaak toe te voegen. Sleep om te nesten/herordenen; tik om te openen.",
+                    "sv": "Träd med överordnade/underordnade uppgifter. Ange en uppgifts Överordnad för att nästla den (skapa en större uppgift för att hysa deluppgifter), eller använd + för att lägga till en deluppgift. Dra för att nästla/ordna om; tryck för att öppna.",
+                    "cs": "Strom nadřazených/podřazených úkolů. Nastavte Nadřazený úkol, abyste jej vnořili (vytvořte větší úkol pro podúkoly), nebo použijte + pro přidání podúkolu. Přetažením vnoříte/přeuspořádáte; klepnutím otevřete.",
+                    "el": "Δέντρο γονικών/θυγατρικών εργασιών. Ορίστε τον Γονέα μιας εργασίας για να την ενσωματώσετε (δημιουργήστε μια μεγαλύτερη εργασία για να στεγάσει υποεργασίες), ή χρησιμοποιήστε + για προσθήκη υποεργασίας. Σύρετε για ενσωμάτωση/αναδιάταξη· πατήστε για άνοιγμα."
+                  }
+                },
+                {
+                  "type": "tree",
+                  "table": "tasks",
+                  "parentColumn": "parent",
+                  "titleColumn": "title",
+                  "statusColumn": "phase",
+                  "doneValue": "past",
+                  "onTap": {
+                    "fn": "editRow"
+                  },
+                  "filterable": true,
+                  "addChild": true,
+                  "orderColumn": "order"
+                }
+              ]
+            }
+          },
+          {
+            "label": "Notes",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "button",
+                  "label": {
+                    "en": "New note",
+                    "ko": "새 메모",
+                    "zh": "新建备注",
+                    "hi": "नया नोट",
+                    "es": "Nueva nota",
+                    "fr": "Nouvelle note",
+                    "ar": "ملاحظة جديدة",
+                    "pt": "Nova nota",
+                    "ru": "Новая заметка",
+                    "de": "Neue Notiz",
+                    "ja": "新規メモ",
+                    "tr": "Yeni not",
+                    "vi": "Ghi chú mới",
+                    "it": "Nuova nota",
+                    "fa": "یادداشت جدید",
+                    "pl": "Nowa notatka",
+                    "uk": "Нова нотатка",
+                    "nl": "Nieuwe notitie",
+                    "sv": "Ny anteckning",
+                    "cs": "Nová poznámka",
+                    "el": "Νέα σημείωση"
+                  },
+                  "icon": "add",
+                  "action": {
+                    "fn": "addRow",
+                    "args": {
+                      "table": "notes",
+                      "values": {}
+                    }
+                  }
+                },
+                {
+                  "type": "cards",
+                  "emptyIcon": "note_add",
+                  "emptyTitle": {
+                    "en": "No notes yet",
+                    "ko": "아직 메모가 없습니다",
+                    "zh": "暂无备注",
+                    "hi": "अभी कोई नोट नहीं",
+                    "es": "Aún no hay notas",
+                    "fr": "Aucune note pour l'instant",
+                    "ar": "لا توجد ملاحظات بعد",
+                    "pt": "Nenhuma nota ainda",
+                    "ru": "Пока нет заметок",
+                    "de": "Noch keine Notizen",
+                    "ja": "まだメモがありません",
+                    "tr": "Henüz not yok",
+                    "vi": "Chưa có ghi chú nào",
+                    "it": "Nessuna nota ancora",
+                    "fa": "هنوز یادداشتی نیست",
+                    "pl": "Brak notatek",
+                    "uk": "Ще немає нотаток",
+                    "nl": "Nog geen notities",
+                    "sv": "Inga anteckningar än",
+                    "cs": "Zatím žádné poznámky",
+                    "el": "Δεν υπάρχουν σημειώσεις ακόμα"
+                  },
+                  "emptyText": {
+                    "en": "Add a note.",
+                    "ko": "메모를 추가하세요.",
+                    "zh": "添加一条备注。",
+                    "hi": "एक नोट जोड़ें।",
+                    "es": "Añade una nota.",
+                    "fr": "Ajoutez une note.",
+                    "ar": "أضف ملاحظة.",
+                    "pt": "Adicione uma nota.",
+                    "ru": "Добавьте заметку.",
+                    "de": "Füge eine Notiz hinzu.",
+                    "ja": "メモを追加しましょう。",
+                    "tr": "Bir not ekleyin.",
+                    "vi": "Thêm một ghi chú.",
+                    "it": "Aggiungi una nota.",
+                    "fa": "یک یادداشت اضافه کنید.",
+                    "pl": "Dodaj notatkę.",
+                    "uk": "Додайте нотатку.",
+                    "nl": "Voeg een notitie toe.",
+                    "sv": "Lägg till en anteckning.",
+                    "cs": "Přidejte poznámku.",
+                    "el": "Προσθέστε μια σημείωση."
+                  },
+                  "emptyAction": {"fn": "addRow", "args": {"table": "notes", "values": {}}},
+                  "emptyActionLabel": {
+                    "en": "New note",
+                    "ko": "새 메모",
+                    "zh": "新建备注",
+                    "hi": "नया नोट",
+                    "es": "Nueva nota",
+                    "fr": "Nouvelle note",
+                    "ar": "ملاحظة جديدة",
+                    "pt": "Nova nota",
+                    "ru": "Новая заметка",
+                    "de": "Neue Notiz",
+                    "ja": "新規メモ",
+                    "tr": "Yeni not",
+                    "vi": "Ghi chú mới",
+                    "it": "Nuova nota",
+                    "fa": "یادداشت جدید",
+                    "pl": "Nowa notatka",
+                    "uk": "Нова нотатка",
+                    "nl": "Nieuwe notitie",
+                    "sv": "Ny anteckning",
+                    "cs": "Nová poznámka",
+                    "el": "Νέα σημείωση"
+                  },
+                  "table": "notes",
+                  "search": true,
+                  "filterable": true,
+                  "title": "title",
+                  "subtitle": "body",
+                  "expandFields": [
+                    {
+                      "column": "body",
+                      "label": "Note"
+                    },
+                    {
+                      "column": "tasks",
+                      "label": "Tasks"
+                    },
+                    {
+                      "column": "createdAt",
+                      "label": "Created"
+                    }
+                  ],
+                  "open": "Open note",
+                  "action": {
+                    "fn": "editRow"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "label": "Completed",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": {
+                    "en": "Completed tasks, newest first. Completion date shown on each.",
+                    "ko": "완료된 작업, 최신순. 각 항목에 완료일이 표시됩니다.",
+                    "zh": "已完成任务，最新在前。每项均显示完成日期。",
+                    "hi": "पूर्ण किए गए कार्य, नवीनतम पहले। प्रत्येक पर पूर्णता तिथि दिखाई गई है।",
+                    "es": "Tareas completadas, más recientes primero. Se muestra la fecha de finalización en cada una.",
+                    "fr": "Tâches terminées, les plus récentes en premier. Date d'achèvement affichée pour chacune.",
+                    "ar": "المهام المكتملة، الأحدث أولًا. تاريخ الإكمال معروض على كل واحدة.",
+                    "pt": "Tarefas concluídas, mais recentes primeiro. Data de conclusão exibida em cada uma.",
+                    "ru": "Завершённые задачи, сначала новые. У каждой указана дата завершения.",
+                    "de": "Erledigte Aufgaben, neueste zuerst. Abschlussdatum bei jeder angezeigt.",
+                    "ja": "完了したタスク、新しい順。それぞれに完了日が表示されます。",
+                    "tr": "Tamamlanan görevler, en yeniden eskiye. Her birinde tamamlanma tarihi gösterilir.",
+                    "vi": "Các nhiệm vụ đã hoàn thành, mới nhất trước. Ngày hoàn thành hiển thị trên mỗi mục.",
+                    "it": "Attività completate, dalla più recente. Data di completamento mostrata su ciascuna.",
+                    "fa": "وظایف انجام‌شده، جدیدترین در ابتدا. تاریخ تکمیل روی هر یک نمایش داده می‌شود.",
+                    "pl": "Ukończone zadania, od najnowszych. Data ukończenia widoczna przy każdym.",
+                    "uk": "Завершені завдання, спочатку найновіші. На кожному показано дату завершення.",
+                    "nl": "Voltooide taken, nieuwste eerst. Voltooiingsdatum bij elk getoond.",
+                    "sv": "Slutförda uppgifter, senaste först. Slutdatum visas på varje.",
+                    "cs": "Dokončené úkoly, nejnovější první. U každého je zobrazeno datum dokončení.",
+                    "el": "Ολοκληρωμένες εργασίες, οι νεότερες πρώτα. Η ημερομηνία ολοκλήρωσης εμφανίζεται σε κάθε μία."
+                  }
+                },
+                {
+                  "type": "cards",
+                  "table": "tasks",
+                  "filter": {
+                    "column": "completed",
+                    "exists": true
+                  },
+                  "sort": {
+                    "column": "completed",
+                    "dir": "desc"
+                  },
+                  "title": "title",
+                  "subtitle": "detail",
+                  "tags": [
+                    {
+                      "column": "completed"
+                    },
+                    {
+                      "column": "track",
+                      "colors": {
+                        "engine": "blue",
+                        "apps": "pink",
+                        "sync": "teal",
+                        "product": "green"
+                      }
+                    }
+                  ],
+                  "collapsible": true,
+                  "recent": 50,
+                  "expandable": true,
+                  "expandFields": [
+                    {
+                      "column": "context",
+                      "label": "Context"
+                    },
+                    {
+                      "column": "completed",
+                      "label": "Completed"
+                    },
+                    {
+                      "column": "completedTime",
+                      "label": "Time"
+                    },
+                    {
+                      "column": "milestone",
+                      "label": "Milestone"
+                    },
+                    {
+                      "column": "units",
+                      "label": "Units"
+                    },
+                    {
+                      "column": "detail",
+                      "label": "Detail"
+                    }
+                  ],
+                  "open": "Open task",
+                  "action": {
+                    "fn": "editRow"
+                  },
+                  "search": true
+                }
+              ]
+            }
+          },
+          {
+            "label": "Stats",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": {
+                    "en": "The board at a glance — work by phase, track, and priority.",
+                    "ko": "한눈에 보는 보드 — 단계, 트랙, 우선순위별 작업.",
+                    "zh": "一览看板——按阶段、轨道和优先级划分的工作。",
+                    "hi": "एक नज़र में बोर्ड — चरण, ट्रैक और प्राथमिकता के अनुसार कार्य।",
+                    "es": "El tablero de un vistazo: trabajo por fase, pista y prioridad.",
+                    "fr": "Le tableau en un coup d'œil — travail par phase, filière et priorité.",
+                    "ar": "اللوحة بلمحة — العمل حسب المرحلة والمسار والأولوية.",
+                    "pt": "O quadro de relance — trabalho por fase, trilha e prioridade.",
+                    "ru": "Доска одним взглядом — работа по этапам, направлениям и приоритету.",
+                    "de": "Das Board auf einen Blick – Arbeit nach Phase, Bereich und Priorität.",
+                    "ja": "ボードを一目で確認——フェーズ、トラック、優先度別の作業。",
+                    "tr": "Panoya bir bakışta — aşamaya, hatta ve önceliğe göre çalışma.",
+                    "vi": "Toàn cảnh bảng — công việc theo giai đoạn, nhánh và mức ưu tiên.",
+                    "it": "La bacheca a colpo d'occhio — lavoro per fase, area e priorità.",
+                    "fa": "نمای کلی تخته — کار بر اساس مرحله، مسیر و اولویت.",
+                    "pl": "Tablica w skrócie — praca wg fazy, ścieżki i priorytetu.",
+                    "uk": "Дошка одним поглядом — робота за етапом, напрямом і пріоритетом.",
+                    "nl": "Het bord in één oogopslag — werk per fase, spoor en prioriteit.",
+                    "sv": "Tavlan i ett ögonkast — arbete efter fas, spår och prioritet.",
+                    "cs": "Nástěnka na první pohled — práce podle fáze, dráhy a priority.",
+                    "el": "Ο πίνακας με μια ματιά — εργασία ανά φάση, κατεύθυνση και προτεραιότητα."
+                  }
+                },
+                {
+                  "type": "row",
+                  "wrap": true,
+                  "children": [
+                    {
+                      "type": "stat",
+                      "table": "tasks",
+                      "filter": {
+                        "column": "phase",
+                        "value": "current"
+                      },
+                      "label": {
+                        "en": "In progress",
+                        "ko": "진행 중",
+                        "zh": "进行中",
+                        "hi": "प्रगति में",
+                        "es": "En curso",
+                        "fr": "En cours",
+                        "ar": "قيد التنفيذ",
+                        "pt": "Em andamento",
+                        "ru": "В процессе",
+                        "de": "In Bearbeitung",
+                        "ja": "進行中",
+                        "tr": "Devam ediyor",
+                        "vi": "Đang thực hiện",
+                        "it": "In corso",
+                        "fa": "در حال انجام",
+                        "pl": "W toku",
+                        "uk": "У процесі",
+                        "nl": "Bezig",
+                        "sv": "Pågår",
+                        "cs": "Probíhá",
+                        "el": "Σε εξέλιξη"
+                      },
+                      "color": "amber"
+                    },
+                    {
+                      "type": "stat",
+                      "table": "tasks",
+                      "filter": {
+                        "column": "phase",
+                        "value": "future"
+                      },
+                      "label": {
+                        "en": "Queued",
+                        "ko": "대기 중",
+                        "zh": "排队中",
+                        "hi": "कतार में",
+                        "es": "En cola",
+                        "fr": "En file d'attente",
+                        "ar": "في قائمة الانتظار",
+                        "pt": "Na fila",
+                        "ru": "В очереди",
+                        "de": "In Warteschlange",
+                        "ja": "待機中",
+                        "tr": "Sırada",
+                        "vi": "Đang chờ",
+                        "it": "In coda",
+                        "fa": "در صف",
+                        "pl": "W kolejce",
+                        "uk": "У черзі",
+                        "nl": "In wachtrij",
+                        "sv": "I kö",
+                        "cs": "Ve frontě",
+                        "el": "Σε αναμονή"
+                      },
+                      "color": "blue"
+                    },
+                    {
+                      "type": "stat",
+                      "table": "tasks",
+                      "filter": {
+                        "column": "phase",
+                        "value": "past"
+                      },
+                      "label": {
+                        "en": "Shipped",
+                        "ko": "배포됨",
+                        "zh": "已发布",
+                        "hi": "शिप किया गया",
+                        "es": "Publicado",
+                        "fr": "Livré",
+                        "ar": "تم الإصدار",
+                        "pt": "Lançado",
+                        "ru": "Выпущено",
+                        "de": "Ausgeliefert",
+                        "ja": "リリース済み",
+                        "tr": "Yayınlandı",
+                        "vi": "Đã phát hành",
+                        "it": "Rilasciato",
+                        "fa": "منتشرشده",
+                        "pl": "Wysłane",
+                        "uk": "Випущено",
+                        "nl": "Uitgeleverd",
+                        "sv": "Levererad",
+                        "cs": "Odesláno",
+                        "el": "Παραδόθηκε"
+                      },
+                      "color": "green"
+                    },
+                    {
+                      "type": "stat",
+                      "table": "decisions",
+                      "filter": {
+                        "column": "status",
+                        "value": "open"
+                      },
+                      "label": {
+                        "en": "Open questions",
+                        "ko": "미해결 질문",
+                        "zh": "未解决问题",
+                        "hi": "खुले प्रश्न",
+                        "es": "Preguntas abiertas",
+                        "fr": "Questions ouvertes",
+                        "ar": "أسئلة مفتوحة",
+                        "pt": "Perguntas em aberto",
+                        "ru": "Открытые вопросы",
+                        "de": "Offene Fragen",
+                        "ja": "未解決の質問",
+                        "tr": "Açık sorular",
+                        "vi": "Câu hỏi chưa có lời giải",
+                        "it": "Domande aperte",
+                        "fa": "سؤالات باز",
+                        "pl": "Otwarte pytania",
+                        "uk": "Відкриті питання",
+                        "nl": "Open vragen",
+                        "sv": "Öppna frågor",
+                        "cs": "Otevřené otázky",
+                        "el": "Ανοιχτές ερωτήσεις"
+                      },
+                      "color": "coral"
+                    }
+                  ]
+                },
+                {
+                  "type": "progress",
+                  "table": "tasks",
+                  "statusColumn": "phase",
+                  "doneValue": "past",
+                  "label": {
+                    "en": "Shipped",
+                    "ko": "배포됨",
+                    "zh": "已发布",
+                    "hi": "शिप किया गया",
+                    "es": "Publicado",
+                    "fr": "Livré",
+                    "ar": "تم الإصدار",
+                    "pt": "Lançado",
+                    "ru": "Выпущено",
+                    "de": "Ausgeliefert",
+                    "ja": "リリース済み",
+                    "tr": "Yayınlandı",
+                    "vi": "Đã phát hành",
+                    "it": "Rilasciato",
+                    "fa": "منتشرشده",
+                    "pl": "Wysłane",
+                    "uk": "Випущено",
+                    "nl": "Uitgeleverd",
+                    "sv": "Levererad",
+                    "cs": "Odesláno",
+                    "el": "Παραδόθηκε"
+                  },
+                  "color": "green"
+                },
+                {
+                  "type": "barchart",
+                  "table": "tasks",
+                  "groupColumn": "track",
+                  "label": {
+                    "en": "Tasks per track",
+                    "ko": "트랙별 작업",
+                    "zh": "按轨道划分的任务",
+                    "hi": "ट्रैक अनुसार कार्य",
+                    "es": "Tareas por pista",
+                    "fr": "Tâches par filière",
+                    "ar": "المهام حسب المسار",
+                    "pt": "Tarefas por trilha",
+                    "ru": "Задачи по направлениям",
+                    "de": "Aufgaben pro Bereich",
+                    "ja": "トラック別タスク",
+                    "tr": "Hatta göre görevler",
+                    "vi": "Nhiệm vụ theo nhánh",
+                    "it": "Attività per area",
+                    "fa": "وظایف بر اساس مسیر",
+                    "pl": "Zadania wg ścieżki",
+                    "uk": "Завдання за напрямом",
+                    "nl": "Taken per spoor",
+                    "sv": "Uppgifter per spår",
+                    "cs": "Úkoly podle dráhy",
+                    "el": "Εργασίες ανά κατεύθυνση"
+                  },
+                  "colors": {
+                    "engine": "blue",
+                    "apps": "pink",
+                    "sync": "teal",
+                    "product": "green"
+                  }
+                },
+                {
+                  "type": "piechart",
+                  "table": "tasks",
+                  "groupColumn": "priority",
+                  "label": {
+                    "en": "Priority mix",
+                    "ko": "우선순위 분포",
+                    "zh": "优先级分布",
+                    "hi": "प्राथमिकता मिश्रण",
+                    "es": "Distribución de prioridad",
+                    "fr": "Répartition des priorités",
+                    "ar": "توزيع الأولويات",
+                    "pt": "Distribuição de prioridade",
+                    "ru": "Распределение приоритетов",
+                    "de": "Prioritätsverteilung",
+                    "ja": "優先度の内訳",
+                    "tr": "Öncelik dağılımı",
+                    "vi": "Phân bố mức ưu tiên",
+                    "it": "Distribuzione priorità",
+                    "fa": "ترکیب اولویت",
+                    "pl": "Rozkład priorytetów",
+                    "uk": "Розподіл пріоритетів",
+                    "nl": "Prioriteitsverdeling",
+                    "sv": "Prioritetsfördelning",
+                    "cs": "Rozložení priorit",
+                    "el": "Κατανομή προτεραιότητας"
+                  },
+                  "height": 160,
+                  "colors": {
+                    "urgent": "red",
+                    "high": "coral",
+                    "normal": "blue",
+                    "low": "gray"
+                  }
+                },
+                {
+                  "type": "barchart",
+                  "table": "tasks",
+                  "groupColumn": "milestone",
+                  "label": {
+                    "en": "Tasks per milestone",
+                    "ko": "마일스톤별 작업",
+                    "zh": "按里程碑划分的任务",
+                    "hi": "माइलस्टोन अनुसार कार्य",
+                    "es": "Tareas por hito",
+                    "fr": "Tâches par jalon",
+                    "ar": "المهام حسب المعلم",
+                    "pt": "Tarefas por marco",
+                    "ru": "Задачи по вехам",
+                    "de": "Aufgaben pro Meilenstein",
+                    "ja": "マイルストーン別タスク",
+                    "tr": "Kilometre taşına göre görevler",
+                    "vi": "Nhiệm vụ theo cột mốc",
+                    "it": "Attività per traguardo",
+                    "fa": "وظایف بر اساس نقطه عطف",
+                    "pl": "Zadania wg kamienia milowego",
+                    "uk": "Завдання за етапом",
+                    "nl": "Taken per mijlpaal",
+                    "sv": "Uppgifter per milstolpe",
+                    "cs": "Úkoly podle milníku",
+                    "el": "Εργασίες ανά ορόσημο"
+                  },
+                  "limit": 8
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "people": {
+      "title": {
+        "en": "People",
+        "ko": "인원",
+        "zh": "人员",
+        "hi": "लोग",
+        "es": "Personas",
+        "fr": "Personnes",
+        "ar": "الأشخاص",
+        "pt": "Pessoas",
+        "ru": "Люди",
+        "de": "Personen",
+        "ja": "メンバー",
+        "tr": "Kişiler",
+        "vi": "Mọi người",
+        "it": "Persone",
+        "fa": "افراد",
+        "pl": "Osoby",
+        "uk": "Люди",
+        "nl": "Personen",
+        "sv": "Personer",
+        "cs": "Lidé",
+        "el": "Άτομα"
+      },
+      "body": {
+        "type": "segments",
+        "segments": [
+          {
+            "label": "Profiles",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "button",
+                  "label": {
+                    "en": "New profile",
+                    "ko": "새 프로필",
+                    "zh": "新建档案",
+                    "hi": "नई प्रोफ़ाइल",
+                    "es": "Nuevo perfil",
+                    "fr": "Nouveau profil",
+                    "ar": "ملف تعريف جديد",
+                    "pt": "Novo perfil",
+                    "ru": "Новый профиль",
+                    "de": "Neues Profil",
+                    "ja": "新規プロフィール",
+                    "tr": "Yeni profil",
+                    "vi": "Hồ sơ mới",
+                    "it": "Nuovo profilo",
+                    "fa": "نمایه جدید",
+                    "pl": "Nowy profil",
+                    "uk": "Новий профіль",
+                    "nl": "Nieuw profiel",
+                    "sv": "Ny profil",
+                    "cs": "Nový profil",
+                    "el": "Νέο προφίλ"
+                  },
+                  "icon": "add",
+                  "action": {
+                    "fn": "addRow",
+                    "args": {
+                      "table": "profiles",
+                      "values": {}
+                    }
+                  }
+                },
+                {
+                  "type": "cards",
+                  "table": "profiles",
+                  "search": true,
+                  "title": "name",
+                  "subtitle": "role",
+                  "expandFields": [
+                    {
+                      "column": "role",
+                      "label": "Role"
+                    },
+                    {
+                      "column": "notes",
+                      "label": "Notes"
+                    }
+                  ],
+                  "open": "Open profile",
+                  "action": {
+                    "fn": "editRow"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "label": "Projects",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "button",
+                  "label": {
+                    "en": "New project",
+                    "ko": "새 프로젝트",
+                    "zh": "新建项目",
+                    "hi": "नई परियोजना",
+                    "es": "Nuevo proyecto",
+                    "fr": "Nouveau projet",
+                    "ar": "مشروع جديد",
+                    "pt": "Novo projeto",
+                    "ru": "Новый проект",
+                    "de": "Neues Projekt",
+                    "ja": "新規プロジェクト",
+                    "tr": "Yeni proje",
+                    "vi": "Dự án mới",
+                    "it": "Nuovo progetto",
+                    "fa": "پروژه جدید",
+                    "pl": "Nowy projekt",
+                    "uk": "Новий проєкт",
+                    "nl": "Nieuw project",
+                    "sv": "Nytt projekt",
+                    "cs": "Nový projekt",
+                    "el": "Νέο έργο"
+                  },
+                  "icon": "add",
+                  "action": {
+                    "fn": "addRow",
+                    "args": {
+                      "table": "projects",
+                      "values": {
+                        "status": "active"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "cards",
+                  "emptyIcon": "folder_open",
+                  "emptyTitle": {
+                    "en": "No projects yet",
+                    "ko": "아직 프로젝트가 없습니다",
+                    "zh": "暂无项目",
+                    "hi": "अभी कोई परियोजना नहीं",
+                    "es": "Aún no hay proyectos",
+                    "fr": "Aucun projet pour l'instant",
+                    "ar": "لا توجد مشاريع بعد",
+                    "pt": "Nenhum projeto ainda",
+                    "ru": "Пока нет проектов",
+                    "de": "Noch keine Projekte",
+                    "ja": "まだプロジェクトがありません",
+                    "tr": "Henüz proje yok",
+                    "vi": "Chưa có dự án nào",
+                    "it": "Nessun progetto ancora",
+                    "fa": "هنوز پروژه‌ای نیست",
+                    "pl": "Brak projektów",
+                    "uk": "Ще немає проєктів",
+                    "nl": "Nog geen projecten",
+                    "sv": "Inga projekt än",
+                    "cs": "Zatím žádné projekty",
+                    "el": "Δεν υπάρχουν έργα ακόμα"
+                  },
+                  "emptyText": {
+                    "en": "Add a project to group your work.",
+                    "ko": "작업을 그룹화하려면 프로젝트를 추가하세요.",
+                    "zh": "添加一个项目来归类你的工作。",
+                    "hi": "अपने कार्य को समूहित करने के लिए एक परियोजना जोड़ें।",
+                    "es": "Agrega un proyecto para agrupar tu trabajo.",
+                    "fr": "Ajoutez un projet pour regrouper votre travail.",
+                    "ar": "أضف مشروعًا لتجميع عملك.",
+                    "pt": "Adicione um projeto para agrupar seu trabalho.",
+                    "ru": "Добавьте проект, чтобы сгруппировать работу.",
+                    "de": "Füge ein Projekt hinzu, um deine Arbeit zu gruppieren.",
+                    "ja": "作業をまとめるためにプロジェクトを追加しましょう。",
+                    "tr": "Çalışmanızı gruplamak için bir proje ekleyin.",
+                    "vi": "Thêm một dự án để nhóm công việc của bạn.",
+                    "it": "Aggiungi un progetto per raggruppare il tuo lavoro.",
+                    "fa": "برای گروه‌بندی کار خود یک پروژه اضافه کنید.",
+                    "pl": "Dodaj projekt, aby zgrupować swoją pracę.",
+                    "uk": "Додайте проєкт, щоб згрупувати свою роботу.",
+                    "nl": "Voeg een project toe om je werk te groeperen.",
+                    "sv": "Lägg till ett projekt för att gruppera ditt arbete.",
+                    "cs": "Přidejte projekt pro seskupení své práce.",
+                    "el": "Προσθέστε ένα έργο για να ομαδοποιήσετε την εργασία σας."
+                  },
+                  "emptyAction": {"fn": "addRow", "args": {"table": "projects", "values": {"status": "active"}}},
+                  "emptyActionLabel": {
+                    "en": "New project",
+                    "ko": "새 프로젝트",
+                    "zh": "新建项目",
+                    "hi": "नई परियोजना",
+                    "es": "Nuevo proyecto",
+                    "fr": "Nouveau projet",
+                    "ar": "مشروع جديد",
+                    "pt": "Novo projeto",
+                    "ru": "Новый проект",
+                    "de": "Neues Projekt",
+                    "ja": "新規プロジェクト",
+                    "tr": "Yeni proje",
+                    "vi": "Dự án mới",
+                    "it": "Nuovo progetto",
+                    "fa": "پروژه جدید",
+                    "pl": "Nowy projekt",
+                    "uk": "Новий проєкт",
+                    "nl": "Nieuw project",
+                    "sv": "Nytt projekt",
+                    "cs": "Nový projekt",
+                    "el": "Νέο έργο"
+                  },
+                  "table": "projects",
+                  "search": true,
+                  "filterable": true,
+                  "groupBy": "profile",
+                  "title": "name",
+                  "subtitle": "summary",
+                  "tags": [
+                    {
+                      "column": "status",
+                      "colors": {
+                        "active": "green",
+                        "paused": "amber",
+                        "done": "gray"
+                      }
+                    }
+                  ],
+                  "expandFields": [
+                    {
+                      "column": "profile",
+                      "label": "Profile"
+                    },
+                    {
+                      "column": "status",
+                      "label": "Status"
+                    },
+                    {
+                      "column": "summary",
+                      "label": "Summary"
+                    }
+                  ],
+                  "open": "Open project",
+                  "action": {
+                    "fn": "editRow"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "plan": {
+      "title": {
+        "en": "Plan",
+        "ko": "계획",
+        "zh": "计划",
+        "hi": "योजना",
+        "es": "Plan",
+        "fr": "Plan",
+        "ar": "الخطة",
+        "pt": "Plano",
+        "ru": "План",
+        "de": "Plan",
+        "ja": "プラン",
+        "tr": "Plan",
+        "vi": "Kế hoạch",
+        "it": "Piano",
+        "fa": "برنامه",
+        "pl": "Plan",
+        "uk": "План",
+        "nl": "Plan",
+        "sv": "Plan",
+        "cs": "Plán",
+        "el": "Σχέδιο"
+      },
+      "body": {
+        "type": "segments",
+        "segments": [
+          {
+            "label": "Decisions",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "row",
+                  "wrap": true,
+                  "children": [
+                    {
+                      "type": "button",
+                      "label": {
+                        "en": "Open",
+                        "ko": "미해결",
+                        "zh": "未解决",
+                        "hi": "खुला",
+                        "es": "Abierto",
+                        "fr": "Ouvert",
+                        "ar": "مفتوح",
+                        "pt": "Aberto",
+                        "ru": "Открыто",
+                        "de": "Offen",
+                        "ja": "未解決",
+                        "tr": "Açık",
+                        "vi": "Mở",
+                        "it": "Aperto",
+                        "fa": "باز",
+                        "pl": "Otwarte",
+                        "uk": "Відкрито",
+                        "nl": "Open",
+                        "sv": "Öppen",
+                        "cs": "Otevřeno",
+                        "el": "Ανοιχτό"
+                      },
+                      "action": {
+                        "fn": "setFilter",
+                        "args": {
+                          "table": "decisions",
+                          "column": "status",
+                          "value": "open"
+                        }
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "label": {
+                        "en": "Answered",
+                        "ko": "답변됨",
+                        "zh": "已回答",
+                        "hi": "उत्तर दिया गया",
+                        "es": "Respondida",
+                        "fr": "Répondue",
+                        "ar": "تمت الإجابة",
+                        "pt": "Respondida",
+                        "ru": "Отвечено",
+                        "de": "Beantwortet",
+                        "ja": "回答済み",
+                        "tr": "Yanıtlandı",
+                        "vi": "Đã trả lời",
+                        "it": "Risposta data",
+                        "fa": "پاسخ‌داده‌شده",
+                        "pl": "Odpowiedziano",
+                        "uk": "Відповідь надано",
+                        "nl": "Beantwoord",
+                        "sv": "Besvarad",
+                        "cs": "Zodpovězeno",
+                        "el": "Απαντήθηκε"
+                      },
+                      "action": {
+                        "fn": "setFilter",
+                        "args": {
+                          "table": "decisions",
+                          "column": "status",
+                          "value": "answered"
+                        }
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "label": {
+                        "en": "Deferred",
+                        "ko": "보류됨",
+                        "zh": "已延后",
+                        "hi": "स्थगित",
+                        "es": "Aplazada",
+                        "fr": "Différée",
+                        "ar": "مؤجل",
+                        "pt": "Adiada",
+                        "ru": "Отложено",
+                        "de": "Verschoben",
+                        "ja": "保留",
+                        "tr": "Ertelendi",
+                        "vi": "Đã hoãn",
+                        "it": "Rimandata",
+                        "fa": "به‌تعویق‌افتاده",
+                        "pl": "Odroczone",
+                        "uk": "Відкладено",
+                        "nl": "Uitgesteld",
+                        "sv": "Uppskjuten",
+                        "cs": "Odloženo",
+                        "el": "Αναβλήθηκε"
+                      },
+                      "action": {
+                        "fn": "setFilter",
+                        "args": {
+                          "table": "decisions",
+                          "column": "status",
+                          "value": "deferred"
+                        }
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "label": {
+                        "en": "All",
+                        "ko": "전체",
+                        "zh": "全部",
+                        "hi": "सभी",
+                        "es": "Todo",
+                        "fr": "Tout",
+                        "ar": "الكل",
+                        "pt": "Todas",
+                        "ru": "Все",
+                        "de": "Alle",
+                        "ja": "すべて",
+                        "tr": "Tümü",
+                        "vi": "Tất cả",
+                        "it": "Tutte",
+                        "fa": "همه",
+                        "pl": "Wszystkie",
+                        "uk": "Усі",
+                        "nl": "Alle",
+                        "sv": "Alla",
+                        "cs": "Vše",
+                        "el": "Όλα"
+                      },
+                      "action": {
+                        "fn": "setFilter",
+                        "args": {
+                          "table": "decisions",
+                          "column": "status",
+                          "value": ""
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "cards",
+                  "table": "decisions",
+                  "groupBy": "status",
+                  "groupOrder": [
+                    "open",
+                    "deferred",
+                    "answered"
+                  ],
+                  "title": "title",
+                  "subtitle": "context",
+                  "tags": [
+                    {
+                      "column": "priority",
+                      "colors": {
+                        "high": "red",
+                        "normal": "amber",
+                        "low": "gray"
+                      }
+                    },
+                    {
+                      "column": "kind",
+                      "colors": {
+                        "question": "blue",
+                        "decision": "purple"
+                      }
+                    }
+                  ],
+                  "collapsible": true,
+                  "recent": 5,
+                  "expandFields": [
+                    {
+                      "column": "context",
+                      "label": "Context"
+                    },
+                    {
+                      "column": "options",
+                      "label": "Options"
+                    },
+                    {
+                      "column": "answer",
+                      "label": "Your answer"
+                    },
+                    {
+                      "column": "related",
+                      "label": "Related tasks"
+                    }
+                  ],
+                  "open": "Open / answer",
+                  "action": {
+                    "fn": "editRow"
+                  },
+                  "search": true
+                },
+                {
+                  "type": "button",
+                  "label": {
+                    "en": "Add",
+                    "ko": "추가",
+                    "zh": "添加",
+                    "hi": "जोड़ें",
+                    "es": "Añadir",
+                    "fr": "Ajouter",
+                    "ar": "إضافة",
+                    "pt": "Adicionar",
+                    "ru": "Добавить",
+                    "de": "Hinzufügen",
+                    "ja": "追加",
+                    "tr": "Ekle",
+                    "vi": "Thêm",
+                    "it": "Aggiungi",
+                    "fa": "افزودن",
+                    "pl": "Dodaj",
+                    "uk": "Додати",
+                    "nl": "Toevoegen",
+                    "sv": "Lägg till",
+                    "cs": "Přidat",
+                    "el": "Προσθήκη"
+                  },
+                  "icon": "add",
+                  "action": {
+                    "fn": "addRow",
+                    "args": {
+                      "table": "decisions",
+                      "values": {
+                        "status": "open",
+                        "kind": "question"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "label": "Designs",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "cards",
+                  "table": "designs",
+                  "groupBy": "kind",
+                  "groupOrder": [
+                    "architecture",
+                    "product",
+                    "project"
+                  ],
+                  "title": "title",
+                  "subtitle": "summary",
+                  "tags": [
+                    {
+                      "column": "kind",
+                      "colors": {
+                        "architecture": "purple",
+                        "product": "pink",
+                        "project": "teal"
+                      }
+                    }
+                  ],
+                  "open": "Open design",
+                  "action": {
+                    "fn": "editRow"
+                  },
+                  "search": true
+                }
+              ]
+            }
+          },
+          {
+            "label": "Graph",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "canvas",
+                  "layout": "graph",
+                  "nodesTable": "tasks",
+                  "labelColumn": "title",
+                  "laneColumn": "track",
+                  "laneOrder": [
+                    "engine",
+                    "apps",
+                    "sync",
+                    "product"
+                  ],
+                  "milestoneColumn": "phase",
+                  "milestoneOrder": [
+                    "past",
+                    "current",
+                    "future"
+                  ],
+                  "colorColumn": "phase",
+                  "colors": {
+                    "future": "blue",
+                    "current": "amber",
+                    "past": "gray"
+                  },
+                  "edgesTable": "links",
+                  "fromColumn": "from",
+                  "toColumn": "to",
+                  "colGap": 240,
+                  "laneGap": 130,
+                  "cellStack": 66,
+                  "marginX": 110,
+                  "marginY": 60,
+                  "fillPhone": true,
+                  "action": {
+                    "fn": "editRow"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "table": {
+      "title": {
+        "en": "Table",
+        "ko": "테이블",
+        "zh": "表格",
+        "hi": "तालिका",
+        "es": "Tabla",
+        "fr": "Tableau",
+        "ar": "الجدول",
+        "pt": "Tabela",
+        "ru": "Таблица",
+        "de": "Tabelle",
+        "ja": "テーブル",
+        "tr": "Tablo",
+        "vi": "Bảng",
+        "it": "Tabella",
+        "fa": "جدول",
+        "pl": "Tabela",
+        "uk": "Таблиця",
+        "nl": "Tabel",
+        "sv": "Tabell",
+        "cs": "Tabulka",
+        "el": "Πίνακας"
+      },
+      "body": {
+        "type": "segments",
+        "segments": [
+          {
+            "label": "Table",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "table",
+                  "table": "tasks",
+                  "overflow": "cards",
+                  "columns": [
+                    "title",
+                    "phase",
+                    "priority",
+                    "track",
+                    "units",
+                    "labels",
+                    "createdAt",
+                    "updatedAt"
+                  ],
+                  "fillPhone": true,
+                  "action": {
+                    "fn": "editRow"
+                  }
+                },
+                {
+                  "type": "button",
+                  "label": {
+                    "en": "New task",
+                    "ko": "새 작업",
+                    "zh": "新任务",
+                    "hi": "नया कार्य",
+                    "es": "Nueva tarea",
+                    "fr": "Nouvelle tâche",
+                    "ar": "مهمة جديدة",
+                    "pt": "Nova tarefa",
+                    "ru": "Новая задача",
+                    "de": "Neue Aufgabe",
+                    "ja": "新規タスク",
+                    "tr": "Yeni görev",
+                    "vi": "Nhiệm vụ mới",
+                    "it": "Nuova attività",
+                    "fa": "وظیفه جدید",
+                    "pl": "Nowe zadanie",
+                    "uk": "Нове завдання",
+                    "nl": "Nieuwe taak",
+                    "sv": "Ny uppgift",
+                    "cs": "Nový úkol",
+                    "el": "Νέα εργασία"
+                  },
+                  "icon": "add",
+                  "action": {
+                    "fn": "addRow",
+                    "args": {
+                      "table": "tasks",
+                      "values": {
+                        "phase": "future",
+                        "priority": "normal"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "label": "Data",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "text",
+                  "value": {
+                    "en": "Browse any table",
+                    "ko": "모든 테이블 탐색",
+                    "zh": "浏览任意表格",
+                    "hi": "किसी भी तालिका को ब्राउज़ करें",
+                    "es": "Explora cualquier tabla",
+                    "fr": "Parcourir n'importe quel tableau",
+                    "ar": "تصفح أي جدول",
+                    "pt": "Navegue por qualquer tabela",
+                    "ru": "Просмотр любой таблицы",
+                    "de": "Beliebige Tabelle durchsuchen",
+                    "ja": "任意のテーブルを表示",
+                    "tr": "Herhangi bir tabloya göz atın",
+                    "vi": "Duyệt bất kỳ bảng nào",
+                    "it": "Sfoglia qualsiasi tabella",
+                    "fa": "مرور هر جدول",
+                    "pl": "Przeglądaj dowolną tabelę",
+                    "uk": "Перегляньте будь-яку таблицю",
+                    "nl": "Blader door elke tabel",
+                    "sv": "Bläddra i valfri tabell",
+                    "cs": "Procházet libovolnou tabulku",
+                    "el": "Περιήγηση σε οποιονδήποτε πίνακα"
+                  },
+                  "style": "title"
+                },
+                {
+                  "type": "dataview",
+                  "overflow": "cards"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "worklog": {
+      "title": {
+        "en": "Worklog",
+        "ko": "작업 기록",
+        "zh": "工作日志",
+        "hi": "वर्कलॉग",
+        "es": "Registro de trabajo",
+        "fr": "Journal de travail",
+        "ar": "سجل العمل",
+        "pt": "Registro de trabalho",
+        "ru": "Журнал работы",
+        "de": "Arbeitsprotokoll",
+        "ja": "作業ログ",
+        "tr": "Çalışma günlüğü",
+        "vi": "Nhật ký công việc",
+        "it": "Registro lavori",
+        "fa": "گزارش کار",
+        "pl": "Dziennik pracy",
+        "uk": "Журнал роботи",
+        "nl": "Werklog",
+        "sv": "Arbetslogg",
+        "cs": "Deník práce",
+        "el": "Αρχείο εργασίας"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "What I did each run, newest first. Each entry links the tasks it touched.",
+              "ko": "각 실행에서 수행한 작업, 최신순. 각 항목은 관련된 작업과 연결됩니다.",
+              "zh": "每次运行所做的事，最新在前。每条记录都链接到相关任务。",
+              "hi": "मैंने हर रन में क्या किया, नवीनतम पहले। प्रत्येक प्रविष्टि उन कार्यों को लिंक करती है जिन्हें उसने छुआ।",
+              "es": "Lo que hice en cada ejecución, más reciente primero. Cada entrada enlaza las tareas que tocó.",
+              "fr": "Ce que j'ai fait à chaque exécution, le plus récent en premier. Chaque entrée relie les tâches concernées.",
+              "ar": "ما قمت به في كل تشغيل، الأحدث أولًا. يربط كل إدخال بالمهام التي مسّها.",
+              "pt": "O que fiz em cada execução, mais recente primeiro. Cada entrada vincula as tarefas que tocou.",
+              "ru": "Что я сделал в каждом запуске, сначала новые. Каждая запись связана с затронутыми задачами.",
+              "de": "Was ich bei jedem Durchlauf getan habe, neueste zuerst. Jeder Eintrag verlinkt die berührten Aufgaben.",
+              "ja": "各実行で行ったこと、新しい順。各エントリは関わったタスクにリンクしています。",
+              "tr": "Her çalıştırmada ne yaptığım, en yeniden eskiye. Her giriş dokunduğu görevlere bağlantı verir.",
+              "vi": "Những gì tôi đã làm trong mỗi lần chạy, mới nhất trước. Mỗi mục liên kết với các nhiệm vụ đã đụng tới.",
+              "it": "Cosa ho fatto in ogni esecuzione, dalla più recente. Ogni voce collega le attività toccate.",
+              "fa": "کاری که در هر اجرا انجام دادم، جدیدترین در ابتدا. هر ورودی به وظایفی که لمس کرده لینک دارد.",
+              "pl": "Co zrobiłem podczas każdego przebiegu, od najnowszych. Każdy wpis linkuje zadania, których dotyczył.",
+              "uk": "Що я робив під час кожного запуску, спочатку найновіші. Кожен запис пов'язаний із завданнями, яких стосувався.",
+              "nl": "Wat ik bij elke run deed, nieuwste eerst. Elke vermelding koppelt de taken die het raakte.",
+              "sv": "Vad jag gjorde varje körning, senaste först. Varje post länkar de uppgifter den rörde.",
+              "cs": "Co jsem udělal při každém běhu, nejnovější první. Každý záznam odkazuje na úkoly, kterých se týkal.",
+              "el": "Τι έκανα σε κάθε εκτέλεση, τα πιο πρόσφατα πρώτα. Κάθε καταχώριση συνδέει τις εργασίες που άγγιξε."
+            }
+          },
+          {
+            "type": "cards",
+            "table": "worklog",
+            "sort": {
+              "column": "date",
+              "dir": "desc"
+            },
+            "title": "summary",
+            "subtitle": "detail",
+            "tags": [
+              {
+                "column": "date"
+              },
+              {
+                "column": "kind",
+                "colors": {
+                  "added": "green",
+                  "changed": "blue",
+                  "fixed": "amber",
+                  "decided": "purple",
+                  "note": "gray"
+                }
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              {
+                "column": "date",
+                "label": "Date"
+              },
+              {
+                "column": "kind",
+                "label": "Kind"
+              },
+              {
+                "column": "tasks",
+                "label": "Tasks"
+              },
+              {
+                "column": "detail",
+                "label": "Detail"
+              }
+            ],
+            "open": "Open",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

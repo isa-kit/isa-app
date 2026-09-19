@@ -1,0 +1,13 @@
+{
+  "id": "layout_demo",
+  "name": "Layout demo",
+  "category": "Developer",
+  "description": "A dashboard used to demo the engine's layout widgets.",
+  "hidden": true,
+  "icon": "dashboard",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_layout_demo"
+  },
+  "seedVersion": "2026-06-15.1"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "crypto",
+  "name": "Crypto",
+  "category": "Finance",
+  "description": "Live crypto prices, price history and the full market table.",
+  "hidden": true,
+  "icon": "currency_bitcoin",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_crypto"
+  },
+  "seedVersion": "2026-06-09.1"
+}

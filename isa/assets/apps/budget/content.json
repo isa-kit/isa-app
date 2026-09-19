@@ -1,0 +1,17 @@
+{
+  "transactions": [
+    { "id": "tx1", "date": "2026-06-02", "month": "2026-06", "amount": 84.20, "type": "expense", "category": "groceries", "payee": "Sample — Market", "account": "Checking", "note": "Sample row — delete me" },
+    { "id": "tx2", "date": "2026-06-05", "month": "2026-06", "amount": 32.50, "type": "expense", "category": "dining", "payee": "Sample — Lunch", "account": "Checking", "note": "Sample row — delete me" },
+    { "id": "tx3", "date": "2026-06-08", "month": "2026-06", "amount": 15.00, "type": "expense", "category": "transport", "payee": "Sample — Transit card", "account": "Cash", "note": "Sample row — delete me" },
+    { "id": "tx4", "date": "2026-06-01", "month": "2026-06", "amount": 2500.00, "type": "income", "category": "salary", "payee": "Sample — Employer", "account": "Checking", "note": "Sample row — delete me" }
+  ],
+  "budgets": [
+    { "id": "b1", "category": "groceries", "limit": 400 },
+    { "id": "b2", "category": "dining", "limit": 150 },
+    { "id": "b3", "category": "transport", "limit": 100 }
+  ],
+  "accounts": [
+    { "id": "a1", "name": "Checking", "kind": "checking", "balance": 0 },
+    { "id": "a2", "name": "Cash", "kind": "cash", "balance": 0 }
+  ]
+}

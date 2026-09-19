@@ -1,0 +1,14 @@
+{
+  "id": "gather",
+  "name": "Gather",
+  "category": "Life",
+  "description": "Group chats, a shared calendar, people and spaces.",
+  "hidden": true,
+  "icon": "diversity_3",
+  "color": "purple",
+  "seedVersion": "1",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_gather"
+  }
+}

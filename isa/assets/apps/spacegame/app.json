@@ -1,0 +1,12 @@
+{
+  "id": "spacegame",
+  "name": "Tetherfield",
+  "category": "Games",
+  "description": "Tetherfield: a space game played on a tether.",
+  "icon": "rocket_launch",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_spacegame"
+  },
+  "seedVersion": "2026-07-05.1.l10n-int-0903"
+}
