@@ -1,0 +1,151 @@
+{
+  "pieces": [
+    {
+      "id": "t1",
+      "label": "1",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "t2",
+      "label": "2",
+      "x": 1,
+      "y": 0
+    },
+    {
+      "id": "t3",
+      "label": "3",
+      "x": 2,
+      "y": 0
+    },
+    {
+      "id": "t4",
+      "label": "4",
+      "x": 3,
+      "y": 0
+    },
+    {
+      "id": "t5",
+      "label": "5",
+      "x": 1,
+      "y": 1
+    },
+    {
+      "id": "t6",
+      "label": "6",
+      "x": 1,
+      "y": 2
+    },
+    {
+      "id": "t7",
+      "label": "7",
+      "x": 2,
+      "y": 1
+    },
+    {
+      "id": "t8",
+      "label": "8",
+      "x": 3,
+      "y": 1
+    },
+    {
+      "id": "t9",
+      "label": "9",
+      "x": 0,
+      "y": 2
+    },
+    {
+      "id": "t10",
+      "label": "10",
+      "x": 2,
+      "y": 2
+    },
+    {
+      "id": "t11",
+      "label": "11",
+      "x": 2,
+      "y": 3
+    },
+    {
+      "id": "t12",
+      "label": "12",
+      "x": 3,
+      "y": 2
+    },
+    {
+      "id": "t13",
+      "label": "13",
+      "x": 0,
+      "y": 3
+    },
+    {
+      "id": "t14",
+      "label": "14",
+      "x": 1,
+      "y": 3
+    },
+    {
+      "id": "t15",
+      "label": "15",
+      "x": 3,
+      "y": 3
+    }
+  ],
+  "pattern": [
+    {
+      "id": "g0",
+      "label": "A",
+      "kind": "blue",
+      "x": 5,
+      "y": 0,
+      "targetX": 0,
+      "targetY": 2
+    },
+    {
+      "id": "g1",
+      "label": "B",
+      "kind": "green",
+      "x": 0,
+      "y": 1,
+      "targetX": 1,
+      "targetY": 2
+    },
+    {
+      "id": "g2",
+      "label": "C",
+      "kind": "amber",
+      "x": 3,
+      "y": 0,
+      "targetX": 2,
+      "targetY": 2
+    },
+    {
+      "id": "g3",
+      "label": "D",
+      "kind": "teal",
+      "x": 1,
+      "y": 0,
+      "targetX": 3,
+      "targetY": 2
+    },
+    {
+      "id": "g4",
+      "label": "E",
+      "kind": "purple",
+      "x": 4,
+      "y": 1,
+      "targetX": 4,
+      "targetY": 2
+    },
+    {
+      "id": "g5",
+      "label": "F",
+      "kind": "pink",
+      "x": 2,
+      "y": 1,
+      "targetX": 5,
+      "targetY": 2
+    }
+  ],
+  "results": []
+}

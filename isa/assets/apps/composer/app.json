@@ -1,0 +1,22 @@
+{
+  "id": "composer",
+  "name": "Moku",
+  "category": "Creative",
+  "description": "Sketch app screens as mockups on a board.",
+  "icon": "dashboard_customize",
+  "color": "#3F51B5",
+  "hidden": false,
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_composer"
+  },
+  "seedVersion": "2026-09-12.moku-consolidated-and-architecture-scope+wikipick-seedmap-proposal-0905+boardhistory-mirror-stamp-0915+frame-carried-node-json-0917+mokufid2-0919-hifi-tranche2-kinds+mokunavarc-0919-item-links+mirrorstruct-0920-block-node-columns+moku-sample-data-0923+moku-part-selection-0923",
+  "seedContent": "initial-only",
+  "durableSettings": [
+    "_composerNativeWikipickFramesV1",
+    "_composerWikipickSeedMapProposalV1",
+    "_composerArchitectureScopeProposalV1",
+    "_composerWikipickMirrorV1",
+    "_composerIsaHostBoardV1"
+  ]
+}

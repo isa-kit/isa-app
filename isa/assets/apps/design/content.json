@@ -1,0 +1,54 @@
+{
+  "boxes": [
+    { "id": "w_frame", "label": "Habits screen", "kind": "frame", "note": "The home screen of the example app.", "x": 40, "y": 40, "w": 260, "h": 440 },
+    { "id": "w_nav", "label": "Habits", "kind": "nav", "x": 60, "y": 70, "w": 220, "h": 40 },
+    { "id": "w_title", "label": "Today", "kind": "text", "x": 60, "y": 130, "w": 200, "h": 30 },
+    { "id": "w_email", "label": "Your habits (list)", "kind": "list", "note": "One row per habit; tap to check off today.", "x": 60, "y": 175, "w": 220, "h": 180 },
+    { "id": "w_pass", "label": "Streak: 5 days", "kind": "text", "x": 60, "y": 370, "w": 200, "h": 28 },
+    { "id": "w_signin", "label": "Add habit", "kind": "button", "x": 60, "y": 410, "w": 220, "h": 48 },
+    { "id": "w_forgot", "label": "Settings", "kind": "text", "x": 200, "y": 78, "w": 80, "h": 24 }
+  ],
+  "links": [],
+  "flow_nodes": [
+    { "id": "f_start", "label": "Open app", "kind": "start", "x": 80, "y": 60, "w": 150, "h": 44 },
+    { "id": "f_enter", "label": "See today's habits", "kind": "process", "x": 80, "y": 160, "w": 170, "h": 48 },
+    { "id": "f_valid", "label": "Done today?", "kind": "decision", "x": 85, "y": 270, "w": 150, "h": 48 },
+    { "id": "f_welcome", "label": "Streak +1", "kind": "end", "x": 340, "y": 270, "w": 150, "h": 44 },
+    { "id": "f_error", "label": "Nudge / reminder", "kind": "process", "x": 80, "y": 380, "w": 170, "h": 48 }
+  ],
+  "flow_edges": [
+    { "id": "fe1", "from": "f_start", "to": "f_enter", "label": "" },
+    { "id": "fe2", "from": "f_enter", "to": "f_valid", "label": "" },
+    { "id": "fe3", "from": "f_valid", "to": "f_welcome", "label": "yes" },
+    { "id": "fe4", "from": "f_valid", "to": "f_error", "label": "no" },
+    { "id": "fe5", "from": "f_error", "to": "f_enter", "label": "later" }
+  ],
+  "brief": [
+    {
+      "id": "brief",
+      "type": "new",
+      "target": "",
+      "title": "Habit tracker",
+      "summary": "A simple daily habit tracker: add a few habits, check them off each day, and watch your streak grow. This is a worked example — review the tabs, then edit it or tap Prepare for Claude to send your own."
+    }
+  ],
+  "features": [
+    { "id": "ft_example", "title": "Add a habit", "kind": "feature", "detail": "Name it and choose how often (daily or weekly).", "target": "Habits screen", "priority": "must" },
+    { "id": "ft_example2", "title": "Check off today", "kind": "feature", "detail": "Tap a habit in the list to mark it done for today.", "target": "Habits screen", "priority": "must" },
+    { "id": "ft_streak", "title": "Streak counter", "kind": "feature", "detail": "Show how many days in a row you've kept it up.", "target": "Habits screen", "priority": "should" },
+    { "id": "ft_remind", "title": "Daily reminder", "kind": "feature", "detail": "An optional notification to nudge you each day.", "target": "whole app", "priority": "nice" }
+  ],
+  "data_model": [
+    { "id": "dm_user", "entity": "habit", "fields": "name, schedule, color", "relationships": "has many check-ins", "notes": "the thing you're tracking" },
+    { "id": "dm_checkin", "entity": "check_in", "fields": "habitId, date, done", "relationships": "belongs to a habit", "notes": "one per habit per day" }
+  ],
+  "notes": [
+    {
+      "id": "n_howto",
+      "title": "About this example",
+      "body": "This is a preset project to review — a Habit Tracker designed across the tabs. Wireframe = the home screen (a list of habits + an Add button). Flowchart = the daily loop. Relationships = the data (habit + check-in). Brief = what it is, with the features listed. When you like a design like this, the maker can turn it into a real app, or tap Prepare for Claude to hand it to me. Edit anything here freely — it's just a starting point.",
+      "author": "claude"
+    }
+  ],
+  "drawings": []
+}

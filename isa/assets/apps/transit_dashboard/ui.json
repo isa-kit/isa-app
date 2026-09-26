@@ -1,0 +1,22 @@
+{
+  "app": { "title": "Transit dashboard", "primaryColor": "#1b7a4b", "theme": "material" },
+  "nav": [
+    { "id": "open", "label": "Open", "icon": "public", "screen": "open" }
+  ],
+  "screens": {
+    "open": {
+      "title": "Transit dashboard (web)",
+      "body": {
+        "type": "column",
+        "children": [
+          { "type": "text",
+            "value": "The full interactive transit dashboard for Boston — forecasts, agent explorer, cross-filter, fiscal map, and the optimizer. Opens in your browser; no sign-in needed." },
+          { "type": "button", "label": "Open the dashboard", "icon": "open_in_browser",
+            "action": { "fn": "openLink", "args": { "url": "https://urban-planning-dashboard.github.io/transit4/dashboard.html" } } },
+          { "type": "text", "style": "caption",
+            "value": "Public, census-anchored results. Share this with anyone — no account required." }
+        ]
+      }
+    }
+  }
+}

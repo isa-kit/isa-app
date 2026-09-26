@@ -1,0 +1,2041 @@
+{
+  "app": {
+    "languages": ["en", "ko", "zh", "hi", "es", "fr", "ar", "pt", "ru", "de", "ja", "tr", "vi", "it", "fa", "pl", "uk", "nl", "sv", "cs", "el"],
+    "translatable": true,
+    "appDataTools": true,
+    "title": {
+      "en": "Tripboard",
+      "ko": "트립보드",
+      "zh": "Tripboard",
+      "hi": "ट्रिपबोर्ड",
+      "es": "Tripboard",
+      "fr": "Tripboard",
+      "ar": "تريب بورد",
+      "pt": "Tripboard",
+      "ru": "Tripboard",
+      "de": "Tripboard",
+      "ja": "トリップボード",
+      "tr": "Tripboard",
+      "vi": "Tripboard",
+      "it": "Tripboard",
+      "fa": "تریپ‌بورد",
+      "pl": "Tripboard",
+      "uk": "Tripboard",
+      "nl": "Tripboard",
+      "sv": "Tripboard",
+      "cs": "Tripboard",
+      "el": "Tripboard"
+    },
+    "primaryColor": "#C2410C",
+    "theme": "neon"
+  },
+  "nav": [
+    { "id": "start", "label": { "en": "Start here", "ko": "여기서 시작", "zh": "从这里开始", "hi": "यहां से शुरू करें", "es": "Empieza aquí", "fr": "Commencez ici", "ar": "ابدأ هنا", "pt": "Comece aqui", "ru": "Начните здесь", "de": "Hier starten", "ja": "ここから開始", "tr": "Buradan başlayın", "vi": "Bắt đầu tại đây", "it": "Inizia qui", "fa": "از اینجا شروع کنید", "pl": "Zacznij tutaj", "uk": "Почніть тут", "nl": "Begin hier", "sv": "Börja här", "cs": "Začněte zde", "el": "Ξεκινήστε εδώ" }, "icon": "waving_hand", "screen": "start" },
+    { "id": "trip", "label": { "en": "Trip", "ko": "여행", "zh": "行程", "hi": "यात्रा", "es": "Viaje", "fr": "Voyage", "ar": "الرحلة", "pt": "Viagem", "ru": "Поездка", "de": "Reise", "ja": "旅行", "tr": "Seyahat", "vi": "Chuyến đi", "it": "Viaggio", "fa": "سفر", "pl": "Podróż", "uk": "Подорож", "nl": "Reis", "sv": "Resa", "cs": "Cesta", "el": "Ταξίδι" }, "icon": "flight_takeoff", "screen": "trip" },
+    { "id": "week", "label": { "en": "Week", "ko": "주", "zh": "周", "hi": "सप्ताह", "es": "Semana", "fr": "Semaine", "ar": "الأسبوع", "pt": "Semana", "ru": "Неделя", "de": "Woche", "ja": "週", "tr": "Hafta", "vi": "Tuần", "it": "Settimana", "fa": "هفته", "pl": "Tydzień", "uk": "Тиждень", "nl": "Week", "sv": "Vecka", "cs": "Týden", "el": "Εβδομάδα" }, "icon": "view_week", "screen": "week" },
+    { "id": "calendar", "label": { "en": "Calendar", "ko": "캘린더", "zh": "日历", "hi": "कैलेंडर", "es": "Calendario", "fr": "Calendrier", "ar": "التقويم", "pt": "Calendário", "ru": "Календарь", "de": "Kalender", "ja": "カレンダー", "tr": "Takvim", "vi": "Lịch", "it": "Calendario", "fa": "تقویم", "pl": "Kalendarz", "uk": "Календар", "nl": "Kalender", "sv": "Kalender", "cs": "Kalendář", "el": "Ημερολόγιο" }, "icon": "calendar_today", "screen": "calendar" },
+    { "id": "todo", "label": { "en": "Todo", "ko": "할 일", "zh": "待办", "hi": "करने योग्य", "es": "Pendientes", "fr": "À faire", "ar": "المهام", "pt": "A fazer", "ru": "Задачи", "de": "Aufgaben", "ja": "Todo", "tr": "Yapılacaklar", "vi": "Việc cần làm", "it": "Da fare", "fa": "کارها", "pl": "Do zrobienia", "uk": "Справи", "nl": "Te doen", "sv": "Att göra", "cs": "Úkoly", "el": "Εκκρεμότητες" }, "icon": "check_circle", "screen": "todo" },
+    { "id": "packing", "label": { "en": "Packing", "ko": "짐 싸기", "zh": "打包", "hi": "पैकिंग", "es": "Equipaje", "fr": "Bagages", "ar": "التعبئة", "pt": "Bagagem", "ru": "Сборы", "de": "Packen", "ja": "荷造り", "tr": "Paketleme", "vi": "Đóng gói", "it": "Bagagli", "fa": "بسته‌بندی", "pl": "Pakowanie", "uk": "Пакування", "nl": "Inpakken", "sv": "Packning", "cs": "Balení", "el": "Αποσκευές" }, "icon": "luggage", "screen": "packing" },
+    { "id": "map", "label": { "en": "Map", "ko": "지도", "zh": "地图", "hi": "मानचित्र", "es": "Mapa", "fr": "Carte", "ar": "الخريطة", "pt": "Mapa", "ru": "Карта", "de": "Karte", "ja": "地図", "tr": "Harita", "vi": "Bản đồ", "it": "Mappa", "fa": "نقشه", "pl": "Mapa", "uk": "Карта", "nl": "Kaart", "sv": "Karta", "cs": "Mapa", "el": "Χάρτης" }, "icon": "map", "screen": "map" },
+    { "id": "notes", "label": { "en": "Notes", "ko": "메모", "zh": "备注", "hi": "नोट्स", "es": "Notas", "fr": "Notes", "ar": "الملاحظات", "pt": "Notas", "ru": "Заметки", "de": "Notizen", "ja": "メモ", "tr": "Notlar", "vi": "Ghi chú", "it": "Note", "fa": "یادداشت‌ها", "pl": "Notatki", "uk": "Нотатки", "nl": "Notities", "sv": "Anteckningar", "cs": "Poznámky", "el": "Σημειώσεις" }, "icon": "sticky_note_2", "screen": "notes" },
+    { "id": "members", "label": { "en": "Members", "ko": "멤버", "zh": "成员", "hi": "सदस्य", "es": "Miembros", "fr": "Membres", "ar": "الأعضاء", "pt": "Membros", "ru": "Участники", "de": "Mitglieder", "ja": "メンバー", "tr": "Üyeler", "vi": "Thành viên", "it": "Membri", "fa": "اعضا", "pl": "Członkowie", "uk": "Учасники", "nl": "Leden", "sv": "Medlemmar", "cs": "Členové", "el": "Μέλη" }, "icon": "people", "screen": "members" },
+    { "id": "activity", "label": { "en": "Activity", "ko": "활동", "zh": "活动", "hi": "गतिविधि", "es": "Actividad", "fr": "Activité", "ar": "النشاط", "pt": "Atividade", "ru": "Активность", "de": "Aktivität", "ja": "アクティビティ", "tr": "Etkinlik", "vi": "Hoạt động", "it": "Attività", "fa": "فعالیت", "pl": "Aktywność", "uk": "Активність", "nl": "Activiteit", "sv": "Aktivitet", "cs": "Aktivita", "el": "Δραστηριότητα" }, "icon": "history", "screen": "activity" }
+  ],
+  "screens": {
+    "start": {
+      "title": {
+        "en": "Start here",
+        "ko": "여기서 시작",
+        "zh": "从这里开始",
+        "hi": "यहां से शुरू करें",
+        "es": "Empieza aquí",
+        "fr": "Commencez ici",
+        "ar": "ابدأ هنا",
+        "pt": "Comece aqui",
+        "ru": "Начните здесь",
+        "de": "Hier starten",
+        "ja": "ここから開始",
+        "tr": "Buradan başlayın",
+        "vi": "Bắt đầu tại đây",
+        "it": "Inizia qui",
+        "fa": "از اینجا شروع کنید",
+        "pl": "Zacznij tutaj",
+        "uk": "Почніть тут",
+        "nl": "Begin hier",
+        "sv": "Börja här",
+        "cs": "Začněte zde",
+        "el": "Ξεκινήστε εδώ"
+      },
+      "body": {
+        "type": "column",
+        "crossAxis": "start",
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": {
+              "en": "👋 Welcome to Tripboard",
+              "ko": "👋 Tripboard에 오신 것을 환영합니다",
+              "zh": "👋 欢迎使用 Tripboard",
+              "hi": "👋 Tripboard में आपका स्वागत है",
+              "es": "👋 Bienvenido a Tripboard",
+              "fr": "👋 Bienvenue sur Tripboard",
+              "ar": "👋 مرحبًا بك في Tripboard",
+              "pt": "👋 Bem-vindo ao Tripboard",
+              "ru": "👋 Добро пожаловать в Tripboard",
+              "de": "👋 Willkommen bei Tripboard",
+              "ja": "👋 Tripboardへようこそ",
+              "tr": "👋 Tripboard'a hoş geldiniz",
+              "vi": "👋 Chào mừng đến với Tripboard",
+              "it": "👋 Benvenuto su Tripboard",
+              "fa": "👋 به Tripboard خوش آمدید",
+              "pl": "👋 Witamy w Tripboard",
+              "uk": "👋 Ласкаво просимо до Tripboard",
+              "nl": "👋 Welkom bij Tripboard",
+              "sv": "👋 Välkommen till Tripboard",
+              "cs": "👋 Vítejte v Tripboard",
+              "el": "👋 Καλώς ήρθατε στο Tripboard"
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "A quick tour of every view. Tap a button below to jump straight there. Hint: you can always come back here from the Start here tab.",
+              "ko": "모든 화면을 빠르게 둘러봅니다. 아래 버튼을 눌러 바로 이동하세요. 힌트: '여기서 시작' 탭에서 언제든 다시 돌아올 수 있습니다.",
+              "zh": "快速浏览每个视图。点击下方按钮直接跳转。提示：你随时可以从“从这里开始”标签页返回。",
+              "hi": "हर दृश्य का त्वरित दौरा। सीधे वहां जाने के लिए नीचे बटन टैप करें। संकेत: आप हमेशा यहां से शुरू करें टैब से यहां वापस आ सकते हैं।",
+              "es": "Un recorrido rápido por cada vista. Toca un botón abajo para ir directo allí. Consejo: siempre puedes volver aquí desde la pestaña Empieza aquí.",
+              "fr": "Un tour rapide de chaque vue. Touchez un bouton ci-dessous pour y accéder directement. Astuce : vous pouvez toujours revenir ici depuis l'onglet Commencez ici.",
+              "ar": "جولة سريعة على كل عرض. انقر على زر أدناه للانتقال مباشرة إليه. تلميح: يمكنك دائمًا العودة إلى هنا من تبويب ابدأ هنا.",
+              "pt": "Um tour rápido por cada visualização. Toque em um botão abaixo para ir direto até lá. Dica: você sempre pode voltar aqui pela aba Comece aqui.",
+              "ru": "Быстрый обзор каждого экрана. Нажмите кнопку ниже, чтобы перейти прямо туда. Подсказка: вы всегда можете вернуться сюда со вкладки «Начните здесь».",
+              "de": "Ein schneller Rundgang durch jede Ansicht. Tippe unten auf einen Button, um direkt dorthin zu springen. Tipp: Du kannst jederzeit über den Tab Hier starten hierher zurückkehren.",
+              "ja": "すべてのビューを素早く見て回りましょう。下のボタンをタップして直接移動します。ヒント: 「ここから開始」タブからいつでもここに戻れます。",
+              "tr": "Her görünümün hızlı bir turu. Doğrudan oraya gitmek için aşağıdaki bir düğmeye dokunun. İpucu: Buradan başlayın sekmesinden her zaman buraya dönebilirsiniz.",
+              "vi": "Một chuyến tham quan nhanh mọi chế độ xem. Chạm vào nút bên dưới để đi thẳng đến đó. Mẹo: bạn luôn có thể quay lại đây từ tab Bắt đầu tại đây.",
+              "it": "Un rapido tour di ogni vista. Tocca un pulsante qui sotto per andare direttamente lì. Suggerimento: puoi sempre tornare qui dalla scheda Inizia qui.",
+              "fa": "یک مرور سریع بر همه نماها. برای رفتن مستقیم به آنجا روی دکمه زیر ضربه بزنید. نکته: همیشه می‌توانید از تب از اینجا شروع کنید به اینجا برگردید.",
+              "pl": "Szybki przegląd każdego widoku. Dotknij przycisku poniżej, aby przejść tam bezpośrednio. Wskazówka: zawsze możesz tu wrócić z karty Zacznij tutaj.",
+              "uk": "Швидкий огляд кожного екрана. Торкніться кнопки нижче, щоб перейти прямо туди. Порада: ви завжди можете повернутися сюди з вкладки «Почніть тут».",
+              "nl": "Een snelle rondleiding langs elke weergave. Tik op een knop hieronder om er direct naartoe te gaan. Tip: je kunt altijd hier terugkomen via het tabblad Begin hier.",
+              "sv": "En snabb rundtur genom varje vy. Tryck på en knapp nedan för att hoppa direkt dit. Tips: du kan alltid komma tillbaka hit från fliken Börja här.",
+              "cs": "Rychlá prohlídka každého zobrazení. Klepnutím na tlačítko níže přejdete přímo tam. Tip: sem se vždy můžete vrátit z karty Začněte zde.",
+              "el": "Μια γρήγορη περιήγηση σε κάθε προβολή. Πατήστε ένα κουμπί παρακάτω για να μεταβείτε απευθείας εκεί. Συμβουλή: μπορείτε πάντα να επιστρέψετε εδώ από την καρτέλα Ξεκινήστε εδώ."
+            }
+          },
+          {
+            "type": "card",
+            "padding": 16,
+            "radius": 12,
+            "child": {
+              "type": "column",
+              "children": [
+                { "type": "row", "children": [
+                  { "type": "text", "style": "display", "value": "✈️" },
+                  { "type": "text", "style": "title", "value": { "en": "Trip — the big picture", "ko": "여행 — 전체 개요", "zh": "行程 — 全局", "hi": "यात्रा — बड़ी तस्वीर", "es": "Viaje: el panorama general", "fr": "Voyage — la vue d'ensemble", "ar": "الرحلة — الصورة الكبيرة", "pt": "Viagem — o panorama geral", "ru": "Поездка — общая картина", "de": "Reise — das Gesamtbild", "ja": "旅行 — 全体像", "tr": "Seyahat — genel bakış", "vi": "Chuyến đi — bức tranh toàn cảnh", "it": "Viaggio — il quadro generale", "fa": "سفر — تصویر کلی", "pl": "Podróż — ogólny obraz", "uk": "Подорож — загальна картина", "nl": "Reis — het grote geheel", "sv": "Resa — helhetsbilden", "cs": "Cesta — celkový přehled", "el": "Ταξίδι — η μεγάλη εικόνα" } }
+                ] },
+                { "type": "text", "style": "body", "value": { "en": "See the trip's name and notes, and share it with your travel companions.", "ko": "여행 이름과 메모를 보고 동행자와 공유하세요.", "zh": "查看行程名称和备注，并与旅伴分享。", "hi": "यात्रा का नाम और नोट्स देखें, और इसे अपने यात्रा साथियों के साथ साझा करें।", "es": "Consulta el nombre y las notas del viaje, y compártelo con tus compañeros de viaje.", "fr": "Consultez le nom et les notes du voyage, et partagez-le avec vos compagnons de voyage.", "ar": "شاهد اسم الرحلة وملاحظاتها، وشاركها مع رفاق سفرك.", "pt": "Veja o nome e as notas da viagem, e compartilhe-a com seus companheiros de viagem.", "ru": "Посмотрите название поездки и заметки, поделитесь ей с попутчиками.", "de": "Sieh dir den Namen und die Notizen der Reise an und teile sie mit deinen Reisebegleitern.", "ja": "旅行の名前とメモを確認し、旅の仲間と共有しましょう。", "tr": "Seyahatin adını ve notlarını görün ve seyahat arkadaşlarınızla paylaşın.", "vi": "Xem tên và ghi chú của chuyến đi, và chia sẻ nó với bạn đồng hành.", "it": "Guarda il nome e le note del viaggio, e condividilo con i tuoi compagni di viaggio.", "fa": "نام و یادداشت‌های سفر را ببینید و آن را با همراهان سفرتان به اشتراک بگذارید.", "pl": "Zobacz nazwę i notatki podróży oraz udostępnij ją swoim towarzyszom podróży.", "uk": "Перегляньте назву та примітки подорожі й поділіться нею з попутниками.", "nl": "Bekijk de naam en notities van de reis en deel deze met je reisgenoten.", "sv": "Se resans namn och anteckningar, och dela den med dina resekamrater.", "cs": "Podívejte se na název a poznámky cesty a sdílejte ji se svými cestovními společníky.", "el": "Δείτε το όνομα και τις σημειώσεις του ταξιδιού, και μοιραστείτε το με τους συνταξιδιώτες σας." } },
+                { "type": "text", "style": "caption", "value": { "en": "Hint: tap \"Share this trip\" to invite Ana and Sam.", "ko": "힌트: \"이 여행 공유\"를 눌러 Ana와 Sam을 초대하세요.", "zh": "提示：点击“分享此行程”来邀请 Ana 和 Sam。", "hi": "संकेत: Ana और Sam को आमंत्रित करने के लिए \"इस यात्रा को साझा करें\" पर टैप करें।", "es": "Consejo: toca \"Compartir este viaje\" para invitar a Ana y Sam.", "fr": "Astuce : touchez « Partager ce voyage » pour inviter Ana et Sam.", "ar": "تلميح: انقر على \"مشاركة هذه الرحلة\" لدعوة Ana و Sam.", "pt": "Dica: toque em \"Compartilhar esta viagem\" para convidar Ana e Sam.", "ru": "Подсказка: нажмите «Поделиться поездкой», чтобы пригласить Ana и Sam.", "de": "Tipp: Tippe auf „Diese Reise teilen“, um Ana und Sam einzuladen.", "ja": "ヒント: 「この旅行を共有」をタップしてAnaとSamを招待しましょう。", "tr": "İpucu: Ana ve Sam'i davet etmek için \"Bu seyahati paylaş\"a dokunun.", "vi": "Mẹo: chạm \"Chia sẻ chuyến đi này\" để mời Ana và Sam.", "it": "Suggerimento: tocca \"Condividi questo viaggio\" per invitare Ana e Sam.", "fa": "نکته: برای دعوت از Ana و Sam روی «این سفر را به اشتراک بگذار» ضربه بزنید.", "pl": "Wskazówka: dotknij \"Udostępnij tę podróż\", aby zaprosić Anę i Sama.", "uk": "Порада: торкніться «Поділитися цією подорожжю», щоб запросити Ану і Сема.", "nl": "Tip: tik op \"Deel deze reis\" om Ana en Sam uit te nodigen.", "sv": "Tips: tryck på \"Dela den här resan\" för att bjuda in Ana och Sam.", "cs": "Tip: klepněte na „Sdílet tuto cestu“ a pozvěte Anu a Sama.", "el": "Συμβουλή: πατήστε «Κοινοποίηση αυτού του ταξιδιού» για να προσκαλέσετε την Ana και τον Sam." } },
+                { "type": "button", "label": { "en": "Open the Trip screen", "ko": "여행 화면 열기", "zh": "打开行程屏幕", "hi": "यात्रा स्क्रीन खोलें", "es": "Abrir la pantalla de viaje", "fr": "Ouvrir l'écran Voyage", "ar": "فتح شاشة الرحلة", "pt": "Abrir a tela de viagem", "ru": "Открыть экран поездки", "de": "Reise-Bildschirm öffnen", "ja": "旅行画面を開く", "tr": "Seyahat ekranını aç", "vi": "Mở màn hình Chuyến đi", "it": "Apri la schermata Viaggio", "fa": "باز کردن صفحه سفر", "pl": "Otwórz ekran Podróż", "uk": "Відкрити екран подорожі", "nl": "Reisscherm openen", "sv": "Öppna resskärmen", "cs": "Otevřít obrazovku Cesta", "el": "Άνοιγμα οθόνης ταξιδιού" }, "icon": "flight_takeoff",
+                  "action": { "fn": "goto", "args": { "screen": "trip" } } }
+              ]
+            }
+          },
+          {
+            "type": "card",
+            "padding": 16,
+            "radius": 12,
+            "child": {
+              "type": "column",
+              "children": [
+                { "type": "row", "children": [
+                  { "type": "text", "style": "display", "value": "🗓️" },
+                  { "type": "text", "style": "title", "value": { "en": "Week — loose plans", "ko": "주 — 느슨한 계획", "zh": "周 — 松散计划", "hi": "सप्ताह — ढीली योजनाएं", "es": "Semana: planes sueltos", "fr": "Semaine — plans provisoires", "ar": "الأسبوع — خطط غير محددة", "pt": "Semana — planos soltos", "ru": "Неделя — черновые планы", "de": "Woche — lose Pläne", "ja": "週 — 大まかな計画", "tr": "Hafta — gevşek planlar", "vi": "Tuần — kế hoạch chưa cố định", "it": "Settimana — piani provvisori", "fa": "هفته — برنامه‌های کلی", "pl": "Tydzień — luźne plany", "uk": "Тиждень — попередні плани", "nl": "Week — losse plannen", "sv": "Vecka — lösa planer", "cs": "Týden — volné plány", "el": "Εβδομάδα — χαλαρά σχέδια" } }
+                ] },
+                { "type": "text", "style": "body", "value": { "en": "Ideas for each week of the trip, before they have an exact date.", "ko": "정확한 날짜가 정해지기 전, 여행 각 주에 대한 아이디어입니다.", "zh": "行程每周的想法，在确定具体日期之前。", "hi": "यात्रा के हर सप्ताह के लिए विचार, सटीक तारीख तय होने से पहले।", "es": "Ideas para cada semana del viaje, antes de tener una fecha exacta.", "fr": "Idées pour chaque semaine du voyage, avant qu'elles n'aient une date précise.", "ar": "أفكار لكل أسبوع من الرحلة، قبل أن يكون لها تاريخ محدد.", "pt": "Ideias para cada semana da viagem, antes de terem uma data exata.", "ru": "Идеи для каждой недели поездки, до того как у них появится точная дата.", "de": "Ideen für jede Woche der Reise, bevor sie ein genaues Datum haben.", "ja": "旅行の各週のアイデア（正確な日付が決まる前）。", "tr": "Kesin bir tarihi olmadan önce seyahatin her haftası için fikirler.", "vi": "Ý tưởng cho mỗi tuần của chuyến đi, trước khi có ngày cụ thể.", "it": "Idee per ogni settimana del viaggio, prima che abbiano una data precisa.", "fa": "ایده‌هایی برای هر هفته سفر، پیش از آنکه تاریخ دقیقی داشته باشند.", "pl": "Pomysły na każdy tydzień podróży, zanim będą mieć dokładną datę.", "uk": "Ідеї для кожного тижня подорожі, до того як вони отримають точну дату.", "nl": "Ideeën voor elke week van de reis, voordat ze een exacte datum hebben.", "sv": "Idéer för varje vecka av resan, innan de har ett exakt datum.", "cs": "Nápady na každý týden cesty, než dostanou přesné datum.", "el": "Ιδέες για κάθε εβδομάδα του ταξιδιού, πριν αποκτήσουν ακριβή ημερομηνία." } },
+                { "type": "text", "style": "caption", "value": { "en": "Hint: tap \"New plan\" to add one.", "ko": "힌트: \"새 계획\"을 눌러 추가하세요.", "zh": "提示：点击“新计划”添加一个。", "hi": "संकेत: एक जोड़ने के लिए \"नई योजना\" पर टैप करें।", "es": "Consejo: toca \"Nuevo plan\" para añadir uno.", "fr": "Astuce : touchez « Nouveau plan » pour en ajouter un.", "ar": "تلميح: انقر على \"خطة جديدة\" لإضافة واحدة.", "pt": "Dica: toque em \"Novo plano\" para adicionar um.", "ru": "Подсказка: нажмите «Новый план», чтобы добавить.", "de": "Tipp: Tippe auf „Neuer Plan“, um einen hinzuzufügen.", "ja": "ヒント: 「新規プラン」をタップして追加します。", "tr": "İpucu: bir tane eklemek için \"Yeni plan\"a dokunun.", "vi": "Mẹo: chạm \"Kế hoạch mới\" để thêm một cái.", "it": "Suggerimento: tocca \"Nuovo piano\" per aggiungerne uno.", "fa": "نکته: برای افزودن یکی روی «برنامه جدید» ضربه بزنید.", "pl": "Wskazówka: dotknij \"Nowy plan\", aby go dodać.", "uk": "Порада: торкніться «Новий план», щоб додати його.", "nl": "Tip: tik op \"Nieuw plan\" om er een toe te voegen.", "sv": "Tips: tryck på \"Ny plan\" för att lägga till en.", "cs": "Tip: klepněte na „Nový plán“ a přidejte jej.", "el": "Συμβουλή: πατήστε «Νέο σχέδιο» για να προσθέσετε ένα." } },
+                { "type": "button", "label": { "en": "Open the Week board", "ko": "주간 보드 열기", "zh": "打开周看板", "hi": "सप्ताह बोर्ड खोलें", "es": "Abrir el tablero semanal", "fr": "Ouvrir le tableau Semaine", "ar": "فتح لوحة الأسبوع", "pt": "Abrir o quadro semanal", "ru": "Открыть недельную доску", "de": "Wochenboard öffnen", "ja": "週間ボードを開く", "tr": "Hafta panosunu aç", "vi": "Mở bảng Tuần", "it": "Apri la bacheca Settimana", "fa": "باز کردن تخته هفته", "pl": "Otwórz tablicę tygodnia", "uk": "Відкрити тижневу дошку", "nl": "Weekbord openen", "sv": "Öppna veckotavlan", "cs": "Otevřít týdenní nástěnku", "el": "Άνοιγμα πίνακα εβδομάδας" }, "icon": "view_week",
+                  "action": { "fn": "goto", "args": { "screen": "week" } } }
+              ]
+            }
+          },
+          {
+            "type": "card",
+            "padding": 16,
+            "radius": 12,
+            "child": {
+              "type": "column",
+              "children": [
+                { "type": "row", "children": [
+                  { "type": "text", "style": "display", "value": "📅" },
+                  { "type": "text", "style": "title", "value": { "en": "Calendar — dated events", "ko": "캘린더 — 날짜가 지정된 일정", "zh": "日历 — 已定日期的事件", "hi": "कैलेंडर — तारीख वाली घटनाएं", "es": "Calendario: eventos con fecha", "fr": "Calendrier — événements datés", "ar": "التقويم — أحداث محددة التاريخ", "pt": "Calendário — eventos com data", "ru": "Календарь — события с датой", "de": "Kalender — datierte Ereignisse", "ja": "カレンダー — 日付付きイベント", "tr": "Takvim — tarihli etkinlikler", "vi": "Lịch — sự kiện có ngày", "it": "Calendario — eventi datati", "fa": "تقویم — رویدادهای دارای تاریخ", "pl": "Kalendarz — wydarzenia z datą", "uk": "Календар — події з датою", "nl": "Kalender — events met datum", "sv": "Kalender — daterade händelser", "cs": "Kalendář — datované události", "el": "Ημερολόγιο — εκδηλώσεις με ημερομηνία" } }
+                ] },
+                { "type": "text", "style": "body", "value": { "en": "Everything that has an exact date, laid out on a monthly grid.", "ko": "정확한 날짜가 있는 모든 항목을 월별 그리드에 표시합니다.", "zh": "所有已确定日期的项目，都以月历网格形式呈现。", "hi": "सटीक तारीख वाली हर चीज़, मासिक ग्रिड पर व्यवस्थित।", "es": "Todo lo que tiene una fecha exacta, organizado en una cuadrícula mensual.", "fr": "Tout ce qui a une date précise, disposé sur une grille mensuelle.", "ar": "كل ما له تاريخ محدد، معروض في شبكة شهرية.", "pt": "Tudo o que tem uma data exata, disposto em uma grade mensal.", "ru": "Всё, что имеет точную дату, отображено на месячной сетке.", "de": "Alles mit einem genauen Datum, dargestellt in einem Monatsraster.", "ja": "正確な日付があるすべての項目を、月間グリッドで表示します。", "tr": "Kesin bir tarihi olan her şey, aylık bir ızgarada düzenlenir.", "vi": "Mọi thứ có ngày cụ thể, được sắp xếp trên lưới theo tháng.", "it": "Tutto ciò che ha una data precisa, disposto su una griglia mensile.", "fa": "هرچیزی که تاریخ دقیقی دارد، در یک شبکه ماهانه چیده شده است.", "pl": "Wszystko, co ma dokładną datę, ułożone na siatce miesięcznej.", "uk": "Усе, що має точну дату, розташоване на місячній сітці.", "nl": "Alles met een exacte datum, uitgezet op een maandraster.", "sv": "Allt som har ett exakt datum, ordnat i ett månadsrutnät.", "cs": "Vše, co má přesné datum, uspořádané v měsíční mřížce.", "el": "Ό,τι έχει ακριβή ημερομηνία, διατεταγμένο σε μηνιαίο πλέγμα." } },
+                { "type": "text", "style": "caption", "value": { "en": "Hint: tap a day to add an event already dated to that day.", "ko": "힌트: 날짜를 눌러 해당 날짜로 지정된 일정을 추가하세요.", "zh": "提示：点击某一天以添加已定在该天的事件。", "hi": "संकेत: उस दिन के लिए पहले से तारीख वाली घटना जोड़ने के लिए किसी दिन पर टैप करें।", "es": "Consejo: toca un día para añadir un evento ya con esa fecha.", "fr": "Astuce : touchez un jour pour y ajouter un événement déjà daté.", "ar": "تلميح: انقر على يوم لإضافة حدث بتاريخ ذلك اليوم.", "pt": "Dica: toque em um dia para adicionar um evento já com essa data.", "ru": "Подсказка: нажмите на день, чтобы добавить событие с этой датой.", "de": "Tipp: Tippe auf einen Tag, um ein bereits auf diesen Tag datiertes Ereignis hinzuzufügen.", "ja": "ヒント: 日付をタップして、その日付ですでに設定されたイベントを追加します。", "tr": "İpucu: o güne zaten tarihlenmiş bir etkinlik eklemek için bir güne dokunun.", "vi": "Mẹo: chạm vào một ngày để thêm sự kiện đã có ngày đó.", "it": "Suggerimento: tocca un giorno per aggiungere un evento già datato a quel giorno.", "fa": "نکته: برای افزودن رویدادی که از قبل تاریخش همان روز است روی یک روز ضربه بزنید.", "pl": "Wskazówka: dotknij dnia, aby dodać wydarzenie już z tą datą.", "uk": "Порада: торкніться дня, щоб додати подію з цією датою.", "nl": "Tip: tik op een dag om een event met die datum toe te voegen.", "sv": "Tips: tryck på en dag för att lägga till en händelse redan daterad till den dagen.", "cs": "Tip: klepnutím na den přidáte událost s tímto datem.", "el": "Συμβουλή: πατήστε μια ημέρα για να προσθέσετε μια εκδήλωση ήδη με αυτήν την ημερομηνία." } },
+                { "type": "button", "label": { "en": "Open the Calendar", "ko": "캘린더 열기", "zh": "打开日历", "hi": "कैलेंडर खोलें", "es": "Abrir el calendario", "fr": "Ouvrir le calendrier", "ar": "فتح التقويم", "pt": "Abrir o calendário", "ru": "Открыть календарь", "de": "Kalender öffnen", "ja": "カレンダーを開く", "tr": "Takvimi aç", "vi": "Mở Lịch", "it": "Apri il calendario", "fa": "باز کردن تقویم", "pl": "Otwórz kalendarz", "uk": "Відкрити календар", "nl": "Kalender openen", "sv": "Öppna kalendern", "cs": "Otevřít kalendář", "el": "Άνοιγμα ημερολογίου" }, "icon": "calendar_today",
+                  "action": { "fn": "goto", "args": { "screen": "calendar" } } }
+              ]
+            }
+          },
+          {
+            "type": "card",
+            "padding": 16,
+            "radius": 12,
+            "child": {
+              "type": "column",
+              "children": [
+                { "type": "row", "children": [
+                  { "type": "text", "style": "display", "value": "✅" },
+                  { "type": "text", "style": "title", "value": { "en": "Todo — things to do", "ko": "할 일 — 해야 할 일", "zh": "待办 — 需做事项", "hi": "करने योग्य — करने वाले काम", "es": "Pendientes: cosas por hacer", "fr": "À faire — choses à faire", "ar": "المهام — أشياء يجب فعلها", "pt": "A fazer — coisas a fazer", "ru": "Задачи — что нужно сделать", "de": "Aufgaben — zu erledigende Dinge", "ja": "Todo — やるべきこと", "tr": "Yapılacaklar — yapılacak şeyler", "vi": "Việc cần làm — những việc cần làm", "it": "Da fare — cose da fare", "fa": "کارها — کارهایی که باید انجام شوند", "pl": "Do zrobienia — rzeczy do zrobienia", "uk": "Справи — що потрібно зробити", "nl": "Te doen — dingen om te doen", "sv": "Att göra — saker att göra", "cs": "Úkoly — co je třeba udělat", "el": "Εκκρεμότητες — πράγματα που πρέπει να γίνουν" } }
+                ] },
+                { "type": "text", "style": "body", "value": { "en": "A shared checklist for the trip.", "ko": "여행을 위한 공유 체크리스트입니다.", "zh": "行程的共享清单。", "hi": "यात्रा के लिए एक साझा चेकलिस्ट।", "es": "Una lista de verificación compartida para el viaje.", "fr": "Une liste de vérification partagée pour le voyage.", "ar": "قائمة تحقق مشتركة للرحلة.", "pt": "Uma lista de verificação compartilhada para a viagem.", "ru": "Общий чек-лист для поездки.", "de": "Eine gemeinsame Checkliste für die Reise.", "ja": "旅行のための共有チェックリストです。", "tr": "Seyahat için paylaşılan bir kontrol listesi.", "vi": "Danh sách kiểm tra chung cho chuyến đi.", "it": "Un elenco di controllo condiviso per il viaggio.", "fa": "یک چک‌لیست مشترک برای سفر.", "pl": "Wspólna lista kontrolna dla podróży.", "uk": "Спільний чекліст для подорожі.", "nl": "Een gedeelde checklist voor de reis.", "sv": "En delad checklista för resan.", "cs": "Sdílený kontrolní seznam pro cestu.", "el": "Μια κοινόχρηστη λίστα ελέγχου για το ταξίδι." } },
+                { "type": "text", "style": "caption", "value": { "en": "Hint: tap a todo to mark it done.", "ko": "힌트: 할 일을 눌러 완료로 표시하세요.", "zh": "提示：点击待办项以标记为完成。", "hi": "संकेत: पूर्ण के रूप में चिह्नित करने के लिए किसी काम पर टैप करें।", "es": "Consejo: toca una tarea para marcarla como hecha.", "fr": "Astuce : touchez une tâche pour la marquer comme terminée.", "ar": "تلميح: انقر على مهمة لتمييزها كمكتملة.", "pt": "Dica: toque em uma tarefa para marcá-la como concluída.", "ru": "Подсказка: нажмите на задачу, чтобы отметить её выполненной.", "de": "Tipp: Tippe auf eine Aufgabe, um sie als erledigt zu markieren.", "ja": "ヒント: タスクをタップして完了にマークします。", "tr": "İpucu: tamamlandı olarak işaretlemek için bir göreve dokunun.", "vi": "Mẹo: chạm vào một việc để đánh dấu đã hoàn thành.", "it": "Suggerimento: tocca un'attività per contrassegnarla come completata.", "fa": "نکته: برای علامت‌گذاری یک کار به‌عنوان انجام‌شده روی آن ضربه بزنید.", "pl": "Wskazówka: dotknij zadania, aby oznaczyć je jako wykonane.", "uk": "Порада: торкніться справи, щоб позначити її виконаною.", "nl": "Tip: tik op een taak om deze als voltooid te markeren.", "sv": "Tips: tryck på en uppgift för att markera den som klar.", "cs": "Tip: klepnutím na úkol jej označíte jako hotový.", "el": "Συμβουλή: πατήστε μια εκκρεμότητα για να τη σημειώσετε ως ολοκληρωμένη." } },
+                { "type": "button", "label": { "en": "Open the Todo list", "ko": "할 일 목록 열기", "zh": "打开待办列表", "hi": "करने योग्य सूची खोलें", "es": "Abrir la lista de pendientes", "fr": "Ouvrir la liste à faire", "ar": "فتح قائمة المهام", "pt": "Abrir a lista de tarefas", "ru": "Открыть список задач", "de": "Todo-Liste öffnen", "ja": "Todoリストを開く", "tr": "Yapılacaklar listesini aç", "vi": "Mở danh sách việc cần làm", "it": "Apri l'elenco da fare", "fa": "باز کردن فهرست کارها", "pl": "Otwórz listę do zrobienia", "uk": "Відкрити список справ", "nl": "Todo-lijst openen", "sv": "Öppna att göra-listan", "cs": "Otevřít seznam úkolů", "el": "Άνοιγμα λίστας εκκρεμοτήτων" }, "icon": "check_circle",
+                  "action": { "fn": "goto", "args": { "screen": "todo" } } }
+              ]
+            }
+          },
+          {
+            "type": "card",
+            "padding": 16,
+            "radius": 12,
+            "child": {
+              "type": "column",
+              "children": [
+                { "type": "row", "children": [
+                  { "type": "text", "style": "display", "value": "🧳" },
+                  { "type": "text", "style": "title", "value": { "en": "Packing — what to bring", "ko": "짐 싸기 — 챙길 것", "zh": "打包 — 需携带物品", "hi": "पैकिंग — क्या लाना है", "es": "Equipaje: qué llevar", "fr": "Bagages — quoi apporter", "ar": "التعبئة — ماذا تحضر", "pt": "Bagagem — o que levar", "ru": "Сборы — что взять", "de": "Packen — was mitnehmen", "ja": "荷造り — 持っていくもの", "tr": "Paketleme — neler getirilecek", "vi": "Đóng gói — mang theo gì", "it": "Bagagli — cosa portare", "fa": "بسته‌بندی — چه چیزی بیاوریم", "pl": "Pakowanie — co zabrać", "uk": "Пакування — що взяти", "nl": "Inpakken — wat mee te nemen", "sv": "Packning — vad man ska ta med", "cs": "Balení — co si vzít", "el": "Αποσκευές — τι να φέρετε" } }
+                ] },
+                { "type": "text", "style": "body", "value": { "en": "A shared packing list, so nobody forgets the charger.", "ko": "공유 짐 목록으로, 아무도 충전기를 잊지 않도록 합니다.", "zh": "共享打包清单，让谁都不会忘记带充电器。", "hi": "एक साझा पैकिंग सूची, ताकि कोई चार्जर न भूले।", "es": "Una lista de equipaje compartida, para que nadie se olvide del cargador.", "fr": "Une liste de bagages partagée, pour que personne n'oublie le chargeur.", "ar": "قائمة تعبئة مشتركة، حتى لا ينسى أحد الشاحن.", "pt": "Uma lista de bagagem compartilhada, para que ninguém esqueça o carregador.", "ru": "Общий список вещей, чтобы никто не забыл зарядное устройство.", "de": "Eine gemeinsame Packliste, damit niemand das Ladekabel vergisst.", "ja": "共有の荷造りリストで、誰も充電器を忘れないようにします。", "tr": "Şarj cihazını kimsenin unutmaması için paylaşılan bir bavul listesi.", "vi": "Danh sách đóng gói chung, để không ai quên bộ sạc.", "it": "Un elenco bagagli condiviso, così nessuno dimentica il caricabatterie.", "fa": "یک لیست بسته‌بندی مشترک، تا هیچ‌کس شارژر را فراموش نکند.", "pl": "Wspólna lista pakowania, żeby nikt nie zapomniał ładowarki.", "uk": "Спільний список речей, щоб ніхто не забув зарядний пристрій.", "nl": "Een gedeelde paklijst, zodat niemand de oplader vergeet.", "sv": "En delad packlista, så att ingen glömmer laddaren.", "cs": "Sdílený balicí seznam, aby nikdo nezapomněl nabíječku.", "el": "Μια κοινόχρηστη λίστα αποσκευών, ώστε κανείς να μην ξεχάσει τον φορτιστή." } },
+                { "type": "text", "style": "caption", "value": { "en": "Hint: tap an item to mark it packed.", "ko": "힌트: 항목을 눌러 챙김으로 표시하세요.", "zh": "提示：点击某项以标记为已打包。", "hi": "संकेत: पैक के रूप में चिह्नित करने के लिए किसी वस्तु पर टैप करें।", "es": "Consejo: toca un artículo para marcarlo como empacado.", "fr": "Astuce : touchez un article pour le marquer comme emballé.", "ar": "تلميح: انقر على عنصر لتمييزه كمعبأ.", "pt": "Dica: toque em um item para marcá-lo como arrumado.", "ru": "Подсказка: нажмите на предмет, чтобы отметить его собранным.", "de": "Tipp: Tippe auf einen Gegenstand, um ihn als gepackt zu markieren.", "ja": "ヒント: アイテムをタップして荷造り済みにマークします。", "tr": "İpucu: paketlendi olarak işaretlemek için bir öğeye dokunun.", "vi": "Mẹo: chạm vào một mục để đánh dấu đã đóng gói.", "it": "Suggerimento: tocca un elemento per contrassegnarlo come imballato.", "fa": "نکته: برای علامت‌گذاری یک مورد به‌عنوان بسته‌بندی‌شده روی آن ضربه بزنید.", "pl": "Wskazówka: dotknij przedmiotu, aby oznaczyć go jako spakowany.", "uk": "Порада: торкніться предмета, щоб позначити його спакованим.", "nl": "Tip: tik op een item om het als ingepakt te markeren.", "sv": "Tips: tryck på ett föremål för att markera det som packat.", "cs": "Tip: klepnutím na položku ji označíte jako sbalenou.", "el": "Συμβουλή: πατήστε ένα αντικείμενο για να το σημειώσετε ως πακεταρισμένο." } },
+                { "type": "button", "label": { "en": "Open the Packing list", "ko": "짐 목록 열기", "zh": "打开打包清单", "hi": "पैकिंग सूची खोलें", "es": "Abrir la lista de equipaje", "fr": "Ouvrir la liste des bagages", "ar": "فتح قائمة التعبئة", "pt": "Abrir a lista de bagagem", "ru": "Открыть список сборов", "de": "Packliste öffnen", "ja": "荷造りリストを開く", "tr": "Bavul listesini aç", "vi": "Mở danh sách đóng gói", "it": "Apri l'elenco bagagli", "fa": "باز کردن فهرست بسته‌بندی", "pl": "Otwórz listę pakowania", "uk": "Відкрити список речей", "nl": "Paklijst openen", "sv": "Öppna packlistan", "cs": "Otevřít balicí seznam", "el": "Άνοιγμα λίστας αποσκευών" }, "icon": "luggage",
+                  "action": { "fn": "goto", "args": { "screen": "packing" } } }
+              ]
+            }
+          },
+          {
+            "type": "card",
+            "padding": 16,
+            "radius": 12,
+            "child": {
+              "type": "column",
+              "children": [
+                { "type": "row", "children": [
+                  { "type": "text", "style": "display", "value": "🗺️" },
+                  { "type": "text", "style": "title", "value": { "en": "Map — everything with a pin", "ko": "지도 — 핀이 있는 모든 것", "zh": "地图 — 所有带图钉项目", "hi": "मानचित्र — पिन वाली हर चीज़", "es": "Mapa: todo con un marcador", "fr": "Carte — tout ce qui a un repère", "ar": "الخريطة — كل ما له دبوس", "pt": "Mapa — tudo com um marcador", "ru": "Карта — всё с меткой", "de": "Karte — alles mit einer Markierung", "ja": "地図 — ピン付きのすべて", "tr": "Harita — işaretli her şey", "vi": "Bản đồ — mọi thứ có ghim", "it": "Mappa — tutto ciò che ha un pin", "fa": "نقشه — هرچیزی که پین دارد", "pl": "Mapa — wszystko ze znacznikiem", "uk": "Карта — усе з міткою", "nl": "Kaart — alles met een markering", "sv": "Karta — allt med en markering", "cs": "Mapa — vše se špendlíkem", "el": "Χάρτης — ό,τι έχει καρφίτσα" } }
+                ] },
+                { "type": "text", "style": "body", "value": { "en": "Every event and note that has a location, on one map.", "ko": "위치가 있는 모든 일정과 메모를 하나의 지도에서 확인합니다.", "zh": "所有带有位置信息的事件和备注，都在同一张地图上。", "hi": "स्थान वाली हर घटना और नोट, एक मानचित्र पर।", "es": "Todos los eventos y notas que tienen una ubicación, en un solo mapa.", "fr": "Chaque événement et note ayant une localisation, sur une seule carte.", "ar": "كل حدث وملاحظة لها موقع، على خريطة واحدة.", "pt": "Todos os eventos e notas que têm uma localização, em um mapa.", "ru": "Все события и заметки с указанной локацией на одной карте.", "de": "Jedes Ereignis und jede Notiz mit einem Standort, auf einer Karte.", "ja": "位置情報を持つすべてのイベントとメモを1つの地図に表示します。", "tr": "Konumu olan her etkinlik ve not, tek bir haritada.", "vi": "Mọi sự kiện và ghi chú có vị trí, trên một bản đồ.", "it": "Ogni evento e nota che ha una posizione, su un'unica mappa.", "fa": "هر رویداد و یادداشتی که موقعیت مکانی دارد، روی یک نقشه.", "pl": "Każde wydarzenie i notatka z lokalizacją, na jednej mapie.", "uk": "Кожна подія та примітка з місцем розташування — на одній карті.", "nl": "Elk event en elke notitie met een locatie, op één kaart.", "sv": "Varje händelse och anteckning som har en plats, på en karta.", "cs": "Každá událost a poznámka s umístěním, na jedné mapě.", "el": "Κάθε εκδήλωση και σημείωση που έχει τοποθεσία, σε έναν χάρτη." } },
+                { "type": "text", "style": "caption", "value": { "en": "Hint: tap a pin to open it.", "ko": "힌트: 핀을 눌러 여세요.", "zh": "提示：点击图钉以打开它。", "hi": "संकेत: इसे खोलने के लिए किसी पिन पर टैप करें।", "es": "Consejo: toca un marcador para abrirlo.", "fr": "Astuce : touchez un repère pour l'ouvrir.", "ar": "تلميح: انقر على دبوس لفتحه.", "pt": "Dica: toque em um marcador para abri-lo.", "ru": "Подсказка: нажмите на метку, чтобы открыть её.", "de": "Tipp: Tippe auf eine Markierung, um sie zu öffnen.", "ja": "ヒント: ピンをタップして開きます。", "tr": "İpucu: açmak için bir işarete dokunun.", "vi": "Mẹo: chạm vào một ghim để mở nó.", "it": "Suggerimento: tocca un pin per aprirlo.", "fa": "نکته: برای باز کردن آن روی یک پین ضربه بزنید.", "pl": "Wskazówka: dotknij znacznika, aby go otworzyć.", "uk": "Порада: торкніться мітки, щоб відкрити її.", "nl": "Tip: tik op een markering om deze te openen.", "sv": "Tips: tryck på en markering för att öppna den.", "cs": "Tip: klepnutím na špendlík jej otevřete.", "el": "Συμβουλή: πατήστε μια καρφίτσα για να την ανοίξετε." } },
+                { "type": "button", "label": { "en": "Open the Map", "ko": "지도 열기", "zh": "打开地图", "hi": "मानचित्र खोलें", "es": "Abrir el mapa", "fr": "Ouvrir la carte", "ar": "فتح الخريطة", "pt": "Abrir o mapa", "ru": "Открыть карту", "de": "Karte öffnen", "ja": "地図を開く", "tr": "Haritayı aç", "vi": "Mở Bản đồ", "it": "Apri la mappa", "fa": "باز کردن نقشه", "pl": "Otwórz mapę", "uk": "Відкрити карту", "nl": "Kaart openen", "sv": "Öppna kartan", "cs": "Otevřít mapu", "el": "Άνοιγμα χάρτη" }, "icon": "map",
+                  "action": { "fn": "goto", "args": { "screen": "map" } } }
+              ]
+            }
+          },
+          {
+            "type": "card",
+            "padding": 16,
+            "radius": 12,
+            "child": {
+              "type": "column",
+              "children": [
+                { "type": "row", "children": [
+                  { "type": "text", "style": "display", "value": "📝" },
+                  { "type": "text", "style": "title", "value": { "en": "Notes — freeform", "ko": "메모 — 자유 형식", "zh": "备注 — 自由格式", "hi": "नोट्स — फ्रीफॉर्म", "es": "Notas: formato libre", "fr": "Notes — libres", "ar": "الملاحظات — حرة الشكل", "pt": "Notas — formato livre", "ru": "Заметки — свободная форма", "de": "Notizen — freie Form", "ja": "メモ — 自由形式", "tr": "Notlar — serbest biçim", "vi": "Ghi chú — tự do", "it": "Note — formato libero", "fa": "یادداشت‌ها — آزاد", "pl": "Notatki — dowolna forma", "uk": "Нотатки — вільна форма", "nl": "Notities — vrije vorm", "sv": "Anteckningar — fritt format", "cs": "Poznámky — volný formát", "el": "Σημειώσεις — ελεύθερη μορφή" } }
+                ] },
+                { "type": "text", "style": "body", "value": { "en": "Anything worth writing down that isn't a todo or an event.", "ko": "할 일이나 일정이 아니지만 기록할 가치가 있는 모든 것입니다.", "zh": "任何值得记下但不属于待办或事件的内容。", "hi": "जो भी लिखने लायक है और वह न तो कोई काम है न घटना।", "es": "Cualquier cosa que valga la pena anotar y que no sea una tarea o un evento.", "fr": "Tout ce qui mérite d'être noté et qui n'est ni une tâche ni un événement.", "ar": "أي شيء يستحق التدوين وليس مهمة أو حدثًا.", "pt": "Qualquer coisa que valha a pena anotar que não seja uma tarefa ou evento.", "ru": "Всё, что стоит записать, но не является задачей или событием.", "de": "Alles, was es wert ist, aufgeschrieben zu werden und weder eine Aufgabe noch ein Ereignis ist.", "ja": "タスクでもイベントでもない、書き留める価値のあるもの全般。", "tr": "Bir görev veya etkinlik olmayan, yazmaya değer herhangi bir şey.", "vi": "Bất cứ điều gì đáng ghi lại mà không phải việc cần làm hay sự kiện.", "it": "Qualsiasi cosa valga la pena annotare che non sia un'attività o un evento.", "fa": "هرچیزی که ارزش نوشتن دارد و کار یا رویداد نیست.", "pl": "Wszystko, co warto zapisać, a co nie jest zadaniem ani wydarzeniem.", "uk": "Усе, що варто записати і що не є справою чи подією.", "nl": "Alles wat het waard is om op te schrijven en geen taak of event is.", "sv": "Allt som är värt att skriva ner som varken är en uppgift eller en händelse.", "cs": "Cokoli, co stojí za zapsání a co není úkol ani událost.", "el": "Οτιδήποτε αξίζει να σημειωθεί που δεν είναι εκκρεμότητα ή εκδήλωση." } },
+                { "type": "text", "style": "caption", "value": { "en": "Hint: tap \"New note\" to add one.", "ko": "힌트: \"새 메모\"를 눌러 추가하세요.", "zh": "提示：点击“新建备注”添加一条。", "hi": "संकेत: एक जोड़ने के लिए \"नया नोट\" पर टैप करें।", "es": "Consejo: toca \"Nueva nota\" para añadir una.", "fr": "Astuce : touchez « Nouvelle note » pour en ajouter une.", "ar": "تلميح: انقر على \"ملاحظة جديدة\" لإضافة واحدة.", "pt": "Dica: toque em \"Nova nota\" para adicionar uma.", "ru": "Подсказка: нажмите «Новая заметка», чтобы добавить.", "de": "Tipp: Tippe auf „Neue Notiz“, um eine hinzuzufügen.", "ja": "ヒント: 「新規メモ」をタップして追加します。", "tr": "İpucu: bir tane eklemek için \"Yeni not\"a dokunun.", "vi": "Mẹo: chạm \"Ghi chú mới\" để thêm một cái.", "it": "Suggerimento: tocca \"Nuova nota\" per aggiungerne una.", "fa": "نکته: برای افزودن یکی روی «یادداشت جدید» ضربه بزنید.", "pl": "Wskazówka: dotknij \"Nowa notatka\", aby ją dodać.", "uk": "Порада: торкніться «Нова примітка», щоб додати її.", "nl": "Tip: tik op \"Nieuwe notitie\" om er een toe te voegen.", "sv": "Tips: tryck på \"Ny anteckning\" för att lägga till en.", "cs": "Tip: klepněte na „Nová poznámka“ a přidejte ji.", "el": "Συμβουλή: πατήστε «Νέα σημείωση» για να προσθέσετε μία." } },
+                { "type": "button", "label": { "en": "Open Notes", "ko": "메모 열기", "zh": "打开备注", "hi": "नोट्स खोलें", "es": "Abrir notas", "fr": "Ouvrir Notes", "ar": "فتح الملاحظات", "pt": "Abrir notas", "ru": "Открыть заметки", "de": "Notizen öffnen", "ja": "メモを開く", "tr": "Notları aç", "vi": "Mở Ghi chú", "it": "Apri note", "fa": "باز کردن یادداشت‌ها", "pl": "Otwórz notatki", "uk": "Відкрити нотатки", "nl": "Notities openen", "sv": "Öppna anteckningar", "cs": "Otevřít poznámky", "el": "Άνοιγμα σημειώσεων" }, "icon": "sticky_note_2",
+                  "action": { "fn": "goto", "args": { "screen": "notes" } } }
+              ]
+            }
+          },
+          {
+            "type": "card",
+            "padding": 16,
+            "radius": 12,
+            "child": {
+              "type": "column",
+              "children": [
+                { "type": "row", "children": [
+                  { "type": "text", "style": "display", "value": "👥" },
+                  { "type": "text", "style": "title", "value": { "en": "Members — who's on the trip", "ko": "멤버 — 여행 참가자", "zh": "成员 — 谁在同行", "hi": "सदस्य — यात्रा में कौन है", "es": "Miembros: quién va en el viaje", "fr": "Membres — qui participe au voyage", "ar": "الأعضاء — من في الرحلة", "pt": "Membros — quem está na viagem", "ru": "Участники — кто в поездке", "de": "Mitglieder — wer ist auf der Reise", "ja": "メンバー — 旅行の参加者", "tr": "Üyeler — seyahatte kimler var", "vi": "Thành viên — ai trong chuyến đi", "it": "Membri — chi partecipa al viaggio", "fa": "اعضا — چه کسانی در سفر هستند", "pl": "Członkowie — kto jest w podróży", "uk": "Учасники — хто в подорожі", "nl": "Leden — wie is er op reis", "sv": "Medlemmar — vem är med på resan", "cs": "Členové — kdo je na cestě", "el": "Μέλη — ποιος συμμετέχει στο ταξίδι" } }
+                ] },
+                { "type": "text", "style": "body", "value": { "en": "Add yourself as a member, then tap your own card to set it as you.", "ko": "본인을 멤버로 추가한 뒤, 본인 카드를 눌러 본인으로 설정하세요.", "zh": "将自己添加为成员，然后点击自己的卡片将其设为你。", "hi": "स्वयं को सदस्य के रूप में जोड़ें, फिर अपने कार्ड को आप के रूप में सेट करने के लिए टैप करें।", "es": "Añádete a ti mismo como miembro, luego toca tu propia tarjeta para configurarla como tú.", "fr": "Ajoutez-vous en tant que membre, puis touchez votre propre carte pour la définir comme étant vous.", "ar": "أضف نفسك كعضو، ثم انقر على بطاقتك الخاصة لتعيينها كأنت.", "pt": "Adicione-se como membro, depois toque em seu próprio cartão para defini-lo como você.", "ru": "Добавьте себя как участника, затем нажмите на свою карточку, чтобы установить её как себя.", "de": "Füge dich selbst als Mitglied hinzu und tippe dann auf deine eigene Karte, um sie als dich festzulegen.", "ja": "自分をメンバーとして追加し、自分のカードをタップして自分として設定します。", "tr": "Kendinizi üye olarak ekleyin, ardından kendi kartınıza dokunarak siz olarak ayarlayın.", "vi": "Thêm chính bạn làm thành viên, sau đó chạm vào thẻ của bạn để đặt nó là bạn.", "it": "Aggiungiti come membro, poi tocca la tua scheda per impostarla come te.", "fa": "خودتان را به‌عنوان عضو اضافه کنید، سپس روی کارت خودتان ضربه بزنید تا آن را به‌عنوان خودتان تنظیم کنید.", "pl": "Dodaj siebie jako członka, a następnie dotknij swojej karty, aby ustawić ją jako siebie.", "uk": "Додайте себе як учасника, потім торкніться своєї картки, щоб позначити її як себе.", "nl": "Voeg jezelf toe als lid en tik dan op je eigen kaart om deze als jou in te stellen.", "sv": "Lägg till dig själv som medlem, tryck sedan på ditt eget kort för att ställa in det som dig.", "cs": "Přidejte se jako člen, poté klepněte na svou vlastní kartu a nastavte ji jako sebe.", "el": "Προσθέστε τον εαυτό σας ως μέλος, έπειτα πατήστε τη δική σας κάρτα για να την ορίσετε ως εσάς." } },
+                { "type": "text", "style": "caption", "value": { "en": "Hint: tap \"Add a member card\" first, then tap it to become that member.", "ko": "힌트: 먼저 \"멤버 카드 추가\"를 누른 뒤, 카드를 눌러 그 멤버가 되세요.", "zh": "提示：先点击“添加成员卡”，然后点击它成为该成员。", "hi": "संकेत: पहले \"सदस्य कार्ड जोड़ें\" पर टैप करें, फिर उस सदस्य बनने के लिए इसे टैप करें।", "es": "Consejo: toca primero \"Añadir una tarjeta de miembro\", luego tócala para convertirte en ese miembro.", "fr": "Astuce : touchez d'abord « Ajouter une carte de membre », puis touchez-la pour devenir ce membre.", "ar": "تلميح: انقر أولاً على \"إضافة بطاقة عضو\"، ثم انقر عليها لتصبح ذلك العضو.", "pt": "Dica: toque primeiro em \"Adicionar um cartão de membro\", depois toque nele para se tornar esse membro.", "ru": "Подсказка: сначала нажмите «Добавить карточку участника», затем нажмите на неё, чтобы стать этим участником.", "de": "Tipp: Tippe zuerst auf „Mitgliedskarte hinzufügen“, dann darauf, um dieses Mitglied zu werden.", "ja": "ヒント: まず「メンバーカードを追加」をタップし、そのカードをタップしてそのメンバーになります。", "tr": "İpucu: önce \"Üye kartı ekle\"ye dokunun, ardından o üye olmak için ona dokunun.", "vi": "Mẹo: chạm \"Thêm thẻ thành viên\" trước, sau đó chạm vào nó để trở thành thành viên đó.", "it": "Suggerimento: tocca prima \"Aggiungi una scheda membro\", poi toccala per diventare quel membro.", "fa": "نکته: ابتدا روی «افزودن کارت عضو» ضربه بزنید، سپس روی آن ضربه بزنید تا آن عضو شوید.", "pl": "Wskazówka: najpierw dotknij \"Dodaj kartę członka\", a następnie dotknij jej, aby stać się tym członkiem.", "uk": "Порада: спочатку торкніться «Додати картку учасника», потім торкніться її, щоб стати цим учасником.", "nl": "Tip: tik eerst op \"Ledenkaart toevoegen\", tik er dan op om dat lid te worden.", "sv": "Tips: tryck först på \"Lägg till ett medlemskort\", tryck sedan på det för att bli den medlemmen.", "cs": "Tip: nejprve klepněte na „Přidat kartu člena“, poté na ni klepněte a staňte se tímto členem.", "el": "Συμβουλή: πατήστε πρώτα «Προσθήκη κάρτας μέλους», έπειτα πατήστε την για να γίνετε αυτό το μέλος." } },
+                { "type": "button", "label": { "en": "Open Members", "ko": "멤버 열기", "zh": "打开成员", "hi": "सदस्य खोलें", "es": "Abrir miembros", "fr": "Ouvrir Membres", "ar": "فتح الأعضاء", "pt": "Abrir membros", "ru": "Открыть участников", "de": "Mitglieder öffnen", "ja": "メンバーを開く", "tr": "Üyeleri aç", "vi": "Mở Thành viên", "it": "Apri membri", "fa": "باز کردن اعضا", "pl": "Otwórz członków", "uk": "Відкрити учасників", "nl": "Leden openen", "sv": "Öppna medlemmar", "cs": "Otevřít členy", "el": "Άνοιγμα μελών" }, "icon": "people",
+                  "action": { "fn": "goto", "args": { "screen": "members" } } }
+              ]
+            }
+          },
+          {
+            "type": "card",
+            "padding": 16,
+            "radius": 12,
+            "child": {
+              "type": "column",
+              "children": [
+                { "type": "row", "children": [
+                  { "type": "text", "style": "display", "value": "🕘" },
+                  { "type": "text", "style": "title", "value": { "en": "Activity — the audit trail", "ko": "활동 — 감사 기록", "zh": "活动 — 审计跟踪", "hi": "गतिविधि — ऑडिट ट्रेल", "es": "Actividad: el registro de auditoría", "fr": "Activité — le journal d'audit", "ar": "النشاط — سجل التدقيق", "pt": "Atividade — o registro de auditoria", "ru": "Активность — журнал аудита", "de": "Aktivität — das Audit-Protokoll", "ja": "アクティビティ — 監査証跡", "tr": "Etkinlik — denetim izi", "vi": "Hoạt động — dấu vết kiểm toán", "it": "Attività — il registro di controllo", "fa": "فعالیت — دنبال ممیزی", "pl": "Aktywność — ślad audytowy", "uk": "Активність — аудиторський слід", "nl": "Activiteit — het auditspoor", "sv": "Aktivitet — granskningsspåret", "cs": "Aktivita — auditní stopa", "el": "Δραστηριότητα — το ίχνος ελέγχου" } }
+                ] },
+                { "type": "text", "style": "body", "value": { "en": "Every row on the trip, most recently updated first.", "ko": "여행의 모든 행을 최근 업데이트순으로 표시합니다.", "zh": "行程中的每一行，最近更新的排在最前。", "hi": "यात्रा की हर पंक्ति, सबसे हाल में अद्यतन पहले।", "es": "Cada fila del viaje, con las actualizadas más recientemente primero.", "fr": "Chaque ligne du voyage, les plus récemment mises à jour en premier.", "ar": "كل صف في الرحلة، مع الأحدث تحديثًا أولاً.", "pt": "Cada linha da viagem, com as mais recentemente atualizadas primeiro.", "ru": "Каждая строка поездки, сначала недавно обновлённые.", "de": "Jede Zeile der Reise, zuletzt aktualisierte zuerst.", "ja": "旅行のすべての行を、最近更新されたものから順に表示します。", "tr": "Seyahatteki her satır, en son güncellenen önce.", "vi": "Mọi hàng trong chuyến đi, cập nhật gần đây nhất trước.", "it": "Ogni riga del viaggio, con quelle aggiornate più di recente per prime.", "fa": "هر ردیف سفر، با به‌روزترین‌ها ابتدا.", "pl": "Każdy wiersz podróży, z najnowszymi aktualizacjami na górze.", "uk": "Кожен рядок подорожі, спочатку останні оновлені.", "nl": "Elke rij van de reis, meest recent bijgewerkte eerst.", "sv": "Varje rad i resan, senast uppdaterade först.", "cs": "Každý řádek cesty, nejnověji aktualizované jako první.", "el": "Κάθε γραμμή του ταξιδιού, με τις πιο πρόσφατα ενημερωμένες πρώτες." } },
+                { "type": "text", "style": "caption", "value": { "en": "Hint: nothing to tap here yet — this fills in as the trip fills in.", "ko": "힌트: 아직 누를 것이 없습니다 — 여행이 채워지면서 여기도 채워집니다.", "zh": "提示：这里暂时还没有可点击的内容——随着行程逐渐填充，这里也会填充。", "hi": "संकेत: यहां अभी टैप करने के लिए कुछ नहीं है — यात्रा भरने के साथ यह भरता जाता है।", "es": "Consejo: aquí no hay nada que tocar todavía; esto se va llenando a medida que el viaje se llena.", "fr": "Astuce : rien à toucher ici pour l'instant — cela se remplit au fur et à mesure que le voyage se remplit.", "ar": "تلميح: لا يوجد شيء للنقر عليه هنا بعد — يمتلئ هذا مع امتلاء الرحلة.", "pt": "Dica: nada para tocar aqui ainda — isso se preenche conforme a viagem é preenchida.", "ru": "Подсказка: пока здесь нечего нажимать — это заполняется по мере заполнения поездки.", "de": "Tipp: Hier gibt es noch nichts zum Tippen — dies füllt sich, sobald sich die Reise füllt.", "ja": "ヒント: まだここにタップできるものはありません — 旅行が埋まるにつれてここも埋まります。", "tr": "İpucu: burada henüz dokunacak bir şey yok — seyahat doldukça bu da dolar.", "vi": "Mẹo: chưa có gì để chạm ở đây — mục này sẽ đầy dần khi chuyến đi được điền thông tin.", "it": "Suggerimento: qui non c'è ancora nulla da toccare — si riempie man mano che il viaggio si riempie.", "fa": "نکته: هنوز چیزی برای ضربه زدن اینجا نیست — این بخش با پر شدن سفر پر می‌شود.", "pl": "Wskazówka: nie ma tu jeszcze nic do dotknięcia — to zapełnia się w miarę wypełniania podróży.", "uk": "Порада: тут поки нічого торкатися — це заповнюється в міру заповнення подорожі.", "nl": "Tip: hier is nog niets om op te tikken — dit vult zich naarmate de reis wordt ingevuld.", "sv": "Tips: inget att trycka på här än — det här fylls i allteftersom resan fylls i.", "cs": "Tip: zde zatím není nic ke klepnutí — vyplní se to postupně, jak se cesta naplňuje.", "el": "Συμβουλή: δεν υπάρχει τίποτα να πατήσετε εδώ ακόμα — αυτό γεμίζει καθώς γεμίζει το ταξίδι." } },
+                { "type": "button", "label": { "en": "Open Activity", "ko": "활동 열기", "zh": "打开活动", "hi": "गतिविधि खोलें", "es": "Abrir actividad", "fr": "Ouvrir Activité", "ar": "فتح النشاط", "pt": "Abrir atividade", "ru": "Открыть активность", "de": "Aktivität öffnen", "ja": "アクティビティを開く", "tr": "Etkinliği aç", "vi": "Mở Hoạt động", "it": "Apri attività", "fa": "باز کردن فعالیت", "pl": "Otwórz aktywność", "uk": "Відкрити активність", "nl": "Activiteit openen", "sv": "Öppna aktivitet", "cs": "Otevřít aktivitu", "el": "Άνοιγμα δραστηριότητας" }, "icon": "history",
+                  "action": { "fn": "goto", "args": { "screen": "activity" } } }
+              ]
+            }
+          },
+          { "type": "divider" },
+          {
+            "type": "card",
+            "padding": 16,
+            "radius": 12,
+            "child": {
+              "type": "column",
+              "children": [
+                { "type": "row", "children": [
+                  { "type": "text", "style": "display", "value": "🔗" },
+                  { "type": "text", "style": "title", "value": { "en": "How sharing works", "ko": "공유 방식", "zh": "分享方式", "hi": "साझाकरण कैसे काम करता है", "es": "Cómo funciona compartir", "fr": "Comment fonctionne le partage", "ar": "كيف تعمل المشاركة", "pt": "Como funciona o compartilhamento", "ru": "Как работает совместный доступ", "de": "So funktioniert das Teilen", "ja": "共有の仕組み", "tr": "Paylaşım nasıl çalışır", "vi": "Cách chia sẻ hoạt động", "it": "Come funziona la condivisione", "fa": "نحوه اشتراک‌گذاری", "pl": "Jak działa udostępnianie", "uk": "Як працює спільний доступ", "nl": "Hoe delen werkt", "sv": "Hur delning fungerar", "cs": "Jak funguje sdílení", "el": "Πώς λειτουργεί η κοινή χρήση" } }
+                ] },
+                {
+                  "type": "text",
+                  "style": "body",
+                  "value": {
+                    "en": "Sharing this trip requires signing in. Once you share it with Ana and Sam, they get their own copy that stays in sync — removing someone later stops NEW updates reaching them, but any copy they already synced stays on their device (it can't be recalled).",
+                    "ko": "이 여행을 공유하려면 로그인이 필요합니다. Ana와 Sam과 공유하면 그들은 동기화되는 자체 사본을 받습니다 — 나중에 누군가를 제거하면 새 업데이트가 전달되지 않지만, 이미 동기화된 사본은 그들의 기기에 남습니다(회수할 수 없음).",
+                    "zh": "分享此行程需要登录。一旦与 Ana 和 Sam 分享，他们会获得自己保持同步的副本——之后移除某人会停止新更新传达给他们，但他们已同步的副本仍保留在其设备上（无法撤回）。",
+                    "hi": "इस यात्रा को साझा करने के लिए साइन इन आवश्यक है। एक बार जब आप इसे Ana और Sam के साथ साझा करते हैं, तो उन्हें अपनी प्रति मिलती है जो सिंक में रहती है — बाद में किसी को हटाने से नए अपडेट उन तक पहुंचना बंद हो जाते हैं, लेकिन कोई भी प्रति जो वे पहले से सिंक कर चुके हैं वह उनके डिवाइस पर बनी रहती है (इसे वापस नहीं लिया जा सकता)।",
+                    "es": "Compartir este viaje requiere iniciar sesión. Una vez que lo compartas con Ana y Sam, obtienen su propia copia que se mantiene sincronizada — eliminar a alguien después detiene que le lleguen NUEVAS actualizaciones, pero cualquier copia que ya haya sincronizado permanece en su dispositivo (no se puede recuperar).",
+                    "fr": "Le partage de ce voyage nécessite de se connecter. Une fois que vous le partagez avec Ana et Sam, ils obtiennent leur propre copie qui reste synchronisée — supprimer quelqu'un plus tard arrête les NOUVELLES mises à jour qui leur parviennent, mais toute copie déjà synchronisée reste sur leur appareil (elle ne peut pas être rappelée).",
+                    "ar": "تتطلب مشاركة هذه الرحلة تسجيل الدخول. بمجرد مشاركتها مع Ana و Sam، يحصلان على نسختهما الخاصة التي تبقى متزامنة — إزالة شخص لاحقًا توقف وصول التحديثات الجديدة إليه، لكن أي نسخة تمت مزامنتها بالفعل تبقى على جهازه (لا يمكن استرجاعها).",
+                    "pt": "Compartilhar esta viagem requer login. Depois que você a compartilhar com Ana e Sam, eles recebem sua própria cópia que permanece sincronizada — remover alguém depois interrompe NOVAS atualizações chegando até eles, mas qualquer cópia já sincronizada permanece no dispositivo deles (não pode ser revogada).",
+                    "ru": "Для совместного доступа к этой поездке требуется вход. После того как вы поделитесь ею с Ana и Sam, они получат свою собственную синхронизируемую копию — удаление кого-либо позже останавливает поступление НОВЫХ обновлений к нему, но любая уже синхронизированная копия останется на его устройстве (её нельзя отозвать).",
+                    "de": "Das Teilen dieser Reise erfordert eine Anmeldung. Sobald du sie mit Ana und Sam teilst, erhalten sie ihre eigene synchronisierte Kopie — jemanden später zu entfernen stoppt NEUE Updates für sie, aber jede bereits synchronisierte Kopie bleibt auf ihrem Gerät (sie kann nicht zurückgerufen werden).",
+                    "ja": "この旅行を共有するにはサインインが必要です。AnaとSamと共有すると、彼らは同期される自分専用のコピーを取得します — 後で誰かを削除すると、新しい更新は届かなくなりますが、すでに同期されたコピーは彼らのデバイスに残ります（取り消せません）。",
+                    "tr": "Bu seyahati paylaşmak oturum açmayı gerektirir. Ana ve Sam ile paylaştığınızda, senkronize kalan kendi kopyalarını alırlar — birini daha sonra kaldırmak YENİ güncellemelerin onlara ulaşmasını durdurur, ancak zaten senkronize ettikleri herhangi bir kopya cihazlarında kalır (geri çağrılamaz).",
+                    "vi": "Chia sẻ chuyến đi này yêu cầu đăng nhập. Khi bạn chia sẻ với Ana và Sam, họ nhận được bản sao riêng luôn đồng bộ — loại bỏ ai đó sau này sẽ ngăn các cập nhật MỚI đến với họ, nhưng bản sao họ đã đồng bộ vẫn còn trên thiết bị của họ (không thể thu hồi).",
+                    "it": "Condividere questo viaggio richiede l'accesso. Una volta condiviso con Ana e Sam, ricevono una propria copia che rimane sincronizzata — rimuovere qualcuno in seguito interrompe l'arrivo di NUOVI aggiornamenti, ma qualsiasi copia già sincronizzata rimane sul loro dispositivo (non può essere richiamata).",
+                    "fa": "برای اشتراک‌گذاری این سفر باید وارد شوید. وقتی آن را با Ana و Sam به اشتراک بگذارید، آن‌ها نسخه خودشان را دریافت می‌کنند که همگام باقی می‌ماند — حذف کردن کسی بعداً باعث می‌شود به‌روزرسانی‌های جدید به او نرسد، اما هر نسخه‌ای که قبلاً همگام شده روی دستگاه او باقی می‌ماند (قابل بازپس‌گیری نیست).",
+                    "pl": "Udostępnianie tej podróży wymaga zalogowania. Gdy udostępnisz ją Anie i Samowi, otrzymują własną kopię, która pozostaje zsynchronizowana — usunięcie kogoś później zatrzymuje docieranie do niego NOWYCH aktualizacji, ale każda już zsynchronizowana kopia pozostaje na jego urządzeniu (nie można jej odwołać).",
+                    "uk": "Для спільного доступу до цієї подорожі потрібен вхід. Коли ви поділитеся нею з Аною і Семом, вони отримають власну копію, що залишається синхронізованою — видалення когось пізніше зупиняє надходження НОВИХ оновлень до нього, але будь-яка вже синхронізована копія залишається на його пристрої (її не можна відкликати).",
+                    "nl": "Deze reis delen vereist inloggen. Zodra je hem deelt met Ana en Sam, krijgen ze hun eigen kopie die gesynchroniseerd blijft — iemand later verwijderen stopt NIEUWE updates naar hen, maar elke kopie die al gesynchroniseerd is blijft op hun apparaat (kan niet worden teruggeroepen).",
+                    "sv": "Att dela den här resan kräver inloggning. När du delar den med Ana och Sam får de sin egen kopia som förblir synkroniserad — att ta bort någon senare stoppar NYA uppdateringar från att nå dem, men alla kopior de redan synkroniserat finns kvar på deras enhet (kan inte återkallas).",
+                    "cs": "Sdílení této cesty vyžaduje přihlášení. Jakmile ji sdílíte s Anou a Samem, získají svou vlastní kopii, která zůstává synchronizovaná — pozdější odebrání někoho zastaví doručování NOVÝCH aktualizací, ale jakákoli již synchronizovaná kopie zůstává na jejich zařízení (nelze ji odvolat).",
+                    "el": "Η κοινή χρήση αυτού του ταξιδιού απαιτεί σύνδεση. Μόλις το μοιραστείτε με την Ana και τον Sam, αποκτούν το δικό τους αντίγραφο που παραμένει συγχρονισμένο — η αφαίρεση κάποιου αργότερα σταματά τις ΝΕΕΣ ενημερώσεις να τους φτάνουν, αλλά οποιοδήποτε αντίγραφο έχουν ήδη συγχρονίσει παραμένει στη συσκευή τους (δεν μπορεί να ανακληθεί)."
+                  }
+                },
+                { "type": "text", "style": "caption", "value": { "en": "Hint: tap \"Share this trip\" on the Trip screen when you're ready.", "ko": "힌트: 준비가 되면 여행 화면에서 \"이 여행 공유\"를 누르세요.", "zh": "提示：准备好后，在行程屏幕上点击“分享此行程”。", "hi": "संकेत: तैयार होने पर यात्रा स्क्रीन पर \"इस यात्रा को साझा करें\" पर टैप करें।", "es": "Consejo: toca \"Compartir este viaje\" en la pantalla de viaje cuando estés listo.", "fr": "Astuce : touchez « Partager ce voyage » sur l'écran Voyage quand vous êtes prêt.", "ar": "تلميح: انقر على \"مشاركة هذه الرحلة\" في شاشة الرحلة عندما تكون جاهزًا.", "pt": "Dica: toque em \"Compartilhar esta viagem\" na tela de viagem quando estiver pronto.", "ru": "Подсказка: нажмите «Поделиться поездкой» на экране поездки, когда будете готовы.", "de": "Tipp: Tippe auf dem Reise-Bildschirm auf „Diese Reise teilen“, wenn du bereit bist.", "ja": "ヒント: 準備ができたら旅行画面で「この旅行を共有」をタップします。", "tr": "İpucu: hazır olduğunuzda Seyahat ekranında \"Bu seyahati paylaş\"a dokunun.", "vi": "Mẹo: chạm \"Chia sẻ chuyến đi này\" trên màn hình Chuyến đi khi bạn sẵn sàng.", "it": "Suggerimento: tocca \"Condividi questo viaggio\" nella schermata Viaggio quando sei pronto.", "fa": "نکته: وقتی آماده بودید، روی «این سفر را به اشتراک بگذار» در صفحه سفر ضربه بزنید.", "pl": "Wskazówka: dotknij \"Udostępnij tę podróż\" na ekranie podróży, gdy będziesz gotowy.", "uk": "Порада: торкніться «Поділитися цією подорожжю» на екрані подорожі, коли будете готові.", "nl": "Tip: tik op \"Deel deze reis\" op het reisscherm wanneer je klaar bent.", "sv": "Tips: tryck på \"Dela den här resan\" på resskärmen när du är redo.", "cs": "Tip: klepněte na „Sdílet tuto cestu“ na obrazovce Cesta, až budete připraveni.", "el": "Συμβουλή: πατήστε «Κοινοποίηση αυτού του ταξιδιού» στην οθόνη ταξιδιού όταν είστε έτοιμοι." } },
+                { "type": "button", "label": { "en": "Open the Trip screen", "ko": "여행 화면 열기", "zh": "打开行程屏幕", "hi": "यात्रा स्क्रीन खोलें", "es": "Abrir la pantalla de viaje", "fr": "Ouvrir l'écran Voyage", "ar": "فتح شاشة الرحلة", "pt": "Abrir a tela de viagem", "ru": "Открыть экран поездки", "de": "Reise-Bildschirm öffnen", "ja": "旅行画面を開く", "tr": "Seyahat ekranını aç", "vi": "Mở màn hình Chuyến đi", "it": "Apri la schermata Viaggio", "fa": "باز کردن صفحه سفر", "pl": "Otwórz ekran Podróż", "uk": "Відкрити екран подорожі", "nl": "Reisscherm openen", "sv": "Öppna resskärmen", "cs": "Otevřít obrazovku Cesta", "el": "Άνοιγμα οθόνης ταξιδιού" }, "icon": "flight_takeoff",
+                  "action": { "fn": "goto", "args": { "screen": "trip" } } }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "trip": {
+      "title": {
+        "en": "Trip",
+        "ko": "여행",
+        "zh": "行程",
+        "hi": "यात्रा",
+        "es": "Viaje",
+        "fr": "Voyage",
+        "ar": "الرحلة",
+        "pt": "Viagem",
+        "ru": "Поездка",
+        "de": "Reise",
+        "ja": "旅行",
+        "tr": "Seyahat",
+        "vi": "Chuyến đi",
+        "it": "Viaggio",
+        "fa": "سفر",
+        "pl": "Podróż",
+        "uk": "Подорож",
+        "nl": "Reis",
+        "sv": "Resa",
+        "cs": "Cesta",
+        "el": "Ταξίδι"
+      },
+      "body": {
+        "type": "column",
+        "crossAxis": "start",
+        "children": [
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": {
+              "en": "✈️ Trip",
+              "ko": "✈️ 여행",
+              "zh": "✈️ 行程",
+              "hi": "✈️ यात्रा",
+              "es": "✈️ Viaje",
+              "fr": "✈️ Voyage",
+              "ar": "✈️ الرحلة",
+              "pt": "✈️ Viagem",
+              "ru": "✈️ Поездка",
+              "de": "✈️ Reise",
+              "ja": "✈️ 旅行",
+              "tr": "✈️ Seyahat",
+              "vi": "✈️ Chuyến đi",
+              "it": "✈️ Viaggio",
+              "fa": "✈️ سفر",
+              "pl": "✈️ Podróż",
+              "uk": "✈️ Подорож",
+              "nl": "✈️ Reis",
+              "sv": "✈️ Resa",
+              "cs": "✈️ Cesta",
+              "el": "✈️ Ταξίδι"
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Sharing this trip requires signing in. Once you share it with Ana and Sam, they get their own copy that stays in sync — removing someone later stops NEW updates reaching them, but any copy they already synced stays on their device (it can't be recalled).",
+              "ko": "이 여행을 공유하려면 로그인이 필요합니다. Ana와 Sam과 공유하면 그들은 동기화되는 자체 사본을 받습니다 — 나중에 누군가를 제거하면 새 업데이트가 전달되지 않지만, 이미 동기화된 사본은 그들의 기기에 남습니다(회수할 수 없음).",
+              "zh": "分享此行程需要登录。一旦与 Ana 和 Sam 分享，他们会获得自己保持同步的副本——之后移除某人会停止新更新传达给他们，但他们已同步的副本仍保留在其设备上（无法撤回）。",
+              "hi": "इस यात्रा को साझा करने के लिए साइन इन आवश्यक है। एक बार जब आप इसे Ana और Sam के साथ साझा करते हैं, तो उन्हें अपनी प्रति मिलती है जो सिंक में रहती है — बाद में किसी को हटाने से नए अपडेट उन तक पहुंचना बंद हो जाते हैं, लेकिन कोई भी प्रति जो वे पहले से सिंक कर चुके हैं वह उनके डिवाइस पर बनी रहती है (इसे वापस नहीं लिया जा सकता)।",
+              "es": "Compartir este viaje requiere iniciar sesión. Una vez que lo compartas con Ana y Sam, obtienen su propia copia que se mantiene sincronizada — eliminar a alguien después detiene que le lleguen NUEVAS actualizaciones, pero cualquier copia que ya haya sincronizado permanece en su dispositivo (no se puede recuperar).",
+              "fr": "Le partage de ce voyage nécessite de se connecter. Une fois que vous le partagez avec Ana et Sam, ils obtiennent leur propre copie qui reste synchronisée — supprimer quelqu'un plus tard arrête les NOUVELLES mises à jour qui leur parviennent, mais toute copie déjà synchronisée reste sur leur appareil (elle ne peut pas être rappelée).",
+              "ar": "تتطلب مشاركة هذه الرحلة تسجيل الدخول. بمجرد مشاركتها مع Ana و Sam، يحصلان على نسختهما الخاصة التي تبقى متزامنة — إزالة شخص لاحقًا توقف وصول التحديثات الجديدة إليه، لكن أي نسخة تمت مزامنتها بالفعل تبقى على جهازه (لا يمكن استرجاعها).",
+              "pt": "Compartilhar esta viagem requer login. Depois que você a compartilhar com Ana e Sam, eles recebem sua própria cópia que permanece sincronizada — remover alguém depois interrompe NOVAS atualizações chegando até eles, mas qualquer cópia já sincronizada permanece no dispositivo deles (não pode ser revogada).",
+              "ru": "Для совместного доступа к этой поездке требуется вход. После того как вы поделитесь ею с Ana и Sam, они получат свою собственную синхронизируемую копию — удаление кого-либо позже останавливает поступление НОВЫХ обновлений к нему, но любая уже синхронизированная копия останется на его устройстве (её нельзя отозвать).",
+              "de": "Das Teilen dieser Reise erfordert eine Anmeldung. Sobald du sie mit Ana und Sam teilst, erhalten sie ihre eigene synchronisierte Kopie — jemanden später zu entfernen stoppt NEUE Updates für sie, aber jede bereits synchronisierte Kopie bleibt auf ihrem Gerät (sie kann nicht zurückgerufen werden).",
+              "ja": "この旅行を共有するにはサインインが必要です。AnaとSamと共有すると、彼らは同期される自分専用のコピーを取得します — 後で誰かを削除すると、新しい更新は届かなくなりますが、すでに同期されたコピーは彼らのデバイスに残ります（取り消せません）。",
+              "tr": "Bu seyahati paylaşmak oturum açmayı gerektirir. Ana ve Sam ile paylaştığınızda, senkronize kalan kendi kopyalarını alırlar — birini daha sonra kaldırmak YENİ güncellemelerin onlara ulaşmasını durdurur, ancak zaten senkronize ettikleri herhangi bir kopya cihazlarında kalır (geri çağrılamaz).",
+              "vi": "Chia sẻ chuyến đi này yêu cầu đăng nhập. Khi bạn chia sẻ với Ana và Sam, họ nhận được bản sao riêng luôn đồng bộ — loại bỏ ai đó sau này sẽ ngăn các cập nhật MỚI đến với họ, nhưng bản sao họ đã đồng bộ vẫn còn trên thiết bị của họ (không thể thu hồi).",
+              "it": "Condividere questo viaggio richiede l'accesso. Una volta condiviso con Ana e Sam, ricevono una propria copia che rimane sincronizzata — rimuovere qualcuno in seguito interrompe l'arrivo di NUOVI aggiornamenti, ma qualsiasi copia già sincronizzata rimane sul loro dispositivo (non può essere richiamata).",
+              "fa": "برای اشتراک‌گذاری این سفر باید وارد شوید. وقتی آن را با Ana و Sam به اشتراک بگذارید، آن‌ها نسخه خودشان را دریافت می‌کنند که همگام باقی می‌ماند — حذف کردن کسی بعداً باعث می‌شود به‌روزرسانی‌های جدید به او نرسد، اما هر نسخه‌ای که قبلاً همگام شده روی دستگاه او باقی می‌ماند (قابل بازپس‌گیری نیست).",
+              "pl": "Udostępnianie tej podróży wymaga zalogowania. Gdy udostępnisz ją Anie i Samowi, otrzymują własną kopię, która pozostaje zsynchronizowana — usunięcie kogoś później zatrzymuje docieranie do niego NOWYCH aktualizacji, ale każda już zsynchronizowana kopia pozostaje na jego urządzeniu (nie można jej odwołać).",
+              "uk": "Для спільного доступу до цієї подорожі потрібен вхід. Коли ви поділитеся нею з Аною і Семом, вони отримають власну копію, що залишається синхронізованою — видалення когось пізніше зупиняє надходження НОВИХ оновлень до нього, але будь-яка вже синхронізована копія залишається на його пристрої (її не можна відкликати).",
+              "nl": "Deze reis delen vereist inloggen. Zodra je hem deelt met Ana en Sam, krijgen ze hun eigen kopie die gesynchroniseerd blijft — iemand later verwijderen stopt NIEUWE updates naar hen, maar elke kopie die al gesynchroniseerd is blijft op hun apparaat (kan niet worden teruggeroepen).",
+              "sv": "Att dela den här resan kräver inloggning. När du delar den med Ana och Sam får de sin egen kopia som förblir synkroniserad — att ta bort någon senare stoppar NYA uppdateringar från att nå dem, men alla kopior de redan synkroniserat finns kvar på deras enhet (kan inte återkallas).",
+              "cs": "Sdílení této cesty vyžaduje přihlášení. Jakmile ji sdílíte s Anou a Samem, získají svou vlastní kopii, která zůstává synchronizovaná — pozdější odebrání někoho zastaví doručování NOVÝCH aktualizací, ale jakákoli již synchronizovaná kopie zůstává na jejich zařízení (nelze ji odvolat).",
+              "el": "Η κοινή χρήση αυτού του ταξιδιού απαιτεί σύνδεση. Μόλις το μοιραστείτε με την Ana και τον Sam, αποκτούν το δικό τους αντίγραφο που παραμένει συγχρονισμένο — η αφαίρεση κάποιου αργότερα σταματά τις ΝΕΕΣ ενημερώσεις να τους φτάνουν, αλλά οποιοδήποτε αντίγραφο έχουν ήδη συγχρονίσει παραμένει στη συσκευή τους (δεν μπορεί να ανακληθεί)."
+            }
+          },
+          {
+            "type": "cards",
+            "table": "entries",
+            "filter": { "column": "kind", "value": "trip" },
+            "example": {
+              "ids": ["trip_root", "mem_ana", "mem_sam", "mem_you", "plan_1", "plan_2", "event_1", "event_2", "todo_1", "todo_2", "packing_1", "packing_2", "note_1", "note_2"],
+              "label": {
+                "en": "Examples",
+                "ko": "예시",
+                "zh": "示例",
+                "hi": "उदाहरण",
+                "es": "Ejemplos",
+                "fr": "Exemples",
+                "ar": "أمثلة",
+                "pt": "Exemplos",
+                "ru": "Примеры",
+                "de": "Beispiele",
+                "ja": "例",
+                "tr": "Örnekler",
+                "vi": "Ví dụ",
+                "it": "Esempi",
+                "fa": "نمونه‌ها",
+                "pl": "Przykłady",
+                "uk": "Приклади",
+                "nl": "Voorbeelden",
+                "sv": "Exempel",
+                "cs": "Příklady",
+                "el": "Παραδείγματα"
+              },
+              "chipLabel": {
+                "en": "Example",
+                "ko": "예시",
+                "zh": "示例",
+                "hi": "उदाहरण",
+                "es": "Ejemplo",
+                "fr": "Exemple",
+                "ar": "مثال",
+                "pt": "Exemplo",
+                "ru": "Пример",
+                "de": "Beispiel",
+                "ja": "例",
+                "tr": "Örnek",
+                "vi": "Ví dụ",
+                "it": "Esempio",
+                "fa": "نمونه",
+                "pl": "Przykład",
+                "uk": "Приклад",
+                "nl": "Voorbeeld",
+                "sv": "Exempel",
+                "cs": "Příklad",
+                "el": "Παράδειγμα"
+              },
+              "hideLabel": {
+                "en": "Hide",
+                "ko": "숨기기",
+                "zh": "隐藏",
+                "hi": "छिपाएं",
+                "es": "Ocultar",
+                "fr": "Masquer",
+                "ar": "إخفاء",
+                "pt": "Ocultar",
+                "ru": "Скрыть",
+                "de": "Ausblenden",
+                "ja": "非表示",
+                "tr": "Gizle",
+                "vi": "Ẩn",
+                "it": "Nascondi",
+                "fa": "پنهان کردن",
+                "pl": "Ukryj",
+                "uk": "Приховати",
+                "nl": "Verbergen",
+                "sv": "Dölj",
+                "cs": "Skrýt",
+                "el": "Απόκρυψη"
+              },
+              "hiddenFromSetting": "tripboardExamplesHidden"
+            },
+            "title": "title",
+            "subtitle": "body",
+            "accentColumn": "kind",
+            "accentColors": { "trip": "purple" },
+            "expandable": true,
+            "expandChevron": true,
+            "expandFields": [
+              { "column": "body", "label": "Notes" }
+            ],
+            "action": { "fn": "editRow" },
+            "tableView": false
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": {
+                  "en": "Share this trip",
+                  "ko": "이 여행 공유",
+                  "zh": "分享此行程",
+                  "hi": "इस यात्रा को साझा करें",
+                  "es": "Compartir este viaje",
+                  "fr": "Partager ce voyage",
+                  "ar": "مشاركة هذه الرحلة",
+                  "pt": "Compartilhar esta viagem",
+                  "ru": "Поделиться поездкой",
+                  "de": "Diese Reise teilen",
+                  "ja": "この旅行を共有",
+                  "tr": "Bu seyahati paylaş",
+                  "vi": "Chia sẻ chuyến đi này",
+                  "it": "Condividi questo viaggio",
+                  "fa": "این سفر را به اشتراک بگذار",
+                  "pl": "Udostępnij tę podróż",
+                  "uk": "Поділитися цією подорожжю",
+                  "nl": "Deel deze reis",
+                  "sv": "Dela den här resan",
+                  "cs": "Sdílet tuto cestu",
+                  "el": "Κοινοποίηση αυτού του ταξιδιού"
+                },
+                "icon": "share",
+                "action": {
+                  "fn": "shareProject",
+                  "args": { "table": "entries", "id": "trip_root" }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "Trip settings",
+                  "ko": "여행 설정",
+                  "zh": "行程设置",
+                  "hi": "यात्रा सेटिंग्स",
+                  "es": "Configuración del viaje",
+                  "fr": "Paramètres du voyage",
+                  "ar": "إعدادات الرحلة",
+                  "pt": "Configurações da viagem",
+                  "ru": "Настройки поездки",
+                  "de": "Reiseeinstellungen",
+                  "ja": "旅行の設定",
+                  "tr": "Seyahat ayarları",
+                  "vi": "Cài đặt chuyến đi",
+                  "it": "Impostazioni viaggio",
+                  "fa": "تنظیمات سفر",
+                  "pl": "Ustawienia podróży",
+                  "uk": "Налаштування подорожі",
+                  "nl": "Reisinstellingen",
+                  "sv": "Resinställningar",
+                  "cs": "Nastavení cesty",
+                  "el": "Ρυθμίσεις ταξιδιού"
+                },
+                "icon": "settings",
+                "action": {
+                  "fn": "projectSettings",
+                  "args": { "table": "entries", "id": "trip_root" }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "week": {
+      "title": {
+        "en": "Week board",
+        "ko": "주간 보드",
+        "zh": "周看板",
+        "hi": "सप्ताह बोर्ड",
+        "es": "Tablero semanal",
+        "fr": "Tableau Semaine",
+        "ar": "لوحة الأسبوع",
+        "pt": "Quadro semanal",
+        "ru": "Недельная доска",
+        "de": "Wochenboard",
+        "ja": "週間ボード",
+        "tr": "Hafta panosu",
+        "vi": "Bảng Tuần",
+        "it": "Bacheca Settimana",
+        "fa": "تخته هفته",
+        "pl": "Tablica tygodnia",
+        "uk": "Тижнева дошка",
+        "nl": "Weekbord",
+        "sv": "Veckotavla",
+        "cs": "Týdenní nástěnka",
+        "el": "Πίνακας εβδομάδας"
+      },
+      "body": {
+        "type": "column",
+        "crossAxis": "start",
+        "children": [
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": {
+              "en": "🗓️ Week plans",
+              "ko": "🗓️ 주간 계획",
+              "zh": "🗓️ 周计划",
+              "hi": "🗓️ सप्ताह योजनाएं",
+              "es": "🗓️ Planes de la semana",
+              "fr": "🗓️ Plans de la semaine",
+              "ar": "🗓️ خطط الأسبوع",
+              "pt": "🗓️ Planos da semana",
+              "ru": "🗓️ Планы на неделю",
+              "de": "🗓️ Wochenpläne",
+              "ja": "🗓️ 週間プラン",
+              "tr": "🗓️ Hafta planları",
+              "vi": "🗓️ Kế hoạch tuần",
+              "it": "🗓️ Piani settimanali",
+              "fa": "🗓️ برنامه‌های هفته",
+              "pl": "🗓️ Plany tygodnia",
+              "uk": "🗓️ Тижневі плани",
+              "nl": "🗓️ Weekplannen",
+              "sv": "🗓️ Veckoplaner",
+              "cs": "🗓️ Týdenní plány",
+              "el": "🗓️ Εβδομαδιαία σχέδια"
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Loose plans for the trip, grouped by week. Tap a card to open it.",
+              "ko": "여행을 위한 느슨한 계획을 주별로 그룹화했습니다. 카드를 눌러 여세요.",
+              "zh": "行程的松散计划，按周分组。点击卡片打开它。",
+              "hi": "यात्रा के लिए ढीली योजनाएं, सप्ताह के अनुसार समूहीकृत। इसे खोलने के लिए कार्ड पर टैप करें।",
+              "es": "Planes sueltos para el viaje, agrupados por semana. Toca una tarjeta para abrirla.",
+              "fr": "Plans provisoires pour le voyage, regroupés par semaine. Touchez une carte pour l'ouvrir.",
+              "ar": "خطط غير محددة للرحلة، مجمعة حسب الأسبوع. انقر على بطاقة لفتحها.",
+              "pt": "Planos soltos para a viagem, agrupados por semana. Toque em um cartão para abri-lo.",
+              "ru": "Черновые планы для поездки, сгруппированные по неделям. Нажмите на карточку, чтобы открыть её.",
+              "de": "Lose Pläne für die Reise, gruppiert nach Woche. Tippe auf eine Karte, um sie zu öffnen.",
+              "ja": "旅行の大まかな計画を週ごとにグループ化。カードをタップして開きます。",
+              "tr": "Seyahat için gevşek planlar, haftaya göre gruplandırılmış. Açmak için bir karta dokunun.",
+              "vi": "Kế hoạch chưa cố định cho chuyến đi, được nhóm theo tuần. Chạm vào thẻ để mở nó.",
+              "it": "Piani provvisori per il viaggio, raggruppati per settimana. Tocca una scheda per aprirla.",
+              "fa": "برنامه‌های کلی برای سفر، گروه‌بندی‌شده بر اساس هفته. برای باز کردن روی یک کارت ضربه بزنید.",
+              "pl": "Luźne plany na podróż, pogrupowane według tygodnia. Dotknij karty, aby ją otworzyć.",
+              "uk": "Попередні плани для подорожі, згруповані за тижнями. Торкніться картки, щоб відкрити її.",
+              "nl": "Losse plannen voor de reis, gegroepeerd per week. Tik op een kaart om deze te openen.",
+              "sv": "Lösa planer för resan, grupperade per vecka. Tryck på ett kort för att öppna det.",
+              "cs": "Volné plány pro cestu, seskupené podle týdne. Klepnutím na kartu ji otevřete.",
+              "el": "Χαλαρά σχέδια για το ταξίδι, ομαδοποιημένα ανά εβδομάδα. Πατήστε μια κάρτα για να την ανοίξετε."
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "New plan",
+              "ko": "새 계획",
+              "zh": "新计划",
+              "hi": "नई योजना",
+              "es": "Nuevo plan",
+              "fr": "Nouveau plan",
+              "ar": "خطة جديدة",
+              "pt": "Novo plano",
+              "ru": "Новый план",
+              "de": "Neuer Plan",
+              "ja": "新規プラン",
+              "tr": "Yeni plan",
+              "vi": "Kế hoạch mới",
+              "it": "Nuovo piano",
+              "fa": "برنامه جدید",
+              "pl": "Nowy plan",
+              "uk": "Новий план",
+              "nl": "Nieuw plan",
+              "sv": "Ny plan",
+              "cs": "Nový plán",
+              "el": "Νέο σχέδιο"
+            },
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "entries",
+                "values": { "kind": "plan", "author": "$setting:tripboardMemberId", "createdBy": "$playerId" },
+                "link": { "table": "relations", "fromId": "trip_root", "type": "contains" }
+              }
+            }
+          },
+          {
+            "type": "cards",
+            "table": "entries",
+            "filter": { "column": "kind", "value": "plan" },
+            "groupByOptions": [
+              { "label": "Week", "column": "weekLabel" }
+            ],
+            "groupBy": "weekLabel",
+            "title": "title",
+            "subtitle": "body",
+            "tags": [
+              { "column": "author" }
+            ],
+            "accentColumn": "kind",
+            "accentColors": { "plan": "amber" },
+            "expandable": true,
+            "expandChevron": true,
+            "expandFields": [
+              { "column": "weekLabel", "label": "Week" },
+              { "column": "body", "label": "Notes" },
+              { "column": "author", "label": "Added by" }
+            ],
+            "open": "Open",
+            "action": { "fn": "editRow" },
+            "swipeActions": ["edit", "delete"],
+            "tableView": false,
+            "emptyIcon": "view_week",
+            "emptyTitle": {
+              "en": "No plans yet",
+              "ko": "아직 계획 없음",
+              "zh": "暂无计划",
+              "hi": "अभी तक कोई योजना नहीं",
+              "es": "Aún no hay planes",
+              "fr": "Aucun plan pour l'instant",
+              "ar": "لا توجد خطط بعد",
+              "pt": "Ainda não há planos",
+              "ru": "Пока нет планов",
+              "de": "Noch keine Pläne",
+              "ja": "まだプランがありません",
+              "tr": "Henüz plan yok",
+              "vi": "Chưa có kế hoạch nào",
+              "it": "Nessun piano ancora",
+              "fa": "هنوز برنامه‌ای نیست",
+              "pl": "Brak planów",
+              "uk": "Ще немає планів",
+              "nl": "Nog geen plannen",
+              "sv": "Inga planer än",
+              "cs": "Zatím žádné plány",
+              "el": "Δεν υπάρχουν σχέδια ακόμα"
+            },
+            "emptyText": {
+              "en": "Add a loose plan — a week label, a title, a note — and it'll land here.",
+              "ko": "느슨한 계획을 추가하세요 — 주 레이블, 제목, 메모 — 여기에 표시됩니다.",
+              "zh": "添加一个松散计划——周标签、标题、备注——它会出现在这里。",
+              "hi": "एक ढीली योजना जोड़ें — एक सप्ताह लेबल, एक शीर्षक, एक नोट — और यह यहां आ जाएगी।",
+              "es": "Añade un plan suelto: una etiqueta de semana, un título, una nota, y aparecerá aquí.",
+              "fr": "Ajoutez un plan provisoire — un libellé de semaine, un titre, une note — et il atterrira ici.",
+              "ar": "أضف خطة غير محددة — تسمية أسبوع، عنوان، ملاحظة — وستظهر هنا.",
+              "pt": "Adicione um plano solto — um rótulo de semana, um título, uma nota — e ele aparecerá aqui.",
+              "ru": "Добавьте черновой план — метка недели, название, заметка — и он появится здесь.",
+              "de": "Füge einen losen Plan hinzu — eine Wochenbeschriftung, einen Titel, eine Notiz — und er landet hier.",
+              "ja": "大まかな計画を追加しましょう — 週ラベル、タイトル、メモ — ここに表示されます。",
+              "tr": "Gevşek bir plan ekleyin — bir hafta etiketi, bir başlık, bir not — ve buraya gelecek.",
+              "vi": "Thêm một kế hoạch chưa cố định — nhãn tuần, tiêu đề, ghi chú — và nó sẽ xuất hiện ở đây.",
+              "it": "Aggiungi un piano provvisorio — un'etichetta settimana, un titolo, una nota — e apparirà qui.",
+              "fa": "یک برنامه کلی اضافه کنید — برچسب هفته، عنوان، یادداشت — و اینجا قرار می‌گیرد.",
+              "pl": "Dodaj luźny plan — etykietę tygodnia, tytuł, notatkę — a wyląduje tutaj.",
+              "uk": "Додайте попередній план — мітку тижня, назву, примітку — і він з'явиться тут.",
+              "nl": "Voeg een los plan toe — een weeklabel, een titel, een notitie — en het verschijnt hier.",
+              "sv": "Lägg till en lös plan — en veckoetikett, en titel, en anteckning — och den hamnar här.",
+              "cs": "Přidejte volný plán — týdenní štítek, název, poznámku — a objeví se zde.",
+              "el": "Προσθέστε ένα χαλαρό σχέδιο — μια ετικέτα εβδομάδας, έναν τίτλο, μια σημείωση — και θα εμφανιστεί εδώ."
+            },
+            "emptyAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "entries",
+                "values": { "kind": "plan", "author": "$setting:tripboardMemberId", "createdBy": "$playerId" },
+                "link": { "table": "relations", "fromId": "trip_root", "type": "contains" }
+              }
+            },
+            "emptyActionLabel": {
+              "en": "New plan",
+              "ko": "새 계획",
+              "zh": "新计划",
+              "hi": "नई योजना",
+              "es": "Nuevo plan",
+              "fr": "Nouveau plan",
+              "ar": "خطة جديدة",
+              "pt": "Novo plano",
+              "ru": "Новый план",
+              "de": "Neuer Plan",
+              "ja": "新規プラン",
+              "tr": "Yeni plan",
+              "vi": "Kế hoạch mới",
+              "it": "Nuovo piano",
+              "fa": "برنامه جدید",
+              "pl": "Nowy plan",
+              "uk": "Новий план",
+              "nl": "Nieuw plan",
+              "sv": "Ny plan",
+              "cs": "Nový plán",
+              "el": "Νέο σχέδιο"
+            }
+          }
+        ]
+      }
+    },
+    "calendar": {
+      "title": {
+        "en": "Calendar",
+        "ko": "캘린더",
+        "zh": "日历",
+        "hi": "कैलेंडर",
+        "es": "Calendario",
+        "fr": "Calendrier",
+        "ar": "التقويم",
+        "pt": "Calendário",
+        "ru": "Календарь",
+        "de": "Kalender",
+        "ja": "カレンダー",
+        "tr": "Takvim",
+        "vi": "Lịch",
+        "it": "Calendario",
+        "fa": "تقویم",
+        "pl": "Kalendarz",
+        "uk": "Календар",
+        "nl": "Kalender",
+        "sv": "Kalender",
+        "cs": "Kalendář",
+        "el": "Ημερολόγιο"
+      },
+      "body": {
+        "type": "column",
+        "crossAxis": "start",
+        "children": [
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": {
+              "en": "📅 Calendar",
+              "ko": "📅 캘린더",
+              "zh": "📅 日历",
+              "hi": "📅 कैलेंडर",
+              "es": "📅 Calendario",
+              "fr": "📅 Calendrier",
+              "ar": "📅 التقويم",
+              "pt": "📅 Calendário",
+              "ru": "📅 Календарь",
+              "de": "📅 Kalender",
+              "ja": "📅 カレンダー",
+              "tr": "📅 Takvim",
+              "vi": "📅 Lịch",
+              "it": "📅 Calendario",
+              "fa": "📅 تقویم",
+              "pl": "📅 Kalendarz",
+              "uk": "📅 Календар",
+              "nl": "📅 Kalender",
+              "sv": "📅 Kalender",
+              "cs": "📅 Kalendář",
+              "el": "📅 Ημερολόγιο"
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Dated events — tap a day or event to open it; also pinned on the Map.",
+              "ko": "날짜가 지정된 일정 — 날짜나 일정을 눌러 여세요. 지도에도 핀으로 표시됩니다.",
+              "zh": "已定日期的事件——点击某天或事件将其打开；也会固定在地图上。",
+              "hi": "तारीख वाली घटनाएं — इसे खोलने के लिए किसी दिन या घटना पर टैप करें; मानचित्र पर भी पिन किया गया।",
+              "es": "Eventos con fecha: toca un día o evento para abrirlo; también fijado en el mapa.",
+              "fr": "Événements datés — touchez un jour ou un événement pour l'ouvrir ; également épinglé sur la carte.",
+              "ar": "أحداث محددة التاريخ — انقر على يوم أو حدث لفتحه؛ مثبتة أيضًا على الخريطة.",
+              "pt": "Eventos com data — toque em um dia ou evento para abri-lo; também fixado no mapa.",
+              "ru": "События с датой — нажмите на день или событие, чтобы открыть его; также закреплено на карте.",
+              "de": "Datierte Ereignisse — tippe auf einen Tag oder ein Ereignis, um es zu öffnen; auch auf der Karte markiert.",
+              "ja": "日付付きイベント — 日付やイベントをタップして開きます。地図にもピン表示されます。",
+              "tr": "Tarihli etkinlikler — açmak için bir güne veya etkinliğe dokunun; ayrıca Haritada işaretli.",
+              "vi": "Sự kiện có ngày — chạm vào một ngày hoặc sự kiện để mở nó; cũng được ghim trên Bản đồ.",
+              "it": "Eventi datati — tocca un giorno o un evento per aprirlo; anche appuntato sulla Mappa.",
+              "fa": "رویدادهای دارای تاریخ — برای باز کردن روی یک روز یا رویداد ضربه بزنید؛ همچنین روی نقشه پین شده است.",
+              "pl": "Wydarzenia z datą — dotknij dnia lub wydarzenia, aby je otworzyć; przypięte także na mapie.",
+              "uk": "Події з датою — торкніться дня чи події, щоб відкрити її; також закріплено на карті.",
+              "nl": "Events met datum — tik op een dag of event om het te openen; ook vastgezet op de kaart.",
+              "sv": "Daterade händelser — tryck på en dag eller händelse för att öppna den; även fäst på kartan.",
+              "cs": "Datované události — klepnutím na den nebo událost ji otevřete; také připnuto na mapě.",
+              "el": "Εκδηλώσεις με ημερομηνία — πατήστε μια ημέρα ή εκδήλωση για να την ανοίξετε· επίσης καρφιτσωμένες στον χάρτη."
+            }
+          },
+          {
+            "type": "calendar",
+            "table": "entries",
+            "titleColumn": "title",
+            "dateColumns": ["date"],
+            "dateColumn": "date",
+            "initialView": "firstWithData",
+            "action": { "fn": "editRow" },
+            "addAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "entries",
+                "values": { "kind": "event", "author": "$setting:tripboardMemberId", "createdBy": "$playerId" },
+                "link": { "table": "relations", "fromId": "trip_root", "type": "contains" }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "todo": {
+      "title": {
+        "en": "Todo",
+        "ko": "할 일",
+        "zh": "待办",
+        "hi": "करने योग्य",
+        "es": "Pendientes",
+        "fr": "À faire",
+        "ar": "المهام",
+        "pt": "A fazer",
+        "ru": "Задачи",
+        "de": "Aufgaben",
+        "ja": "Todo",
+        "tr": "Yapılacaklar",
+        "vi": "Việc cần làm",
+        "it": "Da fare",
+        "fa": "کارها",
+        "pl": "Do zrobienia",
+        "uk": "Справи",
+        "nl": "Te doen",
+        "sv": "Att göra",
+        "cs": "Úkoly",
+        "el": "Εκκρεμότητες"
+      },
+      "body": {
+        "type": "column",
+        "crossAxis": "start",
+        "children": [
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": {
+              "en": "✅ Todo",
+              "ko": "✅ 할 일",
+              "zh": "✅ 待办",
+              "hi": "✅ करने योग्य",
+              "es": "✅ Pendientes",
+              "fr": "✅ À faire",
+              "ar": "✅ المهام",
+              "pt": "✅ A fazer",
+              "ru": "✅ Задачи",
+              "de": "✅ Aufgaben",
+              "ja": "✅ Todo",
+              "tr": "✅ Yapılacaklar",
+              "vi": "✅ Việc cần làm",
+              "it": "✅ Da fare",
+              "fa": "✅ کارها",
+              "pl": "✅ Do zrobienia",
+              "uk": "✅ Справи",
+              "nl": "✅ Te doen",
+              "sv": "✅ Att göra",
+              "cs": "✅ Úkoly",
+              "el": "✅ Εκκρεμότητες"
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Tap a todo to check it off; swipe left to edit or delete (deleting shows an Undo).",
+              "ko": "할 일을 눌러 완료 처리하세요. 왼쪽으로 스와이프하면 편집 또는 삭제할 수 있습니다(삭제 시 실행 취소가 표시됩니다).",
+              "zh": "点击待办项将其勾选；向左滑动可编辑或删除（删除会显示撤销选项）。",
+              "hi": "इसे चेक करने के लिए किसी काम पर टैप करें; संपादित या हटाने के लिए बाएं स्वाइप करें (हटाने पर पूर्ववत दिखाई देता है)।",
+              "es": "Toca una tarea para marcarla; desliza a la izquierda para editar o eliminar (al eliminar aparece Deshacer).",
+              "fr": "Touchez une tâche pour la cocher ; balayez vers la gauche pour modifier ou supprimer (la suppression affiche Annuler).",
+              "ar": "انقر على مهمة لتحديدها؛ اسحب لليسار للتعديل أو الحذف (يظهر تراجع عند الحذف).",
+              "pt": "Toque em uma tarefa para marcá-la; deslize para a esquerda para editar ou excluir (excluir mostra um Desfazer).",
+              "ru": "Нажмите на задачу, чтобы отметить её; проведите влево для редактирования или удаления (при удалении появляется «Отменить»).",
+              "de": "Tippe auf eine Aufgabe, um sie abzuhaken; wische nach links, um zu bearbeiten oder zu löschen (beim Löschen erscheint Rückgängig).",
+              "ja": "タスクをタップしてチェックします。左にスワイプすると編集または削除できます（削除すると元に戻すが表示されます）。",
+              "tr": "İşaretlemek için bir göreve dokunun; düzenlemek veya silmek için sola kaydırın (silme bir Geri Al gösterir).",
+              "vi": "Chạm vào một việc để đánh dấu; vuốt sang trái để chỉnh sửa hoặc xóa (xóa sẽ hiển thị Hoàn tác).",
+              "it": "Tocca un'attività per spuntarla; scorri a sinistra per modificare o eliminare (l'eliminazione mostra un Annulla).",
+              "fa": "برای علامت زدن یک کار روی آن ضربه بزنید؛ برای ویرایش یا حذف به چپ بکشید (حذف یک گزینه بازگردانی نشان می‌دهد).",
+              "pl": "Dotknij zadania, aby je odhaczyć; przesuń w lewo, aby edytować lub usunąć (usuwanie pokazuje Cofnij).",
+              "uk": "Торкніться справи, щоб позначити її; проведіть вліво, щоб редагувати або видалити (видалення показує «Скасувати»).",
+              "nl": "Tik op een taak om deze af te vinken; veeg naar links om te bewerken of te verwijderen (verwijderen toont Ongedaan maken).",
+              "sv": "Tryck på en uppgift för att bocka av den; svep vänster för att redigera eller ta bort (borttagning visar Ångra).",
+              "cs": "Klepnutím na úkol jej odškrtnete; přejetím doleva jej upravíte nebo smažete (smazání zobrazí Zpět).",
+              "el": "Πατήστε μια εκκρεμότητα για να τη σημειώσετε· σύρετε αριστερά για επεξεργασία ή διαγραφή (η διαγραφή εμφανίζει Αναίρεση)."
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "New todo",
+              "ko": "새 할 일",
+              "zh": "新建待办",
+              "hi": "नया काम",
+              "es": "Nueva tarea",
+              "fr": "Nouvelle tâche",
+              "ar": "مهمة جديدة",
+              "pt": "Nova tarefa",
+              "ru": "Новая задача",
+              "de": "Neue Aufgabe",
+              "ja": "新規タスク",
+              "tr": "Yeni görev",
+              "vi": "Việc mới",
+              "it": "Nuova attività",
+              "fa": "کار جدید",
+              "pl": "Nowe zadanie",
+              "uk": "Нова справа",
+              "nl": "Nieuwe taak",
+              "sv": "Ny uppgift",
+              "cs": "Nový úkol",
+              "el": "Νέα εκκρεμότητα"
+            },
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "entries",
+                "values": { "kind": "todo", "status": "todo", "author": "$setting:tripboardMemberId", "createdBy": "$playerId" },
+                "link": { "table": "relations", "fromId": "trip_root", "type": "contains" }
+              }
+            }
+          },
+          {
+            "type": "cards",
+            "table": "entries",
+            "filter": { "column": "kind", "value": "todo" },
+            "sortBy": "status",
+            "title": "title",
+            "subtitle": "assignee",
+            "density": "row",
+            "toggle": true,
+            "statusColumn": "status",
+            "doneValue": "done",
+            "openValue": "todo",
+            "tags": [{ "column": "assignee" }],
+            "accentColumn": "status",
+            "accentColors": { "todo": "blue", "done": "green" },
+            "action": {
+              "fn": "toggleField",
+              "args": { "column": "status", "onValue": "done", "offValue": "todo" }
+            },
+            "swipeActions": ["edit", "delete"],
+            "tableView": false,
+            "emptyIcon": "check_circle",
+            "emptyTitle": {
+              "en": "Nothing to do yet",
+              "ko": "아직 할 일 없음",
+              "zh": "暂无待办",
+              "hi": "अभी करने के लिए कुछ नहीं",
+              "es": "Nada que hacer todavía",
+              "fr": "Rien à faire pour l'instant",
+              "ar": "لا يوجد شيء لفعله بعد",
+              "pt": "Nada a fazer ainda",
+              "ru": "Пока нечего делать",
+              "de": "Noch nichts zu tun",
+              "ja": "まだやることがありません",
+              "tr": "Henüz yapılacak bir şey yok",
+              "vi": "Chưa có gì để làm",
+              "it": "Nulla da fare ancora",
+              "fa": "هنوز کاری برای انجام نیست",
+              "pl": "Nic do zrobienia",
+              "uk": "Ще нічого робити",
+              "nl": "Nog niets te doen",
+              "sv": "Inget att göra än",
+              "cs": "Zatím není co dělat",
+              "el": "Δεν υπάρχει τίποτα να γίνει ακόμα"
+            },
+            "emptyText": {
+              "en": "Add the first todo and it'll show up here.",
+              "ko": "첫 할 일을 추가하면 여기에 표시됩니다.",
+              "zh": "添加第一个待办项，它就会出现在这里。",
+              "hi": "पहला काम जोड़ें और यह यहां दिखाई देगा।",
+              "es": "Añade la primera tarea y aparecerá aquí.",
+              "fr": "Ajoutez la première tâche et elle apparaîtra ici.",
+              "ar": "أضف أول مهمة وستظهر هنا.",
+              "pt": "Adicione a primeira tarefa e ela aparecerá aqui.",
+              "ru": "Добавьте первую задачу, и она появится здесь.",
+              "de": "Füge die erste Aufgabe hinzu, und sie erscheint hier.",
+              "ja": "最初のタスクを追加すると、ここに表示されます。",
+              "tr": "İlk görevi ekleyin, burada görünecek.",
+              "vi": "Thêm việc đầu tiên và nó sẽ xuất hiện ở đây.",
+              "it": "Aggiungi la prima attività e apparirà qui.",
+              "fa": "اولین کار را اضافه کنید تا اینجا نمایش داده شود.",
+              "pl": "Dodaj pierwsze zadanie, a pojawi się tutaj.",
+              "uk": "Додайте першу справу, і вона з'явиться тут.",
+              "nl": "Voeg de eerste taak toe en deze verschijnt hier.",
+              "sv": "Lägg till den första uppgiften så visas den här.",
+              "cs": "Přidejte první úkol a objeví se zde.",
+              "el": "Προσθέστε την πρώτη εκκρεμότητα και θα εμφανιστεί εδώ."
+            },
+            "emptyAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "entries",
+                "values": { "kind": "todo", "status": "todo", "author": "$setting:tripboardMemberId", "createdBy": "$playerId" },
+                "link": { "table": "relations", "fromId": "trip_root", "type": "contains" }
+              }
+            },
+            "emptyActionLabel": {
+              "en": "New todo",
+              "ko": "새 할 일",
+              "zh": "新建待办",
+              "hi": "नया काम",
+              "es": "Nueva tarea",
+              "fr": "Nouvelle tâche",
+              "ar": "مهمة جديدة",
+              "pt": "Nova tarefa",
+              "ru": "Новая задача",
+              "de": "Neue Aufgabe",
+              "ja": "新規タスク",
+              "tr": "Yeni görev",
+              "vi": "Việc mới",
+              "it": "Nuova attività",
+              "fa": "کار جدید",
+              "pl": "Nowe zadanie",
+              "uk": "Нова справа",
+              "nl": "Nieuwe taak",
+              "sv": "Ny uppgift",
+              "cs": "Nový úkol",
+              "el": "Νέα εκκρεμότητα"
+            }
+          }
+        ]
+      }
+    },
+    "packing": {
+      "title": {
+        "en": "Packing",
+        "ko": "짐 싸기",
+        "zh": "打包",
+        "hi": "पैकिंग",
+        "es": "Equipaje",
+        "fr": "Bagages",
+        "ar": "التعبئة",
+        "pt": "Bagagem",
+        "ru": "Сборы",
+        "de": "Packen",
+        "ja": "荷造り",
+        "tr": "Paketleme",
+        "vi": "Đóng gói",
+        "it": "Bagagli",
+        "fa": "بسته‌بندی",
+        "pl": "Pakowanie",
+        "uk": "Пакування",
+        "nl": "Inpakken",
+        "sv": "Packning",
+        "cs": "Balení",
+        "el": "Αποσκευές"
+      },
+      "body": {
+        "type": "column",
+        "crossAxis": "start",
+        "children": [
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": {
+              "en": "🧳 Packing",
+              "ko": "🧳 짐 싸기",
+              "zh": "🧳 打包",
+              "hi": "🧳 पैकिंग",
+              "es": "🧳 Equipaje",
+              "fr": "🧳 Bagages",
+              "ar": "🧳 التعبئة",
+              "pt": "🧳 Bagagem",
+              "ru": "🧳 Сборы",
+              "de": "🧳 Packen",
+              "ja": "🧳 荷造り",
+              "tr": "🧳 Paketleme",
+              "vi": "🧳 Đóng gói",
+              "it": "🧳 Bagagli",
+              "fa": "🧳 بسته‌بندی",
+              "pl": "🧳 Pakowanie",
+              "uk": "🧳 Пакування",
+              "nl": "🧳 Inpakken",
+              "sv": "🧳 Packning",
+              "cs": "🧳 Balení",
+              "el": "🧳 Αποσκευές"
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Tap an item to mark it packed; swipe left to edit or delete (deleting shows an Undo).",
+              "ko": "항목을 눌러 챙김으로 표시하세요. 왼쪽으로 스와이프하면 편집 또는 삭제할 수 있습니다(삭제 시 실행 취소가 표시됩니다).",
+              "zh": "点击某项以标记为已打包；向左滑动可编辑或删除（删除会显示撤销选项）。",
+              "hi": "इसे पैक चिह्नित करने के लिए किसी वस्तु पर टैप करें; संपादित या हटाने के लिए बाएं स्वाइप करें (हटाने पर पूर्ववत दिखाई देता है)।",
+              "es": "Toca un artículo para marcarlo como empacado; desliza a la izquierda para editar o eliminar (al eliminar aparece Deshacer).",
+              "fr": "Touchez un article pour le marquer comme emballé ; balayez vers la gauche pour modifier ou supprimer (la suppression affiche Annuler).",
+              "ar": "انقر على عنصر لتمييزه كمعبأ؛ اسحب لليسار للتعديل أو الحذف (يظهر تراجع عند الحذف).",
+              "pt": "Toque em um item para marcá-lo como arrumado; deslize para a esquerda para editar ou excluir (excluir mostra um Desfazer).",
+              "ru": "Нажмите на предмет, чтобы отметить его собранным; проведите влево для редактирования или удаления (при удалении появляется «Отменить»).",
+              "de": "Tippe auf einen Gegenstand, um ihn als gepackt zu markieren; wische nach links, um zu bearbeiten oder zu löschen (beim Löschen erscheint Rückgängig).",
+              "ja": "アイテムをタップして荷造り済みにマーク。左にスワイプすると編集または削除できます（削除すると元に戻すが表示されます）。",
+              "tr": "Paketlendi olarak işaretlemek için bir öğeye dokunun; düzenlemek veya silmek için sola kaydırın (silme bir Geri Al gösterir).",
+              "vi": "Chạm vào một mục để đánh dấu đã đóng gói; vuốt sang trái để chỉnh sửa hoặc xóa (xóa sẽ hiển thị Hoàn tác).",
+              "it": "Tocca un elemento per contrassegnarlo come imballato; scorri a sinistra per modificare o eliminare (l'eliminazione mostra un Annulla).",
+              "fa": "برای علامت‌گذاری یک مورد به‌عنوان بسته‌بندی‌شده روی آن ضربه بزنید؛ برای ویرایش یا حذف به چپ بکشید (حذف یک گزینه بازگردانی نشان می‌دهد).",
+              "pl": "Dotknij przedmiotu, aby oznaczyć go jako spakowany; przesuń w lewo, aby edytować lub usunąć (usuwanie pokazuje Cofnij).",
+              "uk": "Торкніться предмета, щоб позначити його спакованим; проведіть вліво, щоб редагувати або видалити (видалення показує «Скасувати»).",
+              "nl": "Tik op een item om het als ingepakt te markeren; veeg naar links om te bewerken of te verwijderen (verwijderen toont Ongedaan maken).",
+              "sv": "Tryck på ett föremål för att markera det som packat; svep vänster för att redigera eller ta bort (borttagning visar Ångra).",
+              "cs": "Klepnutím na položku ji označíte jako sbalenou; přejetím doleva ji upravíte nebo smažete (smazání zobrazí Zpět).",
+              "el": "Πατήστε ένα αντικείμενο για να το σημειώσετε ως πακεταρισμένο· σύρετε αριστερά για επεξεργασία ή διαγραφή (η διαγραφή εμφανίζει Αναίρεση)."
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "New item",
+              "ko": "새 항목",
+              "zh": "新建项目",
+              "hi": "नई वस्तु",
+              "es": "Nuevo artículo",
+              "fr": "Nouvel article",
+              "ar": "عنصر جديد",
+              "pt": "Novo item",
+              "ru": "Новый предмет",
+              "de": "Neuer Gegenstand",
+              "ja": "新規アイテム",
+              "tr": "Yeni öğe",
+              "vi": "Mục mới",
+              "it": "Nuovo elemento",
+              "fa": "مورد جدید",
+              "pl": "Nowy przedmiot",
+              "uk": "Новий предмет",
+              "nl": "Nieuw item",
+              "sv": "Nytt föremål",
+              "cs": "Nová položka",
+              "el": "Νέο αντικείμενο"
+            },
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "entries",
+                "values": { "kind": "packing", "status": "todo", "author": "$setting:tripboardMemberId", "createdBy": "$playerId" },
+                "link": { "table": "relations", "fromId": "trip_root", "type": "contains" }
+              }
+            }
+          },
+          {
+            "type": "cards",
+            "table": "entries",
+            "filter": { "column": "kind", "value": "packing" },
+            "sortBy": "status",
+            "title": "title",
+            "subtitle": "assignee",
+            "density": "row",
+            "toggle": true,
+            "statusColumn": "status",
+            "doneValue": "done",
+            "openValue": "todo",
+            "tags": [{ "column": "assignee" }],
+            "accentColumn": "status",
+            "accentColors": { "todo": "teal", "done": "green" },
+            "action": {
+              "fn": "toggleField",
+              "args": { "column": "status", "onValue": "done", "offValue": "todo" }
+            },
+            "swipeActions": ["edit", "delete"],
+            "tableView": false,
+            "emptyIcon": "luggage",
+            "emptyTitle": {
+              "en": "Nothing packed yet",
+              "ko": "아직 짐 없음",
+              "zh": "暂无已打包物品",
+              "hi": "अभी तक कुछ पैक नहीं किया",
+              "es": "Nada empacado todavía",
+              "fr": "Rien d'emballé pour l'instant",
+              "ar": "لا يوجد شيء معبأ بعد",
+              "pt": "Nada arrumado ainda",
+              "ru": "Пока ничего не собрано",
+              "de": "Noch nichts gepackt",
+              "ja": "まだ荷造りされていません",
+              "tr": "Henüz bir şey paketlenmedi",
+              "vi": "Chưa đóng gói gì",
+              "it": "Nulla imballato ancora",
+              "fa": "هنوز چیزی بسته‌بندی نشده",
+              "pl": "Nic jeszcze nie spakowano",
+              "uk": "Ще нічого не спаковано",
+              "nl": "Nog niets ingepakt",
+              "sv": "Inget packat än",
+              "cs": "Zatím nic nezabaleno",
+              "el": "Δεν έχει πακεταριστεί τίποτα ακόμα"
+            },
+            "emptyText": {
+              "en": "Add the first item and it'll show up here.",
+              "ko": "첫 항목을 추가하면 여기에 표시됩니다.",
+              "zh": "添加第一个物品，它就会出现在这里。",
+              "hi": "पहली वस्तु जोड़ें और यह यहां दिखाई देगी।",
+              "es": "Añade el primer artículo y aparecerá aquí.",
+              "fr": "Ajoutez le premier article et il apparaîtra ici.",
+              "ar": "أضف أول عنصر وسيظهر هنا.",
+              "pt": "Adicione o primeiro item e ele aparecerá aqui.",
+              "ru": "Добавьте первый предмет, и он появится здесь.",
+              "de": "Füge den ersten Gegenstand hinzu, und er erscheint hier.",
+              "ja": "最初のアイテムを追加すると、ここに表示されます。",
+              "tr": "İlk öğeyi ekleyin, burada görünecek.",
+              "vi": "Thêm mục đầu tiên và nó sẽ xuất hiện ở đây.",
+              "it": "Aggiungi il primo elemento e apparirà qui.",
+              "fa": "اولین مورد را اضافه کنید تا اینجا نمایش داده شود.",
+              "pl": "Dodaj pierwszy przedmiot, a pojawi się tutaj.",
+              "uk": "Додайте перший предмет, і він з'явиться тут.",
+              "nl": "Voeg het eerste item toe en het verschijnt hier.",
+              "sv": "Lägg till det första föremålet så visas det här.",
+              "cs": "Přidejte první položku a objeví se zde.",
+              "el": "Προσθέστε το πρώτο αντικείμενο και θα εμφανιστεί εδώ."
+            },
+            "emptyAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "entries",
+                "values": { "kind": "packing", "status": "todo", "author": "$setting:tripboardMemberId", "createdBy": "$playerId" },
+                "link": { "table": "relations", "fromId": "trip_root", "type": "contains" }
+              }
+            },
+            "emptyActionLabel": {
+              "en": "New item",
+              "ko": "새 항목",
+              "zh": "新建项目",
+              "hi": "नई वस्तु",
+              "es": "Nuevo artículo",
+              "fr": "Nouvel article",
+              "ar": "عنصر جديد",
+              "pt": "Novo item",
+              "ru": "Новый предмет",
+              "de": "Neuer Gegenstand",
+              "ja": "新規アイテム",
+              "tr": "Yeni öğe",
+              "vi": "Mục mới",
+              "it": "Nuovo elemento",
+              "fa": "مورد جدید",
+              "pl": "Nowy przedmiot",
+              "uk": "Новий предмет",
+              "nl": "Nieuw item",
+              "sv": "Nytt föremål",
+              "cs": "Nová položka",
+              "el": "Νέο αντικείμενο"
+            }
+          }
+        ]
+      }
+    },
+    "map": {
+      "title": {
+        "en": "Map",
+        "ko": "지도",
+        "zh": "地图",
+        "hi": "मानचित्र",
+        "es": "Mapa",
+        "fr": "Carte",
+        "ar": "الخريطة",
+        "pt": "Mapa",
+        "ru": "Карта",
+        "de": "Karte",
+        "ja": "地図",
+        "tr": "Harita",
+        "vi": "Bản đồ",
+        "it": "Mappa",
+        "fa": "نقشه",
+        "pl": "Mapa",
+        "uk": "Карта",
+        "nl": "Kaart",
+        "sv": "Karta",
+        "cs": "Mapa",
+        "el": "Χάρτης"
+      },
+      "body": {
+        "type": "column",
+        "crossAxis": "start",
+        "children": [
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": {
+              "en": "🗺️ Map",
+              "ko": "🗺️ 지도",
+              "zh": "🗺️ 地图",
+              "hi": "🗺️ मानचित्र",
+              "es": "🗺️ Mapa",
+              "fr": "🗺️ Carte",
+              "ar": "🗺️ الخريطة",
+              "pt": "🗺️ Mapa",
+              "ru": "🗺️ Карта",
+              "de": "🗺️ Karte",
+              "ja": "🗺️ 地図",
+              "tr": "🗺️ Harita",
+              "vi": "🗺️ Bản đồ",
+              "it": "🗺️ Mappa",
+              "fa": "🗺️ نقشه",
+              "pl": "🗺️ Mapa",
+              "uk": "🗺️ Карта",
+              "nl": "🗺️ Kaart",
+              "sv": "🗺️ Karta",
+              "cs": "🗺️ Mapa",
+              "el": "🗺️ Χάρτης"
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Every event and note that has a location, on one map — the same rows shown on the Calendar and in Notes. Tap a pin to open it. Give a note a latitude/longitude on the Notes screen and it shows up here too.",
+              "ko": "위치가 있는 모든 일정과 메모를 하나의 지도에서 확인합니다 — 캘린더와 메모에 표시되는 것과 동일한 행입니다. 핀을 눌러 여세요. 메모 화면에서 위도/경도를 지정하면 여기에도 표시됩니다.",
+              "zh": "所有带位置的事件和备注都在一张地图上——与日历和备注中显示的是同一批记录。点击图钉打开它。在备注屏幕上为备注指定经纬度，它也会显示在这里。",
+              "hi": "स्थान वाली हर घटना और नोट, एक मानचित्र पर — कैलेंडर और नोट्स में दिखाई गई वही पंक्तियां। इसे खोलने के लिए पिन पर टैप करें। नोट्स स्क्रीन पर किसी नोट को अक्षांश/देशांतर दें और यह यहां भी दिखाई देगा।",
+              "es": "Todos los eventos y notas que tienen una ubicación, en un solo mapa: las mismas filas que se muestran en el Calendario y en Notas. Toca un marcador para abrirlo. Dale a una nota una latitud/longitud en la pantalla de Notas y también aparecerá aquí.",
+              "fr": "Chaque événement et note ayant une localisation, sur une seule carte — les mêmes lignes affichées dans le Calendrier et dans Notes. Touchez un repère pour l'ouvrir. Donnez une latitude/longitude à une note sur l'écran Notes et elle apparaîtra aussi ici.",
+              "ar": "كل حدث وملاحظة لها موقع، على خريطة واحدة — نفس الصفوف الظاهرة في التقويم والملاحظات. انقر على دبوس لفتحه. أعطِ ملاحظة خط عرض/طول في شاشة الملاحظات وستظهر هنا أيضًا.",
+              "pt": "Todos os eventos e notas que têm uma localização, em um mapa — as mesmas linhas mostradas no Calendário e em Notas. Toque em um marcador para abri-lo. Dê a uma nota uma latitude/longitude na tela de Notas e ela aparecerá aqui também.",
+              "ru": "Все события и заметки с локацией на одной карте — те же строки, что показаны в Календаре и Заметках. Нажмите на метку, чтобы открыть её. Задайте заметке широту/долготу на экране Заметок, и она тоже появится здесь.",
+              "de": "Jedes Ereignis und jede Notiz mit einem Standort, auf einer Karte — dieselben Zeilen wie im Kalender und in Notizen. Tippe auf eine Markierung, um sie zu öffnen. Gib einer Notiz auf dem Notizen-Bildschirm einen Breiten-/Längengrad, und sie erscheint auch hier.",
+              "ja": "位置情報を持つすべてのイベントとメモを1つの地図に表示 — カレンダーとメモに表示されているのと同じ行です。ピンをタップして開きます。メモ画面でメモに緯度/経度を設定すると、ここにも表示されます。",
+              "tr": "Konumu olan her etkinlik ve not, tek bir haritada — Takvim ve Notlar'da gösterilen aynı satırlar. Açmak için bir işarete dokunun. Notlar ekranında bir nota enlem/boylam verin, burada da görünecek.",
+              "vi": "Mọi sự kiện và ghi chú có vị trí, trên một bản đồ — cùng các hàng được hiển thị trên Lịch và trong Ghi chú. Chạm vào một ghim để mở nó. Đặt vĩ độ/kinh độ cho ghi chú trên màn hình Ghi chú và nó cũng sẽ xuất hiện ở đây.",
+              "it": "Ogni evento e nota che ha una posizione, su un'unica mappa — le stesse righe mostrate nel Calendario e nelle Note. Tocca un pin per aprirlo. Dai a una nota una latitudine/longitudine nella schermata Note e apparirà anche qui.",
+              "fa": "هر رویداد و یادداشتی که موقعیت مکانی دارد، روی یک نقشه — همان ردیف‌های نمایش‌داده‌شده در تقویم و یادداشت‌ها. برای باز کردن روی یک پین ضربه بزنید. به یک یادداشت در صفحه یادداشت‌ها عرض/طول جغرافیایی بدهید و اینجا هم نمایش داده می‌شود.",
+              "pl": "Każde wydarzenie i notatka z lokalizacją, na jednej mapie — te same wiersze pokazane w Kalendarzu i w Notatkach. Dotknij znacznika, aby go otworzyć. Nadaj notatce szerokość/długość geograficzną na ekranie Notatek, a pojawi się też tutaj.",
+              "uk": "Кожна подія та примітка з місцем розташування — на одній карті — ті самі рядки, що показані в Календарі та Нотатках. Торкніться мітки, щоб відкрити її. Задайте примітці широту/довготу на екрані Нотаток, і вона теж з'явиться тут.",
+              "nl": "Elk event en elke notitie met een locatie, op één kaart — dezelfde rijen die worden weergegeven in de Kalender en in Notities. Tik op een markering om deze te openen. Geef een notitie een breedte-/lengtegraad op het scherm Notities en deze verschijnt ook hier.",
+              "sv": "Varje händelse och anteckning som har en plats, på en karta — samma rader som visas i Kalendern och i Anteckningar. Tryck på en markering för att öppna den. Ge en anteckning en latitud/longitud på skärmen Anteckningar så visas den också här.",
+              "cs": "Každá událost a poznámka s umístěním, na jedné mapě — stejné řádky zobrazené v Kalendáři a v Poznámkách. Klepnutím na špendlík jej otevřete. Dejte poznámce zeměpisnou šířku/délku na obrazovce Poznámky a objeví se i zde.",
+              "el": "Κάθε εκδήλωση και σημείωση που έχει τοποθεσία, σε έναν χάρτη — οι ίδιες γραμμές που εμφανίζονται στο Ημερολόγιο και στις Σημειώσεις. Πατήστε μια καρφίτσα για να την ανοίξετε. Δώστε σε μια σημείωση γεωγραφικό πλάτος/μήκος στην οθόνη Σημειώσεις και θα εμφανιστεί κι εδώ."
+            }
+          },
+          {
+            "type": "glmap",
+            "id": "tripMap",
+            "table": "entries",
+            "latColumn": "lat",
+            "lonColumn": "lon",
+            "labelColumn": "title",
+            "height": "420",
+            "action": { "fn": "editRow" }
+          }
+        ]
+      }
+    },
+    "notes": {
+      "title": {
+        "en": "Notes",
+        "ko": "메모",
+        "zh": "备注",
+        "hi": "नोट्स",
+        "es": "Notas",
+        "fr": "Notes",
+        "ar": "الملاحظات",
+        "pt": "Notas",
+        "ru": "Заметки",
+        "de": "Notizen",
+        "ja": "メモ",
+        "tr": "Notlar",
+        "vi": "Ghi chú",
+        "it": "Note",
+        "fa": "یادداشت‌ها",
+        "pl": "Notatki",
+        "uk": "Нотатки",
+        "nl": "Notities",
+        "sv": "Anteckningar",
+        "cs": "Poznámky",
+        "el": "Σημειώσεις"
+      },
+      "body": {
+        "type": "column",
+        "crossAxis": "start",
+        "children": [
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": {
+              "en": "📝 Notes",
+              "ko": "📝 메모",
+              "zh": "📝 备注",
+              "hi": "📝 नोट्स",
+              "es": "📝 Notas",
+              "fr": "📝 Notes",
+              "ar": "📝 الملاحظات",
+              "pt": "📝 Notas",
+              "ru": "📝 Заметки",
+              "de": "📝 Notizen",
+              "ja": "📝 メモ",
+              "tr": "📝 Notlar",
+              "vi": "📝 Ghi chú",
+              "it": "📝 Note",
+              "fa": "📝 یادداشت‌ها",
+              "pl": "📝 Notatki",
+              "uk": "📝 Нотатки",
+              "nl": "📝 Notities",
+              "sv": "📝 Anteckningar",
+              "cs": "📝 Poznámky",
+              "el": "📝 Σημειώσεις"
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Freeform notes. Give a note a latitude/longitude and it shows as a pin on the Map; leave them blank for a plain note.",
+              "ko": "자유 형식 메모입니다. 메모에 위도/경도를 지정하면 지도에 핀으로 표시됩니다. 비워두면 일반 메모가 됩니다.",
+              "zh": "自由格式备注。为备注指定经纬度，它会作为图钉显示在地图上；留空则为普通备注。",
+              "hi": "फ्रीफॉर्म नोट्स। किसी नोट को अक्षांश/देशांतर दें और यह मानचित्र पर पिन के रूप में दिखाई देता है; सादे नोट के लिए उन्हें खाली छोड़ दें।",
+              "es": "Notas de formato libre. Dale a una nota una latitud/longitud y aparecerá como marcador en el mapa; déjalas en blanco para una nota simple.",
+              "fr": "Notes libres. Donnez à une note une latitude/longitude et elle apparaît comme repère sur la carte ; laissez-les vides pour une simple note.",
+              "ar": "ملاحظات حرة الشكل. أعطِ ملاحظة خط عرض/طول وستظهر كدبوس على الخريطة؛ اتركها فارغة لملاحظة عادية.",
+              "pt": "Notas de formato livre. Dê a uma nota uma latitude/longitude e ela aparecerá como marcador no mapa; deixe-as em branco para uma nota simples.",
+              "ru": "Заметки свободной формы. Задайте заметке широту/долготу, и она появится как метка на карте; оставьте пустым для обычной заметки.",
+              "de": "Freiformnotizen. Gib einer Notiz einen Breiten-/Längengrad, und sie erscheint als Markierung auf der Karte; lass sie leer für eine einfache Notiz.",
+              "ja": "自由形式のメモです。メモに緯度/経度を設定すると地図上にピンとして表示されます。空欄にすれば通常のメモになります。",
+              "tr": "Serbest biçimli notlar. Bir nota enlem/boylam verin, haritada işaret olarak görünsün; düz bir not için boş bırakın.",
+              "vi": "Ghi chú tự do. Đặt vĩ độ/kinh độ cho ghi chú và nó sẽ hiển thị dưới dạng ghim trên Bản đồ; để trống để có ghi chú thông thường.",
+              "it": "Note in formato libero. Dai a una nota una latitudine/longitudine e apparirà come pin sulla Mappa; lasciale vuote per una nota semplice.",
+              "fa": "یادداشت‌های آزاد. به یک یادداشت عرض/طول جغرافیایی بدهید و به‌عنوان پین روی نقشه نمایش داده می‌شود؛ برای یادداشت ساده آن‌ها را خالی بگذارید.",
+              "pl": "Notatki w dowolnej formie. Nadaj notatce szerokość/długość geograficzną, a pojawi się jako znacznik na mapie; zostaw puste dla zwykłej notatki.",
+              "uk": "Примітки у вільній формі. Задайте примітці широту/довготу, і вона з'явиться як мітка на карті; залиште порожнім для звичайної примітки.",
+              "nl": "Vrije notities. Geef een notitie een breedte-/lengtegraad en deze verschijnt als markering op de kaart; laat leeg voor een gewone notitie.",
+              "sv": "Fritt formaterade anteckningar. Ge en anteckning en latitud/longitud så visas den som en markering på kartan; lämna tomt för en vanlig anteckning.",
+              "cs": "Poznámky ve volném formátu. Dejte poznámce zeměpisnou šířku/délku a zobrazí se jako špendlík na mapě; nechte prázdné pro obyčejnou poznámku.",
+              "el": "Σημειώσεις ελεύθερης μορφής. Δώστε σε μια σημείωση γεωγραφικό πλάτος/μήκος και θα εμφανιστεί ως καρφίτσα στον Χάρτη· αφήστε τα κενά για απλή σημείωση."
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "New note",
+              "ko": "새 메모",
+              "zh": "新建备注",
+              "hi": "नया नोट",
+              "es": "Nueva nota",
+              "fr": "Nouvelle note",
+              "ar": "ملاحظة جديدة",
+              "pt": "Nova nota",
+              "ru": "Новая заметка",
+              "de": "Neue Notiz",
+              "ja": "新規メモ",
+              "tr": "Yeni not",
+              "vi": "Ghi chú mới",
+              "it": "Nuova nota",
+              "fa": "یادداشت جدید",
+              "pl": "Nowa notatka",
+              "uk": "Нова примітка",
+              "nl": "Nieuwe notitie",
+              "sv": "Ny anteckning",
+              "cs": "Nová poznámka",
+              "el": "Νέα σημείωση"
+            },
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "entries",
+                "values": { "kind": "note", "type": "note", "author": "$setting:tripboardMemberId", "createdBy": "$playerId" },
+                "link": { "table": "relations", "fromId": "trip_root", "type": "contains" }
+              }
+            }
+          },
+          {
+            "type": "cards",
+            "table": "entries",
+            "filter": { "column": "kind", "value": "note" },
+            "title": "title",
+            "subtitle": "body",
+            "tags": [{ "column": "author" }],
+            "accentColumn": "kind",
+            "accentColors": { "note": "pink" },
+            "sortBy": "updatedAt",
+            "sortDir": "desc",
+            "expandable": true,
+            "expandChevron": true,
+            "expandFields": [
+              { "column": "body", "label": "Full note" },
+              { "column": "author", "label": "Added by" }
+            ],
+            "action": { "fn": "editRow" },
+            "swipeActions": ["edit", "delete"],
+            "tableView": false,
+            "emptyIcon": "sticky_note_2",
+            "emptyTitle": {
+              "en": "No notes yet",
+              "ko": "아직 메모 없음",
+              "zh": "暂无备注",
+              "hi": "अभी तक कोई नोट नहीं",
+              "es": "Aún no hay notas",
+              "fr": "Aucune note pour l'instant",
+              "ar": "لا توجد ملاحظات بعد",
+              "pt": "Ainda não há notas",
+              "ru": "Пока нет заметок",
+              "de": "Noch keine Notizen",
+              "ja": "まだメモがありません",
+              "tr": "Henüz not yok",
+              "vi": "Chưa có ghi chú nào",
+              "it": "Nessuna nota ancora",
+              "fa": "هنوز یادداشتی نیست",
+              "pl": "Brak notatek",
+              "uk": "Ще немає нотаток",
+              "nl": "Nog geen notities",
+              "sv": "Inga anteckningar än",
+              "cs": "Zatím žádné poznámky",
+              "el": "Δεν υπάρχουν σημειώσεις ακόμα"
+            },
+            "emptyText": {
+              "en": "Add the first note and it'll show up here.",
+              "ko": "첫 메모를 추가하면 여기에 표시됩니다.",
+              "zh": "添加第一条备注，它就会出现在这里。",
+              "hi": "पहला नोट जोड़ें और यह यहां दिखाई देगा।",
+              "es": "Añade la primera nota y aparecerá aquí.",
+              "fr": "Ajoutez la première note et elle apparaîtra ici.",
+              "ar": "أضف أول ملاحظة وستظهر هنا.",
+              "pt": "Adicione a primeira nota e ela aparecerá aqui.",
+              "ru": "Добавьте первую заметку, и она появится здесь.",
+              "de": "Füge die erste Notiz hinzu, und sie erscheint hier.",
+              "ja": "最初のメモを追加すると、ここに表示されます。",
+              "tr": "İlk notu ekleyin, burada görünecek.",
+              "vi": "Thêm ghi chú đầu tiên và nó sẽ xuất hiện ở đây.",
+              "it": "Aggiungi la prima nota e apparirà qui.",
+              "fa": "اولین یادداشت را اضافه کنید تا اینجا نمایش داده شود.",
+              "pl": "Dodaj pierwszą notatkę, a pojawi się tutaj.",
+              "uk": "Додайте першу примітку, і вона з'явиться тут.",
+              "nl": "Voeg de eerste notitie toe en deze verschijnt hier.",
+              "sv": "Lägg till den första anteckningen så visas den här.",
+              "cs": "Přidejte první poznámku a objeví se zde.",
+              "el": "Προσθέστε την πρώτη σημείωση και θα εμφανιστεί εδώ."
+            },
+            "emptyAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "entries",
+                "values": { "kind": "note", "type": "note", "author": "$setting:tripboardMemberId", "createdBy": "$playerId" },
+                "link": { "table": "relations", "fromId": "trip_root", "type": "contains" }
+              }
+            },
+            "emptyActionLabel": {
+              "en": "New note",
+              "ko": "새 메모",
+              "zh": "新建备注",
+              "hi": "नया नोट",
+              "es": "Nueva nota",
+              "fr": "Nouvelle note",
+              "ar": "ملاحظة جديدة",
+              "pt": "Nova nota",
+              "ru": "Новая заметка",
+              "de": "Neue Notiz",
+              "ja": "新規メモ",
+              "tr": "Yeni not",
+              "vi": "Ghi chú mới",
+              "it": "Nuova nota",
+              "fa": "یادداشت جدید",
+              "pl": "Nowa notatka",
+              "uk": "Нова примітка",
+              "nl": "Nieuwe notitie",
+              "sv": "Ny anteckning",
+              "cs": "Nová poznámka",
+              "el": "Νέα σημείωση"
+            }
+          }
+        ]
+      }
+    },
+    "members": {
+      "title": {
+        "en": "Members",
+        "ko": "멤버",
+        "zh": "成员",
+        "hi": "सदस्य",
+        "es": "Miembros",
+        "fr": "Membres",
+        "ar": "الأعضاء",
+        "pt": "Membros",
+        "ru": "Участники",
+        "de": "Mitglieder",
+        "ja": "メンバー",
+        "tr": "Üyeler",
+        "vi": "Thành viên",
+        "it": "Membri",
+        "fa": "اعضا",
+        "pl": "Członkowie",
+        "uk": "Учасники",
+        "nl": "Leden",
+        "sv": "Medlemmar",
+        "cs": "Členové",
+        "el": "Μέλη"
+      },
+      "body": {
+        "type": "column",
+        "crossAxis": "start",
+        "children": [
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": {
+              "en": "👥 Members",
+              "ko": "👥 멤버",
+              "zh": "👥 成员",
+              "hi": "👥 सदस्य",
+              "es": "👥 Miembros",
+              "fr": "👥 Membres",
+              "ar": "👥 الأعضاء",
+              "pt": "👥 Membros",
+              "ru": "👥 Участники",
+              "de": "👥 Mitglieder",
+              "ja": "👥 メンバー",
+              "tr": "👥 Üyeler",
+              "vi": "👥 Thành viên",
+              "it": "👥 Membri",
+              "fa": "👥 اعضا",
+              "pl": "👥 Członkowie",
+              "uk": "👥 Учасники",
+              "nl": "👥 Leden",
+              "sv": "👥 Medlemmar",
+              "cs": "👥 Členové",
+              "el": "👥 Μέλη"
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Add yourself below, then tap a card to set it as you (creating doesn't auto-select — sharing needs signing in, see Trip).",
+              "ko": "아래에 본인을 추가한 뒤 카드를 눌러 본인으로 설정하세요(생성해도 자동 선택되지 않습니다 — 공유하려면 로그인이 필요합니다. 여행 참고).",
+              "zh": "在下方添加自己，然后点击卡片将其设为你（创建不会自动选中——分享需要登录，参见行程）。",
+              "hi": "नीचे स्वयं को जोड़ें, फिर इसे आप के रूप में सेट करने के लिए कार्ड पर टैप करें (बनाना ऑटो-सेलेक्ट नहीं करता — साझा करने के लिए साइन इन चाहिए, यात्रा देखें)।",
+              "es": "Añádete a ti mismo abajo, luego toca una tarjeta para configurarla como tú (crear no selecciona automáticamente; compartir requiere iniciar sesión, ver Viaje).",
+              "fr": "Ajoutez-vous ci-dessous, puis touchez une carte pour la définir comme étant vous (créer ne sélectionne pas automatiquement — le partage nécessite de se connecter, voir Voyage).",
+              "ar": "أضف نفسك أدناه، ثم انقر على بطاقة لتعيينها كأنت (الإنشاء لا يحدد تلقائيًا — المشاركة تتطلب تسجيل الدخول، انظر الرحلة).",
+              "pt": "Adicione-se abaixo, depois toque em um cartão para defini-lo como você (criar não seleciona automaticamente — compartilhar requer login, veja Viagem).",
+              "ru": "Добавьте себя ниже, затем нажмите на карточку, чтобы установить её как себя (создание не выбирает автоматически — для совместного доступа нужен вход, см. Поездка).",
+              "de": "Füge dich unten hinzu und tippe dann auf eine Karte, um sie als dich festzulegen (Erstellen wählt nicht automatisch aus — Teilen erfordert Anmeldung, siehe Reise).",
+              "ja": "以下で自分を追加し、カードをタップして自分として設定します（作成しても自動選択はされません — 共有にはサインインが必要です。旅行を参照）。",
+              "tr": "Aşağıda kendinizi ekleyin, ardından siz olarak ayarlamak için bir karta dokunun (oluşturmak otomatik seçmez — paylaşım oturum açma gerektirir, bkz. Seyahat).",
+              "vi": "Thêm chính bạn bên dưới, sau đó chạm vào một thẻ để đặt nó là bạn (tạo không tự động chọn — chia sẻ cần đăng nhập, xem Chuyến đi).",
+              "it": "Aggiungiti qui sotto, poi tocca una scheda per impostarla come te (la creazione non seleziona automaticamente — la condivisione richiede l'accesso, vedi Viaggio).",
+              "fa": "خودتان را در زیر اضافه کنید، سپس روی یک کارت ضربه بزنید تا آن را به‌عنوان خودتان تنظیم کنید (ایجاد به‌طور خودکار انتخاب نمی‌شود — اشتراک‌گذاری نیاز به ورود دارد، به سفر مراجعه کنید).",
+              "pl": "Dodaj siebie poniżej, a następnie dotknij karty, aby ustawić ją jako siebie (tworzenie nie wybiera automatycznie — udostępnianie wymaga zalogowania, zobacz Podróż).",
+              "uk": "Додайте себе нижче, потім торкніться картки, щоб позначити її як себе (створення не вибирає автоматично — для спільного доступу потрібен вхід, див. Подорож).",
+              "nl": "Voeg jezelf hieronder toe en tik dan op een kaart om deze als jou in te stellen (aanmaken selecteert niet automatisch — delen vereist inloggen, zie Reis).",
+              "sv": "Lägg till dig själv nedan, tryck sedan på ett kort för att ställa in det som dig (att skapa väljer inte automatiskt — delning kräver inloggning, se Resa).",
+              "cs": "Přidejte se níže, poté klepněte na kartu a nastavte ji jako sebe (vytvoření automaticky nevybírá — sdílení vyžaduje přihlášení, viz Cesta).",
+              "el": "Προσθέστε τον εαυτό σας παρακάτω, έπειτα πατήστε μια κάρτα για να την ορίσετε ως εσάς (η δημιουργία δεν επιλέγει αυτόματα — η κοινή χρήση απαιτεί σύνδεση, δείτε Ταξίδι)."
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "Add a member card",
+              "ko": "멤버 카드 추가",
+              "zh": "添加成员卡",
+              "hi": "सदस्य कार्ड जोड़ें",
+              "es": "Añadir una tarjeta de miembro",
+              "fr": "Ajouter une carte de membre",
+              "ar": "إضافة بطاقة عضو",
+              "pt": "Adicionar um cartão de membro",
+              "ru": "Добавить карточку участника",
+              "de": "Mitgliedskarte hinzufügen",
+              "ja": "メンバーカードを追加",
+              "tr": "Üye kartı ekle",
+              "vi": "Thêm thẻ thành viên",
+              "it": "Aggiungi una scheda membro",
+              "fa": "افزودن کارت عضو",
+              "pl": "Dodaj kartę członka",
+              "uk": "Додати картку учасника",
+              "nl": "Ledenkaart toevoegen",
+              "sv": "Lägg till ett medlemskort",
+              "cs": "Přidat kartu člena",
+              "el": "Προσθήκη κάρτας μέλους"
+            },
+            "icon": "person_add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "entries",
+                "values": { "kind": "member", "createdBy": "$playerId" },
+                "link": { "table": "relations", "fromId": "trip_root", "type": "contains" }
+              }
+            }
+          },
+          {
+            "type": "cards",
+            "table": "entries",
+            "filter": { "column": "kind", "value": "member" },
+            "title": "title",
+            "density": "row",
+            "dotColumn": "color",
+            "colors": {
+              "blue": "blue", "pink": "pink", "teal": "teal", "green": "green",
+              "purple": "purple", "gray": "gray", "amber": "amber", "coral": "coral", "red": "red"
+            },
+            "tags": [{ "column": "emoji" }],
+            "accentColumn": "color",
+            "accentColors": {
+              "blue": "blue", "pink": "pink", "teal": "teal", "green": "green",
+              "purple": "purple", "gray": "gray", "amber": "amber", "coral": "coral", "red": "red"
+            },
+            "action": {
+              "fn": "setSetting",
+              "args": { "key": "tripboardMemberId" }
+            },
+            "menuActions": [
+              { "label": "Edit", "action": { "fn": "editRow" } }
+            ],
+            "tableView": false,
+            "emptyIcon": "people",
+            "emptyTitle": {
+              "en": "Nobody yet",
+              "ko": "아직 없음",
+              "zh": "暂无成员",
+              "hi": "अभी तक कोई नहीं",
+              "es": "Nadie todavía",
+              "fr": "Personne pour l'instant",
+              "ar": "لا يوجد أحد بعد",
+              "pt": "Ninguém ainda",
+              "ru": "Пока никого",
+              "de": "Noch niemand",
+              "ja": "まだ誰もいません",
+              "tr": "Henüz kimse yok",
+              "vi": "Chưa có ai",
+              "it": "Nessuno ancora",
+              "fa": "هنوز کسی نیست",
+              "pl": "Nikogo jeszcze",
+              "uk": "Ще нікого немає",
+              "nl": "Nog niemand",
+              "sv": "Ingen ännu",
+              "cs": "Zatím nikdo",
+              "el": "Δεν υπάρχει κανείς ακόμα"
+            },
+            "emptyText": {
+              "en": "Tap \"Add a member card\" above to add yourself.",
+              "ko": "위의 \"멤버 카드 추가\"를 눌러 본인을 추가하세요.",
+              "zh": "点击上方的“添加成员卡”将自己添加进来。",
+              "hi": "स्वयं को जोड़ने के लिए ऊपर \"सदस्य कार्ड जोड़ें\" पर टैप करें।",
+              "es": "Toca \"Añadir una tarjeta de miembro\" arriba para añadirte.",
+              "fr": "Touchez « Ajouter une carte de membre » ci-dessus pour vous ajouter.",
+              "ar": "انقر على \"إضافة بطاقة عضو\" أعلاه لإضافة نفسك.",
+              "pt": "Toque em \"Adicionar um cartão de membro\" acima para se adicionar.",
+              "ru": "Нажмите «Добавить карточку участника» выше, чтобы добавить себя.",
+              "de": "Tippe oben auf „Mitgliedskarte hinzufügen“, um dich selbst hinzuzufügen.",
+              "ja": "上の「メンバーカードを追加」をタップして自分を追加します。",
+              "tr": "Kendinizi eklemek için yukarıdaki \"Üye kartı ekle\"ye dokunun.",
+              "vi": "Chạm \"Thêm thẻ thành viên\" ở trên để thêm chính bạn.",
+              "it": "Tocca \"Aggiungi una scheda membro\" sopra per aggiungerti.",
+              "fa": "برای افزودن خودتان روی «افزودن کارت عضو» بالا ضربه بزنید.",
+              "pl": "Dotknij \"Dodaj kartę członka\" powyżej, aby dodać siebie.",
+              "uk": "Торкніться «Додати картку учасника» вище, щоб додати себе.",
+              "nl": "Tik op \"Ledenkaart toevoegen\" hierboven om jezelf toe te voegen.",
+              "sv": "Tryck på \"Lägg till ett medlemskort\" ovan för att lägga till dig själv.",
+              "cs": "Klepněte výše na „Přidat kartu člena“ a přidejte se.",
+              "el": "Πατήστε «Προσθήκη κάρτας μέλους» παραπάνω για να προσθέσετε τον εαυτό σας."
+            },
+            "emptyAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "entries",
+                "values": { "kind": "member", "createdBy": "$playerId" },
+                "link": { "table": "relations", "fromId": "trip_root", "type": "contains" }
+              }
+            },
+            "emptyActionLabel": {
+              "en": "Add a member card",
+              "ko": "멤버 카드 추가",
+              "zh": "添加成员卡",
+              "hi": "सदस्य कार्ड जोड़ें",
+              "es": "Añadir una tarjeta de miembro",
+              "fr": "Ajouter une carte de membre",
+              "ar": "إضافة بطاقة عضو",
+              "pt": "Adicionar um cartão de membro",
+              "ru": "Добавить карточку участника",
+              "de": "Mitgliedskarte hinzufügen",
+              "ja": "メンバーカードを追加",
+              "tr": "Üye kartı ekle",
+              "vi": "Thêm thẻ thành viên",
+              "it": "Aggiungi una scheda membro",
+              "fa": "افزودن کارت عضو",
+              "pl": "Dodaj kartę członka",
+              "uk": "Додати картку учасника",
+              "nl": "Ledenkaart toevoegen",
+              "sv": "Lägg till ett medlemskort",
+              "cs": "Přidat kartu člena",
+              "el": "Προσθήκη κάρτας μέλους"
+            }
+          }
+        ]
+      }
+    },
+    "activity": {
+      "title": {
+        "en": "Activity",
+        "ko": "활동",
+        "zh": "活动",
+        "hi": "गतिविधि",
+        "es": "Actividad",
+        "fr": "Activité",
+        "ar": "النشاط",
+        "pt": "Atividade",
+        "ru": "Активность",
+        "de": "Aktivität",
+        "ja": "アクティビティ",
+        "tr": "Etkinlik",
+        "vi": "Hoạt động",
+        "it": "Attività",
+        "fa": "فعالیت",
+        "pl": "Aktywność",
+        "uk": "Активність",
+        "nl": "Activiteit",
+        "sv": "Aktivitet",
+        "cs": "Aktivita",
+        "el": "Δραστηριότητα"
+      },
+      "body": {
+        "type": "column",
+        "crossAxis": "start",
+        "children": [
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": {
+              "en": "🕘 Activity",
+              "ko": "🕘 활동",
+              "zh": "🕘 活动",
+              "hi": "🕘 गतिविधि",
+              "es": "🕘 Actividad",
+              "fr": "🕘 Activité",
+              "ar": "🕘 النشاط",
+              "pt": "🕘 Atividade",
+              "ru": "🕘 Активность",
+              "de": "🕘 Aktivität",
+              "ja": "🕘 アクティビティ",
+              "tr": "🕘 Etkinlik",
+              "vi": "🕘 Hoạt động",
+              "it": "🕘 Attività",
+              "fa": "🕘 فعالیت",
+              "pl": "🕘 Aktywność",
+              "uk": "🕘 Активність",
+              "nl": "🕘 Activiteit",
+              "sv": "🕘 Aktivitet",
+              "cs": "🕘 Aktivita",
+              "el": "🕘 Δραστηριότητα"
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Every row, most recently updated first — no whole-board undo (unsafe with 2+ writers); per-row delete still gives an Undo toast.",
+              "ko": "모든 행을 최근 업데이트순으로 표시합니다 — 전체 보드 실행 취소는 없습니다(작성자 2명 이상이면 안전하지 않음). 행별 삭제는 여전히 실행 취소 토스트를 제공합니다.",
+              "zh": "所有行按最近更新排序——没有整版撤销（2 位以上编辑者时不安全）；按行删除仍会显示撤销提示。",
+              "hi": "हर पंक्ति, सबसे हाल में अद्यतन पहले — कोई पूरा-बोर्ड पूर्ववत नहीं (2+ लेखकों के साथ असुरक्षित); प्रति-पंक्ति हटाना अभी भी पूर्ववत टोस्ट देता है।",
+              "es": "Cada fila, con las actualizadas más recientemente primero: no hay deshacer para todo el tablero (inseguro con 2+ editores); eliminar por fila sigue mostrando un aviso Deshacer.",
+              "fr": "Chaque ligne, les plus récemment mises à jour en premier — pas d'annulation globale (dangereux avec 2+ contributeurs) ; la suppression par ligne affiche toujours un toast Annuler.",
+              "ar": "كل صف، مع الأحدث تحديثًا أولاً — لا يوجد تراجع للوحة بأكملها (غير آمن مع 2+ من المحررين)؛ لا يزال الحذف لكل صف يعرض تنبيه تراجع.",
+              "pt": "Cada linha, com as mais recentemente atualizadas primeiro — sem desfazer o quadro inteiro (inseguro com 2+ editores); a exclusão por linha ainda mostra um toast de Desfazer.",
+              "ru": "Каждая строка, сначала недавно обновлённые — нет отмены для всей доски (небезопасно при 2+ авторах); удаление по строке всё ещё показывает уведомление «Отменить».",
+              "de": "Jede Zeile, zuletzt aktualisierte zuerst — kein Rückgängig für das ganze Board (unsicher bei 2+ Bearbeitern); das Löschen pro Zeile zeigt weiterhin einen Rückgängig-Hinweis.",
+              "ja": "すべての行を、最近更新されたものから順に表示 — ボード全体の元に戻すはありません（2人以上の編集者では安全ではないため）。行ごとの削除は引き続き元に戻すトーストを表示します。",
+              "tr": "Her satır, en son güncellenen önce — tüm pano için geri alma yok (2+ yazarla güvenli değil); satır bazında silme hâlâ bir Geri Al bildirimi gösterir.",
+              "vi": "Mọi hàng, cập nhật gần đây nhất trước — không có hoàn tác toàn bảng (không an toàn với 2+ người viết); xóa từng hàng vẫn hiển thị thông báo Hoàn tác.",
+              "it": "Ogni riga, con quelle aggiornate più di recente per prime — nessun annulla per l'intera bacheca (non sicuro con 2+ autori); l'eliminazione per riga mostra comunque un avviso Annulla.",
+              "fa": "هر ردیف، با به‌روزترین‌ها ابتدا — بدون بازگردانی کل تخته (با ۲+ نویسنده ناامن است)؛ حذف هر ردیف همچنان یک اعلان بازگردانی نشان می‌دهد.",
+              "pl": "Każdy wiersz, z najnowszymi aktualizacjami na górze — brak cofnięcia dla całej tablicy (niebezpieczne przy 2+ autorach); usuwanie wiersza nadal pokazuje powiadomienie Cofnij.",
+              "uk": "Кожен рядок, спочатку останні оновлені — немає скасування для всієї дошки (небезпечно з 2+ авторами); видалення по рядку все ще показує сповіщення «Скасувати».",
+              "nl": "Elke rij, meest recent bijgewerkte eerst — geen ongedaan maken voor het hele bord (onveilig met 2+ schrijvers); per-rij verwijderen toont nog steeds een Ongedaan-maken-melding.",
+              "sv": "Varje rad, senast uppdaterade först — ingen ångra för hela tavlan (osäkert med 2+ skribenter); borttagning per rad visar fortfarande en Ångra-avisering.",
+              "cs": "Každý řádek, nejnověji aktualizované jako první — žádné zpět pro celou nástěnku (nebezpečné při 2+ autorech); mazání po řádcích stále zobrazuje oznámení Zpět.",
+              "el": "Κάθε γραμμή, με τις πιο πρόσφατα ενημερωμένες πρώτες — καμία αναίρεση ολόκληρου του πίνακα (μη ασφαλές με 2+ συντάκτες)· η διαγραφή ανά γραμμή εξακολουθεί να εμφανίζει ειδοποίηση Αναίρεσης."
+            }
+          },
+          {
+            "type": "cards",
+            "table": "entries",
+            "filter": {
+              "column": "kind",
+              "in": ["trip", "member", "plan", "event", "todo", "packing", "note"]
+            },
+            "title": "title",
+            "subtitle": "kind",
+            "density": "row",
+            "tags": [
+              { "column": "author" },
+              { "column": "updatedAt" }
+            ],
+            "accentColumn": "kind",
+            "accentColors": {
+              "trip": "purple", "member": "gray", "plan": "amber",
+              "event": "coral", "todo": "blue", "packing": "teal", "note": "pink"
+            },
+            "sortBy": "updatedAt",
+            "sortDir": "desc",
+            "action": { "fn": "editRow" },
+            "tableView": false,
+            "emptyIcon": "history",
+            "emptyTitle": {
+              "en": "Nothing yet",
+              "ko": "아직 없음",
+              "zh": "暂无内容",
+              "hi": "अभी तक कुछ नहीं",
+              "es": "Nada todavía",
+              "fr": "Rien pour l'instant",
+              "ar": "لا يوجد شيء بعد",
+              "pt": "Nada ainda",
+              "ru": "Пока ничего",
+              "de": "Noch nichts",
+              "ja": "まだ何もありません",
+              "tr": "Henüz bir şey yok",
+              "vi": "Chưa có gì",
+              "it": "Niente ancora",
+              "fa": "هنوز چیزی نیست",
+              "pl": "Jeszcze nic",
+              "uk": "Ще нічого немає",
+              "nl": "Nog niets",
+              "sv": "Inget än",
+              "cs": "Zatím nic",
+              "el": "Τίποτα ακόμα"
+            },
+            "emptyText": {
+              "en": "Add a plan, event, todo, packing item, or note and it'll show up here.",
+              "ko": "계획, 일정, 할 일, 짐 항목, 메모를 추가하면 여기에 표시됩니다.",
+              "zh": "添加计划、事件、待办、打包物品或备注，它就会出现在这里。",
+              "hi": "एक योजना, घटना, काम, पैकिंग वस्तु, या नोट जोड़ें और यह यहां दिखाई देगा।",
+              "es": "Añade un plan, evento, tarea, artículo de equipaje o nota y aparecerá aquí.",
+              "fr": "Ajoutez un plan, un événement, une tâche, un article de bagage ou une note et il apparaîtra ici.",
+              "ar": "أضف خطة أو حدثًا أو مهمة أو عنصر تعبئة أو ملاحظة وستظهر هنا.",
+              "pt": "Adicione um plano, evento, tarefa, item de bagagem ou nota e ele aparecerá aqui.",
+              "ru": "Добавьте план, событие, задачу, предмет для сборов или заметку, и это появится здесь.",
+              "de": "Füge einen Plan, ein Ereignis, eine Aufgabe, einen Packgegenstand oder eine Notiz hinzu, und es erscheint hier.",
+              "ja": "プラン、イベント、タスク、荷物、メモを追加すると、ここに表示されます。",
+              "tr": "Bir plan, etkinlik, görev, bavul öğesi veya not ekleyin, burada görünecek.",
+              "vi": "Thêm một kế hoạch, sự kiện, việc cần làm, mục đóng gói, hoặc ghi chú và nó sẽ xuất hiện ở đây.",
+              "it": "Aggiungi un piano, un evento, un'attività, un elemento bagagli o una nota e apparirà qui.",
+              "fa": "یک برنامه، رویداد، کار، مورد بسته‌بندی یا یادداشت اضافه کنید تا اینجا نمایش داده شود.",
+              "pl": "Dodaj plan, wydarzenie, zadanie, przedmiot do spakowania lub notatkę, a pojawi się tutaj.",
+              "uk": "Додайте план, подію, справу, предмет для пакування або примітку, і це з'явиться тут.",
+              "nl": "Voeg een plan, event, taak, in te pakken item of notitie toe en het verschijnt hier.",
+              "sv": "Lägg till en plan, händelse, uppgift, packningsföremål eller anteckning så visas det här.",
+              "cs": "Přidejte plán, událost, úkol, položku k zabalení nebo poznámku a objeví se zde.",
+              "el": "Προσθέστε ένα σχέδιο, μια εκδήλωση, μια εκκρεμότητα, ένα αντικείμενο αποσκευών ή μια σημείωση και θα εμφανιστεί εδώ."
+            }
+          }
+        ]
+      }
+    }
+  }
+}

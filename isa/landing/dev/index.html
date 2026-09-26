@@ -1,0 +1,63 @@
+<!doctype html>
+<!--
+  DEV-CHANNEL root landing (dev.devisant.com only — never the apex). Overlays
+  web/landing/index.html for a dev-channel artifact assembly: this file (and
+  dev/404.html) replace the apex landing/404 for this build; site.css,
+  robots.txt, about.html, faq.html stay shared from web/landing/ (see
+  tool/assemble_prod_artifact.sh's optional 4th CHANNEL_DIR arg). Mirrors the
+  apex decoy page in layout and copy, save one addition: a small
+  "development" tag. Like the apex, it never references the platform, tools,
+  applets, or data; the app on this build stays reachable by direct link only.
+-->
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="devisant — a website.">
+<title>devisant — development</title>
+<link rel="stylesheet" href="/site.css">
+<style>
+  /* One small addition over the shared theme: the "development" tag. */
+  .tag {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 0.2rem 0.6rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <span class="tag">development</span>
+  <h1 class="wordmark">devisant</h1>
+  <p class="lede">A website.</p>
+
+  <nav class="sitenav">
+    <a href="/" aria-current="page">home</a>
+    <a href="/about">about</a>
+    <a href="/faq">faq</a>
+  </nav>
+
+  <section>
+    <h2>Welcome</h2>
+    <p>
+      You have reached dev.devisant.com. This is the development copy of its
+      home page. Not a great deal happens here, but it happens here first.
+    </p>
+  </section>
+
+  <section>
+    <h2>News</h2>
+    <p class="muted">
+      There is no news. This is widely considered a good thing.
+    </p>
+  </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "tables": [
+    {
+      "name": "projects",
+      "label": "Projects",
+      "icon": "apps",
+      "description": "Applets you are building. One row per applet idea, from first spark to shipped."
+    },
+    {
+      "name": "steps",
+      "label": "Steps",
+      "icon": "task",
+      "description": "The guided build checklist. Every step belongs to a phase (Define, Data, Screens, Feel, Ship) and links to the project it is for."
+    },
+    {
+      "name": "playbook",
+      "label": "Playbook",
+      "icon": "menu_book",
+      "description": "Short guides explaining each part of applet-making in depth — read alongside the checklist."
+    },
+    {
+      "name": "styles",
+      "label": "Styles",
+      "icon": "palette",
+      "description": "The design-style gallery: every look an applet can wear, with what it suits and accent colors that pair well."
+    }
+  ]
+}

@@ -1,0 +1,3396 @@
+{
+ "app": {
+  "_openAt_comment": "opt OUT of the host's default cold-start behavior (restore the last-active nav destination via last_screen_prefs.dart) — a fresh open must always land on the journal/'Today' home screen, not wherever the user left off (in-session tab switching via _navHistory is unaffected; this only skips the BOOT-time restore in app_screen.dart's `_load`). Engine-wide default is left alone since other applets may depend on restore-last-screen; this is a per-app opt-in, same mechanism as wikipick's apps/wikipick/ui.json.",
+  "openAt": "home",
+  "_navLabels_comment": "label all five tabs on phones too: the default 'auto' shows only the selected tab's label at 4+ tabs, which left Calendar/Trends/Atlas/More as bare icons (house rule: named doors, never icon-only).",
+  "navLabels": "always",
+  "languages": [
+   "en",
+   "ko",
+   "zh",
+   "hi",
+   "es",
+   "fr",
+   "ar",
+   "pt",
+   "ru",
+   "de",
+   "ja",
+   "tr",
+   "vi",
+   "it",
+   "fa",
+   "pl",
+   "uk",
+   "nl",
+   "sv",
+   "cs",
+   "el"
+  ],
+  "translatable": true,
+  "appDataTools": true,
+  "title": {
+   "en": "Neujour",
+   "ko": "Neujour",
+   "zh": "Neujour",
+   "hi": "Neujour",
+   "es": "Neujour",
+   "fr": "Neujour",
+   "ar": "Neujour",
+   "pt": "Neujour",
+   "ru": "Neujour",
+   "de": "Neujour",
+   "ja": "Neujour",
+   "tr": "Neujour",
+   "vi": "Neujour",
+   "it": "Neujour",
+   "fa": "Neujour",
+   "pl": "Neujour",
+   "uk": "Neujour",
+   "nl": "Neujour",
+   "sv": "Neujour",
+   "cs": "Neujour",
+   "el": "Neujour"
+  },
+  "primaryColor": "#7E57C2",
+  "autosave": true,
+  "theme": "sepia",
+  "intro": {
+   "tour": [
+    {
+     "screen": "journal",
+     "label": {
+      "en": "Today",
+      "ko": "오늘",
+      "zh": "今天",
+      "hi": "आज",
+      "es": "Hoy",
+      "fr": "Aujourd'hui",
+      "ar": "اليوم",
+      "pt": "Hoje",
+      "ru": "Сегодня",
+      "de": "Heute",
+      "ja": "今日",
+      "tr": "Bugün",
+      "vi": "Hôm nay",
+      "it": "Oggi",
+      "fa": "امروز",
+      "pl": "Dziś",
+      "uk": "Сьогодні",
+      "nl": "Vandaag",
+      "sv": "Idag",
+      "cs": "Dnes",
+      "el": "Σήμερα"
+     },
+     "note": {
+      "en": "Write a moment, see today's agenda, browse your days.",
+      "ko": "순간을 기록하고, 오늘의 일정을 보고, 지난 날들을 둘러보세요.",
+      "zh": "记录时刻，查看今天的日程，浏览你的日子。",
+      "hi": "एक पल लिखें, आज का एजेंडा देखें, अपने दिन ब्राउज़ करें।",
+      "es": "Escribe un momento, mira la agenda de hoy, explora tus días.",
+      "fr": "Écrivez un instant, consultez le programme du jour, parcourez vos journées.",
+      "ar": "اكتب لحظة، اطّلع على أجندة اليوم، وتصفّح أيامك.",
+      "pt": "Escreva um momento, veja a agenda de hoje, navegue pelos seus dias.",
+      "ru": "Запишите момент, посмотрите повестку на сегодня, просмотрите свои дни.",
+      "de": "Halte einen Moment fest, sieh die heutige Agenda, durchstöbere deine Tage.",
+      "ja": "瞬間を書き留め、今日の予定を確認し、過去の日々をたどります。",
+      "tr": "Bir anı yazın, bugünün gündemine bakın, günlerinizde gezinin.",
+      "vi": "Viết một khoảnh khắc, xem lịch trình hôm nay, duyệt qua các ngày của bạn.",
+      "it": "Scrivi un momento, guarda l'agenda di oggi, sfoglia i tuoi giorni.",
+      "fa": "لحظه‌ای بنویسید، برنامهٔ امروز را ببینید، روزهای خود را مرور کنید.",
+      "pl": "Zapisz chwilę, zobacz dzisiejszy plan, przeglądaj swoje dni.",
+      "uk": "Запишіть момент, перегляньте порядок денний на сьогодні, перегляньте свої дні.",
+      "nl": "Schrijf een moment op, bekijk de agenda van vandaag, blader door je dagen.",
+      "sv": "Skriv ett ögonblick, se dagens dagordning, bläddra igenom dina dagar.",
+      "cs": "Zapište okamžik, podívejte se na dnešní program, procházejte své dny.",
+      "el": "Γράψτε μια στιγμή, δείτε τη σημερινή ατζέντα, περιηγηθείτε στις ημέρες σας."
+     }
+    },
+    {
+     "screen": "calendar",
+     "label": "Calendar",
+     "note": "Entries laid out by date."
+    },
+    {
+     "screen": "trends",
+     "label": "Trends",
+     "note": "Patterns across your entries."
+    },
+    {
+     "screen": "atlas",
+     "label": "Atlas",
+     "note": "Entries plotted on a map by place."
+    },
+    {
+     "screen": "more",
+     "label": {
+      "en": "More",
+      "ko": "더보기",
+      "zh": "更多",
+      "hi": "और",
+      "es": "Más",
+      "fr": "Plus",
+      "ar": "المزيد",
+      "pt": "Mais",
+      "ru": "Ещё",
+      "de": "Mehr",
+      "ja": "その他",
+      "tr": "Diğer",
+      "vi": "Thêm",
+      "it": "Altro",
+      "fa": "بیشتر",
+      "pl": "Więcej",
+      "uk": "Більше",
+      "nl": "Meer",
+      "sv": "Mer",
+      "cs": "Více",
+      "el": "Περισσότερα"
+     },
+     "note": {
+      "en": "Feelings and Customize live here.",
+      "ko": "감정과 사용자 지정이 여기 있습니다.",
+      "zh": "感受和自定义在这里。",
+      "hi": "भावनाएं और अनुकूलित करें यहां हैं।",
+      "es": "Sentimientos y Personalizar están aquí.",
+      "fr": "Émotions et Personnaliser se trouvent ici.",
+      "ar": "المشاعر والتخصيص هنا.",
+      "pt": "Sentimentos e Personalizar estão aqui.",
+      "ru": "Здесь находятся Чувства и Настроить.",
+      "de": "Gefühle und Anpassen findest du hier.",
+      "ja": "気持ちとカスタマイズはここにあります。",
+      "tr": "Duygular ve Özelleştir burada.",
+      "vi": "Cảm xúc và Tùy chỉnh ở đây.",
+      "it": "Sentimenti e Personalizza si trovano qui.",
+      "fa": "احساسات و سفارشی‌سازی اینجا هستند.",
+      "pl": "Uczucia i Dostosuj są tutaj.",
+      "uk": "Тут розташовані Почуття та Налаштувати.",
+      "nl": "Gevoelens en Aanpassen staan hier.",
+      "sv": "Känslor och Anpassa finns här.",
+      "cs": "Pocity a Přizpůsobit jsou zde.",
+      "el": "Εδώ βρίσκονται τα Συναισθήματα και η Προσαρμογή."
+     }
+    }
+   ],
+   "purpose": {
+    "en": "Neujour is your journal, agenda, and notes together — capture a moment up top, see today's plans, then browse your days below.",
+    "ko": "Neujour는 일기, 일정, 메모를 하나로 모읍니다 — 위에서 순간을 기록하고 오늘의 일정을 확인한 뒤, 아래에서 지난 날들을 둘러보세요.",
+    "zh": "Neujour 将日记、日程和笔记合而为一——在顶部记录一个时刻，查看今天的安排，然后在下方浏览你的每一天。",
+    "hi": "Neujour आपकी जर्नल, एजेंडा और नोट्स को एक साथ लाता है — ऊपर एक पल दर्ज करें, आज की योजनाएं देखें, फिर नीचे अपने दिनों को ब्राउज़ करें।",
+    "es": "Neujour reúne tu diario, agenda y notas en un solo lugar: captura un momento arriba, mira los planes de hoy y luego explora tus días abajo.",
+    "fr": "Neujour réunit votre journal, votre agenda et vos notes — capturez un instant en haut, consultez les plans du jour, puis parcourez vos journées ci-dessous.",
+    "ar": "يجمع Neujour بين يومياتك وجدول أعمالك وملاحظاتك — سجّل لحظة في الأعلى، واطّلع على خطط اليوم، ثم تصفّح أيامك أدناه.",
+    "pt": "O Neujour reúne seu diário, agenda e notas — capture um momento no topo, veja os planos de hoje e depois navegue pelos seus dias abaixo.",
+    "ru": "Neujour объединяет дневник, повестку дня и заметки — запечатлейте момент вверху, посмотрите планы на сегодня, а затем просмотрите свои дни ниже.",
+    "de": "Neujour vereint dein Journal, deine Agenda und deine Notizen — halte oben einen Moment fest, sieh die heutigen Pläne und durchstöbere darunter deine Tage.",
+    "ja": "Neujour は日記・予定・メモをひとつにまとめます — 上部で瞬間を記録し、今日の予定を確認し、下でこれまでの日々をたどれます。",
+    "tr": "Neujour günlüğünüzü, ajandanızı ve notlarınızı bir araya getirir — üstte bir anı yakalayın, bugünün planlarını görün, ardından altta günlerinizde gezinin.",
+    "vi": "Neujour gộp nhật ký, lịch trình và ghi chú của bạn lại với nhau — ghi lại một khoảnh khắc ở trên, xem kế hoạch hôm nay, rồi duyệt qua các ngày của bạn bên dưới.",
+    "it": "Neujour riunisce il tuo diario, la tua agenda e le tue note — cattura un momento in alto, guarda i piani di oggi, poi sfoglia i tuoi giorni qui sotto.",
+    "fa": "Neujour دفترچه، برنامه و یادداشت‌های شما را کنار هم می‌آورد — در بالا یک لحظه را ثبت کنید، برنامه‌های امروز را ببینید و سپس روزهای خود را در پایین مرور کنید.",
+    "pl": "Neujour łączy Twój dziennik, plan dnia i notatki — uchwyć chwilę u góry, zobacz dzisiejsze plany, a potem przeglądaj swoje dni poniżej.",
+    "uk": "Neujour об'єднує ваш щоденник, порядок денний і нотатки — зафіксуйте момент угорі, перегляньте плани на сьогодні, а потім перегляньте свої дні нижче.",
+    "nl": "Neujour brengt je dagboek, agenda en notities samen — leg bovenaan een moment vast, bekijk de plannen van vandaag en blader daaronder door je dagen.",
+    "sv": "Neujour samlar din dagbok, dagordning och anteckningar — fånga ett ögonblick högst upp, se dagens planer och bläddra sedan igenom dina dagar nedanför.",
+    "cs": "Neujour spojuje váš deník, program a poznámky — nahoře zachyťte okamžik, podívejte se na dnešní plány a poté procházejte své dny níže.",
+    "el": "Το Neujour ενώνει το ημερολόγιό σας, την ατζέντα και τις σημειώσεις — καταγράψτε μια στιγμή στο επάνω μέρος, δείτε τα σημερινά σχέδια και έπειτα περιηγηθείτε στις ημέρες σας παρακάτω."
+   },
+   "actions": [
+    {
+     "label": {
+      "en": "Write today's entry",
+      "ko": "오늘의 기록 작성",
+      "zh": "写下今天的条目",
+      "hi": "आज की प्रविष्टि लिखें",
+      "es": "Escribe la entrada de hoy",
+      "fr": "Écrire l'entrée du jour",
+      "ar": "اكتب مدخل اليوم",
+      "pt": "Escrever a entrada de hoje",
+      "ru": "Написать запись за сегодня",
+      "de": "Heutigen Eintrag schreiben",
+      "ja": "今日のエントリーを書く",
+      "tr": "Bugünün kaydını yaz",
+      "vi": "Viết mục hôm nay",
+      "it": "Scrivi la voce di oggi",
+      "fa": "نوشتن ورودی امروز",
+      "pl": "Napisz dzisiejszy wpis",
+      "uk": "Написати сьогоднішній запис",
+      "nl": "Schrijf het item van vandaag",
+      "sv": "Skriv dagens post",
+      "cs": "Napsat dnešní záznam",
+      "el": "Γράψτε τη σημερινή καταχώριση"
+     },
+     "icon": "add",
+     "action": {
+      "fn": "addRow",
+      "args": {
+       "table": "entries",
+       "values": {
+        "date": "today"
+       }
+      }
+     }
+    }
+   ]
+  },
+  "fab": {
+   "icon": "add",
+   "label": "Add",
+   "options": [
+    {
+     "icon": "edit_note",
+     "label": "New entry",
+     "table": "entries",
+     "values": {
+      "date": "today"
+     }
+    },
+    {
+     "icon": "sticky_note_2",
+     "label": "New note",
+     "table": "entries",
+     "values": {
+      "date": "today",
+      "mood": ""
+     }
+    },
+    {
+     "icon": "event",
+     "label": "New event",
+     "table": "events",
+     "values": {
+      "date": "today"
+     }
+    },
+    {
+     "icon": "favorite",
+     "label": "Log a feeling",
+     "table": "feelings",
+     "values": {
+      "outOf": "5"
+     }
+    }
+   ]
+  }
+ },
+ "nav": [
+  {
+   "id": "journal",
+   "label": {
+    "en": "Today",
+    "ko": "오늘",
+    "zh": "今天",
+    "hi": "आज",
+    "es": "Hoy",
+    "fr": "Aujourd'hui",
+    "ar": "اليوم",
+    "pt": "Hoje",
+    "ru": "Сегодня",
+    "de": "Heute",
+    "ja": "今日",
+    "tr": "Bugün",
+    "vi": "Hôm nay",
+    "it": "Oggi",
+    "fa": "امروز",
+    "pl": "Dziś",
+    "uk": "Сьогодні",
+    "nl": "Vandaag",
+    "sv": "Idag",
+    "cs": "Dnes",
+    "el": "Σήμερα"
+   },
+   "icon": "book",
+   "screen": "journal"
+  },
+  {
+   "id": "calendar",
+   "label": {
+    "en": "Calendar",
+    "ko": "캘린더",
+    "zh": "日历",
+    "hi": "कैलेंडर",
+    "es": "Calendario",
+    "fr": "Calendrier",
+    "ar": "التقويم",
+    "pt": "Calendário",
+    "ru": "Календарь",
+    "de": "Kalender",
+    "ja": "カレンダー",
+    "tr": "Takvim",
+    "vi": "Lịch",
+    "it": "Calendario",
+    "fa": "تقویم",
+    "pl": "Kalendarz",
+    "uk": "Календар",
+    "nl": "Kalender",
+    "sv": "Kalender",
+    "cs": "Kalendář",
+    "el": "Ημερολόγιο"
+   },
+   "icon": "calendar_today",
+   "screen": "calendar"
+  },
+  {
+   "id": "trends",
+   "label": {
+    "en": "Trends",
+    "ko": "트렌드",
+    "zh": "趋势",
+    "hi": "रुझान",
+    "es": "Tendencias",
+    "fr": "Tendances",
+    "ar": "الاتجاهات",
+    "pt": "Tendências",
+    "ru": "Тенденции",
+    "de": "Trends",
+    "ja": "傾向",
+    "tr": "Eğilimler",
+    "vi": "Xu hướng",
+    "it": "Tendenze",
+    "fa": "روندها",
+    "pl": "Trendy",
+    "uk": "Тенденції",
+    "nl": "Trends",
+    "sv": "Trender",
+    "cs": "Trendy",
+    "el": "Τάσεις"
+   },
+   "icon": "insights",
+   "screen": "trends"
+  },
+  {
+   "id": "atlas",
+   "label": {
+    "en": "Atlas",
+    "ko": "Atlas",
+    "zh": "Atlas",
+    "hi": "Atlas",
+    "es": "Atlas",
+    "fr": "Atlas",
+    "ar": "Atlas",
+    "pt": "Atlas",
+    "ru": "Atlas",
+    "de": "Atlas",
+    "ja": "Atlas",
+    "tr": "Atlas",
+    "vi": "Atlas",
+    "it": "Atlas",
+    "fa": "Atlas",
+    "pl": "Atlas",
+    "uk": "Atlas",
+    "nl": "Atlas",
+    "sv": "Atlas",
+    "cs": "Atlas",
+    "el": "Atlas"
+   },
+   "icon": "people",
+   "screen": "atlas"
+  },
+  {
+   "id": "more",
+   "label": {
+    "en": "More",
+    "ko": "더보기",
+    "zh": "更多",
+    "hi": "और",
+    "es": "Más",
+    "fr": "Plus",
+    "ar": "المزيد",
+    "pt": "Mais",
+    "ru": "Ещё",
+    "de": "Mehr",
+    "ja": "その他",
+    "tr": "Diğer",
+    "vi": "Thêm",
+    "it": "Altro",
+    "fa": "بیشتر",
+    "pl": "Więcej",
+    "uk": "Більше",
+    "nl": "Meer",
+    "sv": "Mer",
+    "cs": "Více",
+    "el": "Περισσότερα"
+   },
+   "icon": "more_horiz",
+   "screen": "more"
+  }
+ ],
+ "screens": {
+  "journal": {
+   "title": {
+    "en": "Today",
+    "ko": "오늘",
+    "zh": "今天",
+    "hi": "आज",
+    "es": "Hoy",
+    "fr": "Aujourd'hui",
+    "ar": "اليوم",
+    "pt": "Hoje",
+    "ru": "Сегодня",
+    "de": "Heute",
+    "ja": "今日",
+    "tr": "Bugün",
+    "vi": "Hôm nay",
+    "it": "Oggi",
+    "fa": "امروز",
+    "pl": "Dziś",
+    "uk": "Сьогодні",
+    "nl": "Vandaag",
+    "sv": "Idag",
+    "cs": "Dnes",
+    "el": "Σήμερα"
+   },
+   "maxContentWidth": 760,
+   "body": {
+    "type": "column",
+    "children": [
+     {
+      "type": "composer",
+      "table": "entries",
+      "column": "body",
+      "placeholder": {
+       "en": "What happened today?",
+       "ko": "오늘 무슨 일이 있었나요?",
+       "zh": "今天发生了什么？",
+       "hi": "आज क्या हुआ?",
+       "es": "¿Qué pasó hoy?",
+       "fr": "Que s'est-il passé aujourd'hui ?",
+       "ar": "ماذا حدث اليوم؟",
+       "pt": "O que aconteceu hoje?",
+       "ru": "Что произошло сегодня?",
+       "de": "Was ist heute passiert?",
+       "ja": "今日は何がありましたか？",
+       "tr": "Bugün neler oldu?",
+       "vi": "Hôm nay đã xảy ra chuyện gì?",
+       "it": "Cosa è successo oggi?",
+       "fa": "امروز چه اتفاقی افتاد؟",
+       "pl": "Co się dziś wydarzyło?",
+       "uk": "Що сталося сьогодні?",
+       "nl": "Wat is er vandaag gebeurd?",
+       "sv": "Vad hände idag?",
+       "cs": "Co se dnes stalo?",
+       "el": "Τι συνέβη σήμερα;"
+      },
+      "values": {
+       "date": "today"
+      },
+      "sendIcon": "send"
+     },
+     {
+      "type": "text",
+      "style": "caption",
+      "value": {
+       "en": "Agenda",
+       "ko": "일정",
+       "zh": "日程",
+       "hi": "एजेंडा",
+       "es": "Agenda",
+       "fr": "Programme",
+       "ar": "جدول الأعمال",
+       "pt": "Agenda",
+       "ru": "Повестка дня",
+       "de": "Agenda",
+       "ja": "予定",
+       "tr": "Gündem",
+       "vi": "Lịch trình",
+       "it": "Agenda",
+       "fa": "برنامه",
+       "pl": "Plan dnia",
+       "uk": "Порядок денний",
+       "nl": "Agenda",
+       "sv": "Dagordning",
+       "cs": "Program",
+       "el": "Ατζέντα"
+      }
+     },
+     {
+      "type": "agenda",
+      "table": "events",
+      "dateColumns": [
+       "date"
+      ],
+      "titleColumn": "name",
+      "timeColumn": "time",
+      "relativeHeaders": true,
+      "filter": {
+       "column": "date",
+       "value": "today"
+      },
+      "action": {
+       "fn": "editRow"
+      },
+      "emptyText": {
+       "en": "Nothing planned today. Add an event with the + button.",
+       "ko": "오늘은 예정된 일정이 없습니다. + 버튼으로 이벤트를 추가하세요.",
+       "zh": "今天没有安排。点击 + 按钮添加事件。",
+       "hi": "आज कुछ भी योजनाबद्ध नहीं है। + बटन से एक घटना जोड़ें।",
+       "es": "No hay nada planeado para hoy. Añade un evento con el botón +.",
+       "fr": "Rien de prévu aujourd'hui. Ajoutez un événement avec le bouton +.",
+       "ar": "لا يوجد شيء مخطط له اليوم. أضف حدثًا باستخدام الزر +.",
+       "pt": "Nada planejado para hoje. Adicione um evento com o botão +.",
+       "ru": "На сегодня ничего не запланировано. Добавьте событие кнопкой +.",
+       "de": "Heute nichts geplant. Füge mit der Schaltfläche + ein Ereignis hinzu.",
+       "ja": "今日の予定はありません。+ ボタンでイベントを追加できます。",
+       "tr": "Bugün planlanan bir şey yok. + düğmesiyle bir etkinlik ekleyin.",
+       "vi": "Hôm nay chưa có kế hoạch nào. Thêm sự kiện bằng nút +.",
+       "it": "Nulla in programma oggi. Aggiungi un evento con il pulsante +.",
+       "fa": "امروز چیزی برنامه‌ریزی نشده. با دکمهٔ + یک رویداد اضافه کنید.",
+       "pl": "Na dziś nic nie zaplanowano. Dodaj wydarzenie przyciskiem +.",
+       "uk": "На сьогодні нічого не заплановано. Додайте подію кнопкою +.",
+       "nl": "Vandaag niets gepland. Voeg een gebeurtenis toe met de knop +.",
+       "sv": "Inget planerat i dag. Lägg till en händelse med knappen +.",
+       "cs": "Na dnešek nic naplánováno. Přidejte událost tlačítkem +.",
+       "el": "Τίποτα προγραμματισμένο για σήμερα. Προσθέστε μια εκδήλωση με το κουμπί +."
+      }
+     },
+     {
+      "type": "row",
+      "crossAxisAlignment": "center",
+      "children": [
+       {
+        "type": "text",
+        "style": "caption",
+        "value": {
+         "en": "Entries",
+         "ko": "기록",
+         "zh": "条目",
+         "hi": "प्रविष्टियाँ",
+         "es": "Entradas",
+         "fr": "Entrées",
+         "ar": "المدخلات",
+         "pt": "Entradas",
+         "ru": "Записи",
+         "de": "Einträge",
+         "ja": "エントリー",
+         "tr": "Kayıtlar",
+         "vi": "Các mục",
+         "it": "Voci",
+         "fa": "ورودی‌ها",
+         "pl": "Wpisy",
+         "uk": "Записи",
+         "nl": "Items",
+         "sv": "Poster",
+         "cs": "Záznamy",
+         "el": "Καταχωρίσεις"
+        }
+       },
+       {"type": "spacer"},
+       {
+        "type": "pick",
+        "table": "prefs",
+        "rowId": "prefs",
+        "column": "moodFilter",
+        "variant": "dropdown",
+        "label": {
+         "en": "Mood",
+         "ko": "기분",
+         "zh": "心情",
+         "hi": "मूड",
+         "es": "Estado de ánimo",
+         "fr": "Humeur",
+         "ar": "المزاج",
+         "pt": "Humor",
+         "ru": "Настроение",
+         "de": "Stimmung",
+         "ja": "気分",
+         "tr": "Ruh hali",
+         "vi": "Tâm trạng",
+         "it": "Umore",
+         "fa": "حال‌وهوا",
+         "pl": "Nastrój",
+         "uk": "Настрій",
+         "nl": "Stemming",
+         "sv": "Humör",
+         "cs": "Nálada",
+         "el": "Διάθεση"
+        },
+        "options": [
+         {
+          "value": "all",
+          "label": "All",
+          "action": {
+           "fn": "setFilter",
+           "args": {
+            "table": "entries",
+            "column": "mood",
+            "value": ""
+           }
+          }
+         },
+         {
+          "value": "great",
+          "label": "Great",
+          "action": {
+           "fn": "setFilter",
+           "args": {
+            "table": "entries",
+            "column": "mood",
+            "value": "great"
+           }
+          }
+         },
+         {
+          "value": "good",
+          "label": "Good",
+          "action": {
+           "fn": "setFilter",
+           "args": {
+            "table": "entries",
+            "column": "mood",
+            "value": "good"
+           }
+          }
+         },
+         {
+          "value": "ok",
+          "label": "OK",
+          "action": {
+           "fn": "setFilter",
+           "args": {
+            "table": "entries",
+            "column": "mood",
+            "value": "ok"
+           }
+          }
+         },
+         {
+          "value": "low",
+          "label": "Low",
+          "action": {
+           "fn": "setFilter",
+           "args": {
+            "table": "entries",
+            "column": "mood",
+            "value": "low"
+           }
+          }
+         },
+         {
+          "value": "rough",
+          "label": "Rough",
+          "action": {
+           "fn": "setFilter",
+           "args": {
+            "table": "entries",
+            "column": "mood",
+            "value": "rough"
+           }
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "cards",
+      "emptyIcon": "note_add",
+      "example": {
+       "ids": [
+        "en_1",
+        "en_2",
+        "en_3",
+        "en_4",
+        "en_5",
+        "en_6",
+        "en_7",
+        "en_8",
+        "en_9",
+        "en_10",
+        "en_11",
+        "en_12",
+        "en_13",
+        "en_14",
+        "en_15"
+       ],
+       "label": {
+        "en": "Examples",
+        "ko": "예시",
+        "zh": "示例",
+        "hi": "उदाहरण",
+        "es": "Ejemplos",
+        "fr": "Exemples",
+        "ar": "أمثلة",
+        "pt": "Exemplos",
+        "ru": "Примеры",
+        "de": "Beispiele",
+        "ja": "例",
+        "tr": "Örnekler",
+        "vi": "Ví dụ",
+        "it": "Esempi",
+        "fa": "نمونه‌ها",
+        "pl": "Przykłady",
+        "uk": "Приклади",
+        "nl": "Voorbeelden",
+        "sv": "Exempel",
+        "cs": "Příklady",
+        "el": "Παραδείγματα"
+       },
+       "chipLabel": {
+        "en": "Example",
+        "ko": "예시",
+        "zh": "示例",
+        "hi": "उदाहरण",
+        "es": "Ejemplo",
+        "fr": "Exemple",
+        "ar": "مثال",
+        "pt": "Exemplo",
+        "ru": "Пример",
+        "de": "Beispiel",
+        "ja": "例",
+        "tr": "Örnek",
+        "vi": "Ví dụ",
+        "it": "Esempio",
+        "fa": "نمونه",
+        "pl": "Przykład",
+        "uk": "Приклад",
+        "nl": "Voorbeeld",
+        "sv": "Exempel",
+        "cs": "Příklad",
+        "el": "Παράδειγμα"
+       },
+       "hideLabel": {
+        "en": "Hide",
+        "ko": "숨기기",
+        "zh": "隐藏",
+        "hi": "छिपाएं",
+        "es": "Ocultar",
+        "fr": "Masquer",
+        "ar": "إخفاء",
+        "pt": "Ocultar",
+        "ru": "Скрыть",
+        "de": "Ausblenden",
+        "ja": "非表示",
+        "tr": "Gizle",
+        "vi": "Ẩn",
+        "it": "Nascondi",
+        "fa": "پنهان کردن",
+        "pl": "Ukryj",
+        "uk": "Приховати",
+        "nl": "Verbergen",
+        "sv": "Dölj",
+        "cs": "Skrýt",
+        "el": "Απόκρυψη"
+       },
+       "hiddenFromSetting": "neujourExamplesHidden"
+      },
+      "emptyTitle": {
+       "en": "Your journal is empty",
+       "ko": "저널이 비어 있습니다",
+       "zh": "你的日志是空的",
+       "hi": "आपका जर्नल खाली है",
+       "es": "Tu diario está vacío",
+       "fr": "Votre journal est vide",
+       "ar": "يومياتك فارغة",
+       "pt": "Seu diário está vazio",
+       "ru": "Ваш дневник пуст",
+       "de": "Dein Journal ist leer",
+       "ja": "日記はまだ空です",
+       "tr": "Günlüğünüz boş",
+       "vi": "Nhật ký của bạn trống",
+       "it": "Il tuo diario è vuoto",
+       "fa": "دفترچهٔ شما خالی است",
+       "pl": "Twój dziennik jest pusty",
+       "uk": "Ваш щоденник порожній",
+       "nl": "Je dagboek is leeg",
+       "sv": "Din dagbok är tom",
+       "cs": "Váš deník je prázdný",
+       "el": "Το ημερολόγιό σας είναι κενό"
+      },
+      "emptyText": {
+       "en": "Capture your first moment — tap New entry to start writing today.",
+       "ko": "첫 순간을 기록해 보세요 — 오늘부터 글을 쓰려면 '새 기록'을 탭하세요.",
+       "zh": "记录你的第一个时刻——点击\"新条目\"，从今天开始书写。",
+       "hi": "अपना पहला पल दर्ज करें — आज लिखना शुरू करने के लिए नई प्रविष्टि टैप करें।",
+       "es": "Captura tu primer momento: toca Nueva entrada para empezar a escribir hoy.",
+       "fr": "Capturez votre premier moment — appuyez sur Nouvelle entrée pour commencer à écrire aujourd'hui.",
+       "ar": "سجّل لحظتك الأولى — انقر على مدخل جديد لتبدأ الكتابة اليوم.",
+       "pt": "Capture seu primeiro momento — toque em Nova entrada para começar a escrever hoje.",
+       "ru": "Запечатлейте свой первый момент — нажмите «Новая запись», чтобы начать писать сегодня.",
+       "de": "Halte deinen ersten Moment fest — tippe auf „Neuer Eintrag“, um heute mit dem Schreiben zu beginnen.",
+       "ja": "最初の瞬間を記録しましょう — 今日から書き始めるには「新規エントリー」をタップしてください。",
+       "tr": "İlk anınızı yakalayın — bugün yazmaya başlamak için Yeni kayıt'a dokunun.",
+       "vi": "Ghi lại khoảnh khắc đầu tiên của bạn — chạm vào Mục mới để bắt đầu viết hôm nay.",
+       "it": "Cattura il tuo primo momento — tocca Nuova voce per iniziare a scrivere oggi.",
+       "fa": "اولین لحظهٔ خود را ثبت کنید — برای شروع نوشتن امروز روی «ورودی جدید» ضربه بزنید.",
+       "pl": "Uchwyć swój pierwszy moment — dotknij Nowy wpis, aby zacząć pisać już dziś.",
+       "uk": "Зафіксуйте свій перший момент — торкніться «Новий запис», щоб почати писати вже сьогодні.",
+       "nl": "Leg je eerste moment vast — tik op Nieuw item om vandaag te beginnen met schrijven.",
+       "sv": "Fånga ditt första ögonblick — tryck på Ny post för att börja skriva idag.",
+       "cs": "Zachyťte svůj první okamžik — klepnutím na Nový záznam začnete psát ještě dnes.",
+       "el": "Καταγράψτε την πρώτη σας στιγμή — πατήστε Νέα καταχώριση για να αρχίσετε να γράφετε σήμερα."
+      },
+      "emptyAction": {
+       "fn": "addRow",
+       "args": {
+        "table": "entries",
+        "values": {}
+       }
+      },
+      "emptyActionLabel": {
+       "en": "New entry",
+       "ko": "새 기록",
+       "zh": "新条目",
+       "hi": "नई प्रविष्टि",
+       "es": "Nueva entrada",
+       "fr": "Nouvelle entrée",
+       "ar": "مدخل جديد",
+       "pt": "Nova entrada",
+       "ru": "Новая запись",
+       "de": "Neuer Eintrag",
+       "ja": "新規エントリー",
+       "tr": "Yeni kayıt",
+       "vi": "Mục mới",
+       "it": "Nuova voce",
+       "fa": "ورودی جدید",
+       "pl": "Nowy wpis",
+       "uk": "Новий запис",
+       "nl": "Nieuw item",
+       "sv": "Ny post",
+       "cs": "Nový záznam",
+       "el": "Νέα καταχώριση"
+      },
+      "confirmDelete": true,
+      "table": "entries",
+      "groupBy": "date",
+      "groupOrder": [
+       "great",
+       "good",
+       "ok",
+       "low",
+       "rough"
+      ],
+      "groupByOptions": [
+       {
+        "label": "Day",
+        "column": "date"
+       },
+       {
+        "label": "Mood",
+        "column": "mood"
+       }
+      ],
+      "sort": {
+       "column": "date",
+       "dir": "desc"
+      },
+      "title": "title",
+      "subtitle": "body",
+      "tags": [
+       {
+        "column": "mood",
+        "colors": {
+         "great": "green",
+         "good": "teal",
+         "ok": "blue",
+         "low": "amber",
+         "rough": "red"
+        }
+       },
+       {
+        "column": "date"
+       },
+       {
+        "column": "time"
+       },
+       {
+        "column": "tags"
+       }
+      ],
+      "collapsible": true,
+      "recent": 8,
+      "expandable": true,
+      "expandFields": [
+       {
+        "column": "date",
+        "label": "Date"
+       },
+       {
+        "column": "time",
+        "label": "Time"
+       },
+       {
+        "column": "tz",
+        "label": "Time zone"
+       },
+       {
+        "column": "aboutDate",
+        "label": "About date"
+       },
+       {
+        "column": "aboutTime",
+        "label": "About time"
+       },
+       {
+        "column": "mood",
+        "label": "Mood"
+       },
+       {
+        "column": "people",
+        "label": "People"
+       },
+       {
+        "column": "events",
+        "label": "Events"
+       },
+       {
+        "column": "tags",
+        "label": "Tags"
+       },
+       {
+        "column": "places",
+        "label": "Places"
+       },
+       {
+        "column": "quantity",
+        "label": "Quantity"
+       },
+       {
+        "column": "body",
+        "label": "Full entry"
+       }
+      ],
+      "open": "Open entry",
+      "action": {
+       "fn": "editRow"
+      },
+      "tableView": false,
+      "minCardWidth": 400
+     }
+    ]
+   }
+  },
+  "calendar": {
+   "title": {
+    "en": "Calendar",
+    "ko": "캘린더",
+    "zh": "日历",
+    "hi": "कैलेंडर",
+    "es": "Calendario",
+    "fr": "Calendrier",
+    "ar": "التقويم",
+    "pt": "Calendário",
+    "ru": "Календарь",
+    "de": "Kalender",
+    "ja": "カレンダー",
+    "tr": "Takvim",
+    "vi": "Lịch",
+    "it": "Calendario",
+    "fa": "تقویم",
+    "pl": "Kalendarz",
+    "uk": "Календар",
+    "nl": "Kalender",
+    "sv": "Kalender",
+    "cs": "Kalendář",
+    "el": "Ημερολόγιο"
+   },
+   "body": {
+    "type": "column",
+    "children": [
+     {
+      "type": "pick",
+      "variant": "segmented",
+      "table": "prefs",
+      "rowId": "prefs",
+      "column": "calendarView",
+      "options": [
+       {
+        "value": "month",
+        "label": "Calendar"
+       },
+       {
+        "value": "timeline",
+        "label": "Timeline"
+       }
+      ]
+     },
+     {
+      "type": "switch",
+      "table": "prefs",
+      "rowId": "prefs",
+      "column": "calendarView",
+      "cases": {
+       "month": {
+        "type": "column",
+        "children": [
+         {
+          "type": "calendar",
+          "table": "entries",
+          "titleColumn": "title",
+          "scroll": true,
+          "dateColumns": [
+           "date"
+          ],
+          "dateColumn": "date",
+          "weekStartTable": "prefs",
+          "weekStartColumn": "weekStart",
+          "action": {
+           "fn": "editRow"
+          },
+          "addAction": {
+           "fn": "addRow",
+           "args": {
+            "table": "entries",
+            "values": {}
+           }
+          }
+         }
+        ]
+       },
+       "timeline": {
+        "type": "column",
+        "children": [
+         {
+          "type": "text",
+          "style": "caption",
+          "value": {
+           "en": "Day notes and entries, newest first.",
+           "ko": "일일 메모와 기록, 최신순.",
+           "zh": "当日备注和条目，最新的在前。",
+           "hi": "दिन के नोट और प्रविष्टियाँ, नवीनतम पहले।",
+           "es": "Notas del día y entradas, las más recientes primero.",
+           "fr": "Notes du jour et entrées, les plus récentes d'abord.",
+           "ar": "ملاحظات الأيام والمدخلات، الأحدث أولًا.",
+           "pt": "Notas do dia e entradas, mais recentes primeiro.",
+           "ru": "Заметки дня и записи, сначала новые.",
+           "de": "Tagesnotizen und Einträge, neueste zuerst.",
+           "ja": "日のメモとエントリー（新しい順）。",
+           "tr": "Gün notları ve kayıtlar, en yenisi önce.",
+           "vi": "Ghi chú ngày và các mục, mới nhất trước.",
+           "it": "Note del giorno e voci, dalle più recenti.",
+           "fa": "یادداشت‌های روز و ورودی‌ها، جدیدترین اول.",
+           "pl": "Notatki dnia i wpisy, od najnowszych.",
+           "uk": "Нотатки дня та записи, спершу нові.",
+           "nl": "Dagnotities en items, nieuwste eerst.",
+           "sv": "Dagsanteckningar och poster, nyaste först.",
+           "cs": "Poznámky dne a záznamy, od nejnovějších.",
+           "el": "Σημειώσεις ημέρας και καταχωρίσεις, πρώτα οι νεότερες."
+          }
+         },
+         {
+          "type": "button",
+          "label": {
+           "en": "New day note",
+           "ko": "새 일일 메모",
+           "zh": "新的当日备注",
+           "hi": "नया दिन नोट",
+           "es": "Nueva nota del día",
+           "fr": "Nouvelle note du jour",
+           "ar": "ملاحظة يوم جديدة",
+           "pt": "Nova nota do dia",
+           "ru": "Новая заметка дня",
+           "de": "Neue Tagesnotiz",
+           "ja": "新しい日のメモ",
+           "tr": "Yeni gün notu",
+           "vi": "Ghi chú ngày mới",
+           "it": "Nuova nota del giorno",
+           "fa": "یادداشت روز جدید",
+           "pl": "Nowa notatka dnia",
+           "uk": "Нова нотатка дня",
+           "nl": "Nieuwe dagnotitie",
+           "sv": "Ny dagsanteckning",
+           "cs": "Nová poznámka dne",
+           "el": "Νέα σημείωση ημέρας"
+          },
+          "icon": "event_note",
+          "action": {
+           "fn": "addRow",
+           "args": {
+            "table": "days"
+           }
+          }
+         },
+         {
+          "type": "cards",
+          "table": "days",
+          "confirmDelete": true,
+          "sort": {
+           "column": "date",
+           "dir": "desc"
+          },
+          "title": "date",
+          "subtitle": "summary",
+          "tags": [
+           {
+            "column": "mood",
+            "colors": {
+             "great": "green",
+             "good": "teal",
+             "ok": "blue",
+             "low": "amber",
+             "rough": "red"
+            }
+           }
+          ],
+          "expandable": true,
+          "expandFields": [
+           {
+            "column": "summary",
+            "label": "Overall"
+           },
+           {
+            "column": "mood",
+            "label": "Day mood"
+           }
+          ],
+          "open": "Open day",
+          "action": {
+           "fn": "editRow"
+          },
+          "sectionLabel": {
+           "en": "Day notes",
+           "ko": "일일 메모",
+           "zh": "当日备注",
+           "hi": "दिन के नोट",
+           "es": "Notas del día",
+           "fr": "Notes du jour",
+           "ar": "ملاحظات الأيام",
+           "pt": "Notas do dia",
+           "ru": "Заметки дня",
+           "de": "Tagesnotizen",
+           "ja": "日のメモ",
+           "tr": "Gün notları",
+           "vi": "Ghi chú ngày",
+           "it": "Note del giorno",
+           "fa": "یادداشت‌های روز",
+           "pl": "Notatki dnia",
+           "uk": "Нотатки дня",
+           "nl": "Dagnotities",
+           "sv": "Dagsanteckningar",
+           "cs": "Poznámky dne",
+           "el": "Σημειώσεις ημέρας"
+          },
+          "tableView": false,
+          "hideWhenEmpty": true
+         },
+         {
+          "type": "text",
+          "style": "eyebrow",
+          "value": {
+           "en": "Entries",
+           "ko": "기록",
+           "zh": "条目",
+           "hi": "प्रविष्टियाँ",
+           "es": "Entradas",
+           "fr": "Entrées",
+           "ar": "المدخلات",
+           "pt": "Entradas",
+           "ru": "Записи",
+           "de": "Einträge",
+           "ja": "エントリー",
+           "tr": "Kayıtlar",
+           "vi": "Các mục",
+           "it": "Voci",
+           "fa": "ورودی‌ها",
+           "pl": "Wpisy",
+           "uk": "Записи",
+           "nl": "Items",
+           "sv": "Poster",
+           "cs": "Záznamy",
+           "el": "Καταχωρίσεις"
+          }
+         },
+         {
+          "type": "cards",
+          "emptyIcon": "edit_note",
+          "emptyTitle": {
+           "en": "No entries yet",
+           "ko": "아직 기록 없음",
+           "zh": "暂无条目",
+           "hi": "अभी तक कोई प्रविष्टि नहीं",
+           "es": "Aún no hay entradas",
+           "fr": "Pas encore d'entrées",
+           "ar": "لا توجد مدخلات بعد",
+           "pt": "Ainda não há entradas",
+           "ru": "Пока нет записей",
+           "de": "Noch keine Einträge",
+           "ja": "まだエントリーはありません",
+           "tr": "Henüz kayıt yok",
+           "vi": "Chưa có mục nào",
+           "it": "Nessuna voce ancora",
+           "fa": "هنوز ورودی‌ای نیست",
+           "pl": "Brak jeszcze wpisów",
+           "uk": "Ще немає записів",
+           "nl": "Nog geen items",
+           "sv": "Inga poster ännu",
+           "cs": "Zatím žádné záznamy",
+           "el": "Δεν υπάρχουν ακόμη καταχωρίσεις"
+          },
+          "emptyText": {
+           "en": "Write your first entry -- today is a good place to start.",
+           "ko": "첫 기록을 작성해 보세요 — 오늘부터 시작하기 좋습니다.",
+           "zh": "写下你的第一条记录——今天正是开始的好时机。",
+           "hi": "अपनी पहली प्रविष्टि लिखें -- आज शुरू करने के लिए अच्छी जगह है।",
+           "es": "Escribe tu primera entrada; hoy es un buen día para empezar.",
+           "fr": "Rédigez votre première entrée — aujourd'hui est un bon jour pour commencer.",
+           "ar": "اكتب مدخلك الأول -- اليوم مكان جيد للبدء.",
+           "pt": "Escreva sua primeira entrada -- hoje é um bom dia para começar.",
+           "ru": "Напишите свою первую запись — сегодня отличный день, чтобы начать.",
+           "de": "Schreibe deinen ersten Eintrag — heute ist ein guter Tag, um anzufangen.",
+           "ja": "最初のエントリーを書いてみましょう — 今日から始めるのにちょうどいい日です。",
+           "tr": "İlk kaydınızı yazın -- bugün başlamak için iyi bir gün.",
+           "vi": "Viết mục đầu tiên của bạn -- hôm nay là thời điểm tốt để bắt đầu.",
+           "it": "Scrivi la tua prima voce -- oggi è un buon momento per iniziare.",
+           "fa": "اولین ورودی خود را بنویسید -- امروز شروع خوبی است.",
+           "pl": "Napisz swój pierwszy wpis -- dziś to dobry moment, aby zacząć.",
+           "uk": "Напишіть свій перший запис -- сьогодні гарний день, щоб почати.",
+           "nl": "Schrijf je eerste item -- vandaag is een goed moment om te beginnen.",
+           "sv": "Skriv din första post -- idag är ett bra ställe att börja.",
+           "cs": "Napište svůj první záznam -- dnes je dobrý den začít.",
+           "el": "Γράψτε την πρώτη σας καταχώριση -- σήμερα είναι μια καλή στιγμή να ξεκινήσετε."
+          },
+          "emptyAction": {
+           "fn": "addRow",
+           "args": {
+            "table": "entries",
+            "values": {}
+           }
+          },
+          "emptyActionLabel": {
+           "en": "New entry",
+           "ko": "새 기록",
+           "zh": "新条目",
+           "hi": "नई प्रविष्टि",
+           "es": "Nueva entrada",
+           "fr": "Nouvelle entrée",
+           "ar": "مدخل جديد",
+           "pt": "Nova entrada",
+           "ru": "Новая запись",
+           "de": "Neuer Eintrag",
+           "ja": "新規エントリー",
+           "tr": "Yeni kayıt",
+           "vi": "Mục mới",
+           "it": "Nuova voce",
+           "fa": "ورودی جدید",
+           "pl": "Nowy wpis",
+           "uk": "Новий запис",
+           "nl": "Nieuw item",
+           "sv": "Ny post",
+           "cs": "Nový záznam",
+           "el": "Νέα καταχώριση"
+          },
+          "table": "entries",
+          "confirmDelete": true,
+          "groupBy": "date",
+          "groupByOptions": [
+           {
+            "label": "Day",
+            "column": "date"
+           },
+           {
+            "label": "Mood",
+            "column": "mood"
+           }
+          ],
+          "sort": {
+           "column": "date",
+           "dir": "desc"
+          },
+          "title": "title",
+          "subtitle": "body",
+          "tags": [
+           {
+            "column": "date"
+           },
+           {
+            "column": "time"
+           },
+           {
+            "column": "mood",
+            "colors": {
+             "great": "green",
+             "good": "teal",
+             "ok": "blue",
+             "low": "amber",
+             "rough": "red"
+            }
+           },
+           {
+            "column": "tags"
+           }
+          ],
+          "search": true,
+          "searchColumns": [
+           "title",
+           "body"
+          ],
+          "expandable": true,
+          "expandFields": [
+           {
+            "column": "date",
+            "label": "Date"
+           },
+           {
+            "column": "time",
+            "label": "Time"
+           },
+           {
+            "column": "tz",
+            "label": "Time zone"
+           },
+           {
+            "column": "aboutDate",
+            "label": "About date"
+           },
+           {
+            "column": "aboutTime",
+            "label": "About time"
+           },
+           {
+            "column": "mood",
+            "label": "Mood"
+           },
+           {
+            "column": "people",
+            "label": "People"
+           },
+           {
+            "column": "tags",
+            "label": "Tags"
+           },
+           {
+            "column": "body",
+            "label": "Full entry"
+           }
+          ],
+          "open": "Open entry",
+          "action": {
+           "fn": "editRow"
+          },
+          "example": {
+           "ids": [
+            "en_1",
+            "en_2",
+            "en_3",
+            "en_4",
+            "en_5",
+            "en_6",
+            "en_7",
+            "en_8",
+            "en_9",
+            "en_10",
+            "en_11",
+            "en_12",
+            "en_13",
+            "en_14",
+            "en_15"
+           ],
+           "label": {
+            "en": "Examples",
+            "ko": "예시",
+            "zh": "示例",
+            "hi": "उदाहरण",
+            "es": "Ejemplos",
+            "fr": "Exemples",
+            "ar": "أمثلة",
+            "pt": "Exemplos",
+            "ru": "Примеры",
+            "de": "Beispiele",
+            "ja": "例",
+            "tr": "Örnekler",
+            "vi": "Ví dụ",
+            "it": "Esempi",
+            "fa": "نمونه‌ها",
+            "pl": "Przykłady",
+            "uk": "Приклади",
+            "nl": "Voorbeelden",
+            "sv": "Exempel",
+            "cs": "Příklady",
+            "el": "Παραδείγματα"
+           },
+           "chipLabel": {
+            "en": "Example",
+            "ko": "예시",
+            "zh": "示例",
+            "hi": "उदाहरण",
+            "es": "Ejemplo",
+            "fr": "Exemple",
+            "ar": "مثال",
+            "pt": "Exemplo",
+            "ru": "Пример",
+            "de": "Beispiel",
+            "ja": "例",
+            "tr": "Örnek",
+            "vi": "Ví dụ",
+            "it": "Esempio",
+            "fa": "نمونه",
+            "pl": "Przykład",
+            "uk": "Приклад",
+            "nl": "Voorbeeld",
+            "sv": "Exempel",
+            "cs": "Příklad",
+            "el": "Παράδειγμα"
+           },
+           "hideLabel": {
+            "en": "Hide",
+            "ko": "숨기기",
+            "zh": "隐藏",
+            "hi": "छिपाएं",
+            "es": "Ocultar",
+            "fr": "Masquer",
+            "ar": "إخفاء",
+            "pt": "Ocultar",
+            "ru": "Скрыть",
+            "de": "Ausblenden",
+            "ja": "非表示",
+            "tr": "Gizle",
+            "vi": "Ẩn",
+            "it": "Nascondi",
+            "fa": "پنهان کردن",
+            "pl": "Ukryj",
+            "uk": "Приховати",
+            "nl": "Verbergen",
+            "sv": "Dölj",
+            "cs": "Skrýt",
+            "el": "Απόκρυψη"
+           },
+           "hiddenFromSetting": "neujourExamplesHidden"
+          }
+         }
+        ]
+       }
+      },
+      "default": {
+       "type": "column",
+       "children": [
+        {
+         "type": "calendar",
+         "table": "entries",
+         "titleColumn": "title",
+         "scroll": true,
+         "dateColumns": [
+          "date"
+         ],
+         "dateColumn": "date",
+         "weekStartTable": "prefs",
+         "weekStartColumn": "weekStart",
+         "action": {
+          "fn": "editRow"
+         },
+         "addAction": {
+          "fn": "addRow",
+          "args": {
+           "table": "entries",
+           "values": {}
+          }
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  "customize": {
+   "title": {
+    "en": "Customize",
+    "ko": "사용자 지정",
+    "zh": "自定义",
+    "hi": "अनुकूलित करें",
+    "es": "Personalizar",
+    "fr": "Personnaliser",
+    "ar": "تخصيص",
+    "pt": "Personalizar",
+    "ru": "Настроить",
+    "de": "Anpassen",
+    "ja": "カスタマイズ",
+    "tr": "Özelleştir",
+    "vi": "Tùy chỉnh",
+    "it": "Personalizza",
+    "fa": "سفارشی‌سازی",
+    "pl": "Dostosuj",
+    "uk": "Налаштувати",
+    "nl": "Aanpassen",
+    "sv": "Anpassa",
+    "cs": "Přizpůsobit",
+    "el": "Προσαρμογή"
+   },
+   "body": {
+    "type": "column",
+    "children": [
+     {
+      "type": "text",
+      "style": "subtitle",
+      "value": {
+       "en": "First day of the week",
+       "ko": "한 주의 첫 요일",
+       "zh": "每周第一天",
+       "hi": "सप्ताह का पहला दिन",
+       "es": "Primer día de la semana",
+       "fr": "Premier jour de la semaine",
+       "ar": "أول يوم في الأسبوع",
+       "pt": "Primeiro dia da semana",
+       "ru": "Первый день недели",
+       "de": "Erster Tag der Woche",
+       "ja": "週の最初の曜日",
+       "tr": "Haftanın ilk günü",
+       "vi": "Ngày đầu tuần",
+       "it": "Primo giorno della settimana",
+       "fa": "نخستین روز هفته",
+       "pl": "Pierwszy dzień tygodnia",
+       "uk": "Перший день тижня",
+       "nl": "Eerste dag van de week",
+       "sv": "Veckans första dag",
+       "cs": "První den v týdnu",
+       "el": "Πρώτη ημέρα της εβδομάδας"
+      }
+     },
+     {
+      "type": "pick",
+      "variant": "segmented",
+      "dense": true,
+      "table": "prefs",
+      "rowId": "prefs",
+      "column": "weekStart",
+      "options": [
+       {
+        "value": "monday",
+        "label": "Mon"
+       },
+       {
+        "value": "sunday",
+        "label": "Sun"
+       }
+      ]
+     },
+     {
+      "type": "divider"
+     },
+     {
+      "type": "text",
+      "style": "caption",
+      "value": {
+       "en": "Add or remove data types, and edit their fields.",
+       "ko": "데이터 유형을 추가하거나 제거하고, 필드를 편집하세요.",
+       "zh": "添加或删除数据类型，并编辑其字段。",
+       "hi": "डेटा प्रकार जोड़ें या हटाएँ, और उनके फ़ील्ड संपादित करें।",
+       "es": "Añade o quita tipos de datos y edita sus campos.",
+       "fr": "Ajoutez ou supprimez des types de données et modifiez leurs champs.",
+       "ar": "أضف أنواع البيانات أو أزلها، وعدّل حقولها.",
+       "pt": "Adicione ou remova tipos de dados e edite seus campos.",
+       "ru": "Добавляйте или удаляйте типы данных и редактируйте их поля.",
+       "de": "Datentypen hinzufügen oder entfernen und ihre Felder bearbeiten.",
+       "ja": "データの種類を追加・削除し、項目を編集します。",
+       "tr": "Veri türleri ekleyin veya kaldırın, alanlarını düzenleyin.",
+       "vi": "Thêm hoặc xóa loại dữ liệu và chỉnh sửa các trường của chúng.",
+       "it": "Aggiungi o rimuovi tipi di dati e modificane i campi.",
+       "fa": "انواع داده را اضافه یا حذف کنید و فیلدهایشان را ویرایش کنید.",
+       "pl": "Dodawaj lub usuwaj typy danych i edytuj ich pola.",
+       "uk": "Додавайте або вилучайте типи даних і редагуйте їхні поля.",
+       "nl": "Voeg gegevenstypen toe of verwijder ze, en bewerk hun velden.",
+       "sv": "Lägg till eller ta bort datatyper och redigera deras fält.",
+       "cs": "Přidávejte nebo odebírejte datové typy a upravujte jejich pole.",
+       "el": "Προσθέστε ή αφαιρέστε τύπους δεδομένων και επεξεργαστείτε τα πεδία τους."
+      }
+     },
+     {
+      "type": "schemaeditor"
+     }
+    ]
+   }
+  },
+  "trends": {
+   "title": {
+    "en": "Trends",
+    "ko": "트렌드",
+    "zh": "趋势",
+    "hi": "रुझान",
+    "es": "Tendencias",
+    "fr": "Tendances",
+    "ar": "الاتجاهات",
+    "pt": "Tendências",
+    "ru": "Тенденции",
+    "de": "Trends",
+    "ja": "傾向",
+    "tr": "Eğilimler",
+    "vi": "Xu hướng",
+    "it": "Tendenze",
+    "fa": "روندها",
+    "pl": "Trendy",
+    "uk": "Тенденції",
+    "nl": "Trends",
+    "sv": "Trender",
+    "cs": "Trendy",
+    "el": "Τάσεις"
+   },
+   "body": {
+    "type": "column",
+    "children": [
+     {
+      "type": "text",
+      "style": "caption",
+      "value": {
+       "en": "What moves your mood, and how your measurements trend.",
+       "ko": "무엇이 기분에 영향을 주는지, 측정값이 어떻게 변하는지 보여줍니다.",
+       "zh": "哪些因素影响你的心情，以及测量值的变化趋势。",
+       "hi": "आपके मूड पर क्या असर डालता है, और आपके माप कैसे बदलते हैं।",
+       "es": "Qué influye en tu ánimo y cómo evolucionan tus mediciones.",
+       "fr": "Ce qui influence votre humeur, et l'évolution de vos mesures.",
+       "ar": "ما الذي يؤثر في مزاجك، وكيف تتغير قياساتك.",
+       "pt": "O que influencia seu humor e como suas medições evoluem.",
+       "ru": "Что влияет на ваше настроение и как меняются ваши измерения.",
+       "de": "Was deine Stimmung bewegt und wie sich deine Messwerte entwickeln.",
+       "ja": "気分に影響するものと、測定値の推移。",
+       "tr": "Ruh halinizi neyin etkilediği ve ölçümlerinizin nasıl değiştiği.",
+       "vi": "Điều gì ảnh hưởng đến tâm trạng của bạn, và các số đo thay đổi ra sao.",
+       "it": "Cosa influenza il tuo umore e come cambiano le tue misurazioni.",
+       "fa": "چه چیزی بر حالتان اثر می‌گذارد و اندازه‌گیری‌هایتان چگونه تغییر می‌کنند.",
+       "pl": "Co wpływa na twój nastrój i jak zmieniają się twoje pomiary.",
+       "uk": "Що впливає на ваш настрій і як змінюються ваші вимірювання.",
+       "nl": "Wat je stemming beïnvloedt en hoe je metingen zich ontwikkelen.",
+       "sv": "Vad som påverkar ditt humör och hur dina mätvärden utvecklas.",
+       "cs": "Co ovlivňuje vaši náladu a jak se vyvíjejí vaše měření.",
+       "el": "Τι επηρεάζει τη διάθεσή σας και πώς εξελίσσονται οι μετρήσεις σας."
+      }
+     },
+     {
+      "type": "segments",
+      "segments": [
+       {
+        "label": "What moves you",
+        "child": {
+         "type": "column",
+         "children": [
+          {
+           "type": "insights",
+           "table": "entries",
+           "targetColumn": "emotion",
+           "featureRefs": [
+            "people",
+            "tags",
+            "places"
+           ],
+           "featuresTable": "feelings",
+           "featureNameColumn": "name",
+           "featureValueColumn": "score",
+           "featureScaleColumn": "outOf",
+           "featureLinkColumn": "entry",
+           "label": {
+            "en": "What makes you happy (and what doesn’t)",
+            "ko": "무엇이 당신을 행복하게 하는가 (그리고 그렇지 않은가)",
+            "zh": "什么让你快乐（什么不会）",
+            "hi": "क्या आपको खुश करता है (और क्या नहीं)",
+            "es": "Qué te hace feliz (y qué no)",
+            "fr": "Ce qui vous rend heureux (et ce qui ne le fait pas)",
+            "ar": "ما الذي يسعدك (وما لا يسعدك)",
+            "pt": "O que te faz feliz (e o que não faz)",
+            "ru": "Что делает вас счастливым (а что нет)",
+            "de": "Was dich glücklich macht (und was nicht)",
+            "ja": "あなたを幸せにするもの（そうでないもの）",
+            "tr": "Sizi ne mutlu eder (ve neyin etmediği)",
+            "vi": "Điều gì khiến bạn hạnh phúc (và điều gì không)",
+            "it": "Cosa ti rende felice (e cosa no)",
+            "fa": "چه چیزی شما را خوشحال می‌کند (و چه چیزی نمی‌کند)",
+            "pl": "Co czyni cię szczęśliwym (a co nie)",
+            "uk": "Що робить вас щасливими (а що ні)",
+            "nl": "Wat je gelukkig maakt (en wat niet)",
+            "sv": "Vad som gör dig lycklig (och vad som inte gör det)",
+            "cs": "Co vás dělá šťastnými (a co ne)",
+            "el": "Τι σας κάνει ευτυχισμένους (και τι όχι)"
+           },
+           "topN": 8
+          }
+         ]
+        }
+       },
+       {
+        "label": "Measurements",
+        "child": {
+         "type": "column",
+         "children": [
+          {
+           "type": "button",
+           "label": {
+            "en": "Add measurement",
+            "ko": "측정값 추가",
+            "zh": "添加测量",
+            "hi": "माप जोड़ें",
+            "es": "Añadir medición",
+            "fr": "Ajouter une mesure",
+            "ar": "إضافة قياس",
+            "pt": "Adicionar medição",
+            "ru": "Добавить измерение",
+            "de": "Messung hinzufügen",
+            "ja": "測定値を追加",
+            "tr": "Ölçüm ekle",
+            "vi": "Thêm phép đo",
+            "it": "Aggiungi misurazione",
+            "fa": "افزودن اندازه‌گیری",
+            "pl": "Dodaj pomiar",
+            "uk": "Додати вимірювання",
+            "nl": "Meting toevoegen",
+            "sv": "Lägg till mätning",
+            "cs": "Přidat měření",
+            "el": "Προσθήκη μέτρησης"
+           },
+           "icon": "add",
+           "action": {
+            "fn": "addRow",
+            "args": {
+             "table": "measurements",
+             "values": {
+              "metric": "energy"
+             }
+            }
+           }
+          },
+          {
+           "type": "regression",
+           "table": "measurements",
+           "xColumn": "date",
+           "yColumn": "value",
+           "height": "0.45fill",
+           "filterColumn": "metric"
+          },
+          {
+           "type": "table",
+           "example": {
+            "ids": [
+             "m1",
+             "m2",
+             "m3",
+             "m4",
+             "m5",
+             "m6",
+             "m7",
+             "m8",
+             "m9"
+            ],
+            "label": {
+             "en": "Examples",
+             "ko": "예시",
+             "zh": "示例",
+             "hi": "उदाहरण",
+             "es": "Ejemplos",
+             "fr": "Exemples",
+             "ar": "أمثلة",
+             "pt": "Exemplos",
+             "ru": "Примеры",
+             "de": "Beispiele",
+             "ja": "例",
+             "tr": "Örnekler",
+             "vi": "Ví dụ",
+             "it": "Esempi",
+             "fa": "نمونه‌ها",
+             "pl": "Przykłady",
+             "uk": "Приклади",
+             "nl": "Voorbeelden",
+             "sv": "Exempel",
+             "cs": "Příklady",
+             "el": "Παραδείγματα"
+            },
+            "chipLabel": {
+             "en": "Example",
+             "ko": "예시",
+             "zh": "示例",
+             "hi": "उदाहरण",
+             "es": "Ejemplo",
+             "fr": "Exemple",
+             "ar": "مثال",
+             "pt": "Exemplo",
+             "ru": "Пример",
+             "de": "Beispiel",
+             "ja": "例",
+             "tr": "Örnek",
+             "vi": "Ví dụ",
+             "it": "Esempio",
+             "fa": "نمونه",
+             "pl": "Przykład",
+             "uk": "Приклад",
+             "nl": "Voorbeeld",
+             "sv": "Exempel",
+             "cs": "Příklad",
+             "el": "Παράδειγμα"
+            },
+            "hideLabel": {
+             "en": "Hide",
+             "ko": "숨기기",
+             "zh": "隐藏",
+             "hi": "छिपाएं",
+             "es": "Ocultar",
+             "fr": "Masquer",
+             "ar": "إخفاء",
+             "pt": "Ocultar",
+             "ru": "Скрыть",
+             "de": "Ausblenden",
+             "ja": "非表示",
+             "tr": "Gizle",
+             "vi": "Ẩn",
+             "it": "Nascondi",
+             "fa": "پنهان کردن",
+             "pl": "Ukryj",
+             "uk": "Приховати",
+             "nl": "Verbergen",
+             "sv": "Dölj",
+             "cs": "Skrýt",
+             "el": "Απόκρυψη"
+            },
+            "hiddenFromSetting": "neujourExamplesHidden"
+           },
+           "table": "measurements",
+           "columns": [
+            "date",
+            "metric",
+            "value"
+           ],
+           "height": "0.55fill",
+           "action": {
+            "fn": "editRow"
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "feelings": {
+   "title": {
+    "en": "Feelings",
+    "ko": "감정",
+    "zh": "感受",
+    "hi": "भावनाएं",
+    "es": "Sentimientos",
+    "fr": "Émotions",
+    "ar": "المشاعر",
+    "pt": "Sentimentos",
+    "ru": "Чувства",
+    "de": "Gefühle",
+    "ja": "気持ち",
+    "tr": "Duygular",
+    "vi": "Cảm xúc",
+    "it": "Sentimenti",
+    "fa": "احساسات",
+    "pl": "Uczucia",
+    "uk": "Почуття",
+    "nl": "Gevoelens",
+    "sv": "Känslor",
+    "cs": "Pocity",
+    "el": "Συναισθήματα"
+   },
+   "body": {
+    "type": "column",
+    "children": [
+     {
+      "type": "text",
+      "style": "caption",
+      "value": {
+       "en": "Named feelings, scored on your own scale.",
+       "ko": "이름 붙인 감정을 나만의 척도로 기록합니다.",
+       "zh": "为感受命名，并按你自己的标准打分。",
+       "hi": "नामित भावनाएँ, आपके अपने पैमाने पर अंकित।",
+       "es": "Sentimientos con nombre, puntuados en tu propia escala.",
+       "fr": "Des sentiments nommés, notés sur votre propre échelle.",
+       "ar": "مشاعر مسمّاة، تُقيَّم على مقياسك الخاص.",
+       "pt": "Sentimentos nomeados, pontuados na sua própria escala.",
+       "ru": "Названные чувства, оценённые по вашей собственной шкале.",
+       "de": "Benannte Gefühle, bewertet auf deiner eigenen Skala.",
+       "ja": "名前を付けた気持ちを、自分の尺度で記録します。",
+       "tr": "Kendi ölçeğinizde puanlanan, adlandırılmış duygular.",
+       "vi": "Những cảm xúc có tên, được chấm theo thang điểm của riêng bạn.",
+       "it": "Sentimenti con un nome, valutati sulla tua scala.",
+       "fa": "احساس‌های نام‌گذاری‌شده، با مقیاس خودتان.",
+       "pl": "Nazwane uczucia, oceniane w twojej własnej skali.",
+       "uk": "Названі почуття, оцінені за вашою власною шкалою.",
+       "nl": "Benoemde gevoelens, gescoord op je eigen schaal.",
+       "sv": "Namngivna känslor, bedömda på din egen skala.",
+       "cs": "Pojmenované pocity hodnocené na vaší vlastní stupnici.",
+       "el": "Ονομασμένα συναισθήματα, βαθμολογημένα στη δική σας κλίμακα."
+      }
+     },
+     {
+      "type": "row",
+      "children": [
+       {
+        "type": "stat",
+        "table": "feelings",
+        "agg": "count",
+        "label": {
+         "en": "Logged",
+         "ko": "기록됨",
+         "zh": "已记录",
+         "hi": "लॉग किया गया",
+         "es": "Registrado",
+         "fr": "Enregistré",
+         "ar": "مُسجَّل",
+         "pt": "Registrado",
+         "ru": "Записано",
+         "de": "Erfasst",
+         "ja": "記録済み",
+         "tr": "Kaydedildi",
+         "vi": "Đã ghi",
+         "it": "Registrato",
+         "fa": "ثبت‌شده",
+         "pl": "Zapisano",
+         "uk": "Записано",
+         "nl": "Vastgelegd",
+         "sv": "Loggat",
+         "cs": "Zaznamenáno",
+         "el": "Καταγράφηκε"
+        }
+       },
+       {
+        "type": "stat",
+        "table": "feelings",
+        "agg": "avg",
+        "valueColumn": "score",
+        "label": {
+         "en": "Average score",
+         "ko": "평균 점수",
+         "zh": "平均分",
+         "hi": "औसत स्कोर",
+         "es": "Puntuación media",
+         "fr": "Score moyen",
+         "ar": "متوسط النتيجة",
+         "pt": "Pontuação média",
+         "ru": "Средний балл",
+         "de": "Durchschnittswert",
+         "ja": "平均スコア",
+         "tr": "Ortalama puan",
+         "vi": "Điểm trung bình",
+         "it": "Punteggio medio",
+         "fa": "میانگین امتیاز",
+         "pl": "Średni wynik",
+         "uk": "Середній бал",
+         "nl": "Gemiddelde score",
+         "sv": "Genomsnittspoäng",
+         "cs": "Průměrné skóre",
+         "el": "Μέση βαθμολογία"
+        },
+        "color": "purple"
+       }
+      ]
+     },
+     {
+      "type": "button",
+      "label": {
+       "en": "Log a feeling",
+       "ko": "감정 기록하기",
+       "zh": "记录感受",
+       "hi": "भावना लॉग करें",
+       "es": "Registrar un sentimiento",
+       "fr": "Enregistrer une émotion",
+       "ar": "سجّل شعورًا",
+       "pt": "Registrar um sentimento",
+       "ru": "Записать чувство",
+       "de": "Gefühl erfassen",
+       "ja": "気持ちを記録",
+       "tr": "Bir duygu kaydet",
+       "vi": "Ghi lại cảm xúc",
+       "it": "Registra un sentimento",
+       "fa": "ثبت یک احساس",
+       "pl": "Zapisz uczucie",
+       "uk": "Записати почуття",
+       "nl": "Gevoel vastleggen",
+       "sv": "Logga en känsla",
+       "cs": "Zaznamenat pocit",
+       "el": "Καταγραφή συναισθήματος"
+      },
+      "icon": "add",
+      "action": {
+       "fn": "addRow",
+       "args": {
+        "table": "feelings",
+        "values": {
+         "outOf": "5"
+        }
+       }
+      }
+     },
+     {
+      "type": "cards",
+      "emptyIcon": "mood",
+      "example": {
+       "ids": [
+        "fl_sad_0612",
+        "fl_bored_0612",
+        "fl_motivated_0612"
+       ],
+       "label": {
+        "en": "Examples",
+        "ko": "예시",
+        "zh": "示例",
+        "hi": "उदाहरण",
+        "es": "Ejemplos",
+        "fr": "Exemples",
+        "ar": "أمثلة",
+        "pt": "Exemplos",
+        "ru": "Примеры",
+        "de": "Beispiele",
+        "ja": "例",
+        "tr": "Örnekler",
+        "vi": "Ví dụ",
+        "it": "Esempi",
+        "fa": "نمونه‌ها",
+        "pl": "Przykłady",
+        "uk": "Приклади",
+        "nl": "Voorbeelden",
+        "sv": "Exempel",
+        "cs": "Příklady",
+        "el": "Παραδείγματα"
+       },
+       "chipLabel": {
+        "en": "Example",
+        "ko": "예시",
+        "zh": "示例",
+        "hi": "उदाहरण",
+        "es": "Ejemplo",
+        "fr": "Exemple",
+        "ar": "مثال",
+        "pt": "Exemplo",
+        "ru": "Пример",
+        "de": "Beispiel",
+        "ja": "例",
+        "tr": "Örnek",
+        "vi": "Ví dụ",
+        "it": "Esempio",
+        "fa": "نمونه",
+        "pl": "Przykład",
+        "uk": "Приклад",
+        "nl": "Voorbeeld",
+        "sv": "Exempel",
+        "cs": "Příklad",
+        "el": "Παράδειγμα"
+       },
+       "hideLabel": {
+        "en": "Hide",
+        "ko": "숨기기",
+        "zh": "隐藏",
+        "hi": "छिपाएं",
+        "es": "Ocultar",
+        "fr": "Masquer",
+        "ar": "إخفاء",
+        "pt": "Ocultar",
+        "ru": "Скрыть",
+        "de": "Ausblenden",
+        "ja": "非表示",
+        "tr": "Gizle",
+        "vi": "Ẩn",
+        "it": "Nascondi",
+        "fa": "پنهان کردن",
+        "pl": "Ukryj",
+        "uk": "Приховати",
+        "nl": "Verbergen",
+        "sv": "Dölj",
+        "cs": "Skrýt",
+        "el": "Απόκρυψη"
+       },
+       "hiddenFromSetting": "neujourExamplesHidden"
+      },
+      "emptyTitle": {
+       "en": "No feelings logged",
+       "ko": "기록된 감정 없음",
+       "zh": "暂无已记录感受",
+       "hi": "कोई भावना लॉग नहीं की गई",
+       "es": "No hay sentimientos registrados",
+       "fr": "Aucune émotion enregistrée",
+       "ar": "لم تُسجَّل أي مشاعر",
+       "pt": "Nenhum sentimento registrado",
+       "ru": "Нет записанных чувств",
+       "de": "Keine Gefühle erfasst",
+       "ja": "記録された気持ちはありません",
+       "tr": "Kaydedilmiş duygu yok",
+       "vi": "Chưa ghi lại cảm xúc nào",
+       "it": "Nessun sentimento registrato",
+       "fa": "احساسی ثبت نشده",
+       "pl": "Brak zapisanych uczuć",
+       "uk": "Немає записаних почуттів",
+       "nl": "Geen gevoelens vastgelegd",
+       "sv": "Inga känslor loggade",
+       "cs": "Žádné zaznamenané pocity",
+       "el": "Δεν έχουν καταγραφεί συναισθήματα"
+      },
+      "emptyText": {
+       "en": "Track how you feel to see patterns over time.",
+       "ko": "기분을 추적해 시간에 따른 패턴을 확인하세요.",
+       "zh": "追踪你的感受，发现随时间变化的规律。",
+       "hi": "समय के साथ पैटर्न देखने के लिए अपनी भावना को ट्रैक करें।",
+       "es": "Registra cómo te sientes para ver patrones a lo largo del tiempo.",
+       "fr": "Suivez votre humeur pour voir des tendances au fil du temps.",
+       "ar": "تتبّع شعورك لرؤية الأنماط عبر الزمن.",
+       "pt": "Acompanhe como você se sente para ver padrões ao longo do tempo.",
+       "ru": "Отслеживайте свои чувства, чтобы увидеть закономерности со временем.",
+       "de": "Verfolge, wie du dich fühlst, um Muster im Zeitverlauf zu erkennen.",
+       "ja": "気分を追跡して、時間の経過に伴うパターンを確認しましょう。",
+       "tr": "Zaman içindeki kalıpları görmek için nasıl hissettiğinizi takip edin.",
+       "vi": "Theo dõi cảm giác của bạn để thấy các quy luật theo thời gian.",
+       "it": "Monitora come ti senti per vedere modelli nel tempo.",
+       "fa": "احساس خود را پیگیری کنید تا الگوها را در طول زمان ببینید.",
+       "pl": "Śledź swoje samopoczucie, aby zobaczyć wzorce w czasie.",
+       "uk": "Відстежуйте свій стан, щоб побачити закономірності з часом.",
+       "nl": "Volg hoe je je voelt om patronen in de tijd te zien.",
+       "sv": "Följ hur du mår för att se mönster över tid.",
+       "cs": "Sledujte, jak se cítíte, abyste viděli vzorce v čase.",
+       "el": "Παρακολουθήστε πώς νιώθετε για να δείτε μοτίβα με την πάροδο του χρόνου."
+      },
+      "emptyAction": {
+       "fn": "addRow",
+       "args": {
+        "table": "feelings",
+        "values": {
+         "outOf": "5"
+        }
+       }
+      },
+      "emptyActionLabel": {
+       "en": "Add",
+       "ko": "추가",
+       "zh": "添加",
+       "hi": "जोड़ें",
+       "es": "Añadir",
+       "fr": "Ajouter",
+       "ar": "إضافة",
+       "pt": "Adicionar",
+       "ru": "Добавить",
+       "de": "Hinzufügen",
+       "ja": "追加",
+       "tr": "Ekle",
+       "vi": "Thêm",
+       "it": "Aggiungi",
+       "fa": "افزودن",
+       "pl": "Dodaj",
+       "uk": "Додати",
+       "nl": "Toevoegen",
+       "sv": "Lägg till",
+       "cs": "Přidat",
+       "el": "Προσθήκη"
+      },
+      "confirmDelete": true,
+      "table": "feelings",
+      "title": "name",
+      "subtitle": "score",
+      "tags": [
+       {
+        "column": "outOf"
+       },
+       {
+        "column": "date"
+       }
+      ],
+      "search": true,
+      "searchColumns": [
+       "name",
+       "note"
+      ],
+      "sortDir": "desc",
+      "expandable": true,
+      "expandFields": [
+       {
+        "column": "score",
+        "label": "Score"
+       },
+       {
+        "column": "outOf",
+        "label": "Out of"
+       },
+       {
+        "column": "note",
+        "label": "Note"
+       },
+       {
+        "column": "entry",
+        "label": "Entry"
+       }
+      ],
+      "action": {
+       "fn": "editRow"
+      }
+     }
+    ]
+   }
+  },
+  "atlas": {
+   "title": {
+    "en": "Atlas",
+    "ko": "Atlas",
+    "zh": "Atlas",
+    "hi": "Atlas",
+    "es": "Atlas",
+    "fr": "Atlas",
+    "ar": "Atlas",
+    "pt": "Atlas",
+    "ru": "Atlas",
+    "de": "Atlas",
+    "ja": "Atlas",
+    "tr": "Atlas",
+    "vi": "Atlas",
+    "it": "Atlas",
+    "fa": "Atlas",
+    "pl": "Atlas",
+    "uk": "Atlas",
+    "nl": "Atlas",
+    "sv": "Atlas",
+    "cs": "Atlas",
+    "el": "Atlas"
+   },
+   "body": {
+    "type": "segments",
+    "segments": [
+     {
+      "label": "People",
+      "child": {
+       "type": "column",
+       "children": [
+        {
+         "type": "text",
+         "style": "caption",
+         "value": {
+          "en": "People in your journal — drag to arrange, tap to edit.",
+          "ko": "일기 속 사람들 — 드래그해 배치하고, 탭해 편집하세요.",
+          "zh": "日记中的人物——拖动排列，点按编辑。",
+          "hi": "आपकी डायरी के लोग — व्यवस्थित करने के लिए खींचें, संपादित करने के लिए टैप करें।",
+          "es": "Personas de tu diario: arrastra para ordenar, toca para editar.",
+          "fr": "Les personnes de votre journal — faites glisser pour organiser, touchez pour modifier.",
+          "ar": "الأشخاص في يومياتك — اسحب للترتيب، وانقر للتعديل.",
+          "pt": "Pessoas do seu diário — arraste para organizar, toque para editar.",
+          "ru": "Люди из вашего дневника — перетаскивайте, чтобы упорядочить, нажмите, чтобы изменить.",
+          "de": "Menschen aus deinem Tagebuch — zum Anordnen ziehen, zum Bearbeiten tippen.",
+          "ja": "日記に登場する人たち — ドラッグで配置、タップで編集。",
+          "tr": "Günlüğünüzdeki kişiler — yerleştirmek için sürükleyin, düzenlemek için dokunun.",
+          "vi": "Những người trong nhật ký — kéo để sắp xếp, chạm để chỉnh sửa.",
+          "it": "Le persone del tuo diario — trascina per disporle, tocca per modificarle.",
+          "fa": "افراد دفتر خاطرات شما — برای چیدن بکشید، برای ویرایش ضربه بزنید.",
+          "pl": "Osoby z twojego dziennika — przeciągnij, by ułożyć, dotknij, by edytować.",
+          "uk": "Люди з вашого щоденника — перетягуйте, щоб упорядкувати, торкніться, щоб редагувати.",
+          "nl": "Mensen uit je dagboek — sleep om te ordenen, tik om te bewerken.",
+          "sv": "Personer i din dagbok — dra för att ordna, tryck för att redigera.",
+          "cs": "Lidé z vašeho deníku — přetažením uspořádáte, klepnutím upravíte.",
+          "el": "Άνθρωποι του ημερολογίου σας — σύρετε για τακτοποίηση, πατήστε για επεξεργασία."
+         }
+        },
+        {
+         "type": "row",
+         "children": [
+          {
+           "type": "button",
+           "label": {
+            "en": "New person",
+            "ko": "새 인물",
+            "zh": "新人物",
+            "hi": "नया व्यक्ति",
+            "es": "Nueva persona",
+            "fr": "Nouvelle personne",
+            "ar": "شخص جديد",
+            "pt": "Nova pessoa",
+            "ru": "Новый человек",
+            "de": "Neue Person",
+            "ja": "新しい人物",
+            "tr": "Yeni kişi",
+            "vi": "Người mới",
+            "it": "Nuova persona",
+            "fa": "فرد جدید",
+            "pl": "Nowa osoba",
+            "uk": "Нова людина",
+            "nl": "Nieuw persoon",
+            "sv": "Ny person",
+            "cs": "Nová osoba",
+            "el": "Νέο άτομο"
+           },
+           "icon": "add",
+           "action": {
+            "fn": "addRow",
+            "args": {
+             "table": "people"
+            }
+           }
+          },
+          {
+           "type": "button",
+           "label": {
+            "en": "Connect two people",
+            "ko": "두 사람 연결",
+            "zh": "连接两个人",
+            "hi": "दो लोगों को जोड़ें",
+            "es": "Conectar a dos personas",
+            "fr": "Connecter deux personnes",
+            "ar": "ربط شخصين",
+            "pt": "Conectar duas pessoas",
+            "ru": "Связать двух людей",
+            "de": "Zwei Personen verbinden",
+            "ja": "2人をつなぐ",
+            "tr": "İki kişiyi bağla",
+            "vi": "Kết nối hai người",
+            "it": "Collega due persone",
+            "fa": "اتصال دو فرد",
+            "pl": "Połącz dwie osoby",
+            "uk": "З'єднати двох людей",
+            "nl": "Twee personen verbinden",
+            "sv": "Anslut två personer",
+            "cs": "Propojit dvě osoby",
+            "el": "Σύνδεση δύο ατόμων"
+           },
+           "icon": "link",
+           "action": {
+            "fn": "addRow",
+            "args": {
+             "table": "connections"
+            }
+           }
+          }
+         ]
+        },
+        {
+         "type": "canvas",
+         "nodesTable": "people",
+         "edgesTable": "connections",
+         "labelColumn": "name",
+         "xColumn": "x",
+         "yColumn": "y",
+         "fromColumn": "from",
+         "toColumn": "to",
+         "edgeLabelColumn": "label",
+         "fillPhone": true,
+         "action": {
+          "fn": "editRow"
+         }
+        },
+        {
+         "type": "cards",
+         "emptyIcon": "people",
+         "example": {
+          "ids": [
+           "pp_alex",
+           "pp_sam",
+           "pp_mom",
+           "pp_lena",
+           "pp_dana",
+           "pp_theo"
+          ],
+          "label": {
+           "en": "Examples",
+           "ko": "예시",
+           "zh": "示例",
+           "hi": "उदाहरण",
+           "es": "Ejemplos",
+           "fr": "Exemples",
+           "ar": "أمثلة",
+           "pt": "Exemplos",
+           "ru": "Примеры",
+           "de": "Beispiele",
+           "ja": "例",
+           "tr": "Örnekler",
+           "vi": "Ví dụ",
+           "it": "Esempi",
+           "fa": "نمونه‌ها",
+           "pl": "Przykłady",
+           "uk": "Приклади",
+           "nl": "Voorbeelden",
+           "sv": "Exempel",
+           "cs": "Příklady",
+           "el": "Παραδείγματα"
+          },
+          "chipLabel": {
+           "en": "Example",
+           "ko": "예시",
+           "zh": "示例",
+           "hi": "उदाहरण",
+           "es": "Ejemplo",
+           "fr": "Exemple",
+           "ar": "مثال",
+           "pt": "Exemplo",
+           "ru": "Пример",
+           "de": "Beispiel",
+           "ja": "例",
+           "tr": "Örnek",
+           "vi": "Ví dụ",
+           "it": "Esempio",
+           "fa": "نمونه",
+           "pl": "Przykład",
+           "uk": "Приклад",
+           "nl": "Voorbeeld",
+           "sv": "Exempel",
+           "cs": "Příklad",
+           "el": "Παράδειγμα"
+          },
+          "hideLabel": {
+           "en": "Hide",
+           "ko": "숨기기",
+           "zh": "隐藏",
+           "hi": "छिपाएं",
+           "es": "Ocultar",
+           "fr": "Masquer",
+           "ar": "إخفاء",
+           "pt": "Ocultar",
+           "ru": "Скрыть",
+           "de": "Ausblenden",
+           "ja": "非表示",
+           "tr": "Gizle",
+           "vi": "Ẩn",
+           "it": "Nascondi",
+           "fa": "پنهان کردن",
+           "pl": "Ukryj",
+           "uk": "Приховати",
+           "nl": "Verbergen",
+           "sv": "Dölj",
+           "cs": "Skrýt",
+           "el": "Απόκρυψη"
+          },
+          "hiddenFromSetting": "neujourExamplesHidden"
+         },
+         "emptyTitle": {
+          "en": "No people yet",
+          "ko": "아직 사람 없음",
+          "zh": "暂无人物",
+          "hi": "अभी तक कोई व्यक्ति नहीं",
+          "es": "Aún no hay personas",
+          "fr": "Pas encore de personnes",
+          "ar": "لا يوجد أشخاص بعد",
+          "pt": "Ainda não há pessoas",
+          "ru": "Пока нет людей",
+          "de": "Noch keine Personen",
+          "ja": "まだ人物はいません",
+          "tr": "Henüz kişi yok",
+          "vi": "Chưa có người nào",
+          "it": "Nessuna persona ancora",
+          "fa": "هنوز فردی نیست",
+          "pl": "Brak jeszcze osób",
+          "uk": "Ще немає людей",
+          "nl": "Nog geen personen",
+          "sv": "Inga personer ännu",
+          "cs": "Zatím žádné osoby",
+          "el": "Δεν υπάρχουν ακόμη άτομα"
+         },
+         "emptyText": {
+          "en": "Add the people who matter to you.",
+          "ko": "소중한 사람들을 추가하세요.",
+          "zh": "添加对你重要的人。",
+          "hi": "आपके लिए मायने रखने वाले लोगों को जोड़ें।",
+          "es": "Añade a las personas que te importan.",
+          "fr": "Ajoutez les personnes qui comptent pour vous.",
+          "ar": "أضف الأشخاص المهمين بالنسبة لك.",
+          "pt": "Adicione as pessoas que importam para você.",
+          "ru": "Добавьте людей, которые важны для вас.",
+          "de": "Füge die Personen hinzu, die dir wichtig sind.",
+          "ja": "あなたにとって大切な人を追加しましょう。",
+          "tr": "Sizin için önemli olan kişileri ekleyin.",
+          "vi": "Thêm những người quan trọng với bạn.",
+          "it": "Aggiungi le persone importanti per te.",
+          "fa": "افرادی که برایتان اهمیت دارند را اضافه کنید.",
+          "pl": "Dodaj osoby, które są dla Ciebie ważne.",
+          "uk": "Додайте людей, які важливі для вас.",
+          "nl": "Voeg de mensen toe die belangrijk voor je zijn.",
+          "sv": "Lägg till personerna som betyder något för dig.",
+          "cs": "Přidejte lidi, na kterých vám záleží.",
+          "el": "Προσθέστε τα άτομα που έχουν σημασία για εσάς."
+         },
+         "emptyAction": {
+          "fn": "addRow",
+          "args": {
+           "table": "people"
+          }
+         },
+         "emptyActionLabel": {
+          "en": "Add person",
+          "ko": "인물 추가",
+          "zh": "添加人物",
+          "hi": "व्यक्ति जोड़ें",
+          "es": "Añadir persona",
+          "fr": "Ajouter une personne",
+          "ar": "إضافة شخص",
+          "pt": "Adicionar pessoa",
+          "ru": "Добавить человека",
+          "de": "Person hinzufügen",
+          "ja": "人物を追加",
+          "tr": "Kişi ekle",
+          "vi": "Thêm người",
+          "it": "Aggiungi persona",
+          "fa": "افزودن فرد",
+          "pl": "Dodaj osobę",
+          "uk": "Додати людину",
+          "nl": "Persoon toevoegen",
+          "sv": "Lägg till person",
+          "cs": "Přidat osobu",
+          "el": "Προσθήκη ατόμου"
+         },
+         "confirmDelete": true,
+         "table": "people",
+         "groupByOptions": [
+          {
+           "label": "Relation",
+           "column": "relation"
+          }
+         ],
+         "groupBy": "relation",
+         "title": "name",
+         "subtitle": "relation",
+         "tags": [
+          {
+           "column": "relation"
+          }
+         ],
+         "expandable": true,
+         "expandFields": [
+          {
+           "column": "relation",
+           "label": "Relation"
+          }
+         ],
+         "open": "Open",
+         "action": {
+          "fn": "editRow"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "label": "Events",
+      "child": {
+       "type": "column",
+       "children": [
+        {
+         "type": "text",
+         "style": "caption",
+         "value": {
+          "en": "Moments and occasions you've written about.",
+          "ko": "기록해 둔 순간과 행사들.",
+          "zh": "你记录过的时刻和场合。",
+          "hi": "वे पल और अवसर जिनके बारे में आपने लिखा है।",
+          "es": "Momentos y ocasiones sobre los que has escrito.",
+          "fr": "Les moments et occasions dont vous avez parlé.",
+          "ar": "اللحظات والمناسبات التي كتبت عنها.",
+          "pt": "Momentos e ocasiões sobre os quais você escreveu.",
+          "ru": "Моменты и события, о которых вы писали.",
+          "de": "Momente und Anlässe, über die du geschrieben hast.",
+          "ja": "これまでに書いた出来事や行事。",
+          "tr": "Hakkında yazdığınız anlar ve özel günler.",
+          "vi": "Những khoảnh khắc và dịp bạn đã viết về.",
+          "it": "Momenti e occasioni di cui hai scritto.",
+          "fa": "لحظه‌ها و مناسبت‌هایی که درباره‌شان نوشته‌اید.",
+          "pl": "Chwile i okazje opisane w dzienniku.",
+          "uk": "Моменти й події, про які ви писали.",
+          "nl": "Momenten en gelegenheden waarover je hebt geschreven.",
+          "sv": "Stunder och tillfällen du har skrivit om.",
+          "cs": "Okamžiky a události, o kterých jste psali.",
+          "el": "Στιγμές και περιστάσεις για τις οποίες έχετε γράψει."
+         }
+        },
+        {
+         "type": "button",
+         "label": {
+          "en": "New event",
+          "ko": "새 이벤트",
+          "zh": "新事件",
+          "hi": "नई घटना",
+          "es": "Nuevo evento",
+          "fr": "Nouvel événement",
+          "ar": "حدث جديد",
+          "pt": "Novo evento",
+          "ru": "Новое событие",
+          "de": "Neues Ereignis",
+          "ja": "新規イベント",
+          "tr": "Yeni etkinlik",
+          "vi": "Sự kiện mới",
+          "it": "Nuovo evento",
+          "fa": "رویداد جدید",
+          "pl": "Nowe wydarzenie",
+          "uk": "Нова подія",
+          "nl": "Nieuwe gebeurtenis",
+          "sv": "Ny händelse",
+          "cs": "Nová událost",
+          "el": "Νέα εκδήλωση"
+         },
+         "icon": "add",
+         "action": {
+          "fn": "addRow",
+          "args": {
+           "table": "events"
+          }
+         }
+        },
+        {
+         "type": "cards",
+         "emptyIcon": "event",
+         "example": {
+          "ids": [
+           "ev_team_offsite",
+           "ev_sunday_dinner",
+           "ev_quarterly_review",
+           "ev_berlin_trip",
+           "ev_alex_birthday"
+          ],
+          "label": {
+           "en": "Examples",
+           "ko": "예시",
+           "zh": "示例",
+           "hi": "उदाहरण",
+           "es": "Ejemplos",
+           "fr": "Exemples",
+           "ar": "أمثلة",
+           "pt": "Exemplos",
+           "ru": "Примеры",
+           "de": "Beispiele",
+           "ja": "例",
+           "tr": "Örnekler",
+           "vi": "Ví dụ",
+           "it": "Esempi",
+           "fa": "نمونه‌ها",
+           "pl": "Przykłady",
+           "uk": "Приклади",
+           "nl": "Voorbeelden",
+           "sv": "Exempel",
+           "cs": "Příklady",
+           "el": "Παραδείγματα"
+          },
+          "chipLabel": {
+           "en": "Example",
+           "ko": "예시",
+           "zh": "示例",
+           "hi": "उदाहरण",
+           "es": "Ejemplo",
+           "fr": "Exemple",
+           "ar": "مثال",
+           "pt": "Exemplo",
+           "ru": "Пример",
+           "de": "Beispiel",
+           "ja": "例",
+           "tr": "Örnek",
+           "vi": "Ví dụ",
+           "it": "Esempio",
+           "fa": "نمونه",
+           "pl": "Przykład",
+           "uk": "Приклад",
+           "nl": "Voorbeeld",
+           "sv": "Exempel",
+           "cs": "Příklad",
+           "el": "Παράδειγμα"
+          },
+          "hideLabel": {
+           "en": "Hide",
+           "ko": "숨기기",
+           "zh": "隐藏",
+           "hi": "छिपाएं",
+           "es": "Ocultar",
+           "fr": "Masquer",
+           "ar": "إخفاء",
+           "pt": "Ocultar",
+           "ru": "Скрыть",
+           "de": "Ausblenden",
+           "ja": "非表示",
+           "tr": "Gizle",
+           "vi": "Ẩn",
+           "it": "Nascondi",
+           "fa": "پنهان کردن",
+           "pl": "Ukryj",
+           "uk": "Приховати",
+           "nl": "Verbergen",
+           "sv": "Dölj",
+           "cs": "Skrýt",
+           "el": "Απόκρυψη"
+          },
+          "hiddenFromSetting": "neujourExamplesHidden"
+         },
+         "emptyTitle": {
+          "en": "No events yet",
+          "ko": "아직 이벤트 없음",
+          "zh": "暂无事件",
+          "hi": "अभी तक कोई घटना नहीं",
+          "es": "Aún no hay eventos",
+          "fr": "Pas encore d'événements",
+          "ar": "لا توجد أحداث بعد",
+          "pt": "Ainda não há eventos",
+          "ru": "Пока нет событий",
+          "de": "Noch keine Ereignisse",
+          "ja": "まだイベントはありません",
+          "tr": "Henüz etkinlik yok",
+          "vi": "Chưa có sự kiện nào",
+          "it": "Nessun evento ancora",
+          "fa": "هنوز رویدادی نیست",
+          "pl": "Brak jeszcze wydarzeń",
+          "uk": "Ще немає подій",
+          "nl": "Nog geen gebeurtenissen",
+          "sv": "Inga händelser ännu",
+          "cs": "Zatím žádné události",
+          "el": "Δεν υπάρχουν ακόμη εκδηλώσεις"
+         },
+         "emptyText": {
+          "en": "Note the moments worth remembering.",
+          "ko": "기억할 만한 순간을 기록하세요.",
+          "zh": "记下值得铭记的时刻。",
+          "hi": "याद रखने लायक पलों को नोट करें।",
+          "es": "Anota los momentos que merecen recordarse.",
+          "fr": "Notez les moments qui méritent d'être retenus.",
+          "ar": "دوّن اللحظات الجديرة بالتذكر.",
+          "pt": "Anote os momentos que valem a pena lembrar.",
+          "ru": "Записывайте моменты, достойные памяти.",
+          "de": "Halte Momente fest, die es wert sind, sich zu erinnern.",
+          "ja": "記憶に残す価値のある瞬間を書き留めましょう。",
+          "tr": "Hatırlanmaya değer anları not edin.",
+          "vi": "Ghi lại những khoảnh khắc đáng nhớ.",
+          "it": "Annota i momenti che vale la pena ricordare.",
+          "fa": "لحظه‌های ارزش یادآوری را یادداشت کنید.",
+          "pl": "Zapisuj chwile warte zapamiętania.",
+          "uk": "Записуйте моменти, варті пам'яті.",
+          "nl": "Noteer de momenten die het waard zijn om te onthouden.",
+          "sv": "Notera de ögonblick som är värda att komma ihåg.",
+          "cs": "Zaznamenejte okamžiky, na které stojí za to vzpomínat.",
+          "el": "Σημειώστε τις στιγμές που αξίζει να θυμάστε."
+         },
+         "emptyAction": {
+          "fn": "addRow",
+          "args": {
+           "table": "events"
+          }
+         },
+         "emptyActionLabel": {
+          "en": "Add",
+          "ko": "추가",
+          "zh": "添加",
+          "hi": "जोड़ें",
+          "es": "Añadir",
+          "fr": "Ajouter",
+          "ar": "إضافة",
+          "pt": "Adicionar",
+          "ru": "Добавить",
+          "de": "Hinzufügen",
+          "ja": "追加",
+          "tr": "Ekle",
+          "vi": "Thêm",
+          "it": "Aggiungi",
+          "fa": "افزودن",
+          "pl": "Dodaj",
+          "uk": "Додати",
+          "nl": "Toevoegen",
+          "sv": "Lägg till",
+          "cs": "Přidat",
+          "el": "Προσθήκη"
+         },
+         "confirmDelete": true,
+         "table": "events",
+         "sort": {
+          "column": "date",
+          "dir": "desc"
+         },
+         "title": "name",
+         "subtitle": "place",
+         "tags": [
+          {
+           "column": "date"
+          }
+         ],
+         "expandable": true,
+         "expandFields": [
+          {
+           "column": "date",
+           "label": "Date"
+          },
+          {
+           "column": "place",
+           "label": "Place"
+          }
+         ],
+         "open": "Open",
+         "action": {
+          "fn": "editRow"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "label": "Tags",
+      "child": {
+       "type": "column",
+       "children": [
+        {
+         "type": "text",
+         "style": "caption",
+         "value": {
+          "en": "Themes across your entries — tap to rename or recolor.",
+          "ko": "기록 전반의 주제 — 탭해 이름이나 색을 바꾸세요.",
+          "zh": "贯穿条目的主题——点按即可重命名或改色。",
+          "hi": "आपकी प्रविष्टियों के विषय — नाम या रंग बदलने के लिए टैप करें।",
+          "es": "Temas de tus entradas: toca para renombrar o cambiar el color.",
+          "fr": "Les thèmes de vos entrées — touchez pour renommer ou changer la couleur.",
+          "ar": "موضوعات مدخلاتك — انقر لإعادة التسمية أو تغيير اللون.",
+          "pt": "Temas das suas entradas — toque para renomear ou mudar a cor.",
+          "ru": "Темы ваших записей — нажмите, чтобы переименовать или сменить цвет.",
+          "de": "Themen deiner Einträge — tippen zum Umbenennen oder Umfärben.",
+          "ja": "エントリーに共通するテーマ — タップで名前や色を変更。",
+          "tr": "Kayıtlarınızdaki temalar — yeniden adlandırmak veya rengini değiştirmek için dokunun.",
+          "vi": "Chủ đề trong các mục của bạn — chạm để đổi tên hoặc đổi màu.",
+          "it": "Temi delle tue voci — tocca per rinominare o cambiare colore.",
+          "fa": "مضمون‌های ورودی‌هایتان — برای تغییر نام یا رنگ ضربه بزنید.",
+          "pl": "Motywy twoich wpisów — dotknij, by zmienić nazwę lub kolor.",
+          "uk": "Теми ваших записів — торкніться, щоб перейменувати чи змінити колір.",
+          "nl": "Thema's in je items — tik om te hernoemen of van kleur te veranderen.",
+          "sv": "Teman i dina poster — tryck för att byta namn eller färg.",
+          "cs": "Témata vašich záznamů — klepnutím přejmenujete nebo změníte barvu.",
+          "el": "Θέματα των καταχωρίσεών σας — πατήστε για μετονομασία ή αλλαγή χρώματος."
+         }
+        },
+        {
+         "type": "button",
+         "label": {
+          "en": "New tag",
+          "ko": "새 태그",
+          "zh": "新标签",
+          "hi": "नया टैग",
+          "es": "Nueva etiqueta",
+          "fr": "Nouvelle étiquette",
+          "ar": "وسم جديد",
+          "pt": "Nova etiqueta",
+          "ru": "Новая метка",
+          "de": "Neuer Tag",
+          "ja": "新しいタグ",
+          "tr": "Yeni etiket",
+          "vi": "Thẻ mới",
+          "it": "Nuovo tag",
+          "fa": "برچسب جدید",
+          "pl": "Nowy tag",
+          "uk": "Нова мітка",
+          "nl": "Nieuwe tag",
+          "sv": "Ny tagg",
+          "cs": "Nový štítek",
+          "el": "Νέα ετικέτα"
+         },
+         "icon": "add",
+         "action": {
+          "fn": "addRow",
+          "args": {
+           "table": "tags"
+          }
+         }
+        },
+        {
+         "type": "canvas",
+         "nodesTable": "tags",
+         "labelColumn": "name",
+         "xColumn": "x",
+         "yColumn": "y",
+         "fillPhone": true,
+         "action": {
+          "fn": "editRow"
+         }
+        },
+        {
+         "type": "list",
+         "example": {
+          "ids": [
+           "tag_reflection",
+           "tag_work",
+           "tag_family",
+           "tag_travel",
+           "tag_health",
+           "tag_ideas"
+          ],
+          "label": {
+           "en": "Examples",
+           "ko": "예시",
+           "zh": "示例",
+           "hi": "उदाहरण",
+           "es": "Ejemplos",
+           "fr": "Exemples",
+           "ar": "أمثلة",
+           "pt": "Exemplos",
+           "ru": "Примеры",
+           "de": "Beispiele",
+           "ja": "例",
+           "tr": "Örnekler",
+           "vi": "Ví dụ",
+           "it": "Esempi",
+           "fa": "نمونه‌ها",
+           "pl": "Przykłady",
+           "uk": "Приклади",
+           "nl": "Voorbeelden",
+           "sv": "Exempel",
+           "cs": "Příklady",
+           "el": "Παραδείγματα"
+          },
+          "chipLabel": {
+           "en": "Example",
+           "ko": "예시",
+           "zh": "示例",
+           "hi": "उदाहरण",
+           "es": "Ejemplo",
+           "fr": "Exemple",
+           "ar": "مثال",
+           "pt": "Exemplo",
+           "ru": "Пример",
+           "de": "Beispiel",
+           "ja": "例",
+           "tr": "Örnek",
+           "vi": "Ví dụ",
+           "it": "Esempio",
+           "fa": "نمونه",
+           "pl": "Przykład",
+           "uk": "Приклад",
+           "nl": "Voorbeeld",
+           "sv": "Exempel",
+           "cs": "Příklad",
+           "el": "Παράδειγμα"
+          },
+          "hideLabel": {
+           "en": "Hide",
+           "ko": "숨기기",
+           "zh": "隐藏",
+           "hi": "छिपाएं",
+           "es": "Ocultar",
+           "fr": "Masquer",
+           "ar": "إخفاء",
+           "pt": "Ocultar",
+           "ru": "Скрыть",
+           "de": "Ausblenden",
+           "ja": "非表示",
+           "tr": "Gizle",
+           "vi": "Ẩn",
+           "it": "Nascondi",
+           "fa": "پنهان کردن",
+           "pl": "Ukryj",
+           "uk": "Приховати",
+           "nl": "Verbergen",
+           "sv": "Dölj",
+           "cs": "Skrýt",
+           "el": "Απόκρυψη"
+          },
+          "hiddenFromSetting": "neujourExamplesHidden"
+         },
+         "emptyIcon": "label",
+         "emptyTitle": {
+          "en": "No tags yet",
+          "ko": "아직 태그 없음",
+          "zh": "暂无标签",
+          "hi": "अभी तक कोई टैग नहीं",
+          "es": "Aún no hay etiquetas",
+          "fr": "Pas encore d'étiquettes",
+          "ar": "لا توجد وسوم بعد",
+          "pt": "Ainda não há etiquetas",
+          "ru": "Пока нет меток",
+          "de": "Noch keine Tags",
+          "ja": "まだタグはありません",
+          "tr": "Henüz etiket yok",
+          "vi": "Chưa có thẻ nào",
+          "it": "Nessun tag ancora",
+          "fa": "هنوز برچسبی نیست",
+          "pl": "Brak jeszcze tagów",
+          "uk": "Ще немає міток",
+          "nl": "Nog geen tags",
+          "sv": "Inga taggar ännu",
+          "cs": "Zatím žádné štítky",
+          "el": "Δεν υπάρχουν ακόμη ετικέτες"
+         },
+         "emptyText": {
+          "en": "Create tags to organize your entries.",
+          "ko": "태그를 만들어 기록을 정리하세요.",
+          "zh": "创建标签来整理你的条目。",
+          "hi": "अपनी प्रविष्टियों को व्यवस्थित करने के लिए टैग बनाएं।",
+          "es": "Crea etiquetas para organizar tus entradas.",
+          "fr": "Créez des étiquettes pour organiser vos entrées.",
+          "ar": "أنشئ وسومًا لتنظيم مدخلاتك.",
+          "pt": "Crie etiquetas para organizar suas entradas.",
+          "ru": "Создавайте метки, чтобы организовать записи.",
+          "de": "Erstelle Tags, um deine Einträge zu organisieren.",
+          "ja": "タグを作成してエントリーを整理しましょう。",
+          "tr": "Kayıtlarınızı düzenlemek için etiketler oluşturun.",
+          "vi": "Tạo thẻ để sắp xếp các mục của bạn.",
+          "it": "Crea tag per organizzare le tue voci.",
+          "fa": "برای سازمان‌دهی ورودی‌های خود برچسب بسازید.",
+          "pl": "Twórz tagi, aby porządkować swoje wpisy.",
+          "uk": "Створюйте мітки, щоб упорядкувати свої записи.",
+          "nl": "Maak tags om je items te organiseren.",
+          "sv": "Skapa taggar för att organisera dina poster.",
+          "cs": "Vytvořte štítky pro uspořádání svých záznamů.",
+          "el": "Δημιουργήστε ετικέτες για να οργανώσετε τις καταχωρίσεις σας."
+         },
+         "emptyAction": {
+          "fn": "addRow",
+          "args": {
+           "table": "tags"
+          }
+         },
+         "emptyActionLabel": {
+          "en": "New tag",
+          "ko": "새 태그",
+          "zh": "新标签",
+          "hi": "नया टैग",
+          "es": "Nueva etiqueta",
+          "fr": "Nouvelle étiquette",
+          "ar": "وسم جديد",
+          "pt": "Nova etiqueta",
+          "ru": "Новая метка",
+          "de": "Neuer Tag",
+          "ja": "新しいタグ",
+          "tr": "Yeni etiket",
+          "vi": "Thẻ mới",
+          "it": "Nuovo tag",
+          "fa": "برچسب جدید",
+          "pl": "Nowy tag",
+          "uk": "Нова мітка",
+          "nl": "Nieuwe tag",
+          "sv": "Ny tagg",
+          "cs": "Nový štítek",
+          "el": "Νέα ετικέτα"
+         },
+         "confirmDelete": true,
+         "table": "tags",
+         "titleColumn": "name",
+         "metaColumns": [
+          "color"
+         ],
+         "sortColumn": "name",
+         "sortDir": "asc",
+         "action": {
+          "fn": "editRow"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "label": "Places",
+      "child": {
+       "type": "column",
+       "children": [
+        {
+         "type": "text",
+         "style": "caption",
+         "value": {
+          "en": "Places you've written about — tap to edit or add coordinates.",
+          "ko": "기록한 장소들 — 탭해 편집하거나 좌표를 추가하세요.",
+          "zh": "你写到过的地点——点按编辑或添加坐标。",
+          "hi": "वे जगहें जिनके बारे में आपने लिखा है — संपादित करने या निर्देशांक जोड़ने के लिए टैप करें।",
+          "es": "Lugares sobre los que has escrito: toca para editar o añadir coordenadas.",
+          "fr": "Les lieux dont vous avez parlé — touchez pour modifier ou ajouter des coordonnées.",
+          "ar": "الأماكن التي كتبت عنها — انقر للتعديل أو لإضافة الإحداثيات.",
+          "pt": "Lugares sobre os quais você escreveu — toque para editar ou adicionar coordenadas.",
+          "ru": "Места, о которых вы писали, — нажмите, чтобы изменить или добавить координаты.",
+          "de": "Orte, über die du geschrieben hast — tippen zum Bearbeiten oder für Koordinaten.",
+          "ja": "書いた場所 — タップで編集や座標の追加。",
+          "tr": "Hakkında yazdığınız yerler — düzenlemek veya koordinat eklemek için dokunun.",
+          "vi": "Những nơi bạn đã viết về — chạm để chỉnh sửa hoặc thêm tọa độ.",
+          "it": "Luoghi di cui hai scritto — tocca per modificare o aggiungere coordinate.",
+          "fa": "مکان‌هایی که درباره‌شان نوشته‌اید — برای ویرایش یا افزودن مختصات ضربه بزنید.",
+          "pl": "Miejsca opisane w dzienniku — dotknij, by edytować lub dodać współrzędne.",
+          "uk": "Місця, про які ви писали, — торкніться, щоб редагувати чи додати координати.",
+          "nl": "Plaatsen waarover je hebt geschreven — tik om te bewerken of coördinaten toe te voegen.",
+          "sv": "Platser du har skrivit om — tryck för att redigera eller lägga till koordinater.",
+          "cs": "Místa, o kterých jste psali — klepnutím upravíte nebo přidáte souřadnice.",
+          "el": "Μέρη για τα οποία έχετε γράψει — πατήστε για επεξεργασία ή προσθήκη συντεταγμένων."
+         }
+        },
+        {
+         "type": "button",
+         "label": {
+          "en": "New place",
+          "ko": "새 장소",
+          "zh": "新地点",
+          "hi": "नया स्थान",
+          "es": "Nuevo lugar",
+          "fr": "Nouveau lieu",
+          "ar": "مكان جديد",
+          "pt": "Novo lugar",
+          "ru": "Новое место",
+          "de": "Neuer Ort",
+          "ja": "新しい場所",
+          "tr": "Yeni yer",
+          "vi": "Địa điểm mới",
+          "it": "Nuovo luogo",
+          "fa": "مکان جدید",
+          "pl": "Nowe miejsce",
+          "uk": "Нове місце",
+          "nl": "Nieuwe plaats",
+          "sv": "Ny plats",
+          "cs": "Nové místo",
+          "el": "Νέα τοποθεσία"
+         },
+         "icon": "add",
+         "action": {
+          "fn": "addRow",
+          "args": {
+           "table": "places"
+          }
+         }
+        },
+        {
+         "type": "canvas",
+         "nodesTable": "places",
+         "labelColumn": "name",
+         "xColumn": "x",
+         "yColumn": "y",
+         "fillPhone": true,
+         "action": {
+          "fn": "editRow"
+         }
+        },
+        {
+         "type": "cards",
+         "emptyIcon": "place",
+         "example": {
+          "ids": [
+           "place_home",
+           "place_office",
+           "place_lake_trail",
+           "place_berlin",
+           "place_riverside_park"
+          ],
+          "label": {
+           "en": "Examples",
+           "ko": "예시",
+           "zh": "示例",
+           "hi": "उदाहरण",
+           "es": "Ejemplos",
+           "fr": "Exemples",
+           "ar": "أمثلة",
+           "pt": "Exemplos",
+           "ru": "Примеры",
+           "de": "Beispiele",
+           "ja": "例",
+           "tr": "Örnekler",
+           "vi": "Ví dụ",
+           "it": "Esempi",
+           "fa": "نمونه‌ها",
+           "pl": "Przykłady",
+           "uk": "Приклади",
+           "nl": "Voorbeelden",
+           "sv": "Exempel",
+           "cs": "Příklady",
+           "el": "Παραδείγματα"
+          },
+          "chipLabel": {
+           "en": "Example",
+           "ko": "예시",
+           "zh": "示例",
+           "hi": "उदाहरण",
+           "es": "Ejemplo",
+           "fr": "Exemple",
+           "ar": "مثال",
+           "pt": "Exemplo",
+           "ru": "Пример",
+           "de": "Beispiel",
+           "ja": "例",
+           "tr": "Örnek",
+           "vi": "Ví dụ",
+           "it": "Esempio",
+           "fa": "نمونه",
+           "pl": "Przykład",
+           "uk": "Приклад",
+           "nl": "Voorbeeld",
+           "sv": "Exempel",
+           "cs": "Příklad",
+           "el": "Παράδειγμα"
+          },
+          "hideLabel": {
+           "en": "Hide",
+           "ko": "숨기기",
+           "zh": "隐藏",
+           "hi": "छिपाएं",
+           "es": "Ocultar",
+           "fr": "Masquer",
+           "ar": "إخفاء",
+           "pt": "Ocultar",
+           "ru": "Скрыть",
+           "de": "Ausblenden",
+           "ja": "非表示",
+           "tr": "Gizle",
+           "vi": "Ẩn",
+           "it": "Nascondi",
+           "fa": "پنهان کردن",
+           "pl": "Ukryj",
+           "uk": "Приховати",
+           "nl": "Verbergen",
+           "sv": "Dölj",
+           "cs": "Skrýt",
+           "el": "Απόκρυψη"
+          },
+          "hiddenFromSetting": "neujourExamplesHidden"
+         },
+         "emptyTitle": {
+          "en": "No places yet",
+          "ko": "아직 장소 없음",
+          "zh": "暂无地点",
+          "hi": "अभी तक कोई स्थान नहीं",
+          "es": "Aún no hay lugares",
+          "fr": "Pas encore de lieux",
+          "ar": "لا توجد أماكن بعد",
+          "pt": "Ainda não há lugares",
+          "ru": "Пока нет мест",
+          "de": "Noch keine Orte",
+          "ja": "まだ場所はありません",
+          "tr": "Henüz yer yok",
+          "vi": "Chưa có địa điểm nào",
+          "it": "Nessun luogo ancora",
+          "fa": "هنوز مکانی نیست",
+          "pl": "Brak jeszcze miejsc",
+          "uk": "Ще немає місць",
+          "nl": "Nog geen plaatsen",
+          "sv": "Inga platser ännu",
+          "cs": "Zatím žádná místa",
+          "el": "Δεν υπάρχουν ακόμη τοποθεσίες"
+         },
+         "emptyText": {
+          "en": "Add the places you go.",
+          "ko": "자주 가는 장소를 추가하세요.",
+          "zh": "添加你去过的地点。",
+          "hi": "आप जिन स्थानों पर जाते हैं उन्हें जोड़ें।",
+          "es": "Añade los lugares que frecuentas.",
+          "fr": "Ajoutez les lieux que vous fréquentez.",
+          "ar": "أضف الأماكن التي تذهب إليها.",
+          "pt": "Adicione os lugares que você frequenta.",
+          "ru": "Добавьте места, которые вы посещаете.",
+          "de": "Füge die Orte hinzu, die du besuchst.",
+          "ja": "よく行く場所を追加しましょう。",
+          "tr": "Gittiğiniz yerleri ekleyin.",
+          "vi": "Thêm những nơi bạn đến.",
+          "it": "Aggiungi i luoghi che frequenti.",
+          "fa": "مکان‌هایی که به آن‌ها می‌روید را اضافه کنید.",
+          "pl": "Dodaj miejsca, do których chodzisz.",
+          "uk": "Додайте місця, які ви відвідуєте.",
+          "nl": "Voeg de plaatsen toe waar je heen gaat.",
+          "sv": "Lägg till platserna du besöker.",
+          "cs": "Přidejte místa, kam chodíte.",
+          "el": "Προσθέστε τις τοποθεσίες που επισκέπτεστε."
+         },
+         "emptyAction": {
+          "fn": "addRow",
+          "args": {
+           "table": "places"
+          }
+         },
+         "emptyActionLabel": {
+          "en": "Add place",
+          "ko": "장소 추가",
+          "zh": "添加地点",
+          "hi": "स्थान जोड़ें",
+          "es": "Añadir lugar",
+          "fr": "Ajouter un lieu",
+          "ar": "إضافة مكان",
+          "pt": "Adicionar lugar",
+          "ru": "Добавить место",
+          "de": "Ort hinzufügen",
+          "ja": "場所を追加",
+          "tr": "Yer ekle",
+          "vi": "Thêm địa điểm",
+          "it": "Aggiungi luogo",
+          "fa": "افزودن مکان",
+          "pl": "Dodaj miejsce",
+          "uk": "Додати місце",
+          "nl": "Plaats toevoegen",
+          "sv": "Lägg till plats",
+          "cs": "Přidat místo",
+          "el": "Προσθήκη τοποθεσίας"
+         },
+         "confirmDelete": true,
+         "table": "places",
+         "title": "name",
+         "subtitle": "coords",
+         "expandable": true,
+         "expandFields": [
+          {
+           "column": "coords",
+           "label": "Coordinates (lat, lng)"
+          },
+          {
+           "column": "notes",
+           "label": "Notes"
+          }
+         ],
+         "open": "Open",
+         "action": {
+          "fn": "editRow"
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "dense": true
+   }
+  },
+  "more": {
+   "title": {
+    "en": "More",
+    "ko": "더보기",
+    "zh": "更多",
+    "hi": "और",
+    "es": "Más",
+    "fr": "Plus",
+    "ar": "المزيد",
+    "pt": "Mais",
+    "ru": "Ещё",
+    "de": "Mehr",
+    "ja": "その他",
+    "tr": "Diğer",
+    "vi": "Thêm",
+    "it": "Altro",
+    "fa": "بیشتر",
+    "pl": "Więcej",
+    "uk": "Більше",
+    "nl": "Meer",
+    "sv": "Mer",
+    "cs": "Více",
+    "el": "Περισσότερα"
+   },
+   "body": {
+    "type": "column",
+    "children": [
+     {
+      "type": "button",
+      "label": {
+       "en": "Feelings",
+       "ko": "감정",
+       "zh": "感受",
+       "hi": "भावनाएं",
+       "es": "Sentimientos",
+       "fr": "Émotions",
+       "ar": "المشاعر",
+       "pt": "Sentimentos",
+       "ru": "Чувства",
+       "de": "Gefühle",
+       "ja": "気持ち",
+       "tr": "Duygular",
+       "vi": "Cảm xúc",
+       "it": "Sentimenti",
+       "fa": "احساسات",
+       "pl": "Uczucia",
+       "uk": "Почуття",
+       "nl": "Gevoelens",
+       "sv": "Känslor",
+       "cs": "Pocity",
+       "el": "Συναισθήματα"
+      },
+      "icon": "volunteer_activism",
+      "action": {
+       "fn": "goto",
+       "args": {
+        "screen": "feelings"
+       }
+      }
+     },
+     {
+      "type": "button",
+      "label": {
+       "en": "Customize",
+       "ko": "사용자 지정",
+       "zh": "自定义",
+       "hi": "अनुकूलित करें",
+       "es": "Personalizar",
+       "fr": "Personnaliser",
+       "ar": "تخصيص",
+       "pt": "Personalizar",
+       "ru": "Настроить",
+       "de": "Anpassen",
+       "ja": "カスタマイズ",
+       "tr": "Özelleştir",
+       "vi": "Tùy chỉnh",
+       "it": "Personalizza",
+       "fa": "سفارشی‌سازی",
+       "pl": "Dostosuj",
+       "uk": "Налаштувати",
+       "nl": "Aanpassen",
+       "sv": "Anpassa",
+       "cs": "Přizpůsobit",
+       "el": "Προσαρμογή"
+      },
+      "icon": "settings",
+      "action": {
+       "fn": "goto",
+       "args": {
+        "screen": "customize"
+       }
+      }
+     }
+    ]
+   }
+  }
+ }
+}

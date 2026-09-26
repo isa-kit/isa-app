@@ -1,0 +1,36 @@
+{
+  "sources": [
+    {
+      "id": "src_borders",
+      "layer": "Territory borders",
+      "what": "25 world-map snapshots, 2000 BCE → 2010 CE, sampled from a single worldwide polity dataset and merged into one file the year slider filters live.",
+      "source": "Cliopatria - Seshat Global History Databank",
+      "license": "CC BY 4.0 (Creative Commons Attribution 4.0 International)",
+      "note": "Coarse, scholarly-approximate polygons for roughly 1,600 polities spanning 3400 BCE-2024 CE - not an authoritative or legally recognized boundary claim. Coverage is deliberately curated to notable/major polities rather than exhaustive, so earlier eras show fewer, larger territories than a maximal atlas would."
+    },
+    {
+      "id": "src_battles",
+      "layer": "Battles",
+      "what": "347 notable battles with a named war/conflict, curated by Wikipedia-language-edition coverage, capped per century.",
+      "source": "Wikidata (query.wikidata.org)",
+      "license": "CC0 (public domain dedication)",
+      "note": "A curated sample, not a complete record — only battles tagged with coordinates, a date, and a named conflict are included, and each century keeps only its most-covered entries."
+    },
+    {
+      "id": "src_cannae_terrain",
+      "layer": "Battles → Cannae terrain",
+      "what": "8x8km elevation clip (contours, elevation bands, hand-authored river line) around Canne della Battaglia, Apulia — the Cannae battlefield.",
+      "source": "Terrarium DEM tiles (s3://elevation-tiles-prod, Mapzen/Tilezen \"joerd\"); underlying source over this area is EU-DEM (Copernicus Land Monitoring Service)",
+      "license": "Copernicus free-and-open-data policy — required attribution: \"Produced using Copernicus data and information funded by the European Union - EU-DEM layers.\"",
+      "note": "The river line is a hand-authored trace of the DEM's own valley (today's course), not a record of the disputed 216 BC channel."
+    },
+    {
+      "id": "src_cannae_scenario",
+      "layer": "Battles → Cannae units & phases",
+      "what": "16 units and 7 phases choreographing the double envelopment, with terrain-aware routed movement between authored anchor points.",
+      "source": "Authored from general knowledge of Polybius (Histories, Book III) and Livy (Ab Urbe Condita, Book XXII), both public-domain ancient sources",
+      "license": "Public domain (ancient sources); choreography, positions and routing are this app's own reconstruction",
+      "note": "A simplified reconstruction, not a record — unit counts, formation depths and exact geometry are approximate; the ancient sources themselves disagree on troop totals."
+    }
+  ]
+}

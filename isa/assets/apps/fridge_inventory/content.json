@@ -1,0 +1,36 @@
+{
+  "items": [
+    { "id": "i1", "name": "Eggs",           "category": "dairy",   "quantity": 1,   "unit": "dozen",  "fraction": 1.0,  "location": "fridge",  "lowStock": false, "updated": "2026-06-01" },
+    { "id": "i2", "name": "Milk",           "category": "dairy",   "quantity": 1,   "unit": "carton", "fraction": 0.75, "location": "fridge",  "lowStock": false, "updated": "2026-06-02" },
+    { "id": "i3", "name": "Lemonade",       "category": "drinks",  "quantity": 1,   "unit": "bottle", "fraction": 0.5,  "location": "fridge",  "lowStock": true,  "updated": "2026-06-02" },
+    { "id": "i4", "name": "Spinach",        "category": "produce", "quantity": 200, "unit": "g",      "fraction": 1.0,  "location": "fridge",  "lowStock": false, "updated": "2026-06-03" },
+    { "id": "i5", "name": "Chicken breast", "category": "meat",    "quantity": 2,   "unit": "each",   "fraction": 1.0,  "location": "freezer", "lowStock": false, "updated": "2026-05-30" },
+    { "id": "i6", "name": "Pasta",          "category": "pantry",  "quantity": 500, "unit": "g",      "fraction": 0.4,  "location": "pantry",  "lowStock": true,  "updated": "2026-05-28" },
+    { "id": "i7", "name": "Rice",           "category": "pantry",  "quantity": 1,   "unit": "kg",     "fraction": 0.8,  "location": "pantry",  "lowStock": false, "updated": "2026-05-25" },
+    { "id": "i8", "name": "Onion",          "category": "produce", "quantity": 3,   "unit": "each",   "fraction": 1.0,  "location": "pantry",  "lowStock": false, "updated": "2026-06-01" },
+    { "id": "i9", "name": "Garlic",         "category": "produce", "quantity": 1,   "unit": "each",   "fraction": 1.0,  "location": "pantry",  "lowStock": false, "updated": "2026-06-01" },
+    { "id": "i10","name": "Tomato",         "category": "produce", "quantity": 4,   "unit": "each",   "fraction": 1.0,  "location": "fridge",  "lowStock": false, "updated": "2026-06-03" },
+    { "id": "i11","name": "Butter",         "category": "dairy",   "quantity": 1,   "unit": "each",   "fraction": 0.6,  "location": "fridge",  "lowStock": false, "updated": "2026-05-29" },
+    { "id": "i12","name": "Cheddar cheese", "category": "dairy",   "quantity": 250, "unit": "g",      "fraction": 0.5,  "location": "fridge",  "lowStock": false, "updated": "2026-05-31" },
+    { "id": "i13","name": "Olive oil",      "category": "pantry",  "quantity": 500, "unit": "ml",     "fraction": 0.7,  "location": "pantry",  "lowStock": false, "updated": "2026-05-20" },
+    { "id": "i14","name": "Greek yogurt",   "category": "dairy",   "quantity": 500, "unit": "g",      "fraction": 0.6,  "location": "fridge",  "lowStock": false, "updated": "2026-06-07" },
+    { "id": "i15","name": "Frozen peas",    "category": "frozen",  "quantity": 750, "unit": "g",      "fraction": 1.0,  "location": "freezer", "lowStock": false, "updated": "2026-05-22" },
+    { "id": "i16","name": "Ground beef",    "category": "meat",    "quantity": 500, "unit": "g",      "fraction": 1.0,  "location": "freezer", "lowStock": false, "updated": "2026-06-04" },
+    { "id": "i17","name": "Orange juice",   "category": "drinks",  "quantity": 1,   "unit": "carton", "fraction": 0.25, "location": "fridge",  "lowStock": true,  "updated": "2026-06-08" },
+    { "id": "i18","name": "Carrots",        "category": "produce", "quantity": 6,   "unit": "each",   "fraction": 1.0,  "location": "fridge",  "lowStock": false, "updated": "2026-06-06" },
+    { "id": "i19","name": "Sourdough bread","category": "pantry",  "quantity": 1,   "unit": "each",   "fraction": 0.5,  "location": "pantry",  "lowStock": false, "updated": "2026-06-05" },
+    { "id": "i20","name": "Mayonnaise",     "category": "other",   "quantity": 1,   "unit": "bottle", "fraction": 0.3,  "location": "fridge",  "lowStock": true,  "updated": "2026-06-02" },
+    { "id": "i21","name": "Frozen pizza",   "category": "frozen",  "quantity": 2,   "unit": "each",   "fraction": 1.0,  "location": "freezer", "lowStock": false, "updated": "2026-05-26" },
+    { "id": "i22","name": "Sparkling water","category": "drinks",  "quantity": 6,   "unit": "bottle", "fraction": 1.0,  "location": "fridge",  "lowStock": false, "updated": "2026-06-09" }
+  ],
+  "recipes": [
+    { "id": "r1", "name": "Spinach omelette",        "uses": "eggs, spinach, butter, cheddar cheese", "missing": "", "steps": "Beat eggs. Wilt spinach in butter, pour in eggs, fold with grated cheddar.", "minutes": 12 },
+    { "id": "r2", "name": "Grilled cheese and tomato","uses": "sourdough bread, cheddar cheese, butter, tomato", "missing": "", "steps": "Butter the bread, layer cheddar and tomato slices, griddle until golden and melted.", "minutes": 10 },
+    { "id": "r3", "name": "Loaded frozen pizza",     "uses": "frozen pizza, cheddar cheese, tomato, spinach", "missing": "", "steps": "Top the pizza with extra cheddar, tomato, and spinach. Bake per the box plus 2 minutes.", "minutes": 20 },
+    { "id": "r4", "name": "Cheesy tomato pasta",     "uses": "pasta, tomato, cheddar cheese, garlic, olive oil", "missing": "", "steps": "Boil pasta. Soften garlic and chopped tomato in olive oil, toss with pasta and cheddar.", "minutes": 25 },
+    { "id": "r5", "name": "Chicken fried rice",      "uses": "chicken breast, rice, eggs, garlic, onion, frozen peas", "missing": "soy sauce", "steps": "Cook rice and cool. Stir-fry chicken, onion, and garlic. Add rice, peas, and beaten egg; season with soy sauce.", "minutes": 30 },
+    { "id": "r6", "name": "Beef and pea stir-fry",   "uses": "ground beef, frozen peas, onion, garlic, rice", "missing": "", "steps": "Brown the beef with onion and garlic. Stir in peas. Serve over steamed rice.", "minutes": 30 },
+    { "id": "r7", "name": "Carrot ginger soup",      "uses": "carrots, onion, butter", "missing": "ginger, stock", "steps": "Sweat onion in butter, add chopped carrots, ginger, and stock. Simmer until soft, then blend.", "minutes": 35 },
+    { "id": "r8", "name": "Yogurt parfait",          "uses": "greek yogurt, orange juice", "missing": "granola, berries", "steps": "Layer yogurt with granola and berries. Loosen the yogurt with a splash of orange juice if thick.", "minutes": 5 }
+  ]
+}
