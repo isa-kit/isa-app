@@ -1,0 +1,11 @@
+{
+  "note": "Data vintage ledger for terrain's Korea (Seoul subway) dataset — what was last fetched, with which script/source, and when. Mirrors transit4's data/vintages.json shape.",
+  "kr_stations": {
+    "dataset": "kr_stations",
+    "script": "tool/korea/build_korea.py",
+    "source": "OpenStreetMap Overpass API (subway route relations)",
+    "fetched_at": "2026-07-17",
+    "cache": "/tmp/korea/raw.json",
+    "hub_speed_const": 33.0
+  }
+}

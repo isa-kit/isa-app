@@ -1,0 +1,64 @@
+{
+  "tables": [
+    {
+      "name": "boxes",
+      "label": "Wireframe blocks",
+      "icon": "crop_square",
+      "description": "UI blocks (screen frame, nav, button, input, text, image, list, section): drag to place, resize from the corner, tap to edit label + note."
+    },
+    {
+      "name": "links",
+      "label": "Wireframe links",
+      "icon": "link",
+      "description": "Optional arrows between wireframe blocks (navigation: 'tapping this goes to that')."
+    },
+    {
+      "name": "flow_nodes",
+      "label": "Flow steps",
+      "icon": "account_tree",
+      "description": "Flowchart / data-flow steps: start, step, decision, data, end."
+    },
+    {
+      "name": "flow_edges",
+      "label": "Flow arrows",
+      "icon": "arrow_forward",
+      "description": "Arrows between flow steps (the path the process takes)."
+    },
+    {
+      "name": "brief",
+      "label": "Request",
+      "icon": "target",
+      "description": "The overall ask: new applet or a change, a title and a summary. One row."
+    },
+    {
+      "name": "features",
+      "label": "Features & changes",
+      "icon": "list_alt",
+      "description": "What you want — features, changes, fixes, questions — each optionally pinned to a screen/block, with a priority."
+    },
+    {
+      "name": "data_model",
+      "label": "Data model",
+      "icon": "table_chart",
+      "description": "The data/schema: entities, their fields, and relationships."
+    },
+    {
+      "name": "notes",
+      "label": "Notes",
+      "icon": "forum",
+      "description": "Running design discussion — you and Claude both write here."
+    },
+    {
+      "name": "drawings",
+      "label": "Sketches",
+      "icon": "draw",
+      "description": "Freehand vector sketches and dev drawings for anything blocks can't say."
+    },
+    {
+      "name": "sketch",
+      "label": "Wireframe sketch",
+      "icon": "gesture",
+      "description": "Freehand annotations drawn over the wireframe (one row)."
+    }
+  ]
+}

@@ -1,0 +1,718 @@
+{
+  "datasets": [
+    {
+      "id": "ds_wac",
+      "name": "LODES WAC (jobs)",
+      "source": "Census LEHD LODES8 (Workplace Area Characteristics)",
+      "vintage": "2019",
+      "keyed": "keyless",
+      "geography": "block (w_geocode)",
+      "used_by": "generation, industry mix (CNS01-CNS20)",
+      "citation": "lehd.ces.census.gov/data/lodes/LODES8/<st>/wac/",
+      "kind": "census",
+      "status": "active",
+      "license": "Public domain (US Census LODES)",
+      "permanent_url": "https://lehd.ces.census.gov/data/",
+      "doi": ""
+    },
+    {
+      "id": "ds_rac",
+      "name": "LODES RAC (workers)",
+      "source": "Census LEHD LODES8 (Residence Area Characteristics)",
+      "vintage": "2019",
+      "keyed": "keyless",
+      "geography": "block (h_geocode)",
+      "used_by": "worker residence; validates zone geometry (90% within 2x)",
+      "citation": "lehd.ces.census.gov/data/lodes/LODES8/<st>/rac/",
+      "kind": "census",
+      "status": "active",
+      "license": "Public domain (US Census LODES)",
+      "permanent_url": "https://lehd.ces.census.gov/data/",
+      "doi": ""
+    },
+    {
+      "id": "ds_acs",
+      "name": "ACS B08301 (commute mode)",
+      "source": "Census ACS journey-to-work (means of transportation)",
+      "vintage": "2019 5-yr (curated approx; real values gated on census API key)",
+      "keyed": "api-key",
+      "geography": "metro / place",
+      "used_by": "transit-share calibration target (STOPS-style); missing key => exploratory tier",
+      "citation": "api.census.gov/data ACS B08301 / B08303",
+      "kind": "census",
+      "status": "active",
+      "license": "Public domain (US Census ACS)",
+      "permanent_url": "https://www.census.gov/programs-surveys/acs",
+      "doi": ""
+    },
+    {
+      "id": "ds_nhts",
+      "name": "NHTS 2017",
+      "source": "FHWA National Household Travel Survey",
+      "vintage": "2017",
+      "keyed": "keyless",
+      "geography": "national / regional",
+      "used_by": "trip-length target (mean work-trip length); NCHRP-716 transferred parameters",
+      "citation": "nhts.ornl.gov",
+      "kind": "survey",
+      "status": "active",
+      "license": "Public domain (FHWA NHTS)",
+      "permanent_url": "https://nhts.ornl.gov/",
+      "doi": ""
+    },
+    {
+      "id": "ds_dec",
+      "name": "Decennial PL-94-171 (households)",
+      "source": "Census 2020 Decennial redistricting file (PL-94-171 / table H1)",
+      "vintage": "2020",
+      "keyed": "keyless",
+      "geography": "block",
+      "used_by": "households (hh19); MA cached, other states downloadable keyless",
+      "citation": "www2.census.gov/programs-surveys/decennial/2020/data/01-Redistricting_File--PL_94-171/",
+      "kind": "census",
+      "status": "active",
+      "license": "Public domain (US Census PL 94-171)",
+      "permanent_url": "https://www.census.gov/programs-surveys/decennial-census",
+      "doi": ""
+    },
+    {
+      "id": "ds_osm",
+      "name": "OSM highways",
+      "source": "OpenStreetMap via Geofabrik / Overpass (the build script)",
+      "vintage": "live (daily/weekly extracts)",
+      "keyed": "keyless",
+      "geography": "corridor / grid",
+      "used_by": "assignment capacity (6 cities); international spatial structure + roads/names",
+      "citation": "geofabrik.de / overpass-api.de (ODbL)",
+      "kind": "osm",
+      "status": "active",
+      "license": "ODbL (OpenStreetMap)",
+      "permanent_url": "https://www.openstreetmap.org/copyright",
+      "doi": ""
+    },
+    {
+      "id": "ds_gtfs",
+      "name": "GTFS (MBTA)",
+      "source": "MBTA GTFS via Mobility Database / transit.land",
+      "vintage": "live (per-agency refresh; historic archives to 2009)",
+      "keyed": "keyless",
+      "geography": "stop / route",
+      "used_by": "transit service skim (Boston, proven)",
+      "citation": "mobilitydatabase.org / transit.land",
+      "kind": "gtfs",
+      "status": "active",
+      "endpoint": "https://cdn.mbta.com/MBTA_GTFS.zip",
+      "schedule": "",
+      "license": "Open license (MBTA developer terms)",
+      "permanent_url": "https://www.mbta.com/developers/gtfs",
+      "doi": ""
+    }
+  ],
+  "standards": [
+    {
+      "id": "st_fhwa",
+      "standard": "FHWA Travel Model Validation & Reasonableness Checking Manual (2010)",
+      "requires": "Check every four-step stage against observed data (trip rates, trip-length distributions, mode shares vs census JTW, assigned volumes vs counts); assess reasonableness of magnitudes/gradients; validate against data NOT fit to.",
+      "met": "partial"
+    },
+    {
+      "id": "st_nchrp",
+      "standard": "NCHRP Report 716 - Parameters and Techniques",
+      "requires": "For transferred (not locally-estimated) parameters, declare them, anchor to a national/peer source (NHTS), and class transferred results as a different confidence tier than calibrated ones.",
+      "met": "yes"
+    },
+    {
+      "id": "st_tmip",
+      "standard": "TMIP peer-review practice",
+      "requires": "Reviewability: complete written methodology, traceable data lineage, reproducible runs, honest limitations statement - the package a panel could audit without the authors present.",
+      "met": "partial"
+    },
+    {
+      "id": "st_stops",
+      "standard": "FTA STOPS-style calibration norms",
+      "requires": "Calibrate to observed transit targets (census JTW share, NTD boardings), report the achieved-vs-target residual, keep the local adjustment surface small and documented so cities stay comparable.",
+      "met": "partial"
+    }
+  ],
+  "runs": [
+    {
+      "id": "r_2019",
+      "label": "Boston — Baseline 2019",
+      "when": "2026-07-01T00:00:00.000Z",
+      "city": "Boston",
+      "year": "2019",
+      "scenario": "Baseline",
+      "model_version": "7fa3c41",
+      "zones": 1669,
+      "total_trips": 1284000,
+      "transit_pct": 17.4,
+      "avg_trip_mi": 11.2,
+      "tier": "focused",
+      "confidence_tier": "focused",
+      "pass_count": 9,
+      "warn_count": 1,
+      "fail_count": 1,
+      "status": "precomputed",
+      "note": "Focused tier — calibrated to ACS B08301 transit share + NHTS trip length. 1 warn (beta-floor geometry) + 1 fail (foundation provenance in the audited run) shown honestly, not hidden."
+    },
+    {
+      "id": "r_2050",
+      "label": "Boston — Forecast 2050",
+      "when": "2026-07-01T00:00:00.000Z",
+      "city": "Boston",
+      "year": "2050",
+      "scenario": "Forecast",
+      "model_version": "7fa3c41",
+      "zones": 1669,
+      "total_trips": 1402000,
+      "transit_pct": 19.1,
+      "avg_trip_mi": 11.8,
+      "tier": "focused",
+      "confidence_tier": "focused",
+      "pass_count": 9,
+      "warn_count": 1,
+      "fail_count": 1,
+      "status": "precomputed",
+      "note": "Same code version as Baseline (7fa3c41). Growth-year forecast; trips monotonic up vs 2019. Exploratory-anchored years would carry a looser tolerance."
+    }
+  ],
+  "soundness_checks": [
+    {
+      "id": "c1",
+      "run_id": "r_2019",
+      "ord": 1,
+      "check": "report_parses",
+      "asserts": "Run report is valid JSON and has at least one scenario",
+      "status": "pass",
+      "detail": "valid JSON, 2 scenarios (Baseline, Forecast)",
+      "standard": "TMIP peer-review readiness",
+      "applies_to": "m_4step",
+      "standard_doc_url": "https://www.fhwa.dot.gov/planning/tmip/"
+    },
+    {
+      "id": "c2",
+      "run_id": "r_2019",
+      "ord": 2,
+      "check": "zones_positive",
+      "asserts": "Zone count is present and greater than zero",
+      "status": "pass",
+      "detail": "1669 zones",
+      "standard": "FHWA reasonableness",
+      "applies_to": "m_found",
+      "standard_doc_url": "https://www.fhwa.dot.gov/planning/tmip/"
+    },
+    {
+      "id": "c3",
+      "run_id": "r_2019",
+      "ord": 3,
+      "check": "trips_positive",
+      "asserts": "total_trips > 0 in every scenario",
+      "status": "pass",
+      "detail": "total_trips 1,284,000-1,402,000 across scenarios",
+      "standard": "FHWA reasonableness",
+      "applies_to": "m_4step",
+      "standard_doc_url": "https://www.fhwa.dot.gov/planning/tmip/"
+    },
+    {
+      "id": "c4",
+      "run_id": "r_2019",
+      "ord": 4,
+      "check": "share_in_bounds",
+      "asserts": "Transit share falls within [0,100]% in every scenario",
+      "status": "pass",
+      "detail": "transit_pct 17.4-19.1% across scenarios",
+      "standard": "FHWA reasonableness",
+      "applies_to": "m_4step",
+      "standard_doc_url": "https://www.fhwa.dot.gov/planning/tmip/"
+    },
+    {
+      "id": "c5",
+      "run_id": "r_2019",
+      "ord": 5,
+      "check": "share_within_tolerance",
+      "asserts": "Calibrated transit share is within tolerance of the observed target (ACS B08301)",
+      "status": "pass",
+      "detail": "achieved 17.4% vs target 17.9% (residual 2.8% <= tol 15%)",
+      "standard": "FTA STOPS calibration",
+      "applies_to": "m_4step",
+      "standard_doc_url": "https://www.transit.dot.gov/funding/grant-programs/capital-investments/stops"
+    },
+    {
+      "id": "c6",
+      "run_id": "r_2019",
+      "ord": 6,
+      "check": "trip_length_within_tolerance",
+      "asserts": "Mean work-trip length is within tolerance of the NHTS-anchored target",
+      "status": "warn",
+      "detail": "trip-length geometry-limited: beta at floor 0.010; modeled zone extent cannot reach the target trip length even at flattest friction — honest limit, not a failure",
+      "standard": "FTA STOPS calibration",
+      "applies_to": "m_4step",
+      "standard_doc_url": "https://www.transit.dot.gov/funding/grant-programs/capital-investments/stops"
+    },
+    {
+      "id": "c7",
+      "run_id": "r_2019",
+      "ord": 7,
+      "check": "trips_monotonic",
+      "asserts": "total_trips moves monotonically across forecast years",
+      "status": "pass",
+      "detail": "total_trips monotonic up across [2019, 2050]",
+      "standard": "FHWA validation / reasonableness",
+      "applies_to": "m_4step",
+      "standard_doc_url": "https://www.fhwa.dot.gov/planning/tmip/"
+    },
+    {
+      "id": "c8",
+      "run_id": "r_2019",
+      "ord": 8,
+      "check": "mass_sanity",
+      "asserts": "transit_trips <= total_trips in every scenario (mass conservation)",
+      "status": "pass",
+      "detail": "transit_trips <= total_trips in all 2 scenarios",
+      "standard": "FHWA reasonableness",
+      "applies_to": "m_4step",
+      "standard_doc_url": "https://www.fhwa.dot.gov/planning/tmip/"
+    },
+    {
+      "id": "c9",
+      "run_id": "r_2019",
+      "ord": 9,
+      "check": "foundation_provenance",
+      "asserts": "Foundation block carries schema, model_version, and layers",
+      "status": "fail",
+      "detail": "foundation block missing model_version in the audited run report — flagged so the reviewer sees exactly where the provenance gap is (the fix lands in a later version)",
+      "standard": "Reproducibility / versioning (FOUNDATION.md)",
+      "applies_to": "m_found",
+      "standard_doc_url": ""
+    },
+    {
+      "id": "c10",
+      "run_id": "r_2019",
+      "ord": 10,
+      "check": "targets_sourced",
+      "asserts": "Calibration targets name a source and a vintage",
+      "status": "pass",
+      "detail": "share: ACS B08301 2019 5-yr | length: NHTS 2017 | vintage: 2019",
+      "standard": "NCHRP Report 716 (data lineage)",
+      "applies_to": "m_4step",
+      "standard_doc_url": "https://www.trb.org/Publications/Blurbs/167055.aspx"
+    },
+    {
+      "id": "c11",
+      "run_id": "r_2019",
+      "ord": 11,
+      "check": "calibration_mode_noted",
+      "asserts": "config/cities declares the calibration mode (focused vs exploratory)",
+      "status": "pass",
+      "detail": "config/cities/boston.json calibration.mode=focused",
+      "standard": "NCHRP-716 tier discipline",
+      "applies_to": "m_snd",
+      "standard_doc_url": "https://www.trb.org/Publications/Blurbs/167055.aspx"
+    },
+    {
+      "id": "c2050_1",
+      "run_id": "r_2050",
+      "ord": 1,
+      "check": "report_parses",
+      "asserts": "Run report is valid JSON and has at least one scenario",
+      "status": "pass",
+      "detail": "valid JSON, 2 scenarios (Baseline, Forecast)",
+      "standard": "TMIP peer-review readiness",
+      "applies_to": "m_4step",
+      "standard_doc_url": "https://www.fhwa.dot.gov/planning/tmip/"
+    },
+    {
+      "id": "c2050_2",
+      "run_id": "r_2050",
+      "ord": 2,
+      "check": "zones_positive",
+      "asserts": "Zone count is present and greater than zero",
+      "status": "pass",
+      "detail": "1669 zones",
+      "standard": "FHWA reasonableness",
+      "applies_to": "m_found",
+      "standard_doc_url": "https://www.fhwa.dot.gov/planning/tmip/"
+    },
+    {
+      "id": "c2050_3",
+      "run_id": "r_2050",
+      "ord": 3,
+      "check": "trips_positive",
+      "asserts": "total_trips > 0 in every scenario",
+      "status": "pass",
+      "detail": "total_trips 1,402,000 (2050 forecast)",
+      "standard": "FHWA reasonableness",
+      "applies_to": "m_4step",
+      "standard_doc_url": "https://www.fhwa.dot.gov/planning/tmip/"
+    },
+    {
+      "id": "c2050_4",
+      "run_id": "r_2050",
+      "ord": 4,
+      "check": "share_in_bounds",
+      "asserts": "Transit share falls within [0,100]% in every scenario",
+      "status": "pass",
+      "detail": "transit_pct 19.1% (2050 forecast)",
+      "standard": "FHWA reasonableness",
+      "applies_to": "m_4step",
+      "standard_doc_url": "https://www.fhwa.dot.gov/planning/tmip/"
+    },
+    {
+      "id": "c2050_5",
+      "run_id": "r_2050",
+      "ord": 5,
+      "check": "share_within_tolerance",
+      "asserts": "Calibrated transit share is within tolerance of the observed target (ACS B08301)",
+      "status": "pass",
+      "detail": "forecast share 19.1% consistent with the calibrated 2019 base (17.4%); forecast years inherit the base calibration",
+      "standard": "FTA STOPS calibration",
+      "applies_to": "m_4step",
+      "standard_doc_url": "https://www.transit.dot.gov/funding/grant-programs/capital-investments/stops"
+    },
+    {
+      "id": "c2050_6",
+      "run_id": "r_2050",
+      "ord": 6,
+      "check": "trip_length_within_tolerance",
+      "asserts": "Mean work-trip length is within tolerance of the NHTS-anchored target",
+      "status": "warn",
+      "detail": "same beta-floor geometry limit as the base run; mean work-trip length geometry-limited — honest limit, not a failure",
+      "standard": "FTA STOPS calibration",
+      "applies_to": "m_4step",
+      "standard_doc_url": "https://www.transit.dot.gov/funding/grant-programs/capital-investments/stops"
+    },
+    {
+      "id": "c2050_7",
+      "run_id": "r_2050",
+      "ord": 7,
+      "check": "trips_monotonic",
+      "asserts": "total_trips moves monotonically across forecast years",
+      "status": "pass",
+      "detail": "total_trips monotonic up across [2019, 2050]",
+      "standard": "FHWA validation / reasonableness",
+      "applies_to": "m_4step",
+      "standard_doc_url": "https://www.fhwa.dot.gov/planning/tmip/"
+    },
+    {
+      "id": "c2050_8",
+      "run_id": "r_2050",
+      "ord": 8,
+      "check": "mass_sanity",
+      "asserts": "transit_trips <= total_trips in every scenario (mass conservation)",
+      "status": "pass",
+      "detail": "transit_trips <= total_trips in all 2 scenarios",
+      "standard": "FHWA reasonableness",
+      "applies_to": "m_4step",
+      "standard_doc_url": "https://www.fhwa.dot.gov/planning/tmip/"
+    },
+    {
+      "id": "c2050_9",
+      "run_id": "r_2050",
+      "ord": 9,
+      "check": "foundation_provenance",
+      "asserts": "Foundation block carries schema, model_version, and layers",
+      "status": "fail",
+      "detail": "same foundation provenance gap as the base run — foundation block missing model_version in the audited report (fix lands in a later version)",
+      "standard": "Reproducibility / versioning (FOUNDATION.md)",
+      "applies_to": "m_found",
+      "standard_doc_url": ""
+    },
+    {
+      "id": "c2050_10",
+      "run_id": "r_2050",
+      "ord": 10,
+      "check": "targets_sourced",
+      "asserts": "Calibration targets name a source and a vintage",
+      "status": "pass",
+      "detail": "share: ACS B08301 2019 5-yr | length: NHTS 2017 | forecast inherits base targets",
+      "standard": "NCHRP Report 716 (data lineage)",
+      "applies_to": "m_4step",
+      "standard_doc_url": "https://www.trb.org/Publications/Blurbs/167055.aspx"
+    },
+    {
+      "id": "c2050_11",
+      "run_id": "r_2050",
+      "ord": 11,
+      "check": "calibration_mode_noted",
+      "asserts": "config/cities declares the calibration mode (focused vs exploratory)",
+      "status": "pass",
+      "detail": "config/cities/boston.json calibration.mode=focused",
+      "standard": "NCHRP-716 tier discipline",
+      "applies_to": "m_snd",
+      "standard_doc_url": "https://www.trb.org/Publications/Blurbs/167055.aspx"
+    }
+  ],
+  "confidence_tiers": [
+    {
+      "id": "tier_focused",
+      "tier": "focused (calibrated)",
+      "meaning": "Real, observed, sourced LOCAL targets; calibration converged inside the stated tolerance; at least one independent cross-check exists. These numbers may inform decisions, with residuals shown.",
+      "earned_by": "Sourced ACS B08301 transit share + NHTS-anchored trip length, in-tolerance calibration, and an independent cross-check (e.g. NTD boardings held out of the fit).",
+      "downgrades": "Editing the label does NOT promote a run — promotion is earned only by the rows. A run drops to exploratory if targets become approximate anchors, the ACS key is missing, or calibration falls out of tolerance.",
+      "decisions": "May inform decisions (with residuals shown). Suited to a funded corridor study.",
+      "cities": "Boston, Chicago, Seattle"
+    },
+    {
+      "id": "tier_exploratory",
+      "tier": "exploratory (transferred)",
+      "meaning": "Targets are national / peer anchors (NCHRP-716-style transfer); the vintage says 'exploratory'; tolerance is looser. Structurally the same model, honestly weaker grounding.",
+      "earned_by": "Runs against approximate national-anchor targets pending real per-metro ACS pulls (usm_* metro configs).",
+      "downgrades": "Downgraded by: approximate 'exploratory 2019-anchor' targets; a missing ACS API key (can't fetch per-metro B08301); a dense-core bbox that clips the metro; aggregate national anchors used in place of per-metro observed targets.",
+      "decisions": "For coverage, comparison, and exploration — NOT a forecast, NOT a basis for a specific investment decision.",
+      "cities": "most of the 382 US metros (usm_* configs)"
+    }
+  ],
+  "model_history": [
+    {
+      "id": "h1",
+      "model_version": "7fa3c41",
+      "date": "2026-07-01",
+      "what_changed": "Focused-tier Boston baseline: calibration bisection to ACS B08301 share + NHTS trip length; per-run soundness audit (11 checks) wired; foundation block records schema + model_version + layers.",
+      "by": "transit4",
+      "kind": "calibration"
+    },
+    {
+      "id": "h2",
+      "model_version": "b2e9d10",
+      "date": "2026-06-24",
+      "what_changed": "Doubly-constrained gravity distribution replaced the one-pass IPF proxy; beta friction fitted per city instead of a shared constant. Trip-length residuals dropped where geometry allowed.",
+      "by": "transit4",
+      "kind": "method"
+    },
+    {
+      "id": "h3",
+      "model_version": "9c14a7f",
+      "date": "2026-06-13",
+      "what_changed": "Foundation schema v1: versioned-run contract (foundation{schema, model_version(git sha), generated, parameters}) + auditable model_changelog + restore-point backups. Reproducibility contract established.",
+      "by": "transit4",
+      "kind": "schema"
+    }
+  ],
+  "run_inputs": [
+    {
+      "id": "ri_2019_wac",
+      "from": "r_2019",
+      "to": "ds_wac",
+      "type": "uses"
+    },
+    {
+      "id": "ri_2019_rac",
+      "from": "r_2019",
+      "to": "ds_rac",
+      "type": "uses"
+    },
+    {
+      "id": "ri_2019_acs",
+      "from": "r_2019",
+      "to": "ds_acs",
+      "type": "uses"
+    },
+    {
+      "id": "ri_2019_nhts",
+      "from": "r_2019",
+      "to": "ds_nhts",
+      "type": "uses"
+    },
+    {
+      "id": "ri_2019_dec",
+      "from": "r_2019",
+      "to": "ds_dec",
+      "type": "uses"
+    },
+    {
+      "id": "ri_2019_gtfs",
+      "from": "r_2019",
+      "to": "ds_gtfs",
+      "type": "uses"
+    },
+    {
+      "id": "ri_2050_wac",
+      "from": "r_2050",
+      "to": "ds_wac",
+      "type": "uses"
+    },
+    {
+      "id": "ri_2050_acs",
+      "from": "r_2050",
+      "to": "ds_acs",
+      "type": "uses"
+    },
+    {
+      "id": "ri_2050_nhts",
+      "from": "r_2050",
+      "to": "ds_nhts",
+      "type": "uses"
+    },
+    {
+      "id": "ri_2050_dec",
+      "from": "r_2050",
+      "to": "ds_dec",
+      "type": "uses"
+    },
+    {
+      "id": "ri_2050_rac",
+      "from": "r_2050",
+      "to": "ds_rac",
+      "type": "uses"
+    },
+    {
+      "id": "ri_2050_gtfs",
+      "from": "r_2050",
+      "to": "ds_gtfs",
+      "type": "uses"
+    }
+  ],
+  "run_checks": [
+    {
+      "id": "rc_2019_c1",
+      "from": "r_2019",
+      "to": "c1",
+      "type": "audits"
+    },
+    {
+      "id": "rc_2019_c2",
+      "from": "r_2019",
+      "to": "c2",
+      "type": "audits"
+    },
+    {
+      "id": "rc_2019_c3",
+      "from": "r_2019",
+      "to": "c3",
+      "type": "audits"
+    },
+    {
+      "id": "rc_2019_c4",
+      "from": "r_2019",
+      "to": "c4",
+      "type": "audits"
+    },
+    {
+      "id": "rc_2019_c5",
+      "from": "r_2019",
+      "to": "c5",
+      "type": "audits"
+    },
+    {
+      "id": "rc_2019_c6",
+      "from": "r_2019",
+      "to": "c6",
+      "type": "audits"
+    },
+    {
+      "id": "rc_2019_c7",
+      "from": "r_2019",
+      "to": "c7",
+      "type": "audits"
+    },
+    {
+      "id": "rc_2019_c8",
+      "from": "r_2019",
+      "to": "c8",
+      "type": "audits"
+    },
+    {
+      "id": "rc_2019_c9",
+      "from": "r_2019",
+      "to": "c9",
+      "type": "audits"
+    },
+    {
+      "id": "rc_2019_c10",
+      "from": "r_2019",
+      "to": "c10",
+      "type": "audits"
+    },
+    {
+      "id": "rc_2019_c11",
+      "from": "r_2019",
+      "to": "c11",
+      "type": "audits"
+    },
+    {
+      "id": "rc_2050_c1",
+      "from": "r_2050",
+      "to": "c2050_1",
+      "type": "audits"
+    },
+    {
+      "id": "rc_2050_c2",
+      "from": "r_2050",
+      "to": "c2050_2",
+      "type": "audits"
+    },
+    {
+      "id": "rc_2050_c3",
+      "from": "r_2050",
+      "to": "c2050_3",
+      "type": "audits"
+    },
+    {
+      "id": "rc_2050_c4",
+      "from": "r_2050",
+      "to": "c2050_4",
+      "type": "audits"
+    },
+    {
+      "id": "rc_2050_c5",
+      "from": "r_2050",
+      "to": "c2050_5",
+      "type": "audits"
+    },
+    {
+      "id": "rc_2050_c6",
+      "from": "r_2050",
+      "to": "c2050_6",
+      "type": "audits"
+    },
+    {
+      "id": "rc_2050_c7",
+      "from": "r_2050",
+      "to": "c2050_7",
+      "type": "audits"
+    },
+    {
+      "id": "rc_2050_c8",
+      "from": "r_2050",
+      "to": "c2050_8",
+      "type": "audits"
+    },
+    {
+      "id": "rc_2050_c9",
+      "from": "r_2050",
+      "to": "c2050_9",
+      "type": "audits"
+    },
+    {
+      "id": "rc_2050_c10",
+      "from": "r_2050",
+      "to": "c2050_10",
+      "type": "audits"
+    },
+    {
+      "id": "rc_2050_c11",
+      "from": "r_2050",
+      "to": "c2050_11",
+      "type": "audits"
+    }
+  ],
+  "run_config": [
+    {
+      "id": "cfg",
+      "run_label": "Run scenario",
+      "model": "four-step",
+      "city": "boston",
+      "year": "2019",
+      "beta": null,
+      "calib": "focused",
+      "growth": 1,
+      "endpoint": "https://167.233.64.97/model/scenario",
+      "token": "",
+      "schedule": "",
+      "next_run": "",
+      "last_status": "No run yet — /model is authorization-locked (403 at the edge since 2026-07-02). The ledger below shows precomputed runs.",
+      "last_run": "",
+      "model_version": "7fa3c41"
+    }
+  ]
+}

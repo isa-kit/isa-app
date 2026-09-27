@@ -1,0 +1,463 @@
+{
+  "app": {
+    "languages": ["en", "ko", "zh", "hi", "es", "fr", "ar", "pt", "ru", "de", "ja", "tr", "vi", "it", "fa", "pl", "uk", "nl", "sv", "cs", "el"],
+    "translatable": true,
+    "appDataTools": true,
+    "title": {
+      "en": "Exposure Check",
+      "ko": "익스포저 체크",
+      "zh": "隐私暴露检查",
+      "hi": "एक्सपोज़र चेक",
+      "es": "Comprobación de exposición",
+      "fr": "Vérification d'exposition",
+      "ar": "فحص التعرض",
+      "pt": "Verificação de exposição",
+      "ru": "Проверка утечек",
+      "de": "Expositionsprüfung",
+      "ja": "エクスポージャーチェック",
+      "tr": "Maruz Kalma Kontrolü",
+      "vi": "Kiểm tra lộ thông tin",
+      "it": "Controllo esposizione",
+      "fa": "بررسی افشا",
+      "pl": "Sprawdzenie ekspozycji",
+      "uk": "Перевірка витоку даних",
+      "nl": "Blootstellingscheck",
+      "sv": "Exponeringskontroll",
+      "cs": "Kontrola expozice",
+      "el": "Έλεγχος έκθεσης"
+    },
+    "primaryColor": "#0F6E56",
+    "theme": "minimal"
+  },
+  "nav": [
+    { "id": "overview", "label": { "en": "Overview", "ko": "개요", "zh": "概览", "hi": "अवलोकन", "es": "Resumen", "fr": "Aperçu", "ar": "نظرة عامة", "pt": "Visão geral", "ru": "Обзор", "de": "Übersicht", "ja": "概要", "tr": "Genel Bakış", "vi": "Tổng quan", "it": "Panoramica", "fa": "نمای کلی", "pl": "Przegląd", "uk": "Огляд", "nl": "Overzicht", "sv": "Översikt", "cs": "Přehled", "el": "Επισκόπηση" }, "icon": "shield", "screen": "overview" },
+    { "id": "identifiers", "label": { "en": "My details", "ko": "내 정보", "zh": "我的信息", "hi": "मेरा विवरण", "es": "Mis datos", "fr": "Mes informations", "ar": "تفاصيلي", "pt": "Meus dados", "ru": "Мои данные", "de": "Meine Daten", "ja": "自分の情報", "tr": "Bilgilerim", "vi": "Thông tin của tôi", "it": "I miei dati", "fa": "اطلاعات من", "pl": "Moje dane", "uk": "Мої дані", "nl": "Mijn gegevens", "sv": "Mina uppgifter", "cs": "Moje údaje", "el": "Τα στοιχεία μου" }, "icon": "badge", "screen": "identifiers" },
+    { "id": "protections", "label": { "en": "Protections", "ko": "보호 조치", "zh": "防护措施", "hi": "सुरक्षा उपाय", "es": "Protecciones", "fr": "Protections", "ar": "الحمايات", "pt": "Proteções", "ru": "Меры защиты", "de": "Schutzmaßnahmen", "ja": "保護対策", "tr": "Korumalar", "vi": "Biện pháp bảo vệ", "it": "Protezioni", "fa": "محافظت‌ها", "pl": "Zabezpieczenia", "uk": "Захисні заходи", "nl": "Beschermingen", "sv": "Skydd", "cs": "Ochrany", "el": "Προστασίες" }, "icon": "verified_user", "screen": "protections" },
+    { "id": "brokers", "label": { "en": "Opt-outs", "ko": "제외 요청", "zh": "退出请求", "hi": "ऑप्ट-आउट", "es": "Exclusiones", "fr": "Désinscriptions", "ar": "إلغاءات الاشتراك", "pt": "Exclusões", "ru": "Отказы от участия", "de": "Opt-outs", "ja": "オプトアウト", "tr": "Vazgeçmeler", "vi": "Yêu cầu gỡ bỏ", "it": "Rimozioni", "fa": "درخواست حذف", "pl": "Rezygnacje", "uk": "Відмови", "nl": "Afmeldingen", "sv": "Avanmälningar", "cs": "Odhlášení", "el": "Εξαιρέσεις" }, "icon": "person_off", "screen": "brokers" },
+    { "id": "guides", "label": { "en": "Guides", "ko": "가이드", "zh": "指南", "hi": "गाइड", "es": "Guías", "fr": "Guides", "ar": "الأدلة", "pt": "Guias", "ru": "Руководства", "de": "Anleitungen", "ja": "ガイド", "tr": "Rehberler", "vi": "Hướng dẫn", "it": "Guide", "fa": "راهنماها", "pl": "Poradniki", "uk": "Посібники", "nl": "Handleidingen", "sv": "Guider", "cs": "Průvodci", "el": "Οδηγοί" }, "icon": "menu_book", "screen": "guides" }
+  ],
+  "screens": {
+    "overview": {
+      "title": {
+        "en": "Overview",
+        "ko": "개요",
+        "zh": "概览",
+        "hi": "अवलोकन",
+        "es": "Resumen",
+        "fr": "Aperçu",
+        "ar": "نظرة عامة",
+        "pt": "Visão geral",
+        "ru": "Обзор",
+        "de": "Übersicht",
+        "ja": "概要",
+        "tr": "Genel Bakış",
+        "vi": "Tổng quan",
+        "it": "Panoramica",
+        "fa": "نمای کلی",
+        "pl": "Przegląd",
+        "uk": "Огляд",
+        "nl": "Overzicht",
+        "sv": "Översikt",
+        "cs": "Přehled",
+        "el": "Επισκόπηση"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Your personal-exposure workbook. It reduces real risk with steps you can act on today — no scanning, no accounts, no cost. Start on My details, then work the Protections list.",
+              "ko": "당신의 개인정보 노출 워크북입니다. 오늘 당장 실행할 수 있는 단계로 실제 위험을 줄여줍니다 — 스캔도, 계정도, 비용도 필요 없습니다. 내 정보 탭에서 시작한 뒤 보호 조치 목록을 진행하세요.",
+              "zh": "这是你的个人信息暴露工作手册。它用今天就能执行的步骤降低真实风险——无需扫描、无需账户、无需付费。从“我的信息”开始，然后处理“保护措施”列表。",
+              "hi": "यह आपकी व्यक्तिगत-एक्सपोज़र वर्कबुक है। यह आज ही अपनाए जा सकने वाले कदमों से असली जोखिम घटाती है — कोई स्कैनिंग नहीं, कोई खाता नहीं, कोई लागत नहीं। 'मेरा विवरण' से शुरू करें, फिर 'सुरक्षा उपाय' सूची पर काम करें।",
+              "es": "Tu cuaderno de exposición personal. Reduce el riesgo real con pasos que puedes aplicar hoy mismo — sin escaneos, sin cuentas, sin coste. Empieza en Mis datos y luego trabaja la lista de Protecciones.",
+              "fr": "Votre cahier d'exposition personnelle. Il réduit le risque réel avec des étapes que vous pouvez appliquer dès aujourd'hui — sans scan, sans compte, sans coût. Commencez par Mes informations, puis travaillez la liste des Protections.",
+              "ar": "دفتر عملك الشخصي للتعرض. يقلل المخاطر الحقيقية بخطوات يمكنك تنفيذها اليوم — بلا مسح، بلا حسابات، بلا تكلفة. ابدأ من تفاصيلي، ثم اعمل على قائمة الحمايات.",
+              "pt": "Seu caderno de exposição pessoal. Ele reduz o risco real com etapas que você pode aplicar hoje — sem varredura, sem contas, sem custo. Comece em Meus dados, depois trabalhe a lista de Proteções.",
+              "ru": "Ваш личный рабочий журнал по утечкам данных. Он снижает реальный риск с помощью шагов, которые можно применить уже сегодня — без сканирования, без аккаунтов, бесплатно. Начните с «Мои данные», затем пройдите список «Меры защиты».",
+              "de": "Dein persönliches Expositions-Arbeitsbuch. Es senkt echtes Risiko mit Schritten, die du noch heute umsetzen kannst — kein Scan, keine Konten, keine Kosten. Beginne bei Meine Daten und arbeite dann die Liste Schutzmaßnahmen ab.",
+              "ja": "あなた個人の情報露出ワークブックです。今日から実行できるステップで実際のリスクを減らします — スキャンもアカウントも費用も不要です。「自分の情報」から始め、「保護対策」リストに進んでください。",
+              "tr": "Kişisel maruz kalma çalışma kitabınız. Bugün uygulayabileceğiniz adımlarla gerçek riski azaltır — tarama yok, hesap yok, ücret yok. Bilgilerim'den başlayın, ardından Korumalar listesiyle devam edin.",
+              "vi": "Sổ tay lộ thông tin cá nhân của bạn. Nó giảm rủi ro thực sự bằng các bước bạn có thể thực hiện ngay hôm nay — không quét, không tài khoản, không tốn phí. Bắt đầu ở Thông tin của tôi, rồi làm theo danh sách Biện pháp bảo vệ.",
+              "it": "Il tuo quaderno di esposizione personale. Riduce il rischio reale con passi che puoi applicare oggi stesso — nessuna scansione, nessun account, nessun costo. Inizia da I miei dati, poi lavora sulla lista Protezioni.",
+              "fa": "دفترچهٔ افشای شخصی شما. با گام‌هایی که همین امروز می‌توانید انجام دهید ریسک واقعی را کم می‌کند — بدون اسکن، بدون حساب کاربری، بدون هزینه. از اطلاعات من شروع کنید، سپس فهرست محافظت‌ها را پیش ببرید.",
+              "pl": "Twój osobisty zeszyt ekspozycji. Zmniejsza realne ryzyko dzięki krokom, które możesz podjąć już dziś — bez skanowania, bez kont, bez kosztów. Zacznij od Moje dane, a potem przejdź listę Zabezpieczenia.",
+              "uk": "Ваш особистий робочий зошит з витоку даних. Він знижує реальний ризик за допомогою кроків, які можна виконати вже сьогодні — без сканування, без облікових записів, безкоштовно. Почніть з «Мої дані», потім пройдіть список «Захисні заходи».",
+              "nl": "Jouw persoonlijke blootstellingswerkboek. Het vermindert echt risico met stappen die je vandaag kunt toepassen — geen scannen, geen accounts, geen kosten. Begin bij Mijn gegevens en werk dan de lijst Beschermingen af.",
+              "sv": "Din personliga exponeringsarbetsbok. Den minskar verklig risk med steg du kan agera på redan idag — ingen skanning, inga konton, ingen kostnad. Börja med Mina uppgifter och arbeta sedan igenom listan Skydd.",
+              "cs": "Váš osobní sešit expozice. Snižuje skutečné riziko kroky, které můžete udělat ještě dnes — žádné skenování, žádné účty, žádné náklady. Začněte u Moje údaje a poté projděte seznam Ochrany.",
+              "el": "Το προσωπικό σας βιβλίο έκθεσης. Μειώνει τον πραγματικό κίνδυνο με βήματα που μπορείτε να εφαρμόσετε σήμερα — χωρίς σάρωση, χωρίς λογαριασμούς, χωρίς κόστος. Ξεκινήστε από Τα στοιχεία μου, έπειτα δουλέψτε τη λίστα Προστασίες."
+            }
+          },
+          {
+            "type": "row",
+            "children": [
+              { "type": "stat", "table": "hardening", "agg": "count", "filter": { "column": "status", "value": "done" }, "label": { "en": "Protections done", "ko": "완료된 보호 조치", "zh": "已完成的保护措施", "hi": "पूरे किए गए सुरक्षा उपाय", "es": "Protecciones completadas", "fr": "Protections terminées", "ar": "الحمايات المنجزة", "pt": "Proteções concluídas", "ru": "Выполнено мер защиты", "de": "Erledigte Schutzmaßnahmen", "ja": "完了した保護対策", "tr": "Tamamlanan korumalar", "vi": "Biện pháp bảo vệ đã hoàn thành", "it": "Protezioni completate", "fa": "محافظت‌های انجام‌شده", "pl": "Ukończone zabezpieczenia", "uk": "Виконані захисні заходи", "nl": "Voltooide beschermingen", "sv": "Slutförda skydd", "cs": "Dokončené ochrany", "el": "Ολοκληρωμένες προστασίες" }, "color": "green" },
+              { "type": "stat", "table": "hardening", "agg": "count", "filter": { "column": "priority", "value": "critical" }, "label": { "en": "Critical steps", "ko": "핵심 단계", "zh": "关键步骤", "hi": "महत्वपूर्ण कदम", "es": "Pasos críticos", "fr": "Étapes critiques", "ar": "الخطوات الحاسمة", "pt": "Etapas críticas", "ru": "Критические шаги", "de": "Kritische Schritte", "ja": "重要なステップ", "tr": "Kritik adımlar", "vi": "Bước quan trọng", "it": "Passaggi critici", "fa": "گام‌های حیاتی", "pl": "Kroki krytyczne", "uk": "Критичні кроки", "nl": "Kritieke stappen", "sv": "Kritiska steg", "cs": "Kritické kroky", "el": "Κρίσιμα βήματα" }, "color": "coral" },
+              { "type": "stat", "table": "brokers", "agg": "count", "filter": { "column": "status", "value": "confirmed" }, "label": { "en": "Opt-outs confirmed", "ko": "확인된 제외 요청", "zh": "已确认的退出请求", "hi": "पुष्ट किए गए ऑप्ट-आउट", "es": "Exclusiones confirmadas", "fr": "Désinscriptions confirmées", "ar": "إلغاءات الاشتراك المؤكدة", "pt": "Exclusões confirmadas", "ru": "Подтверждённые отказы", "de": "Bestätigte Opt-outs", "ja": "確認済みオプトアウト", "tr": "Onaylanan vazgeçmeler", "vi": "Yêu cầu gỡ bỏ đã xác nhận", "it": "Rimozioni confermate", "fa": "درخواست‌های حذف تأییدشده", "pl": "Potwierdzone rezygnacje", "uk": "Підтверджені відмови", "nl": "Bevestigde afmeldingen", "sv": "Bekräftade avanmälningar", "cs": "Potvrzená odhlášení", "el": "Επιβεβαιωμένες εξαιρέσεις" }, "color": "blue" }
+            ]
+          },
+          { "type": "text", "style": "subtitle", "value": { "en": "Start here", "ko": "여기서 시작", "zh": "从这里开始", "hi": "यहां से शुरू करें", "es": "Empieza aquí", "fr": "Commencez ici", "ar": "ابدأ هنا", "pt": "Comece aqui", "ru": "Начните здесь", "de": "Hier beginnen", "ja": "ここから開始", "tr": "Buradan başlayın", "vi": "Bắt đầu từ đây", "it": "Inizia qui", "fa": "از اینجا شروع کنید", "pl": "Zacznij tutaj", "uk": "Почніть тут", "nl": "Begin hier", "sv": "Börja här", "cs": "Začněte zde", "el": "Ξεκινήστε εδώ" } },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "The critical items below are the highest-payoff protections. Tap through to the Protections tab to mark them done.",
+              "ko": "아래 핵심 항목은 가장 효과가 큰 보호 조치입니다. 보호 조치 탭으로 이동해 완료로 표시하세요.",
+              "zh": "下面的关键项目是收益最高的保护措施。点击进入“保护措施”标签页将其标记为完成。",
+              "hi": "नीचे दिए महत्वपूर्ण आइटम सबसे ज़्यादा फायदा देने वाले सुरक्षा उपाय हैं। उन्हें पूरा चिह्नित करने के लिए 'सुरक्षा उपाय' टैब पर जाएं।",
+              "es": "Los elementos críticos de abajo son las protecciones de mayor beneficio. Ve a la pestaña Protecciones para marcarlas como hechas.",
+              "fr": "Les éléments critiques ci-dessous sont les protections les plus rentables. Accédez à l'onglet Protections pour les marquer comme terminées.",
+              "ar": "العناصر الحاسمة أدناه هي أعلى الحمايات عائدًا. انتقل إلى تبويب الحمايات لتعليمها كمنجزة.",
+              "pt": "Os itens críticos abaixo são as proteções de maior retorno. Toque para ir até a aba Proteções e marcá-las como concluídas.",
+              "ru": "Критические пункты ниже — самые выгодные меры защиты. Перейдите на вкладку «Меры защиты», чтобы отметить их выполненными.",
+              "de": "Die kritischen Punkte unten sind die lohnendsten Schutzmaßnahmen. Tippe zum Reiter Schutzmaßnahmen, um sie als erledigt zu markieren.",
+              "ja": "以下の重要項目は最も効果の高い保護対策です。「保護対策」タブに進んで完了としてマークしてください。",
+              "tr": "Aşağıdaki kritik öğeler en yüksek getirili korumalardır. Bunları tamamlandı olarak işaretlemek için Korumalar sekmesine dokunun.",
+              "vi": "Các mục quan trọng bên dưới là những biện pháp bảo vệ mang lại lợi ích lớn nhất. Nhấn để chuyển đến tab Biện pháp bảo vệ và đánh dấu hoàn thành.",
+              "it": "Gli elementi critici qui sotto sono le protezioni con il rendimento più alto. Tocca per andare alla scheda Protezioni e segnarle come fatte.",
+              "fa": "موارد حیاتی زیر، پرسودترین محافظت‌ها هستند. برای علامت‌گذاری آن‌ها به‌عنوان انجام‌شده، به تب محافظت‌ها بروید.",
+              "pl": "Poniższe krytyczne elementy to zabezpieczenia o najwyższej opłacalności. Przejdź do zakładki Zabezpieczenia, aby oznaczyć je jako wykonane.",
+              "uk": "Критичні пункти нижче — найвигідніші заходи захисту. Перейдіть на вкладку «Захисні заходи», щоб позначити їх виконаними.",
+              "nl": "De kritieke items hieronder zijn de beschermingen met het hoogste rendement. Tik door naar het tabblad Beschermingen om ze als voltooid te markeren.",
+              "sv": "De kritiska punkterna nedan är skydden med störst utdelning. Tryck vidare till fliken Skydd för att markera dem som klara.",
+              "cs": "Kritické položky níže jsou ochrany s nejvyšším přínosem. Klepnutím přejděte na kartu Ochrany a označte je jako hotové.",
+              "el": "Τα κρίσιμα στοιχεία παρακάτω είναι οι προστασίες με το μεγαλύτερο όφελος. Πατήστε στην καρτέλα Προστασίες για να τις σημειώσετε ως ολοκληρωμένες."
+            }
+          },
+          {
+            "type": "cards",
+            "table": "hardening",
+            "filter": { "column": "priority", "value": "critical" },
+            "title": "step",
+            "subtitle": "area",
+            "expandable": true,
+            "expandFields": [
+              { "column": "why", "label": "Why it matters" },
+              { "column": "how", "label": "How to do it" },
+              { "column": "status", "label": "Status" }
+            ],
+            "action": { "fn": "cycle", "args": { "column": "status", "values": ["todo", "done"] } }
+          }
+        ]
+      }
+    },
+    "identifiers": {
+      "title": {
+        "en": "My details",
+        "ko": "내 정보",
+        "zh": "我的信息",
+        "hi": "मेरा विवरण",
+        "es": "Mis datos",
+        "fr": "Mes informations",
+        "ar": "تفاصيلي",
+        "pt": "Meus dados",
+        "ru": "Мои данные",
+        "de": "Meine Daten",
+        "ja": "自分の情報",
+        "tr": "Bilgilerim",
+        "vi": "Thông tin của tôi",
+        "it": "I miei dati",
+        "fa": "اطلاعات من",
+        "pl": "Moje dane",
+        "uk": "Мої дані",
+        "nl": "Mijn gegevens",
+        "sv": "Mina uppgifter",
+        "cs": "Moje údaje",
+        "el": "Τα στοιχεία μου"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "List the details you want to protect. Add one per email, domain, phone, name or address. Tap a row to flip it between 'to review' and 'reviewed'.",
+              "ko": "보호하고 싶은 정보를 나열하세요. 이메일, 도메인, 전화번호, 이름, 주소별로 하나씩 추가합니다. 행을 탭하면 '검토 필요'와 '검토됨'을 전환할 수 있습니다.",
+              "zh": "列出你想保护的信息。每个邮箱、域名、电话、姓名或地址各添加一条。点按某行可在“待审核”和“已审核”之间切换。",
+              "hi": "जिन विवरणों की रक्षा करनी है उन्हें सूचीबद्ध करें। हर ईमेल, डोमेन, फोन, नाम या पते के लिए एक जोड़ें। किसी पंक्ति को टैप करने पर वह 'समीक्षा करनी है' और 'समीक्षित' के बीच बदलती है।",
+              "es": "Enumera los datos que quieres proteger. Añade uno por cada correo, dominio, teléfono, nombre o dirección. Toca una fila para alternar entre 'por revisar' y 'revisado'.",
+              "fr": "Listez les informations que vous voulez protéger. Ajoutez-en une par e-mail, domaine, téléphone, nom ou adresse. Touchez une ligne pour basculer entre « à revoir » et « revu ».",
+              "ar": "أدرج التفاصيل التي تريد حمايتها. أضف واحدًا لكل بريد إلكتروني أو نطاق أو هاتف أو اسم أو عنوان. اضغط على صف لتبديله بين 'للمراجعة' و'تمت المراجعة'.",
+              "pt": "Liste os dados que deseja proteger. Adicione um por e-mail, domínio, telefone, nome ou endereço. Toque em uma linha para alternar entre 'a revisar' e 'revisado'.",
+              "ru": "Перечислите данные, которые хотите защитить. Добавляйте по одному на каждый email, домен, телефон, имя или адрес. Нажмите на строку, чтобы переключить между «на проверку» и «проверено».",
+              "de": "Liste die Daten auf, die du schützen willst. Füge eine pro E-Mail, Domain, Telefonnummer, Namen oder Adresse hinzu. Tippe auf eine Zeile, um zwischen 'zu prüfen' und 'geprüft' zu wechseln.",
+              "ja": "保護したい情報を一覧にしてください。メール、ドメイン、電話、名前、住所ごとに1件ずつ追加します。行をタップすると「要確認」と「確認済み」を切り替えられます。",
+              "tr": "Korumak istediğiniz bilgileri listeleyin. Her e-posta, alan adı, telefon, ad veya adres için bir tane ekleyin. Bir satıra dokunarak 'incelenecek' ile 'incelendi' arasında geçiş yapın.",
+              "vi": "Liệt kê thông tin bạn muốn bảo vệ. Thêm mỗi email, tên miền, số điện thoại, tên hoặc địa chỉ một mục. Nhấn vào một hàng để chuyển giữa 'cần xem lại' và 'đã xem lại'.",
+              "it": "Elenca i dati che vuoi proteggere. Aggiungine uno per ogni email, dominio, telefono, nome o indirizzo. Tocca una riga per passare tra 'da rivedere' e 'rivisto'.",
+              "fa": "جزئیاتی را که می‌خواهید محافظت کنید فهرست کنید. برای هر ایمیل، دامنه، تلفن، نام یا آدرس یکی اضافه کنید. با ضربه‌زدن روی یک ردیف بین «برای بازبینی» و «بازبینی‌شده» جابه‌جا کنید.",
+              "pl": "Wypisz dane, które chcesz chronić. Dodaj po jednym dla każdego e-maila, domeny, telefonu, imienia lub adresu. Dotknij wiersza, aby przełączyć między 'do sprawdzenia' a 'sprawdzone'.",
+              "uk": "Перерахуйте дані, які хочете захистити. Додавайте по одному на кожну електронну адресу, домен, телефон, ім'я чи адресу. Торкніться рядка, щоб перемкнути між «на перевірку» та «перевірено».",
+              "nl": "Vermeld de gegevens die je wilt beschermen. Voeg er één toe per e-mail, domein, telefoon, naam of adres. Tik op een rij om te wisselen tussen 'te controleren' en 'gecontroleerd'.",
+              "sv": "Lista de uppgifter du vill skydda. Lägg till en per e-post, domän, telefon, namn eller adress. Tryck på en rad för att växla mellan 'att granska' och 'granskad'.",
+              "cs": "Vypište údaje, které chcete chránit. Přidejte jeden na e-mail, doménu, telefon, jméno nebo adresu. Klepnutím na řádek přepnete mezi 'ke kontrole' a 'zkontrolováno'.",
+              "el": "Καταγράψτε τα στοιχεία που θέλετε να προστατέψετε. Προσθέστε ένα ανά email, domain, τηλέφωνο, όνομα ή διεύθυνση. Πατήστε μια γραμμή για εναλλαγή μεταξύ 'προς έλεγχο' και 'ελέγχθηκε'."
+            }
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              { "type": "button", "label": { "en": "Add email", "ko": "이메일 추가", "zh": "添加邮箱", "hi": "ईमेल जोड़ें", "es": "Añadir correo", "fr": "Ajouter un e-mail", "ar": "إضافة بريد إلكتروني", "pt": "Adicionar e-mail", "ru": "Добавить email", "de": "E-Mail hinzufügen", "ja": "メールを追加", "tr": "E-posta ekle", "vi": "Thêm email", "it": "Aggiungi email", "fa": "افزودن ایمیل", "pl": "Dodaj e-mail", "uk": "Додати email", "nl": "E-mail toevoegen", "sv": "Lägg till e-post", "cs": "Přidat e-mail", "el": "Προσθήκη email" }, "icon": "mail", "action": { "fn": "addRow", "args": { "table": "identifiers", "values": { "label": "New email", "kind": "email", "reviewed": "to review" } } } },
+              { "type": "button", "label": { "en": "Add website", "ko": "웹사이트 추가", "zh": "添加网站", "hi": "वेबसाइट जोड़ें", "es": "Añadir sitio web", "fr": "Ajouter un site web", "ar": "إضافة موقع", "pt": "Adicionar site", "ru": "Добавить сайт", "de": "Website hinzufügen", "ja": "ウェブサイトを追加", "tr": "Web sitesi ekle", "vi": "Thêm trang web", "it": "Aggiungi sito web", "fa": "افزودن وب‌سایت", "pl": "Dodaj stronę", "uk": "Додати сайт", "nl": "Website toevoegen", "sv": "Lägg till webbplats", "cs": "Přidat web", "el": "Προσθήκη ιστότοπου" }, "icon": "language", "action": { "fn": "addRow", "args": { "table": "identifiers", "values": { "label": "New website", "kind": "website", "reviewed": "to review" } } } },
+              { "type": "button", "label": { "en": "Add phone", "ko": "전화번호 추가", "zh": "添加电话", "hi": "फोन जोड़ें", "es": "Añadir teléfono", "fr": "Ajouter un téléphone", "ar": "إضافة هاتف", "pt": "Adicionar telefone", "ru": "Добавить телефон", "de": "Telefon hinzufügen", "ja": "電話を追加", "tr": "Telefon ekle", "vi": "Thêm số điện thoại", "it": "Aggiungi telefono", "fa": "افزودن تلفن", "pl": "Dodaj telefon", "uk": "Додати телефон", "nl": "Telefoon toevoegen", "sv": "Lägg till telefon", "cs": "Přidat telefon", "el": "Προσθήκη τηλεφώνου" }, "icon": "phone", "action": { "fn": "addRow", "args": { "table": "identifiers", "values": { "label": "New phone", "kind": "phone", "reviewed": "to review" } } } },
+              { "type": "button", "label": { "en": "Add name", "ko": "이름 추가", "zh": "添加姓名", "hi": "नाम जोड़ें", "es": "Añadir nombre", "fr": "Ajouter un nom", "ar": "إضافة اسم", "pt": "Adicionar nome", "ru": "Добавить имя", "de": "Name hinzufügen", "ja": "名前を追加", "tr": "Ad ekle", "vi": "Thêm tên", "it": "Aggiungi nome", "fa": "افزودن نام", "pl": "Dodaj imię", "uk": "Додати ім'я", "nl": "Naam toevoegen", "sv": "Lägg till namn", "cs": "Přidat jméno", "el": "Προσθήκη ονόματος" }, "icon": "person", "action": { "fn": "addRow", "args": { "table": "identifiers", "values": { "label": "New name", "kind": "name", "reviewed": "to review" } } } },
+              { "type": "button", "label": { "en": "Add address", "ko": "주소 추가", "zh": "添加地址", "hi": "पता जोड़ें", "es": "Añadir dirección", "fr": "Ajouter une adresse", "ar": "إضافة عنوان", "pt": "Adicionar endereço", "ru": "Добавить адрес", "de": "Adresse hinzufügen", "ja": "住所を追加", "tr": "Adres ekle", "vi": "Thêm địa chỉ", "it": "Aggiungi indirizzo", "fa": "افزودن آدرس", "pl": "Dodaj adres", "uk": "Додати адресу", "nl": "Adres toevoegen", "sv": "Lägg till adress", "cs": "Přidat adresu", "el": "Προσθήκη διεύθυνσης" }, "icon": "home", "action": { "fn": "addRow", "args": { "table": "identifiers", "values": { "label": "New address", "kind": "address", "reviewed": "to review" } } } }
+            ]
+          },
+          {
+            "example": {"ids": ["id1", "id2", "id3"], "label": {"en": "Examples", "ko": "예시", "zh": "示例", "hi": "उदाहरण", "es": "Ejemplos", "fr": "Exemples", "ar": "أمثلة", "pt": "Exemplos", "ru": "Примеры", "de": "Beispiele", "ja": "例", "tr": "Örnekler", "vi": "Ví dụ", "it": "Esempi", "fa": "نمونه‌ها", "pl": "Przykłady", "uk": "Приклади", "nl": "Voorbeelden", "sv": "Exempel", "cs": "Příklady", "el": "Παραδείγματα"}, "chipLabel": {"en": "Example", "ko": "예시", "zh": "示例", "hi": "उदाहरण", "es": "Ejemplo", "fr": "Exemple", "ar": "مثال", "pt": "Exemplo", "ru": "Пример", "de": "Beispiel", "ja": "例", "tr": "Örnek", "vi": "Ví dụ", "it": "Esempio", "fa": "نمونه", "pl": "Przykład", "uk": "Приклад", "nl": "Voorbeeld", "sv": "Exempel", "cs": "Příklad", "el": "Παράδειγμα"}, "hideLabel": {"en": "Hide", "ko": "숨기기", "zh": "隐藏", "hi": "छिपाएं", "es": "Ocultar", "fr": "Masquer", "ar": "إخفاء", "pt": "Ocultar", "ru": "Скрыть", "de": "Ausblenden", "ja": "非表示", "tr": "Gizle", "vi": "Ẩn", "it": "Nascondi", "fa": "پنهان", "pl": "Ukryj", "uk": "Приховати", "nl": "Verbergen", "sv": "Dölj", "cs": "Skrýt", "el": "Απόκρυψη"}, "hiddenFromSetting": "exposureCheckExampleHidden"},
+            "type": "cards",
+            "table": "identifiers",
+            "search": true,
+            "searchColumns": ["label", "value"],
+            "title": "label",
+            "subtitle": "kind",
+            "expandable": true,
+            "expandFields": [
+              { "column": "value", "label": "The detail" },
+              { "column": "reviewed", "label": "Reviewed" },
+              { "column": "notes", "label": "Notes" }
+            ],
+            "action": { "fn": "cycle", "args": { "column": "reviewed", "values": ["to review", "reviewed"] } }
+          }
+        ]
+      }
+    },
+    "protections": {
+      "title": {
+        "en": "Protections",
+        "ko": "보호 조치",
+        "zh": "防护措施",
+        "hi": "सुरक्षा उपाय",
+        "es": "Protecciones",
+        "fr": "Protections",
+        "ar": "الحمايات",
+        "pt": "Proteções",
+        "ru": "Меры защиты",
+        "de": "Schutzmaßnahmen",
+        "ja": "保護対策",
+        "tr": "Korumalar",
+        "vi": "Biện pháp bảo vệ",
+        "it": "Protezioni",
+        "fa": "محافظت‌ها",
+        "pl": "Zabezpieczenia",
+        "uk": "Захисні заходи",
+        "nl": "Beschermingen",
+        "sv": "Skydd",
+        "cs": "Ochrany",
+        "el": "Προστασίες"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "The checklist that actually reduces your exposure, most important first. Tap any item to flip to-do ↔ done. Expand for why it matters and exactly how.",
+              "ko": "실제로 노출을 줄여주는 체크리스트로, 가장 중요한 것부터 나열됩니다. 항목을 탭하면 할 일 ↔ 완료 상태가 전환됩니다. 펼치면 왜 중요한지와 방법을 볼 수 있습니다.",
+              "zh": "这份清单真正能降低你的暴露风险，最重要的排在最前面。点按任意项在待办↔已完成之间切换。展开可查看重要性及具体做法。",
+              "hi": "यह चेकलिस्ट वाकई आपका एक्सपोज़र घटाती है, सबसे ज़रूरी पहले। किसी भी आइटम को टैप करने पर करना है ↔ हो गया के बीच बदलता है। यह क्यों ज़रूरी है और कैसे करें जानने के लिए विस्तार करें।",
+              "es": "La lista que realmente reduce tu exposición, lo más importante primero. Toca cualquier elemento para alternar entre pendiente ↔ hecho. Expande para ver por qué importa y cómo exactamente.",
+              "fr": "La liste qui réduit vraiment votre exposition, le plus important d'abord. Touchez un élément pour basculer à faire ↔ fait. Développez pour voir pourquoi c'est important et comment.",
+              "ar": "القائمة التي تقلل تعرضك فعليًا، الأهم أولاً. اضغط على أي عنصر للتبديل بين للقيام به ↔ تم. وسّع لمعرفة سبب أهميته وكيفية القيام به بالضبط.",
+              "pt": "A lista de verificação que realmente reduz sua exposição, mais importante primeiro. Toque em qualquer item para alternar entre a fazer ↔ feito. Expanda para ver por que importa e exatamente como.",
+              "ru": "Список, который реально снижает вашу подверженность утечкам — сначала самое важное. Нажмите на пункт, чтобы переключить между «сделать» ↔ «готово». Разверните, чтобы узнать, почему это важно и как именно.",
+              "de": "Die Checkliste, die deine Exposition wirklich verringert, Wichtigstes zuerst. Tippe auf einen Punkt, um zwischen zu erledigen ↔ erledigt zu wechseln. Aufklappen für Warum und genaues Wie.",
+              "ja": "実際に露出を減らすチェックリストです。重要な順に並んでいます。項目をタップすると未完了 ↔ 完了が切り替わります。展開すると重要な理由と具体的な方法が分かります。",
+              "tr": "Maruz kalmanızı gerçekten azaltan kontrol listesi, en önemliden başlar. Herhangi bir öğeye dokunarak yapılacak ↔ yapıldı arasında geçiş yapın. Neden önemli olduğunu ve tam olarak nasıl yapılacağını görmek için genişletin.",
+              "vi": "Danh sách thực sự giảm mức độ lộ thông tin của bạn, quan trọng nhất trước. Nhấn vào bất kỳ mục nào để chuyển cần làm ↔ đã xong. Mở rộng để xem tại sao nó quan trọng và cách làm chính xác.",
+              "it": "L'elenco che riduce davvero la tua esposizione, il più importante per primo. Tocca qualsiasi voce per passare tra da fare ↔ fatto. Espandi per vedere perché conta e come fare esattamente.",
+              "fa": "فهرستی که واقعاً افشای شما را کم می‌کند، مهم‌ترین ابتدا. روی هر مورد ضربه بزنید تا بین انجام‌نشده ↔ انجام‌شده جابه‌جا شود. برای دیدن اهمیت و روش دقیق آن را باز کنید.",
+              "pl": "Lista, która naprawdę zmniejsza twoją ekspozycję, najważniejsze na początku. Dotknij dowolnej pozycji, aby przełączyć między do zrobienia ↔ zrobione. Rozwiń, aby zobaczyć dlaczego to ważne i dokładnie jak.",
+              "uk": "Список, який справді знижує вашу вразливість, найважливіше спочатку. Торкніться будь-якого пункту, щоб перемкнути між «зробити» ↔ «готово». Розгорніть, щоб дізнатися чому це важливо і як саме.",
+              "nl": "De checklist die je blootstelling echt vermindert, belangrijkste eerst. Tik op een item om te wisselen tussen te doen ↔ klaar. Vouw uit voor waarom het belangrijk is en precies hoe.",
+              "sv": "Checklistan som verkligen minskar din exponering, viktigast först. Tryck på ett objekt för att växla mellan att göra ↔ klart. Expandera för att se varför det spelar roll och exakt hur.",
+              "cs": "Seznam, který skutečně snižuje vaši expozici, nejdůležitější první. Klepnutím na položku přepnete mezi k udělání ↔ hotovo. Rozbalte pro zjištění, proč na tom záleží a přesně jak.",
+              "el": "Η λίστα ελέγχου που πραγματικά μειώνει την έκθεσή σας, τα πιο σημαντικά πρώτα. Πατήστε οποιοδήποτε στοιχείο για εναλλαγή προς εκτέλεση ↔ ολοκληρώθηκε. Αναπτύξτε για να δείτε γιατί έχει σημασία και ακριβώς πώς."
+            }
+          },
+          {
+            "type": "row",
+            "children": [
+              { "type": "stat", "table": "hardening", "agg": "count", "filter": { "column": "status", "value": "done" }, "label": { "en": "Done", "ko": "완료", "zh": "已完成", "hi": "हो गया", "es": "Hecho", "fr": "Fait", "ar": "تم", "pt": "Feito", "ru": "Готово", "de": "Erledigt", "ja": "完了", "tr": "Yapıldı", "vi": "Đã xong", "it": "Fatto", "fa": "انجام‌شده", "pl": "Zrobione", "uk": "Готово", "nl": "Klaar", "sv": "Klart", "cs": "Hotovo", "el": "Ολοκληρώθηκε" }, "color": "green" },
+              { "type": "stat", "table": "hardening", "agg": "count", "filter": { "column": "status", "value": "todo" }, "label": { "en": "To do", "ko": "할 일", "zh": "待办", "hi": "करना है", "es": "Pendiente", "fr": "À faire", "ar": "للقيام به", "pt": "A fazer", "ru": "Сделать", "de": "Zu erledigen", "ja": "未完了", "tr": "Yapılacak", "vi": "Cần làm", "it": "Da fare", "fa": "انجام‌نشده", "pl": "Do zrobienia", "uk": "Зробити", "nl": "Te doen", "sv": "Att göra", "cs": "K udělání", "el": "Εκτέλεση" }, "color": "amber" }
+            ]
+          },
+          {
+            "type": "cards",
+            "table": "hardening",
+            "search": true,
+            "searchColumns": ["step", "area", "priority"],
+            "sort": { "column": "priority", "dir": "asc" },
+            "title": "step",
+            "subtitle": "priority",
+            "expandable": true,
+            "expandFields": [
+              { "column": "area", "label": "Area" },
+              { "column": "why", "label": "Why it matters" },
+              { "column": "how", "label": "How to do it" },
+              { "column": "status", "label": "Status" }
+            ],
+            "action": { "fn": "cycle", "args": { "column": "status", "values": ["todo", "done"] } }
+          }
+        ]
+      }
+    },
+    "brokers": {
+      "title": {
+        "en": "Data-broker opt-outs",
+        "ko": "데이터 브로커 제외 요청",
+        "zh": "数据经纪商退出请求",
+        "hi": "डेटा-ब्रोकर ऑप्ट-आउट",
+        "es": "Exclusiones de corredores de datos",
+        "fr": "Désinscriptions des courtiers en données",
+        "ar": "إلغاءات الاشتراك مع سماسرة البيانات",
+        "pt": "Exclusões de corretores de dados",
+        "ru": "Отказы от брокеров данных",
+        "de": "Opt-outs bei Datenhändlern",
+        "ja": "データブローカーのオプトアウト",
+        "tr": "Veri komisyoncusu vazgeçmeleri",
+        "vi": "Yêu cầu gỡ bỏ khỏi bên môi giới dữ liệu",
+        "it": "Rimozioni dai data broker",
+        "fa": "درخواست حذف از کارگزاران داده",
+        "pl": "Rezygnacje z brokerów danych",
+        "uk": "Відмови від брокерів даних",
+        "nl": "Afmeldingen bij databrokers",
+        "sv": "Avanmälningar hos datamäklare",
+        "cs": "Odhlášení od datových makléřů",
+        "el": "Εξαιρέσεις από μεσίτες δεδομένων"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "People-search sites publish your name, address and phone. Opting out is free but tedious. Tap a site to advance not started → requested → confirmed. Expand to see the opt-out page to open.",
+              "ko": "인물 검색 사이트들은 당신의 이름, 주소, 전화번호를 공개합니다. 제외 요청은 무료지만 번거롭습니다. 사이트를 탭하면 미시작 → 요청됨 → 확인됨 순으로 진행됩니다. 펼치면 열어야 할 제외 요청 페이지를 볼 수 있습니다.",
+              "zh": "人肉搜索类网站会公开你的姓名、地址和电话。退出是免费的，但过程繁琐。点按某站点可推进未开始 → 已请求 → 已确认。展开可查看要打开的退出页面。",
+              "hi": "पीपल-सर्च साइटें आपका नाम, पता और फोन प्रकाशित करती हैं। ऑप्ट-आउट मुफ्त है पर थकाऊ। किसी साइट को टैप करने पर वह शुरू नहीं हुआ → अनुरोध किया → पुष्ट किया की ओर बढ़ती है। खोलने वाला ऑप्ट-आउट पेज देखने के लिए विस्तार करें।",
+              "es": "Los sitios de búsqueda de personas publican tu nombre, dirección y teléfono. Excluirse es gratis pero tedioso. Toca un sitio para avanzar de no iniciado → solicitado → confirmado. Expande para ver la página de exclusión a abrir.",
+              "fr": "Les sites de recherche de personnes publient votre nom, adresse et téléphone. Se désinscrire est gratuit mais fastidieux. Touchez un site pour avancer non commencé → demandé → confirmé. Développez pour voir la page de désinscription à ouvrir.",
+              "ar": "تنشر مواقع البحث عن الأشخاص اسمك وعنوانك وهاتفك. إلغاء الاشتراك مجاني لكنه مضنٍ. اضغط على موقع للتقدم لم يبدأ ← طُلب ← تأكّد. وسّع لرؤية صفحة إلغاء الاشتراك التي يجب فتحها.",
+              "pt": "Sites de busca de pessoas publicam seu nome, endereço e telefone. Excluir-se é grátis mas cansativo. Toque em um site para avançar não iniciado → solicitado → confirmado. Expanda para ver a página de exclusão a abrir.",
+              "ru": "Сайты поиска людей публикуют ваше имя, адрес и телефон. Отказ бесплатен, но утомителен. Нажмите на сайт, чтобы продвинуть не начато → запрошено → подтверждено. Разверните, чтобы увидеть страницу отказа для открытия.",
+              "de": "People-Search-Seiten veröffentlichen deinen Namen, deine Adresse und Telefonnummer. Das Opt-out ist kostenlos, aber mühsam. Tippe auf eine Seite, um voranzuschreiten: nicht begonnen → angefordert → bestätigt. Aufklappen, um die zu öffnende Opt-out-Seite zu sehen.",
+              "ja": "個人検索サイトはあなたの名前、住所、電話番号を公開しています。オプトアウトは無料ですが面倒です。サイトをタップすると未着手 → 申請済み → 確認済みと進みます。展開すると開くべきオプトアウトページが表示されます。",
+              "tr": "Kişi arama siteleri adınızı, adresinizi ve telefonunuzu yayınlar. Vazgeçmek ücretsiz ama yorucudur. Bir siteye dokunarak başlanmadı → talep edildi → onaylandı olarak ilerletin. Açılacak vazgeçme sayfasını görmek için genişletin.",
+              "vi": "Các trang tìm kiếm người dùng công khai tên, địa chỉ và số điện thoại của bạn. Gỡ bỏ miễn phí nhưng tốn công. Nhấn vào một trang để tiến từ chưa bắt đầu → đã yêu cầu → đã xác nhận. Mở rộng để xem trang gỡ bỏ cần mở.",
+              "it": "I siti di ricerca persone pubblicano nome, indirizzo e telefono. Rimuoversi è gratis ma noioso. Tocca un sito per avanzare non iniziato → richiesto → confermato. Espandi per vedere la pagina di rimozione da aprire.",
+              "fa": "سایت‌های جست‌وجوی افراد نام، آدرس و تلفن شما را منتشر می‌کنند. حذف رایگان اما خسته‌کننده است. روی یک سایت ضربه بزنید تا از شروع‌نشده → درخواست‌شده → تأییدشده پیش برود. برای دیدن صفحهٔ حذفی که باید باز شود گسترش دهید.",
+              "pl": "Strony wyszukiwania osób publikują twoje imię, adres i telefon. Rezygnacja jest darmowa, ale żmudna. Dotknij strony, aby przejść nie rozpoczęto → zgłoszono → potwierdzono. Rozwiń, aby zobaczyć stronę rezygnacji do otwarcia.",
+              "uk": "Сайти пошуку людей публікують ваше ім'я, адресу та телефон. Відмова безкоштовна, але виснажлива. Торкніться сайту, щоб просунути не почато → запитано → підтверджено. Розгорніть, щоб побачити сторінку відмови для відкриття.",
+              "nl": "People-search-sites publiceren je naam, adres en telefoon. Afmelden is gratis maar omslachtig. Tik op een site om te vorderen niet gestart → aangevraagd → bevestigd. Vouw uit om de te openen afmeldpagina te zien.",
+              "sv": "Personsökningssidor publicerar ditt namn, adress och telefon. Att avanmäla sig är gratis men tröttsamt. Tryck på en sida för att gå från ej påbörjat → begärt → bekräftat. Expandera för att se avanmälningssidan att öppna.",
+              "cs": "Weby pro vyhledávání osob zveřejňují vaše jméno, adresu a telefon. Odhlášení je zdarma, ale zdlouhavé. Klepnutím na web postupte nezahájeno → požádáno → potvrzeno. Rozbalte a zobrazte stránku pro odhlášení k otevření.",
+              "el": "Οι ιστότοποι αναζήτησης ατόμων δημοσιεύουν το όνομα, τη διεύθυνση και το τηλέφωνό σας. Η εξαίρεση είναι δωρεάν αλλά κουραστική. Πατήστε σε έναν ιστότοπο για προχώρημα δεν ξεκίνησε → ζητήθηκε → επιβεβαιώθηκε. Αναπτύξτε για να δείτε τη σελίδα εξαίρεσης προς άνοιγμα."
+            }
+          },
+          {
+            "type": "row",
+            "children": [
+              { "type": "stat", "table": "brokers", "agg": "count", "filter": { "column": "status", "value": "confirmed" }, "label": { "en": "Confirmed", "ko": "확인됨", "zh": "已确认", "hi": "पुष्ट", "es": "Confirmado", "fr": "Confirmé", "ar": "مؤكّد", "pt": "Confirmado", "ru": "Подтверждено", "de": "Bestätigt", "ja": "確認済み", "tr": "Onaylandı", "vi": "Đã xác nhận", "it": "Confermato", "fa": "تأییدشده", "pl": "Potwierdzone", "uk": "Підтверджено", "nl": "Bevestigd", "sv": "Bekräftad", "cs": "Potvrzeno", "el": "Επιβεβαιώθηκε" }, "color": "green" },
+              { "type": "stat", "table": "brokers", "agg": "count", "filter": { "column": "status", "value": "requested" }, "label": { "en": "Requested", "ko": "요청됨", "zh": "已请求", "hi": "अनुरोध किया", "es": "Solicitado", "fr": "Demandé", "ar": "مطلوب", "pt": "Solicitado", "ru": "Запрошено", "de": "Angefordert", "ja": "申請済み", "tr": "Talep edildi", "vi": "Đã yêu cầu", "it": "Richiesto", "fa": "درخواست‌شده", "pl": "Zgłoszone", "uk": "Запитано", "nl": "Aangevraagd", "sv": "Begärt", "cs": "Požádáno", "el": "Ζητήθηκε" }, "color": "amber" },
+              { "type": "stat", "table": "brokers", "agg": "count", "filter": { "column": "status", "value": "not started" }, "label": { "en": "Not started", "ko": "시작 안 함", "zh": "未开始", "hi": "शुरू नहीं हुआ", "es": "No iniciado", "fr": "Non commencé", "ar": "لم يبدأ", "pt": "Não iniciado", "ru": "Не начато", "de": "Nicht begonnen", "ja": "未着手", "tr": "Başlanmadı", "vi": "Chưa bắt đầu", "it": "Non iniziato", "fa": "شروع‌نشده", "pl": "Nie rozpoczęto", "uk": "Не почато", "nl": "Niet gestart", "sv": "Ej påbörjat", "cs": "Nezahájeno", "el": "Δεν ξεκίνησε" }, "color": "coral" }
+            ]
+          },
+          {
+            "type": "cards",
+            "table": "brokers",
+            "search": true,
+            "searchColumns": ["broker", "exposes"],
+            "title": "broker",
+            "subtitle": "status",
+            "expandable": true,
+            "expandFields": [
+              { "column": "exposes", "label": "What it exposes" },
+              { "column": "opt_out_url", "label": "Opt-out page" },
+              { "column": "difficulty", "label": "Difficulty" },
+              { "column": "notes", "label": "Notes" }
+            ],
+            "action": { "fn": "cycle", "args": { "column": "status", "values": ["not started", "requested", "confirmed"] } }
+          }
+        ]
+      }
+    },
+    "guides": {
+      "title": {
+        "en": "Guides",
+        "ko": "가이드",
+        "zh": "指南",
+        "hi": "गाइड",
+        "es": "Guías",
+        "fr": "Guides",
+        "ar": "الأدلة",
+        "pt": "Guias",
+        "ru": "Руководства",
+        "de": "Anleitungen",
+        "ja": "ガイド",
+        "tr": "Rehberler",
+        "vi": "Hướng dẫn",
+        "it": "Guide",
+        "fa": "راهنماها",
+        "pl": "Poradniki",
+        "uk": "Посібники",
+        "nl": "Handleidingen",
+        "sv": "Guider",
+        "cs": "Průvodci",
+        "el": "Οδηγοί"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Plain-language explainers. Tap a guide to expand it. The last one covers the optional advanced (paid) checks — which are not set up yet.",
+              "ko": "쉬운 말로 풀어쓴 설명입니다. 가이드를 탭하면 펼쳐집니다. 마지막 가이드는 선택적 고급(유료) 점검을 다루며, 아직 설정되어 있지 않습니다.",
+              "zh": "通俗易懂的说明。点按某指南可展开。最后一条涵盖可选的高级（付费）检查——目前尚未设置。",
+              "hi": "सरल भाषा में समझाइशें। किसी गाइड को टैप करने पर वह विस्तृत होती है। आखिरी वाली वैकल्पिक एडवांस्ड (पेड) जांच के बारे में है — जो अभी सेट नहीं है।",
+              "es": "Explicaciones en lenguaje sencillo. Toca una guía para expandirla. La última cubre las comprobaciones avanzadas opcionales (de pago), que aún no están configuradas.",
+              "fr": "Explications en langage simple. Touchez un guide pour le développer. Le dernier couvre les vérifications avancées optionnelles (payantes) — qui ne sont pas encore configurées.",
+              "ar": "شروحات بلغة بسيطة. اضغط على دليل لتوسيعه. يغطي الأخير الفحوصات المتقدمة الاختيارية (المدفوعة) — التي لم تُهيّأ بعد.",
+              "pt": "Explicações em linguagem simples. Toque em um guia para expandi-lo. O último cobre as verificações avançadas opcionais (pagas) — que ainda não estão configuradas.",
+              "ru": "Объяснения простым языком. Нажмите на руководство, чтобы развернуть его. Последнее охватывает необязательные расширенные (платные) проверки, которые пока не настроены.",
+              "de": "Erklärungen in einfacher Sprache. Tippe auf eine Anleitung, um sie aufzuklappen. Die letzte behandelt die optionalen erweiterten (kostenpflichtigen) Prüfungen — die noch nicht eingerichtet sind.",
+              "ja": "平易な言葉での説明です。ガイドをタップすると展開します。最後のガイドは任意の高度な（有料の）チェックについてで、まだ設定されていません。",
+              "tr": "Sade dilde açıklamalar. Genişletmek için bir rehbere dokunun. Sonuncusu henüz kurulmamış isteğe bağlı gelişmiş (ücretli) kontrolleri kapsar.",
+              "vi": "Giải thích bằng ngôn ngữ đơn giản. Nhấn vào một hướng dẫn để mở rộng. Mục cuối cùng đề cập đến các kiểm tra nâng cao tùy chọn (có phí) — chưa được thiết lập.",
+              "it": "Spiegazioni in linguaggio semplice. Tocca una guida per espanderla. L'ultima copre i controlli avanzati opzionali (a pagamento) — non ancora configurati.",
+              "fa": "توضیحات به زبان ساده. برای گسترش یک راهنما روی آن ضربه بزنید. آخرین مورد بررسی‌های پیشرفتهٔ اختیاری (پولی) را پوشش می‌دهد — که هنوز راه‌اندازی نشده‌اند.",
+              "pl": "Wyjaśnienia prostym językiem. Dotknij poradnika, aby go rozwinąć. Ostatni obejmuje opcjonalne zaawansowane (płatne) kontrole — które nie są jeszcze skonfigurowane.",
+              "uk": "Пояснення простою мовою. Торкніться посібника, щоб розгорнути його. Останній охоплює необов'язкові розширені (платні) перевірки, які ще не налаштовані.",
+              "nl": "Uitleg in gewone taal. Tik op een gids om deze uit te vouwen. De laatste behandelt de optionele geavanceerde (betaalde) controles — die nog niet zijn ingesteld.",
+              "sv": "Förklaringar på enkelt språk. Tryck på en guide för att expandera den. Den sista täcker de valfria avancerade (betalda) kontrollerna — som ännu inte är konfigurerade.",
+              "cs": "Vysvětlení jednoduchým jazykem. Klepnutím na průvodce jej rozbalíte. Poslední se týká volitelných pokročilých (placených) kontrol — které zatím nejsou nastaveny.",
+              "el": "Επεξηγήσεις σε απλή γλώσσα. Πατήστε έναν οδηγό για να τον αναπτύξετε. Ο τελευταίος καλύπτει τους προαιρετικούς προηγμένους (επί πληρωμή) ελέγχους — που δεν έχουν ρυθμιστεί ακόμα."
+            }
+          },
+          {
+            "type": "cards",
+            "table": "guides",
+            "search": true,
+            "searchColumns": ["topic", "category"],
+            "title": "topic",
+            "subtitle": "category",
+            "expandable": true,
+            "expandFields": [
+              { "column": "body", "label": "" }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

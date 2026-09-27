@@ -1,0 +1,25 @@
+{
+  "files": [
+    { "id": "f_default", "name": "My board", "order": 0 }
+  ],
+  "boards": [
+    { "id": "bd_home", "name": "My ideas", "icon": "bubble_chart", "order": 0, "file": "f_default" }
+  ],
+  "bubbles": [
+    { "id": "b_milk", "label": "milk", "kind": "raw", "qty": "2 L", "pos": "70,250", "outlineColor": "#5FB8C4", "board": "bd_home" },
+    { "id": "b_cream", "label": "cream", "kind": "made", "qty": "350 ml", "pos": "190,120", "outlineColor": "#9D82D8", "board": "bd_home" },
+    { "id": "b_butter", "label": "butter", "kind": "made", "qty": "low", "pos": "330,120", "outlineColor": "#9D82D8", "board": "bd_home" },
+    { "id": "b_crois", "label": "croissant", "kind": "final", "qty": "6 baked", "pos": "450,190", "outlineColor": "#DFAE66", "board": "bd_home" },
+    { "id": "b_ricotta", "label": "ricotta", "kind": "made", "qty": "500 g", "pos": "190,390", "outlineColor": "#9D82D8", "board": "bd_home" },
+    { "id": "b_cannoli", "label": "cannoli", "kind": "final", "qty": "out", "pos": "330,390", "outlineColor": "#DFAE66", "board": "bd_home" },
+    { "id": "b_cheese", "label": "cheese", "kind": "final", "qty": "aging", "pos": "335,255", "outlineColor": "#DFAE66", "board": "bd_home" }
+  ],
+  "links": [
+    { "id": "l_mcrm", "from": "b_milk", "to": "b_cream", "type": "flow", "board": "bd_home" },
+    { "id": "l_mric", "from": "b_milk", "to": "b_ricotta", "type": "flow", "board": "bd_home" },
+    { "id": "l_mchz", "from": "b_milk", "to": "b_cheese", "type": "flow", "board": "bd_home" },
+    { "id": "l_crmb", "from": "b_cream", "to": "b_butter", "type": "flow", "board": "bd_home" },
+    { "id": "l_bcro", "from": "b_butter", "to": "b_crois", "type": "flow", "board": "bd_home" },
+    { "id": "l_rcan", "from": "b_ricotta", "to": "b_cannoli", "type": "flow", "board": "bd_home" }
+  ]
+}

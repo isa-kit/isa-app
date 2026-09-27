@@ -1,0 +1,2265 @@
+{
+  "parcels": [
+    {
+      "id": "p00",
+      "name": "Lot 1-1",
+      "zone": "empty",
+      "lat": 40.7016,
+      "lon": -74.0146
+    },
+    {
+      "id": "p01",
+      "name": "Lot 1-2",
+      "zone": "empty",
+      "lat": 40.7016,
+      "lon": -74.0118
+    },
+    {
+      "id": "p02",
+      "name": "Lot 1-3",
+      "zone": "empty",
+      "lat": 40.7016,
+      "lon": -74.009
+    },
+    {
+      "id": "p03",
+      "name": "Lot 1-4",
+      "zone": "empty",
+      "lat": 40.7016,
+      "lon": -74.0062
+    },
+    {
+      "id": "p04",
+      "name": "Lot 1-5",
+      "zone": "empty",
+      "lat": 40.7016,
+      "lon": -74.0034
+    },
+    {
+      "id": "p10",
+      "name": "Lot 2-1",
+      "zone": "empty",
+      "lat": 40.7038,
+      "lon": -74.0146
+    },
+    {
+      "id": "p11",
+      "name": "Lot 2-2",
+      "zone": "empty",
+      "lat": 40.7038,
+      "lon": -74.0118
+    },
+    {
+      "id": "p12",
+      "name": "Lot 2-3",
+      "zone": "empty",
+      "lat": 40.7038,
+      "lon": -74.009
+    },
+    {
+      "id": "p13",
+      "name": "Lot 2-4",
+      "zone": "empty",
+      "lat": 40.7038,
+      "lon": -74.0062
+    },
+    {
+      "id": "p14",
+      "name": "Lot 2-5",
+      "zone": "empty",
+      "lat": 40.7038,
+      "lon": -74.0034
+    },
+    {
+      "id": "p20",
+      "name": "Lot 3-1",
+      "zone": "empty",
+      "lat": 40.706,
+      "lon": -74.0146
+    },
+    {
+      "id": "p21",
+      "name": "Lot 3-2",
+      "zone": "empty",
+      "lat": 40.706,
+      "lon": -74.0118
+    },
+    {
+      "id": "p22",
+      "name": "Lot 3-3",
+      "zone": "empty",
+      "lat": 40.706,
+      "lon": -74.009
+    },
+    {
+      "id": "p23",
+      "name": "Lot 3-4",
+      "zone": "empty",
+      "lat": 40.706,
+      "lon": -74.0062
+    },
+    {
+      "id": "p24",
+      "name": "Lot 3-5",
+      "zone": "empty",
+      "lat": 40.706,
+      "lon": -74.0034
+    },
+    {
+      "id": "p30",
+      "name": "Lot 4-1",
+      "zone": "empty",
+      "lat": 40.7082,
+      "lon": -74.0146
+    },
+    {
+      "id": "p31",
+      "name": "Lot 4-2",
+      "zone": "empty",
+      "lat": 40.7082,
+      "lon": -74.0118
+    },
+    {
+      "id": "p32",
+      "name": "Lot 4-3",
+      "zone": "empty",
+      "lat": 40.7082,
+      "lon": -74.009
+    },
+    {
+      "id": "p33",
+      "name": "Lot 4-4",
+      "zone": "empty",
+      "lat": 40.7082,
+      "lon": -74.0062
+    },
+    {
+      "id": "p34",
+      "name": "Lot 4-5",
+      "zone": "empty",
+      "lat": 40.7082,
+      "lon": -74.0034
+    },
+    {
+      "id": "p40",
+      "name": "Lot 5-1",
+      "zone": "empty",
+      "lat": 40.7104,
+      "lon": -74.0146
+    },
+    {
+      "id": "p41",
+      "name": "Lot 5-2",
+      "zone": "empty",
+      "lat": 40.7104,
+      "lon": -74.0118
+    },
+    {
+      "id": "p42",
+      "name": "Lot 5-3",
+      "zone": "empty",
+      "lat": 40.7104,
+      "lon": -74.009
+    },
+    {
+      "id": "p43",
+      "name": "Lot 5-4",
+      "zone": "empty",
+      "lat": 40.7104,
+      "lon": -74.0062
+    },
+    {
+      "id": "p44",
+      "name": "Lot 5-5",
+      "zone": "empty",
+      "lat": 40.7104,
+      "lon": -74.0034
+    }
+  ],
+  "city": [
+    {
+      "id": "s1",
+      "turn": 1,
+      "budget": 100,
+      "population": 0,
+      "happiness": 60,
+      "education": 0,
+      "healthcare": 0,
+      "groceryAccess": 0,
+      "groceryCost": 0,
+      "walkability": 10,
+      "carCost": 60,
+      "pollution": 0
+    }
+  ],
+  "city_history": [
+    {
+      "id": "h1",
+      "turn": 1,
+      "budget": 100,
+      "population": 0,
+      "happiness": 60
+    }
+  ],
+  "features": [
+    {
+      "id": "node357607904",
+      "lat": 40.706511,
+      "lon": -74.003373,
+      "kind": "green",
+      "name": "South Street Seaport Historic District"
+    },
+    {
+      "id": "way5029111",
+      "lat": 40.702814,
+      "lon": -74.015775,
+      "kind": "green",
+      "name": "Battery Park"
+    },
+    {
+      "id": "way22926662",
+      "lat": 40.71023,
+      "lon": -74.013584,
+      "kind": "green",
+      "name": "Liberty Park"
+    },
+    {
+      "id": "way25026338",
+      "lat": 40.709231,
+      "lon": -74.011254,
+      "kind": "green",
+      "name": "Zuccotti Park"
+    },
+    {
+      "id": "way53189828",
+      "lat": 40.709108,
+      "lon": -74.005028,
+      "kind": "green",
+      "name": "DeLury Square"
+    },
+    {
+      "id": "way108235837",
+      "lat": 40.702705,
+      "lon": -74.009765,
+      "kind": "green",
+      "name": "Vietnam Veterans Plaza"
+    },
+    {
+      "id": "way109267278",
+      "lat": 40.70348,
+      "lon": -74.01053,
+      "kind": "green",
+      "name": "Coenties Slip"
+    },
+    {
+      "id": "way109441961",
+      "lat": 40.707539,
+      "lon": -74.00369,
+      "kind": "green",
+      "name": "Titanic Memorial Park"
+    },
+    {
+      "id": "way109447376",
+      "lat": 40.707654,
+      "lon": -74.007923,
+      "kind": "green",
+      "name": "Louise Nevelson Plaza"
+    },
+    {
+      "id": "way112692313",
+      "lat": 40.705035,
+      "lon": -74.013663,
+      "kind": "green",
+      "name": "Bowling Green"
+    },
+    {
+      "id": "way129700430",
+      "lat": 40.711557,
+      "lon": -74.017198,
+      "kind": "green",
+      "name": "The Esplanade"
+    },
+    {
+      "id": "way140391511",
+      "lat": 40.712176,
+      "lon": -74.003841,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way208360494",
+      "lat": 40.704797,
+      "lon": -74.009335,
+      "kind": "green",
+      "name": "The Queen Elizabeth II September 11th Garden"
+    },
+    {
+      "id": "way292727035",
+      "lat": 40.711161,
+      "lon": -74.005869,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way328241589",
+      "lat": 40.704466,
+      "lon": -74.003144,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way328241590",
+      "lat": 40.704833,
+      "lon": -74.003549,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way370169372",
+      "lat": 40.707467,
+      "lon": -74.007733,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way375369088",
+      "lat": 40.709002,
+      "lon": -74.008097,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way375369089",
+      "lat": 40.709146,
+      "lon": -74.008231,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way400782868",
+      "lat": 40.706388,
+      "lon": -74.016565,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way400782872",
+      "lat": 40.708836,
+      "lon": -74.015759,
+      "kind": "green",
+      "name": "West Thames Park"
+    },
+    {
+      "id": "way413055246",
+      "lat": 40.712884,
+      "lon": -74.006085,
+      "kind": "green",
+      "name": "City Hall Park"
+    },
+    {
+      "id": "way498671779",
+      "lat": 40.711052,
+      "lon": -74.004095,
+      "kind": "green",
+      "name": "Drumgoole Plaza"
+    },
+    {
+      "id": "way504045549",
+      "lat": 40.70728,
+      "lon": -74.00832,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way538080002",
+      "lat": 40.706676,
+      "lon": -74.014021,
+      "kind": "green",
+      "name": "Elizabeth H. Berger Plaza"
+    },
+    {
+      "id": "way672481921",
+      "lat": 40.704023,
+      "lon": -74.015484,
+      "kind": "green",
+      "name": "The Battery Oval"
+    },
+    {
+      "id": "way672481934",
+      "lat": 40.70294,
+      "lon": -74.015301,
+      "kind": "green",
+      "name": "The Battery Woodland"
+    },
+    {
+      "id": "way697619038",
+      "lat": 40.71105,
+      "lon": -74.013876,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619041",
+      "lat": 40.711073,
+      "lon": -74.013886,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619042",
+      "lat": 40.711098,
+      "lon": -74.013847,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619044",
+      "lat": 40.711131,
+      "lon": -74.01388,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619046",
+      "lat": 40.711179,
+      "lon": -74.013893,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619049",
+      "lat": 40.711184,
+      "lon": -74.013858,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619050",
+      "lat": 40.71125,
+      "lon": -74.013859,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619051",
+      "lat": 40.711222,
+      "lon": -74.013837,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619054",
+      "lat": 40.711302,
+      "lon": -74.013797,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619055",
+      "lat": 40.711281,
+      "lon": -74.013802,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619058",
+      "lat": 40.711382,
+      "lon": -74.013731,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619059",
+      "lat": 40.711346,
+      "lon": -74.013764,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619062",
+      "lat": 40.711442,
+      "lon": -74.013657,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619063",
+      "lat": 40.711456,
+      "lon": -74.013764,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619064",
+      "lat": 40.711485,
+      "lon": -74.01364,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619067",
+      "lat": 40.711494,
+      "lon": -74.013592,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619070",
+      "lat": 40.711819,
+      "lon": -74.013815,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619073",
+      "lat": 40.711835,
+      "lon": -74.013792,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619074",
+      "lat": 40.711909,
+      "lon": -74.013799,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619075",
+      "lat": 40.711882,
+      "lon": -74.013793,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619076",
+      "lat": 40.711984,
+      "lon": -74.013986,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619078",
+      "lat": 40.711961,
+      "lon": -74.013985,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619080",
+      "lat": 40.711857,
+      "lon": -74.014014,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619083",
+      "lat": 40.711837,
+      "lon": -74.014015,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619084",
+      "lat": 40.711783,
+      "lon": -74.014027,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619085",
+      "lat": 40.711804,
+      "lon": -74.014031,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619086",
+      "lat": 40.711749,
+      "lon": -74.014044,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619089",
+      "lat": 40.711727,
+      "lon": -74.014038,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619092",
+      "lat": 40.711526,
+      "lon": -74.014069,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619093",
+      "lat": 40.71149,
+      "lon": -74.014072,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619094",
+      "lat": 40.711361,
+      "lon": -74.01411,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619097",
+      "lat": 40.711331,
+      "lon": -74.014108,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619098",
+      "lat": 40.711274,
+      "lon": -74.014127,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619099",
+      "lat": 40.711293,
+      "lon": -74.014125,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619102",
+      "lat": 40.710922,
+      "lon": -74.012641,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619105",
+      "lat": 40.71088,
+      "lon": -74.01266,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619106",
+      "lat": 40.710814,
+      "lon": -74.01269,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619107",
+      "lat": 40.710834,
+      "lon": -74.012685,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619108",
+      "lat": 40.71077,
+      "lon": -74.012697,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619110",
+      "lat": 40.710706,
+      "lon": -74.012723,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619111",
+      "lat": 40.710745,
+      "lon": -74.012706,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619112",
+      "lat": 40.710687,
+      "lon": -74.012725,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619114",
+      "lat": 40.710653,
+      "lon": -74.012744,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619117",
+      "lat": 40.710644,
+      "lon": -74.012768,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619132",
+      "lat": 40.710463,
+      "lon": -74.012913,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619133",
+      "lat": 40.710475,
+      "lon": -74.012904,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619134",
+      "lat": 40.710624,
+      "lon": -74.013296,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way697619135",
+      "lat": 40.710636,
+      "lon": -74.013287,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way743395860",
+      "lat": 40.703205,
+      "lon": -74.008701,
+      "kind": "green",
+      "name": "The Elevated Acre"
+    },
+    {
+      "id": "way769716503",
+      "lat": 40.703378,
+      "lon": -74.008502,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way822831220",
+      "lat": 40.701187,
+      "lon": -74.014616,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way822831221",
+      "lat": 40.701092,
+      "lon": -74.014219,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way823196028",
+      "lat": 40.704979,
+      "lon": -74.013649,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way823196029",
+      "lat": 40.705035,
+      "lon": -74.013552,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way823196030",
+      "lat": 40.70504,
+      "lon": -74.013739,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way823213797",
+      "lat": 40.704472,
+      "lon": -74.013488,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way823213798",
+      "lat": 40.704473,
+      "lon": -74.013628,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way823213799",
+      "lat": 40.704476,
+      "lon": -74.013859,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way823213800",
+      "lat": 40.704478,
+      "lon": -74.013996,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way823566710",
+      "lat": 40.702168,
+      "lon": -74.011481,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way823566730",
+      "lat": 40.702478,
+      "lon": -74.011545,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way823566733",
+      "lat": 40.702688,
+      "lon": -74.01185,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way823566743",
+      "lat": 40.702297,
+      "lon": -74.01263,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way823566746",
+      "lat": 40.702438,
+      "lon": -74.012442,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way823566748",
+      "lat": 40.702503,
+      "lon": -74.012319,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way823566750",
+      "lat": 40.702616,
+      "lon": -74.011976,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way823568062",
+      "lat": 40.701769,
+      "lon": -74.011677,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way823568925",
+      "lat": 40.702317,
+      "lon": -74.011425,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way823568935",
+      "lat": 40.701984,
+      "lon": -74.01253,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way823570324",
+      "lat": 40.702579,
+      "lon": -74.012355,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way823570325",
+      "lat": 40.702667,
+      "lon": -74.012146,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way823570326",
+      "lat": 40.702714,
+      "lon": -74.012028,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way823570328",
+      "lat": 40.702795,
+      "lon": -74.011785,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way823570330",
+      "lat": 40.702381,
+      "lon": -74.011445,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way823570332",
+      "lat": 40.702102,
+      "lon": -74.011362,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way823570333",
+      "lat": 40.702182,
+      "lon": -74.011384,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way825361820",
+      "lat": 40.702799,
+      "lon": -74.012526,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way825361821",
+      "lat": 40.70274,
+      "lon": -74.012746,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way825361822",
+      "lat": 40.702761,
+      "lon": -74.012668,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way825361825",
+      "lat": 40.702945,
+      "lon": -74.01288,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way825361826",
+      "lat": 40.702998,
+      "lon": -74.012894,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way825361827",
+      "lat": 40.702845,
+      "lon": -74.012853,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way825361828",
+      "lat": 40.702787,
+      "lon": -74.012838,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way825365729",
+      "lat": 40.705053,
+      "lon": -74.015401,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way825365730",
+      "lat": 40.704994,
+      "lon": -74.015116,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way827826692",
+      "lat": 40.70819,
+      "lon": -74.014551,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way888695674",
+      "lat": 40.712135,
+      "lon": -74.004797,
+      "kind": "green",
+      "name": "Living Memorial Grove"
+    },
+    {
+      "id": "way890862859",
+      "lat": 40.707912,
+      "lon": -74.003908,
+      "kind": "green",
+      "name": "Pearl Street Playground"
+    },
+    {
+      "id": "way890862865",
+      "lat": 40.708814,
+      "lon": -74.004238,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way891074490",
+      "lat": 40.710433,
+      "lon": -74.005809,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way1015670149",
+      "lat": 40.712219,
+      "lon": -74.006491,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way1127851294",
+      "lat": 40.706199,
+      "lon": -74.004098,
+      "kind": "green",
+      "name": "Imagination Playground"
+    },
+    {
+      "id": "way1127851314",
+      "lat": 40.706183,
+      "lon": -74.003944,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way1127851315",
+      "lat": 40.706301,
+      "lon": -74.004089,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way1128358868",
+      "lat": 40.706766,
+      "lon": -74.013905,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way1189026325",
+      "lat": 40.70276,
+      "lon": -74.011896,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way1223121919",
+      "lat": 40.709162,
+      "lon": -74.00378,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way1223121948",
+      "lat": 40.70987,
+      "lon": -74.003362,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way1223373442",
+      "lat": 40.709472,
+      "lon": -74.00211,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way1223577693",
+      "lat": 40.711624,
+      "lon": -74.004869,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way1225536033",
+      "lat": 40.709099,
+      "lon": -74.00829,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way1230946464",
+      "lat": 40.709047,
+      "lon": -74.013505,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way1231010985",
+      "lat": 40.708066,
+      "lon": -74.016038,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way1231809422",
+      "lat": 40.712086,
+      "lon": -74.016162,
+      "kind": "green",
+      "name": ""
+    },
+    {
+      "id": "way5669933",
+      "lat": 40.702393,
+      "lon": -74.013538,
+      "kind": "road",
+      "name": "State Street"
+    },
+    {
+      "id": "way5670205",
+      "lat": 40.70258,
+      "lon": -74.012536,
+      "kind": "road",
+      "name": "Water Street"
+    },
+    {
+      "id": "way5670432",
+      "lat": 40.704778,
+      "lon": -74.014967,
+      "kind": "road",
+      "name": "Greenwich Street"
+    },
+    {
+      "id": "way5671202",
+      "lat": 40.703006,
+      "lon": -74.008321,
+      "kind": "road",
+      "name": "South Street"
+    },
+    {
+      "id": "way5671587",
+      "lat": 40.711808,
+      "lon": -74.006507,
+      "kind": "road",
+      "name": "Park Row"
+    },
+    {
+      "id": "way5671593",
+      "lat": 40.711628,
+      "lon": -74.004631,
+      "kind": "road",
+      "name": "Frankfort Street"
+    },
+    {
+      "id": "way5672377",
+      "lat": 40.711541,
+      "lon": -74.010421,
+      "kind": "road",
+      "name": "Church Street"
+    },
+    {
+      "id": "way5672550",
+      "lat": 40.705604,
+      "lon": -74.005247,
+      "kind": "road",
+      "name": "Maiden Lane"
+    },
+    {
+      "id": "way5672925",
+      "lat": 40.704885,
+      "lon": -74.015293,
+      "kind": "road",
+      "name": "Battery Place"
+    },
+    {
+      "id": "way5672973",
+      "lat": 40.706583,
+      "lon": -74.013929,
+      "kind": "road",
+      "name": "Trinity Place"
+    },
+    {
+      "id": "way5673078",
+      "lat": 40.702842,
+      "lon": -74.011875,
+      "kind": "road",
+      "name": "Water Street"
+    },
+    {
+      "id": "way5673530",
+      "lat": 40.711727,
+      "lon": -74.009388,
+      "kind": "road",
+      "name": "Vesey Street"
+    },
+    {
+      "id": "way25564540",
+      "lat": 40.711982,
+      "lon": -74.005389,
+      "kind": "road",
+      "name": ""
+    },
+    {
+      "id": "way32922453",
+      "lat": 40.712314,
+      "lon": -74.004279,
+      "kind": "road",
+      "name": "Centre Street"
+    },
+    {
+      "id": "way32934351",
+      "lat": 40.701638,
+      "lon": -74.012529,
+      "kind": "road",
+      "name": "Whitehall Street"
+    },
+    {
+      "id": "way32934358",
+      "lat": 40.701439,
+      "lon": -74.011737,
+      "kind": "road",
+      "name": "South Street"
+    },
+    {
+      "id": "way46116316",
+      "lat": 40.711372,
+      "lon": -74.003348,
+      "kind": "road",
+      "name": "Brooklyn Bridge"
+    },
+    {
+      "id": "way46116326",
+      "lat": 40.711351,
+      "lon": -74.008367,
+      "kind": "road",
+      "name": "Park Row"
+    },
+    {
+      "id": "way46116329",
+      "lat": 40.712174,
+      "lon": -74.008507,
+      "kind": "road",
+      "name": "Barclay Street"
+    },
+    {
+      "id": "way46154337",
+      "lat": 40.70379,
+      "lon": -74.007035,
+      "kind": "road",
+      "name": "South Street"
+    },
+    {
+      "id": "way46160083",
+      "lat": 40.711603,
+      "lon": -74.008032,
+      "kind": "road",
+      "name": ""
+    },
+    {
+      "id": "way122660458",
+      "lat": 40.711818,
+      "lon": -74.004593,
+      "kind": "road",
+      "name": ""
+    },
+    {
+      "id": "way122660459",
+      "lat": 40.711985,
+      "lon": -74.00437,
+      "kind": "road",
+      "name": "Centre Street"
+    },
+    {
+      "id": "way122660460",
+      "lat": 40.711677,
+      "lon": -74.003992,
+      "kind": "road",
+      "name": "Brooklyn Bridge"
+    },
+    {
+      "id": "way122660461",
+      "lat": 40.712178,
+      "lon": -74.003845,
+      "kind": "road",
+      "name": ""
+    },
+    {
+      "id": "way165672323",
+      "lat": 40.70482,
+      "lon": -74.015896,
+      "kind": "road",
+      "name": "Battery Place"
+    },
+    {
+      "id": "way194923759",
+      "lat": 40.711818,
+      "lon": -74.007948,
+      "kind": "road",
+      "name": "Park Row"
+    },
+    {
+      "id": "way195743137",
+      "lat": 40.704769,
+      "lon": -74.014702,
+      "kind": "road",
+      "name": "Battery Place"
+    },
+    {
+      "id": "way195743196",
+      "lat": 40.70172,
+      "lon": -74.011476,
+      "kind": "road",
+      "name": "South Street"
+    },
+    {
+      "id": "way195743199",
+      "lat": 40.703663,
+      "lon": -74.009754,
+      "kind": "road",
+      "name": "Water Street"
+    },
+    {
+      "id": "way222299275",
+      "lat": 40.711154,
+      "lon": -74.008877,
+      "kind": "road",
+      "name": "Broadway"
+    },
+    {
+      "id": "way226193929",
+      "lat": 40.705744,
+      "lon": -74.003933,
+      "kind": "road",
+      "name": "South Street"
+    },
+    {
+      "id": "way256902827",
+      "lat": 40.705553,
+      "lon": -74.014621,
+      "kind": "road",
+      "name": "Greenwich Street"
+    },
+    {
+      "id": "way384178817",
+      "lat": 40.705053,
+      "lon": -74.007583,
+      "kind": "road",
+      "name": "Water Street"
+    },
+    {
+      "id": "way388318981",
+      "lat": 40.711792,
+      "lon": -74.008308,
+      "kind": "road",
+      "name": "Broadway"
+    },
+    {
+      "id": "way413056164",
+      "lat": 40.711734,
+      "lon": -74.00731,
+      "kind": "road",
+      "name": "Park Row"
+    },
+    {
+      "id": "way413212450",
+      "lat": 40.702925,
+      "lon": -74.014295,
+      "kind": "road",
+      "name": "State Street"
+    },
+    {
+      "id": "way414743429",
+      "lat": 40.710739,
+      "lon": -74.003292,
+      "kind": "road",
+      "name": "Frankfort Street"
+    },
+    {
+      "id": "way414743582",
+      "lat": 40.710213,
+      "lon": -74.002581,
+      "kind": "road",
+      "name": "Frankfort Street"
+    },
+    {
+      "id": "way420888140",
+      "lat": 40.704767,
+      "lon": -74.015185,
+      "kind": "road",
+      "name": "Battery Place"
+    },
+    {
+      "id": "way420888144",
+      "lat": 40.704912,
+      "lon": -74.016025,
+      "kind": "road",
+      "name": "Battery Place"
+    },
+    {
+      "id": "way420888146",
+      "lat": 40.704635,
+      "lon": -74.014622,
+      "kind": "road",
+      "name": "Battery Place"
+    },
+    {
+      "id": "way420888150",
+      "lat": 40.711996,
+      "lon": -74.00453,
+      "kind": "road",
+      "name": "Park Row"
+    },
+    {
+      "id": "way421831216",
+      "lat": 40.702546,
+      "lon": -74.013968,
+      "kind": "road",
+      "name": "State Street"
+    },
+    {
+      "id": "way438366913",
+      "lat": 40.708377,
+      "lon": -74.003075,
+      "kind": "road",
+      "name": "Pearl Street"
+    },
+    {
+      "id": "way440542775",
+      "lat": 40.703266,
+      "lon": -74.007885,
+      "kind": "road",
+      "name": "South Street"
+    },
+    {
+      "id": "way455501322",
+      "lat": 40.711582,
+      "lon": -74.007456,
+      "kind": "road",
+      "name": "Park Row"
+    },
+    {
+      "id": "way455501328",
+      "lat": 40.711913,
+      "lon": -74.006588,
+      "kind": "road",
+      "name": "Park Row"
+    },
+    {
+      "id": "way460624365",
+      "lat": 40.710116,
+      "lon": -74.011369,
+      "kind": "road",
+      "name": "Church Street"
+    },
+    {
+      "id": "way480682396",
+      "lat": 40.704189,
+      "lon": -74.008848,
+      "kind": "road",
+      "name": "Water Street"
+    },
+    {
+      "id": "way496978219",
+      "lat": 40.707285,
+      "lon": -74.004324,
+      "kind": "road",
+      "name": "Water Street"
+    },
+    {
+      "id": "way496989959",
+      "lat": 40.704473,
+      "lon": -74.008422,
+      "kind": "road",
+      "name": "Water Street"
+    },
+    {
+      "id": "way520532096",
+      "lat": 40.711872,
+      "lon": -74.00515,
+      "kind": "road",
+      "name": "Park Row"
+    },
+    {
+      "id": "way524363437",
+      "lat": 40.710734,
+      "lon": -74.003292,
+      "kind": "road",
+      "name": "Frankfort Street"
+    },
+    {
+      "id": "way524610937",
+      "lat": 40.70534,
+      "lon": -74.007174,
+      "kind": "road",
+      "name": "Water Street"
+    },
+    {
+      "id": "way525038147",
+      "lat": 40.70776,
+      "lon": -74.003746,
+      "kind": "road",
+      "name": "Pearl Street"
+    },
+    {
+      "id": "way525656841",
+      "lat": 40.706988,
+      "lon": -74.007118,
+      "kind": "road",
+      "name": "Maiden Lane"
+    },
+    {
+      "id": "way525656842",
+      "lat": 40.706442,
+      "lon": -74.006401,
+      "kind": "road",
+      "name": "Maiden Lane"
+    },
+    {
+      "id": "way525656847",
+      "lat": 40.705892,
+      "lon": -74.006387,
+      "kind": "road",
+      "name": "Water Street"
+    },
+    {
+      "id": "way525656852",
+      "lat": 40.706266,
+      "lon": -74.005857,
+      "kind": "road",
+      "name": "Water Street"
+    },
+    {
+      "id": "way525658419",
+      "lat": 40.706617,
+      "lon": -74.005354,
+      "kind": "road",
+      "name": "Water Street"
+    },
+    {
+      "id": "way526503346",
+      "lat": 40.711102,
+      "lon": -74.003846,
+      "kind": "road",
+      "name": "Frankfort Street"
+    },
+    {
+      "id": "way587038049",
+      "lat": 40.712266,
+      "lon": -74.007901,
+      "kind": "road",
+      "name": "Broadway"
+    },
+    {
+      "id": "way588157329",
+      "lat": 40.709489,
+      "lon": -74.011797,
+      "kind": "road",
+      "name": "Trinity Place"
+    },
+    {
+      "id": "way669685948",
+      "lat": 40.705568,
+      "lon": -74.006846,
+      "kind": "road",
+      "name": "Water Street"
+    },
+    {
+      "id": "way672746385",
+      "lat": 40.7117,
+      "lon": -74.007698,
+      "kind": "road",
+      "name": "Park Row"
+    },
+    {
+      "id": "way737431023",
+      "lat": 40.70535,
+      "lon": -74.013696,
+      "kind": "road",
+      "name": "Broadway"
+    },
+    {
+      "id": "way825365735",
+      "lat": 40.704719,
+      "lon": -74.014146,
+      "kind": "road",
+      "name": "Broadway"
+    },
+    {
+      "id": "way827979008",
+      "lat": 40.708295,
+      "lon": -74.011292,
+      "kind": "road",
+      "name": "Broadway"
+    },
+    {
+      "id": "way835694479",
+      "lat": 40.710672,
+      "lon": -74.009292,
+      "kind": "road",
+      "name": "Broadway"
+    },
+    {
+      "id": "way837943499",
+      "lat": 40.710083,
+      "lon": -74.009795,
+      "kind": "road",
+      "name": "Broadway"
+    },
+    {
+      "id": "way888759076",
+      "lat": 40.711489,
+      "lon": -74.008344,
+      "kind": "road",
+      "name": "Park Row"
+    },
+    {
+      "id": "way959785458",
+      "lat": 40.711635,
+      "lon": -74.004123,
+      "kind": "road",
+      "name": ""
+    },
+    {
+      "id": "way974294810",
+      "lat": 40.711495,
+      "lon": -74.008568,
+      "kind": "road",
+      "name": "Broadway"
+    },
+    {
+      "id": "way989390266",
+      "lat": 40.701862,
+      "lon": -74.010835,
+      "kind": "road",
+      "name": "South Street"
+    },
+    {
+      "id": "way989390267",
+      "lat": 40.702168,
+      "lon": -74.009787,
+      "kind": "road",
+      "name": "South Street"
+    },
+    {
+      "id": "way993795184",
+      "lat": 40.701573,
+      "lon": -74.012171,
+      "kind": "road",
+      "name": "South Street"
+    },
+    {
+      "id": "way993795185",
+      "lat": 40.701632,
+      "lon": -74.011878,
+      "kind": "road",
+      "name": "South Street"
+    },
+    {
+      "id": "way993795186",
+      "lat": 40.70453,
+      "lon": -74.005853,
+      "kind": "road",
+      "name": "South Street"
+    },
+    {
+      "id": "way1002798654",
+      "lat": 40.705949,
+      "lon": -74.016182,
+      "kind": "road",
+      "name": "West Street"
+    },
+    {
+      "id": "way1032502934",
+      "lat": 40.708053,
+      "lon": -74.012771,
+      "kind": "road",
+      "name": "Trinity Place"
+    },
+    {
+      "id": "way1032502935",
+      "lat": 40.708822,
+      "lon": -74.012253,
+      "kind": "road",
+      "name": "Trinity Place"
+    },
+    {
+      "id": "way1032502937",
+      "lat": 40.709173,
+      "lon": -74.012022,
+      "kind": "road",
+      "name": "Trinity Place"
+    },
+    {
+      "id": "way1052686445",
+      "lat": 40.709765,
+      "lon": -74.011595,
+      "kind": "road",
+      "name": "Church Street"
+    },
+    {
+      "id": "way1080964112",
+      "lat": 40.701537,
+      "lon": -74.012115,
+      "kind": "road",
+      "name": "South Street"
+    },
+    {
+      "id": "way1080978583",
+      "lat": 40.705071,
+      "lon": -74.005006,
+      "kind": "road",
+      "name": "South Street"
+    },
+    {
+      "id": "way1086272874",
+      "lat": 40.701531,
+      "lon": -74.012402,
+      "kind": "road",
+      "name": "South Street"
+    },
+    {
+      "id": "way1089573084",
+      "lat": 40.707464,
+      "lon": -74.013165,
+      "kind": "road",
+      "name": "Trinity Place"
+    },
+    {
+      "id": "way1091399056",
+      "lat": 40.704626,
+      "lon": -74.014356,
+      "kind": "road",
+      "name": "Battery Place"
+    },
+    {
+      "id": "way1126410086",
+      "lat": 40.709279,
+      "lon": -74.010482,
+      "kind": "road",
+      "name": "Broadway"
+    },
+    {
+      "id": "way1128388463",
+      "lat": 40.707281,
+      "lon": -74.012126,
+      "kind": "road",
+      "name": "Broadway"
+    },
+    {
+      "id": "way1131052144",
+      "lat": 40.70692,
+      "lon": -74.013538,
+      "kind": "road",
+      "name": "Trinity Place"
+    },
+    {
+      "id": "way1133806010",
+      "lat": 40.706484,
+      "lon": -74.00272,
+      "kind": "road",
+      "name": "South Street"
+    },
+    {
+      "id": "way1135361330",
+      "lat": 40.70899,
+      "lon": -74.002314,
+      "kind": "road",
+      "name": "Pearl Street"
+    },
+    {
+      "id": "way1145069303",
+      "lat": 40.707001,
+      "lon": -74.001819,
+      "kind": "road",
+      "name": "South Street"
+    },
+    {
+      "id": "way1149014898",
+      "lat": 40.708997,
+      "lon": -74.010716,
+      "kind": "road",
+      "name": "Broadway"
+    },
+    {
+      "id": "way1151035737",
+      "lat": 40.704802,
+      "lon": -74.007939,
+      "kind": "road",
+      "name": "Water Street"
+    },
+    {
+      "id": "way1156810185",
+      "lat": 40.70408,
+      "lon": -74.014326,
+      "kind": "road",
+      "name": "State Street"
+    },
+    {
+      "id": "way1157765268",
+      "lat": 40.705846,
+      "lon": -74.013319,
+      "kind": "road",
+      "name": "Broadway"
+    },
+    {
+      "id": "way1158491835",
+      "lat": 40.711425,
+      "lon": -74.008076,
+      "kind": "road",
+      "name": "Park Row"
+    },
+    {
+      "id": "way1158491836",
+      "lat": 40.710385,
+      "lon": -74.009529,
+      "kind": "road",
+      "name": "Broadway"
+    },
+    {
+      "id": "way1158491837",
+      "lat": 40.709796,
+      "lon": -74.010042,
+      "kind": "road",
+      "name": "Broadway"
+    },
+    {
+      "id": "way1158491838",
+      "lat": 40.709576,
+      "lon": -74.01023,
+      "kind": "road",
+      "name": "Broadway"
+    },
+    {
+      "id": "way1190239185",
+      "lat": 40.711946,
+      "lon": -74.008093,
+      "kind": "road",
+      "name": "Park Row"
+    },
+    {
+      "id": "way1197069043",
+      "lat": 40.702419,
+      "lon": -74.013065,
+      "kind": "road",
+      "name": "State Street"
+    },
+    {
+      "id": "way1296669289",
+      "lat": 40.706543,
+      "lon": -74.012738,
+      "kind": "road",
+      "name": "Broadway"
+    },
+    {
+      "id": "way1296669290",
+      "lat": 40.705987,
+      "lon": -74.0132,
+      "kind": "road",
+      "name": "Broadway"
+    },
+    {
+      "id": "way1329042388",
+      "lat": 40.703092,
+      "lon": -74.011026,
+      "kind": "road",
+      "name": "Water Street"
+    },
+    {
+      "id": "way1329395987",
+      "lat": 40.709829,
+      "lon": -74.002095,
+      "kind": "road",
+      "name": "Frankfort Street"
+    },
+    {
+      "id": "way1329547278",
+      "lat": 40.709188,
+      "lon": -74.002053,
+      "kind": "road",
+      "name": "Pearl Street"
+    },
+    {
+      "id": "way1329583840",
+      "lat": 40.703391,
+      "lon": -74.014426,
+      "kind": "road",
+      "name": "State Street"
+    },
+    {
+      "id": "way1329897839",
+      "lat": 40.711673,
+      "lon": -74.003722,
+      "kind": "road",
+      "name": "Brooklyn Bridge"
+    },
+    {
+      "id": "way1332881457",
+      "lat": 40.702548,
+      "lon": -74.009071,
+      "kind": "road",
+      "name": "South Street"
+    },
+    {
+      "id": "way1332885134",
+      "lat": 40.702101,
+      "lon": -74.012734,
+      "kind": "road",
+      "name": "Whitehall Street"
+    },
+    {
+      "id": "way1333741753",
+      "lat": 40.708148,
+      "lon": -74.003348,
+      "kind": "road",
+      "name": "Pearl Street"
+    },
+    {
+      "id": "way1333741754",
+      "lat": 40.708701,
+      "lon": -74.00268,
+      "kind": "road",
+      "name": "Pearl Street"
+    },
+    {
+      "id": "way1334212775",
+      "lat": 40.711966,
+      "lon": -74.005696,
+      "kind": "road",
+      "name": "Park Row"
+    },
+    {
+      "id": "way1334212776",
+      "lat": 40.711928,
+      "lon": -74.005958,
+      "kind": "road",
+      "name": "Park Row"
+    },
+    {
+      "id": "way1334216310",
+      "lat": 40.701993,
+      "lon": -74.010293,
+      "kind": "road",
+      "name": "South Street"
+    },
+    {
+      "id": "way1334230709",
+      "lat": 40.704858,
+      "lon": -74.005338,
+      "kind": "road",
+      "name": "South Street"
+    }
+  ],
+  "residents": [
+    {
+      "id": "res1",
+      "name": "Resident 1",
+      "lat": 40.701879,
+      "lon": -74.01555,
+      "naturePref": 35,
+      "carTolerance": 31,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res2",
+      "name": "Resident 2",
+      "lat": 40.701046,
+      "lon": -74.011327,
+      "naturePref": 86,
+      "carTolerance": 94,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res3",
+      "name": "Resident 3",
+      "lat": 40.702384,
+      "lon": -74.009826,
+      "naturePref": 54,
+      "carTolerance": 4,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res4",
+      "name": "Resident 4",
+      "lat": 40.70066,
+      "lon": -74.006763,
+      "naturePref": 64,
+      "carTolerance": 77,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res5",
+      "name": "Resident 5",
+      "lat": 40.700653,
+      "lon": -74.004002,
+      "naturePref": 83,
+      "carTolerance": 89,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res6",
+      "name": "Resident 6",
+      "lat": 40.70389,
+      "lon": -74.015159,
+      "naturePref": 75,
+      "carTolerance": 35,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res7",
+      "name": "Resident 7",
+      "lat": 40.704419,
+      "lon": -74.012787,
+      "naturePref": 20,
+      "carTolerance": 89,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res8",
+      "name": "Resident 8",
+      "lat": 40.703645,
+      "lon": -74.009444,
+      "naturePref": 27,
+      "carTolerance": 97,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res9",
+      "name": "Resident 9",
+      "lat": 40.703473,
+      "lon": -74.007015,
+      "naturePref": 12,
+      "carTolerance": 45,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res10",
+      "name": "Resident 10",
+      "lat": 40.704495,
+      "lon": -74.003193,
+      "naturePref": 5,
+      "carTolerance": 93,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res11",
+      "name": "Resident 11",
+      "lat": 40.705919,
+      "lon": -74.01535,
+      "naturePref": 48,
+      "carTolerance": 10,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res12",
+      "name": "Resident 12",
+      "lat": 40.706104,
+      "lon": -74.011141,
+      "naturePref": 79,
+      "carTolerance": 46,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res13",
+      "name": "Resident 13",
+      "lat": 40.706155,
+      "lon": -74.008591,
+      "naturePref": 5,
+      "carTolerance": 84,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res14",
+      "name": "Resident 14",
+      "lat": 40.705456,
+      "lon": -74.006621,
+      "naturePref": 10,
+      "carTolerance": 29,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res15",
+      "name": "Resident 15",
+      "lat": 40.706733,
+      "lon": -74.00364,
+      "naturePref": 58,
+      "carTolerance": 81,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res16",
+      "name": "Resident 16",
+      "lat": 40.708868,
+      "lon": -74.015275,
+      "naturePref": 45,
+      "carTolerance": 26,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res17",
+      "name": "Resident 17",
+      "lat": 40.70854,
+      "lon": -74.011396,
+      "naturePref": 87,
+      "carTolerance": 82,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res18",
+      "name": "Resident 18",
+      "lat": 40.707343,
+      "lon": -74.00873,
+      "naturePref": 68,
+      "carTolerance": 93,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res19",
+      "name": "Resident 19",
+      "lat": 40.70769,
+      "lon": -74.006275,
+      "naturePref": 34,
+      "carTolerance": 81,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res20",
+      "name": "Resident 20",
+      "lat": 40.708576,
+      "lon": -74.003961,
+      "naturePref": 41,
+      "carTolerance": 98,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res21",
+      "name": "Resident 21",
+      "lat": 40.710952,
+      "lon": -74.015142,
+      "naturePref": 4,
+      "carTolerance": 40,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res22",
+      "name": "Resident 22",
+      "lat": 40.710202,
+      "lon": -74.012668,
+      "naturePref": 72,
+      "carTolerance": 91,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res23",
+      "name": "Resident 23",
+      "lat": 40.710029,
+      "lon": -74.008689,
+      "naturePref": 50,
+      "carTolerance": 82,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res24",
+      "name": "Resident 24",
+      "lat": 40.710318,
+      "lon": -74.00667,
+      "naturePref": 31,
+      "carTolerance": 95,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res25",
+      "name": "Resident 25",
+      "lat": 40.710523,
+      "lon": -74.003875,
+      "naturePref": 74,
+      "carTolerance": 54,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res26",
+      "name": "Resident 26",
+      "lat": 40.702396,
+      "lon": -74.014801,
+      "naturePref": 28,
+      "carTolerance": 17,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res27",
+      "name": "Resident 27",
+      "lat": 40.701619,
+      "lon": -74.012618,
+      "naturePref": 6,
+      "carTolerance": 14,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res28",
+      "name": "Resident 28",
+      "lat": 40.700906,
+      "lon": -74.00968,
+      "naturePref": 87,
+      "carTolerance": 54,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res29",
+      "name": "Resident 29",
+      "lat": 40.701793,
+      "lon": -74.00643,
+      "naturePref": 76,
+      "carTolerance": 59,
+      "happiness": 50,
+      "band": "ok"
+    },
+    {
+      "id": "res30",
+      "name": "Resident 30",
+      "lat": 40.701658,
+      "lon": -74.002458,
+      "naturePref": 1,
+      "carTolerance": 87,
+      "happiness": 50,
+      "band": "ok"
+    }
+  ]
+}

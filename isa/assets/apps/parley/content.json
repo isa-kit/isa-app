@@ -1,0 +1,41 @@
+{
+  "messages": [
+    {
+      "id": "m1",
+      "sender": "Sofía",
+      "fromLang": "es",
+      "senderLang": "es",
+      "sentAt": "2026-06-17T09:00:00",
+      "text": "¡Hola! Me alegra hablar contigo hoy.",
+      "translated": "Hi! I'm glad to talk with you today.",
+      "display": "Hi! I'm glad to talk with you today.",
+      "original": "¡Hola! Me alegra hablar contigo hoy.",
+      "status": ""
+    },
+    {
+      "id": "m2",
+      "sender": "Marco",
+      "fromLang": "en",
+      "senderLang": "en",
+      "sentAt": "2026-06-17T09:00:20",
+      "text": "Likewise! You type in Spanish, I read English — and the other way round.",
+      "translated": "¡Igualmente! Tú escribes en español, yo leo en inglés, y al revés.",
+      "display": "¡Igualmente! Tú escribes en español, yo leo en inglés, y al revés.",
+      "original": "Likewise! You type in Spanish, I read English — and the other way round.",
+      "status": ""
+    },
+    {
+      "id": "m3",
+      "sender": "Sofía",
+      "fromLang": "es",
+      "senderLang": "es",
+      "sentAt": "2026-06-17T09:00:45",
+      "text": "Perfecto. Comparte el código y empezamos.",
+      "translated": "Perfect. Share the code and let's begin.",
+      "display": "Perfect. Share the code and let's begin.",
+      "original": "Perfecto. Comparte el código y empezamos.",
+      "status": ""
+    }
+  ],
+  "phrases": []
+}

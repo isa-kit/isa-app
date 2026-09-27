@@ -1,0 +1,12 @@
+{
+  "items": [
+    {"id": "i1", "name": "Draft proposal", "category": "Work", "status": "doing", "value": 8, "due": "2026-06-16"},
+    {"id": "i2", "name": "Pay invoices", "category": "Work", "status": "open", "value": 3, "due": "2026-06-18"},
+    {"id": "i3", "name": "Groceries", "category": "Errands", "status": "open", "value": 2, "due": "2026-06-15"},
+    {"id": "i4", "name": "Fix sink", "category": "Home", "status": "done", "value": 5, "due": "2026-06-12"},
+    {"id": "i5", "name": "Book flights", "category": "Errands", "status": "doing", "value": 6, "due": "2026-06-20"},
+    {"id": "i6", "name": "Plan sprint", "category": "Work", "status": "done", "value": 7, "due": "2026-06-14"},
+    {"id": "i7", "name": "Water plants", "category": "Home", "status": "open", "value": 1, "due": "2026-06-17"},
+    {"id": "i8", "name": "Call dentist", "category": "Errands", "status": "done", "value": 2, "due": "2026-06-13"}
+  ]
+}

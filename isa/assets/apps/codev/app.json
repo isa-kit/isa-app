@@ -1,0 +1,12 @@
+{
+  "id": "codev",
+  "name": "Aidev",
+  "category": "Productivity",
+  "description": "Shared work board with activity history and per-project settings.",
+  "icon": "handshake",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_codev"
+  },
+  "seedVersion": "2026-08-26.1.l10n-int-0903"
+}

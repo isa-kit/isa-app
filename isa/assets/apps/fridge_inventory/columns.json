@@ -1,0 +1,99 @@
+{
+  "items": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true
+    },
+    {
+      "name": "category",
+      "type": "enum",
+      "label": "Category",
+      "options": [
+        "dairy",
+        "produce",
+        "meat",
+        "pantry",
+        "frozen",
+        "drinks",
+        "other"
+      ]
+    },
+    {
+      "name": "quantity",
+      "type": "number",
+      "label": "Quantity"
+    },
+    {
+      "name": "unit",
+      "type": "enum",
+      "label": "Unit",
+      "options": [
+        "each",
+        "ml",
+        "L",
+        "g",
+        "kg",
+        "bottle",
+        "carton",
+        "dozen"
+      ]
+    },
+    {
+      "name": "fraction",
+      "type": "number",
+      "label": "Fraction"
+    },
+    {
+      "name": "location",
+      "type": "enum",
+      "label": "Location",
+      "options": [
+        "fridge",
+        "freezer",
+        "pantry"
+      ]
+    },
+    {
+      "name": "lowStock",
+      "type": "boolean",
+      "label": "Low stock",
+      "default": false
+    },
+    {
+      "name": "updated",
+      "type": "date",
+      "label": "Updated",
+      "default": "today"
+    }
+  ],
+  "recipes": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true
+    },
+    {
+      "name": "uses",
+      "type": "text",
+      "label": "Uses"
+    },
+    {
+      "name": "missing",
+      "type": "text",
+      "label": "Missing"
+    },
+    {
+      "name": "steps",
+      "type": "text",
+      "label": "Steps"
+    },
+    {
+      "name": "minutes",
+      "type": "number",
+      "label": "Minutes"
+    }
+  ]
+}

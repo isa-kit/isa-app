@@ -1,0 +1,117 @@
+{
+  "exec_summary": [
+    {
+      "name": "id",
+      "type": "text",
+      "hidden": true
+    },
+    {
+      "name": "headline",
+      "type": "text",
+      "label": {
+        "en": "Headline",
+        "ko": "요약",
+        "zh": "标题",
+        "hi": "मुख्य बिंदु",
+        "es": "Titular",
+        "fr": "Titre",
+        "ar": "العنوان الرئيسي",
+        "pt": "Manchete",
+        "ru": "Заголовок",
+        "de": "Kurzfassung",
+        "ja": "見出し",
+        "tr": "Başlık",
+        "vi": "Tiêu đề chính",
+        "it": "Titolo",
+        "fa": "تیتر",
+        "pl": "Nagłówek",
+        "uk": "Заголовок",
+        "nl": "Kop",
+        "sv": "Rubrik",
+        "cs": "Titulek",
+        "el": "Επικεφαλίδα"
+      }
+    },
+    {
+      "name": "detail",
+      "type": "text",
+      "label": {
+        "en": "Detail",
+        "ko": "세부 내용",
+        "zh": "详情",
+        "hi": "विवरण",
+        "es": "Detalle",
+        "fr": "Détail",
+        "ar": "التفاصيل",
+        "pt": "Detalhe",
+        "ru": "Подробности",
+        "de": "Details",
+        "ja": "詳細",
+        "tr": "Ayrıntı",
+        "vi": "Chi tiết",
+        "it": "Dettaglio",
+        "fa": "جزئیات",
+        "pl": "Szczegóły",
+        "uk": "Деталі",
+        "nl": "Detail",
+        "sv": "Detalj",
+        "cs": "Podrobnosti",
+        "el": "Λεπτομέρεια"
+      }
+    },
+    {
+      "name": "tier",
+      "type": "text",
+      "label": {
+        "en": "Confidence",
+        "ko": "신뢰도",
+        "zh": "置信度",
+        "hi": "भरोसा",
+        "es": "Fiabilidad",
+        "fr": "Confiance",
+        "ar": "الثقة",
+        "pt": "Confiança",
+        "ru": "Надёжность",
+        "de": "Zuverlässigkeit",
+        "ja": "確信度",
+        "tr": "Güvenilirlik",
+        "vi": "Độ tin cậy",
+        "it": "Affidabilità",
+        "fa": "اطمینان",
+        "pl": "Pewność",
+        "uk": "Надійність",
+        "nl": "Betrouwbaarheid",
+        "sv": "Tillförlitlighet",
+        "cs": "Důvěra",
+        "el": "Αξιοπιστία"
+      }
+    },
+    {
+      "name": "audit",
+      "type": "text",
+      "label": {
+        "en": "Audit",
+        "ko": "감사",
+        "zh": "审计",
+        "hi": "ऑडिट",
+        "es": "Auditoría",
+        "fr": "Audit",
+        "ar": "التدقيق",
+        "pt": "Auditoria",
+        "ru": "Аудит",
+        "de": "Prüfung",
+        "ja": "監査",
+        "tr": "Denetim",
+        "vi": "Kiểm toán",
+        "it": "Audit",
+        "fa": "ممیزی",
+        "pl": "Audyt",
+        "uk": "Аудит",
+        "nl": "Audit",
+        "sv": "Granskning",
+        "cs": "Audit",
+        "el": "Έλεγχος"
+      }
+    }
+  ]
+}

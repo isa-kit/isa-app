@@ -1,0 +1,22 @@
+{
+  "tables": [
+    {
+      "name": "transactions",
+      "label": "Transactions",
+      "icon": "list",
+      "description": "Every expense and income entry. The month column (YYYY-MM) drives the by-month chart and maps cleanly from bank CSV exports."
+    },
+    {
+      "name": "budgets",
+      "label": "Budgets",
+      "icon": "flag",
+      "description": "Monthly spending limit per category."
+    },
+    {
+      "name": "accounts",
+      "label": "Accounts",
+      "icon": "table_rows",
+      "description": "Where money lives — checking, savings, credit cards, cash."
+    }
+  ]
+}

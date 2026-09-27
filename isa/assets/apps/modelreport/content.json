@@ -1,0 +1,236 @@
+{
+  "results": [
+    {
+      "id": "baseline_red_line",
+      "scenario": "Baseline",
+      "route": "Red Line",
+      "district": "Downtown",
+      "mode": "rail",
+      "boardings": 12400,
+      "alightings": 12028,
+      "avg_trip_mi": 5.2,
+      "lat": 41.826,
+      "lng": -71.41,
+      "cost": 180000,
+      "benefit_cost": 0.9,
+      "vmt": 42000
+    },
+    {
+      "id": "baseline_blue_line",
+      "scenario": "Baseline",
+      "route": "Blue Line",
+      "district": "Eastside",
+      "mode": "rail",
+      "boardings": 8300,
+      "alightings": 8051,
+      "avg_trip_mi": 6.8,
+      "lat": 41.838,
+      "lng": -71.382,
+      "cost": 193750,
+      "benefit_cost": 1.08,
+      "vmt": 44150
+    },
+    {
+      "id": "baseline_green_line",
+      "scenario": "Baseline",
+      "route": "Green Line",
+      "district": "Westside",
+      "mode": "rail",
+      "boardings": 6100,
+      "alightings": 5917,
+      "avg_trip_mi": 4.5,
+      "lat": 41.818,
+      "lng": -71.442,
+      "cost": 207500,
+      "benefit_cost": 1.26,
+      "vmt": 46300
+    },
+    {
+      "id": "baseline_crosstown_bus",
+      "scenario": "Baseline",
+      "route": "Crosstown Bus",
+      "district": "Northgate",
+      "mode": "bus",
+      "boardings": 4400,
+      "alightings": 4268,
+      "avg_trip_mi": 3.9,
+      "lat": 41.855,
+      "lng": -71.415,
+      "cost": 221250,
+      "benefit_cost": 1.44,
+      "vmt": 48450
+    },
+    {
+      "id": "alt_a_red_line",
+      "scenario": "Alt A",
+      "route": "Red Line",
+      "district": "Downtown",
+      "mode": "rail",
+      "boardings": 14100,
+      "alightings": 13677,
+      "avg_trip_mi": 5.2,
+      "lat": 41.826,
+      "lng": -71.41,
+      "cost": 235000,
+      "benefit_cost": 1.62,
+      "vmt": 50600
+    },
+    {
+      "id": "alt_a_blue_line",
+      "scenario": "Alt A",
+      "route": "Blue Line",
+      "district": "Eastside",
+      "mode": "rail",
+      "boardings": 8100,
+      "alightings": 7857,
+      "avg_trip_mi": 6.8,
+      "lat": 41.838,
+      "lng": -71.382,
+      "cost": 248750,
+      "benefit_cost": 0.9,
+      "vmt": 52750
+    },
+    {
+      "id": "alt_a_green_line",
+      "scenario": "Alt A",
+      "route": "Green Line",
+      "district": "Westside",
+      "mode": "rail",
+      "boardings": 7400,
+      "alightings": 7178,
+      "avg_trip_mi": 4.5,
+      "lat": 41.818,
+      "lng": -71.442,
+      "cost": 262500,
+      "benefit_cost": 1.08,
+      "vmt": 54900
+    },
+    {
+      "id": "alt_a_crosstown_bus",
+      "scenario": "Alt A",
+      "route": "Crosstown Bus",
+      "district": "Northgate",
+      "mode": "bus",
+      "boardings": 5300,
+      "alightings": 5141,
+      "avg_trip_mi": 3.9,
+      "lat": 41.855,
+      "lng": -71.415,
+      "cost": 276250,
+      "benefit_cost": 1.26,
+      "vmt": 57050
+    },
+    {
+      "id": "alt_b_red_line",
+      "scenario": "Alt B",
+      "route": "Red Line",
+      "district": "Downtown",
+      "mode": "rail",
+      "boardings": 11800,
+      "alightings": 11446,
+      "avg_trip_mi": 5.2,
+      "lat": 41.826,
+      "lng": -71.41,
+      "cost": 290000,
+      "benefit_cost": 1.44,
+      "vmt": 59200
+    },
+    {
+      "id": "alt_b_blue_line",
+      "scenario": "Alt B",
+      "route": "Blue Line",
+      "district": "Eastside",
+      "mode": "rail",
+      "boardings": 9600,
+      "alightings": 9312,
+      "avg_trip_mi": 6.8,
+      "lat": 41.838,
+      "lng": -71.382,
+      "cost": 303750,
+      "benefit_cost": 1.62,
+      "vmt": 61350
+    },
+    {
+      "id": "alt_b_green_line",
+      "scenario": "Alt B",
+      "route": "Green Line",
+      "district": "Westside",
+      "mode": "rail",
+      "boardings": 6900,
+      "alightings": 6693,
+      "avg_trip_mi": 4.5,
+      "lat": 41.818,
+      "lng": -71.442,
+      "cost": 317500,
+      "benefit_cost": 0.9,
+      "vmt": 63500
+    },
+    {
+      "id": "alt_b_crosstown_bus",
+      "scenario": "Alt B",
+      "route": "Crosstown Bus",
+      "district": "Northgate",
+      "mode": "bus",
+      "boardings": 6200,
+      "alightings": 6014,
+      "avg_trip_mi": 3.9,
+      "lat": 41.855,
+      "lng": -71.415,
+      "cost": 331250,
+      "benefit_cost": 1.08,
+      "vmt": 65650
+    }
+  ],
+  "slices": [
+    {
+      "id": "slice_vs_baseline",
+      "name": "% change vs Baseline",
+      "config": "{\"mode\": \"chart\", \"filters\": [], \"sorts\": [], \"aggregations\": {}, \"xAxis\": \"route\", \"series\": \"scenario\", \"value\": \"boardings\", \"pctDiff\": true, \"pctBase\": \"Baseline\"}"
+    }
+  ],
+  "metrics": [
+    {
+      "id": "m_baseline",
+      "scenario": "Baseline",
+      "boardings": 31200,
+      "alightings": 30264,
+      "retention_pct": 97.0
+    },
+    {
+      "id": "m_alt_a",
+      "scenario": "Alt A",
+      "boardings": 34900,
+      "alightings": 33853,
+      "retention_pct": 97.0
+    },
+    {
+      "id": "m_alt_b",
+      "scenario": "Alt B",
+      "boardings": 34500,
+      "alightings": 33465,
+      "retention_pct": 97.0
+    }
+  ],
+  "district_stats": [
+    {
+      "id": "d_downtown",
+      "district": "Downtown",
+      "boardings": 38300
+    },
+    {
+      "id": "d_eastside",
+      "district": "Eastside",
+      "boardings": 26000
+    },
+    {
+      "id": "d_westside",
+      "district": "Westside",
+      "boardings": 20400
+    },
+    {
+      "id": "d_northgate",
+      "district": "Northgate",
+      "boardings": 15900
+    }
+  ]
+}

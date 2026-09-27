@@ -1,0 +1,24 @@
+{
+  "id": "parley",
+  "name": "Parley",
+  "icon": "translate",
+  "category": "Life",
+  "description": "A chat that translates as you type.",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_parley"
+  },
+  "seedVersion": "2026-09-03.1",
+  "seedContent": "initial-only",
+  "durableSettings": ["parleyMemberId", "parleyLinkRoom", "parleyLinkKey", "parleyComposeTargetLang"],
+  "packs": [
+    {
+      "id": "parley-dict-full",
+      "label": "Full dictionary",
+      "size": 1707179,
+      "url": "packs/parley/parley-dict-full.jsonl.gz",
+      "license": "CC BY-SA 4.0 / GFDL",
+      "description": "31,817 entries with real example sentences, gzip-compressed."
+    }
+  ]
+}

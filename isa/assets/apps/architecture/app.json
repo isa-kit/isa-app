@@ -1,0 +1,14 @@
+{
+  "id": "architecture",
+  "name": "Architecture",
+  "category": "Developer",
+  "description": "How this app gets built and shipped, and where it stands.",
+  "hidden": false,
+  "icon": "account_tree",
+  "devOnly": false,
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_arch_map"
+  },
+  "seedVersion": "2026-09-12.4"
+}

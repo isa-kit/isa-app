@@ -1,0 +1,64 @@
+{
+  "tables": [
+    {
+      "name": "headline",
+      "label": "Right now",
+      "icon": "speed",
+      "description": "One row: the state of the machine at the moment of the last snapshot — cores, load, how many Claude processes and agents are running, how many prompts are waiting. Fetched on Refresh (mode: replace, so a refresh overwrites rather than accumulates). Seeded empty and never hand-edited: a reading is only ever what the machine actually reported.",
+      "provenance": {
+        "source": "fleet-snapshot.sh on the Mac → https://167.233.64.97/fleet/snapshot.json (Refresh action)"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "sessions",
+      "label": "Sessions",
+      "icon": "forum",
+      "description": "One row per Claude session active in the last 15 minutes: which model, how long since it last did anything, and how many prompts are queued behind it. Numbered, never named — no session ids leave the machine.",
+      "provenance": {
+        "source": "fleet-snapshot.sh (Claude Code transcripts) → /fleet/snapshot.json"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "agents",
+      "label": "Agents",
+      "icon": "smart_toy",
+      "description": "One row per subagent that has written output in the last 10 minutes — how long it has been running and how long since its last write. A high count here with a high load is the signature of an over-parallelised round.",
+      "provenance": {
+        "source": "fleet-snapshot.sh (agent task output files) → /fleet/snapshot.json"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "prompts",
+      "label": "Prompt cost",
+      "icon": "format_list_bulleted",
+      "description": "The most recent finished prompts and what each one actually cost: tokens the main session wrote, tokens its agents wrote, how many agents it spawned, and how long it ran. Prompt TEXT never leaves the machine — only the cost shape. This is the table that makes prompts cheaper over time.",
+      "provenance": {
+        "source": "fleet-snapshot.sh (per-prompt usage ledger) → /fleet/snapshot.json"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "history",
+      "label": "History",
+      "icon": "show_chart",
+      "description": "One row per snapshot taken, oldest first — the efficiency log. The full history stays on the Mac; this is the light tail of it (last 240 readings) so trends are visible from anywhere.",
+      "provenance": {
+        "source": "_claude/health/history.jsonl (tail) → /fleet/snapshot.json"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "tables": [
+    {
+      "name": "profile",
+      "label": "My profile",
+      "icon": "person",
+      "description": "Just you \u2014 your name auto-signs everything you post."
+    },
+    {
+      "name": "spaces",
+      "label": "Spaces",
+      "icon": "forum",
+      "description": "Events, groups, teams, or notes-to-self. Each space has its own secret key \u2014 share the key, share the space."
+    },
+    {
+      "name": "messages",
+      "label": "Messages",
+      "icon": "chat",
+      "description": "Every post, tagged with its space."
+    },
+    {
+      "name": "events",
+      "label": "Events",
+      "icon": "event",
+      "description": "Calendar entries per space."
+    },
+    {
+      "name": "members",
+      "label": "People",
+      "icon": "group",
+      "description": "Who's in each space."
+    },
+    {
+      "name": "listings",
+      "label": "Directory listings",
+      "icon": "campaign",
+      "description": "Public announcements \u2014 synced through the shared Public directory space."
+    }
+  ]
+}
