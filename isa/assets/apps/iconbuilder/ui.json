@@ -1,0 +1,272 @@
+{
+  "app": {
+    "languages": ["en", "ko", "zh", "hi", "es", "fr", "ar", "pt", "ru", "de", "ja", "tr", "vi", "it", "fa", "pl", "uk", "nl", "sv", "cs", "el"],
+    "translatable": true,
+    "appDataTools": true,
+    "intro": {
+      "purpose": {
+        "en": "Icon Builder draws app icons on a square artboard, then exports them as .icns, .ico, PNG sets and PDF.",
+        "ko": "Icon Builder는 정사각형 아트보드에 앱 아이콘을 그린 뒤 .icns, .ico, PNG 세트, PDF로 내보냅니다.",
+        "zh": "Icon Builder 在方形画板上绘制应用图标，然后导出为 .icns、.ico、PNG 套件和 PDF。",
+        "hi": "Icon Builder एक वर्गाकार आर्टबोर्ड पर ऐप आइकन बनाता है, फिर उन्हें .icns, .ico, PNG सेट और PDF के रूप में निर्यात करता है।",
+        "es": "Icon Builder dibuja iconos de aplicaciones en un lienzo cuadrado y luego los exporta como .icns, .ico, conjuntos PNG y PDF.",
+        "fr": "Icon Builder dessine des icônes d'application sur une planche carrée, puis les exporte au format .icns, .ico, ensembles PNG et PDF.",
+        "ar": "يرسم Icon Builder أيقونات التطبيقات على لوحة مربعة، ثم يصدّرها بصيغ .icns و.ico ومجموعات PNG وPDF.",
+        "pt": "O Icon Builder desenha ícones de aplicativos em uma prancheta quadrada e os exporta como .icns, .ico, conjuntos de PNG e PDF.",
+        "ru": "Icon Builder рисует значки приложений на квадратном холсте, а затем экспортирует их в форматах .icns, .ico, наборов PNG и PDF.",
+        "de": "Icon Builder zeichnet App-Icons auf einer quadratischen Zeichenfläche und exportiert sie als .icns, .ico, PNG-Sets und PDF.",
+        "ja": "Icon Builderは正方形のアートボード上でアプリアイコンを描き、.icns、.ico、PNGセット、PDFとして書き出します。",
+        "tr": "Icon Builder, kare bir çizim alanında uygulama simgeleri çizer ve ardından bunları .icns, .ico, PNG setleri ve PDF olarak dışa aktarır.",
+        "vi": "Icon Builder vẽ biểu tượng ứng dụng trên bảng vẽ vuông, sau đó xuất ra dưới dạng .icns, .ico, bộ PNG và PDF.",
+        "it": "Icon Builder disegna le icone delle app su una tavola quadrata, quindi le esporta come .icns, .ico, set PNG e PDF.",
+        "fa": "Icon Builder آیکون‌های برنامه را روی یک بوم مربعی می‌کشد و سپس آن‌ها را به صورت .icns، .ico، مجموعه‌های PNG و PDF صادر می‌کند.",
+        "pl": "Icon Builder rysuje ikony aplikacji na kwadratowym płótnie, a następnie eksportuje je jako .icns, .ico, zestawy PNG i PDF.",
+        "uk": "Icon Builder малює значки застосунків на квадратному полотні, а потім експортує їх у форматах .icns, .ico, наборів PNG і PDF.",
+        "nl": "Icon Builder tekent app-iconen op een vierkant tekenbord en exporteert ze vervolgens als .icns, .ico, PNG-sets en PDF.",
+        "sv": "Icon Builder ritar appikoner på en kvadratisk rityta och exporterar dem sedan som .icns, .ico, PNG-set och PDF.",
+        "cs": "Icon Builder kreslí ikony aplikací na čtvercové plátno a poté je exportuje jako .icns, .ico, sady PNG a PDF.",
+        "el": "Το Icon Builder σχεδιάζει εικονίδια εφαρμογών σε έναν τετράγωνο καμβά και έπειτα τα εξάγει ως .icns, .ico, σύνολα PNG και PDF."
+      },
+      "actions": [
+        {
+          "label": {
+            "en": "New icon",
+            "ko": "새 아이콘",
+            "zh": "新建图标",
+            "hi": "नया आइकन",
+            "es": "Nuevo icono",
+            "fr": "Nouvelle icône",
+            "ar": "أيقونة جديدة",
+            "pt": "Novo ícone",
+            "ru": "Новый значок",
+            "de": "Neues Icon",
+            "ja": "新規アイコン",
+            "tr": "Yeni simge",
+            "vi": "Biểu tượng mới",
+            "it": "Nuova icona",
+            "fa": "آیکون جدید",
+            "pl": "Nowa ikona",
+            "uk": "Новий значок",
+            "nl": "Nieuw icoon",
+            "sv": "Ny ikon",
+            "cs": "Nová ikona",
+            "el": "Νέο εικονίδιο"
+          },
+          "icon": "add",
+          "action": {
+            "fn": "addRow",
+            "args": {
+              "table": "icons",
+              "values": {
+                "title": "Untitled icon"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "title": {
+      "en": "Icon Builder",
+      "zh": "图标制作",
+      "hi": "आइकन बिल्डर",
+      "es": "Creador de iconos",
+      "fr": "Créateur d'icônes",
+      "ar": "منشئ الأيقونات",
+      "pt": "Criador de ícones",
+      "ru": "Конструктор значков",
+      "de": "Icon-Builder",
+      "ja": "アイコンビルダー",
+      "tr": "Simge Oluşturucu",
+      "vi": "Trình tạo biểu tượng",
+      "ko": "아이콘 빌더",
+      "it": "Creatore di icone",
+      "fa": "سازندهٔ آیکون",
+      "pl": "Kreator ikon",
+      "uk": "Конструктор піктограм",
+      "nl": "Icoonbouwer",
+      "sv": "Ikonbyggare",
+      "cs": "Tvůrce ikon",
+      "el": "Δημιουργός εικονιδίων"
+    },
+    "primaryColor": "#0EA5E9"
+  },
+  "nav": [
+    {
+      "id": "icons",
+      "label": {
+        "en": "Icons",
+        "zh": "图标",
+        "hi": "आइकन",
+        "es": "Iconos",
+        "fr": "Icônes",
+        "ar": "الأيقونات",
+        "pt": "Ícones",
+        "ru": "Значки",
+        "de": "Symbole",
+        "ja": "アイコン",
+        "tr": "Simgeler",
+        "vi": "Biểu tượng",
+        "ko": "아이콘",
+        "it": "Icone",
+        "fa": "آیکون‌ها",
+        "pl": "Ikony",
+        "uk": "Піктограми",
+        "nl": "Iconen",
+        "sv": "Ikoner",
+        "cs": "Ikony",
+        "el": "Εικονίδια"
+      },
+      "icon": "apps",
+      "screen": "icons"
+    }
+  ],
+  "screens": {
+    "icons": {
+      "title": {
+        "en": "Icons",
+        "zh": "图标",
+        "hi": "आइकन",
+        "es": "Iconos",
+        "fr": "Icônes",
+        "ar": "الأيقونات",
+        "pt": "Ícones",
+        "ru": "Значки",
+        "de": "Symbole",
+        "ja": "アイコン",
+        "tr": "Simgeler",
+        "vi": "Biểu tượng",
+        "ko": "아이콘",
+        "it": "Icone",
+        "fa": "آیکون‌ها",
+        "pl": "Ikony",
+        "uk": "Піктограми",
+        "nl": "Iconen",
+        "sv": "Ikoner",
+        "cs": "Ikony",
+        "el": "Εικονίδια"
+      },
+      "body": {
+        "type": "explorer",
+        "table": "icons",
+        "nameColumn": "title",
+        "kindColumn": "kind",
+        "parentColumn": "parentId",
+        "trashColumn": "trashed",
+        "title": {
+          "en": "Icons",
+          "zh": "图标",
+          "hi": "आइकन",
+          "es": "Iconos",
+          "fr": "Icônes",
+          "ar": "الأيقونات",
+          "pt": "Ícones",
+          "ru": "Значки",
+          "de": "Symbole",
+          "ja": "アイコン",
+          "tr": "Simgeler",
+          "vi": "Biểu tượng",
+          "ko": "아이콘",
+          "it": "Icone",
+          "fa": "آیکون‌ها",
+          "pl": "Ikony",
+          "uk": "Піктограми",
+          "nl": "Iconen",
+          "sv": "Ikoner",
+          "cs": "Ikony",
+          "el": "Εικονίδια"
+        },
+        "fileIcon": "apps",
+        "newFileLabel": {
+          "en": "New icon",
+          "zh": "新建图标",
+          "hi": "नया आइकन",
+          "es": "Nuevo icono",
+          "fr": "Nouvelle icône",
+          "ar": "أيقونة جديدة",
+          "pt": "Novo ícone",
+          "ru": "Новый значок",
+          "de": "Neues Symbol",
+          "ja": "新しいアイコン",
+          "tr": "Yeni simge",
+          "vi": "Biểu tượng mới",
+          "ko": "새 아이콘",
+          "it": "Nuova icona",
+          "fa": "آیکون جدید",
+          "pl": "Nowa ikona",
+          "uk": "Нова піктограма",
+          "nl": "Nieuw icoon",
+          "sv": "Ny ikon",
+          "cs": "Nová ikona",
+          "el": "Νέο εικονίδιο"
+        },
+        "newFolderLabel": {
+          "en": "New folder",
+          "zh": "新建文件夹",
+          "hi": "नया फ़ोल्डर",
+          "es": "Nueva carpeta",
+          "fr": "Nouveau dossier",
+          "ar": "مجلد جديد",
+          "pt": "Nova pasta",
+          "ru": "Новая папка",
+          "de": "Neuer Ordner",
+          "ja": "新規フォルダ",
+          "tr": "Yeni klasör",
+          "vi": "Thư mục mới",
+          "ko": "새 폴더",
+          "it": "Nuova cartella",
+          "fa": "پوشه جدید",
+          "pl": "Nowy folder",
+          "uk": "Нова папка",
+          "nl": "Nieuwe map",
+          "sv": "Ny mapp",
+          "cs": "Nová složka",
+          "el": "Νέος φάκελος"
+        },
+        "railMode": "drawer",
+        "startBlank": true,
+        "autoSelectFirst": true,
+        "menuActions": [
+          {
+            "label": {
+              "en": "Export a copy…",
+              "zh": "导出副本…",
+              "hi": "एक प्रति निर्यात करें…",
+              "es": "Exportar una copia…",
+              "fr": "Exporter une copie…",
+              "ar": "تصدير نسخة…",
+              "pt": "Exportar uma cópia…",
+              "ru": "Экспортировать копию…",
+              "de": "Kopie exportieren…",
+              "ja": "コピーをエクスポート…",
+              "tr": "Bir kopya dışa aktar…",
+              "vi": "Xuất một bản sao…",
+              "ko": "사본 내보내기…",
+              "it": "Esporta una copia…",
+              "fa": "برون‌بری یک نسخه…",
+              "pl": "Eksportuj kopię…",
+              "uk": "Експортувати копію…",
+              "nl": "Een kopie exporteren…",
+              "sv": "Exportera en kopia…",
+              "cs": "Exportovat kopii…",
+              "el": "Εξαγωγή αντιγράφου…"
+            },
+            "action": {
+              "fn": "exportFileScope"
+            }
+          }
+        ],
+        "detail": {
+          "type": "draw",
+          "table": "icons",
+          "strokesColumn": "strokes",
+          "titleColumn": "title",
+          "imageColumn": "image",
+          "manualSave": true,
+          "twoFingerHoldMs": 250,
+          "fillPhone": true,
+          "iconMode": true
+        }
+      }
+    }
+  }
+}

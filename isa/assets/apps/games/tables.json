@@ -1,0 +1,232 @@
+{
+  "tables": [
+    {
+      "name": "games",
+      "label": "Game catalog",
+      "icon": "sports_esports",
+      "description": "One row per game this hub offers. Home renders these as cards; the screen column names the screen the card opens, so adding a game = adding a row + a screen."
+    },
+    {
+      "name": "matches",
+      "label": "Chess matches",
+      "icon": "flag",
+      "description": "One row per chess match: the position (FEN), the move log and a status line. The board on the Chess tab plays directly against these rows, so matches persist and sync like any other data."
+    },
+    {
+      "name": "units",
+      "label": "Skirmish units",
+      "icon": "people",
+      "description": "Pieces on the skirmish map. Drag to move; tap to edit HP after a fight. Recruit buttons add new ones."
+    },
+    {
+      "name": "war",
+      "label": "Skirmish state",
+      "icon": "dashboard",
+      "description": "The single shared state row for the skirmish: turn counter, gold for both sides, army sizes and the last dice roll."
+    },
+    {
+      "name": "warlog",
+      "label": "Skirmish rounds",
+      "icon": "history",
+      "description": "A snapshot per ended turn — the round-by-round history of the skirmish."
+    },
+    {
+      "name": "pieces",
+      "label": "Free-board pieces",
+      "icon": "circle",
+      "description": "Pieces on the free board — a blank tabletop for inventing games. Drag to move; tap to rename or recolor (owner)."
+    },
+    {
+      "name": "blackjack_cards",
+      "label": "Cards",
+      "icon": "style",
+      "description": "The deck and every dealt card."
+    },
+    {
+      "name": "blackjack_players",
+      "label": "Players",
+      "icon": "group",
+      "description": "Seats and chip counts."
+    },
+    {
+      "name": "old_maid_cards",
+      "label": "Cards",
+      "icon": "casino",
+      "description": "Every card in play: hands, the pass pile, the discards."
+    },
+    {
+      "name": "old_maid_players",
+      "label": "Players",
+      "icon": "people",
+      "description": "The three seats."
+    },
+    {
+      "name": "go_fish_cards",
+      "label": "Cards",
+      "icon": "casino",
+      "description": "The pond, every hand, and the laid-down books."
+    },
+    {
+      "name": "go_fish_players",
+      "label": "Players",
+      "icon": "people",
+      "description": "The three seats."
+    },
+    {
+      "name": "war_cards",
+      "label": "Cards",
+      "icon": "shield",
+      "description": "The deck, the battlefield, and each player's captured pile."
+    },
+    {
+      "name": "war_players",
+      "label": "Players",
+      "icon": "people",
+      "description": "The two seats."
+    },
+    {
+      "name": "memory_pairs_cards",
+      "label": "Cards",
+      "icon": "category",
+      "description": "The shuffled layout: face-down spots, flipped cards, and captured pairs."
+    },
+    {
+      "name": "backgammon_checkers",
+      "label": "Checkers",
+      "icon": "circle",
+      "description": "The 30 checkers plus the BAR and BEAR OFF zone markers. Drag to move; tap to edit."
+    },
+    {
+      "name": "backgammon_dice",
+      "label": "Dice",
+      "icon": "casino",
+      "description": "The two dice. Roll buttons on the Board write results here."
+    },
+    {
+      "name": "backgammon_players",
+      "label": "Players",
+      "icon": "people",
+      "description": "Who plays White and Black, with running match score."
+    },
+    {
+      "name": "backgammon_turn",
+      "label": "Turn",
+      "icon": "swap_horiz",
+      "description": "Whose turn it is - one shared marker row."
+    },
+    {
+      "name": "checkers_pieces",
+      "label": "Pieces",
+      "icon": "circle",
+      "description": "The 24 checkers on the 8x8 grid. Drag to move; tap to crown a king or remove a captured piece."
+    },
+    {
+      "name": "checkers_players",
+      "label": "Players",
+      "icon": "people",
+      "description": "Who plays Red and Black, with running score."
+    },
+    {
+      "name": "checkers_turn",
+      "label": "Turn",
+      "icon": "swap_horiz",
+      "description": "Whose turn it is - one shared marker row."
+    },
+    {
+      "name": "mancala_tokens",
+      "label": "Tokens",
+      "icon": "grain",
+      "description": "48 seeds, 12 pit labels and 2 stores. Drag seeds between pits to sow; tap to edit."
+    },
+    {
+      "name": "mancala_players",
+      "label": "Players",
+      "icon": "people",
+      "description": "Player A (bottom row) and Player B (top row), with running score."
+    },
+    {
+      "name": "mancala_turn",
+      "label": "Turn",
+      "icon": "swap_horiz",
+      "description": "Whose turn it is - one shared marker row."
+    },
+    {
+      "name": "battleship_ships",
+      "label": "Ships",
+      "icon": "shield",
+      "description": "Both fleets; each ship row is visible only to its owner."
+    },
+    {
+      "name": "battleship_shots",
+      "label": "Shots",
+      "icon": "flag",
+      "description": "The public shot log; the defender marks hit or miss."
+    },
+    {
+      "name": "dots_boxes_spots",
+      "label": "Board spots",
+      "icon": "grid_on",
+      "description": "The dot lattice plus every claimable line marker."
+    },
+    {
+      "name": "dots_boxes_boxes",
+      "label": "Boxes",
+      "icon": "check_circle",
+      "description": "The nine boxes; set the owner when you close one."
+    },
+    {
+      "name": "tabletop_tokens",
+      "label": "Tokens",
+      "icon": "circle",
+      "description": "Pieces on the shared table. Drag to move; tap to rename or set owner. Everyone sharing this table sees moves (near-live when signed in)."
+    },
+    {
+      "name": "saboteur_players",
+      "label": "Players",
+      "icon": "person",
+      "description": "The lobby: who's at the table. Add yourself, then everyone sharing this applet plays together."
+    },
+    {
+      "name": "saboteur_roles",
+      "label": "Roles",
+      "icon": "visibility_off",
+      "description": "Each player's SECRET role. A role row's visibleTo is set to that player's id, so the engine shows each player ONLY their own role."
+    },
+    {
+      "name": "saboteur_pieces",
+      "label": "Pieces",
+      "icon": "extension",
+      "description": "The shared build on the canvas board. Drag to move; tap to edit. A saboteur can quietly mark a piece sabotaged."
+    },
+    {
+      "name": "saboteur_votes",
+      "label": "Votes",
+      "icon": "how_to_vote",
+      "description": "Optional accusation tally: who accused whom."
+    },
+    {
+      "name": "yahtzee_dice",
+      "label": "Dice",
+      "icon": "casino",
+      "description": "The five dice; each roll writes a fresh 1-6."
+    },
+    {
+      "name": "yahtzee_scorecard",
+      "label": "Scorecard",
+      "icon": "task",
+      "description": "The 13 categories plus upper bonus, one score column per player."
+    },
+    {
+      "name": "runs",
+      "label": "Runner scores",
+      "icon": "sports_esports",
+      "description": "Side-scroller results — score, outcome (clear/down), and run time in seconds."
+    },
+    {
+      "name": "shop",
+      "label": "Game shop",
+      "icon": "local_offer",
+      "description": "Installable game packs. Tap Install and the game lands on your shelf instantly — tables, screens and a catalog tile, no update needed. Packs can also arrive from the server shelf when online."
+    }
+  ]
+}

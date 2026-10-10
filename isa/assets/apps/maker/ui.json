@@ -1,0 +1,2274 @@
+{
+  "app": {
+    "languages": ["en", "ko", "zh", "hi", "es", "fr", "ar", "pt", "ru", "de", "ja", "tr", "vi", "it", "fa", "pl", "uk", "nl", "sv", "cs", "el"],
+    "translatable": true,
+    "appDataTools": true,
+    "title": {
+      "en": "Maker",
+      "ko": "Maker",
+      "zh": "Maker",
+      "hi": "Maker",
+      "es": "Maker",
+      "fr": "Maker",
+      "ar": "Maker",
+      "pt": "Maker",
+      "ru": "Maker",
+      "de": "Maker",
+      "ja": "Maker",
+      "tr": "Maker",
+      "vi": "Maker",
+      "it": "Maker",
+      "fa": "Maker",
+      "pl": "Maker",
+      "uk": "Maker",
+      "nl": "Maker",
+      "sv": "Maker",
+      "cs": "Maker",
+      "el": "Maker"
+    },
+    "primaryColor": "#7E57C2",
+    "theme": "contrast"
+  },
+  "nav": [
+    {
+      "id": "design",
+      "label": {
+        "en": "Design",
+        "ko": "디자인",
+        "zh": "设计",
+        "hi": "डिज़ाइन",
+        "es": "Diseño",
+        "fr": "Conception",
+        "ar": "التصميم",
+        "pt": "Design",
+        "ru": "Дизайн",
+        "de": "Design",
+        "ja": "デザイン",
+        "tr": "Tasarım",
+        "vi": "Thiết kế",
+        "it": "Design",
+        "fa": "طراحی",
+        "pl": "Projekt",
+        "uk": "Дизайн",
+        "nl": "Ontwerp",
+        "sv": "Design",
+        "cs": "Návrh",
+        "el": "Σχεδίαση"
+      },
+      "icon": "brush",
+      "screen": "design_mode"
+    },
+    {
+      "id": "develop",
+      "label": {
+        "en": "Develop",
+        "ko": "개발",
+        "zh": "开发",
+        "hi": "विकास",
+        "es": "Desarrollar",
+        "fr": "Développer",
+        "ar": "التطوير",
+        "pt": "Desenvolver",
+        "ru": "Разработка",
+        "de": "Entwickeln",
+        "ja": "開発",
+        "tr": "Geliştir",
+        "vi": "Phát triển",
+        "it": "Sviluppa",
+        "fa": "توسعه",
+        "pl": "Programuj",
+        "uk": "Розробка",
+        "nl": "Ontwikkelen",
+        "sv": "Utveckla",
+        "cs": "Vývoj",
+        "el": "Ανάπτυξη"
+      },
+      "icon": "code",
+      "screen": "develop_mode"
+    }
+  ],
+  "screens": {
+    "design_mode": {
+      "title": {
+        "en": "Design",
+        "ko": "디자인",
+        "zh": "设计",
+        "hi": "डिज़ाइन",
+        "es": "Diseño",
+        "fr": "Conception",
+        "ar": "التصميم",
+        "pt": "Design",
+        "ru": "Дизайн",
+        "de": "Design",
+        "ja": "デザイン",
+        "tr": "Tasarım",
+        "vi": "Thiết kế",
+        "it": "Design",
+        "fa": "طراحی",
+        "pl": "Projekt",
+        "uk": "Дизайн",
+        "nl": "Ontwerp",
+        "sv": "Design",
+        "cs": "Návrh",
+        "el": "Σχεδίαση"
+      },
+      "body": {
+        "type": "segments",
+        "segments": [
+          {
+            "label": "Wireframe",
+            "child": {
+              "type": "panel",
+              "title": {
+                "en": "Widgets",
+                "ko": "위젯",
+                "zh": "组件",
+                "hi": "विजेट्स",
+                "es": "Widgets",
+                "fr": "Widgets",
+                "ar": "الأدوات",
+                "pt": "Widgets",
+                "ru": "Виджеты",
+                "de": "Widgets",
+                "ja": "ウィジェット",
+                "tr": "Widget'lar",
+                "vi": "Widget",
+                "it": "Widget",
+                "fa": "ابزارک‌ها",
+                "pl": "Widżety",
+                "uk": "Віджети",
+                "nl": "Widgets",
+                "sv": "Widgetar",
+                "cs": "Widgety",
+                "el": "Γραφικά στοιχεία"
+              },
+              "icon": "widgets",
+              "width": 280,
+              "child": {
+                "type": "column",
+                "children": [
+                  {
+                    "type": "text",
+                    "style": "caption",
+                    "value": {
+                      "en": "Step 1 — block out your screens. Add a frame, then drop blocks inside it. Drag to place, drag the corner to resize, tap to rename. Pinch / scroll to zoom, two-finger or wheel to pan.",
+                      "ko": "1단계 — 화면 레이아웃을 잡아보세요. 프레임을 추가한 뒤 그 안에 블록을 놓으세요. 드래그로 배치, 모서리 드래그로 크기 조절, 탭으로 이름 변경. 핀치/스크롤로 확대, 두 손가락 또는 휠로 이동.",
+                      "zh": "步骤1 — 规划你的屏幕。添加一个框架，然后在其中放置模块。拖动以放置，拖动角落以调整大小，点击以重命名。捏合/滚动缩放，双指或滚轮平移。",
+                      "hi": "चरण 1 — अपनी स्क्रीन का ढांचा बनाएं। एक फ़्रेम जोड़ें, फिर उसमें ब्लॉक डालें। रखने के लिए खींचें, आकार बदलने के लिए कोना खींचें, नाम बदलने के लिए टैप करें। ज़ूम के लिए पिंच/स्क्रॉल, पैन के लिए दो-उंगली या व्हील।",
+                      "es": "Paso 1: esboza tus pantallas. Añade un marco y luego coloca bloques dentro. Arrastra para colocar, arrastra la esquina para redimensionar, toca para renombrar. Pellizca/desplaza para hacer zoom, dos dedos o rueda para desplazarte.",
+                      "fr": "Étape 1 — esquissez vos écrans. Ajoutez un cadre, puis déposez des blocs à l'intérieur. Glissez pour placer, glissez le coin pour redimensionner, appuyez pour renommer. Pincez/faites défiler pour zoomer, deux doigts ou molette pour vous déplacer.",
+                      "ar": "الخطوة 1 — ارسم مخطط شاشاتك. أضف إطارًا ثم أسقط الكتل بداخله. اسحب للوضع، اسحب الزاوية لتغيير الحجم، انقر لإعادة التسمية. اقرص/مرر للتكبير، إصبعان أو عجلة الماوس للتحريك.",
+                      "pt": "Etapa 1 — esboce suas telas. Adicione um quadro e coloque blocos dentro dele. Arraste para posicionar, arraste o canto para redimensionar, toque para renomear. Belisque/role para ampliar, dois dedos ou roda para navegar.",
+                      "ru": "Шаг 1 — набросайте свои экраны. Добавьте рамку, затем поместите в неё блоки. Перетащите для размещения, перетащите угол для изменения размера, коснитесь для переименования. Сведение пальцев/прокрутка для масштабирования, двумя пальцами или колёсиком для панорамирования.",
+                      "de": "Schritt 1 — skizziere deine Bildschirme. Füge einen Rahmen hinzu und platziere Blöcke darin. Ziehen zum Platzieren, Ecke ziehen zum Skalieren, Tippen zum Umbenennen. Zum Zoomen kneifen/scrollen, mit zwei Fingern oder Mausrad schwenken.",
+                      "ja": "ステップ1 — 画面の骨組みを作りましょう。フレームを追加し、その中にブロックを配置します。ドラッグで配置、角をドラッグでリサイズ、タップで名前変更。ピンチ/スクロールでズーム、2本指またはホイールでパン。",
+                      "tr": "Adım 1 — ekranlarınızın taslağını çıkarın. Bir çerçeve ekleyin, ardından içine bloklar bırakın. Yerleştirmek için sürükleyin, boyutlandırmak için köşeyi sürükleyin, yeniden adlandırmak için dokunun. Yakınlaştırmak için sıkıştırın/kaydırın, kaydırmak için iki parmak veya tekerlek kullanın.",
+                      "vi": "Bước 1 — phác thảo các màn hình. Thêm một khung, sau đó thả các khối vào bên trong. Kéo để đặt, kéo góc để đổi kích thước, chạm để đổi tên. Chụm/cuộn để phóng to, hai ngón tay hoặc con lăn để di chuyển.",
+                      "it": "Fase 1 — abbozza le tue schermate. Aggiungi una cornice, poi trascina i blocchi al suo interno. Trascina per posizionare, trascina l'angolo per ridimensionare, tocca per rinominare. Pizzica/scorri per zoomare, due dita o rotella per spostarti.",
+                      "fa": "مرحله ۱ — چیدمان صفحه‌هایتان را بسازید. یک قاب اضافه کنید، سپس بلوک‌ها را داخل آن بیندازید. برای قرار دادن بکشید، برای تغییر اندازه گوشه را بکشید، برای تغییر نام ضربه بزنید. برای بزرگ‌نمایی گاز بگیرید/پیمایش کنید، برای پن دو انگشتی یا چرخ ماوس استفاده کنید.",
+                      "pl": "Krok 1 — zarysuj swoje ekrany. Dodaj ramkę, a następnie umieść w niej bloki. Przeciągnij, aby umieścić, przeciągnij róg, aby zmienić rozmiar, dotknij, aby zmienić nazwę. Uszczypnij/przewiń, aby powiększyć, dwoma palcami lub kółkiem, aby przesuwać.",
+                      "uk": "Крок 1 — накидайте свої екрани. Додайте рамку, потім розмістіть у ній блоки. Перетягніть, щоб розмістити, перетягніть кут, щоб змінити розмір, торкніться, щоб перейменувати. Зведіть пальці/прокрутіть для масштабування, двома пальцями або колесиком для панорамування.",
+                      "nl": "Stap 1 — schets je schermen. Voeg een frame toe en plaats er blokken in. Sleep om te plaatsen, sleep de hoek om te vergroten/verkleinen, tik om te hernoemen. Knijp/scroll om te zoomen, twee vingers of wiel om te pannen.",
+                      "sv": "Steg 1 — skissa dina skärmar. Lägg till en ram och släpp sedan block i den. Dra för att placera, dra i hörnet för att ändra storlek, tryck för att döpa om. Nyp/rulla för att zooma, två fingrar eller hjul för att panorera.",
+                      "cs": "Krok 1 — nastiňte své obrazovky. Přidejte rámeček a poté do něj vložte bloky. Přetažením umístíte, přetažením rohu změníte velikost, klepnutím přejmenujete. Sevřením/posouváním přiblížíte, dvěma prsty nebo kolečkem posunete.",
+                      "el": "Βήμα 1 — σχεδιάστε τις οθόνες σας. Προσθέστε ένα πλαίσιο και τοποθετήστε μπλοκ μέσα του. Σύρετε για τοποθέτηση, σύρετε τη γωνία για αλλαγή μεγέθους, πατήστε για μετονομασία. Τσίμπημα/κύλιση για ζουμ, δύο δάχτυλα ή ροδέλα για μετακίνηση."
+                    }
+                  },
+                  {
+                    "type": "palette",
+                    "table": "boxes",
+                    "items": [
+                      {
+                        "label": "Screen",
+                        "icon": "smartphone",
+                        "values": {
+                          "kind": "frame",
+                          "label": "Screen",
+                          "w": 260,
+                          "h": 440
+                        }
+                      },
+                      {
+                        "label": "Section",
+                        "icon": "crop_square",
+                        "values": {
+                          "kind": "section",
+                          "label": "Section",
+                          "w": 220,
+                          "h": 120
+                        }
+                      },
+                      {
+                        "label": "Nav bar",
+                        "icon": "menu",
+                        "values": {
+                          "kind": "nav",
+                          "label": "Nav",
+                          "w": 240,
+                          "h": 44
+                        }
+                      },
+                      {
+                        "label": "Button",
+                        "icon": "smart_button",
+                        "values": {
+                          "kind": "button",
+                          "label": "Button",
+                          "w": 140,
+                          "h": 44
+                        }
+                      },
+                      {
+                        "label": "Input",
+                        "icon": "text_fields",
+                        "values": {
+                          "kind": "input",
+                          "label": "Input",
+                          "w": 200,
+                          "h": 44
+                        }
+                      },
+                      {
+                        "label": "Text",
+                        "icon": "title",
+                        "values": {
+                          "kind": "text",
+                          "label": "Text",
+                          "w": 200,
+                          "h": 36
+                        }
+                      },
+                      {
+                        "label": "Image",
+                        "icon": "image",
+                        "values": {
+                          "kind": "image",
+                          "label": "Image",
+                          "w": 180,
+                          "h": 120
+                        }
+                      },
+                      {
+                        "label": "List",
+                        "icon": "list",
+                        "values": {
+                          "kind": "list",
+                          "label": "List",
+                          "w": 220,
+                          "h": 160
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "style": "caption",
+                    "value": {
+                      "en": "Arrows: pick the Connect tool (the arrow, top-left of the canvas), then tap two blocks to link them.",
+                      "ko": "화살표: 연결 도구(캔버스 왼쪽 위의 화살표)를 선택한 뒤 두 블록을 탭해서 연결하세요.",
+                      "zh": "箭头：选择连接工具（画布左上角的箭头），然后依次点击两个模块以连接它们。",
+                      "hi": "तीर: कनेक्ट टूल चुनें (कैनवस के ऊपरी-बाएं कोने का तीर), फिर दो ब्लॉक टैप करके उन्हें जोड़ें।",
+                      "es": "Flechas: elige la herramienta Conectar (la flecha, arriba a la izquierda del lienzo), luego toca dos bloques para vincularlos.",
+                      "fr": "Flèches : choisissez l'outil Connecter (la flèche, en haut à gauche du canevas), puis appuyez sur deux blocs pour les relier.",
+                      "ar": "الأسهم: اختر أداة الربط (السهم أعلى يسار اللوحة)، ثم انقر على كتلتين لربطهما.",
+                      "pt": "Setas: selecione a ferramenta Conectar (a seta, no canto superior esquerdo da tela), depois toque em dois blocos para ligá-los.",
+                      "ru": "Стрелки: выберите инструмент «Соединить» (стрелка в левом верхнем углу холста), затем нажмите на два блока, чтобы связать их.",
+                      "de": "Pfeile: Wähle das Verbinden-Werkzeug (der Pfeil oben links auf der Leinwand) und tippe dann auf zwei Blöcke, um sie zu verknüpfen.",
+                      "ja": "矢印：接続ツール（キャンバス左上の矢印）を選び、2つのブロックをタップしてつなぎます。",
+                      "tr": "Oklar: Bağlantı aracını seçin (tuvalin sol üstündeki ok), ardından bağlamak için iki bloğa dokunun.",
+                      "vi": "Mũi tên: chọn công cụ Kết nối (mũi tên, ở góc trên bên trái khung vẽ), sau đó chạm vào hai khối để liên kết chúng.",
+                      "it": "Frecce: scegli lo strumento Connetti (la freccia, in alto a sinistra della tela), poi tocca due blocchi per collegarli.",
+                      "fa": "پیکان‌ها: ابزار اتصال را انتخاب کنید (پیکان، بالا-چپ بوم)، سپس روی دو بلوک ضربه بزنید تا به هم متصل شوند.",
+                      "pl": "Strzałki: wybierz narzędzie Połącz (strzałka w lewym górnym rogu płótna), a następnie dotknij dwóch bloków, aby je połączyć.",
+                      "uk": "Стрілки: виберіть інструмент «З'єднати» (стрілка у верхньому лівому куті полотна), потім торкніться двох блоків, щоб з'єднати їх.",
+                      "nl": "Pijlen: kies het Verbinden-gereedschap (de pijl, linksboven op het canvas), tik dan op twee blokken om ze te koppelen.",
+                      "sv": "Pilar: välj Anslut-verktyget (pilen, uppe till vänster på duken), tryck sedan på två block för att länka dem.",
+                      "cs": "Šipky: vyberte nástroj Připojit (šipka vlevo nahoře na plátně), poté klepněte na dva bloky a propojte je.",
+                      "el": "Βέλη: επιλέξτε το εργαλείο Σύνδεσης (το βέλος, πάνω αριστερά στον καμβά), έπειτα πατήστε δύο μπλοκ για να τα συνδέσετε."
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "style": "caption",
+                    "value": {
+                      "en": "draw.io — open your wireframe in diagrams.net, or bring one in.",
+                      "ko": "draw.io — 와이어프레임을 diagrams.net에서 열거나 가져오세요.",
+                      "zh": "draw.io — 在 diagrams.net 中打开你的线框图，或导入一份。",
+                      "hi": "draw.io — अपना वायरफ़्रेम diagrams.net में खोलें, या एक लाएं।",
+                      "es": "draw.io: abre tu wireframe en diagrams.net, o importa uno.",
+                      "fr": "draw.io — ouvrez votre maquette dans diagrams.net, ou importez-en une.",
+                      "ar": "draw.io — افتح إطارك السلكي في diagrams.net، أو استورد واحدًا.",
+                      "pt": "draw.io — abra seu wireframe no diagrams.net ou importe um.",
+                      "ru": "draw.io — откройте свой каркас в diagrams.net или импортируйте его.",
+                      "de": "draw.io — öffne deinen Wireframe in diagrams.net oder importiere einen.",
+                      "ja": "draw.io — ワイヤーフレームをdiagrams.netで開く、または取り込みます。",
+                      "tr": "draw.io — wireframe'inizi diagrams.net'te açın veya bir tane içe aktarın.",
+                      "vi": "draw.io — mở wireframe của bạn trong diagrams.net, hoặc nhập một bản.",
+                      "it": "draw.io — apri il tuo wireframe in diagrams.net, oppure importane uno.",
+                      "fa": "draw.io — وایرفریم خود را در diagrams.net باز کنید یا یکی وارد کنید.",
+                      "pl": "draw.io — otwórz swoją makietę w diagrams.net lub zaimportuj ją.",
+                      "uk": "draw.io — відкрийте свій каркас у diagrams.net або імпортуйте його.",
+                      "nl": "draw.io — open je wireframe in diagrams.net, of importeer er een.",
+                      "sv": "draw.io — öppna din wireframe i diagrams.net, eller importera en.",
+                      "cs": "draw.io — otevřete svůj drátěný model v diagrams.net, nebo jej importujte.",
+                      "el": "draw.io — ανοίξτε το wireframe σας στο diagrams.net, ή εισαγάγετε ένα."
+                    }
+                  },
+                  {
+                    "type": "row",
+                    "wrap": true,
+                    "children": [
+                      {
+                        "type": "button",
+                        "label": {
+                          "en": "Export to draw.io",
+                          "ko": "draw.io로 내보내기",
+                          "zh": "导出到 draw.io",
+                          "hi": "draw.io में निर्यात करें",
+                          "es": "Exportar a draw.io",
+                          "fr": "Exporter vers draw.io",
+                          "ar": "تصدير إلى draw.io",
+                          "pt": "Exportar para draw.io",
+                          "ru": "Экспорт в draw.io",
+                          "de": "Nach draw.io exportieren",
+                          "ja": "draw.ioへエクスポート",
+                          "tr": "draw.io'ya aktar",
+                          "vi": "Xuất sang draw.io",
+                          "it": "Esporta in draw.io",
+                          "fa": "صدور به draw.io",
+                          "pl": "Eksportuj do draw.io",
+                          "uk": "Експортувати в draw.io",
+                          "nl": "Exporteren naar draw.io",
+                          "sv": "Exportera till draw.io",
+                          "cs": "Exportovat do draw.io",
+                          "el": "Εξαγωγή στο draw.io"
+                        },
+                        "icon": "upload",
+                        "variant": "text",
+                        "action": {
+                          "fn": "exportDrawio",
+                          "args": {
+                            "nodesTable": "boxes",
+                            "edgesTable": "links",
+                            "diagramName": "Wireframe",
+                            "sketchTable": "sketch",
+                            "sketchColumn": "strokes"
+                          }
+                        }
+                      },
+                      {
+                        "type": "button",
+                        "label": {
+                          "en": "Import from draw.io",
+                          "ko": "draw.io에서 가져오기",
+                          "zh": "从 draw.io 导入",
+                          "hi": "draw.io से आयात करें",
+                          "es": "Importar desde draw.io",
+                          "fr": "Importer depuis draw.io",
+                          "ar": "استيراد من draw.io",
+                          "pt": "Importar do draw.io",
+                          "ru": "Импорт из draw.io",
+                          "de": "Aus draw.io importieren",
+                          "ja": "draw.ioからインポート",
+                          "tr": "draw.io'dan içe aktar",
+                          "vi": "Nhập từ draw.io",
+                          "it": "Importa da draw.io",
+                          "fa": "درون‌ریزی از draw.io",
+                          "pl": "Importuj z draw.io",
+                          "uk": "Імпортувати з draw.io",
+                          "nl": "Importeren vanuit draw.io",
+                          "sv": "Importera från draw.io",
+                          "cs": "Importovat z draw.io",
+                          "el": "Εισαγωγή από το draw.io"
+                        },
+                        "icon": "download",
+                        "variant": "text",
+                        "action": {
+                          "fn": "importDrawio",
+                          "args": {
+                            "nodesTable": "boxes",
+                            "edgesTable": "links"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "body": {
+                "type": "canvas",
+                "nodesTable": "boxes",
+                "edgesTable": "links",
+                "labelColumn": "label",
+                "xColumn": "x",
+                "yColumn": "y",
+                "widthColumn": "w",
+                "heightColumn": "h",
+                "zColumn": "z",
+                "fromColumn": "from",
+                "toColumn": "to",
+                "edgeLabelColumn": "label",
+                "colorColumn": "kind",
+                "fillColumn": "fill",
+                "borderColorColumn": "borderColor",
+                "borderWidthColumn": "borderWidth",
+                "colors": {
+                  "frame": "gray",
+                  "nav": "coral",
+                  "button": "blue",
+                  "input": "teal",
+                  "text": "green",
+                  "image": "purple",
+                  "list": "pink",
+                  "section": "amber"
+                },
+                "height": "fill",
+                "fidelity": "themed",
+                "sketchTable": "sketch",
+                "sketchColumn": "strokes",
+                "action": {
+                  "fn": "editRow"
+                }
+              }
+            }
+          },
+          {
+            "label": "Flow",
+            "child": {
+              "type": "panel",
+              "title": {
+                "en": "Flow steps",
+                "ko": "흐름 단계",
+                "zh": "流程步骤",
+                "hi": "फ़्लो चरण",
+                "es": "Pasos del flujo",
+                "fr": "Étapes du flux",
+                "ar": "خطوات التدفق",
+                "pt": "Etapas do fluxo",
+                "ru": "Шаги потока",
+                "de": "Ablaufschritte",
+                "ja": "フローのステップ",
+                "tr": "Akış adımları",
+                "vi": "Các bước luồng",
+                "it": "Passaggi del flusso",
+                "fa": "مراحل جریان",
+                "pl": "Kroki przepływu",
+                "uk": "Кроки потоку",
+                "nl": "Flowstappen",
+                "sv": "Flödessteg",
+                "cs": "Kroky toku",
+                "el": "Βήματα ροής"
+              },
+              "icon": "account_tree",
+              "width": 280,
+              "child": {
+                "type": "column",
+                "children": [
+                  {
+                    "type": "text",
+                    "style": "caption",
+                    "value": {
+                      "en": "Step 2 — map how the app behaves: start, a process, a decision, a data read/write, an end. Same connected blueprint — it travels with your screens and data.",
+                      "ko": "2단계 — 앱의 동작 방식을 도식화하세요: 시작, 처리, 분기, 데이터 읽기/쓰기, 종료. 동일한 연결된 청사진이며 화면과 데이터와 함께 이동합니다.",
+                      "zh": "步骤2 — 描绘应用的行为流程：开始、处理、决策、数据读写、结束。同一份连接蓝图——与你的屏幕和数据一并流转。",
+                      "hi": "चरण 2 — ऐप कैसे व्यवहार करता है इसका नक्शा बनाएं: शुरुआत, एक प्रक्रिया, एक निर्णय, डेटा पढ़ना/लिखना, एक अंत। वही जुड़ा हुआ ब्लूप्रिंट — यह आपकी स्क्रीन और डेटा के साथ चलता है।",
+                      "es": "Paso 2: representa cómo se comporta la app: inicio, un proceso, una decisión, una lectura/escritura de datos, un fin. Es el mismo plano conectado; viaja junto con tus pantallas y datos.",
+                      "fr": "Étape 2 — représentez le comportement de l'application : début, un processus, une décision, une lecture/écriture de données, une fin. Même plan connecté — il voyage avec vos écrans et vos données.",
+                      "ar": "الخطوة 2 — ارسم كيفية سلوك التطبيق: بداية، عملية، قرار، قراءة/كتابة بيانات، نهاية. نفس المخطط المترابط — يتنقل مع شاشاتك وبياناتك.",
+                      "pt": "Etapa 2 — mapeie o comportamento do app: início, um processo, uma decisão, uma leitura/gravação de dados, um fim. O mesmo blueprint conectado — ele viaja com suas telas e dados.",
+                      "ru": "Шаг 2 — опишите поведение приложения: начало, процесс, решение, чтение/запись данных, конец. Тот же связанный чертёж — он перемещается вместе с экранами и данными.",
+                      "de": "Schritt 2 — bilde ab, wie sich die App verhält: Start, ein Prozess, eine Entscheidung, ein Datenlesen/-schreiben, ein Ende. Derselbe verbundene Bauplan — er reist mit deinen Bildschirmen und Daten.",
+                      "ja": "ステップ2 — アプリの動作をマッピングします：開始、処理、分岐、データの読み書き、終了。同じ連結されたブループリントで、画面とデータと共に移動します。",
+                      "tr": "Adım 2 — uygulamanın nasıl davrandığını haritalandırın: başlangıç, bir işlem, bir karar, veri okuma/yazma, bir bitiş. Aynı bağlı taslak — ekranlarınız ve verilerinizle birlikte hareket eder.",
+                      "vi": "Bước 2 — vẽ sơ đồ cách ứng dụng hoạt động: bắt đầu, một quy trình, một quyết định, đọc/ghi dữ liệu, kết thúc. Cùng một bản thiết kế liên kết — nó di chuyển cùng màn hình và dữ liệu của bạn.",
+                      "it": "Fase 2 — mappa il comportamento dell'app: inizio, un processo, una decisione, una lettura/scrittura di dati, una fine. Stesso progetto collegato: viaggia insieme alle tue schermate e ai tuoi dati.",
+                      "fa": "مرحله ۲ — رفتار برنامه را نگاشت کنید: شروع، یک فرایند، یک تصمیم، خواندن/نوشتن داده، پایان. همان طرح متصل — همراه با صفحه‌ها و داده‌های شما حرکت می‌کند.",
+                      "pl": "Krok 2 — zmapuj zachowanie aplikacji: start, proces, decyzja, odczyt/zapis danych, koniec. Ten sam połączony plan — przemieszcza się razem z ekranami i danymi.",
+                      "uk": "Крок 2 — змалюйте поведінку застосунку: початок, процес, рішення, читання/запис даних, кінець. Те саме пов'язане креслення — воно переміщується разом з екранами та даними.",
+                      "nl": "Stap 2 — breng in kaart hoe de app zich gedraagt: start, een proces, een beslissing, een gegevens lezen/schrijven, een einde. Dezelfde verbonden blauwdruk — hij reist mee met je schermen en gegevens.",
+                      "sv": "Steg 2 — kartlägg hur appen beter sig: start, en process, ett beslut, en dataläsning/skrivning, ett slut. Samma sammankopplade blueprint — den följer med dina skärmar och data.",
+                      "cs": "Krok 2 — zmapujte, jak se aplikace chová: start, proces, rozhodnutí, čtení/zápis dat, konec. Stejný propojený plán — cestuje spolu s vašimi obrazovkami a daty.",
+                      "el": "Βήμα 2 — χαρτογραφήστε πώς συμπεριφέρεται η εφαρμογή: έναρξη, μια διεργασία, μια απόφαση, ανάγνωση/εγγραφή δεδομένων, τέλος. Το ίδιο συνδεδεμένο σχέδιο — ταξιδεύει μαζί με τις οθόνες και τα δεδομένα σας."
+                    }
+                  },
+                  {
+                    "type": "row",
+                    "wrap": true,
+                    "children": [
+                      {
+                        "type": "button",
+                        "label": {
+                          "en": "Start",
+                          "ko": "시작",
+                          "zh": "开始",
+                          "hi": "शुरू",
+                          "es": "Inicio",
+                          "fr": "Début",
+                          "ar": "البداية",
+                          "pt": "Início",
+                          "ru": "Начало",
+                          "de": "Start",
+                          "ja": "開始",
+                          "tr": "Başlangıç",
+                          "vi": "Bắt đầu",
+                          "it": "Inizio",
+                          "fa": "شروع",
+                          "pl": "Start",
+                          "uk": "Початок",
+                          "nl": "Start",
+                          "sv": "Start",
+                          "cs": "Start",
+                          "el": "Έναρξη"
+                        },
+                        "icon": "play_arrow",
+                        "action": {
+                          "fn": "addRow",
+                          "args": {
+                            "table": "flow_nodes",
+                            "values": {
+                              "kind": "start",
+                              "label": "Start",
+                              "w": 120,
+                              "h": 44
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "button",
+                        "label": {
+                          "en": "Process",
+                          "ko": "처리",
+                          "zh": "处理",
+                          "hi": "प्रक्रिया",
+                          "es": "Proceso",
+                          "fr": "Processus",
+                          "ar": "عملية",
+                          "pt": "Processo",
+                          "ru": "Процесс",
+                          "de": "Prozess",
+                          "ja": "処理",
+                          "tr": "İşlem",
+                          "vi": "Xử lý",
+                          "it": "Processo",
+                          "fa": "فرایند",
+                          "pl": "Proces",
+                          "uk": "Процес",
+                          "nl": "Proces",
+                          "sv": "Process",
+                          "cs": "Proces",
+                          "el": "Διεργασία"
+                        },
+                        "icon": "crop_square",
+                        "action": {
+                          "fn": "addRow",
+                          "args": {
+                            "table": "flow_nodes",
+                            "values": {
+                              "kind": "process",
+                              "label": "Step",
+                              "w": 160,
+                              "h": 56
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "button",
+                        "label": {
+                          "en": "Decision",
+                          "ko": "결정",
+                          "zh": "决策",
+                          "hi": "निर्णय",
+                          "es": "Decisión",
+                          "fr": "Décision",
+                          "ar": "القرار",
+                          "pt": "Decisão",
+                          "ru": "Решение",
+                          "de": "Entscheidung",
+                          "ja": "分岐",
+                          "tr": "Karar",
+                          "vi": "Quyết định",
+                          "it": "Decisione",
+                          "fa": "تصمیم",
+                          "pl": "Decyzja",
+                          "uk": "Рішення",
+                          "nl": "Beslissing",
+                          "sv": "Beslut",
+                          "cs": "Rozhodnutí",
+                          "el": "Απόφαση"
+                        },
+                        "icon": "call_split",
+                        "action": {
+                          "fn": "addRow",
+                          "args": {
+                            "table": "flow_nodes",
+                            "values": {
+                              "kind": "decision",
+                              "label": "Decision?",
+                              "w": 160,
+                              "h": 56
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "button",
+                        "label": {
+                          "en": "Data",
+                          "ko": "데이터",
+                          "zh": "数据",
+                          "hi": "डेटा",
+                          "es": "Datos",
+                          "fr": "Données",
+                          "ar": "البيانات",
+                          "pt": "Dados",
+                          "ru": "Данные",
+                          "de": "Daten",
+                          "ja": "データ",
+                          "tr": "Veri",
+                          "vi": "Dữ liệu",
+                          "it": "Dati",
+                          "fa": "داده",
+                          "pl": "Dane",
+                          "uk": "Дані",
+                          "nl": "Gegevens",
+                          "sv": "Data",
+                          "cs": "Data",
+                          "el": "Δεδομένα"
+                        },
+                        "icon": "table_rows",
+                        "action": {
+                          "fn": "addRow",
+                          "args": {
+                            "table": "flow_nodes",
+                            "values": {
+                              "kind": "data",
+                              "label": "Data",
+                              "w": 140,
+                              "h": 48
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "button",
+                        "label": {
+                          "en": "End",
+                          "ko": "종료",
+                          "zh": "结束",
+                          "hi": "अंत",
+                          "es": "Fin",
+                          "fr": "Fin",
+                          "ar": "النهاية",
+                          "pt": "Fim",
+                          "ru": "Конец",
+                          "de": "Ende",
+                          "ja": "終了",
+                          "tr": "Bitiş",
+                          "vi": "Kết thúc",
+                          "it": "Fine",
+                          "fa": "پایان",
+                          "pl": "Koniec",
+                          "uk": "Кінець",
+                          "nl": "Einde",
+                          "sv": "Slut",
+                          "cs": "Konec",
+                          "el": "Τέλος"
+                        },
+                        "icon": "stop",
+                        "action": {
+                          "fn": "addRow",
+                          "args": {
+                            "table": "flow_nodes",
+                            "values": {
+                              "kind": "end",
+                              "label": "End",
+                              "w": 120,
+                              "h": 44
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "button",
+                        "label": {
+                          "en": "Arrow",
+                          "ko": "화살표",
+                          "zh": "箭头",
+                          "hi": "तीर",
+                          "es": "Flecha",
+                          "fr": "Flèche",
+                          "ar": "سهم",
+                          "pt": "Seta",
+                          "ru": "Стрелка",
+                          "de": "Pfeil",
+                          "ja": "矢印",
+                          "tr": "Ok",
+                          "vi": "Mũi tên",
+                          "it": "Freccia",
+                          "fa": "پیکان",
+                          "pl": "Strzałka",
+                          "uk": "Стрілка",
+                          "nl": "Pijl",
+                          "sv": "Pil",
+                          "cs": "Šipka",
+                          "el": "Βέλος"
+                        },
+                        "icon": "arrow_forward",
+                        "action": {
+                          "fn": "addRow",
+                          "args": {
+                            "table": "flow_edges"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "style": "caption",
+                    "value": {
+                      "en": "draw.io — export/import this flow in diagrams.net.",
+                      "ko": "draw.io — 이 흐름을 diagrams.net에서 내보내기/가져오기 하세요.",
+                      "zh": "draw.io — 在 diagrams.net 中导出/导入此流程。",
+                      "hi": "draw.io — इस फ़्लो को diagrams.net में निर्यात/आयात करें।",
+                      "es": "draw.io: exporta/importa este flujo en diagrams.net.",
+                      "fr": "draw.io — exportez/importez ce flux dans diagrams.net.",
+                      "ar": "draw.io — صدّر/استورد هذا التدفق في diagrams.net.",
+                      "pt": "draw.io — exporte/importe este fluxo no diagrams.net.",
+                      "ru": "draw.io — экспортируйте/импортируйте этот поток в diagrams.net.",
+                      "de": "draw.io — exportiere/importiere diesen Ablauf in diagrams.net.",
+                      "ja": "draw.io — このフローをdiagrams.netでエクスポート/インポートします。",
+                      "tr": "draw.io — bu akışı diagrams.net'te dışa/içe aktarın.",
+                      "vi": "draw.io — xuất/nhập luồng này trong diagrams.net.",
+                      "it": "draw.io — esporta/importa questo flusso in diagrams.net.",
+                      "fa": "draw.io — این جریان را در diagrams.net صادر/وارد کنید.",
+                      "pl": "draw.io — eksportuj/importuj ten przepływ w diagrams.net.",
+                      "uk": "draw.io — експортуйте/імпортуйте цей потік у diagrams.net.",
+                      "nl": "draw.io — exporteer/importeer deze flow in diagrams.net.",
+                      "sv": "draw.io — exportera/importera detta flöde i diagrams.net.",
+                      "cs": "draw.io — exportujte/importujte tento tok v diagrams.net.",
+                      "el": "draw.io — εξαγωγή/εισαγωγή αυτής της ροής στο diagrams.net."
+                    }
+                  },
+                  {
+                    "type": "row",
+                    "wrap": true,
+                    "children": [
+                      {
+                        "type": "button",
+                        "label": {
+                          "en": "Export to draw.io",
+                          "ko": "draw.io로 내보내기",
+                          "zh": "导出到 draw.io",
+                          "hi": "draw.io में निर्यात करें",
+                          "es": "Exportar a draw.io",
+                          "fr": "Exporter vers draw.io",
+                          "ar": "تصدير إلى draw.io",
+                          "pt": "Exportar para draw.io",
+                          "ru": "Экспорт в draw.io",
+                          "de": "Nach draw.io exportieren",
+                          "ja": "draw.ioへエクスポート",
+                          "tr": "draw.io'ya aktar",
+                          "vi": "Xuất sang draw.io",
+                          "it": "Esporta in draw.io",
+                          "fa": "صدور به draw.io",
+                          "pl": "Eksportuj do draw.io",
+                          "uk": "Експортувати в draw.io",
+                          "nl": "Exporteren naar draw.io",
+                          "sv": "Exportera till draw.io",
+                          "cs": "Exportovat do draw.io",
+                          "el": "Εξαγωγή στο draw.io"
+                        },
+                        "icon": "upload",
+                        "variant": "text",
+                        "action": {
+                          "fn": "exportDrawio",
+                          "args": {
+                            "nodesTable": "flow_nodes",
+                            "edgesTable": "flow_edges",
+                            "diagramName": "Flow"
+                          }
+                        }
+                      },
+                      {
+                        "type": "button",
+                        "label": {
+                          "en": "Import from draw.io",
+                          "ko": "draw.io에서 가져오기",
+                          "zh": "从 draw.io 导入",
+                          "hi": "draw.io से आयात करें",
+                          "es": "Importar desde draw.io",
+                          "fr": "Importer depuis draw.io",
+                          "ar": "استيراد من draw.io",
+                          "pt": "Importar do draw.io",
+                          "ru": "Импорт из draw.io",
+                          "de": "Aus draw.io importieren",
+                          "ja": "draw.ioからインポート",
+                          "tr": "draw.io'dan içe aktar",
+                          "vi": "Nhập từ draw.io",
+                          "it": "Importa da draw.io",
+                          "fa": "درون‌ریزی از draw.io",
+                          "pl": "Importuj z draw.io",
+                          "uk": "Імпортувати з draw.io",
+                          "nl": "Importeren vanuit draw.io",
+                          "sv": "Importera från draw.io",
+                          "cs": "Importovat z draw.io",
+                          "el": "Εισαγωγή από το draw.io"
+                        },
+                        "icon": "download",
+                        "variant": "text",
+                        "action": {
+                          "fn": "importDrawio",
+                          "args": {
+                            "nodesTable": "flow_nodes",
+                            "edgesTable": "flow_edges"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "body": {
+                "type": "canvas",
+                "nodesTable": "flow_nodes",
+                "edgesTable": "flow_edges",
+                "labelColumn": "label",
+                "xColumn": "x",
+                "yColumn": "y",
+                "widthColumn": "w",
+                "heightColumn": "h",
+                "fromColumn": "from",
+                "toColumn": "to",
+                "edgeLabelColumn": "label",
+                "colorColumn": "kind",
+                "colors": {
+                  "start": "green",
+                  "process": "blue",
+                  "decision": "amber",
+                  "data": "teal",
+                  "end": "coral"
+                },
+                "height": "fill",
+                "action": {
+                  "fn": "editRow"
+                }
+              }
+            }
+          },
+          {
+            "label": "Brief",
+            "child": {
+              "type": "segments",
+              "segments": [
+                {
+                  "label": "Request",
+                  "child": {
+                    "type": "column",
+                    "children": [
+                      {
+                        "type": "text",
+                        "style": "caption",
+                        "value": {
+                          "en": "Tell the model what you want. The screens, flow and data you drew come along automatically — here you just say the ask.",
+                          "ko": "모델에게 원하는 것을 말하세요. 직접 그린 화면, 흐름, 데이터는 자동으로 함께 전달됩니다 — 여기서는 요청 사항만 적으면 됩니다.",
+                          "zh": "告诉模型你想要什么。你绘制的屏幕、流程和数据会自动一并传递——这里你只需说明需求。",
+                          "hi": "मॉडल को बताएं आप क्या चाहते हैं। आपने जो स्क्रीन, फ़्लो और डेटा बनाया है वह अपने आप साथ आता है — यहां आपको बस अनुरोध बताना है।",
+                          "es": "Dile al modelo lo que quieres. Las pantallas, el flujo y los datos que dibujaste se incluyen automáticamente; aquí solo tienes que expresar la petición.",
+                          "fr": "Dites au modèle ce que vous voulez. Les écrans, le flux et les données que vous avez dessinés sont transmis automatiquement — ici, exprimez simplement la demande.",
+                          "ar": "أخبر النموذج بما تريد. الشاشات والتدفق والبيانات التي رسمتها تُرفق تلقائيًا — هنا تحتاج فقط لذكر الطلب.",
+                          "pt": "Diga ao modelo o que você quer. As telas, o fluxo e os dados que você desenhou vêm automaticamente — aqui você só precisa dizer o pedido.",
+                          "ru": "Скажите модели, что вы хотите. Экраны, поток и данные, которые вы нарисовали, передаются автоматически — здесь просто сформулируйте запрос.",
+                          "de": "Sag dem Modell, was du möchtest. Die Bildschirme, der Ablauf und die Daten, die du gezeichnet hast, werden automatisch mitgeliefert — hier sagst du nur, worum es geht.",
+                          "ja": "モデルに要望を伝えましょう。描いた画面、フロー、データは自動的に一緒に渡されます — ここでは要望だけを伝えればOKです。",
+                          "tr": "Modele ne istediğinizi söyleyin. Çizdiğiniz ekranlar, akış ve veriler otomatik olarak birlikte gelir — burada sadece isteğinizi belirtin.",
+                          "vi": "Cho mô hình biết bạn muốn gì. Các màn hình, luồng và dữ liệu bạn đã vẽ sẽ tự động đi kèm — ở đây bạn chỉ cần nêu yêu cầu.",
+                          "it": "Di' al modello cosa vuoi. Le schermate, il flusso e i dati che hai disegnato vengono inclusi automaticamente — qui devi solo esprimere la richiesta.",
+                          "fa": "به مدل بگویید چه می‌خواهید. صفحه‌ها، جریان و داده‌هایی که رسم کرده‌اید به‌طور خودکار همراه می‌شوند — اینجا فقط کافی است درخواست را بگویید.",
+                          "pl": "Powiedz modelowi, czego chcesz. Narysowane ekrany, przepływ i dane są dołączane automatycznie — tutaj wystarczy podać samą prośbę.",
+                          "uk": "Скажіть моделі, чого ви хочете. Намальовані вами екрани, потік і дані додаються автоматично — тут просто сформулюйте запит.",
+                          "nl": "Vertel het model wat je wilt. De schermen, flow en gegevens die je hebt getekend worden automatisch meegenomen — hier hoef je alleen het verzoek te formuleren.",
+                          "sv": "Berätta för modellen vad du vill. Skärmarna, flödet och datan du ritat följer med automatiskt — här behöver du bara ange önskemålet.",
+                          "cs": "Řekněte modelu, co chcete. Obrazovky, tok a data, které jste nakreslili, se automaticky přiloží — zde stačí uvést požadavek.",
+                          "el": "Πείτε στο μοντέλο τι θέλετε. Οι οθόνες, η ροή και τα δεδομένα που σχεδιάσατε συμπεριλαμβάνονται αυτόματα — εδώ απλώς διατυπώστε το αίτημα."
+                        }
+                      },
+                      {
+                        "type": "text",
+                        "value": {
+                          "en": "Your request",
+                          "ko": "내 요청",
+                          "zh": "你的请求",
+                          "hi": "आपका अनुरोध",
+                          "es": "Tu solicitud",
+                          "fr": "Votre demande",
+                          "ar": "طلبك",
+                          "pt": "Sua solicitação",
+                          "ru": "Ваш запрос",
+                          "de": "Deine Anfrage",
+                          "ja": "あなたのリクエスト",
+                          "tr": "İsteğiniz",
+                          "vi": "Yêu cầu của bạn",
+                          "it": "La tua richiesta",
+                          "fa": "درخواست شما",
+                          "pl": "Twoja prośba",
+                          "uk": "Ваш запит",
+                          "nl": "Jouw verzoek",
+                          "sv": "Din begäran",
+                          "cs": "Váš požadavek",
+                          "el": "Το αίτημά σας"
+                        },
+                        "style": "subtitle"
+                      },
+                      {
+                        "example": {"ids": ["brief"], "label": {"en": "Examples", "ko": "예시", "zh": "示例", "hi": "उदाहरण", "es": "Ejemplos", "fr": "Exemples", "ar": "أمثلة", "pt": "Exemplos", "ru": "Примеры", "de": "Beispiele", "ja": "例", "tr": "Örnekler", "vi": "Ví dụ", "it": "Esempi", "fa": "نمونه‌ها", "pl": "Przykłady", "uk": "Приклади", "nl": "Voorbeelden", "sv": "Exempel", "cs": "Příklady", "el": "Παραδείγματα"}, "chipLabel": {"en": "Example", "ko": "예시", "zh": "示例", "hi": "उदाहरण", "es": "Ejemplo", "fr": "Exemple", "ar": "مثال", "pt": "Exemplo", "ru": "Пример", "de": "Beispiel", "ja": "例", "tr": "Örnek", "vi": "Ví dụ", "it": "Esempio", "fa": "نمونه", "pl": "Przykład", "uk": "Приклад", "nl": "Voorbeeld", "sv": "Exempel", "cs": "Příklad", "el": "Παράδειγμα"}, "hideLabel": {"en": "Hide", "ko": "숨기기", "zh": "隐藏", "hi": "छिपाएं", "es": "Ocultar", "fr": "Masquer", "ar": "إخفاء", "pt": "Ocultar", "ru": "Скрыть", "de": "Ausblenden", "ja": "非表示", "tr": "Gizle", "vi": "Ẩn", "it": "Nascondi", "fa": "پنهان", "pl": "Ukryj", "uk": "Приховати", "nl": "Verbergen", "sv": "Dölj", "cs": "Skrýt", "el": "Απόκρυψη"}, "hiddenFromSetting": "makerHabitExampleHidden"},
+                        "type": "cards",
+                        "emptyIcon": "description",
+                        "emptyTitle": {
+                          "en": "No brief yet",
+                          "ko": "아직 브리프 없음",
+                          "zh": "暂无简报",
+                          "hi": "अभी तक कोई ब्रीफ़ नहीं",
+                          "es": "Aún no hay resumen",
+                          "fr": "Pas encore de brief",
+                          "ar": "لا يوجد ملخص بعد",
+                          "pt": "Ainda não há briefing",
+                          "ru": "Ещё нет описания",
+                          "de": "Noch kein Briefing",
+                          "ja": "まだ概要はありません",
+                          "tr": "Henüz brief yok",
+                          "vi": "Chưa có bản tóm tắt",
+                          "it": "Nessun brief ancora",
+                          "fa": "هنوز خلاصه‌ای نیست",
+                          "pl": "Brak jeszcze briefu",
+                          "uk": "Ще немає брифу",
+                          "nl": "Nog geen briefing",
+                          "sv": "Ingen sammanfattning ännu",
+                          "cs": "Zatím žádné zadání",
+                          "el": "Δεν υπάρχει ακόμη σύνοψη"
+                        },
+                        "emptyText": {
+                          "en": "Write a description of the app you want to build.",
+                          "ko": "만들고 싶은 앱을 설명해 보세요.",
+                          "zh": "描述你想要构建的应用。",
+                          "hi": "वह ऐप बताएं जिसे आप बनाना चाहते हैं।",
+                          "es": "Describe la app que quieres crear.",
+                          "fr": "Décrivez l'application que vous voulez créer.",
+                          "ar": "صِف التطبيق الذي تريد بناءه.",
+                          "pt": "Descreva o app que você quer criar.",
+                          "ru": "Опишите приложение, которое хотите создать.",
+                          "de": "Beschreibe die App, die du bauen möchtest.",
+                          "ja": "作りたいアプリを説明してください。",
+                          "tr": "Oluşturmak istediğiniz uygulamayı tanımlayın.",
+                          "vi": "Mô tả ứng dụng bạn muốn xây dựng.",
+                          "it": "Descrivi l'app che vuoi creare.",
+                          "fa": "برنامه‌ای که می‌خواهید بسازید را توصیف کنید.",
+                          "pl": "Opisz aplikację, którą chcesz zbudować.",
+                          "uk": "Опишіть застосунок, який хочете створити.",
+                          "nl": "Beschrijf de app die je wilt bouwen.",
+                          "sv": "Beskriv appen du vill bygga.",
+                          "cs": "Popište aplikaci, kterou chcete vytvořit.",
+                          "el": "Περιγράψτε την εφαρμογή που θέλετε να δημιουργήσετε."
+                        },
+                        "table": "brief",
+                        "title": "title",
+                        "subtitle": "summary",
+                        "tags": [
+                          {
+                            "column": "type"
+                          }
+                        ],
+                        "action": {
+                          "fn": "editRow"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "label": "Specifics",
+                  "child": {
+                    "type": "column",
+                    "children": [
+                      {
+                        "type": "text",
+                        "style": "caption",
+                        "value": {
+                          "en": "Break the request into features, changes, fixes or questions, each with a priority. Skip this if your summary above already says enough.",
+                          "ko": "요청을 기능, 변경, 수정, 질문으로 나누고 각각 우선순위를 매기세요. 위 요약으로 충분하다면 이 단계는 건너뛰어도 됩니다.",
+                          "zh": "将请求拆分为功能、变更、修复或问题，并各自设定优先级。如果上方摘要已足够，可跳过此步骤。",
+                          "hi": "अनुरोध को फ़ीचर, बदलाव, सुधार या प्रश्नों में बांटें, हर एक की एक प्राथमिकता के साथ। यदि ऊपर का सारांश पहले से पर्याप्त है तो इसे छोड़ दें।",
+                          "es": "Divide la solicitud en funciones, cambios, correcciones o preguntas, cada una con una prioridad. Omite esto si el resumen anterior ya es suficiente.",
+                          "fr": "Décomposez la demande en fonctionnalités, changements, corrections ou questions, chacun avec une priorité. Ignorez cette étape si le résumé ci-dessus est déjà suffisant.",
+                          "ar": "قسّم الطلب إلى ميزات أو تغييرات أو إصلاحات أو أسئلة، لكل منها أولوية. تخطَّ هذا إذا كان الملخص أعلاه كافيًا بالفعل.",
+                          "pt": "Divida a solicitação em funcionalidades, mudanças, correções ou perguntas, cada uma com uma prioridade. Pule isso se o resumo acima já for suficiente.",
+                          "ru": "Разбейте запрос на функции, изменения, исправления или вопросы, каждый со своим приоритетом. Пропустите этот шаг, если сводки выше уже достаточно.",
+                          "de": "Zerlege die Anfrage in Funktionen, Änderungen, Korrekturen oder Fragen, jeweils mit einer Priorität. Überspringe dies, wenn die Zusammenfassung oben bereits ausreicht.",
+                          "ja": "リクエストを機能、変更、修正、質問に分解し、それぞれに優先度を付けます。上の要約で十分な場合はスキップしてください。",
+                          "tr": "İsteği özellikler, değişiklikler, düzeltmeler veya sorulara ayırın, her birine bir öncelik verin. Yukarıdaki özet zaten yeterliyse bunu atlayın.",
+                          "vi": "Chia yêu cầu thành các tính năng, thay đổi, sửa lỗi hoặc câu hỏi, mỗi mục có một mức ưu tiên. Bỏ qua bước này nếu bản tóm tắt ở trên đã đủ.",
+                          "it": "Suddividi la richiesta in funzionalità, modifiche, correzioni o domande, ciascuna con una priorità. Salta questo passaggio se il riepilogo sopra è già sufficiente.",
+                          "fa": "درخواست را به ویژگی‌ها، تغییرات، رفع‌اشکال‌ها یا پرسش‌ها تقسیم کنید، هرکدام با یک اولویت. اگر خلاصهٔ بالا کافی است، این را رد کنید.",
+                          "pl": "Podziel żądanie na funkcje, zmiany, poprawki lub pytania, każde z priorytetem. Pomiń to, jeśli powyższe podsumowanie już wystarcza.",
+                          "uk": "Розбийте запит на функції, зміни, виправлення або питання, кожне зі своїм пріоритетом. Пропустіть це, якщо резюме вище вже достатнє.",
+                          "nl": "Splits het verzoek op in functies, wijzigingen, oplossingen of vragen, elk met een prioriteit. Sla dit over als de samenvatting hierboven al genoeg zegt.",
+                          "sv": "Dela upp begäran i funktioner, ändringar, fixar eller frågor, var och en med en prioritet. Hoppa över detta om sammanfattningen ovan redan räcker.",
+                          "cs": "Rozdělte požadavek na funkce, změny, opravy nebo otázky, každou s prioritou. Přeskočte to, pokud výše uvedené shrnutí již stačí.",
+                          "el": "Χωρίστε το αίτημα σε λειτουργίες, αλλαγές, διορθώσεις ή ερωτήσεις, καθεμία με προτεραιότητα. Παραλείψτε αυτό αν η παραπάνω σύνοψη είναι ήδη αρκετή."
+                        }
+                      },
+                      {
+                        "type": "button",
+                        "label": {
+                          "en": "Add a specific",
+                          "ko": "항목 추가",
+                          "zh": "添加具体项",
+                          "hi": "विशेष जोड़ें",
+                          "es": "Añadir un elemento específico",
+                          "fr": "Ajouter un élément spécifique",
+                          "ar": "إضافة عنصر محدد",
+                          "pt": "Adicionar um item específico",
+                          "ru": "Добавить пункт",
+                          "de": "Konkreten Punkt hinzufügen",
+                          "ja": "具体的な項目を追加",
+                          "tr": "Belirli bir madde ekle",
+                          "vi": "Thêm mục cụ thể",
+                          "it": "Aggiungi un elemento specifico",
+                          "fa": "افزودن یک مورد مشخص",
+                          "pl": "Dodaj konkretny element",
+                          "uk": "Додати конкретний пункт",
+                          "nl": "Specifiek item toevoegen",
+                          "sv": "Lägg till ett specifikt objekt",
+                          "cs": "Přidat konkrétní položku",
+                          "el": "Προσθήκη συγκεκριμένου στοιχείου"
+                        },
+                        "icon": "add",
+                        "variant": "text",
+                        "action": {
+                          "fn": "addRow",
+                          "args": {
+                            "table": "features",
+                            "values": {
+                              "kind": "feature",
+                              "priority": "should"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "example": {"ids": ["ft_example", "ft_example2", "ft_streak", "ft_remind"], "label": {"en": "Examples", "ko": "예시", "zh": "示例", "hi": "उदाहरण", "es": "Ejemplos", "fr": "Exemples", "ar": "أمثلة", "pt": "Exemplos", "ru": "Примеры", "de": "Beispiele", "ja": "例", "tr": "Örnekler", "vi": "Ví dụ", "it": "Esempi", "fa": "نمونه‌ها", "pl": "Przykłady", "uk": "Приклади", "nl": "Voorbeelden", "sv": "Exempel", "cs": "Příklady", "el": "Παραδείγματα"}, "chipLabel": {"en": "Example", "ko": "예시", "zh": "示例", "hi": "उदाहरण", "es": "Ejemplo", "fr": "Exemple", "ar": "مثال", "pt": "Exemplo", "ru": "Пример", "de": "Beispiel", "ja": "例", "tr": "Örnek", "vi": "Ví dụ", "it": "Esempio", "fa": "نمونه", "pl": "Przykład", "uk": "Приклад", "nl": "Voorbeeld", "sv": "Exempel", "cs": "Příklad", "el": "Παράδειγμα"}, "hideLabel": {"en": "Hide", "ko": "숨기기", "zh": "隐藏", "hi": "छिपाएं", "es": "Ocultar", "fr": "Masquer", "ar": "إخفاء", "pt": "Ocultar", "ru": "Скрыть", "de": "Ausblenden", "ja": "非表示", "tr": "Gizle", "vi": "Ẩn", "it": "Nascondi", "fa": "پنهان", "pl": "Ukryj", "uk": "Приховати", "nl": "Verbergen", "sv": "Dölj", "cs": "Skrýt", "el": "Απόκρυψη"}, "hiddenFromSetting": "makerHabitExampleHidden"},
+                        "type": "cards",
+                        "emptyIcon": "playlist_add_check",
+                        "emptyTitle": {
+                          "en": "No features yet",
+                          "ko": "아직 기능 없음",
+                          "zh": "暂无功能",
+                          "hi": "अभी तक कोई फ़ीचर नहीं",
+                          "es": "Aún no hay funciones",
+                          "fr": "Pas encore de fonctionnalités",
+                          "ar": "لا توجد ميزات بعد",
+                          "pt": "Ainda não há funcionalidades",
+                          "ru": "Пока нет функций",
+                          "de": "Noch keine Funktionen",
+                          "ja": "まだ機能はありません",
+                          "tr": "Henüz özellik yok",
+                          "vi": "Chưa có tính năng nào",
+                          "it": "Nessuna funzionalità ancora",
+                          "fa": "هنوز ویژگی‌ای نیست",
+                          "pl": "Brak jeszcze funkcji",
+                          "uk": "Ще немає функцій",
+                          "nl": "Nog geen functies",
+                          "sv": "Inga funktioner ännu",
+                          "cs": "Zatím žádné funkce",
+                          "el": "Δεν υπάρχουν ακόμη λειτουργίες"
+                        },
+                        "emptyText": {
+                          "en": "List what your app should do.",
+                          "ko": "앱이 해야 할 일을 나열해 보세요.",
+                          "zh": "列出你的应用应做的事。",
+                          "hi": "बताएं कि आपके ऐप को क्या करना चाहिए।",
+                          "es": "Enumera lo que debe hacer tu app.",
+                          "fr": "Listez ce que votre application doit faire.",
+                          "ar": "اذكر ما يجب أن يفعله تطبيقك.",
+                          "pt": "Liste o que seu app deve fazer.",
+                          "ru": "Перечислите, что должно делать ваше приложение.",
+                          "de": "Liste auf, was deine App tun soll.",
+                          "ja": "アプリが行うべきことを挙げてください。",
+                          "tr": "Uygulamanızın ne yapması gerektiğini listeleyin.",
+                          "vi": "Liệt kê những gì ứng dụng của bạn nên làm.",
+                          "it": "Elenca cosa dovrebbe fare la tua app.",
+                          "fa": "آنچه برنامه‌تان باید انجام دهد را فهرست کنید.",
+                          "pl": "Wypisz, co powinna robić Twoja aplikacja.",
+                          "uk": "Перелічіть, що має робити ваш застосунок.",
+                          "nl": "Somop wat je app moet doen.",
+                          "sv": "Lista vad din app ska göra.",
+                          "cs": "Vypište, co má vaše aplikace dělat.",
+                          "el": "Παραθέστε τι πρέπει να κάνει η εφαρμογή σας."
+                        },
+                        "emptyAction": {
+                          "fn": "addRow",
+                          "args": {
+                            "table": "features",
+                            "values": {
+                              "kind": "feature",
+                              "priority": "should"
+                            }
+                          }
+                        },
+                        "emptyActionLabel": {
+                          "en": "Add feature",
+                          "ko": "기능 추가",
+                          "zh": "添加功能",
+                          "hi": "फ़ीचर जोड़ें",
+                          "es": "Añadir función",
+                          "fr": "Ajouter une fonctionnalité",
+                          "ar": "إضافة ميزة",
+                          "pt": "Adicionar funcionalidade",
+                          "ru": "Добавить функцию",
+                          "de": "Funktion hinzufügen",
+                          "ja": "機能を追加",
+                          "tr": "Özellik ekle",
+                          "vi": "Thêm tính năng",
+                          "it": "Aggiungi funzionalità",
+                          "fa": "افزودن ویژگی",
+                          "pl": "Dodaj funkcję",
+                          "uk": "Додати функцію",
+                          "nl": "Functie toevoegen",
+                          "sv": "Lägg till funktion",
+                          "cs": "Přidat funkci",
+                          "el": "Προσθήκη λειτουργίας"
+                        },
+                        "table": "features",
+                        "title": "title",
+                        "subtitle": "detail",
+                        "search": true,
+                        "filterable": true,
+                        "groupByOptions": [
+                          { "label": "Priority", "column": "priority" },
+                          { "label": "Kind", "column": "kind" },
+                          { "label": "Screen", "column": "target" }
+                        ],
+                        "tags": [
+                          {
+                            "column": "kind",
+                            "colors": {
+                              "feature": "blue",
+                              "change": "amber",
+                              "fix": "coral",
+                              "question": "purple",
+                              "note": "gray"
+                            }
+                          },
+                          {
+                            "column": "priority"
+                          }
+                        ],
+                        "action": {
+                          "fn": "editRow"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "fill": true
+      }
+    },
+    "develop_mode": {
+      "title": {
+        "en": "Develop",
+        "ko": "개발",
+        "zh": "开发",
+        "hi": "विकास",
+        "es": "Desarrollar",
+        "fr": "Développer",
+        "ar": "التطوير",
+        "pt": "Desenvolver",
+        "ru": "Разработка",
+        "de": "Entwickeln",
+        "ja": "開発",
+        "tr": "Geliştir",
+        "vi": "Phát triển",
+        "it": "Sviluppa",
+        "fa": "توسعه",
+        "pl": "Programuj",
+        "uk": "Розробка",
+        "nl": "Ontwikkelen",
+        "sv": "Utveckla",
+        "cs": "Vývoj",
+        "el": "Ανάπτυξη"
+      },
+      "body": {
+        "type": "segments",
+        "segments": [
+          {
+            "label": "Data",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": {
+                    "en": "Step 3 — define the data your app holds. Add a table (entity), then give it typed fields below (name + type). You'll connect screens to these on Bind and wire behavior on Logic.",
+                    "ko": "3단계 — 앱이 저장할 데이터를 정의하세요. 테이블(엔티티)을 추가한 뒤 아래에 타입 지정 필드(이름 + 유형)를 부여하세요. Bind에서 화면을 이 데이터에 연결하고 Logic에서 동작을 연결하게 됩니다.",
+                    "zh": "步骤3 — 定义应用所存储的数据。添加一个表（实体），然后在下方为其添加带类型的字段（名称+类型）。稍后你将在“绑定”中把屏幕连接到这些字段，并在“逻辑”中连接行为。",
+                    "hi": "चरण 3 — वह डेटा परिभाषित करें जो आपका ऐप रखता है। एक टेबल (एंटिटी) जोड़ें, फिर नीचे उसे टाइप की गई फ़ील्ड (नाम + प्रकार) दें। आप Bind में स्क्रीन को इनसे जोड़ेंगे और Logic में व्यवहार जोड़ेंगे।",
+                    "es": "Paso 3: define los datos que contiene tu app. Añade una tabla (entidad) y luego dale campos tipados debajo (nombre + tipo). Conectarás las pantallas a estos en Bind y el comportamiento en Logic.",
+                    "fr": "Étape 3 — définissez les données que contient votre application. Ajoutez une table (entité), puis donnez-lui des champs typés ci-dessous (nom + type). Vous relierez les écrans à ces champs dans Bind et le comportement dans Logic.",
+                    "ar": "الخطوة 3 — حدد البيانات التي يحتفظ بها تطبيقك. أضف جدولًا (كيانًا)، ثم امنحه حقولًا مصنفة أدناه (اسم + نوع). ستربط الشاشات بها في Bind وتوصل السلوك في Logic.",
+                    "pt": "Etapa 3 — defina os dados que seu app mantém. Adicione uma tabela (entidade) e depois dê a ela campos tipados abaixo (nome + tipo). Você conectará telas a eles em Bind e o comportamento em Logic.",
+                    "ru": "Шаг 3 — определите данные, которые хранит ваше приложение. Добавьте таблицу (сущность), затем задайте ей типизированные поля ниже (имя + тип). Вы свяжете экраны с ними в Bind и поведение в Logic.",
+                    "de": "Schritt 3 — definiere die Daten, die deine App speichert. Füge eine Tabelle (Entität) hinzu und gib ihr unten typisierte Felder (Name + Typ). Du wirst Bildschirme unter Bind damit verknüpfen und Verhalten unter Logic verdrahten.",
+                    "ja": "ステップ3 — アプリが保持するデータを定義します。テーブル（エンティティ）を追加し、下に型付きフィールド（名前＋型）を設定します。BindでこれらのフィールドとFieldsを画面に接続し、Logicで動作を接続します。",
+                    "tr": "Adım 3 — uygulamanızın tuttuğu verileri tanımlayın. Bir tablo (varlık) ekleyin, ardından aşağıda tiplendirilmiş alanlar (ad + tür) verin. Bind'da ekranları bunlara bağlayacak, Logic'te davranışı bağlayacaksınız.",
+                    "vi": "Bước 3 — xác định dữ liệu mà ứng dụng của bạn lưu trữ. Thêm một bảng (thực thể), sau đó cung cấp cho nó các trường có kiểu bên dưới (tên + loại). Bạn sẽ kết nối màn hình với các trường này ở Bind và kết nối hành vi ở Logic.",
+                    "it": "Fase 3 — definisci i dati che la tua app conserva. Aggiungi una tabella (entità), quindi assegnale campi tipizzati qui sotto (nome + tipo). Collegherai le schermate a questi in Bind e il comportamento in Logic.",
+                    "fa": "مرحله ۳ — داده‌هایی که برنامه‌تان نگه می‌دارد را تعریف کنید. یک جدول (موجودیت) اضافه کنید، سپس در پایین فیلدهای تایپ‌شده (نام + نوع) به آن بدهید. صفحه‌ها را در Bind به این‌ها متصل خواهید کرد و رفتار را در Logic سیم‌کشی می‌کنید.",
+                    "pl": "Krok 3 — zdefiniuj dane przechowywane przez Twoją aplikację. Dodaj tabelę (encję), a następnie nadaj jej poniżej typowane pola (nazwa + typ). Połączysz z nimi ekrany w Bind i zachowanie w Logic.",
+                    "uk": "Крок 3 — визначте дані, які зберігає ваш застосунок. Додайте таблицю (сутність), потім задайте їй типізовані поля нижче (назва + тип). Ви з'єднаєте екрани з ними у Bind і поведінку в Logic.",
+                    "nl": "Stap 3 — definieer de gegevens die je app bevat. Voeg een tabel (entiteit) toe en geef deze hieronder getypeerde velden (naam + type). Je koppelt hier schermen aan in Bind en gedrag in Logic.",
+                    "sv": "Steg 3 — definiera datan din app innehåller. Lägg till en tabell (entitet), ge den sedan typade fält nedan (namn + typ). Du kopplar skärmar till dessa i Bind och beteende i Logic.",
+                    "cs": "Krok 3 — definujte data, která vaše aplikace uchovává. Přidejte tabulku (entitu) a poté jí níže přiřaďte typovaná pole (název + typ). Obrazovky k nim propojíte v Bind a chování v Logic.",
+                    "el": "Βήμα 3 — ορίστε τα δεδομένα που διατηρεί η εφαρμογή σας. Προσθέστε έναν πίνακα (οντότητα) και δώστε του παρακάτω τυποποιημένα πεδία (όνομα + τύπος). Θα συνδέσετε τις οθόνες σε αυτά στο Bind και τη συμπεριφορά στο Logic."
+                  }
+                },
+                {
+                  "type": "button",
+                  "label": {
+                    "en": "Add table",
+                    "ko": "테이블 추가",
+                    "zh": "添加表格",
+                    "hi": "टेबल जोड़ें",
+                    "es": "Añadir tabla",
+                    "fr": "Ajouter une table",
+                    "ar": "إضافة جدول",
+                    "pt": "Adicionar tabela",
+                    "ru": "Добавить таблицу",
+                    "de": "Tabelle hinzufügen",
+                    "ja": "テーブルを追加",
+                    "tr": "Tablo ekle",
+                    "vi": "Thêm bảng",
+                    "it": "Aggiungi tabella",
+                    "fa": "افزودن جدول",
+                    "pl": "Dodaj tabelę",
+                    "uk": "Додати таблицю",
+                    "nl": "Tabel toevoegen",
+                    "sv": "Lägg till tabell",
+                    "cs": "Přidat tabulku",
+                    "el": "Προσθήκη πίνακα"
+                  },
+                  "icon": "add",
+                  "action": {
+                    "fn": "addRow",
+                    "args": {
+                      "table": "data_model"
+                    }
+                  }
+                },
+                {
+                  "example": {"ids": ["dm_user", "dm_checkin"], "label": {"en": "Examples", "ko": "예시", "zh": "示例", "hi": "उदाहरण", "es": "Ejemplos", "fr": "Exemples", "ar": "أمثلة", "pt": "Exemplos", "ru": "Примеры", "de": "Beispiele", "ja": "例", "tr": "Örnekler", "vi": "Ví dụ", "it": "Esempi", "fa": "نمونه‌ها", "pl": "Przykłady", "uk": "Приклади", "nl": "Voorbeelden", "sv": "Exempel", "cs": "Příklady", "el": "Παραδείγματα"}, "chipLabel": {"en": "Example", "ko": "예시", "zh": "示例", "hi": "उदाहरण", "es": "Ejemplo", "fr": "Exemple", "ar": "مثال", "pt": "Exemplo", "ru": "Пример", "de": "Beispiel", "ja": "例", "tr": "Örnek", "vi": "Ví dụ", "it": "Esempio", "fa": "نمونه", "pl": "Przykład", "uk": "Приклад", "nl": "Voorbeeld", "sv": "Exempel", "cs": "Příklad", "el": "Παράδειγμα"}, "hideLabel": {"en": "Hide", "ko": "숨기기", "zh": "隐藏", "hi": "छिपाएं", "es": "Ocultar", "fr": "Masquer", "ar": "إخفاء", "pt": "Ocultar", "ru": "Скрыть", "de": "Ausblenden", "ja": "非表示", "tr": "Gizle", "vi": "Ẩn", "it": "Nascondi", "fa": "پنهان", "pl": "Ukryj", "uk": "Приховати", "nl": "Verbergen", "sv": "Dölj", "cs": "Skrýt", "el": "Απόκρυψη"}, "hiddenFromSetting": "makerHabitExampleHidden"},
+                  "type": "cards",
+                  "table": "data_model",
+                  "title": "entity",
+                  "subtitle": "fields",
+                  "search": true,
+                  "emptyIcon": "table_chart",
+                  "emptyTitle": {
+                    "en": "No tables yet",
+                    "ko": "아직 테이블 없음",
+                    "zh": "暂无表格",
+                    "hi": "अभी तक कोई टेबल नहीं",
+                    "es": "Aún no hay tablas",
+                    "fr": "Pas encore de tables",
+                    "ar": "لا توجد جداول بعد",
+                    "pt": "Ainda não há tabelas",
+                    "ru": "Пока нет таблиц",
+                    "de": "Noch keine Tabellen",
+                    "ja": "まだテーブルはありません",
+                    "tr": "Henüz tablo yok",
+                    "vi": "Chưa có bảng nào",
+                    "it": "Nessuna tabella ancora",
+                    "fa": "هنوز جدولی نیست",
+                    "pl": "Brak jeszcze tabel",
+                    "uk": "Ще немає таблиць",
+                    "nl": "Nog geen tabellen",
+                    "sv": "Inga tabeller ännu",
+                    "cs": "Zatím žádné tabulky",
+                    "el": "Δεν υπάρχουν ακόμη πίνακες"
+                  },
+                  "emptyText": {
+                    "en": "Add your first data table to define what your app remembers — like tasks, recipes, or contacts.",
+                    "ko": "첫 데이터 테이블을 추가해 앱이 기억할 항목을 정의하세요 — 할 일, 레시피, 연락처 등.",
+                    "zh": "添加你的第一个数据表，定义应用要记住的内容——如任务、食谱或联系人。",
+                    "hi": "अपनी पहली डेटा टेबल जोड़ें ताकि तय हो सके आपका ऐप क्या याद रखेगा — जैसे टास्क, रेसिपी या संपर्क।",
+                    "es": "Añade tu primera tabla de datos para definir lo que tu app recordará: tareas, recetas o contactos, por ejemplo.",
+                    "fr": "Ajoutez votre première table de données pour définir ce que votre application retient — comme des tâches, des recettes ou des contacts.",
+                    "ar": "أضف أول جدول بيانات لتحديد ما يتذكره تطبيقك — مثل المهام أو الوصفات أو جهات الاتصال.",
+                    "pt": "Adicione sua primeira tabela de dados para definir o que seu app vai lembrar — como tarefas, receitas ou contatos.",
+                    "ru": "Добавьте свою первую таблицу данных, чтобы определить, что запоминает ваше приложение — например, задачи, рецепты или контакты.",
+                    "de": "Füge deine erste Datentabelle hinzu, um festzulegen, was sich deine App merkt — z. B. Aufgaben, Rezepte oder Kontakte.",
+                    "ja": "最初のデータテーブルを追加して、アプリが記憶する内容を定義しましょう — タスク、レシピ、連絡先など。",
+                    "tr": "Uygulamanızın neyi hatırlayacağını tanımlamak için ilk veri tablonuzu ekleyin — görevler, tarifler veya kişiler gibi.",
+                    "vi": "Thêm bảng dữ liệu đầu tiên để xác định những gì ứng dụng của bạn ghi nhớ — như công việc, công thức nấu ăn hoặc danh bạ.",
+                    "it": "Aggiungi la tua prima tabella dati per definire cosa ricorderà la tua app — come attività, ricette o contatti.",
+                    "fa": "اولین جدول داده خود را اضافه کنید تا مشخص کنید برنامه‌تان چه چیزی را به خاطر می‌سپارد — مانند کارها، دستور پخت یا مخاطبین.",
+                    "pl": "Dodaj swoją pierwszą tabelę danych, aby określić, co będzie pamiętać Twoja aplikacja — np. zadania, przepisy czy kontakty.",
+                    "uk": "Додайте свою першу таблицю даних, щоб визначити, що запам'ятовує ваш застосунок — наприклад, завдання, рецепти чи контакти.",
+                    "nl": "Voeg je eerste gegevenstabel toe om te bepalen wat je app onthoudt — zoals taken, recepten of contacten.",
+                    "sv": "Lägg till din första datatabell för att definiera vad din app kommer ihåg — som uppgifter, recept eller kontakter.",
+                    "cs": "Přidejte svou první datovou tabulku a definujte, co si vaše aplikace bude pamatovat — například úkoly, recepty nebo kontakty.",
+                    "el": "Προσθέστε τον πρώτο σας πίνακα δεδομένων για να ορίσετε τι θυμάται η εφαρμογή σας — όπως εργασίες, συνταγές ή επαφές."
+                  },
+                  "emptyAction": {
+                    "fn": "addRow",
+                    "args": {
+                      "table": "data_model"
+                    }
+                  },
+                  "emptyActionLabel": {
+                    "en": "Add table",
+                    "ko": "테이블 추가",
+                    "zh": "添加表格",
+                    "hi": "टेबल जोड़ें",
+                    "es": "Añadir tabla",
+                    "fr": "Ajouter une table",
+                    "ar": "إضافة جدول",
+                    "pt": "Adicionar tabela",
+                    "ru": "Добавить таблицу",
+                    "de": "Tabelle hinzufügen",
+                    "ja": "テーブルを追加",
+                    "tr": "Tablo ekle",
+                    "vi": "Thêm bảng",
+                    "it": "Aggiungi tabella",
+                    "fa": "افزودن جدول",
+                    "pl": "Dodaj tabelę",
+                    "uk": "Додати таблицю",
+                    "nl": "Tabel toevoegen",
+                    "sv": "Lägg till tabell",
+                    "cs": "Přidat tabulku",
+                    "el": "Προσθήκη πίνακα"
+                  },
+                  "tags": [
+                    {
+                      "column": "relationships"
+                    }
+                  ],
+                  "action": {
+                    "fn": "editRow"
+                  }
+                },
+                {
+                  "type": "divider"
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "en": "Fields",
+                    "ko": "필드",
+                    "zh": "字段",
+                    "hi": "फ़ील्ड",
+                    "es": "Campos",
+                    "fr": "Champs",
+                    "ar": "الحقول",
+                    "pt": "Campos",
+                    "ru": "Поля",
+                    "de": "Felder",
+                    "ja": "フィールド",
+                    "tr": "Alanlar",
+                    "vi": "Trường dữ liệu",
+                    "it": "Campi",
+                    "fa": "فیلدها",
+                    "pl": "Pola",
+                    "uk": "Поля",
+                    "nl": "Velden",
+                    "sv": "Fält",
+                    "cs": "Pole",
+                    "el": "Πεδία"
+                  },
+                  "style": "subtitle"
+                },
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": {
+                    "en": "Edit each field right here in the table — its name, TYPE (text · number · date · yes/no · a choice list · or a link to another table), the OPTIONS for a choice list, whether it's REQUIRED, and which TABLE it belongs to. This typed schema is what the app is really built from.",
+                    "ko": "각 필드는 이 테이블에서 바로 편집합니다 — 이름, TYPE(텍스트·숫자·날짜·예/아니오·선택 목록·다른 테이블로의 링크), 선택 목록의 OPTIONS, REQUIRED 여부, 소속 TABLE. 앱은 실제로 이 타입 지정 스키마를 바탕으로 만들어집니다.",
+                    "zh": "直接在此表中编辑每个字段——其名称、TYPE（文本·数字·日期·是/否·选择列表·或指向其他表的链接）、选择列表的 OPTIONS、是否 REQUIRED，以及所属 TABLE。应用实际上就是基于这份带类型的架构构建的。",
+                    "hi": "हर फ़ील्ड को यहीं टेबल में एडिट करें — उसका नाम, TYPE (टेक्स्ट · संख्या · तिथि · हां/नहीं · चयन सूची · या किसी अन्य टेबल से लिंक), चयन सूची के लिए OPTIONS, वह REQUIRED है या नहीं, और वह किस TABLE से संबंधित है। ऐप वास्तव में इसी टाइप की गई स्कीमा से बनता है।",
+                    "es": "Edita cada campo aquí mismo en la tabla: su nombre, TYPE (texto · número · fecha · sí/no · lista de opciones · o un enlace a otra tabla), las OPTIONS de una lista de opciones, si es REQUIRED y a qué TABLE pertenece. Este esquema tipado es de lo que realmente está hecha la app.",
+                    "fr": "Modifiez chaque champ directement dans la table — son nom, TYPE (texte · nombre · date · oui/non · liste de choix · ou lien vers une autre table), les OPTIONS d'une liste de choix, s'il est REQUIRED, et à quelle TABLE il appartient. C'est ce schéma typé qui construit réellement l'application.",
+                    "ar": "عدّل كل حقل مباشرة هنا في الجدول — اسمه، NOوعه TYPE (نص · رقم · تاريخ · نعم/لا · قائمة اختيار · أو رابط إلى جدول آخر)، خيارات OPTIONS لقائمة الاختيار، هل هو REQUIRED، وإلى أي TABLE ينتمي. هذا المخطط المصنّف هو ما يُبنى منه التطبيق فعليًا.",
+                    "pt": "Edite cada campo diretamente aqui na tabela — seu nome, TYPE (texto · número · data · sim/não · lista de opções · ou um link para outra tabela), as OPTIONS de uma lista de opções, se é REQUIRED, e a qual TABLE pertence. Esse esquema tipado é o que realmente constrói o app.",
+                    "ru": "Редактируйте каждое поле прямо здесь, в таблице — его имя, TYPE (текст · число · дата · да/нет · список выбора · или ссылка на другую таблицу), OPTIONS для списка выбора, обязательность REQUIRED и принадлежность к TABLE. Именно эта типизированная схема лежит в основе приложения.",
+                    "de": "Bearbeite jedes Feld direkt hier in der Tabelle — seinen Namen, TYPE (Text · Zahl · Datum · Ja/Nein · Auswahlliste · oder Verknüpfung zu einer anderen Tabelle), die OPTIONS für eine Auswahlliste, ob es REQUIRED ist, und zu welcher TABLE es gehört. Dieses typisierte Schema ist die eigentliche Grundlage der App.",
+                    "ja": "各フィールドはこのテーブルで直接編集します — 名前、TYPE（テキスト・数値・日付・はい/いいえ・選択リスト・または他のテーブルへのリンク）、選択リストのOPTIONS、REQUIREDかどうか、所属するTABLE。アプリは実際にはこの型付きスキーマから構築されます。",
+                    "tr": "Her alanı doğrudan burada, tabloda düzenleyin — adı, TYPE (metin · sayı · tarih · evet/hayır · seçim listesi · veya başka bir tabloya bağlantı), bir seçim listesi için OPTIONS, REQUIRED olup olmadığı ve hangi TABLE'a ait olduğu. Uygulama gerçekten bu tiplendirilmiş şemadan inşa edilir.",
+                    "vi": "Chỉnh sửa từng trường ngay tại bảng này — tên, TYPE (văn bản · số · ngày · có/không · danh sách lựa chọn · hoặc liên kết đến bảng khác), OPTIONS cho danh sách lựa chọn, có REQUIRED hay không, và thuộc TABLE nào. Lược đồ có kiểu này chính là nền tảng thực sự xây dựng nên ứng dụng.",
+                    "it": "Modifica ogni campo direttamente qui nella tabella — il suo nome, TYPE (testo · numero · data · sì/no · elenco di scelta · o un collegamento a un'altra tabella), le OPTIONS per un elenco di scelta, se è REQUIRED e a quale TABLE appartiene. Questo schema tipizzato è ciò da cui l'app è realmente costruita.",
+                    "fa": "هر فیلد را همین‌جا در جدول ویرایش کنید — نام آن، TYPE (متن · عدد · تاریخ · بله/خیر · فهرست انتخابی · یا پیوند به جدول دیگر)، OPTIONS برای فهرست انتخابی، اینکه REQUIRED است یا نه، و به کدام TABLE تعلق دارد. برنامه در واقع از همین طرحوارهٔ تایپ‌شده ساخته می‌شود.",
+                    "pl": "Edytuj każde pole bezpośrednio tutaj, w tabeli — jego nazwę, TYPE (tekst · liczba · data · tak/nie · lista wyboru · lub łącze do innej tabeli), OPTIONS dla listy wyboru, czy jest REQUIRED, i do której TABLE należy. Ten typowany schemat jest tym, z czego naprawdę zbudowana jest aplikacja.",
+                    "uk": "Редагуйте кожне поле прямо тут, у таблиці — його назву, TYPE (текст · число · дата · так/ні · список вибору · або посилання на іншу таблицю), OPTIONS для списку вибору, чи є воно REQUIRED, і до якої TABLE належить. Саме ця типізована схема є основою застосунку.",
+                    "nl": "Bewerk elk veld direct hier in de tabel — de naam, TYPE (tekst · getal · datum · ja/nee · keuzelijst · of een koppeling naar een andere tabel), de OPTIONS voor een keuzelijst, of het REQUIRED is, en tot welke TABLE het behoort. Dit getypeerde schema is waar de app werkelijk uit is opgebouwd.",
+                    "sv": "Redigera varje fält direkt här i tabellen — dess namn, TYPE (text · nummer · datum · ja/nej · en vallista · eller en länk till en annan tabell), OPTIONS för en vallista, om det är REQUIRED, och vilken TABLE det tillhör. Detta typade schema är vad appen egentligen byggs av.",
+                    "cs": "Upravte každé pole přímo zde v tabulce — jeho název, TYPE (text · číslo · datum · ano/ne · seznam voleb · nebo odkaz na jinou tabulku), OPTIONS pro seznam voleb, zda je REQUIRED, a do které TABLE patří. Toto typované schéma je tím, z čeho je aplikace skutečně postavena.",
+                    "el": "Επεξεργαστείτε κάθε πεδίο απευθείας εδώ στον πίνακα — το όνομά του, TYPE (κείμενο · αριθμός · ημερομηνία · ναι/όχι · λίστα επιλογών · ή σύνδεσμος σε άλλον πίνακα), τις OPTIONS για μια λίστα επιλογών, αν είναι REQUIRED, και σε ποιον TABLE ανήκει. Αυτό το τυποποιημένο σχήμα είναι στην πραγματικότητα η βάση κατασκευής της εφαρμογής."
+                  }
+                },
+                {
+                  "type": "button",
+                  "label": {
+                    "en": "Add field",
+                    "ko": "필드 추가",
+                    "zh": "添加字段",
+                    "hi": "फ़ील्ड जोड़ें",
+                    "es": "Añadir campo",
+                    "fr": "Ajouter un champ",
+                    "ar": "إضافة حقل",
+                    "pt": "Adicionar campo",
+                    "ru": "Добавить поле",
+                    "de": "Feld hinzufügen",
+                    "ja": "フィールドを追加",
+                    "tr": "Alan ekle",
+                    "vi": "Thêm trường",
+                    "it": "Aggiungi campo",
+                    "fa": "افزودن فیلد",
+                    "pl": "Dodaj pole",
+                    "uk": "Додати поле",
+                    "nl": "Veld toevoegen",
+                    "sv": "Lägg till fält",
+                    "cs": "Přidat pole",
+                    "el": "Προσθήκη πεδίου"
+                  },
+                  "icon": "add",
+                  "action": {
+                    "fn": "addRow",
+                    "args": {
+                      "table": "model_fields"
+                    }
+                  }
+                },
+                {
+                  "example": {"ids": ["mf_h_name", "mf_h_sched", "mf_h_color", "mf_c_habit", "mf_c_date", "mf_c_done"], "label": {"en": "Examples", "ko": "예시", "zh": "示例", "hi": "उदाहरण", "es": "Ejemplos", "fr": "Exemples", "ar": "أمثلة", "pt": "Exemplos", "ru": "Примеры", "de": "Beispiele", "ja": "例", "tr": "Örnekler", "vi": "Ví dụ", "it": "Esempi", "fa": "نمونه‌ها", "pl": "Przykłady", "uk": "Приклади", "nl": "Voorbeelden", "sv": "Exempel", "cs": "Příklady", "el": "Παραδείγματα"}, "chipLabel": {"en": "Example", "ko": "예시", "zh": "示例", "hi": "उदाहरण", "es": "Ejemplo", "fr": "Exemple", "ar": "مثال", "pt": "Exemplo", "ru": "Пример", "de": "Beispiel", "ja": "例", "tr": "Örnek", "vi": "Ví dụ", "it": "Esempio", "fa": "نمونه", "pl": "Przykład", "uk": "Приклад", "nl": "Voorbeeld", "sv": "Exempel", "cs": "Příklad", "el": "Παράδειγμα"}, "hideLabel": {"en": "Hide", "ko": "숨기기", "zh": "隐藏", "hi": "छिपाएं", "es": "Ocultar", "fr": "Masquer", "ar": "إخفاء", "pt": "Ocultar", "ru": "Скрыть", "de": "Ausblenden", "ja": "非表示", "tr": "Gizle", "vi": "Ẩn", "it": "Nascondi", "fa": "پنهان", "pl": "Ukryj", "uk": "Приховати", "nl": "Verbergen", "sv": "Dölj", "cs": "Skrýt", "el": "Απόκρυψη"}, "hiddenFromSetting": "makerHabitExampleHidden"},
+                  "type": "table",
+                  "table": "model_fields",
+                  "columns": [
+                    "name",
+                    "type",
+                    "options",
+                    "required",
+                    "table"
+                  ],
+                  "height": 320,
+                  "action": {
+                    "fn": "editRow"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "label": "Bind",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": {
+                    "en": "Step 4 — the connection. Tap a screen element below and pick the data table it shows or writes (a list shows rows of a table; an input writes a field). This is what ties the screens to the data so the whole thing builds as one app.",
+                    "ko": "4단계 — 연결. 아래 화면 요소를 탭하고 표시하거나 기록할 데이터 테이블을 선택하세요(목록은 테이블의 행을 표시하고, 입력란은 필드를 기록합니다). 이것이 화면을 데이터에 묶어 전체가 하나의 앱으로 만들어지게 합니다.",
+                    "zh": "步骤4 — 连接。点击下方的屏幕元素，并选择它所显示或写入的数据表（列表显示表的行；输入框写入字段）。这将屏幕与数据关联起来，使整体构建为一个完整应用。",
+                    "hi": "चरण 4 — कनेक्शन। नीचे किसी स्क्रीन तत्व को टैप करें और वह डेटा टेबल चुनें जिसे यह दिखाता या लिखता है (एक सूची किसी टेबल की पंक्तियां दिखाती है; एक इनपुट फ़ील्ड लिखता है)। यही स्क्रीन को डेटा से जोड़ता है ताकि पूरी चीज़ एक ऐप के रूप में बने।",
+                    "es": "Paso 4: la conexión. Toca un elemento de pantalla abajo y elige la tabla de datos que muestra o en la que escribe (una lista muestra filas de una tabla; un campo de entrada escribe en un campo). Esto es lo que une las pantallas a los datos para que todo se construya como una sola app.",
+                    "fr": "Étape 4 — la connexion. Appuyez sur un élément d'écran ci-dessous et choisissez la table de données qu'il affiche ou dans laquelle il écrit (une liste affiche les lignes d'une table ; un champ de saisie écrit dans un champ). C'est ce qui relie les écrans aux données pour que le tout forme une seule application.",
+                    "ar": "الخطوة 4 — الربط. انقر على عنصر شاشة أدناه واختر جدول البيانات الذي يعرضه أو يكتب فيه (تعرض القائمة صفوف جدول؛ يكتب حقل الإدخال في حقل). هذا ما يربط الشاشات بالبيانات بحيث يُبنى الكل كتطبيق واحد.",
+                    "pt": "Etapa 4 — a conexão. Toque em um elemento de tela abaixo e escolha a tabela de dados que ele mostra ou grava (uma lista mostra linhas de uma tabela; uma entrada grava um campo). Isso é o que liga as telas aos dados para que tudo se construa como um único app.",
+                    "ru": "Шаг 4 — связь. Нажмите на элемент экрана ниже и выберите таблицу данных, которую он отображает или в которую записывает (список показывает строки таблицы; поле ввода записывает поле). Именно это связывает экраны с данными, чтобы всё собиралось как одно приложение.",
+                    "de": "Schritt 4 — die Verbindung. Tippe unten auf ein Bildschirmelement und wähle die Datentabelle aus, die es anzeigt oder in die es schreibt (eine Liste zeigt Zeilen einer Tabelle; eine Eingabe schreibt ein Feld). Dies verbindet die Bildschirme mit den Daten, sodass alles als eine App entsteht.",
+                    "ja": "ステップ4 — 接続。下の画面要素をタップし、それが表示または書き込むデータテーブルを選びます（リストはテーブルの行を表示し、入力欄はフィールドに書き込みます）。これにより画面とデータが結びつき、全体が1つのアプリとして構築されます。",
+                    "tr": "Adım 4 — bağlantı. Aşağıdaki bir ekran öğesine dokunun ve gösterdiği veya yazdığı veri tablosunu seçin (bir liste bir tablonun satırlarını gösterir; bir girdi bir alana yazar). Bu, tüm parçaların tek bir uygulama olarak inşa edilmesi için ekranları verilere bağlayan şeydir.",
+                    "vi": "Bước 4 — kết nối. Chạm vào một phần tử màn hình bên dưới và chọn bảng dữ liệu mà nó hiển thị hoặc ghi vào (danh sách hiển thị các hàng của bảng; ô nhập liệu ghi vào một trường). Đây là thứ ràng buộc màn hình với dữ liệu để toàn bộ được xây dựng thành một ứng dụng duy nhất.",
+                    "it": "Fase 4 — la connessione. Tocca un elemento della schermata qui sotto e scegli la tabella dati che mostra o in cui scrive (un elenco mostra le righe di una tabella; un campo di input scrive un campo). Questo è ciò che collega le schermate ai dati affinché tutto si costruisca come un'unica app.",
+                    "fa": "مرحله ۴ — اتصال. روی یک عنصر صفحه در پایین ضربه بزنید و جدول داده‌ای را که نمایش می‌دهد یا در آن می‌نویسد انتخاب کنید (یک فهرست ردیف‌های یک جدول را نشان می‌دهد؛ یک ورودی یک فیلد را می‌نویسد). این چیزی است که صفحه‌ها را به داده‌ها متصل می‌کند تا کل مجموعه به‌صورت یک برنامه ساخته شود.",
+                    "pl": "Krok 4 — połączenie. Dotknij elementu ekranu poniżej i wybierz tabelę danych, którą wyświetla lub do której zapisuje (lista pokazuje wiersze tabeli; pole wejściowe zapisuje pole). To właśnie łączy ekrany z danymi, dzięki czemu całość buduje się jako jedna aplikacja.",
+                    "uk": "Крок 4 — з'єднання. Торкніться елемента екрана нижче та виберіть таблицю даних, яку він відображає або в яку записує (список показує рядки таблиці; поле вводу записує поле). Саме це пов'язує екрани з даними, щоб усе будувалося як один застосунок.",
+                    "nl": "Stap 4 — de koppeling. Tik op een schermelement hieronder en kies de gegevenstabel die het toont of waarin het schrijft (een lijst toont rijen van een tabel; een invoerveld schrijft een veld). Dit koppelt de schermen aan de gegevens zodat alles als één app wordt gebouwd.",
+                    "sv": "Steg 4 — kopplingen. Tryck på ett skärmelement nedan och välj datatabellen den visar eller skriver till (en lista visar rader i en tabell; ett inmatningsfält skriver ett fält). Det är detta som binder samman skärmarna med datan så att allt byggs som en app.",
+                    "cs": "Krok 4 — propojení. Klepněte na prvek obrazovky níže a vyberte datovou tabulku, kterou zobrazuje nebo do které zapisuje (seznam zobrazuje řádky tabulky; vstupní pole zapisuje pole). Právě to spojuje obrazovky s daty, aby se vše sestavilo jako jedna aplikace.",
+                    "el": "Βήμα 4 — η σύνδεση. Πατήστε ένα στοιχείο οθόνης παρακάτω και επιλέξτε τον πίνακα δεδομένων που εμφανίζει ή στον οποίο γράφει (μια λίστα εμφανίζει γραμμές ενός πίνακα· ένα πεδίο εισαγωγής γράφει ένα πεδίο). Αυτό είναι που συνδέει τις οθόνες με τα δεδομένα ώστε όλα να χτίζονται ως μία εφαρμογή."
+                  }
+                },
+                {
+                  "example": {"ids": ["w_nav", "w_title", "w_email", "w_pass", "w_signin", "w_forgot", "w_demo"], "label": {"en": "Examples", "ko": "예시", "zh": "示例", "hi": "उदाहरण", "es": "Ejemplos", "fr": "Exemples", "ar": "أمثلة", "pt": "Exemplos", "ru": "Примеры", "de": "Beispiele", "ja": "例", "tr": "Örnekler", "vi": "Ví dụ", "it": "Esempi", "fa": "نمونه‌ها", "pl": "Przykłady", "uk": "Приклади", "nl": "Voorbeelden", "sv": "Exempel", "cs": "Příklady", "el": "Παραδείγματα"}, "chipLabel": {"en": "Example", "ko": "예시", "zh": "示例", "hi": "उदाहरण", "es": "Ejemplo", "fr": "Exemple", "ar": "مثال", "pt": "Exemplo", "ru": "Пример", "de": "Beispiel", "ja": "例", "tr": "Örnek", "vi": "Ví dụ", "it": "Esempio", "fa": "نمونه", "pl": "Przykład", "uk": "Приклад", "nl": "Voorbeeld", "sv": "Exempel", "cs": "Příklad", "el": "Παράδειγμα"}, "hideLabel": {"en": "Hide", "ko": "숨기기", "zh": "隐藏", "hi": "छिपाएं", "es": "Ocultar", "fr": "Masquer", "ar": "إخفاء", "pt": "Ocultar", "ru": "Скрыть", "de": "Ausblenden", "ja": "非表示", "tr": "Gizle", "vi": "Ẩn", "it": "Nascondi", "fa": "پنهان", "pl": "Ukryj", "uk": "Приховати", "nl": "Verbergen", "sv": "Dölj", "cs": "Skrýt", "el": "Απόκρυψη"}, "hiddenFromSetting": "makerHabitExampleHidden"},
+                  "type": "table",
+                  "table": "boxes",
+                  "columns": [
+                    "label",
+                    "kind",
+                    "boundTable"
+                  ],
+                  "height": 420,
+                  "action": {
+                    "fn": "editRow"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "label": "Logic",
+            "child": {
+              "type": "segments",
+              "segments": [
+                {
+                  "label": "Behaviors",
+                  "child": {
+                    "type": "column",
+                    "children": [
+                      {
+                        "type": "text",
+                        "style": "caption",
+                        "value": {
+                          "en": "The behavior layer — the companion to Bind. Bind said what each element SHOWS; this says what it DOES. Add a behavior, pick the block, choose what it does (adds a row, writes a field, filters a list…) and which data table. Claude turns these into real actions when it builds.",
+                          "ko": "동작 레이어 — Bind의 짝입니다. Bind는 각 요소가 무엇을 SHOWS(표시)하는지 정했고, 이것은 무엇을 DOES(수행)하는지 정합니다. 동작을 추가하고 블록을 선택한 뒤 무엇을 할지(행 추가, 필드 기록, 목록 필터링 등)와 어떤 데이터 테이블인지 고르세요. Claude가 빌드할 때 이를 실제 동작으로 바꿉니다.",
+                          "zh": "行为层——是 Bind 的搭档。Bind 定义了每个元素“显示”什么；这里定义它“做”什么。添加行为，选择模块，选择它执行的操作（新增一行、写入字段、过滤列表……）以及作用于哪张数据表。构建时 Claude 会把这些转化为真正的操作。",
+                          "hi": "व्यवहार परत — Bind की साथी। Bind ने बताया कि हर तत्व क्या दिखाता है (SHOWS); यह बताता है वह क्या करता है (DOES)। एक व्यवहार जोड़ें, ब्लॉक चुनें, चुनें कि वह क्या करता है (पंक्ति जोड़ता है, फ़ील्ड लिखता है, सूची फ़िल्टर करता है…) और कौन-सी डेटा टेबल। बिल्ड करते समय Claude इन्हें असली क्रियाओं में बदल देता है।",
+                          "es": "La capa de comportamiento: la compañera de Bind. Bind indicaba qué MUESTRA cada elemento; esto indica qué HACE. Añade un comportamiento, elige el bloque, elige qué hace (añade una fila, escribe un campo, filtra una lista…) y en qué tabla de datos. Claude convierte esto en acciones reales al compilar.",
+                          "fr": "La couche de comportement — la complice de Bind. Bind indiquait ce que chaque élément AFFICHE ; ceci indique ce qu'il FAIT. Ajoutez un comportement, choisissez le bloc, choisissez ce qu'il fait (ajoute une ligne, écrit un champ, filtre une liste…) et quelle table de données. Claude transforme cela en actions réelles à la génération.",
+                          "ar": "طبقة السلوك — رفيقة Bind. حدد Bind ما يعرضه (SHOWS) كل عنصر؛ وهذا يحدد ما يفعله (DOES). أضف سلوكًا، اختر الكتلة، اختر ما تفعله (تضيف صفًا، تكتب حقلًا، تُصفّي قائمة…) وأي جدول بيانات. يحوّل Claude هذه إلى إجراءات فعلية عند البناء.",
+                          "pt": "A camada de comportamento — a parceira do Bind. O Bind dizia o que cada elemento MOSTRA; este diz o que ele FAZ. Adicione um comportamento, escolha o bloco, escolha o que ele faz (adiciona uma linha, grava um campo, filtra uma lista…) e em qual tabela de dados. O Claude transforma isso em ações reais ao compilar.",
+                          "ru": "Слой поведения — напарник Bind. Bind определял, что КАЖДЫЙ элемент ПОКАЗЫВАЕТ; здесь — что он ДЕЛАЕТ. Добавьте поведение, выберите блок, выберите, что оно делает (добавляет строку, записывает поле, фильтрует список…) и в какой таблице данных. Claude превращает это в реальные действия при сборке.",
+                          "de": "Die Verhaltensebene — das Gegenstück zu Bind. Bind legte fest, was jedes Element ANZEIGT; dies legt fest, was es TUT. Füge ein Verhalten hinzu, wähle den Block, wähle, was er tut (fügt eine Zeile hinzu, schreibt ein Feld, filtert eine Liste …) und welche Datentabelle. Claude wandelt dies beim Build in echte Aktionen um.",
+                          "ja": "動作レイヤー — Bindの相棒です。Bindは各要素が何を「表示」するかを定義し、これは何を「実行」するかを定義します。動作を追加し、ブロックを選び、何をするか（行の追加、フィールドの書き込み、リストのフィルタなど）とどのデータテーブルかを選びます。ビルド時にClaudeがこれらを実際の動作に変換します。",
+                          "tr": "Davranış katmanı — Bind'ın eşlikçisi. Bind her öğenin ne GÖSTERDİĞİni belirtti; bu ne YAPTIĞINI belirtir. Bir davranış ekleyin, bloğu seçin, ne yaptığını seçin (satır ekler, alan yazar, listeyi filtreler…) ve hangi veri tablosunu. Claude, derlerken bunları gerçek eylemlere dönüştürür.",
+                          "vi": "Lớp hành vi — người bạn đồng hành của Bind. Bind cho biết mỗi phần tử HIỂN THỊ gì; đây cho biết nó LÀM gì. Thêm một hành vi, chọn khối, chọn nó làm gì (thêm một hàng, ghi một trường, lọc danh sách…) và bảng dữ liệu nào. Claude biến những điều này thành hành động thực khi xây dựng.",
+                          "it": "Lo strato di comportamento — il complemento di Bind. Bind indicava cosa MOSTRA ogni elemento; questo indica cosa FA. Aggiungi un comportamento, scegli il blocco, scegli cosa fa (aggiunge una riga, scrive un campo, filtra un elenco…) e quale tabella dati. Claude trasforma tutto ciò in azioni reali durante la compilazione.",
+                          "fa": "لایهٔ رفتار — همراه Bind. Bind مشخص کرد هر عنصر چه چیزی را نشان می‌دهد (SHOWS)؛ این مشخص می‌کند چه کاری انجام می‌دهد (DOES). یک رفتار اضافه کنید، بلوک را انتخاب کنید، انتخاب کنید چه کاری انجام می‌دهد (ردیف اضافه می‌کند، فیلد می‌نویسد، فهرست را فیلتر می‌کند…) و کدام جدول داده. Claude هنگام ساخت اینها را به کنش‌های واقعی تبدیل می‌کند.",
+                          "pl": "Warstwa zachowań — towarzyszka Bind. Bind określała, co POKAZUJE każdy element; ta określa, co ROBI. Dodaj zachowanie, wybierz blok, wybierz co robi (dodaje wiersz, zapisuje pole, filtruje listę…) i którą tabelę danych. Claude zamienia to w rzeczywiste akcje podczas budowania.",
+                          "uk": "Шар поведінки — партнер Bind. Bind визначав, що ПОКАЗУЄ кожен елемент; цей визначає, що він РОБИТЬ. Додайте поведінку, виберіть блок, виберіть, що він робить (додає рядок, записує поле, фільтрує список…) і яку таблицю даних. Claude перетворює це на реальні дії під час побудови.",
+                          "nl": "De gedragslaag — de partner van Bind. Bind bepaalde wat elk element TOONT; dit bepaalt wat het DOET. Voeg een gedrag toe, kies het blok, kies wat het doet (voegt een rij toe, schrijft een veld, filtert een lijst…) en welke gegevenstabel. Claude zet dit om in echte acties tijdens het bouwen.",
+                          "sv": "Beteendelagret — Binds partner. Bind angav vad varje element VISAR; det här anger vad det GÖR. Lägg till ett beteende, välj blocket, välj vad det gör (lägger till en rad, skriver ett fält, filtrerar en lista …) och vilken datatabell. Claude omvandlar dessa till verkliga åtgärder vid byggandet.",
+                          "cs": "Vrstva chování — společník Bind. Bind určoval, co každý prvek ZOBRAZUJE; tato určuje, co DĚLÁ. Přidejte chování, vyberte blok, vyberte, co dělá (přidá řádek, zapíše pole, filtruje seznam…) a kterou datovou tabulku. Claude z toho při sestavování vytváří skutečné akce.",
+                          "el": "Το επίπεδο συμπεριφοράς — ο συνοδοιπόρος του Bind. Το Bind όριζε τι ΕΜΦΑΝΙΖΕΙ κάθε στοιχείο· αυτό ορίζει τι ΚΑΝΕΙ. Προσθέστε μια συμπεριφορά, επιλέξτε το μπλοκ, επιλέξτε τι κάνει (προσθέτει γραμμή, γράφει πεδίο, φιλτράρει λίστα…) και ποιον πίνακα δεδομένων. Το Claude τα μετατρέπει σε πραγματικές ενέργειες κατά τη δημιουργία."
+                        }
+                      },
+                      {
+                        "type": "button",
+                        "label": {
+                          "en": "Add behavior",
+                          "ko": "동작 추가",
+                          "zh": "添加行为",
+                          "hi": "व्यवहार जोड़ें",
+                          "es": "Añadir comportamiento",
+                          "fr": "Ajouter un comportement",
+                          "ar": "إضافة سلوك",
+                          "pt": "Adicionar comportamento",
+                          "ru": "Добавить поведение",
+                          "de": "Verhalten hinzufügen",
+                          "ja": "動作を追加",
+                          "tr": "Davranış ekle",
+                          "vi": "Thêm hành vi",
+                          "it": "Aggiungi comportamento",
+                          "fa": "افزودن رفتار",
+                          "pl": "Dodaj zachowanie",
+                          "uk": "Додати поведінку",
+                          "nl": "Gedrag toevoegen",
+                          "sv": "Lägg till beteende",
+                          "cs": "Přidat chování",
+                          "el": "Προσθήκη συμπεριφοράς"
+                        },
+                        "icon": "add",
+                        "action": {
+                          "fn": "addRow",
+                          "args": {
+                            "table": "wires"
+                          }
+                        }
+                      },
+                      {
+                        "example": {"ids": ["wr_add", "wr_check"], "label": {"en": "Examples", "ko": "예시", "zh": "示例", "hi": "उदाहरण", "es": "Ejemplos", "fr": "Exemples", "ar": "أمثلة", "pt": "Exemplos", "ru": "Примеры", "de": "Beispiele", "ja": "例", "tr": "Örnekler", "vi": "Ví dụ", "it": "Esempi", "fa": "نمونه‌ها", "pl": "Przykłady", "uk": "Приклади", "nl": "Voorbeelden", "sv": "Exempel", "cs": "Příklady", "el": "Παραδείγματα"}, "chipLabel": {"en": "Example", "ko": "예시", "zh": "示例", "hi": "उदाहरण", "es": "Ejemplo", "fr": "Exemple", "ar": "مثال", "pt": "Exemplo", "ru": "Пример", "de": "Beispiel", "ja": "例", "tr": "Örnek", "vi": "Ví dụ", "it": "Esempio", "fa": "نمونه", "pl": "Przykład", "uk": "Приклад", "nl": "Voorbeeld", "sv": "Exempel", "cs": "Příklad", "el": "Παράδειγμα"}, "hideLabel": {"en": "Hide", "ko": "숨기기", "zh": "隐藏", "hi": "छिपाएं", "es": "Ocultar", "fr": "Masquer", "ar": "إخفاء", "pt": "Ocultar", "ru": "Скрыть", "de": "Ausblenden", "ja": "非表示", "tr": "Gizle", "vi": "Ẩn", "it": "Nascondi", "fa": "پنهان", "pl": "Ukryj", "uk": "Приховати", "nl": "Verbergen", "sv": "Dölj", "cs": "Skrýt", "el": "Απόκρυψη"}, "hiddenFromSetting": "makerHabitExampleHidden"},
+                        "type": "table",
+                        "table": "wires",
+                        "columns": [
+                          "element",
+                          "behavior",
+                          "table"
+                        ],
+                        "height": 240,
+                        "action": {
+                          "fn": "editRow"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "label": "Try it",
+                  "child": {
+                    "type": "column",
+                    "children": [
+                      {
+                        "type": "text",
+                        "style": "caption",
+                        "value": {
+                          "en": "A tiny working demo of the same idea on a scratch table. Add item runs a real 'adds a row' action and the row appears below. Fill example data asks your local model to generate rows when it's running, and otherwise drops in a few built-in examples — either way the list updates.",
+                          "ko": "임시 테이블에서 동일한 아이디어를 시연하는 작은 데모입니다. '항목 추가'는 실제 '행 추가' 동작을 실행하며 아래에 행이 나타납니다. '예시 데이터 채우기'는 로컬 모델이 실행 중이면 행 생성을 요청하고, 아니면 기본 내장 예시 몇 개를 넣습니다 — 어느 쪽이든 목록이 갱신됩니다.",
+                          "zh": "这是同一想法在临时表上的一个小型可运行演示。“添加项目”会执行真实的“新增一行”操作，该行会出现在下方。“填充示例数据”会在本地模型运行时请求其生成数据行，否则会插入几条内置示例——无论哪种方式，列表都会更新。",
+                          "hi": "एक स्क्रैच टेबल पर उसी विचार का एक छोटा कार्यशील डेमो। 'आइटम जोड़ें' एक वास्तविक 'पंक्ति जोड़ें' क्रिया चलाता है और पंक्ति नीचे दिखाई देती है। 'उदाहरण डेटा भरें' आपके स्थानीय मॉडल से पंक्तियां बनाने को कहता है जब वह चल रहा हो, अन्यथा कुछ अंतर्निहित उदाहरण डाल देता है — दोनों ही स्थितियों में सूची अपडेट होती है।",
+                          "es": "Una pequeña demo funcional de la misma idea en una tabla de prueba. Añadir elemento ejecuta una acción real de «añadir fila» y la fila aparece debajo. Rellenar datos de ejemplo le pide a tu modelo local que genere filas cuando esté en ejecución, y si no, inserta unos pocos ejemplos integrados; en cualquier caso, la lista se actualiza.",
+                          "fr": "Une petite démo fonctionnelle de la même idée sur une table de test. « Ajouter un élément » exécute une véritable action « ajouter une ligne » et la ligne apparaît ci-dessous. « Remplir avec des données d'exemple » demande à votre modèle local de générer des lignes s'il est en cours d'exécution, sinon insère quelques exemples intégrés — dans les deux cas, la liste se met à jour.",
+                          "ar": "عرض توضيحي صغير وعملي لنفس الفكرة على جدول تجريبي. \"إضافة عنصر\" يُنفّذ إجراء \"إضافة صف\" حقيقيًا ويظهر الصف أدناه. \"تعبئة بيانات نموذجية\" يطلب من نموذجك المحلي إنشاء صفوف عند تشغيله، وإلا يُدرج بضعة أمثلة مدمجة — في كلتا الحالتين تتحدّث القائمة.",
+                          "pt": "Uma pequena demonstração funcional da mesma ideia em uma tabela de rascunho. \"Adicionar item\" executa uma ação real de 'adicionar uma linha' e a linha aparece abaixo. \"Preencher dados de exemplo\" pede ao seu modelo local para gerar linhas quando estiver em execução, e caso contrário insere alguns exemplos integrados — de qualquer forma, a lista é atualizada.",
+                          "ru": "Небольшая рабочая демонстрация той же идеи на черновой таблице. «Добавить элемент» выполняет реальное действие «добавить строку», и строка появляется ниже. «Заполнить примерами данных» просит вашу локальную модель сгенерировать строки, если она запущена, иначе добавляет несколько встроенных примеров — в любом случае список обновляется.",
+                          "de": "Eine kleine, funktionierende Demo derselben Idee auf einer Testtabelle. „Element hinzufügen“ führt eine echte Aktion „Zeile hinzufügen“ aus, und die Zeile erscheint unten. „Beispieldaten einfügen“ bittet dein lokales Modell, Zeilen zu generieren, wenn es läuft, andernfalls werden einige integrierte Beispiele eingefügt — in beiden Fällen aktualisiert sich die Liste.",
+                          "ja": "同じアイデアの小さな動作デモを、試用テーブル上で実行します。「項目を追加」は実際の「行を追加」動作を実行し、行が下に表示されます。「サンプルデータを入力」は、ローカルモデルが実行中であれば行の生成を依頼し、そうでなければいくつかの内蔵サンプルを挿入します — いずれの場合もリストは更新されます。",
+                          "tr": "Aynı fikrin bir taslak tabloda küçük, çalışan bir demosu. \"Öğe ekle\", gerçek bir 'satır ekle' eylemi çalıştırır ve satır aşağıda görünür. \"Örnek verilerle doldur\", çalışıyorsa yerel modelinizden satır üretmesini ister, aksi halde birkaç yerleşik örnek ekler — her iki durumda da liste güncellenir.",
+                          "vi": "Một bản demo hoạt động nhỏ của cùng ý tưởng trên bảng nháp. \"Thêm mục\" chạy một hành động 'thêm hàng' thực sự và hàng đó xuất hiện bên dưới. \"Điền dữ liệu mẫu\" yêu cầu mô hình cục bộ của bạn tạo các hàng khi nó đang chạy, nếu không sẽ thêm vài ví dụ có sẵn — dù cách nào danh sách cũng được cập nhật.",
+                          "it": "Una piccola demo funzionante della stessa idea su una tabella di prova. \"Aggiungi elemento\" esegue una vera azione 'aggiungi una riga' e la riga appare sotto. \"Compila con dati di esempio\" chiede al tuo modello locale di generare righe quando è in esecuzione, altrimenti inserisce alcuni esempi integrati — in entrambi i casi l'elenco si aggiorna.",
+                          "fa": "یک نمایش کاری کوچک از همان ایده روی یک جدول آزمایشی. «افزودن مورد» یک کنش واقعیِ «افزودن ردیف» را اجرا می‌کند و ردیف در پایین ظاهر می‌شود. «پر کردن با داده نمونه» از مدل محلی شما می‌خواهد در صورت اجرا بودن، ردیف تولید کند، در غیر این صورت چند نمونهٔ داخلی درج می‌کند — در هر دو حالت فهرست به‌روزرسانی می‌شود.",
+                          "pl": "Małe działające demo tego samego pomysłu na tabeli roboczej. „Dodaj element” uruchamia prawdziwą akcję „dodaj wiersz”, a wiersz pojawia się poniżej. „Wypełnij przykładowymi danymi” prosi lokalny model o wygenerowanie wierszy, gdy działa, a w przeciwnym razie wstawia kilka wbudowanych przykładów — tak czy inaczej lista się aktualizuje.",
+                          "uk": "Невелике робоче демо тієї самої ідеї на чорновій таблиці. «Додати елемент» виконує реальну дію «додати рядок», і рядок з'являється нижче. «Заповнити прикладними даними» просить вашу локальну модель згенерувати рядки, якщо вона запущена, інакше додає кілька вбудованих прикладів — у будь-якому разі список оновлюється.",
+                          "nl": "Een kleine werkende demo van hetzelfde idee op een kladtabel. 'Item toevoegen' voert een echte 'rij toevoegen'-actie uit en de rij verschijnt hieronder. 'Voorbeeldgegevens invullen' vraagt je lokale model om rijen te genereren wanneer het actief is, en anders worden er enkele ingebouwde voorbeelden toegevoegd — in beide gevallen wordt de lijst bijgewerkt.",
+                          "sv": "En liten fungerande demo av samma idé i en skisstabell. \"Lägg till objekt\" kör en riktig \"lägg till en rad\"-åtgärd och raden visas nedan. \"Fyll i exempeldata\" ber din lokala modell generera rader när den körs, annars läggs några inbyggda exempel till — i båda fallen uppdateras listan.",
+                          "cs": "Malá funkční ukázka stejné myšlenky na testovací tabulce. „Přidat položku“ spustí skutečnou akci „přidat řádek“ a řádek se objeví níže. „Vyplnit ukázková data“ požádá váš lokální model o vygenerování řádků, pokud běží, jinak vloží několik vestavěných příkladů — v obou případech se seznam aktualizuje.",
+                          "el": "Μια μικρή λειτουργική επίδειξη της ίδιας ιδέας σε έναν πρόχειρο πίνακα. Το «Προσθήκη στοιχείου» εκτελεί μια πραγματική ενέργεια «προσθήκη γραμμής» και η γραμμή εμφανίζεται παρακάτω. Το «Συμπλήρωση δεδομένων παραδείγματος» ζητά από το τοπικό σας μοντέλο να δημιουργήσει γραμμές όταν εκτελείται, διαφορετικά προσθέτει μερικά ενσωματωμένα παραδείγματα — και στις δύο περιπτώσεις η λίστα ενημερώνεται."
+                        }
+                      },
+                      {
+                        "type": "row",
+                        "wrap": true,
+                        "children": [
+                          {
+                            "type": "button",
+                            "label": {
+                              "en": "Add item",
+                              "ko": "항목 추가",
+                              "zh": "添加项目",
+                              "hi": "आइटम जोड़ें",
+                              "es": "Añadir elemento",
+                              "fr": "Ajouter un élément",
+                              "ar": "إضافة عنصر",
+                              "pt": "Adicionar item",
+                              "ru": "Добавить элемент",
+                              "de": "Element hinzufügen",
+                              "ja": "項目を追加",
+                              "tr": "Öğe ekle",
+                              "vi": "Thêm mục",
+                              "it": "Aggiungi elemento",
+                              "fa": "افزودن مورد",
+                              "pl": "Dodaj element",
+                              "uk": "Додати елемент",
+                              "nl": "Item toevoegen",
+                              "sv": "Lägg till objekt",
+                              "cs": "Přidat položku",
+                              "el": "Προσθήκη στοιχείου"
+                            },
+                            "icon": "add",
+                            "action": {
+                              "fn": "addRow",
+                              "args": {
+                                "table": "demo_items",
+                                "values": {
+                                  "title": "New item",
+                                  "done": false
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "type": "button",
+                            "label": {
+                              "en": "Fill example data",
+                              "ko": "예시 데이터 채우기",
+                              "zh": "填充示例数据",
+                              "hi": "उदाहरण डेटा भरें",
+                              "es": "Rellenar datos de ejemplo",
+                              "fr": "Remplir avec des données d'exemple",
+                              "ar": "تعبئة بيانات نموذجية",
+                              "pt": "Preencher dados de exemplo",
+                              "ru": "Заполнить примерами данных",
+                              "de": "Beispieldaten einfügen",
+                              "ja": "サンプルデータを入力",
+                              "tr": "Örnek verilerle doldur",
+                              "vi": "Điền dữ liệu mẫu",
+                              "it": "Compila con dati di esempio",
+                              "fa": "پر کردن با داده نمونه",
+                              "pl": "Wypełnij przykładowymi danymi",
+                              "uk": "Заповнити прикладними даними",
+                              "nl": "Voorbeeldgegevens invullen",
+                              "sv": "Fyll i exempeldata",
+                              "cs": "Vyplnit ukázková data",
+                              "el": "Συμπλήρωση δεδομένων παραδείγματος"
+                            },
+                            "icon": "auto_awesome",
+                            "action": {
+                              "fn": "callRest",
+                              "args": {
+                                "url": "${slmBaseUrl}/v1/chat/completions",
+                                "method": "POST",
+                                "body": {
+                                  "model": "qwen2.5:3b-instruct",
+                                  "temperature": 0.4,
+                                  "response_format": {
+                                    "type": "json_object"
+                                  },
+                                  "messages": [
+                                    {
+                                      "role": "system",
+                                      "content": "You generate example rows for a to-do / habit demo table. Reply ONLY with JSON: {\"items\":[{\"title\":\"short label\",\"done\":false}]}."
+                                    },
+                                    {
+                                      "role": "user",
+                                      "content": "Given this app's data model: ${table:data_model}, give 5 short, varied example rows that fit it (each: a title and done=false)."
+                                    }
+                                  ]
+                                },
+                                "into": "demo_items",
+                                "parse": {
+                                  "path": "choices[0].message.content",
+                                  "json": true,
+                                  "rows": "items"
+                                },
+                                "stub": [
+                                  {
+                                    "title": "Drink water",
+                                    "done": false
+                                  },
+                                  {
+                                    "title": "Read 10 pages",
+                                    "done": false
+                                  },
+                                  {
+                                    "title": "Walk 20 minutes",
+                                    "done": true
+                                  },
+                                  {
+                                    "title": "Stretch",
+                                    "done": false
+                                  },
+                                  {
+                                    "title": "Journal",
+                                    "done": false
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "table",
+                        "table": "demo_items",
+                        "columns": [
+                          "title",
+                          "done"
+                        ],
+                        "height": 220,
+                        "action": {
+                          "fn": "editRow"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "label": "Code",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": {
+                    "en": "The app's whole config as raw JSON. “Generate from design” fills it from everything you've drawn; edit it freely; “Build from this code” rebuilds the app from whatever's in the box. The power-user / dev view.",
+                    "ko": "앱의 전체 구성을 원시 JSON으로 봅니다. '디자인에서 생성'은 그동안 그린 모든 것으로 채워주며, 자유롭게 편집할 수 있습니다. '이 코드로 빌드'는 상자에 있는 내용으로 앱을 다시 빌드합니다. 파워 유저/개발자용 화면입니다.",
+                    "zh": "应用的完整配置以原始 JSON 形式呈现。“从设计生成”会根据你所绘制的一切来填充；可自由编辑；“根据此代码构建”会用输入框中的内容重建应用。这是高级用户/开发者视图。",
+                    "hi": "ऐप का पूरा कॉन्फ़िग रॉ JSON के रूप में। 'डिज़ाइन से जनरेट करें' आपके बनाए सब कुछ से इसे भरता है; इसे स्वतंत्र रूप से संपादित करें; 'इस कोड से बिल्ड करें' बॉक्स में जो कुछ है उससे ऐप को फिर से बनाता है। यह पावर-यूज़र / डेव व्यू है।",
+                    "es": "Toda la configuración de la app como JSON sin procesar. «Generar desde el diseño» la rellena con todo lo que has dibujado; edítala libremente; «Compilar desde este código» reconstruye la app a partir de lo que haya en el cuadro. La vista para usuarios avanzados / desarrolladores.",
+                    "fr": "Toute la configuration de l'application en JSON brut. « Générer à partir de la conception » la remplit avec tout ce que vous avez dessiné ; modifiez-la librement ; « Créer à partir de ce code » recompile l'application à partir de ce qui se trouve dans le champ. La vue pour utilisateurs avancés / développeurs.",
+                    "ar": "إعدادات التطبيق بالكامل كملف JSON خام. \"إنشاء من التصميم\" يملأه من كل ما رسمته؛ عدّله بحرية؛ \"البناء من هذا الكود\" يعيد بناء التطبيق من محتوى الصندوق. عرض المستخدم المتقدم / المطوّر.",
+                    "pt": "Toda a configuração do app como JSON bruto. \"Gerar a partir do design\" o preenche com tudo o que você desenhou; edite livremente; \"Compilar a partir deste código\" reconstrói o app a partir do que estiver na caixa. A visão para usuários avançados / desenvolvedores.",
+                    "ru": "Вся конфигурация приложения в виде необработанного JSON. «Сгенерировать из дизайна» заполняет её на основе всего нарисованного; редактируйте свободно; «Собрать из этого кода» пересобирает приложение из содержимого поля. Вид для продвинутых пользователей/разработчиков.",
+                    "de": "Die gesamte App-Konfiguration als rohes JSON. „Aus Design generieren“ füllt sie mit allem, was du gezeichnet hast; bearbeite sie frei; „Aus diesem Code erstellen“ baut die App aus dem Inhalt des Felds neu auf. Die Ansicht für Power-User/Entwickler.",
+                    "ja": "アプリの全設定を生のJSONとして表示します。「デザインから生成」は描いたすべての内容で埋めます。自由に編集できます。「このコードからビルド」はボックス内の内容からアプリを再構築します。パワーユーザー/開発者向けビューです。",
+                    "tr": "Uygulamanın tüm yapılandırması ham JSON olarak. \"Tasarımdan oluştur\" çizdiğiniz her şeyden doldurur; serbestçe düzenleyin; \"Bu koddan derle\" kutuda ne varsa ondan uygulamayı yeniden derler. İleri düzey kullanıcı / geliştirici görünümü.",
+                    "vi": "Toàn bộ cấu hình của ứng dụng dưới dạng JSON thô. \"Tạo từ thiết kế\" điền vào đó từ mọi thứ bạn đã vẽ; chỉnh sửa tự do; \"Xây dựng từ mã này\" xây dựng lại ứng dụng từ bất kỳ nội dung nào trong hộp. Chế độ xem dành cho người dùng nâng cao / nhà phát triển.",
+                    "it": "L'intera configurazione dell'app come JSON grezzo. \"Genera dal design\" la riempie con tutto ciò che hai disegnato; modificala liberamente; \"Compila da questo codice\" ricostruisce l'app da qualsiasi cosa ci sia nella casella. La vista per utenti avanzati / sviluppatori.",
+                    "fa": "کل پیکربندی برنامه به‌صورت JSON خام. «تولید از طراحی» آن را از هر آنچه رسم کرده‌اید پر می‌کند؛ آزادانه ویرایش کنید؛ «ساخت از این کد» برنامه را از هر چه در کادر است دوباره می‌سازد. نمای کاربر حرفه‌ای/توسعه‌دهنده.",
+                    "pl": "Cała konfiguracja aplikacji jako surowy JSON. „Generuj z projektu” wypełnia ją na podstawie wszystkiego, co narysowałeś; edytuj swobodnie; „Zbuduj z tego kodu” odbudowuje aplikację z zawartości pola. Widok dla zaawansowanych użytkowników/programistów.",
+                    "uk": "Уся конфігурація застосунку як необроблений JSON. «Згенерувати з дизайну» заповнює її на основі всього намальованого; редагуйте вільно; «Побудувати з цього коду» перебудовує застосунок із вмісту поля. Перегляд для досвідчених користувачів/розробників.",
+                    "nl": "De volledige configuratie van de app als ruwe JSON. 'Genereren vanuit ontwerp' vult deze met alles wat je hebt getekend; bewerk vrij; 'Bouwen vanuit deze code' herbouwt de app op basis van wat er in het vak staat. De weergave voor poweruser/developer.",
+                    "sv": "Appens hela konfiguration som rå JSON. \"Generera från design\" fyller i den utifrån allt du har ritat; redigera fritt; \"Bygg från denna kod\" bygger om appen från vad som än finns i rutan. Vyn för avancerade användare/utvecklare.",
+                    "cs": "Celá konfigurace aplikace jako čistý JSON. „Vygenerovat z návrhu“ ji vyplní na základě všeho, co jste nakreslili; volně upravujte; „Sestavit z tohoto kódu“ přestaví aplikaci z toho, co je v poli. Zobrazení pro pokročilé uživatele/vývojáře.",
+                    "el": "Ολόκληρη η διαμόρφωση της εφαρμογής ως ακατέργαστο JSON. Το «Δημιουργία από το σχέδιο» το συμπληρώνει από όλα όσα έχετε σχεδιάσει· επεξεργαστείτε το ελεύθερα· το «Δημιουργία από αυτόν τον κώδικα» ανακατασκευάζει την εφαρμογή από ό,τι υπάρχει στο πλαίσιο. Η προβολή για προχωρημένους χρήστες/προγραμματιστές."
+                  }
+                },
+                {
+                  "type": "row",
+                  "wrap": true,
+                  "children": [
+                    {
+                      "type": "button",
+                      "label": {
+                        "en": "Generate from design",
+                        "ko": "디자인에서 생성",
+                        "zh": "从设计生成",
+                        "hi": "डिज़ाइन से जनरेट करें",
+                        "es": "Generar desde el diseño",
+                        "fr": "Générer à partir de la conception",
+                        "ar": "إنشاء من التصميم",
+                        "pt": "Gerar a partir do design",
+                        "ru": "Сгенерировать из дизайна",
+                        "de": "Aus Design generieren",
+                        "ja": "デザインから生成",
+                        "tr": "Tasarımdan oluştur",
+                        "vi": "Tạo từ thiết kế",
+                        "it": "Genera dal design",
+                        "fa": "تولید از طراحی",
+                        "pl": "Generuj z projektu",
+                        "uk": "Згенерувати з дизайну",
+                        "nl": "Genereren vanuit ontwerp",
+                        "sv": "Generera från design",
+                        "cs": "Vygenerovat z návrhu",
+                        "el": "Δημιουργία από το σχέδιο"
+                      },
+                      "icon": "sync",
+                      "action": {
+                        "fn": "hostCall",
+                        "args": {
+                          "name": "generateCode",
+                          "appId": "maker_app",
+                          "appName": "My app"
+                        }
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "label": {
+                        "en": "Build from this code",
+                        "ko": "이 코드로 빌드",
+                        "zh": "根据此代码构建",
+                        "hi": "इस कोड से बिल्ड करें",
+                        "es": "Compilar desde este código",
+                        "fr": "Créer à partir de ce code",
+                        "ar": "البناء من هذا الكود",
+                        "pt": "Compilar a partir deste código",
+                        "ru": "Собрать из этого кода",
+                        "de": "Aus diesem Code erstellen",
+                        "ja": "このコードからビルド",
+                        "tr": "Bu koddan derle",
+                        "vi": "Xây dựng từ mã này",
+                        "it": "Compila da questo codice",
+                        "fa": "ساخت از این کد",
+                        "pl": "Zbuduj z tego kodu",
+                        "uk": "Побудувати з цього коду",
+                        "nl": "Bouwen vanuit deze code",
+                        "sv": "Bygg från denna kod",
+                        "cs": "Sestavit z tohoto kódu",
+                        "el": "Δημιουργία από αυτόν τον κώδικα"
+                      },
+                      "icon": "play_arrow",
+                      "action": {
+                        "fn": "hostCall",
+                        "args": {
+                          "name": "buildFromCode",
+                          "appId": "maker_app",
+                          "appName": "My app"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "example": {"ids": ["code"], "label": {"en": "Examples", "ko": "예시", "zh": "示例", "hi": "उदाहरण", "es": "Ejemplos", "fr": "Exemples", "ar": "أمثلة", "pt": "Exemplos", "ru": "Примеры", "de": "Beispiele", "ja": "例", "tr": "Örnekler", "vi": "Ví dụ", "it": "Esempi", "fa": "نمونه‌ها", "pl": "Przykłady", "uk": "Приклади", "nl": "Voorbeelden", "sv": "Exempel", "cs": "Příklady", "el": "Παραδείγματα"}, "chipLabel": {"en": "Example", "ko": "예시", "zh": "示例", "hi": "उदाहरण", "es": "Ejemplo", "fr": "Exemple", "ar": "مثال", "pt": "Exemplo", "ru": "Пример", "de": "Beispiel", "ja": "例", "tr": "Örnek", "vi": "Ví dụ", "it": "Esempio", "fa": "نمونه", "pl": "Przykład", "uk": "Приклад", "nl": "Voorbeeld", "sv": "Exempel", "cs": "Příklad", "el": "Παράδειγμα"}, "hideLabel": {"en": "Hide", "ko": "숨기기", "zh": "隐藏", "hi": "छिपाएं", "es": "Ocultar", "fr": "Masquer", "ar": "إخفاء", "pt": "Ocultar", "ru": "Скрыть", "de": "Ausblenden", "ja": "非表示", "tr": "Gizle", "vi": "Ẩn", "it": "Nascondi", "fa": "پنهان", "pl": "Ukryj", "uk": "Приховати", "nl": "Verbergen", "sv": "Dölj", "cs": "Skrýt", "el": "Απόκρυψη"}, "hiddenFromSetting": "makerHabitExampleHidden"},
+                  "type": "cards",
+                  "table": "code",
+                  "title": "title",
+                  "subtitle": "json",
+                  "expandable": true,
+                  "open": "Edit / view full code",
+                  "action": {
+                    "fn": "editRow"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "label": "Build",
+            "child": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": {
+                    "en": "Step 5 — turn the blueprint into a real app. Build app from wireframe creates an editable app on your shelf from your screens (with bound tables wired in). Prepare for the model bundles the whole connected blueprint — screens, flow, data, bindings, brief — for hand-off.",
+                    "ko": "5단계 — 청사진을 실제 앱으로 만드세요. '와이어프레임으로 앱 빌드'는 화면(연결된 테이블 포함)을 바탕으로 선반에 편집 가능한 앱을 만듭니다. '모델용으로 준비'는 화면, 흐름, 데이터, 바인딩, 브리프 등 연결된 청사진 전체를 인계용으로 묶습니다.",
+                    "zh": "步骤5 — 将蓝图变成真正的应用。“根据线框图构建应用”会根据你的屏幕（含已绑定的表）在你的应用架上创建一个可编辑的应用。“为模型准备”将屏幕、流程、数据、绑定、简报等整份连接蓝图打包，用于交接。",
+                    "hi": "चरण 5 — ब्लूप्रिंट को असली ऐप में बदलें। 'वायरफ़्रेम से ऐप बिल्ड करें' आपकी स्क्रीन से (बाउंड टेबल के साथ) आपकी शेल्फ पर एक संपादन योग्य ऐप बनाता है। 'मॉडल के लिए तैयार करें' पूरे जुड़े हुए ब्लूप्रिंट — स्क्रीन, फ़्लो, डेटा, बाइंडिंग, ब्रीफ़ — को हैंड-ऑफ़ के लिए बंडल करता है।",
+                    "es": "Paso 5: convierte el plano en una app real. «Compilar app desde el wireframe» crea una app editable en tu estante a partir de tus pantallas (con las tablas vinculadas incluidas). «Preparar para el modelo» empaqueta todo el plano conectado — pantallas, flujo, datos, vínculos, resumen — para su entrega.",
+                    "fr": "Étape 5 — transformez le plan en véritable application. « Créer l'app à partir de la maquette » crée une application modifiable sur votre étagère à partir de vos écrans (avec les tables liées intégrées). « Préparer pour le modèle » regroupe tout le plan connecté — écrans, flux, données, liaisons, brief — pour la transmission.",
+                    "ar": "الخطوة 5 — حوّل المخطط إلى تطبيق حقيقي. \"بناء التطبيق من الإطار السلكي\" ينشئ تطبيقًا قابلًا للتحرير على رفّك من شاشاتك (مع الجداول المرتبطة موصولة). \"التحضير للنموذج\" يجمّع المخطط المترابط بالكامل — الشاشات، التدفق، البيانات، الروابط، الملخص — للتسليم.",
+                    "pt": "Etapa 5 — transforme o blueprint em um app real. \"Compilar app a partir do wireframe\" cria um app editável na sua prateleira a partir das suas telas (com as tabelas vinculadas conectadas). \"Preparar para o modelo\" empacota todo o blueprint conectado — telas, fluxo, dados, vínculos, briefing — para a entrega.",
+                    "ru": "Шаг 5 — превратите чертёж в настоящее приложение. «Собрать приложение из каркаса» создаёт редактируемое приложение на вашей полке из ваших экранов (со связанными таблицами). «Подготовить для модели» упаковывает весь связанный чертёж — экраны, поток, данные, привязки, описание — для передачи.",
+                    "de": "Schritt 5 — verwandle den Bauplan in eine echte App. „App aus dem Wireframe erstellen“ erzeugt eine bearbeitbare App in deinem Regal aus deinen Bildschirmen (mit verknüpften Tabellen). „Für das Modell vorbereiten“ bündelt den gesamten verbundenen Bauplan — Bildschirme, Ablauf, Daten, Verknüpfungen, Briefing — zur Übergabe.",
+                    "ja": "ステップ5 — ブループリントを実際のアプリに変えます。「ワイヤーフレームからアプリをビルド」は、画面（バインドされたテーブルを含む）から編集可能なアプリを棚に作成します。「モデル用に準備」は、画面、フロー、データ、バインディング、要望など、連結されたブループリント全体を引き渡し用にまとめます。",
+                    "tr": "Adım 5 — taslağı gerçek bir uygulamaya dönüştürün. \"Wireframe'den uygulama oluştur\", ekranlarınızdan (bağlı tablolar dahil) rafınızda düzenlenebilir bir uygulama oluşturur. \"Model için hazırla\", tüm bağlı taslağı — ekranlar, akış, veri, bağlamalar, brief — teslim için paketler.",
+                    "vi": "Bước 5 — biến bản thiết kế thành một ứng dụng thực sự. \"Xây dựng ứng dụng từ wireframe\" tạo một ứng dụng có thể chỉnh sửa trên kệ của bạn từ các màn hình (với các bảng liên kết đã được nối). \"Chuẩn bị cho mô hình\" gói toàn bộ bản thiết kế liên kết — màn hình, luồng, dữ liệu, liên kết, bản tóm tắt — để bàn giao.",
+                    "it": "Fase 5 — trasforma il progetto in un'app reale. \"Crea app dal wireframe\" crea un'app modificabile sul tuo scaffale a partire dalle tue schermate (con le tabelle collegate incorporate). \"Prepara per il modello\" impacchetta l'intero progetto connesso — schermate, flusso, dati, collegamenti, brief — per la consegna.",
+                    "fa": "مرحله ۵ — طرح را به یک برنامهٔ واقعی تبدیل کنید. «ساخت برنامه از وایرفریم» از روی صفحه‌های شما (همراه با جداول متصل) یک برنامهٔ قابل‌ویرایش در قفسه‌تان می‌سازد. «آماده‌سازی برای مدل» کل طرح متصل — صفحه‌ها، جریان، داده، پیوندها، خلاصه — را برای تحویل بسته‌بندی می‌کند.",
+                    "pl": "Krok 5 — zamień plan w prawdziwą aplikację. „Zbuduj aplikację z makiety” tworzy edytowalną aplikację na Twojej półce na podstawie ekranów (z powiązanymi tabelami). „Przygotuj dla modelu” pakuje cały połączony plan — ekrany, przepływ, dane, powiązania, brief — do przekazania.",
+                    "uk": "Крок 5 — перетворіть креслення на справжній застосунок. «Побудувати застосунок з каркасу» створює редагований застосунок на вашій полиці з ваших екранів (із прив'язаними таблицями). «Підготувати для моделі» пакує все пов'язане креслення — екрани, потік, дані, прив'язки, бриф — для передачі.",
+                    "nl": "Stap 5 — maak van de blauwdruk een echte app. 'App bouwen vanuit wireframe' maakt een bewerkbare app op je plank op basis van je schermen (met gekoppelde tabellen erin). 'Voorbereiden voor het model' bundelt de volledige verbonden blauwdruk — schermen, flow, gegevens, koppelingen, briefing — voor overdracht.",
+                    "sv": "Steg 5 — förvandla blueprinten till en riktig app. \"Bygg app från wireframe\" skapar en redigerbar app på din hylla utifrån dina skärmar (med bundna tabeller inkopplade). \"Förbered för modellen\" paketerar hela den sammankopplade blueprinten — skärmar, flöde, data, bindningar, sammanfattning — för överlämning.",
+                    "cs": "Krok 5 — proměňte plán ve skutečnou aplikaci. „Sestavit aplikaci z drátěného modelu“ vytvoří upravitelnou aplikaci na vaší poličce z vašich obrazovek (s napojenými tabulkami). „Připravit pro model“ zabalí celý propojený plán — obrazovky, tok, data, vazby, zadání — k předání.",
+                    "el": "Βήμα 5 — μετατρέψτε το σχέδιο σε πραγματική εφαρμογή. Το «Δημιουργία εφαρμογής από το wireframe» δημιουργεί μια επεξεργάσιμη εφαρμογή στο ράφι σας από τις οθόνες σας (με τους συνδεδεμένους πίνακες ενσωματωμένους). Το «Προετοιμασία για το μοντέλο» πακετάρει ολόκληρο το συνδεδεμένο σχέδιο — οθόνες, ροή, δεδομένα, συνδέσεις, σύνοψη — για παράδοση."
+                  }
+                },
+                {
+                  "type": "button",
+                  "label": {
+                    "en": "Build app from wireframe",
+                    "ko": "와이어프레임으로 앱 빌드",
+                    "zh": "根据线框图构建应用",
+                    "hi": "वायरफ़्रेम से ऐप बिल्ड करें",
+                    "es": "Compilar app desde el wireframe",
+                    "fr": "Créer l'app à partir de la maquette",
+                    "ar": "بناء التطبيق من الإطار السلكي",
+                    "pt": "Compilar app a partir do wireframe",
+                    "ru": "Собрать приложение из каркаса",
+                    "de": "App aus dem Wireframe erstellen",
+                    "ja": "ワイヤーフレームからアプリをビルド",
+                    "tr": "Wireframe'den uygulama oluştur",
+                    "vi": "Xây dựng ứng dụng từ wireframe",
+                    "it": "Crea l'app dal wireframe",
+                    "fa": "ساخت برنامه از وایرفریم",
+                    "pl": "Zbuduj aplikację z makiety",
+                    "uk": "Побудувати застосунок з каркасу",
+                    "nl": "App bouwen vanuit wireframe",
+                    "sv": "Bygg app från wireframe",
+                    "cs": "Sestavit aplikaci z drátěného modelu",
+                    "el": "Δημιουργία εφαρμογής από το wireframe"
+                  },
+                  "icon": "auto_awesome",
+                  "action": {
+                    "fn": "hostCall",
+                    "args": {
+                      "name": "buildFromDesign",
+                      "appId": "maker_app",
+                      "appName": "My app"
+                    }
+                  }
+                },
+                {
+                  "type": "button",
+                  "label": {
+                    "en": "Prepare for the model",
+                    "ko": "모델용으로 준비",
+                    "zh": "为模型准备",
+                    "hi": "मॉडल के लिए तैयार करें",
+                    "es": "Preparar para el modelo",
+                    "fr": "Préparer pour le modèle",
+                    "ar": "التحضير للنموذج",
+                    "pt": "Preparar para o modelo",
+                    "ru": "Подготовить для модели",
+                    "de": "Für das Modell vorbereiten",
+                    "ja": "モデル用に準備",
+                    "tr": "Model için hazırla",
+                    "vi": "Chuẩn bị cho mô hình",
+                    "it": "Prepara per il modello",
+                    "fa": "آماده‌سازی برای مدل",
+                    "pl": "Przygotuj dla modelu",
+                    "uk": "Підготувати для моделі",
+                    "nl": "Voorbereiden voor het model",
+                    "sv": "Förbered för modellen",
+                    "cs": "Připravit pro model",
+                    "el": "Προετοιμασία για το μοντέλο"
+                  },
+                  "icon": "send",
+                  "action": {
+                    "fn": "hostCall",
+                    "args": {
+                      "name": "prepareBrief"
+                    }
+                  }
+                },
+                {
+                  "type": "button",
+                  "label": {
+                    "en": "Draft with the model",
+                    "ko": "모델로 초안 작성",
+                    "zh": "用模型起草",
+                    "hi": "मॉडल के साथ ड्राफ़्ट करें",
+                    "es": "Redactar con el modelo",
+                    "fr": "Rédiger avec le modèle",
+                    "ar": "صياغة باستخدام النموذج",
+                    "pt": "Rascunhar com o modelo",
+                    "ru": "Черновик с моделью",
+                    "de": "Mit dem Modell entwerfen",
+                    "ja": "モデルで下書き",
+                    "tr": "Modelle taslak oluştur",
+                    "vi": "Soạn thảo với mô hình",
+                    "it": "Crea bozza con il modello",
+                    "fa": "پیش‌نویس با مدل",
+                    "pl": "Sporządź szkic z modelem",
+                    "uk": "Створити чернетку з моделлю",
+                    "nl": "Concept maken met het model",
+                    "sv": "Utkast med modellen",
+                    "cs": "Vytvořit koncept s modelem",
+                    "el": "Πρόχειρο με το μοντέλο"
+                  },
+                  "icon": "auto_awesome",
+                  "action": {
+                    "fn": "callRest",
+                    "args": {
+                      "url": "${slmBaseUrl}/v1/chat/completions",
+                      "method": "POST",
+                      "body": {
+                        "model": "qwen2.5:3b-instruct",
+                        "temperature": 0.5,
+                        "response_format": {
+                          "type": "json_object"
+                        },
+                        "messages": [
+                          {
+                            "role": "system",
+                            "content": "You are a co-designer for a small no-code app builder. Read the user's app design and suggest concrete next steps. Reply ONLY with JSON: {\"suggestions\":[{\"title\":\"short\",\"detail\":\"one sentence\",\"kind\":\"feature\"}]} where kind is one of feature, data, screen, fix."
+                          },
+                          {
+                            "role": "user",
+                            "content": "Request: ${table:brief}. Data model: ${table:data_model}. Fields: ${table:model_fields}. Features so far: ${table:features}. Suggest 5 concrete improvements or missing pieces for this app."
+                          }
+                        ]
+                      },
+                      "into": "suggestions",
+                      "parse": {
+                        "path": "choices[0].message.content",
+                        "json": true,
+                        "rows": "suggestions"
+                      },
+                      "stub": [
+                        {
+                          "title": "Stamp a created date",
+                          "detail": "Add a date field set when each row is created, so lists can sort by recency.",
+                          "kind": "data"
+                        },
+                        {
+                          "title": "Friendly empty state",
+                          "detail": "Show a short message and an Add button when a list has no rows yet.",
+                          "kind": "screen"
+                        },
+                        {
+                          "title": "One-tap done",
+                          "detail": "Let a list row toggle done without opening the editor.",
+                          "kind": "feature"
+                        },
+                        {
+                          "title": "A details screen",
+                          "detail": "Tapping a row opens a full view instead of inline edit only.",
+                          "kind": "screen"
+                        },
+                        {
+                          "title": "Mark key fields required",
+                          "detail": "Flag the must-have fields as required so the form guides input.",
+                          "kind": "fix"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "divider"
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "en": "What's in the blueprint",
+                    "ko": "청사진에 포함된 것",
+                    "zh": "蓝图中包含的内容",
+                    "hi": "ब्लूप्रिंट में क्या है",
+                    "es": "Qué contiene el plano",
+                    "fr": "Ce que contient le plan",
+                    "ar": "ما الذي يحتويه المخطط",
+                    "pt": "O que há no blueprint",
+                    "ru": "Что входит в чертёж",
+                    "de": "Was der Bauplan enthält",
+                    "ja": "ブループリントの内容",
+                    "tr": "Taslakta neler var",
+                    "vi": "Những gì có trong bản thiết kế",
+                    "it": "Cosa contiene il progetto",
+                    "fa": "در طرح چه چیزی هست",
+                    "pl": "Co zawiera plan",
+                    "uk": "Що входить у креслення",
+                    "nl": "Wat er in het blauwdruk zit",
+                    "sv": "Vad blueprinten innehåller",
+                    "cs": "Co obsahuje plán",
+                    "el": "Τι περιλαμβάνει το σχέδιο"
+                  },
+                  "style": "subtitle"
+                },
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": {
+                    "en": "Screens (Wireframe) · flow steps (Flow) · data tables (Data) · screen→table bindings (Bind) · your request (Brief). The more connected it is, the closer the generated app matches what you meant.",
+                    "ko": "화면(Wireframe) · 흐름 단계(Flow) · 데이터 테이블(Data) · 화면→테이블 바인딩(Bind) · 요청(Brief). 더 많이 연결될수록 생성된 앱이 의도한 바에 더 가까워집니다.",
+                    "zh": "屏幕（线框图）· 流程步骤（流程）· 数据表（数据）· 屏幕→表绑定（绑定）· 你的请求（简报）。连接得越充分，生成的应用就越贴合你的本意。",
+                    "hi": "स्क्रीन (Wireframe) · फ़्लो चरण (Flow) · डेटा टेबल (Data) · स्क्रीन→टेबल बाइंडिंग (Bind) · आपका अनुरोध (Brief)। यह जितना अधिक जुड़ा होगा, जनरेट किया गया ऐप उतना ही आपके अर्थ के करीब होगा।",
+                    "es": "Pantallas (Wireframe) · pasos de flujo (Flow) · tablas de datos (Data) · vínculos pantalla→tabla (Bind) · tu solicitud (Brief). Cuanto más conectado esté, más se acercará la app generada a lo que quisiste decir.",
+                    "fr": "Écrans (Wireframe) · étapes du flux (Flow) · tables de données (Data) · liaisons écran→table (Bind) · votre demande (Brief). Plus c'est connecté, plus l'application générée correspond à ce que vous vouliez dire.",
+                    "ar": "الشاشات (Wireframe) · خطوات التدفق (Flow) · جداول البيانات (Data) · روابط الشاشة↔الجدول (Bind) · طلبك (Brief). كلما زاد الترابط، اقترب التطبيق المُنشأ مما قصدته.",
+                    "pt": "Telas (Wireframe) · etapas do fluxo (Flow) · tabelas de dados (Data) · vínculos tela→tabela (Bind) · sua solicitação (Brief). Quanto mais conectado, mais o app gerado se aproxima do que você quis dizer.",
+                    "ru": "Экраны (Wireframe) · шаги потока (Flow) · таблицы данных (Data) · привязки экран→таблица (Bind) · ваш запрос (Brief). Чем сильнее связано, тем ближе сгенерированное приложение к задуманному.",
+                    "de": "Bildschirme (Wireframe) · Ablaufschritte (Flow) · Datentabellen (Data) · Bildschirm→Tabelle-Verknüpfungen (Bind) · deine Anfrage (Brief). Je stärker vernetzt, desto genauer entspricht die generierte App dem, was du meintest.",
+                    "ja": "画面（Wireframe）・フローステップ（Flow）・データテーブル（Data）・画面→テーブルのバインディング（Bind）・要望（Brief）。連携が深いほど、生成されるアプリはあなたの意図に近くなります。",
+                    "tr": "Ekranlar (Wireframe) · akış adımları (Flow) · veri tabloları (Data) · ekran→tablo bağlamaları (Bind) · isteğiniz (Brief). Ne kadar bağlantılı olursa, oluşturulan uygulama kastettiğinize o kadar yakın olur.",
+                    "vi": "Màn hình (Wireframe) · các bước luồng (Flow) · bảng dữ liệu (Data) · liên kết màn hình→bảng (Bind) · yêu cầu của bạn (Brief). Càng liên kết chặt chẽ, ứng dụng được tạo càng sát với ý bạn muốn.",
+                    "it": "Schermate (Wireframe) · passaggi del flusso (Flow) · tabelle dati (Data) · collegamenti schermata→tabella (Bind) · la tua richiesta (Brief). Più è connesso, più l'app generata corrisponde a ciò che intendevi.",
+                    "fa": "صفحه‌ها (Wireframe) · مراحل جریان (Flow) · جداول داده (Data) · پیوندهای صفحه→جدول (Bind) · درخواست شما (Brief). هرچه اتصال بیشتر باشد، برنامهٔ تولیدشده به آنچه منظور داشتید نزدیک‌تر است.",
+                    "pl": "Ekrany (Wireframe) · kroki przepływu (Flow) · tabele danych (Data) · powiązania ekran→tabela (Bind) · Twoja prośba (Brief). Im większe powiązanie, tym wygenerowana aplikacja bliższa temu, co miałeś na myśli.",
+                    "uk": "Екрани (Wireframe) · кроки потоку (Flow) · таблиці даних (Data) · прив'язки екран→таблиця (Bind) · ваш запит (Brief). Що більше зв'язків, то ближче згенерований застосунок до задуманого.",
+                    "nl": "Schermen (Wireframe) · flowstappen (Flow) · gegevenstabellen (Data) · scherm→tabelkoppelingen (Bind) · jouw verzoek (Brief). Hoe meer het verbonden is, hoe dichter de gegenereerde app bij jouw bedoeling komt.",
+                    "sv": "Skärmar (Wireframe) · flödessteg (Flow) · datatabeller (Data) · skärm→tabellbindningar (Bind) · din begäran (Brief). Ju mer sammankopplat, desto närmare matchar den genererade appen vad du menade.",
+                    "cs": "Obrazovky (Wireframe) · kroky toku (Flow) · datové tabulky (Data) · vazby obrazovka→tabulka (Bind) · váš požadavek (Brief). Čím více je propojeno, tím blíže vygenerovaná aplikace odpovídá tomu, co jste zamýšleli.",
+                    "el": "Οθόνες (Wireframe) · βήματα ροής (Flow) · πίνακες δεδομένων (Data) · συνδέσεις οθόνης→πίνακα (Bind) · το αίτημά σας (Brief). Όσο πιο συνδεδεμένο είναι, τόσο περισσότερο η δημιουργημένη εφαρμογή ταιριάζει σε αυτό που εννοούσατε."
+                  }
+                },
+                {
+                  "type": "divider"
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "en": "Model suggestions",
+                    "ko": "모델 제안",
+                    "zh": "模型建议",
+                    "hi": "मॉडल सुझाव",
+                    "es": "Sugerencias del modelo",
+                    "fr": "Suggestions du modèle",
+                    "ar": "اقتراحات النموذج",
+                    "pt": "Sugestões do modelo",
+                    "ru": "Предложения модели",
+                    "de": "Modellvorschläge",
+                    "ja": "モデルの提案",
+                    "tr": "Model önerileri",
+                    "vi": "Đề xuất từ mô hình",
+                    "it": "Suggerimenti del modello",
+                    "fa": "پیشنهادهای مدل",
+                    "pl": "Sugestie modelu",
+                    "uk": "Пропозиції моделі",
+                    "nl": "Modelsuggesties",
+                    "sv": "Modellförslag",
+                    "cs": "Návrhy modelu",
+                    "el": "Προτάσεις μοντέλου"
+                  },
+                  "style": "subtitle"
+                },
+                {
+                  "type": "text",
+                  "style": "caption",
+                  "value": {
+                    "en": "Draft with the model reads your whole design (request, data model, fields, features) on your device and suggests concrete next steps below. With no local model running it shows a few starter ideas.",
+                    "ko": "'모델로 초안 작성'은 기기에서 전체 설계(요청, 데이터 모델, 필드, 기능)를 읽고 아래에 구체적인 다음 단계를 제안합니다. 로컬 모델이 실행 중이지 않으면 몇 가지 시작 아이디어를 보여줍니다.",
+                    "zh": "“用模型起草”会在你的设备上读取整个设计（请求、数据模型、字段、功能），并在下方提出具体的后续步骤建议。若没有本地模型运行，则显示几个起步创意。",
+                    "hi": "'मॉडल के साथ ड्राफ़्ट करें' आपके डिवाइस पर आपका पूरा डिज़ाइन (अनुरोध, डेटा मॉडल, फ़ील्ड, फ़ीचर) पढ़ता है और नीचे ठोस अगले कदमों का सुझाव देता है। कोई लोकल मॉडल न चलने पर यह कुछ शुरुआती विचार दिखाता है।",
+                    "es": "«Redactar con el modelo» lee todo tu diseño (solicitud, modelo de datos, campos, funciones) en tu dispositivo y sugiere pasos concretos a continuación. Si no hay ningún modelo local en ejecución, muestra algunas ideas iniciales.",
+                    "fr": "« Rédiger avec le modèle » lit l'intégralité de votre conception (demande, modèle de données, champs, fonctionnalités) sur votre appareil et suggère des étapes concrètes ci-dessous. Si aucun modèle local n'est en cours d'exécution, il affiche quelques idées de départ.",
+                    "ar": "\"صياغة باستخدام النموذج\" يقرأ تصميمك بالكامل (الطلب، نموذج البيانات، الحقول، الميزات) على جهازك ويقترح خطوات تالية ملموسة أدناه. بدون تشغيل نموذج محلي، يعرض بضع أفكار أولية.",
+                    "pt": "\"Rascunhar com o modelo\" lê todo o seu design (solicitação, modelo de dados, campos, funcionalidades) no seu dispositivo e sugere próximos passos concretos abaixo. Sem nenhum modelo local em execução, mostra algumas ideias iniciais.",
+                    "ru": "«Черновик с моделью» считывает весь ваш дизайн (запрос, модель данных, поля, функции) на вашем устройстве и предлагает ниже конкретные следующие шаги. Если локальная модель не запущена, показывает несколько стартовых идей.",
+                    "de": "„Mit dem Modell entwerfen“ liest dein gesamtes Design (Anfrage, Datenmodell, Felder, Funktionen) auf deinem Gerät und schlägt unten konkrete nächste Schritte vor. Ohne laufendes lokales Modell zeigt es einige Startideen.",
+                    "ja": "「モデルで下書き」は、あなたのデバイス上で設計全体（要望、データモデル、フィールド、機能）を読み取り、下に具体的な次のステップを提案します。ローカルモデルが動作していない場合は、いくつかの初期アイデアを表示します。",
+                    "tr": "\"Modelle taslak oluştur\", cihazınızdaki tüm tasarımınızı (istek, veri modeli, alanlar, özellikler) okur ve aşağıda somut sonraki adımlar önerir. Yerel model çalışmıyorsa birkaç başlangıç fikri gösterir.",
+                    "vi": "\"Soạn thảo với mô hình\" đọc toàn bộ thiết kế của bạn (yêu cầu, mô hình dữ liệu, trường, tính năng) trên thiết bị của bạn và đề xuất các bước tiếp theo cụ thể bên dưới. Nếu không có mô hình cục bộ nào đang chạy, nó sẽ hiển thị vài ý tưởng khởi đầu.",
+                    "it": "\"Crea bozza con il modello\" legge l'intero design (richiesta, modello dati, campi, funzionalità) sul tuo dispositivo e suggerisce di seguito passi successivi concreti. Senza alcun modello locale in esecuzione, mostra alcune idee di partenza.",
+                    "fa": "«پیش‌نویس با مدل» کل طراحی شما (درخواست، مدل داده، فیلدها، ویژگی‌ها) را روی دستگاه شما می‌خواند و در پایین گام‌های بعدی مشخصی پیشنهاد می‌دهد. اگر مدل محلی‌ای در حال اجرا نباشد، چند ایدهٔ شروع نشان می‌دهد.",
+                    "pl": "„Sporządź szkic z modelem” odczytuje cały Twój projekt (żądanie, model danych, pola, funkcje) na Twoim urządzeniu i proponuje poniżej konkretne kolejne kroki. Bez działającego modelu lokalnego pokazuje kilka pomysłów na start.",
+                    "uk": "«Створити чернетку з моделлю» зчитує весь ваш дизайн (запит, модель даних, поля, функції) на вашому пристрої та пропонує нижче конкретні наступні кроки. Без запущеної локальної моделі показує кілька стартових ідей.",
+                    "nl": "'Concept maken met het model' leest je hele ontwerp (verzoek, gegevensmodel, velden, functies) op je apparaat en stelt hieronder concrete volgende stappen voor. Zonder een actief lokaal model toont het een paar startideeën.",
+                    "sv": "\"Utkast med modellen\" läser hela din design (begäran, datamodell, fält, funktioner) på din enhet och föreslår konkreta nästa steg nedan. Utan någon lokal modell igång visas några startidéer.",
+                    "cs": "„Vytvořit koncept s modelem“ přečte celý váš návrh (požadavek, datový model, pole, funkce) na vašem zařízení a níže navrhne konkrétní další kroky. Pokud neběží žádný lokální model, zobrazí několik výchozích nápadů.",
+                    "el": "Το «Πρόχειρο με το μοντέλο» διαβάζει ολόκληρο το σχέδιό σας (αίτημα, μοντέλο δεδομένων, πεδία, λειτουργίες) στη συσκευή σας και προτείνει παρακάτω συγκεκριμένα επόμενα βήματα. Χωρίς τοπικό μοντέλο σε λειτουργία, εμφανίζει μερικές αρχικές ιδέες."
+                  }
+                },
+                {
+                  "type": "cards",
+                  "emptyIcon": "auto_awesome",
+                  "emptyTitle": {
+                    "en": "No suggestions yet",
+                    "ko": "아직 제안 없음",
+                    "zh": "暂无建议",
+                    "hi": "अभी तक कोई सुझाव नहीं",
+                    "es": "Aún no hay sugerencias",
+                    "fr": "Pas encore de suggestions",
+                    "ar": "لا توجد اقتراحات بعد",
+                    "pt": "Ainda não há sugestões",
+                    "ru": "Пока нет предложений",
+                    "de": "Noch keine Vorschläge",
+                    "ja": "まだ提案はありません",
+                    "tr": "Henüz öneri yok",
+                    "vi": "Chưa có đề xuất nào",
+                    "it": "Nessun suggerimento ancora",
+                    "fa": "هنوز پیشنهادی نیست",
+                    "pl": "Brak jeszcze sugestii",
+                    "uk": "Ще немає пропозицій",
+                    "nl": "Nog geen suggesties",
+                    "sv": "Inga förslag ännu",
+                    "cs": "Zatím žádné návrhy",
+                    "el": "Δεν υπάρχουν ακόμη προτάσεις"
+                  },
+                  "emptyText": {
+                    "en": "Tap Draft with the model for next-step ideas.",
+                    "ko": "다음 단계 아이디어를 얻으려면 '모델로 초안 작성'을 누르세요.",
+                    "zh": "点击“用模型起草”获取下一步建议。",
+                    "hi": "अगले कदम के विचारों के लिए 'मॉडल के साथ ड्राफ़्ट करें' टैप करें।",
+                    "es": "Toca «Redactar con el modelo» para obtener ideas de próximos pasos.",
+                    "fr": "Appuyez sur « Rédiger avec le modèle » pour des idées d'étapes suivantes.",
+                    "ar": "اضغط على \"صياغة باستخدام النموذج\" للحصول على أفكار للخطوات التالية.",
+                    "pt": "Toque em \"Rascunhar com o modelo\" para ideias de próximos passos.",
+                    "ru": "Нажмите «Черновик с моделью», чтобы получить идеи для следующих шагов.",
+                    "de": "Tippe auf „Mit dem Modell entwerfen“ für Ideen zu den nächsten Schritten.",
+                    "ja": "次のステップのアイデアを得るには「モデルで下書き」をタップしてください。",
+                    "tr": "Sıradaki adım fikirleri için \"Modelle taslak oluştur\"a dokunun.",
+                    "vi": "Nhấn \"Soạn thảo với mô hình\" để có ý tưởng cho bước tiếp theo.",
+                    "it": "Tocca \"Crea bozza con il modello\" per idee sui prossimi passi.",
+                    "fa": "برای ایده‌های مرحله بعد روی «پیش‌نویس با مدل» ضربه بزنید.",
+                    "pl": "Dotknij „Sporządź szkic z modelem”, aby uzyskać pomysły na kolejne kroki.",
+                    "uk": "Торкніться «Створити чернетку з моделлю» для ідей наступних кроків.",
+                    "nl": "Tik op 'Concept maken met het model' voor ideeën voor volgende stappen.",
+                    "sv": "Tryck på \"Utkast med modellen\" för idéer om nästa steg.",
+                    "cs": "Klepněte na „Vytvořit koncept s modelem“ pro nápady na další kroky.",
+                    "el": "Πατήστε «Πρόχειρο με το μοντέλο» για ιδέες επόμενων βημάτων."
+                  },
+                  "table": "suggestions",
+                  "title": "title",
+                  "subtitle": "detail",
+                  "tags": [
+                    {
+                      "column": "kind"
+                    }
+                  ],
+                  "action": {
+                    "fn": "editRow"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "fill": true,
+        "scrollBody": true
+      }
+    }
+  }
+}

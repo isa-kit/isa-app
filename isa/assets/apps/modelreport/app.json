@@ -1,0 +1,13 @@
+{
+  "id": "modelreport",
+  "name": "Model reports",
+  "category": "Analytics",
+  "description": "Model-run dashboards: metrics, comparisons and an optional map.",
+  "icon": "leaderboard",
+  "color": "#2E6E5A",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_modelreport"
+  },
+  "seedVersion": "2026-07-14.1-provenance-labels.l10n-int-0903"
+}

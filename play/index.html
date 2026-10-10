@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Play — free standalone games from devisant</title>
+<meta name="description" content="Free standalone games from devisant. Play in your browser or download the APK.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <h1>Play</h1>
+  <p>free standalone games from devisant</p>
+</header>
+
+<main id="game-list">
+  <noscript>
+    <div class="card">
+      <h2>Landsmith</h2>
+      <p class="tagline">A small city-building sim. One valley, one settlement.</p>
+      <p class="meta">version — · —</p>
+      <p class="empty-note">Enable JavaScript to see the full, up-to-date list, or check games.json directly.</p>
+    </div>
+  </noscript>
+</main>
+
+<footer class="site-footer">
+  <p>More at <a href="https://devisant.com">devisant.com</a></p>
+</footer>
+
+<script>
+(function () {
+  var list = document.getElementById('game-list');
+  fetch('games.json', { cache: 'no-store' })
+    .then(function (r) { return r.json(); })
+    .then(function (games) {
+      if (!games || !games.length) {
+        list.innerHTML = '<p class="empty-note">No games published yet — check back soon.</p>';
+        return;
+      }
+      list.innerHTML = '';
+      games.forEach(function (g) {
+        var card = document.createElement('div');
+        card.className = 'card';
+        var previewNote = g.apk && g.apk.preview
+          ? '<p class="preview-note">Android: allow installs from unknown sources; this build is signed with a preview key.</p>'
+          : '';
+        var shaLine = g.apk && g.apk.sha256
+          ? '<details class="sha-line"><summary>sha256</summary><code>' + g.apk.sha256 + '</code></details>'
+          : '';
+        var apkSize = g.apk && g.apk.size ? ' <span class="apk-size">(' + g.apk.size + ')</span>' : '';
+        card.innerHTML =
+          '<h2>' + g.name + '</h2>' +
+          '<p class="tagline">' + (g.tagline || '') + '</p>' +
+          '<p class="meta">' + (g.version || '') + ' · ' + (g.date || '') + '</p>' +
+          '<div class="actions">' +
+            '<a class="btn btn-play" href="' + g.id + '/">Play in browser</a>' +
+            (g.apk && g.apk.url ? '<a class="btn btn-apk" href="' + g.apk.url + '">Download APK</a>' + apkSize : '') +
+          '</div>' +
+          previewNote + shaLine;
+        list.appendChild(card);
+      });
+    })
+    .catch(function () {
+      list.innerHTML = '<p class="empty-note">Could not load the game list.</p>';
+    });
+})();
+</script>
+</body>
+</html>

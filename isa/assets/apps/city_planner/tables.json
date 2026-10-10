@@ -1,0 +1,34 @@
+{
+  "tables": [
+    {
+      "name": "parcels",
+      "label": "Parcels",
+      "icon": "grid_view",
+      "description": "City lots placed on a real map. Tap one to zone it (residential, commercial, industrial, park)."
+    },
+    {
+      "name": "city",
+      "label": "City",
+      "icon": "location_city",
+      "description": "The city's running state — turn, budget, population, happiness, pollution."
+    },
+    {
+      "name": "city_history",
+      "label": "History",
+      "icon": "show_chart",
+      "description": "A snapshot of the city's stats at the end of each turn (for the trend charts)."
+    },
+    {
+      "name": "features",
+      "label": "Features",
+      "icon": "park",
+      "description": "Real OpenStreetMap points around the city — green spaces/parks and roads — used as the spatial backdrop for the per-resident simulation."
+    },
+    {
+      "name": "residents",
+      "label": "Residents",
+      "icon": "person",
+      "description": "Individual residents placed on the map. Each has its own nature/car preferences; happiness is recomputed from nearby features and parcels."
+    }
+  ]
+}

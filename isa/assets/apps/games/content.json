@@ -1,0 +1,2536 @@
+{
+  "matches": [
+    {
+      "id": "m1",
+      "title": "Match 1",
+      "status": "White to move",
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "moves": []
+    }
+  ],
+  "units": [
+    {
+      "id": "u1",
+      "label": "🏰 Base",
+      "side": "blue",
+      "kind": "base",
+      "hp": 30,
+      "x": 60,
+      "y": 200
+    },
+    {
+      "id": "u2",
+      "label": "⚔️ Infantry",
+      "side": "blue",
+      "kind": "infantry",
+      "hp": 10,
+      "x": 160,
+      "y": 130
+    },
+    {
+      "id": "u3",
+      "label": "🏹 Archer",
+      "side": "blue",
+      "kind": "archer",
+      "hp": 8,
+      "x": 160,
+      "y": 270
+    },
+    {
+      "id": "u4",
+      "label": "🏰 Base",
+      "side": "red",
+      "kind": "base",
+      "hp": 30,
+      "x": 620,
+      "y": 200
+    },
+    {
+      "id": "u5",
+      "label": "⚔️ Infantry",
+      "side": "red",
+      "kind": "infantry",
+      "hp": 10,
+      "x": 520,
+      "y": 130
+    },
+    {
+      "id": "u6",
+      "label": "🏹 Archer",
+      "side": "red",
+      "kind": "archer",
+      "hp": 8,
+      "x": 520,
+      "y": 270
+    }
+  ],
+  "war": [
+    {
+      "id": "w1",
+      "turn": 0,
+      "blueGold": 20,
+      "redGold": 20,
+      "blueArmy": 3,
+      "redArmy": 3,
+      "lastRoll": 0
+    }
+  ],
+  "warlog": [],
+  "games": [
+    {
+      "id": "g_chess",
+      "name": "♟ Chess",
+      "screen": "chess",
+      "mode": "live",
+      "players": "2",
+      "tagline": "Full rules — castling, en passant, promotion, mate. Share a room to play a side from each device.",
+      "genre": "board"
+    },
+    {
+      "id": "g_skirmish",
+      "name": "⚔️ Skirmish",
+      "screen": "skirmish",
+      "mode": "live",
+      "players": "2",
+      "tagline": "Turn-based wargame: economy, dice combat, a shared map.",
+      "genre": "strategy"
+    },
+    {
+      "id": "g_freeboard",
+      "name": "🎲 Free board",
+      "screen": "freeboard",
+      "mode": "live",
+      "players": "1–4",
+      "tagline": "A blank tabletop: add pieces, invent rules, prototype a new game.",
+      "genre": "sandbox"
+    },
+    {
+      "id": "g_blackjack",
+      "name": "🂡 Blackjack",
+      "screen": "blackjack",
+      "genre": "cards",
+      "mode": "live",
+      "players": "1–4",
+      "tagline": "Hit or stand against the dealer."
+    },
+    {
+      "id": "g_old_maid",
+      "name": "🃟 Old Maid",
+      "screen": "old_maid",
+      "genre": "cards",
+      "mode": "live",
+      "players": "1–4",
+      "tagline": "Pass, pair, and don't get stuck with the maid."
+    },
+    {
+      "id": "g_go_fish",
+      "name": "🐟 Go Fish",
+      "screen": "go_fish",
+      "genre": "cards",
+      "mode": "live",
+      "players": "1–4",
+      "tagline": "Ask, draw, and collect the books."
+    },
+    {
+      "id": "g_war",
+      "name": "⚔️ War",
+      "screen": "war",
+      "genre": "cards",
+      "mode": "live",
+      "players": "1–4",
+      "tagline": "Flip high, take the pile."
+    },
+    {
+      "id": "g_memory_pairs",
+      "name": "🎴 Memory Pairs",
+      "screen": "memory_pairs",
+      "genre": "cards",
+      "mode": "live",
+      "players": "1–4",
+      "tagline": "Find the matching pairs."
+    },
+    {
+      "id": "g_backgammon",
+      "name": "🎯 Backgammon",
+      "screen": "backgammon",
+      "genre": "board",
+      "mode": "live",
+      "players": "1–4",
+      "tagline": "Race your checkers home."
+    },
+    {
+      "id": "g_checkers",
+      "name": "⛀ Checkers",
+      "screen": "checkers",
+      "genre": "board",
+      "mode": "live",
+      "players": "1–4",
+      "tagline": "Jump, capture, king me."
+    },
+    {
+      "id": "g_mancala",
+      "name": "🪨 Mancala",
+      "screen": "mancala",
+      "genre": "board",
+      "mode": "live",
+      "players": "1–4",
+      "tagline": "Sow the stones, capture the store."
+    },
+    {
+      "id": "g_battleship",
+      "name": "🚢 Battleship",
+      "screen": "battleship",
+      "genre": "board",
+      "mode": "live",
+      "players": "1–4",
+      "tagline": "Hunt the hidden fleet."
+    },
+    {
+      "id": "g_dots_boxes",
+      "name": "✏️ Dots Boxes",
+      "screen": "dots_boxes",
+      "genre": "board",
+      "mode": "live",
+      "players": "1–4",
+      "tagline": "Close a box, take a point."
+    },
+    {
+      "id": "g_tabletop",
+      "name": "🎲 Tabletop",
+      "screen": "tabletop",
+      "genre": "sandbox",
+      "mode": "live",
+      "players": "1–4",
+      "tagline": "A free table for any game you invent."
+    },
+    {
+      "id": "g_saboteur",
+      "name": "🕵️ Saboteur",
+      "screen": "saboteur",
+      "genre": "party",
+      "mode": "live",
+      "players": "1–4",
+      "tagline": "Hidden roles — find the saboteur."
+    },
+    {
+      "id": "g_yahtzee",
+      "name": "🎲 Yahtzee",
+      "screen": "yahtzee",
+      "genre": "dice",
+      "mode": "live",
+      "players": "1–4",
+      "tagline": "Five dice, thirteen boxes, one perfect roll."
+    },
+    {
+      "id": "g_shop",
+      "name": "🛍 Game Shop",
+      "screen": "shop",
+      "genre": "shop",
+      "mode": "live",
+      "players": "—",
+      "tagline": "Get new games — installed onto your shelf in one tap."
+    }
+  ],
+  "pieces": [
+    {
+      "id": "p1",
+      "label": "♛ Queen",
+      "owner": "p1",
+      "x": 120,
+      "y": 100
+    },
+    {
+      "id": "p2",
+      "label": "♛ Queen",
+      "owner": "p2",
+      "x": 120,
+      "y": 300
+    },
+    {
+      "id": "p3",
+      "label": "🎲 Die",
+      "owner": "neutral",
+      "x": 300,
+      "y": 200
+    }
+  ],
+  "blackjack_cards": [],
+  "blackjack_players": [
+    {
+      "id": "p1",
+      "name": "Player 1",
+      "chips": 100,
+      "bet": 0
+    },
+    {
+      "id": "p2",
+      "name": "Player 2",
+      "chips": 100,
+      "bet": 0
+    },
+    {
+      "id": "p3",
+      "name": "Player 3",
+      "chips": 100,
+      "bet": 0
+    }
+  ],
+  "old_maid_cards": [],
+  "old_maid_players": [
+    {
+      "id": "p1",
+      "name": "Player 1"
+    },
+    {
+      "id": "p2",
+      "name": "Player 2"
+    },
+    {
+      "id": "p3",
+      "name": "Player 3"
+    }
+  ],
+  "go_fish_cards": [],
+  "go_fish_players": [
+    {
+      "id": "p1",
+      "name": "Player 1"
+    },
+    {
+      "id": "p2",
+      "name": "Player 2"
+    },
+    {
+      "id": "p3",
+      "name": "Player 3"
+    }
+  ],
+  "war_cards": [],
+  "war_players": [
+    {
+      "id": "p1",
+      "name": "Player 1"
+    },
+    {
+      "id": "p2",
+      "name": "Player 2"
+    }
+  ],
+  "memory_pairs_cards": [],
+  "backgammon_checkers": [
+    {
+      "id": "w1",
+      "label": "W1",
+      "color": "white",
+      "x": 850,
+      "y": 560,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "w2",
+      "label": "W2",
+      "color": "white",
+      "x": 850,
+      "y": 514,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "w3",
+      "label": "W3",
+      "color": "white",
+      "x": 20,
+      "y": 560,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "w4",
+      "label": "W4",
+      "color": "white",
+      "x": 20,
+      "y": 514,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "w5",
+      "label": "W5",
+      "color": "white",
+      "x": 20,
+      "y": 468,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "w6",
+      "label": "W6",
+      "color": "white",
+      "x": 20,
+      "y": 422,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "w7",
+      "label": "W7",
+      "color": "white",
+      "x": 20,
+      "y": 376,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "w8",
+      "label": "W8",
+      "color": "white",
+      "x": 300,
+      "y": 20,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "w9",
+      "label": "W9",
+      "color": "white",
+      "x": 300,
+      "y": 66,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "w10",
+      "label": "W10",
+      "color": "white",
+      "x": 300,
+      "y": 112,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "w11",
+      "label": "W11",
+      "color": "white",
+      "x": 500,
+      "y": 20,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "w12",
+      "label": "W12",
+      "color": "white",
+      "x": 500,
+      "y": 66,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "w13",
+      "label": "W13",
+      "color": "white",
+      "x": 500,
+      "y": 112,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "w14",
+      "label": "W14",
+      "color": "white",
+      "x": 500,
+      "y": 158,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "w15",
+      "label": "W15",
+      "color": "white",
+      "x": 500,
+      "y": 204,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "b1",
+      "label": "B1",
+      "color": "black",
+      "x": 850,
+      "y": 20,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "b2",
+      "label": "B2",
+      "color": "black",
+      "x": 850,
+      "y": 66,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "b3",
+      "label": "B3",
+      "color": "black",
+      "x": 20,
+      "y": 20,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "b4",
+      "label": "B4",
+      "color": "black",
+      "x": 20,
+      "y": 66,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "b5",
+      "label": "B5",
+      "color": "black",
+      "x": 20,
+      "y": 112,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "b6",
+      "label": "B6",
+      "color": "black",
+      "x": 20,
+      "y": 158,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "b7",
+      "label": "B7",
+      "color": "black",
+      "x": 20,
+      "y": 204,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "b8",
+      "label": "B8",
+      "color": "black",
+      "x": 300,
+      "y": 560,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "b9",
+      "label": "B9",
+      "color": "black",
+      "x": 300,
+      "y": 514,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "b10",
+      "label": "B10",
+      "color": "black",
+      "x": 300,
+      "y": 468,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "b11",
+      "label": "B11",
+      "color": "black",
+      "x": 500,
+      "y": 560,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "b12",
+      "label": "B12",
+      "color": "black",
+      "x": 500,
+      "y": 514,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "b13",
+      "label": "B13",
+      "color": "black",
+      "x": 500,
+      "y": 468,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "b14",
+      "label": "B14",
+      "color": "black",
+      "x": 500,
+      "y": 422,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "b15",
+      "label": "B15",
+      "color": "black",
+      "x": 500,
+      "y": 376,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "zbar",
+      "label": "BAR",
+      "color": "zone",
+      "x": 440,
+      "y": 290,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "zoff",
+      "label": "BEAR OFF",
+      "color": "zone",
+      "x": 940,
+      "y": 290,
+      "w": 90,
+      "h": 40
+    }
+  ],
+  "backgammon_dice": [
+    {
+      "id": "d1",
+      "label": "Die 1",
+      "value": 1
+    },
+    {
+      "id": "d2",
+      "label": "Die 2",
+      "value": 1
+    }
+  ],
+  "backgammon_players": [
+    {
+      "id": "pl1",
+      "name": "Player 1",
+      "playerId": "p1",
+      "side": "white",
+      "score": 0
+    },
+    {
+      "id": "pl2",
+      "name": "Player 2",
+      "playerId": "p2",
+      "side": "black",
+      "score": 0
+    }
+  ],
+  "backgammon_turn": [
+    {
+      "id": "t1",
+      "player": "White"
+    }
+  ],
+  "checkers_pieces": [
+    {
+      "id": "b1",
+      "label": "B1",
+      "kind": "black",
+      "x": 80,
+      "y": 16,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "b2",
+      "label": "B2",
+      "kind": "black",
+      "x": 208,
+      "y": 16,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "b3",
+      "label": "B3",
+      "kind": "black",
+      "x": 336,
+      "y": 16,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "b4",
+      "label": "B4",
+      "kind": "black",
+      "x": 464,
+      "y": 16,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "b5",
+      "label": "B5",
+      "kind": "black",
+      "x": 16,
+      "y": 72,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "b6",
+      "label": "B6",
+      "kind": "black",
+      "x": 144,
+      "y": 72,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "b7",
+      "label": "B7",
+      "kind": "black",
+      "x": 272,
+      "y": 72,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "b8",
+      "label": "B8",
+      "kind": "black",
+      "x": 400,
+      "y": 72,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "b9",
+      "label": "B9",
+      "kind": "black",
+      "x": 80,
+      "y": 128,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "b10",
+      "label": "B10",
+      "kind": "black",
+      "x": 208,
+      "y": 128,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "b11",
+      "label": "B11",
+      "kind": "black",
+      "x": 336,
+      "y": 128,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "b12",
+      "label": "B12",
+      "kind": "black",
+      "x": 464,
+      "y": 128,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "r1",
+      "label": "R1",
+      "kind": "red",
+      "x": 16,
+      "y": 296,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "r2",
+      "label": "R2",
+      "kind": "red",
+      "x": 144,
+      "y": 296,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "r3",
+      "label": "R3",
+      "kind": "red",
+      "x": 272,
+      "y": 296,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "r4",
+      "label": "R4",
+      "kind": "red",
+      "x": 400,
+      "y": 296,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "r5",
+      "label": "R5",
+      "kind": "red",
+      "x": 80,
+      "y": 352,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "r6",
+      "label": "R6",
+      "kind": "red",
+      "x": 208,
+      "y": 352,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "r7",
+      "label": "R7",
+      "kind": "red",
+      "x": 336,
+      "y": 352,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "r8",
+      "label": "R8",
+      "kind": "red",
+      "x": 464,
+      "y": 352,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "r9",
+      "label": "R9",
+      "kind": "red",
+      "x": 16,
+      "y": 408,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "r10",
+      "label": "R10",
+      "kind": "red",
+      "x": 144,
+      "y": 408,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "r11",
+      "label": "R11",
+      "kind": "red",
+      "x": 272,
+      "y": 408,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "r12",
+      "label": "R12",
+      "kind": "red",
+      "x": 400,
+      "y": 408,
+      "w": 60,
+      "h": 40
+    }
+  ],
+  "checkers_players": [
+    {
+      "id": "pl1",
+      "name": "Player 1",
+      "playerId": "p1",
+      "side": "red",
+      "score": 0
+    },
+    {
+      "id": "pl2",
+      "name": "Player 2",
+      "playerId": "p2",
+      "side": "black",
+      "score": 0
+    }
+  ],
+  "checkers_turn": [
+    {
+      "id": "t1",
+      "player": "Red"
+    }
+  ],
+  "mancala_tokens": [
+    {
+      "id": "s1",
+      "label": "seed",
+      "kind": "seed",
+      "x": 140,
+      "y": 30,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s2",
+      "label": "seed",
+      "kind": "seed",
+      "x": 170,
+      "y": 52,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s3",
+      "label": "seed",
+      "kind": "seed",
+      "x": 140,
+      "y": 74,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s4",
+      "label": "seed",
+      "kind": "seed",
+      "x": 170,
+      "y": 96,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s5",
+      "label": "seed",
+      "kind": "seed",
+      "x": 270,
+      "y": 30,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s6",
+      "label": "seed",
+      "kind": "seed",
+      "x": 300,
+      "y": 52,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s7",
+      "label": "seed",
+      "kind": "seed",
+      "x": 270,
+      "y": 74,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s8",
+      "label": "seed",
+      "kind": "seed",
+      "x": 300,
+      "y": 96,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s9",
+      "label": "seed",
+      "kind": "seed",
+      "x": 400,
+      "y": 30,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s10",
+      "label": "seed",
+      "kind": "seed",
+      "x": 430,
+      "y": 52,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s11",
+      "label": "seed",
+      "kind": "seed",
+      "x": 400,
+      "y": 74,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s12",
+      "label": "seed",
+      "kind": "seed",
+      "x": 430,
+      "y": 96,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s13",
+      "label": "seed",
+      "kind": "seed",
+      "x": 530,
+      "y": 30,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s14",
+      "label": "seed",
+      "kind": "seed",
+      "x": 560,
+      "y": 52,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s15",
+      "label": "seed",
+      "kind": "seed",
+      "x": 530,
+      "y": 74,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s16",
+      "label": "seed",
+      "kind": "seed",
+      "x": 560,
+      "y": 96,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s17",
+      "label": "seed",
+      "kind": "seed",
+      "x": 660,
+      "y": 30,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s18",
+      "label": "seed",
+      "kind": "seed",
+      "x": 690,
+      "y": 52,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s19",
+      "label": "seed",
+      "kind": "seed",
+      "x": 660,
+      "y": 74,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s20",
+      "label": "seed",
+      "kind": "seed",
+      "x": 690,
+      "y": 96,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s21",
+      "label": "seed",
+      "kind": "seed",
+      "x": 790,
+      "y": 30,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s22",
+      "label": "seed",
+      "kind": "seed",
+      "x": 820,
+      "y": 52,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s23",
+      "label": "seed",
+      "kind": "seed",
+      "x": 790,
+      "y": 74,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s24",
+      "label": "seed",
+      "kind": "seed",
+      "x": 820,
+      "y": 96,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s25",
+      "label": "seed",
+      "kind": "seed",
+      "x": 140,
+      "y": 230,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s26",
+      "label": "seed",
+      "kind": "seed",
+      "x": 170,
+      "y": 252,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s27",
+      "label": "seed",
+      "kind": "seed",
+      "x": 140,
+      "y": 274,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s28",
+      "label": "seed",
+      "kind": "seed",
+      "x": 170,
+      "y": 296,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s29",
+      "label": "seed",
+      "kind": "seed",
+      "x": 270,
+      "y": 230,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s30",
+      "label": "seed",
+      "kind": "seed",
+      "x": 300,
+      "y": 252,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s31",
+      "label": "seed",
+      "kind": "seed",
+      "x": 270,
+      "y": 274,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s32",
+      "label": "seed",
+      "kind": "seed",
+      "x": 300,
+      "y": 296,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s33",
+      "label": "seed",
+      "kind": "seed",
+      "x": 400,
+      "y": 230,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s34",
+      "label": "seed",
+      "kind": "seed",
+      "x": 430,
+      "y": 252,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s35",
+      "label": "seed",
+      "kind": "seed",
+      "x": 400,
+      "y": 274,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s36",
+      "label": "seed",
+      "kind": "seed",
+      "x": 430,
+      "y": 296,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s37",
+      "label": "seed",
+      "kind": "seed",
+      "x": 530,
+      "y": 230,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s38",
+      "label": "seed",
+      "kind": "seed",
+      "x": 560,
+      "y": 252,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s39",
+      "label": "seed",
+      "kind": "seed",
+      "x": 530,
+      "y": 274,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s40",
+      "label": "seed",
+      "kind": "seed",
+      "x": 560,
+      "y": 296,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s41",
+      "label": "seed",
+      "kind": "seed",
+      "x": 660,
+      "y": 230,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s42",
+      "label": "seed",
+      "kind": "seed",
+      "x": 690,
+      "y": 252,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s43",
+      "label": "seed",
+      "kind": "seed",
+      "x": 660,
+      "y": 274,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s44",
+      "label": "seed",
+      "kind": "seed",
+      "x": 690,
+      "y": 296,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s45",
+      "label": "seed",
+      "kind": "seed",
+      "x": 790,
+      "y": 230,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s46",
+      "label": "seed",
+      "kind": "seed",
+      "x": 820,
+      "y": 252,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s47",
+      "label": "seed",
+      "kind": "seed",
+      "x": 790,
+      "y": 274,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "s48",
+      "label": "seed",
+      "kind": "seed",
+      "x": 820,
+      "y": 296,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "pb1",
+      "label": "B6",
+      "kind": "pit",
+      "x": 155,
+      "y": 145,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "pa1",
+      "label": "A1",
+      "kind": "pit",
+      "x": 155,
+      "y": 185,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "pb2",
+      "label": "B5",
+      "kind": "pit",
+      "x": 285,
+      "y": 145,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "pa2",
+      "label": "A2",
+      "kind": "pit",
+      "x": 285,
+      "y": 185,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "pb3",
+      "label": "B4",
+      "kind": "pit",
+      "x": 415,
+      "y": 145,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "pa3",
+      "label": "A3",
+      "kind": "pit",
+      "x": 415,
+      "y": 185,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "pb4",
+      "label": "B3",
+      "kind": "pit",
+      "x": 545,
+      "y": 145,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "pa4",
+      "label": "A4",
+      "kind": "pit",
+      "x": 545,
+      "y": 185,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "pb5",
+      "label": "B2",
+      "kind": "pit",
+      "x": 675,
+      "y": 145,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "pa5",
+      "label": "A5",
+      "kind": "pit",
+      "x": 675,
+      "y": 185,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "pb6",
+      "label": "B1",
+      "kind": "pit",
+      "x": 805,
+      "y": 145,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "pa6",
+      "label": "A6",
+      "kind": "pit",
+      "x": 805,
+      "y": 185,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "id": "storeB",
+      "label": "STORE B",
+      "kind": "store",
+      "x": 30,
+      "y": 140,
+      "w": 90,
+      "h": 56
+    },
+    {
+      "id": "storeA",
+      "label": "STORE A",
+      "kind": "store",
+      "x": 930,
+      "y": 140,
+      "w": 90,
+      "h": 56
+    }
+  ],
+  "mancala_players": [
+    {
+      "id": "pl1",
+      "name": "Player A",
+      "playerId": "p1",
+      "side": "A",
+      "score": 0
+    },
+    {
+      "id": "pl2",
+      "name": "Player B",
+      "playerId": "p2",
+      "side": "B",
+      "score": 0
+    }
+  ],
+  "mancala_turn": [
+    {
+      "id": "t1",
+      "player": "A"
+    }
+  ],
+  "battleship_ships": [
+    {
+      "id": "s1_carrier",
+      "name": "Carrier (5)",
+      "owner": "p1",
+      "visibleTo": "p1",
+      "x": 1,
+      "y": 1,
+      "length": 5,
+      "horizontal": 1,
+      "sunk": false
+    },
+    {
+      "id": "s1_battleship",
+      "name": "Battleship (4)",
+      "owner": "p1",
+      "visibleTo": "p1",
+      "x": 1,
+      "y": 3,
+      "length": 4,
+      "horizontal": 1,
+      "sunk": false
+    },
+    {
+      "id": "s1_cruiser",
+      "name": "Cruiser (3)",
+      "owner": "p1",
+      "visibleTo": "p1",
+      "x": 1,
+      "y": 5,
+      "length": 3,
+      "horizontal": 1,
+      "sunk": false
+    },
+    {
+      "id": "s1_submarine",
+      "name": "Submarine (3)",
+      "owner": "p1",
+      "visibleTo": "p1",
+      "x": 1,
+      "y": 7,
+      "length": 3,
+      "horizontal": 1,
+      "sunk": false
+    },
+    {
+      "id": "s1_destroyer",
+      "name": "Destroyer (2)",
+      "owner": "p1",
+      "visibleTo": "p1",
+      "x": 1,
+      "y": 9,
+      "length": 2,
+      "horizontal": 1,
+      "sunk": false
+    },
+    {
+      "id": "s2_carrier",
+      "name": "Carrier (5)",
+      "owner": "p2",
+      "visibleTo": "p2",
+      "x": 1,
+      "y": 1,
+      "length": 5,
+      "horizontal": 1,
+      "sunk": false
+    },
+    {
+      "id": "s2_battleship",
+      "name": "Battleship (4)",
+      "owner": "p2",
+      "visibleTo": "p2",
+      "x": 1,
+      "y": 3,
+      "length": 4,
+      "horizontal": 1,
+      "sunk": false
+    },
+    {
+      "id": "s2_cruiser",
+      "name": "Cruiser (3)",
+      "owner": "p2",
+      "visibleTo": "p2",
+      "x": 1,
+      "y": 5,
+      "length": 3,
+      "horizontal": 1,
+      "sunk": false
+    },
+    {
+      "id": "s2_submarine",
+      "name": "Submarine (3)",
+      "owner": "p2",
+      "visibleTo": "p2",
+      "x": 1,
+      "y": 7,
+      "length": 3,
+      "horizontal": 1,
+      "sunk": false
+    },
+    {
+      "id": "s2_destroyer",
+      "name": "Destroyer (2)",
+      "owner": "p2",
+      "visibleTo": "p2",
+      "x": 1,
+      "y": 9,
+      "length": 2,
+      "horizontal": 1,
+      "sunk": false
+    }
+  ],
+  "battleship_shots": [],
+  "dots_boxes_spots": [
+    {
+      "id": "dot_r1c1",
+      "label": "●",
+      "name": "Dot r1 c1",
+      "kind": "dot",
+      "owner": "dot",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "dot_r1c2",
+      "label": "●",
+      "name": "Dot r1 c2",
+      "kind": "dot",
+      "owner": "dot",
+      "x": 150,
+      "y": 50
+    },
+    {
+      "id": "dot_r1c3",
+      "label": "●",
+      "name": "Dot r1 c3",
+      "kind": "dot",
+      "owner": "dot",
+      "x": 250,
+      "y": 50
+    },
+    {
+      "id": "dot_r1c4",
+      "label": "●",
+      "name": "Dot r1 c4",
+      "kind": "dot",
+      "owner": "dot",
+      "x": 350,
+      "y": 50
+    },
+    {
+      "id": "dot_r2c1",
+      "label": "●",
+      "name": "Dot r2 c1",
+      "kind": "dot",
+      "owner": "dot",
+      "x": 50,
+      "y": 150
+    },
+    {
+      "id": "dot_r2c2",
+      "label": "●",
+      "name": "Dot r2 c2",
+      "kind": "dot",
+      "owner": "dot",
+      "x": 150,
+      "y": 150
+    },
+    {
+      "id": "dot_r2c3",
+      "label": "●",
+      "name": "Dot r2 c3",
+      "kind": "dot",
+      "owner": "dot",
+      "x": 250,
+      "y": 150
+    },
+    {
+      "id": "dot_r2c4",
+      "label": "●",
+      "name": "Dot r2 c4",
+      "kind": "dot",
+      "owner": "dot",
+      "x": 350,
+      "y": 150
+    },
+    {
+      "id": "dot_r3c1",
+      "label": "●",
+      "name": "Dot r3 c1",
+      "kind": "dot",
+      "owner": "dot",
+      "x": 50,
+      "y": 250
+    },
+    {
+      "id": "dot_r3c2",
+      "label": "●",
+      "name": "Dot r3 c2",
+      "kind": "dot",
+      "owner": "dot",
+      "x": 150,
+      "y": 250
+    },
+    {
+      "id": "dot_r3c3",
+      "label": "●",
+      "name": "Dot r3 c3",
+      "kind": "dot",
+      "owner": "dot",
+      "x": 250,
+      "y": 250
+    },
+    {
+      "id": "dot_r3c4",
+      "label": "●",
+      "name": "Dot r3 c4",
+      "kind": "dot",
+      "owner": "dot",
+      "x": 350,
+      "y": 250
+    },
+    {
+      "id": "dot_r4c1",
+      "label": "●",
+      "name": "Dot r4 c1",
+      "kind": "dot",
+      "owner": "dot",
+      "x": 50,
+      "y": 350
+    },
+    {
+      "id": "dot_r4c2",
+      "label": "●",
+      "name": "Dot r4 c2",
+      "kind": "dot",
+      "owner": "dot",
+      "x": 150,
+      "y": 350
+    },
+    {
+      "id": "dot_r4c3",
+      "label": "●",
+      "name": "Dot r4 c3",
+      "kind": "dot",
+      "owner": "dot",
+      "x": 250,
+      "y": 350
+    },
+    {
+      "id": "dot_r4c4",
+      "label": "●",
+      "name": "Dot r4 c4",
+      "kind": "dot",
+      "owner": "dot",
+      "x": 350,
+      "y": 350
+    },
+    {
+      "id": "eh_r1c1",
+      "label": "—",
+      "name": "— row 1, cols 1-2",
+      "kind": "edge",
+      "owner": "open",
+      "x": 100,
+      "y": 50
+    },
+    {
+      "id": "eh_r1c2",
+      "label": "—",
+      "name": "— row 1, cols 2-3",
+      "kind": "edge",
+      "owner": "open",
+      "x": 200,
+      "y": 50
+    },
+    {
+      "id": "eh_r1c3",
+      "label": "—",
+      "name": "— row 1, cols 3-4",
+      "kind": "edge",
+      "owner": "open",
+      "x": 300,
+      "y": 50
+    },
+    {
+      "id": "eh_r2c1",
+      "label": "—",
+      "name": "— row 2, cols 1-2",
+      "kind": "edge",
+      "owner": "open",
+      "x": 100,
+      "y": 150
+    },
+    {
+      "id": "eh_r2c2",
+      "label": "—",
+      "name": "— row 2, cols 2-3",
+      "kind": "edge",
+      "owner": "open",
+      "x": 200,
+      "y": 150
+    },
+    {
+      "id": "eh_r2c3",
+      "label": "—",
+      "name": "— row 2, cols 3-4",
+      "kind": "edge",
+      "owner": "open",
+      "x": 300,
+      "y": 150
+    },
+    {
+      "id": "eh_r3c1",
+      "label": "—",
+      "name": "— row 3, cols 1-2",
+      "kind": "edge",
+      "owner": "open",
+      "x": 100,
+      "y": 250
+    },
+    {
+      "id": "eh_r3c2",
+      "label": "—",
+      "name": "— row 3, cols 2-3",
+      "kind": "edge",
+      "owner": "open",
+      "x": 200,
+      "y": 250
+    },
+    {
+      "id": "eh_r3c3",
+      "label": "—",
+      "name": "— row 3, cols 3-4",
+      "kind": "edge",
+      "owner": "open",
+      "x": 300,
+      "y": 250
+    },
+    {
+      "id": "eh_r4c1",
+      "label": "—",
+      "name": "— row 4, cols 1-2",
+      "kind": "edge",
+      "owner": "open",
+      "x": 100,
+      "y": 350
+    },
+    {
+      "id": "eh_r4c2",
+      "label": "—",
+      "name": "— row 4, cols 2-3",
+      "kind": "edge",
+      "owner": "open",
+      "x": 200,
+      "y": 350
+    },
+    {
+      "id": "eh_r4c3",
+      "label": "—",
+      "name": "— row 4, cols 3-4",
+      "kind": "edge",
+      "owner": "open",
+      "x": 300,
+      "y": 350
+    },
+    {
+      "id": "ev_r1c1",
+      "label": "|",
+      "name": "| col 1, rows 1-2",
+      "kind": "edge",
+      "owner": "open",
+      "x": 50,
+      "y": 100
+    },
+    {
+      "id": "ev_r1c2",
+      "label": "|",
+      "name": "| col 2, rows 1-2",
+      "kind": "edge",
+      "owner": "open",
+      "x": 150,
+      "y": 100
+    },
+    {
+      "id": "ev_r1c3",
+      "label": "|",
+      "name": "| col 3, rows 1-2",
+      "kind": "edge",
+      "owner": "open",
+      "x": 250,
+      "y": 100
+    },
+    {
+      "id": "ev_r1c4",
+      "label": "|",
+      "name": "| col 4, rows 1-2",
+      "kind": "edge",
+      "owner": "open",
+      "x": 350,
+      "y": 100
+    },
+    {
+      "id": "ev_r2c1",
+      "label": "|",
+      "name": "| col 1, rows 2-3",
+      "kind": "edge",
+      "owner": "open",
+      "x": 50,
+      "y": 200
+    },
+    {
+      "id": "ev_r2c2",
+      "label": "|",
+      "name": "| col 2, rows 2-3",
+      "kind": "edge",
+      "owner": "open",
+      "x": 150,
+      "y": 200
+    },
+    {
+      "id": "ev_r2c3",
+      "label": "|",
+      "name": "| col 3, rows 2-3",
+      "kind": "edge",
+      "owner": "open",
+      "x": 250,
+      "y": 200
+    },
+    {
+      "id": "ev_r2c4",
+      "label": "|",
+      "name": "| col 4, rows 2-3",
+      "kind": "edge",
+      "owner": "open",
+      "x": 350,
+      "y": 200
+    },
+    {
+      "id": "ev_r3c1",
+      "label": "|",
+      "name": "| col 1, rows 3-4",
+      "kind": "edge",
+      "owner": "open",
+      "x": 50,
+      "y": 300
+    },
+    {
+      "id": "ev_r3c2",
+      "label": "|",
+      "name": "| col 2, rows 3-4",
+      "kind": "edge",
+      "owner": "open",
+      "x": 150,
+      "y": 300
+    },
+    {
+      "id": "ev_r3c3",
+      "label": "|",
+      "name": "| col 3, rows 3-4",
+      "kind": "edge",
+      "owner": "open",
+      "x": 250,
+      "y": 300
+    },
+    {
+      "id": "ev_r3c4",
+      "label": "|",
+      "name": "| col 4, rows 3-4",
+      "kind": "edge",
+      "owner": "open",
+      "x": 350,
+      "y": 300
+    }
+  ],
+  "dots_boxes_boxes": [
+    {
+      "id": "box_r1c1",
+      "name": "Box row 1, col 1",
+      "owner": "open"
+    },
+    {
+      "id": "box_r1c2",
+      "name": "Box row 1, col 2",
+      "owner": "open"
+    },
+    {
+      "id": "box_r1c3",
+      "name": "Box row 1, col 3",
+      "owner": "open"
+    },
+    {
+      "id": "box_r2c1",
+      "name": "Box row 2, col 1",
+      "owner": "open"
+    },
+    {
+      "id": "box_r2c2",
+      "name": "Box row 2, col 2",
+      "owner": "open"
+    },
+    {
+      "id": "box_r2c3",
+      "name": "Box row 2, col 3",
+      "owner": "open"
+    },
+    {
+      "id": "box_r3c1",
+      "name": "Box row 3, col 1",
+      "owner": "open"
+    },
+    {
+      "id": "box_r3c2",
+      "name": "Box row 3, col 2",
+      "owner": "open"
+    },
+    {
+      "id": "box_r3c3",
+      "name": "Box row 3, col 3",
+      "owner": "open"
+    }
+  ],
+  "tabletop_tokens": [
+    {
+      "id": "t1",
+      "label": "♚ King",
+      "owner": "p1",
+      "x": 80,
+      "y": 80
+    },
+    {
+      "id": "t2",
+      "label": "♛ Queen",
+      "owner": "p1",
+      "x": 160,
+      "y": 80
+    },
+    {
+      "id": "t3",
+      "label": "♚ King",
+      "owner": "p2",
+      "x": 80,
+      "y": 320
+    },
+    {
+      "id": "t4",
+      "label": "♛ Queen",
+      "owner": "p2",
+      "x": 160,
+      "y": 320
+    },
+    {
+      "id": "t5",
+      "label": "🎲 Die",
+      "owner": "neutral",
+      "x": 280,
+      "y": 200
+    }
+  ],
+  "saboteur_players": [
+    {
+      "id": "pl1",
+      "name": "Ava",
+      "playerId": "p1"
+    },
+    {
+      "id": "pl2",
+      "name": "Ben",
+      "playerId": "p2"
+    },
+    {
+      "id": "pl3",
+      "name": "Cleo",
+      "playerId": "p3"
+    },
+    {
+      "id": "pl4",
+      "name": "Dex",
+      "playerId": "p4"
+    }
+  ],
+  "saboteur_roles": [
+    {
+      "id": "r1",
+      "player": "Ava",
+      "role": "builder",
+      "visibleTo": "p1"
+    },
+    {
+      "id": "r2",
+      "player": "Ben",
+      "role": "saboteur",
+      "visibleTo": "p2"
+    },
+    {
+      "id": "r3",
+      "player": "Cleo",
+      "role": "builder",
+      "visibleTo": "p3"
+    },
+    {
+      "id": "r4",
+      "player": "Dex",
+      "role": "builder",
+      "visibleTo": "p4"
+    }
+  ],
+  "saboteur_pieces": [
+    {
+      "id": "pc1",
+      "label": "Foundation",
+      "by": "p1",
+      "sabotaged": false,
+      "x": 100,
+      "y": 120
+    },
+    {
+      "id": "pc2",
+      "label": "Wall",
+      "by": "p3",
+      "sabotaged": false,
+      "x": 220,
+      "y": 120
+    },
+    {
+      "id": "pc3",
+      "label": "Beam",
+      "by": "p4",
+      "sabotaged": false,
+      "x": 160,
+      "y": 260
+    }
+  ],
+  "saboteur_votes": [],
+  "yahtzee_dice": [
+    {
+      "id": "d1",
+      "name": "Die 1",
+      "value": 1
+    },
+    {
+      "id": "d2",
+      "name": "Die 2",
+      "value": 1
+    },
+    {
+      "id": "d3",
+      "name": "Die 3",
+      "value": 1
+    },
+    {
+      "id": "d4",
+      "name": "Die 4",
+      "value": 1
+    },
+    {
+      "id": "d5",
+      "name": "Die 5",
+      "value": 1
+    }
+  ],
+  "yahtzee_scorecard": [
+    {
+      "id": "c01",
+      "category": "Ones"
+    },
+    {
+      "id": "c02",
+      "category": "Twos"
+    },
+    {
+      "id": "c03",
+      "category": "Threes"
+    },
+    {
+      "id": "c04",
+      "category": "Fours"
+    },
+    {
+      "id": "c05",
+      "category": "Fives"
+    },
+    {
+      "id": "c06",
+      "category": "Sixes"
+    },
+    {
+      "id": "c07",
+      "category": "Upper bonus (35 if Ones-Sixes total 63+)"
+    },
+    {
+      "id": "c08",
+      "category": "Three of a kind"
+    },
+    {
+      "id": "c09",
+      "category": "Four of a kind"
+    },
+    {
+      "id": "c10",
+      "category": "Full house (25)"
+    },
+    {
+      "id": "c11",
+      "category": "Small straight (30)"
+    },
+    {
+      "id": "c12",
+      "category": "Large straight (40)"
+    },
+    {
+      "id": "c13",
+      "category": "Yahtzee (50)"
+    },
+    {
+      "id": "c14",
+      "category": "Chance"
+    }
+  ],
+  "runs": [],
+  "shop": [
+    {
+      "id": "p_tictactoe",
+      "name": "❌ Tic-Tac-Toe",
+      "genre": "board",
+      "tagline": "Three in a row — the classic, tabletop style.",
+      "pack": {
+        "meta": {
+          "id": "tictactoe",
+          "name": "Tic-Tac-Toe",
+          "emoji": "❌",
+          "genre": "board",
+          "players": "2",
+          "mode": "live",
+          "tagline": "Three in a row wins — sandbox marks on a 3x3 board."
+        },
+        "tables": {
+          "tables": [
+            {
+              "name": "marks",
+              "label": "Marks",
+              "icon": "circle",
+              "description": "X and O pieces on the 3x3 board. Drag onto a cell; tap to flip or remove."
+            }
+          ]
+        },
+        "columns": {
+          "marks": [
+            {
+              "name": "id",
+              "type": "text",
+              "label": "ID",
+              "advanced": true
+            },
+            {
+              "name": "label",
+              "type": "text",
+              "label": "Mark"
+            },
+            {
+              "name": "side",
+              "type": "enum",
+              "label": "Side",
+              "options": [
+                "x",
+                "o"
+              ],
+              "default": "x"
+            },
+            {
+              "name": "x",
+              "type": "number",
+              "label": "X",
+              "advanced": true
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "label": "Y",
+              "advanced": true
+            }
+          ]
+        },
+        "content": {
+          "marks": [
+            {
+              "id": "t1",
+              "label": "❌",
+              "side": "x",
+              "x": 60,
+              "y": 420
+            },
+            {
+              "id": "t2",
+              "label": "⭕",
+              "side": "o",
+              "x": 130,
+              "y": 420
+            }
+          ]
+        },
+        "ui": {
+          "nav": [
+            {
+              "id": "play",
+              "label": "Play",
+              "screen": "play"
+            }
+          ],
+          "screens": {
+            "play": {
+              "title": "Tic-Tac-Toe",
+              "body": {
+                "type": "column",
+                "children": [
+                  {
+                    "type": "text",
+                    "style": "caption",
+                    "value": "Drag a mark onto the grid. First three in a row wins — call it like a tabletop."
+                  },
+                  {
+                    "type": "button",
+                    "label": "Add ❌",
+                    "icon": "add",
+                    "action": {
+                      "fn": "addRow",
+                      "args": {
+                        "table": "marks",
+                        "values": {
+                          "label": "❌",
+                          "side": "x",
+                          "x": 80,
+                          "y": 420
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "button",
+                    "label": "Add ⭕",
+                    "icon": "add",
+                    "action": {
+                      "fn": "addRow",
+                      "args": {
+                        "table": "marks",
+                        "values": {
+                          "label": "⭕",
+                          "side": "o",
+                          "x": 150,
+                          "y": 420
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "canvas",
+                    "nodesTable": "marks",
+                    "layout": "free",
+                    "xColumn": "x",
+                    "yColumn": "y",
+                    "labelColumn": "label",
+                    "colorColumn": "side",
+                    "colors": {
+                      "x": "teal",
+                      "o": "coral"
+                    },
+                    "height": 460,
+                    "action": {
+                      "fn": "editRow"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "p_nim",
+      "name": "🥢 Nim",
+      "genre": "strategy",
+      "tagline": "Take 1-3 sticks, don't take the last.",
+      "pack": {
+        "meta": {
+          "id": "nim",
+          "name": "Nim",
+          "emoji": "🥢",
+          "genre": "strategy",
+          "players": "2",
+          "mode": "live",
+          "tagline": "Take 1-3 sticks; whoever takes the last one loses."
+        },
+        "tables": {
+          "tables": [
+            {
+              "name": "sticks",
+              "label": "Sticks",
+              "icon": "circle",
+              "description": "The pile. Delete 1-3 sticks on your turn; do not take the last."
+            }
+          ]
+        },
+        "columns": {
+          "sticks": [
+            {
+              "name": "id",
+              "type": "text",
+              "label": "ID",
+              "advanced": true
+            },
+            {
+              "name": "label",
+              "type": "text",
+              "label": "Stick"
+            },
+            {
+              "name": "x",
+              "type": "number",
+              "label": "X",
+              "advanced": true
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "label": "Y",
+              "advanced": true
+            }
+          ]
+        },
+        "content": {
+          "sticks": [
+            {
+              "id": "s0",
+              "label": "🥢",
+              "x": 60,
+              "y": 80
+            },
+            {
+              "id": "s1",
+              "label": "🥢",
+              "x": 140,
+              "y": 80
+            },
+            {
+              "id": "s2",
+              "label": "🥢",
+              "x": 220,
+              "y": 80
+            },
+            {
+              "id": "s3",
+              "label": "🥢",
+              "x": 300,
+              "y": 80
+            },
+            {
+              "id": "s4",
+              "label": "🥢",
+              "x": 380,
+              "y": 80
+            },
+            {
+              "id": "s5",
+              "label": "🥢",
+              "x": 460,
+              "y": 80
+            },
+            {
+              "id": "s6",
+              "label": "🥢",
+              "x": 540,
+              "y": 80
+            },
+            {
+              "id": "s7",
+              "label": "🥢",
+              "x": 60,
+              "y": 170
+            },
+            {
+              "id": "s8",
+              "label": "🥢",
+              "x": 140,
+              "y": 170
+            },
+            {
+              "id": "s9",
+              "label": "🥢",
+              "x": 220,
+              "y": 170
+            },
+            {
+              "id": "s10",
+              "label": "🥢",
+              "x": 300,
+              "y": 170
+            },
+            {
+              "id": "s11",
+              "label": "🥢",
+              "x": 380,
+              "y": 170
+            },
+            {
+              "id": "s12",
+              "label": "🥢",
+              "x": 460,
+              "y": 170
+            },
+            {
+              "id": "s13",
+              "label": "🥢",
+              "x": 540,
+              "y": 170
+            },
+            {
+              "id": "s14",
+              "label": "🥢",
+              "x": 60,
+              "y": 260
+            }
+          ]
+        },
+        "ui": {
+          "nav": [
+            {
+              "id": "play",
+              "label": "Play",
+              "screen": "play"
+            }
+          ],
+          "screens": {
+            "play": {
+              "title": "Nim",
+              "body": {
+                "type": "column",
+                "children": [
+                  {
+                    "type": "text",
+                    "style": "caption",
+                    "value": "On your turn remove 1-3 sticks (tap one, delete it). Whoever must take the LAST stick loses."
+                  },
+                  {
+                    "type": "stat",
+                    "table": "sticks",
+                    "agg": "count",
+                    "label": "Sticks left",
+                    "color": "teal"
+                  },
+                  {
+                    "type": "canvas",
+                    "nodesTable": "sticks",
+                    "layout": "free",
+                    "xColumn": "x",
+                    "yColumn": "y",
+                    "labelColumn": "label",
+                    "height": 420,
+                    "action": {
+                      "fn": "editRow"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

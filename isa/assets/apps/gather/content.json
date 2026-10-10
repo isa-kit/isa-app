@@ -1,0 +1,16 @@
+{
+  "profile": [],
+  "spaces": [
+    {
+      "id": "directory",
+      "name": "Public directory",
+      "kind": "group",
+      "key": "9a7c1d5e3f0b8a6c4e2d7f1a0b9c8d5e6f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c",
+      "place": "everyone running Gather"
+    }
+  ],
+  "messages": [],
+  "events": [],
+  "members": [],
+  "listings": []
+}

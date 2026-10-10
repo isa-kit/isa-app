@@ -1,0 +1,277 @@
+{
+  "app": {
+    "appDataTools": true,
+    "title": "Diagram",
+    "primaryColor": "#42A5F5",
+    "theme": "contrast"
+  },
+  "nav": [
+    {
+      "id": "files",
+      "label": "Files",
+      "icon": "folder",
+      "screen": "files"
+    },
+    {
+      "id": "canvas",
+      "label": "Canvas",
+      "icon": "account_tree",
+      "screen": "canvas"
+    },
+    {
+      "id": "data",
+      "label": "Data",
+      "icon": "table_rows",
+      "screen": "data"
+    }
+  ],
+  "screens": {
+    "files": {
+      "title": "Files",
+      "body": {
+        "type": "explorer",
+        "table": "files",
+        "nameColumn": "name",
+        "orderColumn": "order",
+        "allowFolders": false,
+        "railMode": "collapsible",
+        "title": "Files",
+        "fileIcon": "account_tree",
+        "newFileLabel": "New diagram",
+        "emptyHome": true,
+        "homeTitle": "Your diagrams",
+        "homeSubtitle": "Open a recent diagram, or start a new one.",
+        "addItems": [
+          { "label": "New diagram", "icon": "add", "values": { "name": "Untitled diagram" } }
+        ],
+        "autoSelectFirst": true,
+        "scopeTargets": [
+          { "table": "nodes", "column": "file" },
+          { "table": "edges", "column": "file" },
+          { "table": "sketch", "column": "file" }
+        ],
+        "detail": {
+          "type": "column",
+          "crossAxis": "stretch",
+          "children": [
+            {
+              "type": "text",
+              "style": "caption",
+              "value": "A file is one flowchart — its own nodes, edges, and sketch. Pick a file on the left, then use the Canvas or Data tabs to edit it. Tap + to start a new diagram, and a file's ⋮ menu to rename or delete it."
+            },
+            {
+              "type": "button",
+              "label": "Open this diagram",
+              "icon": "account_tree",
+              "action": {
+                "fn": "goto",
+                "args": {
+                  "screen": "canvas"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "canvas": {
+      "title": "Flowchart",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "A free-form flowchart. Drag a node to move it; tap a node to rename it. Drag a node's link handle onto another node to connect them. Use the buttons below to add a node or edge."
+          },
+          {
+            "type": "canvas",
+            "nodesTable": "nodes",
+            "edgesTable": "edges",
+            "scopeColumn": "file",
+            "labelColumn": "label",
+            "xColumn": "x",
+            "yColumn": "y",
+            "fromColumn": "from",
+            "toColumn": "to",
+            "colorColumn": "kind",
+            "colors": {
+              "start": "green",
+              "step": "blue",
+              "decision": "amber",
+              "end": "coral"
+            },
+            "fillPhone": true,
+            "sketchTable": "sketch",
+            "sketchColumn": "strokes",
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "New node",
+                "icon": "add",
+                "action": {
+                  "fn": "addRow",
+                  "args": {
+                    "table": "nodes",
+                    "values": {
+                      "kind": "step"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "New edge",
+                "icon": "add",
+                "action": {
+                  "fn": "addRow",
+                  "args": {
+                    "table": "edges"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "draw.io — export/import this diagram in diagrams.net."
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": "Export to draw.io",
+                "icon": "upload",
+                "variant": "text",
+                "action": {
+                  "fn": "exportDrawio",
+                  "args": {
+                    "nodesTable": "nodes",
+                    "edgesTable": "edges",
+                    "diagramName": "Diagram",
+                    "sketchTable": "sketch",
+                    "sketchColumn": "strokes"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": "Import from draw.io",
+                "icon": "download",
+                "variant": "text",
+                "action": {
+                  "fn": "importDrawio",
+                  "args": {
+                    "nodesTable": "nodes",
+                    "edgesTable": "edges"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "data": {
+      "title": "Nodes & edges",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "value": "Nodes",
+            "style": "subtitle"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Every shape on the canvas. Tap a row to edit its label, kind, or position."
+          },
+          {
+            "type": "table",
+            "table": "nodes",
+            "example": {
+              "ids": ["n1", "n2", "n3", "n4", "n5", "n6", "n7", "n8", "n9", "n10", "n11", "n12", "n13", "n14"]
+            },
+            "scopeColumn": "file",
+            "columns": [
+              "label",
+              "kind",
+              "x",
+              "y"
+            ],
+            "height": 240,
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "button",
+            "label": "New node",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "nodes",
+                "values": {
+                  "kind": "step"
+                }
+              }
+            }
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "text",
+            "value": "Edges",
+            "style": "subtitle"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Connections between nodes. Tap a row to change its endpoints or label."
+          },
+          {
+            "type": "table",
+            "table": "edges",
+            "example": {
+              "ids": ["e1", "e2", "e3", "e4", "e5", "e6", "e7", "e8", "e9", "e10", "e11", "e12", "e13", "e14", "e15", "e16", "e17"]
+            },
+            "scopeColumn": "file",
+            "columns": [
+              "from",
+              "to",
+              "label"
+            ],
+            "height": 240,
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "button",
+            "label": "New edge",
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "edges"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

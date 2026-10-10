@@ -1,0 +1,1059 @@
+{
+  "boards": [
+    {
+      "id": "bd_myapp",
+      "name": "My app",
+      "order": 0
+    },
+    {
+      "id": "bd_wikipick_redesign",
+      "name": "Wikipick redesign",
+      "order": 1,
+      "style": "",
+      "accent": "",
+      "mode": "design",
+      "rev": 7
+    },
+    {
+      "id": "bd_architecture_scope",
+      "name": "Architecture — scope & home",
+      "order": 3,
+      "style": "",
+      "accent": "",
+      "mode": "design",
+      "rev": 1
+    },
+    {
+      "id": "bd_wikipick_seedmap",
+      "name": "Wikipick — Seed map",
+      "order": 2,
+      "style": "",
+      "accent": "",
+      "mode": "design",
+      "rev": 1
+    }
+  ],
+  "screens": [
+    {
+      "id": "sc_home",
+      "board": "bd_myapp",
+      "name": "Home",
+      "device": "phone",
+      "x": 0,
+      "y": 0,
+      "variantOf": null
+    },
+    {
+      "id": "sc_details",
+      "board": "bd_myapp",
+      "name": "Details",
+      "device": "phone",
+      "x": 480,
+      "y": 0,
+      "variantOf": null
+    },
+    {
+      "id": "sc_wr_home",
+      "board": "bd_wikipick_redesign",
+      "name": "Home",
+      "device": "phone",
+      "x": 0,
+      "y": 0,
+      "variantOf": null,
+      "width": null,
+      "folder": "",
+      "status": "approved"
+    },
+    {
+      "id": "sc_wr_searchresults",
+      "board": "bd_wikipick_redesign",
+      "name": "Search results",
+      "device": "phone",
+      "x": 470,
+      "y": 0,
+      "variantOf": null,
+      "width": null,
+      "folder": "",
+      "status": "approved"
+    },
+    {
+      "id": "sc_wr_main",
+      "board": "bd_wikipick_redesign",
+      "name": "Article reader",
+      "device": "phone",
+      "x": 940,
+      "y": 0,
+      "variantOf": null,
+      "width": null,
+      "folder": "",
+      "status": "approved"
+    },
+    {
+      "id": "sc_wr_disambiguation",
+      "board": "bd_wikipick_redesign",
+      "name": "Disambiguation",
+      "device": "phone",
+      "x": 1410,
+      "y": 0,
+      "variantOf": null,
+      "width": null,
+      "folder": "",
+      "status": "approved"
+    },
+    {
+      "id": "sc_wr_savingoffline",
+      "board": "bd_wikipick_redesign",
+      "name": "Saving offline",
+      "device": "phone",
+      "x": 1880,
+      "y": 0,
+      "variantOf": null,
+      "width": null,
+      "folder": "",
+      "status": "approved"
+    },
+    {
+      "id": "sc_wr_drawer",
+      "board": "bd_wikipick_redesign",
+      "name": "Drawer nav",
+      "device": "phone",
+      "x": 0,
+      "y": 1010,
+      "variantOf": null,
+      "width": null,
+      "folder": "",
+      "status": "approved"
+    },
+    {
+      "id": "sc_wr_topic",
+      "board": "bd_wikipick_redesign",
+      "name": "Topic detail",
+      "device": "phone",
+      "x": 470,
+      "y": 1010,
+      "variantOf": null,
+      "width": null,
+      "folder": "",
+      "status": "approved"
+    },
+    {
+      "id": "sc_wr_topicmode",
+      "board": "bd_wikipick_redesign",
+      "name": "Topic mode in search",
+      "device": "phone",
+      "x": 1040,
+      "y": 1010,
+      "variantOf": null,
+      "width": null,
+      "folder": "",
+      "status": "proposed"
+    },
+    {
+      "id": "sc_wr_topicbuilder",
+      "board": "bd_wikipick_redesign",
+      "name": "Topic capture",
+      "device": "phone",
+      "x": 1510,
+      "y": 1010,
+      "variantOf": null,
+      "width": null,
+      "folder": "",
+      "status": "proposed"
+    },
+    {
+      "id": "sc_wr_resultmenu",
+      "board": "bd_wikipick_redesign",
+      "name": "Long-press dropdown",
+      "device": "phone",
+      "x": 1980,
+      "y": 1010,
+      "variantOf": null,
+      "width": null,
+      "folder": "",
+      "status": "approved"
+    },
+    {
+      "id": "sc_arch_home",
+      "board": "bd_architecture_scope",
+      "name": "Home (proposed)",
+      "device": "phone",
+      "x": 0,
+      "y": 0,
+      "variantOf": null,
+      "width": null,
+      "folder": "",
+      "status": "proposed"
+    },
+    {
+      "id": "sc_arch_story",
+      "board": "bd_architecture_scope",
+      "name": "Story door (proposed)",
+      "device": "phone",
+      "x": 470,
+      "y": 0,
+      "variantOf": null,
+      "width": null,
+      "folder": "",
+      "status": "proposed"
+    },
+    {
+      "id": "sc_arch_system",
+      "board": "bd_architecture_scope",
+      "name": "System door (proposed)",
+      "device": "phone",
+      "x": 940,
+      "y": 0,
+      "variantOf": null,
+      "width": null,
+      "folder": "",
+      "status": "proposed"
+    },
+    {
+      "id": "sc_wsm_map",
+      "board": "bd_wikipick_seedmap",
+      "name": "Seed map",
+      "device": "phone",
+      "x": 0,
+      "y": 0,
+      "variantOf": null,
+      "width": null,
+      "folder": "",
+      "status": "proposed"
+    },
+    {
+      "id": "sc_wsm_focus",
+      "board": "bd_wikipick_seedmap",
+      "name": "Node focus",
+      "device": "phone",
+      "x": 470,
+      "y": 0,
+      "variantOf": null,
+      "width": null,
+      "folder": "",
+      "status": "proposed"
+    }
+  ],
+  "widgets": [
+    {
+      "id": "w_titlebar",
+      "screen": "sc_home",
+      "kind": "titlebar",
+      "label": "Home",
+      "region": "top",
+      "order": 0,
+      "intent": null
+    },
+    {
+      "id": "w_search",
+      "screen": "sc_home",
+      "kind": "searchbar",
+      "label": "Search",
+      "region": "top",
+      "order": 1,
+      "intent": null
+    },
+    {
+      "id": "w_scroll",
+      "screen": "sc_home",
+      "kind": "scrollview",
+      "label": "Feed",
+      "region": "body",
+      "order": 0,
+      "intent": null
+    },
+    {
+      "id": "w_bottomnav",
+      "screen": "sc_home",
+      "kind": "bottomnav",
+      "label": "Nav",
+      "region": "bottom",
+      "order": 0,
+      "intent": null
+    },
+    {
+      "id": "w_wr_home_title",
+      "screen": "sc_wr_home",
+      "kind": "titlebar",
+      "label": "Wikipick",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "w_wr_home_search",
+      "screen": "sc_wr_home",
+      "kind": "searchbar",
+      "label": "Search Wikipedia · EN",
+      "region": "top",
+      "order": 1
+    },
+    {
+      "id": "w_wr_home_recent",
+      "screen": "sc_wr_home",
+      "kind": "list",
+      "label": "Recently read",
+      "region": "body",
+      "order": 0,
+      "items": "[\"Java Development Kit \\u00b7 2h ago\", \"SDL \\u00b7 3h ago\", {\"text\": \"Awesome Possum (RU) \\u00b7 1d ago\", \"icon\": \"language\"}]"
+    },
+    {
+      "id": "w_wr_home_saved",
+      "screen": "sc_wr_home",
+      "kind": "list",
+      "label": "Saved offline",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Java Development Kit \\u00b7 2 layers \\u00b7 5.5 KB\", \"Verification \\u00b7 1 layer \\u00b7 3.0 KB\", \"Rome \\u00b7 2 layers \\u00b7 102 KB\"]"
+    },
+    {
+      "id": "w_wr_home_footer",
+      "screen": "sc_wr_home",
+      "kind": "text",
+      "label": "Donate to Wikipedia",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "w_wr_sr_title",
+      "screen": "sc_wr_searchresults",
+      "kind": "titlebar",
+      "label": "Wikipick",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "w_wr_sr_search",
+      "screen": "sc_wr_searchresults",
+      "kind": "searchbar",
+      "label": "jdk · EN",
+      "region": "top",
+      "order": 1
+    },
+    {
+      "id": "w_wr_sr_list",
+      "screen": "sc_wr_searchresults",
+      "kind": "list",
+      "label": "Results",
+      "region": "body",
+      "order": 0,
+      "items": "[{\"text\": \"Java Development Kit \\u2014 Software development kit for Java\", \"icon\": \"bookmark\"}, {\"text\": \"JDK Flight Recorder \\u2014 Event recorder built into the Java runtime\", \"icon\": \"bookmark\"}, {\"text\": \"JDK Mission Control \\u2014 Profiling and diagnostics tool suite\", \"icon\": \"bookmark\"}, {\"text\": \"JDK Enhancement Proposal \\u2014 Process for collecting proposals for the JDK\", \"icon\": \"bookmark\"}, {\"text\": \"JDK 1.1 \\u2014 1997 release of the Java Development Kit\", \"icon\": \"bookmark\"}]"
+    },
+    {
+      "id": "w_wr_sr_footer",
+      "screen": "sc_wr_searchresults",
+      "kind": "text",
+      "label": "Tap a result to read it · tap the bookmark to save it",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "w_wr_main_title",
+      "screen": "sc_wr_main",
+      "kind": "titlebar",
+      "label": "Java Development Kit",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "w_wr_main_body",
+      "screen": "sc_wr_main",
+      "kind": "text",
+      "label": "Java Development Kit",
+      "region": "body",
+      "order": 0,
+      "items": "[\"Java Development Kit\", \"Software development kit for the Java platform\", \"Contents \\u00b7 7 sections\", \"The Java Development Kit (JDK) is a software development kit for development of a Java platform application. It includes the Java Runtime Environment, an interpreter, a compiler, an archiver and a documentation generator.\", \"The JDK forms an extended subset of a software development kit. Oracle's implementation ships alongside OpenJDK, the free and open-source reference implementation adopted by most distributions.\", \"JDK contents\", \"The JDK has as its primary components a collection of programming tools, including javac, jar and the debugger\\u2026\", \"Cached today \\u00b7 rev 1370229260\"]"
+    },
+    {
+      "id": "w_wr_main_actions",
+      "screen": "sc_wr_main",
+      "kind": "buttonrow",
+      "label": "Actions",
+      "region": "bottom",
+      "order": 0,
+      "items": "[{\"text\": \"Save\", \"icon\": \"bookmark_add\"}, {\"text\": \"Bookmarks\", \"icon\": \"menu_book\"}, {\"text\": \"Search\", \"icon\": \"search\"}, {\"text\": \"Contents\", \"icon\": \"toc\"}, {\"text\": \"Export\", \"icon\": \"open_in_new\"}]"
+    },
+    {
+      "id": "w_wr_dis_title",
+      "screen": "sc_wr_disambiguation",
+      "kind": "titlebar",
+      "label": "SDL",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "w_wr_dis_intro",
+      "screen": "sc_wr_disambiguation",
+      "kind": "text",
+      "label": "SDL may refer to:",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "w_wr_dis_computing",
+      "screen": "sc_wr_disambiguation",
+      "kind": "list",
+      "label": "Computing",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Simple DirectMedia Layer, a cross-platform multimedia library\", \"Specification and Description Language, for reactive systems\", \"Security Development Lifecycle, a Microsoft software process\", \"Simple Declarative Language, a data serialization format\"]"
+    },
+    {
+      "id": "w_wr_dis_orgs",
+      "screen": "sc_wr_disambiguation",
+      "kind": "list",
+      "label": "Organizations",
+      "region": "body",
+      "order": 2,
+      "items": "[\"SDL plc, a language-technology company\", \"Scottish Democratic League\"]"
+    },
+    {
+      "id": "w_wr_dis_other",
+      "screen": "sc_wr_disambiguation",
+      "kind": "list",
+      "label": "Other uses",
+      "region": "body",
+      "order": 3,
+      "items": "[\"Sasakawa African Association, formerly SDL\", \"Standard delay line, in electronics\"]"
+    },
+    {
+      "id": "w_wr_dis_footer",
+      "screen": "sc_wr_disambiguation",
+      "kind": "text",
+      "label": "Cached today · rev 1306119194",
+      "region": "body",
+      "order": 4
+    },
+    {
+      "id": "w_wr_so_title",
+      "screen": "sc_wr_savingoffline",
+      "kind": "titlebar",
+      "label": "Saving offline",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "w_wr_so_progress",
+      "screen": "sc_wr_savingoffline",
+      "kind": "card",
+      "label": "Overall progress",
+      "region": "top",
+      "order": 1,
+      "items": "[\"34 of 78 pages \\u00b7 1.9 MB \\u00b7 44% done\", \"Fetching: Roman Republic\\u2026\"]"
+    },
+    {
+      "id": "w_wr_so_seeds",
+      "screen": "sc_wr_savingoffline",
+      "kind": "list",
+      "label": "Seeds",
+      "region": "body",
+      "order": 0,
+      "items": "[\"Roman Empire \\u2014 L2 \\u25be \\u00b7 25/25 pages \\u00b7 9/95 links \\u00b7 28% done\", \"Julius Caesar \\u2014 L1 \\u25be \\u00b7 12/25 \\u00b7 paused \\u00b7 48% done\", \"Java Development Kit \\u2014 L2 \\u25be \\u00b7 done \\u00b7 2 layers\"]"
+    },
+    {
+      "id": "w_wr_so_footer",
+      "screen": "sc_wr_savingoffline",
+      "kind": "text",
+      "label": "3 failed — rate limited · Retry failed · long-press a seed: delete",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "w_wr_dr_title",
+      "screen": "sc_wr_drawer",
+      "kind": "titlebar",
+      "label": "Wikipick",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "w_wr_dr_nav",
+      "screen": "sc_wr_drawer",
+      "kind": "list",
+      "label": "Wikipick",
+      "region": "body",
+      "order": 0,
+      "items": "[{\"text\": \"Home\", \"icon\": \"public\"}, \"Library \\u00b7 26\", \"Saving offline \\u00b7 12/25\", \"Topics \\u00b7 3\"]"
+    },
+    {
+      "id": "w_wr_dr_topics",
+      "screen": "sc_wr_drawer",
+      "kind": "list",
+      "label": "Topics",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Roman History \\u00b7 212\", \"Java Ecosystem \\u00b7 88\"]"
+    },
+    {
+      "id": "w_wr_dr_settings",
+      "screen": "sc_wr_drawer",
+      "kind": "settings",
+      "label": "More",
+      "region": "bottom",
+      "order": 0,
+      "items": "[\"Preferences\", \"About & help\", \"Donate to Wikipedia\"]"
+    },
+    {
+      "id": "w_wr_top_title",
+      "screen": "sc_wr_topic",
+      "kind": "titlebar",
+      "label": "Topic",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "w_wr_top_head",
+      "screen": "sc_wr_topic",
+      "kind": "text",
+      "label": "Roman History",
+      "region": "body",
+      "order": 0,
+      "items": "[\"Roman History\", \"3 seeds \\u00b7 212 articles \\u00b7 1.9 MB\"]"
+    },
+    {
+      "id": "w_wr_top_synergy",
+      "screen": "sc_wr_topic",
+      "kind": "card",
+      "label": "Synergy — 42% shared",
+      "region": "body",
+      "order": 1,
+      "items": "[\"89 of 212 articles are reached by 2+ seeds \\u2014 strong overlap. Every shared article was downloaded once.\", \"Layer 1 \\u00b7 18 of 64 shared\", \"Layer 2 \\u00b7 71 of 148 shared\"]"
+    },
+    {
+      "id": "w_wr_top_seeds",
+      "screen": "sc_wr_topic",
+      "kind": "list",
+      "label": "Seeds",
+      "region": "body",
+      "order": 2,
+      "items": "[\"Roman Empire \\u2014 L2 \\u25be \\u00b7 95 articles \\u00b7 43 shared with other seeds\", \"Julius Caesar \\u2014 L2 \\u25be \\u00b7 78 articles \\u00b7 48 shared with other seeds\", \"Punic Wars \\u2014 L1 \\u25be \\u00b7 39 articles \\u00b7 9 shared \\u2014 mostly new ground\"]"
+    },
+    {
+      "id": "w_wr_top_actions",
+      "screen": "sc_wr_topic",
+      "kind": "buttonrow",
+      "label": "Actions",
+      "region": "bottom",
+      "order": 0,
+      "items": "[{\"text\": \"Cache all\", \"icon\": \"download\"}, {\"text\": \"Add seed\", \"icon\": \"add\"}]"
+    },
+    {
+      "id": "w_wr_tm_title",
+      "screen": "sc_wr_topicmode",
+      "kind": "titlebar",
+      "label": "Wikipick",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "w_wr_tm_search",
+      "screen": "sc_wr_topicmode",
+      "kind": "searchbar",
+      "label": "rome · EN",
+      "region": "top",
+      "order": 1
+    },
+    {
+      "id": "w_wr_tm_card",
+      "screen": "sc_wr_topicmode",
+      "kind": "card",
+      "label": "Capture “Rome” as a topic",
+      "region": "top",
+      "order": 2,
+      "items": "[\"Rank these results by how tightly they interlink\"]"
+    },
+    {
+      "id": "w_wr_tm_list",
+      "screen": "sc_wr_topicmode",
+      "kind": "list",
+      "label": "Results",
+      "region": "body",
+      "order": 0,
+      "items": "[{\"text\": \"Rome \\u2014 Capital and largest city of Italy\", \"icon\": \"bookmark\"}, {\"text\": \"Roman Empire \\u2014 27 BC\\u2013476/1453 AD state and civilization\", \"icon\": \"bookmark\"}, {\"text\": \"Romeo and Juliet \\u2014 Tragedy by William Shakespeare\", \"icon\": \"bookmark\"}, {\"text\": \"Rome Fiumicino Airport \\u2014 Main airport serving Rome, Italy\", \"icon\": \"bookmark\"}, {\"text\": \"Romelu Lukaku \\u2014 Belgian footballer (born 1993)\", \"icon\": \"bookmark\"}]"
+    },
+    {
+      "id": "w_wr_tm_footer",
+      "screen": "sc_wr_topicmode",
+      "kind": "text",
+      "label": "The topic card appears whenever a search returns 5+ results",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "w_wr_tb_title",
+      "screen": "sc_wr_topicbuilder",
+      "kind": "titlebar",
+      "label": "Topic capture",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "w_wr_tb_head",
+      "screen": "sc_wr_topicbuilder",
+      "kind": "text",
+      "label": "Rome",
+      "region": "body",
+      "order": 0,
+      "items": "[\"Rome\", \"12 candidates \\u00b7 centrality from links between them \\u00b7 done in 6s\"]"
+    },
+    {
+      "id": "w_wr_tb_core",
+      "screen": "sc_wr_topicbuilder",
+      "kind": "list",
+      "label": "Core — saved as seeds",
+      "region": "body",
+      "order": 1,
+      "items": "[{\"text\": \"Rome \\u2014 11 of 11 link here\", \"toggle\": true}, {\"text\": \"Roman Empire \\u2014 9 of 11\", \"toggle\": true}, {\"text\": \"Ancient Rome \\u2014 8 of 11\", \"toggle\": true}, {\"text\": \"Roman Republic \\u2014 7 of 11\", \"toggle\": true}, {\"text\": \"Colosseum \\u2014 6 of 11\", \"toggle\": true}]"
+    },
+    {
+      "id": "w_wr_tb_peripheral",
+      "screen": "sc_wr_topicbuilder",
+      "kind": "list",
+      "label": "Peripheral — same name, different topic",
+      "region": "body",
+      "order": 2,
+      "items": "[{\"text\": \"Rome (TV series) \\u2014 2 of 11\", \"toggle\": false}, {\"text\": \"Romelu Lukaku \\u2014 0 of 11\", \"toggle\": false}, {\"text\": \"\\u00d3scar Romero \\u2014 0 of 11\", \"toggle\": false}]"
+    },
+    {
+      "id": "w_wr_tb_options",
+      "screen": "sc_wr_topicbuilder",
+      "kind": "buttonrow",
+      "label": "Options",
+      "region": "bottom",
+      "order": 0,
+      "items": "[\"Depth L1 \\u25be\", \"Images off \\u25be\", \"\\u2248 210 articles\"]"
+    },
+    {
+      "id": "w_wr_tb_create",
+      "screen": "sc_wr_topicbuilder",
+      "kind": "buttonrow",
+      "label": "Create",
+      "region": "bottom",
+      "order": 1,
+      "items": "[{\"text\": \"Create topic \\u00b7 cache 5 seeds\", \"icon\": \"download\"}]"
+    },
+    {
+      "id": "w_wr_rm_title",
+      "screen": "sc_wr_resultmenu",
+      "kind": "titlebar",
+      "label": "Wikipick",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "w_wr_rm_search",
+      "screen": "sc_wr_resultmenu",
+      "kind": "searchbar",
+      "label": "rome · EN",
+      "region": "top",
+      "order": 1
+    },
+    {
+      "id": "w_wr_rm_row",
+      "screen": "sc_wr_resultmenu",
+      "kind": "list",
+      "label": "Result (long-pressed)",
+      "region": "body",
+      "order": 0,
+      "items": "[{\"text\": \"Rome \\u2014 Capital and largest city of Italy\", \"icon\": \"bookmark\"}]"
+    },
+    {
+      "id": "w_wr_rm_menu",
+      "screen": "sc_wr_resultmenu",
+      "kind": "popup",
+      "label": "Long-press menu",
+      "region": "overlay",
+      "order": 0,
+      "items": "[{\"text\": \"Read now\", \"icon\": \"search\"}, {\"text\": \"Save offline\", \"icon\": \"bookmark_add\", \"children\": [{\"text\": \"1 level deep (default)\"}, {\"text\": \"2 levels deep\"}, {\"text\": \"Include images\", \"toggle\": false}]}, {\"text\": \"Add to topic\\u2026\", \"icon\": \"add\"}, {\"text\": \"Open on Wikipedia\", \"icon\": \"open_in_new\"}]"
+    },
+    {
+      "id": "w_wr_rm_dim",
+      "screen": "sc_wr_resultmenu",
+      "kind": "list",
+      "label": "Below the fold",
+      "region": "body",
+      "order": 1,
+      "items": "[{\"text\": \"Roman Empire \\u2014 27 BC\\u2013476/1453 AD state and civilization\", \"icon\": \"bookmark\"}]"
+    },
+    {
+      "id": "w_wr_rm_footer",
+      "screen": "sc_wr_resultmenu",
+      "kind": "text",
+      "label": "Long-press a row → this dropdown opens at the finger (never a slide-up sheet). The pressed row stays highlighted while the menu is open. “Save offline” expands in place to the depth/images submenu shown. Every tappable card ripples on touch — hard requirement.",
+      "region": "body",
+      "order": 2
+    },
+    {
+      "id": "w_arch_home_title",
+      "screen": "sc_arch_home",
+      "kind": "titlebar",
+      "label": "Architecture",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "w_arch_home_purpose",
+      "screen": "sc_arch_home",
+      "kind": "text",
+      "label": "How your app gets built and shipped, and where it stands",
+      "region": "top",
+      "order": 1
+    },
+    {
+      "id": "w_arch_home_rightnow",
+      "screen": "sc_arch_home",
+      "kind": "card",
+      "label": "Right now",
+      "region": "body",
+      "order": 0,
+      "items": "[\"15 sessions working\", \"20 applets touched this week\", \"prod 4650e726 · dev 535204dd\"]"
+    },
+    {
+      "id": "w_arch_home_needsyou",
+      "screen": "sc_arch_home",
+      "kind": "list",
+      "label": "Needs you — one action per row; honest empty state reads \"Nothing needs you\"",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Rooms server step — open Versions\"]"
+    },
+    {
+      "id": "w_arch_home_doors",
+      "screen": "sc_arch_home",
+      "kind": "buttonrow",
+      "label": "Doors",
+      "region": "bottom",
+      "order": 0,
+      "items": "[\"Story\", \"System\", \"Reference\"]"
+    },
+    {
+      "id": "w_arch_story_title",
+      "screen": "sc_arch_story",
+      "kind": "titlebar",
+      "label": "Story",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "w_arch_story_purpose",
+      "screen": "sc_arch_story",
+      "kind": "text",
+      "label": "What's new, in order, as it happened",
+      "region": "top",
+      "order": 1
+    },
+    {
+      "id": "w_arch_story_sections",
+      "screen": "sc_arch_story",
+      "kind": "list",
+      "label": "Sections",
+      "region": "body",
+      "order": 0,
+      "items": "[\"What's new\", \"Timeline\", \"Releases\"]"
+    },
+    {
+      "id": "w_arch_story_spine",
+      "screen": "sc_arch_story",
+      "kind": "list",
+      "label": "Time spine (example) — placeholder pending a native spine/timeline widget kind, see sticky",
+      "region": "body",
+      "order": 1,
+      "items": "[\"This week · wikipick seed toggle + tap-cue fix\", \"Last week · anatomy probe line + LOD tiers\", \"Two weeks ago · house design rules v1.1 fleet sweep\"]"
+    },
+    {
+      "id": "w_arch_system_title",
+      "screen": "sc_arch_system",
+      "kind": "titlebar",
+      "label": "System",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "w_arch_system_purpose",
+      "screen": "sc_arch_system",
+      "kind": "text",
+      "label": "The parts, how they connect, and what’s running where",
+      "region": "top",
+      "order": 1
+    },
+    {
+      "id": "w_arch_system_sections",
+      "screen": "sc_arch_system",
+      "kind": "list",
+      "label": "Sections",
+      "region": "body",
+      "order": 0,
+      "items": "[\"System map\", \"Versions & pipeline\", \"Applets board\", \"House rules\"]"
+    },
+    {
+      "id": "w_arch_system_matrix",
+      "screen": "sc_arch_system",
+      "kind": "list",
+      "label": "Dev | Prod (example) — placeholder pending a native table/matrix widget kind, see sticky",
+      "region": "body",
+      "order": 1,
+      "items": "[\"Dev · 535204dd\", \"Prod · 4650e726\"]"
+    },
+    {
+      "id": "w_wsm_map_title",
+      "screen": "sc_wsm_map",
+      "kind": "titlebar",
+      "label": "Seed map",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "w_wsm_map_legend",
+      "screen": "sc_wsm_map",
+      "kind": "buttonrow",
+      "label": "Legend",
+      "region": "top",
+      "order": 1,
+      "items": "[\"\\u25cf Seed\", \"\\u25cf Article\", \"\\u25cb 1 away\", \"\\u25cb 2 away\", \"\\u25ce Shared\"]"
+    },
+    {
+      "id": "w_wsm_map_filter",
+      "screen": "sc_wsm_map",
+      "kind": "buttonrow",
+      "label": "Filter",
+      "region": "top",
+      "order": 2,
+      "items": "[\"Topic \\u25be\"]"
+    },
+    {
+      "id": "w_wsm_map_canvas",
+      "screen": "sc_wsm_map",
+      "kind": "image",
+      "label": "Radial seed map — concentric depth rings around each seed; large terracotta = seed, medium sage = individually-saved article, small warm-tan = 1-away, smaller muted = 2-away, ring-outlined = shared between 2+ seeds; faint edges = crawl_members link; shared members pulled toward the midpoint between their seeds; pan/zoom. Placeholder pending a native `graph` widget kind — see sticky (a).",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "w_wsm_map_counts",
+      "screen": "sc_wsm_map",
+      "kind": "text",
+      "label": "12 seeds · 4 articles · 210 layer articles · 38 shared",
+      "region": "body",
+      "order": 1
+    },
+    {
+      "id": "w_wsm_map_menu",
+      "screen": "sc_wsm_map",
+      "kind": "popup",
+      "label": "Long-press node menu",
+      "region": "overlay",
+      "order": 0,
+      "items": "[{\"text\": \"Add seed\", \"icon\": \"add\"}, {\"text\": \"Remove seed\", \"icon\": \"remove\"}, {\"text\": \"Change depth\\u2026\", \"icon\": \"tune\", \"children\": [{\"text\": \"Depth 1\"}, {\"text\": \"Depth 2\"}]}, {\"text\": \"Details\", \"icon\": \"info\"}, {\"text\": \"Delete\", \"icon\": \"delete\"}]"
+    },
+    {
+      "id": "w_wsm_focus_title",
+      "screen": "sc_wsm_focus",
+      "kind": "titlebar",
+      "label": "Roman Empire — focus",
+      "region": "top",
+      "order": 0
+    },
+    {
+      "id": "w_wsm_focus_canvas",
+      "screen": "sc_wsm_focus",
+      "kind": "image",
+      "label": "Re-centered radial view on one seed — rings only (1 away, 2 away), plus faint ghost nodes at the frame edge marking shared links out to other seeds. Same placeholder kind as the main Seed map (see sticky a).",
+      "region": "body",
+      "order": 0
+    },
+    {
+      "id": "w_wsm_focus_strip",
+      "screen": "sc_wsm_focus",
+      "kind": "list",
+      "label": "Layer articles by degree",
+      "region": "body",
+      "order": 1,
+      "items": "[\"1 away \\u00b7 43 articles\", \"2 away \\u00b7 52 articles\", \"Shared with 2 other seeds \\u00b7 9 articles\"]"
+    },
+    {
+      "id": "w_wsm_focus_actions",
+      "screen": "sc_wsm_focus",
+      "kind": "buttonrow",
+      "label": "Actions",
+      "region": "bottom",
+      "order": 0,
+      "items": "[{\"text\": \"Back to full map\", \"icon\": \"arrow_back\"}]"
+    }
+  ],
+  "flows": [
+    {
+      "id": "fl_home_details",
+      "board": "bd_myapp",
+      "fromWidget": "w_scroll",
+      "toScreen": "sc_details",
+      "transition": "push"
+    },
+    {
+      "id": "fl_arch_home_story",
+      "board": "bd_architecture_scope",
+      "fromWidget": "w_arch_home_doors",
+      "toScreen": "sc_arch_story",
+      "transition": "push"
+    },
+    {
+      "id": "fl_arch_home_system",
+      "board": "bd_architecture_scope",
+      "fromWidget": "w_arch_home_doors",
+      "toScreen": "sc_arch_system",
+      "transition": "push"
+    }
+  ],
+  "frameImages": [],
+  "stickies": [
+    {
+      "id": "st_wr_empty_state_rule",
+      "board": "bd_wikipick_redesign",
+      "x": 0,
+      "y": -150,
+      "width": 320,
+      "text": "When both Home lists are empty: ONE small combined hint line replaces both sections — never two big icons. Bottom action bar in the reader auto-hides on scroll down, returns on scroll up."
+    },
+    {
+      "id": "st_wr_topic_mode_proposal",
+      "board": "bd_wikipick_redesign",
+      "x": 1040,
+      "y": 860,
+      "width": 320,
+      "text": "PROPOSAL (revision 5): Topic mode during search. Search -> a topic card appears under the field (5+ results). Tap -> topic capture: top 12 results ranked by CENTRALITY (how many other candidates link to each one). Majority-linked = CORE, pre-checked; PERIPHERAL = unchecked, tap to override. Depth + images chips reuse per-save options. Name is editable."
+    },
+    {
+      "id": "st_wr_result_menu_proposal",
+      "board": "bd_wikipick_redesign",
+      "x": 1980,
+      "y": 880,
+      "width": 320,
+      "text": "PROPOSAL (revision 6): LONG-PRESS a search result -> ANCHORED DROPDOWN at the finger — never a slide-up sheet. Rows: Read now / Save offline (submenu) / Add to topic / Open on Wikipedia. Tap still opens the article; bookmark icon stays quick-save. Ripple on every tappable row is required."
+    },
+    {
+      "id": "st_arch_purpose",
+      "board": "bd_architecture_scope",
+      "x": 0,
+      "y": -320,
+      "width": 340,
+      "text": "S1 PURPOSE: show, at a glance and in plain words, how the app gets built and shipped and where everything stands right now — so the maintainer knows what’s what, what’s going on, what needs them, and where to go next."
+    },
+    {
+      "id": "st_arch_audience",
+      "board": "bd_architecture_scope",
+      "x": 350,
+      "y": -320,
+      "width": 340,
+      "text": "S2 AUDIENCE: the maintainer is primary (daily \"where do things stand / what needs me\" check on a phone); curious public-app users are secondary, reading it as a story of how the ecosystem is built. Everything shown must be public-safe — counts, dates, generic labels only, no session tags, branch names, commit subjects, hosts, or ops details."
+    },
+    {
+      "id": "st_arch_inscope",
+      "board": "bd_architecture_scope",
+      "x": 700,
+      "y": -320,
+      "width": 340,
+      "text": "S3 IN SCOPE: Home entry (purpose line, Right now card, Needs you list, three named doors) · Story door (What’s new, Timeline, Releases) · System door (System map, Versions & pipeline, Applets board, House rules) · Reference door (process boards, widget/package reference, unchanged content re-housed). Data comes from automated mirror snapshots, asOf-stamped."
+    },
+    {
+      "id": "st_arch_outscope",
+      "board": "bd_architecture_scope",
+      "x": 1050,
+      "y": -320,
+      "width": 340,
+      "text": "S4 OUT OF SCOPE v1: no editing from the applet (no writes to ledgers/boards); no live/streaming data (snapshots only, honest \"as of\"); no cross-applet live reads (engine ask, queued); no internal ops console features (those stay in the private aidev/Dispatch channel)."
+    },
+    {
+      "id": "st_arch_rules",
+      "board": "bd_architecture_scope",
+      "x": 0,
+      "y": 620,
+      "width": 340,
+      "text": "S5 RULES: every screen answers the four questions (What is this? What’s going on? What do I do? Where do I go?); ≤4 named doors, words never icon-only; one purpose line per screen, no legends/paragraphs on group headers; no truncation; one switcher style everywhere; small detail = popup, substantial = full-screen push, never a bottom sheet."
+    },
+    {
+      "id": "st_arch_done",
+      "board": "bd_architecture_scope",
+      "x": 350,
+      "y": 620,
+      "width": 340,
+      "text": "S6 DONE MEANS: a new visitor can say what the applet is, what’s happening, and what to do within 10 seconds on a phone, without tapping. Every screen passes the four-question test and the layout/public-safety gates. Screenshots of every screen reviewed by the maintainer on dev before prod."
+    },
+    {
+      "id": "st_arch_decision_audience",
+      "board": "bd_architecture_scope",
+      "x": 700,
+      "y": 620,
+      "width": 340,
+      "text": "D1 DECISION NEEDED: is the secondary audience (public readers) in, or maintainer-only? Affects how much of the ship pipeline gets shown. RECOMMEND: public-in, public-safe data only."
+    },
+    {
+      "id": "st_arch_decision_needsyou",
+      "board": "bd_architecture_scope",
+      "x": 1050,
+      "y": 620,
+      "width": 340,
+      "text": "D2 DECISION NEEDED: Home’s \"Needs you\" actions — link-out only (open the relevant screen) or real one-tap actions (e.g. \"mark seen\")? RECOMMEND: link-out only for v1."
+    },
+    {
+      "id": "st_arch_decision_doororder",
+      "board": "bd_architecture_scope",
+      "x": 0,
+      "y": 960,
+      "width": 340,
+      "text": "D3 DECISION NEEDED: order of the three doors — Story · System · Reference (recommended) or System first? RECOMMEND: Story · System · Reference, story-first reads better for a new visitor."
+    },
+    {
+      "id": "st_arch_kindgap_spine",
+      "board": "bd_architecture_scope",
+      "x": 470,
+      "y": -640,
+      "width": 300,
+      "text": "KIND GAP (Story door): no native `spine`/`timeline` widget kind exists in composer today — the Time spine example uses `list` as the closest real kind. A dedicated spine kind (areas down, time sideways, HERE marker per the scope doc’s Timeline sub-view) would need an engine round."
+    },
+    {
+      "id": "st_arch_kindgap_matrix",
+      "board": "bd_architecture_scope",
+      "x": 940,
+      "y": -640,
+      "width": 300,
+      "text": "KIND GAP (System door): no native `table`/`matrix` widget kind exists in composer today — the Dev|Prod example uses `list` as the closest real kind. A true 2-column matrix (web/app × dev/prod, per the scope doc’s Versions & pipeline sub-view) would need an engine round."
+    },
+    {
+      "id": "st_wsm_engine_choice",
+      "board": "bd_wikipick_seedmap",
+      "x": 0,
+      "y": -260,
+      "width": 340,
+      "text": "(a) RENDER ENGINE: recommend the existing canvas-with-connections node (bublee/wireframe's, per canvas-connection-default-centre) over a new dedicated `graph` node. Tradeoffs: reuses proven pan/zoom + hit-testing + offline (no network layout deps) at the cost of no built-in force/radial solver — we compute deterministic ring positions ourselves (see sticky b) and feed them as fixed node coordinates, same as bublee's map does today. At 500+ nodes the existing canvas node is untested at that density; recommend capping the rendered graph to the topic-filtered subset (chip already in frame 1) rather than building a new engine node for this round. Color pick for individually-saved ARTICLES (depth 0): sage #6B8F71 — my own choice, not an existing wikipick token, chosen to read as cool/neutral against sepia bg #211912 and terracotta accents #e09a80/#7A2E1D. Composer widgets carry no per-widget color field today, so this palette is a spec note for the eventual graph renderer, not something drawn in this Moku frame itself."
+    },
+    {
+      "id": "st_wsm_layout_rule",
+      "board": "bd_wikipick_seedmap",
+      "x": 470,
+      "y": -260,
+      "width": 340,
+      "text": "(b) LAYOUT: deterministic radial rings per seed, NO physics/jitter — must read smooth on phone per the fleet's map-pan-must-be-smooth standard (pan must stay smooth regardless of data volume/layout complexity). A force-directed layout would recompute node positions every frame under drag, which is exactly what that standard rules out; fixed concentric rings (seed at center, ring1/ring2 at fixed radii, shared members interpolated to the midpoint between their seeds' centers) are computed once per topic-filter change, not per frame."
+    },
+    {
+      "id": "st_wsm_data_model",
+      "board": "bd_wikipick_seedmap",
+      "x": 0,
+      "y": 780,
+      "width": 340,
+      "text": "(c) DATA MODEL: one DERIVED table/view built from `seeds` + `crawl_members` (depth, seed→member edges, shared-member overlap per W16's unified seed model) — explicitly NO new persisted graph table. Node role (seed/article/layer1/layer2/shared) and ring position are computed at read time from existing rows; nothing new to keep in sync on save/delete/refcount."
+    },
+    {
+      "id": "st_wsm_placement",
+      "board": "bd_wikipick_seedmap",
+      "x": 470,
+      "y": 780,
+      "width": 340,
+      "text": "(d) PLACEMENT: a 5th nav destination \"Map\" in the drawer (alongside Home/Library/Saving offline/Topics), plus a \"View on map\" entry in a Topic's ⋮ menu that opens the map pre-filtered to that topic."
+    },
+    {
+      "id": "st_arch_built_0912",
+      "board": "bd_architecture_scope",
+      "x": 350,
+      "y": 960,
+      "width": 340,
+      "text": "BUILT ON DEV 2026-09-12: the Home screen and the three named doors in these frames are now the applet's real structure on the dev channel (purpose line, Right now, Needs you with link-outs, Story/System/Reference). The three frames stay status PROPOSED — only you approve a frame."
+    }
+  ]
+}

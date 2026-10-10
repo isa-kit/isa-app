@@ -1,0 +1,541 @@
+{
+  "app": {
+    "languages": ["en", "ko", "zh", "hi", "es", "fr", "ar", "pt", "ru", "de", "ja", "tr", "vi", "it", "fa", "pl", "uk", "nl", "sv", "cs", "el"],
+    "translatable": true,
+    "intro": {
+      "purpose": {
+        "en": "Shelplet bundles Atlas, Scenarios, Models and Reports into one read — everything you need for a single decision, in one place.",
+        "ko": "Shelplet은 Atlas, Scenarios, Models, Reports를 하나로 묶어 보여줍니다 — 하나의 결정을 위해 필요한 모든 것을 한 곳에서.",
+        "zh": "Shelplet 将 Atlas、Scenarios、Models 和 Reports 汇总为一份阅读材料——做出决策所需的一切,尽在一处。",
+        "hi": "Shelplet, Atlas, Scenarios, Models और Reports को एक साथ जोड़ता है — एक निर्णय के लिए ज़रूरी हर चीज़ एक ही जगह पर।",
+        "es": "Shelplet reúne Atlas, Scenarios, Models y Reports en una sola lectura: todo lo que necesitas para una decisión, en un solo lugar.",
+        "fr": "Shelplet regroupe Atlas, Scenarios, Models et Reports en une seule lecture — tout ce qu'il faut pour une décision, au même endroit.",
+        "ar": "يجمع Shelplet بين Atlas وScenarios وModels وReports في قراءة واحدة — كل ما تحتاجه لاتخاذ قرار، في مكان واحد.",
+        "pt": "O Shelplet reúne Atlas, Scenarios, Models e Reports em uma única leitura — tudo o que você precisa para uma decisão, em um só lugar.",
+        "ru": "Shelplet объединяет Atlas, Scenarios, Models и Reports в единый обзор — всё необходимое для решения в одном месте.",
+        "de": "Shelplet bündelt Atlas, Scenarios, Models und Reports zu einer Übersicht — alles, was du für eine Entscheidung brauchst, an einem Ort.",
+        "ja": "ShelpletはAtlas、Scenarios、Models、Reportsを1つにまとめます — 1つの意思決定に必要なすべてが、ここに。",
+        "tr": "Shelplet, Atlas, Scenarios, Models ve Reports'u tek bir okumada birleştirir — bir karar için gereken her şey tek yerde.",
+        "vi": "Shelplet gộp Atlas, Scenarios, Models và Reports thành một nơi đọc duy nhất — mọi thứ bạn cần cho một quyết định, tại một chỗ.",
+        "it": "Shelplet riunisce Atlas, Scenarios, Models e Reports in un'unica lettura — tutto ciò che serve per una decisione, in un solo posto.",
+        "fa": "Shelplet، Atlas، Scenarios، Models و Reports را در یک نگاه گرد هم می‌آورد — هر آنچه برای یک تصمیم لازم است، در یک‌جا.",
+        "pl": "Shelplet łączy Atlas, Scenarios, Models i Reports w jedną lekturę — wszystko, czego potrzebujesz do jednej decyzji, w jednym miejscu.",
+        "uk": "Shelplet об'єднує Atlas, Scenarios, Models і Reports в один огляд — усе потрібне для рішення в одному місці.",
+        "nl": "Shelplet bundelt Atlas, Scenarios, Models en Reports tot één overzicht — alles wat je nodig hebt voor een beslissing, op één plek.",
+        "sv": "Shelplet samlar Atlas, Scenarios, Models och Reports i en enda överblick — allt du behöver för ett beslut, på ett ställe.",
+        "cs": "Shelplet slučuje Atlas, Scenarios, Models a Reports do jednoho přehledu — vše potřebné pro rozhodnutí na jednom místě.",
+        "el": "Το Shelplet συγκεντρώνει τα Atlas, Scenarios, Models και Reports σε μία ανάγνωση — ό,τι χρειάζεστε για μια απόφαση, σε ένα μέρος."
+      },
+      "tour": [
+        {
+          "screen": "atlas",
+          "label": "Atlas",
+          "note": "The place-analysis map and layers, embedded."
+        },
+        {
+          "screen": "scenarios",
+          "label": "Scenarios",
+          "note": "The scenario setup and runs, embedded."
+        },
+        {
+          "screen": "models",
+          "label": "Models",
+          "note": "The model catalog, embedded."
+        },
+        {
+          "screen": "reports",
+          "label": "Reports",
+          "note": "The report dashboards, embedded."
+        },
+        {
+          "screen": "decision",
+          "label": "Decision",
+          "note": "The final read — what all of the above adds up to."
+        }
+      ]
+    },
+    "title": {
+      "en": "Shelplet",
+      "ko": "Shelplet",
+      "zh": "Shelplet",
+      "hi": "Shelplet",
+      "es": "Shelplet",
+      "fr": "Shelplet",
+      "ar": "Shelplet",
+      "pt": "Shelplet",
+      "ru": "Shelplet",
+      "de": "Shelplet",
+      "ja": "Shelplet",
+      "tr": "Shelplet",
+      "vi": "Shelplet",
+      "it": "Shelplet",
+      "fa": "Shelplet",
+      "pl": "Shelplet",
+      "uk": "Shelplet",
+      "nl": "Shelplet",
+      "sv": "Shelplet",
+      "cs": "Shelplet",
+      "el": "Shelplet"
+    }
+  },
+  "nav": [
+    {
+      "id": "atlas",
+      "label": {
+        "en": "Atlas",
+        "ko": "Atlas",
+        "zh": "Atlas",
+        "hi": "Atlas",
+        "es": "Atlas",
+        "fr": "Atlas",
+        "ar": "Atlas",
+        "pt": "Atlas",
+        "ru": "Atlas",
+        "de": "Atlas",
+        "ja": "Atlas",
+        "tr": "Atlas",
+        "vi": "Atlas",
+        "it": "Atlas",
+        "fa": "Atlas",
+        "pl": "Atlas",
+        "uk": "Atlas",
+        "nl": "Atlas",
+        "sv": "Atlas",
+        "cs": "Atlas",
+        "el": "Atlas"
+      },
+      "icon": "map",
+      "screen": "atlas"
+    },
+    {
+      "id": "scenarios",
+      "label": {
+        "en": "Scenarios",
+        "ko": "Scenarios",
+        "zh": "Scenarios",
+        "hi": "Scenarios",
+        "es": "Scenarios",
+        "fr": "Scenarios",
+        "ar": "Scenarios",
+        "pt": "Scenarios",
+        "ru": "Scenarios",
+        "de": "Scenarios",
+        "ja": "Scenarios",
+        "tr": "Scenarios",
+        "vi": "Scenarios",
+        "it": "Scenarios",
+        "fa": "Scenarios",
+        "pl": "Scenarios",
+        "uk": "Scenarios",
+        "nl": "Scenarios",
+        "sv": "Scenarios",
+        "cs": "Scenarios",
+        "el": "Scenarios"
+      },
+      "icon": "play_arrow",
+      "screen": "scenarios"
+    },
+    {
+      "id": "models",
+      "label": {
+        "en": "Models",
+        "ko": "Models",
+        "zh": "Models",
+        "hi": "Models",
+        "es": "Models",
+        "fr": "Models",
+        "ar": "Models",
+        "pt": "Models",
+        "ru": "Models",
+        "de": "Models",
+        "ja": "Models",
+        "tr": "Models",
+        "vi": "Models",
+        "it": "Models",
+        "fa": "Models",
+        "pl": "Models",
+        "uk": "Models",
+        "nl": "Models",
+        "sv": "Models",
+        "cs": "Models",
+        "el": "Models"
+      },
+      "icon": "account_tree",
+      "screen": "models"
+    },
+    {
+      "id": "reports",
+      "label": {
+        "en": "Reports",
+        "ko": "Reports",
+        "zh": "Reports",
+        "hi": "Reports",
+        "es": "Reports",
+        "fr": "Reports",
+        "ar": "Reports",
+        "pt": "Reports",
+        "ru": "Reports",
+        "de": "Reports",
+        "ja": "Reports",
+        "tr": "Reports",
+        "vi": "Reports",
+        "it": "Reports",
+        "fa": "Reports",
+        "pl": "Reports",
+        "uk": "Reports",
+        "nl": "Reports",
+        "sv": "Reports",
+        "cs": "Reports",
+        "el": "Reports"
+      },
+      "icon": "leaderboard",
+      "screen": "reports"
+    },
+    {
+      "id": "decision",
+      "label": {
+        "en": "Decision",
+        "ko": "결정",
+        "zh": "决策",
+        "hi": "निर्णय",
+        "es": "Decisión",
+        "fr": "Décision",
+        "ar": "القرار",
+        "pt": "Decisão",
+        "ru": "Решение",
+        "de": "Entscheidung",
+        "ja": "意思決定",
+        "tr": "Karar",
+        "vi": "Quyết định",
+        "it": "Decisione",
+        "fa": "تصمیم",
+        "pl": "Decyzja",
+        "uk": "Рішення",
+        "nl": "Beslissing",
+        "sv": "Beslut",
+        "cs": "Rozhodnutí",
+        "el": "Απόφαση"
+      },
+      "icon": "verified",
+      "screen": "decision"
+    }
+  ],
+  "screens": {
+    "atlas": {
+      "title": {
+        "en": "Atlas — map dashboard",
+        "ko": "Atlas — 지도 대시보드",
+        "zh": "Atlas — 地图仪表盘",
+        "hi": "Atlas — मानचित्र डैशबोर्ड",
+        "es": "Atlas: panel de mapa",
+        "fr": "Atlas — tableau de bord cartographique",
+        "ar": "Atlas — لوحة الخريطة",
+        "pt": "Atlas — painel de mapa",
+        "ru": "Atlas — панель карты",
+        "de": "Atlas — Kartendashboard",
+        "ja": "Atlas — マップダッシュボード",
+        "tr": "Atlas — harita panosu",
+        "vi": "Atlas — bảng điều khiển bản đồ",
+        "it": "Atlas — dashboard mappa",
+        "fa": "Atlas — داشبورد نقشه",
+        "pl": "Atlas — panel mapy",
+        "uk": "Atlas — панель карти",
+        "nl": "Atlas — kaartdashboard",
+        "sv": "Atlas — kartöversikt",
+        "cs": "Atlas — mapový přehled",
+        "el": "Atlas — πίνακας χάρτη"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "embed",
+            "appletId": "atlas",
+            "height": 680
+          }
+        ]
+      }
+    },
+    "scenarios": {
+      "title": {
+        "en": "Scenarios — run & prove",
+        "ko": "Scenarios — 실행 및 검증",
+        "zh": "Scenarios — 运行与验证",
+        "hi": "Scenarios — चलाएँ और सत्यापित करें",
+        "es": "Scenarios: ejecutar y comprobar",
+        "fr": "Scenarios — exécuter et vérifier",
+        "ar": "Scenarios — تشغيل وإثبات",
+        "pt": "Scenarios — executar e comprovar",
+        "ru": "Scenarios — запуск и проверка",
+        "de": "Scenarios — ausführen und belegen",
+        "ja": "Scenarios — 実行と検証",
+        "tr": "Scenarios — çalıştır ve doğrula",
+        "vi": "Scenarios — chạy và chứng minh",
+        "it": "Scenarios — esegui e verifica",
+        "fa": "Scenarios — اجرا و اثبات",
+        "pl": "Scenarios — uruchom i udowodnij",
+        "uk": "Scenarios — запуск і перевірка",
+        "nl": "Scenarios — uitvoeren en bewijzen",
+        "sv": "Scenarios — kör och verifiera",
+        "cs": "Scenarios — spustit a ověřit",
+        "el": "Scenarios — εκτέλεση & απόδειξη"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "embed",
+            "appletId": "scenarios",
+            "height": 680
+          }
+        ]
+      }
+    },
+    "models": {
+      "title": {
+        "en": "Models — the logic",
+        "ko": "Models — 로직",
+        "zh": "Models — 逻辑",
+        "hi": "Models — तर्क",
+        "es": "Models: la lógica",
+        "fr": "Models — la logique",
+        "ar": "Models — المنطق",
+        "pt": "Models — a lógica",
+        "ru": "Models — логика",
+        "de": "Models — die Logik",
+        "ja": "Models — ロジック",
+        "tr": "Models — mantık",
+        "vi": "Models — logic",
+        "it": "Models — la logica",
+        "fa": "Models — منطق",
+        "pl": "Models — logika",
+        "uk": "Models — логіка",
+        "nl": "Models — de logica",
+        "sv": "Models — logiken",
+        "cs": "Models — logika",
+        "el": "Models — η λογική"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "embed",
+            "appletId": "terrain",
+            "height": 680
+          }
+        ]
+      }
+    },
+    "reports": {
+      "title": {
+        "en": "Model reports",
+        "ko": "모델 보고서",
+        "zh": "模型报告",
+        "hi": "मॉडल रिपोर्ट",
+        "es": "Informes del modelo",
+        "fr": "Rapports du modèle",
+        "ar": "تقارير النموذج",
+        "pt": "Relatórios do modelo",
+        "ru": "Отчёты модели",
+        "de": "Modellberichte",
+        "ja": "モデルレポート",
+        "tr": "Model raporları",
+        "vi": "Báo cáo mô hình",
+        "it": "Report del modello",
+        "fa": "گزارش‌های مدل",
+        "pl": "Raporty modelu",
+        "uk": "Звіти моделі",
+        "nl": "Modelrapporten",
+        "sv": "Modellrapporter",
+        "cs": "Zprávy modelu",
+        "el": "Αναφορές μοντέλου"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "embed",
+            "appletId": "modelreport",
+            "height": 680
+          }
+        ]
+      }
+    },
+    "decision": {
+      "title": {
+        "en": "Decision — the 5-minute read",
+        "ko": "결정 — 5분 요약",
+        "zh": "决策 — 5分钟速览",
+        "hi": "निर्णय — 5-मिनट की रीडिंग",
+        "es": "Decisión: lectura de 5 minutos",
+        "fr": "Décision — lecture de 5 minutes",
+        "ar": "القرار — قراءة 5 دقائق",
+        "pt": "Decisão — leitura de 5 minutos",
+        "ru": "Решение — обзор за 5 минут",
+        "de": "Entscheidung — 5-Minuten-Lektüre",
+        "ja": "意思決定 — 5分で読める要約",
+        "tr": "Karar — 5 dakikalık özet",
+        "vi": "Quyết định — bản đọc 5 phút",
+        "it": "Decisione — lettura di 5 minuti",
+        "fa": "تصمیم — مطالعه ۵ دقیقه‌ای",
+        "pl": "Decyzja — 5-minutowa lektura",
+        "uk": "Рішення — 5-хвилинний огляд",
+        "nl": "Beslissing — 5 minuten leestijd",
+        "sv": "Beslut — 5 minuters läsning",
+        "cs": "Rozhodnutí — 5minutové čtení",
+        "el": "Απόφαση — ανάγνωση 5 λεπτών"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "What changed, what it costs, how confident, and what the auditors said — one screen. This is a seeded snapshot of the precomputed runs; every number traces in Scenarios (provenance) and paints in Atlas (map).",
+              "ko": "무엇이 바뀌었는지, 비용은 얼마인지, 신뢰도는 어느 정도인지, 감사자들은 무엇이라 했는지 — 한 화면에. 이는 사전 계산된 실행 결과의 시드 스냅샷이며, 모든 수치는 Scenarios(출처)에서 추적되고 Atlas(지도)에 표시됩니다.",
+              "zh": "变化了什么、成本是多少、置信度如何,以及审计人员的意见——尽在一屏。这是预计算运行结果的种子快照;每个数字都可在 Scenarios(溯源)中追溯,并在 Atlas(地图)中呈现。",
+              "hi": "क्या बदला, इसकी लागत क्या है, कितना भरोसा है, और ऑडिटरों ने क्या कहा — एक ही स्क्रीन पर। यह पूर्व-गणित रन का बीज स्नैपशॉट है; हर संख्या Scenarios (उद्गम) में ट्रेस होती है और Atlas (मानचित्र) में दिखती है।",
+              "es": "Qué cambió, cuánto cuesta, cuán fiable es y qué dijeron los auditores, todo en una pantalla. Es una instantánea inicial de las ejecuciones precalculadas; cada cifra se rastrea en Scenarios (procedencia) y se representa en Atlas (mapa).",
+              "fr": "Ce qui a changé, ce que ça coûte, le niveau de confiance et ce qu'ont dit les auditeurs — sur un seul écran. Il s'agit d'un instantané initial des exécutions précalculées ; chaque chiffre se retrace dans Scenarios (provenance) et s'affiche dans Atlas (carte).",
+              "ar": "ما الذي تغيّر، وما تكلفته، ومدى الثقة به، وما قاله المدققون — في شاشة واحدة. هذه لقطة أولية للتشغيلات المحسوبة مسبقًا؛ يمكن تتبع كل رقم في Scenarios (المصدر) وعرضه في Atlas (الخريطة).",
+              "pt": "O que mudou, quanto custa, o nível de confiança e o que os auditores disseram — em uma única tela. Este é um instantâneo inicial das execuções pré-calculadas; cada número é rastreável em Scenarios (proveniência) e exibido em Atlas (mapa).",
+              "ru": "Что изменилось, во сколько это обходится, насколько это надёжно и что сказали аудиторы — на одном экране. Это исходный снимок предварительно рассчитанных прогонов; каждое число прослеживается в Scenarios (происхождение) и отображается в Atlas (карта).",
+              "de": "Was sich geändert hat, was es kostet, wie zuverlässig es ist und was die Prüfer sagten — auf einem Bildschirm. Dies ist ein Ausgangs-Snapshot der vorab berechneten Läufe; jede Zahl lässt sich in Scenarios (Herkunft) zurückverfolgen und wird in Atlas (Karte) dargestellt.",
+              "ja": "何が変わったか、コストはいくらか、確信度はどの程度か、監査者は何と言ったか — すべて1画面で。これは事前計算済みの実行結果の初期スナップショットであり、すべての数値はScenarios(出所)で追跡でき、Atlas(地図)に表示されます。",
+              "tr": "Ne değişti, maliyeti ne kadar, ne kadar güvenilir ve denetçiler ne dedi — tek ekranda. Bu, önceden hesaplanmış çalışmaların başlangıç anlık görüntüsüdür; her sayı Scenarios'ta (köken) izlenebilir ve Atlas'ta (harita) görselleştirilir.",
+              "vi": "Điều gì đã thay đổi, chi phí bao nhiêu, độ tin cậy ra sao và kiểm toán viên nói gì — trên một màn hình. Đây là ảnh chụp ban đầu của các lần chạy đã tính sẵn; mọi con số đều có thể truy vết trong Scenarios (nguồn gốc) và hiển thị trong Atlas (bản đồ).",
+              "it": "Cosa è cambiato, quanto costa, quanto è affidabile e cosa hanno detto i revisori — in un'unica schermata. È un'istantanea iniziale delle esecuzioni precalcolate; ogni numero è tracciabile in Scenarios (provenienza) e visualizzato in Atlas (mappa).",
+              "fa": "چه چیزی تغییر کرده، چقدر هزینه دارد، میزان اطمینان چقدر است و ممیزان چه گفته‌اند — همه در یک صفحه. این یک نمای اولیهٔ اجراهای از پیش محاسبه‌شده است؛ هر عدد در Scenarios (منشأ) قابل ردیابی است و در Atlas (نقشه) نمایش داده می‌شود.",
+              "pl": "Co się zmieniło, ile to kosztuje, jak duża jest pewność i co powiedzieli audytorzy — na jednym ekranie. To wstępny zrzut wcześniej obliczonych przebiegów; każdą liczbę można prześledzić w Scenarios (pochodzenie) i zobaczyć w Atlas (mapa).",
+              "uk": "Що змінилося, скільки це коштує, наскільки це надійно та що сказали аудитори — на одному екрані. Це початковий знімок попередньо обчислених запусків; кожне число простежується в Scenarios (походження) і відображається в Atlas (карта).",
+              "nl": "Wat er is veranderd, wat het kost, hoe betrouwbaar het is en wat de auditors zeiden — op één scherm. Dit is een startmoment-opname van de vooraf berekende runs; elk getal is te herleiden in Scenarios (herkomst) en wordt getoond in Atlas (kaart).",
+              "sv": "Vad som ändrats, vad det kostar, hur tillförlitligt det är och vad granskarna sa — på en skärm. Detta är en ursprunglig ögonblicksbild av de förberäknade körningarna; varje siffra går att spåra i Scenarios (ursprung) och visas i Atlas (karta).",
+              "cs": "Co se změnilo, kolik to stojí, jak vysoká je důvěra a co řekli auditoři — na jedné obrazovce. Toto je počáteční snímek předpočítaných běhů; každé číslo lze dohledat ve Scenarios (původ) a zobrazit v Atlas (mapa).",
+              "el": "Τι άλλαξε, πόσο κοστίζει, πόσο αξιόπιστο είναι και τι είπαν οι ελεγκτές — σε μία οθόνη. Πρόκειται για ένα αρχικό στιγμιότυπο των προϋπολογισμένων εκτελέσεων· κάθε αριθμός ανιχνεύεται στο Scenarios (προέλευση) και απεικονίζεται στο Atlas (χάρτης)."
+            }
+          },
+          {
+            "type": "cards",
+            "table": "exec_summary",
+            "title": "headline",
+            "subtitle": "detail",
+            "expandable": true,
+            "expandFields": [
+              {
+                "column": "tier",
+                "label": "Confidence"
+              },
+              {
+                "column": "audit",
+                "label": "Audit"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Confidence: green FOCUSED = calibrated to real, sourced local targets. Amber EXPLORATORY = coverage/comparison only — not a decision basis.",
+              "ko": "신뢰도: 녹색 FOCUSED = 실제 출처가 확인된 지역 목표에 맞춰 보정됨. 주황 EXPLORATORY = 범위/비교 용도일 뿐 — 의사결정 근거 아님.",
+              "zh": "置信度:绿色 FOCUSED = 已按真实、有据可查的本地目标校准。琥珀色 EXPLORATORY = 仅用于覆盖范围/比较——不作为决策依据。",
+              "hi": "भरोसा: हरा FOCUSED = वास्तविक, स्रोतयुक्त स्थानीय लक्ष्यों के अनुसार कैलिब्रेटेड। एम्बर EXPLORATORY = केवल कवरेज/तुलना के लिए — निर्णय का आधार नहीं।",
+              "es": "Fiabilidad: verde FOCUSED = calibrado con objetivos locales reales y verificados. Ámbar EXPLORATORY = solo cobertura/comparación, no es base para decidir.",
+              "fr": "Confiance : vert FOCUSED = calibré sur des objectifs locaux réels et sourcés. Ambre EXPLORATORY = couverture/comparaison uniquement — pas une base de décision.",
+              "ar": "الثقة: أخضر FOCUSED = معايَر وفق أهداف محلية حقيقية وموثقة المصدر. كهرماني EXPLORATORY = للتغطية/المقارنة فقط — وليس أساسًا لاتخاذ القرار.",
+              "pt": "Confiança: verde FOCUSED = calibrado com metas locais reais e com fonte. Âmbar EXPLORATORY = apenas cobertura/comparação — não é base para decisão.",
+              "ru": "Надёжность: зелёный FOCUSED = откалибровано по реальным, задокументированным локальным целям. Янтарный EXPLORATORY = только охват/сравнение — не основа для решения.",
+              "de": "Zuverlässigkeit: Grün FOCUSED = kalibriert auf reale, belegte lokale Ziele. Bernstein EXPLORATORY = nur Abdeckung/Vergleich — keine Entscheidungsgrundlage.",
+              "ja": "確信度: 緑 FOCUSED = 実際の裏付けあるローカル目標に基づき校正済み。琥珀 EXPLORATORY = 網羅性・比較のみ — 意思決定の根拠にはならない。",
+              "tr": "Güvenilirlik: yeşil FOCUSED = gerçek, kaynaklı yerel hedeflere göre kalibre edilmiştir. Kehribar EXPLORATORY = yalnızca kapsam/karşılaştırma — karar dayanağı değildir.",
+              "vi": "Độ tin cậy: xanh lục FOCUSED = đã hiệu chuẩn theo mục tiêu địa phương thực tế, có nguồn gốc. Hổ phách EXPLORATORY = chỉ để đối chiếu/so sánh — không phải cơ sở ra quyết định.",
+              "it": "Affidabilità: verde FOCUSED = calibrato su obiettivi locali reali e documentati. Ambra EXPLORATORY = solo copertura/confronto — non è base per una decisione.",
+              "fa": "اطمینان: سبز FOCUSED = واسنجی‌شده بر اساس اهداف محلی واقعی و دارای منبع. کهربایی EXPLORATORY = فقط برای پوشش/مقایسه — مبنای تصمیم‌گیری نیست.",
+              "pl": "Pewność: zielony FOCUSED = skalibrowany względem rzeczywistych, udokumentowanych celów lokalnych. Bursztynowy EXPLORATORY = tylko zasięg/porównanie — nie podstawa decyzji.",
+              "uk": "Надійність: зелений FOCUSED = відкалібровано за реальними, задокументованими локальними цілями. Бурштиновий EXPLORATORY = лише охоплення/порівняння — не основа для рішення.",
+              "nl": "Betrouwbaarheid: groen FOCUSED = gekalibreerd op echte, onderbouwde lokale doelen. Amber EXPLORATORY = alleen dekking/vergelijking — geen beslissingsbasis.",
+              "sv": "Tillförlitlighet: grön FOCUSED = kalibrerad mot verkliga, källbelagda lokala mål. Gul EXPLORATORY = endast täckning/jämförelse — inte ett beslutsunderlag.",
+              "cs": "Důvěra: zelená FOCUSED = kalibrováno podle reálných, doložených místních cílů. Jantarová EXPLORATORY = pouze pokrytí/porovnání — není podkladem pro rozhodnutí.",
+              "el": "Αξιοπιστία: πράσινο FOCUSED = βαθμονομημένο βάσει πραγματικών, τεκμηριωμένων τοπικών στόχων. Κεχριμπαρί EXPLORATORY = μόνο κάλυψη/σύγκριση — όχι βάση απόφασης."
+            }
+          },
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": {
+                  "en": "Full proof — Scenarios",
+                  "ko": "전체 근거 — Scenarios",
+                  "zh": "完整证明 — Scenarios",
+                  "hi": "पूर्ण प्रमाण — Scenarios",
+                  "es": "Prueba completa — Scenarios",
+                  "fr": "Preuve complète — Scenarios",
+                  "ar": "الإثبات الكامل — Scenarios",
+                  "pt": "Prova completa — Scenarios",
+                  "ru": "Полное доказательство — Scenarios",
+                  "de": "Vollständiger Nachweis — Scenarios",
+                  "ja": "完全な根拠 — Scenarios",
+                  "tr": "Tam kanıt — Scenarios",
+                  "vi": "Bằng chứng đầy đủ — Scenarios",
+                  "it": "Prova completa — Scenarios",
+                  "fa": "اثبات کامل — Scenarios",
+                  "pl": "Pełny dowód — Scenarios",
+                  "uk": "Повний доказ — Scenarios",
+                  "nl": "Volledig bewijs — Scenarios",
+                  "sv": "Fullständigt bevis — Scenarios",
+                  "cs": "Úplný důkaz — Scenarios",
+                  "el": "Πλήρης απόδειξη — Scenarios"
+                },
+                "icon": "fact_check",
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "openApplet",
+                    "appId": "scenarios",
+                    "title": "Scenarios"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "On the map — Atlas",
+                  "ko": "지도에서 — Atlas",
+                  "zh": "在地图上 — Atlas",
+                  "hi": "मानचित्र पर — Atlas",
+                  "es": "En el mapa: Atlas",
+                  "fr": "Sur la carte — Atlas",
+                  "ar": "على الخريطة — Atlas",
+                  "pt": "No mapa — Atlas",
+                  "ru": "На карте — Atlas",
+                  "de": "Auf der Karte — Atlas",
+                  "ja": "地図上で — Atlas",
+                  "tr": "Haritada — Atlas",
+                  "vi": "Trên bản đồ — Atlas",
+                  "it": "Sulla mappa — Atlas",
+                  "fa": "روی نقشه — Atlas",
+                  "pl": "Na mapie — Atlas",
+                  "uk": "На карті — Atlas",
+                  "nl": "Op de kaart — Atlas",
+                  "sv": "På kartan — Atlas",
+                  "cs": "Na mapě — Atlas",
+                  "el": "Στον χάρτη — Atlas"
+                },
+                "icon": "travel_explore",
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "openApplet",
+                    "appId": "atlas",
+                    "title": "Atlas — place analysis"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

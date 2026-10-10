@@ -1,0 +1,1388 @@
+{
+  "app": {
+    "languages": ["en", "ko", "zh", "hi", "es", "fr", "ar", "pt", "ru", "de", "ja", "tr", "vi", "it", "fa", "pl", "uk", "nl", "sv", "cs", "el"],
+    "translatable": true,
+    "appDataTools": true,
+    "intro": {
+      "tour": [
+        {
+          "screen": "dashboard",
+          "label": "Dashboard",
+          "note": "The full report workbench — charts, tables, filters and saved views."
+        },
+        {
+          "screen": "metrics",
+          "label": "Metrics",
+          "note": "The derived numbers the charts and tables draw from."
+        },
+        {
+          "screen": "compare",
+          "label": "Compare",
+          "note": "Percent difference between scenarios and the base run."
+        },
+        {
+          "screen": "mapview",
+          "label": "Map",
+          "note": "The geospatial add-on — districts shaded by cached totals."
+        },
+        {
+          "screen": "data",
+          "label": "Data",
+          "note": "The seeded demo rows behind this report."
+        },
+        {
+          "screen": "about",
+          "label": "About",
+          "note": "How this dashboard is structured."
+        }
+      ],
+      "guide": "about"
+    },
+    "title": {
+      "en": "Model reports",
+      "ko": "모델 리포트",
+      "zh": "模型报告",
+      "hi": "मॉडल रिपोर्ट",
+      "es": "Informes de modelos",
+      "fr": "Rapports de modèles",
+      "ar": "تقارير النموذج",
+      "pt": "Relatórios de modelos",
+      "ru": "Отчёты моделей",
+      "de": "Modellberichte",
+      "ja": "モデルレポート",
+      "tr": "Model raporları",
+      "vi": "Báo cáo mô hình",
+      "it": "Report dei modelli",
+      "fa": "گزارش‌های مدل",
+      "pl": "Raporty modeli",
+      "uk": "Звіти моделей",
+      "nl": "Modelrapporten",
+      "sv": "Modellrapporter",
+      "cs": "Zprávy o modelech",
+      "el": "Αναφορές μοντέλων"
+    },
+    "primaryColor": "#00695C",
+    "theme": "material"
+  },
+  "nav": [
+    {
+      "id": "dashboard",
+      "label": {
+        "en": "Dashboard",
+        "ko": "대시보드",
+        "zh": "仪表板",
+        "hi": "डैशबोर्ड",
+        "es": "Panel",
+        "fr": "Tableau de bord",
+        "ar": "لوحة المعلومات",
+        "pt": "Painel",
+        "ru": "Панель",
+        "de": "Dashboard",
+        "ja": "ダッシュボード",
+        "tr": "Gösterge paneli",
+        "vi": "Bảng điều khiển",
+        "it": "Pannello",
+        "fa": "داشبورد",
+        "pl": "Pulpit",
+        "uk": "Панель",
+        "nl": "Dashboard",
+        "sv": "Instrumentpanel",
+        "cs": "Přehled",
+        "el": "Πίνακας ελέγχου"
+      },
+      "icon": "dashboard",
+      "screen": "dashboard"
+    },
+    {
+      "id": "metrics",
+      "label": {
+        "en": "Metrics",
+        "ko": "지표",
+        "zh": "指标",
+        "hi": "मेट्रिक्स",
+        "es": "Métricas",
+        "fr": "Indicateurs",
+        "ar": "المقاييس",
+        "pt": "Métricas",
+        "ru": "Метрики",
+        "de": "Kennzahlen",
+        "ja": "指標",
+        "tr": "Ölçütler",
+        "vi": "Chỉ số",
+        "it": "Metriche",
+        "fa": "معیارها",
+        "pl": "Metryki",
+        "uk": "Метрики",
+        "nl": "Statistieken",
+        "sv": "Mätvärden",
+        "cs": "Metriky",
+        "el": "Μετρικές"
+      },
+      "icon": "insights",
+      "screen": "metrics"
+    },
+    {
+      "id": "compare",
+      "label": {
+        "en": "Compare",
+        "ko": "비교",
+        "zh": "比较",
+        "hi": "तुलना करें",
+        "es": "Comparar",
+        "fr": "Comparer",
+        "ar": "مقارنة",
+        "pt": "Comparar",
+        "ru": "Сравнить",
+        "de": "Vergleichen",
+        "ja": "比較",
+        "tr": "Karşılaştır",
+        "vi": "So sánh",
+        "it": "Confronta",
+        "fa": "مقایسه",
+        "pl": "Porównaj",
+        "uk": "Порівняти",
+        "nl": "Vergelijken",
+        "sv": "Jämför",
+        "cs": "Porovnat",
+        "el": "Σύγκριση"
+      },
+      "icon": "insights",
+      "screen": "compare"
+    },
+    {
+      "id": "mapview",
+      "label": {
+        "en": "Map",
+        "ko": "지도",
+        "zh": "地图",
+        "hi": "मानचित्र",
+        "es": "Mapa",
+        "fr": "Carte",
+        "ar": "الخريطة",
+        "pt": "Mapa",
+        "ru": "Карта",
+        "de": "Karte",
+        "ja": "地図",
+        "tr": "Harita",
+        "vi": "Bản đồ",
+        "it": "Mappa",
+        "fa": "نقشه",
+        "pl": "Mapa",
+        "uk": "Карта",
+        "nl": "Kaart",
+        "sv": "Karta",
+        "cs": "Mapa",
+        "el": "Χάρτης"
+      },
+      "icon": "map",
+      "screen": "mapview",
+      "addon": true
+    },
+    {
+      "id": "data",
+      "label": {
+        "en": "Data",
+        "ko": "데이터",
+        "zh": "数据",
+        "hi": "डेटा",
+        "es": "Datos",
+        "fr": "Données",
+        "ar": "البيانات",
+        "pt": "Dados",
+        "ru": "Данные",
+        "de": "Daten",
+        "ja": "データ",
+        "tr": "Veri",
+        "vi": "Dữ liệu",
+        "it": "Dati",
+        "fa": "داده‌ها",
+        "pl": "Dane",
+        "uk": "Дані",
+        "nl": "Gegevens",
+        "sv": "Data",
+        "cs": "Data",
+        "el": "Δεδομένα"
+      },
+      "icon": "table_rows",
+      "screen": "data"
+    },
+    {
+      "id": "about",
+      "label": {
+        "en": "About",
+        "ko": "정보",
+        "zh": "关于",
+        "hi": "जानकारी",
+        "es": "Acerca de",
+        "fr": "À propos",
+        "ar": "حول",
+        "pt": "Sobre",
+        "ru": "О приложении",
+        "de": "Info",
+        "ja": "情報",
+        "tr": "Hakkında",
+        "vi": "Giới thiệu",
+        "it": "Informazioni",
+        "fa": "درباره",
+        "pl": "Informacje",
+        "uk": "Про застосунок",
+        "nl": "Over",
+        "sv": "Om",
+        "cs": "O aplikaci",
+        "el": "Σχετικά"
+      },
+      "icon": "info",
+      "screen": "about"
+    }
+  ],
+  "screens": {
+    "dashboard": {
+      "title": {
+        "en": "Report dashboard",
+        "ko": "리포트 대시보드",
+        "zh": "报告仪表板",
+        "hi": "रिपोर्ट डैशबोर्ड",
+        "es": "Panel de informes",
+        "fr": "Tableau de bord des rapports",
+        "ar": "لوحة التقارير",
+        "pt": "Painel de relatórios",
+        "ru": "Панель отчётов",
+        "de": "Berichts-Dashboard",
+        "ja": "レポートダッシュボード",
+        "tr": "Rapor panosu",
+        "vi": "Bảng điều khiển báo cáo",
+        "it": "Pannello dei report",
+        "fa": "داشبورد گزارش",
+        "pl": "Pulpit raportów",
+        "uk": "Панель звітів",
+        "nl": "Rapportdashboard",
+        "sv": "Rapportpanel",
+        "cs": "Přehled zpráv",
+        "el": "Πίνακας αναφορών"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "The full report workbench: chart or table, filters, sorts, group-by rollups, and saved views. Tap ⚙ (tune) to configure; bookmark to save or load a view. TAP A BAR GROUP to select that category — the rows below (and any other view on this data) filter to it; tap again to clear.",
+              "ko": "전체 리포트 작업대: 차트 또는 테이블, 필터, 정렬, 그룹별 집계, 저장된 보기. 설정하려면 ⚙(조정)을 탭하세요. 보기를 저장하거나 불러오려면 북마크를 사용하세요. 막대 그룹을 탭하면 해당 카테고리가 선택되어 아래 행(및 이 데이터의 다른 모든 보기)이 그에 맞게 필터링됩니다. 다시 탭하면 해제됩니다.",
+              "zh": "完整的报告工作台：图表或表格、筛选、排序、按组汇总以及已保存的视图。点击 ⚙（调整）进行配置；使用书签保存或加载视图。点击一个柱状组以选择该类别——下方的行（以及该数据上的任何其他视图）都会筛选到该类别；再次点击可清除。",
+              "hi": "पूरा रिपोर्ट वर्कबेंच: चार्ट या तालिका, फ़िल्टर, सॉर्ट, ग्रुप-बाय रोलअप और सेव्ड व्यू। कॉन्फ़िगर करने के लिए ⚙ (ट्यून) टैप करें; व्यू सेव या लोड करने के लिए बुकमार्क करें। किसी बार समूह को टैप करने पर वह श्रेणी चुनी जाती है — नीचे की पंक्तियाँ (और इस डेटा पर कोई भी अन्य व्यू) उसी पर फ़िल्टर हो जाती हैं; साफ़ करने के लिए फिर से टैप करें।",
+              "es": "El banco de trabajo completo de informes: gráfico o tabla, filtros, ordenaciones, resúmenes por grupo y vistas guardadas. Toca ⚙ (ajustar) para configurar; usa el marcador para guardar o cargar una vista. TOCA UN GRUPO DE BARRAS para seleccionar esa categoría — las filas de abajo (y cualquier otra vista sobre estos datos) se filtran a ella; toca de nuevo para borrar.",
+              "fr": "L'atelier complet de rapports : graphique ou tableau, filtres, tris, regroupements et vues enregistrées. Appuyez sur ⚙ (régler) pour configurer ; utilisez le signet pour enregistrer ou charger une vue. APPUYEZ SUR UN GROUPE DE BARRES pour sélectionner cette catégorie — les lignes ci-dessous (et toute autre vue sur ces données) se filtrent en conséquence ; appuyez à nouveau pour effacer.",
+              "ar": "منصة العمل الكاملة للتقارير: مخطط أو جدول، عوامل تصفية، ترتيب، تجميعات حسب المجموعة، وعروض محفوظة. اضغط على ⚙ (ضبط) للتهيئة؛ استخدم الإشارة المرجعية لحفظ أو تحميل عرض. اضغط على مجموعة أعمدة لتحديد تلك الفئة — تُصفَّى الصفوف أدناه (وأي عرض آخر لهذه البيانات) وفقًا لها؛ اضغط مرة أخرى للمسح.",
+              "pt": "A bancada completa de relatórios: gráfico ou tabela, filtros, ordenações, resumos por grupo e visualizações salvas. Toque em ⚙ (ajustar) para configurar; use o marcador para salvar ou carregar uma visualização. TOQUE EM UM GRUPO DE BARRAS para selecionar essa categoria — as linhas abaixo (e qualquer outra visualização destes dados) filtram para ela; toque novamente para limpar.",
+              "ru": "Полноценная панель отчётов: диаграмма или таблица, фильтры, сортировки, группировки и сохранённые представления. Нажмите ⚙ (настройка), чтобы настроить; используйте закладку, чтобы сохранить или загрузить представление. НАЖМИТЕ НА ГРУППУ СТОЛБЦОВ, чтобы выбрать эту категорию — строки ниже (и любое другое представление этих данных) отфильтруются по ней; нажмите ещё раз, чтобы очистить.",
+              "de": "Die vollständige Berichtswerkbank: Diagramm oder Tabelle, Filter, Sortierungen, Gruppierungen und gespeicherte Ansichten. Tippe auf ⚙ (Einstellen), um zu konfigurieren; setze ein Lesezeichen, um eine Ansicht zu speichern oder zu laden. TIPPE AUF EINE BALKENGRUPPE, um diese Kategorie auszuwählen — die Zeilen darunter (und jede andere Ansicht dieser Daten) filtern sich darauf; erneut tippen zum Zurücksetzen.",
+              "ja": "本格的なレポート作業台：チャートまたはテーブル、フィルター、並べ替え、グループ集計、保存済みビュー。設定するには ⚙（調整）をタップ。ビューを保存・読み込むにはブックマークを使用。バーのグループをタップするとそのカテゴリが選択され、下の行（およびこのデータの他のビュー）がそれに絞り込まれます。もう一度タップで解除。",
+              "tr": "Tam donanımlı rapor tezgahı: grafik veya tablo, filtreler, sıralamalar, gruba göre toplamlar ve kayıtlı görünümler. Yapılandırmak için ⚙ (ayarla) simgesine dokunun; bir görünümü kaydetmek veya yüklemek için yer imini kullanın. Bir kategoriyi seçmek için BİR ÇUBUK GRUBUNA DOKUNUN — aşağıdaki satırlar (ve bu verideki diğer görünümler) buna göre filtrelenir; temizlemek için tekrar dokunun.",
+              "vi": "Bàn làm việc báo cáo đầy đủ: biểu đồ hoặc bảng, bộ lọc, sắp xếp, tổng hợp theo nhóm và các chế độ xem đã lưu. Nhấn ⚙ (tinh chỉnh) để cấu hình; đánh dấu để lưu hoặc tải một chế độ xem. NHẤN VÀO MỘT NHÓM CỘT để chọn danh mục đó — các hàng bên dưới (và mọi chế độ xem khác trên dữ liệu này) sẽ lọc theo đó; nhấn lại để xóa.",
+              "it": "Il banco di lavoro completo dei report: grafico o tabella, filtri, ordinamenti, riepiloghi per gruppo e viste salvate. Tocca ⚙ (regola) per configurare; usa il segnalibro per salvare o caricare una vista. TOCCA UN GRUPPO DI BARRE per selezionare quella categoria — le righe sottostanti (e qualsiasi altra vista su questi dati) si filtrano di conseguenza; tocca di nuovo per cancellare.",
+              "fa": "میزکار کامل گزارش: نمودار یا جدول، فیلترها، مرتب‌سازی‌ها، جمع‌بندی بر اساس گروه و نماهای ذخیره‌شده. برای پیکربندی روی ⚙ (تنظیم) ضربه بزنید؛ برای ذخیره یا بارگذاری یک نما از نشانک استفاده کنید. برای انتخاب آن دسته روی یک گروه میله‌ای ضربه بزنید — ردیف‌های پایین (و هر نمای دیگری روی این داده) بر اساس آن فیلتر می‌شوند؛ برای پاک کردن دوباره ضربه بزنید.",
+              "pl": "Pełny warsztat raportów: wykres lub tabela, filtry, sortowania, zestawienia grupowe i zapisane widoki. Dotknij ⚙ (dostosuj), aby skonfigurować; użyj zakładki, aby zapisać lub wczytać widok. DOTKNIJ GRUPY SŁUPKÓW, aby wybrać tę kategorię — poniższe wiersze (i każdy inny widok tych danych) zostaną do niej przefiltrowane; dotknij ponownie, aby wyczyścić.",
+              "uk": "Повноцінна робоча панель звітів: діаграма або таблиця, фільтри, сортування, групові підсумки та збережені перегляди. Торкніться ⚙ (налаштувати), щоб налаштувати; використовуйте закладку, щоб зберегти або завантажити перегляд. ТОРКНІТЬСЯ ГРУПИ СТОВПЦІВ, щоб вибрати цю категорію — рядки нижче (та будь-який інший перегляд цих даних) відфільтруються за нею; торкніться ще раз, щоб очистити.",
+              "nl": "De volledige rapportwerkbank: grafiek of tabel, filters, sorteringen, groepstotalen en opgeslagen weergaven. Tik op ⚙ (afstellen) om te configureren; gebruik de bladwijzer om een weergave op te slaan of te laden. TIK OP EEN BALKGROEP om die categorie te selecteren — de rijen hieronder (en elke andere weergave van deze gegevens) filteren erop; tik nogmaals om te wissen.",
+              "sv": "Den fullständiga rapportverkstaden: diagram eller tabell, filter, sorteringar, gruppsummeringar och sparade vyer. Tryck på ⚙ (justera) för att konfigurera; använd bokmärket för att spara eller läsa in en vy. TRYCK PÅ EN STAPELGRUPP för att välja den kategorin — raderna nedan (och alla andra vyer på denna data) filtreras till den; tryck igen för att rensa.",
+              "cs": "Kompletní pracoviště pro zprávy: graf nebo tabulka, filtry, řazení, souhrny podle skupin a uložená zobrazení. Klepnutím na ⚙ (ladit) nastavíte konfiguraci; záložkou uložíte nebo načtete zobrazení. KLEPNUTÍM NA SKUPINU SLOUPCŮ vyberete danou kategorii — řádky níže (a jakékoli jiné zobrazení těchto dat) se podle ní vyfiltrují; dalším klepnutím filtr zrušíte.",
+              "el": "Ο πλήρης πάγκος εργασίας αναφορών: γράφημα ή πίνακας, φίλτρα, ταξινομήσεις, συγκεντρωτικά ανά ομάδα και αποθηκευμένες προβολές. Πατήστε ⚙ (ρύθμιση) για διαμόρφωση· χρησιμοποιήστε τον σελιδοδείκτη για αποθήκευση ή φόρτωση προβολής. ΠΑΤΗΣΤΕ ΜΙΑ ΟΜΑΔΑ ΡΑΒΔΩΝ για να επιλέξετε αυτήν την κατηγορία — οι παρακάτω γραμμές (και κάθε άλλη προβολή σε αυτά τα δεδομένα) φιλτράρονται σε αυτήν· πατήστε ξανά για εκκαθάριση."
+            }
+          },
+          {
+            "type": "report",
+            "table": "results",
+            "slicesTable": "slices",
+            "seriesColumn": "scenario",
+            "exclude": [
+              "id",
+              "lat",
+              "lng"
+            ],
+            "label": {
+              "en": "Model outputs",
+              "ko": "모델 출력",
+              "zh": "模型输出",
+              "hi": "मॉडल आउटपुट",
+              "es": "Salidas del modelo",
+              "fr": "Sorties du modèle",
+              "ar": "مخرجات النموذج",
+              "pt": "Saídas do modelo",
+              "ru": "Результаты модели",
+              "de": "Modellergebnisse",
+              "ja": "モデル出力",
+              "tr": "Model çıktıları",
+              "vi": "Kết quả mô hình",
+              "it": "Output del modello",
+              "fa": "خروجی‌های مدل",
+              "pl": "Wyniki modelu",
+              "uk": "Результати моделі",
+              "nl": "Modeluitvoer",
+              "sv": "Modellutdata",
+              "cs": "Výstupy modelu",
+              "el": "Έξοδοι μοντέλου"
+            },
+            "height": 430,
+            "config": {
+              "mode": "chart",
+              "xAxis": "route",
+              "series": "scenario",
+              "value": "boardings"
+            },
+            "linkFilter": true,
+            "showProvenance": true
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Rows in the current selection:",
+              "ko": "현재 선택된 행:",
+              "zh": "当前所选行数：",
+              "hi": "वर्तमान चयन में पंक्तियाँ:",
+              "es": "Filas en la selección actual:",
+              "fr": "Lignes dans la sélection actuelle :",
+              "ar": "الصفوف في التحديد الحالي:",
+              "pt": "Linhas na seleção atual:",
+              "ru": "Строки в текущем выборе:",
+              "de": "Zeilen in der aktuellen Auswahl:",
+              "ja": "現在の選択に含まれる行:",
+              "tr": "Geçerli seçimdeki satırlar:",
+              "vi": "Các hàng trong lựa chọn hiện tại:",
+              "it": "Righe nella selezione corrente:",
+              "fa": "ردیف‌های موجود در انتخاب فعلی:",
+              "pl": "Wiersze w bieżącym wyborze:",
+              "uk": "Рядки в поточному виборі:",
+              "nl": "Rijen in de huidige selectie:",
+              "sv": "Rader i det aktuella urvalet:",
+              "cs": "Řádky ve stávajícím výběru:",
+              "el": "Γραμμές στην τρέχουσα επιλογή:"
+            }
+          },
+          {
+            "type": "table",
+            "table": "results",
+            "columns": [
+              "scenario",
+              "route",
+              "district",
+              "boardings",
+              "alightings"
+            ],
+            "height": 220,
+            "showProvenance": true
+          }
+        ]
+      }
+    },
+    "compare": {
+      "title": {
+        "en": "Compare model runs",
+        "ko": "모델 실행 비교",
+        "zh": "比较模型运行",
+        "hi": "मॉडल रन की तुलना करें",
+        "es": "Comparar ejecuciones del modelo",
+        "fr": "Comparer les exécutions du modèle",
+        "ar": "مقارنة عمليات تشغيل النموذج",
+        "pt": "Comparar execuções do modelo",
+        "ru": "Сравнение прогонов модели",
+        "de": "Modellläufe vergleichen",
+        "ja": "モデル実行の比較",
+        "tr": "Model çalıştırmalarını karşılaştır",
+        "vi": "So sánh các lần chạy mô hình",
+        "it": "Confronta le esecuzioni del modello",
+        "fa": "مقایسه اجراهای مدل",
+        "pl": "Porównaj przebiegi modelu",
+        "uk": "Порівняти запуски моделі",
+        "nl": "Modelruns vergelijken",
+        "sv": "Jämför modellkörningar",
+        "cs": "Porovnat běhy modelu",
+        "el": "Σύγκριση εκτελέσεων μοντέλου"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Percent difference vs the base run: each bar is a scenario's change from Baseline on the same route. Swap the base or the value column from ⚙.",
+              "ko": "기준 실행 대비 퍼센트 차이: 각 막대는 동일 노선에서 시나리오가 기준선(Baseline) 대비 변화한 정도입니다. 기준이나 값 열은 ⚙에서 바꿀 수 있습니다.",
+              "zh": "相对于基准运行的百分比差异：每根柱子代表某场景在同一路线上相对于基线的变化。可在 ⚙ 中切换基准或数值列。",
+              "hi": "आधार रन की तुलना में प्रतिशत अंतर: प्रत्येक बार उसी रूट पर बेसलाइन से किसी परिदृश्य के परिवर्तन को दर्शाता है। आधार या वैल्यू कॉलम ⚙ से बदलें।",
+              "es": "Diferencia porcentual respecto a la ejecución base: cada barra es el cambio de un escenario respecto a la línea base en la misma ruta. Cambia la base o la columna de valor desde ⚙.",
+              "fr": "Écart en pourcentage par rapport à l'exécution de base : chaque barre représente le changement d'un scénario par rapport à la référence sur le même trajet. Changez la base ou la colonne de valeur depuis ⚙.",
+              "ar": "الفرق المئوي مقابل التشغيل الأساسي: يمثل كل عمود تغيّر أحد السيناريوهات عن خط الأساس على نفس المسار. بدّل الأساس أو عمود القيمة من ⚙.",
+              "pt": "Diferença percentual em relação à execução base: cada barra é a mudança de um cenário em relação à linha de base na mesma rota. Troque a base ou a coluna de valor em ⚙.",
+              "ru": "Процентная разница относительно базового прогона: каждый столбец — изменение сценария относительно базовой линии на одном маршруте. Смените базу или столбец значения в ⚙.",
+              "de": "Prozentuale Abweichung vom Basislauf: Jeder Balken zeigt die Änderung eines Szenarios gegenüber der Baseline auf derselben Route. Basis oder Wertespalte in ⚙ tauschen.",
+              "ja": "基準実行に対するパーセント差：各バーは同じ路線でベースラインからのシナリオの変化を示します。基準や値の列は ⚙ から切り替えられます。",
+              "tr": "Temel çalışmaya göre yüzde fark: her çubuk, aynı güzergahta bir senaryonun Temel değerden değişimini gösterir. Temeli veya değer sütununu ⚙ üzerinden değiştirin.",
+              "vi": "Chênh lệch phần trăm so với lần chạy cơ sở: mỗi cột thể hiện thay đổi của một kịch bản so với đường cơ sở trên cùng tuyến. Đổi cơ sở hoặc cột giá trị từ ⚙.",
+              "it": "Differenza percentuale rispetto all'esecuzione di base: ogni barra è la variazione di uno scenario rispetto alla linea di base sullo stesso percorso. Cambia la base o la colonna dei valori da ⚙.",
+              "fa": "درصد تفاوت نسبت به اجرای پایه: هر میله تغییر یک سناریو نسبت به خط پایه در همان مسیر است. پایه یا ستون مقدار را از ⚙ عوض کنید.",
+              "pl": "Procentowa różnica względem przebiegu bazowego: każdy słupek to zmiana scenariusza względem linii bazowej na tej samej trasie. Zmień bazę lub kolumnę wartości w ⚙.",
+              "uk": "Відсоткова різниця відносно базового запуску: кожен стовпець — зміна сценарію відносно базової лінії на тому самому маршруті. Змініть базу або стовпець значення в ⚙.",
+              "nl": "Procentueel verschil ten opzichte van de basisrun: elke balk is de verandering van een scenario ten opzichte van de basislijn op dezelfde route. Wissel de basis of de waardekolom via ⚙.",
+              "sv": "Procentuell skillnad mot baskörningen: varje stapel visar ett scenarios förändring från baslinjen på samma linje. Byt bas eller värdekolumn från ⚙.",
+              "cs": "Procentuální rozdíl oproti základnímu běhu: každý sloupec je změna scénáře oproti základní hodnotě na stejné trase. Základ nebo sloupec hodnoty změníte v ⚙.",
+              "el": "Ποσοστιαία διαφορά έναντι της βασικής εκτέλεσης: κάθε ράβδος είναι η αλλαγή ενός σεναρίου από τη γραμμή βάσης στην ίδια διαδρομή. Αλλάξτε τη βάση ή τη στήλη τιμών από το ⚙."
+            }
+          },
+          {
+            "type": "report",
+            "table": "results",
+            "slicesTable": "slices",
+            "seriesColumn": "scenario",
+            "exclude": [
+              "id",
+              "lat",
+              "lng"
+            ],
+            "label": {
+              "en": "% change vs Baseline",
+              "ko": "기준선 대비 변화율",
+              "zh": "相对基线的百分比变化",
+              "hi": "बेसलाइन की तुलना में % परिवर्तन",
+              "es": "% de cambio vs. línea base",
+              "fr": "% de variation par rapport à la référence",
+              "ar": "% التغيّر مقابل خط الأساس",
+              "pt": "% de mudança vs. linha de base",
+              "ru": "% изменения относительно базовой линии",
+              "de": "% Änderung ggü. Baseline",
+              "ja": "ベースライン比 変化率",
+              "tr": "Temel değere göre % değişim",
+              "vi": "% thay đổi so với đường cơ sở",
+              "it": "% variazione vs Baseline",
+              "fa": "٪ تغییر نسبت به خط پایه",
+              "pl": "% zmiany względem linii bazowej",
+              "uk": "% зміни відносно базової лінії",
+              "nl": "% verandering t.o.v. basislijn",
+              "sv": "% förändring mot baslinje",
+              "cs": "% změny oproti základní hodnotě",
+              "el": "% μεταβολή έναντι γραμμής βάσης"
+            },
+            "height": 400,
+            "config": {
+              "mode": "chart",
+              "xAxis": "route",
+              "series": "scenario",
+              "value": "boardings",
+              "pctDiff": true,
+              "pctBase": "Baseline"
+            },
+            "showProvenance": true
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Totals side by side (a locked, table-only report — the same node with tools trimmed):",
+              "ko": "합계 나란히 보기(도구가 제한된 잠긴 테이블 전용 리포트 — 동일한 노드입니다):",
+              "zh": "并排合计（一个锁定的、仅表格的报告——同一节点但精简了工具）：",
+              "hi": "कुल योग साथ-साथ (एक लॉक की गई, केवल-तालिका रिपोर्ट — वही नोड जिसमें टूल्स सीमित किए गए हैं):",
+              "es": "Totales lado a lado (un informe bloqueado, solo de tabla — el mismo nodo con las herramientas recortadas):",
+              "fr": "Totaux côte à côte (un rapport verrouillé, uniquement en tableau — le même nœud avec des outils réduits) :",
+              "ar": "الإجماليات جنبًا إلى جنب (تقرير مقفل بصيغة جدول فقط — نفس العقدة مع أدوات مختصرة):",
+              "pt": "Totais lado a lado (um relatório bloqueado, somente em tabela — o mesmo nó com ferramentas reduzidas):",
+              "ru": "Итоги рядом (заблокированный отчёт только в виде таблицы — тот же узел с урезанными инструментами):",
+              "de": "Summen nebeneinander (ein gesperrter, reiner Tabellenbericht — derselbe Knoten mit reduzierten Werkzeugen):",
+              "ja": "合計を並べて表示（ツールを省いたロック済みのテーブル専用レポート — 同じノード）：",
+              "tr": "Toplamlar yan yana (kilitli, yalnızca tablo raporu — araçları kısıtlanmış aynı düğüm):",
+              "vi": "Tổng số cạnh nhau (báo cáo bị khóa, chỉ dạng bảng — cùng nút nhưng cắt bớt công cụ):",
+              "it": "Totali affiancati (un report bloccato, solo tabella — lo stesso nodo con strumenti ridotti):",
+              "fa": "مجموع‌ها کنار هم (یک گزارش قفل‌شده و فقط جدولی — همان گره با ابزارهای محدودشده):",
+              "pl": "Sumy obok siebie (zablokowany raport w postaci samej tabeli — ten sam węzeł z okrojonymi narzędziami):",
+              "uk": "Підсумки поряд (заблокований звіт лише у вигляді таблиці — той самий вузол зі скороченими інструментами):",
+              "nl": "Totalen naast elkaar (een vergrendeld, alleen-tabelrapport — dezelfde node met beperkte tools):",
+              "sv": "Summor sida vid sida (en låst, tabellrapport — samma nod med begränsade verktyg):",
+              "cs": "Součty vedle sebe (uzamčená zpráva pouze ve formě tabulky — stejný uzel s omezenými nástroji):",
+              "el": "Σύνολα δίπλα-δίπλα (μια κλειδωμένη αναφορά μόνο πίνακα — ο ίδιος κόμβος με περιορισμένα εργαλεία):"
+            }
+          },
+          {
+            "type": "report",
+            "table": "results",
+            "tools": [
+              "table"
+            ],
+            "exclude": [
+              "id",
+              "lat",
+              "lng"
+            ],
+            "label": {
+              "en": "Boardings by scenario",
+              "ko": "시나리오별 승차 인원",
+              "zh": "按场景划分的上车人数",
+              "hi": "परिदृश्य के अनुसार बोर्डिंग",
+              "es": "Subidas por escenario",
+              "fr": "Montées par scénario",
+              "ar": "الركاب حسب السيناريو",
+              "pt": "Embarques por cenário",
+              "ru": "Посадки по сценариям",
+              "de": "Einstiege nach Szenario",
+              "ja": "シナリオ別乗車数",
+              "tr": "Senaryoya göre biniş",
+              "vi": "Lượt lên xe theo kịch bản",
+              "it": "Saliti per scenario",
+              "fa": "سوارشدن‌ها بر اساس سناریو",
+              "pl": "Wsiadania według scenariusza",
+              "uk": "Посадки за сценарієм",
+              "nl": "Instappers per scenario",
+              "sv": "Påstigningar per scenario",
+              "cs": "Nástupy podle scénáře",
+              "el": "Επιβιβάσεις ανά σενάριο"
+            },
+            "height": 170,
+            "config": {
+              "mode": "table",
+              "groupBy": "scenario",
+              "aggregations": {
+                "boardings": "sum",
+                "alightings": "sum"
+              }
+            },
+            "showProvenance": true
+          }
+        ]
+      }
+    },
+    "mapview": {
+      "title": {
+        "en": "Map (add-on)",
+        "ko": "지도(애드온)",
+        "zh": "地图（附加组件）",
+        "hi": "मानचित्र (ऐड-ऑन)",
+        "es": "Mapa (complemento)",
+        "fr": "Carte (module complémentaire)",
+        "ar": "الخريطة (إضافة)",
+        "pt": "Mapa (complemento)",
+        "ru": "Карта (дополнение)",
+        "de": "Karte (Add-on)",
+        "ja": "地図（アドオン）",
+        "tr": "Harita (eklenti)",
+        "vi": "Bản đồ (tiện ích bổ sung)",
+        "it": "Mappa (add-on)",
+        "fa": "نقشه (افزونه)",
+        "pl": "Mapa (dodatek)",
+        "uk": "Карта (додаток)",
+        "nl": "Kaart (add-on)",
+        "sv": "Karta (tillägg)",
+        "cs": "Mapa (doplněk)",
+        "el": "Χάρτης (πρόσθετο)"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "The geospatial ADD-ON. Districts shade by cached totals (darker = more boardings) — TAP A DISTRICT to filter every view to it (tap again to clear), and use the Districts chip to hide the overlay. Don't need maps? Switch this whole screen off under ⋮ → Add-ons.",
+              "ko": "지리 공간 애드온입니다. 구역은 캐시된 합계에 따라 음영 처리됩니다(짙을수록 승차 인원이 많음) — 구역을 탭하면 모든 보기가 해당 구역으로 필터링됩니다(다시 탭하면 해제). 오버레이를 숨기려면 구역 칩을 사용하세요. 지도가 필요 없다면 ⋮ → 애드온에서 이 화면 전체를 끌 수 있습니다.",
+              "zh": "这是地理空间附加组件。地区按缓存合计着色（颜色越深表示上车人数越多）——点击一个地区可将所有视图筛选到该地区（再次点击可清除），使用“地区”标签可隐藏叠加层。不需要地图？可在 ⋮ → 附加组件 中整体关闭此屏幕。",
+              "hi": "यह भू-स्थानिक ऐड-ऑन है। जिले कैश्ड कुल के अनुसार शेड होते हैं (गहरा = अधिक बोर्डिंग) — किसी जिले को टैप करने पर हर व्यू उसी पर फ़िल्टर हो जाता है (साफ़ करने के लिए फिर टैप करें), और ओवरले छिपाने के लिए Districts चिप का उपयोग करें। मानचित्र नहीं चाहिए? ⋮ → Add-ons से इस पूरी स्क्रीन को बंद करें।",
+              "es": "El complemento geoespacial. Los distritos se sombrean según los totales en caché (más oscuro = más subidas) — TOCA UN DISTRITO para filtrar todas las vistas a él (toca de nuevo para borrar), y usa el chip Distritos para ocultar la superposición. ¿No necesitas mapas? Desactiva toda esta pantalla en ⋮ → Complementos.",
+              "fr": "Le module complémentaire géospatial. Les districts sont ombrés selon les totaux en cache (plus foncé = plus de montées) — APPUYEZ SUR UN DISTRICT pour filtrer chaque vue sur celui-ci (appuyez à nouveau pour effacer), et utilisez la puce Districts pour masquer la superposition. Pas besoin de cartes ? Désactivez cet écran entier sous ⋮ → Modules complémentaires.",
+              "ar": "الإضافة الجغرافية المكانية. تُظلَّل المقاطعات حسب الإجماليات المخزّنة مؤقتًا (الأغمق = ركاب أكثر) — اضغط على مقاطعة لتصفية كل عرض إليها (اضغط مرة أخرى للمسح)، واستخدم شريحة المقاطعات لإخفاء الطبقة. لا تحتاج الخرائط؟ أوقف هذه الشاشة بأكملها من ⋮ → الإضافات.",
+              "pt": "O complemento geoespacial. Os distritos são sombreados por totais em cache (mais escuro = mais embarques) — TOQUE EM UM DISTRITO para filtrar toda visualização a ele (toque novamente para limpar) e use o chip Distritos para ocultar a sobreposição. Não precisa de mapas? Desative esta tela inteira em ⋮ → Complementos.",
+              "ru": "Геопространственное дополнение. Районы окрашены по кэшированным суммам (темнее = больше посадок) — НАЖМИТЕ НА РАЙОН, чтобы отфильтровать по нему каждое представление (нажмите ещё раз, чтобы очистить), а чипом «Районы» можно скрыть слой. Карты не нужны? Отключите весь этот экран в ⋮ → Дополнения.",
+              "de": "Das Geo-Add-on. Bezirke werden nach zwischengespeicherten Summen eingefärbt (dunkler = mehr Einstiege) — TIPPE AUF EINEN BEZIRK, um jede Ansicht darauf zu filtern (erneut tippen zum Zurücksetzen), und blende die Overlay mit dem Chip „Bezirke“ aus. Keine Karten nötig? Diesen Bildschirm komplett unter ⋮ → Add-ons abschalten.",
+              "ja": "地理空間アドオンです。地区はキャッシュされた合計値に応じて濃淡表示されます（濃いほど乗車数が多い）— 地区をタップするとすべてのビューがその地区に絞り込まれます（もう一度タップで解除）。オーバーレイを隠すには「地区」チップを使用してください。地図が不要な場合は ⋮ → アドオン からこの画面全体をオフにできます。",
+              "tr": "Coğrafi konum eklentisi. Bölgeler önbelleğe alınmış toplamlara göre gölgelendirilir (koyu = daha fazla biniş) — bir bölgeye DOKUNARAK her görünümü ona filtreleyebilirsiniz (temizlemek için tekrar dokunun) ve katmanı gizlemek için Bölgeler etiketini kullanın. Haritalara ihtiyacınız yok mu? ⋮ → Eklentiler altından bu ekranın tamamını kapatın.",
+              "vi": "Đây là tiện ích bổ sung địa lý. Các quận được tô màu theo tổng số đã lưu đệm (đậm hơn = nhiều lượt lên xe hơn) — NHẤN VÀO MỘT QUẬN để lọc mọi chế độ xem theo quận đó (nhấn lại để xóa), và dùng thẻ Quận để ẩn lớp phủ. Không cần bản đồ? Tắt toàn bộ màn hình này trong ⋮ → Tiện ích bổ sung.",
+              "it": "L'add-on geospaziale. I distretti sono ombreggiati in base ai totali in cache (più scuro = più saliti) — TOCCA UN DISTRETTO per filtrare ogni vista su di esso (tocca di nuovo per cancellare), e usa il chip Distretti per nascondere la sovrapposizione. Non ti servono le mappe? Disattiva l'intera schermata da ⋮ → Add-on.",
+              "fa": "این افزونه جغرافیایی است. مناطق بر اساس مجموع ذخیره‌شده سایه‌دار می‌شوند (تیره‌تر = سوارشدن بیشتر) — روی یک منطقه ضربه بزنید تا هر نما بر اساس آن فیلتر شود (برای پاک کردن دوباره ضربه بزنید)، و از تراشه «مناطق» برای پنهان کردن لایه استفاده کنید. به نقشه نیاز ندارید؟ از ⋮ → افزونه‌ها کل این صفحه را خاموش کنید.",
+              "pl": "Dodatek geoprzestrzenny. Dzielnice są cieniowane według zapisanych w pamięci sum (ciemniejsze = więcej wsiadań) — DOTKNIJ DZIELNICY, aby przefiltrować do niej każdy widok (dotknij ponownie, aby wyczyścić), a etykietą Dzielnice ukryjesz nakładkę. Nie potrzebujesz map? Wyłącz cały ten ekran w ⋮ → Dodatki.",
+              "uk": "Геопросторовий додаток. Райони затінюються за кешованими сумами (темніше = більше посадок) — ТОРКНІТЬСЯ РАЙОНУ, щоб відфільтрувати за ним кожен перегляд (торкніться ще раз, щоб очистити), і скористайтеся чіпом «Райони», щоб приховати накладання. Карти не потрібні? Вимкніть весь цей екран у ⋮ → Додатки.",
+              "nl": "De geospatiale add-on. Districten worden gearceerd op basis van gecachte totalen (donkerder = meer instappers) — TIK OP EEN DISTRICT om elke weergave erop te filteren (tik nogmaals om te wissen), en gebruik de chip Districten om de overlay te verbergen. Geen kaarten nodig? Schakel dit hele scherm uit onder ⋮ → Add-ons.",
+              "sv": "Det geospatiala tillägget. Distrikt skuggas efter cachade totaler (mörkare = fler påstigningar) — TRYCK PÅ ETT DISTRIKT för att filtrera varje vy till det (tryck igen för att rensa), och använd chippen Distrikt för att dölja överlägget. Behöver du inte kartor? Stäng av hela den här skärmen under ⋮ → Tillägg.",
+              "cs": "Geoprostorový doplněk. Okrsky jsou stínovány podle uložených součtů (tmavší = více nástupů) — KLEPNUTÍM NA OKRSEK vyfiltrujete podle něj každé zobrazení (dalším klepnutím filtr zrušíte), a čipem Okrsky skryjete překryvnou vrstvu. Nepotřebujete mapy? Vypněte celou tuto obrazovku v ⋮ → Doplňky.",
+              "el": "Το γεωχωρικό πρόσθετο. Οι περιφέρειες σκιάζονται βάσει αποθηκευμένων συνόλων (πιο σκούρο = περισσότερες επιβιβάσεις) — ΠΑΤΗΣΤΕ ΜΙΑ ΠΕΡΙΦΕΡΕΙΑ για να φιλτράρετε κάθε προβολή σε αυτήν (πατήστε ξανά για εκκαθάριση), και χρησιμοποιήστε το chip Περιφέρειες για απόκρυψη της επικάλυψης. Δεν χρειάζεστε χάρτες; Απενεργοποιήστε ολόκληρη αυτήν την οθόνη από ⋮ → Πρόσθετα."
+            }
+          },
+          {
+            "type": "map",
+            "table": "results",
+            "latColumn": "lat",
+            "lonColumn": "lng",
+            "labelColumn": "route",
+            "colorColumn": "scenario",
+            "colors": {
+              "Baseline": "teal",
+              "Alt A": "blue",
+              "Alt B": "amber"
+            },
+            "geojsonAsset": "apps/modelreport/districts.geojson",
+            "nameProperty": "name",
+            "choropleth": {
+              "table": "district_stats",
+              "valueColumn": "boardings",
+              "nameColumn": "district",
+              "color": "teal"
+            },
+            "featureFilterColumn": "district",
+            "overlayToggle": "Districts",
+            "height": 460,
+            "zoom": 12
+          }
+        ]
+      }
+    },
+    "data": {
+      "title": {
+        "en": "Data",
+        "ko": "데이터",
+        "zh": "数据",
+        "hi": "डेटा",
+        "es": "Datos",
+        "fr": "Données",
+        "ar": "البيانات",
+        "pt": "Dados",
+        "ru": "Данные",
+        "de": "Daten",
+        "ja": "データ",
+        "tr": "Veri",
+        "vi": "Dữ liệu",
+        "it": "Dati",
+        "fa": "داده‌ها",
+        "pl": "Dane",
+        "uk": "Дані",
+        "nl": "Gegevens",
+        "sv": "Data",
+        "cs": "Data",
+        "el": "Δεδομένα"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "The seeded rows are a fictional demo of the report STRUCTURE — replace them with your own model outputs. CSV columns should match the table's column names (scenario, route, boardings, …); extra rows merge in.",
+              "ko": "시드로 채워진 행은 리포트 구조를 보여주는 가상의 데모입니다 — 실제 모델 출력으로 교체하세요. CSV 열은 테이블의 열 이름(시나리오, 노선, 승차 인원 등)과 일치해야 합니다. 추가 행은 병합됩니다.",
+              "zh": "预置行只是报告结构的虚构演示——请用你自己的模型输出替换它们。CSV 列应与表格的列名匹配（scenario、route、boardings 等）；额外行会合并进来。",
+              "hi": "सीड की गई पंक्तियाँ रिपोर्ट संरचना का काल्पनिक डेमो हैं — इन्हें अपने खुद के मॉडल आउटपुट से बदलें। CSV कॉलम, तालिका के कॉलम नामों (scenario, route, boardings, …) से मेल खाने चाहिए; अतिरिक्त पंक्तियाँ मर्ज हो जाती हैं।",
+              "es": "Las filas iniciales son una demostración ficticia de la ESTRUCTURA del informe — reemplázalas con tus propias salidas de modelo. Las columnas del CSV deben coincidir con los nombres de columna de la tabla (scenario, route, boardings, …); las filas adicionales se combinan.",
+              "fr": "Les lignes préremplies sont une démonstration fictive de la STRUCTURE du rapport — remplacez-les par vos propres sorties de modèle. Les colonnes du CSV doivent correspondre aux noms de colonnes du tableau (scenario, route, boardings, …) ; les lignes supplémentaires sont fusionnées.",
+              "ar": "الصفوف الأولية هي عرض توضيحي خيالي لبنية التقرير — استبدلها بمخرجات نموذجك الخاص. يجب أن تطابق أعمدة CSV أسماء أعمدة الجدول (scenario، route، boardings، …)؛ يتم دمج الصفوف الإضافية.",
+              "pt": "As linhas semeadas são uma demonstração fictícia da ESTRUTURA do relatório — substitua-as pelas saídas do seu próprio modelo. As colunas do CSV devem corresponder aos nomes das colunas da tabela (scenario, route, boardings, …); linhas extras são mescladas.",
+              "ru": "Начальные строки — вымышленная демонстрация СТРУКТУРЫ отчёта — замените их своими результатами модели. Столбцы CSV должны соответствовать именам столбцов таблицы (scenario, route, boardings, …); дополнительные строки объединяются.",
+              "de": "Die vorbelegten Zeilen sind eine fiktive Demo der Berichtsstruktur — ersetze sie durch deine eigenen Modellergebnisse. CSV-Spalten sollten den Spaltennamen der Tabelle entsprechen (scenario, route, boardings, …); zusätzliche Zeilen werden zusammengeführt.",
+              "ja": "初期投入された行はレポート構造の架空のデモです — 実際のモデル出力に置き換えてください。CSV の列はテーブルの列名（scenario、route、boardings など）と一致させてください。追加の行はマージされます。",
+              "tr": "Başlangıç satırları raporun YAPISININ kurgusal bir tanıtımıdır — bunları kendi model çıktılarınızla değiştirin. CSV sütunları tablonun sütun adlarıyla (scenario, route, boardings, …) eşleşmelidir; ekstra satırlar birleştirilir.",
+              "vi": "Các hàng có sẵn chỉ là bản demo hư cấu về CẤU TRÚC báo cáo — hãy thay bằng kết quả mô hình của riêng bạn. Cột CSV phải khớp với tên cột của bảng (scenario, route, boardings, …); các hàng thêm vào sẽ được hợp nhất.",
+              "it": "Le righe precaricate sono una demo fittizia della STRUTTURA del report — sostituiscile con i tuoi output del modello. Le colonne CSV devono corrispondere ai nomi delle colonne della tabella (scenario, route, boardings, …); le righe extra vengono unite.",
+              "fa": "ردیف‌های اولیه یک نمایش خیالی از ساختار گزارش هستند — آن‌ها را با خروجی‌های مدل خودتان جایگزین کنید. ستون‌های CSV باید با نام ستون‌های جدول (scenario، route، boardings، …) مطابقت داشته باشند؛ ردیف‌های اضافی ادغام می‌شوند.",
+              "pl": "Wstępnie wprowadzone wiersze to fikcyjna demonstracja STRUKTURY raportu — zastąp je własnymi wynikami modelu. Kolumny CSV powinny odpowiadać nazwom kolumn tabeli (scenario, route, boardings, …); dodatkowe wiersze zostaną scalone.",
+              "uk": "Початкові рядки — це вигадана демонстрація СТРУКТУРИ звіту — замініть їх власними результатами моделі. Стовпці CSV мають відповідати назвам стовпців таблиці (scenario, route, boardings, …); додаткові рядки об'єднуються.",
+              "nl": "De vooraf ingevulde rijen zijn een fictieve demo van de rapportstructuur — vervang ze door je eigen modeluitvoer. CSV-kolommen moeten overeenkomen met de kolomnamen van de tabel (scenario, route, boardings, …); extra rijen worden samengevoegd.",
+              "sv": "De förifyllda raderna är en fiktiv demonstration av rapportens STRUKTUR — ersätt dem med dina egna modellresultat. CSV-kolumner ska matcha tabellens kolumnnamn (scenario, route, boardings, …); extra rader slås samman.",
+              "cs": "Předvyplněné řádky jsou smyšlená ukázka STRUKTURY zprávy — nahraďte je vlastními výstupy modelu. Sloupce CSV by měly odpovídat názvům sloupců tabulky (scenario, route, boardings, …); další řádky se sloučí.",
+              "el": "Οι προκαθορισμένες γραμμές είναι μια πλασματική επίδειξη της ΔΟΜΗΣ της αναφοράς — αντικαταστήστε τις με τα δικά σας αποτελέσματα μοντέλου. Οι στήλες CSV πρέπει να ταιριάζουν με τα ονόματα στηλών του πίνακα (scenario, route, boardings, …)· οι επιπλέον γραμμές συγχωνεύονται."
+            }
+          },
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": {
+                  "en": "Import CSV (merge)",
+                  "ko": "CSV 가져오기(병합)",
+                  "zh": "导入 CSV（合并）",
+                  "hi": "CSV आयात करें (मर्ज)",
+                  "es": "Importar CSV (fusionar)",
+                  "fr": "Importer un CSV (fusionner)",
+                  "ar": "استيراد CSV (دمج)",
+                  "pt": "Importar CSV (mesclar)",
+                  "ru": "Импорт CSV (объединить)",
+                  "de": "CSV importieren (zusammenführen)",
+                  "ja": "CSVをインポート（マージ）",
+                  "tr": "CSV içe aktar (birleştir)",
+                  "vi": "Nhập CSV (hợp nhất)",
+                  "it": "Importa CSV (unisci)",
+                  "fa": "درون‌ریزی CSV (ادغام)",
+                  "pl": "Importuj CSV (scal)",
+                  "uk": "Імпорт CSV (об'єднати)",
+                  "nl": "CSV importeren (samenvoegen)",
+                  "sv": "Importera CSV (slå samman)",
+                  "cs": "Importovat CSV (sloučit)",
+                  "el": "Εισαγωγή CSV (συγχώνευση)"
+                },
+                "icon": "upload",
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "importCsv",
+                    "table": "results"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "Import CSV (replace)",
+                  "ko": "CSV 가져오기(교체)",
+                  "zh": "导入 CSV（替换）",
+                  "hi": "CSV आयात करें (बदलें)",
+                  "es": "Importar CSV (reemplazar)",
+                  "fr": "Importer un CSV (remplacer)",
+                  "ar": "استيراد CSV (استبدال)",
+                  "pt": "Importar CSV (substituir)",
+                  "ru": "Импорт CSV (заменить)",
+                  "de": "CSV importieren (ersetzen)",
+                  "ja": "CSVをインポート（置き換え）",
+                  "tr": "CSV içe aktar (değiştir)",
+                  "vi": "Nhập CSV (thay thế)",
+                  "it": "Importa CSV (sostituisci)",
+                  "fa": "درون‌ریزی CSV (جایگزینی)",
+                  "pl": "Importuj CSV (zastąp)",
+                  "uk": "Імпорт CSV (замінити)",
+                  "nl": "CSV importeren (vervangen)",
+                  "sv": "Importera CSV (ersätt)",
+                  "cs": "Importovat CSV (nahradit)",
+                  "el": "Εισαγωγή CSV (αντικατάσταση)"
+                },
+                "icon": "restore",
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "importCsv",
+                    "table": "results",
+                    "replace": true
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": {
+                  "en": "Export CSV",
+                  "ko": "CSV 내보내기",
+                  "zh": "导出 CSV",
+                  "hi": "CSV निर्यात करें",
+                  "es": "Exportar CSV",
+                  "fr": "Exporter en CSV",
+                  "ar": "تصدير CSV",
+                  "pt": "Exportar CSV",
+                  "ru": "Экспорт CSV",
+                  "de": "CSV exportieren",
+                  "ja": "CSVをエクスポート",
+                  "tr": "CSV dışa aktar",
+                  "vi": "Xuất CSV",
+                  "it": "Esporta CSV",
+                  "fa": "برون‌بری CSV",
+                  "pl": "Eksportuj CSV",
+                  "uk": "Експорт CSV",
+                  "nl": "CSV exporteren",
+                  "sv": "Exportera CSV",
+                  "cs": "Exportovat CSV",
+                  "el": "Εξαγωγή CSV"
+                },
+                "icon": "download",
+                "action": {
+                  "fn": "exportData",
+                  "args": {
+                    "format": "csv",
+                    "table": "results"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "Export all (JSON)",
+                  "ko": "전체 내보내기(JSON)",
+                  "zh": "导出全部（JSON）",
+                  "hi": "सभी निर्यात करें (JSON)",
+                  "es": "Exportar todo (JSON)",
+                  "fr": "Tout exporter (JSON)",
+                  "ar": "تصدير الكل (JSON)",
+                  "pt": "Exportar tudo (JSON)",
+                  "ru": "Экспортировать всё (JSON)",
+                  "de": "Alles exportieren (JSON)",
+                  "ja": "すべてエクスポート（JSON）",
+                  "tr": "Tümünü dışa aktar (JSON)",
+                  "vi": "Xuất tất cả (JSON)",
+                  "it": "Esporta tutto (JSON)",
+                  "fa": "برون‌بری همه (JSON)",
+                  "pl": "Eksportuj wszystko (JSON)",
+                  "uk": "Експортувати все (JSON)",
+                  "nl": "Alles exporteren (JSON)",
+                  "sv": "Exportera allt (JSON)",
+                  "cs": "Exportovat vše (JSON)",
+                  "el": "Εξαγωγή όλων (JSON)"
+                },
+                "icon": "download",
+                "action": {
+                  "fn": "exportData",
+                  "args": {
+                    "format": "json",
+                    "pretty": true
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "dataview",
+            "tables": [
+              "results",
+              "slices"
+            ],
+            "height": 380
+          }
+        ]
+      }
+    },
+    "about": {
+      "title": {
+        "en": "About",
+        "ko": "정보",
+        "zh": "关于",
+        "hi": "जानकारी",
+        "es": "Acerca de",
+        "fr": "À propos",
+        "ar": "حول",
+        "pt": "Sobre",
+        "ru": "О приложении",
+        "de": "Info",
+        "ja": "情報",
+        "tr": "Hakkında",
+        "vi": "Giới thiệu",
+        "it": "Informazioni",
+        "fa": "درباره",
+        "pl": "Informacje",
+        "uk": "Про застосунок",
+        "nl": "Over",
+        "sv": "Om",
+        "cs": "O aplikaci",
+        "el": "Σχετικά"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Part of the urban-models suite — this is the REPORT BUILDER. Pair it with Scenarios (runs + proof), Urbanset (the logic), and Atlas (the map). Seed rows here are FICTIONAL — structure demo only; import real outputs via CSV.",
+              "ko": "도시 모델 스위트의 일부로, 이 앱은 리포트 빌더입니다. 시나리오(실행 + 검증), Urbanset(로직), Atlas(지도)와 함께 사용하세요. 여기 시드 행은 가상의 데이터로, 구조 데모용일 뿐입니다 — 실제 출력은 CSV로 가져오세요.",
+              "zh": "属于都市模型套件的一部分——这是报告构建器。可与 Scenarios（运行与证明）、Urbanset（逻辑）和 Atlas（地图）配合使用。此处的预置行是虚构的——仅作结构演示；请通过 CSV 导入真实输出。",
+              "hi": "यह urban-models सुइट का हिस्सा है — यह REPORT BUILDER है। इसे Scenarios (रन + प्रमाण), Urbanset (लॉजिक), और Atlas (मानचित्र) के साथ जोड़ें। यहाँ की सीड पंक्तियाँ काल्पनिक हैं — केवल संरचना डेमो; वास्तविक आउटपुट CSV से आयात करें।",
+              "es": "Parte del conjunto de modelos urbanos — este es el CONSTRUCTOR DE INFORMES. Combínalo con Scenarios (ejecuciones + prueba), Urbanset (la lógica) y Atlas (el mapa). Las filas iniciales aquí son FICTICIAS — solo una demo de estructura; importa salidas reales mediante CSV.",
+              "fr": "Fait partie de la suite de modèles urbains — il s'agit du CONSTRUCTEUR DE RAPPORTS. Associez-le à Scenarios (exécutions + preuve), Urbanset (la logique) et Atlas (la carte). Les lignes préremplies ici sont FICTIVES — simple démo de structure ; importez de vraies sorties via CSV.",
+              "ar": "جزء من مجموعة النماذج الحضرية — هذا هو منشئ التقارير. اقرنه مع Scenarios (عمليات التشغيل + الإثبات) و Urbanset (المنطق) و Atlas (الخريطة). الصفوف الأولية هنا خيالية — مجرد عرض توضيحي للبنية؛ استورد المخرجات الحقيقية عبر CSV.",
+              "pt": "Parte do conjunto de modelos urbanos — este é o CONSTRUTOR DE RELATÓRIOS. Combine-o com Scenarios (execuções + prova), Urbanset (a lógica) e Atlas (o mapa). As linhas semeadas aqui são FICTÍCIAS — apenas demo de estrutura; importe saídas reais via CSV.",
+              "ru": "Часть набора городских моделей — это КОНСТРУКТОР ОТЧЁТОВ. Используйте его вместе со Scenarios (прогоны + доказательства), Urbanset (логика) и Atlas (карта). Начальные строки здесь ВЫМЫШЛЕННЫЕ — просто демонстрация структуры; импортируйте реальные результаты через CSV.",
+              "de": "Teil der Urban-Models-Suite — dies ist der REPORT-BUILDER. Kombiniere ihn mit Scenarios (Läufe + Nachweis), Urbanset (die Logik) und Atlas (die Karte). Die vorbelegten Zeilen hier sind FIKTIV — nur eine Strukturdemo; echte Ergebnisse per CSV importieren.",
+              "ja": "都市モデル・スイートの一部で、これはレポートビルダーです。Scenarios（実行＋証明）、Urbanset（ロジック）、Atlas（地図）と組み合わせて使用してください。ここの初期行は架空のもので、構造のデモに過ぎません — 実際の出力は CSV でインポートしてください。",
+              "tr": "Kentsel modeller paketinin bir parçası — bu RAPOR OLUŞTURUCUDUR. Scenarios (çalıştırmalar + kanıt), Urbanset (mantık) ve Atlas (harita) ile birlikte kullanın. Buradaki başlangıç satırları KURGUSALDIR — yalnızca yapı tanıtımı; gerçek çıktıları CSV ile içe aktarın.",
+              "vi": "Là một phần của bộ mô hình đô thị — đây là TRÌNH TẠO BÁO CÁO. Kết hợp với Scenarios (lần chạy + bằng chứng), Urbanset (logic) và Atlas (bản đồ). Các hàng có sẵn ở đây là HƯ CẤU — chỉ là demo cấu trúc; nhập kết quả thực qua CSV.",
+              "it": "Parte della suite di modelli urbani — questo è il COSTRUTTORE DI REPORT. Abbinalo a Scenarios (esecuzioni + prova), Urbanset (la logica) e Atlas (la mappa). Le righe precaricate qui sono FITTIZIE — solo una demo di struttura; importa output reali via CSV.",
+              "fa": "بخشی از مجموعه مدل‌های شهری — این سازنده گزارش است. آن را با Scenarios (اجراها + اثبات)، Urbanset (منطق) و Atlas (نقشه) ترکیب کنید. ردیف‌های اولیه اینجا خیالی هستند — فقط نمایش ساختار؛ خروجی‌های واقعی را از طریق CSV درون‌ریزی کنید.",
+              "pl": "Część pakietu modeli miejskich — to jest KREATOR RAPORTÓW. Połącz go ze Scenarios (przebiegi + dowód), Urbanset (logika) i Atlas (mapa). Wstępne wiersze tutaj są FIKCYJNE — jedynie demonstracja struktury; zaimportuj rzeczywiste wyniki przez CSV.",
+              "uk": "Частина набору міських моделей — це КОНСТРУКТОР ЗВІТІВ. Поєднуйте його зі Scenarios (запуски + докази), Urbanset (логіка) та Atlas (карта). Початкові рядки тут ВИГАДАНІ — лише демонстрація структури; імпортуйте реальні результати через CSV.",
+              "nl": "Onderdeel van de suite met stadsmodellen — dit is de RAPPORTBOUWER. Combineer met Scenarios (runs + bewijs), Urbanset (de logica) en Atlas (de kaart). De vooraf ingevulde rijen hier zijn FICTIEF — alleen een structuurdemo; importeer echte uitvoer via CSV.",
+              "sv": "Del av sviten för stadsmodeller — det här är RAPPORTBYGGAREN. Kombinera den med Scenarios (körningar + bevis), Urbanset (logiken) och Atlas (kartan). De förifyllda raderna här är FIKTIVA — bara en strukturdemo; importera riktiga resultat via CSV.",
+              "cs": "Součást sady městských modelů — toto je TVŮRCE ZPRÁV. Spárujte jej se Scenarios (běhy + důkaz), Urbanset (logika) a Atlas (mapa). Předvyplněné řádky zde jsou SMYŠLENÉ — pouze ukázka struktury; skutečné výstupy importujte přes CSV.",
+              "el": "Μέρος της σουίτας αστικών μοντέλων — αυτός είναι ο ΚΑΤΑΣΚΕΥΑΣΤΗΣ ΑΝΑΦΟΡΩΝ. Συνδυάστε τον με το Scenarios (εκτελέσεις + απόδειξη), το Urbanset (η λογική) και το Atlas (ο χάρτης). Οι αρχικές γραμμές εδώ είναι ΠΛΑΣΜΑΤΙΚΕΣ — απλή επίδειξη δομής· εισαγάγετε πραγματικά αποτελέσματα μέσω CSV."
+            }
+          },
+          {
+            "type": "text",
+            "style": "display",
+            "value": {
+              "en": "Model reports",
+              "ko": "모델 리포트",
+              "zh": "模型报告",
+              "hi": "मॉडल रिपोर्ट",
+              "es": "Informes de modelos",
+              "fr": "Rapports de modèles",
+              "ar": "تقارير النموذج",
+              "pt": "Relatórios de modelos",
+              "ru": "Отчёты моделей",
+              "de": "Modellberichte",
+              "ja": "モデルレポート",
+              "tr": "Model raporları",
+              "vi": "Báo cáo mô hình",
+              "it": "Report dei modelli",
+              "fa": "گزارش‌های مدل",
+              "pl": "Raporty modeli",
+              "uk": "Звіти моделей",
+              "nl": "Modelrapporten",
+              "sv": "Modellrapporter",
+              "cs": "Zprávy o modelech",
+              "el": "Αναφορές μοντέλων"
+            }
+          },
+          {
+            "type": "text",
+            "value": {
+              "en": "A report dashboard for comparing model outputs — scenario runs, forecasts, any table of results. It reuses the structure of a standalone STOPS report visualizer, rebuilt as a reusable engine piece: filters → sorts → row limit, then a grouped bar chart or a pivot table, with percent-difference against a base run for side-by-side comparison.",
+              "ko": "모델 출력(시나리오 실행, 예측, 각종 결과 표)을 비교하기 위한 리포트 대시보드입니다. 독립형 STOPS 리포트 시각화 도구의 구조를 재사용해 엔진 부품으로 다시 만들었습니다: 필터 → 정렬 → 행 제한, 그 다음 그룹 막대 차트 또는 피벗 테이블, 그리고 기준 실행 대비 퍼센트 차이를 통한 나란한 비교까지 제공합니다.",
+              "zh": "用于比较模型输出的报告仪表板——场景运行、预测、任意结果表格。它复用了独立的 STOPS 报告可视化工具的结构，被重建为可复用的引擎组件：筛选 → 排序 → 行数限制，随后是分组柱状图或数据透视表，并可对基准运行进行百分比差异比较。",
+              "hi": "मॉडल आउटपुट की तुलना के लिए एक रिपोर्ट डैशबोर्ड — परिदृश्य रन, पूर्वानुमान, परिणामों की कोई भी तालिका। यह एक स्टैंडअलोन STOPS रिपोर्ट विज़ुअलाइज़र की संरचना का पुन: उपयोग करता है, जिसे पुन: प्रयोज्य इंजन भाग के रूप में फिर से बनाया गया है: फ़िल्टर → सॉर्ट → पंक्ति सीमा, फिर एक समूहीकृत बार चार्ट या पिवट तालिका, साथ ही साथ-साथ तुलना के लिए आधार रन के मुकाबले प्रतिशत अंतर।",
+              "es": "Un panel de informes para comparar salidas de modelos: ejecuciones de escenarios, pronósticos, cualquier tabla de resultados. Reutiliza la estructura de un visualizador de informes STOPS independiente, reconstruido como pieza reutilizable del motor: filtros → ordenaciones → límite de filas, luego un gráfico de barras agrupado o una tabla dinámica, con diferencia porcentual respecto a una ejecución base para comparación lado a lado.",
+              "fr": "Un tableau de bord de rapports pour comparer les sorties de modèles — exécutions de scénarios, prévisions, tout tableau de résultats. Il réutilise la structure d'un visualiseur de rapports STOPS autonome, reconstruit comme un composant de moteur réutilisable : filtres → tris → limite de lignes, puis un graphique à barres groupées ou un tableau croisé, avec un écart en pourcentage par rapport à une exécution de base pour une comparaison côte à côte.",
+              "ar": "لوحة تقارير لمقارنة مخرجات النماذج — عمليات تشغيل السيناريوهات، التوقعات، أي جدول نتائج. تعيد استخدام بنية أداة تصور تقارير STOPS المستقلة، أُعيد بناؤها كقطعة محرك قابلة لإعادة الاستخدام: تصفية ← ترتيب ← حد للصفوف، ثم مخطط أعمدة مجمّع أو جدول محوري، مع فرق مئوي مقابل تشغيل أساسي للمقارنة جنبًا إلى جنب.",
+              "pt": "Um painel de relatórios para comparar saídas de modelos — execuções de cenários, previsões, qualquer tabela de resultados. Reutiliza a estrutura de um visualizador de relatórios STOPS independente, reconstruído como uma peça reutilizável do motor: filtros → ordenações → limite de linhas, depois um gráfico de barras agrupado ou uma tabela dinâmica, com diferença percentual em relação a uma execução base para comparação lado a lado.",
+              "ru": "Панель отчётов для сравнения результатов модели — прогоны сценариев, прогнозы, любые таблицы результатов. Она использует структуру автономного визуализатора отчётов STOPS, переработанного в переиспользуемый компонент движка: фильтры → сортировки → ограничение строк, затем сгруппированная столбчатая диаграмма или сводная таблица с процентной разницей относительно базового прогона для сравнения бок о бок.",
+              "de": "Ein Berichts-Dashboard zum Vergleich von Modellergebnissen — Szenarioläufe, Prognosen, beliebige Ergebnistabellen. Es nutzt die Struktur eines eigenständigen STOPS-Berichtsvisualisierers, umgebaut zu einem wiederverwendbaren Engine-Baustein: Filter → Sortierungen → Zeilenlimit, dann ein gruppiertes Balkendiagramm oder eine Pivot-Tabelle, mit prozentualer Abweichung gegenüber einem Basislauf für den direkten Vergleich.",
+              "ja": "モデル出力（シナリオ実行、予測、任意の結果テーブル）を比較するためのレポートダッシュボードです。独立した STOPS レポートビジュアライザーの構造を再利用し、再利用可能なエンジン部品として再構築しています：フィルター → 並べ替え → 行数制限、続いてグループ化された棒グラフまたはピボットテーブル、さらに基準実行に対するパーセント差での並列比較。",
+              "tr": "Model çıktılarını karşılaştırmak için bir rapor panosu — senaryo çalıştırmaları, tahminler, herhangi bir sonuç tablosu. Bağımsız bir STOPS rapor görselleştiricisinin yapısını yeniden kullanır ve yeniden kullanılabilir bir motor parçası olarak yeniden inşa edilmiştir: filtreler → sıralamalar → satır sınırı, ardından gruplandırılmış çubuk grafik veya pivot tablo, yan yana karşılaştırma için temel çalışmaya göre yüzde fark ile.",
+              "vi": "Bảng điều khiển báo cáo để so sánh kết quả mô hình — các lần chạy kịch bản, dự báo, bất kỳ bảng kết quả nào. Nó tái sử dụng cấu trúc của một công cụ trực quan hóa báo cáo STOPS độc lập, được xây dựng lại thành một thành phần công cụ có thể tái sử dụng: bộ lọc → sắp xếp → giới hạn hàng, sau đó là biểu đồ cột nhóm hoặc bảng pivot, với chênh lệch phần trăm so với lần chạy cơ sở để so sánh song song.",
+              "it": "Un pannello di report per confrontare gli output dei modelli — esecuzioni di scenari, previsioni, qualsiasi tabella di risultati. Riutilizza la struttura di un visualizzatore di report STOPS autonomo, ricostruito come componente riutilizzabile del motore: filtri → ordinamenti → limite di righe, poi un grafico a barre raggruppate o una tabella pivot, con differenza percentuale rispetto a un'esecuzione di base per il confronto affiancato.",
+              "fa": "یک داشبورد گزارش برای مقایسه خروجی‌های مدل — اجرای سناریوها، پیش‌بینی‌ها، هر جدول نتیجه‌ای. این ابزار ساختار یک ابزار تجسم گزارش مستقل STOPS را دوباره استفاده می‌کند که به‌صورت یک قطعه موتور قابل استفاده مجدد بازسازی شده است: فیلترها → مرتب‌سازی‌ها → محدودیت ردیف، سپس یک نمودار میله‌ای گروه‌بندی‌شده یا جدول محوری، همراه با درصد تفاوت نسبت به یک اجرای پایه برای مقایسه کنار هم.",
+              "pl": "Pulpit raportów do porównywania wyników modeli — przebiegi scenariuszy, prognozy, dowolna tabela wyników. Wykorzystuje strukturę samodzielnego wizualizatora raportów STOPS, przebudowanego jako wielokrotnego użytku element silnika: filtry → sortowania → limit wierszy, następnie pogrupowany wykres słupkowy lub tabela przestawna, z procentową różnicą względem przebiegu bazowego do porównania obok siebie.",
+              "uk": "Панель звітів для порівняння результатів моделі — запуски сценаріїв, прогнози, будь-яка таблиця результатів. Вона повторно використовує структуру автономного візуалізатора звітів STOPS, перебудованого як багаторазовий компонент рушія: фільтри → сортування → обмеження рядків, потім згрупована стовпчикова діаграма або зведена таблиця з відсотковою різницею відносно базового запуску для порівняння поряд.",
+              "nl": "Een rapportdashboard om modeluitvoer te vergelijken — scenariorunes, prognoses, elke resultatentabel. Het hergebruikt de structuur van een op zichzelf staande STOPS-rapportvisualizer, herbouwd als herbruikbaar engine-onderdeel: filters → sorteringen → rijlimiet, gevolgd door een gegroepeerde staafgrafiek of draaitabel, met procentueel verschil ten opzichte van een basisrun voor vergelijking naast elkaar.",
+              "sv": "En rapportpanel för att jämföra modellresultat — scenariokörningar, prognoser, vilken resultattabell som helst. Den återanvänder strukturen från en fristående STOPS-rapportvisualisering, ombyggd till en återanvändbar motorkomponent: filter → sorteringar → radgräns, sedan ett grupperat stapeldiagram eller en pivottabell, med procentuell skillnad mot en baskörning för jämförelse sida vid sida.",
+              "cs": "Přehled zpráv pro porovnávání výstupů modelu — běhy scénářů, prognózy, jakákoli tabulka výsledků. Znovu používá strukturu samostatného vizualizátoru zpráv STOPS, přestavěného jako znovupoužitelná součást enginu: filtry → řazení → limit řádků, poté seskupený sloupcový graf nebo kontingenční tabulka s procentuálním rozdílem oproti základnímu běhu pro srovnání vedle sebe.",
+              "el": "Ένας πίνακας αναφορών για τη σύγκριση εξόδων μοντέλου — εκτελέσεις σεναρίων, προβλέψεις, οποιοσδήποτε πίνακας αποτελεσμάτων. Επαναχρησιμοποιεί τη δομή ενός αυτόνομου εργαλείου οπτικοποίησης αναφορών STOPS, ξαναχτισμένου ως επαναχρησιμοποιήσιμο κομμάτι μηχανής: φίλτρα → ταξινομήσεις → όριο γραμμών, έπειτα ένα ομαδοποιημένο ραβδόγραμμα ή έναν συγκεντρωτικό πίνακα, με ποσοστιαία διαφορά έναντι μιας βασικής εκτέλεσης για σύγκριση δίπλα-δίπλα."
+            }
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": {
+              "en": "Feeding it real data",
+              "ko": "실제 데이터 입력하기",
+              "zh": "输入真实数据",
+              "hi": "इसे वास्तविक डेटा देना",
+              "es": "Alimentarlo con datos reales",
+              "fr": "L'alimenter avec des données réelles",
+              "ar": "تزويده ببيانات حقيقية",
+              "pt": "Alimentando com dados reais",
+              "ru": "Наполнение реальными данными",
+              "de": "Mit echten Daten füttern",
+              "ja": "実データを投入する",
+              "tr": "Gerçek verilerle besleme",
+              "vi": "Đưa dữ liệu thực vào",
+              "it": "Alimentarlo con dati reali",
+              "fa": "تغذیه با داده‌های واقعی",
+              "pl": "Zasilanie prawdziwymi danymi",
+              "uk": "Наповнення реальними даними",
+              "nl": "Voeden met echte gegevens",
+              "sv": "Mata med riktig data",
+              "cs": "Naplnění skutečnými daty",
+              "el": "Τροφοδοσία με πραγματικά δεδομένα"
+            }
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": {
+              "en": "Cached calculations",
+              "ko": "캐시된 계산",
+              "zh": "缓存的计算",
+              "hi": "कैश्ड गणना",
+              "es": "Cálculos en caché",
+              "fr": "Calculs mis en cache",
+              "ar": "الحسابات المخزّنة مؤقتًا",
+              "pt": "Cálculos em cache",
+              "ru": "Кэшированные вычисления",
+              "de": "Zwischengespeicherte Berechnungen",
+              "ja": "キャッシュされた計算",
+              "tr": "Önbelleğe alınmış hesaplamalar",
+              "vi": "Các phép tính đã lưu đệm",
+              "it": "Calcoli in cache",
+              "fa": "محاسبات ذخیره‌شده",
+              "pl": "Zapisane obliczenia",
+              "uk": "Кешовані обчислення",
+              "nl": "Gecachte berekeningen",
+              "sv": "Cachade beräkningar",
+              "cs": "Uložené výpočty",
+              "el": "Αποθηκευμένοι υπολογισμοί"
+            }
+          },
+          {
+            "type": "text",
+            "value": {
+              "en": "The Metrics tab holds derived numbers (totals, retention %) computed once from your outputs and STORED as ordinary rows. Every chart, table and map shading reads those cached values — fast on big datasets, always consistent, refreshed only when you tap Recalculate. The map's district totals work the same way.",
+              "ko": "지표 탭에는 출력값으로부터 한 번 계산되어 일반 행으로 저장된 파생 숫자(합계, 유지율 % 등)가 들어 있습니다. 모든 차트, 테이블, 지도 음영은 이 캐시된 값을 읽습니다 — 대용량 데이터셋에서도 빠르고 항상 일관되며, 다시 계산(Recalculate)을 탭할 때만 갱신됩니다. 지도의 구역 합계도 동일한 방식으로 동작합니다.",
+              "zh": "“指标”标签页保存从输出中一次性计算并作为普通行存储的派生数字（合计、留存率等）。每个图表、表格和地图着色都读取这些缓存值——在大型数据集上速度快、始终一致，仅在你点击“重新计算”时才会刷新。地图的地区合计也以同样方式运作。",
+              "hi": "मेट्रिक्स टैब में व्युत्पन्न संख्याएँ (कुल, प्रतिधारण %) होती हैं जो आपके आउटपुट से एक बार गणना कर सामान्य पंक्तियों के रूप में संग्रहीत की जाती हैं। हर चार्ट, तालिका और मानचित्र शेडिंग उन्हीं कैश्ड मानों को पढ़ती है — बड़े डेटासेट पर तेज़, हमेशा सुसंगत, और केवल Recalculate टैप करने पर ही रिफ्रेश होती है। मानचित्र के जिला कुल भी उसी तरह काम करते हैं।",
+              "es": "La pestaña Métricas contiene números derivados (totales, % de retención) calculados una vez a partir de tus salidas y ALMACENADOS como filas normales. Cada gráfico, tabla y sombreado de mapa lee esos valores en caché — rápido en conjuntos de datos grandes, siempre coherente, y solo se actualiza al tocar Recalcular. Los totales por distrito del mapa funcionan igual.",
+              "fr": "L'onglet Indicateurs contient des nombres dérivés (totaux, % de rétention) calculés une fois à partir de vos sorties et STOCKÉS comme des lignes ordinaires. Chaque graphique, tableau et ombrage de carte lit ces valeurs en cache — rapide sur de grands ensembles de données, toujours cohérent, actualisé uniquement lorsque vous appuyez sur Recalculer. Les totaux par district de la carte fonctionnent de la même manière.",
+              "ar": "يحتوي علامة تبويب المقاييس على أرقام مشتقة (إجماليات، نسبة الاحتفاظ) محسوبة مرة واحدة من مخرجاتك ومخزّنة كصفوف عادية. تقرأ كل مخططات وجداول وتظليلات الخرائط تلك القيم المخزّنة — سريعة على مجموعات البيانات الكبيرة، متسقة دائمًا، ولا تُحدَّث إلا عند الضغط على إعادة الحساب. تعمل إجماليات المقاطعات في الخريطة بالطريقة نفسها.",
+              "pt": "A aba Métricas contém números derivados (totais, % de retenção) calculados uma vez a partir de suas saídas e ARMAZENADOS como linhas comuns. Cada gráfico, tabela e sombreamento de mapa lê esses valores em cache — rápido em conjuntos de dados grandes, sempre consistente, atualizado apenas ao tocar em Recalcular. Os totais por distrito do mapa funcionam da mesma forma.",
+              "ru": "Вкладка «Метрики» содержит производные числа (суммы, % удержания), вычисленные один раз из ваших результатов и СОХРАНЁННЫЕ как обычные строки. Все диаграммы, таблицы и окраска карты читают эти кэшированные значения — быстро на больших наборах данных, всегда согласованно, обновляется только при нажатии «Пересчитать». Итоги по районам на карте работают так же.",
+              "de": "Der Tab „Kennzahlen“ enthält abgeleitete Zahlen (Summen, Bindungsrate %), die einmal aus deinen Ergebnissen berechnet und als gewöhnliche Zeilen GESPEICHERT werden. Jedes Diagramm, jede Tabelle und jede Karteneinfärbung liest diese zwischengespeicherten Werte — schnell bei großen Datensätzen, immer konsistent, wird nur beim Tippen auf „Neu berechnen“ aktualisiert. Die Bezirkssummen der Karte funktionieren genauso.",
+              "ja": "指標タブには、出力から一度だけ計算され通常の行として保存された派生数値（合計、リテンション率など）が含まれます。すべてのチャート、テーブル、地図の濃淡はこのキャッシュ値を読み取ります — 大規模データセットでも高速で、常に一貫性があり、「再計算」をタップしたときのみ更新されます。地図の地区合計も同様に機能します。",
+              "tr": "Ölçütler sekmesi, çıktılarınızdan bir kez hesaplanan ve normal satırlar olarak SAKLANAN türetilmiş sayıları (toplamlar, tutundurma %) içerir. Her grafik, tablo ve harita gölgelendirmesi bu önbelleğe alınmış değerleri okur — büyük veri kümelerinde hızlı, her zaman tutarlı ve yalnızca Yeniden Hesapla'ya dokunduğunuzda yenilenir. Haritanın bölge toplamları da aynı şekilde çalışır.",
+              "vi": "Tab Chỉ số chứa các con số suy ra (tổng số, % giữ chân) được tính một lần từ kết quả của bạn và LƯU TRỮ dưới dạng các hàng thông thường. Mọi biểu đồ, bảng và lớp tô màu bản đồ đều đọc các giá trị đã lưu đệm này — nhanh trên tập dữ liệu lớn, luôn nhất quán, chỉ làm mới khi bạn nhấn Tính lại. Tổng số theo quận trên bản đồ cũng hoạt động tương tự.",
+              "it": "La scheda Metriche contiene numeri derivati (totali, % di ritenzione) calcolati una volta dai tuoi output e MEMORIZZATI come righe ordinarie. Ogni grafico, tabella e ombreggiatura della mappa legge questi valori in cache — veloce su grandi dataset, sempre coerente, aggiornato solo quando tocchi Ricalcola. I totali per distretto della mappa funzionano allo stesso modo.",
+              "fa": "برگه معیارها اعداد مشتق‌شده (مجموع‌ها، درصد نگه‌داشت) را نگه می‌دارد که یک‌بار از خروجی‌های شما محاسبه و به‌صورت ردیف‌های معمولی ذخیره شده‌اند. هر نمودار، جدول و سایه‌زنی نقشه این مقادیر ذخیره‌شده را می‌خواند — روی مجموعه‌داده‌های بزرگ سریع، همیشه سازگار، و فقط با ضربه روی «محاسبه مجدد» به‌روزرسانی می‌شود. مجموع مناطق نقشه نیز به همین شکل کار می‌کند.",
+              "pl": "Karta Metryki zawiera liczby pochodne (sumy, % retencji) obliczone raz na podstawie wyników i ZAPISANE jako zwykłe wiersze. Każdy wykres, tabela i cieniowanie mapy odczytuje te zapisane wartości — szybkie przy dużych zbiorach danych, zawsze spójne, odświeżane tylko po dotknięciu Przelicz ponownie. Sumy dzielnic na mapie działają tak samo.",
+              "uk": "Вкладка «Метрики» містить похідні числа (суми, % утримання), обчислені один раз із ваших результатів і ЗБЕРЕЖЕНІ як звичайні рядки. Кожна діаграма, таблиця та затінення карти читає ці кешовані значення — швидко на великих наборах даних, завжди узгоджено, оновлюється лише після натискання «Перерахувати». Підсумки районів на карті працюють так само.",
+              "nl": "Het tabblad Statistieken bevat afgeleide getallen (totalen, retentie %) die één keer uit je uitvoer worden berekend en OPGESLAGEN als gewone rijen. Elke grafiek, tabel en kaartarcering leest die gecachte waarden — snel bij grote datasets, altijd consistent, wordt alleen vernieuwd wanneer je op Opnieuw berekenen tikt. De districtstotalen van de kaart werken op dezelfde manier.",
+              "sv": "Fliken Mätvärden innehåller härledda tal (summor, retention %) beräknade en gång från din utdata och LAGRADE som vanliga rader. Varje diagram, tabell och kartskuggning läser dessa cachade värden — snabbt på stora dataset, alltid konsekvent, uppdateras endast när du trycker på Räkna om. Kartans distriktssummor fungerar likadant.",
+              "cs": "Karta Metriky obsahuje odvozená čísla (součty, % udržení) vypočtená jednou z vašich výstupů a ULOŽENÁ jako běžné řádky. Každý graf, tabulka a stínování mapy čte tyto uložené hodnoty — rychlé u velkých datových sad, vždy konzistentní, obnovuje se pouze po klepnutí na Přepočítat. Součty okrsků na mapě fungují stejně.",
+              "el": "Η καρτέλα Μετρικές περιέχει παράγωγους αριθμούς (σύνολα, % διατήρησης) που υπολογίζονται μία φορά από τις εξόδους σας και ΑΠΟΘΗΚΕΥΟΝΤΑΙ ως συνηθισμένες γραμμές. Κάθε γράφημα, πίνακας και σκίαση χάρτη διαβάζει αυτές τις αποθηκευμένες τιμές — γρήγορο σε μεγάλα σύνολα δεδομένων, πάντα συνεπές, ανανεώνεται μόνο όταν πατάτε Επανυπολογισμός. Τα σύνολα περιφερειών του χάρτη λειτουργούν με τον ίδιο τρόπο."
+            }
+          },
+          {
+            "type": "text",
+            "value": {
+              "en": "The seeded rows are fictional and only demonstrate the shape. On the Data tab, import a CSV whose header row matches the column names (scenario, route, district, mode, boardings, alightings, avg_trip_mi, lat, lng) — merge adds rows, replace swaps the table. You can also add or rename columns first from the schema editor, then import a CSV matching your own shape.",
+              "ko": "시드 행은 가상이며 형식만을 보여줍니다. 데이터 탭에서 헤더 행이 열 이름(scenario, route, district, mode, boardings, alightings, avg_trip_mi, lat, lng)과 일치하는 CSV를 가져오세요 — 병합은 행을 추가하고, 교체는 테이블을 바꿉니다. 스키마 편집기에서 먼저 열을 추가하거나 이름을 바꾼 뒤, 원하는 형식에 맞는 CSV를 가져올 수도 있습니다.",
+              "zh": "预置行是虚构的，仅用于演示格式。在“数据”标签页中，导入表头与列名（scenario、route、district、mode、boardings、alightings、avg_trip_mi、lat、lng）匹配的 CSV——合并会添加行，替换会交换整张表。你也可以先在架构编辑器中添加或重命名列，再导入符合自己格式的 CSV。",
+              "hi": "सीड की गई पंक्तियाँ काल्पनिक हैं और केवल आकार दर्शाती हैं। Data टैब पर, ऐसा CSV आयात करें जिसकी हेडर पंक्ति कॉलम नामों (scenario, route, district, mode, boardings, alightings, avg_trip_mi, lat, lng) से मेल खाती हो — मर्ज पंक्तियाँ जोड़ता है, रिप्लेस तालिका बदल देता है। आप स्कीमा एडिटर से पहले कॉलम जोड़ या नाम बदल सकते हैं, फिर अपने आकार से मेल खाता CSV आयात करें।",
+              "es": "Las filas iniciales son ficticias y solo demuestran la forma. En la pestaña Datos, importa un CSV cuya fila de encabezado coincida con los nombres de columna (scenario, route, district, mode, boardings, alightings, avg_trip_mi, lat, lng) — fusionar añade filas, reemplazar cambia la tabla. También puedes añadir o renombrar columnas primero desde el editor de esquema y luego importar un CSV que coincida con tu propia forma.",
+              "fr": "Les lignes préremplies sont fictives et ne font que démontrer la forme. Dans l'onglet Données, importez un CSV dont la ligne d'en-tête correspond aux noms de colonnes (scenario, route, district, mode, boardings, alightings, avg_trip_mi, lat, lng) — fusionner ajoute des lignes, remplacer échange le tableau. Vous pouvez aussi ajouter ou renommer des colonnes depuis l'éditeur de schéma, puis importer un CSV correspondant à votre propre forme.",
+              "ar": "الصفوف الأولية خيالية وتوضّح الشكل فقط. في علامة تبويب البيانات، استورد ملف CSV يتطابق صف عناوينه مع أسماء الأعمدة (scenario، route، district، mode، boardings، alightings، avg_trip_mi، lat، lng) — الدمج يضيف صفوفًا، والاستبدال يستبدل الجدول. يمكنك أيضًا إضافة أو إعادة تسمية الأعمدة أولاً من محرر المخطط، ثم استيراد CSV يطابق شكلك الخاص.",
+              "pt": "As linhas semeadas são fictícias e apenas demonstram o formato. Na aba Dados, importe um CSV cuja linha de cabeçalho corresponda aos nomes das colunas (scenario, route, district, mode, boardings, alightings, avg_trip_mi, lat, lng) — mesclar adiciona linhas, substituir troca a tabela. Você também pode adicionar ou renomear colunas primeiro no editor de esquema e depois importar um CSV que corresponda ao seu próprio formato.",
+              "ru": "Начальные строки вымышленные и лишь демонстрируют форму. На вкладке «Данные» импортируйте CSV, у которого строка заголовка совпадает с именами столбцов (scenario, route, district, mode, boardings, alightings, avg_trip_mi, lat, lng) — объединение добавляет строки, замена меняет таблицу. Также можно сначала добавить или переименовать столбцы в редакторе схемы, а затем импортировать CSV, соответствующий вашей форме.",
+              "de": "Die vorbelegten Zeilen sind fiktiv und zeigen nur die Form. Importiere im Tab „Daten“ eine CSV-Datei, deren Kopfzeile den Spaltennamen entspricht (scenario, route, district, mode, boardings, alightings, avg_trip_mi, lat, lng) — Zusammenführen fügt Zeilen hinzu, Ersetzen tauscht die Tabelle. Du kannst auch zuerst im Schema-Editor Spalten hinzufügen oder umbenennen und dann eine CSV-Datei importieren, die zu deiner Form passt.",
+              "ja": "初期行は架空のもので、形だけを示しています。データタブで、ヘッダー行が列名（scenario、route、district、mode、boardings、alightings、avg_trip_mi、lat、lng）と一致する CSV をインポートしてください — マージは行を追加し、置き換えはテーブルを入れ替えます。スキーマエディタで先に列を追加または名前変更してから、自分の形式に合った CSV をインポートすることもできます。",
+              "tr": "Başlangıç satırları kurgusaldır ve yalnızca biçimi gösterir. Veri sekmesinde, başlık satırı sütun adlarıyla (scenario, route, district, mode, boardings, alightings, avg_trip_mi, lat, lng) eşleşen bir CSV içe aktarın — birleştirme satır ekler, değiştirme tabloyu değiştirir. Ayrıca önce şema düzenleyiciden sütun ekleyebilir veya yeniden adlandırabilir, ardından kendi biçiminize uyan bir CSV içe aktarabilirsiniz.",
+              "vi": "Các hàng có sẵn là hư cấu và chỉ minh họa hình dạng. Trên tab Dữ liệu, hãy nhập một CSV có hàng tiêu đề khớp với tên cột (scenario, route, district, mode, boardings, alightings, avg_trip_mi, lat, lng) — hợp nhất sẽ thêm hàng, thay thế sẽ đổi cả bảng. Bạn cũng có thể thêm hoặc đổi tên cột trước từ trình chỉnh sửa lược đồ, sau đó nhập CSV khớp với hình dạng riêng của bạn.",
+              "it": "Le righe precaricate sono fittizie e mostrano solo la forma. Nella scheda Dati, importa un CSV la cui riga di intestazione corrisponda ai nomi delle colonne (scenario, route, district, mode, boardings, alightings, avg_trip_mi, lat, lng) — unisci aggiunge righe, sostituisci scambia la tabella. Puoi anche aggiungere o rinominare colonne prima dall'editor dello schema, poi importare un CSV che corrisponda alla tua forma.",
+              "fa": "ردیف‌های اولیه خیالی هستند و فقط شکل را نشان می‌دهند. در برگه داده، یک CSV درون‌ریزی کنید که ردیف سرستون آن با نام ستون‌ها (scenario، route، district، mode، boardings، alightings، avg_trip_mi، lat، lng) مطابقت داشته باشد — ادغام ردیف اضافه می‌کند، جایگزینی کل جدول را عوض می‌کند. همچنین می‌توانید ابتدا از ویرایشگر شِما ستون‌ها را اضافه یا تغییرنام دهید، سپس یک CSV مطابق شکل خودتان درون‌ریزی کنید.",
+              "pl": "Wstępne wiersze są fikcyjne i pokazują jedynie kształt. Na karcie Dane zaimportuj plik CSV, którego wiersz nagłówka odpowiada nazwom kolumn (scenario, route, district, mode, boardings, alightings, avg_trip_mi, lat, lng) — scalanie dodaje wiersze, zastępowanie wymienia tabelę. Możesz też najpierw dodać lub zmienić nazwy kolumn w edytorze schematu, a następnie zaimportować CSV pasujący do własnego kształtu.",
+              "uk": "Початкові рядки вигадані й лише демонструють форму. На вкладці «Дані» імпортуйте CSV, чий рядок заголовка відповідає назвам стовпців (scenario, route, district, mode, boardings, alightings, avg_trip_mi, lat, lng) — об'єднання додає рядки, заміна змінює таблицю. Ви також можете спершу додати чи перейменувати стовпці в редакторі схеми, а потім імпортувати CSV, що відповідає вашій формі.",
+              "nl": "De vooraf ingevulde rijen zijn fictief en tonen alleen de vorm. Importeer op het tabblad Gegevens een CSV waarvan de headerregel overeenkomt met de kolomnamen (scenario, route, district, mode, boardings, alightings, avg_trip_mi, lat, lng) — samenvoegen voegt rijen toe, vervangen wisselt de tabel. Je kunt ook eerst kolommen toevoegen of hernoemen via de schema-editor en daarna een CSV importeren die bij jouw vorm past.",
+              "sv": "De förifyllda raderna är fiktiva och visar bara formen. Importera på fliken Data en CSV vars rubrikrad matchar kolumnnamnen (scenario, route, district, mode, boardings, alightings, avg_trip_mi, lat, lng) — sammanslagning lägger till rader, ersättning byter ut tabellen. Du kan även först lägga till eller byta namn på kolumner i schemaredigeraren och sedan importera en CSV som matchar din egen form.",
+              "cs": "Předvyplněné řádky jsou smyšlené a ukazují pouze tvar. Na kartě Data importujte CSV, jehož řádek záhlaví odpovídá názvům sloupců (scenario, route, district, mode, boardings, alightings, avg_trip_mi, lat, lng) — sloučení přidá řádky, nahrazení vymění tabulku. Můžete také nejprve přidat nebo přejmenovat sloupce v editoru schématu a poté importovat CSV odpovídající vašemu vlastnímu tvaru.",
+              "el": "Οι αρχικές γραμμές είναι πλασματικές και απλώς επιδεικνύουν τη μορφή. Στην καρτέλα Δεδομένα, εισαγάγετε ένα CSV του οποίου η γραμμή κεφαλίδας ταιριάζει με τα ονόματα στηλών (scenario, route, district, mode, boardings, alightings, avg_trip_mi, lat, lng) — η συγχώνευση προσθέτει γραμμές, η αντικατάσταση αλλάζει τον πίνακα. Μπορείτε επίσης να προσθέσετε ή να μετονομάσετε πρώτα στήλες από τον επεξεργαστή σχήματος και μετά να εισαγάγετε ένα CSV που ταιριάζει με τη δική σας μορφή."
+            }
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": {
+              "en": "Built to grow — or shrink",
+              "ko": "확장 — 또는 축소 — 하도록 설계됨",
+              "zh": "为扩展——或缩减——而设计",
+              "hi": "बढ़ने — या सिकुड़ने — के लिए बनाया गया",
+              "es": "Diseñado para crecer — o reducirse",
+              "fr": "Conçu pour grandir — ou se réduire",
+              "ar": "مُصمَّم لينمو — أو يتقلص",
+              "pt": "Construído para crescer — ou encolher",
+              "ru": "Создано для роста — или сокращения",
+              "de": "Gebaut, um zu wachsen — oder zu schrumpfen",
+              "ja": "拡張にも縮小にも対応",
+              "tr": "Büyümek — ya da küçülmek — için tasarlandı",
+              "vi": "Được xây dựng để mở rộng — hoặc thu nhỏ",
+              "it": "Costruito per crescere — o ridursi",
+              "fa": "ساخته‌شده برای رشد — یا کوچک‌شدن",
+              "pl": "Zbudowany, aby rosnąć — lub kurczyć się",
+              "uk": "Створено, щоб зростати — або зменшуватися",
+              "nl": "Gebouwd om te groeien — of te krimpen",
+              "sv": "Byggd för att växa — eller krympa",
+              "cs": "Postaveno tak, aby rostlo — nebo se zmenšovalo",
+              "el": "Σχεδιασμένο για ανάπτυξη — ή συρρίκνωση"
+            }
+          },
+          {
+            "type": "text",
+            "value": {
+              "en": "Every capability is modular, at two levels. Inside a report widget, a tools list (chart, table, slices, configure) trims controls — like the locked table on the Compare tab. And whole screens can be ADD-ONS: the Map tab is one — open ⋮ → Add-ons to switch it off (or back on) without touching your data. The same socket is how future add-ons arrive: a stock-market watch, a hyperdimensional (many-axis) explorer, or anything else that reads the same tables.",
+              "ko": "모든 기능은 두 단계에서 모듈식으로 구성됩니다. 리포트 위젯 내부에서는 도구 목록(차트, 테이블, 슬라이스, 설정)이 컨트롤을 축소합니다 — Compare 탭의 잠긴 테이블처럼요. 그리고 화면 전체가 애드온이 될 수 있습니다: Map 탭이 그 예입니다 — ⋮ → Add-ons에서 데이터를 건드리지 않고 켜고 끌 수 있습니다. 향후 애드온(주식 시장 시계, 다차원 탐색기 등 같은 테이블을 읽는 모든 것)도 같은 소켓을 통해 추가됩니다.",
+              "zh": "每项功能都在两个层面上是模块化的。在报告小组件内部，工具列表（图表、表格、切片、配置）会精简控件——就像“比较”标签页上的锁定表格。而整个屏幕也可以是附加组件：“地图”标签页就是其一——在 ⋮ → 附加组件 中打开可将其关闭（或重新打开）而不影响你的数据。未来的附加组件也会通过同样的接口接入：股市看板、超维（多轴）探索器，或任何读取相同表格的东西。",
+              "hi": "हर क्षमता दो स्तरों पर मॉड्यूलर है। रिपोर्ट विजेट के भीतर, एक टूल्स सूची (चार्ट, तालिका, स्लाइस, कॉन्फ़िगर) नियंत्रण घटाती है — जैसे Compare टैब पर लॉक की गई तालिका। और पूरी स्क्रीनें ऐड-ऑन हो सकती हैं: Map टैब एक है — ⋮ → Add-ons खोलकर इसे अपने डेटा को छुए बिना बंद (या फिर से चालू) करें। भविष्य के ऐड-ऑन उसी सॉकेट से आते हैं: एक स्टॉक-मार्केट व्यू, एक हाइपरडाइमेंशनल (बहु-अक्ष) एक्सप्लोरर, या वही तालिकाएँ पढ़ने वाली कोई भी चीज़।",
+              "es": "Cada capacidad es modular en dos niveles. Dentro de un widget de informe, una lista de herramientas (gráfico, tabla, cortes, configurar) recorta los controles — como la tabla bloqueada en la pestaña Comparar. Y pantallas enteras pueden ser COMPLEMENTOS: la pestaña Mapa es una — abre ⋮ → Complementos para desactivarla (o reactivarla) sin tocar tus datos. El mismo enchufe es por donde llegarán futuros complementos: un reloj bursátil, un explorador hiperdimensional (de muchos ejes), o cualquier otra cosa que lea las mismas tablas.",
+              "fr": "Chaque fonctionnalité est modulaire, à deux niveaux. À l'intérieur d'un widget de rapport, une liste d'outils (graphique, tableau, tranches, configurer) réduit les commandes — comme le tableau verrouillé de l'onglet Comparer. Et des écrans entiers peuvent être des MODULES COMPLÉMENTAIRES : l'onglet Carte en est un — ouvrez ⋮ → Modules complémentaires pour le désactiver (ou le réactiver) sans toucher à vos données. C'est par cette même prise que les futurs modules arriveront : un suivi boursier, un explorateur hyperdimensionnel (multi-axes), ou tout autre outil qui lit les mêmes tableaux.",
+              "ar": "كل قدرة قابلة للتجزئة على مستويين. داخل عنصر تقرير، تُقلّص قائمة الأدوات (مخطط، جدول، شرائح، تهيئة) عناصر التحكم — مثل الجدول المقفل في علامة تبويب المقارنة. ويمكن أن تكون شاشات كاملة إضافات: علامة تبويب الخريطة واحدة منها — افتح ⋮ ← الإضافات لإيقاف تشغيلها (أو تشغيلها مجددًا) دون المساس ببياناتك. من خلال نفس المنفذ تصل الإضافات المستقبلية: مراقب سوق الأسهم، مستكشف فرط الأبعاد (متعدد المحاور)، أو أي شيء آخر يقرأ الجداول نفسها.",
+              "pt": "Cada capacidade é modular em dois níveis. Dentro de um widget de relatório, uma lista de ferramentas (gráfico, tabela, fatias, configurar) reduz os controles — como a tabela bloqueada na aba Comparar. E telas inteiras podem ser COMPLEMENTOS: a aba Mapa é uma delas — abra ⋮ → Complementos para desativá-la (ou reativá-la) sem tocar em seus dados. O mesmo encaixe é como futuros complementos chegarão: um monitor de bolsa de valores, um explorador hiperdimensional (multieixo), ou qualquer outra coisa que leia as mesmas tabelas.",
+              "ru": "Каждая возможность модульна на двух уровнях. Внутри виджета отчёта список инструментов (диаграмма, таблица, срезы, настройка) урезает элементы управления — как заблокированная таблица на вкладке «Сравнение». А целые экраны могут быть ДОПОЛНЕНИЯМИ: вкладка «Карта» — одно из них — откройте ⋮ → Дополнения, чтобы отключить её (или включить обратно), не трогая ваши данные. Через этот же разъём приходят будущие дополнения: биржевой индикатор, гипермерный (многоосевой) исследователь или что угодно ещё, что читает те же таблицы.",
+              "de": "Jede Funktion ist auf zwei Ebenen modular. Innerhalb eines Berichts-Widgets kürzt eine Werkzeugliste (Diagramm, Tabelle, Slices, Konfigurieren) die Steuerelemente — wie die gesperrte Tabelle im Tab „Vergleichen“. Und ganze Bildschirme können Add-ons sein: der Tab „Karte“ ist einer — öffne ⋮ → Add-ons, um ihn ein- oder auszuschalten, ohne deine Daten zu berühren. Über denselben Steckplatz kommen künftige Add-ons: eine Börsenübersicht, ein hyperdimensionaler (mehrachsiger) Explorer oder alles andere, das dieselben Tabellen liest.",
+              "ja": "すべての機能は2つのレベルでモジュール化されています。レポートウィジェット内では、ツールリスト（チャート、テーブル、スライス、設定）がコントロールを絞り込みます — Compare タブのロックされたテーブルのように。そして画面全体がアドオンになることもあります：Map タブがその一例です — ⋮ → アドオン を開くと、データに触れることなくオン・オフを切り替えられます。今後のアドオン（株式市場ウォッチ、超次元（多軸）エクスプローラーなど、同じテーブルを読み込む機能）も同じ仕組みで追加されます。",
+              "tr": "Her yetenek iki düzeyde modülerdir. Bir rapor widget'ının içinde, bir araç listesi (grafik, tablo, dilimler, yapılandır) denetimleri kısıtlar — Karşılaştır sekmesindeki kilitli tablo gibi. Ve tüm ekranlar EKLENTİ olabilir: Harita sekmesi bunlardan biridir — verilerinize dokunmadan onu kapatmak (veya tekrar açmak) için ⋮ → Eklentiler'i açın. Gelecekteki eklentiler de aynı yuvadan gelir: bir borsa izleyicisi, hiperboyutlu (çok eksenli) bir gezgin veya aynı tabloları okuyan başka herhangi bir şey.",
+              "vi": "Mọi khả năng đều theo mô-đun ở hai cấp độ. Bên trong một widget báo cáo, một danh sách công cụ (biểu đồ, bảng, lát cắt, cấu hình) cắt giảm các điều khiển — như bảng bị khóa trên tab So sánh. Và toàn bộ màn hình có thể là TIỆN ÍCH BỔ SUNG: tab Bản đồ là một trong số đó — mở ⋮ → Tiện ích bổ sung để tắt (hoặc bật lại) mà không chạm vào dữ liệu của bạn. Cùng một ổ cắm đó là cách các tiện ích bổ sung trong tương lai sẽ xuất hiện: một trình theo dõi thị trường chứng khoán, một trình khám phá siêu chiều (nhiều trục), hoặc bất cứ thứ gì khác đọc cùng các bảng đó.",
+              "it": "Ogni funzionalità è modulare, su due livelli. All'interno di un widget di report, un elenco di strumenti (grafico, tabella, sezioni, configura) riduce i controlli — come la tabella bloccata nella scheda Confronta. E intere schermate possono essere ADD-ON: la scheda Mappa lo è — apri ⋮ → Add-on per disattivarla (o riattivarla) senza toccare i tuoi dati. Lo stesso slot è il modo in cui arriveranno i futuri add-on: un monitor di borsa, un esploratore iperdimensionale (multi-asse), o qualsiasi altra cosa legga le stesse tabelle.",
+              "fa": "هر قابلیتی در دو سطح ماژولار است. درون یک ابزارک گزارش، یک فهرست ابزار (نمودار، جدول، برش‌ها، پیکربندی) کنترل‌ها را کاهش می‌دهد — مانند جدول قفل‌شده در برگه مقایسه. و صفحه‌های کامل می‌توانند افزونه باشند: برگه نقشه یکی از آن‌هاست — ⋮ → افزونه‌ها را باز کنید تا بدون دست‌زدن به داده‌هایتان آن را خاموش (یا دوباره روشن) کنید. افزونه‌های آینده نیز از همین سوکت می‌آیند: یک ناظر بازار سهام، یک کاوشگر ابرچندبعدی (چندمحوره)، یا هر چیز دیگری که همان جداول را می‌خواند.",
+              "pl": "Każda funkcja jest modułowa na dwóch poziomach. Wewnątrz widżetu raportu lista narzędzi (wykres, tabela, wycinki, konfiguracja) okrawa elementy sterujące — jak zablokowana tabela na karcie Porównaj. A całe ekrany mogą być DODATKAMI: karta Mapa jest jednym z nich — otwórz ⋮ → Dodatki, aby wyłączyć ją (lub włączyć ponownie) bez dotykania danych. Ten sam gniazdo służy do dołączania przyszłych dodatków: monitora giełdowego, hiperwymiarowego (wieloosiowego) eksploratora lub czegokolwiek innego, co odczytuje te same tabele.",
+              "uk": "Кожна можливість модульна на двох рівнях. Усередині віджета звіту список інструментів (діаграма, таблиця, зрізи, налаштування) скорочує елементи керування — як заблокована таблиця на вкладці «Порівняння». А цілі екрани можуть бути ДОДАТКАМИ: вкладка «Карта» — один з них — відкрийте ⋮ → Додатки, щоб вимкнути її (або знову увімкнути), не торкаючись ваших даних. Через це саме гніздо надходитимуть майбутні додатки: біржовий монітор, гіпервимірний (багатоосьовий) дослідник або будь-що інше, що читає ті самі таблиці.",
+              "nl": "Elke functie is modulair op twee niveaus. Binnen een rapportwidget beperkt een lijst met tools (grafiek, tabel, segmenten, configureren) de bedieningselementen — zoals de vergrendelde tabel op het tabblad Vergelijken. En hele schermen kunnen ADD-ONS zijn: het tabblad Kaart is er een — open ⋮ → Add-ons om het uit (of weer aan) te zetten zonder je gegevens aan te raken. Via dezelfde aansluiting komen toekomstige add-ons binnen: een aandelenmarktmonitor, een hyperdimensionale (meerassige) verkenner, of iets anders dat dezelfde tabellen leest.",
+              "sv": "Varje funktion är modulär på två nivåer. Inuti en rapportwidget begränsar en verktygslista (diagram, tabell, segment, konfigurera) kontrollerna — som den låsta tabellen på fliken Jämför. Och hela skärmar kan vara TILLÄGG: fliken Karta är ett — öppna ⋮ → Tillägg för att stänga av den (eller sätta på den igen) utan att röra din data. Samma uttag är hur framtida tillägg kommer: en börsövervakning, en hyperdimensionell (flerdimensionell) utforskare, eller vad som helst annat som läser samma tabeller.",
+              "cs": "Každá schopnost je modulární na dvou úrovních. Uvnitř widgetu zprávy seznam nástrojů (graf, tabulka, výseče, konfigurace) omezuje ovládací prvky — jako uzamčená tabulka na kartě Porovnat. A celé obrazovky mohou být DOPLŇKY: karta Mapa je jednou z nich — otevřete ⋮ → Doplňky a vypněte ji (nebo znovu zapněte) bez zásahu do vašich dat. Stejným slotem přicházejí i budoucí doplňky: sledování akciového trhu, hyperdimenzionální (víceosý) prohlížeč nebo cokoli jiného, co čte stejné tabulky.",
+              "el": "Κάθε δυνατότητα είναι αρθρωτή, σε δύο επίπεδα. Μέσα σε ένα γραφικό στοιχείο αναφοράς, μια λίστα εργαλείων (γράφημα, πίνακας, τμήματα, διαμόρφωση) περιορίζει τα στοιχεία ελέγχου — όπως ο κλειδωμένος πίνακας στην καρτέλα Σύγκριση. Και ολόκληρες οθόνες μπορεί να είναι ΠΡΟΣΘΕΤΑ: η καρτέλα Χάρτης είναι μία από αυτές — ανοίξτε ⋮ → Πρόσθετα για να την απενεργοποιήσετε (ή να την ενεργοποιήσετε ξανά) χωρίς να αγγίξετε τα δεδομένα σας. Από την ίδια υποδοχή θα έρθουν και μελλοντικά πρόσθετα: ένας παρατηρητής χρηματιστηρίου, ένας υπερδιάστατος (πολυαξονικός) εξερευνητής, ή οτιδήποτε άλλο διαβάζει τους ίδιους πίνακες."
+            }
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": {
+              "en": "Saved views",
+              "ko": "저장된 보기",
+              "zh": "已保存的视图",
+              "hi": "सेव्ड व्यू",
+              "es": "Vistas guardadas",
+              "fr": "Vues enregistrées",
+              "ar": "العروض المحفوظة",
+              "pt": "Visualizações salvas",
+              "ru": "Сохранённые представления",
+              "de": "Gespeicherte Ansichten",
+              "ja": "保存済みビュー",
+              "tr": "Kayıtlı görünümler",
+              "vi": "Chế độ xem đã lưu",
+              "it": "Viste salvate",
+              "fa": "نماهای ذخیره‌شده",
+              "pl": "Zapisane widoki",
+              "uk": "Збережені перегляди",
+              "nl": "Opgeslagen weergaven",
+              "sv": "Sparade vyer",
+              "cs": "Uložená zobrazení",
+              "el": "Αποθηκευμένες προβολές"
+            }
+          },
+          {
+            "type": "text",
+            "value": {
+              "en": "The bookmark icon saves the current configuration as a named view (a plain row in the Saved views table), so favorite comparisons are one tap away — and they back up, sync and export like any other data.",
+              "ko": "북마크 아이콘은 현재 구성을 이름이 지정된 보기(저장된 보기 테이블의 일반 행)로 저장합니다. 그래서 즐겨 찾는 비교를 한 번의 탭으로 열 수 있고, 다른 데이터와 마찬가지로 백업, 동기화, 내보내기가 됩니다.",
+              "zh": "书签图标会将当前配置保存为一个命名视图（“已保存视图”表中的普通一行），因此常用的比较只需一次点击即可打开——它们也会像其他数据一样备份、同步和导出。",
+              "hi": "बुकमार्क आइकन वर्तमान कॉन्फ़िगरेशन को एक नामित व्यू (Saved views तालिका में एक सामान्य पंक्ति) के रूप में सेव करता है, ताकि पसंदीदा तुलनाएँ एक टैप दूर हों — और वे किसी अन्य डेटा की तरह ही बैकअप, सिंक और निर्यात होती हैं।",
+              "es": "El icono de marcador guarda la configuración actual como una vista con nombre (una fila normal en la tabla Vistas guardadas), de modo que las comparaciones favoritas están a un toque de distancia — y se respaldan, sincronizan y exportan como cualquier otro dato.",
+              "fr": "L'icône de signet enregistre la configuration actuelle sous forme de vue nommée (une simple ligne dans le tableau Vues enregistrées), de sorte que vos comparaisons favorites sont à portée d'un appui — et elles sont sauvegardées, synchronisées et exportées comme toute autre donnée.",
+              "ar": "يحفظ رمز الإشارة المرجعية التهيئة الحالية كعرض مُسمّى (صف عادي في جدول العروض المحفوظة)، بحيث تكون المقارنات المفضلة على بُعد ضغطة واحدة — ويتم نسخها احتياطيًا ومزامنتها وتصديرها مثل أي بيانات أخرى.",
+              "pt": "O ícone de marcador salva a configuração atual como uma visualização nomeada (uma linha simples na tabela Visualizações salvas), para que comparações favoritas fiquem a um toque de distância — e são copiadas, sincronizadas e exportadas como qualquer outro dado.",
+              "ru": "Значок закладки сохраняет текущую конфигурацию как именованное представление (обычная строка в таблице «Сохранённые представления»), поэтому избранные сравнения доступны в одно касание — и они резервируются, синхронизируются и экспортируются, как любые другие данные.",
+              "de": "Das Lesezeichensymbol speichert die aktuelle Konfiguration als benannte Ansicht (eine normale Zeile in der Tabelle „Gespeicherte Ansichten“), sodass Lieblingsvergleiche nur einen Tipp entfernt sind — und sie werden wie alle anderen Daten gesichert, synchronisiert und exportiert.",
+              "ja": "ブックマークアイコンは現在の設定を名前付きビュー（「保存済みビュー」テーブルの通常の行）として保存するので、お気に入りの比較をワンタップで開けます — 他のデータと同様にバックアップ、同期、エクスポートされます。",
+              "tr": "Yer imi simgesi, geçerli yapılandırmayı adlandırılmış bir görünüm olarak kaydeder (Kayıtlı görünümler tablosundaki sıradan bir satır), böylece favori karşılaştırmalar tek dokunuş uzaklığında olur — ve diğer tüm veriler gibi yedeklenir, senkronize edilir ve dışa aktarılır.",
+              "vi": "Biểu tượng đánh dấu lưu cấu hình hiện tại thành một chế độ xem có tên (một hàng bình thường trong bảng Chế độ xem đã lưu), để các so sánh yêu thích chỉ cách một lần chạm — và chúng được sao lưu, đồng bộ và xuất giống như mọi dữ liệu khác.",
+              "it": "L'icona del segnalibro salva la configurazione corrente come vista con nome (una semplice riga nella tabella Viste salvate), così i confronti preferiti sono a portata di un tocco — e vengono backuppati, sincronizzati ed esportati come qualsiasi altro dato.",
+              "fa": "نماد نشانک پیکربندی فعلی را به‌عنوان یک نمای نام‌گذاری‌شده (یک ردیف معمولی در جدول نماهای ذخیره‌شده) ذخیره می‌کند، بنابراین مقایسه‌های موردعلاقه فقط یک ضربه فاصله دارند — و مانند هر داده دیگری پشتیبان‌گیری، همگام‌سازی و برون‌بری می‌شوند.",
+              "pl": "Ikona zakładki zapisuje bieżącą konfigurację jako nazwany widok (zwykły wiersz w tabeli Zapisane widoki), dzięki czemu ulubione porównania są o jedno dotknięcie — a ponadto są tworzone kopie zapasowe, synchronizowane i eksportowane jak każde inne dane.",
+              "uk": "Значок закладки зберігає поточну конфігурацію як іменований перегляд (звичайний рядок у таблиці «Збережені перегляди»), тож улюблені порівняння доступні в одне торкання — і вони резервуються, синхронізуються та експортуються, як будь-які інші дані.",
+              "nl": "Het bladwijzerpictogram slaat de huidige configuratie op als een benoemde weergave (een gewone rij in de tabel Opgeslagen weergaven), zodat favoriete vergelijkingen één tik verwijderd zijn — en ze worden geback-upt, gesynchroniseerd en geëxporteerd als alle andere gegevens.",
+              "sv": "Bokmärkesikonen sparar den aktuella konfigurationen som en namngiven vy (en vanlig rad i tabellen Sparade vyer), så att favoritjämförelser är ett tryck bort — och de säkerhetskopieras, synkas och exporteras som all annan data.",
+              "cs": "Ikona záložky uloží aktuální konfiguraci jako pojmenované zobrazení (běžný řádek v tabulce Uložená zobrazení), takže oblíbená porovnání jsou vzdálena jedno klepnutí — a zálohují se, synchronizují a exportují jako jakákoli jiná data.",
+              "el": "Το εικονίδιο σελιδοδείκτη αποθηκεύει την τρέχουσα διαμόρφωση ως επώνυμη προβολή (μια απλή γραμμή στον πίνακα Αποθηκευμένες προβολές), ώστε οι αγαπημένες συγκρίσεις να απέχουν ένα πάτημα — και δημιουργούνται αντίγραφα ασφαλείας, συγχρονίζονται και εξάγονται όπως κάθε άλλο δεδομένο."
+            }
+          }
+        ]
+      }
+    },
+    "metrics": {
+      "title": {
+        "en": "Cached metrics",
+        "ko": "캐시된 지표",
+        "zh": "缓存指标",
+        "hi": "कैश्ड मेट्रिक्स",
+        "es": "Métricas en caché",
+        "fr": "Indicateurs mis en cache",
+        "ar": "المقاييس المخزّنة مؤقتًا",
+        "pt": "Métricas em cache",
+        "ru": "Кэшированные метрики",
+        "de": "Zwischengespeicherte Kennzahlen",
+        "ja": "キャッシュ済み指標",
+        "tr": "Önbelleğe alınmış ölçütler",
+        "vi": "Chỉ số đã lưu đệm",
+        "it": "Metriche in cache",
+        "fa": "معیارهای ذخیره‌شده",
+        "pl": "Zapisane metryki",
+        "uk": "Кешовані метрики",
+        "nl": "Gecachte statistieken",
+        "sv": "Cachade mätvärden",
+        "cs": "Uložené metriky",
+        "el": "Αποθηκευμένες μετρικές"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Derived numbers computed ONCE and stored as rows — charts, tables and the map all read these cached values instead of recalculating. After importing new model outputs, tap Recalculate.",
+              "ko": "파생된 숫자는 한 번만 계산되어 행으로 저장됩니다 — 차트, 테이블, 지도 모두 다시 계산하는 대신 이 캐시된 값을 읽습니다. 새로운 모델 출력을 가져온 후에는 다시 계산(Recalculate)을 탭하세요.",
+              "zh": "派生数字只计算一次并作为行存储——图表、表格和地图都读取这些缓存值，而不是重新计算。导入新的模型输出后，请点击“重新计算”。",
+              "hi": "व्युत्पन्न संख्याएँ केवल एक बार गणना कर पंक्तियों के रूप में संग्रहीत होती हैं — चार्ट, तालिकाएँ और मानचित्र सभी पुनर्गणना के बजाय इन कैश्ड मानों को पढ़ते हैं। नए मॉडल आउटपुट आयात करने के बाद, Recalculate टैप करें।",
+              "es": "Los números derivados se calculan UNA sola vez y se almacenan como filas — gráficos, tablas y el mapa leen estos valores en caché en lugar de recalcular. Después de importar nuevas salidas del modelo, toca Recalcular.",
+              "fr": "Les nombres dérivés sont calculés UNE SEULE FOIS et stockés sous forme de lignes — les graphiques, les tableaux et la carte lisent tous ces valeurs mises en cache au lieu de recalculer. Après avoir importé de nouvelles sorties de modèle, appuyez sur Recalculer.",
+              "ar": "تُحسَب الأرقام المشتقة مرة واحدة فقط وتُخزَّن كصفوف — تقرأ المخططات والجداول والخريطة جميعها هذه القيم المخزّنة مؤقتًا بدلاً من إعادة الحساب. بعد استيراد مخرجات نموذج جديدة، اضغط على إعادة الحساب.",
+              "pt": "Números derivados são calculados UMA VEZ e armazenados como linhas — gráficos, tabelas e o mapa leem esses valores em cache em vez de recalcular. Após importar novas saídas do modelo, toque em Recalcular.",
+              "ru": "Производные числа вычисляются ОДИН РАЗ и сохраняются как строки — диаграммы, таблицы и карта читают эти кэшированные значения вместо пересчёта. После импорта новых результатов модели нажмите «Пересчитать».",
+              "de": "Abgeleitete Zahlen werden EINMAL berechnet und als Zeilen gespeichert — Diagramme, Tabellen und die Karte lesen alle diese zwischengespeicherten Werte, statt neu zu berechnen. Nach dem Import neuer Modellergebnisse auf „Neu berechnen“ tippen.",
+              "ja": "派生数値は一度だけ計算され、行として保存されます — チャート、テーブル、地図はすべて再計算する代わりにこのキャッシュ値を読み取ります。新しいモデル出力をインポートしたら「再計算」をタップしてください。",
+              "tr": "Türetilmiş sayılar BİR KEZ hesaplanır ve satırlar olarak saklanır — grafikler, tablolar ve harita yeniden hesaplamak yerine bu önbelleğe alınmış değerleri okur. Yeni model çıktılarını içe aktardıktan sonra Yeniden Hesapla'ya dokunun.",
+              "vi": "Các con số suy ra được tính MỘT LẦN và lưu dưới dạng hàng — biểu đồ, bảng và bản đồ đều đọc các giá trị đã lưu đệm này thay vì tính lại. Sau khi nhập kết quả mô hình mới, hãy nhấn Tính lại.",
+              "it": "I numeri derivati vengono calcolati UNA VOLTA e memorizzati come righe — grafici, tabelle e la mappa leggono tutti questi valori in cache invece di ricalcolare. Dopo aver importato nuovi output del modello, tocca Ricalcola.",
+              "fa": "اعداد مشتق‌شده فقط یک‌بار محاسبه و به‌صورت ردیف ذخیره می‌شوند — نمودارها، جدول‌ها و نقشه همگی به‌جای محاسبه مجدد این مقادیر ذخیره‌شده را می‌خوانند. پس از درون‌ریزی خروجی‌های جدید مدل، روی محاسبه مجدد ضربه بزنید.",
+              "pl": "Liczby pochodne są obliczane JEDEN RAZ i zapisywane jako wiersze — wykresy, tabele i mapa odczytują te zapisane wartości zamiast przeliczać ponownie. Po zaimportowaniu nowych wyników modelu dotknij Przelicz ponownie.",
+              "uk": "Похідні числа обчислюються ОДИН РАЗ і зберігаються як рядки — діаграми, таблиці та карта читають ці кешовані значення замість перерахунку. Після імпорту нових результатів моделі торкніться «Перерахувати».",
+              "nl": "Afgeleide getallen worden ÉÉN KEER berekend en opgeslagen als rijen — grafieken, tabellen en de kaart lezen allemaal deze gecachte waarden in plaats van opnieuw te berekenen. Tik na het importeren van nieuwe modeluitvoer op Opnieuw berekenen.",
+              "sv": "Härledda tal beräknas EN GÅNG och lagras som rader — diagram, tabeller och kartan läser alla dessa cachade värden istället för att räkna om. Efter att ha importerat ny modellutdata, tryck på Räkna om.",
+              "cs": "Odvozená čísla se počítají JEDNOU a ukládají jako řádky — grafy, tabulky i mapa čtou tyto uložené hodnoty místo přepočítávání. Po importu nových výstupů modelu klepněte na Přepočítat.",
+              "el": "Οι παράγωγοι αριθμοί υπολογίζονται ΜΙΑ ΦΟΡΑ και αποθηκεύονται ως γραμμές — γραφήματα, πίνακες και ο χάρτης διαβάζουν όλοι αυτές τις αποθηκευμένες τιμές αντί να επανυπολογίζουν. Μετά την εισαγωγή νέων εξόδων μοντέλου, πατήστε Επανυπολογισμός."
+            }
+          },
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": {
+                  "en": "Recalculate metrics",
+                  "ko": "지표 다시 계산",
+                  "zh": "重新计算指标",
+                  "hi": "मेट्रिक्स पुनर्गणना करें",
+                  "es": "Recalcular métricas",
+                  "fr": "Recalculer les indicateurs",
+                  "ar": "إعادة حساب المقاييس",
+                  "pt": "Recalcular métricas",
+                  "ru": "Пересчитать метрики",
+                  "de": "Kennzahlen neu berechnen",
+                  "ja": "指標を再計算",
+                  "tr": "Ölçütleri yeniden hesapla",
+                  "vi": "Tính lại chỉ số",
+                  "it": "Ricalcola metriche",
+                  "fa": "محاسبه مجدد معیارها",
+                  "pl": "Przelicz metryki",
+                  "uk": "Перерахувати метрики",
+                  "nl": "Statistieken opnieuw berekenen",
+                  "sv": "Räkna om mätvärden",
+                  "cs": "Přepočítat metriky",
+                  "el": "Επανυπολογισμός μετρικών"
+                },
+                "icon": "refresh",
+                "action": {
+                  "fn": "deriveTable",
+                  "args": {
+                    "from": "results",
+                    "into": "metrics",
+                    "groupBy": "scenario",
+                    "aggregations": {
+                      "boardings": "sum",
+                      "alightings": "sum"
+                    },
+                    "compute": [
+                      {
+                        "name": "retention_pct",
+                        "expr": "alightings / boardings * 100"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "Recalculate district totals",
+                  "ko": "구역 합계 다시 계산",
+                  "zh": "重新计算地区合计",
+                  "hi": "जिला कुल पुनर्गणना करें",
+                  "es": "Recalcular totales por distrito",
+                  "fr": "Recalculer les totaux par district",
+                  "ar": "إعادة حساب إجماليات المقاطعات",
+                  "pt": "Recalcular totais por distrito",
+                  "ru": "Пересчитать итоги по районам",
+                  "de": "Bezirkssummen neu berechnen",
+                  "ja": "地区合計を再計算",
+                  "tr": "Bölge toplamlarını yeniden hesapla",
+                  "vi": "Tính lại tổng số theo quận",
+                  "it": "Ricalcola totali per distretto",
+                  "fa": "محاسبه مجدد مجموع مناطق",
+                  "pl": "Przelicz sumy dzielnic",
+                  "uk": "Перерахувати підсумки районів",
+                  "nl": "Districtstotalen opnieuw berekenen",
+                  "sv": "Räkna om distriktssummor",
+                  "cs": "Přepočítat součty okrsků",
+                  "el": "Επανυπολογισμός συνόλων περιφερειών"
+                },
+                "icon": "refresh",
+                "action": {
+                  "fn": "deriveTable",
+                  "args": {
+                    "from": "results",
+                    "into": "district_stats",
+                    "groupBy": "district",
+                    "aggregations": {
+                      "boardings": "sum"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "table",
+            "table": "metrics",
+            "columns": [
+              "scenario",
+              "boardings",
+              "alightings",
+              "retention_pct"
+            ],
+            "height": 190
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "District totals (feed the map's shading):",
+              "ko": "구역 합계(지도 음영에 반영됨):",
+              "zh": "地区合计（用于地图着色）：",
+              "hi": "जिला कुल (मानचित्र की शेडिंग को फ़ीड करता है):",
+              "es": "Totales por distrito (alimentan el sombreado del mapa):",
+              "fr": "Totaux par district (alimentent l'ombrage de la carte) :",
+              "ar": "إجماليات المقاطعات (تُغذّي تظليل الخريطة):",
+              "pt": "Totais por distrito (alimentam o sombreamento do mapa):",
+              "ru": "Итоги по районам (используются для окраски карты):",
+              "de": "Bezirkssummen (speisen die Karteneinfärbung):",
+              "ja": "地区合計（地図の濃淡に反映）：",
+              "tr": "Bölge toplamları (haritanın gölgelendirmesini besler):",
+              "vi": "Tổng số theo quận (cung cấp cho lớp tô màu bản đồ):",
+              "it": "Totali per distretto (alimentano l'ombreggiatura della mappa):",
+              "fa": "مجموع مناطق (تغذیه‌کننده سایه‌زنی نقشه):",
+              "pl": "Sumy dzielnic (zasilają cieniowanie mapy):",
+              "uk": "Підсумки районів (живлять затінення карти):",
+              "nl": "Districtstotalen (voeden de kaartarcering):",
+              "sv": "Distriktssummor (matar kartans skuggning):",
+              "cs": "Součty okrsků (napájí stínování mapy):",
+              "el": "Σύνολα περιφερειών (τροφοδοτούν τη σκίαση του χάρτη):"
+            }
+          },
+          {
+            "type": "barchart",
+            "table": "district_stats",
+            "labelColumn": "district",
+            "valueColumn": "boardings",
+            "agg": "sum",
+            "label": {
+              "en": "Boardings by district",
+              "ko": "구역별 승차 인원",
+              "zh": "按地区划分的上车人数",
+              "hi": "जिले के अनुसार बोर्डिंग",
+              "es": "Subidas por distrito",
+              "fr": "Montées par district",
+              "ar": "الركاب حسب المقاطعة",
+              "pt": "Embarques por distrito",
+              "ru": "Посадки по районам",
+              "de": "Einstiege nach Bezirk",
+              "ja": "地区別乗車数",
+              "tr": "Bölgeye göre biniş",
+              "vi": "Lượt lên xe theo quận",
+              "it": "Saliti per distretto",
+              "fa": "سوارشدن‌ها بر اساس منطقه",
+              "pl": "Wsiadania według dzielnicy",
+              "uk": "Посадки за районом",
+              "nl": "Instappers per district",
+              "sv": "Påstigningar per distrikt",
+              "cs": "Nástupy podle okrsku",
+              "el": "Επιβιβάσεις ανά περιφέρεια"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

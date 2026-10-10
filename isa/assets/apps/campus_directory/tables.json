@@ -1,0 +1,74 @@
+{
+  "tables": [
+    {
+      "name": "mit_features",
+      "label": "MIT",
+      "icon": "school"
+    },
+    {
+      "name": "harvard_features",
+      "label": "Harvard",
+      "icon": "school"
+    },
+    {
+      "name": "yale_features",
+      "label": "Yale",
+      "icon": "school"
+    },
+    {
+      "name": "columbia_features",
+      "label": "Columbia",
+      "icon": "school"
+    },
+    {
+      "name": "stanford_features",
+      "label": "Stanford",
+      "icon": "school"
+    },
+    {
+      "name": "berkeley_features",
+      "label": "UC Berkeley",
+      "icon": "school"
+    },
+    {
+      "name": "ucla_features",
+      "label": "UCLA",
+      "icon": "school"
+    },
+    {
+      "name": "uw_features",
+      "label": "U. Washington",
+      "icon": "school"
+    },
+    {
+      "name": "umich_features",
+      "label": "U. Michigan",
+      "icon": "school"
+    },
+    {
+      "name": "osu_features",
+      "label": "Ohio State",
+      "icon": "school"
+    },
+    {
+      "name": "gatech_features",
+      "label": "Georgia Tech",
+      "icon": "school"
+    },
+    {
+      "name": "utexas_features",
+      "label": "UT Austin",
+      "icon": "school"
+    },
+    {
+      "name": "asu_features",
+      "label": "Arizona State",
+      "icon": "school"
+    },
+    {
+      "name": "wisc_features",
+      "label": "UW-Madison",
+      "icon": "school"
+    }
+  ]
+}

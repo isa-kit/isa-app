@@ -1,0 +1,13 @@
+{
+  "id": "zootomy",
+  "name": "Zootomy",
+  "category": "Reference",
+  "description": "A comparative muscle atlas for dog, cat and horse. Turn the animal, tap a muscle, and read what it does in THAT species — plus the human-equivalent name and the one thing that is really different. The same muscle carries the same id in all three, so your selection follows you when you switch species. Schematic comparative model — for learning, not a veterinary or clinical reference.",
+  "icon": "pets",
+  "color": "#4E6B3F",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_zootomy"
+  },
+  "seedVersion": "2026-09-01.zootomy.3.l10n-int-0903"
+}

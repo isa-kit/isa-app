@@ -1,0 +1,22 @@
+{
+  "tables": [
+    {
+      "name": "messages",
+      "label": "Messages",
+      "icon": "forum",
+      "description": "One row per chat message: who sent it, the original text, its translation, and the sender's language."
+    },
+    {
+      "name": "participants",
+      "label": "Participants",
+      "icon": "people",
+      "description": "One row per person in the room (keyed by their device id): the language they read and write in. Synced so each device knows what language to translate the other person's messages into."
+    },
+    {
+      "name": "phrases",
+      "label": "Phrases",
+      "icon": "bookmark",
+      "description": "One row per phrase saved from chat (via the message's \"Save phrase\" swipe action): the original text, its translation, and both languages, for the Learn screen's phrasebook + practice cards. Also carries spaced-repetition scheduling state (dueAt/intervalDays/reps, updated by the practice cards' \"Got it\"/\"Again\" swipe actions; dueAt is also pulled slightly earlier when you open a card's origin peek, at most once an hour, recorded in lastPeekedAt) plus a few reconciler-derived columns (due/dueRank/reviewedToday) that drive the due-only practice queue and stats."
+    }
+  ]
+}

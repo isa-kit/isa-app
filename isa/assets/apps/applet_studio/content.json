@@ -1,0 +1,363 @@
+{
+  "projects": [
+    {
+      "id": "p1",
+      "name": "My first applet",
+      "tagline": "A worked example — rename it or delete it and start your own.",
+      "status": "shaping",
+      "audience": "Me",
+      "style": "material",
+      "accent": "#E8590C",
+      "icon": "star",
+      "notes": "Tap any step in the Checklist tab and mark it done as you go. The Playbook tab explains every step in depth."
+    }
+  ],
+  "steps": [
+    {
+      "id": "s01",
+      "title": "Name it and write a one-line purpose",
+      "phase": "1 · Define",
+      "project": "p1",
+      "status": "todo",
+      "tip": "If the purpose doesn't fit in one sentence, it's probably two applets.",
+      "order": 1
+    },
+    {
+      "id": "s02",
+      "title": "List the 2–4 things it keeps track of",
+      "phase": "1 · Define",
+      "project": "p1",
+      "status": "todo",
+      "tip": "Nouns, not features: recipes, plants, workouts. Each becomes a table.",
+      "order": 2
+    },
+    {
+      "id": "s03",
+      "title": "Sketch the main screen on paper",
+      "phase": "1 · Define",
+      "project": "p1",
+      "status": "todo",
+      "tip": "What do you want to see first when you open it? Design backwards from that.",
+      "order": 3
+    },
+    {
+      "id": "s04",
+      "title": "Decide who it's for and when they'd open it",
+      "phase": "1 · Define",
+      "project": "p1",
+      "status": "todo",
+      "tip": "Daily glance, weekly review, or occasional lookup — this decides your first screen.",
+      "order": 4
+    },
+    {
+      "id": "s05",
+      "title": "Create one table per thing",
+      "phase": "2 · Data",
+      "project": "p1",
+      "status": "todo",
+      "tip": "Give each a short name, a label, an icon and a one-line description.",
+      "order": 5
+    },
+    {
+      "id": "s06",
+      "title": "Add columns — start with a title, a status and a date",
+      "phase": "2 · Data",
+      "project": "p1",
+      "status": "todo",
+      "tip": "You can always add more later; starting small keeps screens simple.",
+      "order": 6
+    },
+    {
+      "id": "s07",
+      "title": "Pick a type for every column",
+      "phase": "2 · Data",
+      "project": "p1",
+      "status": "todo",
+      "tip": "text · number · date · yes/no · options (a fixed list) · link (to another table).",
+      "order": 7
+    },
+    {
+      "id": "s08",
+      "title": "Link tables together with link columns",
+      "phase": "2 · Data",
+      "project": "p1",
+      "status": "todo",
+      "tip": "A recipe links to ingredients; an entry links to tags. Links power grouping and filters.",
+      "order": 8
+    },
+    {
+      "id": "s09",
+      "title": "Add 3–5 rows of realistic example data",
+      "phase": "2 · Data",
+      "project": "p1",
+      "status": "todo",
+      "tip": "Real-looking data makes every design decision obvious. Lorem ipsum hides problems.",
+      "order": 9
+    },
+    {
+      "id": "s10",
+      "title": "Choose one main view per table",
+      "phase": "3 · Screens",
+      "project": "p1",
+      "status": "todo",
+      "tip": "Cards to browse, list to scan, buckets for checklists, calendar for dates, table to bulk-edit.",
+      "order": 10
+    },
+    {
+      "id": "s11",
+      "title": "Add a New button on every screen that collects things",
+      "phase": "3 · Screens",
+      "project": "p1",
+      "status": "todo",
+      "tip": "Adding should never be more than one tap away.",
+      "order": 11
+    },
+    {
+      "id": "s12",
+      "title": "Make tapping an item open it for editing",
+      "phase": "3 · Screens",
+      "project": "p1",
+      "status": "todo",
+      "tip": "Long-press or swipe left on any item for Open / Edit / Delete.",
+      "order": 12
+    },
+    {
+      "id": "s13",
+      "title": "Add filter buttons for the questions you ask most",
+      "phase": "3 · Screens",
+      "project": "p1",
+      "status": "todo",
+      "tip": "\"Just the urgent ones\", \"only this week\" — one button each, plus an All button.",
+      "order": 13
+    },
+    {
+      "id": "s14",
+      "title": "Order the nav tabs by how often you'll use them",
+      "phase": "3 · Screens",
+      "project": "p1",
+      "status": "todo",
+      "tip": "The everyday screen goes first; settings and rarely-used views go last.",
+      "order": 14
+    },
+    {
+      "id": "s15",
+      "title": "Pick an accent color no other applet uses",
+      "phase": "4 · Feel",
+      "project": "p1",
+      "status": "todo",
+      "tip": "The accent colors the nav, buttons and highlights — it's the applet's identity.",
+      "order": 15
+    },
+    {
+      "id": "s16",
+      "title": "Pick a design style that matches the mood",
+      "phase": "4 · Feel",
+      "project": "p1",
+      "status": "todo",
+      "tip": "Browse the Design tab: sepia for a journal, neon for a game, minimal for a tool.",
+      "order": 16
+    },
+    {
+      "id": "s17",
+      "title": "Write a one-line caption for every screen",
+      "phase": "4 · Feel",
+      "project": "p1",
+      "status": "todo",
+      "tip": "A good caption tells a first-time user what the screen is for and what to tap.",
+      "order": 17
+    },
+    {
+      "id": "s18",
+      "title": "Choose icons for the tabs and tables",
+      "phase": "4 · Feel",
+      "project": "p1",
+      "status": "todo",
+      "tip": "Icons make tabs scannable without reading. Keep them literal, not clever.",
+      "order": 18
+    },
+    {
+      "id": "s19",
+      "title": "Run it and walk through every screen once",
+      "phase": "5 · Ship",
+      "project": "p1",
+      "status": "todo",
+      "tip": "Look for empty screens, clipped text and anything that needs an explanation.",
+      "order": 19
+    },
+    {
+      "id": "s20",
+      "title": "Add, edit and delete a row in every table",
+      "phase": "5 · Ship",
+      "project": "p1",
+      "status": "todo",
+      "tip": "The full round-trip catches missing required fields and broken links.",
+      "order": 20
+    },
+    {
+      "id": "s21",
+      "title": "Put it on your phone",
+      "phase": "5 · Ship",
+      "project": "p1",
+      "status": "todo",
+      "tip": "Sync the definition over, then check the screens again at phone width.",
+      "order": 21
+    },
+    {
+      "id": "s22",
+      "title": "Use it for a week, then prune",
+      "phase": "5 · Ship",
+      "project": "p1",
+      "status": "todo",
+      "tip": "Remove every column and screen you didn't touch. Smaller applets get used more.",
+      "order": 22
+    }
+  ],
+  "playbook": [
+    {
+      "id": "g01",
+      "topic": "What is an applet?",
+      "phase": "1 · Define",
+      "summary": "A small app made of data: tables, columns, example rows and screens.",
+      "details": "An applet has no code of its own — it is a description. You say what it keeps track of (tables and columns), give it some starting rows, and lay out screens from ready-made building blocks: cards, lists, checklists, calendars, tables, canvases and maps. The platform renders the description into a working app, on every device, and keeps the data in sync.",
+      "order": 1
+    },
+    {
+      "id": "g02",
+      "topic": "Shaping the idea",
+      "phase": "1 · Define",
+      "summary": "One sentence of purpose, a handful of nouns, one sketch.",
+      "details": "Write the purpose as a single sentence: \"Helps me remember which plants need water.\" Then list the nouns — the things it tracks. Two to four is the sweet spot; one is often enough. Sketch only the screen you'd see most. Everything else in the applet exists to serve that one screen.",
+      "order": 2
+    },
+    {
+      "id": "g03",
+      "topic": "Tables and columns",
+      "phase": "2 · Data",
+      "summary": "A table per noun; columns are the facts you record about each one.",
+      "details": "Each thing you track is a table, and each row is one of those things. Columns are the facts per row: a plant has a name, a location, a last-watered date. Resist recording facts you won't act on — every column adds a field to fill in. A good test: would you sort, filter or group by it? If not, it might belong in a notes column.",
+      "order": 3
+    },
+    {
+      "id": "g04",
+      "topic": "Column types",
+      "phase": "2 · Data",
+      "summary": "text · number · date · yes/no · options · link — each unlocks different screens.",
+      "details": "text holds anything; number enables totals and trends; date unlocks calendars and agendas; yes/no makes checkboxes; options (a fixed list you define, like small/medium/large) makes clean filters and groups; link connects a row to a row in another table, which is how recipes know their ingredients. Pick the narrowest type that fits — options beat free text whenever the values repeat.",
+      "order": 4
+    },
+    {
+      "id": "g05",
+      "topic": "Good example data",
+      "phase": "2 · Data",
+      "summary": "Seed each table with a few rows that look like real life.",
+      "details": "Before designing screens, put 3–5 honest rows in every table — real names, plausible dates, one awkwardly long title. Screens designed against real-looking data come out right the first time; screens designed against empty tables or placeholder text need redoing once reality arrives.",
+      "order": 5
+    },
+    {
+      "id": "g06",
+      "topic": "Choosing screens",
+      "phase": "3 · Screens",
+      "summary": "Match each table to the view that fits how you'll read it.",
+      "details": "Cards suit browsing rich items (recipes, journal entries) and can group, search and expand. List is for fast scanning of simple rows. Buckets group rows into sections with checkboxes — ideal for task lists. Calendar and agenda place dated rows in time. Table is a spreadsheet view for bulk edits. Tree shows hierarchy, canvas free-form diagrams, map anything with coordinates. The arch_map applet's Reference tab shows every building block live.",
+      "order": 6
+    },
+    {
+      "id": "g07",
+      "topic": "Buttons and actions",
+      "phase": "3 · Screens",
+      "summary": "Buttons fire actions: add a row, set a filter, open an editor.",
+      "details": "The actions you'll use most: addRow (a New button — give it sensible starting values), setFilter (one-tap views like \"only urgent\"; add an All button that clears it), and editRow (open an item's editor — items also get this on tap, long-press and swipe). Checkboxes use toggles to flip a status between done and not.",
+      "order": 7
+    },
+    {
+      "id": "g08",
+      "topic": "Accent color",
+      "phase": "4 · Feel",
+      "summary": "One color carries the applet's identity through nav, buttons and highlights.",
+      "details": "Every applet declares an accent color, and the whole interface — navigation, buttons, selections, headers — is tinted from it. Pick one that matches the applet's subject (green for plants, amber for recipes) and that no other applet on your shelf uses, so you can tell them apart at a glance from the launcher.",
+      "order": 8
+    },
+    {
+      "id": "g09",
+      "topic": "Design styles",
+      "phase": "4 · Feel",
+      "summary": "Eight named looks that reshape surfaces, corners, outlines and type.",
+      "details": "Beyond color, an applet can wear a style: clean (the classic), material (soft shadows), minimal (near-monochrome, square), contrast (black-on-white, heavy lines), watercolor (washed tints, big radii), pastel (powdery and rounded), sepia (warm paper tones) or neon (saturated with a glow). Browse them in the Design tab and pick the one that matches the applet's mood — a journal wants different paper than a game.",
+      "order": 9
+    },
+    {
+      "id": "g10",
+      "topic": "Testing your applet",
+      "phase": "5 · Ship",
+      "summary": "Walk every screen, round-trip every table, then test at phone size.",
+      "details": "Open every tab and look: anything empty, clipped or unexplained? Then for each table, add a row, edit it, and delete it — this catches missing required fields and broken links between tables. Finally check it at phone width: long titles, crowded rows and deep screens behave differently on a small screen.",
+      "order": 10
+    },
+    {
+      "id": "g11",
+      "topic": "Sharing and syncing",
+      "phase": "5 · Ship",
+      "summary": "Your data follows you between devices; the applet itself can be shared.",
+      "details": "Rows sync between your devices automatically once sync is on — edits merge field-by-field, last write wins. The applet's definition (its tables and screens) can be sent to another device or another person as a bundle or share code: they get the design, with or without staying linked to your future updates.",
+      "order": 11
+    }
+  ],
+  "styles": [
+    {
+      "id": "st1",
+      "name": "clean",
+      "vibe": "Flat outlined cards on tonal surfaces — the classic look.",
+      "bestFor": "Everyday tools, dashboards, anything that should feel neutral and calm.",
+      "pairWith": "#5C6BC0 indigo · #2E7D32 green · #0277BD blue"
+    },
+    {
+      "id": "st2",
+      "name": "material",
+      "vibe": "Stock Material 3: tonal elevation and soft shadows.",
+      "bestFor": "Friendly, app-store-familiar applets; planners and trackers.",
+      "pairWith": "#00897B teal · #5C6BC0 indigo · #E8590C orange"
+    },
+    {
+      "id": "st3",
+      "name": "minimal",
+      "vibe": "Near-monochrome, square corners, hairline rules.",
+      "bestFor": "Reference catalogs, technical tools, dense work boards.",
+      "pairWith": "#455A64 blue-grey · #546E7A slate · #5C6BC0 indigo"
+    },
+    {
+      "id": "st4",
+      "name": "contrast",
+      "vibe": "Pure black-on-white surfaces, heavy outlines, bold type.",
+      "bestFor": "Outdoor and glance-fast use: maps, dispatch, field checklists.",
+      "pairWith": "#0F766E teal · #1565C0 blue · #C62828 red"
+    },
+    {
+      "id": "st5",
+      "name": "watercolor",
+      "vibe": "Soft washed tints, big radii, borderless cards.",
+      "bestFor": "Journals, mood and memory apps, anything personal and gentle.",
+      "pairWith": "#7E57C2 violet · #00ACC1 cyan · #6D28D9 purple"
+    },
+    {
+      "id": "st6",
+      "name": "pastel",
+      "vibe": "Light powdery accents, gently rounded.",
+      "bestFor": "Playful, light-hearted applets; social and lifestyle ideas.",
+      "pairWith": "#EC407A pink · #689F38 light green · #FFB300 amber"
+    },
+    {
+      "id": "st7",
+      "name": "sepia",
+      "vibe": "Warm paper tones, easy on the eyes.",
+      "bestFor": "Recipes, reading lists, notes — anything bookish or cozy.",
+      "pairWith": "#C45D2C terracotta · #B28704 mustard · #5B3A29 coffee"
+    },
+    {
+      "id": "st8",
+      "name": "neon",
+      "vibe": "Saturated accents with a glowing edge.",
+      "bestFor": "Games, crypto tickers, anything energetic and nocturnal.",
+      "pairWith": "#F7931A bitcoin orange · #3D5AFE electric blue · #7A4FB5 violet"
+    }
+  ]
+}

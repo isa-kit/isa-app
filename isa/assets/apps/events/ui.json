@@ -1,0 +1,1159 @@
+{
+  "app": {
+    "languages": ["en", "ko", "zh", "hi", "es", "fr", "ar", "pt", "ru", "de", "ja", "tr", "vi", "it", "fa", "pl", "uk", "nl", "sv", "cs", "el"],
+    "translatable": true,
+    "appDataTools": true,
+    "title": {
+      "en": "Events",
+      "ko": "이벤트",
+      "zh": "活动",
+      "hi": "इवेंट्स",
+      "es": "Eventos",
+      "fr": "Événements",
+      "ar": "الفعاليات",
+      "pt": "Eventos",
+      "ru": "События",
+      "de": "Veranstaltungen",
+      "ja": "イベント",
+      "tr": "Etkinlikler",
+      "vi": "Sự kiện",
+      "it": "Eventi",
+      "fa": "رویدادها",
+      "pl": "Wydarzenia",
+      "uk": "Події",
+      "nl": "Evenementen",
+      "sv": "Evenemang",
+      "cs": "Události",
+      "el": "Εκδηλώσεις"
+    },
+    "primaryColor": "#00ACC1",
+    "theme": "neon",
+    "intro": {
+      "purpose": {
+        "en": "Browse events, mark what you're going to, and see them on a calendar and map.",
+        "ko": "이벤트를 둘러보고, 참석할 이벤트를 표시하고, 캘린더와 지도에서 확인하세요.",
+        "zh": "浏览活动,标记你要参加的活动,并在日历和地图上查看。",
+        "hi": "इवेंट्स ब्राउज़ करें, आप कहाँ जा रहे हैं यह चिह्नित करें, और उन्हें कैलेंडर व मैप पर देखें।",
+        "es": "Explora eventos, marca a cuáles vas a ir y míralos en un calendario y un mapa.",
+        "fr": "Parcourez les événements, indiquez ceux auxquels vous participez et consultez-les sur un calendrier et une carte.",
+        "ar": "تصفّح الفعاليات، وحدّد ما ستحضره، وشاهدها على تقويم وخريطة.",
+        "pt": "Explore eventos, marque a quais você vai e veja-os num calendário e mapa.",
+        "ru": "Просматривайте события, отмечайте, куда вы собираетесь, и смотрите их в календаре и на карте.",
+        "de": "Durchsuche Veranstaltungen, markiere, wohin du gehst, und sieh sie dir im Kalender und auf der Karte an.",
+        "ja": "イベントを閲覧し、参加予定のものにマークを付け、カレンダーと地図で確認できます。",
+        "tr": "Etkinliklere göz atın, nereye gideceğinizi işaretleyin ve onları takvim ile haritada görün.",
+        "vi": "Duyệt sự kiện, đánh dấu bạn sẽ tham dự sự kiện nào, và xem chúng trên lịch cùng bản đồ.",
+        "it": "Sfoglia gli eventi, segna a quali parteciperai e guardali su calendario e mappa.",
+        "fa": "رویدادها را مرور کنید، آنچه قصد شرکت دارید را علامت بزنید، و آن‌ها را روی تقویم و نقشه ببینید.",
+        "pl": "Przeglądaj wydarzenia, oznaczaj, na które się wybierasz, i zobacz je na kalendarzu i mapie.",
+        "uk": "Переглядайте події, позначайте, куди підете, і дивіться їх у календарі та на карті.",
+        "nl": "Blader door evenementen, markeer waar je naartoe gaat, en bekijk ze op een kalender en kaart.",
+        "sv": "Bläddra bland evenemang, markera vad du ska gå på, och se dem i en kalender och på en karta.",
+        "cs": "Procházejte události, označte, kam se chystáte, a prohlédněte si je v kalendáři a na mapě.",
+        "el": "Περιηγηθείτε σε εκδηλώσεις, σημειώστε πού θα πάτε και δείτε τις σε ημερολόγιο και χάρτη."
+      },
+      "actions": [
+        {
+          "label": {
+            "en": "New list",
+            "ko": "새 목록",
+            "zh": "新建列表",
+            "hi": "नई सूची",
+            "es": "Nueva lista",
+            "fr": "Nouvelle liste",
+            "ar": "قائمة جديدة",
+            "pt": "Nova lista",
+            "ru": "Новый список",
+            "de": "Neue Liste",
+            "ja": "新しいリスト",
+            "tr": "Yeni liste",
+            "vi": "Danh sách mới",
+            "it": "Nuovo elenco",
+            "fa": "فهرست جدید",
+            "pl": "Nowa lista",
+            "uk": "Новий список",
+            "nl": "Nieuwe lijst",
+            "sv": "Ny lista",
+            "cs": "Nový seznam",
+            "el": "Νέα λίστα"
+          },
+          "icon": "add",
+          "action": {
+            "fn": "addRow",
+            "args": {
+              "table": "files",
+              "values": {
+                "name": "Untitled list"
+              }
+            }
+          }
+        }
+      ],
+      "tour": [
+        {
+          "screen": "upcoming",
+          "label": "Browse",
+          "note": "Everything coming up."
+        },
+        {
+          "screen": "going",
+          "label": "Going",
+          "note": "What you've marked you're attending."
+        },
+        {
+          "screen": "calendar",
+          "label": "Calendar",
+          "note": "Events laid out by date."
+        },
+        {
+          "screen": "map",
+          "label": "Map",
+          "note": "Events near you."
+        }
+      ]
+    }
+  },
+  "nav": [
+    {
+      "id": "files",
+      "label": {
+        "en": "Files",
+        "ko": "파일",
+        "zh": "文件",
+        "hi": "फ़ाइलें",
+        "es": "Archivos",
+        "fr": "Fichiers",
+        "ar": "الملفات",
+        "pt": "Arquivos",
+        "ru": "Файлы",
+        "de": "Dateien",
+        "ja": "ファイル",
+        "tr": "Dosyalar",
+        "vi": "Tệp",
+        "it": "File",
+        "fa": "فایل‌ها",
+        "pl": "Pliki",
+        "uk": "Файли",
+        "nl": "Bestanden",
+        "sv": "Filer",
+        "cs": "Soubory",
+        "el": "Αρχεία"
+      },
+      "icon": "folder",
+      "screen": "files"
+    },
+    {
+      "id": "upcoming",
+      "label": {
+        "en": "Browse",
+        "ko": "둘러보기",
+        "zh": "浏览",
+        "hi": "ब्राउज़ करें",
+        "es": "Explorar",
+        "fr": "Parcourir",
+        "ar": "تصفح",
+        "pt": "Explorar",
+        "ru": "Обзор",
+        "de": "Durchsuchen",
+        "ja": "閲覧",
+        "tr": "Göz at",
+        "vi": "Duyệt",
+        "it": "Sfoglia",
+        "fa": "مرور",
+        "pl": "Przeglądaj",
+        "uk": "Огляд",
+        "nl": "Bladeren",
+        "sv": "Bläddra",
+        "cs": "Procházet",
+        "el": "Περιήγηση"
+      },
+      "icon": "list",
+      "screen": "upcoming"
+    },
+    {
+      "id": "going",
+      "label": {
+        "en": "Going",
+        "ko": "참석 예정",
+        "zh": "我要参加",
+        "hi": "जा रहे हैं",
+        "es": "Voy a ir",
+        "fr": "J'y vais",
+        "ar": "ذاهب",
+        "pt": "Vou",
+        "ru": "Иду",
+        "de": "Ich gehe hin",
+        "ja": "参加予定",
+        "tr": "Katılıyorum",
+        "vi": "Sẽ tham dự",
+        "it": "Ci vado",
+        "fa": "شرکت می‌کنم",
+        "pl": "Idę",
+        "uk": "Йду",
+        "nl": "Ik ga",
+        "sv": "Jag går",
+        "cs": "Jdu",
+        "el": "Θα πάω"
+      },
+      "icon": "check_circle",
+      "screen": "going"
+    },
+    {
+      "id": "calendar",
+      "label": {
+        "en": "Calendar",
+        "ko": "캘린더",
+        "zh": "日历",
+        "hi": "कैलेंडर",
+        "es": "Calendario",
+        "fr": "Calendrier",
+        "ar": "التقويم",
+        "pt": "Calendário",
+        "ru": "Календарь",
+        "de": "Kalender",
+        "ja": "カレンダー",
+        "tr": "Takvim",
+        "vi": "Lịch",
+        "it": "Calendario",
+        "fa": "تقویم",
+        "pl": "Kalendarz",
+        "uk": "Календар",
+        "nl": "Kalender",
+        "sv": "Kalender",
+        "cs": "Kalendář",
+        "el": "Ημερολόγιο"
+      },
+      "icon": "calendar_today",
+      "screen": "calendar"
+    },
+    {
+      "id": "map",
+      "label": {
+        "en": "Map",
+        "ko": "지도",
+        "zh": "地图",
+        "hi": "मैप",
+        "es": "Mapa",
+        "fr": "Carte",
+        "ar": "الخريطة",
+        "pt": "Mapa",
+        "ru": "Карта",
+        "de": "Karte",
+        "ja": "地図",
+        "tr": "Harita",
+        "vi": "Bản đồ",
+        "it": "Mappa",
+        "fa": "نقشه",
+        "pl": "Mapa",
+        "uk": "Карта",
+        "nl": "Kaart",
+        "sv": "Karta",
+        "cs": "Mapa",
+        "el": "Χάρτης"
+      },
+      "icon": "map",
+      "screen": "map"
+    }
+  ],
+  "screens": {
+    "files": {
+      "title": {
+        "en": "Files",
+        "ko": "파일",
+        "zh": "文件",
+        "hi": "फ़ाइलें",
+        "es": "Archivos",
+        "fr": "Fichiers",
+        "ar": "الملفات",
+        "pt": "Arquivos",
+        "ru": "Файлы",
+        "de": "Dateien",
+        "ja": "ファイル",
+        "tr": "Dosyalar",
+        "vi": "Tệp",
+        "it": "File",
+        "fa": "فایل‌ها",
+        "pl": "Pliki",
+        "uk": "Файли",
+        "nl": "Bestanden",
+        "sv": "Filer",
+        "cs": "Soubory",
+        "el": "Αρχεία"
+      },
+      "body": {
+        "type": "explorer",
+        "table": "files",
+        "nameColumn": "name",
+        "orderColumn": "order",
+        "allowFolders": false,
+        "railMode": "collapsible",
+        "title": {
+          "en": "Files",
+          "ko": "파일",
+          "zh": "文件",
+          "hi": "फ़ाइलें",
+          "es": "Archivos",
+          "fr": "Fichiers",
+          "ar": "الملفات",
+          "pt": "Arquivos",
+          "ru": "Файлы",
+          "de": "Dateien",
+          "ja": "ファイル",
+          "tr": "Dosyalar",
+          "vi": "Tệp",
+          "it": "File",
+          "fa": "فایل‌ها",
+          "pl": "Pliki",
+          "uk": "Файли",
+          "nl": "Bestanden",
+          "sv": "Filer",
+          "cs": "Soubory",
+          "el": "Αρχεία"
+        },
+        "fileIcon": "event",
+        "newFileLabel": {
+          "en": "New list",
+          "ko": "새 목록",
+          "zh": "新建列表",
+          "hi": "नई सूची",
+          "es": "Nueva lista",
+          "fr": "Nouvelle liste",
+          "ar": "قائمة جديدة",
+          "pt": "Nova lista",
+          "ru": "Новый список",
+          "de": "Neue Liste",
+          "ja": "新しいリスト",
+          "tr": "Yeni liste",
+          "vi": "Danh sách mới",
+          "it": "Nuovo elenco",
+          "fa": "فهرست جدید",
+          "pl": "Nowa lista",
+          "uk": "Новий список",
+          "nl": "Nieuwe lijst",
+          "sv": "Ny lista",
+          "cs": "Nový seznam",
+          "el": "Νέα λίστα"
+        },
+        "emptyHome": true,
+        "homeTitle": {
+          "en": "Your event lists",
+          "ko": "내 이벤트 목록",
+          "zh": "你的活动列表",
+          "hi": "आपकी इवेंट सूचियाँ",
+          "es": "Tus listas de eventos",
+          "fr": "Vos listes d'événements",
+          "ar": "قوائم فعالياتك",
+          "pt": "Suas listas de eventos",
+          "ru": "Ваши списки событий",
+          "de": "Deine Veranstaltungslisten",
+          "ja": "あなたのイベントリスト",
+          "tr": "Etkinlik listeleriniz",
+          "vi": "Danh sách sự kiện của bạn",
+          "it": "I tuoi elenchi di eventi",
+          "fa": "فهرست‌های رویداد شما",
+          "pl": "Twoje listy wydarzeń",
+          "uk": "Ваші списки подій",
+          "nl": "Jouw evenementenlijsten",
+          "sv": "Dina evenemangslistor",
+          "cs": "Vaše seznamy událostí",
+          "el": "Οι λίστες εκδηλώσεών σας"
+        },
+        "homeSubtitle": {
+          "en": "Open a recent list, or start a new one.",
+          "ko": "최근 목록을 열거나 새 목록을 시작하세요.",
+          "zh": "打开最近的列表,或新建一个。",
+          "hi": "हाल की सूची खोलें, या नई शुरू करें।",
+          "es": "Abre una lista reciente o crea una nueva.",
+          "fr": "Ouvrez une liste récente ou créez-en une nouvelle.",
+          "ar": "افتح قائمة حديثة أو ابدأ قائمة جديدة.",
+          "pt": "Abra uma lista recente ou crie uma nova.",
+          "ru": "Откройте недавний список или создайте новый.",
+          "de": "Öffne eine kürzlich verwendete Liste oder beginne eine neue.",
+          "ja": "最近のリストを開くか、新しいリストを作成してください。",
+          "tr": "Son bir listeyi açın ya da yenisini başlatın.",
+          "vi": "Mở một danh sách gần đây, hoặc bắt đầu danh sách mới.",
+          "it": "Apri un elenco recente o creane uno nuovo.",
+          "fa": "یک فهرست اخیر را باز کنید یا فهرستی جدید شروع کنید.",
+          "pl": "Otwórz ostatnią listę lub rozpocznij nową.",
+          "uk": "Відкрийте нещодавній список або створіть новий.",
+          "nl": "Open een recente lijst of begin een nieuwe.",
+          "sv": "Öppna en nyligen använd lista, eller starta en ny.",
+          "cs": "Otevřete nedávný seznam nebo založte nový.",
+          "el": "Ανοίξτε μια πρόσφατη λίστα ή ξεκινήστε μια νέα."
+        },
+        "addItems": [
+          { "label": "New list", "icon": "add", "values": { "name": "Untitled list" } }
+        ],
+        "autoSelectFirst": true,
+        "scopeTargets": [
+          { "table": "events", "column": "file" },
+          { "table": "tags", "column": "file" }
+        ],
+        "detail": {
+          "type": "column",
+          "crossAxis": "stretch",
+          "children": [
+            {
+              "type": "text",
+              "style": "caption",
+              "value": {
+                "en": "A file is one list of events — its own events and tags. Pick a file on the left, then use the other tabs to work in it. Tap + to start a new list, and a file's ⋮ menu to rename or delete it.",
+                "ko": "파일은 하나의 이벤트 목록입니다 — 자체 이벤트와 태그를 가집니다. 왼쪽에서 파일을 선택한 뒤 다른 탭을 사용해 작업하세요. +를 눌러 새 목록을 시작하고, 파일의 ⋮ 메뉴로 이름을 바꾸거나 삭제할 수 있습니다.",
+                "zh": "一个文件就是一个活动列表——拥有自己的活动和标签。在左侧选择文件,然后使用其他标签页进行操作。点按 + 新建列表,点按文件的 ⋮ 菜单可重命名或删除。",
+                "hi": "एक फ़ाइल इवेंट्स की एक सूची है — इसके अपने इवेंट्स और टैग होते हैं। बाईं ओर से फ़ाइल चुनें, फिर उसमें काम करने के लिए अन्य टैब्स का उपयोग करें। नई सूची शुरू करने के लिए + टैप करें, और नाम बदलने या हटाने के लिए फ़ाइल के ⋮ मेनू का उपयोग करें।",
+                "es": "Un archivo es una lista de eventos, con sus propios eventos y etiquetas. Elige un archivo a la izquierda y usa las demás pestañas para trabajar en él. Toca + para iniciar una nueva lista y el menú ⋮ del archivo para renombrarlo o eliminarlo.",
+                "fr": "Un fichier est une liste d'événements — avec ses propres événements et étiquettes. Choisissez un fichier à gauche, puis utilisez les autres onglets pour y travailler. Touchez + pour démarrer une nouvelle liste, et le menu ⋮ d'un fichier pour le renommer ou le supprimer.",
+                "ar": "الملف هو قائمة فعاليات واحدة -- بفعالياته ووسومه الخاصة. اختر ملفًا على اليسار، ثم استخدم علامات التبويب الأخرى للعمل فيه. اضغط + لبدء قائمة جديدة، وقائمة ⋮ الخاصة بالملف لإعادة تسميته أو حذفه.",
+                "pt": "Um arquivo é uma lista de eventos — com seus próprios eventos e tags. Escolha um arquivo à esquerda e use as outras abas para trabalhar nele. Toque em + para iniciar uma nova lista e no menu ⋮ do arquivo para renomeá-lo ou excluí-lo.",
+                "ru": "Файл — это один список событий со своими событиями и тегами. Выберите файл слева, затем используйте остальные вкладки для работы с ним. Нажмите +, чтобы начать новый список, и меню ⋮ файла, чтобы переименовать или удалить его.",
+                "de": "Eine Datei ist eine Liste von Veranstaltungen — mit eigenen Veranstaltungen und Tags. Wähle links eine Datei aus und nutze dann die anderen Tabs, um darin zu arbeiten. Tippe auf +, um eine neue Liste zu beginnen, und auf das ⋮-Menü einer Datei, um sie umzubenennen oder zu löschen.",
+                "ja": "ファイルは1つのイベントリストです -- 独自のイベントとタグを持ちます。左側でファイルを選び、他のタブでその中を操作してください。+をタップすると新しいリストを開始でき、ファイルの⋮メニューから名前変更や削除ができます。",
+                "tr": "Bir dosya, kendi etkinlikleri ve etiketleri olan tek bir etkinlik listesidir. Soldan bir dosya seçin, ardından üzerinde çalışmak için diğer sekmeleri kullanın. Yeni bir liste başlatmak için + dokunun, yeniden adlandırmak veya silmek için dosyanın ⋮ menüsünü kullanın.",
+                "vi": "Một tệp là một danh sách sự kiện -- với các sự kiện và thẻ riêng. Chọn một tệp bên trái, sau đó dùng các tab khác để làm việc trong đó. Chạm + để bắt đầu danh sách mới, và menu ⋮ của tệp để đổi tên hoặc xóa.",
+                "it": "Un file è un elenco di eventi — con propri eventi e tag. Scegli un file a sinistra, poi usa le altre schede per lavorarci. Tocca + per avviare un nuovo elenco, e il menu ⋮ di un file per rinominarlo o eliminarlo.",
+                "fa": "یک فایل یک فهرست از رویدادهاست — با رویدادها و برچسب‌های خاص خود. فایلی را از سمت چپ انتخاب کنید، سپس با تب‌های دیگر روی آن کار کنید. برای شروع فهرست جدید + را بزنید و از منوی ⋮ فایل برای تغییر نام یا حذف استفاده کنید.",
+                "pl": "Plik to jedna lista wydarzeń — z własnymi wydarzeniami i tagami. Wybierz plik po lewej, a następnie użyj innych kart, aby w nim pracować. Dotknij +, aby rozpocząć nową listę, a menu ⋮ pliku, aby go zmienić nazwę lub usunąć.",
+                "uk": "Файл — це один список подій із власними подіями та тегами. Виберіть файл ліворуч, потім використовуйте інші вкладки для роботи з ним. Торкніться +, щоб почати новий список, і меню ⋮ файлу, щоб перейменувати або видалити його.",
+                "nl": "Een bestand is één lijst met evenementen — met eigen evenementen en tags. Kies links een bestand en gebruik de andere tabbladen om erin te werken. Tik op + om een nieuwe lijst te starten, en op het ⋮-menu van een bestand om het te hernoemen of verwijderen.",
+                "sv": "En fil är en lista med evenemang — med egna evenemang och taggar. Välj en fil till vänster, använd sedan de andra flikarna för att arbeta i den. Tryck på + för att starta en ny lista, och en fils ⋮-meny för att döpa om eller ta bort den.",
+                "cs": "Soubor je jeden seznam událostí — s vlastními událostmi a štítky. Vyberte soubor vlevo a poté pomocí ostatních karet v něm pracujte. Klepnutím na + spustíte nový seznam, nabídkou ⋮ souboru jej přejmenujete nebo smažete.",
+                "el": "Ένα αρχείο είναι μία λίστα εκδηλώσεων — με τις δικές του εκδηλώσεις και ετικέτες. Επιλέξτε ένα αρχείο αριστερά, έπειτα χρησιμοποιήστε τις άλλες καρτέλες για να εργαστείτε σε αυτό. Πατήστε + για να ξεκινήσετε νέα λίστα και το μενού ⋮ ενός αρχείου για μετονομασία ή διαγραφή."
+              }
+            },
+            {
+              "type": "button",
+              "label": {
+                "en": "Open this list",
+                "ko": "이 목록 열기",
+                "zh": "打开此列表",
+                "hi": "यह सूची खोलें",
+                "es": "Abrir esta lista",
+                "fr": "Ouvrir cette liste",
+                "ar": "فتح هذه القائمة",
+                "pt": "Abrir esta lista",
+                "ru": "Открыть этот список",
+                "de": "Diese Liste öffnen",
+                "ja": "このリストを開く",
+                "tr": "Bu listeyi aç",
+                "vi": "Mở danh sách này",
+                "it": "Apri questo elenco",
+                "fa": "باز کردن این فهرست",
+                "pl": "Otwórz tę listę",
+                "uk": "Відкрити цей список",
+                "nl": "Deze lijst openen",
+                "sv": "Öppna den här listan",
+                "cs": "Otevřít tento seznam",
+                "el": "Άνοιγμα αυτής της λίστας"
+              },
+              "icon": "event",
+              "action": {
+                "fn": "goto",
+                "args": {
+                  "screen": "upcoming"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "upcoming": {
+      "title": {
+        "en": "Browse events",
+        "ko": "이벤트 둘러보기",
+        "zh": "浏览活动",
+        "hi": "इवेंट्स ब्राउज़ करें",
+        "es": "Explorar eventos",
+        "fr": "Parcourir les événements",
+        "ar": "تصفح الفعاليات",
+        "pt": "Explorar eventos",
+        "ru": "Обзор событий",
+        "de": "Veranstaltungen durchsuchen",
+        "ja": "イベントを閲覧",
+        "tr": "Etkinliklere göz at",
+        "vi": "Duyệt sự kiện",
+        "it": "Sfoglia eventi",
+        "fa": "مرور رویدادها",
+        "pl": "Przeglądaj wydarzenia",
+        "uk": "Огляд подій",
+        "nl": "Evenementen bladeren",
+        "sv": "Bläddra bland evenemang",
+        "cs": "Procházet události",
+        "el": "Περιήγηση εκδηλώσεων"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "What's happening nearby. Filter by type, tap a card to see details, or open it to RSVP.",
+              "ko": "주변에서 열리는 이벤트입니다. 유형별로 필터링하고, 카드를 눌러 상세 정보를 보거나 열어서 참석 여부를 회신하세요.",
+              "zh": "附近正在发生的活动。按类型筛选,点按卡片查看详情,或打开以回复参加。",
+              "hi": "आसपास क्या हो रहा है। प्रकार से फ़िल्टर करें, विवरण देखने के लिए कार्ड टैप करें, या RSVP के लिए इसे खोलें।",
+              "es": "Lo que ocurre cerca. Filtra por tipo, toca una tarjeta para ver detalles o ábrela para confirmar asistencia.",
+              "fr": "Ce qui se passe à proximité. Filtrez par type, touchez une carte pour voir les détails, ou ouvrez-la pour confirmer votre présence.",
+              "ar": "ما يحدث بالقرب منك. صفِّ حسب النوع، واضغط على بطاقة لرؤية التفاصيل، أو افتحها للرد بالحضور.",
+              "pt": "O que está acontecendo por perto. Filtre por tipo, toque num cartão para ver detalhes, ou abra-o para confirmar presença.",
+              "ru": "Что происходит рядом. Отфильтруйте по типу, нажмите на карточку, чтобы увидеть подробности, или откройте её, чтобы подтвердить участие.",
+              "de": "Was in der Nähe passiert. Nach Typ filtern, auf eine Karte tippen für Details, oder öffnen, um zuzusagen.",
+              "ja": "近くで開催されるイベントです。種類でフィルタリングし、カードをタップして詳細を確認するか、開いて出欠を返信してください。",
+              "tr": "Yakınlarda neler oluyor. Türe göre filtreleyin, ayrıntıları görmek için bir karta dokunun ya da katılım bildirmek için açın.",
+              "vi": "Những gì đang diễn ra gần đây. Lọc theo loại, chạm vào thẻ để xem chi tiết, hoặc mở để xác nhận tham dự.",
+              "it": "Cosa succede nelle vicinanze. Filtra per tipo, tocca una scheda per i dettagli, o aprila per confermare la partecipazione.",
+              "fa": "چه چیزی در نزدیکی در حال وقوع است. بر اساس نوع فیلتر کنید، روی کارتی ضربه بزنید تا جزئیات را ببینید، یا آن را باز کنید تا پاسخ حضور دهید.",
+              "pl": "Co się dzieje w pobliżu. Filtruj według typu, dotknij karty, aby zobaczyć szczegóły, lub otwórz ją, aby potwierdzić udział.",
+              "uk": "Що відбувається поблизу. Фільтруйте за типом, торкніться картки, щоб побачити деталі, або відкрийте, щоб підтвердити участь.",
+              "nl": "Wat er in de buurt gebeurt. Filter op type, tik op een kaart voor details, of open om aan te melden.",
+              "sv": "Vad som händer i närheten. Filtrera efter typ, tryck på ett kort för detaljer, eller öppna det för att svara.",
+              "cs": "Co se děje v okolí. Filtrujte podle typu, klepnutím na kartu zobrazíte podrobnosti nebo ji otevřete a potvrdíte účast.",
+              "el": "Τι συμβαίνει κοντά σας. Φιλτράρετε ανά τύπο, πατήστε μια κάρτα για λεπτομέρειες ή ανοίξτε την για να δηλώσετε συμμετοχή."
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "New event",
+              "ko": "새 이벤트",
+              "zh": "新建活动",
+              "hi": "नया इवेंट",
+              "es": "Nuevo evento",
+              "fr": "Nouvel événement",
+              "ar": "فعالية جديدة",
+              "pt": "Novo evento",
+              "ru": "Новое событие",
+              "de": "Neue Veranstaltung",
+              "ja": "新しいイベント",
+              "tr": "Yeni etkinlik",
+              "vi": "Sự kiện mới",
+              "it": "Nuovo evento",
+              "fa": "رویداد جدید",
+              "pl": "Nowe wydarzenie",
+              "uk": "Нова подія",
+              "nl": "Nieuw evenement",
+              "sv": "Nytt evenemang",
+              "cs": "Nová událost",
+              "el": "Νέα εκδήλωση"
+            },
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "events",
+                "values": {
+                  "going": false
+                }
+              }
+            }
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": {
+                  "en": "Music",
+                  "ko": "음악",
+                  "zh": "音乐",
+                  "hi": "संगीत",
+                  "es": "Música",
+                  "fr": "Musique",
+                  "ar": "موسيقى",
+                  "pt": "Música",
+                  "ru": "Музыка",
+                  "de": "Musik",
+                  "ja": "音楽",
+                  "tr": "Müzik",
+                  "vi": "Âm nhạc",
+                  "it": "Musica",
+                  "fa": "موسیقی",
+                  "pl": "Muzyka",
+                  "uk": "Музика",
+                  "nl": "Muziek",
+                  "sv": "Musik",
+                  "cs": "Hudba",
+                  "el": "Μουσική"
+                },
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "events",
+                    "column": "tags",
+                    "value": "etag_music"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "Food",
+                  "ko": "음식",
+                  "zh": "美食",
+                  "hi": "भोजन",
+                  "es": "Comida",
+                  "fr": "Cuisine",
+                  "ar": "طعام",
+                  "pt": "Comida",
+                  "ru": "Еда",
+                  "de": "Essen",
+                  "ja": "食事",
+                  "tr": "Yemek",
+                  "vi": "Ẩm thực",
+                  "it": "Cibo",
+                  "fa": "غذا",
+                  "pl": "Jedzenie",
+                  "uk": "Їжа",
+                  "nl": "Eten",
+                  "sv": "Mat",
+                  "cs": "Jídlo",
+                  "el": "Φαγητό"
+                },
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "events",
+                    "column": "tags",
+                    "value": "etag_food"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "Tech",
+                  "ko": "기술",
+                  "zh": "科技",
+                  "hi": "टेक",
+                  "es": "Tecnología",
+                  "fr": "Tech",
+                  "ar": "التقنية",
+                  "pt": "Tecnologia",
+                  "ru": "Технологии",
+                  "de": "Technik",
+                  "ja": "テック",
+                  "tr": "Teknoloji",
+                  "vi": "Công nghệ",
+                  "it": "Tecnologia",
+                  "fa": "فناوری",
+                  "pl": "Technologia",
+                  "uk": "Технології",
+                  "nl": "Tech",
+                  "sv": "Teknik",
+                  "cs": "Technika",
+                  "el": "Τεχνολογία"
+                },
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "events",
+                    "column": "tags",
+                    "value": "etag_tech"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "All",
+                  "ko": "전체",
+                  "zh": "全部",
+                  "hi": "सभी",
+                  "es": "Todos",
+                  "fr": "Tous",
+                  "ar": "الكل",
+                  "pt": "Todos",
+                  "ru": "Все",
+                  "de": "Alle",
+                  "ja": "すべて",
+                  "tr": "Tümü",
+                  "vi": "Tất cả",
+                  "it": "Tutti",
+                  "fa": "همه",
+                  "pl": "Wszystkie",
+                  "uk": "Усі",
+                  "nl": "Alle",
+                  "sv": "Alla",
+                  "cs": "Vše",
+                  "el": "Όλα"
+                },
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "events",
+                    "column": "tags",
+                    "value": ""
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "table": "events",
+            "groupByOptions": [
+              {
+                "label": "Type",
+                "column": "tags"
+              },
+              {
+                "label": "Going",
+                "column": "going"
+              }
+            ],
+            "groupBy": "tags",
+            "sort": {
+              "column": "start",
+              "dir": "asc"
+            },
+            "title": "title",
+            "subtitle": "location",
+            "tags": [
+              {
+                "column": "start"
+              },
+              {
+                "column": "going",
+                "colors": {
+                  "true": "green",
+                  "false": "gray"
+                }
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              {
+                "column": "start",
+                "label": "Start"
+              },
+              {
+                "column": "location",
+                "label": "Location"
+              },
+              {
+                "column": "going",
+                "label": "Going"
+              },
+              {
+                "column": "tags",
+                "label": "Tags"
+              },
+              {
+                "column": "notes",
+                "label": "Notes"
+              }
+            ],
+            "open": "Open / RSVP",
+            "action": {
+              "fn": "editRow"
+            },
+            "openActions": [
+              {
+                "label": "Show on map",
+                "icon": "map",
+                "action": {
+                  "chain": [
+                    { "fn": "focusRow" },
+                    { "fn": "goto", "args": { "screen": "map" } }
+                  ]
+                }
+              }
+            ],
+            "emptyIcon": "event",
+            "emptyTitle": {
+              "en": "No events yet",
+              "ko": "아직 이벤트가 없습니다",
+              "zh": "暂无活动",
+              "hi": "अभी तक कोई इवेंट नहीं",
+              "es": "Aún no hay eventos",
+              "fr": "Aucun événement pour l'instant",
+              "ar": "لا فعاليات بعد",
+              "pt": "Ainda não há eventos",
+              "ru": "Пока нет событий",
+              "de": "Noch keine Veranstaltungen",
+              "ja": "まだイベントはありません",
+              "tr": "Henüz etkinlik yok",
+              "vi": "Chưa có sự kiện nào",
+              "it": "Ancora nessun evento",
+              "fa": "هنوز رویدادی نیست",
+              "pl": "Brak wydarzeń",
+              "uk": "Ще немає подій",
+              "nl": "Nog geen evenementen",
+              "sv": "Inga evenemang än",
+              "cs": "Zatím žádné události",
+              "el": "Δεν υπάρχουν ακόμη εκδηλώσεις"
+            },
+            "emptyText": {
+              "en": "Add an event and it'll show up here, ready to share and RSVP.",
+              "ko": "이벤트를 추가하면 여기에 표시되어 공유하고 참석 여부를 회신할 수 있습니다.",
+              "zh": "添加一个活动,它就会显示在这里,可以分享并回复参加。",
+              "hi": "एक इवेंट जोड़ें और वह यहाँ दिखेगा, शेयर करने और RSVP के लिए तैयार।",
+              "es": "Agrega un evento y aparecerá aquí, listo para compartir y confirmar asistencia.",
+              "fr": "Ajoutez un événement et il apparaîtra ici, prêt à être partagé et confirmé.",
+              "ar": "أضف فعالية وستظهر هنا، جاهزة للمشاركة والرد بالحضور.",
+              "pt": "Adicione um evento e ele aparecerá aqui, pronto para compartilhar e confirmar presença.",
+              "ru": "Добавьте событие, и оно появится здесь, готовое к публикации и подтверждению участия.",
+              "de": "Füge eine Veranstaltung hinzu, dann erscheint sie hier, bereit zum Teilen und für Zusagen.",
+              "ja": "イベントを追加すると、ここに表示され、共有や出欠の返信ができるようになります。",
+              "tr": "Bir etkinlik ekleyin, burada görünecek, paylaşmaya ve katılım bildirmeye hazır olacaktır.",
+              "vi": "Thêm một sự kiện và nó sẽ hiển thị ở đây, sẵn sàng để chia sẻ và xác nhận tham dự.",
+              "it": "Aggiungi un evento e apparirà qui, pronto per essere condiviso e confermato.",
+              "fa": "رویدادی اضافه کنید تا اینجا نمایش داده شود، آمادهٔ اشتراک‌گذاری و پاسخ حضور.",
+              "pl": "Dodaj wydarzenie, a pojawi się tutaj, gotowe do udostępnienia i potwierdzenia udziału.",
+              "uk": "Додайте подію — і вона з'явиться тут, готова до поширення й підтвердження участі.",
+              "nl": "Voeg een evenement toe en het verschijnt hier, klaar om te delen en aan te melden.",
+              "sv": "Lägg till ett evenemang så visas det här, redo att delas och svaras på.",
+              "cs": "Přidejte událost a zobrazí se zde, připravená ke sdílení a potvrzení účasti.",
+              "el": "Προσθέστε μια εκδήλωση και θα εμφανιστεί εδώ, έτοιμη για κοινή χρήση και δήλωση συμμετοχής."
+            },
+            "emptyAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "events",
+                "values": {
+                  "going": false
+                }
+              }
+            },
+            "emptyActionLabel": {
+              "en": "New event",
+              "ko": "새 이벤트",
+              "zh": "新建活动",
+              "hi": "नया इवेंट",
+              "es": "Nuevo evento",
+              "fr": "Nouvel événement",
+              "ar": "فعالية جديدة",
+              "pt": "Novo evento",
+              "ru": "Новое событие",
+              "de": "Neue Veranstaltung",
+              "ja": "新しいイベント",
+              "tr": "Yeni etkinlik",
+              "vi": "Sự kiện mới",
+              "it": "Nuovo evento",
+              "fa": "رویداد جدید",
+              "pl": "Nowe wydarzenie",
+              "uk": "Нова подія",
+              "nl": "Nieuw evenement",
+              "sv": "Nytt evenemang",
+              "cs": "Nová událost",
+              "el": "Νέα εκδήλωση"
+            }
+          }
+        ]
+      }
+    },
+    "going": {
+      "title": {
+        "en": "You're going",
+        "ko": "참석 예정 이벤트",
+        "zh": "你要参加的活动",
+        "hi": "आप जा रहे हैं",
+        "es": "Vas a ir",
+        "fr": "Vous y allez",
+        "ar": "أنت ذاهب",
+        "pt": "Você vai",
+        "ru": "Вы идёте",
+        "de": "Du gehst hin",
+        "ja": "参加予定のイベント",
+        "tr": "Katılıyorsunuz",
+        "vi": "Bạn sẽ tham dự",
+        "it": "Ci vai",
+        "fa": "شما شرکت می‌کنید",
+        "pl": "Idziesz",
+        "uk": "Ви йдете",
+        "nl": "Jij gaat",
+        "sv": "Du går",
+        "cs": "Jdete",
+        "el": "Θα πάτε"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Events you've RSVP'd yes to, soonest first. Open one to update your plans.",
+              "ko": "참석하겠다고 회신한 이벤트를 가까운 순으로 보여줍니다. 열어서 계획을 수정할 수 있습니다.",
+              "zh": "你已回复参加的活动,按时间从近到远排列。打开某个活动即可更新你的计划。",
+              "hi": "वे इवेंट्स जिन पर आपने हाँ में RSVP किया है, सबसे जल्दी वाले पहले। अपनी योजना अपडेट करने के लिए किसी को खोलें।",
+              "es": "Eventos a los que has confirmado asistencia, los más próximos primero. Abre uno para actualizar tus planes.",
+              "fr": "Événements pour lesquels vous avez confirmé votre présence, du plus proche au plus lointain. Ouvrez-en un pour mettre à jour vos plans.",
+              "ar": "الفعاليات التي أكدت حضورها، مرتبة من الأقرب أولًا. افتح واحدة لتحديث خططك.",
+              "pt": "Eventos que você confirmou presença, mais próximos primeiro. Abra um para atualizar seus planos.",
+              "ru": "События, на которые вы подтвердили участие, сначала ближайшие. Откройте одно, чтобы изменить свои планы.",
+              "de": "Veranstaltungen, denen du zugesagt hast, die nächsten zuerst. Öffne eine, um deine Pläne zu aktualisieren.",
+              "ja": "参加を回答したイベントを、近い順に表示します。開いて予定を更新できます。",
+              "tr": "Katılım bildirdiğiniz etkinlikler, en yakın olan önce. Planlarınızı güncellemek için birini açın.",
+              "vi": "Các sự kiện bạn đã xác nhận tham dự, gần nhất trước. Mở một sự kiện để cập nhật kế hoạch.",
+              "it": "Eventi a cui hai confermato la partecipazione, i più vicini per primi. Aprine uno per aggiornare i tuoi piani.",
+              "fa": "رویدادهایی که به آن‌ها پاسخ بله داده‌اید، نزدیک‌ترین ابتدا. یکی را باز کنید تا برنامه‌هایتان را به‌روزرسانی کنید.",
+              "pl": "Wydarzenia, na które potwierdziłeś udział, najbliższe najpierw. Otwórz jedno, aby zaktualizować swoje plany.",
+              "uk": "Події, на які ви підтвердили участь, найближчі спочатку. Відкрийте одну, щоб оновити свої плани.",
+              "nl": "Evenementen waarvoor je hebt aangemeld, dichtstbijzijnde eerst. Open er een om je plannen bij te werken.",
+              "sv": "Evenemang du har tackat ja till, snarast först. Öppna ett för att uppdatera dina planer.",
+              "cs": "Události, na které jste potvrdili účast, nejbližší jako první. Otevřením jedné aktualizujte své plány.",
+              "el": "Εκδηλώσεις για τις οποίες δηλώσατε συμμετοχή, οι πλησιέστερες πρώτα. Ανοίξτε μία για να ενημερώσετε τα σχέδιά σας."
+            }
+          },
+          {
+            "type": "cards",
+            "table": "events",
+            "filter": {
+              "column": "going",
+              "value": "true"
+            },
+            "sort": {
+              "column": "start",
+              "dir": "asc"
+            },
+            "title": "title",
+            "subtitle": "location",
+            "tags": [
+              {
+                "column": "start"
+              },
+              {
+                "column": "tags"
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              {
+                "column": "start",
+                "label": "Start"
+              },
+              {
+                "column": "location",
+                "label": "Location"
+              },
+              {
+                "column": "notes",
+                "label": "Notes"
+              }
+            ],
+            "open": "Open",
+            "action": {
+              "fn": "editRow"
+            },
+            "emptyIcon": "check_circle",
+            "emptyTitle": {
+              "en": "Nothing on your list",
+              "ko": "목록에 아무것도 없습니다",
+              "zh": "你的列表为空",
+              "hi": "आपकी सूची में कुछ नहीं है",
+              "es": "Nada en tu lista",
+              "fr": "Rien sur votre liste",
+              "ar": "لا شيء في قائمتك",
+              "pt": "Nada na sua lista",
+              "ru": "В вашем списке пусто",
+              "de": "Nichts auf deiner Liste",
+              "ja": "リストには何もありません",
+              "tr": "Listenizde bir şey yok",
+              "vi": "Không có gì trong danh sách của bạn",
+              "it": "Niente nella tua lista",
+              "fa": "چیزی در فهرست شما نیست",
+              "pl": "Nic na Twojej liście",
+              "uk": "У вашому списку нічого немає",
+              "nl": "Niets op je lijst",
+              "sv": "Inget på din lista",
+              "cs": "Nic ve vašem seznamu",
+              "el": "Τίποτα στη λίστα σας"
+            },
+            "emptyText": {
+              "en": "Tap RSVP yes on an event from Browse and it'll land here, soonest first.",
+              "ko": "둘러보기에서 이벤트에 참석 RSVP를 탭하면 여기에 가까운 순서로 표시됩니다.",
+              "zh": "在浏览中点按某活动的“参加”,它就会按最近优先显示在这里。",
+              "hi": "ब्राउज़ से किसी इवेंट पर आरएसवीपी हां टैप करें, यह यहां जल्द से जल्द क्रम में दिखेगा।",
+              "es": "Toca RSVP sí en un evento desde Explorar y aparecerá aquí, primero el más próximo.",
+              "fr": "Appuyez sur RSVP oui pour un événement depuis Parcourir, il apparaîtra ici, du plus proche au plus lointain.",
+              "ar": "اضغط على تأكيد الحضور لحدث من التصفح وسيظهر هنا، الأقرب أولاً.",
+              "pt": "Toque em RSVP sim em um evento em Navegar e ele aparecerá aqui, do mais próximo primeiro.",
+              "ru": "Нажмите «Приду» на мероприятии в разделе «Обзор», и оно появится здесь, ближайшие сначала.",
+              "de": "Tippe bei einem Ereignis in Durchsuchen auf Zusage, und es erscheint hier, das nächste zuerst.",
+              "ja": "「参照」でイベントの出席をタップすると、近い順にここに表示されます。",
+              "tr": "Gözat'tan bir etkinlikte Katılıyorum'a dokunun, en yakın olan önce burada görünsün.",
+              "vi": "Chạm Tham gia trên một sự kiện từ Duyệt, sự kiện sẽ hiện ở đây, gần nhất trước.",
+              "it": "Tocca Parteciperò su un evento in Sfoglia e comparirà qui, dal più vicino.",
+              "fa": "روی شرکت می‌کنم برای رویدادی در مرور ضربه بزنید تا اینجا، نزدیک‌ترین ابتدا نمایش داده شود.",
+              "pl": "Dotknij Wezmę udział przy wydarzeniu w Przeglądaj, a pojawi się tutaj, najbliższe pierwsze.",
+              "uk": "Торкніться «Прийду» біля події в розділі «Огляд», і вона з'явиться тут, найближчі спершу.",
+              "nl": "Tik op Ik kom bij een evenement in Bladeren en het verschijnt hier, eerstvolgende eerst.",
+              "sv": "Tryck på Ja tack på ett evenemang i Bläddra så hamnar det här, snarast först.",
+              "cs": "Klepněte na Zúčastním se u události v Procházet a objeví se zde, nejbližší jako první.",
+              "el": "Πατήστε Θα παρευρεθώ σε μια εκδήλωση από την Περιήγηση και θα εμφανιστεί εδώ, με προτεραιότητα στην πλησιέστερη."
+            }
+          }
+        ]
+      }
+    },
+    "calendar": {
+      "title": {
+        "en": "Calendar",
+        "ko": "캘린더",
+        "zh": "日历",
+        "hi": "कैलेंडर",
+        "es": "Calendario",
+        "fr": "Calendrier",
+        "ar": "التقويم",
+        "pt": "Calendário",
+        "ru": "Календарь",
+        "de": "Kalender",
+        "ja": "カレンダー",
+        "tr": "Takvim",
+        "vi": "Lịch",
+        "it": "Calendario",
+        "fa": "تقویم",
+        "pl": "Kalendarz",
+        "uk": "Календар",
+        "nl": "Kalender",
+        "sv": "Kalender",
+        "cs": "Kalendář",
+        "el": "Ημερολόγιο"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Events laid out by date. Tap a day to open that event.",
+              "ko": "이벤트를 날짜순으로 보여줍니다. 날짜를 눌러 해당 이벤트를 여세요.",
+              "zh": "活动按日期排列。点按某天即可打开该活动。",
+              "hi": "इवेंट्स तारीख़ के अनुसार दिखाए गए हैं। उस इवेंट को खोलने के लिए किसी दिन को टैप करें।",
+              "es": "Eventos organizados por fecha. Toca un día para abrir ese evento.",
+              "fr": "Événements présentés par date. Touchez un jour pour ouvrir cet événement.",
+              "ar": "الفعاليات مرتبة حسب التاريخ. اضغط على يوم لفتح تلك الفعالية.",
+              "pt": "Eventos organizados por data. Toque num dia para abrir aquele evento.",
+              "ru": "События, распределённые по датам. Нажмите на день, чтобы открыть это событие.",
+              "de": "Veranstaltungen nach Datum sortiert. Tippe auf einen Tag, um die Veranstaltung zu öffnen.",
+              "ja": "イベントを日付順に表示します。日付をタップするとそのイベントが開きます。",
+              "tr": "Etkinlikler tarihe göre düzenlenmiştir. O etkinliği açmak için bir güne dokunun.",
+              "vi": "Sự kiện được sắp xếp theo ngày. Chạm vào một ngày để mở sự kiện đó.",
+              "it": "Eventi organizzati per data. Tocca un giorno per aprire quell'evento.",
+              "fa": "رویدادها بر اساس تاریخ چیده شده‌اند. برای باز کردن آن رویداد روی روزی ضربه بزنید.",
+              "pl": "Wydarzenia ułożone według daty. Dotknij dnia, aby otworzyć to wydarzenie.",
+              "uk": "Події впорядковано за датою. Торкніться дня, щоб відкрити цю подію.",
+              "nl": "Evenementen gerangschikt op datum. Tik op een dag om dat evenement te openen.",
+              "sv": "Evenemang ordnade efter datum. Tryck på en dag för att öppna det evenemanget.",
+              "cs": "Události uspořádané podle data. Klepnutím na den otevřete danou událost.",
+              "el": "Εκδηλώσεις ταξινομημένες κατά ημερομηνία. Πατήστε μια ημέρα για να ανοίξετε αυτήν την εκδήλωση."
+            }
+          },
+          {
+            "type": "calendar",
+            "table": "events",
+            "titleColumn": "title",
+            "dateColumns": [
+              "start"
+            ],
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "map": {
+      "title": {
+        "en": "Event map",
+        "ko": "이벤트 지도",
+        "zh": "活动地图",
+        "hi": "इवेंट मैप",
+        "es": "Mapa de eventos",
+        "fr": "Carte des événements",
+        "ar": "خريطة الفعاليات",
+        "pt": "Mapa de eventos",
+        "ru": "Карта событий",
+        "de": "Veranstaltungskarte",
+        "ja": "イベントマップ",
+        "tr": "Etkinlik haritası",
+        "vi": "Bản đồ sự kiện",
+        "it": "Mappa eventi",
+        "fa": "نقشهٔ رویداد",
+        "pl": "Mapa wydarzeń",
+        "uk": "Карта подій",
+        "nl": "Evenementenkaart",
+        "sv": "Evenemangskarta",
+        "cs": "Mapa událostí",
+        "el": "Χάρτης εκδηλώσεων"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Where each event is. In the events list, tap an event and press \"Show on map\" to open it here, centered on its spot. Tap \"Show all events\" to zoom back out. Tap a pin to open the event.",
+              "ko": "각 이벤트의 위치를 보여줍니다. 이벤트 목록에서 이벤트를 누르고 \"지도에서 보기\"를 눌러 그 위치를 중심으로 여기에서 열 수 있습니다. \"모든 이벤트 보기\"를 누르면 다시 축소됩니다. 핀을 눌러 이벤트를 여세요.",
+              "zh": "显示每个活动的位置。在活动列表中,点按某个活动并按“在地图上显示”,即可以其所在位置为中心在此打开。点按“显示所有活动”可缩小回全览。点按图钉即可打开该活动。",
+              "hi": "हर इवेंट कहाँ है। इवेंट सूची में, किसी इवेंट को टैप करें और उसे उसके स्थान पर केंद्रित करके यहाँ खोलने के लिए \"मैप पर दिखाएं\" दबाएं। वापस ज़ूम आउट करने के लिए \"सभी इवेंट दिखाएं\" टैप करें। इवेंट खोलने के लिए किसी पिन को टैप करें।",
+              "es": "Dónde está cada evento. En la lista de eventos, toca un evento y pulsa «Mostrar en el mapa» para abrirlo aquí, centrado en su ubicación. Toca «Mostrar todos los eventos» para alejar de nuevo. Toca un pin para abrir el evento.",
+              "fr": "L'emplacement de chaque événement. Dans la liste des événements, touchez un événement et appuyez sur « Afficher sur la carte » pour l'ouvrir ici, centré sur son emplacement. Touchez « Afficher tous les événements » pour dézoomer. Touchez une épingle pour ouvrir l'événement.",
+              "ar": "موقع كل فعالية. في قائمة الفعاليات، اضغط على فعالية واضغط \"إظهار على الخريطة\" لفتحها هنا، مركّزة على موقعها. اضغط \"إظهار كل الفعاليات\" للتصغير مجددًا. اضغط على دبوس لفتح الفعالية.",
+              "pt": "Onde cada evento está. Na lista de eventos, toque num evento e pressione \"Mostrar no mapa\" para abri-lo aqui, centrado no local. Toque em \"Mostrar todos os eventos\" para afastar o zoom. Toque num pino para abrir o evento.",
+              "ru": "Где находится каждое событие. В списке событий нажмите на событие и «Показать на карте», чтобы открыть его здесь, с центром в его точке. Нажмите «Показать все события», чтобы отдалить масштаб. Нажмите на метку, чтобы открыть событие.",
+              "de": "Wo sich jede Veranstaltung befindet. Tippe in der Veranstaltungsliste auf eine Veranstaltung und dann auf „Auf Karte anzeigen“, um sie hier zentriert auf ihren Standort zu öffnen. Tippe auf „Alle Veranstaltungen anzeigen“, um wieder herauszuzoomen. Tippe auf eine Stecknadel, um die Veranstaltung zu öffnen.",
+              "ja": "各イベントの場所を表示します。イベントリストでイベントをタップし、「地図で表示」を押すと、その場所を中心にここで開きます。「すべてのイベントを表示」をタップするとズームアウトします。ピンをタップするとそのイベントが開きます。",
+              "tr": "Her etkinliğin nerede olduğu. Etkinlik listesinde bir etkinliğe dokunun ve konumunda ortalanmış olarak burada açmak için \"Haritada göster\"e basın. Yeniden uzaklaştırmak için \"Tüm etkinlikleri göster\"e dokunun. Etkinliği açmak için bir sabitleyiciye dokunun.",
+              "vi": "Vị trí của từng sự kiện. Trong danh sách sự kiện, chạm vào một sự kiện và nhấn \"Hiện trên bản đồ\" để mở tại đây, căn giữa vào vị trí đó. Chạm \"Hiện tất cả sự kiện\" để thu nhỏ lại. Chạm vào ghim để mở sự kiện.",
+              "it": "Dove si trova ogni evento. Nell'elenco eventi, tocca un evento e premi \"Mostra sulla mappa\" per aprirlo qui, centrato sulla sua posizione. Tocca \"Mostra tutti gli eventi\" per tornare a un livello di zoom più ampio. Tocca un segnaposto per aprire l'evento.",
+              "fa": "موقعیت هر رویداد. در فهرست رویدادها، روی رویدادی ضربه بزنید و «نمایش روی نقشه» را فشار دهید تا اینجا، متمرکز بر مکان آن، باز شود. برای بازگشت به نمای کلی «نمایش همهٔ رویدادها» را بزنید. برای باز کردن رویداد روی سنجاقی ضربه بزنید.",
+              "pl": "Gdzie znajduje się każde wydarzenie. Na liście wydarzeń dotknij wydarzenia i naciśnij „Pokaż na mapie”, aby otworzyć je tutaj, wyśrodkowane na jego lokalizacji. Dotknij „Pokaż wszystkie wydarzenia”, aby oddalić widok. Dotknij pinezki, aby otworzyć wydarzenie.",
+              "uk": "Де знаходиться кожна подія. У списку подій торкніться події та натисніть «Показати на карті», щоб відкрити її тут, з центром у її точці. Торкніться «Показати всі події», щоб знову віддалити карту. Торкніться шпильки, щоб відкрити подію.",
+              "nl": "Waar elk evenement zich bevindt. Tik in de evenementenlijst op een evenement en druk op \"Op kaart tonen\" om het hier te openen, gecentreerd op de locatie. Tik op \"Alle evenementen tonen\" om weer uit te zoomen. Tik op een pin om het evenement te openen.",
+              "sv": "Var varje evenemang äger rum. I evenemangslistan, tryck på ett evenemang och tryck på \"Visa på karta\" för att öppna det här, centrerat på platsen. Tryck på \"Visa alla evenemang\" för att zooma ut igen. Tryck på en nål för att öppna evenemanget.",
+              "cs": "Kde se každá událost koná. V seznamu událostí klepněte na událost a stiskněte „Zobrazit na mapě“, čímž ji otevřete zde, se středem na jejím místě. Klepnutím na „Zobrazit všechny události“ oddálíte zpět. Klepnutím na špendlík otevřete událost.",
+              "el": "Πού βρίσκεται κάθε εκδήλωση. Στη λίστα εκδηλώσεων, πατήστε μια εκδήλωση και πατήστε «Εμφάνιση σε χάρτη» για να την ανοίξετε εδώ, με κέντρο το σημείο της. Πατήστε «Εμφάνιση όλων των εκδηλώσεων» για επαναφορά του ζουμ. Πατήστε μια καρφίτσα για να ανοίξετε την εκδήλωση."
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "Show all events",
+              "ko": "모든 이벤트 보기",
+              "zh": "显示所有活动",
+              "hi": "सभी इवेंट दिखाएं",
+              "es": "Mostrar todos los eventos",
+              "fr": "Afficher tous les événements",
+              "ar": "إظهار كل الفعاليات",
+              "pt": "Mostrar todos os eventos",
+              "ru": "Показать все события",
+              "de": "Alle Veranstaltungen anzeigen",
+              "ja": "すべてのイベントを表示",
+              "tr": "Tüm etkinlikleri göster",
+              "vi": "Hiện tất cả sự kiện",
+              "it": "Mostra tutti gli eventi",
+              "fa": "نمایش همهٔ رویدادها",
+              "pl": "Pokaż wszystkie wydarzenia",
+              "uk": "Показати всі події",
+              "nl": "Alle evenementen tonen",
+              "sv": "Visa alla evenemang",
+              "cs": "Zobrazit všechny události",
+              "el": "Εμφάνιση όλων των εκδηλώσεων"
+            },
+            "icon": "public",
+            "action": {
+              "fn": "clearFocus",
+              "args": { "table": "events" }
+            }
+          },
+          {
+            "type": "map",
+            "table": "events",
+            "latColumn": "lat",
+            "lonColumn": "lon",
+            "labelColumn": "title",
+            "fillPhone": true,
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

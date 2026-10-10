@@ -1,0 +1,58 @@
+{
+  "tables": [
+    {
+      "name": "records",
+      "label": "Records",
+      "icon": "table_rows",
+      "description": "The dataset this dashboard reads: one row per zone \u00d7 scenario with the numeric measures. Import your own CSV with the same shape (zone, scenario, numbers) \u2014 everything below follows the data.",
+      "provenance": {
+        "source": "Imported CSV (importCsv action, Data tab)"
+      },
+      "source": {
+        "type": "importCsv"
+      }
+    },
+    {
+      "name": "zone_stats",
+      "label": "Zone totals (for the map)",
+      "icon": "map",
+      "description": "Per-zone aggregates the map paints \u2014 recalculated from the records with one tap, cached as rows."
+    },
+    {
+      "name": "slices",
+      "label": "Saved views",
+      "icon": "star",
+      "description": "Named report configurations saved from the chart's bookmark \u2014 your slices."
+    },
+    {
+      "name": "panels",
+      "label": "Report panels",
+      "icon": "dashboard_customize",
+      "description": "The report layout as rows: one row per panel. Add a row to add a panel, hide one to remove it, drag the divider between panels to resize \u2014 and each panel switches independently between the block kinds (chart, table, map, delta, KPI tiles, explorer, notes)."
+    },
+    {
+      "name": "notes",
+      "label": "Notes",
+      "icon": "sticky_note_2",
+      "description": "Free-text notes shown in a Notes panel \u2014 one editable Markdown row that travels with the report."
+    },
+    {
+      "name": "dataconfig",
+      "label": "Data controls (saved)",
+      "icon": "tune",
+      "description": "The databoard\u2019s saved Data controls \u2014 one row per dataset holding its filters, grouping and sort so they survive restarts and travel with backups/share codes."
+    },
+    {
+      "name": "boardviews",
+      "label": "Saved board views",
+      "icon": "bookmarks",
+      "description": "Named snapshots of the whole databoard's arrangement \u2014 every panel's kind/size/order/visibility/template, plus the shared data controls \u2014 saved from the bookmark beside the template picker. Recall re-applies both. Different from a chart's own saved slices (one report's filters) and from the fixed Overview/Compare/Explore/Geographic templates (a predefined panel set)."
+    },
+    {
+      "name": "controlblocks",
+      "label": "Control blocks",
+      "icon": "tune",
+      "description": "User-added data-controls blocks on the dock's \"Add control\" palette (filter/group by/sort/range/segment/search) \u2014 parity with how panels are user-added on the Controls screen. Starts empty; the dock's built-in filter/group/sort stay as the always-on starter set."
+    }
+  ]
+}

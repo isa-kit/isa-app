@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    { "id": "t_tasks",    "label": "taskly · tasks",      "x": 40,  "y": 40 },
+    { "id": "t_profiles", "label": "taskly · profiles",   "x": 250, "y": 40 },
+    { "id": "t_notes",    "label": "taskly · notes",      "x": 40,  "y": 150 },
+    { "id": "f_items",    "label": "fridge · items",      "x": 470, "y": 40 },
+    { "id": "f_recipes",  "label": "fridge · recipes",    "x": 660, "y": 40 },
+    { "id": "b_stations", "label": "bikeshare · stations","x": 470, "y": 160 },
+    { "id": "d_nodes",    "label": "diagram · nodes",     "x": 660, "y": 170 },
+    { "id": "d_edges",    "label": "diagram · edges",     "x": 660, "y": 290 },
+    { "id": "c_pantry",   "label": "cooking · pantry",    "x": 40,  "y": 300 },
+    { "id": "c_recipes",  "label": "cooking · recipes",   "x": 250, "y": 300 },
+    { "id": "n_notes",    "label": "notes · notes",       "x": 470, "y": 300 },
+    { "id": "w_units",      "label": "workboard · units",      "x": 40,  "y": 420 },
+    { "id": "w_tasks",      "label": "workboard · tasks",      "x": 250, "y": 420 },
+    { "id": "w_milestones", "label": "workboard · milestones", "x": 470, "y": 420 },
+    { "id": "w_decisions",  "label": "workboard · decisions",  "x": 660, "y": 420 },
+    { "id": "w_links",      "label": "workboard · links",      "x": 850, "y": 420 },
+    { "id": "j_parts",      "label": "neujour · entry_parts",  "x": 40,  "y": 540 },
+    { "id": "j_entries",    "label": "neujour · entries",      "x": 250, "y": 540 },
+    { "id": "j_people",     "label": "neujour · people",       "x": 470, "y": 540 },
+    { "id": "ev_events",    "label": "events_app · events",    "x": 660, "y": 540 },
+    { "id": "ev_tags",      "label": "events_app · tags",      "x": 850, "y": 540 }
+  ],
+  "edges": [
+    { "id": "e_sub",      "from": "t_tasks",  "to": "t_tasks",    "label": "parentId (subtasks)" },
+    { "id": "e_profiles", "from": "t_tasks",  "to": "t_profiles", "label": "profiles (multi)" },
+    { "id": "e_from",     "from": "d_edges",  "to": "d_nodes",    "label": "from" },
+    { "id": "e_to",       "from": "d_edges",  "to": "d_nodes",    "label": "to" },
+    { "id": "e_fridge",   "from": "f_items",  "to": "f_recipes",  "label": "SLM suggests" },
+    { "id": "e_cook",     "from": "c_pantry", "to": "c_recipes",  "label": "SLM suggests" },
+    { "id": "e_w_ms",     "from": "w_tasks",     "to": "w_milestones", "label": "milestone" },
+    { "id": "e_w_units",  "from": "w_tasks",     "to": "w_units",      "label": "units (multi)" },
+    { "id": "e_w_parent", "from": "w_tasks",     "to": "w_tasks",      "label": "parent (subtasks)" },
+    { "id": "e_w_rel",    "from": "w_decisions", "to": "w_tasks",      "label": "related (multi)" },
+    { "id": "e_w_from",   "from": "w_links",     "to": "w_tasks",      "label": "from" },
+    { "id": "e_w_to",     "from": "w_links",     "to": "w_tasks",      "label": "to" },
+    { "id": "e_j_entry",  "from": "j_parts",     "to": "j_entries",    "label": "entry (ordered parts)" },
+    { "id": "e_j_people", "from": "j_entries",   "to": "j_people",     "label": "people (multi)" },
+    { "id": "e_ev_tags",  "from": "ev_events",   "to": "ev_tags",      "label": "tags (multi)" }
+  ]
+}

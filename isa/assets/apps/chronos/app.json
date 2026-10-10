@@ -1,0 +1,14 @@
+{
+  "id": "chronos",
+  "name": "Chronos — history timelapse",
+  "category": "Maps & cities",
+  "description": "History on a map: era borders, a timelapse, and replayed battles.",
+  "icon": "history",
+  "color": "#7A4B3A",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_chronos"
+  },
+  "seedVersion": "2026-08-17.1-cannae-v1.l10n-int-0903",
+  "devOnly": false
+}

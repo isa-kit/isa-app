@@ -1,0 +1,18 @@
+{
+  "profiles": [
+    { "name": "name", "type": "text", "label": "Name", "required": true },
+    { "name": "age", "type": "integer", "label": "Age" },
+    { "name": "bio", "type": "text", "label": "Bio" },
+    { "name": "interests", "type": "ref", "refTable": "interests", "multi": true, "label": "Interests" },
+    { "name": "photo", "type": "text", "label": "Photo" }
+  ],
+  "interests": [
+    { "name": "name", "type": "text", "label": "Name", "required": true }
+  ],
+  "matches": [
+    { "name": "a", "type": "ref", "refTable": "profiles", "label": "Person A" },
+    { "name": "b", "type": "ref", "refTable": "profiles", "label": "Person B" },
+    { "name": "status", "type": "enum", "label": "Status", "options": ["liked", "matched", "passed"], "default": "liked" },
+    { "name": "note", "type": "text", "label": "Note" }
+  ]
+}
