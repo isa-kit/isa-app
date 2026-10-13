@@ -1,0 +1,633 @@
+{
+  "app": {
+    "languages": ["en", "ko", "zh", "hi", "es", "fr", "ar", "pt", "ru", "de", "ja", "tr", "vi", "it", "fa", "pl", "uk", "nl", "sv", "cs", "el"],
+    "translatable": true,
+    "appDataTools": true,
+    "intro": {
+      "purpose": {
+        "en": "Boxes tracks what you packed in which box, so you can find it again when you unpack.",
+        "ko": "Boxes는 어떤 상자에 무엇을 넣었는지 추적해, 짐을 풀 때 다시 찾을 수 있게 해줍니다.",
+        "zh": "Boxes 记录你把什么装进了哪个箱子，方便拆箱时再次找到它。",
+        "hi": "Boxes यह ट्रैक करता है कि आपने किस बॉक्स में क्या पैक किया, ताकि खोलते समय आप उसे फिर से ढूंढ सकें।",
+        "es": "Boxes registra qué guardaste en cada caja, para que puedas volver a encontrarlo al desempacar.",
+        "fr": "Boxes garde la trace de ce que vous avez rangé dans chaque carton, pour le retrouver facilement au déballage.",
+        "ar": "يتتبع Boxes ما قمت بتعبئته في كل صندوق، حتى تتمكن من إيجاده مجددًا عند فتح الصناديق.",
+        "pt": "O Boxes rastreia o que você embalou em cada caixa, para você encontrar de novo ao desempacotar.",
+        "ru": "Boxes отслеживает, что вы упаковали в какую коробку, чтобы вы могли снова найти это при распаковке.",
+        "de": "Boxes verfolgt, was du in welchem Karton verstaut hast, damit du es beim Auspacken wiederfindest.",
+        "ja": "Boxesはどの箱に何を詰めたかを記録し、荷解き時に再び見つけられるようにします。",
+        "tr": "Boxes, hangi kutuya ne paketlediğinizi izler, böylece açarken tekrar bulabilirsiniz.",
+        "vi": "Boxes theo dõi những gì bạn đã đóng gói vào từng thùng, để bạn có thể tìm lại khi mở ra.",
+        "it": "Boxes tiene traccia di cosa hai messo in quale scatola, così puoi ritrovarlo quando disfi i bagagli.",
+        "fa": "Boxes پیگیری می‌کند که در هر جعبه چه چیزی بسته‌بندی کرده‌اید تا هنگام باز کردن دوباره آن را پیدا کنید.",
+        "pl": "Boxes śledzi, co spakowałeś do którego pudła, abyś mógł to ponownie znaleźć podczas rozpakowywania.",
+        "uk": "Boxes відстежує, що ви спакували в яку коробку, щоб ви могли знову знайти це під час розпакування.",
+        "nl": "Boxes houdt bij wat je in welke doos hebt gepakt, zodat je het bij het uitpakken weer terugvindt.",
+        "sv": "Boxes håller reda på vad du packat i vilken låda, så du kan hitta det igen när du packar upp.",
+        "cs": "Boxes sleduje, co jste zabalili do které krabice, abyste to při vybalování zase snadno našli.",
+        "el": "Το Boxes καταγράφει τι πακετάρατε σε ποιο κουτί, ώστε να το ξαναβρείτε όταν ξεπακετάρετε."
+      },
+      "actions": [
+        {
+          "label": {
+            "en": "New box",
+            "ko": "새 상자",
+            "zh": "新建箱子",
+            "hi": "नया बॉक्स",
+            "es": "Nueva caja",
+            "fr": "Nouveau carton",
+            "ar": "صندوق جديد",
+            "pt": "Nova caixa",
+            "ru": "Новая коробка",
+            "de": "Neuer Karton",
+            "ja": "新しい箱",
+            "tr": "Yeni kutu",
+            "vi": "Thùng mới",
+            "it": "Nuova scatola",
+            "fa": "جعبه جدید",
+            "pl": "Nowe pudło",
+            "uk": "Нова коробка",
+            "nl": "Nieuwe doos",
+            "sv": "Ny låda",
+            "cs": "Nová krabice",
+            "el": "Νέο κουτί"
+          },
+          "icon": "add",
+          "action": {
+            "fn": "addRow",
+            "args": {
+              "table": "boxes",
+              "values": {
+                "room": "Other",
+                "status": "Pending packing",
+                "fragile": false
+              }
+            }
+          }
+        }
+      ],
+      "tour": [
+        {
+          "screen": "boxes",
+          "label": "Boxes",
+          "note": "Every box you've packed, by room and status."
+        },
+        {
+          "screen": "items",
+          "label": "Items",
+          "note": "Every item, searchable across all boxes."
+        }
+      ]
+    },
+    "title": {
+      "en": "Boxes",
+      "ko": "상자",
+      "zh": "箱子",
+      "hi": "बॉक्स",
+      "es": "Cajas",
+      "fr": "Cartons",
+      "ar": "الصناديق",
+      "pt": "Caixas",
+      "ru": "Коробки",
+      "de": "Kartons",
+      "ja": "箱",
+      "tr": "Kutular",
+      "vi": "Thùng",
+      "it": "Scatole",
+      "fa": "جعبه‌ها",
+      "pl": "Pudła",
+      "uk": "Коробки",
+      "nl": "Dozen",
+      "sv": "Lådor",
+      "cs": "Krabice",
+      "el": "Κουτιά"
+    },
+    "primaryColor": "#455A64",
+    "theme": "material"
+  },
+  "nav": [
+    {
+      "id": "boxes",
+      "label": {
+        "en": "Boxes",
+        "ko": "상자",
+        "zh": "箱子",
+        "hi": "बॉक्स",
+        "es": "Cajas",
+        "fr": "Cartons",
+        "ar": "الصناديق",
+        "pt": "Caixas",
+        "ru": "Коробки",
+        "de": "Kartons",
+        "ja": "箱",
+        "tr": "Kutular",
+        "vi": "Thùng",
+        "it": "Scatole",
+        "fa": "جعبه‌ها",
+        "pl": "Pudła",
+        "uk": "Коробки",
+        "nl": "Dozen",
+        "sv": "Lådor",
+        "cs": "Krabice",
+        "el": "Κουτιά"
+      },
+      "icon": "inventory_2",
+      "screen": "boxes"
+    },
+    {
+      "id": "items",
+      "label": {
+        "en": "Items",
+        "ko": "물품",
+        "zh": "物品",
+        "hi": "वस्तुएँ",
+        "es": "Artículos",
+        "fr": "Objets",
+        "ar": "العناصر",
+        "pt": "Itens",
+        "ru": "Предметы",
+        "de": "Gegenstände",
+        "ja": "アイテム",
+        "tr": "Öğeler",
+        "vi": "Đồ vật",
+        "it": "Oggetti",
+        "fa": "اقلام",
+        "pl": "Przedmioty",
+        "uk": "Предмети",
+        "nl": "Items",
+        "sv": "Föremål",
+        "cs": "Položky",
+        "el": "Αντικείμενα"
+      },
+      "icon": "checklist",
+      "screen": "items"
+    }
+  ],
+  "screens": {
+    "boxes": {
+      "title": {
+        "en": "Boxes",
+        "ko": "상자",
+        "zh": "箱子",
+        "hi": "बॉक्स",
+        "es": "Cajas",
+        "fr": "Cartons",
+        "ar": "الصناديق",
+        "pt": "Caixas",
+        "ru": "Коробки",
+        "de": "Kartons",
+        "ja": "箱",
+        "tr": "Kutular",
+        "vi": "Thùng",
+        "it": "Scatole",
+        "fa": "جعبه‌ها",
+        "pl": "Pudła",
+        "uk": "Коробки",
+        "nl": "Dozen",
+        "sv": "Lådor",
+        "cs": "Krabice",
+        "el": "Κουτιά"
+      },
+      "body": {
+        "type": "column",
+        "padding": 0,
+        "children": [
+          {
+            "type": "cards",
+            "table": "boxes",
+            "search": true,
+            "minCardWidth": 2000,
+            "example": {
+              "ids": ["b1", "b2", "b3", "b4", "b5", "b6", "b7", "b8"],
+              "label": {
+                "en": "Examples",
+                "ko": "예시",
+                "zh": "示例",
+                "hi": "उदाहरण",
+                "es": "Ejemplos",
+                "fr": "Exemples",
+                "ar": "أمثلة",
+                "pt": "Exemplos",
+                "ru": "Примеры",
+                "de": "Beispiele",
+                "ja": "例",
+                "tr": "Örnekler",
+                "vi": "Ví dụ",
+                "it": "Esempi",
+                "fa": "نمونه‌ها",
+                "pl": "Przykłady",
+                "uk": "Приклади",
+                "nl": "Voorbeelden",
+                "sv": "Exempel",
+                "cs": "Příklady",
+                "el": "Παραδείγματα"
+              },
+              "chipLabel": {
+                "en": "Example",
+                "ko": "예시",
+                "zh": "示例",
+                "hi": "उदाहरण",
+                "es": "Ejemplo",
+                "fr": "Exemple",
+                "ar": "مثال",
+                "pt": "Exemplo",
+                "ru": "Пример",
+                "de": "Beispiel",
+                "ja": "例",
+                "tr": "Örnek",
+                "vi": "Ví dụ",
+                "it": "Esempio",
+                "fa": "نمونه",
+                "pl": "Przykład",
+                "uk": "Приклад",
+                "nl": "Voorbeeld",
+                "sv": "Exempel",
+                "cs": "Příklad",
+                "el": "Παράδειγμα"
+              },
+              "hideLabel": {
+                "en": "Hide",
+                "ko": "숨기기",
+                "zh": "隐藏",
+                "hi": "छिपाएं",
+                "es": "Ocultar",
+                "fr": "Masquer",
+                "ar": "إخفاء",
+                "pt": "Ocultar",
+                "ru": "Скрыть",
+                "de": "Ausblenden",
+                "ja": "非表示",
+                "tr": "Gizle",
+                "vi": "Ẩn",
+                "it": "Nascondi",
+                "fa": "پنهان کردن",
+                "pl": "Ukryj",
+                "uk": "Приховати",
+                "nl": "Verbergen",
+                "sv": "Dölj",
+                "cs": "Skrýt",
+                "el": "Απόκρυψη"
+              },
+              "hiddenFromSetting": "boxesExamplesHidden"
+            },
+            "toolbarActions": [
+              {
+                "icon": "add",
+                "tooltip": "New box",
+                "position": "trailing",
+                "action": {
+                  "fn": "addRow",
+                  "args": {
+                    "table": "boxes",
+                    "values": {
+                      "room": "Other",
+                      "status": "Pending packing",
+                      "fragile": false
+                    }
+                  }
+                }
+              }
+            ],
+            "emptyIcon": "inventory_2",
+            "emptyTitle": {
+              "en": "No boxes yet",
+              "ko": "아직 상자가 없습니다",
+              "zh": "暂无箱子",
+              "hi": "अभी कोई बॉक्स नहीं",
+              "es": "Aún no hay cajas",
+              "fr": "Aucun carton pour l'instant",
+              "ar": "لا توجد صناديق بعد",
+              "pt": "Nenhuma caixa ainda",
+              "ru": "Пока нет коробок",
+              "de": "Noch keine Kartons",
+              "ja": "まだ箱がありません",
+              "tr": "Henüz kutu yok",
+              "vi": "Chưa có thùng nào",
+              "it": "Nessuna scatola ancora",
+              "fa": "هنوز جعبه‌ای نیست",
+              "pl": "Brak pudeł",
+              "uk": "Ще немає коробок",
+              "nl": "Nog geen dozen",
+              "sv": "Inga lådor än",
+              "cs": "Zatím žádné krabice",
+              "el": "Δεν υπάρχουν κουτιά ακόμα"
+            },
+            "emptyText": {
+              "en": "Add your first box — give it a number, a room, and a label so it's easy to find on the other end.",
+              "ko": "첫 상자를 추가하세요 — 번호, 방, 라벨을 지정하면 도착 후 찾기 쉬워집니다.",
+              "zh": "添加你的第一个箱子——给它编号、房间和标签，方便到达后查找。",
+              "hi": "अपना पहला बॉक्स जोड़ें — इसे एक नंबर, एक कमरा और एक लेबल दें ताकि दूसरे छोर पर इसे ढूंढना आसान हो।",
+              "es": "Agrega tu primera caja: ponle un número, una habitación y una etiqueta para encontrarla fácilmente al llegar.",
+              "fr": "Ajoutez votre premier carton — donnez-lui un numéro, une pièce et une étiquette pour le retrouver facilement à l'arrivée.",
+              "ar": "أضف صندوقك الأول — أعطه رقمًا وغرفة وتسمية ليسهل إيجاده لاحقًا.",
+              "pt": "Adicione sua primeira caixa — dê a ela um número, um cômodo e um rótulo para facilitar achá-la depois.",
+              "ru": "Добавьте первую коробку — присвойте ей номер, комнату и метку, чтобы легко найти её позже.",
+              "de": "Füge deinen ersten Karton hinzu – gib ihm eine Nummer, einen Raum und ein Etikett, damit du ihn später leicht findest.",
+              "ja": "最初の箱を追加しましょう。番号、部屋、ラベルを付けておくと、後で見つけやすくなります。",
+              "tr": "İlk kutunuzu ekleyin — diğer uçta kolayca bulmak için bir numara, bir oda ve bir etiket verin.",
+              "vi": "Thêm thùng đầu tiên của bạn — đặt số, phòng và nhãn để dễ tìm khi đến nơi.",
+              "it": "Aggiungi la tua prima scatola: assegnale un numero, una stanza e un'etichetta così è facile ritrovarla dall'altra parte.",
+              "fa": "اولین جعبه خود را اضافه کنید — به آن یک شماره، یک اتاق و یک برچسب بدهید تا در مقصد راحت پیدا شود.",
+              "pl": "Dodaj swoje pierwsze pudło — nadaj mu numer, pokój i etykietę, aby łatwo je znaleźć po drugiej stronie.",
+              "uk": "Додайте свою першу коробку — надайте їй номер, кімнату та мітку, щоб легко знайти її потім.",
+              "nl": "Voeg je eerste doos toe — geef hem een nummer, een kamer en een label zodat je hem later makkelijk terugvindt.",
+              "sv": "Lägg till din första låda — ge den ett nummer, ett rum och en etikett så att den är lätt att hitta senare.",
+              "cs": "Přidejte svou první krabici — dejte jí číslo, místnost a štítek, abyste ji na druhém konci snadno našli.",
+              "el": "Προσθέστε το πρώτο σας κουτί — δώστε του έναν αριθμό, ένα δωμάτιο και μια ετικέτα ώστε να το βρίσκετε εύκολα."
+            },
+            "emptyAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "boxes",
+                "values": {
+                  "room": "Other",
+                  "status": "Pending packing",
+                  "fragile": false
+                }
+              }
+            },
+            "emptyActionLabel": {
+              "en": "New box",
+              "ko": "새 상자",
+              "zh": "新建箱子",
+              "hi": "नया बॉक्स",
+              "es": "Nueva caja",
+              "fr": "Nouveau carton",
+              "ar": "صندوق جديد",
+              "pt": "Nova caixa",
+              "ru": "Новая коробка",
+              "de": "Neuer Karton",
+              "ja": "新しい箱",
+              "tr": "Yeni kutu",
+              "vi": "Thùng mới",
+              "it": "Nuova scatola",
+              "fa": "جعبه جدید",
+              "pl": "Nowe pudło",
+              "uk": "Нова коробка",
+              "nl": "Nieuwe doos",
+              "sv": "Ny låda",
+              "cs": "Nová krabice",
+              "el": "Νέο κουτί"
+            },
+            "filterable": true,
+            "sort": {
+              "column": "numberId",
+              "dir": "asc"
+            },
+            "title": "numberId",
+            "subtitle": "label",
+            "tags": [
+              {
+                "column": "status",
+                "colors": {
+                  "Pending packing": "gray",
+                  "Ongoing": "coral",
+                  "Packed": "amber",
+                  "Loaded": "blue",
+                  "Delivered": "green",
+                  "Unpacked": "teal"
+                }
+              }
+            ],
+            "expandable": false,
+            "open": "Open box",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "items": {
+      "title": {
+        "en": "Items",
+        "ko": "물품",
+        "zh": "物品",
+        "hi": "वस्तुएँ",
+        "es": "Artículos",
+        "fr": "Objets",
+        "ar": "العناصر",
+        "pt": "Itens",
+        "ru": "Предметы",
+        "de": "Gegenstände",
+        "ja": "アイテム",
+        "tr": "Öğeler",
+        "vi": "Đồ vật",
+        "it": "Oggetti",
+        "fa": "اقلام",
+        "pl": "Przedmioty",
+        "uk": "Предмети",
+        "nl": "Items",
+        "sv": "Föremål",
+        "cs": "Položky",
+        "el": "Αντικείμενα"
+      },
+      "body": {
+        "type": "column",
+        "padding": 0,
+        "children": [
+          {
+            "type": "cards",
+            "table": "items",
+            "search": true,
+            "toolbarActions": [
+              {
+                "icon": "add",
+                "tooltip": "New item",
+                "position": "trailing",
+                "action": {
+                  "fn": "addRow",
+                  "args": {
+                    "table": "items",
+                    "values": {
+                      "category": "Misc",
+                      "qty": 1
+                    }
+                  }
+                }
+              }
+            ],
+            "emptyIcon": "checklist",
+            "example": {
+              "ids": ["i1", "i2", "i3", "i4", "i5", "i6", "i7", "i8", "i9", "i10", "i11"],
+              "label": {
+                "en": "Examples",
+                "ko": "예시",
+                "zh": "示例",
+                "hi": "उदाहरण",
+                "es": "Ejemplos",
+                "fr": "Exemples",
+                "ar": "أمثلة",
+                "pt": "Exemplos",
+                "ru": "Примеры",
+                "de": "Beispiele",
+                "ja": "例",
+                "tr": "Örnekler",
+                "vi": "Ví dụ",
+                "it": "Esempi",
+                "fa": "نمونه‌ها",
+                "pl": "Przykłady",
+                "uk": "Приклади",
+                "nl": "Voorbeelden",
+                "sv": "Exempel",
+                "cs": "Příklady",
+                "el": "Παραδείγματα"
+              },
+              "chipLabel": {
+                "en": "Example",
+                "ko": "예시",
+                "zh": "示例",
+                "hi": "उदाहरण",
+                "es": "Ejemplo",
+                "fr": "Exemple",
+                "ar": "مثال",
+                "pt": "Exemplo",
+                "ru": "Пример",
+                "de": "Beispiel",
+                "ja": "例",
+                "tr": "Örnek",
+                "vi": "Ví dụ",
+                "it": "Esempio",
+                "fa": "نمونه",
+                "pl": "Przykład",
+                "uk": "Приклад",
+                "nl": "Voorbeeld",
+                "sv": "Exempel",
+                "cs": "Příklad",
+                "el": "Παράδειγμα"
+              },
+              "hideLabel": {
+                "en": "Hide",
+                "ko": "숨기기",
+                "zh": "隐藏",
+                "hi": "छिपाएं",
+                "es": "Ocultar",
+                "fr": "Masquer",
+                "ar": "إخفاء",
+                "pt": "Ocultar",
+                "ru": "Скрыть",
+                "de": "Ausblenden",
+                "ja": "非表示",
+                "tr": "Gizle",
+                "vi": "Ẩn",
+                "it": "Nascondi",
+                "fa": "پنهان کردن",
+                "pl": "Ukryj",
+                "uk": "Приховати",
+                "nl": "Verbergen",
+                "sv": "Dölj",
+                "cs": "Skrýt",
+                "el": "Απόκρυψη"
+              },
+              "hiddenFromSetting": "boxesExamplesHidden"
+            },
+            "emptyTitle": {
+              "en": "No items logged yet",
+              "ko": "아직 기록된 물품이 없습니다",
+              "zh": "尚未记录任何物品",
+              "hi": "अभी तक कोई वस्तु दर्ज नहीं",
+              "es": "Aún no hay artículos registrados",
+              "fr": "Aucun objet enregistré pour l'instant",
+              "ar": "لم يتم تسجيل أي عناصر بعد",
+              "pt": "Nenhum item registrado ainda",
+              "ru": "Пока нет учтённых предметов",
+              "de": "Noch keine Gegenstände erfasst",
+              "ja": "まだアイテムが記録されていません",
+              "tr": "Henüz kayıtlı öğe yok",
+              "vi": "Chưa có đồ vật nào được ghi lại",
+              "it": "Nessun oggetto registrato ancora",
+              "fa": "هنوز موردی ثبت نشده",
+              "pl": "Brak zarejestrowanych przedmiotów",
+              "uk": "Ще немає зареєстрованих предметів",
+              "nl": "Nog geen items geregistreerd",
+              "sv": "Inga föremål registrerade än",
+              "cs": "Zatím nejsou zaznamenány žádné položky",
+              "el": "Δεν έχουν καταγραφεί αντικείμενα ακόμα"
+            },
+            "emptyText": {
+              "en": "Add items as you pack each box — then search here anytime to find which box number something is in.",
+              "ko": "각 상자를 포장하면서 물품을 추가하세요 — 나중에 여기서 검색하면 물건이 몇 번 상자에 있는지 찾을 수 있습니다.",
+              "zh": "打包每个箱子时添加物品——之后随时在此搜索，即可找到某物在哪个箱子编号中。",
+              "hi": "हर बॉक्स पैक करते समय वस्तुएँ जोड़ें — फिर यहाँ कभी भी खोजकर पता करें कि कोई वस्तु किस बॉक्स नंबर में है।",
+              "es": "Agrega artículos mientras empacas cada caja; luego busca aquí en cualquier momento para saber en qué número de caja está algo.",
+              "fr": "Ajoutez des objets au fur et à mesure que vous remplissez chaque carton — puis recherchez ici à tout moment pour savoir dans quel numéro de carton se trouve quelque chose.",
+              "ar": "أضف العناصر أثناء تعبئة كل صندوق — ثم ابحث هنا في أي وقت لمعرفة رقم الصندوق الذي يحتوي شيئًا ما.",
+              "pt": "Adicione itens conforme embala cada caixa — depois pesquise aqui a qualquer momento para saber em qual número de caixa algo está.",
+              "ru": "Добавляйте предметы по мере упаковки каждой коробки — потом в любой момент найдите здесь, в какой коробке что лежит.",
+              "de": "Füge Gegenstände hinzu, während du jeden Karton packst – such dann hier jederzeit, um herauszufinden, in welcher Kartonnummer sich etwas befindet.",
+              "ja": "各箱を詰めるたびにアイテムを追加しましょう。あとでここから検索すれば、どの箱番号に何が入っているか分かります。",
+              "tr": "Her kutuyu paketlerken öğeler ekleyin — sonra herhangi bir şeyin hangi kutu numarasında olduğunu bulmak için buradan arayın.",
+              "vi": "Thêm đồ vật khi bạn đóng gói từng thùng — sau đó tìm kiếm tại đây bất cứ lúc nào để biết một món đồ nằm ở thùng số mấy.",
+              "it": "Aggiungi oggetti man mano che imballi ogni scatola — poi cerca qui in qualsiasi momento per trovare in quale numero di scatola si trova qualcosa.",
+              "fa": "هنگام بسته‌بندی هر جعبه اقلام را اضافه کنید — سپس هر زمان اینجا جستجو کنید تا بفهمید چیزی در کدام شماره جعبه است.",
+              "pl": "Dodawaj przedmioty podczas pakowania każdego pudła — a potem wyszukaj tutaj w dowolnym momencie, w którym numerze pudła coś się znajduje.",
+              "uk": "Додавайте предмети під час пакування кожної коробки — потім у будь-який момент шукайте тут, у якій коробці щось знаходиться.",
+              "nl": "Voeg items toe terwijl je elke doos inpakt — zoek hier daarna altijd op om te zien in welk doosnummer iets zit.",
+              "sv": "Lägg till föremål när du packar varje låda — sök sedan här när som helst för att hitta i vilken lådnummer något finns.",
+              "cs": "Přidávejte položky při balení každé krabice — pak zde kdykoli vyhledejte, ve kterém čísle krabice se něco nachází.",
+              "el": "Προσθέστε αντικείμενα καθώς πακετάρετε κάθε κουτί — μετά αναζητήστε εδώ οποτεδήποτε για να βρείτε σε ποιο κουτί βρίσκεται κάτι."
+            },
+            "emptyAction": {
+              "fn": "addRow",
+              "args": {
+                "table": "items",
+                "values": {
+                  "category": "Misc",
+                  "qty": 1
+                }
+              }
+            },
+            "emptyActionLabel": {
+              "en": "New item",
+              "ko": "새 물품",
+              "zh": "新建物品",
+              "hi": "नई वस्तु",
+              "es": "Nuevo artículo",
+              "fr": "Nouvel objet",
+              "ar": "عنصر جديد",
+              "pt": "Novo item",
+              "ru": "Новый предмет",
+              "de": "Neuer Gegenstand",
+              "ja": "新しいアイテム",
+              "tr": "Yeni öğe",
+              "vi": "Đồ vật mới",
+              "it": "Nuovo oggetto",
+              "fa": "مورد جدید",
+              "pl": "Nowy przedmiot",
+              "uk": "Новий предмет",
+              "nl": "Nieuw item",
+              "sv": "Nytt föremål",
+              "cs": "Nová položka",
+              "el": "Νέο αντικείμενο"
+            },
+            "filterable": true,
+            "sort": {
+              "column": "boxRef",
+              "dir": "asc"
+            },
+            "title": "name",
+            "subtitle": "boxRef",
+            "tags": [
+              {
+                "column": "category",
+                "colors": {
+                  "Kitchen": "coral",
+                  "Clothes": "purple",
+                  "Books": "amber",
+                  "Electronics": "blue",
+                  "Docs": "gray",
+                  "Misc": "gray"
+                }
+              }
+            ],
+            "expandable": false,
+            "open": "Edit item",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

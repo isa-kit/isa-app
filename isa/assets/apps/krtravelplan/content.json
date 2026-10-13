@@ -1,0 +1,38 @@
+{
+  "entries": [
+    { "id": "trip_root", "kind": "trip", "title": "Korea trip plan",
+      "body": "Example trip -- replace with your own, or edit this one. Schedule holds dated plan items; Research holds notes, links, and candidate places gathered while deciding.",
+      "updatedAt": "2026-08-13T09:00:00.000" },
+
+    { "id": "mem_jc", "kind": "member", "title": "Ana", "initials": "A",
+      "color": "teal", "emoji": "🌸", "updatedAt": "2026-08-13T09:00:00.000" },
+    { "id": "mem_sam", "kind": "member", "title": "Sam", "initials": "S",
+      "color": "blue", "emoji": "🥾", "updatedAt": "2026-08-13T09:00:00.000" },
+
+    { "id": "sched_1", "kind": "schedule", "title": "Seoul food tour (example)",
+      "date": "2026-08-15", "timeLabel": "18:00", "place": "Myeongdong",
+      "status": "confirmed", "lat": 37.5636, "lon": 126.9834, "author": "mem_jc",
+      "updatedAt": "2026-08-13T09:10:00.000" },
+    { "id": "sched_2", "kind": "schedule", "title": "Jeju hike (example)",
+      "date": "2026-09-10", "timeLabel": "09:00", "place": "Hallasan",
+      "status": "idea", "assignee": "mem_sam", "lat": 33.3617, "lon": 126.5292,
+      "author": "mem_sam", "updatedAt": "2026-08-13T09:15:00.000" },
+
+    { "id": "res_1", "kind": "research", "title": "KTX vs. intercity bus to Busan (example)",
+      "body": "Comparing options for the Seoul-Busan leg.", "category": "route",
+      "rating": "top pick", "url": "https://www.letskorail.com/", "author": "mem_jc",
+      "updatedAt": "2026-08-13T09:20:00.000" },
+    { "id": "res_2", "kind": "research", "title": "Guesthouse near Hongdae (example)",
+      "body": "Good reviews, walk to the subway.", "category": "lodging",
+      "rating": "good", "place": "Hongdae", "lat": 37.5563, "lon": 126.9236,
+      "author": "mem_sam", "updatedAt": "2026-08-13T09:25:00.000" }
+  ],
+  "relations": [
+    { "id": "rel_1", "fromId": "trip_root", "toId": "mem_jc", "type": "contains" },
+    { "id": "rel_2", "fromId": "trip_root", "toId": "mem_sam", "type": "contains" },
+    { "id": "rel_3", "fromId": "trip_root", "toId": "sched_1", "type": "contains" },
+    { "id": "rel_4", "fromId": "trip_root", "toId": "sched_2", "type": "contains" },
+    { "id": "rel_5", "fromId": "trip_root", "toId": "res_1", "type": "contains" },
+    { "id": "rel_6", "fromId": "trip_root", "toId": "res_2", "type": "contains" }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "tables": [
+    {
+      "name": "picks",
+      "label": "Picked muscles",
+      "icon": "check_circle",
+      "description": "The muscles you have selected on the body right now. Written by the body view and read back by it, so the figure and this list can never disagree."
+    },
+    {
+      "name": "muscles",
+      "label": "Muscles",
+      "icon": "monitor_heart",
+      "description": "The muscle taxonomy the body model uses — id, name and body region. Reference data, not yours to edit."
+    },
+    {
+      "name": "moves",
+      "label": "Moves",
+      "icon": "fitness_center",
+      "description": "The exercise, stretch and mobility catalogue: what each move targets, how to do it, and what it needs."
+    },
+    {
+      "name": "results",
+      "label": "Matches",
+      "icon": "sort",
+      "description": "The ranked matches for your current pick. Rebuilt every time you change the pick or a filter."
+    },
+    {
+      "name": "prefs",
+      "label": "View",
+      "icon": "tune",
+      "hidden": true,
+      "description": "Which sort and which move types the results screen is showing."
+    }
+  ]
+}

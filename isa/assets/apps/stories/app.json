@@ -1,0 +1,16 @@
+{
+  "id": "stories",
+  "name": "Stories",
+  "category": "Productivity",
+  "description": "Alpha: novels, cartoons and films as stories — scene scripts, a rough storyboard of sketched panels, and notes on characters, places and beats.",
+  "icon": "auto_stories",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_stories"
+  },
+  "seedVersion": "2026-10-12.stories.1",
+  "seedContent": "initial-only",
+  "durableSettings": [
+    "storiesExamplesHidden"
+  ]
+}

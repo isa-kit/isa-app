@@ -1,0 +1,12 @@
+{
+  "id": "sheets",
+  "name": "Sheets",
+  "category": "Productivity",
+  "description": "Spreadsheets as files.",
+  "icon": "table_chart",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_sheets"
+  },
+  "seedVersion": "2026-07-20.files.l10n-int-0903"
+}

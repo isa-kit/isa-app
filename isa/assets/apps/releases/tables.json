@@ -1,0 +1,100 @@
+{
+  "tables": [
+    {
+      "name": "prod",
+      "label": "Production",
+      "icon": "public",
+      "description": "The build the PRODUCTION site is serving right now. Fetched live from devisant.com/isa/build_info.json on every Refresh (mode: replace, so a refresh overwrites rather than accumulates). Seeded empty and never hand-edited — a build stamp is only ever what a real site returned.",
+      "provenance": {
+        "source": "devisant.com/isa/build_info.json (Refresh action)"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "dev",
+      "label": "Dev",
+      "icon": "construction",
+      "description": "The build the DEV site is serving right now. Fetched live from dev.devisant.com/isa/build_info.json on every Refresh (mode: replace). Seeded empty for the same reason as prod.",
+      "provenance": {
+        "source": "dev.devisant.com/isa/build_info.json (Refresh action)"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "apkProd",
+      "label": "Android download (production)",
+      "icon": "android",
+      "description": "The Android APK a new download gets today: the LATEST published (non-prerelease) GitHub release of isa-kit/isan-releases. Its tag is a production build stamp, so it can be read straight against the production site's commit — a native download is cut from a production promote and may sit one promote behind the site. Fetched from the public GitHub REST API on Refresh (mode: replace), unauthenticated, read-only.",
+      "provenance": {
+        "source": "api.github.com/repos/isa-kit/isan-releases/releases/latest (Refresh action)"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "macProd",
+      "label": "macOS download (production)",
+      "icon": "desktop_mac",
+      "description": "The macOS app a new download gets today: the LATEST published (non-prerelease) GitHub release of isa-kit/isan-web, the repo kIsanMacDownloadUrl resolves against. Same production-tag story as apkProd. Fetched from the public GitHub REST API on Refresh (mode: replace).",
+      "provenance": {
+        "source": "api.github.com/repos/isa-kit/isan-web/releases/latest (Refresh action)"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "apkDev",
+      "label": "Android build (dev channel)",
+      "icon": "adb",
+      "description": "Assets on the ROLLING dev-latest prerelease tag of isa-kit/isan-releases. This table holds the tag's ASSETS, not the tag itself, on purpose: dev-latest is force-moved in place, so the release's own published_at is when the tag was first created and says nothing about freshness — each asset's own updated_at and its build-stamped filename do. Empty means no dev APK is currently published. Fetched from the public GitHub REST API on Refresh (mode: replace).",
+      "provenance": {
+        "source": "api.github.com/repos/isa-kit/isan-releases/releases/tags/dev-latest -> assets[] (Refresh action)"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "macDev",
+      "label": "macOS build (dev channel)",
+      "icon": "laptop_mac",
+      "description": "Assets on the dev-latest prerelease tag of isa-kit/isan-web, if one exists. Same rolling-tag reasoning as apkDev. This table is EXPECTED to be empty much of the time — the dev channel does not always carry a macOS build — and an empty table here is a real answer, not a failed fetch. Fetched from the public GitHub REST API on Refresh (mode: replace).",
+      "provenance": {
+        "source": "api.github.com/repos/isa-kit/isan-web/releases/tags/dev-latest -> assets[] (Refresh action)"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "appsProd",
+      "label": "Applets on production",
+      "icon": "apps",
+      "description": "Every applet the PRODUCTION web build actually ships, with the seedVersion that build carries. Fetched from devisant.com/isa/versions.json (the manifest tool/write_versions.py writes next to build_info.json on every deploy) into.path applets, mode replace. A devOnly applet is omitted from the prod manifest by the generator, matching the pruned artifact — so an applet present in appsDev and missing here has not been promoted.",
+      "provenance": {
+        "source": "devisant.com/isa/versions.json -> applets[] (Refresh action)"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "appsDev",
+      "label": "Applets on dev",
+      "icon": "apps_outage",
+      "description": "Every applet the DEV web build ships, with its seedVersion, from dev.devisant.com/isa/versions.json into.path applets, mode replace. The dev manifest keeps devOnly applets. Seeded empty like every other table here.",
+      "provenance": {
+        "source": "dev.devisant.com/isa/versions.json -> applets[] (Refresh action)"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    }
+  ]
+}

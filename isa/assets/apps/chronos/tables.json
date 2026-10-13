@@ -1,0 +1,10 @@
+{
+  "tables": [
+    {
+      "name": "sources",
+      "label": "Data sources",
+      "icon": "fact_check",
+      "description": "Where the map's borders and battles come from, and what kind of approximation each is — the About screen's provenance ledger."
+    }
+  ]
+}

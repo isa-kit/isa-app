@@ -1,0 +1,28 @@
+{
+  "tables": [
+    {
+      "name": "pages",
+      "label": "Pages",
+      "icon": "description",
+      "description": "Idea pages. A page has a title and a written body, can nest inside another page, and carries its own diagram."
+    },
+    {
+      "name": "links",
+      "label": "Links",
+      "icon": "link",
+      "description": "Wiki-link edges parsed from page bodies by the engine: fromId -> toId, one row per [[target]] found in a page's body. toId is the resolved target page id (empty when unresolved); toTitle keeps the raw [[target]] text so a later rename can re-resolve the link."
+    },
+    {
+      "name": "bubbles",
+      "label": "Bubbles",
+      "icon": "bubble_chart",
+      "description": "Bubble-board items. Each bubble belongs to one page's board (the page column)."
+    },
+    {
+      "name": "bubble_links",
+      "label": "Bubble links",
+      "icon": "share",
+      "description": "Lines between bubbles on one page's board (the page column)."
+    }
+  ]
+}

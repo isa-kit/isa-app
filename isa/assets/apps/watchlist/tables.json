@@ -1,0 +1,7 @@
+{
+  "tables": [
+    { "name": "files", "label": "Files", "icon": "folder", "description": "Watchlist files. Each file is its own separate watchlist — its own channels and videos." },
+    { "name": "channels", "label": "Channels", "icon": "subscriptions", "description": "Creators and channels you follow or want to keep an eye on. Each channel tracks its topic, link, whether you're subscribed, and notes." },
+    { "name": "videos", "label": "Videos", "icon": "smart_display", "description": "Videos you want to watch or have watched. Each video links to a channel, carries a priority and status, and tracks how it landed in your list (recommended, subscription, or manually added)." }
+  ]
+}

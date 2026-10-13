@@ -1,0 +1,16 @@
+{
+  "tables": [
+    {
+      "name": "items",
+      "label": "Items",
+      "icon": "style",
+      "description": "Cards, tokens and pieces on the felt. Each has a position (x,y), a stack order (z) and a face-up flag. No rules — move them however you like."
+    },
+    {
+      "name": "house",
+      "label": "House rules",
+      "icon": "rule",
+      "description": "Your own written rules. The app never enforces them."
+    }
+  ]
+}

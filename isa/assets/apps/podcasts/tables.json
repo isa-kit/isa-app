@@ -1,0 +1,7 @@
+{
+  "tables": [
+    { "name": "files", "label": "Files", "icon": "folder", "description": "Podcast library files. Each file is its own separate podcast library — its own shows and episodes." },
+    { "name": "shows", "label": "Shows", "icon": "podcasts", "description": "Podcast shows you follow or want to try. Each show tracks its author, category, feed and site URLs, a following flag, and notes." },
+    { "name": "episodes", "label": "Episodes", "icon": "graphic_eq", "description": "Individual episodes belonging to a show. Tracks play status, rating, a queued flag, length, tags, and the listen URL." }
+  ]
+}

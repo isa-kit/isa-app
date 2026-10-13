@@ -1,0 +1,46 @@
+{
+  "messages": [
+    { "name": "sender", "type": "text", "label": "From" },
+    { "name": "senderId", "type": "text", "label": "Sender id (bubbles)" },
+    { "name": "text", "type": "text", "label": "Message" },
+    { "name": "translated", "type": "text", "label": "Translation" },
+    { "name": "fromLang", "type": "text", "label": "Language" },
+    { "name": "sentAt", "type": "text", "label": "Sent" },
+    { "name": "display", "type": "text", "label": "Shown text" },
+    { "name": "original", "type": "text", "label": "Original (secondary)" },
+    { "name": "status", "type": "text", "label": "Delivery status" },
+    { "name": "senderLang", "type": "text", "label": "Sender's language at send time" },
+    { "name": "t_en", "type": "text", "label": "Subtext: English" },
+    { "name": "t_es", "type": "text", "label": "Subtext: Español" },
+    { "name": "t_fr", "type": "text", "label": "Subtext: Français" },
+    { "name": "t_de", "type": "text", "label": "Subtext: Deutsch" },
+    { "name": "t_pt", "type": "text", "label": "Subtext: Português" },
+    { "name": "t_it", "type": "text", "label": "Subtext: Italiano" },
+    { "name": "t_zh", "type": "text", "label": "Subtext: 中文" },
+    { "name": "t_ja", "type": "text", "label": "Subtext: 日本語" },
+    { "name": "t_ko", "type": "text", "label": "Subtext: 한국어" },
+    { "name": "t_ar", "type": "text", "label": "Subtext: العربية" },
+    { "name": "t_hi", "type": "text", "label": "Subtext: हिन्दी" }
+  ],
+  "participants": [
+    { "name": "lang", "type": "text", "label": "Language" },
+    { "name": "name", "type": "text", "label": "Display name" }
+  ],
+  "phrases": [
+    { "name": "original", "type": "text", "label": "Original" },
+    { "name": "translation", "type": "text", "label": "Translation" },
+    { "name": "srcLang", "type": "text", "label": "From language" },
+    { "name": "dstLang", "type": "text", "label": "To language" },
+    { "name": "savedAt", "type": "text", "label": "Saved" },
+    { "name": "msgId", "type": "text", "label": "Source message" },
+    { "name": "dueAt", "type": "text", "label": "Next review due" },
+    { "name": "intervalDays", "type": "number", "label": "Review interval (days)" },
+    { "name": "reps", "type": "number", "label": "Times reviewed" },
+    { "name": "lastReviewedAt", "type": "text", "label": "Last reviewed" },
+    { "name": "lastPeekedAt", "type": "text", "label": "Last origin peek" },
+    { "name": "due", "type": "text", "label": "Due now (derived)" },
+    { "name": "dueRank", "type": "text", "label": "Due-order sort key (derived)" },
+    { "name": "reviewedToday", "type": "text", "label": "Reviewed today (derived)" },
+    { "name": "rootsCount", "type": "text", "label": "Hanja roots (derived)" }
+  ]
+}

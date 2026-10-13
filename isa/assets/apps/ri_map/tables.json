@@ -1,0 +1,9 @@
+{
+  "tables": [
+    {
+      "name": "places",
+      "label": "Places",
+      "icon": "map"
+    }
+  ]
+}

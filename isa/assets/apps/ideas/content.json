@@ -1,0 +1,249 @@
+{
+  "pages": [
+    {
+      "id": "p_start",
+      "title": "Start here",
+      "body": "# Ideas, connected\n\nEvery page has three sides — **Write**, **Bubbles** and **Diagram**. Switch between them with the tabs at the top of a page.\n\n- Link another page by putting its title in double square brackets, like [[Free will]] or [[Opportunity cost]].\n- Pages nest: open a page and add a page inside it from the page list.\n- The **Graph** tab shows how every page connects.\n\nThese pages are examples. Edit them, or hide them from the page list.",
+      "parentId": "",
+      "kind": "file",
+      "order": 0,
+      "_example": true
+    },
+    {
+      "id": "p_exist",
+      "title": "Existence",
+      "body": "Questions about being and choosing.\n\n- [[Free will]] — can we choose otherwise?\n- [[Meaning]] — where does purpose come from?",
+      "parentId": "",
+      "kind": "file",
+      "order": 1,
+      "_example": true,
+      "tag": "theory"
+    },
+    {
+      "id": "p_free",
+      "title": "Free will",
+      "body": "**Claim:** a choice is free when it flows from the chooser's own reasons.\n\n- Determinism says every event has prior causes.\n- Compatibilists answer that a caused choice can still be *ours*.\n- If choices are free, [[Meaning]] can be made rather than found.\n\nOpen **Bubbles** to see the positions mapped out.",
+      "parentId": "p_exist",
+      "kind": "file",
+      "order": 0,
+      "_example": true,
+      "tag": "question"
+    },
+    {
+      "id": "p_meaning",
+      "title": "Meaning",
+      "body": "Two broad answers:\n\n1. Meaning is **found** — written into the world.\n2. Meaning is **made** — built from what we commit to.\n\nCommitting to one path gives up another — see [[Opportunity cost]]. Making meaning assumes [[Free will]].",
+      "parentId": "p_exist",
+      "kind": "file",
+      "order": 1,
+      "_example": true,
+      "tag": "theory"
+    },
+    {
+      "id": "p_econ",
+      "title": "Economics",
+      "body": "How people share out what is limited.\n\n- [[Scarcity]] — the starting condition.\n- [[Opportunity cost]] — the price of every choice.",
+      "parentId": "",
+      "kind": "file",
+      "order": 2,
+      "_example": true,
+      "tag": "theory"
+    },
+    {
+      "id": "p_scar",
+      "title": "Scarcity",
+      "body": "Wants outrun means, so every resource has competing uses. Scarcity is why [[Opportunity cost]] exists.\n\nOpen **Diagram** for a sketch of the loop.",
+      "parentId": "p_econ",
+      "kind": "file",
+      "order": 0,
+      "_example": true,
+      "tag": "principle",
+      "diagram": "{\"v\":2,\"active\":0,\"layers\":[{\"n\":\"Layer 1\",\"s\":[{\"k\":\"rect\",\"c\":4283315246,\"w\":3.0,\"p\":[[20,40],[165,100]]},{\"k\":\"text\",\"c\":4283315246,\"w\":2.5,\"t\":\"Limited means\",\"p\":[[34,58]]},{\"k\":\"rect\",\"c\":4283315246,\"w\":3.0,\"p\":[[195,40],[340,100]]},{\"k\":\"text\",\"c\":4283315246,\"w\":2.5,\"t\":\"Unlimited wants\",\"p\":[[205,58]]},{\"k\":\"arrow\",\"c\":4288305939,\"w\":3.0,\"p\":[[92,100],[165,170]]},{\"k\":\"arrow\",\"c\":4288305939,\"w\":3.0,\"p\":[[268,100],[195,170]]},{\"k\":\"rect\",\"c\":4283315246,\"w\":3.0,\"p\":[[110,170],[250,230]]},{\"k\":\"text\",\"c\":4283315246,\"w\":2.5,\"t\":\"Choice\",\"p\":[[152,188]]},{\"k\":\"arrow\",\"c\":4288305939,\"w\":3.0,\"p\":[[180,230],[180,300]]},{\"k\":\"rect\",\"c\":4283315246,\"w\":3.0,\"p\":[[95,300],[265,360]]},{\"k\":\"text\",\"c\":4283315246,\"w\":2.5,\"t\":\"Opportunity cost\",\"p\":[[108,318]]}]}]}"
+    },
+    {
+      "id": "p_opp",
+      "title": "Opportunity cost",
+      "body": "The value of the **best alternative given up**.\n\n- An hour spent on one project is an hour not spent on another.\n- It reaches beyond money — even [[Meaning]]: choosing one purpose sets others aside.\n- It follows from [[Scarcity]].",
+      "parentId": "p_econ",
+      "kind": "file",
+      "order": 1,
+      "_example": true,
+      "tag": "principle"
+    }
+  ],
+  "links": [
+    {
+      "id": "lk1",
+      "fromId": "p_start",
+      "toId": "p_free",
+      "toTitle": "Free will",
+      "fromTitle": "Start here",
+      "_example": true
+    },
+    {
+      "id": "lk2",
+      "fromId": "p_start",
+      "toId": "p_opp",
+      "toTitle": "Opportunity cost",
+      "fromTitle": "Start here",
+      "_example": true
+    },
+    {
+      "id": "lk3",
+      "fromId": "p_exist",
+      "toId": "p_free",
+      "toTitle": "Free will",
+      "fromTitle": "Existence",
+      "_example": true
+    },
+    {
+      "id": "lk4",
+      "fromId": "p_exist",
+      "toId": "p_meaning",
+      "toTitle": "Meaning",
+      "fromTitle": "Existence",
+      "_example": true
+    },
+    {
+      "id": "lk5",
+      "fromId": "p_free",
+      "toId": "p_meaning",
+      "toTitle": "Meaning",
+      "fromTitle": "Free will",
+      "_example": true
+    },
+    {
+      "id": "lk6",
+      "fromId": "p_meaning",
+      "toId": "p_opp",
+      "toTitle": "Opportunity cost",
+      "fromTitle": "Meaning",
+      "_example": true
+    },
+    {
+      "id": "lk7",
+      "fromId": "p_meaning",
+      "toId": "p_free",
+      "toTitle": "Free will",
+      "fromTitle": "Meaning",
+      "_example": true
+    },
+    {
+      "id": "lk8",
+      "fromId": "p_econ",
+      "toId": "p_scar",
+      "toTitle": "Scarcity",
+      "fromTitle": "Economics",
+      "_example": true
+    },
+    {
+      "id": "lk9",
+      "fromId": "p_econ",
+      "toId": "p_opp",
+      "toTitle": "Opportunity cost",
+      "fromTitle": "Economics",
+      "_example": true
+    },
+    {
+      "id": "lk10",
+      "fromId": "p_scar",
+      "toId": "p_opp",
+      "toTitle": "Opportunity cost",
+      "fromTitle": "Scarcity",
+      "_example": true
+    },
+    {
+      "id": "lk11",
+      "fromId": "p_opp",
+      "toId": "p_meaning",
+      "toTitle": "Meaning",
+      "fromTitle": "Opportunity cost",
+      "_example": true
+    },
+    {
+      "id": "lk12",
+      "fromId": "p_opp",
+      "toId": "p_scar",
+      "toTitle": "Scarcity",
+      "fromTitle": "Opportunity cost",
+      "_example": true
+    }
+  ],
+  "bubbles": [
+    {
+      "id": "bf_det",
+      "label": "Determinism",
+      "note": "every event has causes",
+      "pos": "180,70",
+      "color": "#5FB8C4",
+      "page": "p_free",
+      "_example": true
+    },
+    {
+      "id": "bf_comp",
+      "label": "Compatibilism",
+      "note": "caused, yet ours",
+      "pos": "90,200",
+      "color": "#9D82D8",
+      "page": "p_free",
+      "_example": true
+    },
+    {
+      "id": "bf_hard",
+      "label": "Hard incompatibilism",
+      "note": "no free will",
+      "pos": "275,200",
+      "color": "#E07A5F",
+      "page": "p_free",
+      "_example": true
+    },
+    {
+      "id": "bf_lib",
+      "label": "Libertarian free will",
+      "note": "some choices uncaused",
+      "pos": "275,340",
+      "color": "#DFAE66",
+      "page": "p_free",
+      "_example": true
+    },
+    {
+      "id": "bf_resp",
+      "label": "Responsibility",
+      "note": "praise and blame",
+      "pos": "90,340",
+      "color": "#81B29A",
+      "page": "p_free",
+      "_example": true
+    }
+  ],
+  "bubble_links": [
+    {
+      "id": "bl1",
+      "from": "bf_det",
+      "to": "bf_comp",
+      "page": "p_free",
+      "_example": true
+    },
+    {
+      "id": "bl2",
+      "from": "bf_det",
+      "to": "bf_hard",
+      "page": "p_free",
+      "_example": true
+    },
+    {
+      "id": "bl3",
+      "from": "bf_comp",
+      "to": "bf_resp",
+      "page": "p_free",
+      "_example": true
+    },
+    {
+      "id": "bl4",
+      "from": "bf_lib",
+      "to": "bf_resp",
+      "page": "p_free",
+      "_example": true
+    }
+  ]
+}

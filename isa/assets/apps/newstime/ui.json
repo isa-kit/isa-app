@@ -1,0 +1,461 @@
+{
+  "app": {
+    "title": {
+      "en": "Newstime",
+      "ko": "Newstime",
+      "zh": "Newstime",
+      "hi": "Newstime",
+      "es": "Newstime",
+      "fr": "Newstime",
+      "ar": "Newstime",
+      "pt": "Newstime",
+      "ru": "Newstime",
+      "de": "Newstime",
+      "ja": "Newstime",
+      "tr": "Newstime",
+      "vi": "Newstime",
+      "it": "Newstime",
+      "fa": "Newstime",
+      "pl": "Newstime",
+      "uk": "Newstime",
+      "nl": "Newstime",
+      "sv": "Newstime",
+      "cs": "Newstime",
+      "el": "Newstime"
+    },
+    "primaryColor": "#B42318",
+    "theme": "minimal",
+    "translatable": true,
+    "languages": [
+      "en",
+      "ko",
+      "zh",
+      "hi",
+      "es",
+      "fr",
+      "ar",
+      "pt",
+      "ru",
+      "de",
+      "ja",
+      "tr",
+      "vi",
+      "it",
+      "fa",
+      "pl",
+      "uk",
+      "nl",
+      "sv",
+      "cs",
+      "el"
+    ],
+    "appDataTools": true,
+    "sync": {
+      "pocketbase": false,
+      "drive": false,
+      "room": false,
+      "mesh": false
+    },
+    "intro": {
+      "purpose": {
+        "en": "Newstime lines up the same story as reported by many outlets around the world. Stories are grouped and ranked by plain rules (how many different outlets cover them, then how recent they are) with no AI and no editor's thumb on the scale. Tap a story to see every outlet's own headline, then open the original article.",
+        "ko": "Newstime은 전 세계 여러 언론사가 보도한 같은 이야기를 한데 모아 보여줍니다. 기사는 단순한 규칙(몇 개 언론사가 다뤘는지, 그다음 얼마나 최근인지)으로 묶이고 정렬되며, AI도 편집자의 손길도 없습니다. 기사를 누르면 각 언론사의 원래 제목을 보고 원문을 열 수 있습니다.",
+        "zh": "Newstime 把全球多家媒体报道的同一件事排在一起。报道按简单规则分组排序（先看有多少家不同媒体报道，再看时间新旧），没有 AI，也没有编辑干预。点开一条报道，可以看到每家媒体各自的标题，并打开原文。",
+        "hi": "Newstime दुनिया भर के कई समाचार स्रोतों की एक ही खबर को एक साथ दिखाता है। खबरें सीधे नियमों से समूहित और क्रमबद्ध होती हैं (कितने अलग स्रोत उसे कवर करते हैं, फिर वह कितनी ताज़ा है), न कोई AI, न कोई संपादकीय झुकाव। किसी खबर को खोलकर हर स्रोत की अपनी हेडलाइन देखें और मूल लेख खोलें।",
+        "es": "Newstime reúne la misma noticia contada por muchos medios del mundo. Las noticias se agrupan y ordenan con reglas simples (cuántos medios distintos las cubren y luego cuán recientes son), sin IA y sin mano editorial. Toca una noticia para ver el titular de cada medio y abrir el artículo original.",
+        "fr": "Newstime met côte à côte un même sujet traité par de nombreux médias dans le monde. Les sujets sont regroupés et classés par des règles simples (combien de médias différents le couvrent, puis sa fraîcheur), sans IA ni main éditoriale. Touchez un sujet pour voir le titre de chaque média, puis ouvrez l'article d'origine.",
+        "ar": "يجمع Newstime الخبر نفسه كما تنقله وسائل إعلام كثيرة حول العالم. تُجمَّع الأخبار وتُرتَّب بقواعد بسيطة (كم وسيلة مختلفة تغطيها، ثم مدى حداثتها) دون ذكاء اصطناعي ودون تدخل تحريري. اضغط على خبر لترى عنوان كل وسيلة ثم افتح المقال الأصلي.",
+        "pt": "O Newstime reúne a mesma notícia contada por vários veículos do mundo. As notícias são agrupadas e ordenadas por regras simples (quantos veículos diferentes as cobrem e, depois, quão recentes são), sem IA e sem mão editorial. Toque numa notícia para ver o título de cada veículo e abrir o artigo original.",
+        "ru": "Newstime собирает одну и ту же новость в изложении множества изданий мира. Новости группируются и ранжируются простыми правилами (сколько разных изданий о ней пишут, затем насколько она свежая) — без ИИ и без редакторского вмешательства. Нажмите на новость, чтобы увидеть заголовок каждого издания и открыть оригинал.",
+        "de": "Newstime stellt dieselbe Meldung so nebeneinander, wie viele Medien weltweit sie berichten. Meldungen werden nach einfachen Regeln gruppiert und sortiert (wie viele verschiedene Medien berichten, dann wie aktuell), ohne KI und ohne redaktionellen Eingriff. Tippen Sie auf eine Meldung, um die Schlagzeile jedes Mediums zu sehen und den Originalartikel zu öffnen.",
+        "ja": "Newstime は、世界中の多くの媒体が報じた同じニュースを並べて見せます。記事は単純なルール（何社が報じたか、次に新しさ）でまとめて並べ、AI も編集者の判断も介しません。記事をタップすると各媒体の見出しが見られ、元の記事を開けます。",
+        "tr": "Newstime, dünyanın dört bir yanındaki birçok kaynağın aynı haberi nasıl aktardığını yan yana gösterir. Haberler basit kurallarla (kaç farklı kaynak yazdı, sonra ne kadar yeni) gruplanır ve sıralanır; yapay zekâ da editör müdahalesi de yoktur. Bir habere dokunup her kaynağın kendi başlığını görün ve özgün makaleyi açın.",
+        "vi": "Newstime xếp cạnh nhau cùng một tin do nhiều hãng tin trên thế giới đưa. Tin được gom nhóm và xếp hạng bằng quy tắc đơn giản (bao nhiêu hãng khác nhau đưa tin, rồi đến độ mới), không dùng AI và không có biên tập viên can thiệp. Chạm vào một tin để xem tiêu đề của từng hãng rồi mở bài gốc.",
+        "it": "Newstime affianca la stessa notizia raccontata da molte testate nel mondo. Le notizie sono raggruppate e ordinate con regole semplici (quante testate diverse le coprono, poi quanto sono recenti), senza IA e senza mano editoriale. Tocca una notizia per vedere il titolo di ogni testata e aprire l'articolo originale.",
+        "fa": "Newstime یک خبر را همان‌طور که رسانه‌های مختلف جهان گزارش کرده‌اند کنار هم می‌گذارد. خبرها با قواعد ساده (چند رسانهٔ متفاوت آن را پوشش داده‌اند، سپس تازگی) گروه‌بندی و رتبه‌بندی می‌شوند، بدون هوش مصنوعی و بدون دخالت سردبیر. روی یک خبر بزنید تا تیتر هر رسانه را ببینید و مقالهٔ اصلی را باز کنید.",
+        "pl": "Newstime zestawia tę samą wiadomość tak, jak opisuje ją wiele redakcji na świecie. Wiadomości są grupowane i porządkowane prostymi zasadami (ile różnych redakcji o nich pisze, potem jak są świeże), bez AI i bez ręki redaktora. Dotknij wiadomości, by zobaczyć tytuł każdej redakcji i otworzyć oryginalny artykuł.",
+        "uk": "Newstime ставить поруч одну й ту саму новину в подачі багатьох видань світу. Новини групуються й ранжуються простими правилами (скільки різних видань про неї пишуть, потім наскільки вона свіжа) — без ШІ та без редакторського втручання. Торкніться новини, щоб побачити заголовок кожного видання й відкрити оригінал.",
+        "nl": "Newstime zet hetzelfde verhaal naast elkaar zoals veel media wereldwijd het brengen. Verhalen worden met eenvoudige regels gegroepeerd en gerangschikt (hoeveel verschillende media erover berichten, daarna hoe recent), zonder AI en zonder redactionele hand. Tik op een verhaal om de kop van elk medium te zien en het originele artikel te openen.",
+        "sv": "Newstime ställer samma nyhet sida vid sida så som många medier världen över rapporterar den. Nyheterna grupperas och rangordnas med enkla regler (hur många olika medier som bevakar dem, sedan hur nya de är), utan AI och utan redaktionell hand. Tryck på en nyhet för att se varje medies rubrik och öppna originalartikeln.",
+        "cs": "Newstime řadí vedle sebe tutéž zprávu tak, jak ji přinášejí média z celého světa. Zprávy se seskupují a řadí jednoduchými pravidly (kolik různých médií o nich píše, pak jak jsou čerstvé), bez AI a bez redaktorského zásahu. Klepnutím na zprávu uvidíte titulek každého média a otevřete původní článek.",
+        "el": "Το Newstime βάζει δίπλα δίπλα την ίδια είδηση όπως την παρουσιάζουν πολλά μέσα σε όλο τον κόσμο. Οι ειδήσεις ομαδοποιούνται και κατατάσσονται με απλούς κανόνες (πόσα διαφορετικά μέσα τις καλύπτουν, μετά πόσο πρόσφατες είναι), χωρίς AI και χωρίς συντακτική παρέμβαση. Πατήστε μια είδηση για να δείτε τον τίτλο κάθε μέσου και να ανοίξετε το πρωτότυπο άρθρο."
+      },
+      "show": "never"
+    }
+  },
+  "nav": [
+    {
+      "id": "feed",
+      "label": {
+        "en": "Stories",
+        "ko": "기사",
+        "zh": "报道",
+        "hi": "खबरें",
+        "es": "Noticias",
+        "fr": "Actualités",
+        "ar": "الأخبار",
+        "pt": "Notícias",
+        "ru": "Новости",
+        "de": "Meldungen",
+        "ja": "ニュース",
+        "tr": "Haberler",
+        "vi": "Tin tức",
+        "it": "Notizie",
+        "fa": "اخبار",
+        "pl": "Wiadomości",
+        "uk": "Новини",
+        "nl": "Nieuws",
+        "sv": "Nyheter",
+        "cs": "Zprávy",
+        "el": "Ειδήσεις"
+      },
+      "icon": "newspaper",
+      "screen": "feed"
+    },
+    {
+      "id": "map",
+      "label": {
+        "en": "News map",
+        "ko": "뉴스 지도",
+        "zh": "新闻地图",
+        "hi": "समाचार नक्शा",
+        "es": "Mapa de noticias",
+        "fr": "Carte de l'actualité",
+        "ar": "خريطة الأخبار",
+        "pt": "Mapa de notícias",
+        "ru": "Карта новостей",
+        "de": "Nachrichtenkarte",
+        "ja": "ニュース地図",
+        "tr": "Haber haritası",
+        "vi": "Bản đồ tin tức",
+        "it": "Mappa delle notizie",
+        "fa": "نقشهٔ خبر",
+        "pl": "Mapa wiadomości",
+        "uk": "Мапа новин",
+        "nl": "Nieuwskaart",
+        "sv": "Nyhetskarta",
+        "cs": "Mapa zpráv",
+        "el": "Χάρτης ειδήσεων"
+      },
+      "icon": "map",
+      "screen": "map"
+    },
+    {
+      "id": "sources",
+      "label": {
+        "en": "Sources",
+        "ko": "출처",
+        "zh": "来源",
+        "hi": "स्रोत",
+        "es": "Fuentes",
+        "fr": "Sources",
+        "ar": "المصادر",
+        "pt": "Fontes",
+        "ru": "Источники",
+        "de": "Quellen",
+        "ja": "情報源",
+        "tr": "Kaynaklar",
+        "vi": "Nguồn",
+        "it": "Fonti",
+        "fa": "منابع",
+        "pl": "Źródła",
+        "uk": "Джерела",
+        "nl": "Bronnen",
+        "sv": "Källor",
+        "cs": "Zdroje",
+        "el": "Πηγές"
+      },
+      "icon": "public",
+      "screen": "sources"
+    }
+  ],
+  "screens": {
+    "feed": {
+      "title": {
+        "en": "Top stories",
+        "ko": "주요 기사",
+        "zh": "头条报道",
+        "hi": "मुख्य खबरें",
+        "es": "Noticias destacadas",
+        "fr": "À la une",
+        "ar": "أبرز الأخبار",
+        "pt": "Principais notícias",
+        "ru": "Главные новости",
+        "de": "Top-Meldungen",
+        "ja": "トップニュース",
+        "tr": "Öne çıkanlar",
+        "vi": "Tin nổi bật",
+        "it": "In evidenza",
+        "fa": "اخبار برتر",
+        "pl": "Najważniejsze",
+        "uk": "Головні новини",
+        "nl": "Topnieuws",
+        "sv": "Toppnyheter",
+        "cs": "Hlavní zprávy",
+        "el": "Κορυφαίες ειδήσεις"
+      },
+      "body": {
+        "type": "newsdesk",
+        "view": "feed",
+        "base": "https://167.233.64.97/news/",
+        "accent": "#B42318",
+        "mapScreen": "map",
+        "sourcesScreen": "sources",
+        "fillPhone": true,
+        "openStory": {
+          "chain": [
+            {
+              "fn": "selectRow"
+            },
+            {
+              "fn": "goto",
+              "args": {
+                "screen": "story"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "map": {
+      "title": {
+        "en": "News map",
+        "ko": "뉴스 지도",
+        "zh": "新闻地图",
+        "hi": "समाचार नक्शा",
+        "es": "Mapa de noticias",
+        "fr": "Carte de l'actualité",
+        "ar": "خريطة الأخبار",
+        "pt": "Mapa de notícias",
+        "ru": "Карта новостей",
+        "de": "Nachrichtenkarte",
+        "ja": "ニュース地図",
+        "tr": "Haber haritası",
+        "vi": "Bản đồ tin tức",
+        "it": "Mappa delle notizie",
+        "fa": "نقشهٔ خبر",
+        "pl": "Mapa wiadomości",
+        "uk": "Мапа новин",
+        "nl": "Nieuwskaart",
+        "sv": "Nyhetskarta",
+        "cs": "Mapa zpráv",
+        "el": "Χάρτης ειδήσεων"
+      },
+      "body": {
+        "type": "newsdesk",
+        "view": "map",
+        "geojsonAsset": "apps/newstime/world.geojson",
+        "base": "https://167.233.64.97/news/",
+        "accent": "#B42318",
+        "mapScreen": "map",
+        "sourcesScreen": "sources",
+        "fillPhone": true,
+        "openStory": {
+          "chain": [
+            {
+              "fn": "selectRow"
+            },
+            {
+              "fn": "goto",
+              "args": {
+                "screen": "story"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "sources": {
+      "title": {
+        "en": "Sources",
+        "ko": "출처",
+        "zh": "来源",
+        "hi": "स्रोत",
+        "es": "Fuentes",
+        "fr": "Sources",
+        "ar": "المصادر",
+        "pt": "Fontes",
+        "ru": "Источники",
+        "de": "Quellen",
+        "ja": "情報源",
+        "tr": "Kaynaklar",
+        "vi": "Nguồn",
+        "it": "Fonti",
+        "fa": "منابع",
+        "pl": "Źródła",
+        "uk": "Джерела",
+        "nl": "Bronnen",
+        "sv": "Källor",
+        "cs": "Zdroje",
+        "el": "Πηγές"
+      },
+      "body": {
+        "type": "newsdesk",
+        "view": "sources",
+        "base": "https://167.233.64.97/news/",
+        "accent": "#B42318",
+        "mapScreen": "map",
+        "sourcesScreen": "sources",
+        "fillPhone": true,
+        "openStory": {
+          "chain": [
+            {
+              "fn": "selectRow"
+            },
+            {
+              "fn": "goto",
+              "args": {
+                "screen": "story"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "story": {
+      "title": {
+        "en": "Who covers it",
+        "ko": "누가 보도했나",
+        "zh": "谁在报道",
+        "hi": "कौन कवर कर रहा है",
+        "es": "Quién lo cubre",
+        "fr": "Qui en parle",
+        "ar": "من يغطيه",
+        "pt": "Quem cobre",
+        "ru": "Кто освещает",
+        "de": "Wer berichtet",
+        "ja": "報じている媒体",
+        "tr": "Kimler haberleştiriyor",
+        "vi": "Ai đưa tin",
+        "it": "Chi lo copre",
+        "fa": "چه کسی پوشش می‌دهد",
+        "pl": "Kto o tym pisze",
+        "uk": "Хто висвітлює",
+        "nl": "Wie dekt het",
+        "sv": "Vem bevakar",
+        "cs": "Kdo o tom píše",
+        "el": "Ποιος το καλύπτει"
+      },
+      "body": {
+        "type": "column",
+        "crossAxis": "stretch",
+        "children": [
+          {
+            "type": "stat",
+            "table": "stories",
+            "raw": true,
+            "valueColumn": "headline",
+            "scopeRowId": "$selected:stories"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "One row per outlet covering this story. Tap a row to read the original on that outlet's site.",
+              "ko": "이 기사를 다룬 언론사마다 한 줄씩입니다. 줄을 누르면 해당 언론사 사이트의 원문이 열립니다.",
+              "zh": "每家报道此事的媒体一行。点按一行即可在该媒体网站阅读原文。",
+              "hi": "इस खबर को कवर करने वाले हर स्रोत की एक पंक्ति। मूल लेख उस स्रोत की साइट पर पढ़ने के लिए पंक्ति दबाएँ।",
+              "es": "Una fila por medio que cubre esta noticia. Toca una fila para leer el original en el sitio del medio.",
+              "fr": "Une ligne par média couvrant ce sujet. Touchez une ligne pour lire l'original sur le site du média.",
+              "ar": "صف واحد لكل وسيلة تغطي هذا الخبر. اضغط على صف لقراءة الأصل في موقع الوسيلة.",
+              "pt": "Uma linha por veículo que cobre esta notícia. Toque numa linha para ler o original no site do veículo.",
+              "ru": "Одна строка на каждое издание, освещающее эту новость. Нажмите на строку, чтобы прочитать оригинал на сайте издания.",
+              "de": "Eine Zeile pro Medium, das darüber berichtet. Tippen Sie auf eine Zeile, um das Original auf der Seite des Mediums zu lesen.",
+              "ja": "この話題を報じた媒体ごとに 1 行です。行をタップすると、その媒体のサイトで元の記事を読めます。",
+              "tr": "Bu haberi yazan her kaynak için bir satır. Özgün yazıyı kaynağın sitesinde okumak için satıra dokunun.",
+              "vi": "Mỗi hãng tin đưa tin này một dòng. Chạm vào dòng để đọc bài gốc trên trang của hãng.",
+              "it": "Una riga per ogni testata che copre questa notizia. Tocca una riga per leggere l'originale sul sito della testata.",
+              "fa": "برای هر رسانه‌ای که این خبر را پوشش داده یک ردیف. روی ردیف بزنید تا اصل مطلب را در سایت آن رسانه بخوانید.",
+              "pl": "Jeden wiersz na każdą redakcję opisującą tę wiadomość. Dotknij wiersza, by przeczytać oryginał na stronie redakcji.",
+              "uk": "Один рядок на кожне видання, що висвітлює цю новину. Торкніться рядка, щоб прочитати оригінал на сайті видання.",
+              "nl": "Eén rij per medium dat dit verhaal brengt. Tik op een rij om het origineel op de site van het medium te lezen.",
+              "sv": "En rad per medium som bevakar nyheten. Tryck på en rad för att läsa originalet på mediets webbplats.",
+              "cs": "Jeden řádek na každé médium, které o zprávě píše. Klepnutím na řádek přečtete originál na webu média.",
+              "el": "Μία γραμμή ανά μέσο που καλύπτει την είδηση. Πατήστε μια γραμμή για να διαβάσετε το πρωτότυπο στον ιστότοπο του μέσου."
+            }
+          },
+          {
+            "type": "cards",
+            "table": "articles",
+            "sort": {
+              "column": "publishedAt",
+              "dir": "desc"
+            },
+            "filter": {
+              "column": "storyId",
+              "value": "$selected:stories"
+            },
+            "title": "title",
+            "subtitle": "byline",
+            "density": "card",
+            "expandable": false,
+            "tableView": false,
+            "tags": [
+              {
+                "column": "source"
+              }
+            ],
+            "action": {
+              "fn": "openLink"
+            },
+            "cardActions": [
+              {
+                "icon": "open_in_new",
+                "label": {
+                  "en": "Open original",
+                  "ko": "원문 열기",
+                  "zh": "打开原文",
+                  "hi": "मूल लेख खोलें",
+                  "es": "Abrir original",
+                  "fr": "Ouvrir l'original",
+                  "ar": "فتح الأصل",
+                  "pt": "Abrir original",
+                  "ru": "Открыть оригинал",
+                  "de": "Original öffnen",
+                  "ja": "元の記事を開く",
+                  "tr": "Özgününü aç",
+                  "vi": "Mở bài gốc",
+                  "it": "Apri l'originale",
+                  "fa": "باز کردن اصل",
+                  "pl": "Otwórz oryginał",
+                  "uk": "Відкрити оригінал",
+                  "nl": "Origineel openen",
+                  "sv": "Öppna originalet",
+                  "cs": "Otevřít originál",
+                  "el": "Άνοιγμα πρωτοτύπου"
+                },
+                "action": {
+                  "fn": "openLink"
+                }
+              }
+            ],
+            "emptyIcon": "article",
+            "emptyTitle": {
+              "en": "No articles for this story",
+              "ko": "이 기사의 항목이 없습니다",
+              "zh": "此报道暂无文章",
+              "hi": "इस खबर के लिए कोई लेख नहीं",
+              "es": "Sin artículos para esta noticia",
+              "fr": "Aucun article pour ce sujet",
+              "ar": "لا مقالات لهذا الخبر",
+              "pt": "Sem artigos para esta notícia",
+              "ru": "Нет статей по этой новости",
+              "de": "Keine Artikel zu dieser Meldung",
+              "ja": "この話題の記事はありません",
+              "tr": "Bu haber için makale yok",
+              "vi": "Không có bài cho tin này",
+              "it": "Nessun articolo per questa notizia",
+              "fa": "مقاله‌ای برای این خبر نیست",
+              "pl": "Brak artykułów do tej wiadomości",
+              "uk": "Немає статей до цієї новини",
+              "nl": "Geen artikelen bij dit verhaal",
+              "sv": "Inga artiklar för nyheten",
+              "cs": "K této zprávě nejsou články",
+              "el": "Κανένα άρθρο για αυτή την είδηση"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

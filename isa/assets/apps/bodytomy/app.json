@@ -1,0 +1,13 @@
+{
+  "id": "bodytomy",
+  "name": "Bodytomy",
+  "category": "Reference",
+  "description": "A rotatable whole-body anatomy viewer built from real anatomical data — muscles, bones, vessels, ligaments and fascia from head to foot, both sides. Tap to build an ordered selection and pull in the bones a muscle attaches to and the muscles that share its movement. Plain-language info cards, a region picker, a probe line that names every layer it crosses, and dissect tools (hide, undo, shadow x-ray). A Movements view names the joints and, for each one, every muscle behind a movement there — pick hip abduction and the whole group lights up with the joint marked. Muscles with several heads are separate parts — the two heads of the calf, the three of the triceps, the three bands of the trapezius — each with its own card, because they do not all do the same job. Focus zooms and turns the body to whichever structure you picked. Decimated and simplified for mobile — for learning, not a medical or clinical reference.",
+  "icon": "monitor_heart",
+  "color": "#B5533C",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_bodytomy"
+  },
+  "seedVersion": "2026-09-01.bodytomy.6.lod-0905"
+}
