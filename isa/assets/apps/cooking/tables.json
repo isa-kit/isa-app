@@ -1,0 +1,16 @@
+{
+  "tables": [
+    {
+      "name": "pantry",
+      "label": "Pantry",
+      "icon": "kitchen",
+      "description": "What you have on hand. Each item has a name, category, quantity, unit, and an optional fraction for partial amounts."
+    },
+    {
+      "name": "recipes",
+      "label": "Recipes",
+      "icon": "menu_book",
+      "description": "Suggested recipes. Populated by the local SLM via callRest; one row per suggested recipe."
+    }
+  ]
+}

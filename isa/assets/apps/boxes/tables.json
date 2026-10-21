@@ -1,0 +1,6 @@
+{
+  "tables": [
+    { "name": "boxes", "label": "Boxes", "icon": "inventory_2", "description": "One row per moving box: its number, label, room it's going to, pack/load/delivery status, fragile flag, and notes.", "childRelations": [ { "childTable": "items", "parentColumn": "boxRef", "label": "Items", "inlineEditColumn": "name", "inlineSelectColumn": "priority" } ] },
+    { "name": "items", "label": "Items", "icon": "checklist", "description": "Things packed into a box. Each item points at its box by number, so you can find which box something is in." }
+  ]
+}

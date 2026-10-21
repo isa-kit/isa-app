@@ -1,0 +1,16 @@
+{
+  "id": "ideas",
+  "name": "Ideas",
+  "category": "Productivity",
+  "description": "Theories and thought systems as nested, linked pages — written in markdown; each page is named by its first line, and has a bubble board and a diagram.",
+  "icon": "lightbulb",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_ideas"
+  },
+  "seedVersion": "2026-10-18.ideas.2",
+  "seedContent": "initial-only",
+  "durableSettings": [
+    "ideasExamplesHidden"
+  ]
+}

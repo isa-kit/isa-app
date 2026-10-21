@@ -1,0 +1,794 @@
+{
+  "app": {
+    "languages": ["en", "ko", "zh", "hi", "es", "fr", "ar", "pt", "ru", "de", "ja", "tr", "vi", "it", "fa", "pl", "uk", "nl", "sv", "cs", "el"],
+    "translatable": true,
+    "appDataTools": true,
+    "intro": {
+      "tour": [
+        {
+          "screen": "projects",
+          "label": "Projects",
+          "note": "Every applet you're making, from spark to shipped."
+        },
+        {
+          "screen": "checklist",
+          "label": "Checklist",
+          "note": "Step through what a project still needs."
+        },
+        {
+          "screen": "playbook",
+          "label": "Playbook",
+          "note": "The how-to for building an applet, start to finish."
+        },
+        {
+          "screen": "design",
+          "label": "Design",
+          "note": "Wireframe the project's screens."
+        },
+        {
+          "screen": "customize",
+          "label": "Customize",
+          "note": "Set the project's name, icon, and look."
+        }
+      ]
+    },
+    "title": {
+      "en": "Applet Studio",
+      "ko": "앱렛 스튜디오",
+      "zh": "应用工作室",
+      "hi": "ऐपलेट स्टूडियो",
+      "es": "Estudio de applets",
+      "fr": "Studio d'applets",
+      "ar": "استوديو التطبيقات",
+      "pt": "Estúdio de applets",
+      "ru": "Студия апплетов",
+      "de": "Applet-Studio",
+      "ja": "アプレットスタジオ",
+      "tr": "Applet Stüdyosu",
+      "vi": "Xưởng ứng dụng",
+      "it": "Studio applet",
+      "fa": "استودیوی اپلت",
+      "pl": "Studio apletów",
+      "uk": "Студія аплетів",
+      "nl": "Applet Studio",
+      "sv": "Applet Studio",
+      "cs": "Studio apletů",
+      "el": "Στούντιο εφαρμογών"
+    },
+    "primaryColor": "#E8590C",
+    "theme": "steampunk",
+    "autosave": true
+  },
+  "nav": [
+    {
+      "id": "projects",
+      "label": {
+        "en": "Projects",
+        "ko": "프로젝트",
+        "zh": "项目",
+        "hi": "परियोजनाएं",
+        "es": "Proyectos",
+        "fr": "Projets",
+        "ar": "المشاريع",
+        "pt": "Projetos",
+        "ru": "Проекты",
+        "de": "Projekte",
+        "ja": "プロジェクト",
+        "tr": "Projeler",
+        "vi": "Dự án",
+        "it": "Progetti",
+        "fa": "پروژه‌ها",
+        "pl": "Projekty",
+        "uk": "Проєкти",
+        "nl": "Projecten",
+        "sv": "Projekt",
+        "cs": "Projekty",
+        "el": "Έργα"
+      },
+      "icon": "apps",
+      "screen": "projects"
+    },
+    {
+      "id": "checklist",
+      "label": {
+        "en": "Checklist",
+        "ko": "체크리스트",
+        "zh": "检查清单",
+        "hi": "चेकलिस्ट",
+        "es": "Lista de verificación",
+        "fr": "Liste de contrôle",
+        "ar": "قائمة التحقق",
+        "pt": "Lista de verificação",
+        "ru": "Чек-лист",
+        "de": "Checkliste",
+        "ja": "チェックリスト",
+        "tr": "Kontrol listesi",
+        "vi": "Danh sách kiểm tra",
+        "it": "Lista di controllo",
+        "fa": "چک‌لیست",
+        "pl": "Lista kontrolna",
+        "uk": "Чек-лист",
+        "nl": "Checklist",
+        "sv": "Checklista",
+        "cs": "Kontrolní seznam",
+        "el": "Λίστα ελέγχου"
+      },
+      "icon": "task",
+      "screen": "checklist"
+    },
+    {
+      "id": "playbook",
+      "label": {
+        "en": "Playbook",
+        "ko": "플레이북",
+        "zh": "操作手册",
+        "hi": "प्लेबुक",
+        "es": "Guía práctica",
+        "fr": "Guide pratique",
+        "ar": "دليل العمل",
+        "pt": "Guia",
+        "ru": "Плейбук",
+        "de": "Playbook",
+        "ja": "プレイブック",
+        "tr": "Oyun kitabı",
+        "vi": "Sổ tay hướng dẫn",
+        "it": "Playbook",
+        "fa": "کتاب راهنما",
+        "pl": "Podręcznik",
+        "uk": "Плейбук",
+        "nl": "Playbook",
+        "sv": "Spelbok",
+        "cs": "Playbook",
+        "el": "Οδηγός εφαρμογής"
+      },
+      "icon": "menu_book",
+      "screen": "playbook"
+    },
+    {
+      "id": "design",
+      "label": {
+        "en": "Design",
+        "ko": "디자인",
+        "zh": "设计",
+        "hi": "डिज़ाइन",
+        "es": "Diseño",
+        "fr": "Design",
+        "ar": "التصميم",
+        "pt": "Design",
+        "ru": "Дизайн",
+        "de": "Design",
+        "ja": "デザイン",
+        "tr": "Tasarım",
+        "vi": "Thiết kế",
+        "it": "Design",
+        "fa": "طراحی",
+        "pl": "Design",
+        "uk": "Дизайн",
+        "nl": "Ontwerp",
+        "sv": "Design",
+        "cs": "Design",
+        "el": "Σχεδιασμός"
+      },
+      "icon": "palette",
+      "screen": "design"
+    },
+    {
+      "id": "customize",
+      "label": {
+        "en": "Customize",
+        "ko": "커스터마이즈",
+        "zh": "自定义",
+        "hi": "अनुकूलित करें",
+        "es": "Personalizar",
+        "fr": "Personnaliser",
+        "ar": "تخصيص",
+        "pt": "Personalizar",
+        "ru": "Настроить",
+        "de": "Anpassen",
+        "ja": "カスタマイズ",
+        "tr": "Özelleştir",
+        "vi": "Tùy chỉnh",
+        "it": "Personalizza",
+        "fa": "سفارشی‌سازی",
+        "pl": "Dostosuj",
+        "uk": "Налаштувати",
+        "nl": "Aanpassen",
+        "sv": "Anpassa",
+        "cs": "Přizpůsobit",
+        "el": "Προσαρμογή"
+      },
+      "icon": "tune",
+      "screen": "customize"
+    }
+  ],
+  "screens": {
+    "projects": {
+      "title": {
+        "en": "Projects",
+        "ko": "프로젝트",
+        "zh": "项目",
+        "hi": "परियोजनाएं",
+        "es": "Proyectos",
+        "fr": "Projets",
+        "ar": "المشاريع",
+        "pt": "Projetos",
+        "ru": "Проекты",
+        "de": "Projekte",
+        "ja": "プロジェクト",
+        "tr": "Projeler",
+        "vi": "Dự án",
+        "it": "Progetti",
+        "fa": "پروژه‌ها",
+        "pl": "Projekty",
+        "uk": "Проєкти",
+        "nl": "Projecten",
+        "sv": "Projekt",
+        "cs": "Projekty",
+        "el": "Έργα"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Every applet you're making, from spark to shipped. Start one (fill in its name + icon), then tap it and choose Open builder to design and build the real app — it lands on your home shelf. The Checklist + Playbook guide each step.",
+              "ko": "구상부터 출시까지, 여러분이 만드는 모든 앱렛입니다. 하나를 시작하고(이름+아이콘 입력), 탭한 뒤 '빌더 열기'를 선택해 실제 앱을 디자인·빌드하세요 — 홈 선반에 나타납니다. 체크리스트+플레이북이 각 단계를 안내합니다.",
+              "zh": "记录你正在制作的每一个应用，从灵感到发布。新建一个（填写名称+图标），然后点按它并选择“打开构建器”来设计并构建真正的应用——它会出现在你的主页架上。检查清单+操作手册会指导每一步。",
+              "hi": "आप जो भी ऐपलेट बना रहे हैं, विचार से लेकर लॉन्च तक। एक शुरू करें (नाम+आइकन भरें), फिर उसे टैप करके 'बिल्डर खोलें' चुनें ताकि असली ऐप डिज़ाइन व निर्मित करें — यह आपके होम शेल्फ पर आ जाता है। चेकलिस्ट+प्लेबुक हर कदम में मार्गदर्शन करते हैं।",
+              "es": "Todos los applets que estás creando, desde la idea hasta el lanzamiento. Empieza uno (rellena su nombre + icono), luego tócalo y elige Abrir constructor para diseñar y construir la app real — aparece en tu estante principal. La Lista de verificación + Guía práctica orientan cada paso.",
+              "fr": "Chaque applet que vous créez, de l'idée au lancement. Démarrez-en un (remplissez son nom + icône), puis touchez-le et choisissez Ouvrir le constructeur pour concevoir et construire la vraie app — elle atterrit sur votre étagère d'accueil. La Liste de contrôle + Guide pratique accompagnent chaque étape.",
+              "ar": "كل تطبيق تصنعه، من الفكرة إلى الإطلاق. ابدأ واحدًا (املأ اسمه + أيقونته)، ثم اضغط عليه واختر فتح المنشئ لتصميم وبناء التطبيق الحقيقي — يظهر في رفك الرئيسي. قائمة التحقق + دليل العمل يرشدانك في كل خطوة.",
+              "pt": "Todo applet que você está criando, da ideia ao lançamento. Comece um (preencha seu nome + ícone), depois toque nele e escolha Abrir construtor para projetar e construir o app real — ele aparece na sua prateleira inicial. A Lista de verificação + Guia orientam cada etapa.",
+              "ru": "Каждое приложение, которое вы создаёте, от идеи до запуска. Начните новое (заполните имя + значок), затем нажмите на него и выберите «Открыть конструктор», чтобы спроектировать и построить настоящее приложение — оно появится на вашей домашней полке. Чек-лист + плейбук направляют каждый шаг.",
+              "de": "Jedes Applet, das du erstellst, vom Funken bis zum Launch. Starte eins (Name + Symbol ausfüllen), tippe es dann an und wähle Builder öffnen, um die echte App zu entwerfen und zu bauen — sie landet auf deinem Startregal. Checkliste + Playbook begleiten jeden Schritt.",
+              "ja": "あなたが作っているすべてのアプレット、ひらめきから公開まで。1つ始めて（名前とアイコンを入力）、それをタップし「ビルダーを開く」を選ぶと実際のアプリをデザイン・構築でき — ホーム棚に表示されます。チェックリストとプレイブックが各ステップを案内します。",
+              "tr": "Yaptığınız her applet, kıvılcımdan yayına kadar. Bir tane başlatın (adını + simgesini doldurun), sonra ona dokunun ve gerçek uygulamayı tasarlamak ve oluşturmak için Oluşturucuyu Aç'ı seçin — ana rafınıza yerleşir. Kontrol Listesi + Oyun Kitabı her adımda rehberlik eder.",
+              "vi": "Mỗi applet bạn đang tạo, từ ý tưởng đến phát hành. Bắt đầu một cái (điền tên + biểu tượng), sau đó nhấn vào nó và chọn Mở trình xây dựng để thiết kế và xây dựng ứng dụng thực — nó sẽ xuất hiện trên kệ chính của bạn. Danh sách kiểm tra + Sổ tay hướng dẫn từng bước.",
+              "it": "Ogni applet che stai creando, dalla scintilla alla pubblicazione. Inizia un progetto (compila nome + icona), poi toccalo e scegli Apri builder per progettare e costruire l'app reale — apparirà sulla tua mensola home. La Lista di controllo + Playbook guidano ogni passo.",
+              "fa": "هر اپلتی که می‌سازید، از جرقه تا انتشار. یکی را شروع کنید (نام + نماد آن را پر کنید)، سپس روی آن ضربه بزنید و «باز کردن سازنده» را انتخاب کنید تا برنامهٔ واقعی را طراحی و بسازید — روی قفسهٔ خانگی شما می‌نشیند. چک‌لیست + کتاب راهنما هر گام را هدایت می‌کنند.",
+              "pl": "Każdy applet, który tworzysz, od iskry po wydanie. Rozpocznij jeden (wpisz jego nazwę + ikonę), następnie dotknij go i wybierz Otwórz kreator, aby zaprojektować i zbudować prawdziwą aplikację — trafi na twoją domową półkę. Lista kontrolna + Podręcznik prowadzą przez każdy krok.",
+              "uk": "Кожен аплет, який ви створюєте, від ідеї до випуску. Почніть новий (заповніть назву + значок), потім торкніться його та оберіть «Відкрити конструктор», щоб спроєктувати та побудувати справжній застосунок — він з'явиться на вашій домашній полиці. Чек-лист + плейбук супроводжують кожен крок.",
+              "nl": "Elke applet die je maakt, van vonk tot uitgebracht. Start er een (vul naam + pictogram in), tik er dan op en kies Bouwer openen om de echte app te ontwerpen en bouwen — hij komt op je startpagina te staan. De Checklist + Playbook begeleiden elke stap.",
+              "sv": "Varje applet du skapar, från gnista till lanserad. Starta en (fyll i namn + ikon), tryck sedan på den och välj Öppna byggverktyg för att designa och bygga den riktiga appen — den hamnar på din hemhylla. Checklistan + Spelboken vägleder varje steg.",
+              "cs": "Každý aplet, který vytváříte, od nápadu po vydání. Založte jeden (vyplňte jeho název + ikonu), poté na něj klepněte a zvolte Otevřít tvůrce a navrhněte a sestavte skutečnou aplikaci — přistane na vaší domovské poličce. Kontrolní seznam + Playbook provázejí každý krok.",
+              "el": "Κάθε εφαρμογή που δημιουργείτε, από τη σπίθα μέχρι την κυκλοφορία. Ξεκινήστε μία (συμπληρώστε το όνομα + το εικονίδιό της), έπειτα πατήστε την και επιλέξτε Άνοιγμα δημιουργού για να σχεδιάσετε και να κατασκευάσετε την πραγματική εφαρμογή — καταλήγει στο ράφι αρχικής σελίδας σας. Η Λίστα ελέγχου + ο Οδηγός καθοδηγούν κάθε βήμα."
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "New applet project",
+              "ko": "새 앱렛 프로젝트",
+              "zh": "新建应用项目",
+              "hi": "नई ऐपलेट परियोजना",
+              "es": "Nuevo proyecto de applet",
+              "fr": "Nouveau projet d'applet",
+              "ar": "مشروع تطبيق جديد",
+              "pt": "Novo projeto de applet",
+              "ru": "Новый проект приложения",
+              "de": "Neues Applet-Projekt",
+              "ja": "新しいアプレットプロジェクト",
+              "tr": "Yeni applet projesi",
+              "vi": "Dự án applet mới",
+              "it": "Nuovo progetto applet",
+              "fa": "پروژهٔ اپلت جدید",
+              "pl": "Nowy projekt appletu",
+              "uk": "Новий проєкт аплета",
+              "nl": "Nieuw appletproject",
+              "sv": "Nytt applet-projekt",
+              "cs": "Nový projekt apletu",
+              "el": "Νέο έργο εφαρμογής"
+            },
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "projects",
+                "values": {
+                  "status": "idea",
+                  "style": "clean"
+                }
+              }
+            }
+          },
+          {
+            "example": {"ids": ["p1"], "label": {"en": "Examples", "ko": "예시", "zh": "示例", "hi": "उदाहरण", "es": "Ejemplos", "fr": "Exemples", "ar": "أمثلة", "pt": "Exemplos", "ru": "Примеры", "de": "Beispiele", "ja": "例", "tr": "Örnekler", "vi": "Ví dụ", "it": "Esempi", "fa": "نمونه‌ها", "pl": "Przykłady", "uk": "Приклади", "nl": "Voorbeelden", "sv": "Exempel", "cs": "Příklady", "el": "Παραδείγματα"}, "chipLabel": {"en": "Example", "ko": "예시", "zh": "示例", "hi": "उदाहरण", "es": "Ejemplo", "fr": "Exemple", "ar": "مثال", "pt": "Exemplo", "ru": "Пример", "de": "Beispiel", "ja": "例", "tr": "Örnek", "vi": "Ví dụ", "it": "Esempio", "fa": "نمونه", "pl": "Przykład", "uk": "Приклад", "nl": "Voorbeeld", "sv": "Exempel", "cs": "Příklad", "el": "Παράδειγμα"}, "hideLabel": {"en": "Hide", "ko": "숨기기", "zh": "隐藏", "hi": "छिपाएं", "es": "Ocultar", "fr": "Masquer", "ar": "إخفاء", "pt": "Ocultar", "ru": "Скрыть", "de": "Ausblenden", "ja": "非表示", "tr": "Gizle", "vi": "Ẩn", "it": "Nascondi", "fa": "پنهان", "pl": "Ukryj", "uk": "Приховати", "nl": "Verbergen", "sv": "Dölj", "cs": "Skrýt", "el": "Απόκρυψη"}, "hiddenFromSetting": "appletStudioExamplesHidden"},
+            "type": "cards",
+            "emptyIcon": "dashboard_customize",
+            "emptyTitle": {
+              "en": "No projects yet",
+              "ko": "아직 프로젝트 없음",
+              "zh": "暂无项目",
+              "hi": "अभी तक कोई परियोजना नहीं",
+              "es": "Aún no hay proyectos",
+              "fr": "Aucun projet pour l'instant",
+              "ar": "لا توجد مشاريع بعد",
+              "pt": "Ainda sem projetos",
+              "ru": "Пока нет проектов",
+              "de": "Noch keine Projekte",
+              "ja": "まだプロジェクトがありません",
+              "tr": "Henüz proje yok",
+              "vi": "Chưa có dự án nào",
+              "it": "Ancora nessun progetto",
+              "fa": "هنوز پروژه‌ای نیست",
+              "pl": "Brak jeszcze projektów",
+              "uk": "Поки немає проєктів",
+              "nl": "Nog geen projecten",
+              "sv": "Inga projekt ännu",
+              "cs": "Zatím žádné projekty",
+              "el": "Δεν υπάρχουν ακόμα έργα"
+            },
+            "emptyText": {
+              "en": "Start a project to design and build an app.",
+              "ko": "앱을 디자인하고 빌드하려면 프로젝트를 시작하세요.",
+              "zh": "开始一个项目来设计并构建应用。",
+              "hi": "ऐप डिज़ाइन व निर्मित करने के लिए एक परियोजना शुरू करें।",
+              "es": "Inicia un proyecto para diseñar y construir una app.",
+              "fr": "Démarrez un projet pour concevoir et construire une app.",
+              "ar": "ابدأ مشروعًا لتصميم وبناء تطبيق.",
+              "pt": "Comece um projeto para projetar e construir um app.",
+              "ru": "Начните проект, чтобы спроектировать и построить приложение.",
+              "de": "Starte ein Projekt, um eine App zu entwerfen und zu bauen.",
+              "ja": "アプリをデザインし構築するにはプロジェクトを開始してください。",
+              "tr": "Bir uygulama tasarlamak ve oluşturmak için bir proje başlatın.",
+              "vi": "Bắt đầu một dự án để thiết kế và xây dựng một ứng dụng.",
+              "it": "Inizia un progetto per progettare e costruire un'app.",
+              "fa": "برای طراحی و ساخت یک برنامه یک پروژه شروع کنید.",
+              "pl": "Rozpocznij projekt, aby zaprojektować i zbudować aplikację.",
+              "uk": "Розпочніть проєкт, щоб спроєктувати та побудувати застосунок.",
+              "nl": "Start een project om een app te ontwerpen en bouwen.",
+              "sv": "Starta ett projekt för att designa och bygga en app.",
+              "cs": "Založte projekt a navrhněte a sestavte aplikaci.",
+              "el": "Ξεκινήστε ένα έργο για να σχεδιάσετε και να κατασκευάσετε μια εφαρμογή."
+            },
+            "emptyAction": {"fn": "addRow", "args": {"table": "projects", "values": {"status": "idea", "style": "clean"}}},
+            "emptyActionLabel": {
+              "en": "New project",
+              "ko": "새 프로젝트",
+              "zh": "新建项目",
+              "hi": "नई परियोजना",
+              "es": "Nuevo proyecto",
+              "fr": "Nouveau projet",
+              "ar": "مشروع جديد",
+              "pt": "Novo projeto",
+              "ru": "Новый проект",
+              "de": "Neues Projekt",
+              "ja": "新しいプロジェクト",
+              "tr": "Yeni proje",
+              "vi": "Dự án mới",
+              "it": "Nuovo progetto",
+              "fa": "پروژهٔ جدید",
+              "pl": "Nowy projekt",
+              "uk": "Новий проєкт",
+              "nl": "Nieuw project",
+              "sv": "Nytt projekt",
+              "cs": "Nový projekt",
+              "el": "Νέο έργο"
+            },
+            "table": "projects",
+            "groupBy": "status",
+            "groupOrder": ["building", "polishing", "shaping", "idea", "shipped"],
+            "groupByOptions": [
+              { "label": "Status", "column": "status" },
+              { "label": "Style", "column": "style" }
+            ],
+            "title": "name",
+            "subtitle": "tagline",
+            "search": true,
+            "tags": [
+              {
+                "column": "status",
+                "colors": {
+                  "idea": "gray",
+                  "shaping": "blue",
+                  "building": "amber",
+                  "polishing": "purple",
+                  "shipped": "green"
+                }
+              },
+              { "column": "style" }
+            ],
+            "pulse": { "column": "status", "value": "building" },
+            "expandable": true,
+            "expandFields": [
+              { "column": "tagline", "label": "Purpose" },
+              { "column": "audience", "label": "Who it's for" },
+              { "column": "style", "label": "Design style" },
+              { "column": "accent", "label": "Accent color" },
+              { "column": "icon", "label": "Icon" },
+              { "column": "notes", "label": "Notes" }
+            ],
+            "open": "Open builder",
+            "action": { "fn": "hostCall", "args": { "name": "buildApplet" } }
+          }
+        ]
+      }
+    },
+    "checklist": {
+      "title": {
+        "en": "Checklist",
+        "ko": "체크리스트",
+        "zh": "检查清单",
+        "hi": "चेकलिस्ट",
+        "es": "Lista de verificación",
+        "fr": "Liste de contrôle",
+        "ar": "قائمة التحقق",
+        "pt": "Lista de verificação",
+        "ru": "Чек-лист",
+        "de": "Checkliste",
+        "ja": "チェックリスト",
+        "tr": "Kontrol listesi",
+        "vi": "Danh sách kiểm tra",
+        "it": "Lista di controllo",
+        "fa": "چک‌لیست",
+        "pl": "Lista kontrolna",
+        "uk": "Чек-лист",
+        "nl": "Checklist",
+        "sv": "Checklista",
+        "cs": "Kontrolní seznam",
+        "el": "Λίστα ελέγχου"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "The path from idea to shipped applet, in five phases. Tick steps off as you go; tap one for its details, or add steps of your own.",
+              "ko": "아이디어에서 출시까지, 다섯 단계로 이어지는 경로입니다. 진행하면서 단계를 체크하고, 세부 정보는 탭해서 확인하거나, 직접 단계를 추가하세요.",
+              "zh": "从想法到发布应用的路径，共五个阶段。随进度勾选步骤；点按查看详情，或添加你自己的步骤。",
+              "hi": "विचार से लॉन्च किए गए ऐपलेट तक का रास्ता, पांच चरणों में। जैसे-जैसे बढ़ें, कदम टिक करें; विवरण के लिए किसी को टैप करें, या अपने कदम जोड़ें।",
+              "es": "El camino de la idea a un applet lanzado, en cinco fases. Marca los pasos a medida que avanzas; toca uno para ver sus detalles, o añade tus propios pasos.",
+              "fr": "Le chemin de l'idée à l'applet lancé, en cinq phases. Cochez les étapes au fur et à mesure ; touchez-en une pour ses détails, ou ajoutez vos propres étapes.",
+              "ar": "المسار من الفكرة إلى التطبيق المُطلق، في خمس مراحل. أشّر الخطوات كلما تقدمت؛ اضغط على واحدة لتفاصيلها، أو أضف خطواتك الخاصة.",
+              "pt": "O caminho da ideia até o applet lançado, em cinco fases. Marque as etapas conforme avança; toque em uma para seus detalhes, ou adicione suas próprias etapas.",
+              "ru": "Путь от идеи до запущенного приложения в пяти фазах. Отмечайте шаги по мере продвижения; нажмите на один для подробностей или добавьте свои собственные шаги.",
+              "de": "Der Weg von der Idee zum ausgelieferten Applet, in fünf Phasen. Hake Schritte ab, während du vorankommst; tippe auf einen für Details, oder füge eigene Schritte hinzu.",
+              "ja": "アイデアからアプレット公開までの道のり、5つのフェーズで構成されています。進めながらステップにチェックを入れ、詳細を見るにはタップするか、独自のステップを追加してください。",
+              "tr": "Fikirden yayınlanan applet'e giden yol, beş aşamada. İlerledikçe adımları işaretleyin; ayrıntıları için birine dokunun veya kendi adımlarınızı ekleyin.",
+              "vi": "Con đường từ ý tưởng đến applet đã phát hành, qua năm giai đoạn. Đánh dấu các bước khi bạn tiến hành; nhấn vào một bước để xem chi tiết, hoặc thêm các bước của riêng bạn.",
+              "it": "Il percorso dall'idea all'applet pubblicata, in cinque fasi. Spunta i passi man mano che procedi; toccane uno per i dettagli, o aggiungi passi tuoi.",
+              "fa": "مسیر از ایده تا اپلت منتشرشده، در پنج فاز. با پیشرفت کارتان مراحل را تیک بزنید؛ برای جزئیات روی یکی ضربه بزنید یا مراحل خودتان را اضافه کنید.",
+              "pl": "Droga od pomysłu do wydanego appletu, w pięciu fazach. Odhaczaj kroki w miarę postępu; dotknij jednego, aby zobaczyć szczegóły, lub dodaj własne kroki.",
+              "uk": "Шлях від ідеї до випущеного аплета, у п'яти фазах. Позначайте кроки в міру просування; торкніться одного для деталей, або додайте власні кроки.",
+              "nl": "Het pad van idee naar uitgebrachte applet, in vijf fasen. Vink stappen af terwijl je vordert; tik op één voor details, of voeg je eigen stappen toe.",
+              "sv": "Vägen från idé till lanserad applet, i fem faser. Bocka av steg medan du går; tryck på ett för detaljer, eller lägg till egna steg.",
+              "cs": "Cesta od nápadu k vydanému apletu, v pěti fázích. Odškrtávejte kroky, jak postupujete; klepnutím na jeden zobrazíte podrobnosti, nebo přidejte vlastní kroky.",
+              "el": "Το μονοπάτι από την ιδέα στην κυκλοφορημένη εφαρμογή, σε πέντε φάσεις. Τσεκάρετε βήματα καθώς προχωράτε· πατήστε ένα για τις λεπτομέρειές του, ή προσθέστε δικά σας βήματα."
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "New step",
+              "ko": "새 단계",
+              "zh": "新建步骤",
+              "hi": "नया कदम",
+              "es": "Nuevo paso",
+              "fr": "Nouvelle étape",
+              "ar": "خطوة جديدة",
+              "pt": "Nova etapa",
+              "ru": "Новый шаг",
+              "de": "Neuer Schritt",
+              "ja": "新しいステップ",
+              "tr": "Yeni adım",
+              "vi": "Bước mới",
+              "it": "Nuovo passo",
+              "fa": "گام جدید",
+              "pl": "Nowy krok",
+              "uk": "Новий крок",
+              "nl": "Nieuwe stap",
+              "sv": "Nytt steg",
+              "cs": "Nový krok",
+              "el": "Νέο βήμα"
+            },
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "steps",
+                "values": {
+                  "phase": "1 · Define",
+                  "status": "todo",
+                  "project": "p1"
+                }
+              }
+            }
+          },
+          {
+            "type": "buckets",
+            "emptyIcon": "checklist",
+            "emptyTitle": {
+              "en": "No steps yet",
+              "ko": "아직 단계 없음",
+              "zh": "暂无步骤",
+              "hi": "अभी तक कोई कदम नहीं",
+              "es": "Aún no hay pasos",
+              "fr": "Aucune étape pour l'instant",
+              "ar": "لا توجد خطوات بعد",
+              "pt": "Ainda sem etapas",
+              "ru": "Пока нет шагов",
+              "de": "Noch keine Schritte",
+              "ja": "まだステップがありません",
+              "tr": "Henüz adım yok",
+              "vi": "Chưa có bước nào",
+              "it": "Ancora nessun passo",
+              "fa": "هنوز گامی نیست",
+              "pl": "Brak jeszcze kroków",
+              "uk": "Поки немає кроків",
+              "nl": "Nog geen stappen",
+              "sv": "Inga steg ännu",
+              "cs": "Zatím žádné kroky",
+              "el": "Δεν υπάρχουν ακόμα βήματα"
+            },
+            "emptyText": {
+              "en": "Add a step to break the work down and track progress.",
+              "ko": "작업을 단계로 나누어 진행 상황을 추적하세요.",
+              "zh": "把工作拆解成步骤以跟踪进度。",
+              "hi": "प्रगति ट्रैक करने के लिए काम को कदमों में बांटें।",
+              "es": "Divide el trabajo en pasos para seguir el progreso.",
+              "fr": "Divisez le travail en étapes pour suivre les progrès.",
+              "ar": "قسّم العمل إلى خطوات لتتبع التقدم.",
+              "pt": "Divida o trabalho em etapas para acompanhar o progresso.",
+              "ru": "Разбейте работу на шаги, чтобы отслеживать прогресс.",
+              "de": "Teile die Arbeit in Schritte auf, um den Fortschritt zu verfolgen.",
+              "ja": "作業をステップに分けて進捗を追跡しましょう。",
+              "tr": "İlerlemeyi izlemek için işi adımlara bölün.",
+              "vi": "Chia công việc thành các bước để theo dõi tiến độ.",
+              "it": "Suddividi il lavoro in passi per monitorare i progressi.",
+              "fa": "کار را برای پیگیری پیشرفت به گام‌ها تقسیم کنید.",
+              "pl": "Podziel pracę na kroki, aby śledzić postęp.",
+              "uk": "Розбийте роботу на кроки, щоб відстежувати прогрес.",
+              "nl": "Verdeel het werk in stappen om de voortgang bij te houden.",
+              "sv": "Dela upp arbetet i steg för att följa framstegen.",
+              "cs": "Rozdělte práci na kroky pro sledování postupu.",
+              "el": "Χωρίστε την εργασία σε βήματα για να παρακολουθείτε την πρόοδο."
+            },
+            "table": "steps",
+            "groupColumn": "phase",
+            "groupOrder": [
+              "1 · Define",
+              "2 · Data",
+              "3 · Screens",
+              "4 · Feel",
+              "5 · Ship"
+            ],
+            "titleColumn": "title",
+            "statusColumn": "status",
+            "doneValue": "done",
+            "openValue": "todo",
+            "subtitleColumns": ["tip"],
+            "onTap": { "fn": "editRow" }
+          }
+        ]
+      }
+    },
+    "playbook": {
+      "title": {
+        "en": "Playbook",
+        "ko": "플레이북",
+        "zh": "操作手册",
+        "hi": "प्लेबुक",
+        "es": "Guía práctica",
+        "fr": "Guide pratique",
+        "ar": "دليل العمل",
+        "pt": "Guia",
+        "ru": "Плейбук",
+        "de": "Playbook",
+        "ja": "プレイブック",
+        "tr": "Oyun kitabı",
+        "vi": "Sổ tay hướng dẫn",
+        "it": "Playbook",
+        "fa": "کتاب راهنما",
+        "pl": "Podręcznik",
+        "uk": "Плейбук",
+        "nl": "Playbook",
+        "sv": "Spelbok",
+        "cs": "Playbook",
+        "el": "Οδηγός εφαρμογής"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Everything the checklist assumes you know, explained properly. One guide per idea — expand a card to read it.",
+              "ko": "체크리스트가 당신이 안다고 가정하는 모든 것을 제대로 설명합니다. 아이디어마다 하나의 가이드가 있으며, 카드를 펼쳐 읽으세요.",
+              "zh": "把检查清单假设你已经知道的一切都好好解释一遍。每个概念一份指南——展开卡片阅读。",
+              "hi": "चेकलिस्ट जो कुछ मान लेती है कि आप जानते हैं, वह सब ठीक से समझाया गया है। प्रति विचार एक गाइड — पढ़ने के लिए कार्ड फैलाएं।",
+              "es": "Todo lo que la lista de verificación asume que ya sabes, explicado correctamente. Una guía por idea — expande una tarjeta para leerla.",
+              "fr": "Tout ce que la liste de contrôle suppose que vous savez déjà, expliqué correctement. Un guide par idée — développez une carte pour la lire.",
+              "ar": "كل ما تفترض قائمة التحقق أنك تعرفه، مشروح بشكل صحيح. دليل واحد لكل فكرة — وسّع بطاقة لقراءتها.",
+              "pt": "Tudo que a lista de verificação assume que você sabe, explicado corretamente. Um guia por ideia — expanda um cartão para lê-lo.",
+              "ru": "Всё, что чек-лист считает само собой разумеющимся, объяснено как следует. По одному руководству на идею — разверните карточку, чтобы прочитать.",
+              "de": "Alles, was die Checkliste als bekannt voraussetzt, ordentlich erklärt. Eine Anleitung pro Idee — klappe eine Karte auf, um sie zu lesen.",
+              "ja": "チェックリストがあなたが知っていると想定していることすべてを、きちんと説明します。1つのアイデアにつき1つのガイド — カードを展開して読んでください。",
+              "tr": "Kontrol listesinin bildiğinizi varsaydığı her şey, düzgünce açıklanır. Her fikir için bir rehber — okumak için bir kartı genişletin.",
+              "vi": "Mọi thứ mà danh sách kiểm tra giả định bạn đã biết, được giải thích đầy đủ. Một hướng dẫn cho mỗi ý tưởng — mở rộng một thẻ để đọc.",
+              "it": "Tutto ciò che la lista di controllo presume tu sappia, spiegato per bene. Una guida per idea — espandi una scheda per leggerla.",
+              "fa": "هرچه چک‌لیست فرض می‌کند می‌دانید، به‌درستی توضیح داده شده. یک راهنما برای هر ایده — یک کارت را برای خواندن باز کنید.",
+              "pl": "Wszystko, co lista kontrolna zakłada, że wiesz, porządnie wyjaśnione. Jeden poradnik na pomysł — rozwiń kartę, aby go przeczytać.",
+              "uk": "Усе, що чек-лист вважає відомим наперед, пояснено як слід. По одному посібнику на ідею — розгорніть картку, щоб прочитати.",
+              "nl": "Alles wat de checklist aanneemt dat je weet, netjes uitgelegd. Eén gids per idee — vouw een kaart uit om te lezen.",
+              "sv": "Allt som checklistan antar att du redan vet, ordentligt förklarat. En guide per idé — expandera ett kort för att läsa den.",
+              "cs": "Vše, co kontrolní seznam předpokládá, že víte, pořádně vysvětleno. Jeden průvodce na nápad — rozbalte kartu a přečtěte si jej.",
+              "el": "Ό,τι η λίστα ελέγχου υποθέτει ότι ξέρετε, εξηγημένο σωστά. Ένας οδηγός ανά ιδέα — αναπτύξτε μια κάρτα για να τον διαβάσετε."
+            }
+          },
+          {
+            "type": "cards",
+            "table": "playbook",
+            "groupBy": "phase",
+            "groupOrder": [
+              "1 · Define",
+              "2 · Data",
+              "3 · Screens",
+              "4 · Feel",
+              "5 · Ship"
+            ],
+            "sort": { "column": "order", "dir": "asc" },
+            "title": "topic",
+            "subtitle": "summary",
+            "search": true,
+            "expandable": true,
+            "expandFields": [
+              { "column": "details", "label": "Guide" }
+            ],
+            "open": "Open guide",
+            "action": { "fn": "editRow" }
+          }
+        ]
+      }
+    },
+    "design": {
+      "title": {
+        "en": "Design",
+        "ko": "디자인",
+        "zh": "设计",
+        "hi": "डिज़ाइन",
+        "es": "Diseño",
+        "fr": "Design",
+        "ar": "التصميم",
+        "pt": "Design",
+        "ru": "Дизайн",
+        "de": "Design",
+        "ja": "デザイン",
+        "tr": "Tasarım",
+        "vi": "Thiết kế",
+        "it": "Design",
+        "fa": "طراحی",
+        "pl": "Design",
+        "uk": "Дизайн",
+        "nl": "Ontwerp",
+        "sv": "Design",
+        "cs": "Design",
+        "el": "Σχεδιασμός"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "An applet's feel is its accent color plus one of these eight styles. Pick the pair that matches the mood — a journal wants different paper than a game — and set them on your project.",
+              "ko": "앱렛의 느낌은 강조 색상과 이 8가지 스타일 중 하나가 결정합니다. 분위기에 맞는 조합을 골라(일기장은 게임과 다른 종이를 원합니다) 프로젝트에 설정하세요.",
+              "zh": "应用的观感由它的强调色加上这八种风格之一决定。选择匹配情绪的组合——日记本需要和游戏不同的“纸张”——并将它们设置到你的项目上。",
+              "hi": "किसी ऐपलेट का अहसास उसके एक्सेंट रंग व इन आठ शैलियों में से एक से बनता है। मूड से मेल खाने वाली जोड़ी चुनें — एक जर्नल को खेल से अलग कागज़ चाहिए — और उन्हें अपनी परियोजना पर सेट करें।",
+              "es": "La sensación de un applet es su color de acento más uno de estos ocho estilos. Elige la pareja que encaje con el ambiente — un diario quiere un papel distinto al de un juego — y configúralos en tu proyecto.",
+              "fr": "L'ambiance d'un applet est sa couleur d'accent plus l'un de ces huit styles. Choisissez la paire qui correspond à l'humeur — un journal veut un papier différent d'un jeu — et définissez-les sur votre projet.",
+              "ar": "شعور التطبيق هو لونه المميز بالإضافة إلى واحد من هذه الأنماط الثمانية. اختر الزوج الذي يناسب المزاج — تحتاج المذكرة إلى ورق مختلف عن لعبة — وضعهما على مشروعك.",
+              "pt": "A sensação de um applet é sua cor de destaque mais um destes oito estilos. Escolha o par que combina com o clima — um diário quer papel diferente de um jogo — e defina-os no seu projeto.",
+              "ru": "Ощущение приложения — это его акцентный цвет плюс один из этих восьми стилей. Выберите пару, соответствующую настроению — дневнику нужна другая «бумага», чем игре, — и задайте их для своего проекта.",
+              "de": "Das Gefühl eines Applets ist seine Akzentfarbe plus einer dieser acht Stile. Wähle das Paar, das zur Stimmung passt — ein Journal will anderes Papier als ein Spiel — und lege sie für dein Projekt fest.",
+              "ja": "アプレットの雰囲気は、そのアクセントカラーとこれら8つのスタイルのうちの1つで決まります。気分に合った組み合わせを選び（ジャーナルはゲームとは違う紙を求めます）、プロジェクトに設定してください。",
+              "tr": "Bir applet'in hissi, vurgu rengi artı bu sekiz stilden biridir. Ruh haline uyan çifti seçin — bir günlük bir oyundan farklı kağıt ister — ve bunları projenize ayarlayın.",
+              "vi": "Cảm giác của một applet là màu nhấn của nó cộng với một trong tám phong cách này. Chọn cặp phù hợp với tâm trạng — một nhật ký cần giấy khác với một trò chơi — và đặt chúng cho dự án của bạn.",
+              "it": "L'atmosfera di un'applet è il suo colore d'accento più uno di questi otto stili. Scegli la coppia che si adatta all'umore — un diario vuole una carta diversa da un gioco — e impostali sul tuo progetto.",
+              "fa": "حس‌وحال یک اپلت رنگ تأکیدی آن به‌علاوهٔ یکی از این هشت سبک است. جفتی را که با فضا هم‌خوان است انتخاب کنید — یک دفترچه‌خاطرات کاغذی متفاوت از یک بازی می‌خواهد — و آن‌ها را روی پروژه‌تان تنظیم کنید.",
+              "pl": "Klimat appletu to jego kolor akcentu plus jeden z tych ośmiu stylów. Wybierz parę pasującą do nastroju — dziennik potrzebuje innego papieru niż gra — i ustaw je w swoim projekcie.",
+              "uk": "Атмосфера аплета — це його акцентний колір плюс один із цих восьми стилів. Оберіть пару, що відповідає настрою — щоденнику потрібен інший «папір», ніж грі, — і встановіть їх для свого проєкту.",
+              "nl": "Het gevoel van een applet is de accentkleur plus een van deze acht stijlen. Kies het paar dat bij de sfeer past — een dagboek wil ander papier dan een spel — en stel ze in voor je project.",
+              "sv": "En applets känsla är dess accentfärg plus en av dessa åtta stilar. Välj paret som matchar stämningen — en journal vill ha annat papper än ett spel — och ställ in dem på ditt projekt.",
+              "cs": "Pocit z apletu tvoří jeho akcentová barva plus jeden z těchto osmi stylů. Vyberte pár, který ladí s náladou — deník chce jiný papír než hra — a nastavte je na svém projektu.",
+              "el": "Η αίσθηση μιας εφαρμογής είναι το χρώμα έμφασής της συν ένα από αυτά τα οκτώ στιλ. Επιλέξτε το ζευγάρι που ταιριάζει στη διάθεση — ένα ημερολόγιο θέλει διαφορετικό χαρτί από ένα παιχνίδι — και ορίστε τα στο έργο σας."
+            }
+          },
+          {
+            "type": "cards",
+            "table": "styles",
+            "title": "name",
+            "subtitle": "vibe",
+            "tags": [
+              {
+                "column": "name",
+                "colors": {
+                  "clean": "blue",
+                  "material": "teal",
+                  "minimal": "gray",
+                  "contrast": "red",
+                  "watercolor": "purple",
+                  "pastel": "pink",
+                  "sepia": "amber",
+                  "neon": "green"
+                }
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              { "column": "bestFor", "label": "Best for" },
+              { "column": "pairWith", "label": "Accents that pair well" }
+            ],
+            "open": "Open style",
+            "action": { "fn": "editRow" }
+          }
+        ]
+      }
+    },
+    "customize": {
+      "title": {
+        "en": "Customize",
+        "ko": "커스터마이즈",
+        "zh": "自定义",
+        "hi": "अनुकूलित करें",
+        "es": "Personalizar",
+        "fr": "Personnaliser",
+        "ar": "تخصيص",
+        "pt": "Personalizar",
+        "ru": "Настроить",
+        "de": "Anpassen",
+        "ja": "カスタマイズ",
+        "tr": "Özelleştir",
+        "vi": "Tùy chỉnh",
+        "it": "Personalizza",
+        "fa": "سفارشی‌سازی",
+        "pl": "Dostosuj",
+        "uk": "Налаштувати",
+        "nl": "Aanpassen",
+        "sv": "Anpassa",
+        "cs": "Přizpůsobit",
+        "el": "Προσαρμογή"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Reshape the Studio itself: add or remove tables and attributes — extra checklist fields, a links table, whatever your process needs. Changes apply instantly.",
+              "ko": "스튜디오 자체를 재구성하세요: 표와 속성을 추가·삭제합니다 — 추가 체크리스트 필드, 링크 표 등 여러분의 프로세스에 필요한 무엇이든. 변경 사항은 즉시 적용됩니다.",
+              "zh": "重塑 Studio 本身：添加或移除表格和属性——额外的检查清单字段、链接表，任何你的流程所需要的。更改会立即生效。",
+              "hi": "स्टूडियो को खुद फिर से आकार दें: तालिकाएं व विशेषताएं जोड़ें या हटाएं — अतिरिक्त चेकलिस्ट फ़ील्ड, एक लिंक तालिका, आपकी प्रक्रिया को जो भी चाहिए। बदलाव तुरंत लागू होते हैं।",
+              "es": "Reconfigura el propio Studio: añade o elimina tablas y atributos — campos extra de la lista de verificación, una tabla de enlaces, lo que necesite tu proceso. Los cambios se aplican al instante.",
+              "fr": "Remodelez le Studio lui-même : ajoutez ou supprimez des tables et attributs — champs supplémentaires de la liste de contrôle, une table de liens, tout ce dont votre processus a besoin. Les changements s'appliquent instantanément.",
+              "ar": "أعد تشكيل الاستوديو نفسه: أضف أو أزل الجداول والسمات — حقول قائمة تحقق إضافية، جدول روابط، أيًا كان ما تحتاجه عمليتك. تُطبَّق التغييرات فورًا.",
+              "pt": "Remodele o próprio Studio: adicione ou remova tabelas e atributos — campos extras de lista de verificação, uma tabela de links, o que quer que seu processo precise. As mudanças se aplicam instantaneamente.",
+              "ru": "Измените саму Студию: добавляйте или удаляйте таблицы и атрибуты — дополнительные поля чек-листа, таблицу ссылок — всё, что нужно вашему процессу. Изменения применяются мгновенно.",
+              "de": "Gestalte das Studio selbst um: füge Tabellen und Attribute hinzu oder entferne sie — zusätzliche Checklistenfelder, eine Link-Tabelle, was auch immer dein Prozess braucht. Änderungen wirken sofort.",
+              "ja": "Studio自体を作り変えましょう：テーブルや属性を追加・削除できます — 追加のチェックリストフィールド、リンクテーブルなど、あなたのプロセスに必要な何でも。変更は即座に反映されます。",
+              "tr": "Stüdyonun kendisini yeniden şekillendirin: tablo ve öznitelik ekleyin veya kaldırın — ekstra kontrol listesi alanları, bir bağlantı tablosu, sürecinizin ihtiyaç duyduğu her şey. Değişiklikler anında uygulanır.",
+              "vi": "Định hình lại chính Studio: thêm hoặc xóa bảng và thuộc tính — trường danh sách kiểm tra bổ sung, một bảng liên kết, bất cứ điều gì quy trình của bạn cần. Thay đổi được áp dụng ngay lập tức.",
+              "it": "Rimodella lo Studio stesso: aggiungi o rimuovi tabelle e attributi — campi extra della lista di controllo, una tabella di link, qualunque cosa serva al tuo processo. Le modifiche si applicano istantaneamente.",
+              "fa": "خود استودیو را بازسازی کنید: جدول‌ها و ویژگی‌ها را اضافه یا حذف کنید — فیلدهای اضافهٔ چک‌لیست، جدول لینک‌ها، هرچه فرایند شما نیاز دارد. تغییرات بلافاصله اعمال می‌شوند.",
+              "pl": "Przekształć samo Studio: dodawaj lub usuwaj tabele i atrybuty — dodatkowe pola listy kontrolnej, tabelę linków, cokolwiek potrzebuje twój proces. Zmiany stosują się natychmiast.",
+              "uk": "Змініть саму Студію: додавайте чи видаляйте таблиці й атрибути — додаткові поля чек-листа, таблицю посилань, усе, що потребує ваш процес. Зміни застосовуються миттєво.",
+              "nl": "Hervorm de Studio zelf: voeg tabellen en attributen toe of verwijder ze — extra checklistvelden, een linktabel, wat je proces ook nodig heeft. Wijzigingen worden direct toegepast.",
+              "sv": "Omforma själva Studion: lägg till eller ta bort tabeller och attribut — extra checklistfält, en länktabell, vad din process än behöver. Ändringar tillämpas omedelbart.",
+              "cs": "Přetvořte samotné Studio: přidávejte nebo odebírejte tabulky a atributy — další pole kontrolního seznamu, tabulku odkazů, cokoli váš proces potřebuje. Změny se projeví okamžitě.",
+              "el": "Αναδιαμορφώστε το ίδιο το Στούντιο: προσθέστε ή αφαιρέστε πίνακες και χαρακτηριστικά — επιπλέον πεδία λίστας ελέγχου, έναν πίνακα συνδέσμων, ό,τι χρειάζεται η διαδικασία σας. Οι αλλαγές εφαρμόζονται αμέσως."
+            }
+          },
+          {
+            "type": "schemaeditor"
+          }
+        ]
+      }
+    }
+  }
+}

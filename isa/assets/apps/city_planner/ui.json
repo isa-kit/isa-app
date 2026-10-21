@@ -1,0 +1,1265 @@
+{
+  "app": {
+    "languages": ["en", "ko", "zh", "hi", "es", "fr", "ar", "pt", "ru", "de", "ja", "tr", "vi", "it", "fa", "pl", "uk", "nl", "sv", "cs", "el"],
+    "translatable": true,
+    "appDataTools": true,
+    "title": {
+      "en": "City Planner",
+      "ko": "도시 계획자",
+      "zh": "城市规划师",
+      "hi": "सिटी प्लानर",
+      "es": "Planificador urbano",
+      "fr": "Urbaniste",
+      "ar": "مخطط المدينة",
+      "pt": "Planejador urbano",
+      "ru": "Градостроитель",
+      "de": "Stadtplaner",
+      "ja": "シティプランナー",
+      "tr": "Şehir Planlayıcı",
+      "vi": "Nhà quy hoạch thành phố",
+      "it": "Pianificatore urbano",
+      "fa": "برنامه‌ریز شهر",
+      "pl": "Planista miasta",
+      "uk": "Міський планувальник",
+      "nl": "Stadsplanner",
+      "sv": "Stadsplanerare",
+      "cs": "Plánovač města",
+      "el": "Πολεοδόμος"
+    },
+    "primaryColor": "#2E7D32",
+    "theme": "material",
+    "autosave": true
+  },
+  "nav": [
+    {
+      "id": "map",
+      "label": {
+        "en": "Map",
+        "ko": "지도",
+        "zh": "地图",
+        "hi": "मैप",
+        "es": "Mapa",
+        "fr": "Carte",
+        "ar": "الخريطة",
+        "pt": "Mapa",
+        "ru": "Карта",
+        "de": "Karte",
+        "ja": "地図",
+        "tr": "Harita",
+        "vi": "Bản đồ",
+        "it": "Mappa",
+        "fa": "نقشه",
+        "pl": "Mapa",
+        "uk": "Карта",
+        "nl": "Kaart",
+        "sv": "Karta",
+        "cs": "Mapa",
+        "el": "Χάρτης"
+      },
+      "icon": "map",
+      "screen": "map"
+    },
+    {
+      "id": "stats",
+      "label": {
+        "en": "Stats",
+        "ko": "통계",
+        "zh": "统计",
+        "hi": "आंकड़े",
+        "es": "Estadísticas",
+        "fr": "Statistiques",
+        "ar": "الإحصاءات",
+        "pt": "Estatísticas",
+        "ru": "Статистика",
+        "de": "Statistiken",
+        "ja": "統計",
+        "tr": "İstatistikler",
+        "vi": "Thống kê",
+        "it": "Statistiche",
+        "fa": "آمار",
+        "pl": "Statystyki",
+        "uk": "Статистика",
+        "nl": "Statistieken",
+        "sv": "Statistik",
+        "cs": "Statistiky",
+        "el": "Στατιστικά"
+      },
+      "icon": "insights",
+      "screen": "stats"
+    },
+    {
+      "id": "residents",
+      "label": {
+        "en": "Residents",
+        "ko": "주민",
+        "zh": "居民",
+        "hi": "निवासी",
+        "es": "Residentes",
+        "fr": "Résidents",
+        "ar": "السكان",
+        "pt": "Residentes",
+        "ru": "Жители",
+        "de": "Bewohner",
+        "ja": "住民",
+        "tr": "Sakinler",
+        "vi": "Cư dân",
+        "it": "Residenti",
+        "fa": "ساکنان",
+        "pl": "Mieszkańcy",
+        "uk": "Мешканці",
+        "nl": "Bewoners",
+        "sv": "Invånare",
+        "cs": "Obyvatelé",
+        "el": "Κάτοικοι"
+      },
+      "icon": "person",
+      "screen": "residents"
+    },
+    {
+      "id": "guide",
+      "label": {
+        "en": "How to play",
+        "ko": "플레이 방법",
+        "zh": "玩法说明",
+        "hi": "कैसे खेलें",
+        "es": "Cómo jugar",
+        "fr": "Comment jouer",
+        "ar": "كيفية اللعب",
+        "pt": "Como jogar",
+        "ru": "Как играть",
+        "de": "Spielanleitung",
+        "ja": "遊び方",
+        "tr": "Nasıl oynanır",
+        "vi": "Cách chơi",
+        "it": "Come giocare",
+        "fa": "نحوهٔ بازی",
+        "pl": "Jak grać",
+        "uk": "Як грати",
+        "nl": "Hoe te spelen",
+        "sv": "Hur man spelar",
+        "cs": "Jak hrát",
+        "el": "Πώς παίζεται"
+      },
+      "icon": "help_outline",
+      "screen": "guide"
+    }
+  ],
+  "screens": {
+    "map": {
+      "title": {
+        "en": "City Planner",
+        "ko": "도시 계획자",
+        "zh": "城市规划师",
+        "hi": "सिटी प्लानर",
+        "es": "Planificador urbano",
+        "fr": "Urbaniste",
+        "ar": "مخطط المدينة",
+        "pt": "Planejador urbano",
+        "ru": "Градостроитель",
+        "de": "Stadtplaner",
+        "ja": "シティプランナー",
+        "tr": "Şehir Planlayıcı",
+        "vi": "Nhà quy hoạch thành phố",
+        "it": "Pianificatore urbano",
+        "fa": "برنامه‌ریز شهر",
+        "pl": "Planista miasta",
+        "uk": "Міський планувальник",
+        "nl": "Stadsplanner",
+        "sv": "Stadsplanerare",
+        "cs": "Plánovač města",
+        "el": "Πολεοδόμος"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Zone the lots, then end the turn. Residents' happiness rises with good, affordable groceries, schools, healthcare, parks, walkability and transit — and falls with pollution, car dependence and high grocery prices. Tap a pin to set its zone (and quality/cost for groceries, schools, hospitals).",
+              "ko": "부지에 구역을 지정한 다음 턴을 종료하세요. 주민 행복도는 좋고 저렴한 식료품, 학교, 의료, 공원, 보행성, 대중교통이 있으면 오르고, 오염, 자동차 의존도, 높은 식료품 가격이 있으면 떨어집니다. 핀을 탭해 구역(및 식료품·학교·병원의 품질/비용)을 설정하세요.",
+              "zh": "为地块划分区域，然后结束回合。良好且实惠的杂货、学校、医疗、公园、步行性和交通会提升居民幸福感——污染、汽车依赖和高昂的杂货价格则会降低幸福感。点按图钉可设置其区域（以及杂货、学校、医院的质量/成本）。",
+              "hi": "प्लॉट्स को ज़ोन करें, फिर टर्न समाप्त करें। अच्छी, किफायती किराने की दुकानें, स्कूल, स्वास्थ्य सेवा, पार्क, पैदल-यात्रा योग्यता व परिवहन से निवासियों की खुशी बढ़ती है — और प्रदूषण, कार-निर्भरता व ऊंची किराने की कीमतों से घटती है। किसी पिन को टैप कर उसका ज़ोन सेट करें (और किराने, स्कूल, अस्पताल के लिए गुणवत्ता/लागत)।",
+              "es": "Zonifica los lotes, luego termina el turno. La felicidad de los residentes sube con buenos comercios asequibles, escuelas, salud, parques, caminabilidad y transporte — y baja con la contaminación, la dependencia del auto y los precios altos de alimentos. Toca un pin para fijar su zona (y calidad/costo de tiendas, escuelas, hospitales).",
+              "fr": "Zonez les parcelles, puis terminez le tour. Le bonheur des résidents augmente avec de bonnes épiceries abordables, des écoles, des soins de santé, des parcs, la marchabilité et les transports — et diminue avec la pollution, la dépendance à la voiture et les prix élevés de l'épicerie. Touchez une épingle pour définir sa zone (et la qualité/le coût pour épiceries, écoles, hôpitaux).",
+              "ar": "خصّص المناطق للقطع، ثم أنهِ الدور. تزداد سعادة السكان مع البقالة الجيدة وبأسعار معقولة، والمدارس، والرعاية الصحية، والحدائق، وإمكانية المشي، والنقل العام — وتنخفض مع التلوث، والاعتماد على السيارات، وارتفاع أسعار البقالة. اضغط على دبوس لتحديد منطقته (والجودة/التكلفة للبقالة والمدارس والمستشفيات).",
+              "pt": "Zoneie os lotes, depois termine o turno. A felicidade dos residentes sobe com boas mercearias acessíveis, escolas, saúde, parques, caminhabilidade e transporte — e cai com poluição, dependência de carro e preços altos de mercearia. Toque em um pino para definir sua zona (e qualidade/custo de mercearias, escolas, hospitais).",
+              "ru": "Зонируйте участки, затем завершите ход. Счастье жителей растёт с хорошими доступными продуктовыми магазинами, школами, здравоохранением, парками, пешеходной доступностью и транспортом — и падает с загрязнением, автозависимостью и высокими ценами на продукты. Нажмите на метку, чтобы задать её зону (и качество/цену для продуктов, школ, больниц).",
+              "de": "Zoniere die Grundstücke und beende dann die Runde. Die Zufriedenheit der Bewohner steigt mit guten, erschwinglichen Lebensmittelgeschäften, Schulen, Gesundheitsversorgung, Parks, Begehbarkeit und Nahverkehr — und sinkt mit Verschmutzung, Autoabhängigkeit und hohen Lebensmittelpreisen. Tippe auf eine Nadel, um ihre Zone festzulegen (sowie Qualität/Kosten für Lebensmittelgeschäfte, Schulen, Krankenhäuser).",
+              "ja": "区画をゾーニングしてからターンを終了してください。良質で手頃な食料品店、学校、医療、公園、歩きやすさ、公共交通機関があると住民の幸福度が上がり、汚染、車依存、高い食料品価格があると下がります。ピンをタップしてゾーン（および食料品店・学校・病院の品質／コスト）を設定してください。",
+              "tr": "Parselleri bölgelendirin, ardından turu bitirin. Sakinlerin mutluluğu iyi ve uygun fiyatlı market, okul, sağlık hizmeti, park, yürünebilirlik ve toplu taşımayla artar — kirlilik, araba bağımlılığı ve yüksek market fiyatlarıyla düşer. Bölgesini ayarlamak için bir iğneye dokunun (ve market, okul, hastaneler için kalite/maliyet).",
+              "vi": "Phân vùng các lô đất, sau đó kết thúc lượt. Hạnh phúc của cư dân tăng lên nhờ cửa hàng tạp hóa tốt, giá cả phải chăng, trường học, chăm sóc sức khỏe, công viên, khả năng đi bộ và giao thông công cộng — và giảm đi vì ô nhiễm, phụ thuộc xe hơi và giá tạp hóa cao. Nhấn vào một ghim để đặt vùng của nó (và chất lượng/chi phí cho tạp hóa, trường học, bệnh viện).",
+              "it": "Assegna la zona ai lotti, poi termina il turno. La felicità dei residenti sale con negozi di alimentari buoni e convenienti, scuole, assistenza sanitaria, parchi, percorribilità a piedi e trasporti — e scende con inquinamento, dipendenza dall'auto e prezzi alti dei generi alimentari. Tocca uno spillo per impostarne la zona (e qualità/costo per alimentari, scuole, ospedali).",
+              "fa": "قطعات را منطقه‌بندی کنید، سپس نوبت را پایان دهید. شادی ساکنان با فروشگاه‌های مواد غذایی خوب و مقرون‌به‌صرفه، مدارس، بهداشت، پارک‌ها، پیاده‌روپذیری و حمل‌ونقل بالا می‌رود — و با آلودگی، وابستگی به خودرو و قیمت بالای مواد غذایی پایین می‌آید. برای تعیین منطقهٔ یک پین روی آن ضربه بزنید (و کیفیت/هزینه برای فروشگاه، مدرسه، بیمارستان).",
+              "pl": "Wyznacz strefy działek, a następnie zakończ turę. Zadowolenie mieszkańców rośnie dzięki dobrym, przystępnym sklepom spożywczym, szkołom, opiece zdrowotnej, parkom, chodliwości i transportowi — a spada z powodu zanieczyszczenia, zależności od samochodu i wysokich cen żywności. Dotknij pinezki, aby ustawić jej strefę (oraz jakość/koszt dla sklepów, szkół, szpitali).",
+              "uk": "Зонуйте ділянки, потім завершіть хід. Щастя мешканців зростає з хорошими доступними продуктовими магазинами, школами, охороною здоров'я, парками, пішохідністю та транспортом — і падає із забрудненням, автозалежністю та високими цінами на продукти. Торкніться шпильки, щоб встановити її зону (та якість/вартість для продуктів, шкіл, лікарень).",
+              "nl": "Zoneer de percelen en beëindig dan de beurt. Het geluk van bewoners stijgt met goede, betaalbare boodschappen, scholen, gezondheidszorg, parken, loopbaarheid en vervoer — en daalt door vervuiling, autoafhankelijkheid en hoge boodschappenprijzen. Tik op een speld om de zone in te stellen (en kwaliteit/kosten voor boodschappen, scholen, ziekenhuizen).",
+              "sv": "Zonindela tomterna, avsluta sedan turen. Invånarnas lycka ökar med bra, prisvärda livsmedelsbutiker, skolor, sjukvård, parker, gångbarhet och kollektivtrafik — och minskar med föroreningar, bilberoende och höga matpriser. Tryck på en nål för att ställa in dess zon (och kvalitet/kostnad för mataffärer, skolor, sjukhus).",
+              "cs": "Vyznačte zóny pozemků, poté ukončete tah. Spokojenost obyvatel roste s dobrými, dostupnými obchody s potravinami, školami, zdravotní péčí, parky, pěší dostupností a dopravou — a klesá se znečištěním, závislostí na autě a vysokými cenami potravin. Klepnutím na špendlík nastavíte jeho zónu (a kvalitu/náklady pro obchody, školy, nemocnice).",
+              "el": "Χωρίστε τα οικόπεδα σε ζώνες, έπειτα τερματίστε τον γύρο. Η ευτυχία των κατοίκων αυξάνεται με καλά, προσιτά παντοπωλεία, σχολεία, υγειονομική περίθαλψη, πάρκα, βατότητα με τα πόδια και συγκοινωνίες — και μειώνεται με ρύπανση, εξάρτηση από αυτοκίνητο και υψηλές τιμές παντοπωλείου. Πατήστε μια καρφίτσα για να ορίσετε τη ζώνη της (και ποιότητα/κόστος για παντοπωλεία, σχολεία, νοσοκομεία)."
+            }
+          },
+          {
+            "type": "table",
+            "table": "city",
+            "columns": [
+              "turn",
+              "budget",
+              "population",
+              "happiness"
+            ],
+            "height": 96
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "End turn",
+              "ko": "턴 종료",
+              "zh": "结束回合",
+              "hi": "टर्न समाप्त करें",
+              "es": "Terminar turno",
+              "fr": "Terminer le tour",
+              "ar": "إنهاء الدور",
+              "pt": "Terminar turno",
+              "ru": "Завершить ход",
+              "de": "Runde beenden",
+              "ja": "ターン終了",
+              "tr": "Turu bitir",
+              "vi": "Kết thúc lượt",
+              "it": "Termina turno",
+              "fa": "پایان نوبت",
+              "pl": "Zakończ turę",
+              "uk": "Завершити хід",
+              "nl": "Beurt beëindigen",
+              "sv": "Avsluta tur",
+              "cs": "Ukončit tah",
+              "el": "Τερματισμός γύρου"
+            },
+            "icon": "skip_next",
+            "action": {
+              "fn": "endTurn",
+              "args": {
+                "state": "city",
+                "stateId": "s1",
+                "units": "parcels",
+                "turnField": "turn",
+                "tallies": {
+                  "res": {
+                    "column": "zone",
+                    "value": "residential"
+                  },
+                  "com": {
+                    "column": "zone",
+                    "value": "commercial"
+                  },
+                  "ind": {
+                    "column": "zone",
+                    "value": "industrial"
+                  },
+                  "park": {
+                    "column": "zone",
+                    "value": "park"
+                  },
+                  "grocery": {
+                    "column": "zone",
+                    "value": "grocery"
+                  },
+                  "school": {
+                    "column": "zone",
+                    "value": "school"
+                  },
+                  "hospital": {
+                    "column": "zone",
+                    "value": "hospital"
+                  },
+                  "transit": {
+                    "column": "zone",
+                    "value": "transit"
+                  },
+                  "schoolQual": {
+                    "column": "zone",
+                    "value": "school",
+                    "agg": "avg",
+                    "field": "quality"
+                  },
+                  "hospitalQual": {
+                    "column": "zone",
+                    "value": "hospital",
+                    "agg": "avg",
+                    "field": "quality"
+                  },
+                  "groceryQual": {
+                    "column": "zone",
+                    "value": "grocery",
+                    "agg": "avg",
+                    "field": "quality"
+                  },
+                  "groceryCostAvg": {
+                    "column": "zone",
+                    "value": "grocery",
+                    "agg": "avg",
+                    "field": "cost"
+                  }
+                },
+                "effects": [
+                  {
+                    "field": "budget",
+                    "mode": "add",
+                    "base": -5,
+                    "terms": [
+                      {
+                        "tally": "com",
+                        "coef": 12
+                      },
+                      {
+                        "tally": "res",
+                        "coef": 4
+                      },
+                      {
+                        "tally": "ind",
+                        "coef": 9
+                      },
+                      {
+                        "tally": "grocery",
+                        "coef": 5
+                      },
+                      {
+                        "tally": "park",
+                        "coef": -2
+                      },
+                      {
+                        "tally": "school",
+                        "coef": -5
+                      },
+                      {
+                        "tally": "hospital",
+                        "coef": -7
+                      },
+                      {
+                        "tally": "transit",
+                        "coef": -4
+                      }
+                    ]
+                  },
+                  {
+                    "field": "population",
+                    "mode": "add",
+                    "base": 0,
+                    "min": 0,
+                    "terms": [
+                      {
+                        "tally": "res",
+                        "coef": 25
+                      }
+                    ]
+                  },
+                  {
+                    "field": "pollution",
+                    "mode": "set",
+                    "base": 0,
+                    "min": 0,
+                    "max": 100,
+                    "terms": [
+                      {
+                        "tally": "ind",
+                        "coef": 6
+                      },
+                      {
+                        "tally": "com",
+                        "coef": 1
+                      },
+                      {
+                        "tally": "park",
+                        "coef": -2
+                      },
+                      {
+                        "tally": "transit",
+                        "coef": -1
+                      }
+                    ]
+                  },
+                  {
+                    "field": "walkability",
+                    "mode": "set",
+                    "base": 10,
+                    "min": 0,
+                    "max": 100,
+                    "terms": [
+                      {
+                        "tally": "park",
+                        "coef": 4
+                      },
+                      {
+                        "tally": "grocery",
+                        "coef": 5
+                      },
+                      {
+                        "tally": "transit",
+                        "coef": 6
+                      },
+                      {
+                        "tally": "school",
+                        "coef": 3
+                      },
+                      {
+                        "tally": "ind",
+                        "coef": -2
+                      }
+                    ]
+                  },
+                  {
+                    "field": "carCost",
+                    "mode": "set",
+                    "base": 60,
+                    "min": 0,
+                    "max": 100,
+                    "terms": [
+                      {
+                        "tally": "transit",
+                        "coef": -8
+                      },
+                      {
+                        "field": "walkability",
+                        "coef": -0.3
+                      }
+                    ]
+                  },
+                  {
+                    "field": "education",
+                    "mode": "set",
+                    "base": 0,
+                    "min": 0,
+                    "max": 100,
+                    "terms": [
+                      {
+                        "tally": "schoolQual",
+                        "coef": 0.9
+                      },
+                      {
+                        "tally": "school",
+                        "coef": 2
+                      }
+                    ]
+                  },
+                  {
+                    "field": "healthcare",
+                    "mode": "set",
+                    "base": 0,
+                    "min": 0,
+                    "max": 100,
+                    "terms": [
+                      {
+                        "tally": "hospitalQual",
+                        "coef": 0.9
+                      },
+                      {
+                        "tally": "hospital",
+                        "coef": 2
+                      }
+                    ]
+                  },
+                  {
+                    "field": "groceryAccess",
+                    "mode": "set",
+                    "base": 0,
+                    "min": 0,
+                    "max": 100,
+                    "terms": [
+                      {
+                        "tally": "groceryQual",
+                        "coef": 0.8
+                      },
+                      {
+                        "tally": "grocery",
+                        "coef": 4
+                      }
+                    ]
+                  },
+                  {
+                    "field": "groceryCost",
+                    "mode": "set",
+                    "base": 0,
+                    "min": 0,
+                    "terms": [
+                      {
+                        "tally": "groceryCostAvg",
+                        "coef": 1
+                      }
+                    ]
+                  },
+                  {
+                    "field": "happiness",
+                    "mode": "set",
+                    "base": 50,
+                    "min": 0,
+                    "max": 100,
+                    "terms": [
+                      {
+                        "field": "education",
+                        "coef": 0.15
+                      },
+                      {
+                        "field": "healthcare",
+                        "coef": 0.15
+                      },
+                      {
+                        "field": "groceryAccess",
+                        "coef": 0.15
+                      },
+                      {
+                        "field": "walkability",
+                        "coef": 0.1
+                      },
+                      {
+                        "tally": "park",
+                        "coef": 2
+                      },
+                      {
+                        "tally": "transit",
+                        "coef": 1
+                      },
+                      {
+                        "field": "pollution",
+                        "coef": -0.3
+                      },
+                      {
+                        "field": "carCost",
+                        "coef": -0.15
+                      },
+                      {
+                        "field": "groceryCost",
+                        "coef": -0.4
+                      }
+                    ]
+                  }
+                ],
+                "history": {
+                  "table": "city_history",
+                  "copy": [
+                    "turn",
+                    "budget",
+                    "population",
+                    "happiness"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "type": "glmap",
+            "table": "parcels",
+            "latColumn": "lat",
+            "lonColumn": "lon",
+            "labelColumn": "zone",
+            "zoom": 14,
+            "fillPhone": true,
+            "styleUrl": "https://www.openhistoricalmap.org/map-styles/main/main.json",
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Basemap: OpenHistoricalMap (historical style) on web; desktop falls back to a standard map. The rules are plain JSON in the End-turn button — open Edit mode to tune the model.",
+              "ko": "베이스맵: 웹에서는 OpenHistoricalMap(역사 지도 스타일)을 사용하고, 데스크톱에서는 표준 지도로 대체됩니다. 규칙은 턴 종료 버튼 안에 있는 일반 JSON입니다 — 편집 모드를 열어 모델을 조정하세요.",
+              "zh": "底图：网页版使用 OpenHistoricalMap（历史风格）；桌面版则回退为标准地图。规则以纯 JSON 形式存放在“结束回合”按钮中——打开编辑模式即可调整模型。",
+              "hi": "बेसमैप: वेब पर OpenHistoricalMap (ऐतिहासिक शैली); डेस्कटॉप पर मानक मैप पर वापस चला जाता है। नियम टर्न-समाप्त बटन में सादा JSON हैं — मॉडल ट्यून करने के लिए एडिट मोड खोलें।",
+              "es": "Mapa base: OpenHistoricalMap (estilo histórico) en web; en escritorio recurre a un mapa estándar. Las reglas son JSON plano en el botón Terminar turno — abre el modo Edición para ajustar el modelo.",
+              "fr": "Fond de carte : OpenHistoricalMap (style historique) sur le web ; le bureau revient à une carte standard. Les règles sont du JSON brut dans le bouton Terminer le tour — ouvrez le mode Édition pour ajuster le modèle.",
+              "ar": "الخريطة الأساسية: OpenHistoricalMap (نمط تاريخي) على الويب؛ يعود سطح المكتب إلى خريطة قياسية. القواعد هي JSON عادي داخل زر إنهاء الدور — افتح وضع التحرير لضبط النموذج.",
+              "pt": "Mapa base: OpenHistoricalMap (estilo histórico) na web; o desktop volta a um mapa padrão. As regras são JSON simples no botão Terminar turno — abra o modo Edição para ajustar o modelo.",
+              "ru": "Базовая карта: OpenHistoricalMap (исторический стиль) в вебе; на десктопе — стандартная карта. Правила — простой JSON внутри кнопки «Завершить ход» — откройте режим редактирования, чтобы настроить модель.",
+              "de": "Basiskarte: OpenHistoricalMap (historischer Stil) im Web; auf dem Desktop wird auf eine Standardkarte zurückgegriffen. Die Regeln sind einfaches JSON in der Schaltfläche Runde beenden — öffne den Bearbeitungsmodus, um das Modell anzupassen.",
+              "ja": "ベースマップ：ウェブではOpenHistoricalMap（歴史様式）、デスクトップでは標準地図にフォールバックします。ルールは「ターン終了」ボタン内の単純なJSONです — 編集モードを開いてモデルを調整してください。",
+              "tr": "Temel harita: web'de OpenHistoricalMap (tarihi stil); masaüstünde standart bir haritaya geri döner. Kurallar Turu Bitir düğmesinde düz JSON'dır — modeli ayarlamak için Düzenleme moduna geçin.",
+              "vi": "Bản đồ nền: OpenHistoricalMap (phong cách lịch sử) trên web; trên desktop trở về bản đồ tiêu chuẩn. Các quy tắc là JSON thuần trong nút Kết thúc lượt — mở chế độ Chỉnh sửa để tinh chỉnh mô hình.",
+              "it": "Mappa base: OpenHistoricalMap (stile storico) sul web; il desktop torna a una mappa standard. Le regole sono JSON semplice nel pulsante Termina turno — apri la modalità Modifica per regolare il modello.",
+              "fa": "نقشهٔ پایه: در وب OpenHistoricalMap (سبک تاریخی)؛ در دسکتاپ به یک نقشهٔ استاندارد بازمی‌گردد. قوانین JSON ساده در دکمهٔ پایان نوبت هستند — برای تنظیم مدل حالت ویرایش را باز کنید.",
+              "pl": "Mapa bazowa: OpenHistoricalMap (styl historyczny) w sieci; na komputerze wraca do standardowej mapy. Reguły to zwykły JSON w przycisku Zakończ turę — otwórz tryb edycji, aby dostroić model.",
+              "uk": "Базова карта: OpenHistoricalMap (історичний стиль) у вебі; на комп'ютері — стандартна карта. Правила — простий JSON у кнопці «Завершити хід» — відкрийте режим редагування, щоб налаштувати модель.",
+              "nl": "Basiskaart: OpenHistoricalMap (historische stijl) op het web; desktop valt terug op een standaardkaart. De regels zijn platte JSON in de knop Beurt beëindigen — open de bewerkingsmodus om het model af te stemmen.",
+              "sv": "Baskarta: OpenHistoricalMap (historisk stil) på webben; på skrivbordet återgår det till en standardkarta. Reglerna är ren JSON i knappen Avsluta tur — öppna redigeringsläget för att finjustera modellen.",
+              "cs": "Základní mapa: OpenHistoricalMap (historický styl) na webu; na desktopu se vrací ke standardní mapě. Pravidla jsou obyčejný JSON v tlačítku Ukončit tah — otevřete režim úprav a model doladíte.",
+              "el": "Βασικός χάρτης: OpenHistoricalMap (ιστορικό στιλ) στον ιστό· η επιφάνεια εργασίας επιστρέφει σε τυπικό χάρτη. Οι κανόνες είναι απλό JSON στο κουμπί Τερματισμός γύρου — ανοίξτε τη λειτουργία Επεξεργασίας για να ρυθμίσετε το μοντέλο."
+            }
+          }
+        ]
+      }
+    },
+    "stats": {
+      "title": {
+        "en": "City stats",
+        "ko": "도시 통계",
+        "zh": "城市统计",
+        "hi": "शहर के आंकड़े",
+        "es": "Estadísticas de la ciudad",
+        "fr": "Statistiques de la ville",
+        "ar": "إحصاءات المدينة",
+        "pt": "Estatísticas da cidade",
+        "ru": "Статистика города",
+        "de": "Stadtstatistiken",
+        "ja": "都市統計",
+        "tr": "Şehir istatistikleri",
+        "vi": "Thống kê thành phố",
+        "it": "Statistiche città",
+        "fa": "آمار شهر",
+        "pl": "Statystyki miasta",
+        "uk": "Статистика міста",
+        "nl": "Stadstatistieken",
+        "sv": "Stadsstatistik",
+        "cs": "Statistiky města",
+        "el": "Στατιστικά πόλης"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Residents' happiness and what drives it. End turns to grow the city; watch the trends.",
+              "ko": "주민 행복도와 그 원인입니다. 턴을 종료해 도시를 성장시키고 추세를 지켜보세요.",
+              "zh": "居民的幸福感及其驱动因素。结束回合以发展城市；观察趋势。",
+              "hi": "निवासियों की खुशी और उसे चलाने वाले कारक। शहर बढ़ाने के लिए टर्न समाप्त करें; रुझान देखें।",
+              "es": "La felicidad de los residentes y qué la impulsa. Termina turnos para hacer crecer la ciudad; observa las tendencias.",
+              "fr": "Le bonheur des résidents et ce qui le motive. Terminez les tours pour faire croître la ville ; observez les tendances.",
+              "ar": "سعادة السكان وما يحركها. أنهِ الأدوار لتنمية المدينة؛ راقب الاتجاهات.",
+              "pt": "A felicidade dos residentes e o que a impulsiona. Termine turnos para crescer a cidade; observe as tendências.",
+              "ru": "Счастье жителей и что на него влияет. Завершайте ходы, чтобы развивать город; наблюдайте за тенденциями.",
+              "de": "Die Zufriedenheit der Bewohner und was sie antreibt. Beende Runden, um die Stadt wachsen zu lassen; beobachte die Trends.",
+              "ja": "住民の幸福度とその要因。ターンを終了して都市を成長させ、傾向を見守りましょう。",
+              "tr": "Sakinlerin mutluluğu ve onu neyin yönlendirdiği. Şehri büyütmek için turları bitirin; eğilimleri izleyin.",
+              "vi": "Hạnh phúc của cư dân và những gì thúc đẩy nó. Kết thúc lượt để phát triển thành phố; theo dõi các xu hướng.",
+              "it": "La felicità dei residenti e cosa la determina. Termina i turni per far crescere la città; osserva le tendenze.",
+              "fa": "شادی ساکنان و آنچه آن را می‌سازد. برای رشد شهر نوبت‌ها را پایان دهید؛ روندها را زیر نظر بگیرید.",
+              "pl": "Zadowolenie mieszkańców i co je napędza. Kończ tury, aby rozwijać miasto; obserwuj trendy.",
+              "uk": "Щастя мешканців і що на нього впливає. Завершуйте ходи, щоб розвивати місто; спостерігайте за тенденціями.",
+              "nl": "Het geluk van bewoners en wat het aandrijft. Beëindig beurten om de stad te laten groeien; volg de trends.",
+              "sv": "Invånarnas lycka och vad som driver den. Avsluta turer för att låta staden växa; följ trenderna.",
+              "cs": "Spokojenost obyvatel a co ji pohání. Ukončováním tahů rozvíjíte město; sledujte trendy.",
+              "el": "Η ευτυχία των κατοίκων και τι την κινεί. Τερματίστε γύρους για να αναπτύξετε την πόλη· παρακολουθήστε τις τάσεις."
+            }
+          },
+          {
+            "type": "segments",
+            "segments": [
+              {
+                "label": "Zones",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "table",
+                      "table": "city",
+                      "columns": [
+                        "happiness",
+                        "education",
+                        "healthcare",
+                        "groceryAccess",
+                        "groceryCost",
+                        "walkability",
+                        "carCost",
+                        "pollution"
+                      ],
+                      "height": 96
+                    },
+                    {
+                      "type": "piechart",
+                      "table": "parcels",
+                      "groupColumn": "zone",
+                      "label": {
+                        "en": "Parcels by zone",
+                        "ko": "구역별 부지",
+                        "zh": "按区域划分的地块",
+                        "hi": "ज़ोन के अनुसार प्लॉट्स",
+                        "es": "Lotes por zona",
+                        "fr": "Parcelles par zone",
+                        "ar": "القطع حسب المنطقة",
+                        "pt": "Lotes por zona",
+                        "ru": "Участки по зонам",
+                        "de": "Grundstücke nach Zone",
+                        "ja": "ゾーン別区画",
+                        "tr": "Bölgeye göre parseller",
+                        "vi": "Lô đất theo vùng",
+                        "it": "Lotti per zona",
+                        "fa": "قطعات بر اساس منطقه",
+                        "pl": "Działki według strefy",
+                        "uk": "Ділянки за зонами",
+                        "nl": "Percelen per zone",
+                        "sv": "Tomter per zon",
+                        "cs": "Pozemky podle zóny",
+                        "el": "Οικόπεδα ανά ζώνη"
+                      },
+                      "height": 170,
+                      "colors": {
+                        "residential": "blue",
+                        "commercial": "purple",
+                        "industrial": "gray",
+                        "park": "green",
+                        "grocery": "amber",
+                        "school": "teal",
+                        "hospital": "red",
+                        "transit": "pink"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Mood",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "barchart",
+                      "table": "residents",
+                      "groupColumn": "band",
+                      "label": {
+                        "en": "Residents by mood",
+                        "ko": "기분별 주민",
+                        "zh": "按情绪划分的居民",
+                        "hi": "मूड के अनुसार निवासी",
+                        "es": "Residentes por estado de ánimo",
+                        "fr": "Résidents par humeur",
+                        "ar": "السكان حسب المزاج",
+                        "pt": "Residentes por humor",
+                        "ru": "Жители по настроению",
+                        "de": "Bewohner nach Stimmung",
+                        "ja": "気分別住民",
+                        "tr": "Ruh haline göre sakinler",
+                        "vi": "Cư dân theo tâm trạng",
+                        "it": "Residenti per umore",
+                        "fa": "ساکنان بر اساس روحیه",
+                        "pl": "Mieszkańcy według nastroju",
+                        "uk": "Мешканці за настроєм",
+                        "nl": "Bewoners per stemming",
+                        "sv": "Invånare efter humör",
+                        "cs": "Obyvatelé podle nálady",
+                        "el": "Κάτοικοι ανά διάθεση"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Trends",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "linechart",
+                      "label": {
+                        "en": "Happiness over turns",
+                        "ko": "턴별 행복도",
+                        "zh": "各回合的幸福度",
+                        "hi": "टर्न के अनुसार खुशी",
+                        "es": "Felicidad por turno",
+                        "fr": "Bonheur au fil des tours",
+                        "ar": "السعادة عبر الأدوار",
+                        "pt": "Felicidade ao longo dos turnos",
+                        "ru": "Счастье по ходам",
+                        "de": "Zufriedenheit über die Runden",
+                        "ja": "ターンごとの幸福度",
+                        "tr": "Turlara göre mutluluk",
+                        "vi": "Hạnh phúc theo lượt",
+                        "it": "Felicità nei turni",
+                        "fa": "شادی طی نوبت‌ها",
+                        "pl": "Zadowolenie w kolejnych turach",
+                        "uk": "Щастя за ходами",
+                        "nl": "Geluk per beurt",
+                        "sv": "Lycka över turer",
+                        "cs": "Spokojenost v čase (tahy)",
+                        "el": "Ευτυχία ανά γύρο"
+                      },
+                      "table": "city_history",
+                      "xColumn": "turn",
+                      "yColumn": "happiness",
+                      "height": 170
+                    },
+                    {
+                      "type": "linechart",
+                      "label": {
+                        "en": "Population over turns",
+                        "ko": "턴별 인구",
+                        "zh": "各回合的人口",
+                        "hi": "टर्न के अनुसार जनसंख्या",
+                        "es": "Población por turno",
+                        "fr": "Population au fil des tours",
+                        "ar": "السكان عبر الأدوار",
+                        "pt": "População ao longo dos turnos",
+                        "ru": "Население по ходам",
+                        "de": "Bevölkerung über die Runden",
+                        "ja": "ターンごとの人口",
+                        "tr": "Turlara göre nüfus",
+                        "vi": "Dân số theo lượt",
+                        "it": "Popolazione nei turni",
+                        "fa": "جمعیت طی نوبت‌ها",
+                        "pl": "Populacja w kolejnych turach",
+                        "uk": "Населення за ходами",
+                        "nl": "Bevolking per beurt",
+                        "sv": "Befolkning över turer",
+                        "cs": "Populace v čase (tahy)",
+                        "el": "Πληθυσμός ανά γύρο"
+                      },
+                      "table": "city_history",
+                      "xColumn": "turn",
+                      "yColumn": "population",
+                      "height": 170
+                    },
+                    {
+                      "type": "linechart",
+                      "label": {
+                        "en": "Budget over turns",
+                        "ko": "턴별 예산",
+                        "zh": "各回合的预算",
+                        "hi": "टर्न के अनुसार बजट",
+                        "es": "Presupuesto por turno",
+                        "fr": "Budget au fil des tours",
+                        "ar": "الميزانية عبر الأدوار",
+                        "pt": "Orçamento ao longo dos turnos",
+                        "ru": "Бюджет по ходам",
+                        "de": "Budget über die Runden",
+                        "ja": "ターンごとの予算",
+                        "tr": "Turlara göre bütçe",
+                        "vi": "Ngân sách theo lượt",
+                        "it": "Budget nei turni",
+                        "fa": "بودجه طی نوبت‌ها",
+                        "pl": "Budżet w kolejnych turach",
+                        "uk": "Бюджет за ходами",
+                        "nl": "Budget per beurt",
+                        "sv": "Budget över turer",
+                        "cs": "Rozpočet v čase (tahy)",
+                        "el": "Προϋπολογισμός ανά γύρο"
+                      },
+                      "table": "city_history",
+                      "xColumn": "turn",
+                      "yColumn": "budget",
+                      "height": 170
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "residents": {
+      "title": {
+        "en": "Residents",
+        "ko": "주민",
+        "zh": "居民",
+        "hi": "निवासी",
+        "es": "Residentes",
+        "fr": "Résidents",
+        "ar": "السكان",
+        "pt": "Residentes",
+        "ru": "Жители",
+        "de": "Bewohner",
+        "ja": "住民",
+        "tr": "Sakinler",
+        "vi": "Cư dân",
+        "it": "Residenti",
+        "fa": "ساکنان",
+        "pl": "Mieszkańcy",
+        "uk": "Мешканці",
+        "nl": "Bewoners",
+        "sv": "Invånare",
+        "cs": "Obyvatelé",
+        "el": "Κάτοικοι"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Every resident has their own happiness, driven by what's physically NEARBY. A line-of-sight proxy (proximity within a radius) checks how much real-world nature/parks they can reach, how much road/car exposure they suffer, and their access to groceries, schools and hospitals. Each factor is weighted by that resident's own nature and car preferences — nature-lovers gain more from nearby green, the car-averse lose more next to roads. The green/road points are real OpenStreetMap features baked into this app. Tap a resident below and press \"Show on map\" to see them highlighted above; tap \"Show all residents\" to zoom back out.",
+              "ko": "모든 주민은 물리적으로 가까운 것에 좌우되는 자신만의 행복도를 가집니다. 가시선 근사치(반경 내 근접성)로 실제 자연/공원에 얼마나 접근할 수 있는지, 도로/차량 노출은 얼마나 겪는지, 식료품·학교·병원 접근성은 어떤지를 확인합니다. 각 요인은 해당 주민 고유의 자연·차량 선호도로 가중치가 매겨집니다 — 자연을 좋아하는 사람은 근처 녹지에서 더 많은 이득을 얻고, 차량을 싫어하는 사람은 도로 옆에서 더 큰 손해를 봅니다. 녹지/도로 지점은 이 앱에 반영된 실제 OpenStreetMap 데이터입니다. 아래에서 주민을 탭하고 '지도에서 보기'를 눌러 위에서 강조 표시를 확인하세요. '모든 주민 보기'를 탭하면 다시 축소됩니다.",
+              "zh": "每位居民都有自己的幸福感，取决于物理上“附近”有什么。视线代理（半径内的邻近度）会检查他们能触及多少真实的自然/公园、承受多少道路/汽车暴露，以及他们获取杂货、学校和医院的可达性。每个因素都会按该居民自身的自然偏好和汽车容忍度加权——热爱自然的人从附近绿地获益更多，厌恶汽车的人在道路旁受损更多。绿地/道路数据点是内置于本应用的真实 OpenStreetMap 特征。点按下方某位居民并按“在地图上显示”即可在上方看到高亮显示；点按“显示所有居民”可缩小回原视角。",
+              "hi": "हर निवासी की अपनी खुशी होती है, जो भौतिक रूप से पास की चीज़ों से प्रेरित होती है। एक लाइन-ऑफ-साइट प्रॉक्सी (एक त्रिज्या के भीतर निकटता) जांचती है कि वे वास्तविक प्रकृति/पार्क तक कितना पहुंच सकते हैं, कितना सड़क/कार का सामना करते हैं, और किराने, स्कूल व अस्पताल तक उनकी पहुंच कैसी है। हर कारक उस निवासी की अपनी प्रकृति व कार पसंद से भारित होता है — प्रकृति-प्रेमी नज़दीकी हरियाली से ज़्यादा फायदा पाते हैं, कार-विरोधी सड़कों के पास ज़्यादा नुकसान उठाते हैं। हरे/सड़क बिंदु इस ऐप में शामिल असली OpenStreetMap विशेषताएं हैं। नीचे किसी निवासी को टैप करें और 'मैप पर दिखाएं' दबाएं ताकि ऊपर उन्हें उभारा जाए; फिर से ज़ूम आउट करने के लिए 'सभी निवासी दिखाएं' टैप करें।",
+              "es": "Cada residente tiene su propia felicidad, impulsada por lo que está físicamente CERCA. Un proxy de línea de visión (proximidad dentro de un radio) comprueba cuánta naturaleza/parques reales pueden alcanzar, cuánta exposición a carreteras/autos sufren, y su acceso a comercios, escuelas y hospitales. Cada factor se pondera según las preferencias propias de naturaleza y auto de ese residente — a los amantes de la naturaleza les beneficia más el verde cercano, a quienes rechazan el auto les afecta más estar junto a carreteras. Los puntos verdes/de carretera son características reales de OpenStreetMap incorporadas en esta app. Toca un residente abajo y pulsa \"Mostrar en el mapa\" para verlo resaltado arriba; toca \"Mostrar todos los residentes\" para alejar de nuevo.",
+              "fr": "Chaque résident a son propre bonheur, déterminé par ce qui est physiquement À PROXIMITÉ. Un proxy de ligne de vue (proximité dans un rayon) vérifie combien de nature/parcs réels ils peuvent atteindre, combien d'exposition aux routes/voitures ils subissent, et leur accès aux épiceries, écoles et hôpitaux. Chaque facteur est pondéré par les propres préférences de ce résident pour la nature et la voiture — les amoureux de la nature bénéficient davantage du vert à proximité, les réfractaires à la voiture perdent davantage près des routes. Les points verts/routiers sont de vraies caractéristiques OpenStreetMap intégrées à cette application. Touchez un résident ci-dessous et appuyez sur « Afficher sur la carte » pour le voir mis en évidence ci-dessus ; touchez « Afficher tous les résidents » pour dézoomer.",
+              "ar": "لكل ساكن سعادته الخاصة، مدفوعة بما هو قريب فعليًا. يتحقق تقريب خط الرؤية (القرب ضمن نصف قطر) من مقدار الطبيعة/الحدائق الحقيقية التي يمكنهم الوصول إليها، ومقدار التعرض للطرق/السيارات الذي يعانون منه، وإمكانية وصولهم إلى البقالة والمدارس والمستشفيات. يُرجَّح كل عامل حسب تفضيلات ذلك الساكن الخاصة بالطبيعة والسيارة — يستفيد محبو الطبيعة أكثر من الخضرة القريبة، ويخسر كارهو السيارات أكثر بجوار الطرق. نقاط الخضرة/الطرق هي ميزات OpenStreetMap حقيقية مدمجة في هذا التطبيق. اضغط على ساكن أدناه واضغط \"إظهار على الخريطة\" لرؤيته مميّزًا أعلاه؛ اضغط \"إظهار جميع السكان\" للتصغير مجددًا.",
+              "pt": "Cada residente tem sua própria felicidade, impulsionada pelo que está fisicamente PRÓXIMO. Um proxy de linha de visão (proximidade dentro de um raio) verifica quanta natureza/parques reais eles podem alcançar, quanta exposição a estradas/carros sofrem, e seu acesso a mercearias, escolas e hospitais. Cada fator é ponderado pelas próprias preferências de natureza e carro daquele residente — amantes da natureza ganham mais com verde próximo, os avessos a carros perdem mais perto de estradas. Os pontos verdes/de estrada são recursos reais do OpenStreetMap incorporados a este app. Toque em um residente abaixo e pressione \"Mostrar no mapa\" para vê-lo destacado acima; toque em \"Mostrar todos os residentes\" para afastar o zoom novamente.",
+              "ru": "У каждого жителя своё счастье, определяемое тем, что физически НАХОДИТСЯ РЯДОМ. Прокси прямой видимости (близость в пределах радиуса) проверяет, сколько реальной природы/парков они могут достичь, насколько сильно они подвержены дорогам/машинам и их доступ к продуктам, школам и больницам. Каждый фактор взвешивается собственными предпочтениями этого жителя к природе и автомобилям — любители природы получают больше от близкой зелени, противники машин теряют больше рядом с дорогами. Точки зелени/дорог — реальные объекты OpenStreetMap, встроенные в это приложение. Нажмите на жителя ниже и нажмите «Показать на карте», чтобы увидеть его выделенным выше; нажмите «Показать всех жителей», чтобы снова отдалить.",
+              "de": "Jeder Bewohner hat sein eigenes Glück, angetrieben von dem, was physisch IN DER NÄHE ist. Ein Sichtlinien-Proxy (Nähe innerhalb eines Radius) prüft, wie viel echte Natur/Parks sie erreichen können, wie viel Straßen-/Autoexposition sie erleiden, und ihren Zugang zu Lebensmittelgeschäften, Schulen und Krankenhäusern. Jeder Faktor wird durch die eigenen Natur- und Autopräferenzen dieses Bewohners gewichtet — Naturliebhaber profitieren mehr vom nahen Grün, Autogegner verlieren mehr neben Straßen. Die Grün-/Straßenpunkte sind echte OpenStreetMap-Merkmale, die in diese App eingebaut sind. Tippe unten auf einen Bewohner und drücke „Auf Karte anzeigen“, um ihn oben hervorgehoben zu sehen; tippe auf „Alle Bewohner anzeigen“, um wieder herauszuzoomen.",
+              "ja": "すべての住民は物理的に近くにあるものに左右される、それぞれの幸福度を持っています。視線プロキシ（半径内の近接度）が、実世界の自然・公園にどれだけアクセスできるか、道路・車への露出をどれだけ受けるか、食料品店・学校・病院へのアクセスを確認します。各要因は、その住民自身の自然嗜好と車への態度によって重み付けされます — 自然愛好家は近くの緑からより多くの恩恵を受け、車嫌いは道路の近くでより多く不利になります。緑・道路のポイントは、このアプリに組み込まれた実際のOpenStreetMapの地物です。下の住民をタップし「地図上に表示」を押すと上に強調表示されます。「すべての住民を表示」をタップするとズームアウトします。",
+              "tr": "Her sakinin kendi mutluluğu vardır, fiziksel olarak YAKINDA olan şeyler tarafından yönlendirilir. Bir görüş hattı vekili (bir yarıçap içindeki yakınlık), gerçek dünya doğasına/parklarına ne kadar ulaşabildiklerini, ne kadar yol/araba maruziyeti yaşadıklarını ve market, okul ve hastanelere erişimlerini kontrol eder. Her faktör, o sakinin kendi doğa ve araba tercihleriyle ağırlıklandırılır — doğa severler yakındaki yeşilden daha çok fayda görür, arabadan kaçınanlar yolların yanında daha çok kaybeder. Yeşil/yol noktaları bu uygulamaya gömülü gerçek OpenStreetMap özellikleridir. Aşağıdaki bir sakine dokunun ve yukarıda vurgulanmış hâlde görmek için \"Haritada göster\"e basın; tekrar uzaklaştırmak için \"Tüm sakinleri göster\"e dokunun.",
+              "vi": "Mỗi cư dân có hạnh phúc riêng, được thúc đẩy bởi những gì ở GẦN đó về mặt vật lý. Một proxy đường ngắm (khoảng cách trong một bán kính) kiểm tra họ có thể tiếp cận bao nhiêu thiên nhiên/công viên thực tế, họ chịu bao nhiêu tiếp xúc với đường/xe hơi, và khả năng tiếp cận tạp hóa, trường học và bệnh viện của họ. Mỗi yếu tố được trọng số hóa theo sở thích riêng của cư dân đó về thiên nhiên và xe hơi — người yêu thiên nhiên hưởng lợi nhiều hơn từ mảng xanh gần đó, người ghét xe hơi mất mát nhiều hơn khi ở gần đường. Các điểm xanh/đường là các đối tượng OpenStreetMap thực được tích hợp trong ứng dụng này. Nhấn vào một cư dân bên dưới và nhấn \"Hiển thị trên bản đồ\" để thấy họ được làm nổi bật ở trên; nhấn \"Hiển thị tất cả cư dân\" để thu phóng trở lại.",
+              "it": "Ogni residente ha la propria felicità, determinata da ciò che è fisicamente NELLE VICINANZE. Un proxy di linea di vista (prossimità entro un raggio) verifica quanta natura/parchi reali possono raggiungere, quanta esposizione a strade/auto subiscono, e il loro accesso a negozi di alimentari, scuole e ospedali. Ogni fattore è ponderato dalle preferenze personali di quel residente per natura e auto — gli amanti della natura guadagnano di più dal verde vicino, chi rifugge l'auto perde di più vicino alle strade. I punti verdi/stradali sono elementi reali di OpenStreetMap incorporati in questa app. Tocca un residente qui sotto e premi \"Mostra sulla mappa\" per vederlo evidenziato sopra; tocca \"Mostra tutti i residenti\" per rimpicciolire di nuovo.",
+              "fa": "هر ساکن شادی خاص خود را دارد که با آنچه از نظر فیزیکی نزدیک است هدایت می‌شود. یک تقریب خط دید (نزدیکی در یک شعاع) بررسی می‌کند چقدر طبیعت/پارک واقعی می‌توانند در دسترسشان باشد، چقدر در معرض جاده/خودرو هستند، و دسترسی آن‌ها به فروشگاه، مدرسه و بیمارستان. هر عامل با ترجیحات خاص طبیعت و خودروی همان ساکن وزن‌دهی می‌شود — طبیعت‌دوستان از سبزی نزدیک بیشتر سود می‌برند، مخالفان خودرو کنار جاده‌ها بیشتر ضرر می‌کنند. نقاط سبز/جاده‌ای ویژگی‌های واقعی OpenStreetMap تعبیه‌شده در این برنامه هستند. روی یک ساکن در پایین ضربه بزنید و «نمایش روی نقشه» را فشار دهید تا در بالا برجسته دیده شود؛ برای بزرگ‌نمایی خارج‌شونده مجدد «نمایش همهٔ ساکنان» را بزنید.",
+              "pl": "Każdy mieszkaniec ma własne zadowolenie, napędzane tym, co jest fizycznie W POBLIŻU. Proxy linii wzroku (bliskość w obrębie promienia) sprawdza, ile realnej przyrody/parków mogą osiągnąć, ile ekspozycji na drogi/samochody znoszą oraz ich dostęp do sklepów, szkół i szpitali. Każdy czynnik jest ważony własnymi preferencjami tego mieszkańca dotyczącymi przyrody i samochodów — miłośnicy przyrody zyskują więcej na pobliskiej zieleni, przeciwnicy samochodów tracą więcej przy drogach. Punkty zieleni/dróg to prawdziwe obiekty OpenStreetMap wbudowane w tę aplikację. Dotknij mieszkańca poniżej i naciśnij \"Pokaż na mapie\", aby zobaczyć go wyróżnionego powyżej; dotknij \"Pokaż wszystkich mieszkańców\", aby ponownie oddalić widok.",
+              "uk": "Кожен мешканець має власне щастя, кероване тим, що фізично ПОРУЧ. Проксі прямої видимості (близькість у межах радіуса) перевіряє, скільки реальної природи/парків вони можуть досягти, наскільки сильно вони зазнають впливу доріг/авто та їхній доступ до продуктів, шкіл і лікарень. Кожен фактор зважується власними уподобаннями цього мешканця щодо природи та авто — любителі природи отримують більше від найближчої зелені, противники авто втрачають більше поруч із дорогами. Точки зелені/доріг — реальні об'єкти OpenStreetMap, вбудовані в цей застосунок. Торкніться мешканця нижче та натисніть «Показати на карті», щоб побачити його виділеним вище; торкніться «Показати всіх мешканців», щоб знову віддалити.",
+              "nl": "Elke bewoner heeft zijn eigen geluk, aangedreven door wat fysiek DICHTBIJ is. Een zichtlijn-proxy (nabijheid binnen een straal) controleert hoeveel echte natuur/parken ze kunnen bereiken, hoeveel weg-/autoblootstelling ze ondervinden, en hun toegang tot boodschappen, scholen en ziekenhuizen. Elke factor wordt gewogen door de eigen natuur- en autovoorkeuren van die bewoner — natuurliefhebbers profiteren meer van nabij groen, autoafkerigen verliezen meer naast wegen. De groen-/wegpunten zijn echte OpenStreetMap-kenmerken, ingebakken in deze app. Tik hieronder op een bewoner en druk op \"Toon op kaart\" om deze hierboven gemarkeerd te zien; tik op \"Toon alle bewoners\" om weer uit te zoomen.",
+              "sv": "Varje invånare har sin egen lycka, driven av det som fysiskt är I NÄRHETEN. En siktlinjeproxy (närhet inom en radie) kontrollerar hur mycket verklig natur/parker de kan nå, hur mycket väg-/bilexponering de utsätts för, och deras tillgång till mataffärer, skolor och sjukhus. Varje faktor viktas av den invånarens egna natur- och bilpreferenser — naturälskare vinner mer på närliggande grönska, bilmotståndare förlorar mer bredvid vägar. Grön-/vägpunkterna är verkliga OpenStreetMap-objekt inbyggda i denna app. Tryck på en invånare nedan och tryck på \"Visa på karta\" för att se den markerad ovan; tryck på \"Visa alla invånare\" för att zooma ut igen.",
+              "cs": "Každý obyvatel má vlastní spokojenost, poháněnou tím, co je fyzicky NABLÍZKU. Proxy přímé viditelnosti (blízkost v rámci poloměru) kontroluje, kolik skutečné přírody/parků mohou dosáhnout, kolik expozice silnicím/autům snášejí, a jejich přístup k obchodům, školám a nemocnicím. Každý faktor je vážen vlastními preferencemi daného obyvatele k přírodě a autům — milovníci přírody získávají více z blízké zeleně, odpůrci aut ztrácejí více poblíž silnic. Body zeleně/silnic jsou skutečné prvky OpenStreetMap zabudované do této aplikace. Klepněte na obyvatele níže a stiskněte \"Zobrazit na mapě\", abyste jej viděli zvýrazněného výše; klepnutím na \"Zobrazit všechny obyvatele\" opět oddálíte.",
+              "el": "Κάθε κάτοικος έχει τη δική του ευτυχία, καθοδηγούμενη από ό,τι είναι φυσικά ΚΟΝΤΑ. Ένα πληρεξούσιο οπτικής επαφής (εγγύτητα εντός μιας ακτίνας) ελέγχει πόση πραγματική φύση/πάρκα μπορούν να φτάσουν, πόση έκθεση σε δρόμους/αυτοκίνητα υφίστανται, και την πρόσβασή τους σε παντοπωλεία, σχολεία και νοσοκομεία. Κάθε παράγοντας σταθμίζεται από τις προσωπικές προτιμήσεις αυτού του κατοίκου για τη φύση και το αυτοκίνητο — οι λάτρεις της φύσης κερδίζουν περισσότερο από κοντινό πράσινο, οι αντίθετοι στο αυτοκίνητο χάνουν περισσότερο δίπλα σε δρόμους. Τα σημεία πρασίνου/δρόμου είναι πραγματικά στοιχεία OpenStreetMap ενσωματωμένα σε αυτήν την εφαρμογή. Πατήστε έναν κάτοικο παρακάτω και πατήστε \"Εμφάνιση στον χάρτη\" για να τον δείτε τονισμένο παραπάνω· πατήστε \"Εμφάνιση όλων των κατοίκων\" για επαναφορά του ζουμ."
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "Show all residents",
+              "ko": "모든 주민 보기",
+              "zh": "显示所有居民",
+              "hi": "सभी निवासी दिखाएं",
+              "es": "Mostrar todos los residentes",
+              "fr": "Afficher tous les résidents",
+              "ar": "إظهار جميع السكان",
+              "pt": "Mostrar todos os residentes",
+              "ru": "Показать всех жителей",
+              "de": "Alle Bewohner anzeigen",
+              "ja": "すべての住民を表示",
+              "tr": "Tüm sakinleri göster",
+              "vi": "Hiển thị tất cả cư dân",
+              "it": "Mostra tutti i residenti",
+              "fa": "نمایش همهٔ ساکنان",
+              "pl": "Pokaż wszystkich mieszkańców",
+              "uk": "Показати всіх мешканців",
+              "nl": "Toon alle bewoners",
+              "sv": "Visa alla invånare",
+              "cs": "Zobrazit všechny obyvatele",
+              "el": "Εμφάνιση όλων των κατοίκων"
+            },
+            "icon": "public",
+            "action": { "fn": "clearFocus", "args": { "table": "residents" } }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "Recompute happiness",
+              "ko": "행복도 다시 계산",
+              "zh": "重新计算幸福度",
+              "hi": "खुशी फिर से गणना करें",
+              "es": "Recalcular felicidad",
+              "fr": "Recalculer le bonheur",
+              "ar": "إعادة حساب السعادة",
+              "pt": "Recalcular felicidade",
+              "ru": "Пересчитать счастье",
+              "de": "Zufriedenheit neu berechnen",
+              "ja": "幸福度を再計算",
+              "tr": "Mutluluğu yeniden hesapla",
+              "vi": "Tính lại hạnh phúc",
+              "it": "Ricalcola felicità",
+              "fa": "محاسبهٔ دوبارهٔ شادی",
+              "pl": "Przelicz zadowolenie",
+              "uk": "Перерахувати щастя",
+              "nl": "Geluk herberekenen",
+              "sv": "Räkna om lycka",
+              "cs": "Přepočítat spokojenost",
+              "el": "Επανυπολογισμός ευτυχίας"
+            },
+            "icon": "calculate",
+            "action": {
+              "fn": "spatialScore",
+              "args": {
+                "subjects": "residents",
+                "latColumn": "lat",
+                "lonColumn": "lon",
+                "factors": [
+                  {
+                    "name": "natureF",
+                    "table": "features",
+                    "column": "kind",
+                    "value": "green",
+                    "radiusMeters": 300
+                  },
+                  {
+                    "name": "parkP",
+                    "table": "parcels",
+                    "column": "zone",
+                    "value": "park",
+                    "radiusMeters": 300
+                  },
+                  {
+                    "name": "carF",
+                    "table": "features",
+                    "column": "kind",
+                    "value": "road",
+                    "radiusMeters": 200
+                  },
+                  {
+                    "name": "indP",
+                    "table": "parcels",
+                    "column": "zone",
+                    "value": "industrial",
+                    "radiusMeters": 300
+                  },
+                  {
+                    "name": "grocery",
+                    "table": "parcels",
+                    "column": "zone",
+                    "value": "grocery",
+                    "radiusMeters": 400,
+                    "agg": "avg",
+                    "field": "quality"
+                  },
+                  {
+                    "name": "school",
+                    "table": "parcels",
+                    "column": "zone",
+                    "value": "school",
+                    "radiusMeters": 500,
+                    "agg": "avg",
+                    "field": "quality"
+                  },
+                  {
+                    "name": "hospital",
+                    "table": "parcels",
+                    "column": "zone",
+                    "value": "hospital",
+                    "radiusMeters": 600,
+                    "agg": "avg",
+                    "field": "quality"
+                  }
+                ],
+                "effects": [
+                  {
+                    "field": "happiness",
+                    "mode": "set",
+                    "base": 50,
+                    "min": 0,
+                    "max": 100,
+                    "terms": [
+                      {
+                        "factor": "natureF",
+                        "prefField": "naturePref",
+                        "coef": 6
+                      },
+                      {
+                        "factor": "parkP",
+                        "prefField": "naturePref",
+                        "coef": 8
+                      },
+                      {
+                        "factor": "carF",
+                        "prefField": "carTolerance",
+                        "coef": -5
+                      },
+                      {
+                        "factor": "indP",
+                        "coef": -4
+                      },
+                      {
+                        "factor": "grocery",
+                        "coef": 0.1
+                      },
+                      {
+                        "factor": "school",
+                        "coef": 0.1
+                      },
+                      {
+                        "factor": "hospital",
+                        "coef": 0.1
+                      }
+                    ]
+                  }
+                ],
+                "bandField": "band",
+                "bandFrom": "happiness",
+                "bands": [
+                  {
+                    "max": 40,
+                    "name": "low"
+                  },
+                  {
+                    "max": 70,
+                    "name": "ok"
+                  },
+                  {
+                    "name": "high"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "type": "glmap",
+            "table": "residents",
+            "latColumn": "lat",
+            "lonColumn": "lon",
+            "labelColumn": "name",
+            "colorColumn": "band",
+            "colors": {
+              "low": "red",
+              "ok": "amber",
+              "high": "green"
+            },
+            "zoom": 14,
+            "height": "0.55fill",
+            "styleUrl": "https://www.openhistoricalmap.org/map-styles/main/main.json",
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "cards",
+            "table": "residents",
+            "title": "name",
+            "subtitle": "happiness",
+            "emptyIcon": "groups",
+            "emptyTitle": {
+              "en": "No residents yet",
+              "ko": "아직 주민 없음",
+              "zh": "暂无居民",
+              "hi": "अभी तक कोई निवासी नहीं",
+              "es": "Aún no hay residentes",
+              "fr": "Aucun résident pour l'instant",
+              "ar": "لا يوجد سكان بعد",
+              "pt": "Ainda sem residentes",
+              "ru": "Пока нет жителей",
+              "de": "Noch keine Bewohner",
+              "ja": "まだ住民がいません",
+              "tr": "Henüz sakin yok",
+              "vi": "Chưa có cư dân nào",
+              "it": "Ancora nessun residente",
+              "fa": "هنوز ساکنی نیست",
+              "pl": "Brak jeszcze mieszkańców",
+              "uk": "Поки немає мешканців",
+              "nl": "Nog geen bewoners",
+              "sv": "Inga invånare ännu",
+              "cs": "Zatím žádní obyvatelé",
+              "el": "Δεν υπάρχουν ακόμα κάτοικοι"
+            },
+            "emptyText": {
+              "en": "Tap Recompute happiness once your city has residents, to see how each one feels about their neighborhood.",
+              "ko": "도시에 주민이 생기면 '행복도 다시 계산'을 탭해 각 주민이 자신의 동네에 대해 어떻게 느끼는지 확인하세요.",
+              "zh": "城市有了居民后，点按“重新计算幸福度”即可查看每位居民对自己所在社区的感受。",
+              "hi": "आपके शहर में निवासी आने पर 'खुशी फिर से गणना करें' टैप करें, ताकि हर निवासी अपने पड़ोस के बारे में कैसा महसूस करता है, यह देख सकें।",
+              "es": "Toca «Recalcular felicidad» cuando tu ciudad tenga residentes, para ver cómo se siente cada uno sobre su vecindario.",
+              "fr": "Touchez « Recalculer le bonheur » une fois que votre ville a des habitants, pour voir comment chacun se sent par rapport à son quartier.",
+              "ar": "اضغط على «إعادة حساب السعادة» بمجرد أن يكون في مدينتك سكان، لترى شعور كل واحد تجاه حيّه.",
+              "pt": "Toque em \"Recalcular felicidade\" assim que sua cidade tiver residentes, para ver como cada um se sente sobre sua vizinhança.",
+              "ru": "Нажмите «Пересчитать счастье», когда в вашем городе появятся жители, чтобы увидеть, как каждый относится к своему району.",
+              "de": "Tippe auf „Zufriedenheit neu berechnen“, sobald deine Stadt Bewohner hat, um zu sehen, wie sich jeder über seine Nachbarschaft fühlt.",
+              "ja": "都市に住民ができたら「幸福度を再計算」をタップして、各住民が自分の地域についてどう感じているか確認しましょう。",
+              "tr": "Şehrinizde sakinler olduğunda \"Mutluluğu yeniden hesapla\"ya dokunun, her birinin mahallesi hakkında ne hissettiğini görmek için.",
+              "vi": "Nhấn \"Tính lại hạnh phúc\" khi thành phố của bạn có cư dân, để xem mỗi người cảm thấy thế nào về khu phố của họ.",
+              "it": "Tocca \"Ricalcola felicità\" quando la tua città ha residenti, per vedere come si sente ognuno riguardo al proprio quartiere.",
+              "fa": "وقتی شهر شما ساکن داشت، روی «محاسبهٔ دوبارهٔ شادی» ضربه بزنید تا ببینید هر ساکن دربارهٔ محلهٔ خود چه احساسی دارد.",
+              "pl": "Stuknij \"Przelicz zadowolenie\", gdy w twoim mieście pojawią się mieszkańcy, aby zobaczyć, jak każdy czuje się w swojej okolicy.",
+              "uk": "Торкніться «Перерахувати щастя», щойно у вашому місті з'являться мешканці, щоб побачити, як кожен ставиться до свого району.",
+              "nl": "Tik op \"Geluk herberekenen\" zodra je stad bewoners heeft, om te zien hoe elke bewoner zich over zijn buurt voelt.",
+              "sv": "Tryck på \"Räkna om lycka\" när din stad har invånare, för att se hur var och en känner för sitt grannskap.",
+              "cs": "Klepněte na \"Přepočítat spokojenost\", jakmile bude ve vašem městě obyvatelstvo, a zjistěte, jak se každý cítí ve své čtvrti.",
+              "el": "Πατήστε «Επανυπολογισμός ευτυχίας» μόλις η πόλη σας αποκτήσει κατοίκους, για να δείτε πώς νιώθει καθένας για τη γειτονιά του."
+            },
+            "sort": {
+              "column": "happiness",
+              "dir": "desc"
+            },
+            "tags": [
+              {
+                "column": "band",
+                "colors": {
+                  "low": "red",
+                  "ok": "amber",
+                  "high": "green"
+                }
+              }
+            ],
+            "action": {
+              "fn": "editRow"
+            },
+            "openActions": [
+              {
+                "label": "Show on map",
+                "icon": "map",
+                "action": {
+                  "fn": "focusRow"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "guide": {
+      "title": {
+        "en": "How to play",
+        "ko": "플레이 방법",
+        "zh": "玩法说明",
+        "hi": "कैसे खेलें",
+        "es": "Cómo jugar",
+        "fr": "Comment jouer",
+        "ar": "كيفية اللعب",
+        "pt": "Como jogar",
+        "ru": "Как играть",
+        "de": "Spielanleitung",
+        "ja": "遊び方",
+        "tr": "Nasıl oynanır",
+        "vi": "Cách chơi",
+        "it": "Come giocare",
+        "fa": "نحوهٔ بازی",
+        "pl": "Jak grać",
+        "uk": "Як грати",
+        "nl": "Hoe te spelen",
+        "sv": "Hur man spelar",
+        "cs": "Jak hrát",
+        "el": "Πώς παίζεται"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "value": {
+              "en": "Goal: maximise residents' happiness while staying solvent.",
+              "ko": "목표: 재정 건전성을 유지하면서 주민 행복도를 극대화하세요.",
+              "zh": "目标：在保持财政稳健的同时最大化居民幸福感。",
+              "hi": "लक्ष्य: शोधनक्षम रहते हुए निवासियों की खुशी को अधिकतम करें।",
+              "es": "Objetivo: maximizar la felicidad de los residentes manteniéndose solvente.",
+              "fr": "Objectif : maximiser le bonheur des résidents tout en restant solvable.",
+              "ar": "الهدف: تعظيم سعادة السكان مع البقاء قادرًا على الوفاء بالالتزامات المالية.",
+              "pt": "Objetivo: maximizar a felicidade dos residentes enquanto permanece solvente.",
+              "ru": "Цель: максимизировать счастье жителей, оставаясь платёжеспособным.",
+              "de": "Ziel: die Zufriedenheit der Bewohner maximieren und dabei solvent bleiben.",
+              "ja": "目標：財政的な健全性を保ちながら住民の幸福度を最大化すること。",
+              "tr": "Amaç: ödeme gücünü korurken sakinlerin mutluluğunu maksimize etmek.",
+              "vi": "Mục tiêu: tối đa hóa hạnh phúc của cư dân trong khi vẫn giữ khả năng thanh toán.",
+              "it": "Obiettivo: massimizzare la felicità dei residenti restando solvibili.",
+              "fa": "هدف: به حداکثر رساندن شادی ساکنان در حالی که از نظر مالی توانمند باقی می‌مانید.",
+              "pl": "Cel: maksymalizacja zadowolenia mieszkańców przy zachowaniu wypłacalności.",
+              "uk": "Мета: максимізувати щастя мешканців, залишаючись платоспроможним.",
+              "nl": "Doel: het geluk van bewoners maximaliseren terwijl je solvabel blijft.",
+              "sv": "Mål: maximera invånarnas lycka samtidigt som du förblir solvent.",
+              "cs": "Cíl: maximalizovat spokojenost obyvatel při zachování solventnosti.",
+              "el": "Στόχος: μεγιστοποίηση της ευτυχίας των κατοίκων παραμένοντας φερέγγυοι."
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Zones & effects:\n• Residential — adds population.\n• Commercial / Industrial — earn budget (industry pollutes).\n• Grocery — set its Quality and Cost; high quality + low cost lifts happiness.\n• School / Hospital — set Quality → education / healthcare.\n• Park — happiness, walkability, less pollution.\n• Transit — raises walkability, cuts car cost and pollution.\n\nEach End turn: budget changes by your mix; population grows from housing; pollution, walkability, car cost, education, healthcare, grocery access & cost recompute; and happiness = a weighted blend of all of them. People, cars and transit are modelled as these factors (not animated). Tune every number in Edit mode — the rulebook is JSON.",
+              "ko": "구역 및 효과:\n• 주거 — 인구를 늘립니다.\n• 상업/공업 — 예산을 법니다(공업은 오염을 유발).\n• 식료품 — 품질과 비용을 설정하세요; 고품질+저비용은 행복도를 높입니다.\n• 학교/병원 — 품질 설정 → 교육/의료.\n• 공원 — 행복도, 보행성, 오염 감소.\n• 대중교통 — 보행성을 높이고 자동차 비용과 오염을 줄입니다.\n\n턴을 종료할 때마다: 예산이 구성에 따라 변하고, 주택에서 인구가 늘어나고, 오염·보행성·차량 비용·교육·의료·식료품 접근성 및 비용이 재계산되며, 행복도는 이 모든 것의 가중 조합입니다. 사람, 차량, 대중교통은 애니메이션이 아니라 이러한 요인으로 모델링됩니다. 편집 모드에서 모든 수치를 조정할 수 있습니다 — 규칙은 JSON입니다.",
+              "zh": "分区与效果：\n• 住宅 — 增加人口。\n• 商业/工业 — 赚取预算（工业会造成污染）。\n• 杂货店 — 设置其质量与成本；高质量+低成本可提升幸福感。\n• 学校/医院 — 设置质量 → 教育/医疗。\n• 公园 — 幸福感、步行性、减少污染。\n• 交通 — 提升步行性，降低汽车成本与污染。\n\n每次结束回合：预算根据你的组合变化；人口随住房增长；污染、步行性、汽车成本、教育、医疗、杂货可达性与成本会重新计算；幸福感 = 所有这些因素的加权综合。人口、汽车和交通以这些因素建模（并非动画演示）。可在编辑模式中调整每一个数值——规则手册就是 JSON。",
+              "hi": "ज़ोन व प्रभाव:\n• आवासीय — जनसंख्या बढ़ाता है।\n• वाणिज्यिक/औद्योगिक — बजट कमाता है (उद्योग प्रदूषण फैलाता है)।\n• किराने की दुकान — इसकी गुणवत्ता व लागत सेट करें; उच्च गुणवत्ता + कम लागत खुशी बढ़ाती है।\n• स्कूल/अस्पताल — गुणवत्ता सेट करें → शिक्षा/स्वास्थ्य सेवा।\n• पार्क — खुशी, पैदल-यात्रा योग्यता, कम प्रदूषण।\n• परिवहन — पैदल-यात्रा योग्यता बढ़ाता है, कार लागत व प्रदूषण घटाता है।\n\nहर टर्न समाप्त होने पर: आपके मिश्रण के अनुसार बजट बदलता है; आवास से जनसंख्या बढ़ती है; प्रदूषण, पैदल-यात्रा योग्यता, कार लागत, शिक्षा, स्वास्थ्य सेवा, किराने तक पहुंच व लागत फिर से गणना होती है; और खुशी = इन सब का भारित मिश्रण। लोग, कारें व परिवहन इन कारकों के रूप में मॉडल किए जाते हैं (एनिमेटेड नहीं)। एडिट मोड में हर संख्या ट्यून करें — नियम पुस्तिका JSON है।",
+              "es": "Zonas y efectos:\n• Residencial — añade población.\n• Comercial / Industrial — genera presupuesto (la industria contamina).\n• Comercio de alimentos — fija su Calidad y Costo; alta calidad + bajo costo aumenta la felicidad.\n• Escuela / Hospital — fija Calidad → educación / salud.\n• Parque — felicidad, caminabilidad, menos contaminación.\n• Transporte — aumenta la caminabilidad, reduce el costo del auto y la contaminación.\n\nCada Terminar turno: el presupuesto cambia según tu mezcla; la población crece por la vivienda; contaminación, caminabilidad, costo del auto, educación, salud, acceso y costo de alimentos se recalculan; y la felicidad = una mezcla ponderada de todo ello. Personas, autos y transporte se modelan como estos factores (no animados). Ajusta cada número en el modo Edición — el reglamento es JSON.",
+              "fr": "Zones et effets :\n• Résidentiel — ajoute de la population.\n• Commercial / Industriel — génère du budget (l'industrie pollue).\n• Épicerie — fixez sa Qualité et son Coût ; haute qualité + faible coût augmente le bonheur.\n• École / Hôpital — fixez Qualité → éducation / santé.\n• Parc — bonheur, marchabilité, moins de pollution.\n• Transport — augmente la marchabilité, réduit le coût de la voiture et la pollution.\n\nÀ chaque Terminer le tour : le budget change selon votre mix ; la population croît grâce au logement ; la pollution, la marchabilité, le coût de la voiture, l'éducation, la santé, l'accès et le coût de l'épicerie sont recalculés ; et le bonheur = un mélange pondéré de tout cela. Les personnes, voitures et transports sont modélisés comme ces facteurs (pas animés). Ajustez chaque chiffre en mode Édition — le règlement est du JSON.",
+              "ar": "المناطق والتأثيرات:\n• سكنية — تضيف سكانًا.\n• تجارية / صناعية — تكسب ميزانية (الصناعة تلوّث).\n• بقالة — حدد الجودة والتكلفة؛ جودة عالية + تكلفة منخفضة ترفع السعادة.\n• مدرسة / مستشفى — حدد الجودة → التعليم / الرعاية الصحية.\n• حديقة — سعادة، إمكانية المشي، تلوث أقل.\n• نقل — يرفع إمكانية المشي، يخفّض تكلفة السيارة والتلوث.\n\nفي كل إنهاء دور: تتغير الميزانية حسب مزيجك؛ ينمو السكان من الإسكان؛ يُعاد حساب التلوث وإمكانية المشي وتكلفة السيارة والتعليم والرعاية الصحية والوصول للبقالة وتكلفتها؛ والسعادة = مزيج مرجّح من كل ذلك. يُنمذج الأشخاص والسيارات والنقل كهذه العوامل (وليس متحركًا). اضبط كل رقم في وضع التحرير — كتاب القواعد هو JSON.",
+              "pt": "Zonas e efeitos:\n• Residencial — adiciona população.\n• Comercial / Industrial — gera orçamento (a indústria polui).\n• Mercearia — defina sua Qualidade e Custo; alta qualidade + baixo custo aumenta a felicidade.\n• Escola / Hospital — defina Qualidade → educação / saúde.\n• Parque — felicidade, caminhabilidade, menos poluição.\n• Transporte — aumenta a caminhabilidade, reduz o custo do carro e a poluição.\n\nA cada Terminar turno: o orçamento muda conforme sua mistura; a população cresce a partir da habitação; poluição, caminhabilidade, custo do carro, educação, saúde, acesso e custo de mercearia são recalculados; e a felicidade = uma mistura ponderada de tudo isso. Pessoas, carros e transporte são modelados como esses fatores (não animados). Ajuste cada número no modo Edição — o livro de regras é JSON.",
+              "ru": "Зоны и эффекты:\n• Жилая — добавляет население.\n• Коммерческая / промышленная — приносит бюджет (промышленность загрязняет).\n• Продуктовый магазин — задайте его качество и цену; высокое качество + низкая цена повышают счастье.\n• Школа / больница — задайте качество → образование / здравоохранение.\n• Парк — счастье, пешеходная доступность, меньше загрязнения.\n• Транспорт — повышает пешеходную доступность, снижает стоимость автомобиля и загрязнение.\n\nПри каждом завершении хода: бюджет меняется в зависимости от вашего сочетания; население растёт за счёт жилья; пересчитываются загрязнение, пешеходная доступность, стоимость автомобиля, образование, здравоохранение, доступ к продуктам и их цена; а счастье = взвешенная смесь всего этого. Люди, машины и транспорт моделируются этими факторами (без анимации). Настройте каждое число в режиме редактирования — свод правил представляет собой JSON.",
+              "de": "Zonen & Effekte:\n• Wohngebiet — erhöht die Bevölkerung.\n• Gewerbe / Industrie — erwirtschaftet Budget (Industrie verschmutzt).\n• Lebensmittelgeschäft — Qualität und Kosten festlegen; hohe Qualität + niedrige Kosten steigern die Zufriedenheit.\n• Schule / Krankenhaus — Qualität festlegen → Bildung / Gesundheitsversorgung.\n• Park — Zufriedenheit, Begehbarkeit, weniger Verschmutzung.\n• Nahverkehr — erhöht die Begehbarkeit, senkt Autokosten und Verschmutzung.\n\nBei jeder Rundenbeendigung: Das Budget ändert sich je nach deinem Mix; die Bevölkerung wächst durch Wohnraum; Verschmutzung, Begehbarkeit, Autokosten, Bildung, Gesundheitsversorgung, Zugang zu und Kosten von Lebensmitteln werden neu berechnet; und Zufriedenheit = eine gewichtete Mischung aus alledem. Menschen, Autos und Nahverkehr werden als diese Faktoren modelliert (nicht animiert). Stelle jede Zahl im Bearbeitungsmodus ein — das Regelwerk ist JSON.",
+              "ja": "ゾーンと効果：\n• 住宅 — 人口を増やします。\n• 商業／工業 — 予算を稼ぎます（工業は汚染を出します）。\n• 食料品店 — 品質とコストを設定します。高品質＋低コストは幸福度を高めます。\n• 学校／病院 — 品質を設定 → 教育／医療。\n• 公園 — 幸福度、歩きやすさ、汚染の減少。\n• 交通機関 — 歩きやすさを高め、車のコストと汚染を減らします。\n\nターン終了ごとに：予算はあなたの構成に応じて変化します。人口は住宅から増加します。汚染、歩きやすさ、車のコスト、教育、医療、食料品店へのアクセス・コストが再計算されます。そして幸福度 = これらすべての加重ブレンドです。人、車、交通機関はこれらの要因としてモデル化されます（アニメーションではありません）。編集モードですべての数値を調整できます — ルールブックはJSONです。",
+              "tr": "Bölgeler ve etkiler:\n• Konut — nüfus ekler.\n• Ticari / Sanayi — bütçe kazandırır (sanayi kirletir).\n• Market — Kalitesini ve Maliyetini ayarlayın; yüksek kalite + düşük maliyet mutluluğu artırır.\n• Okul / Hastane — Kaliteyi ayarlayın → eğitim / sağlık.\n• Park — mutluluk, yürünebilirlik, daha az kirlilik.\n• Toplu taşıma — yürünebilirliği artırır, araba maliyetini ve kirliliği azaltır.\n\nHer Turu Bitir'de: bütçe karışımınıza göre değişir; nüfus konuttan büyür; kirlilik, yürünebilirlik, araba maliyeti, eğitim, sağlık, market erişimi ve maliyeti yeniden hesaplanır; ve mutluluk = bunların hepsinin ağırlıklı karışımıdır. İnsanlar, arabalar ve toplu taşıma bu faktörler olarak modellenir (animasyonlu değildir). Düzenleme modunda her sayıyı ayarlayın — kural kitabı JSON'dır.",
+              "vi": "Vùng & hiệu ứng:\n• Dân cư — thêm dân số.\n• Thương mại / Công nghiệp — kiếm ngân sách (công nghiệp gây ô nhiễm).\n• Cửa hàng tạp hóa — đặt Chất lượng và Chi phí; chất lượng cao + chi phí thấp nâng cao hạnh phúc.\n• Trường học / Bệnh viện — đặt Chất lượng → giáo dục / chăm sóc sức khỏe.\n• Công viên — hạnh phúc, khả năng đi bộ, ít ô nhiễm hơn.\n• Giao thông — tăng khả năng đi bộ, giảm chi phí xe hơi và ô nhiễm.\n\nMỗi lần Kết thúc lượt: ngân sách thay đổi theo cách kết hợp của bạn; dân số tăng từ nhà ở; ô nhiễm, khả năng đi bộ, chi phí xe hơi, giáo dục, chăm sóc sức khỏe, khả năng tiếp cận & chi phí tạp hóa được tính lại; và hạnh phúc = hỗn hợp có trọng số của tất cả những thứ đó. Con người, xe hơi và giao thông được mô hình hóa dưới dạng các yếu tố này (không phải hoạt hình). Điều chỉnh mọi con số trong chế độ Chỉnh sửa — sách quy tắc là JSON.",
+              "it": "Zone ed effetti:\n• Residenziale — aggiunge popolazione.\n• Commerciale / Industriale — guadagna budget (l'industria inquina).\n• Alimentari — imposta Qualità e Costo; alta qualità + basso costo aumenta la felicità.\n• Scuola / Ospedale — imposta Qualità → istruzione / sanità.\n• Parco — felicità, percorribilità a piedi, meno inquinamento.\n• Trasporti — aumenta la percorribilità a piedi, riduce il costo dell'auto e l'inquinamento.\n\nA ogni Termina turno: il budget cambia in base al tuo mix; la popolazione cresce dagli alloggi; inquinamento, percorribilità a piedi, costo dell'auto, istruzione, sanità, accesso e costo degli alimentari si ricalcolano; e la felicità = una miscela ponderata di tutto ciò. Persone, auto e trasporti sono modellati come questi fattori (non animati). Regola ogni numero in modalità Modifica — il regolamento è JSON.",
+              "fa": "منطقه‌ها و اثرات:\n• مسکونی — جمعیت اضافه می‌کند.\n• تجاری / صنعتی — بودجه کسب می‌کند (صنعت آلودگی ایجاد می‌کند).\n• فروشگاه مواد غذایی — کیفیت و هزینهٔ آن را تنظیم کنید؛ کیفیت بالا + هزینهٔ کم شادی را افزایش می‌دهد.\n• مدرسه / بیمارستان — کیفیت را تنظیم کنید → آموزش / بهداشت.\n• پارک — شادی، پیاده‌روپذیری، آلودگی کمتر.\n• حمل‌ونقل — پیاده‌روپذیری را افزایش می‌دهد، هزینهٔ خودرو و آلودگی را کاهش می‌دهد.\n\nدر هر پایان نوبت: بودجه بر اساس ترکیب شما تغییر می‌کند؛ جمعیت از مسکن رشد می‌کند؛ آلودگی، پیاده‌روپذیری، هزینهٔ خودرو، آموزش، بهداشت، دسترسی و هزینهٔ مواد غذایی دوباره محاسبه می‌شوند؛ و شادی = ترکیبی وزن‌دار از همهٔ این‌ها. مردم، خودروها و حمل‌ونقل به‌عنوان این عوامل مدل‌سازی می‌شوند (نه به‌صورت متحرک). هر عدد را در حالت ویرایش تنظیم کنید — کتاب قوانین JSON است.",
+              "pl": "Strefy i efekty:\n• Mieszkalna — zwiększa populację.\n• Handlowa / przemysłowa — zarabia budżet (przemysł zanieczyszcza).\n• Sklep spożywczy — ustaw jego Jakość i Koszt; wysoka jakość + niski koszt zwiększa zadowolenie.\n• Szkoła / Szpital — ustaw Jakość → edukacja / opieka zdrowotna.\n• Park — zadowolenie, chodliwość, mniej zanieczyszczeń.\n• Transport — zwiększa chodliwość, obniża koszt samochodu i zanieczyszczenie.\n\nPrzy każdym Zakończ turę: budżet zmienia się zgodnie z twoim zestawem; populacja rośnie dzięki mieszkalnictwu; zanieczyszczenie, chodliwość, koszt samochodu, edukacja, opieka zdrowotna, dostęp i koszt żywności są przeliczane; a zadowolenie = ważona mieszanka tego wszystkiego. Ludzie, samochody i transport są modelowane jako te czynniki (nie animowane). Dostrój każdą liczbę w trybie edycji — księga zasad to JSON.",
+              "uk": "Зони та ефекти:\n• Житлова — додає населення.\n• Комерційна / промислова — приносить бюджет (промисловість забруднює).\n• Продуктовий магазин — встановіть його якість і вартість; висока якість + низька вартість підвищують щастя.\n• Школа / лікарня — встановіть якість → освіта / охорона здоров'я.\n• Парк — щастя, пішохідність, менше забруднення.\n• Транспорт — підвищує пішохідність, знижує вартість авто та забруднення.\n\nПри кожному завершенні ходу: бюджет змінюється відповідно до вашого поєднання; населення зростає завдяки житлу; забруднення, пішохідність, вартість авто, освіта, охорона здоров'я, доступ до продуктів та їхня вартість перераховуються; а щастя = зважена суміш усього цього. Люди, авто й транспорт моделюються як ці фактори (без анімації). Налаштуйте кожне число в режимі редагування — звід правил — це JSON.",
+              "nl": "Zones & effecten:\n• Woon — voegt bevolking toe.\n• Commercieel / Industrieel — verdient budget (industrie vervuilt).\n• Boodschappen — stel Kwaliteit en Kosten in; hoge kwaliteit + lage kosten verhogen het geluk.\n• School / Ziekenhuis — stel Kwaliteit in → onderwijs / gezondheidszorg.\n• Park — geluk, loopbaarheid, minder vervuiling.\n• Vervoer — verhoogt loopbaarheid, verlaagt autokosten en vervuiling.\n\nBij elke Beurt beëindigen: budget verandert door je mix; bevolking groeit door huisvesting; vervuiling, loopbaarheid, autokosten, onderwijs, gezondheidszorg, toegang en kosten van boodschappen worden herberekend; en geluk = een gewogen mix van dat alles. Mensen, auto's en vervoer worden als deze factoren gemodelleerd (niet geanimeerd). Stel elk getal af in de bewerkingsmodus — het regelboek is JSON.",
+              "sv": "Zoner & effekter:\n• Bostäder — ökar befolkningen.\n• Kommersiellt / Industriellt — tjänar budget (industri förorenar).\n• Mataffär — ställ in dess Kvalitet och Kostnad; hög kvalitet + låg kostnad ökar lyckan.\n• Skola / Sjukhus — ställ in Kvalitet → utbildning / sjukvård.\n• Park — lycka, gångbarhet, mindre föroreningar.\n• Kollektivtrafik — ökar gångbarheten, sänker bilkostnad och föroreningar.\n\nVid varje Avsluta tur: budgeten ändras utifrån din mix; befolkningen växer från bostäder; föroreningar, gångbarhet, bilkostnad, utbildning, sjukvård, tillgång till och kostnad för mat räknas om; och lycka = en viktad blandning av allt detta. Människor, bilar och kollektivtrafik modelleras som dessa faktorer (inte animerade). Justera varje siffra i redigeringsläget — regelboken är JSON.",
+              "cs": "Zóny a efekty:\n• Obytná — přidává obyvatelstvo.\n• Komerční / Průmyslová — vydělává rozpočet (průmysl znečišťuje).\n• Obchod s potravinami — nastavte jeho Kvalitu a Náklady; vysoká kvalita + nízké náklady zvyšují spokojenost.\n• Škola / Nemocnice — nastavte Kvalitu → vzdělání / zdravotní péče.\n• Park — spokojenost, pěší dostupnost, méně znečištění.\n• Doprava — zvyšuje pěší dostupnost, snižuje náklady na auto a znečištění.\n\nPři každém Ukončení tahu: rozpočet se mění podle vašeho mixu; obyvatelstvo roste z bydlení; přepočítávají se znečištění, pěší dostupnost, náklady na auto, vzdělání, zdravotní péče, přístup k potravinám a jejich náklady; a spokojenost = vážená směs toho všeho. Lidé, auta a doprava jsou modelováni jako tyto faktory (nejsou animováni). Doladíte každé číslo v režimu úprav — pravidla jsou v JSON.",
+              "el": "Ζώνες & επιδράσεις:\n• Οικιστική — προσθέτει πληθυσμό.\n• Εμπορική / Βιομηχανική — κερδίζει προϋπολογισμό (η βιομηχανία ρυπαίνει).\n• Παντοπωλείο — ορίστε την Ποιότητα και το Κόστος του· υψηλή ποιότητα + χαμηλό κόστος αυξάνει την ευτυχία.\n• Σχολείο / Νοσοκομείο — ορίστε Ποιότητα → εκπαίδευση / υγειονομική περίθαλψη.\n• Πάρκο — ευτυχία, βατότητα με τα πόδια, λιγότερη ρύπανση.\n• Συγκοινωνία — αυξάνει τη βατότητα, μειώνει το κόστος αυτοκινήτου και τη ρύπανση.\n\nΣε κάθε Τερματισμό γύρου: ο προϋπολογισμός αλλάζει ανάλογα με τον συνδυασμό σας· ο πληθυσμός αυξάνεται από τη στέγαση· η ρύπανση, η βατότητα, το κόστος αυτοκινήτου, η εκπαίδευση, η υγειονομική περίθαλψη, η πρόσβαση και το κόστος παντοπωλείου επανυπολογίζονται· και η ευτυχία = ένα σταθμισμένο μείγμα όλων αυτών. Οι άνθρωποι, τα αυτοκίνητα και οι συγκοινωνίες μοντελοποιούνται ως αυτοί οι παράγοντες (όχι με κίνηση). Ρυθμίστε κάθε αριθμό στη λειτουργία Επεξεργασίας — το εγχειρίδιο κανόνων είναι JSON."
+            }
+          }
+        ]
+      }
+    }
+  }
+}

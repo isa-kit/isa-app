@@ -1,0 +1,16 @@
+{
+  "settings": [
+    { "id": "set_autobuild", "name": "Autobuild — Claude auto-runs queued items (status=current, assigned=claude)", "on": false }
+  ],
+  "updates": [],
+  "tasks": [
+    { "id": "cv1", "title": "Live file bridge via codev/data/ folder", "status": "doing", "owner": "claude", "order": 10, "detail": "Per-applet data/ folder: app mirrors state.json, Claude writes inbox.json, merge is per-field LWW.", "updatedBy": "claude", "updatedAt": "2026-06-06" },
+    { "id": "cv2", "title": "Near-live inbox poll (no manual Sync)", "status": "todo", "owner": "claude", "order": 20, "detail": "Poll inbox.json every few seconds / on window focus so Claude's writes appear without tapping Sync.", "updatedBy": "claude", "updatedAt": "2026-06-06" },
+    { "id": "cv3", "title": "Widget map diagram (colour-coded)", "status": "done", "owner": "claude", "order": 30, "detail": "arch_map Widgets tab: draggable nodes, blue=flutterboard / green=datakit / amber=imported.", "updatedBy": "claude", "updatedAt": "2026-06-06" },
+    { "id": "cv4", "title": "Diagram zoom controls", "status": "done", "owner": "claude", "order": 40, "detail": "Zoom out/in/reset buttons on every free-layout canvas (engine 2026-06-06.25).", "updatedBy": "claude", "updatedAt": "2026-06-06" },
+    { "id": "cv5", "title": "Widget reference tab (readable list)", "status": "doing", "owner": "claude", "order": 50, "detail": "Simple per-widget list: widget name, each attribute, type, and options.", "updatedBy": "claude", "updatedAt": "2026-06-06" },
+    { "id": "cv6", "title": "neujour analysis modules (regressions, journal/exercise/food)", "status": "todo", "owner": "claude", "order": 60, "detail": "Larger R&D: correlate journal + tasks + measurements; applet-of-applet modules.", "updatedBy": "claude", "updatedAt": "2026-06-06" },
+    { "id": "cv7", "title": "Run build 2026-06-06.25 on the phone and review", "status": "todo", "owner": "you", "order": 70, "detail": "Confirm zoom, widget map, save fixes, provisional sub-task removal.", "updatedBy": "claude", "updatedAt": "2026-06-06" },
+    { "id": "cv8", "title": "Decide: share a tasks layer with taskly/workboard", "status": "todo", "owner": "you", "order": 80, "detail": "Stand-alone first; link the shared layer once the bridge is proven.", "updatedBy": "claude", "updatedAt": "2026-06-06" }
+  ]
+}

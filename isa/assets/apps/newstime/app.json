@@ -1,0 +1,13 @@
+{
+  "id": "newstime",
+  "name": "Newstime",
+  "category": "Media",
+  "description": "The same story as many outlets around the world report it, in 15 languages, ranked by plain counting rules (no AI).",
+  "icon": "newspaper",
+  "color": "#B42318",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_newstime"
+  },
+  "seedVersion": "2026-10-12.newstime2"
+}

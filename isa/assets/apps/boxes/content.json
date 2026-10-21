@@ -1,0 +1,185 @@
+{
+  "boxes": [
+    {
+      "id": "b1",
+      "number": 1,
+      "label": "Everyday dishes",
+      "room": "Kitchen",
+      "status": "Packed",
+      "fragile": true,
+      "notes": "Plates, bowls, mugs",
+      "numberId": "1"
+    },
+    {
+      "id": "b2",
+      "number": 2,
+      "label": "Pots and pans",
+      "room": "Kitchen",
+      "status": "Pending packing",
+      "fragile": false,
+      "notes": "",
+      "numberId": "2"
+    },
+    {
+      "id": "b3",
+      "number": 3,
+      "label": "Winter clothes",
+      "room": "Bedroom",
+      "status": "Packed",
+      "fragile": false,
+      "notes": "",
+      "numberId": "3"
+    },
+    {
+      "id": "b4",
+      "number": 4,
+      "label": "Bathroom supplies",
+      "room": "Bathroom",
+      "status": "Pending packing",
+      "fragile": false,
+      "notes": "",
+      "numberId": "4"
+    },
+    {
+      "id": "b5",
+      "number": 5,
+      "label": "Books",
+      "room": "Living",
+      "status": "Loaded",
+      "fragile": false,
+      "notes": "Heavy \u2014 two hands",
+      "numberId": "5"
+    },
+    {
+      "id": "b6",
+      "number": 6,
+      "label": "Desk drawer stuff",
+      "room": "Office",
+      "status": "Ongoing",
+      "fragile": false,
+      "notes": "",
+      "numberId": "6"
+    },
+    {
+      "id": "b7",
+      "number": 7,
+      "label": "Picture frames",
+      "room": "Living",
+      "status": "Packed",
+      "fragile": true,
+      "notes": "Fragile \u2014 this side up",
+      "numberId": "7"
+    },
+    {
+      "id": "b8",
+      "number": 8,
+      "label": "Garage tools",
+      "room": "Garage",
+      "status": "Delivered",
+      "fragile": false,
+      "notes": "",
+      "numberId": "8"
+    }
+  ],
+  "items": [
+    {
+      "id": "i1",
+      "name": "Coffee mugs (set of 6)",
+      "box": 1,
+      "category": "Kitchen",
+      "qty": 6,
+      "boxId": "1",
+      "boxRef": "b1"
+    },
+    {
+      "id": "i2",
+      "name": "Dinner plates",
+      "box": 1,
+      "category": "Kitchen",
+      "qty": 8,
+      "boxId": "1",
+      "boxRef": "b1"
+    },
+    {
+      "id": "i3",
+      "name": "Cast iron skillet",
+      "box": 2,
+      "category": "Kitchen",
+      "qty": 1,
+      "boxId": "2",
+      "boxRef": "b2"
+    },
+    {
+      "id": "i4",
+      "name": "Winter coats",
+      "box": 3,
+      "category": "Clothes",
+      "qty": 3,
+      "boxId": "3",
+      "boxRef": "b3"
+    },
+    {
+      "id": "i5",
+      "name": "Wool sweaters",
+      "box": 3,
+      "category": "Clothes",
+      "qty": 5,
+      "boxId": "3",
+      "boxRef": "b3"
+    },
+    {
+      "id": "i6",
+      "name": "Towels",
+      "box": 4,
+      "category": "Misc",
+      "qty": 4,
+      "boxId": "4",
+      "boxRef": "b4"
+    },
+    {
+      "id": "i7",
+      "name": "Novels",
+      "box": 5,
+      "category": "Books",
+      "qty": 20,
+      "boxId": "5",
+      "boxRef": "b5"
+    },
+    {
+      "id": "i8",
+      "name": "Laptop charger",
+      "box": 6,
+      "category": "Electronics",
+      "qty": 1,
+      "boxId": "6",
+      "boxRef": "b6"
+    },
+    {
+      "id": "i9",
+      "name": "Passport folder",
+      "box": 6,
+      "category": "Docs",
+      "qty": 1,
+      "boxId": "6",
+      "boxRef": "b6"
+    },
+    {
+      "id": "i10",
+      "name": "Family photo frame",
+      "box": 7,
+      "category": "Misc",
+      "qty": 2,
+      "boxId": "7",
+      "boxRef": "b7"
+    },
+    {
+      "id": "i11",
+      "name": "Cordless drill",
+      "box": 8,
+      "category": "Misc",
+      "qty": 1,
+      "boxId": "8",
+      "boxRef": "b8"
+    }
+  ]
+}

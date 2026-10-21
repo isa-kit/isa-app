@@ -1,0 +1,14 @@
+{
+  "id": "sysmon",
+  "name": "System Monitor",
+  "category": "Developer",
+  "description": "This machine right now: load, prompt cost and history.",
+  "icon": "monitor_heart",
+  "color": "#1F4E79",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_sysmon"
+  },
+  "seedContent": "initial-only",
+  "seedVersion": "2026-10-19.sysmon2.forge"
+}

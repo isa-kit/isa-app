@@ -1,0 +1,7 @@
+{
+  "runs": [
+    { "name": "id", "type": "text" },
+    { "name": "mode", "type": "text", "label": { "en": "Mode", "ko": "모드", "zh": "模式", "hi": "मोड", "es": "Modo", "fr": "Mode", "ar": "الوضع", "pt": "Modo", "ru": "Режим", "de": "Modus", "ja": "モード", "tr": "Mod", "vi": "Chế độ", "it": "Modalità", "fa": "حالت", "pl": "Tryb", "uk": "Режим", "nl": "Modus", "sv": "Läge", "cs": "Režim", "el": "Λειτουργία" } },
+    { "name": "wave", "type": "number", "label": { "en": "Wave reached", "ko": "도달한 웨이브", "zh": "到达波次", "hi": "पहुँची लहर", "es": "Oleada alcanzada", "fr": "Vague atteinte", "ar": "الموجة المُبلَّغة", "pt": "Onda alcançada", "ru": "Достигнутая волна", "de": "Erreichte Welle", "ja": "到達ウェーブ", "tr": "Ulaşılan dalga", "vi": "Đợt đạt được", "it": "Ondata raggiunta", "fa": "موج رسیده", "pl": "Osiągnięta fala", "uk": "Досягнута хвиля", "nl": "Bereikte golf", "sv": "Uppnådd våg", "cs": "Dosažená vlna", "el": "Κύμα που φτάσατε" } }
+  ]
+}
