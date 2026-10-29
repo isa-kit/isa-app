@@ -1,0 +1,1256 @@
+{
+ "boards": [
+  {
+   "name": "id",
+   "type": "text"
+  },
+  {
+   "name": "name",
+   "type": "text",
+   "label": "Name"
+  },
+  {
+   "name": "order",
+   "type": "number",
+   "label": "Order",
+   "hidden": true
+  },
+  {
+   "name": "style",
+   "type": "text",
+   "label": "Style",
+   "hidden": true,
+   "default": ""
+  },
+  {
+   "name": "accent",
+   "type": "text",
+   "label": "Accent",
+   "hidden": true,
+   "default": ""
+  },
+  {
+   "name": "mode",
+   "type": "enum",
+   "label": "Mode",
+   "options": [
+    "edit",
+    "design"
+   ],
+   "default": "edit",
+   "hidden": true
+  },
+  {
+   "name": "rev",
+   "type": "number",
+   "label": "Revision",
+   "hidden": true,
+   "default": 1
+  },
+  {
+   "name": "frameMode",
+   "type": "enum",
+   "label": "Frame mode (default)",
+   "options": [
+    "wireframe",
+    "real"
+   ],
+   "default": "wireframe",
+   "hidden": true
+  },
+  {
+   "name": "mirrorApplet",
+   "type": "text",
+   "label": "Mirrors applet",
+   "hidden": true
+  },
+  {
+   "name": "mirrorBuild",
+   "type": "text",
+   "label": "Mirrors applet build",
+   "hidden": true
+  },
+  {
+   "name": "sampleData",
+   "type": "bool",
+   "label": "Sample data",
+   "hidden": true
+  },
+  {
+   "name": "parentBoard",
+   "type": "text",
+   "label": "Scenario of",
+   "hidden": true
+  },
+  {
+   "name": "mirrorHead",
+   "type": "text",
+   "label": "Mirrored config position",
+   "hidden": true
+  },
+  {
+   "name": "mirrorBase",
+   "type": "text",
+   "label": "Cut from config position",
+   "hidden": true
+  },
+  {
+   "name": "artboardSizes",
+   "type": "text",
+   "label": "Custom artboard sizes",
+   "hidden": true,
+   "default": ""
+  },
+  {
+   "name": "snapGrid",
+   "type": "bool",
+   "label": "Snap to grid",
+   "hidden": true
+  },
+  {
+   "name": "playClean",
+   "type": "bool",
+   "label": "Play clean view",
+   "hidden": true
+  },
+  {
+   "name": "playDevice",
+   "type": "text",
+   "label": "Play device",
+   "hidden": true,
+   "default": ""
+  },
+  {
+   "name": "inspect",
+   "type": "bool",
+   "label": "Hover inspector",
+   "hidden": true
+  },
+  {
+   "name": "inspectMode",
+   "type": "enum",
+   "label": "Inspector mode",
+   "options": [
+    "leaf",
+    "path"
+   ],
+   "default": "",
+   "hidden": true
+  }
+ ],
+ "screens": [
+  {
+   "name": "id",
+   "type": "text"
+  },
+  {
+   "name": "board",
+   "type": "text",
+   "label": "Board",
+   "hidden": true
+  },
+  {
+   "name": "name",
+   "type": "text",
+   "label": "Name"
+  },
+  {
+   "name": "device",
+   "type": "enum",
+   "label": "Device",
+   "options": [
+    "phone",
+    "tablet",
+    "web",
+    "fragment"
+   ],
+   "default": "phone"
+  },
+  {
+   "name": "x",
+   "type": "number",
+   "label": "X",
+   "hidden": true,
+   "default": 0
+  },
+  {
+   "name": "y",
+   "type": "number",
+   "label": "Y",
+   "hidden": true,
+   "default": 0
+  },
+  {
+   "name": "width",
+   "type": "number",
+   "label": "Width",
+   "hidden": true
+  },
+  {
+   "name": "variantOf",
+   "type": "text",
+   "label": "Variant of",
+   "hidden": true
+  },
+  {
+   "name": "folder",
+   "type": "text",
+   "label": "Folder",
+   "hidden": true,
+   "default": ""
+  },
+  {
+   "name": "status",
+   "type": "enum",
+   "label": "Status",
+   "options": [
+    "proposed",
+    "approved",
+    "changes"
+   ],
+   "default": "proposed",
+   "hidden": true
+  },
+  {
+   "name": "mode",
+   "type": "enum",
+   "label": "Frame mode",
+   "options": [
+    "wireframe",
+    "real"
+   ],
+   "default": "",
+   "hidden": true
+  },
+  {
+   "name": "realApplet",
+   "type": "text",
+   "label": "Real applet",
+   "default": "",
+   "hidden": true
+  },
+  {
+   "name": "realScreen",
+   "type": "text",
+   "label": "Real screen",
+   "default": "",
+   "hidden": true
+  },
+  {
+   "name": "nodeJson",
+   "type": "text",
+   "label": "Carried screen JSON",
+   "default": "",
+   "hidden": true
+  },
+  {
+   "name": "nodeStamp",
+   "type": "text",
+   "label": "Carried JSON provenance",
+   "default": "",
+   "hidden": true
+  },
+  {
+   "name": "placeholder",
+   "type": "bool",
+   "label": "Host-only surface",
+   "default": false,
+   "hidden": true
+  },
+  {
+   "name": "placeholderLabel",
+   "type": "text",
+   "label": "Placeholder label",
+   "default": "",
+   "hidden": true
+  },
+  {
+   "name": "sampleData",
+   "type": "bool",
+   "label": "Sample data",
+   "hidden": true
+  },
+  {
+   "name": "inputMode",
+   "type": "text",
+   "label": "Taps in Play",
+   "hidden": true
+  },
+  {
+   "name": "revisionOf",
+   "type": "text",
+   "label": "Revision of",
+   "hidden": true,
+   "default": ""
+  },
+  {
+   "name": "revisionBase",
+   "type": "text",
+   "label": "Revision base",
+   "hidden": true,
+   "default": ""
+  },
+  {
+   "name": "revisionNote",
+   "type": "text",
+   "label": "Revision note",
+   "hidden": true,
+   "default": ""
+  },
+  {
+   "name": "content",
+   "type": "enum",
+   "label": "Content mode",
+   "options": [
+    "live",
+    "sketch",
+    "freehand"
+   ],
+   "default": "",
+   "hidden": true
+  },
+  {
+   "name": "height",
+   "type": "number",
+   "label": "Height",
+   "hidden": true
+  },
+  {
+   "name": "order",
+   "type": "number",
+   "label": "Artboard order",
+   "hidden": true
+  }
+ ],
+ "widgets": [
+  {
+   "name": "id",
+   "type": "text"
+  },
+  {
+   "name": "screen",
+   "type": "text",
+   "label": "Screen",
+   "hidden": true
+  },
+  {
+   "name": "kind",
+   "type": "enum",
+   "label": "Kind",
+   "options": [
+    "titlebar",
+    "searchbar",
+    "tabs",
+    "scrollview",
+    "list",
+    "settings",
+    "text",
+    "card",
+    "image",
+    "buttonrow",
+    "bottomnav",
+    "fab",
+    "row",
+    "dropdown",
+    "popup",
+    "calendar",
+    "canvas",
+    "stat",
+    "chips",
+    "chart"
+   ]
+  },
+  {
+   "name": "label",
+   "type": "text",
+   "label": "Label"
+  },
+  {
+   "name": "region",
+   "type": "enum",
+   "label": "Region",
+   "options": [
+    "top",
+    "body",
+    "bottom",
+    "overlay"
+   ]
+  },
+  {
+   "name": "order",
+   "type": "number",
+   "label": "Order",
+   "hidden": true,
+   "default": 0
+  },
+  {
+   "name": "intent",
+   "type": "enum",
+   "label": "Size intent",
+   "options": [
+    "fixed",
+    "fill",
+    "wrap"
+   ],
+   "hidden": true
+  },
+  {
+   "name": "behavior",
+   "type": "text",
+   "label": "Behavior",
+   "hidden": true,
+   "default": ""
+  },
+  {
+   "name": "parent",
+   "type": "text",
+   "label": "Parent",
+   "hidden": true
+  },
+  {
+   "name": "cell",
+   "type": "number",
+   "label": "Cell",
+   "hidden": true,
+   "default": 0
+  },
+  {
+   "name": "cols",
+   "type": "number",
+   "label": "Columns",
+   "hidden": true,
+   "default": 2
+  },
+  {
+   "name": "weights",
+   "type": "text",
+   "label": "Weights",
+   "hidden": true
+  },
+  {
+   "name": "items",
+   "type": "text",
+   "label": "Items",
+   "hidden": true,
+   "default": ""
+  },
+  {
+   "name": "derivedStamp",
+   "type": "text",
+   "label": "Derived provenance",
+   "hidden": true,
+   "default": ""
+  },
+  {
+   "name": "height",
+   "type": "number",
+   "label": "Height",
+   "hidden": true
+  },
+  {
+   "name": "nodeJson",
+   "type": "text",
+   "label": "Carried node JSON",
+   "hidden": true,
+   "default": ""
+  },
+  {
+   "name": "nodeType",
+   "type": "text",
+   "label": "Real node type",
+   "hidden": true,
+   "default": ""
+  },
+  {
+   "name": "nodePath",
+   "type": "text",
+   "label": "Node path",
+   "hidden": true,
+   "default": ""
+  },
+  {
+   "name": "revisionOf",
+   "type": "text",
+   "label": "Revision of",
+   "hidden": true,
+   "default": ""
+  },
+  {
+   "name": "table",
+   "type": "text",
+   "label": "Bound table",
+   "hidden": true,
+   "default": ""
+  },
+  {
+   "name": "field",
+   "type": "text",
+   "label": "Bound column",
+   "hidden": true,
+   "default": ""
+  },
+  {
+   "name": "dataAction",
+   "type": "text",
+   "label": "Data action",
+   "hidden": true,
+   "default": ""
+  }
+ ],
+ "flows": [
+  {
+   "name": "id",
+   "type": "text"
+  },
+  {
+   "name": "board",
+   "type": "text",
+   "label": "Board",
+   "hidden": true
+  },
+  {
+   "name": "fromWidget",
+   "type": "text",
+   "label": "From widget",
+   "hidden": true
+  },
+  {
+   "name": "toScreen",
+   "type": "text",
+   "label": "To screen",
+   "hidden": true
+  },
+  {
+   "name": "transition",
+   "type": "enum",
+   "label": "Transition",
+   "options": [
+    "push",
+    "fade",
+    "sheet"
+   ],
+   "default": "push"
+  },
+  {
+   "name": "fromItem",
+   "type": "text",
+   "label": "From item",
+   "hidden": true
+  },
+  {
+   "name": "action",
+   "type": "enum",
+   "label": "Action",
+   "options": [
+    "screen",
+    "back",
+    "overlay"
+   ],
+   "default": "screen"
+  },
+  {
+   "name": "toOverlay",
+   "type": "text",
+   "label": "To overlay",
+   "hidden": true
+  }
+ ],
+ "stickies": [
+  {
+   "name": "id",
+   "type": "text"
+  },
+  {
+   "name": "board",
+   "type": "text",
+   "label": "Board",
+   "hidden": true
+  },
+  {
+   "name": "x",
+   "type": "number",
+   "label": "X",
+   "hidden": true,
+   "default": 0
+  },
+  {
+   "name": "y",
+   "type": "number",
+   "label": "Y",
+   "hidden": true,
+   "default": 0
+  },
+  {
+   "name": "width",
+   "type": "number",
+   "label": "Width",
+   "hidden": true,
+   "default": 220
+  },
+  {
+   "name": "text",
+   "type": "text",
+   "label": "Note"
+  }
+ ],
+ "pins": [
+  {
+   "name": "id",
+   "type": "text"
+  },
+  {
+   "name": "screen",
+   "type": "text",
+   "label": "Screen",
+   "hidden": true
+  },
+  {
+   "name": "x",
+   "type": "number",
+   "label": "X",
+   "hidden": true,
+   "default": 0.5
+  },
+  {
+   "name": "y",
+   "type": "number",
+   "label": "Y",
+   "hidden": true,
+   "default": 0.5
+  },
+  {
+   "name": "order",
+   "type": "number",
+   "label": "Order",
+   "hidden": true,
+   "default": 0
+  },
+  {
+   "name": "title",
+   "type": "text",
+   "label": "Title"
+  },
+  {
+   "name": "text",
+   "type": "text",
+   "label": "Note"
+  },
+  {
+   "name": "author",
+   "type": "text",
+   "label": "Author",
+   "hidden": true,
+   "default": "you"
+  },
+  {
+   "name": "ref",
+   "type": "text",
+   "label": "Anchor",
+   "hidden": true
+  }
+ ],
+ "frameImages": [
+  {
+   "name": "id",
+   "type": "text"
+  },
+  {
+   "name": "screen",
+   "type": "text",
+   "label": "Screen",
+   "hidden": true
+  },
+  {
+   "name": "mime",
+   "type": "text",
+   "label": "MIME type",
+   "hidden": true,
+   "default": "image/png"
+  },
+  {
+   "name": "b64",
+   "type": "richtext",
+   "label": "Image data (base64)",
+   "hidden": true
+  },
+  {
+   "name": "w",
+   "type": "number",
+   "label": "Width",
+   "hidden": true
+  },
+  {
+   "name": "h",
+   "type": "number",
+   "label": "Height",
+   "hidden": true
+  }
+ ],
+ "frameHistory": [
+  {
+   "name": "id",
+   "type": "text"
+  },
+  {
+   "name": "screen",
+   "type": "text",
+   "label": "Screen",
+   "hidden": true
+  },
+  {
+   "name": "kind",
+   "type": "text",
+   "label": "Kind",
+   "default": "approved"
+  },
+  {
+   "name": "title",
+   "type": "text",
+   "label": "Title",
+   "default": ""
+  },
+  {
+   "name": "changes",
+   "type": "number",
+   "label": "Changes",
+   "default": 0
+  },
+  {
+   "name": "snapshot",
+   "type": "text",
+   "label": "Previous frame",
+   "hidden": true,
+   "default": ""
+  },
+  {
+   "name": "revision",
+   "type": "text",
+   "label": "Revision",
+   "hidden": true,
+   "default": ""
+  },
+  {
+   "name": "by",
+   "type": "text",
+   "label": "By",
+   "default": ""
+  },
+  {
+   "name": "at",
+   "type": "text",
+   "label": "When",
+   "default": ""
+  }
+ ],
+ "proposals": [
+  {
+   "name": "id",
+   "type": "text"
+  },
+  {
+   "name": "scenarioName",
+   "type": "text",
+   "label": "Scenario",
+   "default": ""
+  },
+  {
+   "name": "status",
+   "type": "enum",
+   "label": "Status",
+   "options": [
+    "proposed",
+    "in-review",
+    "applied",
+    "parked"
+   ],
+   "default": "proposed"
+  },
+  {
+   "name": "note",
+   "type": "text",
+   "label": "Note",
+   "default": ""
+  },
+  {
+   "name": "applet",
+   "type": "text",
+   "label": "App",
+   "default": ""
+  },
+  {
+   "name": "scenarioBoard",
+   "type": "text",
+   "label": "Scenario board",
+   "hidden": true,
+   "default": ""
+  },
+  {
+   "name": "rootBoard",
+   "type": "text",
+   "label": "Main board",
+   "hidden": true,
+   "default": ""
+  },
+  {
+   "name": "changeList",
+   "type": "text",
+   "label": "Change list",
+   "hidden": true,
+   "default": ""
+  },
+  {
+   "name": "statusAt",
+   "type": "text",
+   "label": "Status changed",
+   "hidden": true,
+   "default": ""
+  },
+  {
+   "name": "trail",
+   "type": "text",
+   "label": "Status trail",
+   "hidden": true,
+   "default": ""
+  }
+ ],
+ "sketchBoxes": [
+  {
+   "name": "screen",
+   "type": "text",
+   "label": "Artboard",
+   "hidden": true
+  },
+  {
+   "name": "label",
+   "type": "text",
+   "label": "Label",
+   "hidden": true
+  },
+  {
+   "name": "kind",
+   "type": "enum",
+   "label": "Kind",
+   "hidden": true,
+   "options": [
+    "frame",
+    "nav",
+    "button",
+    "input",
+    "text",
+    "image",
+    "list",
+    "section"
+   ]
+  },
+  {
+   "name": "x",
+   "type": "number",
+   "label": "X",
+   "hidden": true
+  },
+  {
+   "name": "y",
+   "type": "number",
+   "label": "Y",
+   "hidden": true
+  },
+  {
+   "name": "w",
+   "type": "number",
+   "label": "Width",
+   "hidden": true
+  },
+  {
+   "name": "h",
+   "type": "number",
+   "label": "Height",
+   "hidden": true
+  },
+  {
+   "name": "z",
+   "type": "number",
+   "label": "Layer order",
+   "hidden": true
+  },
+  {
+   "name": "locked",
+   "type": "bool",
+   "label": "Locked",
+   "hidden": true
+  },
+  {
+   "name": "fill",
+   "type": "text",
+   "label": "Fill",
+   "hidden": true
+  },
+  {
+   "name": "borderColor",
+   "type": "text",
+   "label": "Border colour",
+   "hidden": true
+  },
+  {
+   "name": "borderWidth",
+   "type": "number",
+   "label": "Border width",
+   "hidden": true
+  },
+  {
+   "name": "fontSize",
+   "type": "number",
+   "label": "Text size",
+   "hidden": true
+  },
+  {
+   "name": "textAlign",
+   "type": "text",
+   "label": "Text align",
+   "hidden": true
+  },
+  {
+   "name": "bold",
+   "type": "bool",
+   "label": "Bold",
+   "hidden": true
+  }
+ ],
+ "sketchLinks": [
+  {
+   "name": "from",
+   "type": "text",
+   "label": "From",
+   "hidden": true
+  },
+  {
+   "name": "to",
+   "type": "text",
+   "label": "To",
+   "hidden": true
+  },
+  {
+   "name": "label",
+   "type": "text",
+   "label": "Label",
+   "hidden": true
+  },
+  {
+   "name": "route",
+   "type": "text",
+   "label": "Route",
+   "hidden": true
+  },
+  {
+   "name": "arrow",
+   "type": "text",
+   "label": "Arrow",
+   "hidden": true
+  },
+  {
+   "name": "dash",
+   "type": "bool",
+   "label": "Dashed",
+   "hidden": true
+  }
+ ],
+ "sketchInk": [
+  {
+   "name": "screen",
+   "type": "text",
+   "label": "Artboard",
+   "hidden": true
+  },
+  {
+   "name": "strokes",
+   "type": "text",
+   "label": "Strokes",
+   "hidden": true
+  }
+ ],
+ "freehandDrawings": [
+  {
+   "name": "screen",
+   "type": "text",
+   "label": "Artboard",
+   "hidden": true
+  },
+  {
+   "name": "title",
+   "type": "text",
+   "label": "Title",
+   "hidden": true
+  },
+  {
+   "name": "strokes",
+   "type": "text",
+   "label": "Strokes",
+   "hidden": true
+  }
+ ],
+ "proposalApplies": [
+  {
+   "name": "proposal",
+   "type": "text",
+   "label": "Proposal",
+   "hidden": true
+  },
+  {
+   "name": "at",
+   "type": "text",
+   "label": "Applied at",
+   "hidden": true
+  },
+  {
+   "name": "by",
+   "type": "text",
+   "label": "Applied by",
+   "hidden": true
+  },
+  {
+   "name": "indices",
+   "type": "text",
+   "label": "Changes",
+   "hidden": true
+  },
+  {
+   "name": "patches",
+   "type": "text",
+   "label": "Before and after",
+   "hidden": true
+  },
+  {
+   "name": "revertedAt",
+   "type": "text",
+   "label": "Reverted at",
+   "hidden": true
+  },
+  {
+   "name": "applet",
+   "type": "text",
+   "label": "Applet",
+   "hidden": true
+  }
+ ],
+ "modelTables": [
+  {
+   "name": "id",
+   "type": "text"
+  },
+  {
+   "name": "board",
+   "type": "text",
+   "label": "Board",
+   "hidden": true
+  },
+  {
+   "name": "name",
+   "type": "text",
+   "label": "Name",
+   "hidden": true
+  },
+  {
+   "name": "label",
+   "type": "text",
+   "label": "Label"
+  },
+  {
+   "name": "order",
+   "type": "number",
+   "label": "Order",
+   "hidden": true,
+   "default": 0
+  }
+ ],
+ "modelColumns": [
+  {
+   "name": "id",
+   "type": "text"
+  },
+  {
+   "name": "board",
+   "type": "text",
+   "label": "Board",
+   "hidden": true
+  },
+  {
+   "name": "table",
+   "type": "text",
+   "label": "Table",
+   "hidden": true
+  },
+  {
+   "name": "name",
+   "type": "text",
+   "label": "Name",
+   "hidden": true
+  },
+  {
+   "name": "label",
+   "type": "text",
+   "label": "Label"
+  },
+  {
+   "name": "type",
+   "type": "text",
+   "label": "Type",
+   "default": "text"
+  },
+  {
+   "name": "options",
+   "type": "text",
+   "label": "Options",
+   "hidden": true,
+   "default": ""
+  },
+  {
+   "name": "order",
+   "type": "number",
+   "label": "Order",
+   "hidden": true,
+   "default": 0
+  }
+ ],
+ "modelRows": [
+  {
+   "name": "id",
+   "type": "text"
+  },
+  {
+   "name": "board",
+   "type": "text",
+   "label": "Board",
+   "hidden": true
+  },
+  {
+   "name": "table",
+   "type": "text",
+   "label": "Table",
+   "hidden": true
+  },
+  {
+   "name": "data",
+   "type": "text",
+   "label": "Row data",
+   "hidden": true,
+   "default": ""
+  }
+ ],
+ "cobuildSessions": [
+ {
+   "name": "id",
+   "type": "text"
+  },
+ {
+   "name": "board",
+   "type": "text",
+   "label": "Board",
+   "hidden": true
+  },
+ {
+   "name": "startedAt",
+   "type": "text",
+   "label": "Started",
+   "hidden": true
+  },
+ {
+   "name": "prompt",
+   "type": "text",
+   "label": "Prompt",
+   "hidden": true
+  },
+ {
+   "name": "model",
+   "type": "text",
+   "label": "Model",
+   "hidden": true
+  },
+ {
+   "name": "name",
+   "type": "text",
+   "label": "Name",
+   "hidden": true
+  },
+ {
+   "name": "kind",
+   "type": "text",
+   "label": "Kind",
+   "hidden": true
+  },
+ {
+   "name": "params",
+   "type": "text",
+   "label": "Parameters",
+   "hidden": true,
+   "default": "[]"
+  }
+ ],
+ "cobuildSteps": [
+ {
+   "name": "id",
+   "type": "text"
+  },
+ {
+   "name": "session",
+   "type": "text",
+   "label": "Session",
+   "hidden": true
+  },
+ {
+   "name": "order",
+   "type": "number",
+   "label": "Order",
+   "hidden": true,
+   "default": 0
+  },
+ {
+   "name": "op",
+   "type": "text",
+   "label": "Operation",
+   "hidden": true
+  },
+ {
+   "name": "args",
+   "type": "text",
+   "label": "Arguments",
+   "hidden": true,
+   "default": ""
+  },
+ {
+   "name": "label",
+   "type": "text",
+   "label": "Label",
+   "hidden": true
+  },
+ {
+   "name": "manualPath",
+   "type": "text",
+   "label": "Manual path",
+   "hidden": true
+  },
+ {
+   "name": "ok",
+   "type": "bool",
+   "label": "Succeeded",
+   "hidden": true
+  },
+ {
+   "name": "refusal",
+   "type": "text",
+   "label": "Refusal",
+   "hidden": true
+  },
+ {
+   "name": "targets",
+   "type": "text",
+   "label": "Touched frames",
+   "hidden": true,
+   "default": "[]"
+  },
+ {
+   "name": "createdId",
+   "type": "text",
+   "label": "Created row",
+   "hidden": true
+  }
+ ]
+}

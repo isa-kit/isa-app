@@ -1,0 +1,28 @@
+{
+  "tables": [
+    {
+      "name": "files",
+      "label": "Files",
+      "icon": "folder",
+      "description": "Workbook files. Each file is its own workbook — its own Budget and Scores sheets."
+    },
+    {
+      "name": "sheet_budget",
+      "label": "Budget",
+      "icon": "table_chart",
+      "description": "A spreadsheet. Edit any cell; type =formulas (=B1*C1, =SUM(D1:D3)); drag to select a block; ⌘C/⌘V copy-paste; ⌘D/⌘R fill a formula down/right with references that shift per cell."
+    },
+    {
+      "name": "sheet_scores",
+      "label": "Scores",
+      "icon": "table_chart",
+      "description": "A second sheet in the same workbook. The switcher flips between this and the Budget sheet."
+    },
+    {
+      "name": "sheet_csv",
+      "label": "Data",
+      "icon": "table_chart",
+      "description": "A plain grid (columns A–Z) — where an opened .csv file lives. Edits save back to that file with ⌘S."
+    }
+  ]
+}

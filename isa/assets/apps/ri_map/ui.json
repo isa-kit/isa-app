@@ -1,0 +1,387 @@
+{
+  "app": {
+    "languages": ["en", "ko", "zh", "hi", "es", "fr", "ar", "pt", "ru", "de", "ja", "tr", "vi", "it", "fa", "pl", "uk", "nl", "sv", "cs", "el"],
+    "translatable": true,
+    "appDataTools": true,
+    "title": {
+      "en": "RI Map",
+      "ko": "RI 지도",
+      "zh": "RI地图",
+      "hi": "RI मानचित्र",
+      "es": "Mapa de RI",
+      "fr": "Carte du RI",
+      "ar": "خريطة RI",
+      "pt": "Mapa de RI",
+      "ru": "Карта RI",
+      "de": "RI-Karte",
+      "ja": "RI地図",
+      "tr": "RI Haritası",
+      "vi": "Bản đồ RI",
+      "it": "Mappa RI",
+      "fa": "نقشه RI",
+      "pl": "Mapa RI",
+      "uk": "Карта RI",
+      "nl": "RI-kaart",
+      "sv": "RI-karta",
+      "cs": "Mapa RI",
+      "el": "Χάρτης RI"
+    },
+    "primaryColor": "#1565C0",
+    "theme": "contrast"
+  },
+  "nav": [
+    {
+      "id": "map",
+      "label": {
+        "en": "Map",
+        "ko": "지도",
+        "zh": "地图",
+        "hi": "मानचित्र",
+        "es": "Mapa",
+        "fr": "Carte",
+        "ar": "الخريطة",
+        "pt": "Mapa",
+        "ru": "Карта",
+        "de": "Karte",
+        "ja": "地図",
+        "tr": "Harita",
+        "vi": "Bản đồ",
+        "it": "Mappa",
+        "fa": "نقشه",
+        "pl": "Mapa",
+        "uk": "Карта",
+        "nl": "Kaart",
+        "sv": "Karta",
+        "cs": "Mapa",
+        "el": "Χάρτης"
+      },
+      "icon": "map",
+      "screen": "map"
+    },
+    {
+      "id": "places",
+      "label": {
+        "en": "Places",
+        "ko": "장소",
+        "zh": "地点",
+        "hi": "स्थान",
+        "es": "Lugares",
+        "fr": "Lieux",
+        "ar": "الأماكن",
+        "pt": "Lugares",
+        "ru": "Места",
+        "de": "Orte",
+        "ja": "場所",
+        "tr": "Yerler",
+        "vi": "Địa điểm",
+        "it": "Luoghi",
+        "fa": "مکان‌ها",
+        "pl": "Miejsca",
+        "uk": "Місця",
+        "nl": "Plaatsen",
+        "sv": "Platser",
+        "cs": "Místa",
+        "el": "Τοποθεσίες"
+      },
+      "icon": "table_rows",
+      "screen": "places"
+    }
+  ],
+  "screens": {
+    "map": {
+      "title": {
+        "en": "Rhode Island places",
+        "ko": "로드아일랜드 장소",
+        "zh": "罗德岛地点",
+        "hi": "रोड आइलैंड स्थान",
+        "es": "Lugares de Rhode Island",
+        "fr": "Lieux de Rhode Island",
+        "ar": "أماكن رود آيلاند",
+        "pt": "Lugares de Rhode Island",
+        "ru": "Места Род-Айленда",
+        "de": "Orte in Rhode Island",
+        "ja": "ロードアイランドの場所",
+        "tr": "Rhode Island yerleri",
+        "vi": "Địa điểm ở Rhode Island",
+        "it": "Luoghi di Rhode Island",
+        "fa": "مکان‌های رود آیلند",
+        "pl": "Miejsca na Rhode Island",
+        "uk": "Місця Род-Айленда",
+        "nl": "Plaatsen in Rhode Island",
+        "sv": "Platser i Rhode Island",
+        "cs": "Místa na Rhode Island",
+        "el": "Τοποθεσίες στο Ρόουντ Άιλαντ"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Notable places across Rhode Island on a tile basemap. Tap a pin (or a row in the list below the map) to edit a place. In Places, use the map button at the end of a row to open it here, centered and highlighted. Tap \"Show all places\" to zoom back out. Use + New place to drop another point.",
+              "ko": "타일 기본지도 위에 표시된 로드아일랜드 전역의 주요 장소입니다. 핀(또는 지도 아래 목록의 행)을 탭하여 장소를 편집하세요. 장소 화면에서는 행 끝의 지도 버튼을 사용해 여기서 중앙에 강조 표시된 상태로 열 수 있습니다. \"모든 장소 표시\"를 탭하면 다시 축소됩니다. + 새 장소로 다른 지점을 추가하세요.",
+              "zh": "罗德岛各地的知名地点显示在瓦片底图上。点击图钉（或地图下方列表中的一行）以编辑地点。在「地点」中，使用行末的地图按钮在此处打开该地点，居中并高亮显示。点击「显示所有地点」可缩小视图。使用「+ 新增地点」添加另一个点。",
+              "hi": "टाइल बेसमैप पर रोड आइलैंड भर के उल्लेखनीय स्थान। किसी स्थान को संपादित करने के लिए पिन (या मानचित्र के नीचे सूची में पंक्ति) पर टैप करें। स्थान में, इसे यहां केंद्रित और हाइलाइट करके खोलने के लिए पंक्ति के अंत में मानचित्र बटन का उपयोग करें। वापस ज़ूम आउट करने के लिए \"सभी स्थान दिखाएं\" टैप करें। एक और बिंदु जोड़ने के लिए + नया स्थान का उपयोग करें।",
+              "es": "Lugares notables de Rhode Island en un mapa base de mosaicos. Toca un pin (o una fila de la lista debajo del mapa) para editar un lugar. En Lugares, usa el botón de mapa al final de una fila para abrirlo aquí, centrado y resaltado. Toca \"Mostrar todos los lugares\" para alejar el zoom. Usa + Nuevo lugar para añadir otro punto.",
+              "fr": "Lieux notables de Rhode Island sur un fond de carte en tuiles. Appuyez sur une épingle (ou une ligne de la liste sous la carte) pour modifier un lieu. Dans Lieux, utilisez le bouton de carte à la fin d'une ligne pour l'ouvrir ici, centré et mis en évidence. Appuyez sur « Afficher tous les lieux » pour dézoomer. Utilisez + Nouveau lieu pour ajouter un autre point.",
+              "ar": "أماكن بارزة في جميع أنحاء رود آيلاند على خريطة أساسية بلاطية. اضغط على دبوس (أو صف في القائمة أسفل الخريطة) لتعديل مكان. في الأماكن، استخدم زر الخريطة في نهاية الصف لفتحه هنا، ممركزًا ومميزًا. اضغط \"إظهار كل الأماكن\" للتصغير مرة أخرى. استخدم + مكان جديد لإضافة نقطة أخرى.",
+              "pt": "Lugares notáveis por Rhode Island em um mapa base de blocos. Toque em um pino (ou uma linha na lista abaixo do mapa) para editar um lugar. Em Lugares, use o botão de mapa no final de uma linha para abri-lo aqui, centralizado e destacado. Toque em \"Mostrar todos os lugares\" para reduzir o zoom. Use + Novo lugar para adicionar outro ponto.",
+              "ru": "Примечательные места Род-Айленда на тайловой карте. Нажмите метку (или строку в списке под картой), чтобы изменить место. В разделе «Места» используйте кнопку карты в конце строки, чтобы открыть его здесь по центру с выделением. Нажмите «Показать все места», чтобы уменьшить масштаб. Используйте + Новое место, чтобы добавить ещё одну точку.",
+              "de": "Bemerkenswerte Orte in ganz Rhode Island auf einer Kachel-Basiskarte. Tippen Sie auf eine Stecknadel (oder eine Zeile in der Liste unter der Karte), um einen Ort zu bearbeiten. Nutzen Sie in Orte die Kartenschaltfläche am Ende einer Zeile, um ihn hier zentriert und hervorgehoben zu öffnen. Tippen Sie auf „Alle Orte anzeigen“, um wieder herauszuzoomen. Verwenden Sie + Neuer Ort, um einen weiteren Punkt zu setzen.",
+              "ja": "ロードアイランド全域の注目すべき場所をタイルベースマップ上に表示します。ピン（または地図の下のリストの行）をタップして場所を編集します。「場所」では、行末の地図ボタンを使うと、ここで中央に配置され強調表示された状態で開けます。「すべての場所を表示」をタップするとズームアウトします。「+ 新しい場所」で別の地点を追加できます。",
+              "tr": "Rhode Island genelindeki dikkat çekici yerler bir kutu tabanlı haritada. Bir yeri düzenlemek için bir iğneye (veya haritanın altındaki listedeki bir satıra) dokunun. Yerler'de, bir satırın sonundaki harita düğmesini kullanarak burada ortalanmış ve vurgulanmış şekilde açın. Geri yakınlaştırmak için \"Tüm yerleri göster\"e dokunun. Başka bir nokta eklemek için + Yeni yer kullanın.",
+              "vi": "Những địa điểm nổi bật khắp Rhode Island trên bản đồ nền dạng ô. Nhấn vào một ghim (hoặc một hàng trong danh sách bên dưới bản đồ) để chỉnh sửa địa điểm. Trong Địa điểm, sử dụng nút bản đồ ở cuối hàng để mở nó ở đây, căn giữa và làm nổi bật. Nhấn \"Hiển thị tất cả địa điểm\" để thu phóng ra lại. Dùng + Địa điểm mới để thêm một điểm khác.",
+              "it": "Luoghi degni di nota in tutto il Rhode Island su una mappa base a tessere. Tocca un pin (o una riga nell'elenco sotto la mappa) per modificare un luogo. In Luoghi, usa il pulsante mappa alla fine di una riga per aprirlo qui, centrato ed evidenziato. Tocca \"Mostra tutti i luoghi\" per rimpicciolire di nuovo. Usa + Nuovo luogo per aggiungere un altro punto.",
+              "fa": "مکان‌های قابل‌توجه در سراسر رود آیلند روی یک نقشه پایه کاشی‌ای. برای ویرایش یک مکان روی سنجاق (یا یک ردیف در فهرست زیر نقشه) ضربه بزنید. در مکان‌ها، از دکمه نقشه در انتهای یک ردیف برای باز کردن آن اینجا، به‌صورت وسط‌چین و برجسته استفاده کنید. برای بزرگ‌نمایی به بیرون، روی «نمایش همه مکان‌ها» ضربه بزنید. برای افزودن نقطه دیگر از + مکان جدید استفاده کنید.",
+              "pl": "Godne uwagi miejsca w całym Rhode Island na kafelkowej mapie bazowej. Dotknij pinezki (lub wiersza na liście pod mapą), aby edytować miejsce. W Miejscach użyj przycisku mapy na końcu wiersza, aby otworzyć je tutaj, wyśrodkowane i podświetlone. Dotknij \"Pokaż wszystkie miejsca\", aby oddalić widok. Użyj + Nowe miejsce, aby dodać kolejny punkt.",
+              "uk": "Визначні місця по всьому Род-Айленду на тайловій базовій карті. Торкніться мітки (або рядка у списку під картою), щоб редагувати місце. У розділі «Місця» скористайтеся кнопкою карти в кінці рядка, щоб відкрити його тут, по центру та підсвіченим. Торкніться «Показати всі місця», щоб знову зменшити масштаб. Використовуйте + Нове місце, щоб додати ще одну точку.",
+              "nl": "Opmerkelijke plaatsen door heel Rhode Island op een tegel-basiskaart. Tik op een pin (of een rij in de lijst onder de kaart) om een plaats te bewerken. Gebruik in Plaatsen de kaartknop aan het einde van een rij om deze hier gecentreerd en gemarkeerd te openen. Tik op \"Alle plaatsen tonen\" om weer uit te zoomen. Gebruik + Nieuwe plaats om nog een punt toe te voegen.",
+              "sv": "Anmärkningsvärda platser över hela Rhode Island på en rutbaserad baskarta. Tryck på en nål (eller en rad i listan under kartan) för att redigera en plats. I Platser använder du kartknappen i slutet av en rad för att öppna den här, centrerad och markerad. Tryck på \"Visa alla platser\" för att zooma ut igen. Använd + Ny plats för att lägga till en annan punkt.",
+              "cs": "Pozoruhodná místa po celém Rhode Islandu na dlaždicové základní mapě. Klepnutím na špendlík (nebo řádek v seznamu pod mapou) upravíte místo. V nabídce Místa použijte tlačítko mapy na konci řádku a otevřete jej zde, vystředěné a zvýrazněné. Klepnutím na \"Zobrazit všechna místa\" oddálíte zobrazení. Pomocí + Nové místo přidáte další bod.",
+              "el": "Αξιόλογα μέρη σε όλο το Ρόουντ Άιλαντ σε έναν βασικό χάρτη πλακιδίων. Πατήστε μια καρφίτσα (ή μια γραμμή στη λίστα κάτω από τον χάρτη) για να επεξεργαστείτε ένα μέρος. Στα Μέρη, χρησιμοποιήστε το κουμπί χάρτη στο τέλος μιας γραμμής για να το ανοίξετε εδώ, κεντραρισμένο και επισημασμένο. Πατήστε «Εμφάνιση όλων των μερών» για επανάληψη σμίκρυνσης. Χρησιμοποιήστε + Νέο μέρος για να προσθέσετε άλλο σημείο."
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "Show all places",
+              "ko": "모든 장소 표시",
+              "zh": "显示所有地点",
+              "hi": "सभी स्थान दिखाएं",
+              "es": "Mostrar todos los lugares",
+              "fr": "Afficher tous les lieux",
+              "ar": "إظهار كل الأماكن",
+              "pt": "Mostrar todos os lugares",
+              "ru": "Показать все места",
+              "de": "Alle Orte anzeigen",
+              "ja": "すべての場所を表示",
+              "tr": "Tüm yerleri göster",
+              "vi": "Hiển thị tất cả địa điểm",
+              "it": "Mostra tutti i luoghi",
+              "fa": "نمایش همه مکان‌ها",
+              "pl": "Pokaż wszystkie miejsca",
+              "uk": "Показати всі місця",
+              "nl": "Alle plaatsen tonen",
+              "sv": "Visa alla platser",
+              "cs": "Zobrazit všechna místa",
+              "el": "Εμφάνιση όλων των μερών"
+            },
+            "icon": "public",
+            "action": { "fn": "clearFocus", "args": { "table": "places" } }
+          },
+          {
+            "type": "map",
+            "table": "places",
+            "latColumn": "lat",
+            "lonColumn": "lon",
+            "labelColumn": "name",
+            "fillPhone": true,
+            "zoom": 9,
+            "markerIcon": "pin",
+            "fill": "blue",
+            "fillOpacity": 0.12,
+            "stroke": "blue",
+            "strokeWidth": 1.5,
+            "action": {
+              "fn": "editRow"
+            },
+            "geojson": {
+              "type": "FeatureCollection",
+              "features": [
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "name": "RI (approx)"
+                  },
+                  "geometry": {
+                    "type": "Polygon",
+                    "coordinates": [
+                      [
+                        [
+                          -71.9,
+                          41.1
+                        ],
+                        [
+                          -71.1,
+                          41.1
+                        ],
+                        [
+                          -71.1,
+                          42.02
+                        ],
+                        [
+                          -71.9,
+                          42.02
+                        ],
+                        [
+                          -71.9,
+                          41.1
+                        ]
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "New place",
+              "ko": "새 장소",
+              "zh": "新地点",
+              "hi": "नया स्थान",
+              "es": "Nuevo lugar",
+              "fr": "Nouveau lieu",
+              "ar": "مكان جديد",
+              "pt": "Novo lugar",
+              "ru": "Новое место",
+              "de": "Neuer Ort",
+              "ja": "新しい場所",
+              "tr": "Yeni yer",
+              "vi": "Địa điểm mới",
+              "it": "Nuovo luogo",
+              "fa": "مکان جدید",
+              "pl": "Nowe miejsce",
+              "uk": "Нове місце",
+              "nl": "Nieuwe plaats",
+              "sv": "Ny plats",
+              "cs": "Nové místo",
+              "el": "Νέα τοποθεσία"
+            },
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "places",
+                "values": {
+                  "kind": "city"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "places": {
+      "title": {
+        "en": "All places",
+        "ko": "모든 장소",
+        "zh": "所有地点",
+        "hi": "सभी स्थान",
+        "es": "Todos los lugares",
+        "fr": "Tous les lieux",
+        "ar": "كل الأماكن",
+        "pt": "Todos os lugares",
+        "ru": "Все места",
+        "de": "Alle Orte",
+        "ja": "すべての場所",
+        "tr": "Tüm yerler",
+        "vi": "Tất cả địa điểm",
+        "it": "Tutti i luoghi",
+        "fa": "همه مکان‌ها",
+        "pl": "Wszystkie miejsca",
+        "uk": "Всі місця",
+        "nl": "Alle plaatsen",
+        "sv": "Alla platser",
+        "cs": "Všechna místa",
+        "el": "Όλες οι τοποθεσίες"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Every place plotted on the map. Tap a row to edit its name, kind, or coordinates.",
+              "ko": "지도에 표시된 모든 장소입니다. 행을 탭하면 이름, 종류 또는 좌표를 편집할 수 있습니다.",
+              "zh": "地图上标出的所有地点。点击一行可编辑其名称、种类或坐标。",
+              "hi": "मानचित्र पर अंकित हर स्थान। इसका नाम, प्रकार या निर्देशांक संपादित करने के लिए पंक्ति पर टैप करें।",
+              "es": "Todos los lugares marcados en el mapa. Toca una fila para editar su nombre, tipo o coordenadas.",
+              "fr": "Tous les lieux tracés sur la carte. Appuyez sur une ligne pour modifier son nom, son genre ou ses coordonnées.",
+              "ar": "كل مكان مرسوم على الخريطة. اضغط على صف لتعديل اسمه أو نوعه أو إحداثياته.",
+              "pt": "Todos os lugares plotados no mapa. Toque em uma linha para editar seu nome, classe ou coordenadas.",
+              "ru": "Все места, отмеченные на карте. Нажмите строку, чтобы изменить её название, разновидность или координаты.",
+              "de": "Jeder auf der Karte eingetragene Ort. Tippen Sie auf eine Zeile, um Name, Art oder Koordinaten zu bearbeiten.",
+              "ja": "地図上にプロットされたすべての場所。行をタップすると名前、種別、座標を編集できます。",
+              "tr": "Haritada işaretlenmiş her yer. Adını, türünü veya koordinatlarını düzenlemek için bir satıra dokunun.",
+              "vi": "Mọi địa điểm được vẽ trên bản đồ. Nhấn vào một hàng để chỉnh sửa tên, loại hoặc tọa độ của nó.",
+              "it": "Ogni luogo tracciato sulla mappa. Tocca una riga per modificarne nome, genere o coordinate.",
+              "fa": "هر مکانی که روی نقشه ثبت شده. برای ویرایش نام، گونه یا مختصات آن روی یک ردیف ضربه بزنید.",
+              "pl": "Każde miejsce naniesione na mapę. Dotknij wiersza, aby edytować jego nazwę, rodzaj lub współrzędne.",
+              "uk": "Кожне місце, нанесене на карту. Торкніться рядка, щоб редагувати його назву, різновид або координати.",
+              "nl": "Elke plaats die op de kaart is uitgezet. Tik op een rij om de naam, soort of coördinaten te bewerken.",
+              "sv": "Varje plats som markerats på kartan. Tryck på en rad för att redigera dess namn, slag eller koordinater.",
+              "cs": "Každé místo vyznačené na mapě. Klepnutím na řádek upravíte jeho název, druh nebo souřadnice.",
+              "el": "Κάθε τοποθεσία σχεδιασμένη στον χάρτη. Πατήστε μια γραμμή για να επεξεργαστείτε το όνομα, το είδος ή τις συντεταγμένες της."
+            }
+          },
+          {
+            "type": "table",
+            "table": "places",
+            "columns": [
+              "name",
+              "kind",
+              "lat",
+              "lon"
+            ],
+            "height": "fill",
+            "action": {
+              "fn": "editRow"
+            },
+            "openActions": [
+              {
+                "label": "Show on map",
+                "icon": "map",
+                "action": {
+                  "chain": [
+                    { "fn": "focusRow" },
+                    { "fn": "goto", "args": { "screen": "map" } }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "New place",
+              "ko": "새 장소",
+              "zh": "新地点",
+              "hi": "नया स्थान",
+              "es": "Nuevo lugar",
+              "fr": "Nouveau lieu",
+              "ar": "مكان جديد",
+              "pt": "Novo lugar",
+              "ru": "Новое место",
+              "de": "Neuer Ort",
+              "ja": "新しい場所",
+              "tr": "Yeni yer",
+              "vi": "Địa điểm mới",
+              "it": "Nuovo luogo",
+              "fa": "مکان جدید",
+              "pl": "Nowe miejsce",
+              "uk": "Нове місце",
+              "nl": "Nieuwe plaats",
+              "sv": "Ny plats",
+              "cs": "Nové místo",
+              "el": "Νέα τοποθεσία"
+            },
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "places",
+                "values": {
+                  "kind": "city"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

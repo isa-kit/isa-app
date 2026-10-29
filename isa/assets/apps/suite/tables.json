@@ -1,0 +1,40 @@
+{
+  "tables": [
+    {
+      "name": "files",
+      "label": "Files",
+      "icon": "folder",
+      "description": "Every file in the suite, of any type, in one place. A file's `kind` decides which tool opens it: doc → Docs, note → Notes, sheets → Sheets, wireframe → Wireframe. Folders (kind = folder) nest files into a tree. Docs and notes keep their content in `body`; sheets and wireframes open as their own tool instance keyed to the file, so the file list holds everything while each tool owns its data."
+    },
+    {
+      "name": "tools",
+      "label": "Suite tools (legacy)",
+      "icon": "grid_view",
+      "description": "Retained from the old tab-based hub so existing data is never orphaned; the file-first workspace uses `files` instead. Safe to migrate into `files` later."
+    },
+    {
+      "name": "sheet_budget",
+      "label": "Budget sheet (legacy)",
+      "icon": "table_chart",
+      "description": "Retained legacy table from the old hub. The file-first suite opens sheets as embedded Sheets instances keyed to a `files` row."
+    },
+    {
+      "name": "sheet_roster",
+      "label": "Roster sheet (legacy)",
+      "icon": "table_chart",
+      "description": "Retained legacy table from the old hub."
+    },
+    {
+      "name": "pages",
+      "label": "Pages (legacy)",
+      "icon": "menu_book",
+      "description": "Retained legacy document tree from the old hub; the file-first suite stores docs as `files` rows (kind = doc). Fold these into `files` in a later migration."
+    },
+    {
+      "name": "notes",
+      "label": "Notes (legacy)",
+      "icon": "sticky_note",
+      "description": "Retained legacy notes from the old hub; the file-first suite stores notes as `files` rows (kind = note)."
+    }
+  ]
+}

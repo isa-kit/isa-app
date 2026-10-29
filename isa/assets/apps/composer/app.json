@@ -1,0 +1,24 @@
+{
+  "id": "composer",
+  "name": "Moku",
+  "category": "Creative",
+  "description": "Sketch app screens as mockups on a board.",
+  "icon": "dashboard_customize",
+  "color": "#3F51B5",
+  "hidden": false,
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_composer"
+  },
+  "seedVersion": "2026-09-12.moku-consolidated-and-architecture-scope+wikipick-seedmap-proposal-0905+boardhistory-mirror-stamp-0915+frame-carried-node-json-0917+mokufid2-0919-hifi-tranche2-kinds+mokunavarc-0919-item-links+mirrorstruct-0920-block-node-columns+moku-sample-data-0923+moku-part-selection-0923+moku-proposal-compare-0926+moku-scenarios-1004+moku-proposals-1007+moku-round2-1008+artboard-r1-1012-dual-mode-frames+artboard-r2-1012-chrome+artboard-r3-1012-play-clean+artboard-r4-1012-play-device+artboard-r5-1012-inspect+artboard-r6-1012-apply-log+moku-builder-host-1017-model-tables+moku-cobuild-host-1017-recipe-tables+moku-string-1019+apply-harden-1025-applet-column+moku-recipes-1026+three-screen-types-1027-freehand",
+  "seedContent": "initial-only",
+  "durableSettings": [
+    "_composerNativeWikipickFramesV1",
+    "_composerWikipickSeedMapProposalV1",
+    "_composerArchitectureScopeProposalV1",
+    "_composerWikipickMirrorV1",
+    "_composerIsaHostBoardV1",
+    "aiProviders",
+    "aiProvider"
+  ]
+}

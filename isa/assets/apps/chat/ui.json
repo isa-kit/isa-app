@@ -1,0 +1,655 @@
+{
+  "app": {
+    "languages": [
+      "en",
+      "ko",
+      "zh",
+      "hi",
+      "es",
+      "fr",
+      "ar",
+      "pt",
+      "ru",
+      "de",
+      "ja",
+      "tr",
+      "vi",
+      "it",
+      "fa",
+      "pl",
+      "uk",
+      "nl",
+      "sv",
+      "cs",
+      "el"
+    ],
+    "translatable": true,
+    "primaryColor": "#B5651D",
+    "theme": "pastel",
+    "appDataTools": true,
+    "startScreen": "chat",
+    "guide": "about",
+    "leadingAction": {
+      "icon": "menu",
+      "tooltip": {
+        "en": "Chats",
+        "ko": "대화",
+        "zh": "聊天",
+        "hi": "चैट",
+        "es": "Chats",
+        "fr": "Discussions",
+        "ar": "المحادثات",
+        "pt": "Conversas",
+        "ru": "Чаты",
+        "de": "Chats",
+        "ja": "チャット",
+        "tr": "Sohbetler",
+        "vi": "Cuộc trò chuyện",
+        "it": "Chat",
+        "fa": "گفتگوها",
+        "pl": "Czaty",
+        "uk": "Чати",
+        "nl": "Chats",
+        "sv": "Chattar",
+        "cs": "Chaty",
+        "el": "Συνομιλίες"
+      },
+      "hideAtWidth": 720,
+      "action": {
+        "fn": "goto",
+        "args": {
+          "screen": "chats"
+        }
+      }
+    },
+    "headerActions": [
+      {
+        "icon": "call_split",
+        "tooltip": {
+          "en": "New child chat",
+          "ko": "새 하위 채팅",
+          "zh": "新建子聊天",
+          "hi": "नई शाखा चैट",
+          "es": "Nuevo chat derivado",
+          "fr": "Nouvelle discussion dérivée",
+          "ar": "محادثة فرعية جديدة",
+          "pt": "Nova conversa derivada",
+          "ru": "Новый дочерний чат",
+          "de": "Neuer Zweig-Chat",
+          "ja": "新しい子チャット",
+          "tr": "Yeni alt sohbet",
+          "vi": "Cuộc trò chuyện con mới",
+          "it": "Nuova chat derivata",
+          "fa": "گفتگوی فرعی جدید",
+          "pl": "Nowy czat podrzędny",
+          "uk": "Новий дочірній чат",
+          "nl": "Nieuwe afgeleide chat",
+          "sv": "Ny förgrenad chatt",
+          "cs": "Nový podřízený chat",
+          "el": "Νέα θυγατρική συνομιλία"
+        },
+        "action": {
+          "fn": "hostCall",
+          "args": {
+            "name": "chatNewChild"
+          }
+        }
+      },
+      {
+        "icon": "settings",
+        "tooltip": {
+          "en": "Chat settings",
+          "ko": "채팅 설정",
+          "zh": "聊天设置",
+          "hi": "चैट सेटिंग्स",
+          "es": "Ajustes del chat",
+          "fr": "Paramètres de la discussion",
+          "ar": "إعدادات المحادثة",
+          "pt": "Configurações da conversa",
+          "ru": "Настройки чата",
+          "de": "Chat-Einstellungen",
+          "ja": "チャット設定",
+          "tr": "Sohbet ayarları",
+          "vi": "Cài đặt cuộc trò chuyện",
+          "it": "Impostazioni chat",
+          "fa": "تنظیمات گفتگو",
+          "pl": "Ustawienia czatu",
+          "uk": "Налаштування чату",
+          "nl": "Chatinstellingen",
+          "sv": "Chattinställningar",
+          "cs": "Nastavení chatu",
+          "el": "Ρυθμίσεις συνομιλίας"
+        },
+        "action": {
+          "fn": "goto",
+          "args": {
+            "screen": "settings"
+          }
+        }
+      }
+    ]
+  },
+  "screens": {
+    "chat": {
+      "title": {
+        "en": "New chat",
+        "ko": "새 채팅",
+        "zh": "新聊天",
+        "hi": "नई चैट",
+        "es": "Nuevo chat",
+        "fr": "Nouvelle discussion",
+        "ar": "محادثة جديدة",
+        "pt": "Nova conversa",
+        "ru": "Новый чат",
+        "de": "Neuer Chat",
+        "ja": "新しいチャット",
+        "tr": "Yeni sohbet",
+        "vi": "Cuộc trò chuyện mới",
+        "it": "Nuova chat",
+        "fa": "گفتگوی جدید",
+        "pl": "Nowy czat",
+        "uk": "Новий чат",
+        "nl": "Nieuwe chat",
+        "sv": "Ny chatt",
+        "cs": "Nový chat",
+        "el": "Νέα συνομιλία"
+      },
+      "titleFrom": {
+        "table": "subchats",
+        "id": "$selected:subchats",
+        "column": "name"
+      },
+      "body": {
+        "type": "list",
+        "table": "messages",
+        "titleColumn": "text",
+        "sortColumn": "at",
+        "sortDir": "asc",
+        "anchor": "bottom",
+        "bubbles": {
+          "byColumn": "role",
+          "selfValue": "user",
+          "attachmentsColumn": "attachments",
+          "markdownColumn": "md",
+          "markdownRoles": [
+            "assistant"
+          ]
+        },
+        "emptyIcon": "auto_awesome",
+        "emptyTitle": {
+          "en": "How can I help?",
+          "ko": "무엇을 도와드릴까요?",
+          "zh": "有什么可以帮你的？",
+          "hi": "मैं कैसे मदद कर सकता हूँ?",
+          "es": "¿En qué puedo ayudarte?",
+          "fr": "Comment puis-je vous aider ?",
+          "ar": "كيف يمكنني المساعدة؟",
+          "pt": "Como posso ajudar?",
+          "ru": "Чем могу помочь?",
+          "de": "Wie kann ich helfen?",
+          "ja": "何をお手伝いしましょうか？",
+          "tr": "Nasıl yardımcı olabilirim?",
+          "vi": "Tôi có thể giúp gì?",
+          "it": "Come posso aiutarti?",
+          "fa": "چطور می‌توانم کمک کنم؟",
+          "pl": "W czym mogę pomóc?",
+          "uk": "Чим можу допомогти?",
+          "nl": "Waarmee kan ik helpen?",
+          "sv": "Hur kan jag hjälpa till?",
+          "cs": "Jak mohu pomoci?",
+          "el": "Πώς μπορώ να βοηθήσω;"
+        },
+        "footer": {
+          "type": "composer",
+          "table": "messages",
+          "column": "text",
+          "placeholder": {
+            "en": "Message the assistant…",
+            "ko": "어시스턴트에게 메시지 보내기…",
+            "zh": "给助手发消息…",
+            "hi": "सहायक को संदेश भेजें…",
+            "es": "Escribe al asistente…",
+            "fr": "Écrire à l'assistant…",
+            "ar": "راسل المساعد…",
+            "pt": "Escreva ao assistente…",
+            "ru": "Сообщение ассистенту…",
+            "de": "Nachricht an den Assistenten…",
+            "ja": "アシスタントにメッセージ…",
+            "tr": "Asistana mesaj yaz…",
+            "vi": "Nhắn tin cho trợ lý…",
+            "it": "Scrivi all'assistente…",
+            "fa": "پیام به دستیار…",
+            "pl": "Napisz do asystenta…",
+            "uk": "Повідомлення асистенту…",
+            "nl": "Bericht aan de assistent…",
+            "sv": "Skriv till assistenten…",
+            "cs": "Napište asistentovi…",
+            "el": "Μήνυμα στον βοηθό…"
+          },
+          "sendIcon": "arrow_up",
+          "attachments": true,
+          "attachmentsColumn": "attachments",
+          "values": {
+            "role": "user",
+            "subchat": "$selected:subchats.id",
+            "at": "now"
+          },
+          "action": {
+            "chain": [
+              {
+                "fn": "hostCall",
+                "args": {
+                  "name": "chatAdopt"
+                }
+              },
+              {
+                "fn": "hostCall",
+                "args": {
+                  "name": "chatSend"
+                }
+              }
+            ]
+          }
+        },
+        "sidebar": {
+          "type": "column",
+          "crossAxis": "stretch",
+          "children": [
+            {
+              "type": "button",
+              "label": {
+                "en": "New chat",
+                "ko": "새 채팅",
+                "zh": "新聊天",
+                "hi": "नई चैट",
+                "es": "Nuevo chat",
+                "fr": "Nouvelle discussion",
+                "ar": "محادثة جديدة",
+                "pt": "Nova conversa",
+                "ru": "Новый чат",
+                "de": "Neuer Chat",
+                "ja": "新しいチャット",
+                "tr": "Yeni sohbet",
+                "vi": "Cuộc trò chuyện mới",
+                "it": "Nuova chat",
+                "fa": "گفتگوی جدید",
+                "pl": "Nowy czat",
+                "uk": "Новий чат",
+                "nl": "Nieuwe chat",
+                "sv": "Ny chatt",
+                "cs": "Nový chat",
+                "el": "Νέα συνομιλία"
+              },
+              "icon": "add",
+              "variant": "text",
+              "action": {
+                "chain": [
+                  {
+                    "fn": "hostCall",
+                    "args": {
+                      "name": "chatNew"
+                    }
+                  },
+                  {
+                    "fn": "hostCall",
+                    "args": {
+                      "name": "closeScreen"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "list",
+              "table": "subchats",
+              "titleColumn": "name",
+              "sortColumn": "at",
+              "sortDir": "desc",
+              "parentColumn": "parent",
+              "selectedId": "$selected:subchats",
+              "action": {
+                "chain": [
+                  {
+                    "fn": "hostCall",
+                    "args": {
+                      "name": "chatOpen"
+                    }
+                  },
+                  {
+                    "fn": "hostCall",
+                    "args": {
+                      "name": "closeScreen"
+                    }
+                  }
+                ]
+              },
+              "emptyIcon": "forum",
+              "emptyTitle": {
+                "en": "No chats yet",
+                "ko": "아직 대화가 없습니다",
+                "zh": "还没有聊天",
+                "hi": "अभी कोई चैट नहीं",
+                "es": "Aún no hay chats",
+                "fr": "Aucune discussion pour l'instant",
+                "ar": "لا توجد محادثات بعد",
+                "pt": "Nenhuma conversa ainda",
+                "ru": "Чатов пока нет",
+                "de": "Noch keine Chats",
+                "ja": "チャットはまだありません",
+                "tr": "Henüz sohbet yok",
+                "vi": "Chưa có cuộc trò chuyện nào",
+                "it": "Ancora nessuna chat",
+                "fa": "هنوز گفتگویی نیست",
+                "pl": "Brak czatów",
+                "uk": "Чатів ще немає",
+                "nl": "Nog geen chats",
+                "sv": "Inga chattar än",
+                "cs": "Zatím žádné chaty",
+                "el": "Δεν υπάρχουν συνομιλίες ακόμη"
+              }
+            }
+          ]
+        },
+        "sidebarWidth": 280,
+        "sidebarMinWidth": 720
+      }
+    },
+    "chats": {
+      "title": {
+        "en": "Chats",
+        "ko": "대화",
+        "zh": "聊天",
+        "hi": "चैट",
+        "es": "Chats",
+        "fr": "Discussions",
+        "ar": "المحادثات",
+        "pt": "Conversas",
+        "ru": "Чаты",
+        "de": "Chats",
+        "ja": "チャット",
+        "tr": "Sohbetler",
+        "vi": "Cuộc trò chuyện",
+        "it": "Chat",
+        "fa": "گفتگوها",
+        "pl": "Czaty",
+        "uk": "Чати",
+        "nl": "Chats",
+        "sv": "Chattar",
+        "cs": "Chaty",
+        "el": "Συνομιλίες"
+      },
+      "body": {
+        "type": "column",
+        "crossAxis": "stretch",
+        "children": [
+          {
+            "type": "button",
+            "label": {
+              "en": "New chat",
+              "ko": "새 채팅",
+              "zh": "新聊天",
+              "hi": "नई चैट",
+              "es": "Nuevo chat",
+              "fr": "Nouvelle discussion",
+              "ar": "محادثة جديدة",
+              "pt": "Nova conversa",
+              "ru": "Новый чат",
+              "de": "Neuer Chat",
+              "ja": "新しいチャット",
+              "tr": "Yeni sohbet",
+              "vi": "Cuộc trò chuyện mới",
+              "it": "Nuova chat",
+              "fa": "گفتگوی جدید",
+              "pl": "Nowy czat",
+              "uk": "Новий чат",
+              "nl": "Nieuwe chat",
+              "sv": "Ny chatt",
+              "cs": "Nový chat",
+              "el": "Νέα συνομιλία"
+            },
+            "icon": "add",
+            "variant": "text",
+            "action": {
+              "chain": [
+                {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "chatNew"
+                  }
+                },
+                {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "closeScreen"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "list",
+            "table": "subchats",
+            "titleColumn": "name",
+            "sortColumn": "at",
+            "sortDir": "desc",
+            "parentColumn": "parent",
+            "selectedId": "$selected:subchats",
+            "action": {
+              "chain": [
+                {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "chatOpen"
+                  }
+                },
+                {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "closeScreen"
+                  }
+                }
+              ]
+            },
+            "emptyIcon": "forum",
+            "emptyTitle": {
+              "en": "No chats yet",
+              "ko": "아직 대화가 없습니다",
+              "zh": "还没有聊天",
+              "hi": "अभी कोई चैट नहीं",
+              "es": "Aún no hay chats",
+              "fr": "Aucune discussion pour l'instant",
+              "ar": "لا توجد محادثات بعد",
+              "pt": "Nenhuma conversa ainda",
+              "ru": "Чатов пока нет",
+              "de": "Noch keine Chats",
+              "ja": "チャットはまだありません",
+              "tr": "Henüz sohbet yok",
+              "vi": "Chưa có cuộc trò chuyện nào",
+              "it": "Ancora nessuna chat",
+              "fa": "هنوز گفتگویی نیست",
+              "pl": "Brak czatów",
+              "uk": "Чатів ще немає",
+              "nl": "Nog geen chats",
+              "sv": "Inga chattar än",
+              "cs": "Zatím žádné chaty",
+              "el": "Δεν υπάρχουν συνομιλίες ακόμη"
+            }
+          }
+        ]
+      }
+    },
+    "settings": {
+      "title": {
+        "en": "Chat settings",
+        "ko": "채팅 설정",
+        "zh": "聊天设置",
+        "hi": "चैट सेटिंग्स",
+        "es": "Ajustes del chat",
+        "fr": "Paramètres de la discussion",
+        "ar": "إعدادات المحادثة",
+        "pt": "Configurações da conversa",
+        "ru": "Настройки чата",
+        "de": "Chat-Einstellungen",
+        "ja": "チャット設定",
+        "tr": "Sohbet ayarları",
+        "vi": "Cài đặt cuộc trò chuyện",
+        "it": "Impostazioni chat",
+        "fa": "تنظیمات گفتگو",
+        "pl": "Ustawienia czatu",
+        "uk": "Налаштування чату",
+        "nl": "Chatinstellingen",
+        "sv": "Chattinställningar",
+        "cs": "Nastavení chatu",
+        "el": "Ρυθμίσεις συνομιλίας"
+      },
+      "body": {
+        "type": "record",
+        "table": "subchats",
+        "rowId": "$selected:subchats",
+        "hideTitle": true,
+        "fields": [
+          "name",
+          "provider",
+          "model",
+          "system",
+          "web",
+          "formatting"
+        ],
+        "emptyText": {
+          "en": "Send a message first to set up this chat.",
+          "ko": "이 채팅을 설정하려면 먼저 메시지를 보내세요.",
+          "zh": "请先发送一条消息，再设置此聊天。",
+          "hi": "इस चैट को सेट करने के लिए पहले एक संदेश भेजें।",
+          "es": "Envía primero un mensaje para configurar este chat.",
+          "fr": "Envoyez d’abord un message pour configurer cette discussion.",
+          "ar": "أرسل رسالة أولاً لإعداد هذه المحادثة.",
+          "pt": "Envie uma mensagem primeiro para configurar esta conversa.",
+          "ru": "Сначала отправьте сообщение, чтобы настроить этот чат.",
+          "de": "Senden Sie zuerst eine Nachricht, um diesen Chat einzurichten.",
+          "ja": "このチャットを設定するには、まずメッセージを送信してください。",
+          "tr": "Bu sohbeti ayarlamak için önce bir mesaj gönderin.",
+          "vi": "Hãy gửi một tin nhắn trước để thiết lập cuộc trò chuyện này.",
+          "it": "Invia prima un messaggio per configurare questa chat.",
+          "fa": "برای تنظیم این گفتگو ابتدا یک پیام بفرستید.",
+          "pl": "Najpierw wyślij wiadomość, aby skonfigurować ten czat.",
+          "uk": "Спершу надішліть повідомлення, щоб налаштувати цей чат.",
+          "nl": "Stuur eerst een bericht om deze chat in te stellen.",
+          "sv": "Skicka ett meddelande först för att ställa in den här chatten.",
+          "cs": "Nejprve pošlete zprávu, abyste mohli nastavit tento chat.",
+          "el": "Στείλτε πρώτα ένα μήνυμα για να ρυθμίσετε αυτή τη συνομιλία."
+        }
+      }
+    },
+    "about": {
+      "title": {
+        "en": "About Chat",
+        "ko": "채팅 정보",
+        "zh": "关于聊天",
+        "hi": "चैट के बारे में",
+        "es": "Acerca de Chat",
+        "fr": "À propos de Chat",
+        "ar": "حول الدردشة",
+        "pt": "Sobre o Chat",
+        "ru": "О приложении Чат",
+        "de": "Über Chat",
+        "ja": "チャットについて",
+        "tr": "Sohbet hakkında",
+        "vi": "Giới thiệu về Chat",
+        "it": "Informazioni su Chat",
+        "fa": "درباره گفتگو",
+        "pl": "O aplikacji Czat",
+        "uk": "Про застосунок Чат",
+        "nl": "Over Chat",
+        "sv": "Om Chat",
+        "cs": "O aplikaci Chat",
+        "el": "Σχετικά με το Chat"
+      },
+      "body": {
+        "type": "column",
+        "crossAxis": "stretch",
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": {
+              "en": "Your AI, your key",
+              "ko": "나의 AI, 나의 키",
+              "zh": "您的 AI，您的密钥",
+              "hi": "आपका AI, आपकी कुंजी",
+              "es": "Tu IA, tu clave",
+              "fr": "Votre IA, votre clé",
+              "ar": "ذكاؤك الاصطناعي، مفتاحك",
+              "pt": "Sua IA, sua chave",
+              "ru": "Ваш ИИ, ваш ключ",
+              "de": "Deine KI, dein Schlüssel",
+              "ja": "あなたのAI、あなたのキー",
+              "tr": "Senin yapay zekân, senin anahtarın",
+              "vi": "AI của bạn, khóa của bạn",
+              "it": "La tua IA, la tua chiave",
+              "fa": "هوش مصنوعی شما، کلید شما",
+              "pl": "Twoja AI, twój klucz",
+              "uk": "Ваш ШІ, ваш ключ",
+              "nl": "Jouw AI, jouw sleutel",
+              "sv": "Din AI, din nyckel",
+              "cs": "Vaše AI, váš klíč",
+              "el": "Η δική σας AI, το δικό σας κλειδί"
+            }
+          },
+          {
+            "type": "text",
+            "value": {
+              "en": "1. Add your AI provider key in app settings.\n2. Type and send: your first message starts a new chat.\n3. Tap + to attach a photo, PDF or text file, or paste an image.\n4. The gear sets this chat's model, system prompt and web access.\n5. Start a child chat to branch off a side question.",
+              "ko": "1. 앱 설정에서 AI 제공자 키를 추가하세요.\n2. 입력하고 보내세요. 첫 메시지로 새 채팅이 시작됩니다.\n3. +를 눌러 사진, PDF, 텍스트 파일을 첨부하거나 이미지를 붙여넣으세요.\n4. 톱니바퀴에서 이 채팅의 모델, 시스템 프롬프트, 웹 접근을 설정합니다.\n5. 하위 채팅을 시작해 곁가지 질문을 따로 나눌 수 있습니다.",
+              "zh": "1. 在应用设置中添加你的 AI 提供商密钥。\n2. 输入并发送：第一条消息会开始一个新聊天。\n3. 点按 + 附加照片、PDF 或文本文件，或粘贴图片。\n4. 齿轮图标可设置此聊天的模型、系统提示和网络访问。\n5. 开启子聊天，把旁支问题分开讨论。",
+              "hi": "1. ऐप सेटिंग्स में अपनी AI प्रदाता कुंजी जोड़ें।\n2. लिखें और भेजें: आपका पहला संदेश नई चैट शुरू करता है।\n3. फ़ोटो, PDF या टेक्स्ट फ़ाइल जोड़ने के लिए + दबाएँ, या कोई छवि पेस्ट करें।\n4. गियर से इस चैट का मॉडल, सिस्टम प्रॉम्प्ट और वेब एक्सेस सेट होता है।\n5. किसी अलग सवाल के लिए शाखा चैट शुरू करें।",
+              "es": "1. Añade la clave de tu proveedor de IA en los ajustes de la app.\n2. Escribe y envía: tu primer mensaje inicia un chat nuevo.\n3. Toca + para adjuntar una foto, un PDF o un archivo de texto, o pega una imagen.\n4. El engranaje define el modelo, el prompt del sistema y el acceso web de este chat.\n5. Abre un chat derivado para una pregunta aparte.",
+              "fr": "1. Ajoutez la clé de votre fournisseur d’IA dans les paramètres de l’app.\n2. Écrivez et envoyez : votre premier message démarre une nouvelle discussion.\n3. Touchez + pour joindre une photo, un PDF ou un fichier texte, ou collez une image.\n4. La roue dentée règle le modèle, l’invite système et l’accès web de cette discussion.\n5. Ouvrez une discussion dérivée pour une question à part.",
+              "ar": "1. أضف مفتاح مزوّد الذكاء الاصطناعي في إعدادات التطبيق.\n2. اكتب وأرسل: رسالتك الأولى تبدأ محادثة جديدة.\n3. اضغط + لإرفاق صورة أو ملف PDF أو ملف نصي، أو الصق صورة.\n4. يضبط رمز الترس النموذج وموجّه النظام والوصول إلى الويب لهذه المحادثة.\n5. ابدأ محادثة فرعية لسؤال جانبي.",
+              "pt": "1. Adicione a chave do seu provedor de IA nas configurações do app.\n2. Digite e envie: sua primeira mensagem inicia uma nova conversa.\n3. Toque em + para anexar uma foto, um PDF ou um arquivo de texto, ou cole uma imagem.\n4. A engrenagem define o modelo, o prompt do sistema e o acesso à web desta conversa.\n5. Abra uma conversa derivada para uma pergunta à parte.",
+              "ru": "1. Добавьте ключ вашего ИИ-провайдера в настройках приложения.\n2. Напишите и отправьте: первое сообщение начинает новый чат.\n3. Нажмите +, чтобы прикрепить фото, PDF или текстовый файл, или вставьте изображение.\n4. Шестерёнка задаёт модель, системный промпт и доступ к вебу для этого чата.\n5. Откройте дочерний чат для отдельного вопроса.",
+              "de": "1. Fügen Sie den Schlüssel Ihres KI-Anbieters in den App-Einstellungen hinzu.\n2. Tippen und senden: Ihre erste Nachricht startet einen neuen Chat.\n3. Tippen Sie auf +, um ein Foto, PDF oder eine Textdatei anzuhängen, oder fügen Sie ein Bild ein.\n4. Das Zahnrad legt Modell, System-Prompt und Webzugriff dieses Chats fest.\n5. Starten Sie einen Zweig-Chat für eine Nebenfrage.",
+              "ja": "1. アプリ設定で AI プロバイダーのキーを追加します。\n2. 入力して送信：最初のメッセージで新しいチャットが始まります。\n3. + をタップして写真、PDF、テキストファイルを添付するか、画像を貼り付けます。\n4. 歯車でこのチャットのモデル、システムプロンプト、ウェブアクセスを設定します。\n5. 子チャットを始めて、別の質問を分けられます。",
+              "tr": "1. Uygulama ayarlarından yapay zekâ sağlayıcı anahtarınızı ekleyin.\n2. Yazın ve gönderin: ilk mesajınız yeni bir sohbet başlatır.\n3. Fotoğraf, PDF veya metin dosyası eklemek için + simgesine dokunun ya da bir görsel yapıştırın.\n4. Dişli simgesi bu sohbetin modelini, sistem istemini ve web erişimini ayarlar.\n5. Yan bir soru için alt sohbet başlatın.",
+              "vi": "1. Thêm khóa nhà cung cấp AI của bạn trong cài đặt ứng dụng.\n2. Nhập và gửi: tin nhắn đầu tiên sẽ bắt đầu một cuộc trò chuyện mới.\n3. Chạm + để đính kèm ảnh, PDF hoặc tệp văn bản, hoặc dán một hình ảnh.\n4. Biểu tượng bánh răng đặt mô hình, lời nhắc hệ thống và quyền truy cập web cho cuộc trò chuyện này.\n5. Mở một cuộc trò chuyện con cho câu hỏi bên lề.",
+              "it": "1. Aggiungi la chiave del tuo fornitore di IA nelle impostazioni dell’app.\n2. Scrivi e invia: il primo messaggio avvia una nuova chat.\n3. Tocca + per allegare una foto, un PDF o un file di testo, oppure incolla un’immagine.\n4. L’ingranaggio imposta modello, prompt di sistema e accesso al web di questa chat.\n5. Avvia una chat derivata per una domanda a parte.",
+              "fa": "1. کلید ارائه‌دهندهٔ هوش مصنوعی خود را در تنظیمات برنامه اضافه کنید.\n2. بنویسید و بفرستید: نخستین پیام شما یک گفتگوی جدید را آغاز می‌کند.\n3. برای پیوست عکس، PDF یا فایل متنی روی + بزنید، یا تصویری را جای‌گذاری کنید.\n4. چرخ‌دنده مدل، دستور سیستمی و دسترسی وب این گفتگو را تنظیم می‌کند.\n5. برای یک پرسش جانبی، گفتگوی فرعی باز کنید.",
+              "pl": "1. Dodaj klucz swojego dostawcy AI w ustawieniach aplikacji.\n2. Napisz i wyślij: pierwsza wiadomość rozpoczyna nowy czat.\n3. Stuknij +, aby dołączyć zdjęcie, PDF lub plik tekstowy, albo wklej obraz.\n4. Koło zębate ustawia model, prompt systemowy i dostęp do sieci dla tego czatu.\n5. Otwórz czat podrzędny, aby zadać pytanie poboczne.",
+              "uk": "1. Додайте ключ свого постачальника ШІ в налаштуваннях застосунку.\n2. Напишіть і надішліть: перше повідомлення починає новий чат.\n3. Торкніться +, щоб прикріпити фото, PDF або текстовий файл, або вставте зображення.\n4. Шестірня задає модель, системний промпт і доступ до вебу для цього чату.\n5. Відкрийте дочірній чат для окремого запитання.",
+              "nl": "1. Voeg de sleutel van je AI-aanbieder toe in de app-instellingen.\n2. Typ en verstuur: je eerste bericht start een nieuwe chat.\n3. Tik op + om een foto, pdf of tekstbestand bij te voegen, of plak een afbeelding.\n4. Het tandwiel stelt het model, de systeemprompt en webtoegang van deze chat in.\n5. Start een afgeleide chat voor een zijvraag.",
+              "sv": "1. Lägg till nyckeln för din AI-leverantör i appens inställningar.\n2. Skriv och skicka: ditt första meddelande startar en ny chatt.\n3. Tryck på + för att bifoga ett foto, en PDF eller en textfil, eller klistra in en bild.\n4. Kugghjulet ställer in modell, systemprompt och webbåtkomst för den här chatten.\n5. Starta en förgrenad chatt för en sidofråga.",
+              "cs": "1. Přidejte klíč svého poskytovatele AI v nastavení aplikace.\n2. Napište a odešlete: první zpráva zahájí nový chat.\n3. Klepnutím na + připojíte fotku, PDF nebo textový soubor, případně vložte obrázek.\n4. Ozubené kolo nastavuje model, systémový prompt a přístup k webu pro tento chat.\n5. Pro vedlejší otázku založte podřízený chat.",
+              "el": "1. Προσθέστε το κλειδί του παρόχου ΤΝ στις ρυθμίσεις της εφαρμογής.\n2. Γράψτε και στείλτε: το πρώτο σας μήνυμα ξεκινά νέα συνομιλία.\n3. Πατήστε + για να επισυνάψετε φωτογραφία, PDF ή αρχείο κειμένου, ή επικολλήστε μια εικόνα.\n4. Το γρανάζι ορίζει το μοντέλο, την προτροπή συστήματος και την πρόσβαση στον ιστό για αυτή τη συνομιλία.\n5. Ξεκινήστε θυγατρική συνομιλία για μια παράπλευρη ερώτηση."
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Replies arrive whole (no streaming yet).",
+              "ko": "답변은 한 번에 도착합니다(아직 스트리밍 없음).",
+              "zh": "回复会整体到达（暂不支持流式）。",
+              "hi": "जवाब पूरा एक साथ आता है (अभी स्ट्रीमिंग नहीं)।",
+              "es": "Las respuestas llegan completas (aún sin streaming).",
+              "fr": "Les réponses arrivent en entier (pas encore de streaming).",
+              "ar": "تصل الردود كاملة (لا يوجد بث تدريجي بعد).",
+              "pt": "As respostas chegam inteiras (ainda sem streaming).",
+              "ru": "Ответы приходят целиком (потоковой передачи пока нет).",
+              "de": "Antworten kommen komplett (noch kein Streaming).",
+              "ja": "返信は一度にまとめて届きます（ストリーミングは未対応）。",
+              "tr": "Yanıtlar bir bütün olarak gelir (henüz akış yok).",
+              "vi": "Phản hồi đến đầy đủ một lần (chưa hỗ trợ phát trực tiếp).",
+              "it": "Le risposte arrivano intere (ancora niente streaming).",
+              "fa": "پاسخ‌ها یکجا می‌رسند (هنوز پخش زنده نیست).",
+              "pl": "Odpowiedzi przychodzą w całości (jeszcze bez strumieniowania).",
+              "uk": "Відповіді надходять повністю (потокового режиму ще немає).",
+              "nl": "Antwoorden komen in één keer binnen (nog geen streaming).",
+              "sv": "Svar kommer i sin helhet (ingen strömning än).",
+              "cs": "Odpovědi přicházejí celé (zatím bez streamování).",
+              "el": "Οι απαντήσεις έρχονται ολόκληρες (χωρίς streaming ακόμη)."
+            }
+          }
+        ]
+      }
+    }
+  }
+}

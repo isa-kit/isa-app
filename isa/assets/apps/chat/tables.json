@@ -1,0 +1,28 @@
+{
+  "tables": [
+    {
+      "name": "chats",
+      "label": "Chats",
+      "icon": "forum",
+      "description": "Top-level conversations, newest first in the chat list."
+    },
+    {
+      "name": "subchats",
+      "label": "Threads",
+      "icon": "chat_bubble_outline",
+      "description": "Each chat's conversations: its main thread plus any child chats branched from it. Each carries its own model, system prompt and web switch."
+    },
+    {
+      "name": "messages",
+      "label": "Messages",
+      "icon": "chat",
+      "description": "What you and the assistant said, per thread. Attachments are stored inside the row."
+    },
+    {
+      "name": "providers",
+      "label": "AI providers",
+      "icon": "hub",
+      "description": "Your configured AI provider choices (ids and names only), mirrored by the app so a chat can pick one. Never holds keys."
+    }
+  ]
+}

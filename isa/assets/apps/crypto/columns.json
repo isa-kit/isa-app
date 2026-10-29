@@ -1,0 +1,24 @@
+{
+  "markets": [
+    { "name": "id", "type": "text", "label": "ID" },
+    { "name": "market_cap_rank", "type": "integer", "label": "Rank" },
+    { "name": "name", "type": "text", "label": "Name" },
+    { "name": "symbol", "type": "text", "label": "Symbol" },
+    { "name": "current_price", "type": "number", "label": "Price (USD)" },
+    { "name": "price_change_percentage_24h", "type": "number", "label": "24h %" },
+    { "name": "high_24h", "type": "number", "label": "24h High" },
+    { "name": "low_24h", "type": "number", "label": "24h Low" },
+    { "name": "market_cap", "type": "number", "label": "Market Cap" },
+    { "name": "total_volume", "type": "number", "label": "24h Volume" }
+  ],
+  "btc_history": [
+    { "name": "id", "type": "text", "label": "ID" },
+    { "name": "time", "type": "number", "label": "Time (unix ms)" },
+    { "name": "price", "type": "number", "label": "Price (USD)" }
+  ],
+  "eth_history": [
+    { "name": "id", "type": "text", "label": "ID" },
+    { "name": "time", "type": "number", "label": "Time (unix ms)" },
+    { "name": "price", "type": "number", "label": "Price (USD)" }
+  ]
+}

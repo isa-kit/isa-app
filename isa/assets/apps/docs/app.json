@@ -1,0 +1,14 @@
+{
+  "id": "docs",
+  "name": "Docs",
+  "category": "Productivity",
+  "description": "Write and keep documents as files.",
+  "icon": "menu_book",
+  "color": "#00897B",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_docs"
+  },
+  "seedVersion": "2026-10-28.docx-fileown-p2",
+  "seedContent": "initial-only"
+}

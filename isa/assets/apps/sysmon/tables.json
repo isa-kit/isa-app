@@ -1,0 +1,319 @@
+{
+  "tables": [
+    {
+      "name": "headline",
+      "label": "Right now",
+      "icon": "speed",
+      "description": "One row: the state of the machine at the moment of the last snapshot \u2014 cores, load, how many Claude processes and agents are running, how many prompts are waiting. Fetched on Refresh (mode: replace, so a refresh overwrites rather than accumulates). Seeded empty and never hand-edited: a reading is only ever what the machine actually reported.",
+      "provenance": {
+        "source": "fleet-snapshot.sh on the Mac \u2192 https://167.233.64.97/fleet/snapshot.json (Refresh action)"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "sessions",
+      "label": "Sessions",
+      "icon": "forum",
+      "description": "One row per Claude session active in the last 15 minutes: which model, how long since it last did anything, and how many prompts are queued behind it. Numbered, never named \u2014 no session ids leave the machine.",
+      "provenance": {
+        "source": "fleet-snapshot.sh (Claude Code transcripts) \u2192 /fleet/snapshot.json"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "agents",
+      "label": "Agents",
+      "icon": "smart_toy",
+      "description": "One row per subagent that has written output in the last 10 minutes \u2014 how long it has been running and how long since its last write. A high count here with a high load is the signature of an over-parallelised round.",
+      "provenance": {
+        "source": "fleet-snapshot.sh (agent task output files) \u2192 /fleet/snapshot.json"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "prompts",
+      "label": "Prompt cost",
+      "icon": "format_list_bulleted",
+      "description": "The most recent finished prompts and what each one actually cost: tokens the main session wrote, tokens its agents wrote, how many agents it spawned, and how long it ran. Prompt TEXT never leaves the machine \u2014 only the cost shape. This is the table that makes prompts cheaper over time.",
+      "provenance": {
+        "source": "fleet-snapshot.sh (per-prompt usage ledger) \u2192 /fleet/snapshot.json"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "history",
+      "label": "History",
+      "icon": "show_chart",
+      "description": "One row per snapshot taken, oldest first \u2014 the efficiency log. The full history stays on the Mac; this is the light tail of it (last 240 readings) so trends are visible from anywhere.",
+      "provenance": {
+        "source": "_claude/health/history.jsonl (tail) \u2192 /fleet/snapshot.json"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "forge_system",
+      "label": "Forge: right now",
+      "icon": "speed",
+      "description": "One row: the forge server's load, memory, swap, disk and uptime at its last snapshot. Fetched on Refresh (mode: replace). Seeded empty and never hand-edited.",
+      "provenance": {
+        "source": "forge snapshot job \u2192 https://167.233.64.97/t4/forge-status.json (system block)"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "forge_top_cpu",
+      "label": "Forge: top CPU",
+      "icon": "memory",
+      "description": "The ten processes on the forge server with the highest average CPU since they started (not instantaneous).",
+      "provenance": {
+        "source": "forge snapshot job \u2192 https://167.233.64.97/t4/forge-status.json (top_cpu)"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "forge_top_ram",
+      "label": "Forge: top RAM",
+      "icon": "storage",
+      "description": "The ten processes on the forge server using the most memory.",
+      "provenance": {
+        "source": "forge snapshot job \u2192 https://167.233.64.97/t4/forge-status.json (top_ram)"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "forge_services",
+      "label": "Forge: services",
+      "icon": "settings_applications",
+      "description": "The forge services and whether each is active, with the memory of its main process only.",
+      "provenance": {
+        "source": "forge snapshot job \u2192 https://167.233.64.97/t4/forge-status.json (services)"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "forge_hist",
+      "label": "Forge: over time",
+      "icon": "show_chart",
+      "description": "The last 24 hours of server readings (CPU, load, memory), one row per snapshot. Fetched on Refresh (mode: replace). Seeded empty and never hand-edited.",
+      "provenance": {
+        "source": "forge snapshot job \u2192 https://167.233.64.97/forge/history/series-24h.json"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "edge_system",
+      "label": "Edge: right now",
+      "icon": "speed",
+      "description": "One row: the edge server's disk, load and memory at its last snapshot. Fetched on Refresh (mode: replace). Seeded empty and never hand-edited.",
+      "provenance": {
+        "source": "edge status collector (hetzmon-1027) \u2192 https://167.233.64.97/t4/edge-status.json (system block)"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "edge_categories",
+      "label": "Edge: disk by category",
+      "icon": "storage",
+      "description": "The edge disk's used space split by owner (downloads, data feeds, database, backups, transit planner, docker, system), re-measured hourly.",
+      "provenance": {
+        "source": "edge status collector (hetzmon-1027) \u2192 https://167.233.64.97/t4/edge-status.json (categories)"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "edge_history",
+      "label": "Edge: history",
+      "icon": "history",
+      "description": "The newest 168 hourly readings of edge disk, load and memory, newest first. The box keeps the full year.",
+      "provenance": {
+        "source": "edge status collector (hetzmon-1027) \u2192 https://167.233.64.97/t4/edge-status.json (history)"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "edge_top_cpu",
+      "label": "Edge: top CPU",
+      "icon": "memory",
+      "description": "The five programs on the edge with the highest average CPU since they started, grouped by program name.",
+      "provenance": {
+        "source": "edge status collector (hetzmon-1027) \u2192 https://167.233.64.97/t4/edge-status.json (top_cpu)"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "edge_top_ram",
+      "label": "Edge: top RAM",
+      "icon": "storage",
+      "description": "The five programs on the edge using the most memory, grouped by program name.",
+      "provenance": {
+        "source": "edge status collector (hetzmon-1027) \u2192 https://167.233.64.97/t4/edge-status.json (top_ram)"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "ai_connections",
+      "label": "AI connections",
+      "icon": "hub",
+      "description": "One row per AI connection this device knows about: whether a Claude API key is configured (app names only, never the key) and whether a forge or local model answers. Rewritten on Refresh. Device-local and host-computed, not synced; the web app cannot reach a local forge, and says so rather than reporting it down.",
+      "provenance": {
+        "source": "isan host: this device's own AI provider settings + a 3-second reachability probe (sysmonAiConnections hostCall)"
+      }
+    },
+    {
+      "name": "ai_budget",
+      "label": "AI spend",
+      "icon": "savings",
+      "description": "One row: this month's ESTIMATED Claude API spend on this device against the budget set on the slider (tokens times published per-million prices). An estimate, not billing truth: the real hard cap is the Console workspace spend limit on Anthropic's side. Forge and local models are never counted. Device-local and host-computed, not synced.",
+      "provenance": {
+        "source": "isan host: engine AiSpendMeter (tokens x published prices), persisted device-locally (sysmonAiConnections hostCall)"
+      }
+    },
+    {
+      "name": "forge_cores",
+      "label": "Forge: CPU by core",
+      "icon": "grid_on",
+      "description": "The last 3 hours of per-core CPU readings, one row per core per minute (value = percent busy). Feeds the core heatmap and the busiest-core bars. Fetched on Refresh (mode: replace). Seeded empty and never hand-edited.",
+      "provenance": {
+        "source": "forge history pipeline \u2192 https://167.233.64.97/forge/history/series-cores-3h.json"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "forge_hist3h",
+      "label": "Forge: last 3 hours",
+      "icon": "show_chart",
+      "description": "The last 3 hours of forge readings, one row per minute: CPU, load, memory, swap, disk used and total (GB) and uptime (seconds). Fetched on Refresh (mode: replace). Seeded empty and never hand-edited.",
+      "provenance": {
+        "source": "forge history pipeline \u2192 https://167.233.64.97/forge/history/series-3h.json"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "forge_gaps",
+      "label": "Forge: downtime gaps",
+      "icon": "event_busy",
+      "description": "Periods when the forge machine stopped reporting (from / to, epoch seconds). Empty means no gaps were recorded. Fetched on Refresh (mode: replace). Seeded empty and never hand-edited.",
+      "provenance": {
+        "source": "forge history pipeline \u2192 https://167.233.64.97/forge/history/index.json (gaps)"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "edge_cores",
+      "label": "Edge: CPU by core",
+      "icon": "grid_on",
+      "description": "The last 3 hours of per-core CPU readings, one row per core per minute (value = percent busy). Feeds the core heatmap and the busiest-core bars. Fetched on Refresh (mode: replace). Seeded empty and never hand-edited.",
+      "provenance": {
+        "source": "edge history pipeline \u2192 https://167.233.64.97/edge/history/series-cores-3h.json"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "edge_hist3h",
+      "label": "Edge: last 3 hours",
+      "icon": "show_chart",
+      "description": "The last 3 hours of edge readings, one row per minute: CPU, load, memory, swap, disk used and total (GB) and uptime (seconds). Fetched on Refresh (mode: replace). Seeded empty and never hand-edited.",
+      "provenance": {
+        "source": "edge history pipeline \u2192 https://167.233.64.97/edge/history/series-3h.json"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "edge_gaps",
+      "label": "Edge: downtime gaps",
+      "icon": "event_busy",
+      "description": "Periods when the edge machine stopped reporting (from / to, epoch seconds). Empty means no gaps were recorded. Fetched on Refresh (mode: replace). Seeded empty and never hand-edited.",
+      "provenance": {
+        "source": "edge history pipeline \u2192 https://167.233.64.97/edge/history/index.json (gaps)"
+      },
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "managed_apps",
+      "label": "Managed apps",
+      "icon": "apps",
+      "description": "One row per app the platform knows about: every bundled applet plus the external tools listed in the bundled managed-externals file. Rewritten on Refresh. Device-local and host-computed, not synced. Spend reads 'not reported' until an app reports it \u2014 never 0. Read-only in this round.",
+      "provenance": {
+        "source": "isan host: bundled apps list + each app.json + managed-externals.json (+ the app registry when reachable) (sysmonManagedApps hostCall)"
+      }
+    },
+    {
+      "name": "managed_platforms",
+      "label": "App platforms",
+      "icon": "devices",
+      "description": "One row per app per platform (web, android, macos): whether a production build is available, its build stamp, the last build time and the latest build job state. 'unknown' means the build feed could not be reached, not that nothing exists. Device-local, not synced.",
+      "provenance": {
+        "source": "isan host: public builds feed (/t4/builds-status.json) via the builds client (sysmonManagedApps hostCall)"
+      }
+    },
+    {
+      "name": "command_meta",
+      "label": "Action status",
+      "icon": "info",
+      "description": "One row: whether this account can run app actions right now (signed out, not allowed, quota left). Rewritten on Refresh. Device-local, not synced.",
+      "provenance": {
+        "source": "isan host: GET /fapi/command with the signed-in user's own token (sysmonManagedApps hostCall)"
+      }
+    },
+    {
+      "name": "services",
+      "label": "Services",
+      "icon": "dns",
+      "description": "The allowlisted edge and forge service units and their current status as the edge reports it ('not installed' when a unit is absent). Rewritten on Refresh. Device-local, not synced.",
+      "provenance": {
+        "source": "isan host: svc.ctl status via /fapi/command (sysmonManagedApps hostCall)"
+      }
+    },
+    {
+      "name": "command_feed",
+      "label": "What happened",
+      "icon": "history",
+      "description": "The signed-in user's own recent app-management actions (newest first): what was asked, on which app, and how it ended. Read from the server's immutable command log; nothing here is editable. Device-local, not synced.",
+      "provenance": {
+        "source": "isan host: the user's own command_log rows on the main PocketBase (sysmonManagedApps hostCall)"
+      }
+    }
+  ]
+}

@@ -1,0 +1,493 @@
+{
+  "_meta": {
+    "phoneme_count": 39,
+    "consonants": 24,
+    "vowels": 15,
+    "notes": "This table pairs each ARPAbet phoneme with its DEFAULT hangul realization. Coda jamo here (e.g. ㅋ/ㅌ/ㅍ/ㅆ as syllable-finals) are used as STYLIZED PRONUNCIATION SYMBOLS for coaching, not standard Korean orthographic jongseong -- malsori is not writing correct Korean spelling, it is writing a pronunciation guide, so jongseong-neutralization rules do not apply here."
+  },
+  "phonemes": [
+    {
+      "arpabet": "B",
+      "type": "consonant",
+      "hangul_onset": "ㅂ",
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "coda_bare": "ㅂ"
+      },
+      "coach_ko": null,
+      "example_en": "boy",
+      "example_hangul": "보이"
+    },
+    {
+      "arpabet": "CH",
+      "type": "consonant",
+      "hangul_onset": "ㅊ",
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "coda_bare": "ㅊ"
+      },
+      "coach_ko": null,
+      "example_en": "chip",
+      "example_hangul": "칩"
+    },
+    {
+      "arpabet": "D",
+      "type": "consonant",
+      "hangul_onset": "ㄷ",
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "coda_bare": "ㄷ"
+      },
+      "coach_ko": "모음 사이에 오면(water처럼) 미국식으로는 'ㄹ'에 가깝게 굴려요 — 또박또박 ㄷ 아님",
+      "example_en": "dog",
+      "example_hangul": "도그"
+    },
+    {
+      "arpabet": "DH",
+      "type": "consonant",
+      "hangul_onset": "ㄷ",
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "coda_bare": "ㄷ"
+      },
+      "coach_ko": "혀끝을 윗니와 아랫니 사이에 살짝 물고 성대를 울리면서 흘리듯 — ㄷ처럼 끊지 않기 (this/that)",
+      "example_en": "this",
+      "example_hangul": "디스"
+    },
+    {
+      "arpabet": "F",
+      "type": "consonant",
+      "hangul_onset": "ㅍ",
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "coda_bare": "ㅍ"
+      },
+      "coach_ko": "윗니로 아랫입술을 살짝 물고 바람을 새듯 내보내기 — 입술을 다물고 터뜨리는 ㅍ이 아님",
+      "example_en": "coffee",
+      "example_hangul": "커퓌"
+    },
+    {
+      "arpabet": "G",
+      "type": "consonant",
+      "hangul_onset": "ㄱ",
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "coda_bare": "ㄱ"
+      },
+      "coach_ko": null,
+      "example_en": "go",
+      "example_hangul": "고우"
+    },
+    {
+      "arpabet": "HH",
+      "type": "consonant",
+      "hangul_onset": "ㅎ",
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "coda_bare": null
+      },
+      "coach_ko": "음절 끝에는 거의 안 옴 — 있으면 숨 내쉬듯 가볍게",
+      "example_en": "hi",
+      "example_hangul": "하이"
+    },
+    {
+      "arpabet": "JH",
+      "type": "consonant",
+      "hangul_onset": "ㅈ",
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "coda_bare": "ㅈ"
+      },
+      "coach_ko": "ㅊ보다 훨씬 부드럽고 성대가 울려요 (judge, page)",
+      "example_en": "judge",
+      "example_hangul": "줘지"
+    },
+    {
+      "arpabet": "K",
+      "type": "consonant",
+      "hangul_onset": "ㅋ",
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "coda_bare": "ㅋ"
+      },
+      "coach_ko": "s 뒤에 오면(sky, school) 거센소리 ㅋ가 아니라 된소리 ㄲ에 가까워요",
+      "example_en": "milk",
+      "example_hangul": "미역ㅋ"
+    },
+    {
+      "arpabet": "L",
+      "type": "consonant",
+      "hangul_onset": "ㄹ",
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "coda_bare": "을"
+      },
+      "coach_ko": "어두 ㄹ: 혀끝을 윗잇몸에 가볍게 대고 흘리기 (한국어 ㄹ보다 길게). 어말/자음 앞 ㄹ('dark L', world처럼): 혀 뒤를 목구멍쪽으로 살짝 눌러 '을'처럼 — 그냥 흘려 쓰는 ㄹ 받침이 아니라 별도 박자로 침",
+      "example_en": "world",
+      "example_hangul": "워을ㄷ"
+    },
+    {
+      "arpabet": "M",
+      "type": "consonant",
+      "hangul_onset": "ㅁ",
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "coda_bare": "ㅁ"
+      },
+      "coach_ko": null,
+      "example_en": "milk",
+      "example_hangul": "미역ㅋ"
+    },
+    {
+      "arpabet": "N",
+      "type": "consonant",
+      "hangul_onset": "ㄴ",
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "coda_bare": "ㄴ"
+      },
+      "coach_ko": null,
+      "example_en": "no",
+      "example_hangul": "노우"
+    },
+    {
+      "arpabet": "NG",
+      "type": "consonant",
+      "hangul_onset": null,
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "coda_bare": "ㅇ"
+      },
+      "coach_ko": "받침으로만 나옴 — 한국어 응 받침과 거의 동일, 혀 뒤가 목젖에 붙어요",
+      "example_en": "length",
+      "example_hangul": "렝ㅆ"
+    },
+    {
+      "arpabet": "P",
+      "type": "consonant",
+      "hangul_onset": "ㅍ",
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "coda_bare": "ㅍ"
+      },
+      "coach_ko": null,
+      "example_en": "pie",
+      "example_hangul": "파이"
+    },
+    {
+      "arpabet": "R",
+      "type": "consonant",
+      "hangul_onset": "ㄹ",
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "coda_bare": "korean_r_coloring"
+      },
+      "coach_ko": "한국어 ㄹ처럼 혀끝을 튕기지 말고, 혀를 입천장 어디에도 안 닿게 뒤로 살짝 말기 — 튕기면 L처럼 들려요. (실제 발음은 strawberry의 '뤼'처럼 입술이 살짝 오므라들기도 하지만, v1 syllabify 알고리즘은 이 rounding을 아직 규칙화하지 않아 예시는 라잍처럼 표준 ㄹ+모음으로 렌더링됩니다)",
+      "example_en": "right",
+      "example_hangul": "라잍"
+    },
+    {
+      "arpabet": "S",
+      "type": "consonant",
+      "hangul_onset": "ㅅ",
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "coda_bare": "ㅅ"
+      },
+      "coach_ko": "모음 i/y 앞에서도 한국어처럼 '시'로 구개음화되지 않게 — 계속 편평한 바람소리",
+      "example_en": "strawberry",
+      "example_hangul": "ㅅ트로버뤼"
+    },
+    {
+      "arpabet": "SH",
+      "type": "consonant",
+      "hangul_onset": "ㅅ",
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "coda_bare": "ㅅ"
+      },
+      "coach_ko": "입술을 둥글게 앞으로 내밀고 넓게 바람 — 한국어 ㅅ보다 훨씬 굵은 소리",
+      "example_en": "she",
+      "example_hangul": "쉬"
+    },
+    {
+      "arpabet": "T",
+      "type": "consonant",
+      "hangul_onset": "ㅌ",
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "coda_bare": "ㅌ"
+      },
+      "coach_ko": "모음 사이(water, little)에서는 미국식으로 빠른 'ㄹ' 탄음 — 또박또박 ㅌ로 읽으면 부자연스러워요",
+      "example_en": "water",
+      "example_hangul": "워러"
+    },
+    {
+      "arpabet": "TH",
+      "type": "consonant",
+      "hangul_onset": "ㅆ",
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "coda_bare": "ㅅ"
+      },
+      "coach_ko": "혀끝을 윗니 아래니 사이에 물고 숨을 뱉기 — ㅆ이나 ㅅ으로 적지만 실제로는 이 사이로 바람 새는 소리 (think, length)",
+      "example_en": "length",
+      "example_hangul": "렝ㅆ"
+    },
+    {
+      "arpabet": "V",
+      "type": "consonant",
+      "hangul_onset": "ㅂ",
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "coda_bare": "ㅂ"
+      },
+      "coach_ko": "윗니로 아랫입술을 물고 성대를 울리기 — 입술만 다무는 ㅂ이 아니라 떨리는 소리",
+      "example_en": "very",
+      "example_hangul": "붸뤼"
+    },
+    {
+      "arpabet": "W",
+      "type": "consonant",
+      "hangul_onset": null,
+      "onset_is_glide": true,
+      "hangul_nucleus_or_coda": {
+        "coda_bare": null
+      },
+      "coach_ko": "입술을 동그랗게 오므렸다가 뒤 모음으로 빠르게 풀기 — 뒤 모음과 합쳐서 한 글자(워/왜/위 등)로 적어요",
+      "example_en": "world",
+      "example_hangul": "워을ㄷ"
+    },
+    {
+      "arpabet": "Y",
+      "type": "consonant",
+      "hangul_onset": null,
+      "onset_is_glide": true,
+      "hangul_nucleus_or_coda": {
+        "coda_bare": null
+      },
+      "coach_ko": "뒤 모음과 합쳐서 한 글자(야/여/유 등)로 적어요 — 별도 박자를 만들지 않음",
+      "example_en": "yes",
+      "example_hangul": "예스"
+    },
+    {
+      "arpabet": "Z",
+      "type": "consonant",
+      "hangul_onset": "ㅈ",
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "coda_bare": "ㅈ"
+      },
+      "coach_ko": "ㅅ이 아니라 벌 소리처럼 성대를 울리면서 — size를 '사이스'가 아니라 '사이즈'로",
+      "example_en": "size",
+      "example_hangul": "사이즈"
+    },
+    {
+      "arpabet": "ZH",
+      "type": "consonant",
+      "hangul_onset": "ㅈ",
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "coda_bare": "ㅈ"
+      },
+      "coach_ko": "Z보다 입술을 더 둥글게 — 드물게 나옴 (measure, vision)",
+      "example_en": "vision",
+      "example_hangul": "뷔전"
+    },
+    {
+      "arpabet": "AA",
+      "type": "vowel",
+      "hangul_onset": null,
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "stressed": "어",
+        "unstressed": "어"
+      },
+      "coach_ko": "교과서는 '아'로 적지만 실제 발음은 '어'에 가까워요 (coffee=커피가 이미 그 예)",
+      "example_en": "coffee",
+      "example_hangul": "커"
+    },
+    {
+      "arpabet": "AE",
+      "type": "vowel",
+      "hangul_onset": null,
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "stressed": "애",
+        "unstressed": "애"
+      },
+      "coach_ko": "'에'보다 입을 훨씬 크게 벌려서 — cat을 '켓'이 아니라 입 벌린 '캐앳'처럼",
+      "example_en": "cat",
+      "example_hangul": "캩"
+    },
+    {
+      "arpabet": "AH",
+      "type": "vowel",
+      "hangul_onset": null,
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "stressed": "어",
+        "unstressed": "으"
+      },
+      "coach_ko": "강세 있으면 '어'(cup=컵), 강세 없는 대부분의 애매한 모음(schwa)은 '으'에 가깝게 뭉개서 — 또박또박 모음을 살리지 않는 게 오히려 더 자연스러워요",
+      "example_en": "cup / about",
+      "example_hangul": "컵 / 어바읃"
+    },
+    {
+      "arpabet": "AO",
+      "type": "vowel",
+      "hangul_onset": null,
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "stressed": "오",
+        "unstressed": "오"
+      },
+      "coach_ko": "입술을 둥글게 오므린 '오' — strawberry의 'straw'가 이 소리",
+      "example_en": "strawberry",
+      "example_hangul": "ㅅ트로"
+    },
+    {
+      "arpabet": "AW",
+      "type": "vowel",
+      "hangul_onset": null,
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "stressed": "아우",
+        "unstressed": "아우"
+      },
+      "coach_ko": "'아'에서 입술을 빠르게 오므리며 '우'로 — 두 박자처럼 늘어지지 않게 빠르게 붙여서",
+      "example_en": "how",
+      "example_hangul": "하우"
+    },
+    {
+      "arpabet": "AY",
+      "type": "vowel",
+      "hangul_onset": null,
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "stressed": "아이",
+        "unstressed": "아이"
+      },
+      "coach_ko": "'아'에서 '이'로 빠르게 미끄러지듯",
+      "example_en": "right",
+      "example_hangul": "롸잍"
+    },
+    {
+      "arpabet": "EH",
+      "type": "vowel",
+      "hangul_onset": null,
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "stressed": "에",
+        "unstressed": "에"
+      },
+      "coach_ko": null,
+      "example_en": "bed",
+      "example_hangul": "베ㄷ"
+    },
+    {
+      "arpabet": "ER",
+      "type": "vowel",
+      "hangul_onset": null,
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "stressed": "어(ㄹ 색)",
+        "unstressed": "어"
+      },
+      "coach_ko": "혀를 입천장 쪽으로 말아 올린 채로 '어' — 자음 앞/어말이면 world처럼 '을' 박자를 따로, 강세 없이 어말(-er)에 오면 computer의 '터'처럼 그냥 '어'로 끝내도 충분",
+      "example_en": "world / computer",
+      "example_hangul": "워을 / 퓨터"
+    },
+    {
+      "arpabet": "EY",
+      "type": "vowel",
+      "hangul_onset": null,
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "stressed": "에이",
+        "unstressed": "에이"
+      },
+      "coach_ko": "'에'에서 '이'로 빠르게 미끄러지듯",
+      "example_en": "day",
+      "example_hangul": "데이"
+    },
+    {
+      "arpabet": "IH",
+      "type": "vowel",
+      "hangul_onset": null,
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "stressed": "이(짧게)",
+        "unstressed": "이(짧게)"
+      },
+      "coach_ko": "IY(beat)보다 짧고 힘 빼서 — bit과 beat이 한글로는 둘 다 '이'처럼 보이지만 길이가 달라요",
+      "example_en": "milk",
+      "example_hangul": "미"
+    },
+    {
+      "arpabet": "IY",
+      "type": "vowel",
+      "hangul_onset": null,
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "stressed": "이(길게)",
+        "unstressed": "이"
+      },
+      "coach_ko": "IH보다 길고 힘주어서 — 입꼬리를 옆으로 당겨 확실하게",
+      "example_en": "strawberry (-ry)",
+      "example_hangul": "뤼"
+    },
+    {
+      "arpabet": "OW",
+      "type": "vowel",
+      "hangul_onset": null,
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "stressed": "오우",
+        "unstressed": "오우"
+      },
+      "coach_ko": "'오'에서 입술을 더 오므리며 '우'로 — go를 '고'가 아니라 '고우'로 흘려서",
+      "example_en": "go",
+      "example_hangul": "고우"
+    },
+    {
+      "arpabet": "OY",
+      "type": "vowel",
+      "hangul_onset": null,
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "stressed": "오이",
+        "unstressed": "오이"
+      },
+      "coach_ko": null,
+      "example_en": "boy",
+      "example_hangul": "보이"
+    },
+    {
+      "arpabet": "UH",
+      "type": "vowel",
+      "hangul_onset": null,
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "stressed": "우(짧게)",
+        "unstressed": "우(짧게)"
+      },
+      "coach_ko": "UW보다 짧고 입술 덜 오므려서",
+      "example_en": "book",
+      "example_hangul": "붘"
+    },
+    {
+      "arpabet": "UW",
+      "type": "vowel",
+      "hangul_onset": null,
+      "onset_is_glide": false,
+      "hangul_nucleus_or_coda": {
+        "stressed": "우(길게)",
+        "unstressed": "우"
+      },
+      "coach_ko": "입술을 확실히 동그랗게 오므려서 길게",
+      "example_en": "world (W)",
+      "example_hangul": "우"
+    }
+  ]
+}

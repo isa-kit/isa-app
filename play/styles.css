@@ -1,0 +1,158 @@
+:root {
+  --paper: #EDF0EA;
+  --ink: #1C2620;
+  --ochre: #B98A22;
+  --iron: #2E5F80;
+  --card-bg: #FFFFFF;
+  --card-border: #D8DCD2;
+  --muted: #5A655C;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #151B17;
+    --ink: #E3E8E1;
+    --ochre: #D9A93A;
+    --iron: #7FB2D4;
+    --card-bg: #1D2420;
+    --card-border: #2C352E;
+    --muted: #9AA69C;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.5;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+header.site-header {
+  margin-bottom: 2.5rem;
+}
+
+header.site-header h1 {
+  font-size: 2rem;
+  margin: 0 0 0.25rem;
+  letter-spacing: -0.01em;
+}
+
+header.site-header p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 1.25rem 1.4rem;
+}
+
+.card h2 {
+  margin: 0 0 0.2rem;
+  font-size: 1.25rem;
+}
+
+.card .tagline {
+  margin: 0 0 0.5rem;
+  color: var(--muted);
+}
+
+.card .meta {
+  margin: 0 0 0.9rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.card .actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border-radius: 7px;
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+
+.btn-play {
+  background: var(--iron);
+  color: #fff;
+}
+
+.btn-apk {
+  background: transparent;
+  color: var(--ochre);
+  border-color: var(--ochre);
+}
+
+.apk-size {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.preview-note {
+  margin: 0.6rem 0 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.sha-line {
+  margin-top: 0.5rem;
+}
+
+.sha-line summary {
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.sha-line code {
+  display: block;
+  margin-top: 0.3rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  word-break: break-all;
+  color: var(--muted);
+}
+
+footer.site-footer {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--card-border);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+footer.site-footer a {
+  color: var(--iron);
+}
+
+.empty-note {
+  color: var(--muted);
+  font-size: 0.9rem;
+}

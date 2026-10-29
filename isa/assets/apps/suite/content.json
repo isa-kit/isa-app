@@ -1,0 +1,10 @@
+{
+  "files": [
+    { "id": "f_gs", "name": "Getting started", "kind": "folder", "order": 1 },
+    { "id": "f_welcome", "name": "Welcome", "kind": "doc", "parentId": "f_gs", "body": "# Welcome to your Suite\n\nThis is one workspace for all your files. Pick a file on the left and it opens in the right tool — Docs, Notes, Sheets and Wireframes all live together here.\n\nMake a new file with the + buttons, or drop files into folders to keep things tidy.", "order": 1, "updatedAt": "2026-07-03" },
+    { "id": "f_ideas", "name": "Ideas", "kind": "note", "body": "**Quick note** — jot anything here.\n\n- Notes are markdown with a live toolbar\n- Docs are full rich text\n- Sheets and Wireframes open as their own tool\n- Everything shows up in this one file list", "order": 2, "updatedAt": "2026-07-03" },
+    { "id": "f_budget", "name": "Budget", "kind": "sheets", "order": 3, "updatedAt": "2026-07-03" },
+    { "id": "f_layout", "name": "Layout sketch", "kind": "wireframe", "order": 4, "updatedAt": "2026-07-03" },
+    { "id": "f_board", "name": "Idea board", "kind": "bublee", "order": 5, "updatedAt": "2026-07-10" }
+  ]
+}

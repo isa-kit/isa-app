@@ -1,0 +1,145 @@
+{
+ "version": "reach-korea-pyramid-0812 (per-band real sources; supersedes reach-tiles-0809)",
+ "source": {
+  "coarse": "walk_access_coarse.geojson",
+  "mid": "walk_access_mid.geojson",
+  "fine": "walk_access_fine.geojson"
+ },
+ "aggregation": "area-weighted (3x3 supersampled) re-aggregation of EACH band's own walk_access_<band>.geojson (build_hexwalk.py) into hex/tri tessellations at that band's real cell size: walk_min + per-hub raw minutes = weighted mean of RAW minutes, rounded to whole minutes; nearest_station = weight-majority.",
+ "propertyParity": [
+  "a",
+  "b",
+  "c",
+  "col",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "nearest_station_id",
+  "nearest_station_name",
+  "nearest_station_name_ko",
+  "o",
+  "p",
+  "row",
+  "walk_min"
+ ],
+ "scalesM": {
+  "coarse": 2881,
+  "mid": 1920,
+  "fine": 338
+ },
+ "pyramidNote": "Coarse and mid cover the FULL Seoul Capital Area (clipped to the real Seoul/Incheon/Gyeonggi-do province boundary, not a bbox rectangle). Fine covers the CORE only (Seoul + Incheon) at ~338m — Gyeonggi-do satellite cities get mid-level ~1920m detail this round, not fine. See DATA_SOURCES.md reach-korea-pyramid-0812 entry for the full reasoning and the reproducible extension path.",
+ "zoomBands": {
+  "coarse": "<=12.5",
+  "mid": "12.5-14",
+  "fine": ">=14"
+ },
+ "assets": [
+  {
+   "asset": "reach_cells_coarse.geojson",
+   "shape": "square",
+   "granularity": "coarse",
+   "cellScaleM": 2881,
+   "coverage": "full-capital-area",
+   "zoomBand": "<=12.5",
+   "features": 665,
+   "bytes": 294974,
+   "existing": true
+  },
+  {
+   "asset": "reach_cells_mid.geojson",
+   "shape": "square",
+   "granularity": "mid",
+   "cellScaleM": 1920,
+   "coverage": "full-capital-area",
+   "zoomBand": "12.5-14",
+   "features": 1449,
+   "bytes": 641791,
+   "existing": true
+  },
+  {
+   "asset": "reach_cells_fine.geojson",
+   "shape": "square",
+   "granularity": "fine",
+   "cellScaleM": 338,
+   "coverage": "core (Seoul + Incheon)",
+   "zoomBand": ">=14",
+   "features": 6467,
+   "bytes": 2833776,
+   "existing": true
+  },
+  {
+   "asset": "reach_cells_hex_coarse.geojson",
+   "shape": "hexagon",
+   "granularity": "coarse",
+   "cellScaleM": 2881,
+   "coverage": "full-capital-area",
+   "zoomBand": "<=12.5",
+   "features": 585,
+   "bytes": 284348,
+   "existing": false
+  },
+  {
+   "asset": "reach_cells_hex_mid.geojson",
+   "shape": "hexagon",
+   "granularity": "mid",
+   "cellScaleM": 1920,
+   "coverage": "full-capital-area",
+   "zoomBand": "12.5-14",
+   "features": 1205,
+   "bytes": 584278,
+   "existing": false
+  },
+  {
+   "asset": "reach_cells_hex_fine.geojson",
+   "shape": "hexagon",
+   "granularity": "fine",
+   "cellScaleM": 338,
+   "coverage": "core (Seoul + Incheon)",
+   "zoomBand": ">=14",
+   "features": 5593,
+   "bytes": 2680879,
+   "existing": false
+  },
+  {
+   "asset": "reach_cells_tri_coarse.geojson",
+   "shape": "triangle",
+   "granularity": "coarse",
+   "cellScaleM": 2881,
+   "coverage": "full-capital-area",
+   "zoomBand": "<=12.5",
+   "features": 604,
+   "bytes": 255104,
+   "existing": false
+  },
+  {
+   "asset": "reach_cells_tri_mid.geojson",
+   "shape": "triangle",
+   "granularity": "mid",
+   "cellScaleM": 1920,
+   "coverage": "full-capital-area",
+   "zoomBand": "12.5-14",
+   "features": 1198,
+   "bytes": 505846,
+   "existing": false
+  },
+  {
+   "asset": "reach_cells_tri_fine.geojson",
+   "shape": "triangle",
+   "granularity": "fine",
+   "cellScaleM": 338,
+   "coverage": "core (Seoul + Incheon)",
+   "zoomBand": ">=14",
+   "features": 5630,
+   "bytes": 2350283,
+   "existing": false
+  }
+ ]
+}

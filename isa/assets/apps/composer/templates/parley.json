@@ -1,0 +1,175 @@
+{
+ "board": {
+  "name": "Parley",
+  "frameMode": "real"
+ },
+ "screens": [
+  {
+   "id": "parley_0_chat",
+   "name": "Chat",
+   "device": "phone",
+   "x": 0,
+   "y": 0,
+   "realApplet": "parley",
+   "realScreen": "chat"
+  },
+  {
+   "id": "parley_1_learn",
+   "name": "Learn",
+   "device": "phone",
+   "x": 480,
+   "y": 0,
+   "realApplet": "parley",
+   "realScreen": "learn"
+  },
+  {
+   "id": "parley_2_breakdown",
+   "name": "Message breakdown",
+   "device": "phone",
+   "x": 0,
+   "y": 560,
+   "placeholder": true,
+   "placeholderLabel": "Host sheet (tap-a-message breakdown)"
+  },
+  {
+   "id": "parley_3_word_page",
+   "name": "Word page",
+   "device": "phone",
+   "x": 480,
+   "y": 560,
+   "placeholder": true,
+   "placeholderLabel": "Host sheet (dictionary word page)"
+  },
+  {
+   "id": "parley_4_compose_helper",
+   "name": "Compose helper",
+   "device": "phone",
+   "x": 960,
+   "y": 560,
+   "placeholder": true,
+   "placeholderLabel": "Host sheet (compose helper)"
+  }
+ ],
+ "widgets": [
+  {
+   "id": "parley_0_chat_title",
+   "screen": "parley_0_chat",
+   "kind": "titlebar",
+   "label": "Parley",
+   "region": "top",
+   "order": 0
+  },
+  {
+   "id": "parley_0_chat_lang",
+   "screen": "parley_0_chat",
+   "kind": "buttonrow",
+   "label": "English ⇄ 한국어 · tap to switch",
+   "region": "top",
+   "order": 1
+  },
+  {
+   "id": "parley_0_chat_messages",
+   "screen": "parley_0_chat",
+   "kind": "list",
+   "label": "Messages",
+   "region": "body",
+   "order": 0,
+   "items": "[\"Hi! How are you? \\u00b7 you\", {\"text\": \"안녕하세요! 잘 지내요? \\u00b7 translated\", \"icon\": \"translate\"}, \"Great, ready to practice? \\u00b7 you\"]"
+  },
+  {
+   "id": "parley_0_chat_composer",
+   "screen": "parley_0_chat",
+   "kind": "buttonrow",
+   "label": "Type a message · Send",
+   "region": "bottom",
+   "order": 0
+  },
+  {
+   "id": "parley_1_learn_title",
+   "screen": "parley_1_learn",
+   "kind": "titlebar",
+   "label": "Learn",
+   "region": "top",
+   "order": 0
+  },
+  {
+   "id": "parley_1_learn_stats",
+   "screen": "parley_1_learn",
+   "kind": "list",
+   "label": "Your stats",
+   "region": "top",
+   "order": 1,
+   "items": "[\"12-day streak\", \"340 words learned\", \"Level: Intermediate\"]"
+  },
+  {
+   "id": "parley_1_learn_cards",
+   "screen": "parley_1_learn",
+   "kind": "list",
+   "label": "Practice cards",
+   "region": "body",
+   "order": 0,
+   "items": "[{\"text\": \"안녕하세요 — Hello\", \"icon\": \"style\"}, {\"text\": \"감사합니다 — Thank you\", \"icon\": \"style\"}, {\"text\": \"화이팅! — Go for it!\", \"icon\": \"style\"}]"
+  },
+  {
+   "id": "parley_1_learn_phrasebook",
+   "screen": "parley_1_learn",
+   "kind": "list",
+   "label": "Phrasebook",
+   "region": "body",
+   "order": 1,
+   "items": "[\"Greetings (12)\", \"Food & dining (18)\", \"Travel (9)\", \"Numbers (10)\"]"
+  },
+  {
+   "id": "parley_2_breakdown_title",
+   "screen": "parley_2_breakdown",
+   "kind": "titlebar",
+   "label": "Message breakdown",
+   "region": "top",
+   "order": 0
+  },
+  {
+   "id": "parley_2_breakdown_lines",
+   "screen": "parley_2_breakdown",
+   "kind": "list",
+   "label": "Breakdown",
+   "region": "body",
+   "order": 0,
+   "items": "[\"안녕 — stem\", \"하세요 — honorific ending\", \"Romanization · annyeong haseyo\"]"
+  },
+  {
+   "id": "parley_3_word_page_title",
+   "screen": "parley_3_word_page",
+   "kind": "titlebar",
+   "label": "Word",
+   "region": "top",
+   "order": 0
+  },
+  {
+   "id": "parley_3_word_page_body",
+   "screen": "parley_3_word_page",
+   "kind": "list",
+   "label": "Entry",
+   "region": "body",
+   "order": 0,
+   "items": "[\"안녕하세요 — Hello\", \"Example sentences\", \"Save to phrasebook\"]"
+  },
+  {
+   "id": "parley_4_compose_helper_title",
+   "screen": "parley_4_compose_helper",
+   "kind": "titlebar",
+   "label": "Compose helper",
+   "region": "top",
+   "order": 0
+  },
+  {
+   "id": "parley_4_compose_helper_body",
+   "screen": "parley_4_compose_helper",
+   "kind": "list",
+   "label": "Suggestions",
+   "region": "body",
+   "order": 0,
+   "items": "[\"Suggested phrase 1\", \"Suggested phrase 2\", \"Add someone to chat\"]"
+  }
+ ],
+ "flows": []
+}

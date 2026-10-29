@@ -1,0 +1,18 @@
+{
+  "id": "pine_composer",
+  "name": "Pine Composer",
+  "category": "Finance",
+  "description": "Build TradingView Pine Script indicators from toggle-able quant blocks — preview on demo data, copy the script.",
+  "icon": "candlestick_chart",
+  "color": "#2962FF",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_pine_composer"
+  },
+  "seedVersion": "2026-10-18.pinecomp2",
+  "durableSettings": [
+    "pinecomposerAiProvider",
+    "aiProviders",
+    "aiProvider"
+  ]
+}

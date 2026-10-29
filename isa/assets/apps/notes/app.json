@@ -1,0 +1,16 @@
+{
+  "id": "notes",
+  "name": "Notes",
+  "category": "Productivity",
+  "description": "Linked notes as files, with browse and a graph view.",
+  "icon": "sticky_note",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_notes"
+  },
+  "seedVersion": "2026-10-27.bound-txt-fileown-p0.bound-edge-persist",
+  "seedContent": "initial-only",
+  "durableSettings": [
+    "notesExamplesHidden"
+  ]
+}

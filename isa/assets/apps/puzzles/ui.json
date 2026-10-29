@@ -1,0 +1,404 @@
+{
+  "app": {
+    "languages": ["en", "ko", "zh", "hi", "es", "fr", "ar", "pt", "ru", "de", "ja", "tr", "vi", "it", "fa", "pl", "uk", "nl", "sv", "cs", "el"],
+    "translatable": true,
+    "appDataTools": true,
+    "title": {
+      "en": "Puzzles",
+      "ko": "퍼즐",
+      "zh": "益智游戏",
+      "hi": "पहेलियाँ",
+      "es": "Puzzles",
+      "fr": "Puzzles",
+      "ar": "الألغاز",
+      "pt": "Quebra-cabeças",
+      "ru": "Головоломки",
+      "de": "Puzzles",
+      "ja": "パズル",
+      "tr": "Bulmacalar",
+      "vi": "Câu đố",
+      "it": "Puzzle",
+      "fa": "پازل‌ها",
+      "pl": "Puzzle",
+      "uk": "Головоломки",
+      "nl": "Puzzels",
+      "sv": "Pussel",
+      "cs": "Hlavolamy",
+      "el": "Παζλ"
+    },
+    "primaryColor": "#7C4DFF",
+    "theme": "arcade",
+    "autosave": true,
+    "liveSeconds": 3,
+    "intro": {
+      "tour": [
+        {
+          "screen": "pattern",
+          "label": "Pattern",
+          "note": "A pattern-matching puzzle."
+        },
+        {
+          "screen": "records",
+          "label": "Records",
+          "note": "Your best times and scores."
+        }
+      ]
+    }
+  },
+  "nav": [
+    {
+      "id": "slide",
+      "label": {
+        "en": "Slide",
+        "ko": "슬라이드",
+        "zh": "滑块",
+        "hi": "स्लाइड",
+        "es": "Deslizar",
+        "fr": "Glisser",
+        "ar": "الانزلاق",
+        "pt": "Deslizar",
+        "ru": "Пятнашки",
+        "de": "Schieben",
+        "ja": "スライド",
+        "tr": "Kaydır",
+        "vi": "Trượt",
+        "it": "Scorrevole",
+        "fa": "اسلاید",
+        "pl": "Przesuwanka",
+        "uk": "Пятнашки",
+        "nl": "Schuiven",
+        "sv": "Skjutpussel",
+        "cs": "Posuvník",
+        "el": "Συρόμενο"
+      },
+      "icon": "grid_on",
+      "screen": "slide"
+    },
+    {
+      "id": "pattern",
+      "label": {
+        "en": "Pattern",
+        "ko": "패턴",
+        "zh": "图案",
+        "hi": "पैटर्न",
+        "es": "Patrón",
+        "fr": "Motif",
+        "ar": "النمط",
+        "pt": "Padrão",
+        "ru": "Узор",
+        "de": "Muster",
+        "ja": "パターン",
+        "tr": "Desen",
+        "vi": "Mẫu hình",
+        "it": "Motivo",
+        "fa": "الگو",
+        "pl": "Wzór",
+        "uk": "Візерунок",
+        "nl": "Patroon",
+        "sv": "Mönster",
+        "cs": "Vzor",
+        "el": "Μοτίβο"
+      },
+      "icon": "dashboard",
+      "screen": "pattern"
+    },
+    {
+      "id": "records",
+      "label": {
+        "en": "Records",
+        "ko": "기록",
+        "zh": "记录",
+        "hi": "रिकॉर्ड",
+        "es": "Récords",
+        "fr": "Records",
+        "ar": "السجلات",
+        "pt": "Recordes",
+        "ru": "Рекорды",
+        "de": "Rekorde",
+        "ja": "記録",
+        "tr": "Kayıtlar",
+        "vi": "Kỷ lục",
+        "it": "Record",
+        "fa": "رکوردها",
+        "pl": "Rekordy",
+        "uk": "Рекорди",
+        "nl": "Records",
+        "sv": "Rekord",
+        "cs": "Rekordy",
+        "el": "Ρεκόρ"
+      },
+      "icon": "history",
+      "screen": "records"
+    }
+  ],
+  "screens": {
+    "slide": {
+      "title": {
+        "en": "Slide 15",
+        "ko": "15 슬라이드",
+        "zh": "十五数字华容道",
+        "hi": "स्लाइड 15",
+        "es": "Puzle 15",
+        "fr": "Taquin 15",
+        "ar": "لغز الانزلاق 15",
+        "pt": "Jogo dos 15",
+        "ru": "Пятнашки 15",
+        "de": "15er-Schiebepuzzle",
+        "ja": "15パズル",
+        "tr": "15'li kaydırmalı bulmaca",
+        "vi": "Trò chơi 15 ô",
+        "it": "Gioco del 15",
+        "fa": "پازل کشویی ۱۵",
+        "pl": "Piętnastka",
+        "uk": "П'ятнашки",
+        "nl": "15-puzzel",
+        "sv": "15-pusslet",
+        "cs": "Patnáctka",
+        "el": "Παζλ 15"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Tap a tile beside the gap to slide it; order 1–15 to win. Share this applet into a room (⋮ → Share) and solve it together — every move syncs live.",
+              "ko": "빈칸 옆의 타일을 탭해서 밀어보세요. 1–15 순서대로 맞추면 승리입니다. 이 앱을 방에 공유하고(⋮ → 공유) 함께 풀어보세요 — 모든 이동이 실시간으로 동기화됩니다.",
+              "zh": "点击空格旁边的方块即可滑动；按1–15排好即获胜。将此小程序分享到房间（⋮ → 分享），一起解题——每一步都会实时同步。",
+              "hi": "खाली जगह के पास की टाइल टैप करके उसे खिसकाएँ; 1–15 क्रम में जीतें. इस ऐप को कमरे में साझा करें (⋮ → साझा करें) और साथ मिलकर हल करें — हर चाल लाइव सिंक होती है.",
+              "es": "Toca una ficha junto al hueco para deslizarla; ordena del 1 al 15 para ganar. Comparte esta applet en una sala (⋮ → Compartir) y resuélvela juntos — cada movimiento se sincroniza en vivo.",
+              "fr": "Touchez une tuile à côté de l'espace vide pour la faire glisser ; classez de 1 à 15 pour gagner. Partagez cette applet dans une salle (⋮ → Partager) et résolvez-la ensemble — chaque coup se synchronise en direct.",
+              "ar": "اضغط على قطعة بجانب الفراغ لتحريكها؛ رتّب من 1 إلى 15 للفوز. شارك هذا التطبيق في غرفة (⋮ → مشاركة) وحلّوه معًا — كل حركة تتزامن مباشرةً.",
+              "pt": "Toque em uma peça ao lado do espaço vazio para deslizá-la; ordene de 1 a 15 para vencer. Compartilhe este applet em uma sala (⋮ → Compartilhar) e resolvam juntos — cada movimento sincroniza ao vivo.",
+              "ru": "Нажмите на плитку рядом с пустой клеткой, чтобы сдвинуть её; расставьте по порядку от 1 до 15, чтобы выиграть. Поделитесь этим приложением в комнате (⋮ → Поделиться) и решайте вместе — каждый ход синхронизируется в реальном времени.",
+              "de": "Tippe auf eine Kachel neben der Lücke, um sie zu verschieben; ordne 1–15 zum Gewinnen. Teile diese Applet in einem Raum (⋮ → Teilen) und löst gemeinsam — jeder Zug wird live synchronisiert.",
+              "ja": "隙間の隣のタイルをタップしてスライドさせます。1〜15の順に並べたら勝ちです。このアプレットをルームに共有し（⋮→共有）、一緒に解きましょう — 動きはすべてリアルタイムで同期されます。",
+              "tr": "Boşluğun yanındaki karoya dokunarak kaydırın; 1-15 sırasına dizerek kazanın. Bu appleti bir odaya paylaşın (⋮ → Paylaş) ve birlikte çözün — her hamle canlı senkronize olur.",
+              "vi": "Chạm vào ô bên cạnh khoảng trống để trượt nó; sắp xếp theo thứ tự 1–15 để thắng. Chia sẻ applet này vào một phòng (⋮ → Chia sẻ) và cùng giải — mọi nước đi đều đồng bộ trực tiếp.",
+              "it": "Tocca una tessera accanto allo spazio vuoto per farla scorrere; ordina da 1 a 15 per vincere. Condividi questa applet in una stanza (⋮ → Condividi) e risolvetela insieme — ogni mossa si sincronizza in tempo reale.",
+              "fa": "روی یک کاشی کنار فضای خالی ضربه بزنید تا سُر بخورد؛ برای بردن، از ۱ تا ۱۵ مرتب کنید. این اپلت را در یک اتاق به اشتراک بگذارید (⋮ → اشتراک‌گذاری) و با هم حل کنید — هر حرکت به‌صورت زنده همگام‌سازی می‌شود.",
+              "pl": "Stuknij kafelek obok pustego miejsca, aby go przesunąć; ułóż w kolejności 1–15, aby wygrać. Udostępnij tę appletkę w pokoju (⋮ → Udostępnij) i rozwiązujcie razem — każdy ruch synchronizuje się na żywo.",
+              "uk": "Торкніться плитки біля порожньої клітинки, щоб посунути її; розставте по порядку від 1 до 15, щоб перемогти. Поділіться цим аплетом у кімнаті (⋮ → Поділитися) і розв'язуйте разом — кожен хід синхронізується наживо.",
+              "nl": "Tik op een tegel naast het gat om te schuiven; sorteer 1–15 om te winnen. Deel deze applet in een kamer (⋮ → Delen) en los het samen op — elke zet synchroniseert live.",
+              "sv": "Tryck på en bricka bredvid luckan för att skjuta den; ordna 1–15 för att vinna. Dela denna applet i ett rum (⋮ → Dela) och lös den tillsammans — varje drag synkas live.",
+              "cs": "Klepnutím na dlaždici vedle mezery ji posunete; seřaďte 1–15 a vyhrajte. Sdílejte tuto appletu do místnosti (⋮ → Sdílet) a řešte společně — každý tah se synchronizuje živě.",
+              "el": "Πατήστε ένα πλακίδιο δίπλα στο κενό για να το σύρετε· τακτοποιήστε 1–15 για να κερδίσετε. Μοιραστείτε αυτό το applet σε ένα δωμάτιο (⋮ → Κοινή χρήση) και λύστε το μαζί — κάθε κίνηση συγχρονίζεται ζωντανά."
+            }
+          },
+          {
+            "type": "puzzlegrid",
+            "table": "pieces",
+            "cols": 4,
+            "rows": 4,
+            "mode": "slide",
+            "win": {
+              "type": "order"
+            },
+            "resultsTable": "results"
+          }
+        ]
+      }
+    },
+    "pattern": {
+      "title": {
+        "en": "Pattern",
+        "ko": "패턴",
+        "zh": "图案",
+        "hi": "पैटर्न",
+        "es": "Patrón",
+        "fr": "Motif",
+        "ar": "النمط",
+        "pt": "Padrão",
+        "ru": "Узор",
+        "de": "Muster",
+        "ja": "パターン",
+        "tr": "Desen",
+        "vi": "Mẫu hình",
+        "it": "Motivo",
+        "fa": "الگو",
+        "pl": "Wzór",
+        "uk": "Візерунок",
+        "nl": "Patroon",
+        "sv": "Mönster",
+        "cs": "Vzor",
+        "el": "Μοτίβο"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Co-op: tap a gem, then tap an empty cell to move it. Get every gem to the bottom row in A–F order.",
+              "ko": "협동: 보석을 탭한 다음 빈 칸을 탭해서 이동시키세요. 모든 보석을 A–F 순서로 맨 아래 줄에 놓으세요.",
+              "zh": "合作模式：点击一个宝石，再点击空格即可移动。把所有宝石按A–F顺序移到最底行。",
+              "hi": "सहयोग: एक रत्न टैप करें, फिर उसे ले जाने के लिए किसी खाली सेल पर टैप करें। हर रत्न को A–F क्रम में सबसे नीचे की पंक्ति में लाएँ।",
+              "es": "Cooperativo: toca una gema y luego una celda vacía para moverla. Lleva cada gema a la fila inferior en orden A–F.",
+              "fr": "Coopératif : touchez une gemme, puis une case vide pour la déplacer. Amenez chaque gemme sur la rangée du bas dans l'ordre A–F.",
+              "ar": "تعاوني: اضغط على جوهرة ثم اضغط على خانة فارغة لتحريكها. ضع كل جوهرة في الصف السفلي بترتيب A–F.",
+              "pt": "Cooperativo: toque em uma gema e depois em uma célula vazia para movê-la. Leve cada gema até a linha inferior na ordem A–F.",
+              "ru": "Совместный режим: нажмите на камень, затем на пустую ячейку, чтобы переместить его. Расставьте все камни в нижнем ряду по порядку A–F.",
+              "de": "Kooperativ: Tippe auf einen Edelstein, dann auf eine leere Zelle, um ihn zu bewegen. Bringe jeden Edelstein in der Reihenfolge A–F in die unterste Reihe.",
+              "ja": "協力プレイ：宝石をタップし、次に空いているマスをタップして移動させます。すべての宝石をA〜Fの順で最下段に並べましょう。",
+              "tr": "İşbirliği: Bir mücevhere dokunun, ardından taşımak için boş bir hücreye dokunun. Her mücevheri A–F sırasına göre en alt sıraya getirin.",
+              "vi": "Hợp tác: chạm vào một viên đá quý, sau đó chạm vào ô trống để di chuyển. Đưa mọi viên đá quý về hàng dưới cùng theo thứ tự A–F.",
+              "it": "Cooperativa: tocca una gemma, poi una cella vuota per spostarla. Porta ogni gemma nella riga inferiore nell'ordine A–F.",
+              "fa": "همکاری: روی یک جواهر ضربه بزنید، سپس روی یک خانه خالی ضربه بزنید تا آن را جابه‌جا کنید. هر جواهر را به ترتیب A تا F به ردیف پایین برسانید.",
+              "pl": "Współpraca: dotknij klejnotu, a następnie pustej komórki, aby go przesunąć. Ustaw każdy klejnot w dolnym rzędzie w kolejności A–F.",
+              "uk": "Кооператив: торкніться коштовного каменя, потім порожньої клітинки, щоб перемістити його. Розставте всі камені в нижньому ряду в порядку A–F.",
+              "nl": "Coöp: tik op een edelsteen en dan op een lege cel om te verplaatsen. Breng elke edelsteen in A–F-volgorde naar de onderste rij.",
+              "sv": "Samarbete: tryck på en ädelsten och sedan på en tom ruta för att flytta den. Få varje ädelsten till nedersta raden i ordningen A–F.",
+              "cs": "Spolupráce: klepněte na drahokam a poté na prázdné políčko, čímž jej přesunete. Dostaňte každý drahokam do spodní řady v pořadí A–F.",
+              "el": "Συνεργατικό: πατήστε ένα πετράδι και μετά ένα κενό κελί για να το μετακινήσετε. Φέρτε κάθε πετράδι στην κάτω σειρά με σειρά A–F."
+            }
+          },
+          {
+            "type": "puzzlegrid",
+            "table": "pattern",
+            "cols": 6,
+            "rows": 3,
+            "mode": "free",
+            "win": {
+              "type": "target"
+            },
+            "resultsTable": "results",
+            "colors": {
+              "blue": "blue",
+              "green": "green",
+              "amber": "amber",
+              "teal": "teal",
+              "purple": "purple",
+              "pink": "pink"
+            }
+          }
+        ]
+      }
+    },
+    "records": {
+      "title": {
+        "en": "Records",
+        "ko": "기록",
+        "zh": "记录",
+        "hi": "रिकॉर्ड",
+        "es": "Récords",
+        "fr": "Records",
+        "ar": "السجلات",
+        "pt": "Recordes",
+        "ru": "Рекорды",
+        "de": "Rekorde",
+        "ja": "記録",
+        "tr": "Kayıtlar",
+        "vi": "Kỷ lục",
+        "it": "Record",
+        "fa": "رکوردها",
+        "pl": "Rekordy",
+        "uk": "Рекорди",
+        "nl": "Records",
+        "sv": "Rekord",
+        "cs": "Rekordy",
+        "el": "Ρεκόρ"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Fewest moves wins. Solves from every device in the room land here.",
+              "ko": "적은 이동 횟수가 승리합니다. 방의 모든 기기에서 완료한 기록이 여기 모입니다.",
+              "zh": "移动步数最少者获胜。房间内所有设备的完成记录都会汇总到这里。",
+              "hi": "सबसे कम चालें जीतती हैं। कमरे के हर डिवाइस से किए गए समाधान यहाँ आते हैं।",
+              "es": "Gana quien haga menos movimientos. Las resoluciones de todos los dispositivos de la sala aparecen aquí.",
+              "fr": "Le moins de coups gagne. Les résolutions de tous les appareils de la salle apparaissent ici.",
+              "ar": "الفوز لأقل عدد من الحركات. تظهر هنا الحلول من جميع أجهزة الغرفة.",
+              "pt": "Vence quem fizer menos movimentos. As resoluções de todos os dispositivos da sala aparecem aqui.",
+              "ru": "Побеждает тот, кто сделал меньше всего ходов. Здесь собираются решения со всех устройств комнаты.",
+              "de": "Die wenigsten Züge gewinnen. Lösungen von allen Geräten im Raum landen hier.",
+              "ja": "最少手数の人が勝ちです。ルーム内のすべての端末の完了記録がここに集まります。",
+              "tr": "En az hamle kazanır. Odadaki tüm cihazlardan gelen çözümler burada toplanır.",
+              "vi": "Ít nước đi nhất sẽ thắng. Kết quả giải từ mọi thiết bị trong phòng đều xuất hiện ở đây.",
+              "it": "Vince chi fa meno mosse. Le soluzioni da tutti i dispositivi della stanza arrivano qui.",
+              "fa": "کمترین حرکت برنده می‌شود. راه‌حل‌ها از تمام دستگاه‌های اتاق اینجا جمع می‌شوند.",
+              "pl": "Wygrywa najmniejsza liczba ruchów. Rozwiązania ze wszystkich urządzeń w pokoju pojawiają się tutaj.",
+              "uk": "Перемагає той, хто зробив найменше ходів. Розв'язки з усіх пристроїв кімнати з'являються тут.",
+              "nl": "De minste zetten wint. Oplossingen van alle apparaten in de kamer komen hier binnen.",
+              "sv": "Färst drag vinner. Lösningar från alla enheter i rummet hamnar här.",
+              "cs": "Vyhrává nejméně tahů. Řešení ze všech zařízení v místnosti se zobrazují zde.",
+              "el": "Οι λιγότερες κινήσεις κερδίζουν. Οι λύσεις από κάθε συσκευή στο δωμάτιο εμφανίζονται εδώ."
+            }
+          },
+          {
+            "type": "cards",
+            "emptyIcon": "emoji_events",
+            "emptyTitle": {
+              "en": "No results yet",
+              "ko": "아직 결과 없음",
+              "zh": "暂无结果",
+              "hi": "अभी तक कोई परिणाम नहीं",
+              "es": "Aún no hay resultados",
+              "fr": "Aucun résultat pour l'instant",
+              "ar": "لا توجد نتائج بعد",
+              "pt": "Ainda sem resultados",
+              "ru": "Пока нет результатов",
+              "de": "Noch keine Ergebnisse",
+              "ja": "まだ結果がありません",
+              "tr": "Henüz sonuç yok",
+              "vi": "Chưa có kết quả",
+              "it": "Ancora nessun risultato",
+              "fa": "هنوز نتیجه‌ای نیست",
+              "pl": "Brak wyników",
+              "uk": "Поки що немає результатів",
+              "nl": "Nog geen resultaten",
+              "sv": "Inga resultat ännu",
+              "cs": "Zatím žádné výsledky",
+              "el": "Δεν υπάρχουν ακόμη αποτελέσματα"
+            },
+            "emptyText": {
+              "en": "Start a puzzle and your times will appear here.",
+              "ko": "퍼즐을 시작하면 기록이 여기에 표시됩니다.",
+              "zh": "开始一个谜题后，你的成绩会显示在这里。",
+              "hi": "एक पहेली शुरू करें और आपके समय यहाँ दिखाई देंगे।",
+              "es": "Empieza un puzle y tus tiempos aparecerán aquí.",
+              "fr": "Commencez un puzzle et vos temps apparaîtront ici.",
+              "ar": "ابدأ لغزًا وستظهر أوقاتك هنا.",
+              "pt": "Comece um quebra-cabeça e seus tempos aparecerão aqui.",
+              "ru": "Начните головоломку, и здесь появится ваше время.",
+              "de": "Starte ein Puzzle, und deine Zeiten erscheinen hier.",
+              "ja": "パズルを始めると、タイムがここに表示されます。",
+              "tr": "Bir bulmaca başlatın, sürelerinizi burada göreceksiniz.",
+              "vi": "Bắt đầu một câu đố và thời gian của bạn sẽ xuất hiện ở đây.",
+              "it": "Inizia un puzzle e i tuoi tempi appariranno qui.",
+              "fa": "یک پازل را شروع کنید تا زمان‌های شما اینجا نمایش داده شود.",
+              "pl": "Zacznij puzzle, a Twoje czasy pojawią się tutaj.",
+              "uk": "Почніть головоломку, і ваш час з'явиться тут.",
+              "nl": "Begin een puzzel en je tijden verschijnen hier.",
+              "sv": "Starta ett pussel så visas dina tider här.",
+              "cs": "Začněte hlavolam a vaše časy se zde zobrazí.",
+              "el": "Ξεκινήστε ένα παζλ και οι χρόνοι σας θα εμφανιστούν εδώ."
+            },
+            "table": "results",
+            "title": "moves",
+            "subtitle": "seconds",
+            "sort": {
+              "column": "moves",
+              "dir": "asc"
+            },
+            "expandFields": [
+              {
+                "column": "at",
+                "label": "When"
+              }
+            ],
+            "open": "Edit",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    }
+  }
+}
