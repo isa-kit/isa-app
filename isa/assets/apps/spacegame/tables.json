@@ -1,0 +1,6 @@
+{
+  "tables": [
+    { "name": "runs", "label": "Runs" },
+    { "name": "campaign", "label": "Campaign progress" }
+  ]
+}

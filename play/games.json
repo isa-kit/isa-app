@@ -1,0 +1,16 @@
+[
+  {
+    "id": "landsmith",
+    "version": "v0.1.0",
+    "date": "2026-09-04",
+    "apk": {
+      "url": "https://github.com/isa-kit/play/releases/download/landsmith-v0.1.0/landsmith-latest.apk",
+      "size": "15.6 MB",
+      "sha256": "676fb157110f92f9caecd2cb83023a15a369a3f63dd9c64dc0345b72265e4eba",
+      "preview": true
+    },
+    "name": "Landsmith",
+    "tagline": "A self-running valley: people explore, harvest, build, and invent. Shape the land, mark where things go, or step into a villager.",
+    "platforms": "Web (Chrome/Safari, desktop or phone) \u00b7 Android 7+ APK. macOS build on request."
+  }
+]

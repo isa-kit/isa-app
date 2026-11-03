@@ -1,0 +1,147 @@
+{
+  "app": {
+    "title": {
+      "en": "Pine Composer",
+      "ko": "Pine Composer",
+      "zh": "Pine Composer",
+      "hi": "Pine Composer",
+      "es": "Pine Composer",
+      "fr": "Pine Composer",
+      "ar": "Pine Composer",
+      "pt": "Pine Composer",
+      "ru": "Pine Composer",
+      "de": "Pine Composer",
+      "ja": "Pine Composer",
+      "tr": "Pine Composer",
+      "vi": "Pine Composer",
+      "it": "Pine Composer",
+      "fa": "Pine Composer",
+      "pl": "Pine Composer",
+      "uk": "Pine Composer",
+      "nl": "Pine Composer",
+      "sv": "Pine Composer",
+      "cs": "Pine Composer",
+      "el": "Pine Composer"
+    },
+    "primaryColor": "#2962FF",
+    "theme": "minimal",
+    "translatable": true,
+    "languages": [
+      "en",
+      "ko",
+      "zh",
+      "hi",
+      "es",
+      "fr",
+      "ar",
+      "pt",
+      "ru",
+      "de",
+      "ja",
+      "tr",
+      "vi",
+      "it",
+      "fa",
+      "pl",
+      "uk",
+      "nl",
+      "sv",
+      "cs",
+      "el"
+    ],
+    "appDataTools": true,
+    "sync": {
+      "pocketbase": false,
+      "drive": false,
+      "room": false,
+      "mesh": false
+    },
+    "intro": {
+      "purpose": {
+        "en": "Build TradingView Pine Script indicators from toggle-able quant blocks, preview them on demo data, then copy the script. Everything runs on your device with no network.",
+        "ko": "켜고 끌 수 있는 퀀트 블록으로 TradingView Pine Script 지표를 만들고, 데모 데이터로 미리 본 뒤 스크립트를 복사하세요. 모든 작업은 기기에서 처리되며 네트워크를 쓰지 않습니다.",
+        "zh": "用可开关的量化模块搭建 TradingView Pine Script 指标，在演示数据上预览，然后复制脚本。一切都在设备本地运行，无需联网。",
+        "hi": "चालू/बंद होने वाले क्वांट ब्लॉक से TradingView Pine Script इंडिकेटर बनाएँ, डेमो डेटा पर पूर्वावलोकन देखें और स्क्रिप्ट कॉपी करें। सब कुछ आपके डिवाइस पर चलता है, नेटवर्क की ज़रूरत नहीं।",
+        "es": "Crea indicadores de TradingView Pine Script con bloques cuantitativos que activas o desactivas, previsualízalos con datos de demostración y copia el script. Todo funciona en tu dispositivo, sin red.",
+        "fr": "Créez des indicateurs TradingView Pine Script à partir de blocs quantitatifs activables, prévisualisez-les sur des données de démonstration, puis copiez le script. Tout se passe sur votre appareil, sans réseau.",
+        "ar": "أنشئ مؤشرات TradingView Pine Script من وحدات كمّية يمكن تشغيلها وإيقافها، وعاينها على بيانات تجريبية ثم انسخ الشيفرة. كل شيء يعمل على جهازك دون شبكة.",
+        "pt": "Crie indicadores TradingView Pine Script com blocos quantitativos que você liga e desliga, visualize-os em dados de demonstração e copie o script. Tudo roda no seu dispositivo, sem rede.",
+        "ru": "Собирайте индикаторы TradingView Pine Script из включаемых количественных блоков, смотрите их на демо-данных и копируйте скрипт. Всё работает на вашем устройстве без сети.",
+        "de": "Baue TradingView-Pine-Script-Indikatoren aus ein- und ausschaltbaren Quant-Bausteinen, sieh sie dir mit Demodaten an und kopiere das Skript. Alles läuft auf deinem Gerät, ohne Netzwerk.",
+        "ja": "オン/オフできるクオンツブロックから TradingView の Pine Script インジケーターを作り、デモデータでプレビューして、スクリプトをコピーできます。すべて端末内で動作し、通信は不要です。",
+        "tr": "Açıp kapatabildiğiniz nicel bloklarla TradingView Pine Script göstergeleri oluşturun, demo verilerde önizleyin ve betiği kopyalayın. Her şey cihazınızda çalışır, ağ gerekmez.",
+        "vi": "Tạo chỉ báo TradingView Pine Script từ các khối định lượng bật/tắt được, xem trước trên dữ liệu mẫu rồi sao chép mã. Mọi thứ chạy trên thiết bị của bạn, không cần mạng.",
+        "it": "Crea indicatori TradingView Pine Script da blocchi quantitativi attivabili, visualizzali in anteprima su dati dimostrativi e copia lo script. Tutto funziona sul tuo dispositivo, senza rete.",
+        "fa": "با بلوک‌های کمّیِ قابل روشن و خاموش، اندیکاتورهای TradingView Pine Script بسازید، روی داده‌های نمایشی پیش‌نمایش کنید و اسکریپت را کپی کنید. همه‌چیز روی دستگاه شما اجرا می‌شود و به شبکه نیازی نیست.",
+        "pl": "Twórz wskaźniki TradingView Pine Script z włączanych i wyłączanych bloków ilościowych, podejrzyj je na danych demonstracyjnych i skopiuj skrypt. Wszystko działa na Twoim urządzeniu, bez sieci.",
+        "uk": "Створюйте індикатори TradingView Pine Script із кількісних блоків, які можна вмикати й вимикати, переглядайте їх на демо-даних і копіюйте скрипт. Усе працює на вашому пристрої без мережі.",
+        "nl": "Bouw TradingView Pine Script-indicatoren uit aan- en uitzetbare kwantblokken, bekijk ze op demodata en kopieer het script. Alles draait op je apparaat, zonder netwerk.",
+        "sv": "Bygg TradingView Pine Script-indikatorer av kvantblock som du slår av och på, förhandsgranska dem på demodata och kopiera skriptet. Allt körs på din enhet, utan nätverk.",
+        "cs": "Sestavte indikátory TradingView Pine Script z kvantitativních bloků, které lze zapínat a vypínat, zobrazte náhled na ukázkových datech a zkopírujte skript. Vše běží ve vašem zařízení bez sítě.",
+        "el": "Φτιάξτε δείκτες TradingView Pine Script από ποσοτικά μπλοκ που ενεργοποιείτε ή απενεργοποιείτε, δείτε προεπισκόπηση σε δεδομένα επίδειξης και αντιγράψτε το σκριπτ. Όλα τρέχουν στη συσκευή σας, χωρίς δίκτυο."
+      },
+      "show": "never"
+    }
+  },
+  "nav": [
+    {
+      "id": "home",
+      "label": {
+        "en": "Pine Composer",
+        "ko": "Pine Composer",
+        "zh": "Pine Composer",
+        "hi": "Pine Composer",
+        "es": "Pine Composer",
+        "fr": "Pine Composer",
+        "ar": "Pine Composer",
+        "pt": "Pine Composer",
+        "ru": "Pine Composer",
+        "de": "Pine Composer",
+        "ja": "Pine Composer",
+        "tr": "Pine Composer",
+        "vi": "Pine Composer",
+        "it": "Pine Composer",
+        "fa": "Pine Composer",
+        "pl": "Pine Composer",
+        "uk": "Pine Composer",
+        "nl": "Pine Composer",
+        "sv": "Pine Composer",
+        "cs": "Pine Composer",
+        "el": "Pine Composer"
+      },
+      "icon": "candlestick_chart",
+      "screen": "home"
+    }
+  ],
+  "screens": {
+    "home": {
+      "title": {
+        "en": "Pine Composer",
+        "ko": "Pine Composer",
+        "zh": "Pine Composer",
+        "hi": "Pine Composer",
+        "es": "Pine Composer",
+        "fr": "Pine Composer",
+        "ar": "Pine Composer",
+        "pt": "Pine Composer",
+        "ru": "Pine Composer",
+        "de": "Pine Composer",
+        "ja": "Pine Composer",
+        "tr": "Pine Composer",
+        "vi": "Pine Composer",
+        "it": "Pine Composer",
+        "fa": "Pine Composer",
+        "pl": "Pine Composer",
+        "uk": "Pine Composer",
+        "nl": "Pine Composer",
+        "sv": "Pine Composer",
+        "cs": "Pine Composer",
+        "el": "Pine Composer"
+      },
+      "body": {
+        "type": "pinecomposer",
+        "fillPhone": true
+      }
+    }
+  }
+}

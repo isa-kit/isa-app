@@ -1,0 +1,18 @@
+{
+  "exec_summary": [
+    {
+      "id": "ex1",
+      "headline": "Boston 2019 baseline: 17.4% transit share",
+      "detail": "1.28M daily trips over 1,669 zones; avg work trip 11.2 mi. Calibrated to observed ACS share (residual 2.8%).",
+      "tier": "FOCUSED — fit to inform decisions",
+      "audit": "11-check audit: 9 pass · 1 warn (trip-length geometry limit) · 1 fail (a provenance field the next model version adds) — nothing hidden"
+    },
+    {
+      "id": "ex2",
+      "headline": "2050 forecast: 19.1% transit share (+1.7pt)",
+      "detail": "1.40M daily trips; growth-year forecast on the same calibrated engine (version 7fa3c41).",
+      "tier": "FOCUSED — same engine, forecast year",
+      "audit": "Same 11 checks re-run against the forecast; same honest warn + fail as the base"
+    }
+  ]
+}

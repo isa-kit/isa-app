@@ -1,0 +1,40 @@
+{
+  "eras": [
+    {
+      "id": "bronze",
+      "file": "era_bronze.geojson",
+      "min": -2000,
+      "max": -500,
+      "features": 257
+    },
+    {
+      "id": "classical",
+      "file": "era_classical.geojson",
+      "min": -500,
+      "max": 500,
+      "features": 1606
+    },
+    {
+      "id": "medieval",
+      "file": "era_medieval.geojson",
+      "min": 500,
+      "max": 1500,
+      "features": 5519
+    },
+    {
+      "id": "earlymodern",
+      "file": "era_earlymodern.geojson",
+      "min": 1400,
+      "max": 1800,
+      "features": 3777
+    },
+    {
+      "id": "modern",
+      "file": "era_modern.geojson",
+      "min": 1800,
+      "max": 2010,
+      "features": 3122
+    }
+  ],
+  "overview": "empires_overview.geojson"
+}

@@ -1,0 +1,16 @@
+{
+  "tables": [
+    {
+      "name": "pinebuild",
+      "label": "Current build",
+      "icon": "tune",
+      "description": "Autosave of the indicator you are building (blocks, settings). Local scratch, never synced."
+    },
+    {
+      "name": "pinerecipes",
+      "label": "Recipes",
+      "icon": "bookmarks",
+      "description": "Builds you saved as named recipes. Local to this device, never synced."
+    }
+  ]
+}

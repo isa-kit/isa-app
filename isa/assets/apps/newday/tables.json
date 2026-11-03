@@ -1,0 +1,80 @@
+{
+  "tables": [
+    {
+      "name": "pages",
+      "label": {
+        "en": "Entry",
+        "ko": "항목",
+        "zh": "条目",
+        "hi": "प्रविष्टि",
+        "es": "Entrada",
+        "fr": "Entrée",
+        "ar": "إدخال",
+        "pt": "Entrada",
+        "ru": "Запись",
+        "de": "Eintrag",
+        "ja": "エントリー",
+        "tr": "Kayıt",
+        "vi": "Mục",
+        "it": "Voce",
+        "fa": "مورد",
+        "pl": "Wpis",
+        "uk": "Запис",
+        "nl": "Item",
+        "sv": "Inlägg",
+        "cs": "Záznam",
+        "el": "Καταχώριση"
+      },
+      "icon": "description",
+      "description": "Pages. A page has a title and a written body, can nest inside another page, carries its own diagram, and can be a note, a journal entry, a task or an event on your timeline."
+    },
+    {
+      "name": "links",
+      "label": "Links",
+      "icon": "link",
+      "description": "Wiki-link edges parsed from page bodies by the engine: fromId -> toId, one row per [[target]] found in a page's body. toId is the resolved target page id (empty when unresolved); toTitle keeps the raw [[target]] text so a later rename can re-resolve the link."
+    },
+    {
+      "name": "bubbles",
+      "label": "Bubbles",
+      "icon": "bubble_chart",
+      "description": "Bubble-board items. Each bubble belongs to one page's board (the page column)."
+    },
+    {
+      "name": "bubble_links",
+      "label": "Bubble links",
+      "icon": "share",
+      "description": "Lines between bubbles on one page's board (the page column)."
+    },
+    {
+      "name": "grafts",
+      "label": "Also filed under",
+      "icon": "call_split",
+      "description": "Extra places a page is filed: fromId is the branch page, toId the page that also appears under it (type graft). A page's parentId stays its one home; these rows add more places without moving it, and are never touched by the wiki-link index."
+    },
+    {
+      "name": "tags",
+      "label": "Tags",
+      "icon": "local_offer",
+      "description": "Your own tags. Give each a type (mood, project, place, habit...) to group them."
+    },
+    {
+      "name": "days",
+      "label": "Days",
+      "icon": "today",
+      "description": "One row per day: an overall summary and mood for the whole day."
+    },
+    {
+      "name": "prefs",
+      "label": "Settings",
+      "icon": "settings",
+      "description": "Which features are on. A single row you tweak; not page data."
+    },
+    {
+      "name": "habit_ticks",
+      "label": "Habit ticks",
+      "icon": "check_box",
+      "description": "One row per habit done on a day: page -> the habit page, date -> the day. Shaped as a page-keyed side table so a future 'tracker' page tool can own it."
+    }
+  ]
+}

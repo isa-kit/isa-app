@@ -1,0 +1,133 @@
+{
+  "app": {
+    "title": "Layout demo",
+    "primaryColor": "#3D7DD8",
+    "theme": "clean"
+  },
+  "nav": [
+    {
+      "id": "board",
+      "label": "Dashboard",
+      "icon": "dashboard",
+      "screen": "board"
+    }
+  ],
+  "screens": {
+    "board": {
+      "title": "Layout demo",
+      "body": {
+        "type": "split",
+        "axis": "row",
+        "weights": [1, 2, 1],
+        "gap": 8,
+        "children": [
+          {
+            "type": "card",
+            "tab": "Items",
+            "child": {
+              "type": "list",
+              "table": "items",
+              "titleColumn": "name",
+              "subtitleColumns": ["category", "status"],
+              "sortColumn": "due",
+              "sortDir": "asc",
+              "emptyIcon": "playlist_add",
+              "emptyTitle": "No items yet",
+              "emptyText": "Add your first item to start tracking what's open, in progress, and done."
+            }
+          },
+          {
+            "type": "split",
+            "axis": "col",
+            "weights": [1, 1],
+            "gap": 8,
+            "children": [
+              {
+                "type": "split",
+                "axis": "row",
+                "gap": 8,
+                "children": [
+                  {
+                    "type": "card",
+                    "tab": "Doing",
+                    "child": {
+                      "type": "stat",
+                      "table": "items",
+                      "agg": "count",
+                      "filter": {"column": "status", "value": "doing"},
+                      "label": "In progress",
+                      "color": "blue"
+                    }
+                  },
+                  {
+                    "type": "card",
+                    "tab": "Open",
+                    "child": {
+                      "type": "stat",
+                      "table": "items",
+                      "agg": "count",
+                      "filter": {"column": "status", "value": "open"},
+                      "label": "Open items",
+                      "color": "amber"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "card",
+                "tab": "Table",
+                "child": {
+                  "type": "table",
+                  "table": "items"
+                }
+              }
+            ]
+          },
+          {
+            "type": "split",
+            "axis": "col",
+            "weights": [1, 1, 1],
+            "gap": 8,
+            "children": [
+              {
+                "type": "card",
+                "tab": "Total",
+                "child": {
+                  "type": "stat",
+                  "table": "items",
+                  "agg": "count",
+                  "label": "Items",
+                  "color": "blue"
+                }
+              },
+              {
+                "type": "card",
+                "tab": "Value",
+                "child": {
+                  "type": "stat",
+                  "table": "items",
+                  "agg": "sum",
+                  "valueColumn": "value",
+                  "label": "Total value",
+                  "color": "teal"
+                }
+              },
+              {
+                "type": "card",
+                "tab": "Done",
+                "child": {
+                  "type": "stat",
+                  "table": "items",
+                  "agg": "count",
+                  "filter": {"column": "status", "value": "done"},
+                  "label": "Done",
+                  "color": "amber"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

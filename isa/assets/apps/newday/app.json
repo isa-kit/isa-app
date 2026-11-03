@@ -1,0 +1,16 @@
+{
+  "id": "newday",
+  "name": "Agenday",
+  "category": "Productivity",
+  "description": "Your days, planned and written: one day at a time with schedule, tasks and journal, plus nested linked pages with a bubble board and diagram, and one dated timeline with tags you define.",
+  "icon": "wb_twilight",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_newday"
+  },
+  "seedVersion": "2026-11-02.newday.3",
+  "seedContent": "initial-only",
+  "durableSettings": [
+    "newdayExamplesHidden"
+  ]
+}

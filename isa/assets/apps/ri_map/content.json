@@ -1,0 +1,29 @@
+{
+  "places": [
+    { "id": "p1", "name": "Providence",        "kind": "city",     "lat": 41.8240, "lon": -71.4128 },
+    { "id": "p2", "name": "Newport",           "kind": "city",     "lat": 41.4901, "lon": -71.3128 },
+    { "id": "p3", "name": "Warwick",           "kind": "city",     "lat": 41.7001, "lon": -71.4162 },
+    { "id": "p4", "name": "Cranston",          "kind": "city",     "lat": 41.7798, "lon": -71.4373 },
+    { "id": "p5", "name": "Pawtucket",         "kind": "city",     "lat": 41.8787, "lon": -71.3826 },
+    { "id": "p6", "name": "Westerly",          "kind": "city",     "lat": 41.3776, "lon": -71.8273 },
+    { "id": "p7", "name": "Block Island",      "kind": "island",   "lat": 41.1712, "lon": -71.5580 },
+    { "id": "p8", "name": "URI (Kingston)",    "kind": "campus",   "lat": 41.4862, "lon": -71.5314 },
+    { "id": "p9", "name": "Beavertail Light",  "kind": "landmark", "lat": 41.4490, "lon": -71.3997 },
+    { "id": "p10", "name": "Narragansett",            "kind": "town",     "lat": 41.4501, "lon": -71.4495 },
+    { "id": "p11", "name": "Bristol",                 "kind": "town",     "lat": 41.6771, "lon": -71.2662 },
+    { "id": "p12", "name": "East Greenwich",          "kind": "town",     "lat": 41.6601, "lon": -71.4528 },
+    { "id": "p13", "name": "Woonsocket",              "kind": "city",     "lat": 42.0029, "lon": -71.5153 },
+    { "id": "p14", "name": "Cliff Walk (Newport)",    "kind": "landmark", "lat": 41.4800, "lon": -71.2960 },
+    { "id": "p15", "name": "The Breakers",            "kind": "landmark", "lat": 41.4699, "lon": -71.2986 },
+    { "id": "p16", "name": "Roger Williams Park Zoo", "kind": "landmark", "lat": 41.7950, "lon": -71.4160 },
+    { "id": "p17", "name": "Waterplace Park",         "kind": "park",     "lat": 41.8281, "lon": -71.4140 },
+    { "id": "p18", "name": "Brown University",        "kind": "campus",   "lat": 41.8268, "lon": -71.4025 },
+    { "id": "p19", "name": "RISD",                    "kind": "campus",   "lat": 41.8262, "lon": -71.4090 },
+    { "id": "p20", "name": "T.F. Green Airport",      "kind": "airport",  "lat": 41.7240, "lon": -71.4283 },
+    { "id": "p21", "name": "Misquamicut State Beach", "kind": "beach",    "lat": 41.3250, "lon": -71.7630 },
+    { "id": "p22", "name": "Point Judith Light",      "kind": "landmark", "lat": 41.3611, "lon": -71.4814 },
+    { "id": "p23", "name": "Mohegan Bluffs",          "kind": "landmark", "lat": 41.1490, "lon": -71.5560 },
+    { "id": "p24", "name": "Colt State Park",         "kind": "park",     "lat": 41.6852, "lon": -71.2884 },
+    { "id": "p25", "name": "Slater Mill",             "kind": "landmark", "lat": 41.8760, "lon": -71.3820 }
+  ]
+}

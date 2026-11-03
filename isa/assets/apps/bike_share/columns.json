@@ -1,0 +1,9 @@
+{
+  "stations": [
+    { "name": "name",       "type": "text",    "label": "Station" },
+    { "name": "capacity",   "type": "integer", "label": "Capacity" },
+    { "name": "lat",        "type": "number",  "label": "Latitude" },
+    { "name": "lon",        "type": "number",  "label": "Longitude" },
+    { "name": "station_id", "type": "text",    "label": "ID" }
+  ]
+}

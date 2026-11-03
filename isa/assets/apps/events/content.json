@@ -1,0 +1,27 @@
+{
+  "tags": [
+    { "id": "etag_music", "name": "music" },
+    { "id": "etag_food", "name": "food" },
+    { "id": "etag_tech", "name": "tech" },
+    { "id": "etag_market", "name": "market" },
+    { "id": "etag_class", "name": "class" },
+    { "id": "etag_outdoors", "name": "outdoors" },
+    { "id": "etag_community", "name": "community" }
+  ],
+  "events": [
+    { "id": "ee_1", "title": "WaterFire Providence", "start": "2026-06-06", "location": "Waterplace Park, Providence, RI", "lat": 41.8268, "lon": -71.4103, "going": true, "tags": ["etag_music"], "notes": "Evening lighting along the river." },
+    { "id": "ee_2", "title": "Hope Street Food Truck Night", "start": "2026-06-10", "location": "Hope Street, Providence, RI", "lat": 41.8389, "lon": -71.3927, "going": false, "tags": ["etag_food"], "notes": "Rotating trucks; arrive early." },
+    { "id": "ee_3", "title": "RI Tech Meetup", "start": "2026-06-12", "location": "Providence, RI", "lat": 41.8240, "lon": -71.4128, "going": false, "tags": ["etag_tech"], "notes": "Lightning talks and networking." },
+    { "id": "ee_4", "title": "Pawtucket Arts Festival", "start": "2026-06-15", "location": "Slater Park, Pawtucket, RI", "lat": 41.8770, "lon": -71.3700, "going": false, "tags": ["etag_music", "etag_food"], "notes": "Live bands and local vendors." },
+    { "id": "ee_5", "title": "Newport Jazz Preview", "start": "2026-06-20", "location": "Fort Adams, Newport, RI", "lat": 41.4762, "lon": -71.3398, "going": true, "tags": ["etag_music"], "notes": "Outdoor stage by the bay." },
+    { "id": "ee_6", "title": "Armory Farmers Market", "start": "2026-05-21", "location": "Dexter Training Ground, Providence, RI", "lat": 41.8158, "lon": -71.4286, "going": true, "tags": ["etag_market", "etag_food"], "notes": "Went for early-season greens and bread; back weekly through fall." },
+    { "id": "ee_7", "title": "Boston New Tech Demo Night", "start": "2026-05-28", "location": "CIC Cambridge, 1 Broadway, Cambridge, MA", "lat": 42.3625, "lon": -71.0846, "going": true, "tags": ["etag_tech", "etag_community"], "notes": "Five startup demos plus pizza; good crowd last time." },
+    { "id": "ee_8", "title": "India Point Park Sunset Run", "start": "2026-06-03", "location": "India Point Park, Providence, RI", "lat": 41.8163, "lon": -71.3924, "going": false, "tags": ["etag_outdoors", "etag_community"], "notes": "Casual 5k loop along the waterfront, all paces welcome." },
+    { "id": "ee_9", "title": "Providence Flea", "start": "2026-06-14", "location": "345 South Water St, Providence, RI", "lat": 41.8175, "lon": -71.4046, "going": false, "tags": ["etag_market"], "notes": "Vintage and makers market on the riverwalk, 10am-3pm." },
+    { "id": "ee_10", "title": "Intro to Wheel Throwing", "start": "2026-06-17", "location": "The Steel Yard, 27 Sims Ave, Providence, RI", "lat": 41.8231, "lon": -71.4357, "going": true, "tags": ["etag_class"], "notes": "Beginner pottery class, 6-9pm; clay and tools provided." },
+    { "id": "ee_11", "title": "SoWa Open Market", "start": "2026-06-21", "location": "500 Harrison Ave, Boston, MA", "lat": 42.3424, "lon": -71.0658, "going": false, "tags": ["etag_market", "etag_food"], "notes": "Art market plus food trucks and the beer garden." },
+    { "id": "ee_12", "title": "AI in Practice: Summer Lecture", "start": "2026-06-24", "location": "Brown CIT Building, 115 Waterman St, Providence, RI", "lat": 41.8268, "lon": -71.4003, "going": true, "tags": ["etag_tech", "etag_class"], "notes": "Open lecture; doors at 5:30, talk at 6. Register online." },
+    { "id": "ee_13", "title": "Boston Harbor Concert Cruise", "start": "2026-06-27", "location": "Long Wharf, Boston, MA", "lat": 42.3601, "lon": -71.0497, "going": false, "tags": ["etag_music", "etag_outdoors"], "notes": "Two-hour evening cruise with a live funk band." },
+    { "id": "ee_14", "title": "Al Fresco on the Hill", "start": "2026-07-02", "location": "Atwells Ave, Federal Hill, Providence, RI", "lat": 41.8228, "lon": -71.4222, "going": false, "tags": ["etag_food", "etag_music", "etag_community"], "notes": "Street dining night on Federal Hill with live acoustic sets." }
+  ]
+}

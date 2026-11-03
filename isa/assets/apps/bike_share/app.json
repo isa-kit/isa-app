@@ -1,0 +1,13 @@
+{
+  "id": "bike_share",
+  "name": "Bike Share — isa-kit demo",
+  "category": "Maps & cities",
+  "description": "Boston bike-share stations on a map, with the station data behind them.",
+  "hidden": true,
+  "icon": "auto_awesome",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_bikeshare"
+  },
+  "seedVersion": "2026-06-05.2"
+}

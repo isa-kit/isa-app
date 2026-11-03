@@ -1,0 +1,34 @@
+{
+  "pinebuild": [
+    {
+      "name": "id",
+      "type": "text"
+    },
+    {
+      "name": "name",
+      "type": "text"
+    },
+    {
+      "name": "config",
+      "type": "text"
+    }
+  ],
+  "pinerecipes": [
+    {
+      "name": "id",
+      "type": "text"
+    },
+    {
+      "name": "name",
+      "type": "text"
+    },
+    {
+      "name": "config",
+      "type": "text"
+    },
+    {
+      "name": "createdAt",
+      "type": "text"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "externals": [
+    {
+      "id": "booktranslate",
+      "name": "Book Translator",
+      "kind": "external",
+      "state": "active",
+      "group": "Developer",
+      "tags": ["translation", "books", "ebook"],
+      "description": "Translates whole PDF books into PDF/EPUB/TXT with AI; runs on the Mac"
+    },
+    {
+      "id": "scripture-studio",
+      "name": "Scripture Studio",
+      "kind": "external",
+      "state": "planned",
+      "group": "Reference",
+      "tags": ["translation", "scripture"],
+      "description": "Source-language scripture translator — in design"
+    }
+  ]
+}

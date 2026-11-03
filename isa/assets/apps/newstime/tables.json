@@ -1,0 +1,64 @@
+{
+  "tables": [
+    {
+      "name": "stories",
+      "label": "Stories",
+      "icon": "newspaper",
+      "description": "The merged, ranked story list for your outlet languages, timeframe and filters (computed on the device from our news server's files). Replaced on every refresh; local scratch, never synced."
+    },
+    {
+      "name": "articles",
+      "label": "Articles",
+      "icon": "article",
+      "description": "The covering articles of the story you opened: each outlet's own headline, its own category label verbatim, publish time and the original link."
+    },
+    {
+      "name": "sources",
+      "label": "Sources",
+      "icon": "public",
+      "description": "Every outlet of your outlet languages with its article count in the current timeframe and whether it is in your feed."
+    },
+    {
+      "name": "countries",
+      "label": "Countries",
+      "icon": "map",
+      "description": "Countries the current stories mention (mechanical gazetteer match on the server, no AI), most covered first."
+    },
+    {
+      "name": "mapshade",
+      "label": "Map shading",
+      "icon": "palette",
+      "description": "Per-country 3-step shade for the news map, plus two scale anchors."
+    },
+    {
+      "name": "mapsel",
+      "label": "Map selection",
+      "icon": "touch_app",
+      "description": "Filter target for the country tapped on the news map (holds no rows)."
+    },
+    {
+      "name": "info",
+      "label": "Feed info",
+      "icon": "info",
+      "description": "One row: when the server built the files and the current counts."
+    },
+    {
+      "name": "languages",
+      "label": "Languages",
+      "icon": "translate",
+      "description": "The outlet languages the server serves, with outlet counts and archive span."
+    },
+    {
+      "name": "prefs",
+      "label": "Preferences",
+      "icon": "tune",
+      "description": "Your outlet languages, timeframe, sort, outlet-origin filters and switched-off outlets. Stays on this device."
+    },
+    {
+      "name": "mysources",
+      "label": "Your sources",
+      "icon": "bookmark",
+      "description": "Feeds you added from the directory or by URL. Stored on this device only; the app does not fetch other sites yet."
+    }
+  ]
+}

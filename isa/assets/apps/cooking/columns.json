@@ -1,0 +1,18 @@
+{
+  "pantry": [
+    { "name": "name",     "type": "text",   "label": "Name", "required": true },
+    { "name": "category", "type": "text",   "label": "Category" },
+    { "name": "quantity", "type": "number", "label": "Quantity" },
+    { "name": "unit",     "type": "enum",   "label": "Unit", "options": ["each", "ml", "L", "g", "bottle", "carton", "dozen"] },
+    { "name": "fraction", "type": "number", "label": "Fraction" }
+  ],
+  "recipes": [
+    { "name": "name",       "type": "text",    "label": "Name", "required": true },
+    { "name": "uses",       "type": "text",    "label": "Uses" },
+    { "name": "missing",    "type": "text",    "label": "Missing" },
+    { "name": "steps",      "type": "text",    "label": "Steps" },
+    { "name": "minutes",    "type": "number",  "label": "Minutes" },
+    { "name": "matchScore", "type": "number",  "label": "Pantry matches" },
+    { "name": "suggested",  "type": "boolean", "label": "Suggested" }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "files": [
+    { "id": "f_default", "name": "My documents", "order": 0 }
+  ],
+  "pages": [
+    {
+      "id": "pg_welcome",
+      "parentId": "",
+      "kind": "doc",
+      "title": "Untitled",
+      "order": 0,
+      "body": "",
+      "file": "f_default"
+    }
+  ]
+}

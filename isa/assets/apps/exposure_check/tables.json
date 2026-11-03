@@ -1,0 +1,28 @@
+{
+  "tables": [
+    {
+      "name": "identifiers",
+      "label": "My details",
+      "icon": "badge",
+      "description": "The personal details you want to protect — emails, websites/domains, phone numbers, names and addresses. One row each. Tap a row to mark it reviewed."
+    },
+    {
+      "name": "hardening",
+      "label": "Protections",
+      "icon": "verified_user",
+      "description": "A prioritized checklist of steps that shrink your exposure. Tap an item to flip it between to-do and done."
+    },
+    {
+      "name": "brokers",
+      "label": "Data-broker opt-outs",
+      "icon": "person_off",
+      "description": "People-search sites that publish your name, address and phone. Track your removal request with each one — tap to advance not started → requested → confirmed."
+    },
+    {
+      "name": "guides",
+      "label": "Guides",
+      "icon": "menu_book",
+      "description": "Plain-language explainers: how leaks actually happen, what can and cannot be scanned, and how the optional advanced checks would work."
+    }
+  ]
+}

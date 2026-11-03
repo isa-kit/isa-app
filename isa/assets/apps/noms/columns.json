@@ -1,0 +1,7 @@
+{
+  "runs": [
+    { "name": "id", "type": "text" },
+    { "name": "day", "type": "number", "label": { "en": "Day", "ko": "일차", "zh": "天数", "hi": "दिन", "es": "Día", "fr": "Jour", "ar": "اليوم", "pt": "Dia", "ru": "День", "de": "Tag", "ja": "日目", "tr": "Gün", "vi": "Ngày", "it": "Giorno", "fa": "روز", "pl": "Dzień", "uk": "День", "nl": "Dag", "sv": "Dag", "cs": "Den", "el": "Ημέρα" } },
+    { "name": "noms", "type": "number", "label": { "en": "Noms", "ko": "Noms", "zh": "Noms", "hi": "Noms", "es": "Noms", "fr": "Noms", "ar": "Noms", "pt": "Noms", "ru": "Noms", "de": "Noms", "ja": "Noms", "tr": "Noms", "vi": "Noms", "it": "Noms", "fa": "Noms", "pl": "Noms", "uk": "Noms", "nl": "Noms", "sv": "Noms", "cs": "Noms", "el": "Noms" } }
+  ]
+}

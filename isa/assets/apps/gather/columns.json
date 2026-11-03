@@ -1,0 +1,169 @@
+{
+  "profile": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Your name",
+      "required": true
+    },
+    {
+      "name": "emoji",
+      "type": "text",
+      "label": "Emoji"
+    }
+  ],
+  "spaces": [
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Space name",
+      "required": true
+    },
+    {
+      "name": "kind",
+      "type": "enum",
+      "label": "Kind",
+      "options": [
+        "event",
+        "group",
+        "team",
+        "self"
+      ]
+    },
+    {
+      "name": "key",
+      "type": "text",
+      "label": "Invite key (share = invite)",
+      "advanced": true
+    },
+    {
+      "name": "place",
+      "type": "text",
+      "label": "Where (for events)"
+    }
+  ],
+  "messages": [
+    {
+      "name": "space",
+      "type": "ref",
+      "refTable": "spaces",
+      "label": "Space",
+      "required": true
+    },
+    {
+      "name": "author",
+      "type": "text",
+      "label": "From",
+      "default": "first:profile.name"
+    },
+    {
+      "name": "text",
+      "type": "text",
+      "label": "Message",
+      "required": true
+    },
+    {
+      "name": "at",
+      "type": "dateTime",
+      "label": "Sent",
+      "default": "now",
+      "advanced": true
+    }
+  ],
+  "events": [
+    {
+      "name": "space",
+      "type": "ref",
+      "refTable": "spaces",
+      "label": "Space",
+      "required": true
+    },
+    {
+      "name": "title",
+      "type": "text",
+      "label": "What",
+      "required": true
+    },
+    {
+      "name": "date",
+      "type": "date",
+      "label": "When",
+      "required": true
+    },
+    {
+      "name": "place",
+      "type": "text",
+      "label": "Where"
+    },
+    {
+      "name": "by",
+      "type": "text",
+      "label": "Proposed by",
+      "default": "first:profile.name",
+      "advanced": true
+    }
+  ],
+  "members": [
+    {
+      "name": "space",
+      "type": "ref",
+      "refTable": "spaces",
+      "label": "Space",
+      "required": true
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": "Name",
+      "default": "first:profile.name"
+    },
+    {
+      "name": "emoji",
+      "type": "text",
+      "label": "Emoji",
+      "default": "first:profile.emoji"
+    }
+  ],
+  "listings": [
+    {
+      "name": "space",
+      "type": "ref",
+      "refTable": "spaces",
+      "label": "Post in",
+      "required": true
+    },
+    {
+      "name": "title",
+      "type": "text",
+      "label": "Space name",
+      "required": true
+    },
+    {
+      "name": "kind",
+      "type": "enum",
+      "label": "Kind",
+      "options": [
+        "event",
+        "group",
+        "team"
+      ]
+    },
+    {
+      "name": "blurb",
+      "type": "text",
+      "label": "What/where/when"
+    },
+    {
+      "name": "joinKey",
+      "type": "text",
+      "label": "Join key (include = anyone may join)"
+    },
+    {
+      "name": "by",
+      "type": "text",
+      "label": "Posted by",
+      "default": "first:profile.name",
+      "advanced": true
+    }
+  ]
+}

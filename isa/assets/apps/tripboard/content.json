@@ -1,0 +1,67 @@
+{
+  "entries": [
+    { "id": "trip_root", "kind": "trip", "title": "Korea trip — Aug–Oct",
+      "body": "Example trip — replace with your own, or edit this one.",
+      "updatedAt": "2026-07-20T09:00:00.000" },
+
+    { "id": "mem_ana", "kind": "member", "title": "Ana", "color": "teal", "emoji": "🌸",
+      "updatedAt": "2026-07-20T09:00:00.000" },
+    { "id": "mem_sam", "kind": "member", "title": "Sam", "color": "blue", "emoji": "🥾",
+      "updatedAt": "2026-07-20T09:00:00.000" },
+    { "id": "mem_you", "kind": "member", "title": "You", "color": "amber", "emoji": "✈️",
+      "updatedAt": "2026-07-20T09:00:00.000" },
+
+    { "id": "plan_1", "kind": "plan", "title": "Book Jeju flights (example)",
+      "weekLabel": "Week 1", "body": "", "author": "mem_sam",
+      "updatedAt": "2026-07-20T09:05:00.000" },
+    { "id": "plan_2", "kind": "plan", "title": "Look into a rail pass (example)",
+      "weekLabel": "Week 2", "body": "", "author": "mem_you",
+      "updatedAt": "2026-07-21T10:00:00.000" },
+
+    { "id": "event_1", "kind": "event", "title": "Seoul food tour (example)",
+      "date": "2026-08-15", "timeLabel": "18:00", "place": "Myeongdong",
+      "lat": 37.5636, "lon": 126.9834, "author": "mem_ana",
+      "updatedAt": "2026-07-20T09:10:00.000" },
+    { "id": "event_2", "kind": "event", "title": "Jeju hike (example)",
+      "date": "2026-09-10", "timeLabel": "09:00", "place": "Hallasan",
+      "lat": 33.3617, "lon": 126.5292, "author": "mem_sam",
+      "updatedAt": "2026-07-20T09:15:00.000" },
+
+    { "id": "todo_1", "kind": "todo", "title": "Get travel insurance (example)",
+      "status": "todo", "assignee": "mem_you", "author": "mem_you",
+      "updatedAt": "2026-07-20T09:20:00.000" },
+    { "id": "todo_2", "kind": "todo", "title": "Exchange currency (example)",
+      "status": "todo", "assignee": "mem_sam", "author": "mem_sam",
+      "updatedAt": "2026-07-20T09:25:00.000" },
+
+    { "id": "packing_1", "kind": "packing", "title": "Hiking boots (example)",
+      "status": "todo", "assignee": "mem_sam", "author": "mem_sam",
+      "updatedAt": "2026-07-20T09:30:00.000" },
+    { "id": "packing_2", "kind": "packing", "title": "Portable wifi (example)",
+      "status": "done", "assignee": "mem_ana", "author": "mem_ana",
+      "updatedAt": "2026-07-20T09:35:00.000" },
+
+    { "id": "note_1", "kind": "note", "title": "Visa check (example)",
+      "body": "Example note: check visa requirements.", "author": "mem_you",
+      "updatedAt": "2026-07-21T11:00:00.000" },
+    { "id": "note_2", "kind": "note", "title": "Meeting point (example)",
+      "body": "Example pinned note: meet here for the food tour.",
+      "lat": 37.5636, "lon": 126.9834, "author": "mem_ana",
+      "updatedAt": "2026-07-21T11:05:00.000" }
+  ],
+  "relations": [
+    { "id": "rel_1", "fromId": "trip_root", "toId": "mem_ana", "type": "contains" },
+    { "id": "rel_2", "fromId": "trip_root", "toId": "mem_sam", "type": "contains" },
+    { "id": "rel_3", "fromId": "trip_root", "toId": "mem_you", "type": "contains" },
+    { "id": "rel_4", "fromId": "trip_root", "toId": "plan_1", "type": "contains" },
+    { "id": "rel_5", "fromId": "trip_root", "toId": "plan_2", "type": "contains" },
+    { "id": "rel_6", "fromId": "trip_root", "toId": "event_1", "type": "contains" },
+    { "id": "rel_7", "fromId": "trip_root", "toId": "event_2", "type": "contains" },
+    { "id": "rel_8", "fromId": "trip_root", "toId": "todo_1", "type": "contains" },
+    { "id": "rel_9", "fromId": "trip_root", "toId": "todo_2", "type": "contains" },
+    { "id": "rel_10", "fromId": "trip_root", "toId": "packing_1", "type": "contains" },
+    { "id": "rel_11", "fromId": "trip_root", "toId": "packing_2", "type": "contains" },
+    { "id": "rel_12", "fromId": "trip_root", "toId": "note_1", "type": "contains" },
+    { "id": "rel_13", "fromId": "trip_root", "toId": "note_2", "type": "contains" }
+  ]
+}
