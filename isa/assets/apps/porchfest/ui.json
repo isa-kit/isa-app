@@ -1,0 +1,969 @@
+{
+  "app": {
+    "languages": [
+      "en",
+      "ko",
+      "zh",
+      "hi",
+      "es",
+      "fr",
+      "ar",
+      "pt",
+      "ru",
+      "de",
+      "ja",
+      "tr",
+      "vi",
+      "it",
+      "fa",
+      "pl",
+      "uk",
+      "nl",
+      "sv",
+      "cs",
+      "el"
+    ],
+    "translatable": true,
+    "appDataTools": true,
+    "intro": {
+      "tour": [
+        {
+          "screen": "map",
+          "label": "Map",
+          "note": "Porches on the map, lit up by who is playing at the time on the clock."
+        },
+        {
+          "screen": "schedule",
+          "label": "Schedule",
+          "note": "Every performance, listed by time."
+        },
+        {
+          "screen": "about",
+          "label": "About",
+          "note": "How the event and this map work."
+        }
+      ],
+      "guide": "about"
+    },
+    "title": {
+      "ar": "\u062e\u0631\u064a\u0637\u0629 \u0628\u0648\u0631\u0634\u0641\u0633\u062a",
+      "cs": "Mapa Porchfestu",
+      "de": "Porchfest-Karte",
+      "el": "\u03a7\u03ac\u03c1\u03c4\u03b7\u03c2 Porchfest",
+      "en": "Porchfest map",
+      "es": "Mapa de Porchfest",
+      "fa": "\u0646\u0642\u0634\u0647 \u067e\u0648\u0631\u0686\u200c\u0641\u0633\u062a",
+      "fr": "Carte du Porchfest",
+      "hi": "\u092a\u094b\u0930\u094d\u091a\u092b\u0947\u0938\u094d\u091f \u092e\u093e\u0928\u091a\u093f\u0924\u094d\u0930",
+      "it": "Mappa del Porchfest",
+      "ja": "\u30dd\u30fc\u30c1\u30d5\u30a7\u30b9\u30c8 \u30de\u30c3\u30d7",
+      "ko": "\ud3ec\uce58\ud398\uc2a4\ud2b8 \uc9c0\ub3c4",
+      "nl": "Porchfest-kaart",
+      "pl": "Mapa Porchfest",
+      "pt": "Mapa do Porchfest",
+      "ru": "\u041a\u0430\u0440\u0442\u0430 Porchfest",
+      "sv": "Porchfest-karta",
+      "tr": "Porchfest haritas\u0131",
+      "uk": "\u041a\u0430\u0440\u0442\u0430 Porchfest",
+      "vi": "B\u1ea3n \u0111\u1ed3 Porchfest",
+      "zh": "Porchfest \u5730\u56fe"
+    },
+    "primaryColor": "#3F7DD9",
+    "theme": "contrast"
+  },
+  "nav": [
+    {
+      "id": "map",
+      "label": {
+        "ar": "\u0627\u0644\u062e\u0631\u064a\u0637\u0629",
+        "cs": "Mapa",
+        "de": "Karte",
+        "el": "\u03a7\u03ac\u03c1\u03c4\u03b7\u03c2",
+        "en": "Map",
+        "es": "Mapa",
+        "fa": "\u0646\u0642\u0634\u0647",
+        "fr": "Carte",
+        "hi": "\u092e\u093e\u0928\u091a\u093f\u0924\u094d\u0930",
+        "it": "Mappa",
+        "ja": "\u30de\u30c3\u30d7",
+        "ko": "\uc9c0\ub3c4",
+        "nl": "Kaart",
+        "pl": "Mapa",
+        "pt": "Mapa",
+        "ru": "\u041a\u0430\u0440\u0442\u0430",
+        "sv": "Karta",
+        "tr": "Harita",
+        "uk": "\u041a\u0430\u0440\u0442\u0430",
+        "vi": "B\u1ea3n \u0111\u1ed3",
+        "zh": "\u5730\u56fe"
+      },
+      "icon": "map",
+      "screen": "map"
+    },
+    {
+      "id": "schedule",
+      "label": {
+        "ar": "\u0627\u0644\u062c\u062f\u0648\u0644",
+        "cs": "Program",
+        "de": "Zeitplan",
+        "el": "\u03a0\u03c1\u03cc\u03b3\u03c1\u03b1\u03bc\u03bc\u03b1",
+        "en": "Schedule",
+        "es": "Horario",
+        "fa": "\u0628\u0631\u0646\u0627\u0645\u0647 \u0632\u0645\u0627\u0646\u06cc",
+        "fr": "Programme",
+        "hi": "\u0905\u0928\u0941\u0938\u0942\u091a\u0940",
+        "it": "Programma",
+        "ja": "\u30b9\u30b1\u30b8\u30e5\u30fc\u30eb",
+        "ko": "\uc77c\uc815",
+        "nl": "Schema",
+        "pl": "Harmonogram",
+        "pt": "Programa\u00e7\u00e3o",
+        "ru": "\u0420\u0430\u0441\u043f\u0438\u0441\u0430\u043d\u0438\u0435",
+        "sv": "Schema",
+        "tr": "Program",
+        "uk": "\u0420\u043e\u0437\u043a\u043b\u0430\u0434",
+        "vi": "L\u1ecbch tr\u00ecnh",
+        "zh": "\u65e5\u7a0b"
+      },
+      "icon": "event_note",
+      "screen": "schedule"
+    },
+    {
+      "id": "about",
+      "label": {
+        "ar": "\u062d\u0648\u0644",
+        "cs": "O aplikaci",
+        "de": "Info",
+        "el": "\u03a3\u03c7\u03b5\u03c4\u03b9\u03ba\u03ac",
+        "en": "About",
+        "es": "Acerca de",
+        "fa": "\u062f\u0631\u0628\u0627\u0631\u0647",
+        "fr": "\u00c0 propos",
+        "hi": "\u091c\u093e\u0928\u0915\u093e\u0930\u0940",
+        "it": "Info",
+        "ja": "\u30a2\u30d7\u30ea\u306b\u3064\u3044\u3066",
+        "ko": "\uc815\ubcf4",
+        "nl": "Over",
+        "pl": "Informacje",
+        "pt": "Sobre",
+        "ru": "\u041e \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0438",
+        "sv": "Om",
+        "tr": "Hakk\u0131nda",
+        "uk": "\u041f\u0440\u043e \u0437\u0430\u0441\u0442\u043e\u0441\u0443\u043d\u043e\u043a",
+        "vi": "Gi\u1edbi thi\u1ec7u",
+        "zh": "\u5173\u4e8e"
+      },
+      "icon": "menu_book",
+      "screen": "about"
+    }
+  ],
+  "screens": {
+    "map": {
+      "title": {
+        "ar": "\u062e\u0631\u064a\u0637\u0629 \u0628\u0648\u0631\u0634\u0641\u0633\u062a",
+        "cs": "Mapa Porchfestu",
+        "de": "Porchfest-Karte",
+        "el": "\u03a7\u03ac\u03c1\u03c4\u03b7\u03c2 Porchfest",
+        "en": "Porchfest map",
+        "es": "Mapa de Porchfest",
+        "fa": "\u0646\u0642\u0634\u0647 \u067e\u0648\u0631\u0686\u200c\u0641\u0633\u062a",
+        "fr": "Carte du Porchfest",
+        "hi": "\u092a\u094b\u0930\u094d\u091a\u092b\u0947\u0938\u094d\u091f \u092e\u093e\u0928\u091a\u093f\u0924\u094d\u0930",
+        "it": "Mappa del Porchfest",
+        "ja": "\u30dd\u30fc\u30c1\u30d5\u30a7\u30b9\u30c8 \u30de\u30c3\u30d7",
+        "ko": "\ud3ec\uce58\ud398\uc2a4\ud2b8 \uc9c0\ub3c4",
+        "nl": "Porchfest-kaart",
+        "pl": "Mapa Porchfest",
+        "pt": "Mapa do Porchfest",
+        "ru": "\u041a\u0430\u0440\u0442\u0430 Porchfest",
+        "sv": "Porchfest-karta",
+        "tr": "Porchfest haritas\u0131",
+        "uk": "\u041a\u0430\u0440\u0442\u0430 Porchfest",
+        "vi": "B\u1ea3n \u0111\u1ed3 Porchfest",
+        "zh": "Porchfest \u5730\u56fe"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "ar": "\u062a\u064f\u0638\u0647\u0631 \u0627\u0644\u062f\u0628\u0627\u0628\u064a\u0633 \u0645\u0646 \u064a\u0639\u0632\u0641 \u0641\u064a \u0627\u0644\u0648\u0642\u062a \u0627\u0644\u0645\u0639\u0631\u0648\u0636 \u0639\u0644\u0649 \u0627\u0644\u0633\u0627\u0639\u0629 \u2014 \u0627\u0644\u0623\u062d\u0645\u0631 \u064a\u0639\u0632\u0641 \u0627\u0644\u0622\u0646\u060c \u0648\u0627\u0644\u0623\u0632\u0631\u0642 \u0644\u0645 \u064a\u0628\u062f\u0623 \u0628\u0639\u062f\u060c \u0648\u0627\u0644\u0631\u0645\u0627\u062f\u064a \u0627\u0646\u062a\u0647\u0649. \u0627\u0636\u063a\u0637 \u25b6 \u0644\u062a\u0645\u0631\u064a\u0631 \u0627\u0644\u0648\u0642\u062a \u0639\u0628\u0631 \u0627\u0644\u0645\u0647\u0631\u062c\u0627\u0646\u060c \u0623\u0648 \u0627\u0646\u0642\u0631 \u0648\u0627\u0633\u062d\u0628 \u0639\u0644\u0649 \u0634\u0631\u064a\u0637 \u0627\u0644\u064a\u0648\u0645/\u0627\u0644\u0648\u0642\u062a \u0644\u062a\u0636\u064a\u064a\u0642 \u0627\u0644\u0646\u0637\u0627\u0642.",
+              "cs": "\u0160pendl\u00edky ukazuj\u00ed, kdo hraje v \u010dase nastaven\u00e9m na hodin\u00e1ch \u2014 \u010derven\u00e1 hraje pr\u00e1v\u011b te\u010f, modr\u00e1 teprve za\u010dne, \u0161ed\u00e1 u\u017e skon\u010dila. Stiskn\u011bte \u25b6 a \u010das projde cel\u00fdm festivalem, nebo klepn\u011bte a t\u00e1hn\u011bte po pruhu dne a \u010dasu.",
+              "de": "Die Nadeln zeigen, wer zur Uhrzeit der Uhr spielt \u2014 Rot spielt jetzt, Blau kommt noch, Grau ist vorbei. Dr\u00fccke \u25b6, um durch das Festival zu laufen, oder tippe und ziehe \u00fcber den Tag-/Zeitstreifen, um einzugrenzen.",
+              "el": "\u039f\u03b9 \u03c0\u03b9\u03bd\u03ad\u03b6\u03b5\u03c2 \u03b4\u03b5\u03af\u03c7\u03bd\u03bf\u03c5\u03bd \u03c0\u03bf\u03b9\u03bf\u03c2 \u03c0\u03b1\u03af\u03b6\u03b5\u03b9 \u03c4\u03b7\u03bd \u03ce\u03c1\u03b1 \u03c4\u03bf\u03c5 \u03c1\u03bf\u03bb\u03bf\u03b3\u03b9\u03bf\u03cd \u2014 \u03ba\u03cc\u03ba\u03ba\u03b9\u03bd\u03bf \u03c0\u03b1\u03af\u03b6\u03b5\u03b9 \u03c4\u03ce\u03c1\u03b1, \u03bc\u03c0\u03bb\u03b5 \u03b4\u03b5\u03bd \u03be\u03b5\u03ba\u03af\u03bd\u03b7\u03c3\u03b5 \u03b1\u03ba\u03cc\u03bc\u03b7, \u03b3\u03ba\u03c1\u03b9 \u03c4\u03b5\u03bb\u03b5\u03af\u03c9\u03c3\u03b5. \u03a0\u03b1\u03c4\u03ae\u03c3\u03c4\u03b5 \u25b6 \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03c5\u03bb\u03ae\u03c3\u03b5\u03b9 \u03bf \u03c7\u03c1\u03cc\u03bd\u03bf\u03c2 \u03c3\u03b5 \u03cc\u03bb\u03bf \u03c4\u03bf \u03c6\u03b5\u03c3\u03c4\u03b9\u03b2\u03ac\u03bb \u03ae \u03b1\u03b3\u03b3\u03af\u03be\u03c4\u03b5 \u03ba\u03b1\u03b9 \u03c3\u03cd\u03c1\u03b5\u03c4\u03b5 \u03c4\u03b7 \u03bb\u03c9\u03c1\u03af\u03b4\u03b1 \u03b7\u03bc\u03ad\u03c1\u03b1\u03c2/\u03ce\u03c1\u03b1\u03c2.",
+              "en": "Pins show who is playing at the time on the clock \u2014 red is on now, blue is still to come, grey has finished. Press \u25b6 to roll through the festival, or tap and drag across the day/time strip to narrow it down.",
+              "es": "Las chinchetas muestran qui\u00e9n toca a la hora del reloj: rojo est\u00e1 sonando ahora, azul a\u00fan est\u00e1 por llegar y gris ya ha terminado. Pulsa \u25b6 para avanzar por el festival, o toca y arrastra sobre la franja de d\u00eda y hora para acotar.",
+              "fa": "\u0633\u0646\u062c\u0627\u0642\u200c\u0647\u0627 \u0646\u0634\u0627\u0646 \u0645\u06cc\u200c\u062f\u0647\u0646\u062f \u0686\u0647 \u06a9\u0633\u06cc \u062f\u0631 \u0632\u0645\u0627\u0646 \u0646\u0645\u0627\u06cc\u0634\u200c\u062f\u0627\u062f\u0647\u200c\u0634\u062f\u0647 \u0631\u0648\u06cc \u0633\u0627\u0639\u062a \u0627\u062c\u0631\u0627 \u0645\u06cc\u200c\u06a9\u0646\u062f \u2014 \u0642\u0631\u0645\u0632 \u06cc\u0639\u0646\u06cc \u0647\u0645\u200c\u0627\u06a9\u0646\u0648\u0646\u060c \u0622\u0628\u06cc \u06cc\u0639\u0646\u06cc \u0647\u0646\u0648\u0632 \u0634\u0631\u0648\u0639 \u0646\u0634\u062f\u0647 \u0648 \u062e\u0627\u06a9\u0633\u062a\u0631\u06cc \u06cc\u0639\u0646\u06cc \u062a\u0645\u0627\u0645 \u0634\u062f\u0647 \u0627\u0633\u062a. \u25b6 \u0631\u0627 \u0628\u0632\u0646\u06cc\u062f \u062a\u0627 \u0632\u0645\u0627\u0646 \u062f\u0631 \u0633\u0631\u0627\u0633\u0631 \u062c\u0634\u0646\u0648\u0627\u0631\u0647 \u062c\u0644\u0648 \u0628\u0631\u0648\u062f\u060c \u06cc\u0627 \u0646\u0648\u0627\u0631 \u0631\u0648\u0632/\u0633\u0627\u0639\u062a \u0631\u0627 \u0644\u0645\u0633 \u0648 \u0628\u06a9\u0634\u06cc\u062f.",
+              "fr": "Les \u00e9pingles montrent qui joue \u00e0 l'heure affich\u00e9e sur l'horloge : rouge = en cours, bleu = \u00e0 venir, gris = termin\u00e9. Appuyez sur \u25b6 pour faire d\u00e9filer le festival, ou touchez et faites glisser la bande jour/heure pour affiner.",
+              "hi": "\u092a\u093f\u0928 \u0926\u093f\u0916\u093e\u0924\u0947 \u0939\u0948\u0902 \u0915\u093f \u0918\u0921\u093c\u0940 \u0915\u0947 \u0938\u092e\u092f \u092a\u0930 \u0915\u094c\u0928 \u092c\u091c\u093e \u0930\u0939\u093e \u0939\u0948 \u2014 \u0932\u093e\u0932 \u0915\u093e \u092e\u0924\u0932\u092c \u0905\u092d\u0940 \u091a\u0932 \u0930\u0939\u093e \u0939\u0948, \u0928\u0940\u0932\u093e \u0905\u092d\u0940 \u0906\u0928\u093e \u092c\u093e\u0915\u0940 \u0939\u0948, \u0914\u0930 \u0938\u094d\u0932\u0947\u091f\u0940 \u0938\u092e\u093e\u092a\u094d\u0924 \u0939\u094b \u091a\u0941\u0915\u093e \u0939\u0948\u0964 \u092a\u0942\u0930\u0947 \u0909\u0924\u094d\u0938\u0935 \u092e\u0947\u0902 \u0938\u092e\u092f \u0906\u0917\u0947 \u092c\u0922\u093c\u093e\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f \u25b6 \u0926\u092c\u093e\u090f\u0901, \u092f\u093e \u0926\u093f\u0928/\u0938\u092e\u092f \u092a\u091f\u094d\u091f\u0940 \u092a\u0930 \u091f\u0948\u092a \u0915\u0930\u0915\u0947 \u0916\u0940\u0902\u091a\u0947\u0902\u0964",
+              "it": "I segnaposto mostrano chi suona all'ora indicata dall'orologio: rosso sta suonando ora, blu deve ancora iniziare, grigio ha finito. Premi \u25b6 per scorrere il festival, oppure tocca e trascina sulla striscia giorno/ora per restringere.",
+              "ja": "\u30d4\u30f3\u306f\u6642\u8a08\u306e\u6642\u523b\u306b\u6f14\u594f\u3057\u3066\u3044\u308b\u51fa\u6f14\u8005\u3092\u793a\u3057\u307e\u3059\u3002\u8d64\u306f\u4eca\u6f14\u594f\u4e2d\u3001\u9752\u306f\u3053\u308c\u304b\u3089\u3001\u30b0\u30ec\u30fc\u306f\u7d42\u4e86\u3067\u3059\u3002\u25b6 \u3092\u62bc\u3059\u3068\u30d5\u30a7\u30b9\u5168\u4f53\u306e\u6642\u9593\u304c\u9032\u307f\u307e\u3059\u3002\u65e5\u4ed8\u30fb\u6642\u9593\u30d0\u30fc\u3092\u30bf\u30c3\u30d7\u307e\u305f\u306f\u30c9\u30e9\u30c3\u30b0\u3059\u308b\u3068\u7d5e\u308a\u8fbc\u3081\u307e\u3059\u3002",
+              "ko": "\ud540\uc740 \uc2dc\uacc4\uc5d0 \ud45c\uc2dc\ub41c \uc2dc\uac01\uc5d0 \uc5f0\uc8fc \uc911\uc778 \uacf5\uc5f0\uc744 \ubcf4\uc5ec\uc90d\ub2c8\ub2e4 \u2014 \ube68\uac15\uc740 \uc9c0\uae08 \uacf5\uc5f0 \uc911, \ud30c\ub791\uc740 \uc544\uc9c1 \uc2dc\uc791 \uc804, \ud68c\uc0c9\uc740 \uc774\ubbf8 \ub05d\ub09c \uacf5\uc5f0\uc785\ub2c8\ub2e4. \u25b6\ub97c \ub204\ub974\uba74 \ucd95\uc81c \uc2dc\uac04\uc774 \ud758\ub7ec\uac00\uace0, \ub0a0\uc9dc\u00b7\uc2dc\uac04 \ub9c9\ub300\ub97c \ub204\ub974\uac70\ub098 \ub4dc\ub798\uadf8\ud574 \ubc94\uc704\ub97c \uc881\ud790 \uc218 \uc788\uc2b5\ub2c8\ub2e4.",
+              "nl": "De spelden tonen wie er speelt op de tijd van de klok \u2014 rood speelt nu, blauw moet nog beginnen, grijs is klaar. Druk op \u25b6 om door het festival te lopen, of tik en sleep over de dag-/tijdbalk om te filteren.",
+              "pl": "Pinezki pokazuj\u0105, kto gra o godzinie ustawionej na zegarze \u2014 czerwony gra teraz, niebieski dopiero zagra, szary ju\u017c sko\u0144czy\u0142. Naci\u015bnij \u25b6, aby przewin\u0105\u0107 festiwal, albo dotknij i przeci\u0105gnij pasek dnia/godziny, by zaw\u0119zi\u0107 wyb\u00f3r.",
+              "pt": "Os alfinetes mostram quem est\u00e1 a tocar \u00e0 hora do rel\u00f3gio \u2014 vermelho est\u00e1 a tocar agora, azul ainda vai come\u00e7ar e cinzento j\u00e1 terminou. Prima \u25b6 para percorrer o festival, ou toque e arraste na faixa de dia/hora para filtrar.",
+              "ru": "\u041c\u0435\u0442\u043a\u0438 \u043f\u043e\u043a\u0430\u0437\u044b\u0432\u0430\u044e\u0442, \u043a\u0442\u043e \u0438\u0433\u0440\u0430\u0435\u0442 \u0432\u043e \u0432\u0440\u0435\u043c\u044f, \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u043d\u043e\u0435 \u043d\u0430 \u0447\u0430\u0441\u0430\u0445: \u043a\u0440\u0430\u0441\u043d\u044b\u0439 \u2014 \u0438\u0433\u0440\u0430\u0435\u0442 \u0441\u0435\u0439\u0447\u0430\u0441, \u0441\u0438\u043d\u0438\u0439 \u2014 \u0435\u0449\u0451 \u0432\u043f\u0435\u0440\u0435\u0434\u0438, \u0441\u0435\u0440\u044b\u0439 \u2014 \u0443\u0436\u0435 \u0437\u0430\u043a\u043e\u043d\u0447\u0438\u043b. \u041d\u0430\u0436\u043c\u0438\u0442\u0435 \u25b6, \u0447\u0442\u043e\u0431\u044b \u043f\u0440\u043e\u043a\u0440\u0443\u0442\u0438\u0442\u044c \u0444\u0435\u0441\u0442\u0438\u0432\u0430\u043b\u044c, \u0438\u043b\u0438 \u043a\u043e\u0441\u043d\u0438\u0442\u0435\u0441\u044c \u0438 \u043f\u0440\u043e\u0432\u0435\u0434\u0438\u0442\u0435 \u043f\u043e \u043f\u043e\u043b\u043e\u0441\u0435 \u0434\u043d\u044f \u0438 \u0432\u0440\u0435\u043c\u0435\u043d\u0438, \u0447\u0442\u043e\u0431\u044b \u0441\u0443\u0437\u0438\u0442\u044c \u0432\u044b\u0431\u043e\u0440.",
+              "sv": "N\u00e5larna visar vem som spelar vid klockans tid \u2014 r\u00f6tt spelar nu, bl\u00e5tt har inte b\u00f6rjat, gr\u00e5tt \u00e4r klart. Tryck p\u00e5 \u25b6 f\u00f6r att rulla genom festivalen, eller tryck och dra \u00f6ver dag-/tidsraden f\u00f6r att avgr\u00e4nsa.",
+              "tr": "\u0130\u015faretler saatteki saatte kimin \u00e7ald\u0131\u011f\u0131n\u0131 g\u00f6sterir \u2014 k\u0131rm\u0131z\u0131 \u015fu anda \u00e7al\u0131yor, mavi hen\u00fcz ba\u015flamad\u0131, gri bitti. Festival boyunca ilerlemek i\u00e7in \u25b6 tu\u015funa bas\u0131n veya g\u00fcn/saat \u015feridine dokunup s\u00fcr\u00fckleyerek daralt\u0131n.",
+              "uk": "\u041f\u043e\u0437\u043d\u0430\u0447\u043a\u0438 \u043f\u043e\u043a\u0430\u0437\u0443\u044e\u0442\u044c, \u0445\u0442\u043e \u0433\u0440\u0430\u0454 \u043e \u0447\u0430\u0441\u0456 \u043d\u0430 \u0433\u043e\u0434\u0438\u043d\u043d\u0438\u043a\u0443 \u2014 \u0447\u0435\u0440\u0432\u043e\u043d\u0438\u0439 \u0433\u0440\u0430\u0454 \u0437\u0430\u0440\u0430\u0437, \u0441\u0438\u043d\u0456\u0439 \u0449\u0435 \u043f\u043e\u043f\u0435\u0440\u0435\u0434\u0443, \u0441\u0456\u0440\u0438\u0439 \u0443\u0436\u0435 \u0437\u0430\u0432\u0435\u0440\u0448\u0438\u0432. \u041d\u0430\u0442\u0438\u0441\u043d\u0456\u0442\u044c \u25b6, \u0449\u043e\u0431 \u043f\u0440\u043e\u043a\u0440\u0443\u0442\u0438\u0442\u0438 \u0444\u0435\u0441\u0442\u0438\u0432\u0430\u043b\u044c, \u0430\u0431\u043e \u0442\u043e\u0440\u043a\u043d\u0456\u0442\u044c\u0441\u044f \u0439 \u043f\u0440\u043e\u0432\u0435\u0434\u0456\u0442\u044c \u043f\u043e \u0441\u043c\u0443\u0437\u0456 \u0434\u043d\u044f \u0442\u0430 \u0447\u0430\u0441\u0443, \u0449\u043e\u0431 \u0437\u0432\u0443\u0437\u0438\u0442\u0438 \u0432\u0438\u0431\u0456\u0440.",
+              "vi": "C\u00e1c ghim cho bi\u1ebft ai \u0111ang bi\u1ec3u di\u1ec5n v\u00e0o th\u1eddi \u0111i\u1ec3m tr\u00ean \u0111\u1ed3ng h\u1ed3 \u2014 \u0111\u1ecf l\u00e0 \u0111ang di\u1ec5n, xanh l\u00e0 s\u1eafp t\u1edbi, x\u00e1m l\u00e0 \u0111\u00e3 xong. Nh\u1ea5n \u25b6 \u0111\u1ec3 ch\u1ea1y qua c\u1ea3 l\u1ec5 h\u1ed9i, ho\u1eb7c ch\u1ea1m v\u00e0 k\u00e9o tr\u00ean d\u1ea3i ng\u00e0y/gi\u1edd \u0111\u1ec3 thu h\u1eb9p.",
+              "zh": "\u56fe\u9489\u663e\u793a\u5728\u65f6\u949f\u6240\u793a\u65f6\u523b\u6b63\u5728\u6f14\u51fa\u7684\u4e50\u961f\u2014\u2014\u7ea2\u8272\u8868\u793a\u6b63\u5728\u6f14\u51fa\uff0c\u84dd\u8272\u8868\u793a\u5c1a\u672a\u5f00\u59cb\uff0c\u7070\u8272\u8868\u793a\u5df2\u7ecf\u7ed3\u675f\u3002\u6309 \u25b6 \u53ef\u8ba9\u65f6\u95f4\u5728\u6574\u4e2a\u97f3\u4e50\u8282\u4e2d\u63a8\u8fdb\uff0c\u6216\u70b9\u6309\u5e76\u62d6\u52a8\u65e5\u671f/\u65f6\u95f4\u6761\u6765\u7f29\u5c0f\u8303\u56f4\u3002"
+            }
+          },
+          {
+            "type": "datacontrols",
+            "table": "events",
+            "dock": "auto",
+            "children": [
+              {
+                "type": "datanow",
+                "table": "events",
+                "startColumn": "startAbs",
+                "endColumn": "endAbs",
+                "statusColumn": "liveStatus",
+                "label": "Clock",
+                "format": "dayTime",
+                "dayLabels": [
+                  "Sat",
+                  "Sun"
+                ],
+                "baseDate": "2026-07-11",
+                "liveLabel": "Live",
+                "upcomingLabel": "Upcoming",
+                "finishedLabel": "Finished",
+                "play": true,
+                "playIntervalMs": 220,
+                "playStepMinutes": 5
+              },
+              {
+                "type": "databars",
+                "table": "events",
+                "column": "slot",
+                "sectionColumn": "day",
+                "colors": {
+                  "Sat 12 PM": "blue",
+                  "Sat 1 PM": "blue",
+                  "Sat 2 PM": "green",
+                  "Sat 3 PM": "green",
+                  "Sat 4 PM": "amber",
+                  "Sat 5 PM": "amber",
+                  "Sun 12 PM": "blue",
+                  "Sun 1 PM": "blue",
+                  "Sun 2 PM": "green",
+                  "Sun 3 PM": "green",
+                  "Sun 4 PM": "amber",
+                  "Sun 5 PM": "amber"
+                },
+                "play": true
+              },
+              {
+                "type": "datasegment",
+                "table": "events",
+                "column": "genreTag",
+                "label": "Genre",
+                "max": 12
+              }
+            ],
+            "body": {
+              "type": "column",
+              "children": [
+                {
+                  "type": "pick",
+                  "table": "viewPrefs",
+                  "rowId": "v1",
+                  "column": "view",
+                  "variant": "segmented",
+                  "options": [
+                    {
+                      "value": "map",
+                      "label": "Map"
+                    },
+                    {
+                      "value": "table",
+                      "label": "Table"
+                    }
+                  ]
+                },
+                {
+                  "type": "switch",
+                  "table": "viewPrefs",
+                  "rowId": "v1",
+                  "column": "view",
+                  "cases": {
+                    "map": {
+                      "type": "column",
+                      "children": [
+                        {
+                          "type": "map",
+                          "table": "events",
+                          "latColumn": "lat",
+                          "lonColumn": "lon",
+                          "labelColumn": "artist",
+                          "colorColumn": "liveStatus",
+                          "colors": {
+                            "Live": "red",
+                            "Upcoming": "blue",
+                            "Finished": "gray"
+                          },
+                          "configSource": "board",
+                          "cluster": true,
+                          "markerPulse": true,
+                          "userLocation": true,
+                          "zoom": 15,
+                          "height": "520",
+                          "action": {
+                            "fn": "openLink"
+                          },
+                          "listSubtitleColumn": "start",
+                          "listTagColumn": "liveStatus",
+                          "detailPopup": true,
+                          "detailFields": [
+                            "liveStatus",
+                            "start",
+                            "end",
+                            "genreTag"
+                          ],
+                          "linkColumn": "url"
+                        },
+                        {
+                          "type": "row",
+                          "wrap": true,
+                          "spacing": 16,
+                          "children": [
+                            {
+                              "type": "row",
+                              "spacing": 4,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "\u25cf",
+                                  "color": "red"
+                                },
+                                {
+                                  "type": "text",
+                                  "value": {
+                                    "ar": "\u064a\u0639\u0632\u0641 \u0627\u0644\u0622\u0646",
+                                    "cs": "Hraje te\u010f",
+                                    "de": "Jetzt live",
+                                    "el": "\u0396\u03c9\u03bd\u03c4\u03b1\u03bd\u03ac \u03c4\u03ce\u03c1\u03b1",
+                                    "en": "Live now",
+                                    "es": "En directo ahora",
+                                    "fa": "\u0647\u0645\u200c\u0627\u06a9\u0646\u0648\u0646 \u0632\u0646\u062f\u0647",
+                                    "fr": "En direct",
+                                    "hi": "\u0905\u092d\u0940 \u0932\u093e\u0907\u0935",
+                                    "it": "Dal vivo ora",
+                                    "ja": "\u6f14\u594f\u4e2d",
+                                    "ko": "\uc9c0\uae08 \uacf5\uc5f0 \uc911",
+                                    "nl": "Nu live",
+                                    "pl": "Gra teraz",
+                                    "pt": "Ao vivo agora",
+                                    "ru": "\u0418\u0433\u0440\u0430\u0435\u0442 \u0441\u0435\u0439\u0447\u0430\u0441",
+                                    "sv": "Spelar nu",
+                                    "tr": "\u015eu anda canl\u0131",
+                                    "uk": "\u0413\u0440\u0430\u0454 \u0437\u0430\u0440\u0430\u0437",
+                                    "vi": "\u0110ang di\u1ec5n",
+                                    "zh": "\u6b63\u5728\u6f14\u51fa"
+                                  },
+                                  "style": "caption"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "row",
+                              "spacing": 4,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "\u25cf",
+                                  "color": "blue"
+                                },
+                                {
+                                  "type": "text",
+                                  "value": {
+                                    "ar": "\u0642\u0627\u062f\u0645",
+                                    "cs": "Chyst\u00e1 se",
+                                    "de": "Kommt noch",
+                                    "el": "\u03a0\u03c1\u03bf\u03c3\u03b5\u03c7\u03ce\u03c2",
+                                    "en": "Upcoming",
+                                    "es": "Pr\u00f3ximo",
+                                    "fa": "\u067e\u06cc\u0634\u200c\u0631\u0648",
+                                    "fr": "\u00c0 venir",
+                                    "hi": "\u0906\u0917\u093e\u092e\u0940",
+                                    "it": "In arrivo",
+                                    "ja": "\u3053\u308c\u304b\u3089",
+                                    "ko": "\uc608\uc815",
+                                    "nl": "Komt nog",
+                                    "pl": "Wkr\u00f3tce",
+                                    "pt": "Em breve",
+                                    "ru": "\u0421\u043a\u043e\u0440\u043e",
+                                    "sv": "Kommande",
+                                    "tr": "Yakla\u015fan",
+                                    "uk": "\u041d\u0435\u0437\u0430\u0431\u0430\u0440\u043e\u043c",
+                                    "vi": "S\u1eafp t\u1edbi",
+                                    "zh": "\u5373\u5c06\u5f00\u59cb"
+                                  },
+                                  "style": "caption"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "row",
+                              "spacing": 4,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "\u25cf",
+                                  "color": "gray"
+                                },
+                                {
+                                  "type": "text",
+                                  "value": {
+                                    "ar": "\u0627\u0646\u062a\u0647\u0649",
+                                    "cs": "Skon\u010dilo",
+                                    "de": "Vorbei",
+                                    "el": "\u03a4\u03b5\u03bb\u03b5\u03af\u03c9\u03c3\u03b5",
+                                    "en": "Finished",
+                                    "es": "Finalizado",
+                                    "fa": "\u067e\u0627\u06cc\u0627\u0646\u200c\u06cc\u0627\u0641\u062a\u0647",
+                                    "fr": "Termin\u00e9",
+                                    "hi": "\u0938\u092e\u093e\u092a\u094d\u0924",
+                                    "it": "Concluso",
+                                    "ja": "\u7d42\u4e86",
+                                    "ko": "\uc885\ub8cc",
+                                    "nl": "Afgelopen",
+                                    "pl": "Zako\u0144czone",
+                                    "pt": "Terminado",
+                                    "ru": "\u0417\u0430\u0432\u0435\u0440\u0448\u0435\u043d\u043e",
+                                    "sv": "Avslutat",
+                                    "tr": "Bitti",
+                                    "uk": "\u0417\u0430\u0432\u0435\u0440\u0448\u0435\u043d\u043e",
+                                    "vi": "\u0110\u00e3 xong",
+                                    "zh": "\u5df2\u7ed3\u675f"
+                                  },
+                                  "style": "caption"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "table": {
+                      "type": "cards",
+                      "table": "events",
+                      "title": "artist",
+                      "subtitle": "address",
+                      "groupBy": "slot",
+                      "tags": [
+                        {
+                          "column": "liveStatus"
+                        },
+                        {
+                          "column": "start"
+                        },
+                        {
+                          "column": "genreTag"
+                        }
+                      ],
+                      "configSource": "board",
+                      "search": true,
+                      "typeToSearch": true,
+                      "filterable": true,
+                      "filterableColumns": [
+                        "artist",
+                        "day",
+                        "start",
+                        "end",
+                        "hour",
+                        "genreTag",
+                        "address",
+                        "slot",
+                        "liveStatus"
+                      ],
+                      "collapsible": true,
+                      "sortBy": "startMin",
+                      "height": 520,
+                      "action": {
+                        "fn": "editRow"
+                      }
+                    }
+                  },
+                  "default": {
+                    "type": "column",
+                    "children": [
+                      {
+                        "type": "map",
+                        "table": "events",
+                        "latColumn": "lat",
+                        "lonColumn": "lon",
+                        "labelColumn": "artist",
+                        "colorColumn": "liveStatus",
+                        "colors": {
+                          "Live": "red",
+                          "Upcoming": "blue",
+                          "Finished": "gray"
+                        },
+                        "configSource": "board",
+                        "cluster": true,
+                        "markerPulse": true,
+                        "userLocation": true,
+                        "zoom": 15,
+                        "height": "520",
+                        "action": {
+                          "fn": "openLink"
+                        },
+                        "listSubtitleColumn": "start",
+                        "listTagColumn": "liveStatus",
+                        "detailPopup": true,
+                        "detailFields": [
+                          "liveStatus",
+                          "start",
+                          "end",
+                          "genreTag"
+                        ],
+                        "linkColumn": "url"
+                      },
+                      {
+                        "type": "row",
+                        "wrap": true,
+                        "spacing": 16,
+                        "children": [
+                          {
+                            "type": "row",
+                            "spacing": 4,
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "\u25cf",
+                                "color": "red"
+                              },
+                              {
+                                "type": "text",
+                                "value": {
+                                  "ar": "\u064a\u0639\u0632\u0641 \u0627\u0644\u0622\u0646",
+                                  "cs": "Hraje te\u010f",
+                                  "de": "Jetzt live",
+                                  "el": "\u0396\u03c9\u03bd\u03c4\u03b1\u03bd\u03ac \u03c4\u03ce\u03c1\u03b1",
+                                  "en": "Live now",
+                                  "es": "En directo ahora",
+                                  "fa": "\u0647\u0645\u200c\u0627\u06a9\u0646\u0648\u0646 \u0632\u0646\u062f\u0647",
+                                  "fr": "En direct",
+                                  "hi": "\u0905\u092d\u0940 \u0932\u093e\u0907\u0935",
+                                  "it": "Dal vivo ora",
+                                  "ja": "\u6f14\u594f\u4e2d",
+                                  "ko": "\uc9c0\uae08 \uacf5\uc5f0 \uc911",
+                                  "nl": "Nu live",
+                                  "pl": "Gra teraz",
+                                  "pt": "Ao vivo agora",
+                                  "ru": "\u0418\u0433\u0440\u0430\u0435\u0442 \u0441\u0435\u0439\u0447\u0430\u0441",
+                                  "sv": "Spelar nu",
+                                  "tr": "\u015eu anda canl\u0131",
+                                  "uk": "\u0413\u0440\u0430\u0454 \u0437\u0430\u0440\u0430\u0437",
+                                  "vi": "\u0110ang di\u1ec5n",
+                                  "zh": "\u6b63\u5728\u6f14\u51fa"
+                                },
+                                "style": "caption"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "row",
+                            "spacing": 4,
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "\u25cf",
+                                "color": "blue"
+                              },
+                              {
+                                "type": "text",
+                                "value": {
+                                  "ar": "\u0642\u0627\u062f\u0645",
+                                  "cs": "Chyst\u00e1 se",
+                                  "de": "Kommt noch",
+                                  "el": "\u03a0\u03c1\u03bf\u03c3\u03b5\u03c7\u03ce\u03c2",
+                                  "en": "Upcoming",
+                                  "es": "Pr\u00f3ximo",
+                                  "fa": "\u067e\u06cc\u0634\u200c\u0631\u0648",
+                                  "fr": "\u00c0 venir",
+                                  "hi": "\u0906\u0917\u093e\u092e\u0940",
+                                  "it": "In arrivo",
+                                  "ja": "\u3053\u308c\u304b\u3089",
+                                  "ko": "\uc608\uc815",
+                                  "nl": "Komt nog",
+                                  "pl": "Wkr\u00f3tce",
+                                  "pt": "Em breve",
+                                  "ru": "\u0421\u043a\u043e\u0440\u043e",
+                                  "sv": "Kommande",
+                                  "tr": "Yakla\u015fan",
+                                  "uk": "\u041d\u0435\u0437\u0430\u0431\u0430\u0440\u043e\u043c",
+                                  "vi": "S\u1eafp t\u1edbi",
+                                  "zh": "\u5373\u5c06\u5f00\u59cb"
+                                },
+                                "style": "caption"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "row",
+                            "spacing": 4,
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "\u25cf",
+                                "color": "gray"
+                              },
+                              {
+                                "type": "text",
+                                "value": {
+                                  "ar": "\u0627\u0646\u062a\u0647\u0649",
+                                  "cs": "Skon\u010dilo",
+                                  "de": "Vorbei",
+                                  "el": "\u03a4\u03b5\u03bb\u03b5\u03af\u03c9\u03c3\u03b5",
+                                  "en": "Finished",
+                                  "es": "Finalizado",
+                                  "fa": "\u067e\u0627\u06cc\u0627\u0646\u200c\u06cc\u0627\u0641\u062a\u0647",
+                                  "fr": "Termin\u00e9",
+                                  "hi": "\u0938\u092e\u093e\u092a\u094d\u0924",
+                                  "it": "Concluso",
+                                  "ja": "\u7d42\u4e86",
+                                  "ko": "\uc885\ub8cc",
+                                  "nl": "Afgelopen",
+                                  "pl": "Zako\u0144czone",
+                                  "pt": "Terminado",
+                                  "ru": "\u0417\u0430\u0432\u0435\u0440\u0448\u0435\u043d\u043e",
+                                  "sv": "Avslutat",
+                                  "tr": "Bitti",
+                                  "uk": "\u0417\u0430\u0432\u0435\u0440\u0448\u0435\u043d\u043e",
+                                  "vi": "\u0110\u00e3 xong",
+                                  "zh": "\u5df2\u7ed3\u675f"
+                                },
+                                "style": "caption"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "schedule": {
+      "title": {
+        "ar": "\u0627\u0644\u062c\u062f\u0648\u0644",
+        "cs": "Program",
+        "de": "Zeitplan",
+        "el": "\u03a0\u03c1\u03cc\u03b3\u03c1\u03b1\u03bc\u03bc\u03b1",
+        "en": "Schedule",
+        "es": "Horario",
+        "fa": "\u0628\u0631\u0646\u0627\u0645\u0647 \u0632\u0645\u0627\u0646\u06cc",
+        "fr": "Programme",
+        "hi": "\u0905\u0928\u0941\u0938\u0942\u091a\u0940",
+        "it": "Programma",
+        "ja": "\u30b9\u30b1\u30b8\u30e5\u30fc\u30eb",
+        "ko": "\uc77c\uc815",
+        "nl": "Schema",
+        "pl": "Harmonogram",
+        "pt": "Programa\u00e7\u00e3o",
+        "ru": "\u0420\u0430\u0441\u043f\u0438\u0441\u0430\u043d\u0438\u0435",
+        "sv": "Schema",
+        "tr": "Program",
+        "uk": "\u0420\u043e\u0437\u043a\u043b\u0430\u0434",
+        "vi": "L\u1ecbch tr\u00ecnh",
+        "zh": "\u65e5\u7a0b"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "cards",
+            "table": "events",
+            "title": "artist",
+            "subtitle": "address",
+            "groupBy": "hour",
+            "tags": [
+              {
+                "column": "liveStatus"
+              },
+              {
+                "column": "start"
+              },
+              {
+                "column": "day"
+              }
+            ],
+            "search": true,
+            "typeToSearch": true,
+            "filterable": true,
+            "filterableColumns": [
+              "artist",
+              "day",
+              "start",
+              "end",
+              "hour",
+              "genreTag",
+              "address",
+              "slot",
+              "liveStatus"
+            ],
+            "collapsible": true,
+            "sortBy": "startMin",
+            "height": 480,
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "about": {
+      "title": {
+        "ar": "\u062d\u0648\u0644 \u0647\u0630\u0647 \u0627\u0644\u062e\u0631\u064a\u0637\u0629",
+        "cs": "O t\u00e9to map\u011b",
+        "de": "\u00dcber diese Karte",
+        "el": "\u03a3\u03c7\u03b5\u03c4\u03b9\u03ba\u03ac \u03bc\u03b5 \u03b1\u03c5\u03c4\u03cc\u03bd \u03c4\u03bf\u03bd \u03c7\u03ac\u03c1\u03c4\u03b7",
+        "en": "About this map",
+        "es": "Acerca de este mapa",
+        "fa": "\u062f\u0631\u0628\u0627\u0631\u0647 \u0627\u06cc\u0646 \u0646\u0642\u0634\u0647",
+        "fr": "\u00c0 propos de cette carte",
+        "hi": "\u0907\u0938 \u092e\u093e\u0928\u091a\u093f\u0924\u094d\u0930 \u0915\u0947 \u092c\u093e\u0930\u0947 \u092e\u0947\u0902",
+        "it": "Informazioni su questa mappa",
+        "ja": "\u3053\u306e\u30de\u30c3\u30d7\u306b\u3064\u3044\u3066",
+        "ko": "\uc774 \uc9c0\ub3c4 \uc815\ubcf4",
+        "nl": "Over deze kaart",
+        "pl": "O tej mapie",
+        "pt": "Sobre este mapa",
+        "ru": "\u041e\u0431 \u044d\u0442\u043e\u0439 \u043a\u0430\u0440\u0442\u0435",
+        "sv": "Om den h\u00e4r kartan",
+        "tr": "Bu harita hakk\u0131nda",
+        "uk": "\u041f\u0440\u043e \u0446\u044e \u043a\u0430\u0440\u0442\u0443",
+        "vi": "Gi\u1edbi thi\u1ec7u b\u1ea3n \u0111\u1ed3 n\u00e0y",
+        "zh": "\u5173\u4e8e\u6b64\u5730\u56fe"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": {
+              "ar": "\u0643\u0627\u0645\u0628\u0631\u064a\u062f\u062c\u0628\u0648\u0631\u062a \u0628\u0648\u0631\u0634\u0641\u0633\u062a",
+              "cs": "Cambridgeport Porchfest",
+              "de": "Cambridgeport Porchfest",
+              "el": "Cambridgeport Porchfest",
+              "en": "Cambridgeport Porchfest",
+              "es": "Cambridgeport Porchfest",
+              "fa": "\u067e\u0648\u0631\u0686\u200c\u0641\u0633\u062a \u06a9\u0645\u0628\u0631\u06cc\u062c\u200c\u067e\u0648\u0631\u062a",
+              "fr": "Cambridgeport Porchfest",
+              "hi": "\u0915\u0948\u092e\u094d\u092c\u094d\u0930\u093f\u091c\u092a\u094b\u0930\u094d\u091f \u092a\u094b\u0930\u094d\u091a\u092b\u0947\u0938\u094d\u091f",
+              "it": "Cambridgeport Porchfest",
+              "ja": "\u30b1\u30f3\u30d6\u30ea\u30c3\u30b8\u30dd\u30fc\u30c8\u30fb\u30dd\u30fc\u30c1\u30d5\u30a7\u30b9\u30c8",
+              "ko": "\ucf00\uc784\ube0c\ub9ac\uc9c0\ud3ec\ud2b8 \ud3ec\uce58\ud398\uc2a4\ud2b8",
+              "nl": "Cambridgeport Porchfest",
+              "pl": "Cambridgeport Porchfest",
+              "pt": "Cambridgeport Porchfest",
+              "ru": "Cambridgeport Porchfest",
+              "sv": "Cambridgeport Porchfest",
+              "tr": "Cambridgeport Porchfest",
+              "uk": "Cambridgeport Porchfest",
+              "vi": "Cambridgeport Porchfest",
+              "zh": "Cambridgeport Porchfest"
+            }
+          },
+          {
+            "type": "text",
+            "value": {
+              "ar": "\u0641\u0639\u0627\u0644\u064a\u0629 \u062a\u0633\u062a\u0645\u0631 \u064a\u0648\u0645\u064a\u0646. \u0627\u0644\u0633\u0628\u062a 11 \u064a\u0648\u0644\u064a\u0648 2026\u060c \u0645\u0646 12:00 \u0638\u0647\u0631\u064b\u0627 \u062d\u062a\u0649 6:00 \u0645\u0633\u0627\u0621\u064b\u060c \u0641\u064a \u062d\u064a \u0643\u0627\u0645\u0628\u0631\u064a\u062f\u062c\u0628\u0648\u0631\u062a \u2014 \u064a\u0648\u0645 \u0645\u0646 \u062d\u0641\u0644\u0627\u062a \u0627\u0644\u0634\u0631\u0641\u0627\u062a \u0627\u0644\u0645\u062c\u0627\u0646\u064a\u0629 \u0644\u0643\u0644 \u0627\u0644\u062d\u064a. \u0627\u0644\u0623\u062d\u062f 12 \u064a\u0648\u0644\u064a\u0648 2026\u060c \u062a\u0633\u062a\u0645\u0631 \u0627\u0644\u0639\u0631\u0648\u0636 \u0641\u064a \u0627\u0644\u0645\u0637\u0627\u0639\u0645 \u0648\u0627\u0644\u0645\u0642\u0627\u0647\u064a \u0639\u0644\u0649 \u0637\u0648\u0644 Mass Ave\u060c \u0641\u064a Central Square \u0648Harvard Square\u060c \u0643\u0627\u0645\u0628\u0631\u064a\u062f\u062c\u060c \u0645\u0627\u0633\u0627\u062a\u0634\u0648\u0633\u062a\u0633.",
+              "cs": "Dvoudenn\u00ed akce. Sobota 11. \u010dervence 2026, 12:00\u201318:00, ve \u010dtvrti Cambridgeport \u2014 den bezplatn\u00fdch koncert\u016f na verand\u00e1ch pro celou \u010dtvr\u0165. Ned\u011ble 12. \u010dervence 2026, vystoupen\u00ed pokra\u010duj\u00ed v restaurac\u00edch a kav\u00e1rn\u00e1ch pod\u00e9l Mass Ave, na Central Square a Harvard Square, Cambridge MA.",
+              "de": "Eine zweit\u00e4gige Veranstaltung. Samstag, 11. Juli 2026, 12:00\u201318:00 Uhr, im Stadtteil Cambridgeport \u2014 ein stadtteilweiter Tag kostenloser Veranda-Konzerte. Sonntag, 12. Juli 2026, gehen die Auftritte in Restaurants und Caf\u00e9s entlang der Mass Ave, am Central Square und Harvard Square, Cambridge MA weiter.",
+              "el": "\u039c\u03b9\u03b1 \u03b4\u03b9\u03ae\u03bc\u03b5\u03c1\u03b7 \u03b5\u03ba\u03b4\u03ae\u03bb\u03c9\u03c3\u03b7. \u03a3\u03ac\u03b2\u03b2\u03b1\u03c4\u03bf, 11 \u0399\u03bf\u03c5\u03bb\u03af\u03bf\u03c5 2026, 12:00\u201318:00, \u03c3\u03c4\u03b7 \u03b3\u03b5\u03b9\u03c4\u03bf\u03bd\u03b9\u03ac Cambridgeport \u2014 \u03bc\u03b9\u03b1 \u03bc\u03ad\u03c1\u03b1 \u03b4\u03c9\u03c1\u03b5\u03ac\u03bd \u03c3\u03c5\u03bd\u03b1\u03c5\u03bb\u03b9\u03ce\u03bd \u03c3\u03b5 \u03b2\u03b5\u03c1\u03ac\u03bd\u03c4\u03b5\u03c2 \u03b3\u03b9\u03b1 \u03cc\u03bb\u03b7 \u03c4\u03b7 \u03b3\u03b5\u03b9\u03c4\u03bf\u03bd\u03b9\u03ac. \u039a\u03c5\u03c1\u03b9\u03b1\u03ba\u03ae, 12 \u0399\u03bf\u03c5\u03bb\u03af\u03bf\u03c5 2026, \u03bf\u03b9 \u03c0\u03b1\u03c1\u03b1\u03c3\u03c4\u03ac\u03c3\u03b5\u03b9\u03c2 \u03c3\u03c5\u03bd\u03b5\u03c7\u03af\u03b6\u03bf\u03bd\u03c4\u03b1\u03b9 \u03c3\u03b5 \u03b5\u03c3\u03c4\u03b9\u03b1\u03c4\u03cc\u03c1\u03b9\u03b1 \u03ba\u03b1\u03b9 \u03ba\u03b1\u03c6\u03ad \u03ba\u03b1\u03c4\u03ac \u03bc\u03ae\u03ba\u03bf\u03c2 \u03c4\u03b7\u03c2 Mass Ave, \u03c3\u03c4\u03b7\u03bd Central Square \u03ba\u03b1\u03b9 \u03c4\u03b7\u03bd Harvard Square, Cambridge MA.",
+              "en": "A two-day event. Saturday, July 11, 2026, 12:00 PM \u2013 6:00 PM, in the Cambridgeport neighborhood \u2014 a neighborhood-wide day of free porch concerts. Sunday, July 12, 2026, performances continue at restaurants and cafes along Mass Ave, in Central Square and Harvard Square, Cambridge MA.",
+              "es": "Un evento de dos d\u00edas. S\u00e1bado 11 de julio de 2026, de 12:00 a 18:00, en el vecindario de Cambridgeport, un d\u00eda de conciertos gratuitos en porches para todo el vecindario. Domingo 12 de julio de 2026, las actuaciones contin\u00faan en restaurantes y caf\u00e9s a lo largo de Mass Ave, en Central Square y Harvard Square, Cambridge MA.",
+              "fa": "\u0631\u0648\u06cc\u062f\u0627\u062f\u06cc \u062f\u0648 \u0631\u0648\u0632\u0647. \u0634\u0646\u0628\u0647\u060c \u06f1\u06f1 \u0698\u0648\u0626\u06cc\u0647 \u06f2\u06f0\u06f2\u06f6\u060c \u0627\u0632 \u0633\u0627\u0639\u062a \u06f1\u06f2 \u062a\u0627 \u06f6 \u0628\u0639\u062f\u0627\u0632\u0638\u0647\u0631\u060c \u062f\u0631 \u0645\u062d\u0644\u0647 \u06a9\u0645\u0628\u0631\u06cc\u062c\u200c\u067e\u0648\u0631\u062a \u2014 \u0631\u0648\u0632\u06cc \u0633\u0631\u0627\u0633\u0631 \u0645\u062d\u0644\u0647 \u0627\u0632 \u06a9\u0646\u0633\u0631\u062a\u200c\u0647\u0627\u06cc \u0631\u0627\u06cc\u06af\u0627\u0646 \u0627\u06cc\u0648\u0627\u0646. \u06cc\u06a9\u0634\u0646\u0628\u0647\u060c \u06f1\u06f2 \u0698\u0648\u0626\u06cc\u0647 \u06f2\u06f0\u06f2\u06f6\u060c \u0627\u062c\u0631\u0627\u0647\u0627 \u062f\u0631 \u0631\u0633\u062a\u0648\u0631\u0627\u0646\u200c\u0647\u0627 \u0648 \u06a9\u0627\u0641\u0647\u200c\u0647\u0627\u06cc \u0627\u0645\u062a\u062f\u0627\u062f \u0645\u0633 \u0627\u0648\u0646\u06cc\u0648\u060c \u062f\u0631 \u0633\u0646\u062a\u0631\u0627\u0644 \u0627\u0633\u06a9\u0648\u0626\u0631 \u0648 \u0647\u0627\u0631\u0648\u0627\u0631\u062f \u0627\u0633\u06a9\u0648\u0626\u0631\u060c \u06a9\u0645\u0628\u0631\u06cc\u062c \u0645\u0627\u0633\u0627\u0686\u0648\u0633\u062a \u0627\u062f\u0627\u0645\u0647 \u0645\u06cc\u200c\u06cc\u0627\u0628\u062f.",
+              "fr": "Un \u00e9v\u00e9nement de deux jours. Samedi 11 juillet 2026, de 12h \u00e0 18h, dans le quartier de Cambridgeport \u2014 une journ\u00e9e de concerts de porches gratuits pour tout le quartier. Dimanche 12 juillet 2026, les spectacles se poursuivent dans les restaurants et caf\u00e9s le long de Mass Ave, \u00e0 Central Square et Harvard Square, Cambridge MA.",
+              "hi": "\u092f\u0939 \u0926\u094b \u0926\u093f\u0935\u0938\u0940\u092f \u0906\u092f\u094b\u091c\u0928 \u0939\u0948\u0964 \u0936\u0928\u093f\u0935\u093e\u0930, 11 \u091c\u0941\u0932\u093e\u0908 2026, \u0926\u094b\u092a\u0939\u0930 12:00 \u2013 \u0936\u093e\u092e 6:00 \u092c\u091c\u0947, \u0915\u0948\u092e\u094d\u092c\u094d\u0930\u093f\u091c\u092a\u094b\u0930\u094d\u091f \u092a\u0921\u093c\u094b\u0938 \u092e\u0947\u0902 \u2014 \u092e\u0941\u092b\u093c\u094d\u0924 \u092a\u094b\u0930\u094d\u091a \u0915\u0949\u0928\u094d\u0938\u0930\u094d\u091f \u0915\u093e \u092a\u0942\u0930\u0947 \u092a\u0921\u093c\u094b\u0938 \u0915\u093e \u0926\u093f\u0928\u0964 \u0930\u0935\u093f\u0935\u093e\u0930, 12 \u091c\u0941\u0932\u093e\u0908 2026, \u092e\u093e\u0938 \u090f\u0935\u0947\u0928\u094d\u092f\u0942, \u0938\u0947\u0902\u091f\u094d\u0930\u0932 \u0938\u094d\u0915\u094d\u0935\u093e\u092f\u0930 \u0914\u0930 \u0939\u093e\u0930\u094d\u0935\u0930\u094d\u0921 \u0938\u094d\u0915\u094d\u0935\u093e\u092f\u0930, \u0915\u0948\u092e\u094d\u092c\u094d\u0930\u093f\u091c \u090f\u092e\u090f \u0915\u0947 \u0930\u0947\u0938\u094d\u0924\u0930\u093e\u0901 \u0914\u0930 \u0915\u0948\u092b\u093c\u0947 \u092e\u0947\u0902 \u092a\u094d\u0930\u0926\u0930\u094d\u0936\u0928 \u091c\u093e\u0930\u0940 \u0930\u0939\u0924\u0947 \u0939\u0948\u0902\u0964",
+              "it": "Un evento di due giorni. Sabato 11 luglio 2026, dalle 12:00 alle 18:00, nel quartiere di Cambridgeport \u2014 una giornata di concerti gratuiti sui portici per tutto il quartiere. Domenica 12 luglio 2026, le esibizioni continuano in ristoranti e caff\u00e8 lungo Mass Ave, a Central Square e Harvard Square, Cambridge MA.",
+              "ja": "2\u65e5\u9593\u306b\u308f\u305f\u308b\u30a4\u30d9\u30f3\u30c8\u3067\u3059\u30022026\u5e747\u670811\u65e5\uff08\u571f\uff0912:00\u301c18:00\u3001\u30b1\u30f3\u30d6\u30ea\u30c3\u30b8\u30dd\u30fc\u30c8\u5730\u533a\u3067\u2014\u2014\u5730\u533a\u5168\u4f53\u3092\u6319\u3052\u305f\u7121\u6599\u30dd\u30fc\u30c1\u30b3\u30f3\u30b5\u30fc\u30c8\u306e\u65e5\u3067\u3059\u30022026\u5e747\u670812\u65e5\uff08\u65e5\uff09\u306f\u3001\u30de\u30b5\u30c1\u30e5\u30fc\u30bb\u30c3\u30c4\u30fb\u30a2\u30d9\u30cb\u30e5\u30fc\u6cbf\u3044\u3001\u30bb\u30f3\u30c8\u30e9\u30eb\u30fb\u30b9\u30af\u30a8\u30a2\u3001\u30cf\u30fc\u30d0\u30fc\u30c9\u30fb\u30b9\u30af\u30a8\u30a2\uff08\u30de\u30b5\u30c1\u30e5\u30fc\u30bb\u30c3\u30c4\u5dde\u30b1\u30f3\u30d6\u30ea\u30c3\u30b8\uff09\u306e\u30ec\u30b9\u30c8\u30e9\u30f3\u3084\u30ab\u30d5\u30a7\u3067\u6f14\u594f\u304c\u7d9a\u304d\u307e\u3059\u3002",
+              "ko": "\uc774\ud2c0\uac04 \uc5f4\ub9ac\ub294 \ud589\uc0ac\uc785\ub2c8\ub2e4. 2026\ub144 7\uc6d4 11\uc77c \ud1a0\uc694\uc77c \uc624\ud6c4 12\uc2dc\u20136\uc2dc, \ucf00\uc784\ube0c\ub9ac\uc9c0\ud3ec\ud2b8 \uc9c0\uc5ed\uc5d0\uc11c \uc5f4\ub9ac\ub294 \ubb34\ub8cc \ud3ec\uce58 \ucf58\uc11c\ud2b8\uc758 \ub0a0\uc785\ub2c8\ub2e4. 2026\ub144 7\uc6d4 12\uc77c \uc77c\uc694\uc77c\uc5d0\ub294 \ub9e4\uc0ac\ucd94\uc138\uce20 \uc560\ube44\ub274, \uc13c\ud2b8\ub7f4 \uc2a4\ud018\uc5b4, \ud558\ubc84\ub4dc \uc2a4\ud018\uc5b4(\ucf00\uc784\ube0c\ub9ac\uc9c0, \ub9e4\uc0ac\ucd94\uc138\uce20\uc8fc)\uc758 \uc2dd\ub2f9\uacfc \uce74\ud398\uc5d0\uc11c \uacf5\uc5f0\uc774 \uc774\uc5b4\uc9d1\ub2c8\ub2e4.",
+              "nl": "Een evenement van twee dagen. Zaterdag 11 juli 2026, 12:00\u201318:00 uur, in de wijk Cambridgeport \u2014 een dag met gratis veranda-concerten voor de hele buurt. Zondag 12 juli 2026 gaan de optredens verder bij restaurants en caf\u00e9s langs Mass Ave, op Central Square en Harvard Square, Cambridge MA.",
+              "pl": "Dwudniowe wydarzenie. Sobota, 11 lipca 2026, 12:00\u201318:00, w dzielnicy Cambridgeport \u2014 dzie\u0144 bezp\u0142atnych koncert\u00f3w na gankach dla ca\u0142ej dzielnicy. Niedziela, 12 lipca 2026, wyst\u0119py trwaj\u0105 dalej w restauracjach i kawiarniach wzd\u0142u\u017c Mass Ave, na Central Square i Harvard Square, Cambridge MA.",
+              "pt": "Um evento de dois dias. S\u00e1bado, 11 de julho de 2026, das 12h \u00e0s 18h, no bairro de Cambridgeport \u2014 um dia de shows gratuitos em varandas para todo o bairro. Domingo, 12 de julho de 2026, as apresenta\u00e7\u00f5es continuam em restaurantes e caf\u00e9s ao longo da Mass Ave, na Central Square e Harvard Square, Cambridge MA.",
+              "ru": "\u0414\u0432\u0443\u0445\u0434\u043d\u0435\u0432\u043d\u043e\u0435 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0435. \u0421\u0443\u0431\u0431\u043e\u0442\u0430, 11 \u0438\u044e\u043b\u044f 2026 \u0433., 12:00\u201318:00, \u0432 \u0440\u0430\u0439\u043e\u043d\u0435 Cambridgeport \u2014 \u0434\u0435\u043d\u044c \u0431\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0445 \u043a\u043e\u043d\u0446\u0435\u0440\u0442\u043e\u0432 \u043d\u0430 \u043a\u0440\u044b\u043b\u044c\u0446\u0430\u0445 \u0434\u043b\u044f \u0432\u0441\u0435\u0433\u043e \u0440\u0430\u0439\u043e\u043d\u0430. \u0412\u043e\u0441\u043a\u0440\u0435\u0441\u0435\u043d\u044c\u0435, 12 \u0438\u044e\u043b\u044f 2026 \u0433., \u0432\u044b\u0441\u0442\u0443\u043f\u043b\u0435\u043d\u0438\u044f \u043f\u0440\u043e\u0434\u043e\u043b\u0436\u0430\u044e\u0442\u0441\u044f \u0432 \u0440\u0435\u0441\u0442\u043e\u0440\u0430\u043d\u0430\u0445 \u0438 \u043a\u0430\u0444\u0435 \u0432\u0434\u043e\u043b\u044c Mass Ave, \u043d\u0430 Central Square \u0438 Harvard Square, \u041a\u0435\u043c\u0431\u0440\u0438\u0434\u0436, \u041c\u0430\u0441\u0441\u0430\u0447\u0443\u0441\u0435\u0442\u0441.",
+              "sv": "Ett tv\u00e5dagarsevenemang. L\u00f6rdag 11 juli 2026, 12:00\u201318:00, i stadsdelen Cambridgeport \u2014 en dag med gratis verandakonserter f\u00f6r hela stadsdelen. S\u00f6ndag 12 juli 2026 forts\u00e4tter f\u00f6rest\u00e4llningarna p\u00e5 restauranger och kaf\u00e9er l\u00e4ngs Mass Ave, p\u00e5 Central Square och Harvard Square, Cambridge MA.",
+              "tr": "\u0130ki g\u00fcnl\u00fck bir etkinlik. Cumartesi, 11 Temmuz 2026, 12:00\u201318:00, Cambridgeport mahallesinde \u2014 t\u00fcm mahalleyi kapsayan \u00fccretsiz veranda konserleri g\u00fcn\u00fc. Pazar, 12 Temmuz 2026, g\u00f6steriler Mass Ave boyunca, Central Square ve Harvard Square'deki restoran ve kafelerde (Cambridge, MA) devam ediyor.",
+              "uk": "\u0414\u0432\u043e\u0434\u0435\u043d\u043d\u0430 \u043f\u043e\u0434\u0456\u044f. \u0421\u0443\u0431\u043e\u0442\u0430, 11 \u043b\u0438\u043f\u043d\u044f 2026 \u0440., 12:00\u201318:00, \u0443 \u0440\u0430\u0439\u043e\u043d\u0456 Cambridgeport \u2014 \u0434\u0435\u043d\u044c \u0431\u0435\u0437\u043a\u043e\u0448\u0442\u043e\u0432\u043d\u0438\u0445 \u043a\u043e\u043d\u0446\u0435\u0440\u0442\u0456\u0432 \u043d\u0430 \u0433\u0430\u043d\u043a\u0430\u0445 \u0434\u043b\u044f \u0432\u0441\u044c\u043e\u0433\u043e \u0440\u0430\u0439\u043e\u043d\u0443. \u041d\u0435\u0434\u0456\u043b\u044f, 12 \u043b\u0438\u043f\u043d\u044f 2026 \u0440., \u0432\u0438\u0441\u0442\u0443\u043f\u0438 \u0442\u0440\u0438\u0432\u0430\u044e\u0442\u044c \u0443 \u0440\u0435\u0441\u0442\u043e\u0440\u0430\u043d\u0430\u0445 \u0456 \u043a\u0430\u0444\u0435 \u0432\u0437\u0434\u043e\u0432\u0436 Mass Ave, \u043d\u0430 Central Square \u0442\u0430 Harvard Square, \u041a\u0435\u043c\u0431\u0440\u0438\u0434\u0436, \u041c\u0430\u0441\u0441\u0430\u0447\u0443\u0441\u0435\u0442\u0441.",
+              "vi": "S\u1ef1 ki\u1ec7n k\u00e9o d\u00e0i hai ng\u00e0y. Th\u1ee9 B\u1ea3y, 11 th\u00e1ng 7 n\u0103m 2026, 12:00 \u2013 18:00, t\u1ea1i khu Cambridgeport \u2014 m\u1ed9t ng\u00e0y h\u00f2a nh\u1ea1c m\u00e1i hi\u00ean mi\u1ec5n ph\u00ed tr\u00ean to\u00e0n khu ph\u1ed1. Ch\u1ee7 Nh\u1eadt, 12 th\u00e1ng 7 n\u0103m 2026, c\u00e1c bu\u1ed5i bi\u1ec3u di\u1ec5n ti\u1ebfp t\u1ee5c t\u1ea1i c\u00e1c nh\u00e0 h\u00e0ng v\u00e0 qu\u00e1n c\u00e0 ph\u00ea d\u1ecdc Mass Ave, t\u1ea1i Central Square v\u00e0 Harvard Square, Cambridge MA.",
+              "zh": "\u4e3a\u671f\u4e24\u5929\u7684\u6d3b\u52a8\u30022026\u5e747\u670811\u65e5\u661f\u671f\u516d\uff0c\u4e2d\u534812\u70b9\u81f3\u4e0b\u53486\u70b9\uff0c\u5728Cambridgeport\u793e\u533a\u4e3e\u884c\u2014\u2014\u4e00\u6574\u4e2a\u793e\u533a\u7684\u514d\u8d39\u95e8\u5eca\u97f3\u4e50\u4f1a\u65e5\u30022026\u5e747\u670812\u65e5\u661f\u671f\u65e5\uff0c\u6f14\u51fa\u5728\u9a6c\u8428\u8bf8\u585e\u5927\u9053\u6cbf\u7ebf\u3001\u4e2d\u592e\u5e7f\u573a\u548c\u54c8\u4f5b\u5e7f\u573a\uff08\u9a6c\u8428\u8bf8\u585e\u5dde\u5251\u6865\u5e02\uff09\u7684\u9910\u5385\u548c\u5496\u5561\u9986\u7ee7\u7eed\u3002"
+            }
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": {
+              "ar": "\u0627\u0633\u062a\u062e\u062f\u0627\u0645 \u0627\u0644\u0633\u0627\u0639\u0629",
+              "cs": "Pr\u00e1ce s hodinami",
+              "de": "Die Uhr benutzen",
+              "el": "\u03a7\u03c1\u03ae\u03c3\u03b7 \u03c4\u03bf\u03c5 \u03c1\u03bf\u03bb\u03bf\u03b3\u03b9\u03bf\u03cd",
+              "en": "Using the clock",
+              "es": "Usar el reloj",
+              "fa": "\u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0627\u0632 \u0633\u0627\u0639\u062a",
+              "fr": "Utiliser l'horloge",
+              "hi": "\u0918\u0921\u093c\u0940 \u0915\u093e \u0909\u092a\u092f\u094b\u0917",
+              "it": "Usare l'orologio",
+              "ja": "\u6642\u8a08\u306e\u4f7f\u3044\u65b9",
+              "ko": "\uc2dc\uacc4 \uc0ac\uc6a9\ubc95",
+              "nl": "De klok gebruiken",
+              "pl": "Korzystanie z zegara",
+              "pt": "Usar o rel\u00f3gio",
+              "ru": "\u041a\u0430\u043a \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u044c\u0441\u044f \u0447\u0430\u0441\u0430\u043c\u0438",
+              "sv": "Anv\u00e4nda klockan",
+              "tr": "Saati kullanma",
+              "uk": "\u042f\u043a \u043a\u043e\u0440\u0438\u0441\u0442\u0443\u0432\u0430\u0442\u0438\u0441\u044f \u0433\u043e\u0434\u0438\u043d\u043d\u0438\u043a\u043e\u043c",
+              "vi": "D\u00f9ng \u0111\u1ed3ng h\u1ed3",
+              "zh": "\u4f7f\u7528\u65f6\u949f"
+            }
+          },
+          {
+            "type": "text",
+            "value": {
+              "ar": "\u062a\u062d\u062f\u062f \u0627\u0644\u0633\u0627\u0639\u0629 \u0627\u0644\u0648\u0642\u062a \u0627\u0644\u0630\u064a \u062a\u0639\u0631\u0636\u0647 \u0627\u0644\u062e\u0631\u064a\u0637\u0629. \u0627\u0633\u062d\u0628\u0647\u0627\u060c \u0623\u0648 \u0627\u0636\u063a\u0637 \u25b6 \u0644\u062a\u0645\u0631\u064a\u0631 \u0627\u0644\u064a\u0648\u0645\u064a\u0646 \u0648\u0645\u0634\u0627\u0647\u062f\u0629 \u0627\u0644\u0634\u0631\u0641\u0627\u062a \u062a\u0636\u064a\u0621 \u062b\u0645 \u062a\u0646\u0637\u0641\u0626\u060c \u0623\u0648 \u0627\u0636\u063a\u0637 Now \u0644\u0644\u0627\u0646\u062a\u0642\u0627\u0644 \u0625\u0644\u0649 \u0627\u0644\u0648\u0642\u062a \u0627\u0644\u062d\u0642\u064a\u0642\u064a. \u0623\u062b\u0646\u0627\u0621 \u0627\u0644\u0645\u0647\u0631\u062c\u0627\u0646 \u064a\u0643\u0648\u0646 Now \u0647\u0648 \u0627\u0644\u0639\u0631\u0636 \u0627\u0644\u0645\u0628\u0627\u0634\u0631\u061b \u0648\u062e\u0627\u0631\u062c\u0647 \u062a\u0643\u0648\u0646 \u0627\u0644\u0633\u0627\u0639\u0629 \u0628\u0631\u0648\u0641\u0629.",
+              "cs": "Hodiny ur\u010duj\u00ed \u010das, kter\u00fd mapa ukazuje. T\u00e1hn\u011bte za n\u011b, stiskn\u011bte \u25b6 a projd\u011bte oba dny, jak se verandy rozsv\u011bcej\u00ed a zase hasnou, nebo stiskn\u011bte Now a p\u0159esko\u010dte na skute\u010dn\u00fd \u010das. B\u011bhem festivalu je Now \u017eiv\u00fd pohled; mimo n\u011bj jsou hodiny zkou\u0161kou.",
+              "de": "Die Uhr bestimmt, welche Zeit die Karte zeigt. Zieh sie, dr\u00fccke \u25b6, um durch beide Tage zu laufen und zu sehen, wie Veranden aufleuchten und wieder erl\u00f6schen, oder dr\u00fccke Now f\u00fcr die echte Uhrzeit. W\u00e4hrend des Festivals ist Now die Live-Ansicht; au\u00dferhalb ist die Uhr eine Probe.",
+              "el": "\u03a4\u03bf \u03c1\u03bf\u03bb\u03cc\u03b9 \u03bf\u03c1\u03af\u03b6\u03b5\u03b9 \u03c4\u03b7\u03bd \u03ce\u03c1\u03b1 \u03c0\u03bf\u03c5 \u03b4\u03b5\u03af\u03c7\u03bd\u03b5\u03b9 \u03bf \u03c7\u03ac\u03c1\u03c4\u03b7\u03c2. \u03a3\u03cd\u03c1\u03b5\u03c4\u03ad \u03c4\u03bf, \u03c0\u03b1\u03c4\u03ae\u03c3\u03c4\u03b5 \u25b6 \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03ba\u03c5\u03bb\u03ae\u03c3\u03bf\u03c5\u03bd \u03ba\u03b1\u03b9 \u03bf\u03b9 \u03b4\u03cd\u03bf \u03b7\u03bc\u03ad\u03c1\u03b5\u03c2 \u03ba\u03b1\u03b9 \u03bd\u03b1 \u03b4\u03b5\u03af\u03c4\u03b5 \u03c4\u03b9\u03c2 \u03b2\u03b5\u03c1\u03ac\u03bd\u03c4\u03b5\u03c2 \u03bd\u03b1 \u03b1\u03bd\u03ac\u03b2\u03bf\u03c5\u03bd \u03ba\u03b1\u03b9 \u03bd\u03b1 \u03c3\u03b2\u03ae\u03bd\u03bf\u03c5\u03bd, \u03ae \u03c0\u03b1\u03c4\u03ae\u03c3\u03c4\u03b5 Now \u03b3\u03b9\u03b1 \u03c4\u03b7\u03bd \u03c0\u03c1\u03b1\u03b3\u03bc\u03b1\u03c4\u03b9\u03ba\u03ae \u03ce\u03c1\u03b1. \u03a3\u03c4\u03b7 \u03b4\u03b9\u03ac\u03c1\u03ba\u03b5\u03b9\u03b1 \u03c4\u03bf\u03c5 \u03c6\u03b5\u03c3\u03c4\u03b9\u03b2\u03ac\u03bb \u03c4\u03bf Now \u03b5\u03af\u03bd\u03b1\u03b9 \u03b7 \u03b6\u03c9\u03bd\u03c4\u03b1\u03bd\u03ae \u03c0\u03c1\u03bf\u03b2\u03bf\u03bb\u03ae\u00b7 \u03b5\u03ba\u03c4\u03cc\u03c2 \u03b1\u03c5\u03c4\u03bf\u03cd, \u03c4\u03bf \u03c1\u03bf\u03bb\u03cc\u03b9 \u03b5\u03af\u03bd\u03b1\u03b9 \u03c0\u03c1\u03cc\u03b2\u03b1.",
+              "en": "The clock sets the time the map is showing. Drag it, press \u25b6 to roll through both days and watch porches light up and expire, or press Now to jump to the real time. During the festival Now is the live view; outside it the clock is a rehearsal.",
+              "es": "El reloj fija la hora que muestra el mapa. Arr\u00e1stralo, pulsa \u25b6 para recorrer los dos d\u00edas y ver c\u00f3mo los porches se encienden y se apagan, o pulsa Now para ir a la hora real. Durante el festival, Now es la vista en directo; fuera de \u00e9l, el reloj es un ensayo.",
+              "fa": "\u0633\u0627\u0639\u062a \u062a\u0639\u06cc\u06cc\u0646 \u0645\u06cc\u200c\u06a9\u0646\u062f \u0646\u0642\u0634\u0647 \u0686\u0647 \u0632\u0645\u0627\u0646\u06cc \u0631\u0627 \u0646\u0634\u0627\u0646 \u062f\u0647\u062f. \u0622\u0646 \u0631\u0627 \u0628\u06a9\u0634\u06cc\u062f\u060c \u25b6 \u0631\u0627 \u0628\u0632\u0646\u06cc\u062f \u062a\u0627 \u0632\u0645\u0627\u0646 \u062f\u0631 \u0647\u0631 \u062f\u0648 \u0631\u0648\u0632 \u062c\u0644\u0648 \u0628\u0631\u0648\u062f \u0648 \u0628\u0628\u06cc\u0646\u06cc\u062f \u0627\u06cc\u0648\u0627\u0646\u200c\u0647\u0627 \u0631\u0648\u0634\u0646 \u0648 \u062e\u0627\u0645\u0648\u0634 \u0645\u06cc\u200c\u0634\u0648\u0646\u062f\u060c \u06cc\u0627 Now \u0631\u0627 \u0628\u0632\u0646\u06cc\u062f \u062a\u0627 \u0628\u0647 \u0632\u0645\u0627\u0646 \u0648\u0627\u0642\u0639\u06cc \u0628\u0631\u0648\u06cc\u062f. \u062f\u0631 \u0631\u0648\u0632\u0647\u0627\u06cc \u062c\u0634\u0646\u0648\u0627\u0631\u0647 Now \u0646\u0645\u0627\u06cc \u0632\u0646\u062f\u0647 \u0627\u0633\u062a\u061b \u0628\u06cc\u0631\u0648\u0646 \u0627\u0632 \u0622\u0646\u060c \u0633\u0627\u0639\u062a \u06cc\u06a9 \u062a\u0645\u0631\u06cc\u0646 \u0627\u0633\u062a.",
+              "fr": "L'horloge fixe l'heure affich\u00e9e par la carte. Faites-la glisser, appuyez sur \u25b6 pour parcourir les deux journ\u00e9es et voir les porches s'allumer puis s'\u00e9teindre, ou appuyez sur Now pour revenir \u00e0 l'heure r\u00e9elle. Pendant le festival, Now est la vue en direct ; en dehors, l'horloge est une r\u00e9p\u00e9tition.",
+              "hi": "\u0918\u0921\u093c\u0940 \u0924\u092f \u0915\u0930\u0924\u0940 \u0939\u0948 \u0915\u093f \u0928\u0915\u094d\u0936\u093e \u0915\u094c\u0928-\u0938\u093e \u0938\u092e\u092f \u0926\u093f\u0916\u093e \u0930\u0939\u093e \u0939\u0948\u0964 \u0909\u0938\u0947 \u0916\u0940\u0902\u091a\u0947\u0902, \u0926\u094b\u0928\u094b\u0902 \u0926\u093f\u0928 \u0906\u0917\u0947 \u092c\u0922\u093c\u093e\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f \u25b6 \u0926\u092c\u093e\u090f\u0901 \u0914\u0930 \u0926\u0947\u0916\u0947\u0902 \u0915\u093f \u092c\u0930\u093e\u092e\u0926\u0947 \u0915\u0948\u0938\u0947 \u091c\u0917\u0924\u0947 \u0914\u0930 \u092c\u0941\u091d\u0924\u0947 \u0939\u0948\u0902, \u092f\u093e \u0905\u0938\u0932\u0940 \u0938\u092e\u092f \u092a\u0930 \u091c\u093e\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f Now \u0926\u092c\u093e\u090f\u0901\u0964 \u0909\u0924\u094d\u0938\u0935 \u0915\u0947 \u0926\u094c\u0930\u093e\u0928 Now \u0939\u0940 \u0932\u093e\u0907\u0935 \u0926\u0943\u0936\u094d\u092f \u0939\u0948; \u092c\u093e\u0915\u0940 \u0938\u092e\u092f \u0918\u0921\u093c\u0940 \u090f\u0915 \u0930\u093f\u0939\u0930\u094d\u0938\u0932 \u0939\u0948\u0964",
+              "it": "L'orologio stabilisce l'ora che la mappa mostra. Trascinalo, premi \u25b6 per scorrere entrambe le giornate e vedere i portici accendersi e spegnersi, oppure premi Now per tornare all'ora reale. Durante il festival Now \u00e8 la vista dal vivo; fuori, l'orologio \u00e8 una prova.",
+              "ja": "\u6642\u8a08\u306f\u5730\u56f3\u304c\u793a\u3059\u6642\u523b\u3092\u6c7a\u3081\u307e\u3059\u3002\u30c9\u30e9\u30c3\u30b0\u3059\u308b\u304b\u3001\u25b6 \u3092\u62bc\u3057\u3066\u4e8c\u65e5\u9593\u306e\u6642\u9593\u3092\u9032\u3081\u3001\u30dd\u30fc\u30c1\u304c\u706f\u3063\u3066\u6d88\u3048\u3066\u3044\u304f\u69d8\u5b50\u3092\u3054\u89a7\u304f\u3060\u3055\u3044\u3002Now \u3092\u62bc\u3059\u3068\u5b9f\u969b\u306e\u6642\u523b\u306b\u79fb\u52d5\u3057\u307e\u3059\u3002\u4f1a\u671f\u4e2d\u306f Now \u304c\u30e9\u30a4\u30d6\u8868\u793a\u3001\u4f1a\u671f\u5916\u3067\u306f\u6642\u8a08\u306f\u30ea\u30cf\u30fc\u30b5\u30eb\u3067\u3059\u3002",
+              "ko": "\uc2dc\uacc4\ub294 \uc9c0\ub3c4\uac00 \ubcf4\uc5ec\uc8fc\ub294 \uc2dc\uac01\uc744 \uc815\ud569\ub2c8\ub2e4. \uc2dc\uacc4\ub97c \ub04c\uac70\ub098 \u25b6\ub97c \ub20c\ub7ec \uc774\ud2c0\uc744 \ud758\ub824\ubcf4\ub0b4\uba70 \ud604\uad00\uc774 \ucf1c\uc9c0\uace0 \uaebc\uc9c0\ub294 \ubaa8\uc2b5\uc744 \ubcf4\uc138\uc694. Now\ub97c \ub204\ub974\uba74 \uc2e4\uc81c \uc2dc\uac01\uc73c\ub85c \uc774\ub3d9\ud569\ub2c8\ub2e4. \ucd95\uc81c \uae30\uac04\uc5d0\ub294 Now\uac00 \uc2e4\uc2dc\uac04 \ud654\uba74\uc774\uace0, \uadf8 \ubc16\uc758 \ub54c\uc5d0\ub294 \uc2dc\uacc4\uac00 \uc608\ud589\uc5f0\uc2b5\uc785\ub2c8\ub2e4.",
+              "nl": "De klok bepaalt welke tijd de kaart laat zien. Sleep hem, druk op \u25b6 om door beide dagen te lopen en te zien hoe veranda's oplichten en weer doven, of druk op Now voor de echte tijd. Tijdens het festival is Now de live-weergave; daarbuiten is de klok een repetitie.",
+              "pl": "Zegar ustala godzin\u0119, kt\u00f3r\u0105 pokazuje mapa. Przeci\u0105gnij go, naci\u015bnij \u25b6, aby przewin\u0105\u0107 oba dni i zobaczy\u0107, jak ganki si\u0119 zapalaj\u0105 i gasn\u0105, albo naci\u015bnij Now, aby przej\u015b\u0107 do rzeczywistego czasu. W trakcie festiwalu Now to widok na \u017cywo; poza nim zegar jest pr\u00f3b\u0105.",
+              "pt": "O rel\u00f3gio define a hora que o mapa mostra. Arraste-o, prima \u25b6 para percorrer os dois dias e ver as varandas acenderem-se e apagarem-se, ou prima Now para ir para a hora real. Durante o festival, Now \u00e9 a vista em direto; fora dele, o rel\u00f3gio \u00e9 um ensaio.",
+              "ru": "\u0427\u0430\u0441\u044b \u0437\u0430\u0434\u0430\u044e\u0442 \u0432\u0440\u0435\u043c\u044f, \u043a\u043e\u0442\u043e\u0440\u043e\u0435 \u043f\u043e\u043a\u0430\u0437\u044b\u0432\u0430\u0435\u0442 \u043a\u0430\u0440\u0442\u0430. \u041f\u0435\u0440\u0435\u0442\u0430\u0449\u0438\u0442\u0435 \u0438\u0445, \u043d\u0430\u0436\u043c\u0438\u0442\u0435 \u25b6, \u0447\u0442\u043e\u0431\u044b \u043f\u0440\u043e\u043a\u0440\u0443\u0442\u0438\u0442\u044c \u043e\u0431\u0430 \u0434\u043d\u044f \u0438 \u0443\u0432\u0438\u0434\u0435\u0442\u044c, \u043a\u0430\u043a \u043a\u0440\u044b\u043b\u044c\u0446\u0430 \u0437\u0430\u0433\u043e\u0440\u0430\u044e\u0442\u0441\u044f \u0438 \u0433\u0430\u0441\u043d\u0443\u0442, \u0438\u043b\u0438 \u043d\u0430\u0436\u043c\u0438\u0442\u0435 Now, \u0447\u0442\u043e\u0431\u044b \u043f\u0435\u0440\u0435\u0439\u0442\u0438 \u043a \u0440\u0435\u0430\u043b\u044c\u043d\u043e\u043c\u0443 \u0432\u0440\u0435\u043c\u0435\u043d\u0438. \u0412\u043e \u0432\u0440\u0435\u043c\u044f \u0444\u0435\u0441\u0442\u0438\u0432\u0430\u043b\u044f Now \u2014 \u044d\u0442\u043e \u0436\u0438\u0432\u043e\u0439 \u0440\u0435\u0436\u0438\u043c; \u0432\u043d\u0435 \u0435\u0433\u043e \u0447\u0430\u0441\u044b \u0440\u0430\u0431\u043e\u0442\u0430\u044e\u0442 \u043a\u0430\u043a \u0440\u0435\u043f\u0435\u0442\u0438\u0446\u0438\u044f.",
+              "sv": "Klockan best\u00e4mmer vilken tid kartan visar. Dra i den, tryck p\u00e5 \u25b6 f\u00f6r att rulla genom b\u00e5da dagarna och se verandorna t\u00e4ndas och slockna, eller tryck p\u00e5 Now f\u00f6r att hoppa till den riktiga tiden. Under festivalen \u00e4r Now livevyn; utanf\u00f6r den \u00e4r klockan en repetition.",
+              "tr": "Saat, haritan\u0131n g\u00f6sterdi\u011fi zaman\u0131 belirler. S\u00fcr\u00fckleyin, iki g\u00fcn\u00fc ilerletmek ve verandalar\u0131n yan\u0131p s\u00f6nmesini izlemek i\u00e7in \u25b6 tu\u015funa bas\u0131n ya da ger\u00e7ek saate gitmek i\u00e7in Now tu\u015funa bas\u0131n. Festival s\u0131ras\u0131nda Now canl\u0131 g\u00f6r\u00fcn\u00fcmd\u00fcr; d\u0131\u015f\u0131nda ise saat bir provad\u0131r.",
+              "uk": "\u0413\u043e\u0434\u0438\u043d\u043d\u0438\u043a \u0437\u0430\u0434\u0430\u0454 \u0447\u0430\u0441, \u044f\u043a\u0438\u0439 \u043f\u043e\u043a\u0430\u0437\u0443\u0454 \u043a\u0430\u0440\u0442\u0430. \u041f\u0435\u0440\u0435\u0442\u044f\u0433\u043d\u0456\u0442\u044c \u0439\u043e\u0433\u043e, \u043d\u0430\u0442\u0438\u0441\u043d\u0456\u0442\u044c \u25b6, \u0449\u043e\u0431 \u043f\u0440\u043e\u043a\u0440\u0443\u0442\u0438\u0442\u0438 \u043e\u0431\u0438\u0434\u0432\u0430 \u0434\u043d\u0456 \u0439 \u043f\u043e\u0431\u0430\u0447\u0438\u0442\u0438, \u044f\u043a \u0491\u0430\u043d\u043a\u0438 \u0441\u043f\u0430\u043b\u0430\u0445\u0443\u044e\u0442\u044c \u0456 \u0437\u0433\u0430\u0441\u0430\u044e\u0442\u044c, \u0430\u0431\u043e \u043d\u0430\u0442\u0438\u0441\u043d\u0456\u0442\u044c Now, \u0449\u043e\u0431 \u043f\u0435\u0440\u0435\u0439\u0442\u0438 \u0434\u043e \u0441\u043f\u0440\u0430\u0432\u0436\u043d\u044c\u043e\u0433\u043e \u0447\u0430\u0441\u0443. \u041f\u0456\u0434 \u0447\u0430\u0441 \u0444\u0435\u0441\u0442\u0438\u0432\u0430\u043b\u044e Now \u2014 \u0446\u0435 \u0436\u0438\u0432\u0438\u0439 \u043f\u0435\u0440\u0435\u0433\u043b\u044f\u0434; \u043f\u043e\u0437\u0430 \u043d\u0438\u043c \u0433\u043e\u0434\u0438\u043d\u043d\u0438\u043a \u043f\u0440\u0430\u0446\u044e\u0454 \u044f\u043a \u0440\u0435\u043f\u0435\u0442\u0438\u0446\u0456\u044f.",
+              "vi": "\u0110\u1ed3ng h\u1ed3 quy\u1ebft \u0111\u1ecbnh th\u1eddi \u0111i\u1ec3m m\u00e0 b\u1ea3n \u0111\u1ed3 \u0111ang hi\u1ec3n th\u1ecb. H\u00e3y k\u00e9o n\u00f3, nh\u1ea5n \u25b6 \u0111\u1ec3 ch\u1ea1y qua c\u1ea3 hai ng\u00e0y v\u00e0 xem c\u00e1c hi\u00ean nh\u00e0 s\u00e1ng l\u00ean r\u1ed3i t\u1eaft \u0111i, ho\u1eb7c nh\u1ea5n Now \u0111\u1ec3 v\u1ec1 th\u1eddi gian th\u1ef1c. Trong l\u1ec5 h\u1ed9i, Now l\u00e0 ch\u1ebf \u0111\u1ed9 tr\u1ef1c ti\u1ebfp; ngo\u00e0i l\u1ec5 h\u1ed9i, \u0111\u1ed3ng h\u1ed3 ch\u1ec9 l\u00e0 m\u1ed9t bu\u1ed5i di\u1ec5n t\u1eadp.",
+              "zh": "\u65f6\u949f\u51b3\u5b9a\u5730\u56fe\u6240\u663e\u793a\u7684\u65f6\u523b\u3002\u62d6\u52a8\u5b83\uff0c\u6216\u6309 \u25b6 \u8ba9\u4e24\u5929\u7684\u65f6\u95f4\u63a8\u8fdb\uff0c\u770b\u7740\u95e8\u5eca\u4eae\u8d77\u53c8\u7184\u706d\uff1b\u6309 Now \u53ef\u8df3\u5230\u771f\u5b9e\u65f6\u95f4\u3002\u97f3\u4e50\u8282\u671f\u95f4\uff0cNow \u5c31\u662f\u5b9e\u65f6\u89c6\u56fe\uff1b\u5176\u4ed6\u65f6\u5019\uff0c\u65f6\u949f\u53ea\u662f\u4e00\u6b21\u9884\u6f14\u3002"
+            }
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": {
+              "ar": "\u0645\u0646 \u0623\u064a\u0646 \u062a\u0623\u062a\u064a \u0627\u0644\u0628\u064a\u0627\u0646\u0627\u062a",
+              "cs": "Odkud poch\u00e1zej\u00ed data",
+              "de": "Woher die Daten stammen",
+              "el": "\u0391\u03c0\u03cc \u03c0\u03bf\u03cd \u03c0\u03c1\u03bf\u03ad\u03c1\u03c7\u03bf\u03bd\u03c4\u03b1\u03b9 \u03c4\u03b1 \u03b4\u03b5\u03b4\u03bf\u03bc\u03ad\u03bd\u03b1",
+              "en": "Where the data comes from",
+              "es": "De d\u00f3nde vienen los datos",
+              "fa": "\u062f\u0627\u062f\u0647\u200c\u0647\u0627 \u0627\u0632 \u06a9\u062c\u0627 \u0645\u06cc\u200c\u0622\u06cc\u0646\u062f",
+              "fr": "D'o\u00f9 viennent les donn\u00e9es",
+              "hi": "\u0921\u0947\u091f\u093e \u0915\u0939\u093e\u0901 \u0938\u0947 \u0906\u0924\u093e \u0939\u0948",
+              "it": "Da dove provengono i dati",
+              "ja": "\u30c7\u30fc\u30bf\u306e\u51fa\u6240",
+              "ko": "\ub370\uc774\ud130 \ucd9c\ucc98",
+              "nl": "Waar de gegevens vandaan komen",
+              "pl": "Sk\u0105d pochodz\u0105 dane",
+              "pt": "De onde v\u00eam os dados",
+              "ru": "\u041e\u0442\u043a\u0443\u0434\u0430 \u0434\u0430\u043d\u043d\u044b\u0435",
+              "sv": "Var data kommer ifr\u00e5n",
+              "tr": "Veriler nereden geliyor",
+              "uk": "\u0417\u0432\u0456\u0434\u043a\u0438 \u0434\u0430\u043d\u0456",
+              "vi": "D\u1eef li\u1ec7u \u0111\u1ebfn t\u1eeb \u0111\u00e2u",
+              "zh": "\u6570\u636e\u6765\u6e90"
+            }
+          },
+          {
+            "type": "text",
+            "value": {
+              "ar": "\u0627\u0644\u0645\u062f\u062e\u0644 \u0627\u0644\u0648\u062d\u064a\u062f \u0644\u0647\u0630\u0647 \u0627\u0644\u062e\u0631\u064a\u0637\u0629 \u0647\u0648 \u062e\u0645\u0633\u0629 \u0645\u0644\u0641\u0627\u062a \u062c\u062f\u0627\u0648\u0644 \u0645\u0648\u062d\u0651\u062f\u0629: \u0627\u0644\u0623\u0645\u0627\u0643\u0646 \u0648\u0627\u0644\u0641\u0631\u0642 \u0648\u0627\u0644\u0639\u0631\u0648\u0636 \u0648\u062f\u0648\u0631\u0627\u062a \u0627\u0644\u0645\u064a\u0627\u0647 \u0648\u0627\u0644\u0645\u062a\u0641\u0631\u0642\u0627\u062a. \u062a\u064f\u062d\u062f\u064e\u0651\u062b \u0645\u0646 cambridgeport.org/porchfestmaps \u0648\u0645\u0646 \u0644\u0648\u062d\u0629 ArcGIS \u0627\u0644\u0639\u0627\u0645\u0629 \u0644\u0645\u0647\u0631\u062c\u0627\u0646 \u0628\u0648\u0631\u062a\u0634\u0641\u0633\u062a \u0641\u064a \u0645\u062f\u064a\u0646\u0629 \u0643\u0627\u0645\u0628\u0631\u064a\u062f\u062c\u060c \u062b\u0645 \u062a\u064f\u0628\u0646\u0649 \u0627\u0644\u062e\u0631\u064a\u0637\u0629 \u0645\u0646 \u062a\u0644\u0643 \u0627\u0644\u0645\u0644\u0641\u0627\u062a \u0648\u062d\u062f\u0647\u0627 \u2014 \u0648\u0644\u0627 \u0634\u064a\u0621 \u0647\u0646\u0627 \u064a\u062a\u0635\u0644 \u0628\u0627\u0644\u0625\u0646\u062a\u0631\u0646\u062a \u0623\u062b\u0646\u0627\u0621 \u0627\u0644\u0627\u0633\u062a\u062e\u062f\u0627\u0645. \u0627\u0633\u062a\u0628\u062f\u0644\u0647\u0627 \u0628\u0645\u0644\u0641\u0627\u062a\u0643 \u0627\u0644\u062e\u0645\u0633\u0629 \u0648\u0633\u062a\u0639\u0645\u0644 \u0627\u0644\u062e\u0631\u064a\u0637\u0629 \u0646\u0641\u0633\u0647\u0627 \u0645\u0639 \u0623\u064a \u0645\u0647\u0631\u062c\u0627\u0646 \u0622\u062e\u0631.",
+              "cs": "Jedin\u00fdm vstupem t\u00e9to mapy je p\u011bt standardizovan\u00fdch tabulkov\u00fdch soubor\u016f: m\u00edsta, kapely, vystoupen\u00ed, toalety a r\u016fzn\u00e9. Obnovuj\u00ed se z cambridgeport.org/porchfestmaps a z ve\u0159ejn\u00e9ho panelu ArcGIS Porchfest m\u011bsta Cambridge a mapa se pak sestavuje v\u00fdhradn\u011b z t\u011bchto soubor\u016f \u2014 p\u0159i pou\u017e\u00edv\u00e1n\u00ed tu nic ne\u010dte internet. Vym\u011b\u0148te je za sv\u00fdch p\u011bt soubor\u016f a stejn\u00e1 mapa poslou\u017e\u00ed jak\u00e9mukoli jin\u00e9mu porchfestu.",
+              "de": "Die einzige Eingabe dieser Karte sind f\u00fcnf standardisierte Tabellendateien: Orte, Bands, Auftritte, Toiletten und Sonstiges. Sie werden von cambridgeport.org/porchfestmaps und dem \u00f6ffentlichen ArcGIS-Porchfest-Dashboard der Stadt Cambridge aktualisiert, danach wird die Karte allein aus diesen Dateien neu gebaut \u2014 im Betrieb liest hier nichts das Internet. Tausche deine eigenen f\u00fcnf Dateien ein und dieselbe Karte l\u00e4uft f\u00fcr jedes andere Porchfest.",
+              "el": "\u0397 \u03bc\u03cc\u03bd\u03b7 \u03b5\u03af\u03c3\u03bf\u03b4\u03bf\u03c2 \u03b1\u03c5\u03c4\u03bf\u03cd \u03c4\u03bf\u03c5 \u03c7\u03ac\u03c1\u03c4\u03b7 \u03b5\u03af\u03bd\u03b1\u03b9 \u03c0\u03ad\u03bd\u03c4\u03b5 \u03c4\u03c5\u03c0\u03bf\u03c0\u03bf\u03b9\u03b7\u03bc\u03ad\u03bd\u03b1 \u03b1\u03c1\u03c7\u03b5\u03af\u03b1 \u03c5\u03c0\u03bf\u03bb\u03bf\u03b3\u03b9\u03c3\u03c4\u03b9\u03ba\u03bf\u03cd \u03c6\u03cd\u03bb\u03bb\u03bf\u03c5: \u03c7\u03ce\u03c1\u03bf\u03b9, \u03c3\u03c5\u03b3\u03ba\u03c1\u03bf\u03c4\u03ae\u03bc\u03b1\u03c4\u03b1, \u03b5\u03bc\u03c6\u03b1\u03bd\u03af\u03c3\u03b5\u03b9\u03c2, \u03c4\u03bf\u03c5\u03b1\u03bb\u03ad\u03c4\u03b5\u03c2 \u03ba\u03b1\u03b9 \u03b4\u03b9\u03ac\u03c6\u03bf\u03c1\u03b1. \u0391\u03bd\u03b1\u03bd\u03b5\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03b9 \u03b1\u03c0\u03cc \u03c4\u03bf cambridgeport.org/porchfestmaps \u03ba\u03b1\u03b9 \u03b1\u03c0\u03cc \u03c4\u03bf\u03bd \u03b4\u03b7\u03bc\u03cc\u03c3\u03b9\u03bf \u03c0\u03af\u03bd\u03b1\u03ba\u03b1 ArcGIS Porchfest \u03c4\u03bf\u03c5 \u03b4\u03ae\u03bc\u03bf\u03c5 \u03c4\u03bf\u03c5 \u039a\u03ad\u03bc\u03c0\u03c1\u03b9\u03c4\u03b6, \u03ba\u03b1\u03b9 \u03ad\u03c0\u03b5\u03b9\u03c4\u03b1 \u03bf \u03c7\u03ac\u03c1\u03c4\u03b7\u03c2 \u03be\u03b1\u03bd\u03b1\u03c7\u03c4\u03af\u03b6\u03b5\u03c4\u03b1\u03b9 \u03bc\u03cc\u03bd\u03bf \u03b1\u03c0\u03cc \u03b1\u03c5\u03c4\u03ac \u03c4\u03b1 \u03b1\u03c1\u03c7\u03b5\u03af\u03b1 \u2014 \u03c4\u03af\u03c0\u03bf\u03c4\u03b1 \u03b5\u03b4\u03ce \u03b4\u03b5\u03bd \u03b4\u03b9\u03b1\u03b2\u03ac\u03b6\u03b5\u03b9 \u03c4\u03bf \u03b4\u03b9\u03b1\u03b4\u03af\u03ba\u03c4\u03c5\u03bf \u03cc\u03c3\u03bf \u03c4\u03bf\u03bd \u03c7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03b5\u03af\u03c4\u03b5. \u0392\u03ac\u03bb\u03c4\u03b5 \u03c4\u03b1 \u03b4\u03b9\u03ba\u03ac \u03c3\u03b1\u03c2 \u03c0\u03ad\u03bd\u03c4\u03b5 \u03b1\u03c1\u03c7\u03b5\u03af\u03b1 \u03ba\u03b1\u03b9 \u03bf \u03af\u03b4\u03b9\u03bf\u03c2 \u03c7\u03ac\u03c1\u03c4\u03b7\u03c2 \u03c4\u03c1\u03ad\u03c7\u03b5\u03b9 \u03b3\u03b9\u03b1 \u03bf\u03c0\u03bf\u03b9\u03bf\u03b4\u03ae\u03c0\u03bf\u03c4\u03b5 \u03ac\u03bb\u03bb\u03bf porchfest.",
+              "en": "Five standardized spreadsheet files are this map's only input: venues, bands, events, bathrooms and misc. They are refreshed from cambridgeport.org/porchfestmaps and the City of Cambridge's public ArcGIS Porchfest dashboard, and the map is then rebuilt from those files alone \u2014 nothing here reads the internet while you use it. Swap in your own five files and the same map runs any other porchfest.",
+              "es": "La \u00fanica entrada de este mapa son cinco archivos de hoja de c\u00e1lculo normalizados: lugares, grupos, actuaciones, ba\u00f1os y varios. Se actualizan desde cambridgeport.org/porchfestmaps y el panel p\u00fablico ArcGIS Porchfest de la ciudad de Cambridge, y luego el mapa se reconstruye solo a partir de esos archivos: nada aqu\u00ed consulta internet mientras lo usas. Cambia tus propios cinco archivos y el mismo mapa servir\u00e1 para cualquier otro porchfest.",
+              "fa": "\u062a\u0646\u0647\u0627 \u0648\u0631\u0648\u062f\u06cc \u0627\u06cc\u0646 \u0646\u0642\u0634\u0647 \u067e\u0646\u062c \u0641\u0627\u06cc\u0644 \u0635\u0641\u062d\u0647\u200c\u06af\u0633\u062a\u0631\u062f\u0647 \u0627\u0633\u062a\u0627\u0646\u062f\u0627\u0631\u062f \u0627\u0633\u062a: \u0645\u06a9\u0627\u0646\u200c\u0647\u0627\u060c \u06af\u0631\u0648\u0647\u200c\u0647\u0627\u060c \u0627\u062c\u0631\u0627\u0647\u0627\u060c \u0633\u0631\u0648\u06cc\u0633\u200c\u0647\u0627\u06cc \u0628\u0647\u062f\u0627\u0634\u062a\u06cc \u0648 \u0645\u062a\u0641\u0631\u0642\u0647. \u0627\u06cc\u0646 \u0641\u0627\u06cc\u0644\u200c\u0647\u0627 \u0627\u0632 cambridgeport.org/porchfestmaps \u0648 \u062f\u0627\u0634\u0628\u0648\u0631\u062f \u0639\u0645\u0648\u0645\u06cc ArcGIS \u067e\u0648\u0631\u0686\u200c\u0641\u0633\u062a \u0634\u0647\u0631 \u06a9\u06cc\u0645\u0628\u0631\u06cc\u062c \u0628\u0647\u200c\u0631\u0648\u0632 \u0645\u06cc\u200c\u0634\u0648\u0646\u062f \u0648 \u0633\u067e\u0633 \u0646\u0642\u0634\u0647 \u0641\u0642\u0637 \u0627\u0632 \u0647\u0645\u0627\u0646 \u0641\u0627\u06cc\u0644\u200c\u0647\u0627 \u0633\u0627\u062e\u062a\u0647 \u0645\u06cc\u200c\u0634\u0648\u062f \u2014 \u0647\u0646\u06af\u0627\u0645 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0647\u06cc\u0686\u200c\u0686\u06cc\u0632 \u0627\u06cc\u0646\u062c\u0627 \u0627\u06cc\u0646\u062a\u0631\u0646\u062a \u0631\u0627 \u0646\u0645\u06cc\u200c\u062e\u0648\u0627\u0646\u062f. \u067e\u0646\u062c \u0641\u0627\u06cc\u0644 \u062e\u0648\u062f\u062a\u0627\u0646 \u0631\u0627 \u062c\u0627\u06cc\u06af\u0632\u06cc\u0646 \u06a9\u0646\u06cc\u062f \u062a\u0627 \u0647\u0645\u06cc\u0646 \u0646\u0642\u0634\u0647 \u0628\u0631\u0627\u06cc \u0647\u0631 \u067e\u0648\u0631\u0686\u200c\u0641\u0633\u062a \u062f\u06cc\u06af\u0631\u06cc \u06a9\u0627\u0631 \u06a9\u0646\u062f.",
+              "fr": "Cette carte n'a qu'une seule source : cinq fichiers tableur normalis\u00e9s \u2014 lieux, groupes, concerts, toilettes et divers. Ils sont actualis\u00e9s depuis cambridgeport.org/porchfestmaps et le tableau de bord ArcGIS Porchfest public de la ville de Cambridge, puis la carte est reconstruite \u00e0 partir de ces seuls fichiers : rien ici ne consulte internet pendant que vous l'utilisez. Remplacez-les par les v\u00f4tres et la m\u00eame carte fonctionnera pour n'importe quel autre porchfest.",
+              "hi": "\u0907\u0938 \u0928\u0915\u094d\u0936\u0947 \u0915\u093e \u090f\u0915\u092e\u093e\u0924\u094d\u0930 \u0907\u0928\u092a\u0941\u091f \u092a\u093e\u0901\u091a \u092e\u093e\u0928\u0915\u0940\u0915\u0943\u0924 \u0938\u094d\u092a\u094d\u0930\u0947\u0921\u0936\u0940\u091f \u092b\u093c\u093e\u0907\u0932\u0947\u0902 \u0939\u0948\u0902: \u0938\u094d\u0925\u0932, \u092c\u0948\u0902\u0921, \u0915\u093e\u0930\u094d\u092f\u0915\u094d\u0930\u092e, \u0936\u094c\u091a\u093e\u0932\u092f \u0914\u0930 \u0905\u0928\u094d\u092f\u0964 \u092f\u0947 cambridgeport.org/porchfestmaps \u0914\u0930 \u0915\u0948\u0902\u092c\u094d\u0930\u093f\u091c \u0936\u0939\u0930 \u0915\u0947 \u0938\u093e\u0930\u094d\u0935\u091c\u0928\u093f\u0915 ArcGIS Porchfest \u0921\u0948\u0936\u092c\u094b\u0930\u094d\u0921 \u0938\u0947 \u0924\u093e\u091c\u093c\u093e \u0915\u0940 \u091c\u093e\u0924\u0940 \u0939\u0948\u0902, \u0914\u0930 \u092b\u093f\u0930 \u0928\u0915\u094d\u0936\u093e \u0915\u0947\u0935\u0932 \u0909\u0928\u094d\u0939\u0940\u0902 \u092b\u093c\u093e\u0907\u0932\u094b\u0902 \u0938\u0947 \u092c\u0928\u093e\u092f\u093e \u091c\u093e\u0924\u093e \u0939\u0948 \u2014 \u0909\u092a\u092f\u094b\u0917 \u0915\u0947 \u0926\u094c\u0930\u093e\u0928 \u092f\u0939 \u0907\u0902\u091f\u0930\u0928\u0947\u091f \u0928\u0939\u0940\u0902 \u092a\u0922\u093c\u0924\u093e\u0964 \u0905\u092a\u0928\u0940 \u092a\u093e\u0901\u091a \u092b\u093c\u093e\u0907\u0932\u0947\u0902 \u092c\u0926\u0932 \u0926\u0940\u091c\u093f\u090f \u0914\u0930 \u092f\u0939\u0940 \u0928\u0915\u094d\u0936\u093e \u0915\u093f\u0938\u0940 \u092d\u0940 \u0926\u0942\u0938\u0930\u0947 porchfest \u092a\u0930 \u091a\u0932\u0947\u0917\u093e\u0964",
+              "it": "L'unico input di questa mappa sono cinque file di foglio di calcolo standardizzati: luoghi, band, esibizioni, bagni e varie. Vengono aggiornati da cambridgeport.org/porchfestmaps e dal cruscotto pubblico ArcGIS Porchfest della citt\u00e0 di Cambridge, poi la mappa viene ricostruita solo da quei file: mentre la usi qui nulla legge internet. Sostituiscili con i tuoi cinque file e la stessa mappa funziona per qualsiasi altro porchfest.",
+              "ja": "\u3053\u306e\u5730\u56f3\u306e\u5165\u529b\u306f\u3001\u6a19\u6e96\u5316\u3055\u308c\u305f5\u3064\u306e\u8868\u30d5\u30a1\u30a4\u30eb\u3060\u3051\u3067\u3059\uff1a\u4f1a\u5834\u3001\u30d0\u30f3\u30c9\u3001\u516c\u6f14\u3001\u30c8\u30a4\u30ec\u3001\u305d\u306e\u4ed6\u3002\u3053\u308c\u3089\u306f cambridgeport.org/porchfestmaps \u3068\u30b1\u30f3\u30d6\u30ea\u30c3\u30b8\u5e02\u306e\u516c\u958b ArcGIS Porchfest \u30c0\u30c3\u30b7\u30e5\u30dc\u30fc\u30c9\u304b\u3089\u66f4\u65b0\u3055\u308c\u3001\u5730\u56f3\u306f\u305d\u306e\u30d5\u30a1\u30a4\u30eb\u3060\u3051\u304b\u3089\u4f5c\u308a\u76f4\u3055\u308c\u307e\u3059\u3002\u5229\u7528\u4e2d\u306b\u30a4\u30f3\u30bf\u30fc\u30cd\u30c3\u30c8\u3092\u8aad\u3080\u3053\u3068\u306f\u3042\u308a\u307e\u305b\u3093\u30025\u3064\u306e\u30d5\u30a1\u30a4\u30eb\u3092\u5dee\u3057\u66ff\u3048\u308c\u3070\u3001\u540c\u3058\u5730\u56f3\u304c\u4ed6\u306e\u30dd\u30fc\u30c1\u30d5\u30a7\u30b9\u30c8\u3067\u3082\u52d5\u304d\u307e\u3059\u3002",
+              "ko": "\uc774 \uc9c0\ub3c4\uc758 \uc785\ub825\uc740 \ud45c\uc900\ud654\ub41c \ub2e4\uc12f \uac1c\uc758 \uc2a4\ud504\ub808\ub4dc\uc2dc\ud2b8 \ud30c\uc77c\ubfd0\uc785\ub2c8\ub2e4: \uc7a5\uc18c, \ubc34\ub4dc, \uacf5\uc5f0, \ud654\uc7a5\uc2e4, \uae30\ud0c0. \uc774 \ud30c\uc77c\ub4e4\uc740 cambridgeport.org/porchfestmaps\uc640 \ucf00\uc784\ube0c\ub9ac\uc9c0\uc2dc\uc758 \uacf5\uac1c ArcGIS \ud3ec\uce58\ud398\uc2a4\ud2b8 \ub300\uc2dc\ubcf4\ub4dc\uc5d0\uc11c \uac31\uc2e0\ub418\uba70, \uc9c0\ub3c4\ub294 \uc624\uc9c1 \uadf8 \ud30c\uc77c\ub4e4\ub85c\ub9cc \ub2e4\uc2dc \ub9cc\ub4e4\uc5b4\uc9d1\ub2c8\ub2e4 \u2014 \uc0ac\uc6a9 \uc911\uc5d0\ub294 \uc778\ud130\ub137\uc744 \uc804\ud600 \uc77d\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \ud30c\uc77c \ub2e4\uc12f \uac1c\ub97c \ubc14\uafb8\uba74 \uac19\uc740 \uc9c0\ub3c4\uac00 \ub2e4\ub978 \ud3ec\uce58\ud398\uc2a4\ud2b8\uc5d0\ub3c4 \uadf8\ub300\ub85c \uc791\ub3d9\ud569\ub2c8\ub2e4.",
+              "nl": "De enige invoer van deze kaart zijn vijf gestandaardiseerde spreadsheetbestanden: locaties, bands, optredens, toiletten en overig. Ze worden ververst vanaf cambridgeport.org/porchfestmaps en het openbare ArcGIS Porchfest-dashboard van de stad Cambridge, waarna de kaart alleen uit die bestanden wordt opgebouwd \u2014 tijdens gebruik leest hier niets het internet. Vervang ze door je eigen vijf bestanden en dezelfde kaart werkt voor elk ander porchfest.",
+              "pl": "Jedynym \u017ar\u00f3d\u0142em tej mapy jest pi\u0119\u0107 ustandaryzowanych plik\u00f3w arkusza: miejsca, zespo\u0142y, wyst\u0119py, toalety i r\u00f3\u017cne. S\u0105 od\u015bwie\u017cane z cambridgeport.org/porchfestmaps oraz z publicznego panelu ArcGIS Porchfest miasta Cambridge, a mapa jest nast\u0119pnie budowana wy\u0142\u0105cznie z tych plik\u00f3w \u2014 podczas korzystania nic tu nie si\u0119ga do internetu. Podmie\u0144 je na w\u0142asne pi\u0119\u0107 plik\u00f3w, a ta sama mapa obs\u0142u\u017cy dowolny inny porchfest.",
+              "pt": "A \u00fanica entrada deste mapa s\u00e3o cinco ficheiros de folha de c\u00e1lculo normalizados: locais, bandas, atua\u00e7\u00f5es, casas de banho e diversos. S\u00e3o atualizados a partir de cambridgeport.org/porchfestmaps e do painel p\u00fablico ArcGIS Porchfest da cidade de Cambridge, e o mapa \u00e9 depois reconstru\u00eddo s\u00f3 a partir desses ficheiros \u2014 nada aqui consulta a internet enquanto o usa. Troque-os pelos seus cinco ficheiros e o mesmo mapa serve qualquer outro porchfest.",
+              "ru": "\u0415\u0434\u0438\u043d\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0439 \u0438\u0441\u0442\u043e\u0447\u043d\u0438\u043a \u044d\u0442\u043e\u0439 \u043a\u0430\u0440\u0442\u044b \u2014 \u043f\u044f\u0442\u044c \u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0445 \u0442\u0430\u0431\u043b\u0438\u0447\u043d\u044b\u0445 \u0444\u0430\u0439\u043b\u043e\u0432: \u043f\u043b\u043e\u0449\u0430\u0434\u043a\u0438, \u0433\u0440\u0443\u043f\u043f\u044b, \u0432\u044b\u0441\u0442\u0443\u043f\u043b\u0435\u043d\u0438\u044f, \u0442\u0443\u0430\u043b\u0435\u0442\u044b \u0438 \u043f\u0440\u043e\u0447\u0435\u0435. \u041e\u043d\u0438 \u043e\u0431\u043d\u043e\u0432\u043b\u044f\u044e\u0442\u0441\u044f \u0441 cambridgeport.org/porchfestmaps \u0438 \u0438\u0437 \u043e\u0442\u043a\u0440\u044b\u0442\u043e\u0439 \u043f\u0430\u043d\u0435\u043b\u0438 ArcGIS Porchfest \u0433\u043e\u0440\u043e\u0434\u0430 \u041a\u0435\u0439\u043c\u0431\u0440\u0438\u0434\u0436, \u043f\u043e\u0441\u043b\u0435 \u0447\u0435\u0433\u043e \u043a\u0430\u0440\u0442\u0430 \u0441\u043e\u0431\u0438\u0440\u0430\u0435\u0442\u0441\u044f \u0442\u043e\u043b\u044c\u043a\u043e \u0438\u0437 \u044d\u0442\u0438\u0445 \u0444\u0430\u0439\u043b\u043e\u0432 \u2014 \u0432\u043e \u0432\u0440\u0435\u043c\u044f \u0440\u0430\u0431\u043e\u0442\u044b \u043e\u043d\u0430 \u043d\u0435 \u043e\u0431\u0440\u0430\u0449\u0430\u0435\u0442\u0441\u044f \u043a \u0438\u043d\u0442\u0435\u0440\u043d\u0435\u0442\u0443. \u0417\u0430\u043c\u0435\u043d\u0438\u0442\u0435 \u043f\u044f\u0442\u044c \u0444\u0430\u0439\u043b\u043e\u0432 \u0441\u0432\u043e\u0438\u043c\u0438, \u0438 \u0442\u0430 \u0436\u0435 \u043a\u0430\u0440\u0442\u0430 \u043f\u043e\u0434\u043e\u0439\u0434\u0451\u0442 \u0434\u043b\u044f \u043b\u044e\u0431\u043e\u0433\u043e \u0434\u0440\u0443\u0433\u043e\u0433\u043e porchfest.",
+              "sv": "Den h\u00e4r kartans enda indata \u00e4r fem standardiserade kalkylarksfiler: platser, band, framtr\u00e4danden, toaletter och \u00f6vrigt. De uppdateras fr\u00e5n cambridgeport.org/porchfestmaps och Cambridges \u00f6ppna ArcGIS Porchfest-panel, och kartan byggs sedan enbart av dessa filer \u2014 inget h\u00e4r l\u00e4ser internet medan du anv\u00e4nder den. Byt till dina egna fem filer s\u00e5 fungerar samma karta f\u00f6r vilken annan porchfest som helst.",
+              "tr": "Bu haritan\u0131n tek girdisi be\u015f standart tablo dosyas\u0131d\u0131r: mek\u00e2nlar, gruplar, etkinlikler, tuvaletler ve di\u011ferleri. Bu dosyalar cambridgeport.org/porchfestmaps adresinden ve Cambridge \u015fehrinin a\u00e7\u0131k ArcGIS Porchfest panosundan yenilenir; harita sonra yaln\u0131zca bu dosyalardan yeniden kurulur \u2014 kullan\u0131rken burada hi\u00e7bir \u015fey internete bakmaz. Kendi be\u015f dosyan\u0131z\u0131 koyun, ayn\u0131 harita ba\u015fka herhangi bir porchfest i\u00e7in \u00e7al\u0131\u015f\u0131r.",
+              "uk": "\u0404\u0434\u0438\u043d\u0435 \u0434\u0436\u0435\u0440\u0435\u043b\u043e \u0446\u0456\u0454\u0457 \u043a\u0430\u0440\u0442\u0438 \u2014 \u043f'\u044f\u0442\u044c \u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u0438\u0437\u043e\u0432\u0430\u043d\u0438\u0445 \u0442\u0430\u0431\u043b\u0438\u0447\u043d\u0438\u0445 \u0444\u0430\u0439\u043b\u0456\u0432: \u043c\u0430\u0439\u0434\u0430\u043d\u0447\u0438\u043a\u0438, \u0433\u0443\u0440\u0442\u0438, \u0432\u0438\u0441\u0442\u0443\u043f\u0438, \u0432\u0431\u0438\u0440\u0430\u043b\u044c\u043d\u0456 \u0442\u0430 \u0456\u043d\u0448\u0435. \u0412\u043e\u043d\u0438 \u043e\u043d\u043e\u0432\u043b\u044e\u044e\u0442\u044c\u0441\u044f \u0437 cambridgeport.org/porchfestmaps \u0456 \u0437 \u0432\u0456\u0434\u043a\u0440\u0438\u0442\u043e\u0457 \u043f\u0430\u043d\u0435\u043b\u0456 ArcGIS Porchfest \u043c\u0456\u0441\u0442\u0430 \u041a\u0435\u043c\u0431\u0440\u0438\u0434\u0436, \u043f\u0456\u0441\u043b\u044f \u0447\u043e\u0433\u043e \u043a\u0430\u0440\u0442\u0430 \u0437\u0431\u0438\u0440\u0430\u0454\u0442\u044c\u0441\u044f \u043b\u0438\u0448\u0435 \u0437 \u0446\u0438\u0445 \u0444\u0430\u0439\u043b\u0456\u0432 \u2014 \u043f\u0456\u0434 \u0447\u0430\u0441 \u043a\u043e\u0440\u0438\u0441\u0442\u0443\u0432\u0430\u043d\u043d\u044f \u0442\u0443\u0442 \u043d\u0456\u0449\u043e \u043d\u0435 \u0437\u0432\u0435\u0440\u0442\u0430\u0454\u0442\u044c\u0441\u044f \u0434\u043e \u0456\u043d\u0442\u0435\u0440\u043d\u0435\u0442\u0443. \u0417\u0430\u043c\u0456\u043d\u0456\u0442\u044c \u0457\u0445 \u0441\u0432\u043e\u0457\u043c\u0438 \u043f'\u044f\u0442\u044c\u043c\u0430 \u0444\u0430\u0439\u043b\u0430\u043c\u0438, \u0456 \u0442\u0430 \u0441\u0430\u043c\u0430 \u043a\u0430\u0440\u0442\u0430 \u043f\u0440\u0430\u0446\u044e\u0432\u0430\u0442\u0438\u043c\u0435 \u0434\u043b\u044f \u0431\u0443\u0434\u044c-\u044f\u043a\u043e\u0433\u043e \u0456\u043d\u0448\u043e\u0433\u043e porchfest.",
+              "vi": "\u0110\u1ea7u v\u00e0o duy nh\u1ea5t c\u1ee7a b\u1ea3n \u0111\u1ed3 n\u00e0y l\u00e0 n\u0103m t\u1ec7p b\u1ea3ng t\u00ednh chu\u1ea9n ho\u00e1: \u0111\u1ecba \u0111i\u1ec3m, ban nh\u1ea1c, bu\u1ed5i di\u1ec5n, nh\u00e0 v\u1ec7 sinh v\u00e0 m\u1ee5c kh\u00e1c. Ch\u00fang \u0111\u01b0\u1ee3c l\u00e0m m\u1edbi t\u1eeb cambridgeport.org/porchfestmaps v\u00e0 b\u1ea3ng \u0111i\u1ec1u khi\u1ec3n ArcGIS Porchfest c\u00f4ng khai c\u1ee7a th\u00e0nh ph\u1ed1 Cambridge, r\u1ed3i b\u1ea3n \u0111\u1ed3 \u0111\u01b0\u1ee3c d\u1ef1ng l\u1ea1i ch\u1ec9 t\u1eeb nh\u1eefng t\u1ec7p \u0111\u00f3 \u2014 kh\u00f4ng c\u00f3 g\u00ec \u1edf \u0111\u00e2y \u0111\u1ecdc internet trong l\u00fac b\u1ea1n d\u00f9ng. Thay b\u1eb1ng n\u0103m t\u1ec7p c\u1ee7a ri\u00eang b\u1ea1n v\u00e0 c\u00f9ng b\u1ea3n \u0111\u1ed3 n\u00e0y ch\u1ea1y cho b\u1ea5t k\u1ef3 porchfest n\u00e0o kh\u00e1c.",
+              "zh": "\u8fd9\u5f20\u5730\u56fe\u7684\u552f\u4e00\u8f93\u5165\u662f\u4e94\u4e2a\u6807\u51c6\u5316\u7684\u8868\u683c\u6587\u4ef6\uff1a\u573a\u5730\u3001\u4e50\u961f\u3001\u6f14\u51fa\u3001\u6d17\u624b\u95f4\u548c\u5176\u4ed6\u3002\u5b83\u4eec\u4ece cambridgeport.org/porchfestmaps \u548c\u5251\u6865\u5e02\u516c\u5f00\u7684 ArcGIS Porchfest \u9762\u677f\u66f4\u65b0\uff0c\u7136\u540e\u5730\u56fe\u4ec5\u4f9d\u636e\u8fd9\u4e9b\u6587\u4ef6\u91cd\u5efa\u2014\u2014\u4f7f\u7528\u65f6\u4e0d\u4f1a\u8bfb\u53d6\u4efb\u4f55\u7f51\u7edc\u5185\u5bb9\u3002\u6362\u4e0a\u4f60\u81ea\u5df1\u7684\u4e94\u4e2a\u6587\u4ef6\uff0c\u540c\u4e00\u5f20\u5730\u56fe\u5c31\u80fd\u7528\u4e8e\u5176\u4ed6\u4efb\u4f55 porchfest\u3002"
+            }
+          },
+          {
+            "type": "text",
+            "style": "title",
+            "value": {
+              "ar": "\u062d\u0648\u0644 \u0627\u0644\u062f\u0642\u0629",
+              "cs": "O p\u0159esnosti",
+              "de": "Zur Genauigkeit",
+              "el": "\u03a3\u03c7\u03b5\u03c4\u03b9\u03ba\u03ac \u03bc\u03b5 \u03c4\u03b7\u03bd \u03b1\u03ba\u03c1\u03af\u03b2\u03b5\u03b9\u03b1",
+              "en": "On accuracy",
+              "es": "Sobre la precisi\u00f3n",
+              "fa": "\u062f\u0631\u0628\u0627\u0631\u0647 \u062f\u0642\u062a",
+              "fr": "\u00c0 propos de la pr\u00e9cision",
+              "hi": "\u0938\u091f\u0940\u0915\u0924\u093e \u0915\u0947 \u092c\u093e\u0930\u0947 \u092e\u0947\u0902",
+              "it": "Sulla precisione",
+              "ja": "\u7cbe\u5ea6\u306b\u3064\u3044\u3066",
+              "ko": "\uc815\ud655\ub3c4\uc5d0 \ub300\ud558\uc5ec",
+              "nl": "Over nauwkeurigheid",
+              "pl": "O dok\u0142adno\u015bci",
+              "pt": "Sobre a precis\u00e3o",
+              "ru": "\u041e \u0442\u043e\u0447\u043d\u043e\u0441\u0442\u0438",
+              "sv": "Om noggrannhet",
+              "tr": "Do\u011fruluk hakk\u0131nda",
+              "uk": "\u041f\u0440\u043e \u0442\u043e\u0447\u043d\u0456\u0441\u0442\u044c",
+              "vi": "V\u1ec1 \u0111\u1ed9 ch\u00ednh x\u00e1c",
+              "zh": "\u5173\u4e8e\u51c6\u786e\u6027"
+            }
+          },
+          {
+            "type": "text",
+            "value": {
+              "ar": "\u0627\u0644\u0625\u062d\u062f\u0627\u062b\u064a\u0627\u062a \u0647\u064a \u0627\u0644\u0646\u0642\u0627\u0637 \u0627\u0644\u062a\u064a \u0646\u0634\u0631\u0647\u0627 \u0627\u0644\u0645\u0646\u0638\u0645\u0648\u0646 \u0623\u0646\u0641\u0633\u0647\u0645\u060c \u062f\u0648\u0646 \u062a\u0631\u0645\u064a\u0632 \u062c\u063a\u0631\u0627\u0641\u064a \u0645\u0633\u062a\u0642\u0644\u060c \u0644\u0630\u0627 \u0642\u062f \u062a\u0628\u062f\u0648 \u0628\u0639\u0636 \u0627\u0644\u0634\u0631\u0641\u0627\u062a \u0628\u0639\u064a\u062f\u0629 \u0642\u0644\u064a\u0644\u064b\u0627 \u0639\u0646 \u0645\u0648\u0636\u0639\u0647\u0627. \u0623\u0648\u0642\u0627\u062a \u0627\u0644\u0627\u0646\u062a\u0647\u0627\u0621 \u062a\u0642\u062f\u064a\u0631\u064a\u0629: \u0627\u0644\u0642\u0627\u0626\u0645\u0629 \u0627\u0644\u0645\u0646\u0634\u0648\u0631\u0629 \u062a\u062d\u0645\u0644 \u0648\u0642\u062a \u0627\u0644\u0628\u062f\u0621 \u0641\u0642\u0637\u060c \u0644\u0630\u0627 \u064a\u064f\u0641\u062a\u0631\u0636 \u0623\u0646 \u0643\u0644 \u0639\u0631\u0636 \u064a\u0633\u062a\u0645\u0631 \u0633\u0627\u0639\u0629 \u0648\u0627\u062d\u062f\u0629\u060c \u0648\u0647\u064a \u0645\u062f\u0629 \u0627\u0644\u0641\u062a\u0631\u0629 \u0641\u064a \u0627\u0644\u0645\u0647\u0631\u062c\u0627\u0646. \u0646\u0642\u0627\u0637 \u062f\u0648\u0631\u0627\u062a \u0627\u0644\u0645\u064a\u0627\u0647 \u0648\u0627\u0644\u0645\u062a\u0641\u0631\u0642\u0627\u062a \u0641\u0627\u0631\u063a\u0629 \u2014 \u0644\u0627 \u062a\u0648\u062c\u062f \u0642\u0627\u0626\u0645\u0629 \u0639\u0627\u0645\u0629 \u062a\u0646\u0634\u0631\u0647\u0627\u060c \u0648\u0627\u062e\u062a\u0644\u0627\u0642 \u0627\u0644\u0646\u0642\u0627\u0637 \u0623\u0633\u0648\u0623 \u0645\u0646 \u0641\u0631\u0627\u063a \u0635\u0627\u062f\u0642.",
+              "cs": "Sou\u0159adnice jsou body zve\u0159ejn\u011bn\u00e9 samotn\u00fdmi po\u0159adateli, bez nez\u00e1visl\u00e9ho geok\u00f3dov\u00e1n\u00ed, tak\u017ee p\u00e1r verand m\u016f\u017ee sed\u011bt trochu vedle. \u010cASY KONCE JSOU ODHAD: zve\u0159ejn\u011bn\u00fd seznam uv\u00e1d\u00ed jen \u010das za\u010d\u00e1tku, proto se p\u0159edpokl\u00e1d\u00e1, \u017ee ka\u017ed\u00e9 vystoupen\u00ed trv\u00e1 hodinu, co\u017e je d\u00e9lka festivalov\u00e9ho slotu. Body toalet a r\u016fzn\u00e9 jsou pr\u00e1zdn\u00e9 \u2014 \u017e\u00e1dn\u00fd ve\u0159ejn\u00fd seznam je nezve\u0159ej\u0148uje a vym\u00fd\u0161let si body by bylo hor\u0161\u00ed ne\u017e poctiv\u00e9 pr\u00e1zdno.",
+              "de": "Die Koordinaten sind die von den Veranstaltern selbst ver\u00f6ffentlichten Punkte, nicht unabh\u00e4ngig geokodiert \u2014 einzelne Veranden k\u00f6nnen also etwas verrutscht sein. DIE ENDZEITEN SIND GESCH\u00c4TZT: die ver\u00f6ffentlichte Liste enth\u00e4lt nur die Startzeit, daher wird f\u00fcr jeden Auftritt eine Stunde angenommen, die Slotl\u00e4nge des Festivals. Toiletten- und Sonstiges-Punkte sind leer \u2014 keine \u00f6ffentliche Liste ver\u00f6ffentlicht sie, und erfundene Punkte w\u00e4ren schlimmer als eine ehrliche L\u00fccke.",
+              "el": "\u039f\u03b9 \u03c3\u03c5\u03bd\u03c4\u03b5\u03c4\u03b1\u03b3\u03bc\u03ad\u03bd\u03b5\u03c2 \u03b5\u03af\u03bd\u03b1\u03b9 \u03c4\u03b1 \u03c3\u03b7\u03bc\u03b5\u03af\u03b1 \u03c0\u03bf\u03c5 \u03b4\u03b7\u03bc\u03bf\u03c3\u03af\u03b5\u03c5\u03c3\u03b1\u03bd \u03bf\u03b9 \u03af\u03b4\u03b9\u03bf\u03b9 \u03bf\u03b9 \u03b4\u03b9\u03bf\u03c1\u03b3\u03b1\u03bd\u03c9\u03c4\u03ad\u03c2, \u03c7\u03c9\u03c1\u03af\u03c2 \u03b1\u03bd\u03b5\u03be\u03ac\u03c1\u03c4\u03b7\u03c4\u03b7 \u03b3\u03b5\u03c9\u03ba\u03c9\u03b4\u03b9\u03ba\u03bf\u03c0\u03bf\u03af\u03b7\u03c3\u03b7, \u03bf\u03c0\u03cc\u03c4\u03b5 \u03ba\u03ac\u03c0\u03bf\u03b9\u03b5\u03c2 \u03b2\u03b5\u03c1\u03ac\u03bd\u03c4\u03b5\u03c2 \u03bc\u03c0\u03bf\u03c1\u03b5\u03af \u03bd\u03b1 \u03c0\u03ad\u03c6\u03c4\u03bf\u03c5\u03bd \u03bb\u03af\u03b3\u03bf \u03c0\u03b1\u03c1\u03ac\u03bc\u03b5\u03c1\u03b1. \u039f\u0399 \u03a9\u03a1\u0395\u03a3 \u039b\u0397\u039e\u0397\u03a3 \u0395\u0399\u039d\u0391\u0399 \u0395\u039a\u03a4\u0399\u039c\u0397\u03a3\u0397: \u03b7 \u03b4\u03b7\u03bc\u03bf\u03c3\u03b9\u03b5\u03c5\u03bc\u03ad\u03bd\u03b7 \u03bb\u03af\u03c3\u03c4\u03b1 \u03ad\u03c7\u03b5\u03b9 \u03bc\u03cc\u03bd\u03bf \u03ce\u03c1\u03b1 \u03ad\u03bd\u03b1\u03c1\u03be\u03b7\u03c2, \u03bf\u03c0\u03cc\u03c4\u03b5 \u03ba\u03ac\u03b8\u03b5 \u03b5\u03bc\u03c6\u03ac\u03bd\u03b9\u03c3\u03b7 \u03b8\u03b5\u03c9\u03c1\u03b5\u03af\u03c4\u03b1\u03b9 \u03cc\u03c4\u03b9 \u03ba\u03c1\u03b1\u03c4\u03ac \u03bc\u03af\u03b1 \u03ce\u03c1\u03b1, \u03cc\u03c3\u03bf \u03ba\u03b1\u03b9 \u03b7 \u03b8\u03c5\u03c1\u03af\u03b4\u03b1 \u03c4\u03bf\u03c5 \u03c6\u03b5\u03c3\u03c4\u03b9\u03b2\u03ac\u03bb. \u03a4\u03b1 \u03c3\u03b7\u03bc\u03b5\u03af\u03b1 \u03b3\u03b9\u03b1 \u03c4\u03bf\u03c5\u03b1\u03bb\u03ad\u03c4\u03b5\u03c2 \u03ba\u03b1\u03b9 \u03b4\u03b9\u03ac\u03c6\u03bf\u03c1\u03b1 \u03b5\u03af\u03bd\u03b1\u03b9 \u03ba\u03b5\u03bd\u03ac \u2014 \u03ba\u03b1\u03bc\u03af\u03b1 \u03b4\u03b7\u03bc\u03cc\u03c3\u03b9\u03b1 \u03bb\u03af\u03c3\u03c4\u03b1 \u03b4\u03b5\u03bd \u03c4\u03b1 \u03b4\u03b7\u03bc\u03bf\u03c3\u03b9\u03b5\u03cd\u03b5\u03b9, \u03ba\u03b1\u03b9 \u03b7 \u03b5\u03c0\u03b9\u03bd\u03cc\u03b7\u03c3\u03b7 \u03c3\u03b7\u03bc\u03b5\u03af\u03c9\u03bd \u03b8\u03b1 \u03ae\u03c4\u03b1\u03bd \u03c7\u03b5\u03b9\u03c1\u03cc\u03c4\u03b5\u03c1\u03b7 \u03b1\u03c0\u03cc \u03ad\u03bd\u03b1 \u03c4\u03af\u03bc\u03b9\u03bf \u03ba\u03b5\u03bd\u03cc.",
+              "en": "Coordinates are the organizers' own published points, not independently geocoded, so a few porches may sit slightly off. END TIMES ARE ESTIMATED: the published listing carries a start time only, so every set is assumed to run one hour, the festival's slot length. Bathroom and misc points ship empty \u2014 no public listing publishes them, and inventing points would be worse than an honest blank.",
+              "es": "Las coordenadas son los puntos publicados por los propios organizadores, sin geocodificaci\u00f3n independiente, as\u00ed que alg\u00fan porche puede quedar algo desplazado. LAS HORAS DE FIN SON ESTIMADAS: el listado publicado solo trae la hora de inicio, as\u00ed que se supone que cada actuaci\u00f3n dura una hora, la duraci\u00f3n de franja del festival. Los puntos de ba\u00f1os y varios van vac\u00edos: ning\u00fan listado p\u00fablico los publica, e inventarlos ser\u00eda peor que un hueco honesto.",
+              "fa": "\u0645\u062e\u062a\u0635\u0627\u062a \u0647\u0645\u0627\u0646 \u0646\u0642\u0627\u0637\u06cc \u0627\u0633\u062a \u06a9\u0647 \u062e\u0648\u062f \u0628\u0631\u06af\u0632\u0627\u0631\u06a9\u0646\u0646\u062f\u06af\u0627\u0646 \u0645\u0646\u062a\u0634\u0631 \u06a9\u0631\u062f\u0647\u200c\u0627\u0646\u062f \u0648 \u0628\u0647\u200c\u0637\u0648\u0631 \u0645\u0633\u062a\u0642\u0644 \u0698\u0626\u0648\u06a9\u062f \u0646\u0634\u062f\u0647 \u0627\u0633\u062a\u060c \u0628\u0646\u0627\u0628\u0631\u0627\u06cc\u0646 \u0645\u0645\u06a9\u0646 \u0627\u0633\u062a \u0686\u0646\u062f \u0627\u06cc\u0648\u0627\u0646 \u06a9\u0645\u06cc \u062c\u0627\u0628\u0647\u200c\u062c\u0627 \u0628\u0647 \u0646\u0638\u0631 \u0628\u0631\u0633\u062f. \u0632\u0645\u0627\u0646 \u067e\u0627\u06cc\u0627\u0646 \u062a\u062e\u0645\u06cc\u0646\u06cc \u0627\u0633\u062a: \u0641\u0647\u0631\u0633\u062a \u0645\u0646\u062a\u0634\u0631\u0634\u062f\u0647 \u062a\u0646\u0647\u0627 \u0632\u0645\u0627\u0646 \u0634\u0631\u0648\u0639 \u0631\u0627 \u062f\u0627\u0631\u062f\u060c \u067e\u0633 \u0641\u0631\u0636 \u0634\u062f\u0647 \u0647\u0631 \u0627\u062c\u0631\u0627 \u06cc\u06a9 \u0633\u0627\u0639\u062a\u060c \u0628\u0631\u0627\u0628\u0631 \u0637\u0648\u0644 \u0647\u0631 \u0628\u0627\u0632\u0647\u0654 \u062c\u0634\u0646\u0648\u0627\u0631\u0647\u060c \u0637\u0648\u0644 \u0645\u06cc\u200c\u06a9\u0634\u062f. \u0646\u0642\u0627\u0637 \u0633\u0631\u0648\u06cc\u0633 \u0628\u0647\u062f\u0627\u0634\u062a\u06cc \u0648 \u0645\u062a\u0641\u0631\u0642\u0647 \u062e\u0627\u0644\u06cc \u0627\u0633\u062a \u2014 \u0647\u06cc\u0686 \u0641\u0647\u0631\u0633\u062a \u0639\u0645\u0648\u0645\u06cc \u0622\u0646\u200c\u0647\u0627 \u0631\u0627 \u0645\u0646\u062a\u0634\u0631 \u0646\u0645\u06cc\u200c\u06a9\u0646\u062f \u0648 \u0633\u0627\u062e\u062a\u0646 \u0646\u0642\u0637\u0647 \u0628\u062f\u062a\u0631 \u0627\u0632 \u06cc\u06a9 \u062c\u0627\u06cc \u062e\u0627\u0644\u06cc \u0635\u0627\u062f\u0642\u0627\u0646\u0647 \u0627\u0633\u062a.",
+              "fr": "Les coordonn\u00e9es sont les points publi\u00e9s par les organisateurs eux-m\u00eames, sans g\u00e9ocodage ind\u00e9pendant : quelques porches peuvent donc \u00eatre l\u00e9g\u00e8rement d\u00e9cal\u00e9s. LES HEURES DE FIN SONT ESTIM\u00c9ES : la liste publi\u00e9e ne donne que l'heure de d\u00e9but, on suppose donc que chaque set dure une heure, la dur\u00e9e d'un cr\u00e9neau du festival. Les points toilettes et divers sont vides \u2014 aucune liste publique ne les publie, et les inventer serait pire qu'un blanc honn\u00eate.",
+              "hi": "\u0928\u093f\u0930\u094d\u0926\u0947\u0936\u093e\u0902\u0915 \u0906\u092f\u094b\u091c\u0915\u094b\u0902 \u0926\u094d\u0935\u093e\u0930\u093e \u092a\u094d\u0930\u0915\u093e\u0936\u093f\u0924 \u092c\u093f\u0902\u0926\u0941 \u0939\u0948\u0902, \u0905\u0932\u0917 \u0938\u0947 \u091c\u093f\u092f\u094b\u0915\u094b\u0921 \u0928\u0939\u0940\u0902 \u0915\u093f\u090f \u0917\u090f, \u0907\u0938\u0932\u093f\u090f \u0915\u0941\u091b \u092c\u0930\u093e\u092e\u0926\u0947 \u0925\u094b\u0921\u093c\u093e \u0939\u091f\u0915\u0930 \u0926\u093f\u0916 \u0938\u0915\u0924\u0947 \u0939\u0948\u0902\u0964 \u0938\u092e\u093e\u092a\u094d\u0924\u093f \u0938\u092e\u092f \u0905\u0928\u0941\u092e\u093e\u0928\u093f\u0924 \u0939\u0948\u0902: \u092a\u094d\u0930\u0915\u093e\u0936\u093f\u0924 \u0938\u0942\u091a\u0940 \u092e\u0947\u0902 \u0915\u0947\u0935\u0932 \u0906\u0930\u0902\u092d \u0938\u092e\u092f \u0939\u0948, \u0907\u0938\u0932\u093f\u090f \u092e\u093e\u0928\u093e \u0917\u092f\u093e \u0939\u0948 \u0915\u093f \u0939\u0930 \u092a\u094d\u0930\u0938\u094d\u0924\u0941\u0924\u093f \u090f\u0915 \u0918\u0902\u091f\u093e \u091a\u0932\u0924\u0940 \u0939\u0948, \u091c\u094b \u0909\u0924\u094d\u0938\u0935 \u0915\u0940 \u0938\u094d\u0932\u0949\u091f \u0905\u0935\u0927\u093f \u0939\u0948\u0964 \u0936\u094c\u091a\u093e\u0932\u092f \u0914\u0930 \u0905\u0928\u094d\u092f \u092c\u093f\u0902\u0926\u0941 \u0916\u093e\u0932\u0940 \u0939\u0948\u0902 \u2014 \u0915\u094b\u0908 \u0938\u093e\u0930\u094d\u0935\u091c\u0928\u093f\u0915 \u0938\u0942\u091a\u0940 \u0909\u0928\u094d\u0939\u0947\u0902 \u092a\u094d\u0930\u0915\u093e\u0936\u093f\u0924 \u0928\u0939\u0940\u0902 \u0915\u0930\u0924\u0940, \u0914\u0930 \u092c\u093f\u0902\u0926\u0941 \u0917\u0922\u093c\u0928\u093e \u0908\u092e\u093e\u0928\u0926\u093e\u0930 \u0916\u093e\u0932\u0940\u092a\u0928 \u0938\u0947 \u092c\u0941\u0930\u093e \u0939\u094b\u0917\u093e\u0964",
+              "it": "Le coordinate sono i punti pubblicati dagli stessi organizzatori, non geocodificati in modo indipendente, quindi qualche portico pu\u00f2 risultare leggermente spostato. GLI ORARI DI FINE SONO STIMATI: l'elenco pubblicato riporta solo l'ora di inizio, quindi si assume che ogni esibizione duri un'ora, la durata di uno slot del festival. I punti bagni e varie sono vuoti: nessun elenco pubblico li pubblica, e inventarli sarebbe peggio di un vuoto onesto.",
+              "ja": "\u5ea7\u6a19\u306f\u4e3b\u50ac\u8005\u81ea\u8eab\u304c\u516c\u958b\u3057\u305f\u5730\u70b9\u3067\u3001\u72ec\u81ea\u306b\u30b8\u30aa\u30b3\u30fc\u30c7\u30a3\u30f3\u30b0\u3057\u3066\u3044\u306a\u3044\u305f\u3081\u3001\u3044\u304f\u3064\u304b\u306e\u30dd\u30fc\u30c1\u306f\u5c11\u3057\u305a\u308c\u308b\u3053\u3068\u304c\u3042\u308a\u307e\u3059\u3002\u7d42\u4e86\u6642\u523b\u306f\u63a8\u5b9a\u3067\u3059\uff1a\u516c\u958b\u60c5\u5831\u306b\u306f\u958b\u59cb\u6642\u523b\u3057\u304b\u306a\u3044\u305f\u3081\u3001\u5404\u51fa\u6f14\u306f\u30d5\u30a7\u30b9\u306e\u67a0\u3068\u540c\u30581\u6642\u9593\u7d9a\u304f\u3082\u306e\u3068\u3057\u3066\u3044\u307e\u3059\u3002\u30c8\u30a4\u30ec\u3068\u305d\u306e\u4ed6\u306e\u5730\u70b9\u306f\u7a7a\u3067\u3059\u3002\u516c\u958b\u60c5\u5831\u304c\u306a\u304f\u3001\u5730\u70b9\u3092\u3067\u3063\u3061\u4e0a\u3052\u308b\u3088\u308a\u6b63\u76f4\u306b\u7a7a\u3051\u3066\u304a\u304f\u65b9\u304c\u3088\u3044\u304b\u3089\u3067\u3059\u3002",
+              "ko": "\uc88c\ud45c\ub294 \uc8fc\ucd5c \uce21\uc774 \uc9c1\uc811 \uacf5\uac1c\ud55c \uc9c0\uc810\uc774\uba70 \ubcc4\ub3c4\ub85c \uc9c0\uc624\ucf54\ub529\ud558\uc9c0 \uc54a\uc558\uc73c\ubbc0\ub85c \uc77c\ubd80 \ud604\uad00\uc740 \uc870\uae08 \uc5b4\uae0b\ub0a0 \uc218 \uc788\uc2b5\ub2c8\ub2e4. \uc885\ub8cc \uc2dc\uac01\uc740 \ucd94\uc815\uce58\uc785\ub2c8\ub2e4: \uacf5\uac1c\ub41c \ubaa9\ub85d\uc5d0\ub294 \uc2dc\uc791 \uc2dc\uac01\ub9cc \uc788\uc5b4 \ubaa8\ub4e0 \uacf5\uc5f0\uc774 \ucd95\uc81c\uc758 \ud55c \uce78 \uae38\uc774\uc778 \ud55c \uc2dc\uac04 \ub3d9\uc548 \uc774\uc5b4\uc9c4\ub2e4\uace0 \uac00\uc815\ud569\ub2c8\ub2e4. \ud654\uc7a5\uc2e4\uacfc \uae30\ud0c0 \uc9c0\uc810\uc740 \ube44\uc5b4 \uc788\uc2b5\ub2c8\ub2e4 \u2014 \uacf5\uac1c \ubaa9\ub85d\uc774 \uc5c6\uc73c\uba70, \uc9c0\uc810\uc744 \uc9c0\uc5b4\ub0b4\ub294 \uac83\ubcf4\ub2e4 \uc815\uc9c1\ud55c \uacf5\ubc31\uc774 \ub0ab\uc2b5\ub2c8\ub2e4.",
+              "nl": "De co\u00f6rdinaten zijn de door de organisatoren zelf gepubliceerde punten, niet onafhankelijk gegeocodeerd, dus een enkele veranda kan iets verschoven staan. EINDTIJDEN ZIJN GESCHAT: de gepubliceerde lijst bevat alleen een begintijd, dus er wordt aangenomen dat elk optreden een uur duurt, de slotlengte van het festival. Toilet- en overige punten zijn leeg \u2014 geen enkele publieke lijst publiceert ze, en punten verzinnen zou erger zijn dan een eerlijke leegte.",
+              "pl": "Wsp\u00f3\u0142rz\u0119dne to punkty opublikowane przez samych organizator\u00f3w, bez niezale\u017cnego geokodowania, wi\u0119c kilka gank\u00f3w mo\u017ce by\u0107 lekko przesuni\u0119tych. GODZINY ZAKO\u0143CZENIA S\u0104 SZACUNKOWE: opublikowany wykaz podaje tylko godzin\u0119 rozpocz\u0119cia, wi\u0119c przyj\u0119to, \u017ce ka\u017cdy wyst\u0119p trwa godzin\u0119, tyle co slot festiwalu. Punkty toalet i r\u00f3\u017cne s\u0105 puste \u2014 \u017caden publiczny wykaz ich nie podaje, a wymy\u015blanie punkt\u00f3w by\u0142oby gorsze ni\u017c uczciwa pustka.",
+              "pt": "As coordenadas s\u00e3o os pontos publicados pelos pr\u00f3prios organizadores, sem geocodifica\u00e7\u00e3o independente, por isso algumas varandas podem ficar ligeiramente desviadas. AS HORAS DE FIM S\u00c3O ESTIMADAS: a listagem publicada traz apenas a hora de in\u00edcio, pelo que se assume que cada atua\u00e7\u00e3o dura uma hora, a dura\u00e7\u00e3o do intervalo do festival. Os pontos de casas de banho e diversos v\u00e3o vazios \u2014 nenhuma listagem p\u00fablica os publica, e invent\u00e1-los seria pior do que um vazio honesto.",
+              "ru": "\u041a\u043e\u043e\u0440\u0434\u0438\u043d\u0430\u0442\u044b \u2014 \u044d\u0442\u043e \u0442\u043e\u0447\u043a\u0438, \u043e\u043f\u0443\u0431\u043b\u0438\u043a\u043e\u0432\u0430\u043d\u043d\u044b\u0435 \u0441\u0430\u043c\u0438\u043c\u0438 \u043e\u0440\u0433\u0430\u043d\u0438\u0437\u0430\u0442\u043e\u0440\u0430\u043c\u0438, \u0431\u0435\u0437 \u043d\u0435\u0437\u0430\u0432\u0438\u0441\u0438\u043c\u043e\u0433\u043e \u0433\u0435\u043e\u043a\u043e\u0434\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f, \u043f\u043e\u044d\u0442\u043e\u043c\u0443 \u043e\u0442\u0434\u0435\u043b\u044c\u043d\u044b\u0435 \u043a\u0440\u044b\u043b\u044c\u0446\u0430 \u043c\u043e\u0433\u0443\u0442 \u043e\u043a\u0430\u0437\u0430\u0442\u044c\u0441\u044f \u043d\u0435\u043c\u043d\u043e\u0433\u043e \u043d\u0435 \u043d\u0430 \u043c\u0435\u0441\u0442\u0435. \u0412\u0420\u0415\u041c\u042f \u041e\u041a\u041e\u041d\u0427\u0410\u041d\u0418\u042f \u041e\u0426\u0415\u041d\u041e\u0427\u041d\u041e\u0415: \u0432 \u043e\u043f\u0443\u0431\u043b\u0438\u043a\u043e\u0432\u0430\u043d\u043d\u043e\u043c \u0441\u043f\u0438\u0441\u043a\u0435 \u0435\u0441\u0442\u044c \u0442\u043e\u043b\u044c\u043a\u043e \u0432\u0440\u0435\u043c\u044f \u043d\u0430\u0447\u0430\u043b\u0430, \u043f\u043e\u044d\u0442\u043e\u043c\u0443 \u0441\u0447\u0438\u0442\u0430\u0435\u0442\u0441\u044f, \u0447\u0442\u043e \u043a\u0430\u0436\u0434\u043e\u0435 \u0432\u044b\u0441\u0442\u0443\u043f\u043b\u0435\u043d\u0438\u0435 \u0434\u043b\u0438\u0442\u0441\u044f \u0447\u0430\u0441 \u2014 \u0441\u0442\u043e\u043b\u044c\u043a\u043e \u0436\u0435, \u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0441\u043b\u043e\u0442 \u0444\u0435\u0441\u0442\u0438\u0432\u0430\u043b\u044f. \u0422\u043e\u0447\u043a\u0438 \u0442\u0443\u0430\u043b\u0435\u0442\u043e\u0432 \u0438 \u043f\u0440\u043e\u0447\u0435\u0433\u043e \u043f\u0443\u0441\u0442\u044b\u0435: \u0438\u0445 \u043d\u0435 \u043f\u0443\u0431\u043b\u0438\u043a\u0443\u0435\u0442 \u043d\u0438 \u043e\u0434\u0438\u043d \u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0439 \u0441\u043f\u0438\u0441\u043e\u043a, \u0430 \u0432\u044b\u0434\u0443\u043c\u044b\u0432\u0430\u0442\u044c \u0442\u043e\u0447\u043a\u0438 \u0445\u0443\u0436\u0435, \u0447\u0435\u043c \u0447\u0435\u0441\u0442\u043d\u043e \u043e\u0441\u0442\u0430\u0432\u0438\u0442\u044c \u043f\u0443\u0441\u0442\u043e.",
+              "sv": "Koordinaterna \u00e4r arrang\u00f6rernas egna publicerade punkter, inte sj\u00e4lvst\u00e4ndigt geokodade, s\u00e5 n\u00e5gon veranda kan hamna en aning fel. SLUTTIDER \u00c4R UPPSKATTADE: den publicerade listan har bara en starttid, s\u00e5 varje framtr\u00e4dande antas p\u00e5g\u00e5 en timme, festivalens passl\u00e4ngd. Toalett- och \u00f6vrigpunkter levereras tomma \u2014 ingen offentlig lista publicerar dem, och att hitta p\u00e5 punkter vore s\u00e4mre \u00e4n en \u00e4rlig lucka.",
+              "tr": "Koordinatlar d\u00fczenleyicilerin kendi yay\u0131mlad\u0131\u011f\u0131 noktalard\u0131r, ba\u011f\u0131ms\u0131z olarak co\u011frafi kodlanmam\u0131\u015ft\u0131r; bu y\u00fczden birka\u00e7 veranda biraz kaym\u0131\u015f g\u00f6r\u00fcnebilir. B\u0130T\u0130\u015e SAATLER\u0130 TAHM\u0130N\u0130D\u0130R: yay\u0131mlanan listede yaln\u0131zca ba\u015flang\u0131\u00e7 saati var, bu y\u00fczden her setin festivalin dilim uzunlu\u011fu olan bir saat s\u00fcrd\u00fc\u011f\u00fc varsay\u0131l\u0131r. Tuvalet ve di\u011fer noktalar bo\u015f gelir \u2014 bunlar\u0131 yay\u0131mlayan a\u00e7\u0131k bir liste yok ve nokta uydurmak d\u00fcr\u00fcst bir bo\u015fluktan daha k\u00f6t\u00fc olurdu.",
+              "uk": "\u041a\u043e\u043e\u0440\u0434\u0438\u043d\u0430\u0442\u0438 \u2014 \u0446\u0435 \u0442\u043e\u0447\u043a\u0438, \u043e\u043f\u0440\u0438\u043b\u044e\u0434\u043d\u0435\u043d\u0456 \u0441\u0430\u043c\u0438\u043c\u0438 \u043e\u0440\u0433\u0430\u043d\u0456\u0437\u0430\u0442\u043e\u0440\u0430\u043c\u0438, \u0431\u0435\u0437 \u043d\u0435\u0437\u0430\u043b\u0435\u0436\u043d\u043e\u0433\u043e \u0433\u0435\u043e\u043a\u043e\u0434\u0443\u0432\u0430\u043d\u043d\u044f, \u0442\u043e\u0436 \u043e\u043a\u0440\u0435\u043c\u0456 \u0491\u0430\u043d\u043a\u0438 \u043c\u043e\u0436\u0443\u0442\u044c \u0441\u0442\u043e\u044f\u0442\u0438 \u0442\u0440\u043e\u0445\u0438 \u043d\u0435 \u043d\u0430 \u043c\u0456\u0441\u0446\u0456. \u0427\u0410\u0421 \u0417\u0410\u0412\u0415\u0420\u0428\u0415\u041d\u041d\u042f \u0404 \u041e\u0426\u0406\u041d\u041a\u041e\u042e: \u0432 \u043e\u043f\u0440\u0438\u043b\u044e\u0434\u043d\u0435\u043d\u043e\u043c\u0443 \u043f\u0435\u0440\u0435\u043b\u0456\u043a\u0443 \u0454 \u043b\u0438\u0448\u0435 \u0447\u0430\u0441 \u043f\u043e\u0447\u0430\u0442\u043a\u0443, \u0442\u043e\u043c\u0443 \u0432\u0432\u0430\u0436\u0430\u0454\u0442\u044c\u0441\u044f, \u0449\u043e \u043a\u043e\u0436\u0435\u043d \u0432\u0438\u0441\u0442\u0443\u043f \u0442\u0440\u0438\u0432\u0430\u0454 \u0433\u043e\u0434\u0438\u043d\u0443 \u2014 \u0441\u0442\u0456\u043b\u044c\u043a\u0438 \u0436, \u0441\u043a\u0456\u043b\u044c\u043a\u0438 \u0441\u043b\u043e\u0442 \u0444\u0435\u0441\u0442\u0438\u0432\u0430\u043b\u044e. \u0422\u043e\u0447\u043a\u0438 \u0432\u0431\u0438\u0440\u0430\u043b\u0435\u043d\u044c \u0442\u0430 \u0456\u043d\u0448\u0456 \u043f\u043e\u0440\u043e\u0436\u043d\u0456: \u0436\u043e\u0434\u0435\u043d \u0432\u0456\u0434\u043a\u0440\u0438\u0442\u0438\u0439 \u043f\u0435\u0440\u0435\u043b\u0456\u043a \u0457\u0445 \u043d\u0435 \u043f\u0443\u0431\u043b\u0456\u043a\u0443\u0454, \u0430 \u0432\u0438\u0433\u0430\u0434\u0443\u0432\u0430\u0442\u0438 \u0442\u043e\u0447\u043a\u0438 \u0433\u0456\u0440\u0448\u0435, \u043d\u0456\u0436 \u0447\u0435\u0441\u043d\u043e \u043b\u0438\u0448\u0438\u0442\u0438 \u043f\u043e\u0440\u043e\u0436\u043d\u044c\u043e.",
+              "vi": "To\u1ea1 \u0111\u1ed9 l\u00e0 c\u00e1c \u0111i\u1ec3m do ch\u00ednh ban t\u1ed5 ch\u1ee9c c\u00f4ng b\u1ed1, kh\u00f4ng \u0111\u01b0\u1ee3c m\u00e3 ho\u00e1 \u0111\u1ecba l\u00fd \u0111\u1ed9c l\u1eadp, n\u00ean v\u00e0i hi\u00ean nh\u00e0 c\u00f3 th\u1ec3 l\u1ec7ch \u0111\u00f4i ch\u00fat. GI\u1edc K\u1ebeT TH\u00daC L\u00c0 \u01af\u1edaC T\u00cdNH: danh s\u00e1ch c\u00f4ng b\u1ed1 ch\u1ec9 c\u00f3 gi\u1edd b\u1eaft \u0111\u1ea7u, n\u00ean m\u1ed7i ti\u1ebft m\u1ee5c \u0111\u01b0\u1ee3c gi\u1ea3 \u0111\u1ecbnh k\u00e9o d\u00e0i m\u1ed9t gi\u1edd, \u0111\u00fang b\u1eb1ng \u0111\u1ed9 d\u00e0i m\u1ed9t khung gi\u1edd c\u1ee7a l\u1ec5 h\u1ed9i. \u0110i\u1ec3m nh\u00e0 v\u1ec7 sinh v\u00e0 m\u1ee5c kh\u00e1c \u0111\u1ec3 tr\u1ed1ng \u2014 kh\u00f4ng c\u00f3 danh s\u00e1ch c\u00f4ng khai n\u00e0o c\u00f4ng b\u1ed1 ch\u00fang, v\u00e0 b\u1ecba ra \u0111i\u1ec3m c\u00f2n t\u1ec7 h\u01a1n m\u1ed9t kho\u1ea3ng tr\u1ed1ng trung th\u1ef1c.",
+              "zh": "\u5750\u6807\u662f\u4e3b\u529e\u65b9\u81ea\u5df1\u516c\u5e03\u7684\u70b9\u4f4d\uff0c\u5e76\u672a\u53e6\u884c\u5730\u7406\u7f16\u7801\uff0c\u56e0\u6b64\u4e2a\u522b\u95e8\u5eca\u53ef\u80fd\u7565\u6709\u504f\u5dee\u3002\u7ed3\u675f\u65f6\u95f4\u4e3a\u4f30\u7b97\uff1a\u516c\u5f00\u540d\u5355\u53ea\u63d0\u4f9b\u5f00\u59cb\u65f6\u95f4\uff0c\u56e0\u6b64\u5047\u5b9a\u6bcf\u573a\u6f14\u51fa\u6301\u7eed\u4e00\u5c0f\u65f6\uff0c\u5373\u97f3\u4e50\u8282\u7684\u65f6\u6bb5\u957f\u5ea6\u3002\u6d17\u624b\u95f4\u4e0e\u5176\u4ed6\u70b9\u4f4d\u4e3a\u7a7a\u2014\u2014\u6ca1\u6709\u516c\u5f00\u540d\u5355\u53d1\u5e03\u5b83\u4eec\uff0c\u800c\u51ed\u7a7a\u634f\u9020\u6bd4\u8bda\u5b9e\u7559\u767d\u66f4\u7cdf\u3002"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

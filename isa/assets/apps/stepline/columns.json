@@ -1,0 +1,12 @@
+{
+  "steplinerecipe": [
+    {
+      "name": "id",
+      "type": "text"
+    },
+    {
+      "name": "config",
+      "type": "text"
+    }
+  ]
+}

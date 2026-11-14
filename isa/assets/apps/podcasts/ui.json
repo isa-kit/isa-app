@@ -1,0 +1,1695 @@
+{
+  "app": {
+    "languages": ["en", "ko", "zh", "hi", "es", "fr", "ar", "pt", "ru", "de", "ja", "tr", "vi", "it", "fa", "pl", "uk", "nl", "sv", "cs", "el"],
+    "translatable": true,
+    "appDataTools": true,
+    "title": {
+      "en": "Podcasts",
+      "ko": "팟캐스트",
+      "zh": "播客",
+      "hi": "पॉडकास्ट",
+      "es": "Podcasts",
+      "fr": "Podcasts",
+      "ar": "بودكاست",
+      "pt": "Podcasts",
+      "ru": "Подкасты",
+      "de": "Podcasts",
+      "ja": "ポッドキャスト",
+      "tr": "Podcastler",
+      "vi": "Podcast",
+      "it": "Podcast",
+      "fa": "پادکست‌ها",
+      "pl": "Podcasty",
+      "uk": "Подкасти",
+      "nl": "Podcasts",
+      "sv": "Poddar",
+      "cs": "Podcasty",
+      "el": "Podcasts"
+    },
+    "primaryColor": "#8E24AA",
+    "theme": "material",
+    "intro": {
+      "purpose": {
+        "en": "Subscribe to shows, queue episodes and discover new ones.",
+        "ko": "프로그램을 구독하고, 에피소드를 대기열에 넣고, 새로운 것을 발견하세요.",
+        "zh": "订阅节目、将剧集加入队列并发现新节目。",
+        "hi": "शो सब्सक्राइब करें, एपिसोड को कतार में लगाएँ और नए खोजें।",
+        "es": "Suscríbete a programas, pon episodios en cola y descubre otros nuevos.",
+        "fr": "Abonnez-vous à des émissions, mettez des épisodes en file d'attente et découvrez-en de nouvelles.",
+        "ar": "اشترك في البرامج، وأضف الحلقات إلى قائمة الانتظار، واكتشف برامج جديدة.",
+        "pt": "Assine programas, coloque episódios na fila e descubra novos.",
+        "ru": "Подписывайтесь на шоу, добавляйте эпизоды в очередь и открывайте новые.",
+        "de": "Abonnieren Sie Sendungen, stellen Sie Episoden in die Warteschlange und entdecken Sie neue.",
+        "ja": "番組を購読し、エピソードをキューに入れ、新しい番組を発見しましょう。",
+        "tr": "Programlara abone olun, bölümleri sıraya alın ve yenilerini keşfedin.",
+        "vi": "Đăng ký các chương trình, xếp hàng đợi các tập và khám phá chương trình mới.",
+        "it": "Iscriviti agli show, metti in coda gli episodi e scoprine di nuovi.",
+        "fa": "به برنامه‌ها مشترک شوید، قسمت‌ها را در صف قرار دهید و برنامه‌های جدید کشف کنید.",
+        "pl": "Subskrybuj programy, kolejkuj odcinki i odkrywaj nowe.",
+        "uk": "Підписуйтесь на шоу, додавайте епізоди в чергу та відкривайте нові.",
+        "nl": "Abonneer op shows, plaats afleveringen in de wachtrij en ontdek nieuwe.",
+        "sv": "Prenumerera på program, köa avsnitt och upptäck nya.",
+        "cs": "Přihlaste se k odběru pořadů, řaďte epizody do fronty a objevujte nové.",
+        "el": "Εγγραφείτε σε εκπομπές, βάλτε επεισόδια στην ουρά και ανακαλύψτε νέα."
+      },
+      "actions": [
+        {
+          "label": {
+            "en": "New library",
+            "ko": "새 라이브러리",
+            "zh": "新建媒体库",
+            "hi": "नई लाइब्रेरी",
+            "es": "Nueva biblioteca",
+            "fr": "Nouvelle bibliothèque",
+            "ar": "مكتبة جديدة",
+            "pt": "Nova biblioteca",
+            "ru": "Новая библиотека",
+            "de": "Neue Bibliothek",
+            "ja": "新しいライブラリ",
+            "tr": "Yeni kitaplık",
+            "vi": "Thư viện mới",
+            "it": "Nuova libreria",
+            "fa": "کتابخانه جدید",
+            "pl": "Nowa biblioteka",
+            "uk": "Нова бібліотека",
+            "nl": "Nieuwe bibliotheek",
+            "sv": "Nytt bibliotek",
+            "cs": "Nová knihovna",
+            "el": "Νέα βιβλιοθήκη"
+          },
+          "icon": "add",
+          "action": {
+            "fn": "addRow",
+            "args": {
+              "table": "files",
+              "values": {
+                "name": "Untitled library"
+              }
+            }
+          }
+        }
+      ],
+      "tour": [
+        {
+          "screen": "shows",
+          "label": "Shows",
+          "note": "Everything you're subscribed to."
+        },
+        {
+          "screen": "queue",
+          "label": "Queue",
+          "note": "Episodes lined up to listen to."
+        },
+        {
+          "screen": "episodes",
+          "label": "Episodes",
+          "note": "Every episode across your shows."
+        },
+        {
+          "screen": "search",
+          "label": "Discover",
+          "note": "Find new shows to subscribe to."
+        }
+      ]
+    }
+  },
+  "nav": [
+    { "id": "files",    "label": { "en": "Files", "ko": "파일", "zh": "文件", "hi": "फ़ाइलें", "es": "Archivos", "fr": "Fichiers", "ar": "الملفات", "pt": "Arquivos", "ru": "Файлы", "de": "Dateien", "ja": "ファイル", "tr": "Dosyalar", "vi": "Tệp", "it": "File", "fa": "فایل‌ها", "pl": "Pliki", "uk": "Файли", "nl": "Bestanden", "sv": "Filer", "cs": "Soubory", "el": "Αρχεία" },    "icon": "folder",     "screen": "files" },
+    { "id": "shows",    "label": { "en": "Shows", "ko": "프로그램", "zh": "节目", "hi": "शो", "es": "Programas", "fr": "Émissions", "ar": "البرامج", "pt": "Programas", "ru": "Шоу", "de": "Sendungen", "ja": "番組", "tr": "Programlar", "vi": "Chương trình", "it": "Show", "fa": "برنامه‌ها", "pl": "Programy", "uk": "Шоу", "nl": "Shows", "sv": "Program", "cs": "Pořady", "el": "Εκπομπές" },    "icon": "podcasts",    "screen": "shows" },
+    { "id": "queue",    "label": { "en": "Queue", "ko": "대기열", "zh": "队列", "hi": "कतार", "es": "Cola", "fr": "File d'attente", "ar": "قائمة الانتظار", "pt": "Fila", "ru": "Очередь", "de": "Warteschlange", "ja": "キュー", "tr": "Sıra", "vi": "Hàng đợi", "it": "Coda", "fa": "صف", "pl": "Kolejka", "uk": "Черга", "nl": "Wachtrij", "sv": "Kö", "cs": "Fronta", "el": "Ουρά" },    "icon": "playlist_play", "screen": "queue" },
+    { "id": "episodes", "label": { "en": "Episodes", "ko": "에피소드", "zh": "剧集", "hi": "एपिसोड", "es": "Episodios", "fr": "Épisodes", "ar": "الحلقات", "pt": "Episódios", "ru": "Эпизоды", "de": "Episoden", "ja": "エピソード", "tr": "Bölümler", "vi": "Các tập", "it": "Episodi", "fa": "قسمت‌ها", "pl": "Odcinki", "uk": "Епізоди", "nl": "Afleveringen", "sv": "Avsnitt", "cs": "Epizody", "el": "Επεισόδια" }, "icon": "graphic_eq",  "screen": "episodes" },
+    { "id": "search",   "label": { "en": "Discover", "ko": "발견", "zh": "发现", "hi": "खोजें", "es": "Descubrir", "fr": "Découvrir", "ar": "اكتشف", "pt": "Descobrir", "ru": "Открыть для себя", "de": "Entdecken", "ja": "発見", "tr": "Keşfet", "vi": "Khám phá", "it": "Scopri", "fa": "کشف", "pl": "Odkryj", "uk": "Відкрити", "nl": "Ontdekken", "sv": "Upptäck", "cs": "Objevit", "el": "Ανακάλυψη" }, "icon": "recommend",   "screen": "search" }
+  ],
+  "screens": {
+    "files": {
+      "title": {
+        "en": "Files",
+        "ko": "파일",
+        "zh": "文件",
+        "hi": "फ़ाइलें",
+        "es": "Archivos",
+        "fr": "Fichiers",
+        "ar": "الملفات",
+        "pt": "Arquivos",
+        "ru": "Файлы",
+        "de": "Dateien",
+        "ja": "ファイル",
+        "tr": "Dosyalar",
+        "vi": "Tệp",
+        "it": "File",
+        "fa": "فایل‌ها",
+        "pl": "Pliki",
+        "uk": "Файли",
+        "nl": "Bestanden",
+        "sv": "Filer",
+        "cs": "Soubory",
+        "el": "Αρχεία"
+      },
+      "body": {
+        "type": "explorer",
+        "table": "files",
+        "nameColumn": "name",
+        "orderColumn": "order",
+        "allowFolders": false,
+        "railMode": "collapsible",
+        "title": {
+          "en": "Files",
+          "ko": "파일",
+          "zh": "文件",
+          "hi": "फ़ाइलें",
+          "es": "Archivos",
+          "fr": "Fichiers",
+          "ar": "الملفات",
+          "pt": "Arquivos",
+          "ru": "Файлы",
+          "de": "Dateien",
+          "ja": "ファイル",
+          "tr": "Dosyalar",
+          "vi": "Tệp",
+          "it": "File",
+          "fa": "فایل‌ها",
+          "pl": "Pliki",
+          "uk": "Файли",
+          "nl": "Bestanden",
+          "sv": "Filer",
+          "cs": "Soubory",
+          "el": "Αρχεία"
+        },
+        "fileIcon": "podcasts",
+        "newFileLabel": {
+          "en": "New library",
+          "ko": "새 라이브러리",
+          "zh": "新建媒体库",
+          "hi": "नई लाइब्रेरी",
+          "es": "Nueva biblioteca",
+          "fr": "Nouvelle bibliothèque",
+          "ar": "مكتبة جديدة",
+          "pt": "Nova biblioteca",
+          "ru": "Новая библиотека",
+          "de": "Neue Bibliothek",
+          "ja": "新しいライブラリ",
+          "tr": "Yeni kitaplık",
+          "vi": "Thư viện mới",
+          "it": "Nuova libreria",
+          "fa": "کتابخانه جدید",
+          "pl": "Nowa biblioteka",
+          "uk": "Нова бібліотека",
+          "nl": "Nieuwe bibliotheek",
+          "sv": "Nytt bibliotek",
+          "cs": "Nová knihovna",
+          "el": "Νέα βιβλιοθήκη"
+        },
+        "emptyHome": true,
+        "homeTitle": {
+          "en": "Your podcast libraries",
+          "ko": "내 팟캐스트 라이브러리",
+          "zh": "你的播客媒体库",
+          "hi": "आपकी पॉडकास्ट लाइब्रेरी",
+          "es": "Tus bibliotecas de podcasts",
+          "fr": "Vos bibliothèques de podcasts",
+          "ar": "مكتبات البودكاست الخاصة بك",
+          "pt": "Suas bibliotecas de podcasts",
+          "ru": "Ваши библиотеки подкастов",
+          "de": "Ihre Podcast-Bibliotheken",
+          "ja": "あなたのポッドキャストライブラリ",
+          "tr": "Podcast kitaplıklarınız",
+          "vi": "Thư viện podcast của bạn",
+          "it": "Le tue librerie di podcast",
+          "fa": "کتابخانه‌های پادکست شما",
+          "pl": "Twoje biblioteki podcastów",
+          "uk": "Ваші бібліотеки подкастів",
+          "nl": "Uw podcastbibliotheken",
+          "sv": "Dina poddbibliotek",
+          "cs": "Vaše knihovny podcastů",
+          "el": "Οι βιβλιοθήκες podcast σας"
+        },
+        "homeSubtitle": {
+          "en": "Open a recent library, or start a new one.",
+          "ko": "최근 라이브러리를 열거나 새로 시작하세요.",
+          "zh": "打开最近的媒体库，或新建一个。",
+          "hi": "हाल की लाइब्रेरी खोलें, या नई शुरू करें।",
+          "es": "Abre una biblioteca reciente o crea una nueva.",
+          "fr": "Ouvrez une bibliothèque récente, ou créez-en une nouvelle.",
+          "ar": "افتح مكتبة حديثة، أو ابدأ مكتبة جديدة.",
+          "pt": "Abra uma biblioteca recente ou comece uma nova.",
+          "ru": "Откройте недавнюю библиотеку или создайте новую.",
+          "de": "Öffnen Sie eine kürzliche Bibliothek oder erstellen Sie eine neue.",
+          "ja": "最近使ったライブラリを開くか、新しく始めましょう。",
+          "tr": "Son bir kitaplığı açın veya yenisini başlatın.",
+          "vi": "Mở một thư viện gần đây, hoặc bắt đầu một thư viện mới.",
+          "it": "Apri una libreria recente o creane una nuova.",
+          "fa": "یک کتابخانه اخیر را باز کنید یا یکی جدید شروع کنید.",
+          "pl": "Otwórz ostatnią bibliotekę lub rozpocznij nową.",
+          "uk": "Відкрийте нещодавню бібліотеку або створіть нову.",
+          "nl": "Open een recente bibliotheek of begin een nieuwe.",
+          "sv": "Öppna ett nyligen använt bibliotek eller starta ett nytt.",
+          "cs": "Otevřete nedávnou knihovnu nebo založte novou.",
+          "el": "Ανοίξτε μια πρόσφατη βιβλιοθήκη ή ξεκινήστε νέα."
+        },
+        "addItems": [
+          { "label": "New library", "icon": "add", "values": { "name": "Untitled library" } }
+        ],
+        "autoSelectFirst": true,
+        "scopeTargets": [
+          { "table": "shows", "column": "file" },
+          { "table": "episodes", "column": "file" }
+        ],
+        "detail": {
+          "type": "column",
+          "crossAxis": "stretch",
+          "children": [
+            {
+              "type": "text",
+              "style": "caption",
+              "value": {
+                "en": "A file is one podcast library — its own shows and episodes. Pick a file on the left, then use the other tabs to work in it. Tap + to start a new library, and a file's ⋮ menu to rename or delete it.",
+                "ko": "파일은 하나의 팟캐스트 라이브러리입니다 — 자체 프로그램과 에피소드가 있습니다. 왼쪽에서 파일을 선택한 다음 다른 탭을 사용해 작업하세요. +를 눌러 새 라이브러리를 시작하고, 파일의 ⋮ 메뉴로 이름을 바꾸거나 삭제하세요.",
+                "zh": "一个文件即一个播客媒体库——拥有自己的节目和剧集。在左侧选择一个文件，然后使用其他标签页进行操作。点击 + 新建媒体库，使用文件的 ⋮ 菜单重命名或删除它。",
+                "hi": "एक फ़ाइल एक पॉडकास्ट लाइब्रेरी है — इसके अपने शो और एपिसोड। बाईं ओर एक फ़ाइल चुनें, फिर उसमें काम करने के लिए अन्य टैब्स का उपयोग करें। नई लाइब्रेरी शुरू करने के लिए + टैप करें, और नाम बदलने या हटाने के लिए फ़ाइल के ⋮ मेनू का उपयोग करें।",
+                "es": "Un archivo es una biblioteca de podcasts, con sus propios programas y episodios. Elige un archivo a la izquierda y usa las otras pestañas para trabajar en él. Toca + para iniciar una nueva biblioteca, y el menú ⋮ de un archivo para renombrarlo o eliminarlo.",
+                "fr": "Un fichier est une bibliothèque de podcasts — avec ses propres émissions et épisodes. Choisissez un fichier à gauche, puis utilisez les autres onglets pour y travailler. Appuyez sur + pour créer une nouvelle bibliothèque, et le menu ⋮ d'un fichier pour le renommer ou le supprimer.",
+                "ar": "الملف هو مكتبة بودكاست واحدة — لها برامجها وحلقاتها الخاصة. اختر ملفًا على اليسار، ثم استخدم علامات التبويب الأخرى للعمل فيه. اضغط على + لبدء مكتبة جديدة، وقائمة ⋮ الخاصة بالملف لإعادة تسميته أو حذفه.",
+                "pt": "Um arquivo é uma biblioteca de podcasts — com seus próprios programas e episódios. Escolha um arquivo à esquerda, depois use as outras abas para trabalhar nele. Toque em + para iniciar uma nova biblioteca, e o menu ⋮ de um arquivo para renomeá-lo ou excluí-lo.",
+                "ru": "Файл — это одна библиотека подкастов — со своими шоу и эпизодами. Выберите файл слева, затем работайте в нём с помощью других вкладок. Нажмите +, чтобы начать новую библиотеку, и меню ⋮ файла, чтобы переименовать или удалить его.",
+                "de": "Eine Datei ist eine Podcast-Bibliothek — mit eigenen Sendungen und Episoden. Wählen Sie links eine Datei, dann arbeiten Sie über die anderen Tabs darin. Tippen Sie auf +, um eine neue Bibliothek zu starten, und auf das ⋮-Menü einer Datei, um sie umzubenennen oder zu löschen.",
+                "ja": "ファイルとは1つのポッドキャストライブラリのことです — それぞれ独自の番組とエピソードを持ちます。左側でファイルを選び、他のタブでその中の作業を行います。+をタップすると新しいライブラリを開始し、ファイルの⋮メニューで名前の変更や削除ができます。",
+                "tr": "Bir dosya, kendi programları ve bölümleriyle bir podcast kitaplığıdır. Soldan bir dosya seçin, ardından içinde çalışmak için diğer sekmeleri kullanın. Yeni bir kitaplık başlatmak için + dokunun, yeniden adlandırmak veya silmek için bir dosyanın ⋮ menüsünü kullanın.",
+                "vi": "Một tệp là một thư viện podcast — với các chương trình và tập riêng. Chọn một tệp bên trái, sau đó dùng các tab khác để làm việc trong đó. Nhấn + để bắt đầu thư viện mới, và menu ⋮ của tệp để đổi tên hoặc xóa nó.",
+                "it": "Un file è una libreria di podcast — con i propri show ed episodi. Scegli un file a sinistra, poi usa le altre schede per lavorarci. Tocca + per avviare una nuova libreria, e il menu ⋮ di un file per rinominarlo o eliminarlo.",
+                "fa": "یک فایل یک کتابخانه پادکست است — با برنامه‌ها و قسمت‌های خودش. یک فایل را در سمت چپ انتخاب کنید، سپس از برگه‌های دیگر برای کار در آن استفاده کنید. برای شروع کتابخانه جدید روی + ضربه بزنید و از منوی ⋮ یک فایل برای تغییر نام یا حذف آن استفاده کنید.",
+                "pl": "Plik to jedna biblioteka podcastów — z własnymi programami i odcinkami. Wybierz plik po lewej, następnie użyj innych kart, aby w nim pracować. Dotknij +, aby rozpocząć nową bibliotekę, i menu ⋮ pliku, aby go zmienić nazwę lub usunąć.",
+                "uk": "Файл — це одна бібліотека подкастів — зі своїми шоу та епізодами. Виберіть файл ліворуч, потім працюйте в ньому за допомогою інших вкладок. Торкніться +, щоб почати нову бібліотеку, і меню ⋮ файлу, щоб перейменувати або видалити його.",
+                "nl": "Een bestand is één podcastbibliotheek — met eigen shows en afleveringen. Kies links een bestand en gebruik dan de andere tabbladen om erin te werken. Tik op + om een nieuwe bibliotheek te starten, en het ⋮-menu van een bestand om het te hernoemen of te verwijderen.",
+                "sv": "En fil är ett poddbibliotek — med egna program och avsnitt. Välj en fil till vänster och använd sedan de andra flikarna för att arbeta i den. Tryck på + för att starta ett nytt bibliotek, och en fils ⋮-meny för att byta namn eller ta bort den.",
+                "cs": "Soubor je jedna knihovna podcastů — s vlastními pořady a epizodami. Vyberte soubor vlevo, poté v něm pracujte pomocí ostatních karet. Klepnutím na + založíte novou knihovnu, nabídkou ⋮ souboru jej přejmenujete nebo smažete.",
+                "el": "Ένα αρχείο είναι μία βιβλιοθήκη podcast — με τις δικές της εκπομπές και επεισόδια. Επιλέξτε ένα αρχείο αριστερά, μετά χρησιμοποιήστε τις άλλες καρτέλες για να εργαστείτε σε αυτό. Πατήστε + για να ξεκινήσετε νέα βιβλιοθήκη, και το μενού ⋮ ενός αρχείου για μετονομασία ή διαγραφή."
+              }
+            },
+            {
+              "type": "button",
+              "label": {
+                "en": "Open this library",
+                "ko": "이 라이브러리 열기",
+                "zh": "打开此媒体库",
+                "hi": "इस लाइब्रेरी को खोलें",
+                "es": "Abrir esta biblioteca",
+                "fr": "Ouvrir cette bibliothèque",
+                "ar": "افتح هذه المكتبة",
+                "pt": "Abrir esta biblioteca",
+                "ru": "Открыть эту библиотеку",
+                "de": "Diese Bibliothek öffnen",
+                "ja": "このライブラリを開く",
+                "tr": "Bu kitaplığı aç",
+                "vi": "Mở thư viện này",
+                "it": "Apri questa libreria",
+                "fa": "باز کردن این کتابخانه",
+                "pl": "Otwórz tę bibliotekę",
+                "uk": "Відкрити цю бібліотеку",
+                "nl": "Deze bibliotheek openen",
+                "sv": "Öppna det här biblioteket",
+                "cs": "Otevřít tuto knihovnu",
+                "el": "Άνοιγμα αυτής της βιβλιοθήκης"
+              },
+              "icon": "podcasts",
+              "action": {
+                "fn": "goto",
+                "args": {
+                  "screen": "shows"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "shows": {
+      "title": {
+        "en": "Shows",
+        "ko": "프로그램",
+        "zh": "节目",
+        "hi": "शो",
+        "es": "Programas",
+        "fr": "Émissions",
+        "ar": "البرامج",
+        "pt": "Programas",
+        "ru": "Шоу",
+        "de": "Sendungen",
+        "ja": "番組",
+        "tr": "Programlar",
+        "vi": "Chương trình",
+        "it": "Show",
+        "fa": "برنامه‌ها",
+        "pl": "Programy",
+        "uk": "Шоу",
+        "nl": "Shows",
+        "sv": "Program",
+        "cs": "Pořady",
+        "el": "Εκπομπές"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Podcasts you follow or want to try. Tap a show to edit it, or follow new ones. Grouped by category.",
+              "ko": "구독 중이거나 시도해보고 싶은 팟캐스트입니다. 프로그램을 눌러 편집하거나 새로운 것을 구독하세요. 카테고리별로 그룹화됨.",
+              "zh": "你关注或想尝试的播客。点击节目进行编辑，或关注新节目。按类别分组。",
+              "hi": "पॉडकास्ट जिन्हें आप फ़ॉलो करते हैं या आज़माना चाहते हैं। संपादित करने के लिए किसी शो पर टैप करें, या नए फ़ॉलो करें। श्रेणी के अनुसार समूहीकृत।",
+              "es": "Podcasts que sigues o quieres probar. Toca un programa para editarlo, o sigue otros nuevos. Agrupados por categoría.",
+              "fr": "Podcasts que vous suivez ou souhaitez essayer. Appuyez sur une émission pour la modifier, ou suivez-en de nouvelles. Groupées par catégorie.",
+              "ar": "البودكاست الذي تتابعه أو ترغب في تجربته. اضغط على برنامج لتحريره، أو تابع برامج جديدة. مجمّعة حسب الفئة.",
+              "pt": "Podcasts que você segue ou quer experimentar. Toque em um programa para editá-lo, ou siga novos. Agrupados por categoria.",
+              "ru": "Подкасты, на которые вы подписаны или хотите попробовать. Нажмите на шоу, чтобы отредактировать, или подпишитесь на новые. Сгруппированы по категориям.",
+              "de": "Podcasts, denen Sie folgen oder die Sie ausprobieren möchten. Tippen Sie auf eine Sendung, um sie zu bearbeiten, oder folgen Sie neuen. Nach Kategorie gruppiert.",
+              "ja": "フォロー中、または試してみたいポッドキャストです。番組をタップして編集するか、新しい番組をフォローしてください。カテゴリー別にグループ化されています。",
+              "tr": "Takip ettiğiniz veya denemek istediğiniz podcast'ler. Düzenlemek için bir programa dokunun, veya yenilerini takip edin. Kategoriye göre gruplanmıştır.",
+              "vi": "Các podcast bạn theo dõi hoặc muốn thử. Nhấn vào một chương trình để chỉnh sửa, hoặc theo dõi chương trình mới. Được nhóm theo danh mục.",
+              "it": "Podcast che segui o vuoi provare. Tocca uno show per modificarlo, o seguine di nuovi. Raggruppati per categoria.",
+              "fa": "پادکست‌هایی که دنبال می‌کنید یا می‌خواهید امتحان کنید. برای ویرایش روی یک برنامه ضربه بزنید، یا برنامه‌های جدید را دنبال کنید. بر اساس دسته‌بندی گروه‌بندی شده.",
+              "pl": "Podcasty, które obserwujesz lub chcesz wypróbować. Dotknij programu, aby go edytować, lub zacznij obserwować nowe. Pogrupowane wg kategorii.",
+              "uk": "Подкасти, на які ви підписані або хочете спробувати. Торкніться шоу, щоб редагувати, або підпишіться на нові. Згруповано за категоріями.",
+              "nl": "Podcasts die u volgt of wilt proberen. Tik op een show om te bewerken, of volg nieuwe. Gegroepeerd per categorie.",
+              "sv": "Poddar du följer eller vill prova. Tryck på ett program för att redigera det, eller följ nya. Grupperade efter kategori.",
+              "cs": "Podcasty, které sledujete nebo chcete vyzkoušet. Klepnutím na pořad jej upravíte, nebo sledujte nové. Seskupeno podle kategorie.",
+              "el": "Podcast που ακολουθείτε ή θέλετε να δοκιμάσετε. Πατήστε μια εκπομπή για επεξεργασία, ή ακολουθήστε νέες. Ομαδοποιημένα ανά κατηγορία."
+            }
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "stat",
+                "table": "shows",
+                "label": {
+                  "en": "Shows",
+                  "ko": "프로그램",
+                  "zh": "节目",
+                  "hi": "शो",
+                  "es": "Programas",
+                  "fr": "Émissions",
+                  "ar": "البرامج",
+                  "pt": "Programas",
+                  "ru": "Шоу",
+                  "de": "Sendungen",
+                  "ja": "番組",
+                  "tr": "Programlar",
+                  "vi": "Chương trình",
+                  "it": "Show",
+                  "fa": "برنامه‌ها",
+                  "pl": "Programy",
+                  "uk": "Шоу",
+                  "nl": "Shows",
+                  "sv": "Program",
+                  "cs": "Pořady",
+                  "el": "Εκπομπές"
+                },
+                "color": "purple"
+              },
+              {
+                "type": "stat",
+                "table": "shows",
+                "filter": {
+                  "column": "following",
+                  "value": true
+                },
+                "label": {
+                  "en": "Following",
+                  "ko": "팔로우 중",
+                  "zh": "已关注",
+                  "hi": "फ़ॉलो कर रहे हैं",
+                  "es": "Siguiendo",
+                  "fr": "Suivies",
+                  "ar": "المتابَعة",
+                  "pt": "Seguindo",
+                  "ru": "Подписки",
+                  "de": "Gefolgt",
+                  "ja": "フォロー中",
+                  "tr": "Takip edilenler",
+                  "vi": "Đang theo dõi",
+                  "it": "Seguiti",
+                  "fa": "دنبال‌شده",
+                  "pl": "Obserwowane",
+                  "uk": "Підписки",
+                  "nl": "Gevolgd",
+                  "sv": "Följer",
+                  "cs": "Sledované",
+                  "el": "Ακολουθούνται"
+                },
+                "color": "teal"
+              }
+            ]
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "Follow a show",
+              "ko": "프로그램 팔로우",
+              "zh": "关注节目",
+              "hi": "एक शो फ़ॉलो करें",
+              "es": "Seguir un programa",
+              "fr": "Suivre une émission",
+              "ar": "تابع برنامجًا",
+              "pt": "Seguir um programa",
+              "ru": "Подписаться на шоу",
+              "de": "Sendung folgen",
+              "ja": "番組をフォロー",
+              "tr": "Bir programı takip et",
+              "vi": "Theo dõi một chương trình",
+              "it": "Segui uno show",
+              "fa": "دنبال کردن یک برنامه",
+              "pl": "Obserwuj program",
+              "uk": "Підписатися на шоу",
+              "nl": "Een show volgen",
+              "sv": "Följ ett program",
+              "cs": "Sledovat pořad",
+              "el": "Ακολουθήστε μια εκπομπή"
+            },
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "shows",
+                "values": {
+                  "following": true,
+                  "category": "Other"
+                }
+              }
+            }
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": {
+                  "en": "All",
+                  "ko": "전체",
+                  "zh": "全部",
+                  "hi": "सभी",
+                  "es": "Todos",
+                  "fr": "Tous",
+                  "ar": "الكل",
+                  "pt": "Todos",
+                  "ru": "Все",
+                  "de": "Alle",
+                  "ja": "すべて",
+                  "tr": "Tümü",
+                  "vi": "Tất cả",
+                  "it": "Tutti",
+                  "fa": "همه",
+                  "pl": "Wszystkie",
+                  "uk": "Усі",
+                  "nl": "Alle",
+                  "sv": "Alla",
+                  "cs": "Vše",
+                  "el": "Όλα"
+                },
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "shows",
+                    "column": "category",
+                    "value": ""
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "Tech",
+                  "ko": "기술",
+                  "zh": "科技",
+                  "hi": "टेक",
+                  "es": "Tecnología",
+                  "fr": "Techno",
+                  "ar": "تقنية",
+                  "pt": "Tecnologia",
+                  "ru": "Технологии",
+                  "de": "Technik",
+                  "ja": "テクノロジー",
+                  "tr": "Teknoloji",
+                  "vi": "Công nghệ",
+                  "it": "Tecnologia",
+                  "fa": "فناوری",
+                  "pl": "Technologia",
+                  "uk": "Технології",
+                  "nl": "Technologie",
+                  "sv": "Teknik",
+                  "cs": "Technika",
+                  "el": "Τεχνολογία"
+                },
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "shows",
+                    "column": "category",
+                    "value": "Tech"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "News",
+                  "ko": "뉴스",
+                  "zh": "新闻",
+                  "hi": "समाचार",
+                  "es": "Noticias",
+                  "fr": "Actualités",
+                  "ar": "الأخبار",
+                  "pt": "Notícias",
+                  "ru": "Новости",
+                  "de": "Nachrichten",
+                  "ja": "ニュース",
+                  "tr": "Haberler",
+                  "vi": "Tin tức",
+                  "it": "Notizie",
+                  "fa": "اخبار",
+                  "pl": "Wiadomości",
+                  "uk": "Новини",
+                  "nl": "Nieuws",
+                  "sv": "Nyheter",
+                  "cs": "Zprávy",
+                  "el": "Ειδήσεις"
+                },
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "shows",
+                    "column": "category",
+                    "value": "News"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "Comedy",
+                  "ko": "코미디",
+                  "zh": "喜剧",
+                  "hi": "कॉमेडी",
+                  "es": "Comedia",
+                  "fr": "Humour",
+                  "ar": "الكوميديا",
+                  "pt": "Comédia",
+                  "ru": "Комедия",
+                  "de": "Comedy",
+                  "ja": "コメディ",
+                  "tr": "Komedi",
+                  "vi": "Hài kịch",
+                  "it": "Commedia",
+                  "fa": "کمدی",
+                  "pl": "Komedia",
+                  "uk": "Комедія",
+                  "nl": "Comedy",
+                  "sv": "Komedi",
+                  "cs": "Komedie",
+                  "el": "Κωμωδία"
+                },
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "shows",
+                    "column": "category",
+                    "value": "Comedy"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "Story",
+                  "ko": "스토리",
+                  "zh": "故事",
+                  "hi": "कहानी",
+                  "es": "Historias",
+                  "fr": "Récits",
+                  "ar": "القصص",
+                  "pt": "Histórias",
+                  "ru": "Истории",
+                  "de": "Geschichten",
+                  "ja": "ストーリー",
+                  "tr": "Hikaye",
+                  "vi": "Câu chuyện",
+                  "it": "Storie",
+                  "fa": "داستان",
+                  "pl": "Opowieści",
+                  "uk": "Історії",
+                  "nl": "Verhalen",
+                  "sv": "Berättelser",
+                  "cs": "Příběhy",
+                  "el": "Ιστορίες"
+                },
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "shows",
+                    "column": "category",
+                    "value": "Story"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "Other",
+                  "ko": "기타",
+                  "zh": "其他",
+                  "hi": "अन्य",
+                  "es": "Otros",
+                  "fr": "Autre",
+                  "ar": "أخرى",
+                  "pt": "Outros",
+                  "ru": "Другое",
+                  "de": "Sonstiges",
+                  "ja": "その他",
+                  "tr": "Diğer",
+                  "vi": "Khác",
+                  "it": "Altro",
+                  "fa": "سایر",
+                  "pl": "Inne",
+                  "uk": "Інше",
+                  "nl": "Overig",
+                  "sv": "Övrigt",
+                  "cs": "Ostatní",
+                  "el": "Άλλο"
+                },
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "shows",
+                    "column": "category",
+                    "value": "Other"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "table": "shows",
+            "example": {
+              "ids": [
+                "s_replyall",
+                "s_thedaily",
+                "s_radiolab",
+                "s_99pi",
+                "s_lexfridman",
+                "s_smartless",
+                "s_hardfork",
+                "s_thismyths"
+              ],
+              "label": {
+                "en": "Examples",
+                "ko": "예시",
+                "zh": "示例",
+                "hi": "उदाहरण",
+                "es": "Ejemplos",
+                "fr": "Exemples",
+                "ar": "أمثلة",
+                "pt": "Exemplos",
+                "ru": "Примеры",
+                "de": "Beispiele",
+                "ja": "例",
+                "tr": "Örnekler",
+                "vi": "Ví dụ",
+                "it": "Esempi",
+                "fa": "نمونه‌ها",
+                "pl": "Przykłady",
+                "uk": "Приклади",
+                "nl": "Voorbeelden",
+                "sv": "Exempel",
+                "cs": "Příklady",
+                "el": "Παραδείγματα"
+              },
+              "chipLabel": {
+                "en": "Example",
+                "ko": "예시",
+                "zh": "示例",
+                "hi": "उदाहरण",
+                "es": "Ejemplo",
+                "fr": "Exemple",
+                "ar": "مثال",
+                "pt": "Exemplo",
+                "ru": "Пример",
+                "de": "Beispiel",
+                "ja": "例",
+                "tr": "Örnek",
+                "vi": "Ví dụ",
+                "it": "Esempio",
+                "fa": "نمونه",
+                "pl": "Przykład",
+                "uk": "Приклад",
+                "nl": "Voorbeeld",
+                "sv": "Exempel",
+                "cs": "Příklad",
+                "el": "Παράδειγμα"
+              },
+              "hideLabel": {
+                "en": "Hide",
+                "ko": "숨기기",
+                "zh": "隐藏",
+                "hi": "छिपाएं",
+                "es": "Ocultar",
+                "fr": "Masquer",
+                "ar": "إخفاء",
+                "pt": "Ocultar",
+                "ru": "Скрыть",
+                "de": "Ausblenden",
+                "ja": "非表示",
+                "tr": "Gizle",
+                "vi": "Ẩn",
+                "it": "Nascondi",
+                "fa": "پنهان کردن",
+                "pl": "Ukryj",
+                "uk": "Приховати",
+                "nl": "Verbergen",
+                "sv": "Dölj",
+                "cs": "Skrýt",
+                "el": "Απόκρυψη"
+              },
+              "hiddenFromSetting": "podcastsExamplesHidden"
+            },
+            "groupBy": "category",
+            "groupOrder": [
+              "Tech",
+              "News",
+              "Comedy",
+              "Story",
+              "Other"
+            ],
+            "sort": {
+              "column": "title",
+              "dir": "asc"
+            },
+            "title": "title",
+            "subtitle": "author",
+            "tags": [
+              {
+                "column": "following",
+                "colors": {
+                  "true": "teal",
+                  "false": "gray"
+                }
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              {
+                "column": "author",
+                "label": "Author"
+              },
+              {
+                "column": "category",
+                "label": "Category"
+              },
+              {
+                "column": "notes",
+                "label": "Notes"
+              }
+            ],
+            "open": "Edit show",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "queue": {
+      "title": {
+        "en": "Queue",
+        "ko": "대기열",
+        "zh": "队列",
+        "hi": "कतार",
+        "es": "Cola",
+        "fr": "File d'attente",
+        "ar": "قائمة الانتظار",
+        "pt": "Fila",
+        "ru": "Очередь",
+        "de": "Warteschlange",
+        "ja": "キュー",
+        "tr": "Sıra",
+        "vi": "Hàng đợi",
+        "it": "Coda",
+        "fa": "صف",
+        "pl": "Kolejka",
+        "uk": "Черга",
+        "nl": "Wachtrij",
+        "sv": "Kö",
+        "cs": "Fronta",
+        "el": "Ουρά"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Episodes you lined up to listen to. Tick one off when you finish it, or open it in your browser below. Use the funnel to narrow by show or status.",
+              "ko": "듣기 위해 대기시켜 둔 에피소드입니다. 다 들으면 체크하거나 아래에서 브라우저로 여세요. 프로그램이나 상태별로 좁히려면 필터를 사용하세요.",
+              "zh": "你排队等待收听的剧集。听完后打勾，或在下方浏览器中打开。使用漏斗筛选器按节目或状态缩小范围。",
+              "hi": "वे एपिसोड जिन्हें आपने सुनने के लिए कतार में लगाया है। पूरा होने पर उसे चेक करें, या नीचे अपने ब्राउज़र में खोलें। शो या स्थिति के अनुसार संकीर्ण करने के लिए फ़नल का उपयोग करें।",
+              "es": "Episodios que has puesto en cola para escuchar. Márcalo al terminarlo, o ábrelo en tu navegador abajo. Usa el embudo para acotar por programa o estado.",
+              "fr": "Épisodes que vous avez mis en file d'attente pour les écouter. Cochez-en un une fois terminé, ou ouvrez-le dans votre navigateur ci-dessous. Utilisez l'entonnoir pour affiner par émission ou statut.",
+              "ar": "الحلقات التي وضعتها في قائمة الانتظار للاستماع إليها. ضع علامة عليها عند الانتهاء منها، أو افتحها في متصفحك أدناه. استخدم القمع للتضييق حسب البرنامج أو الحالة.",
+              "pt": "Episódios que você enfileirou para ouvir. Marque um quando terminar, ou abra-o no seu navegador abaixo. Use o funil para restringir por programa ou status.",
+              "ru": "Эпизоды, которые вы поставили в очередь для прослушивания. Отметьте, когда закончите, или откройте в браузере ниже. Используйте фильтр-воронку, чтобы сузить по шоу или статусу.",
+              "de": "Episoden, die Sie sich zum Anhören vorgemerkt haben. Haken Sie eine ab, wenn Sie fertig sind, oder öffnen Sie sie unten in Ihrem Browser. Nutzen Sie den Trichter, um nach Sendung oder Status einzugrenzen.",
+              "ja": "聞くために並べたエピソードです。聞き終えたらチェックするか、下のブラウザで開いてください。番組やステータスで絞り込むにはファンネルを使用します。",
+              "tr": "Dinlemek için sıraya koyduğunuz bölümler. Bitirdiğinizde işaretleyin, veya aşağıdaki tarayıcınızda açın. Programa veya duruma göre daraltmak için hunileri kullanın.",
+              "vi": "Các tập bạn đã xếp hàng để nghe. Đánh dấu khi bạn nghe xong, hoặc mở nó trong trình duyệt bên dưới. Dùng bộ lọc phễu để thu hẹp theo chương trình hoặc trạng thái.",
+              "it": "Episodi che hai messo in coda per ascoltarli. Spuntane uno quando lo finisci, o aprilo nel tuo browser sotto. Usa l'imbuto per restringere per show o stato.",
+              "fa": "قسمت‌هایی که برای گوش دادن در صف قرار داده‌اید. وقتی تمام شد آن را علامت بزنید، یا در مرورگر خود در زیر بازش کنید. برای محدود کردن بر اساس برنامه یا وضعیت از قیف استفاده کنید.",
+              "pl": "Odcinki, które ustawiłeś w kolejce do wysłuchania. Zaznacz, gdy skończysz, lub otwórz w przeglądarce poniżej. Użyj filtra lejkowego, aby zawęzić wg programu lub statusu.",
+              "uk": "Епізоди, які ви поставили в чергу для прослуховування. Позначте, коли закінчите, або відкрийте в браузері нижче. Використайте фільтр-лійку, щоб звузити за шоу чи статусом.",
+              "nl": "Afleveringen die u in de wachtrij hebt gezet om te beluisteren. Vink er een af als u klaar bent, of open hem hieronder in uw browser. Gebruik de trechter om te versmallen op show of status.",
+              "sv": "Avsnitt du köat för att lyssna på. Bocka av ett när du är klar, eller öppna det i din webbläsare nedan. Använd tratten för att begränsa efter program eller status.",
+              "cs": "Epizody, které jste zařadili do fronty k poslechu. Odškrtněte, jakmile jej dokončíte, nebo jej otevřete níže ve svém prohlížeči. K zúžení podle pořadu nebo stavu použijte trychtýř.",
+              "el": "Επεισόδια που έχετε βάλει στην ουρά για να ακούσετε. Επιλέξτε ένα όταν το τελειώσετε, ή ανοίξτε το στο πρόγραμμα περιήγησης παρακάτω. Χρησιμοποιήστε το χωνί για να περιορίσετε κατά εκπομπή ή κατάσταση."
+            }
+          },
+          {
+            "type": "cards",
+            "table": "episodes",
+            "filter": {
+              "column": "queued",
+              "value": "true"
+            },
+            "sort": {
+              "column": "published",
+              "dir": "desc"
+            },
+            "title": "title",
+            "subtitle": "tags",
+            "tags": [
+              {
+                "column": "status",
+                "colors": {
+                  "unplayed": "blue",
+                  "playing": "amber",
+                  "done": "green"
+                }
+              }
+            ],
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": {
+              "en": "Mark progress",
+              "ko": "진행 상황 표시",
+              "zh": "标记进度",
+              "hi": "प्रगति चिह्नित करें",
+              "es": "Marcar progreso",
+              "fr": "Marquer la progression",
+              "ar": "تحديد التقدم",
+              "pt": "Marcar progresso",
+              "ru": "Отметить прогресс",
+              "de": "Fortschritt markieren",
+              "ja": "進捗をマーク",
+              "tr": "İlerlemeyi işaretle",
+              "vi": "Đánh dấu tiến độ",
+              "it": "Segna progresso",
+              "fa": "علامت‌گذاری پیشرفت",
+              "pl": "Oznacz postęp",
+              "uk": "Позначити прогрес",
+              "nl": "Voortgang markeren",
+              "sv": "Markera framsteg",
+              "cs": "Označit průběh",
+              "el": "Σήμανση προόδου"
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Tap an episode below to tick it off — done episodes drop out of the queue list above.",
+              "ko": "아래에서 에피소드를 눌러 체크하세요 — 완료된 에피소드는 위 대기열 목록에서 사라집니다.",
+              "zh": "点击下方剧集将其打勾——已完成的剧集会从上方队列列表中移除。",
+              "hi": "इसे चेक करने के लिए नीचे किसी एपिसोड पर टैप करें — पूर्ण एपिसोड ऊपर की कतार सूची से हट जाते हैं।",
+              "es": "Toca un episodio abajo para marcarlo — los episodios terminados salen de la lista de cola de arriba.",
+              "fr": "Appuyez sur un épisode ci-dessous pour le cocher — les épisodes terminés disparaissent de la liste de file d'attente ci-dessus.",
+              "ar": "اضغط على حلقة أدناه لوضع علامة عليها — تخرج الحلقات المكتملة من قائمة الانتظار أعلاه.",
+              "pt": "Toque em um episódio abaixo para marcá-lo — episódios concluídos saem da lista de fila acima.",
+              "ru": "Нажмите на эпизод ниже, чтобы отметить его — завершённые эпизоды исчезают из списка очереди выше.",
+              "de": "Tippen Sie unten auf eine Episode, um sie abzuhaken — erledigte Episoden fallen aus der Warteschlangenliste oben heraus.",
+              "ja": "下のエピソードをタップしてチェックしてください — 完了したエピソードは上のキューリストから外れます。",
+              "tr": "İşaretlemek için aşağıdaki bir bölüme dokunun — tamamlanan bölümler yukarıdaki sıra listesinden çıkar.",
+              "vi": "Nhấn vào một tập bên dưới để đánh dấu — các tập đã xong sẽ rời khỏi danh sách hàng đợi phía trên.",
+              "it": "Tocca un episodio sotto per spuntarlo — gli episodi completati escono dall'elenco della coda sopra.",
+              "fa": "برای علامت‌گذاری روی یک قسمت در زیر ضربه بزنید — قسمت‌های تمام‌شده از فهرست صف بالا خارج می‌شوند.",
+              "pl": "Dotknij odcinka poniżej, aby go zaznaczyć — ukończone odcinki znikają z listy kolejki powyżej.",
+              "uk": "Торкніться епізоду нижче, щоб позначити його — завершені епізоди зникають зі списку черги вище.",
+              "nl": "Tik hieronder op een aflevering om deze af te vinken — voltooide afleveringen verdwijnen uit de wachtrijlijst hierboven.",
+              "sv": "Tryck på ett avsnitt nedan för att bocka av det — avklarade avsnitt försvinner från kölistan ovan.",
+              "cs": "Klepnutím na epizodu níže ji odškrtněte — dokončené epizody vypadnou ze seznamu fronty výše.",
+              "el": "Πατήστε ένα επεισόδιο παρακάτω για να το επιλέξετε — τα ολοκληρωμένα επεισόδια φεύγουν από τη λίστα ουράς παραπάνω."
+            }
+          },
+          {
+            "type": "agenda",
+            "table": "episodes",
+            "filterable": true,
+            "titleColumn": "title",
+            "statusColumn": "status",
+            "doneValue": "done",
+            "dateColumns": [
+              "published"
+            ],
+            "action": {
+              "fn": "editRow"
+            },
+            "onToggle": {
+              "fn": "toggleDone"
+            }
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": {
+              "en": "Open an episode",
+              "ko": "에피소드 열기",
+              "zh": "打开剧集",
+              "hi": "एक एपिसोड खोलें",
+              "es": "Abrir un episodio",
+              "fr": "Ouvrir un épisode",
+              "ar": "افتح حلقة",
+              "pt": "Abrir um episódio",
+              "ru": "Открыть эпизод",
+              "de": "Eine Episode öffnen",
+              "ja": "エピソードを開く",
+              "tr": "Bir bölümü aç",
+              "vi": "Mở một tập",
+              "it": "Apri un episodio",
+              "fa": "باز کردن یک قسمت",
+              "pl": "Otwórz odcinek",
+              "uk": "Відкрити епізод",
+              "nl": "Een aflevering openen",
+              "sv": "Öppna ett avsnitt",
+              "cs": "Otevřít epizodu",
+              "el": "Άνοιγμα ενός επεισοδίου"
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "Open in browser",
+              "ko": "브라우저에서 열기",
+              "zh": "在浏览器中打开",
+              "hi": "ब्राउज़र में खोलें",
+              "es": "Abrir en el navegador",
+              "fr": "Ouvrir dans le navigateur",
+              "ar": "افتح في المتصفح",
+              "pt": "Abrir no navegador",
+              "ru": "Открыть в браузере",
+              "de": "Im Browser öffnen",
+              "ja": "ブラウザで開く",
+              "tr": "Tarayıcıda aç",
+              "vi": "Mở trong trình duyệt",
+              "it": "Apri nel browser",
+              "fa": "باز کردن در مرورگر",
+              "pl": "Otwórz w przeglądarce",
+              "uk": "Відкрити в браузері",
+              "nl": "Openen in browser",
+              "sv": "Öppna i webbläsare",
+              "cs": "Otevřít v prohlížeči",
+              "el": "Άνοιγμα σε πρόγραμμα περιήγησης"
+            },
+            "icon": "open_in_browser",
+            "action": {
+              "fn": "openLink",
+              "args": {
+                "url": "https://gimletmedia.com/shows/reply-all/n8hwl6"
+              }
+            }
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "stat",
+                "table": "episodes",
+                "filter": {
+                  "column": "queued",
+                  "value": true
+                },
+                "label": {
+                  "en": "Queued",
+                  "ko": "대기 중",
+                  "zh": "已加入队列",
+                  "hi": "कतारबद्ध",
+                  "es": "En cola",
+                  "fr": "En file d'attente",
+                  "ar": "في قائمة الانتظار",
+                  "pt": "Na fila",
+                  "ru": "В очереди",
+                  "de": "In der Warteschlange",
+                  "ja": "キュー登録済み",
+                  "tr": "Sıraya alındı",
+                  "vi": "Đã xếp hàng",
+                  "it": "In coda",
+                  "fa": "در صف",
+                  "pl": "W kolejce",
+                  "uk": "У черзі",
+                  "nl": "In wachtrij",
+                  "sv": "Köad",
+                  "cs": "Ve frontě",
+                  "el": "Στην ουρά"
+                },
+                "color": "amber"
+              },
+              {
+                "type": "stat",
+                "table": "episodes",
+                "filter": {
+                  "column": "status",
+                  "value": "done"
+                },
+                "label": {
+                  "en": "Done",
+                  "ko": "완료",
+                  "zh": "已完成",
+                  "hi": "पूर्ण",
+                  "es": "Hecho",
+                  "fr": "Terminé",
+                  "ar": "تم",
+                  "pt": "Concluído",
+                  "ru": "Готово",
+                  "de": "Erledigt",
+                  "ja": "完了",
+                  "tr": "Tamamlandı",
+                  "vi": "Đã xong",
+                  "it": "Fatto",
+                  "fa": "انجام‌شده",
+                  "pl": "Ukończono",
+                  "uk": "Готово",
+                  "nl": "Klaar",
+                  "sv": "Klart",
+                  "cs": "Hotovo",
+                  "el": "Ολοκληρώθηκε"
+                },
+                "color": "green"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "episodes": {
+      "title": {
+        "en": "Episodes",
+        "ko": "에피소드",
+        "zh": "剧集",
+        "hi": "एपिसोड",
+        "es": "Episodios",
+        "fr": "Épisodes",
+        "ar": "الحلقات",
+        "pt": "Episódios",
+        "ru": "Эпизоды",
+        "de": "Episoden",
+        "ja": "エピソード",
+        "tr": "Bölümler",
+        "vi": "Các tập",
+        "it": "Episodi",
+        "fa": "قسمت‌ها",
+        "pl": "Odcinki",
+        "uk": "Епізоди",
+        "nl": "Afleveringen",
+        "sv": "Avsnitt",
+        "cs": "Epizody",
+        "el": "Επεισόδια"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Every episode, grouped by show, newest first. Tap one to edit it, or open the listen link below.",
+              "ko": "모든 에피소드가 프로그램별로 그룹화되어 최신순으로 표시됩니다. 눌러서 편집하거나 아래 청취 링크를 여세요.",
+              "zh": "所有剧集按节目分组，最新的在前。点击一个即可编辑，或打开下方的收听链接。",
+              "hi": "हर एपिसोड, शो के अनुसार समूहीकृत, सबसे नया पहले। संपादित करने के लिए किसी पर टैप करें, या नीचे सुनने का लिंक खोलें।",
+              "es": "Todos los episodios, agrupados por programa, los más recientes primero. Toca uno para editarlo, o abre el enlace de escucha abajo.",
+              "fr": "Chaque épisode, groupé par émission, du plus récent au plus ancien. Appuyez sur l'un pour le modifier, ou ouvrez le lien d'écoute ci-dessous.",
+              "ar": "كل حلقة، مجمّعة حسب البرنامج، الأحدث أولاً. اضغط على واحدة لتحريرها، أو افتح رابط الاستماع أدناه.",
+              "pt": "Todos os episódios, agrupados por programa, mais recentes primeiro. Toque em um para editá-lo, ou abra o link de audição abaixo.",
+              "ru": "Все эпизоды сгруппированы по шоу, сначала новые. Нажмите на один, чтобы отредактировать, или откройте ссылку прослушивания ниже.",
+              "de": "Jede Episode, gruppiert nach Sendung, neueste zuerst. Tippen Sie auf eine, um sie zu bearbeiten, oder öffnen Sie unten den Hörlink.",
+              "ja": "すべてのエピソードが番組ごとにグループ化され、新しい順に表示されます。タップして編集するか、下の再生リンクを開いてください。",
+              "tr": "Her bölüm, programa göre gruplanmış, en yeniden en eskiye. Düzenlemek için birine dokunun, veya aşağıdaki dinleme bağlantısını açın.",
+              "vi": "Mọi tập, được nhóm theo chương trình, mới nhất trước. Nhấn vào một tập để chỉnh sửa, hoặc mở liên kết nghe bên dưới.",
+              "it": "Ogni episodio, raggruppato per show, dal più recente. Tocca uno per modificarlo, o apri il link di ascolto sotto.",
+              "fa": "هر قسمت، بر اساس برنامه گروه‌بندی شده، جدیدترین‌ها اول. برای ویرایش روی یکی ضربه بزنید، یا لینک شنیدن را در زیر باز کنید.",
+              "pl": "Każdy odcinek, pogrupowany wg programu, najnowsze na górze. Dotknij, aby edytować, lub otwórz link do słuchania poniżej.",
+              "uk": "Кожен епізод, згрупований за шоу, найновіші спочатку. Торкніться, щоб редагувати, або відкрийте посилання для прослуховування нижче.",
+              "nl": "Elke aflevering, gegroepeerd per show, nieuwste eerst. Tik erop om te bewerken, of open de luisterlink hieronder.",
+              "sv": "Varje avsnitt, grupperat efter program, senaste först. Tryck på ett för att redigera det, eller öppna lyssnalänken nedan.",
+              "cs": "Každá epizoda, seskupená podle pořadu, nejnovější první. Klepnutím na ni ji upravíte, nebo otevřete odkaz k poslechu níže.",
+              "el": "Κάθε επεισόδιο, ομαδοποιημένο κατά εκπομπή, νεότερο πρώτα. Πατήστε ένα για επεξεργασία, ή ανοίξτε τον σύνδεσμο ακρόασης παρακάτω."
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "Add episode",
+              "ko": "에피소드 추가",
+              "zh": "添加剧集",
+              "hi": "एपिसोड जोड़ें",
+              "es": "Añadir episodio",
+              "fr": "Ajouter un épisode",
+              "ar": "إضافة حلقة",
+              "pt": "Adicionar episódio",
+              "ru": "Добавить эпизод",
+              "de": "Episode hinzufügen",
+              "ja": "エピソードを追加",
+              "tr": "Bölüm ekle",
+              "vi": "Thêm tập",
+              "it": "Aggiungi episodio",
+              "fa": "افزودن قسمت",
+              "pl": "Dodaj odcinek",
+              "uk": "Додати епізод",
+              "nl": "Aflevering toevoegen",
+              "sv": "Lägg till avsnitt",
+              "cs": "Přidat epizodu",
+              "el": "Προσθήκη επεισοδίου"
+            },
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "episodes",
+                "values": {
+                  "status": "unplayed",
+                  "queued": false
+                }
+              }
+            }
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": {
+                  "en": "All",
+                  "ko": "전체",
+                  "zh": "全部",
+                  "hi": "सभी",
+                  "es": "Todos",
+                  "fr": "Tous",
+                  "ar": "الكل",
+                  "pt": "Todos",
+                  "ru": "Все",
+                  "de": "Alle",
+                  "ja": "すべて",
+                  "tr": "Tümü",
+                  "vi": "Tất cả",
+                  "it": "Tutti",
+                  "fa": "همه",
+                  "pl": "Wszystkie",
+                  "uk": "Усі",
+                  "nl": "Alle",
+                  "sv": "Alla",
+                  "cs": "Vše",
+                  "el": "Όλα"
+                },
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "episodes",
+                    "column": "status",
+                    "value": ""
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "Unplayed",
+                  "ko": "재생 안 함",
+                  "zh": "未播放",
+                  "hi": "अचलाया गया",
+                  "es": "Sin reproducir",
+                  "fr": "Non écouté",
+                  "ar": "لم يُشغَّل",
+                  "pt": "Não reproduzido",
+                  "ru": "Не прослушано",
+                  "de": "Nicht abgespielt",
+                  "ja": "未再生",
+                  "tr": "Oynatılmadı",
+                  "vi": "Chưa phát",
+                  "it": "Non riprodotto",
+                  "fa": "پخش‌نشده",
+                  "pl": "Nieodtworzone",
+                  "uk": "Не відтворено",
+                  "nl": "Niet afgespeeld",
+                  "sv": "Ospelat",
+                  "cs": "Nepřehráno",
+                  "el": "Δεν αναπαράχθηκε"
+                },
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "episodes",
+                    "column": "status",
+                    "value": "unplayed"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "Playing",
+                  "ko": "재생 중",
+                  "zh": "正在播放",
+                  "hi": "चल रहा है",
+                  "es": "Reproduciendo",
+                  "fr": "En cours de lecture",
+                  "ar": "قيد التشغيل",
+                  "pt": "Reproduzindo",
+                  "ru": "Воспроизводится",
+                  "de": "Wird abgespielt",
+                  "ja": "再生中",
+                  "tr": "Oynatılıyor",
+                  "vi": "Đang phát",
+                  "it": "In riproduzione",
+                  "fa": "در حال پخش",
+                  "pl": "Odtwarzane",
+                  "uk": "Відтворюється",
+                  "nl": "Wordt afgespeeld",
+                  "sv": "Spelas",
+                  "cs": "Přehrává se",
+                  "el": "Αναπαραγωγή"
+                },
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "episodes",
+                    "column": "status",
+                    "value": "playing"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "Done",
+                  "ko": "완료",
+                  "zh": "已完成",
+                  "hi": "पूर्ण",
+                  "es": "Hecho",
+                  "fr": "Terminé",
+                  "ar": "تم",
+                  "pt": "Concluído",
+                  "ru": "Готово",
+                  "de": "Erledigt",
+                  "ja": "完了",
+                  "tr": "Tamamlandı",
+                  "vi": "Đã xong",
+                  "it": "Fatto",
+                  "fa": "انجام‌شده",
+                  "pl": "Ukończono",
+                  "uk": "Готово",
+                  "nl": "Klaar",
+                  "sv": "Klart",
+                  "cs": "Hotovo",
+                  "el": "Ολοκληρώθηκε"
+                },
+                "action": {
+                  "fn": "setFilter",
+                  "args": {
+                    "table": "episodes",
+                    "column": "status",
+                    "value": "done"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "Open in browser",
+              "ko": "브라우저에서 열기",
+              "zh": "在浏览器中打开",
+              "hi": "ब्राउज़र में खोलें",
+              "es": "Abrir en el navegador",
+              "fr": "Ouvrir dans le navigateur",
+              "ar": "افتح في المتصفح",
+              "pt": "Abrir no navegador",
+              "ru": "Открыть в браузере",
+              "de": "Im Browser öffnen",
+              "ja": "ブラウザで開く",
+              "tr": "Tarayıcıda aç",
+              "vi": "Mở trong trình duyệt",
+              "it": "Apri nel browser",
+              "fa": "باز کردن در مرورگر",
+              "pl": "Otwórz w przeglądarce",
+              "uk": "Відкрити в браузері",
+              "nl": "Openen in browser",
+              "sv": "Öppna i webbläsare",
+              "cs": "Otevřít v prohlížeči",
+              "el": "Άνοιγμα σε πρόγραμμα περιήγησης"
+            },
+            "icon": "open_in_browser",
+            "action": {
+              "fn": "openLink",
+              "args": {
+                "url": "https://99percentinvisible.org/episode/petrichor"
+              }
+            }
+          },
+          {
+            "type": "cards",
+            "table": "episodes",
+            "groupBy": "show",
+            "example": {
+              "ids": [
+                "e1",
+                "e2",
+                "e3",
+                "e4",
+                "e5",
+                "e6",
+                "e7",
+                "e8",
+                "e9",
+                "e10",
+                "e11",
+                "e12"
+              ],
+              "label": {
+                "en": "Examples",
+                "ko": "예시",
+                "zh": "示例",
+                "hi": "उदाहरण",
+                "es": "Ejemplos",
+                "fr": "Exemples",
+                "ar": "أمثلة",
+                "pt": "Exemplos",
+                "ru": "Примеры",
+                "de": "Beispiele",
+                "ja": "例",
+                "tr": "Örnekler",
+                "vi": "Ví dụ",
+                "it": "Esempi",
+                "fa": "نمونه‌ها",
+                "pl": "Przykłady",
+                "uk": "Приклади",
+                "nl": "Voorbeelden",
+                "sv": "Exempel",
+                "cs": "Příklady",
+                "el": "Παραδείγματα"
+              },
+              "chipLabel": {
+                "en": "Example",
+                "ko": "예시",
+                "zh": "示例",
+                "hi": "उदाहरण",
+                "es": "Ejemplo",
+                "fr": "Exemple",
+                "ar": "مثال",
+                "pt": "Exemplo",
+                "ru": "Пример",
+                "de": "Beispiel",
+                "ja": "例",
+                "tr": "Örnek",
+                "vi": "Ví dụ",
+                "it": "Esempio",
+                "fa": "نمونه",
+                "pl": "Przykład",
+                "uk": "Приклад",
+                "nl": "Voorbeeld",
+                "sv": "Exempel",
+                "cs": "Příklad",
+                "el": "Παράδειγμα"
+              },
+              "hideLabel": {
+                "en": "Hide",
+                "ko": "숨기기",
+                "zh": "隐藏",
+                "hi": "छिपाएं",
+                "es": "Ocultar",
+                "fr": "Masquer",
+                "ar": "إخفاء",
+                "pt": "Ocultar",
+                "ru": "Скрыть",
+                "de": "Ausblenden",
+                "ja": "非表示",
+                "tr": "Gizle",
+                "vi": "Ẩn",
+                "it": "Nascondi",
+                "fa": "پنهان کردن",
+                "pl": "Ukryj",
+                "uk": "Приховати",
+                "nl": "Verbergen",
+                "sv": "Dölj",
+                "cs": "Skrýt",
+                "el": "Απόκρυψη"
+              },
+              "hiddenFromSetting": "podcastsExamplesHidden"
+            },
+            "sort": {
+              "column": "published",
+              "dir": "desc"
+            },
+            "title": "title",
+            "subtitle": "tags",
+            "tags": [
+              {
+                "column": "status",
+                "colors": {
+                  "unplayed": "blue",
+                  "playing": "amber",
+                  "done": "green"
+                }
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              {
+                "column": "published",
+                "label": "Published"
+              },
+              {
+                "column": "durationMin",
+                "label": "Duration (min)"
+              },
+              {
+                "column": "rating",
+                "label": "Rating"
+              },
+              {
+                "column": "notes",
+                "label": "Notes"
+              }
+            ],
+            "open": "Edit episode",
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "search": {
+      "title": {
+        "en": "Discover",
+        "ko": "발견",
+        "zh": "发现",
+        "hi": "खोजें",
+        "es": "Descubrir",
+        "fr": "Découvrir",
+        "ar": "اكتشف",
+        "pt": "Descobrir",
+        "ru": "Открыть для себя",
+        "de": "Entdecken",
+        "ja": "発見",
+        "tr": "Keşfet",
+        "vi": "Khám phá",
+        "it": "Scopri",
+        "fa": "کشف",
+        "pl": "Odkryj",
+        "uk": "Відкрити",
+        "nl": "Ontdekken",
+        "sv": "Upptäck",
+        "cs": "Objevit",
+        "el": "Ανακάλυψη"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": {
+              "en": "Discover — shows that bridge your interests",
+              "ko": "발견 — 관심사를 이어주는 프로그램",
+              "zh": "发现 — 连接你兴趣的节目",
+              "hi": "खोजें — शो जो आपकी रुचियों को जोड़ते हैं",
+              "es": "Descubrir: programas que conectan tus intereses",
+              "fr": "Découvrir — des émissions qui relient vos intérêts",
+              "ar": "اكتشف — برامج تربط بين اهتماماتك",
+              "pt": "Descobrir — programas que conectam seus interesses",
+              "ru": "Открыть для себя — шоу, объединяющие ваши интересы",
+              "de": "Entdecken — Sendungen, die Ihre Interessen verbinden",
+              "ja": "発見 — あなたの興味をつなぐ番組",
+              "tr": "Keşfet — ilgi alanlarınızı köprüleyen programlar",
+              "vi": "Khám phá — các chương trình kết nối sở thích của bạn",
+              "it": "Scopri — show che collegano i tuoi interessi",
+              "fa": "کشف — برنامه‌هایی که علایق شما را پیوند می‌دهند",
+              "pl": "Odkryj — programy łączące twoje zainteresowania",
+              "uk": "Відкрити для себе — шоу, що поєднують ваші інтереси",
+              "nl": "Ontdekken — shows die uw interesses verbinden",
+              "sv": "Upptäck — program som knyter samman dina intressen",
+              "cs": "Objevit — pořady, které propojují vaše zájmy",
+              "el": "Ανακάλυψη — εκπομπές που γεφυρώνουν τα ενδιαφέροντά σας"
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Computed on your device from the shows you follow — no account, no API key. Tap below and it suggests shows you don't follow yet that connect your different interests (the ones bridging, say, your tech and story sides).",
+              "ko": "당신이 팔로우하는 프로그램을 바탕으로 기기에서 계산됩니다 — 계정도, API 키도 필요 없습니다. 아래를 누르면 아직 팔로우하지 않은, 서로 다른 관심사를 연결하는 프로그램(예: 기술과 스토리 측면을 잇는 것)을 추천합니다.",
+              "zh": "根据你关注的节目在你的设备上计算——无需账户，无需 API 密钥。点击下方，它会推荐你尚未关注、连接你不同兴趣（比如连接你的科技和故事偏好）的节目。",
+              "hi": "आपके फ़ॉलो किए गए शो से आपके डिवाइस पर गणना की जाती है — कोई खाता नहीं, कोई API कुंजी नहीं। नीचे टैप करें और यह उन शो का सुझाव देता है जिन्हें आप अभी फ़ॉलो नहीं करते जो आपकी विभिन्न रुचियों को जोड़ते हैं (जैसे आपके टेक और कहानी पक्षों को जोड़ने वाले)।",
+              "es": "Calculado en tu dispositivo a partir de los programas que sigues — sin cuenta, sin clave de API. Toca abajo y sugiere programas que aún no sigues que conectan tus diferentes intereses (los que unen, por ejemplo, tu lado tecnológico y el narrativo).",
+              "fr": "Calculé sur votre appareil à partir des émissions que vous suivez — pas de compte, pas de clé API. Appuyez ci-dessous et il suggère des émissions que vous ne suivez pas encore et qui relient vos différents intérêts (celles qui font le pont entre, disons, votre côté tech et votre côté récits).",
+              "ar": "يُحسب على جهازك من البرامج التي تتابعها — بدون حساب، بدون مفتاح API. اضغط أدناه وسيقترح برامج لم تتابعها بعد تربط بين اهتماماتك المختلفة (تلك التي تربط، مثلاً، بين جانبك التقني وجانب القصص).",
+              "pt": "Calculado no seu dispositivo a partir dos programas que você segue — sem conta, sem chave de API. Toque abaixo e ele sugere programas que você ainda não segue que conectam seus diferentes interesses (os que fazem a ponte entre, digamos, seu lado tech e o de histórias).",
+              "ru": "Вычисляется на вашем устройстве на основе шоу, на которые вы подписаны — без учётной записи, без ключа API. Нажмите ниже, и он предложит шоу, на которые вы ещё не подписаны, объединяющие разные ваши интересы (например, соединяющие технологии и истории).",
+              "de": "Auf Ihrem Gerät berechnet aus den Sendungen, denen Sie folgen — kein Konto, kein API-Schlüssel. Tippen Sie unten, und es schlägt Sendungen vor, denen Sie noch nicht folgen und die Ihre verschiedenen Interessen verbinden (z. B. die Brücke zwischen Ihrer Technik- und Ihrer Geschichten-Seite).",
+              "ja": "あなたがフォローしている番組をもとに、お使いのデバイス上で計算されます — アカウントもAPIキーも不要です。下をタップすると、あなたの異なる興味をつなぐ、まだフォローしていない番組が提案されます（例えば、テクノロジー面とストーリー面をつなぐものなど）。",
+              "tr": "Takip ettiğiniz programlardan cihazınızda hesaplanır — hesap yok, API anahtarı yok. Aşağıya dokunun, farklı ilgi alanlarınızı birbirine bağlayan (örneğin teknoloji ve hikaye yönlerinizi köprüleyen) henüz takip etmediğiniz programları önerir.",
+              "vi": "Được tính toán trên thiết bị của bạn từ các chương trình bạn theo dõi — không cần tài khoản, không cần khóa API. Nhấn bên dưới và nó sẽ gợi ý các chương trình bạn chưa theo dõi kết nối các sở thích khác nhau của bạn (những chương trình bắc cầu, chẳng hạn, giữa khía cạnh công nghệ và câu chuyện của bạn).",
+              "it": "Calcolato sul tuo dispositivo dagli show che segui — nessun account, nessuna chiave API. Tocca sotto e suggerirà show che non segui ancora che collegano i tuoi diversi interessi (quelli che collegano, ad esempio, il tuo lato tech e quello narrativo).",
+              "fa": "بر روی دستگاه شما از روی برنامه‌هایی که دنبال می‌کنید محاسبه می‌شود — بدون حساب کاربری، بدون کلید API. در زیر ضربه بزنید و برنامه‌هایی را که هنوز دنبال نمی‌کنید و علایق مختلف شما را به هم پیوند می‌دهند پیشنهاد می‌دهد (مثلاً آن‌هایی که جنبه فناوری و داستانی شما را پیوند می‌زنند).",
+              "pl": "Obliczane na twoim urządzeniu na podstawie obserwowanych programów — bez konta, bez klucza API. Dotknij poniżej, a zaproponuje programy, których jeszcze nie obserwujesz, łączące twoje różne zainteresowania (np. łączące twoją stronę technologiczną i narracyjną).",
+              "uk": "Обчислюється на вашому пристрої на основі шоу, на які ви підписані — без облікового запису, без ключа API. Торкніться нижче, і він запропонує шоу, на які ви ще не підписані, що поєднують ваші різні інтереси (наприклад, поєднують вашу технологічну та наративну сторони).",
+              "nl": "Berekend op uw apparaat op basis van de shows die u volgt — geen account, geen API-sleutel. Tik hieronder en het stelt shows voor die u nog niet volgt en die uw verschillende interesses verbinden (bijvoorbeeld die uw tech- en verhaalkant overbruggen).",
+              "sv": "Beräknas på din enhet utifrån de program du följer — inget konto, ingen API-nyckel. Tryck nedan så föreslås program du inte redan följer som kopplar samman dina olika intressen (de som till exempel bygger bro mellan din teknik- och berättarsida).",
+              "cs": "Vypočítáno na vašem zařízení z pořadů, které sledujete — žádný účet, žádný API klíč. Klepněte níže a navrhne pořady, které ještě nesledujete a které spojují vaše různé zájmy (ty, jež propojují například vaši technickou a vyprávěcí stránku).",
+              "el": "Υπολογίζεται στη συσκευή σας από τις εκπομπές που ακολουθείτε — χωρίς λογαριασμό, χωρίς κλειδί API. Πατήστε παρακάτω και προτείνει εκπομπές που δεν ακολουθείτε ακόμα και που συνδέουν τα διαφορετικά ενδιαφέροντά σας (αυτές που γεφυρώνουν, ας πούμε, την τεχνολογική και την αφηγηματική σας πλευρά)."
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "Find shows for you",
+              "ko": "나를 위한 프로그램 찾기",
+              "zh": "为你寻找节目",
+              "hi": "अपने लिए शो खोजें",
+              "es": "Encontrar programas para ti",
+              "fr": "Trouver des émissions pour vous",
+              "ar": "ابحث عن برامج لك",
+              "pt": "Encontrar programas para você",
+              "ru": "Найти шоу для вас",
+              "de": "Sendungen für Sie finden",
+              "ja": "あなたに合う番組を探す",
+              "tr": "Size uygun programlar bul",
+              "vi": "Tìm chương trình cho bạn",
+              "it": "Trova show per te",
+              "fa": "برنامه‌هایی برای شما پیدا کنید",
+              "pl": "Znajdź programy dla siebie",
+              "uk": "Знайти шоу для вас",
+              "nl": "Shows voor u vinden",
+              "sv": "Hitta program åt dig",
+              "cs": "Najít pořady pro vás",
+              "el": "Βρείτε εκπομπές για εσάς"
+            },
+            "icon": "recommend",
+            "action": {
+              "fn": "recommend",
+              "args": {
+                "table": "shows",
+                "linkColumns": ["category", "tags"],
+                "excludeWhen": { "column": "following", "value": true },
+                "scoreColumn": "recScore",
+                "reasonColumn": "recReason",
+                "topicColumn": "category",
+                "limit": 5
+              }
+            }
+          },
+          {
+            "type": "cards",
+            "table": "shows",
+            "filter": { "column": "following", "value": false },
+            "sort": { "column": "recScore", "dir": "desc" },
+            "title": "title",
+            "subtitle": "recReason",
+            "tags": [
+              {
+                "column": "category",
+                "colors": {
+                  "Tech": "blue",
+                  "News": "amber",
+                  "Comedy": "coral",
+                  "Story": "teal",
+                  "Other": "gray"
+                }
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              { "column": "recReason", "label": "Why" },
+              { "column": "author", "label": "Author" },
+              { "column": "category", "label": "Category" }
+            ],
+            "open": "Follow / edit",
+            "action": { "fn": "editRow" }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Open a suggestion to follow it. Want live iTunes search (type a name, add any show) too? That's a separate keyless follow-up.",
+              "ko": "제안을 열어 팔로우하세요. 실시간 iTunes 검색(이름 입력, 원하는 프로그램 추가)도 원하시나요? 그것은 별도의 키가 필요 없는 후속 기능입니다.",
+              "zh": "打开建议即可关注。想要实时 iTunes 搜索（输入名称，添加任意节目）吗？那是另一个无需密钥的后续功能。",
+              "hi": "फ़ॉलो करने के लिए किसी सुझाव को खोलें। लाइव iTunes खोज भी चाहिए (नाम टाइप करें, कोई भी शो जोड़ें)? वह एक अलग की-रहित फ़ॉलो-अप है।",
+              "es": "Abre una sugerencia para seguirla. ¿Quieres también búsqueda en vivo de iTunes (escribe un nombre, añade cualquier programa)? Eso es un seguimiento aparte sin clave.",
+              "fr": "Ouvrez une suggestion pour la suivre. Vous voulez aussi la recherche iTunes en direct (tapez un nom, ajoutez n'importe quelle émission) ? C'est un suivi séparé sans clé.",
+              "ar": "افتح اقتراحًا لمتابعته. تريد أيضًا بحث iTunes المباشر (اكتب اسمًا، أضف أي برنامج)؟ هذه متابعة منفصلة لا تتطلب مفتاحًا.",
+              "pt": "Abra uma sugestão para segui-la. Quer também busca ao vivo no iTunes (digite um nome, adicione qualquer programa)? Isso é um acompanhamento separado sem chave.",
+              "ru": "Откройте предложение, чтобы подписаться. Хотите живой поиск в iTunes (введите имя, добавьте любое шоу)? Это отдельная доработка без ключа.",
+              "de": "Öffnen Sie einen Vorschlag, um ihm zu folgen. Möchten Sie auch die Live-iTunes-Suche (Namen eingeben, beliebige Sendung hinzufügen)? Das ist ein separates schlüsselloses Follow-up.",
+              "ja": "提案を開いてフォローしましょう。ライブiTunes検索（名前を入力し、任意の番組を追加）も欲しいですか？それは別のキー不要のフォローアップです。",
+              "tr": "Takip etmek için bir öneriyi açın. Canlı iTunes araması da mı istiyorsunuz (isim yazın, herhangi bir program ekleyin)? Bu, anahtar gerektirmeyen ayrı bir takip işi.",
+              "vi": "Mở một gợi ý để theo dõi nó. Bạn cũng muốn tìm kiếm iTunes trực tiếp (nhập tên, thêm bất kỳ chương trình nào)? Đó là một bước tiếp theo riêng biệt không cần khóa.",
+              "it": "Apri un suggerimento per seguirlo. Vuoi anche la ricerca live su iTunes (digita un nome, aggiungi qualsiasi show)? È un follow-up separato senza chiave.",
+              "fa": "برای دنبال کردن یک پیشنهاد را باز کنید. جستجوی زنده iTunes (تایپ یک نام، افزودن هر برنامه‌ای) هم می‌خواهید؟ آن یک پیگیری جداگانه بدون کلید است.",
+              "pl": "Otwórz sugestię, aby ją obserwować. Chcesz też wyszukiwania na żywo w iTunes (wpisz nazwę, dodaj dowolny program)? To osobna funkcja bez klucza.",
+              "uk": "Відкрийте пропозицію, щоб підписатися на неї. Хочете також живий пошук iTunes (введіть назву, додайте будь-яке шоу)? Це окрема доробка без ключа.",
+              "nl": "Open een suggestie om deze te volgen. Wilt u ook live iTunes-zoeken (typ een naam, voeg elke show toe)? Dat is een aparte sleutelloze vervolgstap.",
+              "sv": "Öppna ett förslag för att följa det. Vill du också ha live iTunes-sökning (skriv ett namn, lägg till valfritt program)? Det är en separat nyckellös uppföljning.",
+              "cs": "Otevřete návrh a sledujte jej. Chcete i živé vyhledávání iTunes (napište jméno, přidejte libovolný pořad)? To je samostatné navazující řešení bez klíče.",
+              "el": "Ανοίξτε μια πρόταση για να την ακολουθήσετε. Θέλετε επίσης ζωντανή αναζήτηση iTunes (πληκτρολογήστε ένα όνομα, προσθέστε οποιαδήποτε εκπομπή); Αυτό είναι ξεχωριστό follow-up χωρίς κλειδί."
+            }
+          }
+        ]
+      }
+    }
+  }
+}

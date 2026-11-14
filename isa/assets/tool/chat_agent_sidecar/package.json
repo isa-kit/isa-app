@@ -1,0 +1,17 @@
+{
+  "name": "isan-chat-agent-sidecar",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Local Agent SDK sidecar for the isan Chat dev agent (stdio JSON lines).",
+  "type": "module",
+  "main": "sidecar.mjs",
+  "engines": {
+    "node": ">=18.14.0"
+  },
+  "scripts": {
+    "test": "node --test test/sidecar.test.mjs test/real_zod_schemas.test.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "0.3.316"
+  }
+}

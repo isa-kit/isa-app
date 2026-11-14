@@ -1,0 +1,8 @@
+{
+  "tables": [
+    { "name": "files", "label": "Files", "icon": "folder", "description": "Diagram files. Each file is its own flowchart — its own set of nodes, edges, and sketch." },
+    { "name": "nodes", "label": "Nodes", "icon": "account_tree", "description": "Diagram nodes. Each node has a label and an x/y position on the canvas." },
+    { "name": "edges", "label": "Edges", "icon": "list", "description": "Directed edges between nodes, referencing a from-node and a to-node." },
+    { "name": "sketch", "label": "Sketch", "icon": "gesture", "description": "Freehand annotations drawn over the diagram (one row)." }
+  ]
+}

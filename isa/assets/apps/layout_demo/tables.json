@@ -1,0 +1,10 @@
+{
+  "tables": [
+    {
+      "name": "items",
+      "label": "Items",
+      "icon": "dashboard",
+      "description": "Demo items powering the dashboard split layout — a few categories, statuses, values and due dates so each region has something to show."
+    }
+  ]
+}

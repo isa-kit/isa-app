@@ -1,0 +1,130 @@
+{
+  "pinebuild": [
+    {
+      "name": "id",
+      "type": "text"
+    },
+    {
+      "name": "name",
+      "type": "text"
+    },
+    {
+      "name": "config",
+      "type": "text"
+    }
+  ],
+  "pinerecipes": [
+    {
+      "name": "id",
+      "type": "text"
+    },
+    {
+      "name": "name",
+      "type": "text"
+    },
+    {
+      "name": "config",
+      "type": "text"
+    },
+    {
+      "name": "createdAt",
+      "type": "text"
+    }
+  ],
+  "pineviews": [
+    {
+      "name": "id",
+      "type": "text"
+    },
+    {
+      "name": "name",
+      "type": "text"
+    },
+    {
+      "name": "config",
+      "type": "text"
+    },
+    {
+      "name": "createdAt",
+      "type": "text"
+    }
+  ],
+  "pinediscover": [
+    {
+      "name": "id",
+      "type": "text"
+    },
+    {
+      "name": "name",
+      "type": "text"
+    },
+    {
+      "name": "config",
+      "type": "text"
+    },
+    {
+      "name": "createdAt",
+      "type": "text"
+    }
+  ],
+  "pinefollows": [
+    {
+      "name": "id",
+      "type": "text"
+    },
+    {
+      "name": "kind",
+      "type": "text"
+    },
+    {
+      "name": "filerId",
+      "type": "text"
+    },
+    {
+      "name": "name",
+      "type": "text"
+    },
+    {
+      "name": "addedAt",
+      "type": "text"
+    },
+    {
+      "name": "lastSeenFiled",
+      "type": "text"
+    }
+  ],
+  "pineideas": [
+    {
+      "name": "id",
+      "type": "text"
+    },
+    {
+      "name": "ideaId",
+      "type": "text"
+    },
+    {
+      "name": "ideaText",
+      "type": "text"
+    },
+    {
+      "name": "round",
+      "type": "text"
+    },
+    {
+      "name": "hash",
+      "type": "text"
+    },
+    {
+      "name": "settings",
+      "type": "text"
+    },
+    {
+      "name": "verdict",
+      "type": "text"
+    },
+    {
+      "name": "createdAt",
+      "type": "text"
+    }
+  ]
+}

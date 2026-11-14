@@ -1,0 +1,95 @@
+{
+  "cities": [
+    {
+      "name": "id",
+      "type": "text"
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "label": {
+        "en": "City",
+        "ko": "도시",
+        "zh": "城市",
+        "hi": "शहर",
+        "es": "Ciudad",
+        "fr": "Ville",
+        "ar": "المدينة",
+        "pt": "Cidade",
+        "ru": "Город",
+        "de": "Stadt",
+        "ja": "街",
+        "tr": "Şehir",
+        "vi": "Thành phố",
+        "it": "Città",
+        "fa": "شهر",
+        "pl": "Miasto",
+        "uk": "Місто",
+        "nl": "Stad",
+        "sv": "Stad",
+        "cs": "Město",
+        "el": "Πόλη"
+      }
+    },
+    {
+      "name": "pop",
+      "type": "number",
+      "label": {
+        "en": "Population",
+        "ko": "인구",
+        "zh": "人口",
+        "hi": "जनसंख्या",
+        "es": "Población",
+        "fr": "Population",
+        "ar": "السكان",
+        "pt": "População",
+        "ru": "Население",
+        "de": "Bevölkerung",
+        "ja": "人口",
+        "tr": "Nüfus",
+        "vi": "Dân số",
+        "it": "Popolazione",
+        "fa": "جمعیت",
+        "pl": "Populacja",
+        "uk": "Населення",
+        "nl": "Bevolking",
+        "sv": "Befolkning",
+        "cs": "Populace",
+        "el": "Πληθυσμός"
+      }
+    }
+  ],
+  "siegeSaves": [
+    {
+      "name": "id",
+      "type": "text"
+    },
+    {
+      "name": "data",
+      "type": "text",
+      "label": {
+        "en": "Save data",
+        "ko": "저장 데이터",
+        "zh": "存档数据",
+        "hi": "सेव डेटा",
+        "es": "Datos guardados",
+        "fr": "Données de sauvegarde",
+        "ar": "بيانات الحفظ",
+        "pt": "Dados salvos",
+        "ru": "Данные сохранения",
+        "de": "Speicherdaten",
+        "ja": "セーブデータ",
+        "tr": "Kayıt verisi",
+        "vi": "Dữ liệu lưu",
+        "it": "Dati di salvataggio",
+        "fa": "داده ذخیره",
+        "pl": "Dane zapisu",
+        "uk": "Дані збереження",
+        "nl": "Opslaggegevens",
+        "sv": "Sparad data",
+        "cs": "Data uložení",
+        "el": "Δεδομένα αποθήκευσης"
+      }
+    }
+  ]
+}

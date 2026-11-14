@@ -1,0 +1,16 @@
+{
+  "tables": [
+    {
+      "name": "agencies",
+      "label": "Data sources",
+      "icon": "dns",
+      "description": "Transit agencies this app reads. Edit a source, point one at your own server, add your own, or switch one off."
+    },
+    {
+      "name": "views",
+      "label": "Saved views",
+      "icon": "bookmark",
+      "description": "Your saved map views — a place, radius, and filters you can jump back to."
+    }
+  ]
+}

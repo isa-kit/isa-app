@@ -1,0 +1,375 @@
+{
+  "pages": [
+    {
+      "id": "nd_start",
+      "title": "Welcome to New Day",
+      "body": "# Welcome to New Day\n\nThis is your journal and agenda in one place. Every page has a **Write** side, a **Bubbles** side and a **Diagram** side, and can be a note, a journal entry, a task or an event.\n\n- Open **Today** for your agenda and journal.\n- Link pages with double brackets, like [[Plan the week]].\n- Make your own tags on the **Tags** tab.\n- Switch features on or off in **Settings**.\n\nThese pages are examples. Hide them whenever you like.",
+      "parentId": "",
+      "kind": "file",
+      "order": 0,
+      "scheduleKind": "none",
+      "entryKind": "note",
+      "done": false,
+      "tags": [],
+      "_example": true
+    },
+    {
+      "id": "nd_j1",
+      "title": "Morning walk by the river",
+      "body": "Morning walk by the river\n\nCold air, clear head. Walked before breakfast and decided what to focus on this week.",
+      "parentId": "",
+      "kind": "file",
+      "order": 1,
+      "scheduleKind": "none",
+      "entryKind": "journal",
+      "done": false,
+      "tags": [
+        "tg_walk",
+        "tg_calm"
+      ],
+      "_example": true,
+      "when": "2026-10-29",
+      "mood": "good"
+    },
+    {
+      "id": "nd_t1",
+      "title": "Finished the budget draft",
+      "body": "Finished the budget draft\n\nSent it over for review.",
+      "parentId": "",
+      "kind": "file",
+      "order": 2,
+      "scheduleKind": "todo",
+      "entryKind": "task",
+      "done": true,
+      "tags": [
+        "tg_work"
+      ],
+      "_example": true,
+      "when": "2026-10-30",
+      "groupId": "nd_grp_work"
+    },
+    {
+      "id": "nd_j2",
+      "title": "Quiet evening at home",
+      "body": "Quiet evening at home\n\nCooked, read a few chapters, early night.",
+      "parentId": "",
+      "kind": "file",
+      "order": 3,
+      "scheduleKind": "none",
+      "entryKind": "journal",
+      "done": false,
+      "tags": [
+        "tg_home",
+        "tg_calm"
+      ],
+      "_example": true,
+      "when": "2026-10-30",
+      "mood": "ok"
+    },
+    {
+      "id": "nd_t2",
+      "title": "Plan the week",
+      "body": "Plan the week\n\nPick three things that matter.",
+      "parentId": "",
+      "kind": "file",
+      "order": 4,
+      "scheduleKind": "todo",
+      "entryKind": "task",
+      "done": false,
+      "tags": [
+        "tg_work"
+      ],
+      "_example": true,
+      "when": "2026-10-31",
+      "groupId": "nd_grp_home",
+      "groupIds": [
+        "nd_grp_home",
+        "nd_grp_work"
+      ]
+    },
+    {
+      "id": "nd_e1",
+      "title": "Lunch with a friend",
+      "body": "Lunch with a friend",
+      "parentId": "",
+      "kind": "file",
+      "order": 5,
+      "scheduleKind": "appointment",
+      "entryKind": "event",
+      "done": false,
+      "tags": [
+        "tg_home",
+        "tg_ana"
+      ],
+      "_example": true,
+      "when": "2026-10-31",
+      "whenTime": "12:30"
+    },
+    {
+      "id": "nd_j3",
+      "title": "Today I want to notice more",
+      "body": "Today I want to notice more\n\nStart small: one honest line before bed.",
+      "parentId": "",
+      "kind": "file",
+      "order": 6,
+      "scheduleKind": "none",
+      "entryKind": "journal",
+      "done": false,
+      "tags": [
+        "tg_calm"
+      ],
+      "_example": true,
+      "when": "2026-10-31",
+      "mood": "good"
+    },
+    {
+      "id": "nd_e2",
+      "title": "Dentist check-up",
+      "body": "Dentist check-up",
+      "parentId": "",
+      "kind": "file",
+      "order": 7,
+      "scheduleKind": "appointment",
+      "entryKind": "event",
+      "done": false,
+      "tags": [
+        "tg_health"
+      ],
+      "_example": true,
+      "when": "2026-11-04",
+      "whenTime": "09:15"
+    },
+    {
+      "id": "nd_t3",
+      "title": "Renew library card",
+      "body": "Renew library card",
+      "parentId": "",
+      "kind": "file",
+      "order": 8,
+      "scheduleKind": "todo",
+      "entryKind": "task",
+      "done": false,
+      "tags": [
+        "tg_home"
+      ],
+      "_example": true,
+      "when": "2026-11-06",
+      "groupId": "nd_grp_home"
+    },
+    {
+      "id": "nd_e3",
+      "title": "Long hike with the group",
+      "body": "Long hike with the group",
+      "parentId": "",
+      "kind": "file",
+      "order": 9,
+      "scheduleKind": "event",
+      "entryKind": "event",
+      "done": false,
+      "tags": [
+        "tg_walk",
+        "tg_health"
+      ],
+      "_example": true,
+      "when": "2026-11-08",
+      "whenTime": "08:00"
+    },
+    {
+      "id": "nd_g1",
+      "title": "Finish the garden plan",
+      "parentId": "",
+      "kind": "file",
+      "order": 10,
+      "scheduleKind": "none",
+      "entryKind": "goal",
+      "done": true,
+      "tags": [],
+      "_example": true,
+      "when": "2026-10-31"
+    },
+    {
+      "id": "nd_g2",
+      "title": "Run three times",
+      "parentId": "",
+      "kind": "file",
+      "order": 11,
+      "scheduleKind": "none",
+      "entryKind": "goal",
+      "done": false,
+      "tags": [],
+      "_example": true,
+      "when": "2026-10-31"
+    },
+    {
+      "id": "nd_td1",
+      "title": "Renew passport",
+      "parentId": "",
+      "kind": "file",
+      "order": 12,
+      "scheduleKind": "todo",
+      "entryKind": "task",
+      "done": false,
+      "tags": [],
+      "_example": true
+    },
+    {
+      "id": "nd_n1",
+      "title": "Trip ideas",
+      "parentId": "",
+      "kind": "file",
+      "order": 13,
+      "scheduleKind": "none",
+      "entryKind": "note",
+      "done": false,
+      "tags": [],
+      "_example": true,
+      "when": "2026-10-31",
+      "body": "Ask about the trip dates.\n\nSeeds arrive on Thursday."
+    },
+    {
+      "id": "nd_h1",
+      "title": "Walk",
+      "parentId": "",
+      "kind": "file",
+      "order": 14,
+      "scheduleKind": "none",
+      "entryKind": "habit",
+      "done": false,
+      "tags": [],
+      "_example": true
+    },
+    {
+      "id": "nd_h2",
+      "title": "Read 20 minutes",
+      "parentId": "",
+      "kind": "file",
+      "order": 15,
+      "scheduleKind": "none",
+      "entryKind": "habit",
+      "done": false,
+      "tags": [],
+      "_example": true
+    }
+  ],
+  "links": [
+    {
+      "id": "nd_lk1",
+      "fromId": "nd_start",
+      "toId": "nd_t2",
+      "toTitle": "Plan the week",
+      "fromTitle": "Welcome to New Day",
+      "_example": true
+    }
+  ],
+  "bubbles": [],
+  "bubble_links": [],
+  "grafts": [],
+  "tags": [
+    {
+      "id": "tg_walk",
+      "name": "walk",
+      "color": "#2E9E6B",
+      "group": "habit",
+      "_example": true
+    },
+    {
+      "id": "tg_work",
+      "name": "work",
+      "color": "#3F7FD8",
+      "group": "project",
+      "_example": true,
+      "groupIds": [
+        "nd_grp_work"
+      ]
+    },
+    {
+      "id": "tg_home",
+      "name": "home",
+      "color": "#E2873C",
+      "group": "place",
+      "_example": true
+    },
+    {
+      "id": "tg_calm",
+      "name": "calm",
+      "color": "#8A63C7",
+      "group": "mood",
+      "_example": true
+    },
+    {
+      "id": "tg_health",
+      "name": "health",
+      "color": "#D84B4B",
+      "group": "project",
+      "_example": true
+    },
+    {
+      "id": "tg_ana",
+      "name": "Ana Reyes",
+      "color": "#B03060",
+      "group": "person",
+      "details": "Friend from the hiking group. Trail map: https://example.com/trails",
+      "groupIds": [
+        "nd_grp_home"
+      ],
+      "_example": true
+    }
+  ],
+  "days": [
+    {
+      "id": "nd_day1",
+      "date": "2026-10-31",
+      "summary": "A slow, good start to the weekend.",
+      "mood": "good",
+      "_example": true,
+      "gratitude": "A slow morning and good coffee."
+    }
+  ],
+  "prefs": [
+    {
+      "id": "prefs",
+      "agendaOn": true,
+      "moodOn": true,
+      "tagsOn": true,
+      "boardOn": true,
+      "timelineLens": "past",
+      "ringAtTimes": true
+    }
+  ],
+  "habit_ticks": [
+    {
+      "id": "nd_ht1",
+      "page": "nd_h1",
+      "date": "2026-10-31",
+      "_example": true
+    },
+    {
+      "id": "nd_ht2",
+      "page": "nd_h1",
+      "date": "2026-10-30",
+      "_example": true
+    },
+    {
+      "id": "nd_ht3",
+      "page": "nd_h2",
+      "date": "2026-10-30",
+      "_example": true
+    }
+  ],
+  "task_groups": [
+    {
+      "id": "nd_grp_home",
+      "name": "Home",
+      "color": "#2E8C83",
+      "order": 10,
+      "_example": true
+    },
+    {
+      "id": "nd_grp_work",
+      "name": "Work",
+      "color": "#3B6EA8",
+      "order": 20,
+      "_example": true
+    }
+  ]
+}

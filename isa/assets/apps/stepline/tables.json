@@ -1,0 +1,10 @@
+{
+  "tables": [
+    {
+      "name": "steplinerecipe",
+      "label": "Recipe",
+      "icon": "low_priority",
+      "description": "The step recipe you are editing (one row). Local to this device, never synced."
+    }
+  ]
+}

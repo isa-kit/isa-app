@@ -1,0 +1,200 @@
+{
+  "hubs": [
+    {
+      "index": 1,
+      "key": "seoul_station",
+      "sid": "kr_005",
+      "label": "Seoul Station"
+    },
+    {
+      "index": 2,
+      "key": "city_hall",
+      "sid": "kr_014",
+      "label": "City Hall"
+    },
+    {
+      "index": 3,
+      "key": "gangnam",
+      "sid": "kr_027",
+      "label": "Gangnam"
+    },
+    {
+      "index": 4,
+      "key": "wangsimni",
+      "sid": "kr_071",
+      "label": "Wangsimni"
+    },
+    {
+      "index": 5,
+      "key": "sadang",
+      "sid": "kr_133",
+      "label": "Sadang"
+    },
+    {
+      "index": 6,
+      "key": "jamsil",
+      "sid": "kr_178",
+      "label": "Jamsil (Songpa-gu Office)"
+    },
+    {
+      "index": 7,
+      "key": "konkuk",
+      "sid": "kr_209",
+      "label": "Konkuk University"
+    },
+    {
+      "index": 8,
+      "key": "hongik",
+      "sid": "kr_368",
+      "label": "Hongik University"
+    }
+  ],
+  "modes": [
+    {
+      "slot": 0,
+      "mode": "subway",
+      "label": "Subway"
+    },
+    {
+      "slot": 1,
+      "mode": "rail",
+      "label": "Subway + rail"
+    }
+  ],
+  "bucketLimits": [
+    10,
+    20,
+    30,
+    45,
+    60,
+    90,
+    120
+  ],
+  "bucketLabels": [
+    "<10",
+    "10-20",
+    "20-30",
+    "30-45",
+    "45-60",
+    "60-90",
+    "90-120",
+    "120+"
+  ],
+  "cappedIndex": 7,
+  "capMinutes": 120,
+  "cellProps": [
+    {
+      "hubIndex": 1,
+      "hub": "seoul_station",
+      "mode": "subway",
+      "numKey": "a"
+    },
+    {
+      "hubIndex": 1,
+      "hub": "seoul_station",
+      "mode": "rail",
+      "numKey": "b"
+    },
+    {
+      "hubIndex": 2,
+      "hub": "city_hall",
+      "mode": "subway",
+      "numKey": "c"
+    },
+    {
+      "hubIndex": 2,
+      "hub": "city_hall",
+      "mode": "rail",
+      "numKey": "d"
+    },
+    {
+      "hubIndex": 3,
+      "hub": "gangnam",
+      "mode": "subway",
+      "numKey": "e"
+    },
+    {
+      "hubIndex": 3,
+      "hub": "gangnam",
+      "mode": "rail",
+      "numKey": "f"
+    },
+    {
+      "hubIndex": 4,
+      "hub": "wangsimni",
+      "mode": "subway",
+      "numKey": "g"
+    },
+    {
+      "hubIndex": 4,
+      "hub": "wangsimni",
+      "mode": "rail",
+      "numKey": "h"
+    },
+    {
+      "hubIndex": 5,
+      "hub": "sadang",
+      "mode": "subway",
+      "numKey": "i"
+    },
+    {
+      "hubIndex": 5,
+      "hub": "sadang",
+      "mode": "rail",
+      "numKey": "j"
+    },
+    {
+      "hubIndex": 6,
+      "hub": "jamsil",
+      "mode": "subway",
+      "numKey": "k"
+    },
+    {
+      "hubIndex": 6,
+      "hub": "jamsil",
+      "mode": "rail",
+      "numKey": "l"
+    },
+    {
+      "hubIndex": 7,
+      "hub": "konkuk",
+      "mode": "subway",
+      "numKey": "m"
+    },
+    {
+      "hubIndex": 7,
+      "hub": "konkuk",
+      "mode": "rail",
+      "numKey": "n"
+    },
+    {
+      "hubIndex": 8,
+      "hub": "hongik",
+      "mode": "subway",
+      "numKey": "o"
+    },
+    {
+      "hubIndex": 8,
+      "hub": "hongik",
+      "mode": "rail",
+      "numKey": "p"
+    }
+  ],
+  "propNaming": "Single-char lowercase keys ONLY (a-p), each a JSON NUMBER = RAW TOTAL MINUTES (whole minutes, capped at capMinutes) for that hub x mode. The uppercase A-P bucket-LABEL twins are GONE as of reach-tiles-0809 -- they existed only to feed the engine's string-match colour ramp, which colorProp+steps (numeric thresholds, flutterboard +numeric-steps-ramp.1) replaces. Colour = a `steps` ramp keyed on bucketLimits; the Within control = a `steps` ramp cut at ANY threshold; tap detail = the raw number. Mapping is cellProps[] above (also derivable as KEY_ALPHABET[(hubIndex-1)*2+modeSlot] in build_reach_cells.py) -- never hardcode letters in the UI without checking this manifest.",
+  "stepsThresholds": [
+    0,
+    10,
+    20,
+    30,
+    45,
+    60,
+    90,
+    120
+  ],
+  "hubSideAccessConstant": 0,
+  "assets": {
+    "fine": "reach_cells_fine.geojson",
+    "mid": "reach_cells_mid.geojson",
+    "coarse": "reach_cells_coarse.geojson"
+  }
+}

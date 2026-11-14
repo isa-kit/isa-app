@@ -1,0 +1,146 @@
+{
+  "app": {
+    "title": {
+      "en": "Stepline",
+      "ko": "Stepline",
+      "zh": "Stepline",
+      "hi": "Stepline",
+      "es": "Stepline",
+      "fr": "Stepline",
+      "ar": "Stepline",
+      "pt": "Stepline",
+      "ru": "Stepline",
+      "de": "Stepline",
+      "ja": "Stepline",
+      "tr": "Stepline",
+      "vi": "Stepline",
+      "it": "Stepline",
+      "fa": "Stepline",
+      "pl": "Stepline",
+      "uk": "Stepline",
+      "nl": "Stepline",
+      "sv": "Stepline",
+      "cs": "Stepline",
+      "el": "Stepline"
+    },
+    "primaryColor": "#2962FF",
+    "theme": "minimal",
+    "translatable": true,
+    "languages": [
+      "en",
+      "ko",
+      "zh",
+      "hi",
+      "es",
+      "fr",
+      "ar",
+      "pt",
+      "ru",
+      "de",
+      "ja",
+      "tr",
+      "vi",
+      "it",
+      "fa",
+      "pl",
+      "uk",
+      "nl",
+      "sv",
+      "cs",
+      "el"
+    ],
+    "appDataTools": true,
+    "sync": {
+      "pocketbase": false,
+      "drive": false,
+      "room": false,
+      "mesh": false
+    },
+    "intro": {
+      "purpose": {
+        "en": "Edit the step recipe of a model: reorder steps, switch them off, add steps from a library. Stepline checks that every step's inputs exist before it runs, and exports the recipe as a JSON file for the model kit. Nothing is sent anywhere.",
+        "ko": "Edit the step recipe of a model: reorder steps, switch them off, add steps from a library. Stepline checks that every step's inputs exist before it runs, and exports the recipe as a JSON file for the model kit. Nothing is sent anywhere.",
+        "zh": "Edit the step recipe of a model: reorder steps, switch them off, add steps from a library. Stepline checks that every step's inputs exist before it runs, and exports the recipe as a JSON file for the model kit. Nothing is sent anywhere.",
+        "hi": "Edit the step recipe of a model: reorder steps, switch them off, add steps from a library. Stepline checks that every step's inputs exist before it runs, and exports the recipe as a JSON file for the model kit. Nothing is sent anywhere.",
+        "es": "Edit the step recipe of a model: reorder steps, switch them off, add steps from a library. Stepline checks that every step's inputs exist before it runs, and exports the recipe as a JSON file for the model kit. Nothing is sent anywhere.",
+        "fr": "Edit the step recipe of a model: reorder steps, switch them off, add steps from a library. Stepline checks that every step's inputs exist before it runs, and exports the recipe as a JSON file for the model kit. Nothing is sent anywhere.",
+        "ar": "Edit the step recipe of a model: reorder steps, switch them off, add steps from a library. Stepline checks that every step's inputs exist before it runs, and exports the recipe as a JSON file for the model kit. Nothing is sent anywhere.",
+        "pt": "Edit the step recipe of a model: reorder steps, switch them off, add steps from a library. Stepline checks that every step's inputs exist before it runs, and exports the recipe as a JSON file for the model kit. Nothing is sent anywhere.",
+        "ru": "Edit the step recipe of a model: reorder steps, switch them off, add steps from a library. Stepline checks that every step's inputs exist before it runs, and exports the recipe as a JSON file for the model kit. Nothing is sent anywhere.",
+        "de": "Edit the step recipe of a model: reorder steps, switch them off, add steps from a library. Stepline checks that every step's inputs exist before it runs, and exports the recipe as a JSON file for the model kit. Nothing is sent anywhere.",
+        "ja": "Edit the step recipe of a model: reorder steps, switch them off, add steps from a library. Stepline checks that every step's inputs exist before it runs, and exports the recipe as a JSON file for the model kit. Nothing is sent anywhere.",
+        "tr": "Edit the step recipe of a model: reorder steps, switch them off, add steps from a library. Stepline checks that every step's inputs exist before it runs, and exports the recipe as a JSON file for the model kit. Nothing is sent anywhere.",
+        "vi": "Edit the step recipe of a model: reorder steps, switch them off, add steps from a library. Stepline checks that every step's inputs exist before it runs, and exports the recipe as a JSON file for the model kit. Nothing is sent anywhere.",
+        "it": "Edit the step recipe of a model: reorder steps, switch them off, add steps from a library. Stepline checks that every step's inputs exist before it runs, and exports the recipe as a JSON file for the model kit. Nothing is sent anywhere.",
+        "fa": "Edit the step recipe of a model: reorder steps, switch them off, add steps from a library. Stepline checks that every step's inputs exist before it runs, and exports the recipe as a JSON file for the model kit. Nothing is sent anywhere.",
+        "pl": "Edit the step recipe of a model: reorder steps, switch them off, add steps from a library. Stepline checks that every step's inputs exist before it runs, and exports the recipe as a JSON file for the model kit. Nothing is sent anywhere.",
+        "uk": "Edit the step recipe of a model: reorder steps, switch them off, add steps from a library. Stepline checks that every step's inputs exist before it runs, and exports the recipe as a JSON file for the model kit. Nothing is sent anywhere.",
+        "nl": "Edit the step recipe of a model: reorder steps, switch them off, add steps from a library. Stepline checks that every step's inputs exist before it runs, and exports the recipe as a JSON file for the model kit. Nothing is sent anywhere.",
+        "sv": "Edit the step recipe of a model: reorder steps, switch them off, add steps from a library. Stepline checks that every step's inputs exist before it runs, and exports the recipe as a JSON file for the model kit. Nothing is sent anywhere.",
+        "cs": "Edit the step recipe of a model: reorder steps, switch them off, add steps from a library. Stepline checks that every step's inputs exist before it runs, and exports the recipe as a JSON file for the model kit. Nothing is sent anywhere.",
+        "el": "Edit the step recipe of a model: reorder steps, switch them off, add steps from a library. Stepline checks that every step's inputs exist before it runs, and exports the recipe as a JSON file for the model kit. Nothing is sent anywhere."
+      }
+    }
+  },
+  "nav": [
+    {
+      "id": "home",
+      "label": {
+        "en": "Stepline",
+        "ko": "Stepline",
+        "zh": "Stepline",
+        "hi": "Stepline",
+        "es": "Stepline",
+        "fr": "Stepline",
+        "ar": "Stepline",
+        "pt": "Stepline",
+        "ru": "Stepline",
+        "de": "Stepline",
+        "ja": "Stepline",
+        "tr": "Stepline",
+        "vi": "Stepline",
+        "it": "Stepline",
+        "fa": "Stepline",
+        "pl": "Stepline",
+        "uk": "Stepline",
+        "nl": "Stepline",
+        "sv": "Stepline",
+        "cs": "Stepline",
+        "el": "Stepline"
+      },
+      "icon": "low_priority",
+      "screen": "home"
+    }
+  ],
+  "screens": {
+    "home": {
+      "title": {
+        "en": "Stepline",
+        "ko": "Stepline",
+        "zh": "Stepline",
+        "hi": "Stepline",
+        "es": "Stepline",
+        "fr": "Stepline",
+        "ar": "Stepline",
+        "pt": "Stepline",
+        "ru": "Stepline",
+        "de": "Stepline",
+        "ja": "Stepline",
+        "tr": "Stepline",
+        "vi": "Stepline",
+        "it": "Stepline",
+        "fa": "Stepline",
+        "pl": "Stepline",
+        "uk": "Stepline",
+        "nl": "Stepline",
+        "sv": "Stepline",
+        "cs": "Stepline",
+        "el": "Stepline"
+      },
+      "body": {
+        "type": "stepline",
+        "fillPhone": true
+      }
+    }
+  }
+}

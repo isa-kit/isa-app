@@ -1,0 +1,13 @@
+{
+  "id": "events",
+  "name": "Events",
+  "category": "Life",
+  "description": "Browse events, mark what you're going to, see them on a calendar and map.",
+  "icon": "event",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_events_app"
+  },
+  "seedVersion": "2026-07-20.files.l10n-int-0903",
+  "seedContent": "initial-only"
+}
