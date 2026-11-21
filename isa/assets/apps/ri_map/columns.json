@@ -1,0 +1,8 @@
+{
+  "places": [
+    { "name": "name", "type": "text",   "label": { "en": "Name", "ko": "이름", "zh": "名称", "hi": "नाम", "es": "Nombre", "fr": "Nom", "ar": "الاسم", "pt": "Nome", "ru": "Название", "de": "Name", "ja": "名前", "tr": "Ad", "vi": "Tên", "it": "Nome", "fa": "نام", "pl": "Nazwa", "uk": "Назва", "nl": "Naam", "sv": "Namn", "cs": "Název", "el": "Όνομα" }, "required": true },
+    { "name": "kind", "type": "text",   "label": { "en": "Kind", "ko": "종류", "zh": "种类", "hi": "प्रकार", "es": "Clase", "fr": "Genre", "ar": "النوع", "pt": "Classe", "ru": "Разновидность", "de": "Art", "ja": "種別", "tr": "Tür", "vi": "Loại", "it": "Genere", "fa": "گونه", "pl": "Rodzaj", "uk": "Різновид", "nl": "Soort", "sv": "Slag", "cs": "Druh", "el": "Είδος" } },
+    { "name": "lat",  "type": "number", "label": { "en": "Latitude", "ko": "위도", "zh": "纬度", "hi": "अक्षांश", "es": "Latitud", "fr": "Latitude", "ar": "خط العرض", "pt": "Latitude", "ru": "Широта", "de": "Breitengrad", "ja": "緯度", "tr": "Enlem", "vi": "Vĩ độ", "it": "Latitudine", "fa": "عرض جغرافیایی", "pl": "Szerokość geograficzna", "uk": "Широта", "nl": "Breedtegraad", "sv": "Latitud", "cs": "Zeměpisná šířka", "el": "Γεωγραφικό πλάτος" } },
+    { "name": "lon",  "type": "number", "label": { "en": "Longitude", "ko": "경도", "zh": "经度", "hi": "देशांतर", "es": "Longitud", "fr": "Longitude", "ar": "خط الطول", "pt": "Longitude", "ru": "Долгота", "de": "Längengrad", "ja": "経度", "tr": "Boylam", "vi": "Kinh độ", "it": "Longitudine", "fa": "طول جغرافیایی", "pl": "Długość geograficzna", "uk": "Довгота", "nl": "Lengtegraad", "sv": "Longitud", "cs": "Zeměpisná délka", "el": "Γεωγραφικό μήκος" } }
+  ]
+}

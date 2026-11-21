@@ -1,0 +1,105 @@
+{
+  "app": {
+    "title": "Crypto",
+    "primaryColor": "#F7931A",
+    "theme": "neon"
+  },
+  "nav": [
+    { "id": "prices", "label": "Prices", "icon": "trending_up", "screen": "prices" },
+    { "id": "history", "label": "History", "icon": "show_chart", "screen": "history" },
+    { "id": "all", "label": "Table", "icon": "table_rows", "screen": "all" }
+  ],
+  "screens": {
+    "prices": {
+      "title": "Live prices",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Live top-25 cryptocurrencies by market cap (CoinGecko). Loads on open; tap Refresh for the latest. Search by name or symbol; tap a coin for details."
+          },
+          {
+            "type": "button",
+            "label": "Refresh",
+            "icon": "refresh",
+            "action": { "fn": "refreshTable" }
+          },
+          {
+            "type": "cards",
+            "table": "markets",
+            "search": true,
+            "searchColumns": ["name", "symbol"],
+            "sort": { "column": "market_cap_rank", "dir": "asc" },
+            "title": "name",
+            "subtitle": "symbol",
+            "expandable": true,
+            "expandFields": [
+              { "column": "current_price", "label": "Price (USD)" },
+              { "column": "price_change_percentage_24h", "label": "24h change %" },
+              { "column": "high_24h", "label": "24h high" },
+              { "column": "low_24h", "label": "24h low" },
+              { "column": "market_cap", "label": "Market cap" },
+              { "column": "total_volume", "label": "24h volume" }
+            ]
+          }
+        ]
+      }
+    },
+    "history": {
+      "title": "Price history",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Daily close price over the last 90 days (CryptoCompare). The latest value is shown at the top-right of each chart."
+          },
+          {
+            "type": "button",
+            "label": "Refresh",
+            "icon": "refresh",
+            "action": { "fn": "refreshTable" }
+          },
+          {
+            "type": "linechart",
+            "label": "Bitcoin (BTC) — 90 days, USD",
+            "table": "btc_history",
+            "xColumn": "time",
+            "yColumn": "price",
+            "height": "0.5fill"
+          },
+          {
+            "type": "linechart",
+            "label": "Ethereum (ETH) — 90 days, USD",
+            "table": "eth_history",
+            "xColumn": "time",
+            "yColumn": "price",
+            "height": "0.5fill"
+          }
+        ]
+      }
+    },
+    "all": {
+      "title": "All markets",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": "Every loaded market in a dense table."
+          },
+          {
+            "type": "table",
+            "table": "markets",
+            "columns": ["market_cap_rank", "name", "symbol", "current_price", "price_change_percentage_24h", "market_cap"],
+            "height": "fill"
+          }
+        ]
+      }
+    }
+  }
+}

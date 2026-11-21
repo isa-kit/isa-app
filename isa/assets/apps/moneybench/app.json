@@ -1,0 +1,22 @@
+{
+  "id": "moneybench",
+  "name": "MoneyIdeasBench",
+  "category": "Finance",
+  "description": "Turn a trading idea into a chart signal, test it on past prices, and copy the TradingView script. Signals only.",
+  "icon": "show_chart",
+  "color": "#2962FF",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_pine_composer"
+  },
+  "syncId": "pine_composer",
+  "seedVersion": "2026-11-13.idealab-1",
+  "durableSettings": [
+    "pinecomposerAiProvider",
+    "pinecomposerBuildView",
+    "pinecomposerDividends",
+    "aiProviders",
+    "aiProvider",
+    "marketDataSource"
+  ]
+}

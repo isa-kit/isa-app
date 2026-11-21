@@ -1,0 +1,166 @@
+{
+  "app": {
+    "title": {
+      "en": "MoneyIdeasBench",
+      "ko": "MoneyIdeasBench",
+      "zh": "MoneyIdeasBench",
+      "hi": "MoneyIdeasBench",
+      "es": "MoneyIdeasBench",
+      "fr": "MoneyIdeasBench",
+      "ar": "MoneyIdeasBench",
+      "pt": "MoneyIdeasBench",
+      "ru": "MoneyIdeasBench",
+      "de": "MoneyIdeasBench",
+      "ja": "MoneyIdeasBench",
+      "tr": "MoneyIdeasBench",
+      "vi": "MoneyIdeasBench",
+      "it": "MoneyIdeasBench",
+      "fa": "MoneyIdeasBench",
+      "pl": "MoneyIdeasBench",
+      "uk": "MoneyIdeasBench",
+      "nl": "MoneyIdeasBench",
+      "sv": "MoneyIdeasBench",
+      "cs": "MoneyIdeasBench",
+      "el": "MoneyIdeasBench"
+    },
+    "primaryColor": "#2962FF",
+    "theme": "minimal",
+    "translatable": true,
+    "languages": [
+      "en",
+      "ko",
+      "zh",
+      "hi",
+      "es",
+      "fr",
+      "ar",
+      "pt",
+      "ru",
+      "de",
+      "ja",
+      "tr",
+      "vi",
+      "it",
+      "fa",
+      "pl",
+      "uk",
+      "nl",
+      "sv",
+      "cs",
+      "el"
+    ],
+    "appDataTools": true,
+    "sync": {
+      "pocketbase": false,
+      "drive": false,
+      "room": false,
+      "mesh": false
+    },
+    "intro": {
+      "purpose": {
+        "en": "Turn a trading idea into a chart signal, test it on past prices, and copy the TradingView script. Signals only, it never trades.",
+        "ko": "트레이딩 아이디어를 차트 신호로 바꾸고, 과거 가격으로 테스트한 뒤 TradingView 스크립트를 복사하세요. 신호만 보여 주며 거래는 하지 않습니다.",
+        "zh": "把交易想法变成图表信号，用过去的价格测试，然后复制 TradingView 脚本。只提供信号，从不交易。",
+        "ja": "トレードのアイデアをチャートのシグナルにし、過去の価格でテストして、TradingViewのスクリプトをコピーします。シグナルだけで、取引はしません。",
+        "es": "Convierte una idea de trading en una señal de gráfico, pruébala con precios pasados y copia el script de TradingView. Solo señales, nunca opera.",
+        "de": "Mach aus einer Trading-Idee ein Chartsignal, teste es an vergangenen Kursen und kopiere das TradingView-Skript. Nur Signale, es handelt nie.",
+        "fr": "Transformez une idée de trading en signal de graphique, testez-la sur les prix passés et copiez le script TradingView. Signaux seulement, il ne trade jamais.",
+        "hi": "ट्रेडिंग आइडिया को चार्ट सिग्नल में बदलें, पिछली कीमतों पर परखें और TradingView स्क्रिप्ट कॉपी करें। सिर्फ़ सिग्नल, यह कभी ट्रेड नहीं करता।",
+        "ar": "حوّل فكرة تداول إلى إشارة على الرسم البياني، واختبرها على أسعار سابقة، ثم انسخ سكربت TradingView. إشارات فقط، ولا يتداول أبدًا.",
+        "pt": "Transforme uma ideia de trading em um sinal no gráfico, teste-a com preços passados e copie o script do TradingView. Só sinais, nunca negocia.",
+        "ru": "Превратите торговую идею в сигнал на графике, проверьте её на прошлых ценах и скопируйте скрипт для TradingView. Только сигналы, он никогда не торгует.",
+        "tr": "Bir alım satım fikrini grafik sinyaline dönüştürün, geçmiş fiyatlarla test edin ve TradingView betiğini kopyalayın. Yalnızca sinyal verir, asla işlem yapmaz.",
+        "vi": "Biến một ý tưởng giao dịch thành tín hiệu trên biểu đồ, thử với giá quá khứ và sao chép mã TradingView. Chỉ có tín hiệu, không bao giờ giao dịch.",
+        "it": "Trasforma un'idea di trading in un segnale sul grafico, provala sui prezzi passati e copia lo script di TradingView. Solo segnali, non fa mai trading.",
+        "fa": "یک ایده معاملاتی را به سیگنال نمودار تبدیل کنید، با قیمت‌های گذشته آزمایش کنید و اسکریپت TradingView را کپی کنید. فقط سیگنال، هرگز معامله نمی‌کند.",
+        "pl": "Zamień pomysł handlowy w sygnał na wykresie, sprawdź go na dawnych cenach i skopiuj skrypt TradingView. Tylko sygnały, nigdy nie handluje.",
+        "uk": "Перетворіть торгову ідею на сигнал на графіку, перевірте її на минулих цінах і скопіюйте скрипт для TradingView. Лише сигнали, він ніколи не торгує.",
+        "nl": "Maak van een handelsidee een grafieksignaal, test het op eerdere koersen en kopieer het TradingView-script. Alleen signalen, het handelt nooit.",
+        "sv": "Gör en handelsidé till en diagramsignal, testa den på tidigare kurser och kopiera TradingView-skriptet. Bara signaler, den handlar aldrig.",
+        "cs": "Proměňte obchodní nápad v signál v grafu, vyzkoušejte ho na minulých cenách a zkopírujte skript pro TradingView. Jen signály, nikdy neobchoduje.",
+        "el": "Μετατρέψτε μια ιδέα συναλλαγών σε σήμα στο γράφημα, δοκιμάστε την σε παλιές τιμές και αντιγράψτε το σενάριο TradingView. Μόνο σήματα, δεν κάνει ποτέ συναλλαγές."
+      },
+      "show": "never",
+      "infoAction": {
+        "fn": "pineOpenLearn"
+      }
+    }
+  },
+  "nav": [
+    {
+      "id": "home",
+      "label": {
+        "en": "MoneyIdeasBench",
+        "ko": "MoneyIdeasBench",
+        "zh": "MoneyIdeasBench",
+        "hi": "MoneyIdeasBench",
+        "es": "MoneyIdeasBench",
+        "fr": "MoneyIdeasBench",
+        "ar": "MoneyIdeasBench",
+        "pt": "MoneyIdeasBench",
+        "ru": "MoneyIdeasBench",
+        "de": "MoneyIdeasBench",
+        "ja": "MoneyIdeasBench",
+        "tr": "MoneyIdeasBench",
+        "vi": "MoneyIdeasBench",
+        "it": "MoneyIdeasBench",
+        "fa": "MoneyIdeasBench",
+        "pl": "MoneyIdeasBench",
+        "uk": "MoneyIdeasBench",
+        "nl": "MoneyIdeasBench",
+        "sv": "MoneyIdeasBench",
+        "cs": "MoneyIdeasBench",
+        "el": "MoneyIdeasBench"
+      },
+      "icon": "candlestick_chart",
+      "screen": "home"
+    }
+  ],
+  "screens": {
+    "home": {
+      "title": {
+        "en": "MoneyIdeasBench",
+        "ko": "MoneyIdeasBench",
+        "zh": "MoneyIdeasBench",
+        "hi": "MoneyIdeasBench",
+        "es": "MoneyIdeasBench",
+        "fr": "MoneyIdeasBench",
+        "ar": "MoneyIdeasBench",
+        "pt": "MoneyIdeasBench",
+        "ru": "MoneyIdeasBench",
+        "de": "MoneyIdeasBench",
+        "ja": "MoneyIdeasBench",
+        "tr": "MoneyIdeasBench",
+        "vi": "MoneyIdeasBench",
+        "it": "MoneyIdeasBench",
+        "fa": "MoneyIdeasBench",
+        "pl": "MoneyIdeasBench",
+        "uk": "MoneyIdeasBench",
+        "nl": "MoneyIdeasBench",
+        "sv": "MoneyIdeasBench",
+        "cs": "MoneyIdeasBench",
+        "el": "MoneyIdeasBench"
+      },
+      "body": {
+        "type": "pinecomposer",
+        "fillPhone": true,
+        "simpleByDefault": true,
+        "homeCtas": true,
+        "startHere": true,
+        "contentColumn": true,
+        "appLabel": "MoneyIdeasBench",
+        "strings": {
+          "home.purpose": {
+            "en": "Turn an idea into a chart signal. Signals only. It never trades.",
+            "ko": "아이디어를 차트 신호로 바꿔 보세요. 신호만 보여 주며 거래는 하지 않습니다.",
+            "zh": "把想法变成图表信号。只提供信号，从不交易。",
+            "ja": "アイデアをチャートのシグナルに。シグナルだけで、取引はしません。",
+            "es": "Convierte una idea en una señal de gráfico. Solo señales. Nunca opera.",
+            "de": "Mach aus einer Idee ein Chartsignal. Nur Signale. Es handelt nie.",
+            "fr": "Transformez une idée en signal de graphique. Signaux seulement. Il ne trade jamais."
+          }
+        }
+      }
+    }
+  }
+}

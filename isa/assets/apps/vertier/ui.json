@@ -1,0 +1,652 @@
+{
+  "app": {
+    "languages": ["en", "ko", "zh", "hi", "es", "fr", "ar", "pt", "ru", "de", "ja", "tr", "vi", "it", "fa", "pl", "uk", "nl", "sv", "cs", "el"],
+    "translatable": true,
+    "appDataTools": true,
+    "title": {
+      "en": "Vertier",
+      "ko": "Vertier",
+      "zh": "Vertier",
+      "hi": "Vertier",
+      "es": "Vertier",
+      "fr": "Vertier",
+      "ar": "Vertier",
+      "pt": "Vertier",
+      "ru": "Vertier",
+      "de": "Vertier",
+      "ja": "Vertier",
+      "tr": "Vertier",
+      "vi": "Vertier",
+      "it": "Vertier",
+      "fa": "Vertier",
+      "pl": "Vertier",
+      "uk": "Vertier",
+      "nl": "Vertier",
+      "sv": "Vertier",
+      "cs": "Vertier",
+      "el": "Vertier"
+    },
+    "primaryColor": "#7C3AED",
+    "theme": "neon"
+  },
+  "nav": [
+    {
+      "id": "discover",
+      "label": {
+        "en": "Discover",
+        "ko": "발견",
+        "zh": "发现",
+        "hi": "खोजें",
+        "es": "Descubrir",
+        "fr": "Découvrir",
+        "ar": "اكتشف",
+        "pt": "Descobrir",
+        "ru": "Обзор",
+        "de": "Entdecken",
+        "ja": "発見",
+        "tr": "Keşfet",
+        "vi": "Khám phá",
+        "it": "Scopri",
+        "fa": "کشف کن",
+        "pl": "Odkryj",
+        "uk": "Огляд",
+        "nl": "Ontdekken",
+        "sv": "Upptäck",
+        "cs": "Objevit",
+        "el": "Ανακάλυψη"
+      },
+      "icon": "campaign",
+      "screen": "discover"
+    }
+  ],
+  "screens": {
+    "discover": {
+      "title": {
+        "en": "Discover",
+        "ko": "발견",
+        "zh": "发现",
+        "hi": "खोजें",
+        "es": "Descubrir",
+        "fr": "Découvrir",
+        "ar": "اكتشف",
+        "pt": "Descobrir",
+        "ru": "Обзор",
+        "de": "Entdecken",
+        "ja": "発見",
+        "tr": "Keşfet",
+        "vi": "Khám phá",
+        "it": "Scopri",
+        "fa": "کشف کن",
+        "pl": "Odkryj",
+        "uk": "Огляд",
+        "nl": "Ontdekken",
+        "sv": "Upptäck",
+        "cs": "Objevit",
+        "el": "Ανακάλυψη"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Share what you find, what you think, an idea. It's yours — keep it to yourself or open it up to a few people or everyone. Your call, any time.",
+              "ko": "찾은 것, 생각한 것, 아이디어를 공유하세요. 당신 것입니다 — 혼자만 볼 수도, 몇 명이나 모두에게 열 수도 있습니다. 언제든 당신의 선택입니다.",
+              "zh": "分享你发现的东西、你的想法、一个点子。这是你的——可以只留给自己，也可以对少数人或所有人公开。什么时候都由你决定。",
+              "hi": "जो पाएं, जो सोचें, कोई विचार — साझा करें। यह आपका है — इसे अपने तक रखें या कुछ लोगों या सबके लिए खोलें। जब चाहें, आपकी मर्ज़ी।",
+              "es": "Comparte lo que encuentres, lo que piensas, una idea. Es tuyo — guárdalo para ti o ábrelo a unas pocas personas o a todos. Tú decides, en cualquier momento.",
+              "fr": "Partagez ce que vous trouvez, ce que vous pensez, une idée. C'est à vous — gardez-le pour vous ou ouvrez-le à quelques personnes ou à tout le monde. À vous de choisir, à tout moment.",
+              "ar": "شارك ما تجده، ما تفكر فيه، فكرة. إنه لك — احتفظ به لنفسك أو افتحه لبضعة أشخاص أو للجميع. القرار لك، في أي وقت.",
+              "pt": "Compartilhe o que você encontra, o que pensa, uma ideia. É seu — guarde para você ou abra para algumas pessoas ou para todos. Você decide, a qualquer momento.",
+              "ru": "Делитесь тем, что нашли, о чём думаете, идеей. Это ваше — оставьте при себе или откройте для нескольких людей или для всех. Решать вам в любой момент.",
+              "de": "Teile, was du findest, was du denkst, eine Idee. Es gehört dir — behalte es für dich oder öffne es für ein paar Leute oder alle. Deine Entscheidung, jederzeit.",
+              "ja": "見つけたもの、考えたこと、アイデアを共有しましょう。これはあなたのもの — 自分だけにとどめても、少数の人や全員に公開してもかまいません。いつでもあなたの判断です。",
+              "tr": "Bulduğunuzu, düşündüğünüzü, bir fikri paylaşın. O sizin — kendinize saklayın ya da birkaç kişiye veya herkese açın. Karar her zaman sizin.",
+              "vi": "Chia sẻ những gì bạn tìm thấy, những gì bạn nghĩ, một ý tưởng. Đó là của bạn — giữ riêng cho mình hoặc mở cho vài người hay tất cả mọi người. Bạn quyết định, bất cứ lúc nào.",
+              "it": "Condividi ciò che trovi, ciò che pensi, un'idea. È tuo — tienilo per te o aprilo a poche persone o a tutti. Decidi tu, in qualsiasi momento.",
+              "fa": "چیزی را که پیدا می‌کنید، فکری که دارید، یک ایده را به اشتراک بگذارید. مال شماست — آن را برای خودتان نگه دارید یا برای چند نفر یا همه باز کنید. تصمیم با شماست، هر زمان.",
+              "pl": "Podziel się tym, co znajdziesz, co myślisz, pomysłem. To twoje — zachowaj to dla siebie lub otwórz dla kilku osób albo dla wszystkich. Decyzja zawsze należy do ciebie.",
+              "uk": "Діліться тим, що знаходите, про що думаєте, ідеєю. Це ваше — залиште при собі або відкрийте для кількох людей чи всіх. Рішення завжди за вами.",
+              "nl": "Deel wat je vindt, wat je denkt, een idee. Het is van jou — houd het voor jezelf of open het voor een paar mensen of iedereen. Jouw keuze, altijd.",
+              "sv": "Dela vad du hittar, vad du tänker, en idé. Det är ditt — behåll det för dig själv eller öppna det för några få eller alla. Ditt val, när som helst.",
+              "cs": "Sdílejte, co najdete, co si myslíte, nápad. Je to vaše — nechte si to pro sebe nebo to otevřete pro pár lidí nebo pro všechny. Vaše volba, kdykoli.",
+              "el": "Μοιραστείτε ό,τι βρίσκετε, ό,τι σκέφτεστε, μια ιδέα. Είναι δικό σας — κρατήστε το για εσάς ή ανοίξτε το σε λίγα άτομα ή σε όλους. Δική σας επιλογή, ανά πάσα στιγμή."
+            }
+          },
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": {
+                  "en": "Share a link",
+                  "ko": "링크 공유",
+                  "zh": "分享链接",
+                  "hi": "लिंक साझा करें",
+                  "es": "Compartir enlace",
+                  "fr": "Partager un lien",
+                  "ar": "مشاركة رابط",
+                  "pt": "Compartilhar link",
+                  "ru": "Поделиться ссылкой",
+                  "de": "Link teilen",
+                  "ja": "リンクを共有",
+                  "tr": "Bağlantı paylaş",
+                  "vi": "Chia sẻ liên kết",
+                  "it": "Condividi link",
+                  "fa": "اشتراک‌گذاری لینک",
+                  "pl": "Udostępnij link",
+                  "uk": "Поділитися посиланням",
+                  "nl": "Link delen",
+                  "sv": "Dela länk",
+                  "cs": "Sdílet odkaz",
+                  "el": "Κοινή χρήση συνδέσμου"
+                },
+                "icon": "link",
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "promptLink",
+                    "collectionId": "football",
+                    "author": "You"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "Write a post",
+                  "ko": "글쓰기",
+                  "zh": "撰写帖子",
+                  "hi": "पोस्ट लिखें",
+                  "es": "Escribir publicación",
+                  "fr": "Écrire un post",
+                  "ar": "كتابة منشور",
+                  "pt": "Escrever post",
+                  "ru": "Написать пост",
+                  "de": "Beitrag schreiben",
+                  "ja": "投稿を書く",
+                  "tr": "Gönderi yaz",
+                  "vi": "Viết bài",
+                  "it": "Scrivi un post",
+                  "fa": "نوشتن پست",
+                  "pl": "Napisz post",
+                  "uk": "Написати пост",
+                  "nl": "Bericht schrijven",
+                  "sv": "Skriv ett inlägg",
+                  "cs": "Napsat příspěvek",
+                  "el": "Γράψτε ανάρτηση"
+                },
+                "icon": "edit_note",
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "promptText",
+                    "collectionId": "football",
+                    "author": "You"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Yours",
+              "ko": "내 것",
+              "zh": "你的",
+              "hi": "आपका",
+              "es": "Tuyo",
+              "fr": "Le vôtre",
+              "ar": "الخاص بك",
+              "pt": "Seu",
+              "ru": "Ваше",
+              "de": "Deins",
+              "ja": "あなたのもの",
+              "tr": "Sizinki",
+              "vi": "Của bạn",
+              "it": "Il tuo",
+              "fa": "مال شما",
+              "pl": "Twoje",
+              "uk": "Ваше",
+              "nl": "Van jou",
+              "sv": "Ditt",
+              "cs": "Vaše",
+              "el": "Δικά σας"
+            }
+          },
+          {
+            "type": "votefeed",
+            "table": "posts",
+            "voteTable": "postvotes",
+            "collectionColumn": "collId",
+            "renderKinds": true,
+            "kindColumn": "kind",
+            "urlColumn": "url",
+            "bodyColumn": "body",
+            "scoped": true,
+            "votable": false,
+            "groupTable": "circles",
+            "groupMemberColumn": "memberIds",
+            "onOpenLink": {
+              "fn": "openLink"
+            },
+            "onShare": {
+              "fn": "hostCall",
+              "args": {
+                "name": "shareTo"
+              }
+            },
+            "ranking": "balanced"
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "From everyone",
+              "ko": "모두로부터",
+              "zh": "来自所有人",
+              "hi": "सबसे",
+              "es": "De todos",
+              "fr": "De tout le monde",
+              "ar": "من الجميع",
+              "pt": "De todos",
+              "ru": "От всех",
+              "de": "Von allen",
+              "ja": "みんなから",
+              "tr": "Herkesten",
+              "vi": "Từ mọi người",
+              "it": "Da tutti",
+              "fa": "از همه",
+              "pl": "Od wszystkich",
+              "uk": "Від усіх",
+              "nl": "Van iedereen",
+              "sv": "Från alla",
+              "cs": "Od všech",
+              "el": "Από όλους"
+            }
+          },
+          {
+            "type": "votefeed",
+            "table": "creations",
+            "voteTable": "votes",
+            "collectionColumn": "collId",
+            "renderKinds": true,
+            "kindColumn": "kind",
+            "urlColumn": "url",
+            "onOpenLink": {
+              "fn": "openLink"
+            },
+            "dailyBudget": 10,
+            "ranking": "balanced",
+            "onVote": {
+              "fn": "vertierVote"
+            },
+            "commentable": true,
+            "repliesTable": "replies",
+            "onReply": {
+              "fn": "vertierReply"
+            }
+          }
+        ]
+      }
+    },
+    "compare": {
+      "title": {
+        "en": "Compare",
+        "ko": "비교",
+        "zh": "比较",
+        "hi": "तुलना करें",
+        "es": "Comparar",
+        "fr": "Comparer",
+        "ar": "قارن",
+        "pt": "Comparar",
+        "ru": "Сравнить",
+        "de": "Vergleichen",
+        "ja": "比較",
+        "tr": "Karşılaştır",
+        "vi": "So sánh",
+        "it": "Confronta",
+        "fa": "مقایسه",
+        "pl": "Porównaj",
+        "uk": "Порівняти",
+        "nl": "Vergelijken",
+        "sv": "Jämför",
+        "cs": "Porovnat",
+        "el": "Σύγκριση"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Footballers — tap a column to sort, or switch to head-to-head. Figures are public, approximate and editable.",
+              "ko": "축구선수 — 열을 탭해 정렬하거나 1대1 비교로 전환하세요. 수치는 공개 자료이며 근사치이고 편집 가능합니다.",
+              "zh": "足球运动员——点按列标题排序，或切换到一对一对比。数据为公开的近似值，可编辑。",
+              "hi": "फुटबॉलर — किसी कॉलम को टैप करके क्रमबद्ध करें, या हेड-टू-हेड पर स्विच करें। आंकड़े सार्वजनिक, अनुमानित और संपादन योग्य हैं।",
+              "es": "Futbolistas — toca una columna para ordenar, o cambia a cara a cara. Las cifras son públicas, aproximadas y editables.",
+              "fr": "Footballeurs — touchez une colonne pour trier, ou passez en tête-à-tête. Les chiffres sont publics, approximatifs et modifiables.",
+              "ar": "لاعبو كرة القدم — اضغط على عمود للفرز، أو انتقل إلى المواجهة المباشرة. الأرقام عامة وتقريبية وقابلة للتعديل.",
+              "pt": "Jogadores de futebol — toque em uma coluna para ordenar, ou mude para frente a frente. Os números são públicos, aproximados e editáveis.",
+              "ru": "Футболисты — нажмите на столбец для сортировки или переключитесь на сравнение один на один. Цифры публичные, приблизительные и редактируемые.",
+              "de": "Fußballer — tippe auf eine Spalte zum Sortieren, oder wechsle zum direkten Vergleich. Die Zahlen sind öffentlich, ungefähr und bearbeitbar.",
+              "ja": "サッカー選手 — 列をタップして並べ替えるか、一対一比較に切り替えてください。数値は公開情報でおおよその値であり、編集可能です。",
+              "tr": "Futbolcular — sıralamak için bir sütuna dokunun, ya da karşılıklıya geçin. Rakamlar herkese açık, yaklaşık ve düzenlenebilirdir.",
+              "vi": "Cầu thủ bóng đá — nhấn vào một cột để sắp xếp, hoặc chuyển sang đối đầu trực tiếp. Số liệu công khai, gần đúng và có thể chỉnh sửa.",
+              "it": "Calciatori — tocca una colonna per ordinare, o passa al confronto diretto. I numeri sono pubblici, approssimativi e modificabili.",
+              "fa": "فوتبالیست‌ها — روی یک ستون ضربه بزنید تا مرتب شود، یا به مقایسهٔ رودررو تغییر دهید. اعداد عمومی، تقریبی و قابل ویرایش هستند.",
+              "pl": "Piłkarze — dotknij kolumny, aby sortować, lub przełącz na porównanie jeden na jednego. Liczby są publiczne, przybliżone i edytowalne.",
+              "uk": "Футболісти — торкніться стовпця для сортування, або перемкніться на пряме порівняння. Цифри публічні, приблизні та редаговані.",
+              "nl": "Voetballers — tik op een kolom om te sorteren, of schakel over naar rechtstreeks vergelijken. Cijfers zijn openbaar, bij benadering en bewerkbaar.",
+              "sv": "Fotbollsspelare — tryck på en kolumn för att sortera, eller växla till direktjämförelse. Siffrorna är offentliga, ungefärliga och redigerbara.",
+              "cs": "Fotbalisté — klepnutím na sloupec seřaďte, nebo přepněte na přímé srovnání. Čísla jsou veřejná, přibližná a upravitelná.",
+              "el": "Ποδοσφαιριστές — πατήστε μια στήλη για ταξινόμηση, ή αλλάξτε σε σύγκριση ένας-προς-έναν. Τα στοιχεία είναι δημόσια, κατά προσέγγιση και επεξεργάσιμα."
+            }
+          },
+          {
+            "type": "compare",
+            "collectionId": "football",
+            "collectionTable": "collections",
+            "itemsTable": "items"
+          }
+        ]
+      }
+    },
+    "tiers": {
+      "title": {
+        "en": "Tier list",
+        "ko": "티어 리스트",
+        "zh": "梯度榜",
+        "hi": "टियर सूची",
+        "es": "Lista de niveles",
+        "fr": "Liste de tiers",
+        "ar": "قائمة الفئات",
+        "pt": "Lista de tiers",
+        "ru": "Тир-лист",
+        "de": "Tier-Liste",
+        "ja": "ティアリスト",
+        "tr": "Sıralama listesi",
+        "vi": "Danh sách bậc",
+        "it": "Lista dei livelli",
+        "fa": "فهرست رده‌ها",
+        "pl": "Lista poziomów",
+        "uk": "Список рівнів",
+        "nl": "Tierlijst",
+        "sv": "Tierlista",
+        "cs": "Seznam úrovní",
+        "el": "Λίστα βαθμίδων"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Drag players from Unranked into the tiers. Your ranking saves automatically — then publish it for the community to vote on.",
+              "ko": "미분류에서 선수를 드래그해 티어에 배치하세요. 순위는 자동으로 저장됩니다 — 그 후 커뮤니티가 투표할 수 있도록 게시하세요.",
+              "zh": "把球员从“未分级”拖入各梯度。你的排名会自动保存——然后发布给社区投票。",
+              "hi": "'बिना रैंक' से खिलाड़ियों को टियर में खींचें। आपकी रैंकिंग अपने आप सेव होती है — फिर समुदाय के वोट के लिए इसे प्रकाशित करें।",
+              "es": "Arrastra jugadores de Sin clasificar a los niveles. Tu clasificación se guarda automáticamente — luego publícala para que la comunidad vote.",
+              "fr": "Faites glisser les joueurs de Non classés vers les tiers. Votre classement s'enregistre automatiquement — puis publiez-le pour que la communauté vote.",
+              "ar": "اسحب اللاعبين من غير مصنّف إلى الفئات. يُحفظ ترتيبك تلقائيًا — ثم انشره ليصوّت عليه المجتمع.",
+              "pt": "Arraste jogadores de Não classificados para os tiers. Sua classificação salva automaticamente — depois publique para a comunidade votar.",
+              "ru": "Перетаскивайте игроков из «Без ранга» в тиры. Ваш рейтинг сохраняется автоматически — затем опубликуйте его для голосования сообщества.",
+              "de": "Ziehe Spieler von Ohne Rang in die Tiers. Deine Rangliste wird automatisch gespeichert — veröffentliche sie dann, damit die Community abstimmen kann.",
+              "ja": "「未ランク」から選手をドラッグしてティアに配置します。ランキングは自動保存されます — その後、コミュニティが投票できるよう公開してください。",
+              "tr": "Oyuncuları Sıralanmamış'tan seviyelere sürükleyin. Sıralamanız otomatik olarak kaydedilir — ardından topluluğun oylaması için yayınlayın.",
+              "vi": "Kéo cầu thủ từ Chưa xếp hạng vào các bậc. Xếp hạng của bạn tự động lưu — sau đó công bố để cộng đồng bình chọn.",
+              "it": "Trascina i giocatori da Non classificati nei livelli. La tua classifica si salva automaticamente — poi pubblicala perché la community possa votare.",
+              "fa": "بازیکنان را از دسته‌بندی‌نشده به رده‌ها بکشید. رتبه‌بندی شما به‌طور خودکار ذخیره می‌شود — سپس آن را منتشر کنید تا جامعه رأی دهد.",
+              "pl": "Przeciągnij graczy z Nieocenionych do poziomów. Twój ranking zapisuje się automatycznie — następnie opublikuj go, aby społeczność mogła głosować.",
+              "uk": "Перетягуйте гравців із «Без рангу» до рівнів. Ваш рейтинг зберігається автоматично — потім опублікуйте його для голосування спільноти.",
+              "nl": "Sleep spelers van Ongerangschikt naar de tiers. Jouw ranking wordt automatisch opgeslagen — publiceer het dan zodat de community erop kan stemmen.",
+              "sv": "Dra spelare från Orankad till nivåerna. Din rangordning sparas automatiskt — publicera den sedan så att gemenskapen kan rösta.",
+              "cs": "Přetáhněte hráče z Nezařazeno do úrovní. Váš žebříček se ukládá automaticky — poté jej zveřejněte, aby o něm mohla hlasovat komunita.",
+              "el": "Σύρετε παίκτες από Χωρίς κατάταξη στις βαθμίδες. Η κατάταξή σας αποθηκεύεται αυτόματα — έπειτα δημοσιεύστε την για να ψηφίσει η κοινότητα."
+            }
+          },
+          {
+            "type": "tierlist",
+            "collectionId": "football",
+            "itemsTable": "items"
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "Publish to Discover",
+              "ko": "발견에 게시",
+              "zh": "发布到发现",
+              "hi": "खोजें में प्रकाशित करें",
+              "es": "Publicar en Descubrir",
+              "fr": "Publier dans Découvrir",
+              "ar": "النشر في اكتشف",
+              "pt": "Publicar em Descobrir",
+              "ru": "Опубликовать в Обзор",
+              "de": "In Entdecken veröffentlichen",
+              "ja": "発見に公開",
+              "tr": "Keşfet'e yayınla",
+              "vi": "Công bố lên Khám phá",
+              "it": "Pubblica in Scopri",
+              "fa": "انتشار در کشف کن",
+              "pl": "Opublikuj w Odkryj",
+              "uk": "Опублікувати в Огляд",
+              "nl": "Publiceren in Ontdekken",
+              "sv": "Publicera i Upptäck",
+              "cs": "Zveřejnit v Objevit",
+              "el": "Δημοσίευση στο Ανακάλυψη"
+            },
+            "icon": "campaign",
+            "action": {
+              "fn": "vertierPublish",
+              "args": {
+                "table": "creations",
+                "from": "tierlists",
+                "fromId": "tl_football",
+                "snapshot": [
+                  "placements",
+                  "tiers"
+                ],
+                "values": {
+                  "type": "tier list",
+                  "collectionId": "football",
+                  "title": "My football tiers",
+                  "author": "You"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "collections": {
+      "title": {
+        "en": "Collections",
+        "ko": "컬렉션",
+        "zh": "收藏集",
+        "hi": "संग्रह",
+        "es": "Colecciones",
+        "fr": "Collections",
+        "ar": "المجموعات",
+        "pt": "Coleções",
+        "ru": "Коллекции",
+        "de": "Sammlungen",
+        "ja": "コレクション",
+        "tr": "Koleksiyonlar",
+        "vi": "Bộ sưu tập",
+        "it": "Collezioni",
+        "fa": "مجموعه‌ها",
+        "pl": "Kolekcje",
+        "uk": "Колекції",
+        "nl": "Collecties",
+        "sv": "Samlingar",
+        "cs": "Kolekce",
+        "el": "Συλλογές"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "A collection is any set of things to compare and rank — players, phones, anything. Making your own (with your own attributes) is coming next.",
+              "ko": "컬렉션은 비교하고 순위를 매길 수 있는 모든 항목 집합입니다 — 선수, 휴대폰, 무엇이든 가능합니다. 나만의 컬렉션(직접 속성 포함)을 만드는 기능은 곧 제공됩니다.",
+              "zh": "收藏集是任何一组可以比较和排名的东西——球员、手机、任何都行。创建你自己的收藏集（带自定义属性）功能即将推出。",
+              "hi": "संग्रह किसी भी चीज़ का समूह है जिसकी तुलना व रैंकिंग की जा सके — खिलाड़ी, फोन, कुछ भी। अपना खुद का संग्रह (अपनी विशेषताओं के साथ) बनाना जल्द आ रहा है।",
+              "es": "Una colección es cualquier conjunto de cosas para comparar y clasificar — jugadores, teléfonos, lo que sea. Crear la tuya propia (con tus propios atributos) llegará pronto.",
+              "fr": "Une collection est n'importe quel ensemble de choses à comparer et classer — joueurs, téléphones, n'importe quoi. Créer la vôtre (avec vos propres attributs) arrive bientôt.",
+              "ar": "المجموعة هي أي مجموعة من الأشياء للمقارنة والترتيب — لاعبون، هواتف، أي شيء. إنشاء مجموعتك الخاصة (بسماتك الخاصة) قادم قريبًا.",
+              "pt": "Uma coleção é qualquer conjunto de coisas para comparar e classificar — jogadores, telefones, qualquer coisa. Criar a sua própria (com seus próprios atributos) está por vir.",
+              "ru": "Коллекция — это любой набор вещей для сравнения и ранжирования — игроки, телефоны, что угодно. Создание собственной (с собственными атрибутами) появится позже.",
+              "de": "Eine Sammlung ist jede beliebige Menge von Dingen zum Vergleichen und Bewerten — Spieler, Handys, alles. Eine eigene zu erstellen (mit eigenen Attributen) kommt als Nächstes.",
+              "ja": "コレクションとは、比較しランク付けできるものの集まりです — 選手、スマートフォン、何でも構いません。独自の属性で自分だけのコレクションを作る機能は近日公開予定です。",
+              "tr": "Koleksiyon, karşılaştırılıp sıralanabilecek herhangi bir şey kümesidir — oyuncular, telefonlar, her şey. Kendi koleksiyonunuzu (kendi özniteliklerinizle) oluşturmak yakında geliyor.",
+              "vi": "Bộ sưu tập là bất kỳ tập hợp thứ gì đó để so sánh và xếp hạng — cầu thủ, điện thoại, bất cứ thứ gì. Việc tạo bộ sưu tập của riêng bạn (với thuộc tính riêng) sắp ra mắt.",
+              "it": "Una collezione è qualsiasi insieme di cose da confrontare e classificare — giocatori, telefoni, qualunque cosa. Creare la tua (con i tuoi attributi) arriverà presto.",
+              "fa": "یک مجموعه هر دسته‌ای از چیزهایی است که می‌توان مقایسه و رتبه‌بندی کرد — بازیکنان، گوشی‌ها، هرچیزی. ساختن مجموعهٔ خودتان (با ویژگی‌های خودتان) به‌زودی می‌آید.",
+              "pl": "Kolekcja to dowolny zestaw rzeczy do porównywania i rankingowania — gracze, telefony, cokolwiek. Tworzenie własnej (z własnymi atrybutami) pojawi się wkrótce.",
+              "uk": "Колекція — це будь-який набір речей для порівняння й ранжування — гравці, телефони, що завгодно. Створення власної (з власними атрибутами) з'явиться найближчим часом.",
+              "nl": "Een collectie is elke verzameling dingen om te vergelijken en te rangschikken — spelers, telefoons, wat dan ook. Je eigen collectie maken (met eigen attributen) komt binnenkort.",
+              "sv": "En samling är vilken uppsättning saker som helst att jämföra och rangordna — spelare, telefoner, vad som helst. Att skapa din egen (med egna attribut) kommer härnäst.",
+              "cs": "Kolekce je jakákoli sada věcí k porovnání a seřazení — hráči, telefony, cokoli. Vytvoření vlastní (s vlastními atributy) přijde jako další.",
+              "el": "Μια συλλογή είναι οποιοδήποτε σύνολο πραγμάτων για σύγκριση και κατάταξη — παίκτες, τηλέφωνα, οτιδήποτε. Η δημιουργία της δικής σας (με δικά σας χαρακτηριστικά) έρχεται σύντομα."
+            }
+          },
+          {
+            "type": "cards",
+            "emptyIcon": "collections_bookmark",
+            "emptyTitle": {
+              "en": "No collections yet",
+              "ko": "아직 컬렉션 없음",
+              "zh": "暂无收藏集",
+              "hi": "अभी तक कोई संग्रह नहीं",
+              "es": "Aún no hay colecciones",
+              "fr": "Aucune collection pour l'instant",
+              "ar": "لا توجد مجموعات بعد",
+              "pt": "Ainda sem coleções",
+              "ru": "Пока нет коллекций",
+              "de": "Noch keine Sammlungen",
+              "ja": "まだコレクションがありません",
+              "tr": "Henüz koleksiyon yok",
+              "vi": "Chưa có bộ sưu tập nào",
+              "it": "Ancora nessuna collezione",
+              "fa": "هنوز مجموعه‌ای نیست",
+              "pl": "Brak jeszcze kolekcji",
+              "uk": "Поки немає колекцій",
+              "nl": "Nog geen collecties",
+              "sv": "Inga samlingar ännu",
+              "cs": "Zatím žádné kolekce",
+              "el": "Δεν υπάρχουν ακόμα συλλογές"
+            },
+            "emptyText": {
+              "en": "Create a collection to group your saved links and posts.",
+              "ko": "컬렉션을 만들어 저장한 링크와 글을 묶어보세요.",
+              "zh": "创建一个收藏集，把你保存的链接和帖子归入其中。",
+              "hi": "अपने सेव किए लिंक व पोस्ट को समूहित करने के लिए एक संग्रह बनाएं।",
+              "es": "Crea una colección para agrupar tus enlaces y publicaciones guardados.",
+              "fr": "Créez une collection pour regrouper vos liens et posts enregistrés.",
+              "ar": "أنشئ مجموعة لتجميع روابطك ومنشوراتك المحفوظة.",
+              "pt": "Crie uma coleção para agrupar seus links e posts salvos.",
+              "ru": "Создайте коллекцию, чтобы сгруппировать сохранённые ссылки и посты.",
+              "de": "Erstelle eine Sammlung, um deine gespeicherten Links und Beiträge zu gruppieren.",
+              "ja": "コレクションを作成して、保存したリンクや投稿をまとめましょう。",
+              "tr": "Kaydettiğiniz bağlantı ve gönderileri toplamak için bir koleksiyon oluşturun.",
+              "vi": "Tạo một bộ sưu tập để nhóm các liên kết và bài đăng đã lưu của bạn.",
+              "it": "Crea una collezione per raggruppare i tuoi link e post salvati.",
+              "fa": "یک مجموعه بسازید تا لینک‌ها و پست‌های ذخیره‌شدهٔ خود را گروه‌بندی کنید.",
+              "pl": "Utwórz kolekcję, aby zgrupować zapisane linki i posty.",
+              "uk": "Створіть колекцію, щоб згрупувати збережені посилання та пости.",
+              "nl": "Maak een collectie om je opgeslagen links en berichten te groeperen.",
+              "sv": "Skapa en samling för att gruppera dina sparade länkar och inlägg.",
+              "cs": "Vytvořte kolekci a seskupte své uložené odkazy a příspěvky.",
+              "el": "Δημιουργήστε μια συλλογή για να ομαδοποιήσετε τους αποθηκευμένους συνδέσμους και τις αναρτήσεις σας."
+            },
+            "table": "collections",
+            "example": {
+              "ids": [
+                "football"
+              ],
+              "label": {
+                "en": "Examples",
+                "ko": "예시",
+                "zh": "示例",
+                "hi": "उदाहरण",
+                "es": "Ejemplos",
+                "fr": "Exemples",
+                "ar": "أمثلة",
+                "pt": "Exemplos",
+                "ru": "Примеры",
+                "de": "Beispiele",
+                "ja": "例",
+                "tr": "Örnekler",
+                "vi": "Ví dụ",
+                "it": "Esempi",
+                "fa": "نمونه‌ها",
+                "pl": "Przykłady",
+                "uk": "Приклади",
+                "nl": "Voorbeelden",
+                "sv": "Exempel",
+                "cs": "Příklady",
+                "el": "Παραδείγματα"
+              },
+              "chipLabel": {
+                "en": "Example",
+                "ko": "예시",
+                "zh": "示例",
+                "hi": "उदाहरण",
+                "es": "Ejemplo",
+                "fr": "Exemple",
+                "ar": "مثال",
+                "pt": "Exemplo",
+                "ru": "Пример",
+                "de": "Beispiel",
+                "ja": "例",
+                "tr": "Örnek",
+                "vi": "Ví dụ",
+                "it": "Esempio",
+                "fa": "نمونه",
+                "pl": "Przykład",
+                "uk": "Приклад",
+                "nl": "Voorbeeld",
+                "sv": "Exempel",
+                "cs": "Příklad",
+                "el": "Παράδειγμα"
+              },
+              "hideLabel": {
+                "en": "Hide",
+                "ko": "숨기기",
+                "zh": "隐藏",
+                "hi": "छिपाएं",
+                "es": "Ocultar",
+                "fr": "Masquer",
+                "ar": "إخفاء",
+                "pt": "Ocultar",
+                "ru": "Скрыть",
+                "de": "Ausblenden",
+                "ja": "非表示",
+                "tr": "Gizle",
+                "vi": "Ẩn",
+                "it": "Nascondi",
+                "fa": "پنهان کردن",
+                "pl": "Ukryj",
+                "uk": "Приховати",
+                "nl": "Verbergen",
+                "sv": "Dölj",
+                "cs": "Skrýt",
+                "el": "Απόκρυψη"
+              },
+              "hiddenFromSetting": "vertierExamplesHidden"
+            },
+            "title": "name",
+            "subtitle": "domain",
+            "search": true
+          }
+        ]
+      }
+    }
+  }
+}

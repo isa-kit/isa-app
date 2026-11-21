@@ -1,0 +1,6 @@
+{
+  "tables": [
+    { "name": "items", "label": "Items", "icon": "kitchen", "description": "Things in the fridge, freezer, and pantry. Each item tracks quantity, unit, an optional fraction, location, and a low-stock flag." },
+    { "name": "recipes", "label": "Recipes", "icon": "menu_book", "description": "Recipes suggested from what you have on hand. Populated by the local SLM via callRest; one row per suggested recipe." }
+  ]
+}

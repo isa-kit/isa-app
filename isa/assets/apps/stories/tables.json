@@ -1,0 +1,28 @@
+{
+  "tables": [
+    {
+      "name": "stories",
+      "label": "Stories",
+      "icon": "auto_stories",
+      "description": "Stories: a novel, cartoon or film, each with a title, a form and a one-line pitch."
+    },
+    {
+      "name": "scenes",
+      "label": "Scenes",
+      "icon": "edit_note",
+      "description": "Scenes of a story (story column), ordered by scene number, each with a synopsis and a script."
+    },
+    {
+      "name": "panels",
+      "label": "Panels",
+      "icon": "draw",
+      "description": "Storyboard panels of a scene (scene column), ordered by panel number: caption, dialogue and a rough drawing. The sprite and figures columns are reserved for a future figure-to-sprite engine and are unused in the Alpha."
+    },
+    {
+      "name": "story_notes",
+      "label": "Story notes",
+      "icon": "sticky_note_2",
+      "description": "Notes about a story (story column): characters, places, beats and ideas."
+    }
+  ]
+}

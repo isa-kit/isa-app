@@ -1,0 +1,13 @@
+{
+  "id": "stepline",
+  "name": "Stepline",
+  "category": "Analytics",
+  "description": "Edit a model's step recipe: reorder, switch steps off, add steps from a library, with dependency checks and a JSON export.",
+  "icon": "low_priority",
+  "color": "#2962FF",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_stepline"
+  },
+  "seedVersion": "2026-11-13.stepline.1"
+}

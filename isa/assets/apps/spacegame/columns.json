@@ -1,0 +1,14 @@
+{
+  "runs": [
+    { "name": "id", "type": "text" },
+    { "name": "mode", "type": "text", "label": { "en": "Mode", "ko": "모드", "zh": "模式", "hi": "मोड", "es": "Modo", "fr": "Mode", "ar": "الوضع", "pt": "Modo", "ru": "Режим", "de": "Modus", "ja": "モード", "tr": "Mod", "vi": "Chế độ", "it": "Modalità", "fa": "حالت", "pl": "Tryb", "uk": "Режим", "nl": "Modus", "sv": "Läge", "cs": "Režim", "el": "Λειτουργία" } },
+    { "name": "wave", "type": "number", "label": { "en": "Wave reached", "ko": "도달한 웨이브", "zh": "达到波次", "hi": "पहुंची लहर", "es": "Oleada alcanzada", "fr": "Vague atteinte", "ar": "الموجة التي تم الوصول إليها", "pt": "Onda alcançada", "ru": "Достигнутая волна", "de": "Erreichte Welle", "ja": "到達ウェーブ", "tr": "Ulaşılan dalga", "vi": "Đợt sóng đạt được", "it": "Ondata raggiunta", "fa": "موج رسیده", "pl": "Osiągnięta fala", "uk": "Досягнута хвиля", "nl": "Bereikte golf", "sv": "Nådd våg", "cs": "Dosažená vlna", "el": "Κύμα που φτάσατε" } }
+  ],
+  "campaign": [
+    { "name": "id", "type": "text" },
+    { "name": "levelId", "type": "text", "label": { "en": "Level", "ko": "레벨", "zh": "关卡", "hi": "स्तर", "es": "Nivel", "fr": "Niveau", "ar": "المستوى", "pt": "Nível", "ru": "Уровень", "de": "Level", "ja": "レベル", "tr": "Seviye", "vi": "Cấp độ", "it": "Livello", "fa": "مرحله", "pl": "Poziom", "uk": "Рівень", "nl": "Niveau", "sv": "Nivå", "cs": "Úroveň", "el": "Επίπεδο" } },
+    { "name": "stars", "type": "number", "label": { "en": "Stars", "ko": "별", "zh": "星级", "hi": "सितारे", "es": "Estrellas", "fr": "Étoiles", "ar": "النجوم", "pt": "Estrelas", "ru": "Звёзды", "de": "Sterne", "ja": "星", "tr": "Yıldızlar", "vi": "Sao", "it": "Stelle", "fa": "ستاره‌ها", "pl": "Gwiazdki", "uk": "Зірки", "nl": "Sterren", "sv": "Stjärnor", "cs": "Hvězdy", "el": "Αστέρια" } },
+    { "name": "score", "type": "number", "label": { "en": "Best score", "ko": "최고 점수", "zh": "最高分数", "hi": "सर्वश्रेष्ठ स्कोर", "es": "Mejor puntuación", "fr": "Meilleur score", "ar": "أفضل نتيجة", "pt": "Melhor pontuação", "ru": "Лучший результат", "de": "Bestpunktzahl", "ja": "ベストスコア", "tr": "En iyi skor", "vi": "Điểm cao nhất", "it": "Punteggio migliore", "fa": "بهترین امتیاز", "pl": "Najlepszy wynik", "uk": "Найкращий результат", "nl": "Beste score", "sv": "Bästa poäng", "cs": "Nejlepší skóre", "el": "Καλύτερη βαθμολογία" } },
+    { "name": "version", "type": "number", "label": { "en": "Save version", "ko": "세이브 버전", "zh": "存档版本", "hi": "सेव संस्करण", "es": "Versión de guardado", "fr": "Version de sauvegarde", "ar": "إصدار الحفظ", "pt": "Versão do salvamento", "ru": "Версия сохранения", "de": "Speicherversion", "ja": "セーブバージョン", "tr": "Kayıt sürümü", "vi": "Phiên bản lưu", "it": "Versione salvataggio", "fa": "نسخه ذخیره", "pl": "Wersja zapisu", "uk": "Версія збереження", "nl": "Opslagversie", "sv": "Sparversion", "cs": "Verze uložení", "el": "Έκδοση αποθήκευσης" } }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "tables": [
+    {
+      "name": "picks",
+      "label": "Selected muscles",
+      "icon": "check_circle",
+      "description": "What you have selected on the animal right now. Shared by all three species screens — this table is why a pick carries across a species switch."
+    },
+    {
+      "name": "homology",
+      "label": "Translation table",
+      "icon": "translate",
+      "description": "One row per muscle id: the animal name, the human-equivalent name, which species have it, and the species-by-species difference. Reference data."
+    },
+    {
+      "name": "species",
+      "label": "Species",
+      "icon": "pets",
+      "description": "The three animals this atlas models, and what makes each build distinctive."
+    }
+  ]
+}

@@ -1,0 +1,1430 @@
+{
+  "app": {
+    "languages": ["en", "ko", "zh", "hi", "es", "fr", "ar", "pt", "ru", "de", "ja", "tr", "vi", "it", "fa", "pl", "uk", "nl", "sv", "cs", "el"],
+    "translatable": true,
+    "appDataTools": true,
+    "title": {
+      "en": "Watchlist",
+      "ko": "워치리스트",
+      "zh": "观看清单",
+      "hi": "वॉचलिस्ट",
+      "es": "Lista de seguimiento",
+      "fr": "Liste de visionnage",
+      "ar": "قائمة المشاهدة",
+      "pt": "Lista de observação",
+      "ru": "Список для просмотра",
+      "de": "Watchliste",
+      "ja": "ウォッチリスト",
+      "tr": "İzleme listesi",
+      "vi": "Danh sách xem",
+      "it": "Watchlist",
+      "fa": "فهرست تماشا",
+      "pl": "Lista do obejrzenia",
+      "uk": "Список перегляду",
+      "nl": "Kijklijst",
+      "sv": "Bevakningslista",
+      "cs": "Seznam ke sledování",
+      "el": "Λίστα παρακολούθησης"
+    },
+    "primaryColor": "#E53935",
+    "theme": "material",
+    "intro": {
+      "purpose": {
+        "en": "What to watch, by channel, plus what you've watched and recommendations.",
+        "ko": "채널별로 무엇을 볼지, 그리고 이미 본 것과 추천을 함께 관리하세요.",
+        "zh": "按频道查看要看什么，加上你已看过的内容和推荐。",
+        "hi": "चैनल के अनुसार क्या देखें, साथ ही आपने क्या देखा है और सिफ़ारिशें।",
+        "es": "Qué ver, por canal, además de lo que has visto y recomendaciones.",
+        "fr": "Quoi regarder, par chaîne, plus ce que vous avez regardé et des recommandations.",
+        "ar": "ما يجب مشاهدته، حسب القناة، بالإضافة إلى ما شاهدته والتوصيات.",
+        "pt": "O que assistir, por canal, além do que você já assistiu e recomendações.",
+        "ru": "Что смотреть по каналам, плюс то, что вы уже посмотрели, и рекомендации.",
+        "de": "Was anzusehen ist, nach Kanal, plus was Sie bereits gesehen haben und Empfehlungen.",
+        "ja": "チャンネル別に何を見るか、それに視聴済みのものとおすすめ。",
+        "tr": "Kanala göre ne izleneceği, artı izledikleriniz ve öneriler.",
+        "vi": "Xem gì, theo kênh, cùng với những gì bạn đã xem và các đề xuất.",
+        "it": "Cosa guardare, per canale, più ciò che hai visto e i consigli.",
+        "fa": "چه چیزی تماشا کنید، بر اساس کانال، به‌علاوه آنچه تماشا کرده‌اید و پیشنهادها.",
+        "pl": "Co oglądać, wg kanału, oraz co już obejrzałeś i rekomendacje.",
+        "uk": "Що дивитися за каналами, плюс те, що ви вже переглянули, і рекомендації.",
+        "nl": "Wat te bekijken, per kanaal, plus wat u hebt bekeken en aanbevelingen.",
+        "sv": "Vad du ska titta på, efter kanal, plus vad du har sett och rekommendationer.",
+        "cs": "Co sledovat, podle kanálu, plus co jste již sledovali a doporučení.",
+        "el": "Τι να παρακολουθήσετε, ανά κανάλι, συν ό,τι έχετε παρακολουθήσει και προτάσεις."
+      },
+      "actions": [
+        {
+          "label": {
+            "en": "New watchlist",
+            "ko": "새 워치리스트",
+            "zh": "新建观看清单",
+            "hi": "नई वॉचलिस्ट",
+            "es": "Nueva lista de seguimiento",
+            "fr": "Nouvelle liste de visionnage",
+            "ar": "قائمة مشاهدة جديدة",
+            "pt": "Nova lista de observação",
+            "ru": "Новый список для просмотра",
+            "de": "Neue Watchliste",
+            "ja": "新しいウォッチリスト",
+            "tr": "Yeni izleme listesi",
+            "vi": "Danh sách xem mới",
+            "it": "Nuova watchlist",
+            "fa": "فهرست تماشای جدید",
+            "pl": "Nowa lista do obejrzenia",
+            "uk": "Новий список перегляду",
+            "nl": "Nieuwe kijklijst",
+            "sv": "Ny bevakningslista",
+            "cs": "Nový seznam ke sledování",
+            "el": "Νέα λίστα παρακολούθησης"
+          },
+          "icon": "add",
+          "action": {
+            "fn": "addRow",
+            "args": {
+              "table": "files",
+              "values": {
+                "name": "Untitled watchlist"
+              }
+            }
+          }
+        }
+      ],
+      "tour": [
+        {
+          "screen": "watch",
+          "label": "Watch",
+          "note": "What's queued up to watch next."
+        },
+        {
+          "screen": "byChannel",
+          "label": "By channel",
+          "note": "Grouped by channel."
+        },
+        {
+          "screen": "watched",
+          "label": "Watched",
+          "note": "What you've already seen."
+        },
+        {
+          "screen": "recs",
+          "label": "Recommendations",
+          "note": "Suggestions based on your list."
+        }
+      ]
+    }
+  },
+  "nav": [
+    { "id": "files", "label": { "en": "Files", "ko": "파일", "zh": "文件", "hi": "फ़ाइलें", "es": "Archivos", "fr": "Fichiers", "ar": "الملفات", "pt": "Arquivos", "ru": "Файлы", "de": "Dateien", "ja": "ファイル", "tr": "Dosyalar", "vi": "Tệp", "it": "File", "fa": "فایل‌ها", "pl": "Pliki", "uk": "Файли", "nl": "Bestanden", "sv": "Filer", "cs": "Soubory", "el": "Αρχεία" }, "icon": "folder", "screen": "files" },
+    { "id": "watch", "label": { "en": "Watch", "ko": "시청", "zh": "观看", "hi": "देखें", "es": "Ver", "fr": "Regarder", "ar": "المشاهدة", "pt": "Assistir", "ru": "Смотреть", "de": "Ansehen", "ja": "視聴", "tr": "İzle", "vi": "Xem", "it": "Guarda", "fa": "تماشا", "pl": "Oglądaj", "uk": "Дивитися", "nl": "Bekijken", "sv": "Titta", "cs": "Sledovat", "el": "Παρακολούθηση" }, "icon": "smart_display", "screen": "watch" },
+    { "id": "byChannel", "label": { "en": "By channel", "ko": "채널별", "zh": "按频道", "hi": "चैनल के अनुसार", "es": "Por canal", "fr": "Par chaîne", "ar": "حسب القناة", "pt": "Por canal", "ru": "По каналам", "de": "Nach Kanal", "ja": "チャンネル別", "tr": "Kanala göre", "vi": "Theo kênh", "it": "Per canale", "fa": "بر اساس کانال", "pl": "Wg kanału", "uk": "За каналами", "nl": "Per kanaal", "sv": "Efter kanal", "cs": "Podle kanálu", "el": "Ανά κανάλι" }, "icon": "subscriptions", "screen": "byChannel" },
+    { "id": "watched", "label": { "en": "Watched", "ko": "시청 완료", "zh": "已观看", "hi": "देखा गया", "es": "Visto", "fr": "Vu", "ar": "تمت مشاهدته", "pt": "Assistido", "ru": "Просмотрено", "de": "Angesehen", "ja": "視聴済み", "tr": "İzlendi", "vi": "Đã xem", "it": "Visto", "fa": "دیده‌شده", "pl": "Obejrzane", "uk": "Переглянуто", "nl": "Bekeken", "sv": "Sett", "cs": "Zhlédnuto", "el": "Παρακολουθήθηκε" }, "icon": "check_circle", "screen": "watched" },
+    { "id": "recs", "label": { "en": "Recommendations", "ko": "추천", "zh": "推荐", "hi": "सिफ़ारिशें", "es": "Recomendaciones", "fr": "Recommandations", "ar": "التوصيات", "pt": "Recomendações", "ru": "Рекомендации", "de": "Empfehlungen", "ja": "おすすめ", "tr": "Öneriler", "vi": "Đề xuất", "it": "Consigliati", "fa": "پیشنهادها", "pl": "Rekomendacje", "uk": "Рекомендації", "nl": "Aanbevelingen", "sv": "Rekommendationer", "cs": "Doporučení", "el": "Προτάσεις" }, "icon": "recommend", "screen": "recs" }
+  ],
+  "screens": {
+    "files": {
+      "title": {
+        "en": "Files",
+        "ko": "파일",
+        "zh": "文件",
+        "hi": "फ़ाइलें",
+        "es": "Archivos",
+        "fr": "Fichiers",
+        "ar": "الملفات",
+        "pt": "Arquivos",
+        "ru": "Файлы",
+        "de": "Dateien",
+        "ja": "ファイル",
+        "tr": "Dosyalar",
+        "vi": "Tệp",
+        "it": "File",
+        "fa": "فایل‌ها",
+        "pl": "Pliki",
+        "uk": "Файли",
+        "nl": "Bestanden",
+        "sv": "Filer",
+        "cs": "Soubory",
+        "el": "Αρχεία"
+      },
+      "body": {
+        "type": "explorer",
+        "table": "files",
+        "nameColumn": "name",
+        "orderColumn": "order",
+        "allowFolders": false,
+        "railMode": "collapsible",
+        "title": {
+          "en": "Files",
+          "ko": "파일",
+          "zh": "文件",
+          "hi": "फ़ाइलें",
+          "es": "Archivos",
+          "fr": "Fichiers",
+          "ar": "الملفات",
+          "pt": "Arquivos",
+          "ru": "Файлы",
+          "de": "Dateien",
+          "ja": "ファイル",
+          "tr": "Dosyalar",
+          "vi": "Tệp",
+          "it": "File",
+          "fa": "فایل‌ها",
+          "pl": "Pliki",
+          "uk": "Файли",
+          "nl": "Bestanden",
+          "sv": "Filer",
+          "cs": "Soubory",
+          "el": "Αρχεία"
+        },
+        "fileIcon": "smart_display",
+        "newFileLabel": {
+          "en": "New watchlist",
+          "ko": "새 워치리스트",
+          "zh": "新建观看清单",
+          "hi": "नई वॉचलिस्ट",
+          "es": "Nueva lista de seguimiento",
+          "fr": "Nouvelle liste de visionnage",
+          "ar": "قائمة مشاهدة جديدة",
+          "pt": "Nova lista de observação",
+          "ru": "Новый список для просмотра",
+          "de": "Neue Watchliste",
+          "ja": "新しいウォッチリスト",
+          "tr": "Yeni izleme listesi",
+          "vi": "Danh sách xem mới",
+          "it": "Nuova watchlist",
+          "fa": "فهرست تماشای جدید",
+          "pl": "Nowa lista do obejrzenia",
+          "uk": "Новий список перегляду",
+          "nl": "Nieuwe kijklijst",
+          "sv": "Ny bevakningslista",
+          "cs": "Nový seznam ke sledování",
+          "el": "Νέα λίστα παρακολούθησης"
+        },
+        "emptyHome": true,
+        "homeTitle": {
+          "en": "Your watchlists",
+          "ko": "내 워치리스트",
+          "zh": "你的观看清单",
+          "hi": "आपकी वॉचलिस्ट",
+          "es": "Tus listas de seguimiento",
+          "fr": "Vos listes de visionnage",
+          "ar": "قوائم المشاهدة الخاصة بك",
+          "pt": "Suas listas de observação",
+          "ru": "Ваши списки для просмотра",
+          "de": "Ihre Watchlisten",
+          "ja": "あなたのウォッチリスト",
+          "tr": "İzleme listeleriniz",
+          "vi": "Danh sách xem của bạn",
+          "it": "Le tue watchlist",
+          "fa": "فهرست‌های تماشای شما",
+          "pl": "Twoje listy do obejrzenia",
+          "uk": "Ваші списки перегляду",
+          "nl": "Uw kijklijsten",
+          "sv": "Dina bevakningslistor",
+          "cs": "Vaše seznamy ke sledování",
+          "el": "Οι λίστες παρακολούθησής σας"
+        },
+        "homeSubtitle": {
+          "en": "Open a recent watchlist, or start a new one.",
+          "ko": "최근 워치리스트를 열거나 새로 시작하세요.",
+          "zh": "打开最近的观看清单，或新建一个。",
+          "hi": "हाल की वॉचलिस्ट खोलें, या नई शुरू करें।",
+          "es": "Abre una lista reciente o crea una nueva.",
+          "fr": "Ouvrez une liste récente, ou créez-en une nouvelle.",
+          "ar": "افتح قائمة حديثة، أو ابدأ قائمة جديدة.",
+          "pt": "Abra uma lista recente ou comece uma nova.",
+          "ru": "Откройте недавний список или создайте новый.",
+          "de": "Öffnen Sie eine kürzliche Watchliste oder erstellen Sie eine neue.",
+          "ja": "最近使ったウォッチリストを開くか、新しく始めましょう。",
+          "tr": "Son bir listeyi açın veya yenisini başlatın.",
+          "vi": "Mở một danh sách gần đây, hoặc bắt đầu một danh sách mới.",
+          "it": "Apri una watchlist recente o creane una nuova.",
+          "fa": "یک فهرست اخیر را باز کنید یا یکی جدید شروع کنید.",
+          "pl": "Otwórz ostatnią listę lub rozpocznij nową.",
+          "uk": "Відкрийте нещодавній список або створіть новий.",
+          "nl": "Open een recente kijklijst of begin een nieuwe.",
+          "sv": "Öppna en nyligen använd lista eller starta en ny.",
+          "cs": "Otevřete nedávný seznam nebo založte nový.",
+          "el": "Ανοίξτε μια πρόσφατη λίστα ή ξεκινήστε νέα."
+        },
+        "addItems": [
+          { "label": "New watchlist", "icon": "add", "values": { "name": "Untitled watchlist" } }
+        ],
+        "autoSelectFirst": true,
+        "scopeTargets": [
+          { "table": "channels", "column": "file" },
+          { "table": "videos", "column": "file" }
+        ],
+        "detail": {
+          "type": "column",
+          "crossAxis": "stretch",
+          "children": [
+            {
+              "type": "text",
+              "style": "caption",
+              "value": {
+                "en": "A file is one watchlist — its own channels and videos. Pick a file on the left, then use the other tabs to work in it. Tap + to start a new watchlist, and a file's ⋮ menu to rename or delete it.",
+                "ko": "파일은 하나의 워치리스트입니다 — 자체 채널과 동영상이 있습니다. 왼쪽에서 파일을 선택한 다음 다른 탭을 사용해 작업하세요. +를 눌러 새 워치리스트를 시작하고, 파일의 ⋮ 메뉴로 이름을 바꾸거나 삭제하세요.",
+                "zh": "一个文件即一个观看清单——拥有自己的频道和视频。在左侧选择一个文件，然后使用其他标签页进行操作。点击 + 新建观看清单，使用文件的 ⋮ 菜单重命名或删除它。",
+                "hi": "एक फ़ाइल एक वॉचलिस्ट है — इसके अपने चैनल और वीडियो। बाईं ओर एक फ़ाइल चुनें, फिर उसमें काम करने के लिए अन्य टैब्स का उपयोग करें। नई वॉचलिस्ट शुरू करने के लिए + टैप करें, और नाम बदलने या हटाने के लिए फ़ाइल के ⋮ मेनू का उपयोग करें।",
+                "es": "Un archivo es una lista de seguimiento, con sus propios canales y videos. Elige un archivo a la izquierda y usa las otras pestañas para trabajar en él. Toca + para iniciar una nueva lista, y el menú ⋮ de un archivo para renombrarlo o eliminarlo.",
+                "fr": "Un fichier est une liste de visionnage — avec ses propres chaînes et vidéos. Choisissez un fichier à gauche, puis utilisez les autres onglets pour y travailler. Appuyez sur + pour créer une nouvelle liste, et le menu ⋮ d'un fichier pour le renommer ou le supprimer.",
+                "ar": "الملف هو قائمة مشاهدة واحدة — لها قنواتها ومقاطع الفيديو الخاصة بها. اختر ملفًا على اليسار، ثم استخدم علامات التبويب الأخرى للعمل فيه. اضغط على + لبدء قائمة مشاهدة جديدة، وقائمة ⋮ الخاصة بالملف لإعادة تسميته أو حذفه.",
+                "pt": "Um arquivo é uma lista de observação — com seus próprios canais e vídeos. Escolha um arquivo à esquerda, depois use as outras abas para trabalhar nele. Toque em + para iniciar uma nova lista, e o menu ⋮ de um arquivo para renomeá-lo ou excluí-lo.",
+                "ru": "Файл — это один список для просмотра — со своими каналами и видео. Выберите файл слева, затем работайте в нём с помощью других вкладок. Нажмите +, чтобы начать новый список, и меню ⋮ файла, чтобы переименовать или удалить его.",
+                "de": "Eine Datei ist eine Watchliste — mit eigenen Kanälen und Videos. Wählen Sie links eine Datei, dann arbeiten Sie über die anderen Tabs darin. Tippen Sie auf +, um eine neue Watchliste zu starten, und auf das ⋮-Menü einer Datei, um sie umzubenennen oder zu löschen.",
+                "ja": "ファイルとは1つのウォッチリストのことです — それぞれ独自のチャンネルと動画を持ちます。左側でファイルを選び、他のタブでその中の作業を行います。+をタップすると新しいウォッチリストを開始し、ファイルの⋮メニューで名前の変更や削除ができます。",
+                "tr": "Bir dosya, kendi kanalları ve videolarıyla bir izleme listesidir. Soldan bir dosya seçin, ardından içinde çalışmak için diğer sekmeleri kullanın. Yeni bir izleme listesi başlatmak için + dokunun, yeniden adlandırmak veya silmek için bir dosyanın ⋮ menüsünü kullanın.",
+                "vi": "Một tệp là một danh sách xem — với các kênh và video riêng. Chọn một tệp bên trái, sau đó dùng các tab khác để làm việc trong đó. Nhấn + để bắt đầu danh sách xem mới, và menu ⋮ của tệp để đổi tên hoặc xóa nó.",
+                "it": "Un file è una watchlist — con i propri canali e video. Scegli un file a sinistra, poi usa le altre schede per lavorarci. Tocca + per avviare una nuova watchlist, e il menu ⋮ di un file per rinominarlo o eliminarlo.",
+                "fa": "یک فایل یک فهرست تماشا است — با کانال‌ها و ویدیوهای خودش. یک فایل را در سمت چپ انتخاب کنید، سپس از برگه‌های دیگر برای کار در آن استفاده کنید. برای شروع فهرست تماشای جدید روی + ضربه بزنید و از منوی ⋮ یک فایل برای تغییر نام یا حذف آن استفاده کنید.",
+                "pl": "Plik to jedna lista do obejrzenia — z własnymi kanałami i filmami. Wybierz plik po lewej, następnie użyj innych kart, aby w nim pracować. Dotknij +, aby rozpocząć nową listę, i menu ⋮ pliku, aby go zmienić nazwę lub usunąć.",
+                "uk": "Файл — це один список перегляду — зі своїми каналами та відео. Виберіть файл ліворуч, потім працюйте в ньому за допомогою інших вкладок. Торкніться +, щоб почати новий список, і меню ⋮ файлу, щоб перейменувати або видалити його.",
+                "nl": "Een bestand is één kijklijst — met eigen kanalen en video's. Kies links een bestand en gebruik dan de andere tabbladen om erin te werken. Tik op + om een nieuwe kijklijst te starten, en het ⋮-menu van een bestand om het te hernoemen of te verwijderen.",
+                "sv": "En fil är en bevakningslista — med egna kanaler och videor. Välj en fil till vänster och använd sedan de andra flikarna för att arbeta i den. Tryck på + för att starta en ny lista, och en fils ⋮-meny för att byta namn eller ta bort den.",
+                "cs": "Soubor je jeden seznam ke sledování — s vlastními kanály a videi. Vyberte soubor vlevo, poté v něm pracujte pomocí ostatních karet. Klepnutím na + založíte nový seznam, nabídkou ⋮ souboru jej přejmenujete nebo smažete.",
+                "el": "Ένα αρχείο είναι μία λίστα παρακολούθησης — με τα δικά της κανάλια και βίντεο. Επιλέξτε ένα αρχείο αριστερά, μετά χρησιμοποιήστε τις άλλες καρτέλες για να εργαστείτε σε αυτό. Πατήστε + για να ξεκινήσετε νέα λίστα, και το μενού ⋮ ενός αρχείου για μετονομασία ή διαγραφή."
+              }
+            },
+            {
+              "type": "button",
+              "label": {
+                "en": "Open this watchlist",
+                "ko": "이 워치리스트 열기",
+                "zh": "打开此观看清单",
+                "hi": "इस वॉचलिस्ट को खोलें",
+                "es": "Abrir esta lista de seguimiento",
+                "fr": "Ouvrir cette liste de visionnage",
+                "ar": "افتح قائمة المشاهدة هذه",
+                "pt": "Abrir esta lista de observação",
+                "ru": "Открыть этот список",
+                "de": "Diese Watchliste öffnen",
+                "ja": "このウォッチリストを開く",
+                "tr": "Bu izleme listesini aç",
+                "vi": "Mở danh sách xem này",
+                "it": "Apri questa watchlist",
+                "fa": "باز کردن این فهرست تماشا",
+                "pl": "Otwórz tę listę",
+                "uk": "Відкрити цей список",
+                "nl": "Deze kijklijst openen",
+                "sv": "Öppna den här listan",
+                "cs": "Otevřít tento seznam",
+                "el": "Άνοιγμα αυτής της λίστας"
+              },
+              "icon": "smart_display",
+              "action": {
+                "fn": "goto",
+                "args": {
+                  "screen": "watch"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "watch": {
+      "title": {
+        "en": "Watch",
+        "ko": "시청",
+        "zh": "观看",
+        "hi": "देखें",
+        "es": "Ver",
+        "fr": "Regarder",
+        "ar": "المشاهدة",
+        "pt": "Assistir",
+        "ru": "Смотреть",
+        "de": "Ansehen",
+        "ja": "視聴",
+        "tr": "İzle",
+        "vi": "Xem",
+        "it": "Guarda",
+        "fa": "تماشا",
+        "pl": "Oglądaj",
+        "uk": "Дивитися",
+        "nl": "Bekijken",
+        "sv": "Titta",
+        "cs": "Sledovat",
+        "el": "Παρακολούθηση"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Everything queued up, sorted into Must / Maybe / Someday. Newest on top. Tap a card to edit it, or open the video in your browser.",
+              "ko": "대기 중인 모든 항목이 Must / Maybe / Someday로 정렬되어 있습니다. 최신순으로 상단에 표시됩니다. 카드를 눌러 편집하거나 브라우저에서 동영상을 여세요.",
+              "zh": "所有排队的内容，按 Must / Maybe / Someday 分类。最新的在上方。点击卡片进行编辑，或在浏览器中打开视频。",
+              "hi": "सब कुछ कतार में लगाया गया, Must / Maybe / Someday में क्रमबद्ध। सबसे नया ऊपर। संपादित करने के लिए किसी कार्ड पर टैप करें, या अपने ब्राउज़र में वीडियो खोलें।",
+              "es": "Todo lo puesto en cola, ordenado en Must / Maybe / Someday. Lo más nuevo arriba. Toca una tarjeta para editarla, o abre el video en tu navegador.",
+              "fr": "Tout ce qui est en file d'attente, trié en Must / Maybe / Someday. Le plus récent en haut. Appuyez sur une carte pour la modifier, ou ouvrez la vidéo dans votre navigateur.",
+              "ar": "كل ما هو في قائمة الانتظار، مصنّف إلى Must / Maybe / Someday. الأحدث في الأعلى. اضغط على بطاقة لتحريرها، أو افتح الفيديو في متصفحك.",
+              "pt": "Tudo na fila, ordenado em Must / Maybe / Someday. Mais recente no topo. Toque em um cartão para editá-lo, ou abra o vídeo no seu navegador.",
+              "ru": "Всё в очереди, разбито на Must / Maybe / Someday. Новейшее сверху. Нажмите на карточку, чтобы отредактировать, или откройте видео в браузере.",
+              "de": "Alles in der Warteschlange, sortiert in Must / Maybe / Someday. Neuestes oben. Tippen Sie auf eine Karte, um sie zu bearbeiten, oder öffnen Sie das Video in Ihrem Browser.",
+              "ja": "キューに入っているすべてが、Must／Maybe／Somedayに分類されています。新しいものが上に表示されます。カードをタップして編集するか、ブラウザで動画を開いてください。",
+              "tr": "Sıraya alınan her şey Must / Maybe / Someday olarak sıralanmıştır. En yeni üstte. Düzenlemek için bir karta dokunun, veya videoyu tarayıcınızda açın.",
+              "vi": "Mọi thứ đã xếp hàng, được sắp xếp theo Must / Maybe / Someday. Mới nhất ở trên. Nhấn vào một thẻ để chỉnh sửa, hoặc mở video trong trình duyệt của bạn.",
+              "it": "Tutto in coda, ordinato in Must / Maybe / Someday. Il più recente in alto. Tocca una scheda per modificarla, o apri il video nel tuo browser.",
+              "fa": "همه‌چیز در صف، در Must / Maybe / Someday مرتب‌شده. جدیدترین در بالا. برای ویرایش روی یک کارت ضربه بزنید، یا ویدیو را در مرورگر خود باز کنید.",
+              "pl": "Wszystko w kolejce, posortowane na Must / Maybe / Someday. Najnowsze na górze. Dotknij karty, aby ją edytować, lub otwórz wideo w przeglądarce.",
+              "uk": "Усе в черзі, розсортовано на Must / Maybe / Someday. Найновіше зверху. Торкніться картки, щоб редагувати, або відкрийте відео в браузері.",
+              "nl": "Alles in de wachtrij, gesorteerd in Must / Maybe / Someday. Nieuwste bovenaan. Tik op een kaart om te bewerken, of open de video in uw browser.",
+              "sv": "Allt köat, sorterat i Must / Maybe / Someday. Senaste överst. Tryck på ett kort för att redigera det, eller öppna videon i din webbläsare.",
+              "cs": "Vše ve frontě, seřazeno do Must / Maybe / Someday. Nejnovější nahoře. Klepnutím na kartu ji upravíte, nebo otevřete video ve svém prohlížeči.",
+              "el": "Όλα στην ουρά, ταξινομημένα σε Must / Maybe / Someday. Νεότερα πρώτα. Πατήστε μια κάρτα για επεξεργασία, ή ανοίξτε το βίντεο στο πρόγραμμα περιήγησής σας."
+            }
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "stat",
+                "table": "videos",
+                "filter": { "column": "status", "value": "todo" },
+                "label": {
+                  "en": "To watch",
+                  "ko": "볼 목록",
+                  "zh": "待看",
+                  "hi": "देखने के लिए",
+                  "es": "Por ver",
+                  "fr": "À regarder",
+                  "ar": "للمشاهدة",
+                  "pt": "Para assistir",
+                  "ru": "К просмотру",
+                  "de": "Ansehen",
+                  "ja": "視聴予定",
+                  "tr": "İzlenecek",
+                  "vi": "Cần xem",
+                  "it": "Da guardare",
+                  "fa": "برای تماشا",
+                  "pl": "Do obejrzenia",
+                  "uk": "До перегляду",
+                  "nl": "Te bekijken",
+                  "sv": "Att titta på",
+                  "cs": "Ke shlédnutí",
+                  "el": "Προς παρακολούθηση"
+                },
+                "color": "blue"
+              },
+              {
+                "type": "stat",
+                "table": "videos",
+                "filter": { "column": "priority", "value": "must" },
+                "label": {
+                  "en": "Must-watch",
+                  "ko": "필수 시청",
+                  "zh": "必看",
+                  "hi": "अवश्य देखें",
+                  "es": "Imprescindible",
+                  "fr": "À voir absolument",
+                  "ar": "يجب مشاهدته",
+                  "pt": "Imperdível",
+                  "ru": "Обязательно к просмотру",
+                  "de": "Unbedingt ansehen",
+                  "ja": "必見",
+                  "tr": "Mutlaka izlenmeli",
+                  "vi": "Nhất định phải xem",
+                  "it": "Da non perdere",
+                  "fa": "حتماً تماشا کنید",
+                  "pl": "Koniecznie do obejrzenia",
+                  "uk": "Обов'язково до перегляду",
+                  "nl": "Absoluut bekijken",
+                  "sv": "Måste titta",
+                  "cs": "Nutno zhlédnout",
+                  "el": "Απαραίτητο θέαμα"
+                },
+                "color": "coral"
+              }
+            ]
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "Add a video",
+              "ko": "동영상 추가",
+              "zh": "添加视频",
+              "hi": "वीडियो जोड़ें",
+              "es": "Añadir video",
+              "fr": "Ajouter une vidéo",
+              "ar": "إضافة فيديو",
+              "pt": "Adicionar vídeo",
+              "ru": "Добавить видео",
+              "de": "Video hinzufügen",
+              "ja": "動画を追加",
+              "tr": "Video ekle",
+              "vi": "Thêm video",
+              "it": "Aggiungi video",
+              "fa": "افزودن ویدیو",
+              "pl": "Dodaj wideo",
+              "uk": "Додати відео",
+              "nl": "Video toevoegen",
+              "sv": "Lägg till video",
+              "cs": "Přidat video",
+              "el": "Προσθήκη βίντεο"
+            },
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "videos",
+                "values": {
+                  "status": "todo",
+                  "priority": "maybe",
+                  "source": "manual",
+                  "added": "2026-06-21"
+                }
+              }
+            }
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": {
+                  "en": "All",
+                  "ko": "전체",
+                  "zh": "全部",
+                  "hi": "सभी",
+                  "es": "Todos",
+                  "fr": "Tous",
+                  "ar": "الكل",
+                  "pt": "Todos",
+                  "ru": "Все",
+                  "de": "Alle",
+                  "ja": "すべて",
+                  "tr": "Tümü",
+                  "vi": "Tất cả",
+                  "it": "Tutti",
+                  "fa": "همه",
+                  "pl": "Wszystkie",
+                  "uk": "Усі",
+                  "nl": "Alle",
+                  "sv": "Alla",
+                  "cs": "Vše",
+                  "el": "Όλα"
+                },
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "videos", "column": "priority", "value": "" }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "Must",
+                  "ko": "필수",
+                  "zh": "必看",
+                  "hi": "अवश्य",
+                  "es": "Imprescindible",
+                  "fr": "Absolu",
+                  "ar": "يجب",
+                  "pt": "Imperdível",
+                  "ru": "Обязательно",
+                  "de": "Muss",
+                  "ja": "必見",
+                  "tr": "Mutlaka",
+                  "vi": "Bắt buộc",
+                  "it": "Da non perdere",
+                  "fa": "حتماً",
+                  "pl": "Koniecznie",
+                  "uk": "Обов'язково",
+                  "nl": "Absoluut",
+                  "sv": "Måste",
+                  "cs": "Nutno",
+                  "el": "Απαραίτητο"
+                },
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "videos", "column": "priority", "value": "must" }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "Maybe",
+                  "ko": "아마도",
+                  "zh": "或许",
+                  "hi": "शायद",
+                  "es": "Quizás",
+                  "fr": "Peut-être",
+                  "ar": "ربما",
+                  "pt": "Talvez",
+                  "ru": "Возможно",
+                  "de": "Vielleicht",
+                  "ja": "たぶん",
+                  "tr": "Belki",
+                  "vi": "Có thể",
+                  "it": "Forse",
+                  "fa": "شاید",
+                  "pl": "Może",
+                  "uk": "Можливо",
+                  "nl": "Misschien",
+                  "sv": "Kanske",
+                  "cs": "Možná",
+                  "el": "Ίσως"
+                },
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "videos", "column": "priority", "value": "maybe" }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "Someday",
+                  "ko": "언젠가",
+                  "zh": "以后再看",
+                  "hi": "किसी दिन",
+                  "es": "Algún día",
+                  "fr": "Un jour",
+                  "ar": "يومًا ما",
+                  "pt": "Algum dia",
+                  "ru": "Когда-нибудь",
+                  "de": "Irgendwann",
+                  "ja": "いつか",
+                  "tr": "Bir gün",
+                  "vi": "Một ngày nào đó",
+                  "it": "Un giorno",
+                  "fa": "یک روز",
+                  "pl": "Kiedyś",
+                  "uk": "Колись",
+                  "nl": "Ooit",
+                  "sv": "Någon dag",
+                  "cs": "Někdy",
+                  "el": "Κάποια μέρα"
+                },
+                "action": {
+                  "fn": "setFilter",
+                  "args": { "table": "videos", "column": "priority", "value": "someday" }
+                }
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "table": "videos",
+            "example": {
+              "ids": [
+                "v1",
+                "v2",
+                "v3",
+                "v4",
+                "v5",
+                "v6",
+                "v7",
+                "v8",
+                "v9",
+                "v10",
+                "v11",
+                "v12",
+                "v13"
+              ],
+              "label": {
+                "en": "Examples",
+                "ko": "예시",
+                "zh": "示例",
+                "hi": "उदाहरण",
+                "es": "Ejemplos",
+                "fr": "Exemples",
+                "ar": "أمثلة",
+                "pt": "Exemplos",
+                "ru": "Примеры",
+                "de": "Beispiele",
+                "ja": "例",
+                "tr": "Örnekler",
+                "vi": "Ví dụ",
+                "it": "Esempi",
+                "fa": "نمونه‌ها",
+                "pl": "Przykłady",
+                "uk": "Приклади",
+                "nl": "Voorbeelden",
+                "sv": "Exempel",
+                "cs": "Příklady",
+                "el": "Παραδείγματα"
+              },
+              "chipLabel": {
+                "en": "Example",
+                "ko": "예시",
+                "zh": "示例",
+                "hi": "उदाहरण",
+                "es": "Ejemplo",
+                "fr": "Exemple",
+                "ar": "مثال",
+                "pt": "Exemplo",
+                "ru": "Пример",
+                "de": "Beispiel",
+                "ja": "例",
+                "tr": "Örnek",
+                "vi": "Ví dụ",
+                "it": "Esempio",
+                "fa": "نمونه",
+                "pl": "Przykład",
+                "uk": "Приклад",
+                "nl": "Voorbeeld",
+                "sv": "Exempel",
+                "cs": "Příklad",
+                "el": "Παράδειγμα"
+              },
+              "hideLabel": {
+                "en": "Hide",
+                "ko": "숨기기",
+                "zh": "隐藏",
+                "hi": "छिपाएं",
+                "es": "Ocultar",
+                "fr": "Masquer",
+                "ar": "إخفاء",
+                "pt": "Ocultar",
+                "ru": "Скрыть",
+                "de": "Ausblenden",
+                "ja": "非表示",
+                "tr": "Gizle",
+                "vi": "Ẩn",
+                "it": "Nascondi",
+                "fa": "پنهان کردن",
+                "pl": "Ukryj",
+                "uk": "Приховати",
+                "nl": "Verbergen",
+                "sv": "Dölj",
+                "cs": "Skrýt",
+                "el": "Απόκρυψη"
+              },
+              "hiddenFromSetting": "watchlistExamplesHidden"
+            },
+            "groupBy": "priority",
+            "groupOrder": ["must", "maybe", "someday"],
+            "sort": { "column": "added", "dir": "desc" },
+            "title": "title",
+            "subtitle": "channel",
+            "tags": [
+              {
+                "column": "status",
+                "colors": {
+                  "todo": "blue",
+                  "watching": "amber",
+                  "watched": "green"
+                }
+              },
+              {
+                "column": "topic",
+                "colors": {
+                  "Science": "teal",
+                  "Tech": "blue",
+                  "Cooking": "coral",
+                  "Music": "purple",
+                  "Other": "gray"
+                }
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              { "column": "channel", "label": "Channel" },
+              { "column": "lengthMin", "label": "Length (min)" },
+              { "column": "source", "label": "Source" },
+              { "column": "rating", "label": "Rating" },
+              { "column": "notes", "label": "Notes" }
+            ],
+            "open": "Edit video",
+            "action": { "fn": "editRow" }
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": {
+              "en": "Open a video",
+              "ko": "동영상 열기",
+              "zh": "打开视频",
+              "hi": "एक वीडियो खोलें",
+              "es": "Abrir un video",
+              "fr": "Ouvrir une vidéo",
+              "ar": "افتح فيديو",
+              "pt": "Abrir um vídeo",
+              "ru": "Открыть видео",
+              "de": "Ein Video öffnen",
+              "ja": "動画を開く",
+              "tr": "Bir video aç",
+              "vi": "Mở một video",
+              "it": "Apri un video",
+              "fa": "باز کردن یک ویدیو",
+              "pl": "Otwórz wideo",
+              "uk": "Відкрити відео",
+              "nl": "Een video openen",
+              "sv": "Öppna en video",
+              "cs": "Otevřít video",
+              "el": "Άνοιγμα ενός βίντεο"
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "These open in your browser. Links are safety-checked on your device before they open.",
+              "ko": "이것들은 브라우저에서 열립니다. 링크는 열리기 전에 기기에서 안전 검사를 거칩니다.",
+              "zh": "这些将在你的浏览器中打开。链接会在你的设备上进行安全检查后再打开。",
+              "hi": "ये आपके ब्राउज़र में खुलते हैं। खुलने से पहले लिंक आपके डिवाइस पर सुरक्षा-जाँच किए जाते हैं।",
+              "es": "Estos se abren en tu navegador. Los enlaces se verifican por seguridad en tu dispositivo antes de abrirse.",
+              "fr": "Ceux-ci s'ouvrent dans votre navigateur. Les liens sont vérifiés pour leur sécurité sur votre appareil avant leur ouverture.",
+              "ar": "تُفتح هذه في متصفحك. يتم فحص الروابط أمنيًا على جهازك قبل فتحها.",
+              "pt": "Estes abrem no seu navegador. Os links são verificados quanto à segurança no seu dispositivo antes de abrir.",
+              "ru": "Они открываются в вашем браузере. Ссылки проверяются на безопасность на вашем устройстве перед открытием.",
+              "de": "Diese öffnen sich in Ihrem Browser. Links werden vor dem Öffnen auf Ihrem Gerät auf Sicherheit geprüft.",
+              "ja": "これらはブラウザで開きます。リンクは開く前にお使いのデバイス上で安全性がチェックされます。",
+              "tr": "Bunlar tarayıcınızda açılır. Bağlantılar açılmadan önce cihazınızda güvenlik kontrolünden geçirilir.",
+              "vi": "Chúng mở trong trình duyệt của bạn. Các liên kết được kiểm tra an toàn trên thiết bị của bạn trước khi mở.",
+              "it": "Questi si aprono nel tuo browser. I link vengono controllati per sicurezza sul tuo dispositivo prima di aprirsi.",
+              "fa": "این‌ها در مرورگر شما باز می‌شوند. لینک‌ها پیش از باز شدن روی دستگاه شما از نظر ایمنی بررسی می‌شوند.",
+              "pl": "Otwierają się w twojej przeglądarce. Linki są sprawdzane pod kątem bezpieczeństwa na twoim urządzeniu przed otwarciem.",
+              "uk": "Вони відкриваються у вашому браузері. Посилання перевіряються на безпеку на вашому пристрої перед відкриттям.",
+              "nl": "Deze openen in uw browser. Links worden op uw apparaat op veiligheid gecontroleerd voordat ze openen.",
+              "sv": "Dessa öppnas i din webbläsare. Länkar säkerhetskontrolleras på din enhet innan de öppnas.",
+              "cs": "Ty se otevírají ve vašem prohlížeči. Odkazy jsou před otevřením bezpečnostně zkontrolovány na vašem zařízení.",
+              "el": "Αυτά ανοίγουν στο πρόγραμμα περιήγησής σας. Οι σύνδεσμοι ελέγχονται για ασφάλεια στη συσκευή σας πριν ανοίξουν."
+            }
+          },
+          {
+            "type": "linkcard",
+            "url": "https://www.youtube.com/watch?v=bHIhgxav9LY",
+            "title": {
+              "en": "The Big Misconception About Electricity — Veritasium",
+              "ko": "The Big Misconception About Electricity — Veritasium",
+              "zh": "The Big Misconception About Electricity — Veritasium",
+              "hi": "The Big Misconception About Electricity — Veritasium",
+              "es": "The Big Misconception About Electricity — Veritasium",
+              "fr": "The Big Misconception About Electricity — Veritasium",
+              "ar": "The Big Misconception About Electricity — Veritasium",
+              "pt": "The Big Misconception About Electricity — Veritasium",
+              "ru": "The Big Misconception About Electricity — Veritasium",
+              "de": "The Big Misconception About Electricity — Veritasium",
+              "ja": "The Big Misconception About Electricity — Veritasium",
+              "tr": "The Big Misconception About Electricity — Veritasium",
+              "vi": "The Big Misconception About Electricity — Veritasium",
+              "it": "The Big Misconception About Electricity — Veritasium",
+              "fa": "The Big Misconception About Electricity — Veritasium",
+              "pl": "The Big Misconception About Electricity — Veritasium",
+              "uk": "The Big Misconception About Electricity — Veritasium",
+              "nl": "The Big Misconception About Electricity — Veritasium",
+              "sv": "The Big Misconception About Electricity — Veritasium",
+              "cs": "The Big Misconception About Electricity — Veritasium",
+              "el": "The Big Misconception About Electricity — Veritasium"
+            },
+            "onOpen": { "fn": "openLink" }
+          },
+          {
+            "type": "linkcard",
+            "url": "https://www.youtube.com/watch?v=r6sGWTCMz2k",
+            "title": {
+              "en": "But What Is a Fourier Series? — 3Blue1Brown",
+              "ko": "But What Is a Fourier Series? — 3Blue1Brown",
+              "zh": "But What Is a Fourier Series? — 3Blue1Brown",
+              "hi": "But What Is a Fourier Series? — 3Blue1Brown",
+              "es": "But What Is a Fourier Series? — 3Blue1Brown",
+              "fr": "But What Is a Fourier Series? — 3Blue1Brown",
+              "ar": "But What Is a Fourier Series? — 3Blue1Brown",
+              "pt": "But What Is a Fourier Series? — 3Blue1Brown",
+              "ru": "But What Is a Fourier Series? — 3Blue1Brown",
+              "de": "But What Is a Fourier Series? — 3Blue1Brown",
+              "ja": "But What Is a Fourier Series? — 3Blue1Brown",
+              "tr": "But What Is a Fourier Series? — 3Blue1Brown",
+              "vi": "But What Is a Fourier Series? — 3Blue1Brown",
+              "it": "But What Is a Fourier Series? — 3Blue1Brown",
+              "fa": "But What Is a Fourier Series? — 3Blue1Brown",
+              "pl": "But What Is a Fourier Series? — 3Blue1Brown",
+              "uk": "But What Is a Fourier Series? — 3Blue1Brown",
+              "nl": "But What Is a Fourier Series? — 3Blue1Brown",
+              "sv": "But What Is a Fourier Series? — 3Blue1Brown",
+              "cs": "But What Is a Fourier Series? — 3Blue1Brown",
+              "el": "But What Is a Fourier Series? — 3Blue1Brown"
+            },
+            "onOpen": { "fn": "openLink" }
+          }
+        ]
+      }
+    },
+    "byChannel": {
+      "title": {
+        "en": "By channel",
+        "ko": "채널별",
+        "zh": "按频道",
+        "hi": "चैनल के अनुसार",
+        "es": "Por canal",
+        "fr": "Par chaîne",
+        "ar": "حسب القناة",
+        "pt": "Por canal",
+        "ru": "По каналам",
+        "de": "Nach Kanal",
+        "ja": "チャンネル別",
+        "tr": "Kanala göre",
+        "vi": "Theo kênh",
+        "it": "Per canale",
+        "fa": "بر اساس کانال",
+        "pl": "Wg kanału",
+        "uk": "За каналами",
+        "nl": "Per kanaal",
+        "sv": "Efter kanal",
+        "cs": "Podle kanálu",
+        "el": "Ανά κανάλι"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Your channels, then every video grouped under the channel it came from. Add a video straight to your list below.",
+              "ko": "당신의 채널, 그리고 출처 채널별로 그룹화된 모든 동영상입니다. 아래에서 목록에 바로 동영상을 추가하세요.",
+              "zh": "你的频道，以及按来源频道分组的所有视频。在下方直接将视频添加到你的列表。",
+              "hi": "आपके चैनल, फिर हर वीडियो जिस चैनल से आया उसके अंतर्गत समूहीकृत। नीचे सीधे अपनी सूची में एक वीडियो जोड़ें।",
+              "es": "Tus canales, luego cada video agrupado bajo el canal del que provino. Añade un video directamente a tu lista abajo.",
+              "fr": "Vos chaînes, puis chaque vidéo groupée sous la chaîne d'où elle provient. Ajoutez une vidéo directement à votre liste ci-dessous.",
+              "ar": "قنواتك، ثم كل فيديو مجمّع تحت القناة التي جاء منها. أضف فيديو مباشرة إلى قائمتك أدناه.",
+              "pt": "Seus canais, depois todo vídeo agrupado sob o canal de onde veio. Adicione um vídeo diretamente à sua lista abaixo.",
+              "ru": "Ваши каналы, затем каждое видео сгруппировано по каналу, из которого оно пришло. Добавьте видео прямо в свой список ниже.",
+              "de": "Ihre Kanäle, dann jedes Video gruppiert unter dem Kanal, von dem es stammt. Fügen Sie unten ein Video direkt zu Ihrer Liste hinzu.",
+              "ja": "あなたのチャンネル、そしてすべての動画が元のチャンネルごとにグループ化されます。下でリストに動画を直接追加できます。",
+              "tr": "Kanallarınız, ardından her video geldiği kanalın altında gruplanır. Aşağıda listenize doğrudan bir video ekleyin.",
+              "vi": "Các kênh của bạn, sau đó mọi video được nhóm dưới kênh mà nó xuất phát. Thêm video trực tiếp vào danh sách của bạn bên dưới.",
+              "it": "I tuoi canali, poi ogni video raggruppato sotto il canale da cui proviene. Aggiungi un video direttamente alla tua lista sotto.",
+              "fa": "کانال‌های شما، سپس هر ویدیو زیر کانالی که از آن آمده گروه‌بندی می‌شود. یک ویدیو را مستقیماً به فهرست خود در زیر اضافه کنید.",
+              "pl": "Twoje kanały, a następnie każdy film pogrupowany pod kanałem, z którego pochodzi. Dodaj film bezpośrednio do swojej listy poniżej.",
+              "uk": "Ваші канали, потім кожне відео згруповано під каналом, звідки воно надійшло. Додайте відео прямо до свого списку нижче.",
+              "nl": "Uw kanalen, en vervolgens elke video gegroepeerd onder het kanaal waarvan deze afkomstig is. Voeg hieronder direct een video toe aan uw lijst.",
+              "sv": "Dina kanaler, sedan varje video grupperad under kanalen den kom från. Lägg till en video direkt till din lista nedan.",
+              "cs": "Vaše kanály, poté každé video seskupené pod kanálem, ze kterého pochází. Přidejte video přímo do svého seznamu níže.",
+              "el": "Τα κανάλια σας, μετά κάθε βίντεο ομαδοποιημένο κάτω από το κανάλι προέλευσής του. Προσθέστε ένα βίντεο απευθείας στη λίστα σας παρακάτω."
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "Add a channel",
+              "ko": "채널 추가",
+              "zh": "添加频道",
+              "hi": "चैनल जोड़ें",
+              "es": "Añadir canal",
+              "fr": "Ajouter une chaîne",
+              "ar": "إضافة قناة",
+              "pt": "Adicionar canal",
+              "ru": "Добавить канал",
+              "de": "Kanal hinzufügen",
+              "ja": "チャンネルを追加",
+              "tr": "Kanal ekle",
+              "vi": "Thêm kênh",
+              "it": "Aggiungi canale",
+              "fa": "افزودن کانال",
+              "pl": "Dodaj kanał",
+              "uk": "Додати канал",
+              "nl": "Kanaal toevoegen",
+              "sv": "Lägg till kanal",
+              "cs": "Přidat kanál",
+              "el": "Προσθήκη καναλιού"
+            },
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "channels",
+                "values": { "topic": "Other", "subscribed": false }
+              }
+            }
+          },
+          {
+            "type": "list",
+            "table": "channels",
+            "example": {
+              "ids": [
+                "ch_veritasium",
+                "ch_fireship",
+                "ch_kurzgesagt",
+                "ch_babish",
+                "ch_3blue1brown",
+                "ch_marqueszone"
+              ],
+              "label": {
+                "en": "Examples",
+                "ko": "예시",
+                "zh": "示例",
+                "hi": "उदाहरण",
+                "es": "Ejemplos",
+                "fr": "Exemples",
+                "ar": "أمثلة",
+                "pt": "Exemplos",
+                "ru": "Примеры",
+                "de": "Beispiele",
+                "ja": "例",
+                "tr": "Örnekler",
+                "vi": "Ví dụ",
+                "it": "Esempi",
+                "fa": "نمونه‌ها",
+                "pl": "Przykłady",
+                "uk": "Приклади",
+                "nl": "Voorbeelden",
+                "sv": "Exempel",
+                "cs": "Příklady",
+                "el": "Παραδείγματα"
+              },
+              "chipLabel": {
+                "en": "Example",
+                "ko": "예시",
+                "zh": "示例",
+                "hi": "उदाहरण",
+                "es": "Ejemplo",
+                "fr": "Exemple",
+                "ar": "مثال",
+                "pt": "Exemplo",
+                "ru": "Пример",
+                "de": "Beispiel",
+                "ja": "例",
+                "tr": "Örnek",
+                "vi": "Ví dụ",
+                "it": "Esempio",
+                "fa": "نمونه",
+                "pl": "Przykład",
+                "uk": "Приклад",
+                "nl": "Voorbeeld",
+                "sv": "Exempel",
+                "cs": "Příklad",
+                "el": "Παράδειγμα"
+              },
+              "hideLabel": {
+                "en": "Hide",
+                "ko": "숨기기",
+                "zh": "隐藏",
+                "hi": "छिपाएं",
+                "es": "Ocultar",
+                "fr": "Masquer",
+                "ar": "إخفاء",
+                "pt": "Ocultar",
+                "ru": "Скрыть",
+                "de": "Ausblenden",
+                "ja": "非表示",
+                "tr": "Gizle",
+                "vi": "Ẩn",
+                "it": "Nascondi",
+                "fa": "پنهان کردن",
+                "pl": "Ukryj",
+                "uk": "Приховати",
+                "nl": "Verbergen",
+                "sv": "Dölj",
+                "cs": "Skrýt",
+                "el": "Απόκρυψη"
+              },
+              "hiddenFromSetting": "watchlistExamplesHidden"
+            },
+            "titleColumn": "name",
+            "subtitleColumns": ["topic"],
+            "metaColumns": ["subscribed"],
+            "sortColumn": "name",
+            "sortDir": "asc",
+            "action": { "fn": "editRow" }
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": {
+              "en": "Videos by channel",
+              "ko": "채널별 동영상",
+              "zh": "按频道分类的视频",
+              "hi": "चैनल के अनुसार वीडियो",
+              "es": "Videos por canal",
+              "fr": "Vidéos par chaîne",
+              "ar": "مقاطع الفيديو حسب القناة",
+              "pt": "Vídeos por canal",
+              "ru": "Видео по каналам",
+              "de": "Videos nach Kanal",
+              "ja": "チャンネル別動画",
+              "tr": "Kanala göre videolar",
+              "vi": "Video theo kênh",
+              "it": "Video per canale",
+              "fa": "ویدیوها بر اساس کانال",
+              "pl": "Filmy wg kanału",
+              "uk": "Відео за каналами",
+              "nl": "Video's per kanaal",
+              "sv": "Videor efter kanal",
+              "cs": "Videa podle kanálu",
+              "el": "Βίντεο ανά κανάλι"
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "Add a video",
+              "ko": "동영상 추가",
+              "zh": "添加视频",
+              "hi": "वीडियो जोड़ें",
+              "es": "Añadir video",
+              "fr": "Ajouter une vidéo",
+              "ar": "إضافة فيديو",
+              "pt": "Adicionar vídeo",
+              "ru": "Добавить видео",
+              "de": "Video hinzufügen",
+              "ja": "動画を追加",
+              "tr": "Video ekle",
+              "vi": "Thêm video",
+              "it": "Aggiungi video",
+              "fa": "افزودن ویدیو",
+              "pl": "Dodaj wideo",
+              "uk": "Додати відео",
+              "nl": "Video toevoegen",
+              "sv": "Lägg till video",
+              "cs": "Přidat video",
+              "el": "Προσθήκη βίντεο"
+            },
+            "icon": "add",
+            "action": {
+              "fn": "addRow",
+              "args": {
+                "table": "videos",
+                "values": {
+                  "status": "todo",
+                  "priority": "maybe",
+                  "source": "manual",
+                  "added": "2026-06-21"
+                }
+              }
+            }
+          },
+          {
+            "type": "cards",
+            "table": "videos",
+            "groupBy": "channel",
+            "sort": { "column": "added", "dir": "desc" },
+            "title": "title",
+            "subtitle": "topic",
+            "tags": [
+              {
+                "column": "priority",
+                "colors": {
+                  "must": "coral",
+                  "maybe": "amber",
+                  "someday": "gray"
+                }
+              },
+              {
+                "column": "status",
+                "colors": {
+                  "todo": "blue",
+                  "watching": "amber",
+                  "watched": "green"
+                }
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              { "column": "channel", "label": "Channel" },
+              { "column": "lengthMin", "label": "Length (min)" },
+              { "column": "source", "label": "Source" },
+              { "column": "notes", "label": "Notes" }
+            ],
+            "open": "Edit video",
+            "action": { "fn": "editRow" }
+          }
+        ]
+      }
+    },
+    "watched": {
+      "title": {
+        "en": "Watched",
+        "ko": "시청 완료",
+        "zh": "已观看",
+        "hi": "देखा गया",
+        "es": "Visto",
+        "fr": "Vu",
+        "ar": "تمت مشاهدته",
+        "pt": "Assistido",
+        "ru": "Просмотрено",
+        "de": "Angesehen",
+        "ja": "視聴済み",
+        "tr": "İzlendi",
+        "vi": "Đã xem",
+        "it": "Visto",
+        "fa": "دیده‌شده",
+        "pl": "Obejrzane",
+        "uk": "Переглянуто",
+        "nl": "Bekeken",
+        "sv": "Sett",
+        "cs": "Zhlédnuto",
+        "el": "Παρακολουθήθηκε"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Everything you've finished, your highest-rated first. The chart shows how your viewing splits across topics.",
+              "ko": "다 본 것들이 평점 높은 순으로 표시됩니다. 차트는 시청이 주제별로 어떻게 나뉘는지 보여줍니다.",
+              "zh": "你已看完的所有内容，评分最高的排在前面。图表显示你的观看在各主题间的分布。",
+              "hi": "आपने जो पूरा कर लिया है, आपकी सर्वोच्च रेटिंग वाला पहले। चार्ट दिखाता है कि आपका देखना विषयों में कैसे बंटा है।",
+              "es": "Todo lo que has terminado, lo mejor calificado primero. El gráfico muestra cómo se divide tu visualización entre temas.",
+              "fr": "Tout ce que vous avez terminé, le mieux noté en premier. Le graphique montre comment votre visionnage se répartit entre les sujets.",
+              "ar": "كل ما أنهيته، الأعلى تقييمًا أولاً. يُظهر الرسم البياني كيف تنقسم مشاهدتك عبر المواضيع.",
+              "pt": "Tudo que você terminou, o mais bem avaliado primeiro. O gráfico mostra como sua visualização se divide entre tópicos.",
+              "ru": "Всё, что вы закончили, с самым высоким рейтингом первым. Диаграмма показывает, как ваш просмотр распределяется по темам.",
+              "de": "Alles, was Sie beendet haben, höchstbewertet zuerst. Das Diagramm zeigt, wie sich Ihr Ansehen auf Themen aufteilt.",
+              "ja": "視聴を終えたすべてが、評価が高い順に表示されます。チャートは視聴がトピック別にどう分かれているかを示します。",
+              "tr": "Bitirdiğiniz her şey, en yüksek puanlı önce. Grafik, izlemenizin konulara göre nasıl bölündüğünü gösterir.",
+              "vi": "Mọi thứ bạn đã hoàn thành, đánh giá cao nhất trước. Biểu đồ cho thấy việc xem của bạn phân chia theo chủ đề như thế nào.",
+              "it": "Tutto ciò che hai finito, il più votato per primo. Il grafico mostra come si suddivide la tua visione tra gli argomenti.",
+              "fa": "هر آنچه تمام کرده‌اید، بالاترین امتیاز اول. نمودار نشان می‌دهد تماشای شما چگونه بین موضوعات تقسیم می‌شود.",
+              "pl": "Wszystko, co ukończyłeś, najwyżej oceniane najpierw. Wykres pokazuje, jak twoje oglądanie rozkłada się na tematy.",
+              "uk": "Усе, що ви завершили, з найвищим рейтингом спочатку. Діаграма показує, як ваш перегляд розподіляється за темами.",
+              "nl": "Alles wat u hebt afgerond, hoogst beoordeeld eerst. De grafiek toont hoe uw kijken zich verdeelt over onderwerpen.",
+              "sv": "Allt du blivit klar med, högst betyg först. Diagrammet visar hur ditt tittande delas upp mellan ämnen.",
+              "cs": "Vše, co jste dokončili, nejlépe hodnocené první. Graf ukazuje, jak se vaše sledování dělí mezi témata.",
+              "el": "Ό,τι έχετε ολοκληρώσει, με την υψηλότερη βαθμολογία πρώτα. Το γράφημα δείχνει πώς κατανέμεται η παρακολούθησή σας ανά θέμα."
+            }
+          },
+          {
+            "type": "barchart",
+            "table": "videos",
+            "groupColumn": "topic",
+            "filter": { "column": "status", "value": "watched" },
+            "label": {
+              "en": "Watched by topic",
+              "ko": "주제별 시청",
+              "zh": "按主题观看",
+              "hi": "विषय के अनुसार देखा गया",
+              "es": "Visto por tema",
+              "fr": "Vu par sujet",
+              "ar": "تمت المشاهدة حسب الموضوع",
+              "pt": "Assistido por tópico",
+              "ru": "Просмотрено по темам",
+              "de": "Nach Thema angesehen",
+              "ja": "トピック別視聴",
+              "tr": "Konuya göre izlendi",
+              "vi": "Đã xem theo chủ đề",
+              "it": "Visto per argomento",
+              "fa": "دیده‌شده بر اساس موضوع",
+              "pl": "Obejrzane wg tematu",
+              "uk": "Переглянуто за темою",
+              "nl": "Bekeken per onderwerp",
+              "sv": "Sett efter ämne",
+              "cs": "Zhlédnuto podle tématu",
+              "el": "Παρακολουθήθηκε ανά θέμα"
+            }
+          },
+          {
+            "type": "cards",
+            "table": "videos",
+            "filter": { "column": "status", "value": "watched" },
+            "sort": { "column": "rating", "dir": "desc" },
+            "title": "title",
+            "subtitle": "channel",
+            "tags": [
+              {
+                "column": "topic",
+                "colors": {
+                  "Science": "teal",
+                  "Tech": "blue",
+                  "Cooking": "coral",
+                  "Music": "purple",
+                  "Other": "gray"
+                }
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              { "column": "channel", "label": "Channel" },
+              { "column": "rating", "label": "Rating" },
+              { "column": "lengthMin", "label": "Length (min)" },
+              { "column": "added", "label": "Added" },
+              { "column": "notes", "label": "Notes" }
+            ],
+            "open": "Edit video",
+            "action": { "fn": "editRow" }
+          }
+        ]
+      }
+    },
+    "recs": {
+      "title": {
+        "en": "Recommendations",
+        "ko": "추천",
+        "zh": "推荐",
+        "hi": "सिफ़ारिशें",
+        "es": "Recomendaciones",
+        "fr": "Recommandations",
+        "ar": "التوصيات",
+        "pt": "Recomendações",
+        "ru": "Рекомендации",
+        "de": "Empfehlungen",
+        "ja": "おすすめ",
+        "tr": "Öneriler",
+        "vi": "Đề xuất",
+        "it": "Consigliati",
+        "fa": "پیشنهادها",
+        "pl": "Rekomendacje",
+        "uk": "Рекомендації",
+        "nl": "Aanbevelingen",
+        "sv": "Rekommendationer",
+        "cs": "Doporučení",
+        "el": "Προτάσεις"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": {
+              "en": "Bridges — discover across your interests",
+              "ko": "브리지 — 관심사를 넘나드는 발견",
+              "zh": "桥梁 — 跨兴趣发现",
+              "hi": "ब्रिज — अपनी रुचियों के पार खोजें",
+              "es": "Puentes: descubre a través de tus intereses",
+              "fr": "Ponts — découvrez à travers vos intérêts",
+              "ar": "الجسور — اكتشف عبر اهتماماتك",
+              "pt": "Pontes — descubra através de seus interesses",
+              "ru": "Мосты — открытия на стыке ваших интересов",
+              "de": "Brücken — Entdeckungen über Ihre Interessen hinweg",
+              "ja": "ブリッジ — 興味を横断して発見する",
+              "tr": "Köprüler — ilgi alanlarınız arasında keşif",
+              "vi": "Cầu nối — khám phá xuyên suốt các sở thích của bạn",
+              "it": "Ponti — scopri attraverso i tuoi interessi",
+              "fa": "پل‌ها — کشف در میان علایق شما",
+              "pl": "Mostki — odkrywaj między swoimi zainteresowaniami",
+              "uk": "Мости — відкриття на перетині ваших інтересів",
+              "nl": "Bruggen — ontdekken over uw interesses heen",
+              "sv": "Broar — upptäck tvärs över dina intressen",
+              "cs": "Mosty — objevujte napříč svými zájmy",
+              "el": "Γέφυρες — ανακαλύψτε στα ενδιαφέροντά σας"
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Computed on your device from how your videos connect — no account, no API key. These are your unwatched videos that bridge your different interests (the ones linking, say, your science and tech sides), strongest first.",
+              "ko": "동영상들이 어떻게 연결되는지를 바탕으로 기기에서 계산됩니다 — 계정도, API 키도 필요 없습니다. 이것은 서로 다른 관심사를 연결하는(예: 과학과 기술 측면을 잇는) 아직 보지 않은 동영상이며, 강한 순서대로 표시됩니다.",
+              "zh": "根据你的视频之间的关联在你的设备上计算——无需账户，无需 API 密钥。这些是连接你不同兴趣（比如连接你的科学和技术偏好）的未看视频，最强的排在前面。",
+              "hi": "आपके वीडियो कैसे जुड़ते हैं इसके आधार पर आपके डिवाइस पर गणना की जाती है — कोई खाता नहीं, कोई API कुंजी नहीं। ये आपके अनदेखे वीडियो हैं जो आपकी अलग-अलग रुचियों को जोड़ते हैं (जैसे आपके विज्ञान और तकनीक पक्षों को जोड़ने वाले), सबसे मज़बूत पहले।",
+              "es": "Calculado en tu dispositivo a partir de cómo se conectan tus videos: sin cuenta, sin clave de API. Estos son tus videos sin ver que conectan tus diferentes intereses (los que unen, por ejemplo, tu lado científico y tecnológico), el más fuerte primero.",
+              "fr": "Calculé sur votre appareil à partir de la façon dont vos vidéos se connectent — pas de compte, pas de clé API. Ce sont vos vidéos non vues qui relient vos différents intérêts (celles qui font le pont entre, disons, votre côté science et tech), les plus fortes en premier.",
+              "ar": "يُحسب على جهازك من كيفية ارتباط مقاطع الفيديو الخاصة بك — بدون حساب، بدون مفتاح API. هذه مقاطع الفيديو غير المشاهدة التي تربط بين اهتماماتك المختلفة (تلك التي تربط، مثلاً، جانبك العلمي والتقني)، الأقوى أولاً.",
+              "pt": "Calculado no seu dispositivo a partir de como seus vídeos se conectam — sem conta, sem chave de API. Estes são seus vídeos não assistidos que conectam seus diferentes interesses (os que ligam, digamos, seu lado científico e tecnológico), o mais forte primeiro.",
+              "ru": "Вычисляется на вашем устройстве на основе связей между вашими видео — без учётной записи, без ключа API. Это ваши непросмотренные видео, объединяющие разные ваши интересы (например, соединяющие научную и техническую стороны), самые сильные сначала.",
+              "de": "Auf Ihrem Gerät berechnet aus der Verbindung Ihrer Videos — kein Konto, kein API-Schlüssel. Dies sind Ihre ungesehenen Videos, die Ihre verschiedenen Interessen verbinden (z. B. die Brücke zwischen Ihrer Wissenschafts- und Technikseite), stärkste zuerst.",
+              "ja": "あなたの動画がどうつながっているかをもとに、お使いのデバイス上で計算されます — アカウントもAPIキーも不要です。これらはあなたの異なる興味をつなぐ（例えば科学面とテクノロジー面をつなぐ）未視聴の動画で、つながりが強い順に表示されます。",
+              "tr": "Videolarınızın nasıl bağlandığından cihazınızda hesaplanır — hesap yok, API anahtarı yok. Bunlar farklı ilgi alanlarınızı birbirine bağlayan (örneğin bilim ve teknoloji yönlerinizi köprüleyen) henüz izlemediğiniz videolardır, en güçlüsü önce.",
+              "vi": "Được tính toán trên thiết bị của bạn từ cách các video của bạn kết nối — không cần tài khoản, không cần khóa API. Đây là những video chưa xem của bạn kết nối các sở thích khác nhau của bạn (những video bắc cầu, chẳng hạn, giữa khía cạnh khoa học và công nghệ của bạn), mạnh nhất trước.",
+              "it": "Calcolato sul tuo dispositivo da come si collegano i tuoi video — nessun account, nessuna chiave API. Questi sono i tuoi video non visti che collegano i tuoi diversi interessi (quelli che collegano, ad esempio, il tuo lato scientifico e tecnologico), il più forte per primo.",
+              "fa": "بر روی دستگاه شما از روی نحوه اتصال ویدیوهایتان محاسبه می‌شود — بدون حساب کاربری، بدون کلید API. این‌ها ویدیوهای تماشانشده شما هستند که علایق مختلف شما را پیوند می‌دهند (مثلاً آن‌هایی که جنبه علمی و فناوری شما را پیوند می‌زنند)، قوی‌ترین‌ها اول.",
+              "pl": "Obliczane na twoim urządzeniu na podstawie tego, jak łączą się twoje filmy — bez konta, bez klucza API. To twoje nieobejrzane filmy łączące twoje różne zainteresowania (np. łączące twoją stronę naukową i technologiczną), najsilniejsze najpierw.",
+              "uk": "Обчислюється на вашому пристрої на основі того, як пов'язані ваші відео — без облікового запису, без ключа API. Це ваші непереглянуті відео, що поєднують ваші різні інтереси (наприклад, поєднують наукову та технологічну сторони), найсильніші спочатку.",
+              "nl": "Berekend op uw apparaat op basis van hoe uw video's verbonden zijn — geen account, geen API-sleutel. Dit zijn uw onbekeken video's die uw verschillende interesses verbinden (bijvoorbeeld die uw wetenschaps- en techkant overbruggen), sterkste eerst.",
+              "sv": "Beräknas på din enhet utifrån hur dina videor kopplas samman — inget konto, ingen API-nyckel. Detta är dina osedda videor som bygger bro mellan dina olika intressen (de som till exempel kopplar samman din vetenskaps- och tekniksida), starkast först.",
+              "cs": "Vypočítáno na vašem zařízení podle toho, jak se vaše videa propojují — žádný účet, žádný API klíč. To jsou vaše nezhlédnutá videa, která propojují vaše různé zájmy (ta, jež propojují například vaši vědeckou a technickou stránku), nejsilnější první.",
+              "el": "Υπολογίζεται στη συσκευή σας από το πώς συνδέονται τα βίντεό σας — χωρίς λογαριασμό, χωρίς κλειδί API. Αυτά είναι τα μη παρακολουθημένα βίντεό σας που γεφυρώνουν τα διαφορετικά ενδιαφέροντά σας (αυτά που συνδέουν, ας πούμε, την επιστημονική και την τεχνολογική σας πλευρά), τα ισχυρότερα πρώτα."
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "Find my bridges",
+              "ko": "내 브리지 찾기",
+              "zh": "查找我的桥梁",
+              "hi": "मेरे ब्रिज खोजें",
+              "es": "Encontrar mis puentes",
+              "fr": "Trouver mes ponts",
+              "ar": "ابحث عن جسوري",
+              "pt": "Encontrar minhas pontes",
+              "ru": "Найти мои мосты",
+              "de": "Meine Brücken finden",
+              "ja": "ブリッジを探す",
+              "tr": "Köprülerimi bul",
+              "vi": "Tìm cầu nối của tôi",
+              "it": "Trova i miei ponti",
+              "fa": "پل‌های من را پیدا کن",
+              "pl": "Znajdź moje mostki",
+              "uk": "Знайти мої мости",
+              "nl": "Mijn bruggen vinden",
+              "sv": "Hitta mina broar",
+              "cs": "Najít mé mosty",
+              "el": "Βρείτε τις γέφυρές μου"
+            },
+            "icon": "recommend",
+            "action": {
+              "fn": "recommend",
+              "args": {
+                "table": "videos",
+                "linkColumns": ["topic", "channel", "tags"],
+                "excludeWhen": { "column": "status", "value": "watched" },
+                "scoreColumn": "recScore",
+                "reasonColumn": "recReason",
+                "topicColumn": "topic",
+                "limit": 5
+              }
+            }
+          },
+          {
+            "type": "cards",
+            "table": "videos",
+            "filter": { "column": "status", "value": "todo" },
+            "sort": { "column": "recScore", "dir": "desc" },
+            "title": "title",
+            "subtitle": "recReason",
+            "tags": [
+              {
+                "column": "topic",
+                "colors": {
+                  "Science": "teal",
+                  "Tech": "blue",
+                  "Cooking": "coral",
+                  "Music": "purple",
+                  "Other": "gray"
+                }
+              }
+            ],
+            "expandable": true,
+            "expandFields": [
+              { "column": "recReason", "label": "Why" },
+              { "column": "channel", "label": "Channel" },
+              { "column": "lengthMin", "label": "Length (min)" }
+            ],
+            "open": "Edit video",
+            "action": { "fn": "editRow" }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Tip: the more you add, the better the bridges. Want YouTube's own recommendations too? That's a separate future option — it needs a YouTube API key and a one-time sign-in.",
+              "ko": "팁: 많이 추가할수록 브리지가 더 좋아집니다. YouTube 자체 추천도 원하시나요? 그것은 별도의 향후 옵션입니다 — YouTube API 키와 일회성 로그인이 필요합니다.",
+              "zh": "提示：添加得越多，桥梁效果越好。也想要 YouTube 自带的推荐吗？那是一个单独的未来选项——需要 YouTube API 密钥和一次性登录。",
+              "hi": "सुझाव: जितना अधिक जोड़ेंगे, ब्रिज उतने बेहतर होंगे। YouTube की अपनी सिफ़ारिशें भी चाहिए? वह एक अलग भविष्य का विकल्प है — इसके लिए YouTube API कुंजी और एक बार का साइन-इन चाहिए।",
+              "es": "Consejo: cuantos más añadas, mejores serán los puentes. ¿Quieres también las recomendaciones propias de YouTube? Esa es una opción futura aparte — necesita una clave de API de YouTube y un inicio de sesión único.",
+              "fr": "Astuce : plus vous ajoutez, meilleurs sont les ponts. Vous voulez aussi les recommandations propres de YouTube ? C'est une option future séparée — elle nécessite une clé API YouTube et une connexion unique.",
+              "ar": "نصيحة: كلما أضفت المزيد، كانت الجسور أفضل. تريد أيضًا توصيات يوتيوب الخاصة؟ هذا خيار مستقبلي منفصل — يحتاج إلى مفتاح API الخاص بيوتيوب وتسجيل دخول لمرة واحدة.",
+              "pt": "Dica: quanto mais você adiciona, melhores as pontes. Quer também as recomendações próprias do YouTube? Essa é uma opção futura separada — precisa de uma chave de API do YouTube e um login único.",
+              "ru": "Совет: чем больше вы добавляете, тем лучше мосты. Хотите также собственные рекомендации YouTube? Это отдельная будущая опция — требует ключа YouTube API и однократного входа.",
+              "de": "Tipp: Je mehr Sie hinzufügen, desto besser die Brücken. Möchten Sie auch die eigenen Empfehlungen von YouTube? Das ist eine separate zukünftige Option — sie benötigt einen YouTube-API-Schlüssel und eine einmalige Anmeldung.",
+              "ja": "ヒント：追加すればするほどブリッジは良くなります。YouTube自体のおすすめも欲しいですか？それは別の将来のオプションです — YouTube APIキーと一度きりのサインインが必要です。",
+              "tr": "İpucu: ne kadar çok eklerseniz köprüler o kadar iyi olur. YouTube'un kendi önerilerini de mi istiyorsunuz? Bu, ayrı bir gelecek seçeneği — bir YouTube API anahtarı ve tek seferlik bir oturum açma gerektirir.",
+              "vi": "Mẹo: bạn càng thêm nhiều, cầu nối càng tốt. Bạn cũng muốn các đề xuất riêng của YouTube? Đó là một tùy chọn riêng trong tương lai — nó cần một khóa API YouTube và đăng nhập một lần.",
+              "it": "Suggerimento: più ne aggiungi, migliori sono i ponti. Vuoi anche i consigli propri di YouTube? È un'opzione futura separata — richiede una chiave API di YouTube e un accesso una tantum.",
+              "fa": "نکته: هرچه بیشتر اضافه کنید، پل‌ها بهتر می‌شوند. پیشنهادهای خود YouTube را هم می‌خواهید؟ آن یک گزینه آینده جداگانه است — به یک کلید API یوتیوب و ورود یک‌باره نیاز دارد.",
+              "pl": "Wskazówka: im więcej dodasz, tym lepsze mostki. Chcesz też własnych rekomendacji YouTube? To osobna przyszła opcja — wymaga klucza API YouTube i jednorazowego logowania.",
+              "uk": "Порада: чим більше ви додаєте, тим кращі мости. Хочете також власні рекомендації YouTube? Це окрема майбутня опція — потребує ключа YouTube API та одноразового входу.",
+              "nl": "Tip: hoe meer u toevoegt, hoe beter de bruggen. Wilt u ook YouTube's eigen aanbevelingen? Dat is een aparte toekomstige optie — het vereist een YouTube API-sleutel en eenmalig inloggen.",
+              "sv": "Tips: ju mer du lägger till, desto bättre broar. Vill du också ha YouTubes egna rekommendationer? Det är ett separat framtida alternativ — det kräver en YouTube API-nyckel och en engångsinloggning.",
+              "cs": "Tip: čím více přidáte, tím lepší mosty. Chcete i vlastní doporučení YouTube? To je samostatná budoucí možnost — vyžaduje klíč YouTube API a jednorázové přihlášení.",
+              "el": "Συμβουλή: όσο περισσότερα προσθέτετε, τόσο καλύτερες οι γέφυρες. Θέλετε και τις δικές του προτάσεις του YouTube; Αυτή είναι μια ξεχωριστή μελλοντική επιλογή — χρειάζεται κλειδί API του YouTube και εφάπαξ σύνδεση."
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "tables": [
+    {
+      "name": "cities",
+      "label": "Cities"
+    },
+    {
+      "name": "siegeSaves",
+      "label": "Nomnoms saves"
+    }
+  ]
+}

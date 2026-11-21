@@ -1,0 +1,10 @@
+{
+  "tables": [
+    {
+      "name": "drawings",
+      "label": "Drawings",
+      "icon": "draw",
+      "description": "Freehand sketches, stored as vector strokes so they reopen and stay editable."
+    }
+  ]
+}

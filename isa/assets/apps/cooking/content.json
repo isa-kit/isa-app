@@ -1,0 +1,38 @@
+{
+  "pantry": [
+    { "id": "p1", "name": "Eggs",         "category": "dairy",   "quantity": 6,   "unit": "each" },
+    { "id": "p2", "name": "Milk",         "category": "dairy",   "quantity": 500, "unit": "ml" },
+    { "id": "p3", "name": "Spinach",      "category": "produce", "quantity": 1,   "unit": "carton" },
+    { "id": "p4", "name": "Lemonade",     "category": "drinks",  "quantity": 1,   "unit": "bottle", "fraction": 0.5 },
+    { "id": "p5", "name": "Butter",       "category": "dairy",   "quantity": 1,   "unit": "each",   "fraction": 0.6 },
+    { "id": "p6", "name": "Tomatoes",     "category": "produce", "quantity": 4,   "unit": "each" },
+    { "id": "p7", "name": "Pasta",        "category": "pantry",  "quantity": 500, "unit": "g" },
+    { "id": "p8", "name": "Olive oil",    "category": "pantry",  "quantity": 500, "unit": "ml",     "fraction": 0.7 },
+    { "id": "p9", "name": "Parmesan",     "category": "dairy",   "quantity": 1,   "unit": "each",   "fraction": 0.4 },
+    { "id": "p10","name": "Orange juice", "category": "drinks",  "quantity": 1,   "unit": "carton", "fraction": 0.8 },
+    { "id": "p11","name": "Onions",       "category": "produce", "quantity": 3,   "unit": "each" },
+    { "id": "p12","name": "Garlic",       "category": "produce", "quantity": 2,   "unit": "each" },
+    { "id": "p13","name": "Rice",         "category": "pantry",  "quantity": 1000,"unit": "g",      "fraction": 0.8 },
+    { "id": "p14","name": "Flour",        "category": "pantry",  "quantity": 1000,"unit": "g",      "fraction": 0.9 },
+    { "id": "p15","name": "Chicken thighs","category": "meat",   "quantity": 6,   "unit": "each" },
+    { "id": "p16","name": "Greek yogurt", "category": "dairy",   "quantity": 500, "unit": "g",      "fraction": 0.7 },
+    { "id": "p17","name": "Sparkling water","category": "drinks","quantity": 2,   "unit": "bottle" },
+    { "id": "p18","name": "Carrots",      "category": "produce", "quantity": 5,   "unit": "each" },
+    { "id": "p19","name": "Canned chickpeas","category": "pantry","quantity": 2,  "unit": "each" },
+    { "id": "p20","name": "Soy sauce",    "category": "pantry",  "quantity": 1,   "unit": "bottle", "fraction": 0.5 }
+  ],
+  "recipes": [
+    { "id": "r1", "name": "Pantry scramble",      "uses": "eggs, spinach, milk, butter",       "missing": "",      "steps": "Whisk eggs with milk. Wilt spinach in butter. Pour in eggs and stir until just set.", "minutes": 10 },
+    { "id": "r2", "name": "Tomato pasta",          "uses": "pasta, tomatoes, olive oil, parmesan", "missing": "garlic", "steps": "Boil pasta. Soften tomatoes in olive oil. Toss together and finish with parmesan.", "minutes": 20 },
+    { "id": "r3", "name": "Spinach omelette",      "uses": "eggs, spinach, butter, parmesan",   "missing": "",      "steps": "Beat eggs. Cook spinach in butter, add eggs, fold with parmesan.", "minutes": 12 },
+    { "id": "r4", "name": "Lemonade pancakes",     "uses": "milk, lemonade, flour, butter",     "missing": "flour", "steps": "Whisk flour and milk. Add lemonade for lift. Cook on buttered pan until golden.", "minutes": 25 },
+    { "id": "r5", "name": "Roast chicken dinner",  "uses": "chicken, potatoes, rosemary, olive oil", "missing": "chicken, potatoes, rosemary", "steps": "Rub chicken with oil and rosemary. Roast with potatoes until cooked through.", "minutes": 80 },
+    { "id": "r6", "name": "Garlic butter rice",    "uses": "rice, garlic, butter, onions",      "missing": "",      "steps": "Soften diced onion and garlic in butter. Stir in rice, add water, simmer covered until tender.", "minutes": 25 },
+    { "id": "r7", "name": "Chickpea tomato stew",  "uses": "canned chickpeas, tomatoes, onions, garlic, olive oil", "missing": "", "steps": "Fry onion and garlic in olive oil. Add chopped tomatoes and chickpeas. Simmer 15 minutes and season.", "minutes": 30 },
+    { "id": "r8", "name": "Soy chicken stir-fry",  "uses": "chicken thighs, carrots, garlic, soy sauce, rice", "missing": "", "steps": "Cook rice. Stir-fry sliced chicken until browned, add carrots and garlic, splash in soy sauce, serve over rice.", "minutes": 35 },
+    { "id": "r9", "name": "Carrot ribbon salad",   "uses": "carrots, olive oil",                "missing": "lemon", "steps": "Peel carrots into ribbons. Dress with olive oil, lemon juice, salt, and pepper.", "minutes": 10 },
+    { "id": "r10","name": "Yogurt pancakes",       "uses": "flour, greek yogurt, eggs, milk, butter", "missing": "", "steps": "Whisk yogurt, eggs, and milk. Fold in flour. Cook ladlefuls on a buttered pan until golden on both sides.", "minutes": 20 },
+    { "id": "r11","name": "Spinach rice pilaf",    "uses": "rice, spinach, onions, butter",     "missing": "",      "steps": "Sweat onion in butter. Toast rice briefly, add water, simmer. Stir spinach through at the end.", "minutes": 30 },
+    { "id": "r12","name": "Pasta carbonara",       "uses": "pasta, eggs, parmesan, butter",     "missing": "pancetta", "steps": "Boil pasta. Crisp pancetta. Off heat, toss pasta with beaten eggs, parmesan, and a little pasta water.", "minutes": 25 }
+  ]
+}

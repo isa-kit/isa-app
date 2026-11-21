@@ -1,0 +1,58 @@
+{
+  "tables": [
+    {
+      "name": "layers",
+      "label": "Map layers",
+      "icon": "layers",
+      "description": "Every Atlas map layer with its data source, vintage and zoom range — the provenance ledger."
+    },
+    {
+      "name": "run_config",
+      "label": "Model run setup",
+      "icon": "tune",
+      "description": "One row: the scenario you want the model to run (year, growth, note) plus the connection settings (endpoint, token). Tap it on the Run screen to edit."
+    },
+    {
+      "name": "runs",
+      "label": "Model runs",
+      "icon": "leaderboard",
+      "description": "The output ledger: one row per LIVE model run, appended when the server replies. when/year/growth/note are stamped from the configuration at insert.",
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "endpoint_info",
+      "label": "Endpoint health",
+      "icon": "monitor_heart",
+      "description": "Latest /health reply from the model endpoint — replaced on every health check.",
+      "source": {
+        "type": "httpAction"
+      }
+    },
+    {
+      "name": "results",
+      "label": "Model outputs",
+      "icon": "leaderboard",
+      "description": "One row per scenario x route/segment/metric. The cockpit reads these; every row carries run_id, model_version and confidence_tier."
+    },
+    {
+      "name": "slices",
+      "label": "Saved views",
+      "icon": "star",
+      "description": "Named report configurations saved from the Cockpit (bookmark icon) — plain rows that sync/back up/export like any other data."
+    },
+    {
+      "name": "shapes",
+      "label": "Custom shapes",
+      "icon": "polyline",
+      "description": "User geospatial polygons — drawn on the map or imported from GeoJSON / shapefile. Each carries geometry, provenance, and the insight the model stamps back (workers, jobs, households)."
+    },
+    {
+      "name": "zone_stats",
+      "label": "Zone layers (calculated)",
+      "icon": "map",
+      "description": "Per-town calculated values the Dashboard map paints as choropleth layers — trips from the ridership rows, cost per person-mile from the economics rows. Editable rows like everything else; refreshed when new model outputs land."
+    }
+  ]
+}

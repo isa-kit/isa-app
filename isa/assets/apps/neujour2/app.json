@@ -1,0 +1,22 @@
+{
+  "id": "neujour2",
+  "name": "Neujour",
+  "category": "Life",
+  "description": "Your journal and agenda in one app: write notes and journal entries from the box at the bottom, keep tasks in colored groups, and see trends, feelings, people and places. The twin of New Day: same tabs, same data, imports and exports every kind.",
+  "icon": "book",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_neujour2"
+  },
+  "seedVersion": "2026-11-15.neujour2.twin",
+  "seedContent": "initial-only",
+  "durableSettings": [
+    "newdayExamplesHidden",
+    "newdayList.sort",
+    "newdayList.show",
+    "newdayList.hiddenGroups",
+    "newdayList.tags",
+    "newdayList.expanded",
+    "neujourExamplesHidden"
+  ]
+}

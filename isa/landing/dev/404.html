@@ -1,0 +1,37 @@
+<!doctype html>
+<!--
+  DEV-CHANNEL 404 (dev.devisant.com only). Overlays web/landing/404.html for a
+  dev-channel artifact assembly — mirrors the apex 404 exactly, save the same
+  "development" tag as dev/index.html. See dev/index.html's header comment for
+  the overlay mechanism.
+-->
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>devisant — development</title>
+<link rel="stylesheet" href="/site.css">
+<style>
+  .tag {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 0.2rem 0.6rem;
+  }
+</style>
+</head>
+<body>
+<main class="centered">
+  <span class="tag">development</span>
+  <h1 class="wordmark">devisant</h1>
+  <p class="lede">Nothing at this address.</p>
+  <a class="back" href="/">Back</a>
+</main>
+</body>
+</html>

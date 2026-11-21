@@ -1,0 +1,1135 @@
+{
+  "app": {
+    "appDataTools": true,
+    "title": "Architecture",
+    "primaryColor": "#5C6BC0",
+    "theme": "mui",
+    "intro": {
+      "purpose": "How this app gets built and shipped, and where it stands. Home answers what is going on and what needs you; the three doors below it hold the story, the system, and the reference boards.",
+      "show": "never",
+      "tour": [
+        {
+          "screen": "home",
+          "label": "Home",
+          "note": "What is going on right now, and anything waiting on you."
+        },
+        {
+          "screen": "story",
+          "label": "Story",
+          "note": "What happened, and when."
+        },
+        {
+          "screen": "system",
+          "label": "System",
+          "note": "How it's built and what runs where."
+        },
+        {
+          "screen": "reference",
+          "label": "Reference",
+          "note": "The boards and component lists behind everything else."
+        }
+      ]
+    }
+  },
+  "nav": [
+    {
+      "id": "home",
+      "label": "Home",
+      "icon": "home",
+      "screen": "home"
+    },
+    {
+      "id": "story",
+      "label": "Story",
+      "icon": "auto_awesome",
+      "screen": "story"
+    },
+    {
+      "id": "system",
+      "label": "System",
+      "icon": "hub",
+      "screen": "system"
+    },
+    {
+      "id": "reference",
+      "label": "Reference",
+      "icon": "menu_book",
+      "screen": "reference"
+    }
+  ],
+  "screens": {
+    "home": {
+      "title": "Home",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "header",
+            "eyebrow": "architecture",
+            "title": "Architecture",
+            "subtitle": "How this app gets built and shipped, and where it stands.",
+            "size": "compact"
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "RIGHT NOW"
+          },
+          {
+            "type": "cards",
+            "table": "right_now",
+            "density": "row",
+            "title": "line",
+            "sortBy": "order",
+            "sortDir": "asc",
+            "detailMode": "popup",
+            "tableView": false,
+            "expandFields": [
+              {
+                "column": "detail",
+                "label": "What this means"
+              },
+              {
+                "column": "asOf",
+                "label": "Freshness"
+              }
+            ],
+            "emptyIcon": "bolt",
+            "emptyTitle": "No snapshot yet",
+            "emptyText": "Start the workspace mirror to fill this in."
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "NEEDS YOU"
+          },
+          {
+            "type": "cards",
+            "table": "needs_you",
+            "title": "label",
+            "subtitle": "detail",
+            "sortBy": "count",
+            "sortDir": "desc",
+            "tableView": false,
+            "open": "View",
+            "action": {
+              "fn": "goto",
+              "args": {
+                "screenColumn": "targetScreen"
+              }
+            },
+            "tags": [
+              {
+                "column": "count",
+                "label": "count"
+              }
+            ],
+            "emptyIcon": "check_circle",
+            "emptyTitle": "Nothing needs attention right now.",
+            "emptyText": "Open System to see what is moving anyway."
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": "WHERE TO GO"
+          },
+          {
+            "type": "cards",
+            "table": "doors",
+            "title": "name",
+            "subtitle": "purpose",
+            "sortBy": "order",
+            "sortDir": "asc",
+            "iconColumn": "icon",
+            "tableView": false,
+            "action": {
+              "fn": "goto",
+              "args": {
+                "screenColumn": "screen"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "story": {
+      "title": "Story",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "header",
+            "eyebrow": "story",
+            "title": "Story",
+            "subtitle": "What happened, and when.",
+            "size": "compact"
+          },
+          {
+            "type": "segments",
+            "id": "arch-story",
+            "segments": [
+              {
+                "label": "What's new",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "text",
+                      "style": "subtitle",
+                      "value": "This week adds up to: popups instead of empty pages, one consistent spacing rhythm across the app, and faster scrolling through long reads."
+                    },
+                    {
+                      "type": "cards",
+                      "table": "updates",
+                      "layout": "spine",
+                      "spineLabel": "dateLabel",
+                      "title": "title",
+                      "subtitle": "summary",
+                      "detailMode": "popup",
+                      "tableView": false,
+                      "tags": [
+                        {
+                          "column": "area"
+                        }
+                      ],
+                      "expandFields": [
+                        {
+                          "column": "detail",
+                          "label": "What changed"
+                        }
+                      ],
+                      "emptyIcon": "auto_awesome",
+                      "emptyTitle": "Nothing new recorded yet",
+                      "emptyText": "Open System to see what is being worked on.",
+                      "sortBy": "date",
+                      "sortDir": "desc"
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Timeline",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "text",
+                      "style": "caption",
+                      "value": "Six weeks of work: each area runs down the left, time runs sideways."
+                    },
+                    {
+                      "type": "gantt",
+                      "table": "timeline_items",
+                      "titleColumn": "title",
+                      "parentColumn": "parentId",
+                      "startColumn": "scheduledStart",
+                      "endColumn": "endDate",
+                      "statusColumn": "status",
+                      "doneValue": "landed",
+                      "statusColors": {
+                        "landed": "green",
+                        "inFlight": "blue",
+                        "waiting": "amber"
+                      },
+                      "dashedStatuses": [
+                        "inFlight"
+                      ],
+                      "todayLabel": "HERE",
+                      "expandFields": [
+                        {
+                          "column": "sessionTag",
+                          "label": "Session"
+                        },
+                        {
+                          "column": "landedAt",
+                          "label": "Where it landed"
+                        },
+                        {
+                          "column": "detail",
+                          "label": "What happened"
+                        },
+                        {
+                          "column": "asOf",
+                          "label": "Freshness"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "row",
+                      "wrap": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "style": "caption",
+                          "value": "🟩 landed"
+                        },
+                        {
+                          "type": "text",
+                          "style": "caption",
+                          "value": "┅ in flight"
+                        },
+                        {
+                          "type": "text",
+                          "style": "caption",
+                          "value": "🟧 waiting on you"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Releases",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "text",
+                      "style": "caption",
+                      "value": "Every push to the live app, newest first, with what it gave you."
+                    },
+                    {
+                      "type": "cards",
+                      "table": "release_stories",
+                      "layout": "spine",
+                      "spineLabel": "dateLabel",
+                      "title": "name",
+                      "subtitle": "summary",
+                      "detailMode": "push",
+                      "tableView": false,
+                      "expandFields": [
+                        {
+                          "column": "detail",
+                          "label": "What shipped"
+                        },
+                        {
+                          "column": "asOf",
+                          "label": "Freshness"
+                        }
+                      ],
+                      "emptyIcon": "rocket_launch",
+                      "emptyTitle": "No releases recorded yet",
+                      "emptyText": "Open System to see what is queued to ship.",
+                      "sortBy": "date",
+                      "sortDir": "desc"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "system": {
+      "title": "System",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "header",
+            "eyebrow": "system",
+            "title": "System",
+            "subtitle": "How it's built and what runs where.",
+            "size": "compact"
+          },
+          {
+            "type": "segments",
+            "id": "arch-system",
+            "segments": [
+              {
+                "label": "System map",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "text",
+                      "style": "caption",
+                      "value": "Top to bottom: every applet is JSON, the engine renders it, the app shell hosts it, the server carries its data."
+                    },
+                    {
+                      "type": "cards",
+                      "table": "sys_map_parts",
+                      "layout": "flow",
+                      "connectorColumn": "connector",
+                      "title": "title",
+                      "subtitle": "summary",
+                      "sortBy": "order",
+                      "sortDir": "asc",
+                      "detailMode": "popup",
+                      "tableView": false,
+                      "tags": [
+                        {
+                          "column": "chip"
+                        },
+                        {
+                          "column": "flag",
+                          "colors": {
+                            "amber": "amber"
+                          }
+                        }
+                      ],
+                      "expandFields": [
+                        {
+                          "column": "detail",
+                          "label": "What this part is"
+                        },
+                        {
+                          "column": "asOf",
+                          "label": "Freshness"
+                        }
+                      ],
+                      "emptyIcon": "account_tree",
+                      "emptyTitle": "No map snapshot yet",
+                      "emptyText": "Start the workspace mirror to fill this in."
+                    },
+                    {
+                      "type": "text",
+                      "style": "caption",
+                      "value": "Touched counts cover the last seven days of merged work — a periodic snapshot, not a live feed."
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Versions & pipeline",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "text",
+                      "style": "caption",
+                      "value": "What each part is running on the dev and prod channels, and what is moving between them."
+                    },
+                    {
+                      "type": "text",
+                      "style": "eyebrow",
+                      "value": "WHAT IS AHEAD OF WHAT"
+                    },
+                    {
+                      "type": "cards",
+                      "table": "repo_overview",
+                      "density": "row",
+                      "title": "repo",
+                      "subtitle": "publishState",
+                      "detailMode": "push",
+                      "tableView": false,
+                      "tags": [
+                        {
+                          "column": "aheadCount",
+                          "label": "dev ahead"
+                        }
+                      ],
+                      "expandFields": [
+                        {
+                          "column": "latestPromotes",
+                          "label": "Latest prod promotes"
+                        },
+                        {
+                          "column": "aheadTitles",
+                          "label": "Dev commits not yet on main"
+                        },
+                        {
+                          "column": "publishState",
+                          "label": "Dev-site publish state"
+                        },
+                        {
+                          "column": "asOf",
+                          "label": "Freshness"
+                        }
+                      ],
+                      "emptyIcon": "cloud_sync",
+                      "emptyTitle": "No overview snapshot yet",
+                      "emptyText": "Start the workspace mirror to fill this in."
+                    },
+                    {
+                      "type": "text",
+                      "style": "eyebrow",
+                      "value": "DEV AND PROD, SIDE BY SIDE"
+                    },
+                    {
+                      "type": "cards",
+                      "table": "versions_matrix",
+                      "groupBy": "component",
+                      "phoneColumns": 2,
+                      "sort": {
+                        "column": "order",
+                        "dir": "asc"
+                      },
+                      "sortBy": "channelOrder",
+                      "sortDir": "asc",
+                      "title": "channel",
+                      "subtitle": "stamp",
+                      "monoColumns": [
+                        "stamp"
+                      ],
+                      "detailMode": "popup",
+                      "tableView": false,
+                      "tags": [
+                        {
+                          "column": "freshness",
+                          "colors": {
+                            "current": "green",
+                            "matches web": "green",
+                            "behind": "amber",
+                            "unknown": "grey"
+                          }
+                        }
+                      ],
+                      "expandFields": [
+                        {
+                          "column": "detail",
+                          "label": "Where this comes from"
+                        },
+                        {
+                          "column": "asOf",
+                          "label": "Freshness"
+                        }
+                      ],
+                      "emptyIcon": "grid_on",
+                      "emptyTitle": "No build stamps yet",
+                      "emptyText": "Start the workspace mirror to fill this in."
+                    },
+                    {
+                      "type": "text",
+                      "style": "eyebrow",
+                      "value": "HOW A CHANGE REACHES YOU"
+                    },
+                    {
+                      "type": "cards",
+                      "table": "big_picture_flow",
+                      "layout": "flow",
+                      "connectorColumn": "connector",
+                      "title": "title",
+                      "subtitle": "summary",
+                      "sortBy": "order",
+                      "sortDir": "asc",
+                      "detailMode": "popup",
+                      "tableView": false,
+                      "tags": [
+                        {
+                          "column": "chip"
+                        },
+                        {
+                          "column": "flag",
+                          "colors": {
+                            "amber": "amber"
+                          }
+                        }
+                      ],
+                      "expandFields": [
+                        {
+                          "column": "detail",
+                          "label": "Detail"
+                        },
+                        {
+                          "column": "asOf",
+                          "label": "Freshness"
+                        }
+                      ],
+                      "emptyIcon": "arrow_downward",
+                      "emptyTitle": "No flow snapshot yet",
+                      "emptyText": "Start the workspace mirror to fill this in."
+                    },
+                    {
+                      "type": "text",
+                      "style": "eyebrow",
+                      "value": "BUILD AND DEPLOY HEALTH"
+                    },
+                    {
+                      "type": "cards",
+                      "table": "ci_devops",
+                      "density": "row",
+                      "title": "title",
+                      "subtitle": "when",
+                      "monoColumns": [
+                        "when"
+                      ],
+                      "sortBy": "order",
+                      "sortDir": "asc",
+                      "detailMode": "popup",
+                      "tableView": false,
+                      "tags": [
+                        {
+                          "column": "status",
+                          "colors": {
+                            "success": "green",
+                            "healthy": "green",
+                            "failure": "red",
+                            "cancelled": "amber",
+                            "in_progress": "blue",
+                            "stale": "amber"
+                          }
+                        }
+                      ],
+                      "expandFields": [
+                        {
+                          "column": "detail",
+                          "label": "Detail"
+                        },
+                        {
+                          "column": "asOf",
+                          "label": "Freshness"
+                        }
+                      ],
+                      "emptyIcon": "monitor_heart",
+                      "emptyTitle": "No build health yet",
+                      "emptyText": "Start the workspace mirror to fill this in."
+                    },
+                    {
+                      "type": "text",
+                      "style": "eyebrow",
+                      "value": "PROCESSING AND QUEUED"
+                    },
+                    {
+                      "type": "cards",
+                      "table": "versions_pipeline",
+                      "density": "row",
+                      "groupBy": "kind",
+                      "groupOrder": [
+                        "processing",
+                        "queued"
+                      ],
+                      "title": "title",
+                      "subtitle": "part",
+                      "detailMode": "popup",
+                      "tableView": false,
+                      "expandFields": [
+                        {
+                          "column": "detail",
+                          "label": "Detail"
+                        },
+                        {
+                          "column": "asOf",
+                          "label": "Freshness"
+                        }
+                      ],
+                      "emptyIcon": "sync",
+                      "emptyTitle": "Nothing in the pipeline",
+                      "emptyText": "Open the applets board to see what is being worked on."
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Applets board",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "text",
+                      "style": "caption",
+                      "value": "Every applet, grouped by what it is for, with how recently it was worked on."
+                    },
+                    {
+                      "type": "cards",
+                      "table": "applets_board",
+                      "density": "row",
+                      "groupBy": "theme",
+                      "groupsCollapsed": false,
+                      "filterable": true,
+                      "search": true,
+                      "searchColumns": [
+                        "name",
+                        "theme"
+                      ],
+                      "filterableColumns": [
+                        "theme",
+                        "status",
+                        "envChip"
+                      ],
+                      "title": "name",
+                      "subtitle": "lastWorkDate",
+                      "sortBy": "lastWorkDate",
+                      "sortDir": "desc",
+                      "detailMode": "popup",
+                      "tableView": false,
+                      "tags": [
+                        {
+                          "column": "status",
+                          "colors": {
+                            "in work": "blue",
+                            "fresh": "green",
+                            "resting": "grey"
+                          }
+                        },
+                        {
+                          "column": "envChip",
+                          "colors": {
+                            "dev ahead": "amber",
+                            "in step": "green",
+                            "dev only": "blue"
+                          }
+                        }
+                      ],
+                      "expandFields": [
+                        {
+                          "column": "lastWork",
+                          "label": "Last real work"
+                        },
+                        {
+                          "column": "envDetail",
+                          "label": "Where it runs"
+                        },
+                        {
+                          "column": "asOf",
+                          "label": "Freshness"
+                        }
+                      ],
+                      "emptyIcon": "apps",
+                      "emptyTitle": "No applets recorded yet",
+                      "emptyText": "Start the workspace mirror to fill this in.",
+                      "monoColumns": [
+                        "lastWorkDate"
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "House rules",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "text",
+                      "style": "caption",
+                      "value": "The design rules every screen in the ecosystem is held to, and how far each one has rolled out."
+                    },
+                    {
+                      "type": "cards",
+                      "table": "house_rules",
+                      "layout": "spine",
+                      "spineLabel": "dateLabel",
+                      "title": "name",
+                      "subtitle": "statement",
+                      "detailMode": "popup",
+                      "tableView": false,
+                      "tags": [
+                        {
+                          "column": "enforcement",
+                          "colors": {
+                            "enforced": "green",
+                            "rolling out": "amber",
+                            "recorded": "grey"
+                          }
+                        }
+                      ],
+                      "expandFields": [
+                        {
+                          "column": "detail",
+                          "label": "The rule in full"
+                        }
+                      ],
+                      "emptyIcon": "gavel",
+                      "emptyTitle": "No rules recorded yet",
+                      "emptyText": "Open Story to see the changes they shaped.",
+                      "sortBy": "date",
+                      "sortDir": "desc"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "reference": {
+      "title": "Reference",
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "header",
+            "eyebrow": "reference",
+            "title": "Reference",
+            "subtitle": "The boards and component lists behind everything else.",
+            "size": "compact"
+          },
+          {
+            "type": "segments",
+            "id": "arch-reference",
+            "segments": [
+              {
+                "label": "How work ships",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "text",
+                      "style": "caption",
+                      "value": "The steps a change goes through, and what runs on this machine versus in the cloud."
+                    },
+                    {
+                      "type": "text",
+                      "style": "eyebrow",
+                      "value": "THE WORKING CYCLE"
+                    },
+                    {
+                      "type": "cards",
+                      "table": "workflow",
+                      "title": "title",
+                      "subtitle": "summary",
+                      "sortBy": "step",
+                      "sortDir": "asc",
+                      "detailMode": "popup",
+                      "expandFields": [
+                        {
+                          "column": "detail",
+                          "label": "What happens"
+                        }
+                      ],
+                      "tags": [
+                        {
+                          "column": "phase",
+                          "colors": {
+                            "Plan": "blue",
+                            "Build": "amber",
+                            "Ship": "green"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "style": "eyebrow",
+                      "value": "EACH STEP IN DETAIL"
+                    },
+                    {
+                      "type": "text",
+                      "style": "caption",
+                      "value": "On these boards: ⚑ a gate · ⚡ an incident that set a rule · ◐ partly recorded · ⇄ lives in two places."
+                    },
+                    {
+                      "type": "cards",
+                      "table": "sys_process",
+                      "density": "row",
+                      "groupBy": "lane",
+                      "groupsCollapsed": true,
+                      "title": "title",
+                      "detailMode": "popup",
+                      "expandFields": [
+                        {
+                          "column": "detail",
+                          "label": "What happens"
+                        }
+                      ],
+                      "tags": [
+                        {
+                          "column": "gate"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "style": "eyebrow",
+                      "value": "HERE VERSUS IN THE CLOUD"
+                    },
+                    {
+                      "type": "cards",
+                      "table": "sys_ci",
+                      "density": "row",
+                      "groupBy": "aspect",
+                      "groupsCollapsed": true,
+                      "title": "title",
+                      "detailMode": "popup",
+                      "expandFields": [
+                        {
+                          "column": "detail",
+                          "label": "In full"
+                        }
+                      ],
+                      "tags": [
+                        {
+                          "column": "gate"
+                        },
+                        {
+                          "column": "spans"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "How it got here",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "text",
+                      "style": "caption",
+                      "value": "Where today's rules came from, and where each piece of the tree lives."
+                    },
+                    {
+                      "type": "text",
+                      "style": "eyebrow",
+                      "value": "RULES AND WHAT CAUSED THEM"
+                    },
+                    {
+                      "type": "text",
+                      "style": "caption",
+                      "value": "On these boards: ⚑ a gate · ⚡ an incident that set a rule · ◐ partly recorded · ⇄ lives in two places."
+                    },
+                    {
+                      "type": "cards",
+                      "table": "sys_history",
+                      "density": "row",
+                      "groupBy": "domain",
+                      "groupsCollapsed": true,
+                      "title": "title",
+                      "detailMode": "popup",
+                      "expandFields": [
+                        {
+                          "column": "detail",
+                          "label": "In full"
+                        }
+                      ],
+                      "tags": [
+                        {
+                          "column": "incident"
+                        },
+                        {
+                          "column": "rule"
+                        },
+                        {
+                          "column": "partial"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "style": "eyebrow",
+                      "value": "WHERE THINGS LIVE"
+                    },
+                    {
+                      "type": "cards",
+                      "table": "sys_structure",
+                      "density": "row",
+                      "groupBy": "place",
+                      "groupsCollapsed": true,
+                      "title": "title",
+                      "detailMode": "popup",
+                      "expandFields": [
+                        {
+                          "column": "detail",
+                          "label": "In full"
+                        },
+                        {
+                          "column": "spansWith",
+                          "label": "Spans with"
+                        }
+                      ],
+                      "tags": [
+                        {
+                          "column": "gate"
+                        },
+                        {
+                          "column": "spans"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Widgets",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "text",
+                      "style": "caption",
+                      "value": "The building blocks a screen is made of — the map first, then every one by name."
+                    },
+                    {
+                      "type": "canvas",
+                      "nodesTable": "wnodes",
+                      "edgesTable": "wedges",
+                      "labelColumn": "label",
+                      "xColumn": "x",
+                      "yColumn": "y",
+                      "fromColumn": "from",
+                      "toColumn": "to",
+                      "edgeLabelColumn": "label",
+                      "colorColumn": "pkg",
+                      "colors": {
+                        "flutterboard": "blue",
+                        "datakit": "green",
+                        "imported": "amber"
+                      },
+                      "fillPhone": true,
+                      "action": {
+                        "fn": "editRow"
+                      }
+                    },
+                    {
+                      "type": "row",
+                      "wrap": true,
+                      "children": [
+                        {
+                          "type": "button",
+                          "label": "New widget node",
+                          "icon": "add",
+                          "action": {
+                            "fn": "addRow",
+                            "args": {
+                              "table": "wnodes"
+                            }
+                          }
+                        },
+                        {
+                          "type": "button",
+                          "label": "New link",
+                          "icon": "add",
+                          "action": {
+                            "fn": "addRow",
+                            "args": {
+                              "table": "wedges"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "style": "eyebrow",
+                      "value": "EVERY WIDGET BY NAME"
+                    },
+                    {
+                      "type": "cards",
+                      "table": "catalog",
+                      "groupBy": "widget",
+                      "collapsible": true,
+                      "search": true,
+                      "searchColumns": [
+                        "widget",
+                        "attr",
+                        "detail"
+                      ],
+                      "title": "attr",
+                      "subtitle": "detail",
+                      "tags": [
+                        {
+                          "column": "type"
+                        }
+                      ],
+                      "expandable": false
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Packages",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "text",
+                      "style": "caption",
+                      "value": "The code libraries the app is stacked on, and how they depend on each other."
+                    },
+                    {
+                      "type": "canvas",
+                      "nodesTable": "nodes",
+                      "edgesTable": "edges",
+                      "labelColumn": "label",
+                      "xColumn": "x",
+                      "yColumn": "y",
+                      "fromColumn": "from",
+                      "toColumn": "to",
+                      "fillPhone": true,
+                      "action": {
+                        "fn": "editRow"
+                      }
+                    },
+                    {
+                      "type": "row",
+                      "wrap": true,
+                      "children": [
+                        {
+                          "type": "button",
+                          "label": "New package",
+                          "icon": "add",
+                          "action": {
+                            "fn": "addRow",
+                            "args": {
+                              "table": "nodes"
+                            }
+                          }
+                        },
+                        {
+                          "type": "button",
+                          "label": "New dependency",
+                          "icon": "add",
+                          "action": {
+                            "fn": "addRow",
+                            "args": {
+                              "table": "edges"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "table",
+                      "table": "nodes",
+                      "columns": [
+                        "label",
+                        "x",
+                        "y"
+                      ],
+                      "height": 240,
+                      "action": {
+                        "fn": "editRow"
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "label": "New package",
+                      "icon": "add",
+                      "action": {
+                        "fn": "addRow",
+                        "args": {
+                          "table": "nodes"
+                        }
+                      }
+                    },
+                    {
+                      "type": "divider"
+                    },
+                    {
+                      "type": "table",
+                      "table": "edges",
+                      "columns": [
+                        "from",
+                        "to",
+                        "label"
+                      ],
+                      "height": 240,
+                      "action": {
+                        "fn": "editRow"
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "label": "New dependency",
+                      "icon": "add",
+                      "action": {
+                        "fn": "addRow",
+                        "args": {
+                          "table": "edges"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

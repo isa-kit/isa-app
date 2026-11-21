@@ -1,0 +1,52 @@
+{
+  "tables": [
+    {
+      "name": "scenarios",
+      "label": "Forecast scenarios",
+      "icon": "timeline",
+      "description": "Boston transit forecasts, census-anchored (2019 \u2192 2040 + Allston)"
+    },
+    {
+      "name": "invest",
+      "label": "Where to invest",
+      "icon": "trending_up",
+      "description": "Optimizer: top towns to boost transit, by goal"
+    },
+    {
+      "name": "agents",
+      "label": "Travel agents",
+      "icon": "groups",
+      "description": "Synthetic population (census income + vehicles) for the explorer"
+    },
+    {
+      "name": "towns",
+      "label": "Towns",
+      "icon": "location_city",
+      "description": "Per-town socio + fiscal for the cross-filter"
+    },
+    {
+      "name": "invest_access",
+      "label": "Invest \u00b7 access",
+      "icon": "trending_up",
+      "description": "Optimizer top towns \u2014 access objective"
+    },
+    {
+      "name": "invest_equity",
+      "label": "Invest \u00b7 equity",
+      "icon": "balance",
+      "description": "Optimizer top towns \u2014 equity objective"
+    },
+    {
+      "name": "invest_ridership",
+      "label": "Invest \u00b7 ridership",
+      "icon": "groups",
+      "description": "Optimizer top towns \u2014 ridership objective"
+    },
+    {
+      "name": "cities",
+      "label": "Cities",
+      "icon": "public",
+      "description": "Cross-city comparison \u2014 same model, calibrated per metro"
+    }
+  ]
+}

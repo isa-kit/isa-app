@@ -1,0 +1,17 @@
+{
+  "lookup": [
+    {
+      "id": "current",
+      "query": "",
+      "found": false,
+      "rendered": "",
+      "stressIndex": null,
+      "arpabetText": "",
+      "textbookContrast": "",
+      "searchedAt": ""
+    }
+  ],
+  "beats": [],
+  "coach": [],
+  "history": []
+}
