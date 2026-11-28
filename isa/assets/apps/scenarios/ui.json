@@ -1,0 +1,1227 @@
+{
+  "app": {
+    "languages": ["en", "ko", "zh", "hi", "es", "fr", "ar", "pt", "ru", "de", "ja", "tr", "vi", "it", "fa", "pl", "uk", "nl", "sv", "cs", "el"],
+    "translatable": true,
+    "appDataTools": true,
+    "intro": {
+      "tour": [
+        {
+          "screen": "runs",
+          "label": "Setup & runs",
+          "note": "Configure and launch a scenario run."
+        },
+        {
+          "screen": "provenance",
+          "label": "Provenance",
+          "note": "Trace every finished run back to its data sources."
+        },
+        {
+          "screen": "data",
+          "label": "Data",
+          "note": "The datasets a scenario can draw on."
+        },
+        {
+          "screen": "about",
+          "label": "About",
+          "note": "How scenarios and confidence tiers work."
+        }
+      ],
+      "guide": "about"
+    },
+    "title": {
+      "en": "Scenarios",
+      "ko": "시나리오",
+      "zh": "场景",
+      "hi": "परिदृश्य",
+      "es": "Escenarios",
+      "fr": "Scénarios",
+      "ar": "السيناريوهات",
+      "pt": "Cenários",
+      "ru": "Сценарии",
+      "de": "Szenarien",
+      "ja": "シナリオ",
+      "tr": "Senaryolar",
+      "vi": "Kịch bản",
+      "it": "Scenari",
+      "fa": "سناریوها",
+      "pl": "Scenariusze",
+      "uk": "Сценарії",
+      "nl": "Scenario's",
+      "sv": "Scenarier",
+      "cs": "Scénáře",
+      "el": "Σενάρια"
+    },
+    "primaryColor": "#2E6E5A"
+  },
+  "nav": [
+    {
+      "id": "runs",
+      "label": {
+        "en": "Setup & runs",
+        "ko": "설정 및 실행",
+        "zh": "设置与运行",
+        "hi": "सेटअप और रन",
+        "es": "Configuración y ejecuciones",
+        "fr": "Configuration et exécutions",
+        "ar": "الإعداد والتشغيلات",
+        "pt": "Configuração e execuções",
+        "ru": "Настройка и запуски",
+        "de": "Einrichtung & Läufe",
+        "ja": "設定と実行",
+        "tr": "Kurulum ve çalıştırmalar",
+        "vi": "Thiết lập & lượt chạy",
+        "it": "Configurazione ed esecuzioni",
+        "fa": "تنظیم و اجراها",
+        "pl": "Konfiguracja i uruchomienia",
+        "uk": "Налаштування та запуски",
+        "nl": "Instellingen & runs",
+        "sv": "Inställningar & körningar",
+        "cs": "Nastavení a běhy",
+        "el": "Ρύθμιση & εκτελέσεις"
+      },
+      "icon": "play_arrow",
+      "screen": "runs"
+    },
+    {
+      "id": "provenance",
+      "label": {
+        "en": "Provenance",
+        "ko": "출처 추적",
+        "zh": "溯源",
+        "hi": "उद्गम",
+        "es": "Procedencia",
+        "fr": "Provenance",
+        "ar": "التتبع",
+        "pt": "Proveniência",
+        "ru": "Происхождение",
+        "de": "Herkunft",
+        "ja": "来歴",
+        "tr": "Köken",
+        "vi": "Nguồn gốc",
+        "it": "Provenienza",
+        "fa": "ردیابی منشأ",
+        "pl": "Pochodzenie",
+        "uk": "Походження",
+        "nl": "Herkomst",
+        "sv": "Ursprung",
+        "cs": "Původ",
+        "el": "Προέλευση"
+      },
+      "icon": "fact_check",
+      "screen": "provenance"
+    },
+    {
+      "id": "data",
+      "label": {
+        "en": "Data",
+        "ko": "데이터",
+        "zh": "数据",
+        "hi": "डेटा",
+        "es": "Datos",
+        "fr": "Données",
+        "ar": "البيانات",
+        "pt": "Dados",
+        "ru": "Данные",
+        "de": "Daten",
+        "ja": "データ",
+        "tr": "Veri",
+        "vi": "Dữ liệu",
+        "it": "Dati",
+        "fa": "داده",
+        "pl": "Dane",
+        "uk": "Дані",
+        "nl": "Gegevens",
+        "sv": "Data",
+        "cs": "Data",
+        "el": "Δεδομένα"
+      },
+      "icon": "dataset",
+      "screen": "data"
+    },
+    {
+      "id": "about",
+      "label": {
+        "en": "About",
+        "ko": "소개",
+        "zh": "关于",
+        "hi": "परिचय",
+        "es": "Acerca de",
+        "fr": "À propos",
+        "ar": "حول",
+        "pt": "Sobre",
+        "ru": "О программе",
+        "de": "Über",
+        "ja": "概要",
+        "tr": "Hakkında",
+        "vi": "Giới thiệu",
+        "it": "Informazioni",
+        "fa": "درباره",
+        "pl": "O aplikacji",
+        "uk": "Про додаток",
+        "nl": "Over",
+        "sv": "Om",
+        "cs": "O aplikaci",
+        "el": "Σχετικά"
+      },
+      "icon": "info",
+      "screen": "about"
+    }
+  ],
+  "screens": {
+    "runs": {
+      "title": {
+        "en": "Setup & runs",
+        "ko": "설정 및 실행",
+        "zh": "设置与运行",
+        "hi": "सेटअप और रन",
+        "es": "Configuración y ejecuciones",
+        "fr": "Configuration et exécutions",
+        "ar": "الإعداد والتشغيلات",
+        "pt": "Configuração e execuções",
+        "ru": "Настройка и запуски",
+        "de": "Einrichtung & Läufe",
+        "ja": "設定と実行",
+        "tr": "Kurulum ve çalıştırmalar",
+        "vi": "Thiết lập & lượt chạy",
+        "it": "Configurazione ed esecuzioni",
+        "fa": "تنظیم و اجراها",
+        "pl": "Konfiguracja i uruchomienia",
+        "uk": "Налаштування та запуски",
+        "nl": "Instellingen & runs",
+        "sv": "Inställningar & körningar",
+        "cs": "Nastavení a běhy",
+        "el": "Ρύθμιση & εκτελέσεις"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Set up a run here; the Pipeline screen explains each step's logic, and Provenance traces every finished run end to end.",
+              "ko": "여기서 실행을 설정하세요. 파이프라인 화면은 각 단계의 로직을 설명하고, 출처 추적 화면은 완료된 모든 실행을 처음부터 끝까지 추적합니다.",
+              "zh": "在此设置运行；流水线屏幕解释每一步的逻辑，溯源屏幕端到端追踪每次已完成的运行。",
+              "hi": "यहां रन सेट करें; पाइपलाइन स्क्रीन प्रत्येक चरण के तर्क को समझाती है, और उद्गम स्क्रीन हर पूर्ण किए गए रन को आद्यंत ट्रेस करती है।",
+              "es": "Configura una ejecución aquí; la pantalla de canalización explica la lógica de cada paso, y Procedencia rastrea cada ejecución terminada de principio a fin.",
+              "fr": "Configurez une exécution ici ; l'écran Pipeline explique la logique de chaque étape, et Provenance retrace chaque exécution terminée de bout en bout.",
+              "ar": "أعدّ تشغيلًا هنا؛ تشرح شاشة خط الأنابيب منطق كل خطوة، وتتتبع شاشة التتبع كل تشغيل مكتمل من البداية إلى النهاية.",
+              "pt": "Configure uma execução aqui; a tela de pipeline explica a lógica de cada etapa, e Proveniência rastreia cada execução concluída de ponta a ponta.",
+              "ru": "Настройте запуск здесь; экран конвейера объясняет логику каждого шага, а экран происхождения отслеживает каждый завершённый запуск от начала до конца.",
+              "de": "Richte hier einen Lauf ein; der Pipeline-Bildschirm erklärt die Logik jedes Schritts, und Herkunft verfolgt jeden abgeschlossenen Lauf lückenlos.",
+              "ja": "ここで実行を設定します。パイプライン画面は各ステップのロジックを説明し、来歴画面は完了したすべての実行を最初から最後まで追跡します。",
+              "tr": "Buradan bir çalıştırma ayarlayın; Ardışık Düzen ekranı her adımın mantığını açıklar ve Köken ekranı tamamlanan her çalıştırmayı uçtan uca izler.",
+              "vi": "Thiết lập một lượt chạy tại đây; màn hình Pipeline giải thích logic của từng bước, và Nguồn gốc theo dõi mỗi lượt chạy đã hoàn thành từ đầu đến cuối.",
+              "it": "Configura un'esecuzione qui; la schermata Pipeline spiega la logica di ogni passaggio, e Provenienza traccia ogni esecuzione completata dall'inizio alla fine.",
+              "fa": "یک اجرا را اینجا تنظیم کنید؛ صفحه خط لوله منطق هر مرحله را توضیح می‌دهد و صفحه ردیابی منشأ هر اجرای پایان‌یافته را از ابتدا تا انتها ردیابی می‌کند.",
+              "pl": "Skonfiguruj tutaj uruchomienie; ekran Potoku wyjaśnia logikę każdego kroku, a Pochodzenie śledzi każde zakończone uruchomienie od początku do końca.",
+              "uk": "Налаштуйте запуск тут; екран конвеєра пояснює логіку кожного кроку, а екран походження відстежує кожен завершений запуск від початку до кінця.",
+              "nl": "Stel hier een run in; het Pipeline-scherm legt de logica van elke stap uit, en Herkomst traceert elke voltooide run van begin tot eind.",
+              "sv": "Ställ in en körning här; Pipeline-skärmen förklarar logiken för varje steg, och Ursprung spårar varje avslutad körning från början till slut.",
+              "cs": "Nastavte zde běh; obrazovka Pipeline vysvětluje logiku každého kroku a Původ sleduje každý dokončený běh od začátku do konce.",
+              "el": "Ρυθμίστε μια εκτέλεση εδώ· η οθόνη Pipeline εξηγεί τη λογική κάθε βήματος, και η Προέλευση ιχνηλατεί κάθε ολοκληρωμένη εκτέλεση από άκρη σε άκρη."
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Confidence tiers at a glance: green FOCUSED = calibrated to real, sourced local targets — fit to inform decisions; amber EXPLORATORY = transferred anchors — coverage and comparison only, not a decision basis.",
+              "ko": "신뢰도 등급 한눈에 보기: 녹색 FOCUSED = 실제 출처가 있는 지역 목표에 보정됨 — 의사결정에 활용 가능; 황색 EXPLORATORY = 전이된 기준값 — 범위 파악 및 비교용, 의사결정 근거 아님.",
+              "zh": "置信度层级一览：绿色 FOCUSED = 已校准到真实、有据可查的本地目标——适合用于决策；琥珀色 EXPLORATORY = 迁移锚点——仅用于覆盖与比较，不作为决策依据。",
+              "hi": "एक नज़र में विश्वास स्तर: हरा FOCUSED = वास्तविक, स्रोतित स्थानीय लक्ष्यों के लिए कैलिब्रेट — निर्णय लेने योग्य; एम्बर EXPLORATORY = स्थानांतरित एंकर — केवल कवरेज और तुलना, निर्णय आधार नहीं।",
+              "es": "Niveles de confianza de un vistazo: verde ENFOCADO = calibrado con objetivos locales reales y con fuente — apto para informar decisiones; ámbar EXPLORATORIO = anclas transferidas — solo cobertura y comparación, no una base de decisión.",
+              "fr": "Niveaux de confiance en un coup d'œil : vert FOCALISÉ = calibré sur des cibles locales réelles et sourcées — apte à éclairer des décisions ; ambre EXPLORATOIRE = ancres transférées — couverture et comparaison uniquement, pas une base de décision.",
+              "ar": "مستويات الثقة بلمحة: الأخضر FOCUSED = معايَر وفق أهداف محلية حقيقية وموثقة المصدر — مناسب لاتخاذ القرار؛ الكهرماني EXPLORATORY = مراسٍ منقولة — للتغطية والمقارنة فقط، وليس أساسًا للقرار.",
+              "pt": "Níveis de confiança rapidamente: verde FOCUSED = calibrado com metas locais reais e com fonte — apto para embasar decisões; âmbar EXPLORATORY = âncoras transferidas — apenas cobertura e comparação, não base para decisão.",
+              "ru": "Уровни достоверности вкратце: зелёный FOCUSED = откалиброван по реальным, документированным локальным целям — пригоден для принятия решений; янтарный EXPLORATORY = перенесённые опорные значения — только для охвата и сравнения, не основа для решений.",
+              "de": "Vertrauensstufen auf einen Blick: grün FOCUSED = kalibriert auf reale, belegte lokale Zielwerte — geeignet als Entscheidungsgrundlage; bernstein EXPLORATORY = übertragene Ankerwerte — nur für Abdeckung und Vergleich, keine Entscheidungsgrundlage.",
+              "ja": "信頼度層を一目で: 緑 FOCUSED = 実データに基づく出典明確な地域目標に較正済み — 意思決定に活用可能；琥珀 EXPLORATORY = 転用アンカー — カバレッジと比較のみ、意思決定の根拠にはならない。",
+              "tr": "Bir bakışta güven düzeyleri: yeşil FOCUSED = gerçek, kaynağı belirtilmiş yerel hedeflere göre kalibre edilmiş — kararlara temel oluşturabilir; kehribar EXPLORATORY = aktarılmış referans noktaları — yalnızca kapsam ve karşılaştırma amaçlı, karar temeli değil.",
+              "vi": "Các cấp độ tin cậy trong nháy mắt: xanh lục FOCUSED = hiệu chuẩn theo mục tiêu địa phương thực, có nguồn — phù hợp làm căn cứ quyết định; hổ phách EXPLORATORY = mốc chuyển giao — chỉ để bao phủ và so sánh, không phải căn cứ quyết định.",
+              "it": "Livelli di affidabilità in breve: verde FOCUSED = calibrato su obiettivi locali reali e documentati — adatto a orientare decisioni; ambra EXPLORATORY = ancore trasferite — solo copertura e confronto, non una base decisionale.",
+              "fa": "سطوح اطمینان به‌طور خلاصه: سبز FOCUSED = کالیبره‌شده با اهداف محلی واقعی و دارای منبع — مناسب برای تصمیم‌گیری؛ کهربایی EXPLORATORY = لنگرهای منتقل‌شده — فقط برای پوشش و مقایسه، نه مبنای تصمیم.",
+              "pl": "Poziomy pewności w skrócie: zielony FOCUSED = skalibrowany do rzeczywistych, udokumentowanych celów lokalnych — odpowiedni jako podstawa decyzji; bursztynowy EXPLORATORY = przeniesione punkty odniesienia — tylko zasięg i porównanie, nie podstawa decyzji.",
+              "uk": "Рівні довіри одним поглядом: зелений FOCUSED = відкалібровано за реальними, задокументованими локальними цілями — придатний як основа для рішень; бурштиновий EXPLORATORY = перенесені опорні значення — лише для охоплення й порівняння, не основа для рішень.",
+              "nl": "Betrouwbaarheidsniveaus in één oogopslag: groen FOCUSED = gekalibreerd op echte, herleidbare lokale doelen — geschikt als beslissingsgrondslag; amber EXPLORATORY = overgedragen ankerpunten — alleen dekking en vergelijking, geen beslissingsgrondslag.",
+              "sv": "Tillförlitlighetsnivåer i korthet: grön FOCUSED = kalibrerad mot verkliga, källbelagda lokala mål — lämplig som beslutsunderlag; bärnsten EXPLORATORY = överförda referenspunkter — endast täckning och jämförelse, inget beslutsunderlag.",
+              "cs": "Úrovně důvěryhodnosti ve zkratce: zelená FOCUSED = kalibrováno na skutečné, doložené místní cíle — vhodné jako podklad pro rozhodování; jantarová EXPLORATORY = přenesené referenční body — pouze pokrytí a srovnání, ne podklad pro rozhodování.",
+              "el": "Επίπεδα εμπιστοσύνης με μια ματιά: πράσινο FOCUSED = βαθμονομημένο σε πραγματικούς, τεκμηριωμένους τοπικούς στόχους — κατάλληλο για λήψη αποφάσεων· κεχριμπαρί EXPLORATORY = μεταφερμένα σημεία αναφοράς — μόνο κάλυψη και σύγκριση, όχι βάση απόφασης."
+            }
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": {
+              "en": "Model setup",
+              "ko": "모델 설정",
+              "zh": "模型设置",
+              "hi": "मॉडल सेटअप",
+              "es": "Configuración del modelo",
+              "fr": "Configuration du modèle",
+              "ar": "إعداد النموذج",
+              "pt": "Configuração do modelo",
+              "ru": "Настройка модели",
+              "de": "Modelleinrichtung",
+              "ja": "モデル設定",
+              "tr": "Model kurulumu",
+              "vi": "Thiết lập mô hình",
+              "it": "Configurazione del modello",
+              "fa": "تنظیمات مدل",
+              "pl": "Konfiguracja modelu",
+              "uk": "Налаштування моделі",
+              "nl": "Modelinstellingen",
+              "sv": "Modellinställning",
+              "cs": "Nastavení modelu",
+              "el": "Ρύθμιση μοντέλου"
+            }
+          },
+          {
+            "type": "cards",
+            "table": "run_config",
+            "title": "run_label",
+            "subtitle": "last_status",
+            "expandable": true,
+            "open": "Model setup",
+            "expandFields": [
+              {
+                "column": "model",
+                "label": "Model"
+              },
+              {
+                "column": "model_version",
+                "label": "Model version (git sha)"
+              },
+              {
+                "column": "city",
+                "label": "City / region"
+              },
+              {
+                "column": "year",
+                "label": "Scenario year"
+              },
+              {
+                "column": "growth",
+                "label": "Growth factor"
+              },
+              {
+                "column": "beta",
+                "label": "Distribution β (override)"
+              },
+              {
+                "column": "calib",
+                "label": "Calibration mode"
+              },
+              {
+                "column": "endpoint",
+                "label": "Endpoint"
+              }
+            ],
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": {
+                  "en": "Run on server — coming soon",
+                  "ko": "서버에서 실행 — 곧 지원 예정",
+                  "zh": "在服务器上运行 — 即将推出",
+                  "hi": "सर्वर पर चलाएं — जल्द आ रहा है",
+                  "es": "Ejecutar en el servidor: próximamente",
+                  "fr": "Exécuter sur le serveur — bientôt disponible",
+                  "ar": "التشغيل على الخادم — قريبًا",
+                  "pt": "Executar no servidor — em breve",
+                  "ru": "Запуск на сервере — скоро",
+                  "de": "Auf Server ausführen — bald verfügbar",
+                  "ja": "サーバーで実行 — 近日公開",
+                  "tr": "Sunucuda çalıştır — yakında",
+                  "vi": "Chạy trên máy chủ — sắp ra mắt",
+                  "it": "Esegui sul server — prossimamente",
+                  "fa": "اجرا روی سرور — به‌زودی",
+                  "pl": "Uruchom na serwerze — wkrótce",
+                  "uk": "Запуск на сервері — незабаром",
+                  "nl": "Uitvoeren op server — binnenkort",
+                  "sv": "Kör på server — kommer snart",
+                  "cs": "Spustit na serveru — již brzy",
+                  "el": "Εκτέλεση στον διακομιστή — σύντομα"
+                },
+                "icon": "play_arrow",
+                "action": {
+                  "fn": "setFields",
+                  "args": {
+                    "table": "run_config",
+                    "id": "cfg",
+                    "set": {
+                      "last_run": "now",
+                      "last_status": "Run requested — recorded locally. Server compute is not yet authorized for this app."
+                    }
+                  },
+                  "confirm": "Records your run request locally — the server model endpoint is not yet authorized for this app."
+                }
+              }
+            ]
+          },
+          {
+            "type": "cards",
+            "table": "runs",
+            "title": "label",
+            "subtitle": "scenario",
+            "sortBy": "when",
+            "sortDir": "desc",
+            "expandable": true,
+            "open": "Open run record",
+            "tags": [
+              {
+                "column": "tier",
+                "colors": {
+                  "focused": "green",
+                  "exploratory": "amber"
+                }
+              },
+              {
+                "column": "status",
+                "colors": {
+                  "precomputed": "gray",
+                  "live model run": "teal",
+                  "imported": "blue"
+                }
+              }
+            ],
+            "expandFields": [
+              {
+                "column": "model_version",
+                "label": "Model version (git sha)"
+              },
+              {
+                "column": "total_trips",
+                "label": "HBW trips/day"
+              },
+              {
+                "column": "transit_pct",
+                "label": "Transit share %"
+              },
+              {
+                "column": "note",
+                "label": "Note"
+              }
+            ],
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": {
+                  "en": "See it on the map — Atlas",
+                  "ko": "지도에서 보기 — Atlas",
+                  "zh": "在地图上查看 — Atlas",
+                  "hi": "मानचित्र पर देखें — Atlas",
+                  "es": "Verlo en el mapa — Atlas",
+                  "fr": "Le voir sur la carte — Atlas",
+                  "ar": "شاهدها على الخريطة — Atlas",
+                  "pt": "Veja no mapa — Atlas",
+                  "ru": "Посмотреть на карте — Atlas",
+                  "de": "Auf der Karte ansehen — Atlas",
+                  "ja": "地図で見る — Atlas",
+                  "tr": "Haritada gör — Atlas",
+                  "vi": "Xem trên bản đồ — Atlas",
+                  "it": "Guardalo sulla mappa — Atlas",
+                  "fa": "دیدن روی نقشه — Atlas",
+                  "pl": "Zobacz na mapie — Atlas",
+                  "uk": "Переглянути на карті — Atlas",
+                  "nl": "Bekijk het op de kaart — Atlas",
+                  "sv": "Se det på kartan — Atlas",
+                  "cs": "Zobrazit na mapě — Atlas",
+                  "el": "Δείτε το στον χάρτη — Atlas"
+                },
+                "icon": "travel_explore",
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "openApplet",
+                    "appId": "atlas",
+                    "title": "Atlas — place analysis"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "The logic — Urbanset",
+                  "ko": "로직 보기 — Urbanset",
+                  "zh": "逻辑详情 — Urbanset",
+                  "hi": "तर्क — Urbanset",
+                  "es": "La lógica — Urbanset",
+                  "fr": "La logique — Urbanset",
+                  "ar": "المنطق — Urbanset",
+                  "pt": "A lógica — Urbanset",
+                  "ru": "Логика — Urbanset",
+                  "de": "Die Logik — Urbanset",
+                  "ja": "ロジック — Urbanset",
+                  "tr": "Mantık — Urbanset",
+                  "vi": "Logic — Urbanset",
+                  "it": "La logica — Urbanset",
+                  "fa": "منطق — Urbanset",
+                  "pl": "Logika — Urbanset",
+                  "uk": "Логіка — Urbanset",
+                  "nl": "De logica — Urbanset",
+                  "sv": "Logiken — Urbanset",
+                  "cs": "Logika — Urbanset",
+                  "el": "Η λογική — Urbanset"
+                },
+                "icon": "account_tree",
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "openApplet",
+                    "appId": "terrain",
+                    "title": "Urbanset"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "provenance": {
+      "title": {
+        "en": "Provenance",
+        "ko": "출처 추적",
+        "zh": "溯源",
+        "hi": "उद्गम",
+        "es": "Procedencia",
+        "fr": "Provenance",
+        "ar": "التتبع",
+        "pt": "Proveniência",
+        "ru": "Происхождение",
+        "de": "Herkunft",
+        "ja": "来歴",
+        "tr": "Köken",
+        "vi": "Nguồn gốc",
+        "it": "Provenienza",
+        "fa": "ردیابی منشأ",
+        "pl": "Pochodzenie",
+        "uk": "Походження",
+        "nl": "Herkomst",
+        "sv": "Ursprung",
+        "cs": "Původ",
+        "el": "Προέλευση"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Trace any number end to end: run → model version → input datasets → soundness checks → confidence tier.",
+              "ko": "모든 수치를 처음부터 끝까지 추적: 실행 → 모델 버전 → 입력 데이터셋 → 타당성 검사 → 신뢰도 등급.",
+              "zh": "端到端追踪任意数字：运行 → 模型版本 → 输入数据集 → 合理性检查 → 置信度层级。",
+              "hi": "किसी भी संख्या को आद्यंत ट्रेस करें: रन → मॉडल संस्करण → इनपुट डेटासेट → सुदृढ़ता जांच → विश्वास स्तर।",
+              "es": "Rastrea cualquier número de principio a fin: ejecución → versión del modelo → conjuntos de datos de entrada → verificaciones de solidez → nivel de confianza.",
+              "fr": "Retracez n'importe quel chiffre de bout en bout : exécution → version du modèle → jeux de données d'entrée → vérifications de cohérence → niveau de confiance.",
+              "ar": "تتبّع أي رقم من البداية إلى النهاية: التشغيل ← إصدار النموذج ← مجموعات بيانات الإدخال ← فحوصات السلامة ← مستوى الثقة.",
+              "pt": "Rastreie qualquer número de ponta a ponta: execução → versão do modelo → conjuntos de dados de entrada → verificações de solidez → nível de confiança.",
+              "ru": "Отследите любое число от начала до конца: запуск → версия модели → входные наборы данных → проверки достоверности → уровень доверия.",
+              "de": "Verfolge jede Zahl lückenlos: Lauf → Modellversion → Eingabedatensätze → Plausibilitätsprüfungen → Vertrauensstufe.",
+              "ja": "任意の数値を最初から最後まで追跡: 実行 → モデルバージョン → 入力データセット → 妥当性チェック → 信頼度層。",
+              "tr": "Herhangi bir sayıyı uçtan uca izleyin: çalıştırma → model sürümü → girdi veri kümeleri → geçerlilik kontrolleri → güven düzeyi.",
+              "vi": "Theo dõi bất kỳ con số nào từ đầu đến cuối: lượt chạy → phiên bản mô hình → tập dữ liệu đầu vào → kiểm tra độ tin cậy → cấp độ tin cậy.",
+              "it": "Traccia qualsiasi numero dall'inizio alla fine: esecuzione → versione del modello → set di dati di input → controlli di solidità → livello di affidabilità.",
+              "fa": "هر عددی را از ابتدا تا انتها ردیابی کنید: اجرا → نسخه مدل → مجموعه‌داده‌های ورودی → بررسی‌های صحت → سطح اطمینان.",
+              "pl": "Śledź dowolną liczbę od początku do końca: uruchomienie → wersja modelu → zbiory danych wejściowych → kontrole poprawności → poziom pewności.",
+              "uk": "Відстежуйте будь-яке число від початку до кінця: запуск → версія моделі → вхідні набори даних → перевірки достовірності → рівень довіри.",
+              "nl": "Traceer elk getal van begin tot eind: run → modelversie → invoerdatasets → soliditeitscontroles → betrouwbaarheidsniveau.",
+              "sv": "Spåra vilket tal som helst från början till slut: körning → modellversion → indata-dataset → soliditetskontroller → tillförlitlighetsnivå.",
+              "cs": "Sledujte libovolné číslo od začátku do konce: běh → verze modelu → vstupní datové sady → kontroly platnosti → úroveň důvěryhodnosti.",
+              "el": "Ιχνηλατήστε οποιονδήποτε αριθμό από άκρη σε άκρη: εκτέλεση → έκδοση μοντέλου → σύνολα δεδομένων εισόδου → έλεγχοι εγκυρότητας → επίπεδο εμπιστοσύνης."
+            }
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": {
+              "en": "Run record",
+              "ko": "실행 기록",
+              "zh": "运行记录",
+              "hi": "रन रिकॉर्ड",
+              "es": "Registro de ejecución",
+              "fr": "Enregistrement d'exécution",
+              "ar": "سجل التشغيل",
+              "pt": "Registro de execução",
+              "ru": "Запись запуска",
+              "de": "Laufdatensatz",
+              "ja": "実行記録",
+              "tr": "Çalıştırma kaydı",
+              "vi": "Bản ghi lượt chạy",
+              "it": "Registro dell'esecuzione",
+              "fa": "سابقه اجرا",
+              "pl": "Rekord uruchomienia",
+              "uk": "Запис запуску",
+              "nl": "Runrecord",
+              "sv": "Körningspost",
+              "cs": "Záznam běhu",
+              "el": "Εγγραφή εκτέλεσης"
+            }
+          },
+          {
+            "type": "record",
+            "table": "runs",
+            "readOnly": true,
+            "fields": [
+              "label",
+              "city",
+              "year",
+              "scenario",
+              "model_version",
+              "tier",
+              "total_trips",
+              "transit_pct",
+              "avg_trip_mi",
+              "pass_count",
+              "warn_count",
+              "fail_count"
+            ]
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": {
+              "en": "Inputs",
+              "ko": "입력",
+              "zh": "输入",
+              "hi": "इनपुट",
+              "es": "Entradas",
+              "fr": "Entrées",
+              "ar": "المدخلات",
+              "pt": "Entradas",
+              "ru": "Входные данные",
+              "de": "Eingaben",
+              "ja": "入力",
+              "tr": "Girdiler",
+              "vi": "Đầu vào",
+              "it": "Input",
+              "fa": "ورودی‌ها",
+              "pl": "Dane wejściowe",
+              "uk": "Вхідні дані",
+              "nl": "Invoer",
+              "sv": "Indata",
+              "cs": "Vstupy",
+              "el": "Είσοδοι"
+            }
+          },
+          {
+            "type": "table",
+            "table": "run_inputs",
+            "columns": [
+              "from",
+              "to",
+              "type"
+            ],
+            "height": 180
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": {
+              "en": "Soundness checks",
+              "ko": "타당성 검사",
+              "zh": "合理性检查",
+              "hi": "सुदृढ़ता जांच",
+              "es": "Verificaciones de solidez",
+              "fr": "Vérifications de cohérence",
+              "ar": "فحوصات السلامة",
+              "pt": "Verificações de solidez",
+              "ru": "Проверки достоверности",
+              "de": "Plausibilitätsprüfungen",
+              "ja": "妥当性チェック",
+              "tr": "Geçerlilik kontrolleri",
+              "vi": "Kiểm tra độ tin cậy",
+              "it": "Controlli di solidità",
+              "fa": "بررسی‌های صحت",
+              "pl": "Kontrole poprawności",
+              "uk": "Перевірки достовірності",
+              "nl": "Soliditeitscontroles",
+              "sv": "Soliditetskontroller",
+              "cs": "Kontroly platnosti",
+              "el": "Έλεγχοι εγκυρότητας"
+            }
+          },
+          {
+            "type": "cards",
+            "table": "soundness_checks",
+            "title": "check",
+            "subtitle": "detail",
+            "sortBy": "ord",
+            "sortDir": "asc",
+            "expandable": true,
+            "open": "Open check",
+            "tags": [
+              {
+                "column": "status",
+                "colors": {
+                  "pass": "green",
+                  "warn": "amber",
+                  "fail": "coral"
+                }
+              },
+              {
+                "column": "standard"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": {
+              "en": "Confidence tier",
+              "ko": "신뢰도 등급",
+              "zh": "置信度层级",
+              "hi": "विश्वास स्तर",
+              "es": "Nivel de confianza",
+              "fr": "Niveau de confiance",
+              "ar": "مستوى الثقة",
+              "pt": "Nível de confiança",
+              "ru": "Уровень доверия",
+              "de": "Vertrauensstufe",
+              "ja": "信頼度層",
+              "tr": "Güven düzeyi",
+              "vi": "Cấp độ tin cậy",
+              "it": "Livello di affidabilità",
+              "fa": "سطح اطمینان",
+              "pl": "Poziom pewności",
+              "uk": "Рівень довіри",
+              "nl": "Betrouwbaarheidsniveau",
+              "sv": "Tillförlitlighetsnivå",
+              "cs": "Úroveň důvěryhodnosti",
+              "el": "Επίπεδο εμπιστοσύνης"
+            }
+          },
+          {
+            "type": "cards",
+            "table": "confidence_tiers",
+            "title": "tier",
+            "subtitle": "meaning",
+            "expandable": true,
+            "open": "What earns / downgrades this tier"
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": {
+              "en": "Version history",
+              "ko": "버전 기록",
+              "zh": "版本历史",
+              "hi": "संस्करण इतिहास",
+              "es": "Historial de versiones",
+              "fr": "Historique des versions",
+              "ar": "سجل الإصدارات",
+              "pt": "Histórico de versões",
+              "ru": "История версий",
+              "de": "Versionsverlauf",
+              "ja": "バージョン履歴",
+              "tr": "Sürüm geçmişi",
+              "vi": "Lịch sử phiên bản",
+              "it": "Cronologia versioni",
+              "fa": "تاریخچه نسخه‌ها",
+              "pl": "Historia wersji",
+              "uk": "Історія версій",
+              "nl": "Versiegeschiedenis",
+              "sv": "Versionshistorik",
+              "cs": "Historie verzí",
+              "el": "Ιστορικό εκδόσεων"
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Each model version is a git sha; every run pins the exact sha that produced it, so the same code state can be restored and re-run.",
+              "ko": "각 모델 버전은 git sha입니다. 모든 실행은 자신을 만든 정확한 sha를 고정하므로, 동일한 코드 상태를 복원하고 재실행할 수 있습니다.",
+              "zh": "每个模型版本对应一个 git sha；每次运行都固定生成它的确切 sha，因此可以还原并重新运行相同的代码状态。",
+              "hi": "प्रत्येक मॉडल संस्करण एक git sha है; हर रन उस सटीक sha को पिन करता है जिसने उसे बनाया, ताकि उसी कोड स्थिति को पुनर्स्थापित और पुनः चलाया जा सके।",
+              "es": "Cada versión del modelo es un sha de git; cada ejecución fija el sha exacto que la produjo, para poder restaurar y volver a ejecutar el mismo estado del código.",
+              "fr": "Chaque version du modèle est un sha git ; chaque exécution épingle le sha exact qui l'a produite, afin de pouvoir restaurer et relancer le même état du code.",
+              "ar": "كل إصدار من النموذج هو sha في git؛ يثبّت كل تشغيل الـ sha الدقيق الذي أنتجه، بحيث يمكن استعادة نفس حالة الكود وإعادة تشغيلها.",
+              "pt": "Cada versão do modelo é um sha do git; cada execução fixa o sha exato que a produziu, para que o mesmo estado do código possa ser restaurado e reexecutado.",
+              "ru": "Каждая версия модели — это git sha; каждый запуск фиксирует точный sha, который его создал, поэтому то же состояние кода можно восстановить и запустить снова.",
+              "de": "Jede Modellversion ist ein Git-Sha; jeder Lauf fixiert genau den Sha, der ihn erzeugt hat, sodass derselbe Codestand wiederhergestellt und erneut ausgeführt werden kann.",
+              "ja": "各モデルバージョンは git sha です。すべての実行はそれを生成した正確な sha を固定するため、同じコード状態を復元して再実行できます。",
+              "tr": "Her model sürümü bir git sha'sıdır; her çalıştırma onu üreten tam sha'yı sabitler, böylece aynı kod durumu geri yüklenip yeniden çalıştırılabilir.",
+              "vi": "Mỗi phiên bản mô hình là một git sha; mỗi lượt chạy ghim đúng sha đã tạo ra nó, để có thể khôi phục và chạy lại cùng trạng thái mã.",
+              "it": "Ogni versione del modello è uno sha git; ogni esecuzione fissa lo sha esatto che l'ha prodotta, così lo stesso stato del codice può essere ripristinato e rieseguito.",
+              "fa": "هر نسخه مدل یک sha گیت است؛ هر اجرا sha دقیقی را که آن را تولید کرده ثابت می‌کند، تا بتوان همان وضعیت کد را بازیابی و دوباره اجرا کرد.",
+              "pl": "Każda wersja modelu to sha git; każde uruchomienie przypina dokładny sha, który je wygenerował, dzięki czemu ten sam stan kodu można przywrócić i uruchomić ponownie.",
+              "uk": "Кожна версія моделі — це git sha; кожен запуск фіксує точний sha, який його створив, тож той самий стан коду можна відновити й запустити знову.",
+              "nl": "Elke modelversie is een git-sha; elke run legt de exacte sha vast die hem heeft geproduceerd, zodat dezelfde codestatus kan worden hersteld en opnieuw uitgevoerd.",
+              "sv": "Varje modellversion är en git-sha; varje körning fäster den exakta sha som skapade den, så att samma kodtillstånd kan återställas och köras igen.",
+              "cs": "Každá verze modelu je git sha; každý běh připíná přesné sha, které jej vytvořilo, takže lze obnovit a znovu spustit stejný stav kódu.",
+              "el": "Κάθε έκδοση μοντέλου είναι ένα git sha· κάθε εκτέλεση καθηλώνει το ακριβές sha που την παρήγαγε, ώστε η ίδια κατάσταση κώδικα να μπορεί να αποκατασταθεί και να εκτελεστεί ξανά."
+            }
+          },
+          {
+            "type": "table",
+            "table": "model_history",
+            "columns": [
+              "model_version",
+              "date",
+              "kind",
+              "what_changed",
+              "by"
+            ],
+            "height": 220,
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    },
+    "data": {
+      "title": {
+        "en": "Data — sources, feeds, shapes, layers",
+        "ko": "데이터 — 출처, 피드, 형상, 레이어",
+        "zh": "数据 — 来源、订阅源、图形、图层",
+        "hi": "डेटा — स्रोत, फ़ीड, आकृतियाँ, परतें",
+        "es": "Datos: fuentes, feeds, formas, capas",
+        "fr": "Données — sources, flux, formes, couches",
+        "ar": "البيانات — المصادر، التغذيات، الأشكال، الطبقات",
+        "pt": "Dados — fontes, feeds, formas, camadas",
+        "ru": "Данные — источники, ленты, формы, слои",
+        "de": "Daten — Quellen, Feeds, Formen, Ebenen",
+        "ja": "データ — ソース、フィード、シェイプ、レイヤー",
+        "tr": "Veri — kaynaklar, akışlar, şekiller, katmanlar",
+        "vi": "Dữ liệu — nguồn, luồng dữ liệu, hình dạng, lớp",
+        "it": "Dati — fonti, feed, forme, livelli",
+        "fa": "داده — منابع، فیدها، شکل‌ها، لایه‌ها",
+        "pl": "Dane — źródła, kanały, kształty, warstwy",
+        "uk": "Дані — джерела, стрічки, форми, шари",
+        "nl": "Data — bronnen, feeds, vormen, lagen",
+        "sv": "Data — källor, flöden, former, lager",
+        "cs": "Data — zdroje, kanály, tvary, vrstvy",
+        "el": "Δεδομένα — πηγές, ροές, σχήματα, επίπεδα"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Everything the models read and paint, in one place — add, import, or take out any of it; every entry is an editable row with provenance.",
+              "ko": "모델이 읽고 그리는 모든 것을 한곳에서 — 추가, 가져오기, 제거가 모두 가능하며, 각 항목은 출처가 있는 편집 가능한 행입니다.",
+              "zh": "模型读取和绘制的一切都在这里——可以添加、导入或移除；每条记录都是带溯源信息的可编辑行。",
+              "hi": "मॉडल जो कुछ भी पढ़ते और बनाते हैं, वह सब एक जगह — जोड़ें, आयात करें, या हटाएं; हर प्रविष्टि उद्गम सहित संपादन योग्य पंक्ति है।",
+              "es": "Todo lo que los modelos leen y dibujan, en un solo lugar: añade, importa o elimina cualquiera de ellos; cada entrada es una fila editable con procedencia.",
+              "fr": "Tout ce que les modèles lisent et dessinent, en un seul endroit — ajoutez, importez ou retirez n'importe quel élément ; chaque entrée est une ligne modifiable avec provenance.",
+              "ar": "كل ما تقرأه النماذج وترسمه، في مكان واحد — أضف أو استورد أو أزل أيًا منها؛ كل إدخال هو صف قابل للتعديل مع تتبع المصدر.",
+              "pt": "Tudo o que os modelos leem e desenham, em um só lugar — adicione, importe ou remova qualquer um; cada entrada é uma linha editável com proveniência.",
+              "ru": "Всё, что модели читают и отображают, в одном месте — добавляйте, импортируйте или удаляйте что угодно; каждая запись — редактируемая строка с указанием происхождения.",
+              "de": "Alles, was die Modelle lesen und darstellen, an einem Ort — füge hinzu, importiere oder entferne beliebig; jeder Eintrag ist eine bearbeitbare Zeile mit Herkunftsangabe.",
+              "ja": "モデルが読み込み描画するすべてを一か所に — 追加、インポート、削除が自由。各エントリは来歴付きの編集可能な行です。",
+              "tr": "Modellerin okuduğu ve çizdiği her şey tek bir yerde — herhangi birini ekleyin, içe aktarın veya çıkarın; her giriş kökeni olan düzenlenebilir bir satırdır.",
+              "vi": "Mọi thứ mà mô hình đọc và vẽ, ở một nơi — thêm, nhập hoặc loại bỏ bất kỳ mục nào; mỗi mục là một hàng có thể chỉnh sửa kèm nguồn gốc.",
+              "it": "Tutto ciò che i modelli leggono e disegnano, in un unico posto — aggiungi, importa o rimuovi qualsiasi elemento; ogni voce è una riga modificabile con provenienza.",
+              "fa": "هرآنچه مدل‌ها می‌خوانند و ترسیم می‌کنند، در یک مکان — هرکدام را اضافه، وارد یا حذف کنید؛ هر ورودی یک ردیف قابل ویرایش با منشأ مشخص است.",
+              "pl": "Wszystko, co modele odczytują i rysują, w jednym miejscu — dodawaj, importuj lub usuwaj dowolny element; każdy wpis to edytowalny wiersz z pochodzeniem.",
+              "uk": "Усе, що моделі читають і малюють, в одному місці — додавайте, імпортуйте чи вилучайте будь-що; кожен запис — редагований рядок із зазначенням походження.",
+              "nl": "Alles wat de modellen lezen en tekenen, op één plek — voeg toe, importeer of verwijder wat dan ook; elke invoer is een bewerkbare rij met herkomst.",
+              "sv": "Allt modellerna läser och ritar, på ett ställe — lägg till, importera eller ta bort vad som helst; varje post är en redigerbar rad med ursprung.",
+              "cs": "Vše, co modely čtou a vykreslují, na jednom místě — přidávejte, importujte nebo odebírejte cokoli; každý záznam je upravitelný řádek s původem.",
+              "el": "Ό,τι διαβάζουν και σχεδιάζουν τα μοντέλα, σε ένα μέρος — προσθέστε, εισαγάγετε ή αφαιρέστε οτιδήποτε· κάθε καταχώριση είναι μια επεξεργάσιμη γραμμή με προέλευση."
+            }
+          },
+          {
+            "type": "segments",
+            "segments": [
+              {
+                "label": "Sources",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "row",
+                      "children": [
+                        {
+                          "type": "button",
+                          "label": {
+                            "en": "Add dataset",
+                            "ko": "데이터셋 추가",
+                            "zh": "添加数据集",
+                            "hi": "डेटासेट जोड़ें",
+                            "es": "Añadir conjunto de datos",
+                            "fr": "Ajouter un jeu de données",
+                            "ar": "إضافة مجموعة بيانات",
+                            "pt": "Adicionar conjunto de dados",
+                            "ru": "Добавить набор данных",
+                            "de": "Datensatz hinzufügen",
+                            "ja": "データセットを追加",
+                            "tr": "Veri kümesi ekle",
+                            "vi": "Thêm tập dữ liệu",
+                            "it": "Aggiungi set di dati",
+                            "fa": "افزودن مجموعه‌داده",
+                            "pl": "Dodaj zbiór danych",
+                            "uk": "Додати набір даних",
+                            "nl": "Dataset toevoegen",
+                            "sv": "Lägg till dataset",
+                            "cs": "Přidat datovou sadu",
+                            "el": "Προσθήκη συνόλου δεδομένων"
+                          },
+                          "icon": "add",
+                          "action": {
+                            "fn": "addRow",
+                            "args": {
+                              "table": "datasets"
+                            }
+                          }
+                        },
+                        {
+                          "type": "button",
+                          "label": {
+                            "en": "Import CSV",
+                            "ko": "CSV 가져오기",
+                            "zh": "导入 CSV",
+                            "hi": "CSV आयात करें",
+                            "es": "Importar CSV",
+                            "fr": "Importer un CSV",
+                            "ar": "استيراد CSV",
+                            "pt": "Importar CSV",
+                            "ru": "Импорт CSV",
+                            "de": "CSV importieren",
+                            "ja": "CSVをインポート",
+                            "tr": "CSV içe aktar",
+                            "vi": "Nhập CSV",
+                            "it": "Importa CSV",
+                            "fa": "درون‌ریزی CSV",
+                            "pl": "Importuj CSV",
+                            "uk": "Імпортувати CSV",
+                            "nl": "CSV importeren",
+                            "sv": "Importera CSV",
+                            "cs": "Importovat CSV",
+                            "el": "Εισαγωγή CSV"
+                          },
+                          "icon": "upload",
+                          "action": {
+                            "fn": "hostCall",
+                            "args": {
+                              "name": "importCsv",
+                              "table": "datasets"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "style": "caption",
+                      "value": {
+                        "en": "Every dataset that feeds the model, with its source, vintage and access — the data-lineage spine.",
+                        "ko": "모델에 입력되는 모든 데이터셋을 출처, 연도, 접근 방식과 함께 표시 — 데이터 계보의 근간입니다.",
+                        "zh": "输入模型的每个数据集，包含其来源、年份和访问方式——数据血缘的主干。",
+                        "hi": "मॉडल को फीड करने वाला हर डेटासेट, उसके स्रोत, वर्ष और पहुंच के साथ — डेटा-वंशावली की रीढ़।",
+                        "es": "Cada conjunto de datos que alimenta el modelo, con su fuente, año y acceso: la columna vertebral del linaje de datos.",
+                        "fr": "Chaque jeu de données alimentant le modèle, avec sa source, son millésime et son accès — l'épine dorsale de la traçabilité des données.",
+                        "ar": "كل مجموعة بيانات تغذي النموذج، مع مصدرها وسنتها وطريقة الوصول إليها — العمود الفقري لتتبع أصل البيانات.",
+                        "pt": "Cada conjunto de dados que alimenta o modelo, com sua fonte, ano e acesso — a espinha dorsal da linhagem de dados.",
+                        "ru": "Каждый набор данных, питающий модель, с его источником, годом и способом доступа — основа происхождения данных.",
+                        "de": "Jeder Datensatz, der das Modell speist, mit Quelle, Jahrgang und Zugriff — das Rückgrat der Datenherkunft.",
+                        "ja": "モデルに供給されるすべてのデータセットを、出所・年次・アクセス方法とともに表示 — データ系譜の背骨です。",
+                        "tr": "Modeli besleyen her veri kümesi, kaynağı, sürümü ve erişimiyle birlikte — veri soy kütüğünün omurgası.",
+                        "vi": "Mọi tập dữ liệu nuôi mô hình, kèm nguồn, niên đại và cách truy cập — xương sống của phả hệ dữ liệu.",
+                        "it": "Ogni set di dati che alimenta il modello, con la sua fonte, l'annata e l'accesso — la spina dorsale della tracciabilità dei dati.",
+                        "fa": "هر مجموعه‌داده‌ای که مدل را تغذیه می‌کند، همراه با منبع، سال و دسترسی آن — ستون فقرات شجره داده.",
+                        "pl": "Każdy zbiór danych zasilający model, wraz ze źródłem, rocznikiem i dostępem — kręgosłup pochodzenia danych.",
+                        "uk": "Кожен набір даних, що живить модель, із джерелом, роком і доступом — хребет походження даних.",
+                        "nl": "Elke dataset die het model voedt, met bron, jaargang en toegang — de ruggengraat van de dataherkomst.",
+                        "sv": "Varje dataset som matar modellen, med källa, årgång och åtkomst — ryggraden i datahärledningen.",
+                        "cs": "Každá datová sada, která krmí model, se svým zdrojem, ročníkem a přístupem — páteř původu dat.",
+                        "el": "Κάθε σύνολο δεδομένων που τροφοδοτεί το μοντέλο, με την πηγή, τη χρονιά και την πρόσβασή του — η ραχοκοκαλιά της προέλευσης δεδομένων."
+                      }
+                    },
+                    {
+                      "type": "cards",
+                      "table": "datasets",
+                      "title": "name",
+                      "subtitle": "source",
+                      "search": true,
+                      "searchColumns": [
+                        "name",
+                        "source",
+                        "used_by"
+                      ],
+                      "collapsible": true,
+                      "groupByOptions": [
+                        {
+                          "label": "Access",
+                          "column": "keyed"
+                        }
+                      ],
+                      "tags": [
+                        {
+                          "column": "keyed",
+                          "colors": {
+                            "keyless": "green",
+                            "api-key": "amber",
+                            "license": "red"
+                          }
+                        }
+                      ],
+                      "expandable": true,
+                      "expandFields": [
+                        {
+                          "column": "source",
+                          "label": "Source"
+                        },
+                        {
+                          "column": "vintage",
+                          "label": "Vintage / year"
+                        },
+                        {
+                          "column": "used_by",
+                          "label": "Used by"
+                        },
+                        {
+                          "column": "citation",
+                          "label": "URL / citation"
+                        }
+                      ],
+                      "action": {
+                        "fn": "editRow"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "GTFS",
+                "child": {
+                  "type": "column",
+                  "children": [
+                    {
+                      "type": "row",
+                      "children": [
+                        {
+                          "type": "button",
+                          "label": {
+                            "en": "Add GTFS feed",
+                            "ko": "GTFS 피드 추가",
+                            "zh": "添加 GTFS 数据源",
+                            "hi": "GTFS फ़ीड जोड़ें",
+                            "es": "Añadir feed GTFS",
+                            "fr": "Ajouter un flux GTFS",
+                            "ar": "إضافة تغذية GTFS",
+                            "pt": "Adicionar feed GTFS",
+                            "ru": "Добавить фид GTFS",
+                            "de": "GTFS-Feed hinzufügen",
+                            "ja": "GTFSフィードを追加",
+                            "tr": "GTFS akışı ekle",
+                            "vi": "Thêm luồng GTFS",
+                            "it": "Aggiungi feed GTFS",
+                            "fa": "افزودن فید GTFS",
+                            "pl": "Dodaj kanał GTFS",
+                            "uk": "Додати фід GTFS",
+                            "nl": "GTFS-feed toevoegen",
+                            "sv": "Lägg till GTFS-flöde",
+                            "cs": "Přidat GTFS kanál",
+                            "el": "Προσθήκη ροής GTFS"
+                          },
+                          "icon": "add",
+                          "action": {
+                            "fn": "addRow",
+                            "args": {
+                              "table": "datasets",
+                              "values": {
+                                "kind": "gtfs",
+                                "keyed": "keyless",
+                                "status": "active"
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "table",
+                      "table": "datasets",
+                      "filters": {
+                        "kind": "gtfs"
+                      },
+                      "columns": [
+                        "name",
+                        "source",
+                        "endpoint",
+                        "vintage",
+                        "status"
+                      ],
+                      "height": 300,
+                      "action": {
+                        "fn": "editRow"
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "label": {
+                        "en": "Run on server — coming soon",
+                        "ko": "서버에서 실행 — 곧 지원 예정",
+                        "zh": "在服务器上运行 — 即将推出",
+                        "hi": "सर्वर पर चलाएं — जल्द आ रहा है",
+                        "es": "Ejecutar en el servidor: próximamente",
+                        "fr": "Exécuter sur le serveur — bientôt disponible",
+                        "ar": "التشغيل على الخادم — قريبًا",
+                        "pt": "Executar no servidor — em breve",
+                        "ru": "Запуск на сервере — скоро",
+                        "de": "Auf Server ausführen — bald verfügbar",
+                        "ja": "サーバーで実行 — 近日公開",
+                        "tr": "Sunucuda çalıştır — yakında",
+                        "vi": "Chạy trên máy chủ — sắp ra mắt",
+                        "it": "Esegui sul server — prossimamente",
+                        "fa": "اجرا روی سرور — به‌زودی",
+                        "pl": "Uruchom na serwerze — wkrótce",
+                        "uk": "Запуск на сервері — незабаром",
+                        "nl": "Uitvoeren op server — binnenkort",
+                        "sv": "Kör på server — kommer snart",
+                        "cs": "Spustit na serveru — již brzy",
+                        "el": "Εκτέλεση στον διακομιστή — σύντομα"
+                      },
+                      "icon": "cloud_download",
+                      "action": {
+                        "fn": "http",
+                        "onError": "continue",
+                        "confirm": "Intent recorded — feed refresh runs server-side once /model authorizes terrain.",
+                        "args": {
+                          "method": "POST",
+                          "url": "https://167.233.64.97/model/gtfs_refresh",
+                          "body": {
+                            "table": "datasets"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "about": {
+      "title": {
+        "en": "About Scenarios",
+        "ko": "Scenarios 소개",
+        "zh": "关于 Scenarios",
+        "hi": "Scenarios के बारे में",
+        "es": "Acerca de Scenarios",
+        "fr": "À propos de Scenarios",
+        "ar": "حول Scenarios",
+        "pt": "Sobre o Scenarios",
+        "ru": "О Scenarios",
+        "de": "Über Scenarios",
+        "ja": "Scenarios について",
+        "tr": "Scenarios Hakkında",
+        "vi": "Giới thiệu Scenarios",
+        "it": "Informazioni su Scenarios",
+        "fa": "درباره Scenarios",
+        "pl": "O aplikacji Scenarios",
+        "uk": "Про Scenarios",
+        "nl": "Over Scenarios",
+        "sv": "Om Scenarios",
+        "cs": "O aplikaci Scenarios",
+        "el": "Σχετικά με το Scenarios"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": {
+              "en": "Configure, run, and prove it",
+              "ko": "구성하고, 실행하고, 증명하기",
+              "zh": "配置、运行并验证",
+              "hi": "कॉन्फ़िगर करें, चलाएं, और सिद्ध करें",
+              "es": "Configura, ejecuta y demuéstralo",
+              "fr": "Configurer, exécuter, prouver",
+              "ar": "اضبطه، شغّله، وأثبته",
+              "pt": "Configure, execute e comprove",
+              "ru": "Настройте, запустите и докажите",
+              "de": "Konfigurieren, ausführen, belegen",
+              "ja": "構成し、実行し、証明する",
+              "tr": "Yapılandır, çalıştır, kanıtla",
+              "vi": "Cấu hình, chạy, và chứng minh",
+              "it": "Configura, esegui e dimostralo",
+              "fa": "پیکربندی، اجرا و اثبات کنید",
+              "pl": "Skonfiguruj, uruchom i udowodnij",
+              "uk": "Налаштуйте, запустіть і доведіть",
+              "nl": "Configureer, voer uit en bewijs het",
+              "sv": "Konfigurera, kör och bevisa",
+              "cs": "Nakonfigurujte, spusťte a dokažte to",
+              "el": "Ρυθμίστε, εκτελέστε και αποδείξτε το"
+            }
+          },
+          {
+            "type": "text",
+            "value": {
+              "en": "Scenarios is the run room of the urban-models suite: set up a model run, create scenarios, and keep the proof — every run pins its model version, its input data sources (including GTFS feeds), the 11-check soundness audit it passed, and a confidence tier. The map lives in Atlas; the logic lives in Urbanset; reports live in Model reports.",
+              "ko": "Scenarios는 도시 모델 스위트의 실행실입니다: 모델 실행을 설정하고, 시나리오를 생성하고, 증거를 보관합니다 — 모든 실행은 모델 버전, 입력 데이터 소스(GTFS 피드 포함), 통과한 11개 항목 타당성 감사, 신뢰도 등급을 고정합니다. 지도는 Atlas에, 로직은 Urbanset에, 보고서는 Model reports에 있습니다.",
+              "zh": "Scenarios 是城市模型套件的运行室：设置模型运行、创建场景并保留证明——每次运行都固定其模型版本、输入数据源（包括 GTFS 数据源）、通过的 11 项合理性审计以及置信度层级。地图位于 Atlas；逻辑位于 Urbanset；报告位于 Model reports。",
+              "hi": "Scenarios शहरी-मॉडल सुइट का रन कक्ष है: मॉडल रन सेट करें, परिदृश्य बनाएं, और प्रमाण रखें — हर रन अपने मॉडल संस्करण, इनपुट डेटा स्रोतों (GTFS फ़ीड सहित), उत्तीर्ण 11-जांच सुदृढ़ता ऑडिट, और विश्वास स्तर को पिन करता है। मानचित्र Atlas में है; तर्क Urbanset में है; रिपोर्ट Model reports में हैं।",
+              "es": "Scenarios es la sala de ejecución del conjunto de modelos urbanos: configura una ejecución del modelo, crea escenarios y conserva la prueba — cada ejecución fija su versión del modelo, sus fuentes de datos de entrada (incluidos los feeds GTFS), la auditoría de solidez de 11 verificaciones que superó, y un nivel de confianza. El mapa vive en Atlas; la lógica vive en Urbanset; los informes viven en Model reports.",
+              "fr": "Scenarios est la salle d'exécution de la suite de modèles urbains : configurez une exécution de modèle, créez des scénarios et conservez la preuve — chaque exécution épingle sa version de modèle, ses sources de données d'entrée (y compris les flux GTFS), l'audit de cohérence à 11 vérifications qu'elle a réussi, et un niveau de confiance. La carte se trouve dans Atlas ; la logique dans Urbanset ; les rapports dans Model reports.",
+              "ar": "Scenarios هي غرفة التشغيل لمجموعة النماذج الحضرية: أعدّ تشغيل نموذج، وأنشئ سيناريوهات، واحتفظ بالإثبات — يثبّت كل تشغيل إصدار نموذجه، ومصادر بياناته المدخلة (بما فيها تغذيات GTFS)، وتدقيق السلامة المكوّن من 11 فحصًا الذي اجتازه، ومستوى الثقة. الخريطة موجودة في Atlas؛ والمنطق في Urbanset؛ والتقارير في Model reports.",
+              "pt": "Scenarios é a sala de execução do conjunto de modelos urbanos: configure uma execução do modelo, crie cenários e guarde a prova — cada execução fixa sua versão do modelo, suas fontes de dados de entrada (incluindo feeds GTFS), a auditoria de solidez de 11 verificações que passou, e um nível de confiança. O mapa fica no Atlas; a lógica fica no Urbanset; os relatórios ficam em Model reports.",
+              "ru": "Scenarios — это комната запуска в наборе городских моделей: настройте запуск модели, создайте сценарии и сохраните доказательство — каждый запуск фиксирует версию модели, источники входных данных (включая фиды GTFS), пройденный аудит достоверности из 11 проверок и уровень доверия. Карта находится в Atlas; логика — в Urbanset; отчёты — в Model reports.",
+              "de": "Scenarios ist der Ausführungsraum der Urban-Models-Suite: Richte einen Modelllauf ein, erstelle Szenarien und bewahre den Nachweis — jeder Lauf fixiert seine Modellversion, seine Eingabedatenquellen (einschließlich GTFS-Feeds), das bestandene 11-Punkte-Plausibilitätsaudit und eine Vertrauensstufe. Die Karte liegt in Atlas; die Logik in Urbanset; Berichte in Model reports.",
+              "ja": "Scenarios は都市モデル群の実行室です：モデル実行を設定し、シナリオを作成し、証拠を保管します — すべての実行はモデルバージョン、入力データソース（GTFSフィード含む）、合格した11項目の妥当性監査、信頼度層を固定します。地図はAtlasに、ロジックはUrbansetに、レポートはModel reportsにあります。",
+              "tr": "Scenarios, kentsel model paketinin çalıştırma odasıdır: bir model çalıştırması ayarlayın, senaryolar oluşturun ve kanıtı saklayın — her çalıştırma model sürümünü, girdi veri kaynaklarını (GTFS akışları dahil), geçtiği 11 kontrollü geçerlilik denetimini ve bir güven düzeyini sabitler. Harita Atlas'ta; mantık Urbanset'te; raporlar Model reports'ta yaşar.",
+              "vi": "Scenarios là phòng chạy của bộ mô hình đô thị: thiết lập một lượt chạy mô hình, tạo kịch bản, và giữ bằng chứng — mỗi lượt chạy ghim phiên bản mô hình, nguồn dữ liệu đầu vào (bao gồm luồng GTFS), cuộc kiểm toán độ tin cậy 11 mục đã vượt qua, và một cấp độ tin cậy. Bản đồ nằm trong Atlas; logic nằm trong Urbanset; báo cáo nằm trong Model reports.",
+              "it": "Scenarios è la sala di esecuzione della suite di modelli urbani: configura un'esecuzione del modello, crea scenari e conserva la prova — ogni esecuzione fissa la sua versione del modello, le sue fonti di dati di input (compresi i feed GTFS), l'audit di solidità a 11 controlli superato, e un livello di affidabilità. La mappa vive in Atlas; la logica vive in Urbanset; i report vivono in Model reports.",
+              "fa": "Scenarios اتاق اجرای مجموعه مدل‌های شهری است: یک اجرای مدل را تنظیم کنید، سناریوها بسازید و مدرک را نگه دارید — هر اجرا نسخه مدل، منابع داده ورودی (شامل فیدهای GTFS)، ممیزی صحت ۱۱ بخشی که قبول شده، و یک سطح اطمینان را ثابت می‌کند. نقشه در Atlas است؛ منطق در Urbanset است؛ گزارش‌ها در Model reports هستند.",
+              "pl": "Scenarios to pokój uruchamiania pakietu modeli miejskich: skonfiguruj uruchomienie modelu, twórz scenariusze i zachowuj dowód — każde uruchomienie przypina swoją wersję modelu, źródła danych wejściowych (w tym kanały GTFS), zaliczony 11-punktowy audyt poprawności oraz poziom pewności. Mapa znajduje się w Atlas; logika w Urbanset; raporty w Model reports.",
+              "uk": "Scenarios — це кімната запуску набору міських моделей: налаштуйте запуск моделі, створюйте сценарії та зберігайте доказ — кожен запуск фіксує версію моделі, джерела вхідних даних (зокрема фіди GTFS), пройдений аудит достовірності з 11 перевірок і рівень довіри. Карта в Atlas; логіка в Urbanset; звіти в Model reports.",
+              "nl": "Scenarios is de uitvoerkamer van de stedelijke-modellensuite: stel een modelrun in, maak scenario's aan en bewaar het bewijs — elke run legt zijn modelversie, invoerdatabronnen (inclusief GTFS-feeds), de geslaagde 11-punts soliditeitsaudit en een betrouwbaarheidsniveau vast. De kaart bevindt zich in Atlas; de logica in Urbanset; rapporten in Model reports.",
+              "sv": "Scenarios är körrummet i sviten av urbana modeller: ställ in en modellkörning, skapa scenarier och behåll beviset — varje körning fäster sin modellversion, sina indata-källor (inklusive GTFS-flöden), den godkända 11-punkts soliditetsrevisionen och en tillförlitlighetsnivå. Kartan finns i Atlas; logiken finns i Urbanset; rapporter finns i Model reports.",
+              "cs": "Scenarios je spouštěcí místnost sady městských modelů: nastavte běh modelu, vytvářejte scénáře a uchovávejte důkaz — každý běh připíná svou verzi modelu, své vstupní datové zdroje (včetně kanálů GTFS), úspěšně provedený 11bodový audit platnosti a úroveň důvěryhodnosti. Mapa žije v Atlas; logika žije v Urbanset; zprávy žijí v Model reports.",
+              "el": "Το Scenarios είναι το δωμάτιο εκτέλεσης της σουίτας αστικών μοντέλων: ρυθμίστε μια εκτέλεση μοντέλου, δημιουργήστε σενάρια και κρατήστε την απόδειξη — κάθε εκτέλεση καθηλώνει την έκδοση μοντέλου της, τις πηγές δεδομένων εισόδου της (συμπεριλαμβανομένων ροών GTFS), τον έλεγχο εγκυρότητας 11 σημείων που πέρασε, και ένα επίπεδο εμπιστοσύνης. Ο χάρτης βρίσκεται στο Atlas· η λογική στο Urbanset· οι αναφορές στο Model reports."
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Live server runs are authorization-locked today (the run button records the intent honestly); precomputed and imported runs carry the full trace.",
+              "ko": "실시간 서버 실행은 현재 인증으로 잠겨 있습니다(실행 버튼은 의도를 정직하게 기록합니다). 사전 계산되거나 가져온 실행은 전체 추적 정보를 포함합니다.",
+              "zh": "实时服务器运行目前受授权锁定（运行按钮如实记录意图）；预计算和导入的运行携带完整追踪信息。",
+              "hi": "लाइव सर्वर रन आज प्राधिकरण-लॉक्ड हैं (रन बटन इरादे को ईमानदारी से रिकॉर्ड करता है); पूर्व-गणना और आयातित रन पूर्ण ट्रेस रखते हैं।",
+              "es": "Las ejecuciones en servidor en vivo están bloqueadas por autorización hoy (el botón de ejecución registra la intención honestamente); las ejecuciones precalculadas e importadas llevan la traza completa.",
+              "fr": "Les exécutions en direct sur serveur sont actuellement verrouillées par autorisation (le bouton d'exécution enregistre honnêtement l'intention) ; les exécutions précalculées et importées portent la trace complète.",
+              "ar": "التشغيلات المباشرة على الخادم مقفلة حاليًا بالتفويض (يسجّل زر التشغيل النية بصدق)؛ التشغيلات المحسوبة مسبقًا والمستوردة تحمل التتبع الكامل.",
+              "pt": "As execuções em servidor ao vivo estão bloqueadas por autorização hoje (o botão de execução registra a intenção honestamente); execuções pré-computadas e importadas carregam o rastro completo.",
+              "ru": "Живые запуски на сервере сегодня заблокированы авторизацией (кнопка запуска честно фиксирует намерение); предварительно вычисленные и импортированные запуски несут полную трассировку.",
+              "de": "Live-Server-Läufe sind heute durch Autorisierung gesperrt (der Ausführen-Button erfasst die Absicht ehrlich); vorberechnete und importierte Läufe tragen die vollständige Rückverfolgung.",
+              "ja": "ライブサーバー実行は現在認可でロックされています（実行ボタンは意図を正直に記録します）。事前計算済みおよびインポート済みの実行は完全なトレースを保持します。",
+              "tr": "Canlı sunucu çalıştırmaları bugün yetkilendirmeyle kilitlidir (çalıştır düğmesi niyeti dürüstçe kaydeder); önceden hesaplanmış ve içe aktarılan çalıştırmalar tam izi taşır.",
+              "vi": "Lượt chạy máy chủ trực tiếp hiện bị khóa theo ủy quyền (nút chạy ghi lại ý định một cách trung thực); các lượt chạy tính trước và đã nhập mang theo dấu vết đầy đủ.",
+              "it": "Le esecuzioni live sul server sono oggi bloccate da autorizzazione (il pulsante di esecuzione registra onestamente l'intento); le esecuzioni precalcolate e importate portano la traccia completa.",
+              "fa": "اجراهای سرور زنده امروز با مجوز قفل شده‌اند (دکمه اجرا نیت را صادقانه ثبت می‌کند)؛ اجراهای از‌پیش‌محاسبه‌شده و درون‌ریزی‌شده ردیابی کامل را همراه دارند.",
+              "pl": "Uruchomienia na żywo na serwerze są dziś zablokowane autoryzacją (przycisk uruchomienia uczciwie rejestruje zamiar); uruchomienia prekomputowane i zaimportowane niosą pełny ślad.",
+              "uk": "Живі запуски на сервері сьогодні заблоковано авторизацією (кнопка запуску чесно фіксує намір); попередньо обчислені та імпортовані запуски несуть повний слід.",
+              "nl": "Live-serveruns zijn vandaag vergrendeld door autorisatie (de startknop legt de intentie eerlijk vast); vooraf berekende en geïmporteerde runs dragen het volledige spoor.",
+              "sv": "Live serverkörningar är idag låsta av auktorisering (körknappen registrerar avsikten ärligt); förberäknade och importerade körningar bär hela spåret.",
+              "cs": "Živé běhy na serveru jsou dnes uzamčeny autorizací (tlačítko spuštění poctivě zaznamenává záměr); předpočítané a importované běhy nesou úplnou stopu.",
+              "el": "Οι ζωντανές εκτελέσεις διακομιστή είναι σήμερα κλειδωμένες με εξουσιοδότηση (το κουμπί εκτέλεσης καταγράφει έντιμα την πρόθεση)· οι προϋπολογισμένες και εισαγόμενες εκτελέσεις φέρουν το πλήρες ίχνος."
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "tables": [
+    {
+      "name": "sheetmusicpieces",
+      "label": "Your pieces",
+      "icon": "library_music",
+      "description": "MusicXML files you opened (title, composer, rights line, the score text, date added). Local to this device, never synced."
+    },
+    {
+      "name": "sheetmusicsections",
+      "label": "Sections",
+      "icon": "repeat",
+      "description": "Saved named loops: piece, name, first and last bar, repeat total, last practised. Local to this device, never synced."
+    },
+    {
+      "name": "sheetmusicsettings",
+      "label": "Piece settings",
+      "icon": "tune",
+      "description": "Per piece: speed, hands, last section, goal tempo, key change, instrument, melody or chords. Local to this device, never synced."
+    },
+    {
+      "name": "sheetmusicplandays",
+      "label": "100 days progress",
+      "icon": "grid_view",
+      "description": "One row per day you touched in the 100-day plan: lesson read, drill done, repeats, the date it was finished, skipped. Local to this device, never synced."
+    },
+    {
+      "name": "sheetmusicplan",
+      "label": "100 days settings",
+      "icon": "event_repeat",
+      "description": "The 100-day plan's pace (my own pace / one day per date), start day and practised dates for the streak. Local to this device, never synced."
+    }
+  ]
+}

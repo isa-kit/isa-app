@@ -1,0 +1,1755 @@
+{
+  "app": {
+    "languages": [
+      "en",
+      "ko",
+      "zh",
+      "hi",
+      "es",
+      "fr",
+      "ar",
+      "pt",
+      "ru",
+      "de",
+      "ja",
+      "tr",
+      "vi",
+      "it",
+      "fa",
+      "pl",
+      "uk",
+      "nl",
+      "sv",
+      "cs",
+      "el"
+    ],
+    "translatable": true,
+    "appDataTools": true,
+    "title": {
+      "en": "Parley",
+      "ko": "Parley",
+      "zh": "Parley",
+      "hi": "Parley",
+      "es": "Parley",
+      "fr": "Parley",
+      "ar": "Parley",
+      "pt": "Parley",
+      "ru": "Parley",
+      "de": "Parley",
+      "ja": "Parley",
+      "tr": "Parley",
+      "vi": "Parley",
+      "it": "Parley",
+      "fa": "Parley",
+      "pl": "Parley",
+      "uk": "Parley",
+      "nl": "Parley",
+      "sv": "Parley",
+      "cs": "Parley",
+      "el": "Parley"
+    },
+    "primaryColor": "#2E7D6B",
+    "maxContentWidth": 760,
+    "theme": "pastel",
+    "liveSeconds": 2,
+    "intro": {
+      "purpose": {
+        "en": "A chat that translates as you type — pick your language above, and every message is shown in both languages.",
+        "ko": "입력하면서 번역되는 대화 — 위에서 언어를 선택하세요. 그리고 모든 메시지는 두 가지 언어로 표시됩니다.",
+        "zh": "一边打字一边翻译的聊天 — 选择上面的语言，每条消息都会显示两种语言。",
+        "hi": "चर्चा लिखते हुए अनुवादित होती है — ऊपर अपना भाषा चुनें, और प्रत्येक निबंध दोनों भाषाओं में दिखाई देता है।",
+        "es": "Una conversación que se traduce mientras escribes — elige tu idioma arriba, y cada mensaje se muestra en ambos idiomas.",
+        "fr": "Un chat qui se traduit en temps réel — choisissez votre langue au-dessus, et chaque message est affiché dans les deux langues.",
+        "ar": "محادثة تترجم أثناء الكتابة — اختر لغتك أعلاه، وتمثّل كل رسالة باللغتين.",
+        "pt": "A chat que traduz à medida que você digita — escolha o seu idioma acima, e cada mensagem aparece em ambos os idiomas.",
+        "ru": "Чат, который переводит текст при написании — выберите язык сверху, и каждый сообщение будет отображаться на обоих языках.",
+        "de": "Ein Chat, der while du tippest übersetzt — Wähle deine Sprache oben aus, und jede Nachricht wird in beiden Sprachen angezeigt.",
+        "ja": "タイプしている間に翻訳が行われるチャット — 上部から言語を選択してください。メッセージは両方の言語で表示されます。",
+        "tr": "Yazarken çeviri yapacak bir sohbet — yukarıdaki dil seçin ve her mesaj ikidili gösterilir.",
+        "vi": "Trò chuyện dịch tự động khi bạn gõ — chọn ngôn ngữ ở trên, và mỗi tin nhắn sẽ xuất hiện ở cả hai ngôn ngữ.",
+        "it": "Chat che traduce a mano a mano - scegli il tuo linguaggio sopra e ogni messaggio viene visualizzato in entrambe le lingue.",
+        "fa": "چتی که در حال نوشتن ترجمه می‌شود — زبان مورد نظر را بالا انتخاب کنید و هر پیام به زبان‌هایی در اینجا نمایش داده می‌شود.",
+        "pl": "A chat that translates as you type — pick your language above, and every message is shown in both languages.",
+        "uk": "Чат, який перекладає за написанням — виберіть мову вище, і кожне повідомлення показується на обох мовах.",
+        "nl": "Een chat die terwijl je typ vertaalt — kies je taal hierboven, en elke bericht wordt getoond in beide talen.",
+        "sv": "En chat som översätter med tanke — välj ditt språk ovan, och varje meddelande visas på båda språken.",
+        "cs": "A chat, který překládá při psaní — vyberte jazyk výše a každý zpráv je zobrazen v obou jazycích.",
+        "el": "Μια συνομιλία που μεταφέρεται με τον τύπο σας — επιλέξτε τη γλώσσα πάνω κάτω, και κάθε μήνυμα εμφανίζεται στις δύο γλώσσες."
+      },
+      "show": "never",
+      "actions": [
+        {
+          "label": {
+            "en": "Show example conversation again",
+            "ko": "다시 예시 대화를 표시",
+            "zh": "再次显示示例对话",
+            "hi": "पुनः उदाहरण चर्चा दिखाएं",
+            "es": "Mostrar conversación de ejemplo de nuevo",
+            "fr": "Afficher à nouveau la conversation d'exemple",
+            "ar": "أظهر المحادثة المثال مرة أخرى",
+            "pt": "Mostrar conversa de exemplo novamente",
+            "ru": "Показать пример разговора снова",
+            "de": "Beispiel-Kommunikation erneut anzeigen",
+            "ja": "例の会話をもう一度表示",
+            "tr": "Örnek sohbeti tekrar göster",
+            "vi": "Hiển thị cuộc trò chuyện ví dụ lại",
+            "it": "Rendi di nuovo visibile la conversazione di esempio",
+            "fa": "مثال‌های صحبت دوباره نشان بده",
+            "pl": "Pokaż ponownie przykład rozmowy",
+            "uk": "Повторити приклад розмови",
+            "nl": "Vergeet voorbeeldgesprek opnieuw te tonen",
+            "sv": "Visa exempelkonversation igen",
+            "cs": "Znovu ukázat ukázkovou konverzaci",
+            "el": "Εισαγάγετε ξανά τον παραδειγματικό διάλογο"
+          },
+          "icon": "visibility",
+          "action": {
+            "fn": "hostCall",
+            "args": {
+              "name": "hideParleyExamples",
+              "hidden": false
+            }
+          }
+        }
+      ]
+    },
+    "headerActions": [
+      {
+        "icon": "settings",
+        "tooltip": {
+          "en": "Settings",
+          "ko": "설정",
+          "zh": "设置",
+          "hi": "सेटिंग्स",
+          "es": "Ajustes",
+          "fr": "Réglages",
+          "ar": "الإعدادات",
+          "pt": "Configurações",
+          "ru": "Настройки",
+          "de": "Einstellungen",
+          "ja": "設定",
+          "tr": "Ayarlar",
+          "vi": "Cài đặt",
+          "it": "Impostazioni",
+          "fa": "تنظیمات",
+          "pl": "Ustawienia",
+          "uk": "Налаштування",
+          "nl": "Instellingen",
+          "sv": "Inställningar",
+          "cs": "Nastavení",
+          "el": "Ρυθμίσεις"
+        },
+        "action": {
+          "fn": "hostCall",
+          "args": {
+            "name": "parleyOpenSettings"
+          }
+        }
+      }
+    ]
+  },
+  "nav": [
+    {
+      "id": "home",
+      "label": {
+        "en": "Home",
+        "ko": "홈",
+        "zh": "首页",
+        "hi": "होम",
+        "es": "Inicio",
+        "fr": "Accueil",
+        "ar": "الرئيسية",
+        "pt": "Início",
+        "ru": "Главная",
+        "de": "Start",
+        "ja": "ホーム",
+        "tr": "Ana sayfa",
+        "vi": "Trang chủ",
+        "it": "Home",
+        "fa": "خانه",
+        "pl": "Start",
+        "uk": "Головна",
+        "nl": "Start",
+        "sv": "Hem",
+        "cs": "Domů",
+        "el": "Αρχική"
+      },
+      "icon": "home",
+      "screen": "home"
+    },
+    {
+      "id": "library",
+      "label": {
+        "en": "Library",
+        "ko": "보관함",
+        "zh": "资料库",
+        "hi": "लाइब्रेरी",
+        "es": "Biblioteca",
+        "fr": "Bibliothèque",
+        "ar": "المكتبة",
+        "pt": "Biblioteca",
+        "ru": "Библиотека",
+        "de": "Bibliothek",
+        "ja": "ライブラリ",
+        "tr": "Kitaplık",
+        "vi": "Thư viện",
+        "it": "Libreria",
+        "fa": "کتابخانه",
+        "pl": "Biblioteka",
+        "uk": "Бібліотека",
+        "nl": "Bibliotheek",
+        "sv": "Bibliotek",
+        "cs": "Knihovna",
+        "el": "Βιβλιοθήκη"
+      },
+      "icon": "local_library",
+      "screen": "library"
+    },
+    {
+      "id": "drill",
+      "label": {
+        "en": "Drill",
+        "ko": "연습",
+        "zh": "练习",
+        "hi": "अभ्यास",
+        "es": "Practicar",
+        "fr": "Réviser",
+        "ar": "تدريب",
+        "pt": "Praticar",
+        "ru": "Тренировка",
+        "de": "Üben",
+        "ja": "練習",
+        "tr": "Alıştırma",
+        "vi": "Luyện tập",
+        "it": "Esercizio",
+        "fa": "تمرین",
+        "pl": "Ćwiczenia",
+        "uk": "Тренування",
+        "nl": "Oefenen",
+        "sv": "Öva",
+        "cs": "Procvičit",
+        "el": "Εξάσκηση"
+      },
+      "icon": "school",
+      "screen": "drill"
+    },
+    {
+      "id": "chats",
+      "label": {
+        "en": "Chats",
+        "ko": "채팅",
+        "zh": "聊天",
+        "hi": "चैट",
+        "es": "Chats",
+        "fr": "Discussions",
+        "ar": "المحادثات",
+        "pt": "Conversas",
+        "ru": "Чаты",
+        "de": "Chats",
+        "ja": "チャット",
+        "tr": "Sohbetler",
+        "vi": "Trò chuyện",
+        "it": "Chat",
+        "fa": "گفتگوها",
+        "pl": "Czaty",
+        "uk": "Чати",
+        "nl": "Chats",
+        "sv": "Chattar",
+        "cs": "Chaty",
+        "el": "Συνομιλίες"
+      },
+      "icon": "forum",
+      "screen": "chats"
+    }
+  ],
+  "screens": {
+    "home": {
+      "title": {
+        "en": "Parley",
+        "ko": "Parley",
+        "zh": "Parley",
+        "hi": "Parley",
+        "es": "Parley",
+        "fr": "Parley",
+        "ar": "Parley",
+        "pt": "Parley",
+        "ru": "Parley",
+        "de": "Parley",
+        "ja": "Parley",
+        "tr": "Parley",
+        "vi": "Parley",
+        "it": "Parley",
+        "fa": "Parley",
+        "pl": "Parley",
+        "uk": "Parley",
+        "nl": "Parley",
+        "sv": "Parley",
+        "cs": "Parley",
+        "el": "Parley"
+      },
+      "body": {
+        "type": "column",
+        "crossAxis": "stretch",
+        "children": [
+          {
+            "type": "button",
+            "label": {
+              "en": "Paste or type a text to save",
+              "ko": "저장할 텍스트를 붙여넣거나 입력하세요",
+              "zh": "粘贴或输入要保存的文本",
+              "hi": "सहेजने के लिए पाठ चिपकाएँ या लिखें",
+              "es": "Pega o escribe un texto para guardar",
+              "fr": "Collez ou tapez un texte à enregistrer",
+              "ar": "الصق نصًا أو اكتبه لحفظه",
+              "pt": "Cole ou digite um texto para salvar",
+              "ru": "Вставьте или введите текст для сохранения",
+              "de": "Text zum Speichern einfügen oder tippen",
+              "ja": "保存するテキストを貼り付けるか入力",
+              "tr": "Kaydetmek için metin yapıştırın veya yazın",
+              "vi": "Dán hoặc gõ văn bản để lưu",
+              "it": "Incolla o scrivi un testo da salvare",
+              "fa": "متنی برای ذخیره بچسبانید یا بنویسید",
+              "pl": "Wklej lub wpisz tekst do zapisania",
+              "uk": "Вставте або введіть текст для збереження",
+              "nl": "Plak of typ een tekst om te bewaren",
+              "sv": "Klistra in eller skriv en text att spara",
+              "cs": "Vložte nebo napište text k uložení",
+              "el": "Επικολλήστε ή γράψτε ένα κείμενο για αποθήκευση"
+            },
+            "icon": "content_paste",
+            "variant": "outlined",
+            "action": {
+              "fn": "hostCall",
+              "args": {
+                "name": "parleyOpenCapture"
+              }
+            }
+          },
+          {
+            "type": "card",
+            "child": {
+              "type": "column",
+              "crossAxis": "stretch",
+              "children": [
+                {
+                  "type": "stat",
+                  "dense": true,
+                  "table": "phrases",
+                  "agg": "count",
+                  "filter": {
+                    "column": "due",
+                    "value": "1"
+                  },
+                  "label": {
+                    "en": "to drill today",
+                    "ko": "오늘 연습할 항목",
+                    "zh": "今天要练习",
+                    "hi": "आज अभ्यास के लिए",
+                    "es": "para practicar hoy",
+                    "fr": "à réviser aujourd'hui",
+                    "ar": "للتدريب اليوم",
+                    "pt": "para praticar hoje",
+                    "ru": "на сегодня",
+                    "de": "heute zu üben",
+                    "ja": "今日の練習",
+                    "tr": "bugün çalışılacak",
+                    "vi": "cần ôn hôm nay",
+                    "it": "da ripassare oggi",
+                    "fa": "برای تمرین امروز",
+                    "pl": "do powtórki dziś",
+                    "uk": "на сьогодні",
+                    "nl": "vandaag te oefenen",
+                    "sv": "att öva i dag",
+                    "cs": "k procvičení dnes",
+                    "el": "για εξάσκηση σήμερα"
+                  }
+                },
+                {
+                  "type": "row",
+                  "wrap": true,
+                  "children": [
+                    {
+                      "type": "stat",
+                      "dense": true,
+                      "table": "phrases",
+                      "agg": "count",
+                      "filter": {
+                        "column": "dueLang",
+                        "value": "fr"
+                      },
+                      "label": {
+                        "en": "French",
+                        "ko": "프랑스어",
+                        "zh": "法语",
+                        "hi": "फ़्रेंच",
+                        "es": "Francés",
+                        "fr": "Français",
+                        "ar": "الفرنسية",
+                        "pt": "Francês",
+                        "ru": "Французский",
+                        "de": "Französisch",
+                        "ja": "フランス語",
+                        "tr": "Fransızca",
+                        "vi": "Tiếng Pháp",
+                        "it": "Francese",
+                        "fa": "فرانسوی",
+                        "pl": "Francuski",
+                        "uk": "Французька",
+                        "nl": "Frans",
+                        "sv": "Franska",
+                        "cs": "Francouzština",
+                        "el": "Γαλλικά"
+                      }
+                    },
+                    {
+                      "type": "stat",
+                      "dense": true,
+                      "table": "phrases",
+                      "agg": "count",
+                      "filter": {
+                        "column": "dueLang",
+                        "value": "ko"
+                      },
+                      "label": {
+                        "en": "Korean",
+                        "ko": "한국어",
+                        "zh": "韩语",
+                        "hi": "कोरियाई",
+                        "es": "Coreano",
+                        "fr": "Coréen",
+                        "ar": "الكورية",
+                        "pt": "Coreano",
+                        "ru": "Корейский",
+                        "de": "Koreanisch",
+                        "ja": "韓国語",
+                        "tr": "Korece",
+                        "vi": "Tiếng Hàn",
+                        "it": "Coreano",
+                        "fa": "کره‌ای",
+                        "pl": "Koreański",
+                        "uk": "Корейська",
+                        "nl": "Koreaans",
+                        "sv": "Koreanska",
+                        "cs": "Korejština",
+                        "el": "Κορεατικά"
+                      }
+                    },
+                    {
+                      "type": "stat",
+                      "dense": true,
+                      "table": "phrases",
+                      "agg": "count",
+                      "filter": {
+                        "column": "dueLang",
+                        "value": "ja"
+                      },
+                      "label": {
+                        "en": "Japanese",
+                        "ko": "일본어",
+                        "zh": "日语",
+                        "hi": "जापानी",
+                        "es": "Japonés",
+                        "fr": "Japonais",
+                        "ar": "اليابانية",
+                        "pt": "Japonês",
+                        "ru": "Японский",
+                        "de": "Japanisch",
+                        "ja": "日本語",
+                        "tr": "Japonca",
+                        "vi": "Tiếng Nhật",
+                        "it": "Giapponese",
+                        "fa": "ژاپنی",
+                        "pl": "Japoński",
+                        "uk": "Японська",
+                        "nl": "Japans",
+                        "sv": "Japanska",
+                        "cs": "Japonština",
+                        "el": "Ιαπωνικά"
+                      }
+                    },
+                    {
+                      "type": "stat",
+                      "dense": true,
+                      "table": "phrases",
+                      "agg": "count",
+                      "filter": {
+                        "column": "dueLang",
+                        "value": "de"
+                      },
+                      "label": {
+                        "en": "German",
+                        "ko": "독일어",
+                        "zh": "德语",
+                        "hi": "जर्मन",
+                        "es": "Alemán",
+                        "fr": "Allemand",
+                        "ar": "الألمانية",
+                        "pt": "Alemão",
+                        "ru": "Немецкий",
+                        "de": "Deutsch",
+                        "ja": "ドイツ語",
+                        "tr": "Almanca",
+                        "vi": "Tiếng Đức",
+                        "it": "Tedesco",
+                        "fa": "آلمانی",
+                        "pl": "Niemiecki",
+                        "uk": "Німецька",
+                        "nl": "Duits",
+                        "sv": "Tyska",
+                        "cs": "Němčina",
+                        "el": "Γερμανικά"
+                      }
+                    },
+                    {
+                      "type": "stat",
+                      "dense": true,
+                      "table": "phrases",
+                      "agg": "count",
+                      "filter": {
+                        "column": "dueLang",
+                        "value": "en"
+                      },
+                      "label": {
+                        "en": "English",
+                        "ko": "영어",
+                        "zh": "英语",
+                        "hi": "अंग्रेज़ी",
+                        "es": "Inglés",
+                        "fr": "Anglais",
+                        "ar": "الإنجليزية",
+                        "pt": "Inglês",
+                        "ru": "Английский",
+                        "de": "Englisch",
+                        "ja": "英語",
+                        "tr": "İngilizce",
+                        "vi": "Tiếng Anh",
+                        "it": "Inglese",
+                        "fa": "انگلیسی",
+                        "pl": "Angielski",
+                        "uk": "Англійська",
+                        "nl": "Engels",
+                        "sv": "Engelska",
+                        "cs": "Angličtina",
+                        "el": "Αγγλικά"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "button",
+                  "label": {
+                    "en": "Start drill",
+                    "ko": "연습 시작",
+                    "zh": "开始练习",
+                    "hi": "अभ्यास शुरू करें",
+                    "es": "Empezar a practicar",
+                    "fr": "Commencer",
+                    "ar": "ابدأ التدريب",
+                    "pt": "Começar a praticar",
+                    "ru": "Начать тренировку",
+                    "de": "Üben starten",
+                    "ja": "練習を始める",
+                    "tr": "Alıştırmaya başla",
+                    "vi": "Bắt đầu luyện",
+                    "it": "Inizia",
+                    "fa": "شروع تمرین",
+                    "pl": "Zacznij ćwiczyć",
+                    "uk": "Почати тренування",
+                    "nl": "Begin met oefenen",
+                    "sv": "Börja öva",
+                    "cs": "Začít procvičovat",
+                    "el": "Έναρξη εξάσκησης"
+                  },
+                  "icon": "school",
+                  "action": {
+                    "fn": "goto",
+                    "args": {
+                      "screen": "drill"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": {
+              "en": "Recent",
+              "ko": "최근",
+              "zh": "最近",
+              "hi": "हाल के",
+              "es": "Recientes",
+              "fr": "Récents",
+              "ar": "الأحدث",
+              "pt": "Recentes",
+              "ru": "Недавние",
+              "de": "Zuletzt",
+              "ja": "最近",
+              "tr": "Son eklenenler",
+              "vi": "Gần đây",
+              "it": "Recenti",
+              "fa": "اخیر",
+              "pl": "Ostatnie",
+              "uk": "Нещодавні",
+              "nl": "Recent",
+              "sv": "Senaste",
+              "cs": "Nedávné",
+              "el": "Πρόσφατα"
+            }
+          },
+          {
+            "type": "list",
+            "table": "texts",
+            "titleColumn": "preview",
+            "subtitleColumns": [
+              "summary"
+            ],
+            "sortColumn": "updatedAt",
+            "sortDir": "desc",
+            "onTap": {
+              "fn": "hostCall",
+              "args": {
+                "name": "parleyOpenText"
+              }
+            },
+            "confirmDelete": true,
+            "swipeActions": [
+              "delete"
+            ],
+            "emptyIcon": "article",
+            "emptyTitle": {
+              "en": "Nothing saved yet",
+              "ko": "아직 저장한 것이 없습니다",
+              "zh": "还没有保存任何内容",
+              "hi": "अभी कुछ सहेजा नहीं गया",
+              "es": "Aún no has guardado nada",
+              "fr": "Rien d'enregistré pour l'instant",
+              "ar": "لا شيء محفوظ بعد",
+              "pt": "Nada salvo ainda",
+              "ru": "Пока ничего не сохранено",
+              "de": "Noch nichts gespeichert",
+              "ja": "まだ何も保存していません",
+              "tr": "Henüz kayıtlı bir şey yok",
+              "vi": "Chưa lưu gì",
+              "it": "Ancora niente di salvato",
+              "fa": "هنوز چیزی ذخیره نشده",
+              "pl": "Nic jeszcze nie zapisano",
+              "uk": "Ще нічого не збережено",
+              "nl": "Nog niets bewaard",
+              "sv": "Inget sparat än",
+              "cs": "Zatím nic uloženo",
+              "el": "Τίποτα αποθηκευμένο ακόμη"
+            },
+            "emptyText": {
+              "en": "Paste a text above — it shows up here.",
+              "ko": "위에 텍스트를 붙여넣으면 여기에 표시됩니다.",
+              "zh": "在上方粘贴文本，它会显示在这里。",
+              "hi": "ऊपर पाठ चिपकाएँ — वह यहाँ दिखेगा।",
+              "es": "Pega un texto arriba: aparecerá aquí.",
+              "fr": "Collez un texte ci-dessus : il apparaîtra ici.",
+              "ar": "الصق نصًا في الأعلى وسيظهر هنا.",
+              "pt": "Cole um texto acima — ele aparece aqui.",
+              "ru": "Вставьте текст выше — он появится здесь.",
+              "de": "Füge oben einen Text ein – er erscheint hier.",
+              "ja": "上にテキストを貼り付けると、ここに表示されます。",
+              "tr": "Yukarıya bir metin yapıştırın; burada görünür.",
+              "vi": "Dán văn bản ở trên — nó sẽ hiện ở đây.",
+              "it": "Incolla un testo qui sopra: comparirà qui.",
+              "fa": "متنی را در بالا بچسبانید؛ اینجا نشان داده می‌شود.",
+              "pl": "Wklej tekst powyżej — pojawi się tutaj.",
+              "uk": "Вставте текст вище — він з'явиться тут.",
+              "nl": "Plak hierboven een tekst — hij verschijnt hier.",
+              "sv": "Klistra in en text ovan – den visas här.",
+              "cs": "Vložte text výše — objeví se zde.",
+              "el": "Επικολλήστε ένα κείμενο παραπάνω — θα εμφανιστεί εδώ."
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "All saved items",
+              "ko": "저장한 모든 항목",
+              "zh": "所有已保存的内容",
+              "hi": "सभी सहेजे गए आइटम",
+              "es": "Todo lo guardado",
+              "fr": "Tout ce qui est enregistré",
+              "ar": "كل العناصر المحفوظة",
+              "pt": "Todos os itens salvos",
+              "ru": "Всё сохранённое",
+              "de": "Alle gespeicherten Einträge",
+              "ja": "保存したすべて",
+              "tr": "Tüm kayıtlılar",
+              "vi": "Tất cả mục đã lưu",
+              "it": "Tutti gli elementi salvati",
+              "fa": "همه موارد ذخیره‌شده",
+              "pl": "Wszystkie zapisane",
+              "uk": "Усе збережене",
+              "nl": "Alles wat je bewaarde",
+              "sv": "Allt sparat",
+              "cs": "Vše uložené",
+              "el": "Όλα τα αποθηκευμένα"
+            },
+            "variant": "text",
+            "icon": "chevron_right",
+            "action": {
+              "fn": "goto",
+              "args": {
+                "screen": "library"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "library": {
+      "title": {
+        "en": "Library",
+        "ko": "보관함",
+        "zh": "资料库",
+        "hi": "लाइब्रेरी",
+        "es": "Biblioteca",
+        "fr": "Bibliothèque",
+        "ar": "المكتبة",
+        "pt": "Biblioteca",
+        "ru": "Библиотека",
+        "de": "Bibliothek",
+        "ja": "ライブラリ",
+        "tr": "Kitaplık",
+        "vi": "Thư viện",
+        "it": "Libreria",
+        "fa": "کتابخانه",
+        "pl": "Biblioteka",
+        "uk": "Бібліотека",
+        "nl": "Bibliotheek",
+        "sv": "Bibliotek",
+        "cs": "Knihovna",
+        "el": "Βιβλιοθήκη"
+      },
+      "body": {
+        "type": "column",
+        "crossAxis": "stretch",
+        "children": [
+          {
+            "type": "textinput",
+            "hint": {
+              "en": "Search saved items and words",
+              "ko": "저장한 항목과 단어 검색",
+              "zh": "搜索已保存的内容和词语",
+              "hi": "सहेजे गए आइटम और शब्द खोजें",
+              "es": "Buscar en lo guardado y en palabras",
+              "fr": "Chercher dans vos textes et les mots",
+              "ar": "ابحث في المحفوظات والكلمات",
+              "pt": "Pesquisar itens salvos e palavras",
+              "ru": "Поиск по сохранённому и словам",
+              "de": "Gespeichertes und Wörter suchen",
+              "ja": "保存したものと単語を検索",
+              "tr": "Kayıtlılarda ve kelimelerde ara",
+              "vi": "Tìm mục đã lưu và từ",
+              "it": "Cerca tra elementi salvati e parole",
+              "fa": "جستجو در موارد ذخیره‌شده و کلمات",
+              "pl": "Szukaj w zapisanych i słowach",
+              "uk": "Пошук у збереженому та словах",
+              "nl": "Zoek in bewaarde items en woorden",
+              "sv": "Sök i sparat och ord",
+              "cs": "Hledat v uloženém a ve slovech",
+              "el": "Αναζήτηση σε αποθηκευμένα και λέξεις"
+            },
+            "debounceMs": 900,
+            "action": {
+              "fn": "hostCall",
+              "args": {
+                "name": "parleySearch",
+                "query": "$value"
+              }
+            }
+          },
+          {
+            "type": "segments",
+            "segments": [
+              {
+                "label": {
+                  "en": "Saved",
+                  "ko": "저장됨",
+                  "zh": "已保存",
+                  "hi": "सहेजे गए",
+                  "es": "Guardado",
+                  "fr": "Enregistré",
+                  "ar": "المحفوظ",
+                  "pt": "Salvos",
+                  "ru": "Сохранённое",
+                  "de": "Gespeichert",
+                  "ja": "保存済み",
+                  "tr": "Kaydedilenler",
+                  "vi": "Đã lưu",
+                  "it": "Salvati",
+                  "fa": "ذخیره‌شده",
+                  "pl": "Zapisane",
+                  "uk": "Збережене",
+                  "nl": "Bewaard",
+                  "sv": "Sparat",
+                  "cs": "Uložené",
+                  "el": "Αποθηκευμένα"
+                },
+                "child": {
+                  "type": "column",
+                  "crossAxis": "stretch",
+                  "children": [
+                    {
+                      "type": "text",
+                      "style": "eyebrow",
+                      "value": {
+                        "en": "Your texts",
+                        "ko": "내 텍스트",
+                        "zh": "你的文本",
+                        "hi": "आपके पाठ",
+                        "es": "Tus textos",
+                        "fr": "Vos textes",
+                        "ar": "نصوصك",
+                        "pt": "Seus textos",
+                        "ru": "Ваши тексты",
+                        "de": "Deine Texte",
+                        "ja": "あなたのテキスト",
+                        "tr": "Metinleriniz",
+                        "vi": "Văn bản của bạn",
+                        "it": "I tuoi testi",
+                        "fa": "متن‌های شما",
+                        "pl": "Twoje teksty",
+                        "uk": "Ваші тексти",
+                        "nl": "Jouw teksten",
+                        "sv": "Dina texter",
+                        "cs": "Vaše texty",
+                        "el": "Τα κείμενά σας"
+                      }
+                    },
+                    {
+                      "type": "list",
+                      "table": "texts",
+                      "titleColumn": "preview",
+                      "subtitleColumns": [
+                        "summary"
+                      ],
+                      "sortColumn": "updatedAt",
+                      "sortDir": "desc",
+                      "onTap": {
+                        "fn": "hostCall",
+                        "args": {
+                          "name": "parleyOpenText"
+                        }
+                      },
+                      "confirmDelete": true,
+                      "swipeActions": [
+                        "delete"
+                      ],
+                      "emptyIcon": "article",
+                      "emptyTitle": {
+                        "en": "Nothing saved yet",
+                        "ko": "아직 저장한 것이 없습니다",
+                        "zh": "还没有保存任何内容",
+                        "hi": "अभी कुछ सहेजा नहीं गया",
+                        "es": "Aún no has guardado nada",
+                        "fr": "Rien d'enregistré pour l'instant",
+                        "ar": "لا شيء محفوظ بعد",
+                        "pt": "Nada salvo ainda",
+                        "ru": "Пока ничего не сохранено",
+                        "de": "Noch nichts gespeichert",
+                        "ja": "まだ何も保存していません",
+                        "tr": "Henüz kayıtlı bir şey yok",
+                        "vi": "Chưa lưu gì",
+                        "it": "Ancora niente di salvato",
+                        "fa": "هنوز چیزی ذخیره نشده",
+                        "pl": "Nic jeszcze nie zapisano",
+                        "uk": "Ще нічого не збережено",
+                        "nl": "Nog niets bewaard",
+                        "sv": "Inget sparat än",
+                        "cs": "Zatím nic uloženo",
+                        "el": "Τίποτα αποθηκευμένο ακόμη"
+                      },
+                      "emptyText": {
+                        "en": "Paste a text on Home — it shows up here.",
+                        "ko": "홈에서 텍스트를 붙여넣으면 여기에 표시됩니다.",
+                        "zh": "在首页粘贴文本，它会显示在这里。",
+                        "hi": "होम पर पाठ चिपकाएँ — वह यहाँ दिखेगा।",
+                        "es": "Pega un texto en Inicio: aparecerá aquí.",
+                        "fr": "Collez un texte dans Accueil : il apparaîtra ici.",
+                        "ar": "الصق نصًا في الرئيسية وسيظهر هنا.",
+                        "pt": "Cole um texto no Início — ele aparece aqui.",
+                        "ru": "Вставьте текст на Главной — он появится здесь.",
+                        "de": "Füge auf Start einen Text ein – er erscheint hier.",
+                        "ja": "ホームでテキストを貼り付けると、ここに表示されます。",
+                        "tr": "Ana sayfada bir metin yapıştırın; burada görünür.",
+                        "vi": "Dán văn bản ở Trang chủ — nó sẽ hiện ở đây.",
+                        "it": "Incolla un testo in Home: comparirà qui.",
+                        "fa": "در خانه متنی بچسبانید؛ اینجا نشان داده می‌شود.",
+                        "pl": "Wklej tekst na stronie Start — pojawi się tutaj.",
+                        "uk": "Вставте текст на Головній — він з'явиться тут.",
+                        "nl": "Plak een tekst op Start — hij verschijnt hier.",
+                        "sv": "Klistra in en text på Hem – den visas här.",
+                        "cs": "Vložte text na stránce Domů — objeví se zde.",
+                        "el": "Επικολλήστε ένα κείμενο στην Αρχική — θα εμφανιστεί εδώ."
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "style": "eyebrow",
+                      "value": {
+                        "en": "Phrases you drill",
+                        "ko": "연습하는 표현",
+                        "zh": "你练习的短语",
+                        "hi": "आपके अभ्यास वाले वाक्यांश",
+                        "es": "Frases que practicas",
+                        "fr": "Expressions que vous révisez",
+                        "ar": "العبارات التي تتدرب عليها",
+                        "pt": "Frases que você pratica",
+                        "ru": "Фразы для тренировки",
+                        "de": "Sätze, die du übst",
+                        "ja": "練習中のフレーズ",
+                        "tr": "Çalıştığınız ifadeler",
+                        "vi": "Cụm từ bạn luyện",
+                        "it": "Frasi che ripassi",
+                        "fa": "عبارت‌هایی که تمرین می‌کنید",
+                        "pl": "Wyrażenia, które ćwiczysz",
+                        "uk": "Фрази для тренування",
+                        "nl": "Zinnen die je oefent",
+                        "sv": "Fraser du övar",
+                        "cs": "Fráze, které procvičujete",
+                        "el": "Φράσεις που εξασκείτε"
+                      }
+                    },
+                    {
+                      "type": "list",
+                      "table": "phrases",
+                      "titleColumn": "original",
+                      "subtitleColumns": [
+                        "translation"
+                      ],
+                      "metaColumns": [
+                        "srcLang"
+                      ],
+                      "sortColumn": "savedAt",
+                      "sortDir": "desc",
+                      "confirmDelete": true,
+                      "swipeActions": [
+                        "delete"
+                      ],
+                      "emptyIcon": "bookmark",
+                      "emptyTitle": {
+                        "en": "No phrases yet",
+                        "ko": "아직 표현이 없습니다",
+                        "zh": "还没有短语",
+                        "hi": "अभी कोई वाक्यांश नहीं",
+                        "es": "Aún no hay frases",
+                        "fr": "Aucune expression pour l'instant",
+                        "ar": "لا عبارات بعد",
+                        "pt": "Nenhuma frase ainda",
+                        "ru": "Пока нет фраз",
+                        "de": "Noch keine Sätze",
+                        "ja": "まだフレーズはありません",
+                        "tr": "Henüz ifade yok",
+                        "vi": "Chưa có cụm từ",
+                        "it": "Ancora nessuna frase",
+                        "fa": "هنوز عبارتی نیست",
+                        "pl": "Brak wyrażeń",
+                        "uk": "Ще немає фраз",
+                        "nl": "Nog geen zinnen",
+                        "sv": "Inga fraser än",
+                        "cs": "Zatím žádné fráze",
+                        "el": "Δεν υπάρχουν φράσεις ακόμη"
+                      },
+                      "emptyText": {
+                        "en": "Save a part of a text, or a word, to drill it.",
+                        "ko": "텍스트의 일부나 단어를 저장해 연습하세요.",
+                        "zh": "保存文本的一部分或一个词来练习。",
+                        "hi": "अभ्यास के लिए पाठ का हिस्सा या शब्द सहेजें।",
+                        "es": "Guarda una parte de un texto o una palabra para practicarla.",
+                        "fr": "Enregistrez une partie d'un texte ou un mot pour le réviser.",
+                        "ar": "احفظ جزءًا من نص أو كلمة لتتدرب عليها.",
+                        "pt": "Salve uma parte de um texto ou uma palavra para praticar.",
+                        "ru": "Сохраните часть текста или слово, чтобы тренировать.",
+                        "de": "Speichere einen Teil eines Textes oder ein Wort, um es zu üben.",
+                        "ja": "テキストの一部か単語を保存して練習しましょう。",
+                        "tr": "Çalışmak için bir metin parçası veya kelime kaydedin.",
+                        "vi": "Lưu một phần văn bản hoặc một từ để luyện.",
+                        "it": "Salva una parte di un testo o una parola per ripassarla.",
+                        "fa": "برای تمرین، بخشی از متن یا یک کلمه را ذخیره کنید.",
+                        "pl": "Zapisz fragment tekstu lub słowo, by je ćwiczyć.",
+                        "uk": "Збережіть частину тексту або слово, щоб тренувати.",
+                        "nl": "Bewaar een deel van een tekst of een woord om te oefenen.",
+                        "sv": "Spara en del av en text eller ett ord för att öva.",
+                        "cs": "Uložte část textu nebo slovo k procvičení.",
+                        "el": "Αποθηκεύστε ένα μέρος κειμένου ή μια λέξη για εξάσκηση."
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "label": {
+                  "en": "Reading shelf",
+                  "ko": "읽기 책장",
+                  "zh": "阅读书架",
+                  "hi": "पढ़ने की शेल्फ़",
+                  "es": "Estante de lectura",
+                  "fr": "Étagère de lecture",
+                  "ar": "رف القراءة",
+                  "pt": "Estante de leitura",
+                  "ru": "Полка для чтения",
+                  "de": "Leseregal",
+                  "ja": "読書棚",
+                  "tr": "Okuma rafı",
+                  "vi": "Kệ đọc",
+                  "it": "Scaffale di lettura",
+                  "fa": "قفسه مطالعه",
+                  "pl": "Półka z lekturami",
+                  "uk": "Полиця для читання",
+                  "nl": "Leesplank",
+                  "sv": "Läshylla",
+                  "cs": "Čtecí police",
+                  "el": "Ράφι ανάγνωσης"
+                },
+                "child": {
+                  "type": "text",
+                  "value": {
+                    "en": "Coming in a later update: free texts by level and practice scenario packs. For now, read your own texts.",
+                    "ko": "다음 업데이트에서 제공: 수준별 무료 텍스트와 상황별 연습 묶음. 지금은 내 텍스트를 읽어 보세요.",
+                    "zh": "将在后续更新中提供：按级别分的免费文本和情景练习包。目前请阅读你自己的文本。",
+                    "hi": "बाद के अपडेट में: स्तर के अनुसार मुफ़्त पाठ और अभ्यास परिदृश्य पैक। अभी अपने पाठ पढ़ें।",
+                    "es": "En una próxima actualización: textos gratuitos por nivel y paquetes de escenarios. Por ahora, lee tus propios textos.",
+                    "fr": "Dans une prochaine mise à jour : des textes libres par niveau et des scénarios d'entraînement. Pour l'instant, lisez vos propres textes.",
+                    "ar": "في تحديث لاحق: نصوص مجانية حسب المستوى وحزم سيناريوهات تدريب. الآن اقرأ نصوصك.",
+                    "pt": "Em uma próxima atualização: textos gratuitos por nível e pacotes de cenários. Por enquanto, leia seus próprios textos.",
+                    "ru": "В следующем обновлении: бесплатные тексты по уровням и наборы сценариев. Пока читайте свои тексты.",
+                    "de": "In einem späteren Update: freie Texte nach Stufe und Übungsszenarien. Lies vorerst deine eigenen Texte.",
+                    "ja": "今後のアップデートで提供：レベル別の無料テキストと場面練習パック。今はご自身のテキストを読んでください。",
+                    "tr": "Sonraki bir güncellemede: seviyeye göre ücretsiz metinler ve senaryo paketleri. Şimdilik kendi metinlerinizi okuyun.",
+                    "vi": "Sẽ có trong bản cập nhật sau: văn bản miễn phí theo cấp độ và gói tình huống luyện tập. Hiện tại hãy đọc văn bản của bạn.",
+                    "it": "In un prossimo aggiornamento: testi liberi per livello e pacchetti di scenari. Per ora leggi i tuoi testi.",
+                    "fa": "در به‌روزرسانی بعدی: متن‌های رایگان بر اساس سطح و بسته‌های سناریوی تمرین. فعلاً متن‌های خودتان را بخوانید.",
+                    "pl": "W kolejnej aktualizacji: darmowe teksty według poziomu i pakiety scenariuszy. Na razie czytaj własne teksty.",
+                    "uk": "У наступному оновленні: безкоштовні тексти за рівнями та набори сценаріїв. Поки читайте власні тексти.",
+                    "nl": "In een latere update: vrije teksten per niveau en oefenscenario's. Lees voorlopig je eigen teksten.",
+                    "sv": "I en senare uppdatering: fria texter per nivå och övningsscenarier. Läs dina egna texter så länge.",
+                    "cs": "V pozdější aktualizaci: volné texty podle úrovně a balíčky scénářů. Zatím čtěte vlastní texty.",
+                    "el": "Σε επόμενη ενημέρωση: δωρεάν κείμενα ανά επίπεδο και πακέτα σεναρίων. Προς το παρόν, διαβάστε τα δικά σας κείμενα."
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "drill": {
+      "title": {
+        "en": "Drill",
+        "ko": "연습",
+        "zh": "练习",
+        "hi": "अभ्यास",
+        "es": "Practicar",
+        "fr": "Réviser",
+        "ar": "تدريب",
+        "pt": "Praticar",
+        "ru": "Тренировка",
+        "de": "Üben",
+        "ja": "練習",
+        "tr": "Alıştırma",
+        "vi": "Luyện tập",
+        "it": "Esercizio",
+        "fa": "تمرین",
+        "pl": "Ćwiczenia",
+        "uk": "Тренування",
+        "nl": "Oefenen",
+        "sv": "Öva",
+        "cs": "Procvičit",
+        "el": "Εξάσκηση"
+      },
+      "body": {
+        "type": "column",
+        "crossAxis": "stretch",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Today's practice cards. Expand a card to see the translation, then swipe: Again or Got it.",
+              "ko": "오늘의 연습 카드입니다. 카드를 펼쳐 번역을 보고, 밀어서 '다시' 또는 '알겠어요'를 고르세요.",
+              "zh": "今天的练习卡片。展开卡片查看翻译，然后滑动：再来一次或记住了。",
+              "hi": "आज के अभ्यास कार्ड। अनुवाद देखने के लिए कार्ड खोलें, फिर स्वाइप करें: फिर से या समझ गया।",
+              "es": "Tarjetas de práctica de hoy. Abre una tarjeta para ver la traducción y desliza: Otra vez o Lo tengo.",
+              "fr": "Les cartes du jour. Ouvrez une carte pour voir la traduction, puis glissez : Encore ou Je sais.",
+              "ar": "بطاقات تدريب اليوم. افتح البطاقة لترى الترجمة، ثم اسحب: مرة أخرى أو فهمت.",
+              "pt": "Cartões de prática de hoje. Abra um cartão para ver a tradução e deslize: De novo ou Entendi.",
+              "ru": "Карточки на сегодня. Раскройте карточку, чтобы увидеть перевод, затем смахните: Ещё раз или Понял.",
+              "de": "Die Übungskarten für heute. Karte öffnen, um die Übersetzung zu sehen, dann wischen: Nochmal oder Gewusst.",
+              "ja": "今日の練習カード。カードを開いて訳を見て、スワイプ：もう一度 または 覚えた。",
+              "tr": "Bugünün alıştırma kartları. Çeviriyi görmek için kartı açın, sonra kaydırın: Tekrar veya Anladım.",
+              "vi": "Thẻ luyện tập hôm nay. Mở thẻ để xem bản dịch, rồi vuốt: Lại hoặc Đã nhớ.",
+              "it": "Le schede di oggi. Apri una scheda per vedere la traduzione, poi scorri: Ancora o Fatto.",
+              "fa": "کارت‌های تمرین امروز. کارت را باز کنید تا ترجمه را ببینید، سپس بکشید: دوباره یا فهمیدم.",
+              "pl": "Dzisiejsze karty. Rozwiń kartę, by zobaczyć tłumaczenie, potem przesuń: Jeszcze raz lub Umiem.",
+              "uk": "Картки на сьогодні. Розгорніть картку, щоб побачити переклад, потім проведіть: Ще раз або Зрозумів.",
+              "nl": "De oefenkaarten van vandaag. Open een kaart voor de vertaling en veeg: Opnieuw of Weet ik.",
+              "sv": "Dagens övningskort. Öppna ett kort för att se översättningen och svep: Igen eller Kan det.",
+              "cs": "Dnešní karty. Rozbalte kartu pro překlad a přejeďte: Znovu nebo Umím.",
+              "el": "Οι κάρτες εξάσκησης της ημέρας. Ανοίξτε μια κάρτα για τη μετάφραση και σύρετε: Ξανά ή Το ξέρω."
+            }
+          },
+          {
+            "type": "cards",
+            "table": "phrases",
+            "title": "original",
+            "filter": {
+              "column": "due",
+              "value": "1"
+            },
+            "tapBehavior": "expand",
+            "expandFields": [
+              {
+                "column": "translation",
+                "label": "Translation"
+              }
+            ],
+            "expandPeek": {
+              "call": "practicePeek",
+              "tapCall": "practicePeekOpen"
+            },
+            "sortBy": "dueRank",
+            "sortDir": "asc",
+            "swipeActions": [
+              {
+                "label": "Again",
+                "icon": "refresh",
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "reviewPhrase",
+                    "outcome": "again"
+                  }
+                }
+              },
+              {
+                "label": "Got it",
+                "icon": "check_circle",
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "reviewPhrase",
+                    "outcome": "gotIt"
+                  }
+                }
+              }
+            ],
+            "emptyIcon": "school",
+            "emptyTitle": {
+              "en": "Nothing due to practice",
+              "ko": "연습할 것이 없습니다.",
+              "zh": "暂无待练短语",
+              "hi": "किसी भी दिन की प्रैक्टिस नहीं",
+              "es": "Nada por practicar",
+              "fr": "Rien à pratiquer",
+              "ar": "لا شيء مطلوب للتمرين",
+              "pt": "Nada para praticar",
+              "ru": "Ничего не предстоит повторить",
+              "de": "Keine Übungen anstehend",
+              "ja": "練習期限はありません",
+              "tr": "Pekiyin kaydedilmedi",
+              "vi": "Không có gì cần thực hành",
+              "it": "Niente da praticare",
+              "fa": "هیچ چیز برای تمرین",
+              "pl": "Brak zadań doćwiczenia",
+              "uk": "Немає нічого для практики",
+              "nl": "Niets te oefenen",
+              "sv": "Inga uppgifter att öva",
+              "cs": "Nic k provádění cvičení",
+              "el": "Δεν υπάρχει κάτι να αναθεωρήσετε"
+            },
+            "emptyText": {
+              "en": "Save a part of a text, or a word, then come back when it is due.",
+              "ko": "텍스트의 일부나 단어를 저장한 뒤, 복습할 때 다시 오세요.",
+              "zh": "保存文本的一部分或一个词，到期时再回来。",
+              "hi": "किसी पाठ का हिस्सा या कोई शब्द सहेजें, फिर समय आने पर लौटें।",
+              "es": "Guarda una parte de un texto o una palabra y vuelve cuando toque.",
+              "fr": "Enregistrez une partie d'un texte ou un mot, puis revenez quand c'est l'heure.",
+              "ar": "احفظ جزءًا من نص أو كلمة، ثم عد عندما يحين موعدها.",
+              "pt": "Salve uma parte de um texto ou uma palavra e volte quando for a hora.",
+              "ru": "Сохраните часть текста или слово и вернитесь, когда придёт время.",
+              "de": "Speichere einen Teil eines Textes oder ein Wort und komm wieder, wenn es fällig ist.",
+              "ja": "テキストの一部か単語を保存して、復習の時間に戻ってきてください。",
+              "tr": "Bir metnin bir kısmını veya bir kelimeyi kaydedin, zamanı gelince dönün.",
+              "vi": "Lưu một phần văn bản hoặc một từ, rồi quay lại khi đến hạn.",
+              "it": "Salva una parte di un testo o una parola, poi torna quando è il momento.",
+              "fa": "بخشی از یک متن یا یک کلمه را ذخیره کنید و هنگام موعد برگردید.",
+              "pl": "Zapisz fragment tekstu lub słowo i wróć, gdy przyjdzie pora.",
+              "uk": "Збережіть частину тексту або слово й поверніться, коли настане час.",
+              "nl": "Bewaar een deel van een tekst of een woord en kom terug als het tijd is.",
+              "sv": "Spara en del av en text eller ett ord och kom tillbaka när det är dags.",
+              "cs": "Uložte část textu nebo slovo a vraťte se, až přijde čas.",
+              "el": "Αποθηκεύστε ένα μέρος ενός κειμένου ή μια λέξη και επιστρέψτε όταν έρθει η ώρα."
+            }
+          }
+        ]
+      }
+    },
+    "chats": {
+      "title": {
+        "en": "Parley",
+        "ko": "Parley",
+        "zh": "Parley",
+        "hi": "Parley",
+        "es": "Parley",
+        "fr": "Parley",
+        "ar": "Parley",
+        "pt": "Parley",
+        "ru": "Parley",
+        "de": "Parley",
+        "ja": "Parley",
+        "tr": "Parley",
+        "vi": "Parley",
+        "it": "Parley",
+        "fa": "Parley",
+        "pl": "Parley",
+        "uk": "Parley",
+        "nl": "Parley",
+        "sv": "Parley",
+        "cs": "Parley",
+        "el": "Parley"
+      },
+      "body": {
+        "type": "column",
+        "crossAxis": "stretch",
+        "children": [
+          {
+            "type": "row",
+            "wrap": false,
+            "mainAxis": "spaceBetween",
+            "children": [
+              {
+                "type": "pick",
+                "table": "participants",
+                "rowId": "$playerId",
+                "column": "lang",
+                "dragSelect": true,
+                "label": {
+                  "en": "Language",
+                  "ko": "언어",
+                  "zh": "语言",
+                  "hi": "भाषा",
+                  "es": "Idioma",
+                  "fr": "Langue",
+                  "ar": "اللغة",
+                  "pt": "Idioma",
+                  "ru": "Язык",
+                  "de": "Sprache",
+                  "ja": "言語",
+                  "tr": "Dil",
+                  "vi": "Ngôn ngữ",
+                  "it": "Lingua",
+                  "fa": "زبان",
+                  "pl": "Język",
+                  "uk": "Мова",
+                  "nl": "Taal",
+                  "sv": "Language",
+                  "cs": "Jazyk",
+                  "el": "Γλώσσα"
+                },
+                "options": [
+                  {
+                    "value": "en",
+                    "label": "English",
+                    "action": {
+                      "fn": "hostCall",
+                      "args": {
+                        "name": "setMyLanguage",
+                        "lang": "en"
+                      }
+                    }
+                  },
+                  {
+                    "value": "es",
+                    "label": "Español",
+                    "action": {
+                      "fn": "hostCall",
+                      "args": {
+                        "name": "setMyLanguage",
+                        "lang": "es"
+                      }
+                    }
+                  },
+                  {
+                    "value": "fr",
+                    "label": "Français",
+                    "action": {
+                      "fn": "hostCall",
+                      "args": {
+                        "name": "setMyLanguage",
+                        "lang": "fr"
+                      }
+                    }
+                  },
+                  {
+                    "value": "de",
+                    "label": "Deutsch",
+                    "action": {
+                      "fn": "hostCall",
+                      "args": {
+                        "name": "setMyLanguage",
+                        "lang": "de"
+                      }
+                    }
+                  },
+                  {
+                    "value": "pt",
+                    "label": "Português",
+                    "action": {
+                      "fn": "hostCall",
+                      "args": {
+                        "name": "setMyLanguage",
+                        "lang": "pt"
+                      }
+                    }
+                  },
+                  {
+                    "value": "it",
+                    "label": "Italiano",
+                    "action": {
+                      "fn": "hostCall",
+                      "args": {
+                        "name": "setMyLanguage",
+                        "lang": "it"
+                      }
+                    }
+                  },
+                  {
+                    "value": "zh",
+                    "label": "中文",
+                    "action": {
+                      "fn": "hostCall",
+                      "args": {
+                        "name": "setMyLanguage",
+                        "lang": "zh"
+                      }
+                    }
+                  },
+                  {
+                    "value": "ja",
+                    "label": "日本語",
+                    "action": {
+                      "fn": "hostCall",
+                      "args": {
+                        "name": "setMyLanguage",
+                        "lang": "ja"
+                      }
+                    }
+                  },
+                  {
+                    "value": "ko",
+                    "label": "한국어",
+                    "action": {
+                      "fn": "hostCall",
+                      "args": {
+                        "name": "setMyLanguage",
+                        "lang": "ko"
+                      }
+                    }
+                  },
+                  {
+                    "value": "ar",
+                    "label": "العربية",
+                    "action": {
+                      "fn": "hostCall",
+                      "args": {
+                        "name": "setMyLanguage",
+                        "lang": "ar"
+                      }
+                    }
+                  },
+                  {
+                    "value": "hi",
+                    "label": "हिन्दी",
+                    "action": {
+                      "fn": "hostCall",
+                      "args": {
+                        "name": "setMyLanguage",
+                        "lang": "hi"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "Share",
+                  "ko": "공유",
+                  "zh": "分享",
+                  "hi": "साझा",
+                  "es": "Compartir",
+                  "fr": "Partager",
+                  "ar": "مشاركة",
+                  "pt": "Compartilhar",
+                  "ru": "Поделиться",
+                  "de": "Teilen",
+                  "ja": "共有",
+                  "tr": "Paylaş",
+                  "vi": "Chia sẻ",
+                  "it": "Condividi",
+                  "fa": "اشتراک‌گذاری",
+                  "pl": "Dzielenie się",
+                  "uk": "Ділитися",
+                  "nl": "Delen",
+                  "sv": "Share",
+                  "cs": "Sdílet",
+                  "el": "Ανταλλαγή"
+                },
+                "icon": "link",
+                "variant": "text",
+                "dense": true,
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "copyParleyLink"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "list",
+            "emptyIcon": "forum",
+            "emptyTitle": {
+              "en": "No messages yet",
+              "ko": "아직 메시지가 없습니다",
+              "zh": "还没有消息",
+              "hi": "अभी तक कोई निबंध नहीं",
+              "es": "Aún no hay mensajes",
+              "fr": "Aucun message pour l'instant",
+              "ar": "لا توجد رسائل بعد",
+              "pt": "Ainda sem mensagens",
+              "ru": "Сообщений пока нет",
+              "de": "Noch keine Nachrichten",
+              "ja": "まだメッセージはありません",
+              "tr": "Henüz mesajınız yok",
+              "vi": "Chưa có tin nhắn nào",
+              "it": "Ancora nessun messaggio",
+              "fa": "هنوز پیامی نداری",
+              "pl": "Brak wiadomości jeszcze",
+              "uk": "Ще немає повідомлень",
+              "nl": "Nog geen berichten",
+              "sv": "Inga meddelanden än",
+              "cs": "Ještě žádné zprávy",
+              "el": "Δεν υπάρχουν μήνυμα ακόμη"
+            },
+            "emptyText": {
+              "en": "Connect with a code and say hello -- messages show up here.",
+              "ko": "코드로 연결해보세요 -- 메시지가 여기에 표시됩니다.",
+              "zh": "使用代码连接并说你好——消息会显示在这里。",
+              "hi": "कोड से जोड़िए और नमस्ते कहिए -- संदेश यहाँ दिखाई देते हैं।",
+              "es": "Conéctate con un código y di hola -- aquí aparecen los mensajes.",
+              "fr": "Connectez-vous avec un code et dites bonjour -- les messages apparaissent ici.",
+              "ar": "اتصل بـ كود و قل مرحباً -- الرسائل ستظهر هنا.",
+              "pt": "Conecte-se com um código e diga olá -- as mensagens aparecem aqui.",
+              "ru": "Подключитесь с помощью кода и скажите привет — сообщения появятся здесь.",
+              "de": "Verbinde mit einem Code und sage Hallo – Nachrichten erscheinen hier.",
+              "ja": "コードで接続してこんにちはと言いましょう--メッセージはここに表示されます。",
+              "tr": "Kodu kullanarak bağlantı kurun ve merhaba deyin -- mesajlar burada gösterilir.",
+              "vi": "Kết nối bằng mã và chào hỏi -- tin nhắn sẽ xuất hiện ở đây.",
+              "it": "Connetti con un codice e saluta -- qui appariranno i messaggi.",
+              "fa": "با کد ارتباط بگیرید و سلام بگوید -- پیام‌ها اینجا نمایش داده می‌شوند.",
+              "pl": "Połącz się za pomocą kodu i powiedz cześć -- wiadomości pojawią się tutaj.",
+              "uk": "З'єднайтеся за допомогою коду та привітайтеся — повідомлення з'являться тут.",
+              "nl": "Verbind met een code en zeg hallo -- berichten verschijnen hier.",
+              "sv": "Anslut med en kod och säg hej -- meddelanden visas här.",
+              "cs": "Připojte se pomocí kódu a řekněte si ahoj -- zde se zobrazují zprávy.",
+              "el": "Συνδεστε με έναν κώδικα και ασκησητε χαλάρωση -- τα μήνυμα φαίνονται εδώ."
+            },
+            "table": "messages",
+            "titleColumn": "text",
+            "subtitleColumns": [
+              {
+                "fromSetting": "parleyViewCol",
+                "fallback": "display"
+              }
+            ],
+            "metaColumns": [
+              "sender",
+              "status"
+            ],
+            "sortColumn": "sentAt",
+            "sortDir": "asc",
+            "example": {
+              "ids": [
+                "m1",
+                "m2",
+                "m3"
+              ],
+              "label": {
+                "en": "EXAMPLE CONVERSATION",
+                "ko": "예시 대화",
+                "zh": "示例对话",
+                "hi": "उदाहरण बातचीत",
+                "es": "EJEMPLO DE CONVERSACIÓN",
+                "fr": "EXEMPLE DE CONVERSACTION",
+                "ar": "مثال على حوار",
+                "pt": "EXEMPLO DE CONVERSACAO",
+                "ru": "Пример разговора",
+                "de": "BEISPIEL-GEWÄCHS",
+                "ja": "例の会話",
+                "tr": "ÖRNEK ÇALIŞMA",
+                "vi": "VÍ DỤ HÌNH THỨC",
+                "it": "ESEMPLO DI CONVERSAZIONE",
+                "fa": "مثال‌گویی در مکالمه",
+                "pl": "PRZYKŁadowa KONwersacja",
+                "uk": "ПОВІДОМЛЕННЯ",
+                "nl": "BESLETEN VORBEIgbaar",
+                "sv": "ANTECKNINGSBEVÄRKNING",
+                "cs": "PŘÍKLAD POMĚRNYCH VĚT",
+                "el": "Παράδειγμα συνομιλίας"
+              },
+              "hideLabel": {
+                "en": "Hide",
+                "ko": "숨기기",
+                "zh": "隐藏",
+                "hi": "तोप्रकाश",
+                "es": "Ocultar",
+                "fr": "Masquer",
+                "ar": "إخفاء",
+                "pt": "Esconder",
+                "ru": "Скрыть",
+                "de": "Verstecken",
+                "ja": "例",
+                "tr": "Gizle",
+                "vi": "Ẩn",
+                "it": "Nascondi",
+                "fa": "پنهان کردن",
+                "pl": "Schowaj",
+                "uk": "Зберегти",
+                "nl": "BESLETEN",
+                "sv": "Skjuta ner",
+                "cs": "Skrýt",
+                "el": "Απόκρυψη"
+              },
+              "chipLabel": {
+                "en": "Example",
+                "ko": "예시",
+                "zh": "示例",
+                "hi": "उदाहरण",
+                "es": "Ejemplo",
+                "fr": "Exemple",
+                "ar": "مثال",
+                "pt": "Exemplo",
+                "ru": "Пример",
+                "de": "Beispiel",
+                "ja": "例",
+                "tr": "Örnek",
+                "vi": "Ví dụ",
+                "it": "Esempio",
+                "fa": "مثال‌گویی",
+                "pl": "Przykładowa",
+                "uk": "Збережено",
+                "nl": "VORBEIgbaar",
+                "sv": "Exempel",
+                "cs": "Příklady",
+                "el": "Παράδειγμα"
+              },
+              "hiddenFromSetting": "parleyExamplesHidden",
+              "onHide": {
+                "fn": "hostCall",
+                "args": {
+                  "name": "hideParleyExamples",
+                  "hidden": true
+                }
+              }
+            },
+            "bubbles": {
+              "byColumn": "senderId",
+              "selfValue": "$playerId",
+              "example": {
+                "ids": [
+                  "m1",
+                  "m2",
+                  "m3"
+                ],
+                "label": {
+                  "en": "EXAMPLE CONVERSATION",
+                  "ko": "예시 대화",
+                  "zh": "示例对话",
+                  "hi": "उदाहरण बातचीत",
+                  "es": "EJEMPLO DE CONVERSACIÓN",
+                  "fr": "EXEMPLE DE CONVERSACTION",
+                  "ar": "مثال على حوار",
+                  "pt": "EXEMPLO DE CONVERSACAO",
+                  "ru": "Пример разговора",
+                  "de": "BEISPIEL-GEWÄCHS",
+                  "ja": "例の会話",
+                  "tr": "ÖRNEK ÇALIŞMA",
+                  "vi": "VÍ DỤ HÌNH THỨC",
+                  "it": "ESEMPLO DI CONVERSAZIONE",
+                  "fa": "مثال‌گویی در مکالمه",
+                  "pl": "PRZYKŁadowa KONwersacja",
+                  "uk": "ПОВІДОМЛЕННЯ",
+                  "nl": "BESLETEN VORBEIgbaar",
+                  "sv": "ANTECKNINGSBEVÄRKNING",
+                  "cs": "PŘÍKLAD POMĚRNYCH VĚT",
+                  "el": "Παράδειγμα συνομιλίας"
+                },
+                "hideLabel": {
+                  "en": "Hide",
+                  "ko": "숨기기",
+                  "zh": "隐藏",
+                  "hi": "तोप्रकाश",
+                  "es": "Ocultar",
+                  "fr": "Masquer",
+                  "ar": "إخفاء",
+                  "pt": "Esconder",
+                  "ru": "Скрыть",
+                  "de": "Verstecken",
+                  "ja": "例",
+                  "tr": "Gizle",
+                  "vi": "Ẩn",
+                  "it": "Nascondi",
+                  "fa": "پنهان کردن",
+                  "pl": "Schowaj",
+                  "uk": "Зберегти",
+                  "nl": "BESLETEN",
+                  "sv": "Skjuta ner",
+                  "cs": "Skrýt",
+                  "el": "Απόκρυψη"
+                },
+                "chipLabel": {
+                  "en": "Example",
+                  "ko": "예시",
+                  "zh": "示例",
+                  "hi": "उदाहरण",
+                  "es": "Ejemplo",
+                  "fr": "Exemple",
+                  "ar": "مثال",
+                  "pt": "Exemplo",
+                  "ru": "Пример",
+                  "de": "Beispiel",
+                  "ja": "例",
+                  "tr": "Örnek",
+                  "vi": "Ví dụ",
+                  "it": "Esempio",
+                  "fa": "مثال‌گویی",
+                  "pl": "Przykładowa",
+                  "uk": "Збережено",
+                  "nl": "VORBEIgbaar",
+                  "sv": "Exempel",
+                  "cs": "Příklady",
+                  "el": "Παράδειγμα"
+                },
+                "hiddenFromSetting": "parleyExamplesHidden",
+                "onHide": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "hideParleyExamples",
+                    "hidden": true
+                  }
+                }
+              }
+            },
+            "onTap": {
+              "fn": "hostCall",
+              "args": {
+                "name": "breakdownMessage"
+              }
+            },
+            "swipeActions": [
+              {
+                "label": "Save phrase",
+                "icon": "bookmark_add",
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "savePhrase"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "composer",
+            "table": "messages",
+            "column": "text",
+            "placeholder": {
+              "en": "Type a message…",
+              "ko": "메시지를 입력하세요…",
+              "zh": "输入消息……",
+              "hi": "संदेश लिखें…",
+              "es": "Escribe un mensaje…",
+              "fr": "Tapez un message…",
+              "ar": "اكتب رسالة...",
+              "pt": "Digite uma mensagem…",
+              "ru": "Введите сообщение…",
+              "de": "Eine Nachricht eingeben…",
+              "ja": "メッセージをタイプ…",
+              "tr": "Bir mesaj yazın…",
+              "vi": "Nhập tin nhắn…",
+              "it": "Scrivi un messaggio…",
+              "fa": "پیام می‌نویسید…",
+              "pl": "Wpisz wiadomość…",
+              "uk": "Введіть повідомлення…",
+              "nl": "Typ een bericht…",
+              "sv": "Skriv ett meddelande…",
+              "cs": "Zadejte zprávu…",
+              "el": "Εισάγετε ένα μήνυμα…"
+            },
+            "sendIcon": "send",
+            "values": {
+              "sender": "$playerId",
+              "senderId": "$playerId",
+              "sentAt": "now",
+              "id": "uuid",
+              "status": "Sending…",
+              "display": "",
+              "original": "",
+              "translated": ""
+            },
+            "action": {
+              "fn": "hostCall",
+              "args": {
+                "name": "translateMessage"
+              }
+            },
+            "helperIcon": "translate",
+            "helperTooltip": {
+              "en": "Preview in their language",
+              "ko": "대화에서 저장한 표현들 및 빠르게 연습할 수 있는 방법.",
+              "zh": "在他们的语言中预览",
+              "hi": "अपने भाषात ​​में परिचालन",
+              "es": "Previo en su idioma",
+              "fr": "Prévisualiser dans leur langue",
+              "ar": "عرض باللغة التي يتحدثون بها",
+              "pt": "Pré-visualizar em sua língua",
+              "ru": "Предварительный просмотр на их языке",
+              "de": "Vorschau in ihrer Sprache",
+              "ja": "相手の言語でプレビュー",
+              "tr": "Onların dilinde önizleme",
+              "vi": "Xem trước trong ngôn ngữ của họ",
+              "it": "Anteprima nella loro lingua",
+              "fa": "پیش‌نمایش به زبان آن‌ها",
+              "pl": "Podgląd w ich języku",
+              "uk": "Попередження на їхньому мові",
+              "nl": "Voorblik in hun taal",
+              "sv": "Förhandsgranska i deras språk",
+              "cs": "Náhled v jejich jazyce",
+              "el": "Προεπισκόπηση στη γλώσσα τους"
+            },
+            "helperAction": {
+              "fn": "hostCall",
+              "args": {
+                "name": "composeHelperPreview"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

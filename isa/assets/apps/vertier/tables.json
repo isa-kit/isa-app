@@ -1,0 +1,82 @@
+{
+  "tables": [
+    {
+      "name": "collections",
+      "label": "Collections",
+      "icon": "category",
+      "description": "Things to compare \u2014 each collection defines its own attributes."
+    },
+    {
+      "name": "items",
+      "label": "Items",
+      "icon": "list",
+      "description": "The entries inside a collection (the things being compared)."
+    },
+    {
+      "name": "tierlists",
+      "label": "Tier lists",
+      "icon": "leaderboard",
+      "description": "Saved opinionated rankings of a collection's items into tiers."
+    },
+    {
+      "name": "creations",
+      "label": "Creations",
+      "icon": "campaign",
+      "description": "Published tier lists / comparisons others can vote on.",
+      "source": {
+        "type": "rest",
+        "url": "https://167.233.64.97/api/collections/vertier_creations/records?perPage=200&sort=-publishedAt",
+        "rowsPath": "items",
+        "autoRefresh": true
+      }
+    },
+    {
+      "name": "votes",
+      "label": "Votes",
+      "icon": "how_to_vote",
+      "description": "The full vote matrix \u2014 one row per user's vote on a creation.",
+      "source": {
+        "type": "rest",
+        "url": "https://167.233.64.97/api/collections/vertier_votes/records?perPage=500",
+        "rowsPath": "items",
+        "autoRefresh": true
+      }
+    },
+    {
+      "name": "replies",
+      "label": "Replies",
+      "icon": "mode_comment",
+      "description": "Conversation on a creation \u2014 one row per reply, pulled back the way votes are.",
+      "source": {
+        "type": "rest",
+        "url": "https://167.233.64.97/api/collections/vertier_replies/records?perPage=500&sort=repliedAt",
+        "rowsPath": "items",
+        "autoRefresh": true
+      }
+    },
+    {
+      "name": "posts",
+      "label": "Your posts",
+      "icon": "edit_note",
+      "description": "Your own posts \u2014 private to you by default, shared outward by choice."
+    },
+    {
+      "name": "contacts",
+      "label": "People",
+      "icon": "person",
+      "description": "People you can share a post with."
+    },
+    {
+      "name": "circles",
+      "label": "Groups",
+      "icon": "groups",
+      "description": "Named groups you can share a post with (each lists its members)."
+    },
+    {
+      "name": "postvotes",
+      "label": "Your post votes",
+      "icon": "how_to_vote",
+      "description": "Local vote tallies on your own posts (not synced)."
+    }
+  ]
+}

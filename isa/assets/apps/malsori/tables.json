@@ -1,0 +1,28 @@
+{
+  "tables": [
+    {
+      "name": "lookup",
+      "label": "Current lookup",
+      "icon": "search",
+      "description": "Singleton row (id \"current\") holding the last-searched word: whether it was found in the bundled dictionary, its rendered malsori beats concatenated, the stress-beat index, its raw ARPAbet pronunciation, and (only for the curated example words) a genuine textbook-transliteration contrast string."
+    },
+    {
+      "name": "beats",
+      "label": "Beats",
+      "icon": "grain",
+      "description": "One row per malsori sound-block (\"beat\") for the current lookup: its Hangul text, the slice of English spelling it covers, and whether it carries the word's primary-stress dot. Cleared and rewritten on every lookup."
+    },
+    {
+      "name": "coach",
+      "label": "Coaching lines",
+      "icon": "school",
+      "description": "One row per Korean coaching tip for a tricky sound present in the current lookup's word (pulled from the bundled phoneme mapping's coach_ko field). Cleared and rewritten on every lookup."
+    },
+    {
+      "name": "history",
+      "label": "Recent lookups",
+      "icon": "history",
+      "description": "Local-only (never synced — malsori has no rooms) list of recent searches, newest first, capped at 30 rows: the word, its rendered beats, and whether it was found."
+    }
+  ]
+}

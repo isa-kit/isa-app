@@ -1,0 +1,432 @@
+{
+  "stories": [
+    {
+      "name": "id",
+      "type": "text"
+    },
+    {
+      "name": "rank",
+      "type": "integer"
+    },
+    {
+      "name": "storyId",
+      "type": "text"
+    },
+    {
+      "name": "lang",
+      "type": "text"
+    },
+    {
+      "name": "headline",
+      "type": "text",
+      "label": {
+        "en": "Headline",
+        "ko": "제목",
+        "zh": "标题",
+        "hi": "हेडलाइन",
+        "es": "Titular",
+        "fr": "Titre",
+        "ar": "العنوان",
+        "pt": "Manchete",
+        "ru": "Заголовок",
+        "de": "Schlagzeile",
+        "ja": "見出し",
+        "tr": "Başlık",
+        "vi": "Tiêu đề",
+        "it": "Titolo",
+        "fa": "تیتر",
+        "pl": "Nagłówek",
+        "uk": "Заголовок",
+        "nl": "Kop",
+        "sv": "Rubrik",
+        "cs": "Titulek",
+        "el": "Τίτλος"
+      }
+    },
+    {
+      "name": "category",
+      "type": "text",
+      "label": {
+        "en": "Topic",
+        "ko": "주제",
+        "zh": "主题",
+        "hi": "विषय",
+        "es": "Tema",
+        "fr": "Thème",
+        "ar": "الموضوع",
+        "pt": "Tema",
+        "ru": "Тема",
+        "de": "Thema",
+        "ja": "トピック",
+        "tr": "Konu",
+        "vi": "Chủ đề",
+        "it": "Argomento",
+        "fa": "موضوع",
+        "pl": "Temat",
+        "uk": "Тема",
+        "nl": "Onderwerp",
+        "sv": "Ämne",
+        "cs": "Téma",
+        "el": "Θέμα"
+      }
+    },
+    {
+      "name": "keywords",
+      "type": "text"
+    },
+    {
+      "name": "sourceIds",
+      "type": "text"
+    },
+    {
+      "name": "sourceList",
+      "type": "text"
+    },
+    {
+      "name": "sourceCount",
+      "type": "integer"
+    },
+    {
+      "name": "outletTotal",
+      "type": "integer"
+    },
+    {
+      "name": "coverage",
+      "type": "number"
+    },
+    {
+      "name": "top",
+      "type": "boolean"
+    },
+    {
+      "name": "articleCount",
+      "type": "integer"
+    },
+    {
+      "name": "countries",
+      "type": "text"
+    },
+    {
+      "name": "dates",
+      "type": "text"
+    },
+    {
+      "name": "lastUpdate",
+      "type": "dateTime"
+    },
+    {
+      "name": "firstSeen",
+      "type": "dateTime"
+    },
+    {
+      "name": "badge",
+      "type": "text"
+    },
+    {
+      "name": "age",
+      "type": "text"
+    }
+  ],
+  "articles": [
+    {
+      "name": "id",
+      "type": "text"
+    },
+    {
+      "name": "storyId",
+      "type": "text"
+    },
+    {
+      "name": "sourceId",
+      "type": "text"
+    },
+    {
+      "name": "source",
+      "type": "text"
+    },
+    {
+      "name": "title",
+      "type": "text"
+    },
+    {
+      "name": "url",
+      "type": "text"
+    },
+    {
+      "name": "publishedAt",
+      "type": "dateTime"
+    },
+    {
+      "name": "category",
+      "type": "text"
+    },
+    {
+      "name": "sourceCategory",
+      "type": "text"
+    },
+    {
+      "name": "summary",
+      "type": "text"
+    },
+    {
+      "name": "byline",
+      "type": "text"
+    },
+    {
+      "name": "age",
+      "type": "text"
+    }
+  ],
+  "sources": [
+    {
+      "name": "id",
+      "type": "text"
+    },
+    {
+      "name": "name",
+      "type": "text"
+    },
+    {
+      "name": "home",
+      "type": "text"
+    },
+    {
+      "name": "lang",
+      "type": "text"
+    },
+    {
+      "name": "country",
+      "type": "text"
+    },
+    {
+      "name": "region",
+      "type": "text"
+    },
+    {
+      "name": "articleCount",
+      "type": "integer"
+    },
+    {
+      "name": "storyCount",
+      "type": "integer"
+    },
+    {
+      "name": "state",
+      "type": "text"
+    },
+    {
+      "name": "enabled",
+      "type": "boolean"
+    },
+    {
+      "name": "inFeed",
+      "type": "boolean"
+    },
+    {
+      "name": "counted",
+      "type": "boolean"
+    },
+    {
+      "name": "status",
+      "type": "text"
+    }
+  ],
+  "countries": [
+    {
+      "name": "id",
+      "type": "text"
+    },
+    {
+      "name": "code",
+      "type": "text"
+    },
+    {
+      "name": "name",
+      "type": "text"
+    },
+    {
+      "name": "storyCount",
+      "type": "integer"
+    },
+    {
+      "name": "storyIds",
+      "type": "text"
+    }
+  ],
+  "mapshade": [
+    {
+      "name": "id",
+      "type": "text"
+    },
+    {
+      "name": "code",
+      "type": "text"
+    },
+    {
+      "name": "shade",
+      "type": "number"
+    }
+  ],
+  "mapsel": [
+    {
+      "name": "id",
+      "type": "text"
+    },
+    {
+      "name": "code",
+      "type": "text"
+    }
+  ],
+  "info": [
+    {
+      "name": "id",
+      "type": "text"
+    },
+    {
+      "name": "generatedAt",
+      "type": "dateTime"
+    },
+    {
+      "name": "mode",
+      "type": "text"
+    },
+    {
+      "name": "storyCount",
+      "type": "integer"
+    },
+    {
+      "name": "outletsActive",
+      "type": "integer"
+    },
+    {
+      "name": "outletsTotal",
+      "type": "integer"
+    },
+    {
+      "name": "articleCount",
+      "type": "integer"
+    },
+    {
+      "name": "sourcesLive",
+      "type": "integer"
+    },
+    {
+      "name": "sourcesTotal",
+      "type": "integer"
+    }
+  ],
+  "languages": [
+    {
+      "name": "id",
+      "type": "text"
+    },
+    {
+      "name": "code",
+      "type": "text"
+    },
+    {
+      "name": "name",
+      "type": "text"
+    },
+    {
+      "name": "gloss",
+      "type": "text"
+    },
+    {
+      "name": "outletCount",
+      "type": "integer"
+    },
+    {
+      "name": "outletsActive24h",
+      "type": "integer"
+    },
+    {
+      "name": "archiveFirst",
+      "type": "text"
+    },
+    {
+      "name": "archiveLast",
+      "type": "text"
+    },
+    {
+      "name": "generatedAt",
+      "type": "dateTime"
+    }
+  ],
+  "prefs": [
+    {
+      "name": "id",
+      "type": "text"
+    },
+    {
+      "name": "langs",
+      "type": "text"
+    },
+    {
+      "name": "mode",
+      "type": "text"
+    },
+    {
+      "name": "dateFrom",
+      "type": "text"
+    },
+    {
+      "name": "dateTo",
+      "type": "text"
+    },
+    {
+      "name": "sort",
+      "type": "text"
+    },
+    {
+      "name": "regions",
+      "type": "text"
+    },
+    {
+      "name": "countries",
+      "type": "text"
+    },
+    {
+      "name": "hidden",
+      "type": "text"
+    },
+    {
+      "name": "added",
+      "type": "text"
+    }
+  ],
+  "mysources": [
+    {
+      "name": "id",
+      "type": "text"
+    },
+    {
+      "name": "name",
+      "type": "text"
+    },
+    {
+      "name": "feedUrl",
+      "type": "text"
+    },
+    {
+      "name": "language",
+      "type": "text"
+    },
+    {
+      "name": "country",
+      "type": "text"
+    },
+    {
+      "name": "kind",
+      "type": "text"
+    },
+    {
+      "name": "status",
+      "type": "text"
+    },
+    {
+      "name": "addedAt",
+      "type": "dateTime"
+    }
+  ]
+}

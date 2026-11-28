@@ -1,0 +1,26 @@
+{
+  "files": [
+    { "id": "f_default", "name": "My notes", "order": 0 }
+  ],
+  "notes": [
+    { "id": "n1", "title": "Welcome to Notes", "body": "This whole app is just JSON: schema, content, and a UI tree. Tap any note to edit it, or use + New note to jot something down. See [[Book recommendations]] for an example of a linked note — type `[[Title]]` anywhere in a note's body to link another note, and check the Graph tab to see how notes connect.", "date": "2026-06-01", "pinned": true, "file": "f_default" },
+    { "id": "n2", "title": "Grocery list", "body": "Oat milk, eggs, spinach, coffee beans.", "date": "2026-06-02", "pinned": false, "file": "f_default" },
+    { "id": "n3", "title": "Book recommendations", "body": "The Pragmatic Programmer, Thinking in Systems, A Pattern Language. Came up while writing [[Welcome to Notes]].", "date": "2026-06-03", "pinned": false, "file": "f_default" },
+    { "id": "n4", "title": "Weekend plans", "body": "Saturday: farmers market + bike ride. Sunday: meal prep and a long walk.", "date": "2026-06-04", "pinned": false, "file": "f_default" },
+    { "id": "n5", "title": "Wifi password (guest)", "body": "Network: HomeGuest  /  Password: welcome-friend-2026", "date": "2026-06-04", "pinned": true, "file": "f_default" },
+    { "id": "n6", "title": "Movie watchlist", "body": "Dune Part Two, Past Lives, The Holdovers.", "date": "2026-06-05", "pinned": false, "file": "f_default" },
+    { "id": "n7", "title": "Bike maintenance", "body": "Rear brake pads are nearly gone — order replacements (Shimano B05S). Chain measured at 0.75% wear, swap it at the same time. Shop quote was $40 labor if I don't want to do it myself.", "date": "2026-06-06", "pinned": false, "file": "f_default" },
+    { "id": "n8", "title": "Gift ideas for Dana", "body": "Birthday is July 3rd. Ideas so far: the ceramic pour-over she pointed at in the shop on Wickenden, trail running socks, or a print from that photographer she follows. Budget ~$60.", "date": "2026-06-06", "pinned": false, "file": "f_default" },
+    { "id": "n9", "title": "Sourdough attempt #4", "body": "75% hydration this time. Bulk ferment 5h at 24C, shaped much tighter, cold proof overnight. Result: best oven spring yet, crumb still slightly dense at the bottom — try a hotter dutch oven preheat (260C) next round.", "date": "2026-06-07", "pinned": false, "file": "f_default" },
+    { "id": "n10", "title": "Car service", "body": "Oil change + tire rotation due. Garage on Elm has a slot Thursday 6/18 at 9am — call to confirm. Last service was December at 42,310 miles.", "date": "2026-06-08", "pinned": false, "file": "f_default" },
+    { "id": "n11", "title": "Quote to remember", "body": "\"The best time to plant a tree was twenty years ago. The second best time is now.\" Came up in the 1:1 with Lena and it stuck.", "date": "2026-06-08", "pinned": false, "file": "f_default" },
+    { "id": "n12", "title": "Berlin trip checklist", "body": "Before the 19th: passport (valid, checked), print flat confirmation, notify bank of travel, download offline maps, charge camera batteries, ask Marco to water the plants.", "date": "2026-06-09", "pinned": true, "file": "f_default" },
+    { "id": "n13", "title": "App idea: receipt splitter", "body": "Point camera at a receipt, tap who had what, it does the math including tax/tip proportionally. Everyone gets a venmo link. Probably exists, but none of the ones I tried handle shared appetizers well.", "date": "2026-06-09", "pinned": false, "file": "f_default" },
+    { "id": "n14", "title": "Dentist", "body": "Cleaning booked for Tuesday 2026-06-16, 14:30 with Dr. Okafor. They moved offices — new address is 210 Thayer St, 3rd floor. Bring the new insurance card.", "date": "2026-06-10", "pinned": false, "file": "f_default" },
+    { "id": "n15", "title": "Restaurant list — summer", "body": "To try before September: the new Oaxacan place on Hope St, the pop-up ramen counter (Fridays only), Persimmon's tasting menu for the anniversary, and the lobster shack in Wickford everyone keeps mentioning.", "date": "2026-06-10", "pinned": false, "file": "f_default" }
+  ],
+  "links": [
+    { "id": "lk1", "fromId": "n1", "toId": "n3", "toTitle": "Book recommendations", "fromTitle": "Welcome to Notes" },
+    { "id": "lk2", "fromId": "n3", "toId": "n1", "toTitle": "Welcome to Notes", "fromTitle": "Book recommendations" }
+  ]
+}

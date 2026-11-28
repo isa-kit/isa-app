@@ -1,0 +1,34 @@
+{
+  "id": "parley",
+  "name": "Parley",
+  "icon": "translate",
+  "category": "Life",
+  "description": "A chat that translates as you type.",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_parley"
+  },
+  "seedVersion": "2026-11-26.parleytexts",
+  "seedContent": "initial-only",
+  "uiVariants": {"classic": {"file": "ui.classic.json", "title": "Classic"}},
+  "roomSyncExclude": ["texts"],
+  "durableSettings": ["parleyMemberId", "parleyLinkRoom", "parleyLinkKey", "parleyComposeTargetLang"],
+  "packs": [
+    {
+      "id": "parley-dict-full",
+      "label": "Full Korean dictionary",
+      "size": 1707179,
+      "url": "packs/parley/parley-dict-full.jsonl.gz",
+      "license": "CC BY-SA 4.0 / GFDL",
+      "description": "31,817 entries with real example sentences, gzip-compressed."
+    },
+    {
+      "id": "parley-fr-full",
+      "label": "Full French dictionary",
+      "size": 6535484,
+      "url": "packs/parley/parley-fr-full.jsonl.gz",
+      "license": "CC BY-SA 4.0 / GFDL",
+      "description": "83,011 French words and 278,463 word forms, with real example sentences, gzip-compressed."
+    }
+  ]
+}

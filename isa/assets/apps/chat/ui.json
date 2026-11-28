@@ -1,0 +1,3546 @@
+{
+  "app": {
+    "languages": [
+      "en",
+      "ko",
+      "zh",
+      "hi",
+      "es",
+      "fr",
+      "ar",
+      "pt",
+      "ru",
+      "de",
+      "ja",
+      "tr",
+      "vi",
+      "it",
+      "fa",
+      "pl",
+      "uk",
+      "nl",
+      "sv",
+      "cs",
+      "el"
+    ],
+    "translatable": true,
+    "primaryColor": "#B5651D",
+    "theme": "pastel",
+    "appDataTools": true,
+    "startScreen": "chat",
+    "guide": "about",
+    "leadingAction": {
+      "icon": "menu",
+      "tooltip": {
+        "en": "Chats",
+        "ko": "대화",
+        "zh": "聊天",
+        "hi": "चैट",
+        "es": "Chats",
+        "fr": "Discussions",
+        "ar": "المحادثات",
+        "pt": "Conversas",
+        "ru": "Чаты",
+        "de": "Chats",
+        "ja": "チャット",
+        "tr": "Sohbetler",
+        "vi": "Cuộc trò chuyện",
+        "it": "Chat",
+        "fa": "گفتگوها",
+        "pl": "Czaty",
+        "uk": "Чати",
+        "nl": "Chats",
+        "sv": "Chattar",
+        "cs": "Chaty",
+        "el": "Συνομιλίες"
+      },
+      "hideAtWidth": 720,
+      "action": {
+        "fn": "goto",
+        "args": {
+          "screen": "chats"
+        }
+      }
+    },
+    "headerActions": [
+      {
+        "icon": "call_split",
+        "tooltip": {
+          "en": "New child chat",
+          "ko": "새 하위 채팅",
+          "zh": "新建子聊天",
+          "hi": "नई शाखा चैट",
+          "es": "Nuevo chat derivado",
+          "fr": "Nouvelle discussion dérivée",
+          "ar": "محادثة فرعية جديدة",
+          "pt": "Nova conversa derivada",
+          "ru": "Новый дочерний чат",
+          "de": "Neuer Zweig-Chat",
+          "ja": "新しい子チャット",
+          "tr": "Yeni alt sohbet",
+          "vi": "Cuộc trò chuyện con mới",
+          "it": "Nuova chat derivata",
+          "fa": "گفتگوی فرعی جدید",
+          "pl": "Nowy czat podrzędny",
+          "uk": "Новий дочірній чат",
+          "nl": "Nieuwe afgeleide chat",
+          "sv": "Ny förgrenad chatt",
+          "cs": "Nový podřízený chat",
+          "el": "Νέα θυγατρική συνομιλία"
+        },
+        "action": {
+          "fn": "hostCall",
+          "args": {
+            "name": "chatNewChild"
+          }
+        }
+      },
+      {
+        "icon": "content_copy",
+        "tooltip": {
+          "en": "Copy chat",
+          "ko": "대화 복사",
+          "zh": "复制聊天",
+          "hi": "चैट कॉपी करें",
+          "es": "Copiar chat",
+          "fr": "Copier la discussion",
+          "ar": "نسخ المحادثة",
+          "pt": "Copiar conversa",
+          "ru": "Копировать чат",
+          "de": "Chat kopieren",
+          "ja": "チャットをコピー",
+          "tr": "Sohbeti kopyala",
+          "vi": "Sao chép cuộc trò chuyện",
+          "it": "Copia chat",
+          "fa": "کپی گفتگو",
+          "pl": "Kopiuj czat",
+          "uk": "Копіювати чат",
+          "nl": "Chat kopiëren",
+          "sv": "Kopiera chatt",
+          "cs": "Kopírovat chat",
+          "el": "Αντιγραφή συνομιλίας"
+        },
+        "action": {
+          "fn": "hostCall",
+          "args": {
+            "name": "chatCopy"
+          }
+        }
+      },
+      {
+        "icon": "settings",
+        "tooltip": {
+          "en": "Chat settings",
+          "ko": "채팅 설정",
+          "zh": "聊天设置",
+          "hi": "चैट सेटिंग्स",
+          "es": "Ajustes del chat",
+          "fr": "Paramètres de la discussion",
+          "ar": "إعدادات المحادثة",
+          "pt": "Configurações da conversa",
+          "ru": "Настройки чата",
+          "de": "Chat-Einstellungen",
+          "ja": "チャット設定",
+          "tr": "Sohbet ayarları",
+          "vi": "Cài đặt cuộc trò chuyện",
+          "it": "Impostazioni chat",
+          "fa": "تنظیمات گفتگو",
+          "pl": "Ustawienia czatu",
+          "uk": "Налаштування чату",
+          "nl": "Chatinstellingen",
+          "sv": "Chattinställningar",
+          "cs": "Nastavení chatu",
+          "el": "Ρυθμίσεις συνομιλίας"
+        },
+        "action": {
+          "fn": "goto",
+          "args": {
+            "screen": "settings"
+          }
+        },
+        "hideBelowWidth": 600
+      }
+    ],
+    "appUndoRedo": false,
+    "keyboardUndo": "off",
+    "sync": {
+      "tables": [
+        "chats",
+        "subchats",
+        "messages",
+        "providers"
+      ]
+    },
+    "modelChip": {
+      "kind": "chat"
+    }
+  },
+  "screens": {
+    "chat": {
+      "title": {
+        "en": "New chat",
+        "ko": "새 채팅",
+        "zh": "新聊天",
+        "hi": "नई चैट",
+        "es": "Nuevo chat",
+        "fr": "Nouvelle discussion",
+        "ar": "محادثة جديدة",
+        "pt": "Nova conversa",
+        "ru": "Новый чат",
+        "de": "Neuer Chat",
+        "ja": "新しいチャット",
+        "tr": "Yeni sohbet",
+        "vi": "Cuộc trò chuyện mới",
+        "it": "Nuova chat",
+        "fa": "گفتگوی جدید",
+        "pl": "Nowy czat",
+        "uk": "Новий чат",
+        "nl": "Nieuwe chat",
+        "sv": "Ny chatt",
+        "cs": "Nový chat",
+        "el": "Νέα συνομιλία"
+      },
+      "titleFrom": {
+        "table": "subchats",
+        "id": "$selected:subchats",
+        "column": "name"
+      },
+      "body": {
+        "type": "list",
+        "table": "messages",
+        "titleColumn": "text",
+        "sortColumn": "at",
+        "sortDir": "asc",
+        "anchor": "bottom",
+        "bubbles": {
+          "byColumn": "role",
+          "selfValue": "user",
+          "attachmentsColumn": "attachments",
+          "markdownColumn": "md",
+          "markdownRoles": [
+            "assistant"
+          ],
+          "selectable": true,
+          "chat": {
+            "labels": {
+              "thinking": {
+                "en": "Thinking…",
+                "ko": "생각하는 중…",
+                "zh": "思考中…",
+                "hi": "सोच रहा है…",
+                "es": "Pensando…",
+                "fr": "Réflexion…",
+                "ar": "يفكّر…",
+                "pt": "Pensando…",
+                "ru": "Думаю…",
+                "de": "Denkt nach…",
+                "ja": "考え中…",
+                "tr": "Düşünüyor…",
+                "vi": "Đang suy nghĩ…",
+                "it": "Sta pensando…",
+                "fa": "در حال فکر کردن…",
+                "pl": "Myślę…",
+                "uk": "Думаю…",
+                "nl": "Denkt na…",
+                "sv": "Tänker…",
+                "cs": "Přemýšlí…",
+                "el": "Σκέφτεται…"
+              },
+              "thoughtFor": {
+                "en": "Thought for {n}s",
+                "ko": "{n}초 동안 생각함",
+                "zh": "思考了 {n} 秒",
+                "hi": "{n} सेकंड तक सोचा",
+                "es": "Pensó durante {n} s",
+                "fr": "Réflexion de {n} s",
+                "ar": "فكّر لمدة {n} ث",
+                "pt": "Pensou por {n} s",
+                "ru": "Размышлял {n} с",
+                "de": "{n} s nachgedacht",
+                "ja": "{n}秒間考えました",
+                "tr": "{n} sn düşündü",
+                "vi": "Đã suy nghĩ {n} giây",
+                "it": "Ha pensato per {n} s",
+                "fa": "{n} ثانیه فکر کرد",
+                "pl": "Myślał {n} s",
+                "uk": "Думав {n} с",
+                "nl": "{n} s nagedacht",
+                "sv": "Tänkte i {n} s",
+                "cs": "Přemýšlel {n} s",
+                "el": "Σκέφτηκε για {n} δ"
+              },
+              "reasoning": {
+                "en": "Reasoning",
+                "ko": "추론",
+                "zh": "推理",
+                "hi": "तर्क",
+                "es": "Razonamiento",
+                "fr": "Raisonnement",
+                "ar": "الاستدلال",
+                "pt": "Raciocínio",
+                "ru": "Рассуждение",
+                "de": "Überlegungen",
+                "ja": "推論",
+                "tr": "Muhakeme",
+                "vi": "Lập luận",
+                "it": "Ragionamento",
+                "fa": "استدلال",
+                "pl": "Rozumowanie",
+                "uk": "Міркування",
+                "nl": "Redenering",
+                "sv": "Resonemang",
+                "cs": "Úvahy",
+                "el": "Συλλογισμός"
+              },
+              "continued": {
+                "en": "Continued ×{n}",
+                "ko": "{n}회 이어서 작성",
+                "zh": "已续写 ×{n}",
+                "hi": "जारी रखा ×{n}",
+                "es": "Continuado ×{n}",
+                "fr": "Poursuivi ×{n}",
+                "ar": "استُكمل ×{n}",
+                "pt": "Continuado ×{n}",
+                "ru": "Продолжено ×{n}",
+                "de": "Fortgesetzt ×{n}",
+                "ja": "続きを生成 ×{n}",
+                "tr": "Devam edildi ×{n}",
+                "vi": "Đã tiếp tục ×{n}",
+                "it": "Continuato ×{n}",
+                "fa": "ادامه یافت ×{n}",
+                "pl": "Kontynuowano ×{n}",
+                "uk": "Продовжено ×{n}",
+                "nl": "Voortgezet ×{n}",
+                "sv": "Fortsatt ×{n}",
+                "cs": "Pokračováno ×{n}",
+                "el": "Συνεχίστηκε ×{n}"
+              },
+              "stopped": {
+                "en": "Stopped",
+                "ko": "중지됨",
+                "zh": "已停止",
+                "hi": "रोका गया",
+                "es": "Detenido",
+                "fr": "Arrêté",
+                "ar": "تم الإيقاف",
+                "pt": "Interrompido",
+                "ru": "Остановлено",
+                "de": "Gestoppt",
+                "ja": "停止しました",
+                "tr": "Durduruldu",
+                "vi": "Đã dừng",
+                "it": "Interrotto",
+                "fa": "متوقف شد",
+                "pl": "Zatrzymano",
+                "uk": "Зупинено",
+                "nl": "Gestopt",
+                "sv": "Stoppad",
+                "cs": "Zastaveno",
+                "el": "Διακόπηκε"
+              },
+              "cutOff": {
+                "en": "Cut off",
+                "ko": "잘림",
+                "zh": "已截断",
+                "hi": "अधूरा कटा",
+                "es": "Cortado",
+                "fr": "Tronqué",
+                "ar": "مقطوع",
+                "pt": "Cortado",
+                "ru": "Обрезано",
+                "de": "Abgeschnitten",
+                "ja": "途中で終了",
+                "tr": "Kesildi",
+                "vi": "Bị cắt",
+                "it": "Troncato",
+                "fa": "نیمه‌تمام ماند",
+                "pl": "Ucięto",
+                "uk": "Обрізано",
+                "nl": "Afgekapt",
+                "sv": "Avklippt",
+                "cs": "Zkráceno",
+                "el": "Περικόπηκε"
+              },
+              "sources": {
+                "en": "Sources",
+                "ko": "출처",
+                "zh": "来源",
+                "hi": "स्रोत",
+                "es": "Fuentes",
+                "fr": "Sources",
+                "ar": "المصادر",
+                "pt": "Fontes",
+                "ru": "Источники",
+                "de": "Quellen",
+                "ja": "出典",
+                "tr": "Kaynaklar",
+                "vi": "Nguồn",
+                "it": "Fonti",
+                "fa": "منابع",
+                "pl": "Źródła",
+                "uk": "Джерела",
+                "nl": "Bronnen",
+                "sv": "Källor",
+                "cs": "Zdroje",
+                "el": "Πηγές"
+              },
+              "save": {
+                "en": "Save",
+                "ko": "저장",
+                "zh": "保存",
+                "hi": "सहेजें",
+                "es": "Guardar",
+                "fr": "Enregistrer",
+                "ar": "حفظ",
+                "pt": "Salvar",
+                "ru": "Сохранить",
+                "de": "Speichern",
+                "ja": "保存",
+                "tr": "Kaydet",
+                "vi": "Lưu",
+                "it": "Salva",
+                "fa": "ذخیره",
+                "pl": "Zapisz",
+                "uk": "Зберегти",
+                "nl": "Opslaan",
+                "sv": "Spara",
+                "cs": "Uložit",
+                "el": "Αποθήκευση"
+              }
+            },
+            "actions": {
+              "billing": {
+                "label": {
+                  "en": "Add credit",
+                  "ko": "크레딧 추가",
+                  "zh": "充值额度",
+                  "hi": "क्रेडिट जोड़ें",
+                  "es": "Añadir crédito",
+                  "fr": "Ajouter du crédit",
+                  "ar": "إضافة رصيد",
+                  "pt": "Adicionar crédito",
+                  "ru": "Пополнить баланс",
+                  "de": "Guthaben aufladen",
+                  "ja": "クレジットを追加",
+                  "tr": "Kredi ekle",
+                  "vi": "Nạp thêm tín dụng",
+                  "it": "Aggiungi credito",
+                  "fa": "افزودن اعتبار",
+                  "pl": "Dodaj środki",
+                  "uk": "Поповнити баланс",
+                  "nl": "Tegoed toevoegen",
+                  "sv": "Lägg till kredit",
+                  "cs": "Přidat kredit",
+                  "el": "Προσθήκη πίστωσης"
+                },
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "chatOpenBilling"
+                  }
+                }
+              },
+              "settings": {
+                "label": {
+                  "en": "Open settings",
+                  "ko": "설정 열기",
+                  "zh": "打开设置",
+                  "hi": "सेटिंग खोलें",
+                  "es": "Abrir ajustes",
+                  "fr": "Ouvrir les réglages",
+                  "ar": "فتح الإعدادات",
+                  "pt": "Abrir configurações",
+                  "ru": "Открыть настройки",
+                  "de": "Einstellungen öffnen",
+                  "ja": "設定を開く",
+                  "tr": "Ayarları aç",
+                  "vi": "Mở cài đặt",
+                  "it": "Apri impostazioni",
+                  "fa": "باز کردن تنظیمات",
+                  "pl": "Otwórz ustawienia",
+                  "uk": "Відкрити налаштування",
+                  "nl": "Instellingen openen",
+                  "sv": "Öppna inställningar",
+                  "cs": "Otevřít nastavení",
+                  "el": "Άνοιγμα ρυθμίσεων"
+                },
+                "action": {
+                  "fn": "goto",
+                  "args": {
+                    "screen": "settings"
+                  }
+                }
+              },
+              "checkServer": {
+                "label": {
+                  "en": "Check server",
+                  "ko": "서버 확인",
+                  "zh": "检查服务器",
+                  "hi": "सर्वर जाँचें",
+                  "es": "Comprobar servidor",
+                  "fr": "Vérifier le serveur",
+                  "ar": "تحقق من الخادم",
+                  "pt": "Verificar servidor",
+                  "ru": "Проверить сервер",
+                  "de": "Server prüfen",
+                  "ja": "サーバーを確認",
+                  "tr": "Sunucuyu kontrol et",
+                  "vi": "Kiểm tra máy chủ",
+                  "it": "Controlla il server",
+                  "fa": "بررسی سرور",
+                  "pl": "Sprawdź serwer",
+                  "uk": "Перевірити сервер",
+                  "nl": "Server controleren",
+                  "sv": "Kontrollera servern",
+                  "cs": "Zkontrolovat server",
+                  "el": "Έλεγχος διακομιστή"
+                },
+                "action": {
+                  "fn": "goto",
+                  "args": {
+                    "screen": "settings"
+                  }
+                }
+              },
+              "newChat": {
+                "label": {
+                  "en": "New chat",
+                  "ko": "새 채팅",
+                  "zh": "新聊天",
+                  "hi": "नई चैट",
+                  "es": "Nuevo chat",
+                  "fr": "Nouvelle discussion",
+                  "ar": "محادثة جديدة",
+                  "pt": "Nova conversa",
+                  "ru": "Новый чат",
+                  "de": "Neuer Chat",
+                  "ja": "新しいチャット",
+                  "tr": "Yeni sohbet",
+                  "vi": "Cuộc trò chuyện mới",
+                  "it": "Nuova chat",
+                  "fa": "گفتگوی جدید",
+                  "pl": "Nowy czat",
+                  "uk": "Новий чат",
+                  "nl": "Nieuwe chat",
+                  "sv": "Ny chatt",
+                  "cs": "Nový chat",
+                  "el": "Νέα συνομιλία"
+                },
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "chatNew"
+                  }
+                }
+              },
+              "retry": {
+                "label": {
+                  "en": "Retry",
+                  "ko": "다시 시도",
+                  "zh": "重试",
+                  "hi": "फिर कोशिश करें",
+                  "es": "Reintentar",
+                  "fr": "Réessayer",
+                  "ar": "إعادة المحاولة",
+                  "pt": "Tentar novamente",
+                  "ru": "Повторить",
+                  "de": "Erneut versuchen",
+                  "ja": "再試行",
+                  "tr": "Yeniden dene",
+                  "vi": "Thử lại",
+                  "it": "Riprova",
+                  "fa": "تلاش دوباره",
+                  "pl": "Ponów",
+                  "uk": "Повторити",
+                  "nl": "Opnieuw proberen",
+                  "sv": "Försök igen",
+                  "cs": "Zkusit znovu",
+                  "el": "Επανάληψη"
+                },
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "chatRetry"
+                  }
+                }
+              },
+              "truncated": {
+                "label": {
+                  "en": "Continue",
+                  "ko": "계속",
+                  "zh": "继续",
+                  "hi": "जारी रखें",
+                  "es": "Continuar",
+                  "fr": "Continuer",
+                  "ar": "متابعة",
+                  "pt": "Continuar",
+                  "ru": "Продолжить",
+                  "de": "Fortfahren",
+                  "ja": "続ける",
+                  "tr": "Devam et",
+                  "vi": "Tiếp tục",
+                  "it": "Continua",
+                  "fa": "ادامه",
+                  "pl": "Kontynuuj",
+                  "uk": "Продовжити",
+                  "nl": "Doorgaan",
+                  "sv": "Fortsätt",
+                  "cs": "Pokračovat",
+                  "el": "Συνέχεια"
+                },
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "chatContinue"
+                  }
+                }
+              },
+              "stop": {
+                "label": {
+                  "en": "Stop",
+                  "ko": "중지",
+                  "zh": "停止",
+                  "hi": "रोकें",
+                  "es": "Detener",
+                  "fr": "Arrêter",
+                  "ar": "إيقاف",
+                  "pt": "Parar",
+                  "ru": "Стоп",
+                  "de": "Stopp",
+                  "ja": "停止",
+                  "tr": "Durdur",
+                  "vi": "Dừng",
+                  "it": "Ferma",
+                  "fa": "توقف",
+                  "pl": "Zatrzymaj",
+                  "uk": "Зупинити",
+                  "nl": "Stoppen",
+                  "sv": "Stoppa",
+                  "cs": "Zastavit",
+                  "el": "Διακοπή"
+                },
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "chatStop"
+                  }
+                }
+              }
+            },
+            "fileActions": {
+              "fn": "hostCall",
+              "args": {
+                "name": "chatFileActions"
+              }
+            },
+            "byline": true,
+            "statusLine": true
+          },
+          "rowActions": [
+            {
+              "id": "edit",
+              "icon": "edit",
+              "label": {
+                "en": "Edit",
+                "ko": "편집",
+                "zh": "编辑",
+                "hi": "संपादित करें",
+                "es": "Editar",
+                "fr": "Modifier",
+                "ar": "تعديل",
+                "pt": "Editar",
+                "ru": "Изменить",
+                "de": "Bearbeiten",
+                "ja": "編集",
+                "tr": "Düzenle",
+                "vi": "Chỉnh sửa",
+                "it": "Modifica",
+                "fa": "ویرایش",
+                "pl": "Edytuj",
+                "uk": "Редагувати",
+                "nl": "Bewerken",
+                "sv": "Redigera",
+                "cs": "Upravit",
+                "el": "Επεξεργασία"
+              },
+              "hint": {
+                "en": "Change this message and send it again",
+                "ko": "이 메시지를 수정해서 다시 보냅니다",
+                "zh": "修改这条消息并重新发送",
+                "hi": "इस संदेश को बदलकर फिर से भेजें",
+                "es": "Cambia este mensaje y envíalo de nuevo",
+                "fr": "Modifiez ce message et renvoyez-le",
+                "ar": "عدّل هذه الرسالة وأرسلها مرة أخرى",
+                "pt": "Altere esta mensagem e envie de novo",
+                "ru": "Измените это сообщение и отправьте снова",
+                "de": "Diese Nachricht ändern und erneut senden",
+                "ja": "このメッセージを変更してもう一度送信します",
+                "tr": "Bu mesajı değiştirip yeniden gönder",
+                "vi": "Sửa tin nhắn này rồi gửi lại",
+                "it": "Modifica questo messaggio e invialo di nuovo",
+                "fa": "این پیام را تغییر دهید و دوباره بفرستید",
+                "pl": "Zmień tę wiadomość i wyślij ją ponownie",
+                "uk": "Змініть це повідомлення й надішліть знову",
+                "nl": "Pas dit bericht aan en verstuur het opnieuw",
+                "sv": "Ändra meddelandet och skicka det igen",
+                "cs": "Upravte tuto zprávu a odešlete ji znovu",
+                "el": "Αλλάξτε αυτό το μήνυμα και στείλτε το ξανά"
+              },
+              "action": {
+                "fn": "hostCall",
+                "args": {
+                  "name": "chatEditMessage"
+                }
+              },
+              "column": "role",
+              "equals": "user"
+            },
+            {
+              "builtin": "copy",
+              "hint": {
+                "en": "Copy the text to your clipboard",
+                "ko": "텍스트를 클립보드에 복사합니다",
+                "zh": "将文字复制到剪贴板",
+                "hi": "टेक्स्ट को क्लिपबोर्ड पर कॉपी करें",
+                "es": "Copia el texto al portapapeles",
+                "fr": "Copiez le texte dans le presse-papiers",
+                "ar": "انسخ النص إلى الحافظة",
+                "pt": "Copie o texto para a área de transferência",
+                "ru": "Скопировать текст в буфер обмена",
+                "de": "Den Text in die Zwischenablage kopieren",
+                "ja": "テキストをクリップボードにコピーします",
+                "tr": "Metni panoya kopyala",
+                "vi": "Sao chép văn bản vào bộ nhớ tạm",
+                "it": "Copia il testo negli appunti",
+                "fa": "متن را در کلیپ‌بورد کپی کنید",
+                "pl": "Skopiuj tekst do schowka",
+                "uk": "Скопіювати текст у буфер обміну",
+                "nl": "Kopieer de tekst naar het klembord",
+                "sv": "Kopiera texten till urklipp",
+                "cs": "Zkopírovat text do schránky",
+                "el": "Αντιγραφή του κειμένου στο πρόχειρο"
+              }
+            },
+            {
+              "id": "regenerate",
+              "icon": "refresh",
+              "label": {
+                "en": "Regenerate",
+                "ko": "다시 생성",
+                "zh": "重新生成",
+                "hi": "फिर से बनाएँ",
+                "es": "Regenerar",
+                "fr": "Régénérer",
+                "ar": "إعادة الإنشاء",
+                "pt": "Gerar novamente",
+                "ru": "Сгенерировать заново",
+                "de": "Neu generieren",
+                "ja": "再生成",
+                "tr": "Yeniden oluştur",
+                "vi": "Tạo lại",
+                "it": "Rigenera",
+                "fa": "تولید دوباره",
+                "pl": "Wygeneruj ponownie",
+                "uk": "Згенерувати знову",
+                "nl": "Opnieuw genereren",
+                "sv": "Generera igen",
+                "cs": "Vygenerovat znovu",
+                "el": "Επαναδημιουργία"
+              },
+              "hint": {
+                "en": "Ask for a new answer to the same question",
+                "ko": "같은 질문에 새 답변을 요청합니다",
+                "zh": "对同一个问题重新要一个回答",
+                "hi": "उसी सवाल का नया जवाब माँगें",
+                "es": "Pide una respuesta nueva a la misma pregunta",
+                "fr": "Demandez une nouvelle réponse à la même question",
+                "ar": "اطلب إجابة جديدة للسؤال نفسه",
+                "pt": "Peça uma nova resposta para a mesma pergunta",
+                "ru": "Запросить новый ответ на тот же вопрос",
+                "de": "Eine neue Antwort auf dieselbe Frage anfordern",
+                "ja": "同じ質問に新しい回答を求めます",
+                "tr": "Aynı soruya yeni bir yanıt iste",
+                "vi": "Yêu cầu câu trả lời mới cho cùng câu hỏi",
+                "it": "Chiedi una nuova risposta alla stessa domanda",
+                "fa": "برای همان پرسش پاسخ تازه‌ای بخواهید",
+                "pl": "Poproś o nową odpowiedź na to samo pytanie",
+                "uk": "Попросити нову відповідь на те саме запитання",
+                "nl": "Vraag een nieuw antwoord op dezelfde vraag",
+                "sv": "Be om ett nytt svar på samma fråga",
+                "cs": "Požádat o novou odpověď na stejnou otázku",
+                "el": "Ζητήστε νέα απάντηση στην ίδια ερώτηση"
+              },
+              "action": {
+                "fn": "hostCall",
+                "args": {
+                  "name": "chatRegenerate"
+                }
+              },
+              "column": "role",
+              "equals": "assistant",
+              "lastOnly": true
+            },
+            {
+              "builtin": "softDelete",
+              "flag": "deleted",
+              "hint": {
+                "en": "Remove it — you can undo",
+                "ko": "삭제합니다 — 되돌릴 수 있습니다",
+                "zh": "删除它——可以撤销",
+                "hi": "इसे हटाएँ — आप इसे पूर्ववत कर सकते हैं",
+                "es": "Quítalo — puedes deshacerlo",
+                "fr": "Supprimez-le — vous pouvez annuler",
+                "ar": "احذفه — يمكنك التراجع",
+                "pt": "Remova — você pode desfazer",
+                "ru": "Удалить — можно отменить",
+                "de": "Entfernen — Sie können es rückgängig machen",
+                "ja": "削除します — 元に戻せます",
+                "tr": "Kaldır — geri alabilirsin",
+                "vi": "Xóa đi — bạn có thể hoàn tác",
+                "it": "Rimuovilo — puoi annullare",
+                "fa": "حذفش کنید — می‌توانید برگردانید",
+                "pl": "Usuń — możesz to cofnąć",
+                "uk": "Видалити — можна скасувати",
+                "nl": "Verwijder het — je kunt het ongedaan maken",
+                "sv": "Ta bort — du kan ångra",
+                "cs": "Odstranit — jde to vrátit zpět",
+                "el": "Αφαίρεση — μπορείτε να την αναιρέσετε"
+              }
+            }
+          ],
+          "contentMaxWidth": 760,
+          "markdownSetting": "chat:markdown"
+        },
+        "emptyIcon": "auto_awesome",
+        "emptyTitle": {
+          "en": "How can I help?",
+          "ko": "무엇을 도와드릴까요?",
+          "zh": "有什么可以帮你的？",
+          "hi": "मैं कैसे मदद कर सकता हूँ?",
+          "es": "¿En qué puedo ayudarte?",
+          "fr": "Comment puis-je vous aider ?",
+          "ar": "كيف يمكنني المساعدة؟",
+          "pt": "Como posso ajudar?",
+          "ru": "Чем могу помочь?",
+          "de": "Wie kann ich helfen?",
+          "ja": "何をお手伝いしましょうか？",
+          "tr": "Nasıl yardımcı olabilirim?",
+          "vi": "Tôi có thể giúp gì?",
+          "it": "Come posso aiutarti?",
+          "fa": "چطور می‌توانم کمک کنم؟",
+          "pl": "W czym mogę pomóc?",
+          "uk": "Чим можу допомогти?",
+          "nl": "Waarmee kan ik helpen?",
+          "sv": "Hur kan jag hjälpa till?",
+          "cs": "Jak mohu pomoci?",
+          "el": "Πώς μπορώ να βοηθήσω;"
+        },
+        "footer": {
+          "type": "column",
+          "crossAxis": "stretch",
+          "children": [
+            {
+              "type": "column",
+              "crossAxis": "stretch",
+              "children": [
+                {
+                  "type": "list",
+                  "table": "agent_status",
+                  "titleColumn": "text",
+                  "sortColumn": "order",
+                  "sortDir": "asc",
+                  "builtinDelete": false,
+                  "swipeActions": false,
+                  "hideEmptyDefault": true
+                },
+                {
+                  "type": "row",
+                  "showIf": {
+                    "setting": "chat:agentRunning",
+                    "equals": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "button",
+                      "label": {
+                        "en": "Stop",
+                        "ko": "중지",
+                        "zh": "停止",
+                        "hi": "रोकें",
+                        "es": "Detener",
+                        "fr": "Arrêter",
+                        "ar": "إيقاف",
+                        "pt": "Parar",
+                        "ru": "Остановить",
+                        "de": "Stoppen",
+                        "ja": "停止",
+                        "tr": "Durdur",
+                        "vi": "Dừng",
+                        "it": "Interrompi",
+                        "fa": "توقف",
+                        "pl": "Zatrzymaj",
+                        "uk": "Зупинити",
+                        "nl": "Stoppen",
+                        "sv": "Stoppa",
+                        "cs": "Zastavit",
+                        "el": "Διακοπή"
+                      },
+                      "icon": "close",
+                      "variant": "text",
+                      "dense": true,
+                      "action": {
+                        "fn": "hostCall",
+                        "args": {
+                          "name": "agentStop"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "row",
+                  "showIf": {
+                    "setting": "chat:agentQueued",
+                    "equals": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "button",
+                      "label": {
+                        "en": "Send now (stops this step)",
+                        "ko": "지금 보내기(이 단계 중지)",
+                        "zh": "立即发送（停止此步骤）",
+                        "hi": "अभी भेजें (यह चरण रुकेगा)",
+                        "es": "Enviar ahora (detiene este paso)",
+                        "fr": "Envoyer maintenant (arrête cette étape)",
+                        "ar": "أرسل الآن (يوقف هذه الخطوة)",
+                        "pt": "Enviar agora (para esta etapa)",
+                        "ru": "Отправить сейчас (остановит этот шаг)",
+                        "de": "Jetzt senden (stoppt diesen Schritt)",
+                        "ja": "今すぐ送信（このステップを停止）",
+                        "tr": "Şimdi gönder (bu adımı durdurur)",
+                        "vi": "Gửi ngay (dừng bước này)",
+                        "it": "Invia ora (interrompe questo passaggio)",
+                        "fa": "اکنون بفرست (این مرحله متوقف می‌شود)",
+                        "pl": "Wyślij teraz (zatrzyma ten krok)",
+                        "uk": "Надіслати зараз (зупинить цей крок)",
+                        "nl": "Nu verzenden (stopt deze stap)",
+                        "sv": "Skicka nu (stoppar det här steget)",
+                        "cs": "Odeslat hned (zastaví tento krok)",
+                        "el": "Αποστολή τώρα (σταματά αυτό το βήμα)"
+                      },
+                      "icon": "arrow_forward",
+                      "variant": "text",
+                      "dense": true,
+                      "action": {
+                        "fn": "hostCall",
+                        "args": {
+                          "name": "agentSendNow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "column",
+                  "crossAxis": "stretch",
+                  "showIf": {
+                    "setting": "chat:aiProblemOn",
+                    "equals": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "list",
+                      "table": "ai_status",
+                      "titleColumn": "text",
+                      "builtinDelete": false,
+                      "swipeActions": false,
+                      "hideEmptyDefault": true
+                    },
+                    {
+                      "type": "button",
+                      "label": {
+                        "en": "Fix",
+                        "ko": "해결",
+                        "zh": "修复",
+                        "hi": "ठीक करें",
+                        "es": "Arreglar",
+                        "fr": "Corriger",
+                        "ar": "إصلاح",
+                        "pt": "Corrigir",
+                        "ru": "Исправить",
+                        "de": "Beheben",
+                        "ja": "修正",
+                        "tr": "Düzelt",
+                        "vi": "Khắc phục",
+                        "it": "Risolvi",
+                        "fa": "رفع مشکل",
+                        "pl": "Napraw",
+                        "uk": "Виправити",
+                        "nl": "Oplossen",
+                        "sv": "Åtgärda",
+                        "cs": "Opravit",
+                        "el": "Διόρθωση"
+                      },
+                      "variant": "text",
+                      "icon": "settings",
+                      "action": {
+                        "fn": "hostCall",
+                        "args": {
+                          "name": "chatFixAi"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "column",
+                  "crossAxis": "stretch",
+                  "showIf": {
+                    "setting": "chat:agentPending",
+                    "equals": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "row",
+                      "wrap": true,
+                      "spacing": 8,
+                      "children": [
+                        {
+                          "type": "button",
+                          "label": {
+                            "en": "Allow once",
+                            "ko": "한 번 허용",
+                            "zh": "仅允许一次",
+                            "hi": "एक बार अनुमति दें",
+                            "es": "Permitir una vez",
+                            "fr": "Autoriser une fois",
+                            "ar": "السماح مرة واحدة",
+                            "pt": "Permitir uma vez",
+                            "ru": "Разрешить один раз",
+                            "de": "Einmal erlauben",
+                            "ja": "一度だけ許可",
+                            "tr": "Bir kez izin ver",
+                            "vi": "Cho phép một lần",
+                            "it": "Consenti una volta",
+                            "fa": "یک بار اجازه بده",
+                            "pl": "Zezwól raz",
+                            "uk": "Дозволити один раз",
+                            "nl": "Eenmalig toestaan",
+                            "sv": "Tillåt en gång",
+                            "cs": "Povolit jednou",
+                            "el": "Να επιτραπεί μία φορά"
+                          },
+                          "variant": "filled",
+                          "action": {
+                            "fn": "hostCall",
+                            "args": {
+                              "name": "agentResolve",
+                              "choice": "once"
+                            }
+                          },
+                          "showIf": {
+                            "setting": "chat:agentPendingDomain",
+                            "notEquals": "true"
+                          }
+                        },
+                        {
+                          "type": "button",
+                          "label": {
+                            "en": "Allow for this chat",
+                            "ko": "이 채팅에서 허용",
+                            "zh": "在此对话中允许",
+                            "hi": "इस चैट के लिए अनुमति दें",
+                            "es": "Permitir en este chat",
+                            "fr": "Autoriser pour ce chat",
+                            "ar": "السماح لهذه المحادثة",
+                            "pt": "Permitir neste chat",
+                            "ru": "Разрешить в этом чате",
+                            "de": "Für diesen Chat erlauben",
+                            "ja": "このチャットで許可",
+                            "tr": "Bu sohbet için izin ver",
+                            "vi": "Cho phép trong cuộc trò chuyện này",
+                            "it": "Consenti per questa chat",
+                            "fa": "اجازه برای این گفتگو",
+                            "pl": "Zezwól w tym czacie",
+                            "uk": "Дозволити в цьому чаті",
+                            "nl": "Toestaan voor deze chat",
+                            "sv": "Tillåt för den här chatten",
+                            "cs": "Povolit pro tento chat",
+                            "el": "Να επιτραπεί σε αυτή τη συνομιλία"
+                          },
+                          "variant": "filled",
+                          "showIf": {
+                            "setting": "chat:agentPendingDomain",
+                            "equals": "true"
+                          },
+                          "action": {
+                            "fn": "hostCall",
+                            "args": {
+                              "name": "agentResolve",
+                              "choice": "once"
+                            }
+                          }
+                        },
+                        {
+                          "type": "button",
+                          "label": {
+                            "en": "Allow folder…",
+                            "ko": "폴더 허용…",
+                            "zh": "允许文件夹…",
+                            "hi": "फ़ोल्डर की अनुमति दें…",
+                            "es": "Permitir carpeta…",
+                            "fr": "Autoriser le dossier…",
+                            "ar": "السماح بالمجلد…",
+                            "pt": "Permitir pasta…",
+                            "ru": "Разрешить папку…",
+                            "de": "Ordner erlauben…",
+                            "ja": "フォルダを許可…",
+                            "tr": "Klasöre izin ver…",
+                            "vi": "Cho phép thư mục…",
+                            "it": "Consenti cartella…",
+                            "fa": "اجازه برای پوشه…",
+                            "pl": "Zezwól na folder…",
+                            "uk": "Дозволити теку…",
+                            "nl": "Map toestaan…",
+                            "sv": "Tillåt mapp…",
+                            "cs": "Povolit složku…",
+                            "el": "Να επιτραπεί ο φάκελος…"
+                          },
+                          "variant": "outlined",
+                          "action": {
+                            "fn": "hostCall",
+                            "args": {
+                              "name": "agentResolve",
+                              "choice": "pickScope"
+                            }
+                          },
+                          "showIf": {
+                            "setting": "chat:agentPendingDomain",
+                            "notEquals": "true"
+                          }
+                        },
+                        {
+                          "type": "button",
+                          "label": {
+                            "en": "Deny",
+                            "ko": "거부",
+                            "zh": "拒绝",
+                            "hi": "अस्वीकार करें",
+                            "es": "Denegar",
+                            "fr": "Refuser",
+                            "ar": "رفض",
+                            "pt": "Negar",
+                            "ru": "Отклонить",
+                            "de": "Ablehnen",
+                            "ja": "拒否",
+                            "tr": "Reddet",
+                            "vi": "Từ chối",
+                            "it": "Nega",
+                            "fa": "رد کن",
+                            "pl": "Odmów",
+                            "uk": "Відхилити",
+                            "nl": "Weigeren",
+                            "sv": "Neka",
+                            "cs": "Zamítnout",
+                            "el": "Άρνηση"
+                          },
+                          "variant": "text",
+                          "action": {
+                            "fn": "hostCall",
+                            "args": {
+                              "name": "agentResolve",
+                              "choice": "deny"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "style": "caption",
+                      "value": {
+                        "en": "Answer above first; your message will send next.",
+                        "ko": "먼저 위 질문에 답해 주세요. 메시지는 그다음에 전송됩니다.",
+                        "zh": "请先回答上面的问题；您的消息随后会发送。",
+                        "hi": "पहले ऊपर के सवाल का जवाब दें; आपका संदेश उसके बाद भेजा जाएगा।",
+                        "es": "Responde primero arriba; tu mensaje se enviará después.",
+                        "fr": "Répondez d'abord ci-dessus ; votre message partira ensuite.",
+                        "ar": "أجب عن السؤال أعلاه أولاً؛ وسيُرسل رسالتك بعد ذلك.",
+                        "pt": "Responda acima primeiro; sua mensagem será enviada depois.",
+                        "ru": "Сначала ответьте выше; ваше сообщение отправится следом.",
+                        "de": "Antworte zuerst oben; deine Nachricht wird danach gesendet.",
+                        "ja": "先に上の確認に答えてください。メッセージはその後に送信されます。",
+                        "tr": "Önce yukarıdakini yanıtlayın; mesajınız ardından gönderilecek.",
+                        "vi": "Hãy trả lời câu hỏi ở trên trước; tin nhắn của bạn sẽ được gửi sau.",
+                        "it": "Rispondi prima qui sopra; il tuo messaggio partirà dopo.",
+                        "fa": "ابتدا به پرسش بالا پاسخ دهید؛ پیام شما بعد از آن ارسال می‌شود.",
+                        "pl": "Najpierw odpowiedz powyżej; twoja wiadomość zostanie wysłana potem.",
+                        "uk": "Спершу дайте відповідь вище; ваше повідомлення надійде далі.",
+                        "nl": "Beantwoord eerst het bovenstaande; je bericht wordt daarna verzonden.",
+                        "sv": "Svara ovan först; ditt meddelande skickas sedan.",
+                        "cs": "Nejdřív odpovězte výše; vaše zpráva se odešle poté.",
+                        "el": "Απαντήστε πρώτα παραπάνω· το μήνυμά σας θα σταλεί μετά."
+                      },
+                      "showIf": {
+                        "setting": "chat:agentQueued",
+                        "equals": "true"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "row",
+                  "wrap": true,
+                  "showIf": {
+                    "setting": "chat:agentHasGrants",
+                    "equals": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "button",
+                      "label": {
+                        "en": "Stop allowing",
+                        "ko": "허용 중단",
+                        "zh": "停止允许",
+                        "hi": "अनुमति रोकें",
+                        "es": "Dejar de permitir",
+                        "fr": "Ne plus autoriser",
+                        "ar": "إيقاف السماح",
+                        "pt": "Parar de permitir",
+                        "ru": "Отозвать разрешение",
+                        "de": "Nicht mehr erlauben",
+                        "ja": "許可を取り消す",
+                        "tr": "İzni kaldır",
+                        "vi": "Ngừng cho phép",
+                        "it": "Revoca il permesso",
+                        "fa": "توقف اجازه",
+                        "pl": "Cofnij zgodę",
+                        "uk": "Скасувати дозвіл",
+                        "nl": "Niet meer toestaan",
+                        "sv": "Sluta tillåta",
+                        "cs": "Zrušit povolení",
+                        "el": "Ανάκληση άδειας"
+                      },
+                      "variant": "text",
+                      "action": {
+                        "fn": "hostCall",
+                        "args": {
+                          "name": "agentRevoke"
+                        }
+                      },
+                      "icon": "close"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "composer",
+              "table": "messages",
+              "column": "text",
+              "placeholder": {
+                "en": "Message the assistant…",
+                "ko": "어시스턴트에게 메시지 보내기…",
+                "zh": "给助手发消息…",
+                "hi": "सहायक को संदेश भेजें…",
+                "es": "Escribe al asistente…",
+                "fr": "Écrire à l'assistant…",
+                "ar": "راسل المساعد…",
+                "pt": "Escreva ao assistente…",
+                "ru": "Сообщение ассистенту…",
+                "de": "Nachricht an den Assistenten…",
+                "ja": "アシスタントにメッセージ…",
+                "tr": "Asistana mesaj yaz…",
+                "vi": "Nhắn tin cho trợ lý…",
+                "it": "Scrivi all'assistente…",
+                "fa": "پیام به دستیار…",
+                "pl": "Napisz do asystenta…",
+                "uk": "Повідомлення асистенту…",
+                "nl": "Bericht aan de assistent…",
+                "sv": "Skriv till assistenten…",
+                "cs": "Napište asistentovi…",
+                "el": "Μήνυμα στον βοηθό…"
+              },
+              "sendIcon": "arrow_up",
+              "helperAction": {
+                "fn": "hostCall",
+                "args": {
+                  "name": "agentActivity"
+                }
+              },
+              "helperIcon": "lightbulb",
+              "helperTooltip": {
+                "en": "Working folder",
+                "ko": "작업 폴더",
+                "zh": "工作文件夹",
+                "hi": "कार्य फ़ोल्डर",
+                "es": "Carpeta de trabajo",
+                "fr": "Dossier de travail",
+                "ar": "مجلد العمل",
+                "pt": "Pasta de trabalho",
+                "ru": "Рабочая папка",
+                "de": "Arbeitsordner",
+                "ja": "作業フォルダー",
+                "tr": "Çalışma klasörü",
+                "vi": "Thư mục làm việc",
+                "it": "Cartella di lavoro",
+                "fa": "پوشهٔ کاری",
+                "pl": "Folder roboczy",
+                "uk": "Робоча папка",
+                "nl": "Werkmap",
+                "sv": "Arbetsmapp",
+                "cs": "Pracovní složka",
+                "el": "Φάκελος εργασίας"
+              },
+              "attachments": true,
+              "attachmentsColumn": "attachments",
+              "values": {
+                "role": "user",
+                "subchat": "$selected:subchats.id",
+                "at": "now"
+              },
+              "action": {
+                "chain": [
+                  {
+                    "fn": "hostCall",
+                    "args": {
+                      "name": "chatAdopt"
+                    }
+                  },
+                  {
+                    "fn": "hostCall",
+                    "args": {
+                      "name": "chatSend"
+                    }
+                  }
+                ]
+              },
+              "pasteTable": true,
+              "dropFiles": true,
+              "enterBehavior": "send",
+              "maxLines": 8,
+              "busy": {
+                "statusColumn": "status",
+                "statuses": [
+                  "waiting",
+                  "thinking",
+                  "streaming",
+                  "searching",
+                  "creating",
+                  "retrying",
+                  "continuing"
+                ],
+                "scopeColumn": "subchat",
+                "scopeValue": "$selected:subchats"
+              },
+              "stopAction": {
+                "fn": "hostCall",
+                "args": {
+                  "name": "chatStop"
+                }
+              },
+              "stopLabel": {
+                "en": "Stop",
+                "ko": "중지",
+                "zh": "停止",
+                "hi": "रोकें",
+                "es": "Detener",
+                "fr": "Arrêter",
+                "ar": "إيقاف",
+                "pt": "Parar",
+                "ru": "Стоп",
+                "de": "Stopp",
+                "ja": "停止",
+                "tr": "Durdur",
+                "vi": "Dừng",
+                "it": "Ferma",
+                "fa": "توقف",
+                "pl": "Zatrzymaj",
+                "uk": "Зупинити",
+                "nl": "Stoppen",
+                "sv": "Stoppa",
+                "cs": "Zastavit",
+                "el": "Διακοπή"
+              },
+              "contentMaxWidth": 760,
+              "fillSetting": "chat:composerFill",
+              "enterBehaviorSetting": "chat:enterKey",
+              "showIf": {
+                "setting": "chat:agentAvailable",
+                "equals": "true"
+              }
+            },
+            {
+              "type": "composer",
+              "table": "messages",
+              "column": "text",
+              "placeholder": {
+                "en": "Message the assistant…",
+                "ko": "어시스턴트에게 메시지 보내기…",
+                "zh": "给助手发消息…",
+                "hi": "सहायक को संदेश भेजें…",
+                "es": "Escribe al asistente…",
+                "fr": "Écrire à l'assistant…",
+                "ar": "راسل المساعد…",
+                "pt": "Escreva ao assistente…",
+                "ru": "Сообщение ассистенту…",
+                "de": "Nachricht an den Assistenten…",
+                "ja": "アシスタントにメッセージ…",
+                "tr": "Asistana mesaj yaz…",
+                "vi": "Nhắn tin cho trợ lý…",
+                "it": "Scrivi all'assistente…",
+                "fa": "پیام به دستیار…",
+                "pl": "Napisz do asystenta…",
+                "uk": "Повідомлення асистенту…",
+                "nl": "Bericht aan de assistent…",
+                "sv": "Skriv till assistenten…",
+                "cs": "Napište asistentovi…",
+                "el": "Μήνυμα στον βοηθό…"
+              },
+              "sendIcon": "arrow_up",
+              "attachments": true,
+              "attachmentsColumn": "attachments",
+              "values": {
+                "role": "user",
+                "subchat": "$selected:subchats.id",
+                "at": "now"
+              },
+              "action": {
+                "chain": [
+                  {
+                    "fn": "hostCall",
+                    "args": {
+                      "name": "chatAdopt"
+                    }
+                  },
+                  {
+                    "fn": "hostCall",
+                    "args": {
+                      "name": "chatSend"
+                    }
+                  }
+                ]
+              },
+              "pasteTable": true,
+              "dropFiles": true,
+              "enterBehavior": "send",
+              "maxLines": 8,
+              "busy": {
+                "statusColumn": "status",
+                "statuses": [
+                  "waiting",
+                  "thinking",
+                  "streaming",
+                  "searching",
+                  "creating",
+                  "retrying",
+                  "continuing"
+                ],
+                "scopeColumn": "subchat",
+                "scopeValue": "$selected:subchats"
+              },
+              "stopAction": {
+                "fn": "hostCall",
+                "args": {
+                  "name": "chatStop"
+                }
+              },
+              "stopLabel": {
+                "en": "Stop",
+                "ko": "중지",
+                "zh": "停止",
+                "hi": "रोकें",
+                "es": "Detener",
+                "fr": "Arrêter",
+                "ar": "إيقاف",
+                "pt": "Parar",
+                "ru": "Стоп",
+                "de": "Stopp",
+                "ja": "停止",
+                "tr": "Durdur",
+                "vi": "Dừng",
+                "it": "Ferma",
+                "fa": "توقف",
+                "pl": "Zatrzymaj",
+                "uk": "Зупинити",
+                "nl": "Stoppen",
+                "sv": "Stoppa",
+                "cs": "Zastavit",
+                "el": "Διακοπή"
+              },
+              "contentMaxWidth": 760,
+              "fillSetting": "chat:composerFill",
+              "enterBehaviorSetting": "chat:enterKey",
+              "showIf": {
+                "setting": "chat:agentAvailable",
+                "notEquals": "true"
+              }
+            }
+          ]
+        },
+        "sidebar": {
+          "type": "column",
+          "crossAxis": "stretch",
+          "children": [
+            {
+              "type": "button",
+              "label": {
+                "en": "New chat",
+                "ko": "새 채팅",
+                "zh": "新聊天",
+                "hi": "नई चैट",
+                "es": "Nuevo chat",
+                "fr": "Nouvelle discussion",
+                "ar": "محادثة جديدة",
+                "pt": "Nova conversa",
+                "ru": "Новый чат",
+                "de": "Neuer Chat",
+                "ja": "新しいチャット",
+                "tr": "Yeni sohbet",
+                "vi": "Cuộc trò chuyện mới",
+                "it": "Nuova chat",
+                "fa": "گفتگوی جدید",
+                "pl": "Nowy czat",
+                "uk": "Новий чат",
+                "nl": "Nieuwe chat",
+                "sv": "Ny chatt",
+                "cs": "Nový chat",
+                "el": "Νέα συνομιλία"
+              },
+              "icon": "add",
+              "variant": "text",
+              "action": {
+                "chain": [
+                  {
+                    "fn": "hostCall",
+                    "args": {
+                      "name": "chatNew"
+                    }
+                  },
+                  {
+                    "fn": "hostCall",
+                    "args": {
+                      "name": "closeScreen"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "list",
+              "table": "subchats",
+              "titleColumn": "name",
+              "sortColumn": "at",
+              "sortDir": "desc",
+              "parentColumn": "parent",
+              "tree": {
+                "unreadColumn": "unread",
+                "workingColumn": "working"
+              },
+              "selectedId": "$selected:subchats",
+              "action": {
+                "chain": [
+                  {
+                    "fn": "hostCall",
+                    "args": {
+                      "name": "chatOpen"
+                    }
+                  },
+                  {
+                    "fn": "hostCall",
+                    "args": {
+                      "name": "closeScreen"
+                    }
+                  }
+                ]
+              },
+              "emptyIcon": "forum",
+              "emptyTitle": {
+                "en": "No chats yet",
+                "ko": "아직 대화가 없습니다",
+                "zh": "还没有聊天",
+                "hi": "अभी कोई चैट नहीं",
+                "es": "Aún no hay chats",
+                "fr": "Aucune discussion pour l'instant",
+                "ar": "لا توجد محادثات بعد",
+                "pt": "Nenhuma conversa ainda",
+                "ru": "Чатов пока нет",
+                "de": "Noch keine Chats",
+                "ja": "チャットはまだありません",
+                "tr": "Henüz sohbet yok",
+                "vi": "Chưa có cuộc trò chuyện nào",
+                "it": "Ancora nessuna chat",
+                "fa": "هنوز گفتگویی نیست",
+                "pl": "Brak czatów",
+                "uk": "Чатів ще немає",
+                "nl": "Nog geen chats",
+                "sv": "Inga chattar än",
+                "cs": "Zatím žádné chaty",
+                "el": "Δεν υπάρχουν συνομιλίες ακόμη"
+              },
+              "rowActions": [
+                {
+                  "id": "rename",
+                  "icon": "edit",
+                  "label": {
+                    "en": "Rename",
+                    "ko": "이름 바꾸기",
+                    "zh": "重命名",
+                    "hi": "नाम बदलें",
+                    "es": "Renombrar",
+                    "fr": "Renommer",
+                    "ar": "إعادة التسمية",
+                    "pt": "Renomear",
+                    "ru": "Переименовать",
+                    "de": "Umbenennen",
+                    "ja": "名前を変更",
+                    "tr": "Yeniden adlandır",
+                    "vi": "Đổi tên",
+                    "it": "Rinomina",
+                    "fa": "تغییر نام",
+                    "pl": "Zmień nazwę",
+                    "uk": "Перейменувати",
+                    "nl": "Hernoemen",
+                    "sv": "Byt namn",
+                    "cs": "Přejmenovat",
+                    "el": "Μετονομασία"
+                  },
+                  "hint": {
+                    "en": "Give this chat a new name",
+                    "ko": "이 대화에 새 이름을 지어 줍니다",
+                    "zh": "给这个聊天起个新名字",
+                    "hi": "इस चैट को नया नाम दें",
+                    "es": "Dale un nombre nuevo a este chat",
+                    "fr": "Donnez un nouveau nom à cette discussion",
+                    "ar": "أعطِ هذه المحادثة اسمًا جديدًا",
+                    "pt": "Dê um novo nome a esta conversa",
+                    "ru": "Дать этому чату новое имя",
+                    "de": "Diesem Chat einen neuen Namen geben",
+                    "ja": "このチャットに新しい名前を付けます",
+                    "tr": "Bu sohbete yeni bir ad ver",
+                    "vi": "Đặt tên mới cho cuộc trò chuyện này",
+                    "it": "Dai a questa chat un nuovo nome",
+                    "fa": "برای این گفتگو نام تازه‌ای بگذارید",
+                    "pl": "Nadaj temu czatowi nową nazwę",
+                    "uk": "Дати цьому чату нову назву",
+                    "nl": "Geef deze chat een nieuwe naam",
+                    "sv": "Ge den här chatten ett nytt namn",
+                    "cs": "Dejte tomuto chatu nový název",
+                    "el": "Δώστε νέο όνομα σε αυτή τη συνομιλία"
+                  },
+                  "action": {
+                    "fn": "hostCall",
+                    "args": {
+                      "name": "chatRenameChat"
+                    }
+                  }
+                },
+                {
+                  "id": "newSub",
+                  "icon": "add",
+                  "label": {
+                    "en": "New child chat",
+                    "ko": "새 하위 대화",
+                    "zh": "新子聊天",
+                    "hi": "नई उप-चैट",
+                    "es": "Nuevo subchat",
+                    "fr": "Nouvelle sous-discussion",
+                    "ar": "محادثة فرعية جديدة",
+                    "pt": "Nova subconversa",
+                    "ru": "Новый подчат",
+                    "de": "Neuer Unterchat",
+                    "ja": "新しいサブチャット",
+                    "tr": "Yeni alt sohbet",
+                    "vi": "Cuộc trò chuyện con mới",
+                    "it": "Nuova sottochat",
+                    "fa": "زیرگفتگوی جدید",
+                    "pl": "Nowy podczat",
+                    "uk": "Новий підчат",
+                    "nl": "Nieuwe subchat",
+                    "sv": "Ny underchatt",
+                    "cs": "Nový podchat",
+                    "el": "Νέα υποσυνομιλία"
+                  },
+                  "hint": {
+                    "en": "A fresh chat under this one",
+                    "ko": "이 대화 아래에 새로 시작하는 대화",
+                    "zh": "在这个聊天下面开一个全新的聊天",
+                    "hi": "इसके नीचे एक नई चैट",
+                    "es": "Un chat nuevo debajo de este",
+                    "fr": "Une nouvelle discussion sous celle-ci",
+                    "ar": "محادثة جديدة تحت هذه المحادثة",
+                    "pt": "Uma conversa nova dentro desta",
+                    "ru": "Новый чат внутри этого",
+                    "de": "Ein frischer Chat unter diesem",
+                    "ja": "このチャットの下に新しいチャットを作ります",
+                    "tr": "Bunun altında yepyeni bir sohbet",
+                    "vi": "Một cuộc trò chuyện mới nằm dưới cuộc này",
+                    "it": "Una chat nuova sotto questa",
+                    "fa": "یک گفتگوی تازه زیر این گفتگو",
+                    "pl": "Nowy czat pod tym",
+                    "uk": "Новий чат під цим",
+                    "nl": "Een nieuwe chat onder deze",
+                    "sv": "En ny chatt under den här",
+                    "cs": "Nový chat pod tímto",
+                    "el": "Μια νέα συνομιλία κάτω από αυτή"
+                  },
+                  "action": {
+                    "fn": "hostCall",
+                    "args": {
+                      "name": "chatNewSubChat"
+                    }
+                  }
+                },
+                {
+                  "id": "branch",
+                  "icon": "call_split",
+                  "label": {
+                    "en": "Branch from here",
+                    "ko": "여기서 갈라 가기",
+                    "zh": "从这里分支",
+                    "hi": "यहाँ से शाखा बनाएँ",
+                    "es": "Ramificar desde aquí",
+                    "fr": "Créer une branche ici",
+                    "ar": "تفرّع من هنا",
+                    "pt": "Ramificar a partir daqui",
+                    "ru": "Ответвить отсюда",
+                    "de": "Von hier abzweigen",
+                    "ja": "ここから分岐",
+                    "tr": "Buradan dallandır",
+                    "vi": "Tách nhánh từ đây",
+                    "it": "Dirama da qui",
+                    "fa": "انشعاب از اینجا",
+                    "pl": "Rozgałęź stąd",
+                    "uk": "Відгалузити звідси",
+                    "nl": "Vanaf hier vertakken",
+                    "sv": "Förgrena härifrån",
+                    "cs": "Odbočit odsud",
+                    "el": "Διακλάδωση από εδώ"
+                  },
+                  "hint": {
+                    "en": "Continue this chat in a new child chat",
+                    "ko": "이 대화를 새 하위 대화에서 이어 갑니다",
+                    "zh": "在新的子聊天里继续这个聊天",
+                    "hi": "इस चैट को नई उप-चैट में जारी रखें",
+                    "es": "Continúa este chat en un subchat nuevo",
+                    "fr": "Poursuivez cette discussion dans une nouvelle sous-discussion",
+                    "ar": "تابع هذه المحادثة في محادثة فرعية جديدة",
+                    "pt": "Continue esta conversa em uma nova subconversa",
+                    "ru": "Продолжить этот чат в новом подчате",
+                    "de": "Diesen Chat in einem neuen Unterchat fortsetzen",
+                    "ja": "このチャットを新しいサブチャットで続けます",
+                    "tr": "Bu sohbete yeni bir alt sohbette devam et",
+                    "vi": "Tiếp tục cuộc trò chuyện này trong một cuộc trò chuyện con mới",
+                    "it": "Continua questa chat in una nuova sottochat",
+                    "fa": "این گفتگو را در یک زیرگفتگوی تازه ادامه دهید",
+                    "pl": "Kontynuuj ten czat w nowym podczacie",
+                    "uk": "Продовжити цей чат у новому підчаті",
+                    "nl": "Zet deze chat voort in een nieuwe subchat",
+                    "sv": "Fortsätt den här chatten i en ny underchatt",
+                    "cs": "Pokračovat v tomto chatu v novém podchatu",
+                    "el": "Συνεχίστε αυτή τη συνομιλία σε μια νέα υποσυνομιλία"
+                  },
+                  "action": {
+                    "fn": "hostCall",
+                    "args": {
+                      "name": "chatBranchFrom"
+                    }
+                  }
+                },
+                {
+                  "id": "archive",
+                  "icon": "inventory_2",
+                  "column": "archived",
+                  "notEquals": true,
+                  "label": {
+                    "en": "Archive",
+                    "es": "Archivar",
+                    "fr": "Archiver",
+                    "de": "Archivieren",
+                    "it": "Archivia",
+                    "pt": "Arquivar",
+                    "nl": "Archiveren",
+                    "sv": "Arkivera",
+                    "cs": "Archivovat",
+                    "el": "Αρχειοθέτηση",
+                    "pl": "Archiwizuj",
+                    "uk": "Архівувати",
+                    "ru": "Архивировать",
+                    "tr": "Arşivle",
+                    "vi": "Lưu trữ",
+                    "ko": "보관",
+                    "ja": "アーカイブ",
+                    "zh": "归档",
+                    "ar": "أرشفة",
+                    "hi": "संग्रहित करें",
+                    "fa": "بایگانی"
+                  },
+                  "action": {
+                    "fn": "hostCall",
+                    "args": {
+                      "name": "chatArchive"
+                    }
+                  }
+                },
+                {
+                  "id": "unarchive",
+                  "icon": "restore",
+                  "column": "archived",
+                  "equals": true,
+                  "label": {
+                    "en": "Unarchive",
+                    "es": "Desarchivar",
+                    "fr": "Désarchiver",
+                    "de": "Aus Archiv holen",
+                    "it": "Ripristina dall’archivio",
+                    "pt": "Desarquivar",
+                    "nl": "Uit archief halen",
+                    "sv": "Återställ från arkiv",
+                    "cs": "Obnovit z archivu",
+                    "el": "Αναίρεση αρχειοθέτησης",
+                    "pl": "Przywróć z archiwum",
+                    "uk": "Повернути з архіву",
+                    "ru": "Вернуть из архива",
+                    "tr": "Arşivden çıkar",
+                    "vi": "Bỏ lưu trữ",
+                    "ko": "보관 해제",
+                    "ja": "アーカイブを解除",
+                    "zh": "取消归档",
+                    "ar": "إلغاء الأرشفة",
+                    "hi": "संग्रह से निकालें",
+                    "fa": "خروج از بایگانی"
+                  },
+                  "action": {
+                    "fn": "hostCall",
+                    "args": {
+                      "name": "chatUnarchive"
+                    }
+                  }
+                },
+                {
+                  "id": "chatSettings",
+                  "icon": "settings",
+                  "label": {
+                    "en": "Chat settings",
+                    "ko": "채팅 설정",
+                    "zh": "聊天设置",
+                    "hi": "चैट सेटिंग्स",
+                    "es": "Ajustes del chat",
+                    "fr": "Paramètres de la discussion",
+                    "ar": "إعدادات المحادثة",
+                    "pt": "Configurações da conversa",
+                    "ru": "Настройки чата",
+                    "de": "Chat-Einstellungen",
+                    "ja": "チャット設定",
+                    "tr": "Sohbet ayarları",
+                    "vi": "Cài đặt cuộc trò chuyện",
+                    "it": "Impostazioni chat",
+                    "fa": "تنظیمات گفتگو",
+                    "pl": "Ustawienia czatu",
+                    "uk": "Налаштування чату",
+                    "nl": "Chatinstellingen",
+                    "sv": "Chattinställningar",
+                    "cs": "Nastavení chatu",
+                    "el": "Ρυθμίσεις συνομιλίας"
+                  },
+                  "action": {
+                    "fn": "goto",
+                    "args": {
+                      "screen": "settings"
+                    }
+                  }
+                },
+                {
+                  "builtin": "softDelete",
+                  "flag": "deleted",
+                  "hint": {
+                    "en": "Remove this chat — you can undo",
+                    "ko": "이 대화를 삭제합니다 — 되돌릴 수 있습니다",
+                    "zh": "删除这个聊天——可以撤销",
+                    "hi": "इस चैट को हटाएँ — आप इसे पूर्ववत कर सकते हैं",
+                    "es": "Quita este chat — puedes deshacerlo",
+                    "fr": "Supprimez cette discussion — vous pouvez annuler",
+                    "ar": "احذف هذه المحادثة — يمكنك التراجع",
+                    "pt": "Remova esta conversa — você pode desfazer",
+                    "ru": "Удалить этот чат — можно отменить",
+                    "de": "Diesen Chat entfernen — Sie können es rückgängig machen",
+                    "ja": "このチャットを削除します — 元に戻せます",
+                    "tr": "Bu sohbeti kaldır — geri alabilirsin",
+                    "vi": "Xóa cuộc trò chuyện này — bạn có thể hoàn tác",
+                    "it": "Rimuovi questa chat — puoi annullare",
+                    "fa": "این گفتگو را حذف کنید — می‌توانید برگردانید",
+                    "pl": "Usuń ten czat — możesz to cofnąć",
+                    "uk": "Видалити цей чат — можна скасувати",
+                    "nl": "Verwijder deze chat — je kunt het ongedaan maken",
+                    "sv": "Ta bort den här chatten — du kan ångra",
+                    "cs": "Odstranit tento chat — jde to vrátit zpět",
+                    "el": "Αφαίρεση αυτής της συνομιλίας — μπορείτε να την αναιρέσετε"
+                  },
+                  "afterAction": {
+                    "fn": "hostCall",
+                    "args": {
+                      "name": "chatAfterDelete"
+                    }
+                  }
+                }
+              ],
+              "subtitleColumns": [
+                "modelLine"
+              ],
+              "rowFilter": {
+                "column": "archived",
+                "truthy": false
+              }
+            },
+            {
+              "type": "padding",
+              "padding": 0,
+              "left": 12,
+              "showIf": {
+                "setting": "chat:hasArchived",
+                "equals": "true"
+              },
+              "child": {
+                "type": "disclosure",
+                "label": {
+                  "en": "Archived",
+                  "es": "Archivados",
+                  "fr": "Archivés",
+                  "de": "Archiviert",
+                  "it": "Archiviati",
+                  "pt": "Arquivados",
+                  "nl": "Gearchiveerd",
+                  "sv": "Arkiverade",
+                  "cs": "Archivováno",
+                  "el": "Αρχειοθετημένα",
+                  "pl": "Zarchiwizowane",
+                  "uk": "Архів",
+                  "ru": "Архив",
+                  "tr": "Arşivlenenler",
+                  "vi": "Đã lưu trữ",
+                  "ko": "보관됨",
+                  "ja": "アーカイブ済み",
+                  "zh": "已归档",
+                  "ar": "المؤرشفة",
+                  "hi": "संग्रहित",
+                  "fa": "بایگانی‌شده"
+                },
+                "children": [
+                  {
+                    "type": "list",
+                    "table": "subchats",
+                    "titleColumn": "name",
+                    "sortColumn": "at",
+                    "sortDir": "desc",
+                    "parentColumn": "parent",
+                    "tree": {
+                      "unreadColumn": "unread",
+                      "workingColumn": "working"
+                    },
+                    "selectedId": "$selected:subchats",
+                    "action": {
+                      "chain": [
+                        {
+                          "fn": "hostCall",
+                          "args": {
+                            "name": "chatOpen"
+                          }
+                        },
+                        {
+                          "fn": "hostCall",
+                          "args": {
+                            "name": "closeScreen"
+                          }
+                        }
+                      ]
+                    },
+                    "rowActions": [
+                      {
+                        "id": "unarchive",
+                        "icon": "restore",
+                        "column": "archived",
+                        "equals": true,
+                        "label": {
+                          "en": "Unarchive",
+                          "es": "Desarchivar",
+                          "fr": "Désarchiver",
+                          "de": "Aus Archiv holen",
+                          "it": "Ripristina dall’archivio",
+                          "pt": "Desarquivar",
+                          "nl": "Uit archief halen",
+                          "sv": "Återställ från arkiv",
+                          "cs": "Obnovit z archivu",
+                          "el": "Αναίρεση αρχειοθέτησης",
+                          "pl": "Przywróć z archiwum",
+                          "uk": "Повернути з архіву",
+                          "ru": "Вернуть из архива",
+                          "tr": "Arşivden çıkar",
+                          "vi": "Bỏ lưu trữ",
+                          "ko": "보관 해제",
+                          "ja": "アーカイブを解除",
+                          "zh": "取消归档",
+                          "ar": "إلغاء الأرشفة",
+                          "hi": "संग्रह से निकालें",
+                          "fa": "خروج از بایگانی"
+                        },
+                        "action": {
+                          "fn": "hostCall",
+                          "args": {
+                            "name": "chatUnarchive"
+                          }
+                        }
+                      },
+                      {
+                        "builtin": "softDelete",
+                        "flag": "deleted",
+                        "afterAction": {
+                          "fn": "hostCall",
+                          "args": {
+                            "name": "chatAfterDelete"
+                          }
+                        }
+                      }
+                    ],
+                    "subtitleColumns": [
+                      "modelLine"
+                    ],
+                    "rowFilter": {
+                      "column": "archived",
+                      "truthy": true
+                    },
+                    "hideEmptyDefault": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "sidebarWidth": 280,
+        "sidebarMinWidth": 720,
+        "selectableThread": true,
+        "action": {
+          "fn": "hostCall",
+          "args": {
+            "name": "agentRowTap"
+          }
+        }
+      }
+    },
+    "chats": {
+      "title": {
+        "en": "Chats",
+        "ko": "대화",
+        "zh": "聊天",
+        "hi": "चैट",
+        "es": "Chats",
+        "fr": "Discussions",
+        "ar": "المحادثات",
+        "pt": "Conversas",
+        "ru": "Чаты",
+        "de": "Chats",
+        "ja": "チャット",
+        "tr": "Sohbetler",
+        "vi": "Cuộc trò chuyện",
+        "it": "Chat",
+        "fa": "گفتگوها",
+        "pl": "Czaty",
+        "uk": "Чати",
+        "nl": "Chats",
+        "sv": "Chattar",
+        "cs": "Chaty",
+        "el": "Συνομιλίες"
+      },
+      "body": {
+        "type": "column",
+        "crossAxis": "stretch",
+        "children": [
+          {
+            "type": "button",
+            "label": {
+              "en": "New chat",
+              "ko": "새 채팅",
+              "zh": "新聊天",
+              "hi": "नई चैट",
+              "es": "Nuevo chat",
+              "fr": "Nouvelle discussion",
+              "ar": "محادثة جديدة",
+              "pt": "Nova conversa",
+              "ru": "Новый чат",
+              "de": "Neuer Chat",
+              "ja": "新しいチャット",
+              "tr": "Yeni sohbet",
+              "vi": "Cuộc trò chuyện mới",
+              "it": "Nuova chat",
+              "fa": "گفتگوی جدید",
+              "pl": "Nowy czat",
+              "uk": "Новий чат",
+              "nl": "Nieuwe chat",
+              "sv": "Ny chatt",
+              "cs": "Nový chat",
+              "el": "Νέα συνομιλία"
+            },
+            "icon": "add",
+            "variant": "text",
+            "action": {
+              "chain": [
+                {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "chatNew"
+                  }
+                },
+                {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "closeScreen"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "list",
+            "table": "subchats",
+            "titleColumn": "name",
+            "sortColumn": "at",
+            "sortDir": "desc",
+            "parentColumn": "parent",
+            "tree": {
+              "unreadColumn": "unread",
+              "workingColumn": "working"
+            },
+            "selectedId": "$selected:subchats",
+            "action": {
+              "chain": [
+                {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "chatOpen"
+                  }
+                },
+                {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "closeScreen"
+                  }
+                }
+              ]
+            },
+            "emptyIcon": "forum",
+            "emptyTitle": {
+              "en": "No chats yet",
+              "ko": "아직 대화가 없습니다",
+              "zh": "还没有聊天",
+              "hi": "अभी कोई चैट नहीं",
+              "es": "Aún no hay chats",
+              "fr": "Aucune discussion pour l'instant",
+              "ar": "لا توجد محادثات بعد",
+              "pt": "Nenhuma conversa ainda",
+              "ru": "Чатов пока нет",
+              "de": "Noch keine Chats",
+              "ja": "チャットはまだありません",
+              "tr": "Henüz sohbet yok",
+              "vi": "Chưa có cuộc trò chuyện nào",
+              "it": "Ancora nessuna chat",
+              "fa": "هنوز گفتگویی نیست",
+              "pl": "Brak czatów",
+              "uk": "Чатів ще немає",
+              "nl": "Nog geen chats",
+              "sv": "Inga chattar än",
+              "cs": "Zatím žádné chaty",
+              "el": "Δεν υπάρχουν συνομιλίες ακόμη"
+            },
+            "rowActions": [
+              {
+                "id": "rename",
+                "icon": "edit",
+                "label": {
+                  "en": "Rename",
+                  "ko": "이름 바꾸기",
+                  "zh": "重命名",
+                  "hi": "नाम बदलें",
+                  "es": "Renombrar",
+                  "fr": "Renommer",
+                  "ar": "إعادة التسمية",
+                  "pt": "Renomear",
+                  "ru": "Переименовать",
+                  "de": "Umbenennen",
+                  "ja": "名前を変更",
+                  "tr": "Yeniden adlandır",
+                  "vi": "Đổi tên",
+                  "it": "Rinomina",
+                  "fa": "تغییر نام",
+                  "pl": "Zmień nazwę",
+                  "uk": "Перейменувати",
+                  "nl": "Hernoemen",
+                  "sv": "Byt namn",
+                  "cs": "Přejmenovat",
+                  "el": "Μετονομασία"
+                },
+                "hint": {
+                  "en": "Give this chat a new name",
+                  "ko": "이 대화에 새 이름을 지어 줍니다",
+                  "zh": "给这个聊天起个新名字",
+                  "hi": "इस चैट को नया नाम दें",
+                  "es": "Dale un nombre nuevo a este chat",
+                  "fr": "Donnez un nouveau nom à cette discussion",
+                  "ar": "أعطِ هذه المحادثة اسمًا جديدًا",
+                  "pt": "Dê um novo nome a esta conversa",
+                  "ru": "Дать этому чату новое имя",
+                  "de": "Diesem Chat einen neuen Namen geben",
+                  "ja": "このチャットに新しい名前を付けます",
+                  "tr": "Bu sohbete yeni bir ad ver",
+                  "vi": "Đặt tên mới cho cuộc trò chuyện này",
+                  "it": "Dai a questa chat un nuovo nome",
+                  "fa": "برای این گفتگو نام تازه‌ای بگذارید",
+                  "pl": "Nadaj temu czatowi nową nazwę",
+                  "uk": "Дати цьому чату нову назву",
+                  "nl": "Geef deze chat een nieuwe naam",
+                  "sv": "Ge den här chatten ett nytt namn",
+                  "cs": "Dejte tomuto chatu nový název",
+                  "el": "Δώστε νέο όνομα σε αυτή τη συνομιλία"
+                },
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "chatRenameChat"
+                  }
+                }
+              },
+              {
+                "id": "newSub",
+                "icon": "add",
+                "label": {
+                  "en": "New child chat",
+                  "ko": "새 하위 대화",
+                  "zh": "新子聊天",
+                  "hi": "नई उप-चैट",
+                  "es": "Nuevo subchat",
+                  "fr": "Nouvelle sous-discussion",
+                  "ar": "محادثة فرعية جديدة",
+                  "pt": "Nova subconversa",
+                  "ru": "Новый подчат",
+                  "de": "Neuer Unterchat",
+                  "ja": "新しいサブチャット",
+                  "tr": "Yeni alt sohbet",
+                  "vi": "Cuộc trò chuyện con mới",
+                  "it": "Nuova sottochat",
+                  "fa": "زیرگفتگوی جدید",
+                  "pl": "Nowy podczat",
+                  "uk": "Новий підчат",
+                  "nl": "Nieuwe subchat",
+                  "sv": "Ny underchatt",
+                  "cs": "Nový podchat",
+                  "el": "Νέα υποσυνομιλία"
+                },
+                "hint": {
+                  "en": "A fresh chat under this one",
+                  "ko": "이 대화 아래에 새로 시작하는 대화",
+                  "zh": "在这个聊天下面开一个全新的聊天",
+                  "hi": "इसके नीचे एक नई चैट",
+                  "es": "Un chat nuevo debajo de este",
+                  "fr": "Une nouvelle discussion sous celle-ci",
+                  "ar": "محادثة جديدة تحت هذه المحادثة",
+                  "pt": "Uma conversa nova dentro desta",
+                  "ru": "Новый чат внутри этого",
+                  "de": "Ein frischer Chat unter diesem",
+                  "ja": "このチャットの下に新しいチャットを作ります",
+                  "tr": "Bunun altında yepyeni bir sohbet",
+                  "vi": "Một cuộc trò chuyện mới nằm dưới cuộc này",
+                  "it": "Una chat nuova sotto questa",
+                  "fa": "یک گفتگوی تازه زیر این گفتگو",
+                  "pl": "Nowy czat pod tym",
+                  "uk": "Новий чат під цим",
+                  "nl": "Een nieuwe chat onder deze",
+                  "sv": "En ny chatt under den här",
+                  "cs": "Nový chat pod tímto",
+                  "el": "Μια νέα συνομιλία κάτω από αυτή"
+                },
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "chatNewSubChat"
+                  }
+                }
+              },
+              {
+                "id": "branch",
+                "icon": "call_split",
+                "label": {
+                  "en": "Branch from here",
+                  "ko": "여기서 갈라 가기",
+                  "zh": "从这里分支",
+                  "hi": "यहाँ से शाखा बनाएँ",
+                  "es": "Ramificar desde aquí",
+                  "fr": "Créer une branche ici",
+                  "ar": "تفرّع من هنا",
+                  "pt": "Ramificar a partir daqui",
+                  "ru": "Ответвить отсюда",
+                  "de": "Von hier abzweigen",
+                  "ja": "ここから分岐",
+                  "tr": "Buradan dallandır",
+                  "vi": "Tách nhánh từ đây",
+                  "it": "Dirama da qui",
+                  "fa": "انشعاب از اینجا",
+                  "pl": "Rozgałęź stąd",
+                  "uk": "Відгалузити звідси",
+                  "nl": "Vanaf hier vertakken",
+                  "sv": "Förgrena härifrån",
+                  "cs": "Odbočit odsud",
+                  "el": "Διακλάδωση από εδώ"
+                },
+                "hint": {
+                  "en": "Continue this chat in a new child chat",
+                  "ko": "이 대화를 새 하위 대화에서 이어 갑니다",
+                  "zh": "在新的子聊天里继续这个聊天",
+                  "hi": "इस चैट को नई उप-चैट में जारी रखें",
+                  "es": "Continúa este chat en un subchat nuevo",
+                  "fr": "Poursuivez cette discussion dans une nouvelle sous-discussion",
+                  "ar": "تابع هذه المحادثة في محادثة فرعية جديدة",
+                  "pt": "Continue esta conversa em uma nova subconversa",
+                  "ru": "Продолжить этот чат в новом подчате",
+                  "de": "Diesen Chat in einem neuen Unterchat fortsetzen",
+                  "ja": "このチャットを新しいサブチャットで続けます",
+                  "tr": "Bu sohbete yeni bir alt sohbette devam et",
+                  "vi": "Tiếp tục cuộc trò chuyện này trong một cuộc trò chuyện con mới",
+                  "it": "Continua questa chat in una nuova sottochat",
+                  "fa": "این گفتگو را در یک زیرگفتگوی تازه ادامه دهید",
+                  "pl": "Kontynuuj ten czat w nowym podczacie",
+                  "uk": "Продовжити цей чат у новому підчаті",
+                  "nl": "Zet deze chat voort in een nieuwe subchat",
+                  "sv": "Fortsätt den här chatten i en ny underchatt",
+                  "cs": "Pokračovat v tomto chatu v novém podchatu",
+                  "el": "Συνεχίστε αυτή τη συνομιλία σε μια νέα υποσυνομιλία"
+                },
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "chatBranchFrom"
+                  }
+                }
+              },
+              {
+                "id": "archive",
+                "icon": "inventory_2",
+                "column": "archived",
+                "notEquals": true,
+                "label": {
+                  "en": "Archive",
+                  "es": "Archivar",
+                  "fr": "Archiver",
+                  "de": "Archivieren",
+                  "it": "Archivia",
+                  "pt": "Arquivar",
+                  "nl": "Archiveren",
+                  "sv": "Arkivera",
+                  "cs": "Archivovat",
+                  "el": "Αρχειοθέτηση",
+                  "pl": "Archiwizuj",
+                  "uk": "Архівувати",
+                  "ru": "Архивировать",
+                  "tr": "Arşivle",
+                  "vi": "Lưu trữ",
+                  "ko": "보관",
+                  "ja": "アーカイブ",
+                  "zh": "归档",
+                  "ar": "أرشفة",
+                  "hi": "संग्रहित करें",
+                  "fa": "بایگانی"
+                },
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "chatArchive"
+                  }
+                }
+              },
+              {
+                "id": "unarchive",
+                "icon": "restore",
+                "column": "archived",
+                "equals": true,
+                "label": {
+                  "en": "Unarchive",
+                  "es": "Desarchivar",
+                  "fr": "Désarchiver",
+                  "de": "Aus Archiv holen",
+                  "it": "Ripristina dall’archivio",
+                  "pt": "Desarquivar",
+                  "nl": "Uit archief halen",
+                  "sv": "Återställ från arkiv",
+                  "cs": "Obnovit z archivu",
+                  "el": "Αναίρεση αρχειοθέτησης",
+                  "pl": "Przywróć z archiwum",
+                  "uk": "Повернути з архіву",
+                  "ru": "Вернуть из архива",
+                  "tr": "Arşivden çıkar",
+                  "vi": "Bỏ lưu trữ",
+                  "ko": "보관 해제",
+                  "ja": "アーカイブを解除",
+                  "zh": "取消归档",
+                  "ar": "إلغاء الأرشفة",
+                  "hi": "संग्रह से निकालें",
+                  "fa": "خروج از بایگانی"
+                },
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "chatUnarchive"
+                  }
+                }
+              },
+              {
+                "id": "chatSettings",
+                "icon": "settings",
+                "label": {
+                  "en": "Chat settings",
+                  "ko": "채팅 설정",
+                  "zh": "聊天设置",
+                  "hi": "चैट सेटिंग्स",
+                  "es": "Ajustes del chat",
+                  "fr": "Paramètres de la discussion",
+                  "ar": "إعدادات المحادثة",
+                  "pt": "Configurações da conversa",
+                  "ru": "Настройки чата",
+                  "de": "Chat-Einstellungen",
+                  "ja": "チャット設定",
+                  "tr": "Sohbet ayarları",
+                  "vi": "Cài đặt cuộc trò chuyện",
+                  "it": "Impostazioni chat",
+                  "fa": "تنظیمات گفتگو",
+                  "pl": "Ustawienia czatu",
+                  "uk": "Налаштування чату",
+                  "nl": "Chatinstellingen",
+                  "sv": "Chattinställningar",
+                  "cs": "Nastavení chatu",
+                  "el": "Ρυθμίσεις συνομιλίας"
+                },
+                "action": {
+                  "fn": "goto",
+                  "args": {
+                    "screen": "settings"
+                  }
+                }
+              },
+              {
+                "builtin": "softDelete",
+                "flag": "deleted",
+                "hint": {
+                  "en": "Remove this chat — you can undo",
+                  "ko": "이 대화를 삭제합니다 — 되돌릴 수 있습니다",
+                  "zh": "删除这个聊天——可以撤销",
+                  "hi": "इस चैट को हटाएँ — आप इसे पूर्ववत कर सकते हैं",
+                  "es": "Quita este chat — puedes deshacerlo",
+                  "fr": "Supprimez cette discussion — vous pouvez annuler",
+                  "ar": "احذف هذه المحادثة — يمكنك التراجع",
+                  "pt": "Remova esta conversa — você pode desfazer",
+                  "ru": "Удалить этот чат — можно отменить",
+                  "de": "Diesen Chat entfernen — Sie können es rückgängig machen",
+                  "ja": "このチャットを削除します — 元に戻せます",
+                  "tr": "Bu sohbeti kaldır — geri alabilirsin",
+                  "vi": "Xóa cuộc trò chuyện này — bạn có thể hoàn tác",
+                  "it": "Rimuovi questa chat — puoi annullare",
+                  "fa": "این گفتگو را حذف کنید — می‌توانید برگردانید",
+                  "pl": "Usuń ten czat — możesz to cofnąć",
+                  "uk": "Видалити цей чат — можна скасувати",
+                  "nl": "Verwijder deze chat — je kunt het ongedaan maken",
+                  "sv": "Ta bort den här chatten — du kan ångra",
+                  "cs": "Odstranit tento chat — jde to vrátit zpět",
+                  "el": "Αφαίρεση αυτής της συνομιλίας — μπορείτε να την αναιρέσετε"
+                },
+                "afterAction": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "chatAfterDelete"
+                  }
+                }
+              }
+            ],
+            "subtitleColumns": [
+              "modelLine"
+            ],
+            "rowFilter": {
+              "column": "archived",
+              "truthy": false
+            }
+          },
+          {
+            "type": "padding",
+            "padding": 0,
+            "left": 12,
+            "showIf": {
+              "setting": "chat:hasArchived",
+              "equals": "true"
+            },
+            "child": {
+              "type": "disclosure",
+              "label": {
+                "en": "Archived",
+                "es": "Archivados",
+                "fr": "Archivés",
+                "de": "Archiviert",
+                "it": "Archiviati",
+                "pt": "Arquivados",
+                "nl": "Gearchiveerd",
+                "sv": "Arkiverade",
+                "cs": "Archivováno",
+                "el": "Αρχειοθετημένα",
+                "pl": "Zarchiwizowane",
+                "uk": "Архів",
+                "ru": "Архив",
+                "tr": "Arşivlenenler",
+                "vi": "Đã lưu trữ",
+                "ko": "보관됨",
+                "ja": "アーカイブ済み",
+                "zh": "已归档",
+                "ar": "المؤرشفة",
+                "hi": "संग्रहित",
+                "fa": "بایگانی‌شده"
+              },
+              "children": [
+                {
+                  "type": "list",
+                  "table": "subchats",
+                  "titleColumn": "name",
+                  "sortColumn": "at",
+                  "sortDir": "desc",
+                  "parentColumn": "parent",
+                  "tree": {
+                    "unreadColumn": "unread",
+                    "workingColumn": "working"
+                  },
+                  "selectedId": "$selected:subchats",
+                  "action": {
+                    "chain": [
+                      {
+                        "fn": "hostCall",
+                        "args": {
+                          "name": "chatOpen"
+                        }
+                      },
+                      {
+                        "fn": "hostCall",
+                        "args": {
+                          "name": "closeScreen"
+                        }
+                      }
+                    ]
+                  },
+                  "rowActions": [
+                    {
+                      "id": "unarchive",
+                      "icon": "restore",
+                      "column": "archived",
+                      "equals": true,
+                      "label": {
+                        "en": "Unarchive",
+                        "es": "Desarchivar",
+                        "fr": "Désarchiver",
+                        "de": "Aus Archiv holen",
+                        "it": "Ripristina dall’archivio",
+                        "pt": "Desarquivar",
+                        "nl": "Uit archief halen",
+                        "sv": "Återställ från arkiv",
+                        "cs": "Obnovit z archivu",
+                        "el": "Αναίρεση αρχειοθέτησης",
+                        "pl": "Przywróć z archiwum",
+                        "uk": "Повернути з архіву",
+                        "ru": "Вернуть из архива",
+                        "tr": "Arşivden çıkar",
+                        "vi": "Bỏ lưu trữ",
+                        "ko": "보관 해제",
+                        "ja": "アーカイブを解除",
+                        "zh": "取消归档",
+                        "ar": "إلغاء الأرشفة",
+                        "hi": "संग्रह से निकालें",
+                        "fa": "خروج از بایگانی"
+                      },
+                      "action": {
+                        "fn": "hostCall",
+                        "args": {
+                          "name": "chatUnarchive"
+                        }
+                      }
+                    },
+                    {
+                      "builtin": "softDelete",
+                      "flag": "deleted",
+                      "afterAction": {
+                        "fn": "hostCall",
+                        "args": {
+                          "name": "chatAfterDelete"
+                        }
+                      }
+                    }
+                  ],
+                  "subtitleColumns": [
+                    "modelLine"
+                  ],
+                  "rowFilter": {
+                    "column": "archived",
+                    "truthy": true
+                  },
+                  "hideEmptyDefault": true
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "settings": {
+      "title": {
+        "en": "Chat settings",
+        "ko": "채팅 설정",
+        "zh": "聊天设置",
+        "hi": "चैट सेटिंग्स",
+        "es": "Ajustes del chat",
+        "fr": "Paramètres de la discussion",
+        "ar": "إعدادات المحادثة",
+        "pt": "Configurações da conversa",
+        "ru": "Настройки чата",
+        "de": "Chat-Einstellungen",
+        "ja": "チャット設定",
+        "tr": "Sohbet ayarları",
+        "vi": "Cài đặt cuộc trò chuyện",
+        "it": "Impostazioni chat",
+        "fa": "تنظیمات گفتگو",
+        "pl": "Ustawienia czatu",
+        "uk": "Налаштування чату",
+        "nl": "Chatinstellingen",
+        "sv": "Chattinställningar",
+        "cs": "Nastavení chatu",
+        "el": "Ρυθμίσεις συνομιλίας"
+      },
+      "body": {
+        "type": "column",
+        "scroll": true,
+        "crossAxis": "stretch",
+        "children": [
+          {
+            "type": "record",
+            "table": "subchats",
+            "rowId": "$selected:subchats",
+            "hideTitle": true,
+            "fields": [
+              "name",
+              "provider",
+              "modelId",
+              "system",
+              "web",
+              "thinking"
+            ],
+            "emptyText": {
+              "en": "Send a message first to set up this chat.",
+              "ko": "이 채팅을 설정하려면 먼저 메시지를 보내세요.",
+              "zh": "请先发送一条消息，再设置此聊天。",
+              "hi": "इस चैट को सेट करने के लिए पहले एक संदेश भेजें।",
+              "es": "Envía primero un mensaje para configurar este chat.",
+              "fr": "Envoyez d’abord un message pour configurer cette discussion.",
+              "ar": "أرسل رسالة أولاً لإعداد هذه المحادثة.",
+              "pt": "Envie uma mensagem primeiro para configurar esta conversa.",
+              "ru": "Сначала отправьте сообщение, чтобы настроить этот чат.",
+              "de": "Senden Sie zuerst eine Nachricht, um diesen Chat einzurichten.",
+              "ja": "このチャットを設定するには、まずメッセージを送信してください。",
+              "tr": "Bu sohbeti ayarlamak için önce bir mesaj gönderin.",
+              "vi": "Hãy gửi một tin nhắn trước để thiết lập cuộc trò chuyện này.",
+              "it": "Invia prima un messaggio per configurare questa chat.",
+              "fa": "برای تنظیم این گفتگو ابتدا یک پیام بفرستید.",
+              "pl": "Najpierw wyślij wiadomość, aby skonfigurować ten czat.",
+              "uk": "Спершу надішліть повідомлення, щоб налаштувати цей чат.",
+              "nl": "Stuur eerst een bericht om deze chat in te stellen.",
+              "sv": "Skicka ett meddelande först för att ställa in den här chatten.",
+              "cs": "Nejprve pošlete zprávu, abyste mohli nastavit tento chat.",
+              "el": "Στείλτε πρώτα ένα μήνυμα για να ρυθμίσετε αυτή τη συνομιλία."
+            }
+          },
+          {
+            "type": "column",
+            "crossAxis": "stretch",
+            "children": [
+              {
+                "type": "text",
+                "style": "title",
+                "value": {
+                  "en": "Enter key",
+                  "ko": "Enter 키",
+                  "zh": "回车键",
+                  "hi": "Enter कुंजी",
+                  "es": "Tecla Intro",
+                  "fr": "Touche Entrée",
+                  "ar": "مفتاح Enter",
+                  "pt": "Tecla Enter",
+                  "ru": "Клавиша Enter",
+                  "de": "Eingabetaste",
+                  "ja": "Enter キー",
+                  "tr": "Enter tuşu",
+                  "vi": "Phím Enter",
+                  "it": "Tasto Invio",
+                  "fa": "کلید Enter",
+                  "pl": "Klawisz Enter",
+                  "uk": "Клавіша Enter",
+                  "nl": "Entertoets",
+                  "sv": "Enter-tangenten",
+                  "cs": "Klávesa Enter",
+                  "el": "Πλήκτρο Enter"
+                }
+              },
+              {
+                "type": "padding",
+                "padding": 0,
+                "left": 4,
+                "child": {
+                  "type": "row",
+                  "children": [
+                    {
+                      "type": "button",
+                      "label": {
+                        "en": "Send",
+                        "ko": "보내기",
+                        "zh": "发送",
+                        "hi": "भेजें",
+                        "es": "Enviar",
+                        "fr": "Envoyer",
+                        "ar": "إرسال",
+                        "pt": "Enviar",
+                        "ru": "Отправить",
+                        "de": "Senden",
+                        "ja": "送信",
+                        "tr": "Gönder",
+                        "vi": "Gửi",
+                        "it": "Invia",
+                        "fa": "ارسال",
+                        "pl": "Wyślij",
+                        "uk": "Надіслати",
+                        "nl": "Verzenden",
+                        "sv": "Skicka",
+                        "cs": "Odeslat",
+                        "el": "Αποστολή"
+                      },
+                      "variant": "filled",
+                      "showIf": {
+                        "setting": "chat:enterKey",
+                        "notEquals": "newline"
+                      },
+                      "action": {
+                        "fn": "setSetting",
+                        "args": {
+                          "key": "chat:enterKey",
+                          "value": "send"
+                        }
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "label": {
+                        "en": "Send",
+                        "ko": "보내기",
+                        "zh": "发送",
+                        "hi": "भेजें",
+                        "es": "Enviar",
+                        "fr": "Envoyer",
+                        "ar": "إرسال",
+                        "pt": "Enviar",
+                        "ru": "Отправить",
+                        "de": "Senden",
+                        "ja": "送信",
+                        "tr": "Gönder",
+                        "vi": "Gửi",
+                        "it": "Invia",
+                        "fa": "ارسال",
+                        "pl": "Wyślij",
+                        "uk": "Надіслати",
+                        "nl": "Verzenden",
+                        "sv": "Skicka",
+                        "cs": "Odeslat",
+                        "el": "Αποστολή"
+                      },
+                      "variant": "outlined",
+                      "showIf": {
+                        "setting": "chat:enterKey",
+                        "equals": "newline"
+                      },
+                      "action": {
+                        "fn": "setSetting",
+                        "args": {
+                          "key": "chat:enterKey",
+                          "value": "send"
+                        }
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "label": {
+                        "en": "New line",
+                        "ko": "줄바꿈",
+                        "zh": "换行",
+                        "hi": "नई पंक्ति",
+                        "es": "Nueva línea",
+                        "fr": "Nouvelle ligne",
+                        "ar": "سطر جديد",
+                        "pt": "Nova linha",
+                        "ru": "Новая строка",
+                        "de": "Neue Zeile",
+                        "ja": "改行",
+                        "tr": "Yeni satır",
+                        "vi": "Xuống dòng",
+                        "it": "A capo",
+                        "fa": "خط جدید",
+                        "pl": "Nowy wiersz",
+                        "uk": "Новий рядок",
+                        "nl": "Nieuwe regel",
+                        "sv": "Ny rad",
+                        "cs": "Nový řádek",
+                        "el": "Νέα γραμμή"
+                      },
+                      "variant": "filled",
+                      "showIf": {
+                        "setting": "chat:enterKey",
+                        "equals": "newline"
+                      },
+                      "action": {
+                        "fn": "setSetting",
+                        "args": {
+                          "key": "chat:enterKey",
+                          "value": "newline"
+                        }
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "label": {
+                        "en": "New line",
+                        "ko": "줄바꿈",
+                        "zh": "换行",
+                        "hi": "नई पंक्ति",
+                        "es": "Nueva línea",
+                        "fr": "Nouvelle ligne",
+                        "ar": "سطر جديد",
+                        "pt": "Nova linha",
+                        "ru": "Новая строка",
+                        "de": "Neue Zeile",
+                        "ja": "改行",
+                        "tr": "Yeni satır",
+                        "vi": "Xuống dòng",
+                        "it": "A capo",
+                        "fa": "خط جدید",
+                        "pl": "Nowy wiersz",
+                        "uk": "Новий рядок",
+                        "nl": "Nieuwe regel",
+                        "sv": "Ny rad",
+                        "cs": "Nový řádek",
+                        "el": "Νέα γραμμή"
+                      },
+                      "variant": "outlined",
+                      "showIf": {
+                        "setting": "chat:enterKey",
+                        "notEquals": "newline"
+                      },
+                      "action": {
+                        "fn": "setSetting",
+                        "args": {
+                          "key": "chat:enterKey",
+                          "value": "newline"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "text",
+                "style": "caption",
+                "value": {
+                  "en": "Enter sends · Shift+Enter adds a new line",
+                  "ko": "Enter는 보내기 · Shift+Enter는 줄바꿈",
+                  "zh": "回车发送 · Shift+回车换行",
+                  "hi": "Enter भेजता है · Shift+Enter नई पंक्ति जोड़ता है",
+                  "es": "Intro envía · Mayús+Intro añade una línea",
+                  "fr": "Entrée envoie · Maj+Entrée ajoute une ligne",
+                  "ar": "Enter يرسل · Shift+Enter يضيف سطرًا جديدًا",
+                  "pt": "Enter envia · Shift+Enter adiciona uma linha",
+                  "ru": "Enter отправляет · Shift+Enter — новая строка",
+                  "de": "Eingabe sendet · Umschalt+Eingabe fügt eine neue Zeile ein",
+                  "ja": "Enter で送信 · Shift+Enter で改行",
+                  "tr": "Enter gönderir · Shift+Enter yeni satır ekler",
+                  "vi": "Enter để gửi · Shift+Enter để xuống dòng",
+                  "it": "Invio invia · Maiusc+Invio va a capo",
+                  "fa": "Enter می‌فرستد · Shift+Enter خط جدید اضافه می‌کند",
+                  "pl": "Enter wysyła · Shift+Enter dodaje nowy wiersz",
+                  "uk": "Enter надсилає · Shift+Enter додає новий рядок",
+                  "nl": "Enter verstuurt · Shift+Enter voegt een nieuwe regel toe",
+                  "sv": "Enter skickar · Skift+Enter lägger till en ny rad",
+                  "cs": "Enter odešle · Shift+Enter přidá nový řádek",
+                  "el": "Το Enter στέλνει · Το Shift+Enter προσθέτει νέα γραμμή"
+                }
+              },
+              {
+                "type": "text",
+                "style": "caption",
+                "value": {
+                  "en": "Enter adds a new line · Cmd/Ctrl+Enter sends",
+                  "ko": "Enter는 줄바꿈 · Cmd/Ctrl+Enter는 보내기",
+                  "zh": "回车换行 · Cmd/Ctrl+回车发送",
+                  "hi": "Enter नई पंक्ति जोड़ता है · Cmd/Ctrl+Enter भेजता है",
+                  "es": "Intro añade una línea · Cmd/Ctrl+Intro envía",
+                  "fr": "Entrée ajoute une ligne · Cmd/Ctrl+Entrée envoie",
+                  "ar": "Enter يضيف سطرًا جديدًا · Cmd/Ctrl+Enter يرسل",
+                  "pt": "Enter adiciona uma linha · Cmd/Ctrl+Enter envia",
+                  "ru": "Enter — новая строка · Cmd/Ctrl+Enter отправляет",
+                  "de": "Eingabe fügt eine neue Zeile ein · Cmd/Strg+Eingabe sendet",
+                  "ja": "Enter で改行 · Cmd/Ctrl+Enter で送信",
+                  "tr": "Enter yeni satır ekler · Cmd/Ctrl+Enter gönderir",
+                  "vi": "Enter để xuống dòng · Cmd/Ctrl+Enter để gửi",
+                  "it": "Invio va a capo · Cmd/Ctrl+Invio invia",
+                  "fa": "Enter خط جدید اضافه می‌کند · Cmd/Ctrl+Enter می‌فرستد",
+                  "pl": "Enter dodaje nowy wiersz · Cmd/Ctrl+Enter wysyła",
+                  "uk": "Enter додає новий рядок · Cmd/Ctrl+Enter надсилає",
+                  "nl": "Enter voegt een nieuwe regel toe · Cmd/Ctrl+Enter verstuurt",
+                  "sv": "Enter lägger till en ny rad · Cmd/Ctrl+Enter skickar",
+                  "cs": "Enter přidá nový řádek · Cmd/Ctrl+Enter odešle",
+                  "el": "Το Enter προσθέτει νέα γραμμή · Το Cmd/Ctrl+Enter στέλνει"
+                }
+              }
+            ]
+          },
+          {
+            "type": "column",
+            "crossAxis": "stretch",
+            "children": [
+              {
+                "type": "text",
+                "style": "title",
+                "value": {
+                  "en": "Show replies as formatted text",
+                  "ko": "답변을 서식 있는 텍스트로 표시",
+                  "zh": "以格式化文本显示回复",
+                  "hi": "उत्तर फ़ॉर्मेट किए हुए टेक्स्ट में दिखाएँ",
+                  "es": "Mostrar las respuestas con formato",
+                  "fr": "Afficher les réponses en texte mis en forme",
+                  "ar": "عرض الردود كنص منسّق",
+                  "pt": "Mostrar respostas como texto formatado",
+                  "ru": "Показывать ответы с форматированием",
+                  "de": "Antworten als formatierten Text anzeigen",
+                  "ja": "返信を書式付きテキストで表示",
+                  "tr": "Yanıtları biçimlendirilmiş metin olarak göster",
+                  "vi": "Hiển thị câu trả lời dưới dạng văn bản định dạng",
+                  "it": "Mostra le risposte come testo formattato",
+                  "fa": "نمایش پاسخ‌ها به‌صورت متن قالب‌بندی‌شده",
+                  "pl": "Pokazuj odpowiedzi jako sformatowany tekst",
+                  "uk": "Показувати відповіді з форматуванням",
+                  "nl": "Antwoorden als opgemaakte tekst tonen",
+                  "sv": "Visa svar som formaterad text",
+                  "cs": "Zobrazovat odpovědi jako formátovaný text",
+                  "el": "Εμφάνιση απαντήσεων ως μορφοποιημένο κείμενο"
+                }
+              },
+              {
+                "type": "padding",
+                "padding": 0,
+                "left": 4,
+                "child": {
+                  "type": "row",
+                  "children": [
+                    {
+                      "type": "button",
+                      "label": {
+                        "en": "On",
+                        "ko": "켜기",
+                        "zh": "开",
+                        "hi": "चालू",
+                        "es": "Sí",
+                        "fr": "Oui",
+                        "ar": "تشغيل",
+                        "pt": "Ligado",
+                        "ru": "Вкл.",
+                        "de": "Ein",
+                        "ja": "オン",
+                        "tr": "Açık",
+                        "vi": "Bật",
+                        "it": "Sì",
+                        "fa": "روشن",
+                        "pl": "Wł.",
+                        "uk": "Увімк.",
+                        "nl": "Aan",
+                        "sv": "På",
+                        "cs": "Zapnuto",
+                        "el": "Ενεργό"
+                      },
+                      "variant": "filled",
+                      "showIf": {
+                        "setting": "chat:markdown",
+                        "notEquals": "off"
+                      },
+                      "action": {
+                        "fn": "setSetting",
+                        "args": {
+                          "key": "chat:markdown",
+                          "value": "on"
+                        }
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "label": {
+                        "en": "On",
+                        "ko": "켜기",
+                        "zh": "开",
+                        "hi": "चालू",
+                        "es": "Sí",
+                        "fr": "Oui",
+                        "ar": "تشغيل",
+                        "pt": "Ligado",
+                        "ru": "Вкл.",
+                        "de": "Ein",
+                        "ja": "オン",
+                        "tr": "Açık",
+                        "vi": "Bật",
+                        "it": "Sì",
+                        "fa": "روشن",
+                        "pl": "Wł.",
+                        "uk": "Увімк.",
+                        "nl": "Aan",
+                        "sv": "På",
+                        "cs": "Zapnuto",
+                        "el": "Ενεργό"
+                      },
+                      "variant": "outlined",
+                      "showIf": {
+                        "setting": "chat:markdown",
+                        "equals": "off"
+                      },
+                      "action": {
+                        "fn": "setSetting",
+                        "args": {
+                          "key": "chat:markdown",
+                          "value": "on"
+                        }
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "label": {
+                        "en": "Off",
+                        "ko": "끄기",
+                        "zh": "关",
+                        "hi": "बंद",
+                        "es": "No",
+                        "fr": "Non",
+                        "ar": "إيقاف",
+                        "pt": "Desligado",
+                        "ru": "Выкл.",
+                        "de": "Aus",
+                        "ja": "オフ",
+                        "tr": "Kapalı",
+                        "vi": "Tắt",
+                        "it": "No",
+                        "fa": "خاموش",
+                        "pl": "Wył.",
+                        "uk": "Вимк.",
+                        "nl": "Uit",
+                        "sv": "Av",
+                        "cs": "Vypnuto",
+                        "el": "Ανενεργό"
+                      },
+                      "variant": "filled",
+                      "showIf": {
+                        "setting": "chat:markdown",
+                        "equals": "off"
+                      },
+                      "action": {
+                        "fn": "setSetting",
+                        "args": {
+                          "key": "chat:markdown",
+                          "value": "off"
+                        }
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "label": {
+                        "en": "Off",
+                        "ko": "끄기",
+                        "zh": "关",
+                        "hi": "बंद",
+                        "es": "No",
+                        "fr": "Non",
+                        "ar": "إيقاف",
+                        "pt": "Desligado",
+                        "ru": "Выкл.",
+                        "de": "Aus",
+                        "ja": "オフ",
+                        "tr": "Kapalı",
+                        "vi": "Tắt",
+                        "it": "No",
+                        "fa": "خاموش",
+                        "pl": "Wył.",
+                        "uk": "Вимк.",
+                        "nl": "Uit",
+                        "sv": "Av",
+                        "cs": "Vypnuto",
+                        "el": "Ανενεργό"
+                      },
+                      "variant": "outlined",
+                      "showIf": {
+                        "setting": "chat:markdown",
+                        "notEquals": "off"
+                      },
+                      "action": {
+                        "fn": "setSetting",
+                        "args": {
+                          "key": "chat:markdown",
+                          "value": "off"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "text",
+                "style": "caption",
+                "value": {
+                  "en": "Off shows replies as plain text. Copy always copies the original text.",
+                  "ko": "끄면 답변이 일반 텍스트로 표시됩니다. 복사는 항상 원본 텍스트를 복사합니다.",
+                  "zh": "关闭后回复显示为纯文本。复制始终复制原始文本。",
+                  "hi": "बंद होने पर उत्तर सादे टेक्स्ट में दिखते हैं। कॉपी हमेशा मूल टेक्स्ट कॉपी करता है।",
+                  "es": "Desactivado, las respuestas se muestran como texto sin formato. Copiar siempre copia el texto original.",
+                  "fr": "Désactivé, les réponses s'affichent en texte brut. Copier copie toujours le texte d'origine.",
+                  "ar": "عند الإيقاف تُعرض الردود كنص عادي. النسخ ينسخ دائمًا النص الأصلي.",
+                  "pt": "Desligado, as respostas aparecem como texto simples. Copiar sempre copia o texto original.",
+                  "ru": "Если выключить, ответы показываются обычным текстом. Копирование всегда берёт исходный текст.",
+                  "de": "Aus zeigt Antworten als einfachen Text. Kopieren kopiert immer den Originaltext.",
+                  "ja": "オフにすると返信はプレーンテキストで表示されます。コピーは常に元のテキストをコピーします。",
+                  "tr": "Kapalıyken yanıtlar düz metin olarak görünür. Kopyalama her zaman özgün metni kopyalar.",
+                  "vi": "Khi tắt, câu trả lời hiển thị dạng văn bản thuần. Sao chép luôn sao chép văn bản gốc.",
+                  "it": "Se disattivato, le risposte appaiono come testo semplice. Copia copia sempre il testo originale.",
+                  "fa": "با خاموش کردن، پاسخ‌ها به‌صورت متن ساده نمایش داده می‌شوند. کپی همیشه متن اصلی را کپی می‌کند.",
+                  "pl": "Po wyłączeniu odpowiedzi są zwykłym tekstem. Kopiowanie zawsze kopiuje oryginalny tekst.",
+                  "uk": "Якщо вимкнути, відповіді показуються простим текстом. Копіювання завжди бере вихідний текст.",
+                  "nl": "Uit toont antwoorden als gewone tekst. Kopiëren kopieert altijd de originele tekst.",
+                  "sv": "Av visar svar som vanlig text. Kopiera kopierar alltid originaltexten.",
+                  "cs": "Vypnuto zobrazí odpovědi jako prostý text. Kopírování vždy zkopíruje původní text.",
+                  "el": "Όταν είναι απενεργοποιημένο, οι απαντήσεις εμφανίζονται ως απλό κείμενο. Η αντιγραφή αντιγράφει πάντα το αρχικό κείμενο."
+                }
+              }
+            ]
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "Copy chat",
+              "ko": "대화 복사",
+              "zh": "复制聊天",
+              "hi": "चैट कॉपी करें",
+              "es": "Copiar chat",
+              "fr": "Copier la discussion",
+              "ar": "نسخ المحادثة",
+              "pt": "Copiar conversa",
+              "ru": "Копировать чат",
+              "de": "Chat kopieren",
+              "ja": "チャットをコピー",
+              "tr": "Sohbeti kopyala",
+              "vi": "Sao chép cuộc trò chuyện",
+              "it": "Copia chat",
+              "fa": "کپی گفتگو",
+              "pl": "Kopiuj czat",
+              "uk": "Копіювати чат",
+              "nl": "Chat kopiëren",
+              "sv": "Kopiera chatt",
+              "cs": "Kopírovat chat",
+              "el": "Αντιγραφή συνομιλίας"
+            },
+            "variant": "text",
+            "action": {
+              "fn": "hostCall",
+              "args": {
+                "name": "chatCopy"
+              }
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "Copy as context",
+              "ko": "컨텍스트로 복사",
+              "zh": "复制为上下文",
+              "hi": "संदर्भ के रूप में कॉपी करें",
+              "es": "Copiar como contexto",
+              "fr": "Copier comme contexte",
+              "ar": "نسخ كسياق",
+              "pt": "Copiar como contexto",
+              "ru": "Копировать как контекст",
+              "de": "Als Kontext kopieren",
+              "ja": "コンテキストとしてコピー",
+              "tr": "Bağlam olarak kopyala",
+              "vi": "Sao chép làm ngữ cảnh",
+              "it": "Copia come contesto",
+              "fa": "کپی به‌عنوان زمینه",
+              "pl": "Kopiuj jako kontekst",
+              "uk": "Копіювати як контекст",
+              "nl": "Kopiëren als context",
+              "sv": "Kopiera som kontext",
+              "cs": "Kopírovat jako kontext",
+              "el": "Αντιγραφή ως περιεχόμενο"
+            },
+            "variant": "text",
+            "action": {
+              "fn": "hostCall",
+              "args": {
+                "name": "chatCopyContext"
+              }
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "Copy last 10 messages as context",
+              "ko": "마지막 메시지 10개를 컨텍스트로 복사",
+              "zh": "将最近 10 条消息复制为上下文",
+              "hi": "अंतिम 10 संदेश संदर्भ के रूप में कॉपी करें",
+              "es": "Copiar los últimos 10 mensajes como contexto",
+              "fr": "Copier les 10 derniers messages comme contexte",
+              "ar": "نسخ آخر 10 رسالة كسياق",
+              "pt": "Copiar as últimas 10 mensagens como contexto",
+              "ru": "Копировать последние 10 сообщений как контекст",
+              "de": "Letzte 10 Nachrichten als Kontext kopieren",
+              "ja": "最新の10件のメッセージをコンテキストとしてコピー",
+              "tr": "Son 10 mesajı bağlam olarak kopyala",
+              "vi": "Sao chép 10 tin nhắn cuối làm ngữ cảnh",
+              "it": "Copia gli ultimi 10 messaggi come contesto",
+              "fa": "کپی 10 پیام آخر به‌عنوان زمینه",
+              "pl": "Kopiuj ostatnie 10 wiadomości jako kontekst",
+              "uk": "Копіювати останні 10 повідомлень як контекст",
+              "nl": "Kopieer de laatste 10 berichten als context",
+              "sv": "Kopiera de senaste 10 meddelandena som kontext",
+              "cs": "Kopírovat posledních 10 zpráv jako kontext",
+              "el": "Αντιγραφή των τελευταίων 10 μηνυμάτων ως περιεχόμενο"
+            },
+            "variant": "text",
+            "action": {
+              "fn": "hostCall",
+              "args": {
+                "name": "chatCopyContext",
+                "last": 10
+              }
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "Copy last 25 messages as context",
+              "ko": "마지막 메시지 25개를 컨텍스트로 복사",
+              "zh": "将最近 25 条消息复制为上下文",
+              "hi": "अंतिम 25 संदेश संदर्भ के रूप में कॉपी करें",
+              "es": "Copiar los últimos 25 mensajes como contexto",
+              "fr": "Copier les 25 derniers messages comme contexte",
+              "ar": "نسخ آخر 25 رسالة كسياق",
+              "pt": "Copiar as últimas 25 mensagens como contexto",
+              "ru": "Копировать последние 25 сообщений как контекст",
+              "de": "Letzte 25 Nachrichten als Kontext kopieren",
+              "ja": "最新の25件のメッセージをコンテキストとしてコピー",
+              "tr": "Son 25 mesajı bağlam olarak kopyala",
+              "vi": "Sao chép 25 tin nhắn cuối làm ngữ cảnh",
+              "it": "Copia gli ultimi 25 messaggi come contesto",
+              "fa": "کپی 25 پیام آخر به‌عنوان زمینه",
+              "pl": "Kopiuj ostatnie 25 wiadomości jako kontekst",
+              "uk": "Копіювати останні 25 повідомлень як контекст",
+              "nl": "Kopieer de laatste 25 berichten als context",
+              "sv": "Kopiera de senaste 25 meddelandena som kontext",
+              "cs": "Kopírovat posledních 25 zpráv jako kontext",
+              "el": "Αντιγραφή των τελευταίων 25 μηνυμάτων ως περιεχόμενο"
+            },
+            "variant": "text",
+            "action": {
+              "fn": "hostCall",
+              "args": {
+                "name": "chatCopyContext",
+                "last": 25
+              }
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "Copy last 50 messages as context",
+              "ko": "마지막 메시지 50개를 컨텍스트로 복사",
+              "zh": "将最近 50 条消息复制为上下文",
+              "hi": "अंतिम 50 संदेश संदर्भ के रूप में कॉपी करें",
+              "es": "Copiar los últimos 50 mensajes como contexto",
+              "fr": "Copier les 50 derniers messages comme contexte",
+              "ar": "نسخ آخر 50 رسالة كسياق",
+              "pt": "Copiar as últimas 50 mensagens como contexto",
+              "ru": "Копировать последние 50 сообщений как контекст",
+              "de": "Letzte 50 Nachrichten als Kontext kopieren",
+              "ja": "最新の50件のメッセージをコンテキストとしてコピー",
+              "tr": "Son 50 mesajı bağlam olarak kopyala",
+              "vi": "Sao chép 50 tin nhắn cuối làm ngữ cảnh",
+              "it": "Copia gli ultimi 50 messaggi come contesto",
+              "fa": "کپی 50 پیام آخر به‌عنوان زمینه",
+              "pl": "Kopiuj ostatnie 50 wiadomości jako kontekst",
+              "uk": "Копіювати останні 50 повідомлень як контекст",
+              "nl": "Kopieer de laatste 50 berichten als context",
+              "sv": "Kopiera de senaste 50 meddelandena som kontext",
+              "cs": "Kopírovat posledních 50 zpráv jako kontext",
+              "el": "Αντιγραφή των τελευταίων 50 μηνυμάτων ως περιεχόμενο"
+            },
+            "variant": "text",
+            "action": {
+              "fn": "hostCall",
+              "args": {
+                "name": "chatCopyContext",
+                "last": 50
+              }
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "Export as Markdown",
+              "ko": "Markdown으로 내보내기",
+              "zh": "导出为 Markdown",
+              "hi": "Markdown के रूप में निर्यात करें",
+              "es": "Exportar como Markdown",
+              "fr": "Exporter en Markdown",
+              "ar": "تصدير بصيغة Markdown",
+              "pt": "Exportar como Markdown",
+              "ru": "Экспорт в Markdown",
+              "de": "Als Markdown exportieren",
+              "ja": "Markdownとして書き出す",
+              "tr": "Markdown olarak dışa aktar",
+              "vi": "Xuất dưới dạng Markdown",
+              "it": "Esporta come Markdown",
+              "fa": "صدور به‌صورت Markdown",
+              "pl": "Eksportuj jako Markdown",
+              "uk": "Експортувати як Markdown",
+              "nl": "Exporteren als Markdown",
+              "sv": "Exportera som Markdown",
+              "cs": "Exportovat jako Markdown",
+              "el": "Εξαγωγή ως Markdown"
+            },
+            "variant": "text",
+            "action": {
+              "fn": "hostCall",
+              "args": {
+                "name": "chatExport",
+                "format": "md"
+              }
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "Export for context (zip)",
+              "ko": "컨텍스트용으로 내보내기 (zip)",
+              "zh": "导出为上下文（zip）",
+              "hi": "संदर्भ के लिए निर्यात करें (zip)",
+              "es": "Exportar para contexto (zip)",
+              "fr": "Exporter pour contexte (zip)",
+              "ar": "تصدير كسياق (zip)",
+              "pt": "Exportar para contexto (zip)",
+              "ru": "Экспорт для контекста (zip)",
+              "de": "Als Kontext exportieren (zip)",
+              "ja": "コンテキスト用に書き出す（zip）",
+              "tr": "Bağlam için dışa aktar (zip)",
+              "vi": "Xuất làm ngữ cảnh (zip)",
+              "it": "Esporta per contesto (zip)",
+              "fa": "صدور برای زمینه (zip)",
+              "pl": "Eksportuj jako kontekst (zip)",
+              "uk": "Експортувати для контексту (zip)",
+              "nl": "Exporteren voor context (zip)",
+              "sv": "Exportera för kontext (zip)",
+              "cs": "Exportovat pro kontext (zip)",
+              "el": "Εξαγωγή για περιεχόμενο (zip)"
+            },
+            "variant": "text",
+            "action": {
+              "fn": "hostCall",
+              "args": {
+                "name": "chatExportContext"
+              }
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "Export as JSON",
+              "ko": "JSON으로 내보내기",
+              "zh": "导出为 JSON",
+              "hi": "JSON के रूप में निर्यात करें",
+              "es": "Exportar como JSON",
+              "fr": "Exporter en JSON",
+              "ar": "تصدير بصيغة JSON",
+              "pt": "Exportar como JSON",
+              "ru": "Экспорт в JSON",
+              "de": "Als JSON exportieren",
+              "ja": "JSONとして書き出す",
+              "tr": "JSON olarak dışa aktar",
+              "vi": "Xuất dưới dạng JSON",
+              "it": "Esporta come JSON",
+              "fa": "صدور به‌صورت JSON",
+              "pl": "Eksportuj jako JSON",
+              "uk": "Експортувати як JSON",
+              "nl": "Exporteren als JSON",
+              "sv": "Exportera som JSON",
+              "cs": "Exportovat jako JSON",
+              "el": "Εξαγωγή ως JSON"
+            },
+            "variant": "text",
+            "action": {
+              "fn": "hostCall",
+              "args": {
+                "name": "chatExport",
+                "format": "json"
+              }
+            }
+          },
+          {
+            "type": "button",
+            "label": {
+              "en": "Import chat",
+              "ko": "대화 가져오기",
+              "zh": "导入聊天",
+              "hi": "चैट आयात करें",
+              "es": "Importar chat",
+              "fr": "Importer une discussion",
+              "ar": "استيراد محادثة",
+              "pt": "Importar conversa",
+              "ru": "Импорт чата",
+              "de": "Chat importieren",
+              "ja": "チャットを読み込む",
+              "tr": "Sohbeti içe aktar",
+              "vi": "Nhập cuộc trò chuyện",
+              "it": "Importa chat",
+              "fa": "درون‌ریزی گفتگو",
+              "pl": "Importuj czat",
+              "uk": "Імпортувати чат",
+              "nl": "Chat importeren",
+              "sv": "Importera chatt",
+              "cs": "Importovat chat",
+              "el": "Εισαγωγή συνομιλίας"
+            },
+            "variant": "text",
+            "action": {
+              "fn": "hostCall",
+              "args": {
+                "name": "chatImport"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "about": {
+      "title": {
+        "en": "About Chat",
+        "ko": "채팅 정보",
+        "zh": "关于聊天",
+        "hi": "चैट के बारे में",
+        "es": "Acerca de Chat",
+        "fr": "À propos de Chat",
+        "ar": "حول الدردشة",
+        "pt": "Sobre o Chat",
+        "ru": "О приложении Чат",
+        "de": "Über Chat",
+        "ja": "チャットについて",
+        "tr": "Sohbet hakkında",
+        "vi": "Giới thiệu về Chat",
+        "it": "Informazioni su Chat",
+        "fa": "درباره گفتگو",
+        "pl": "O aplikacji Czat",
+        "uk": "Про застосунок Чат",
+        "nl": "Over Chat",
+        "sv": "Om Chat",
+        "cs": "O aplikaci Chat",
+        "el": "Σχετικά με το Chat"
+      },
+      "body": {
+        "type": "column",
+        "crossAxis": "stretch",
+        "children": [
+          {
+            "type": "text",
+            "style": "title",
+            "value": {
+              "en": "Your AI, your key",
+              "ko": "나의 AI, 나의 키",
+              "zh": "您的 AI，您的密钥",
+              "hi": "आपका AI, आपकी कुंजी",
+              "es": "Tu IA, tu clave",
+              "fr": "Votre IA, votre clé",
+              "ar": "ذكاؤك الاصطناعي، مفتاحك",
+              "pt": "Sua IA, sua chave",
+              "ru": "Ваш ИИ, ваш ключ",
+              "de": "Deine KI, dein Schlüssel",
+              "ja": "あなたのAI、あなたのキー",
+              "tr": "Senin yapay zekân, senin anahtarın",
+              "vi": "AI của bạn, khóa của bạn",
+              "it": "La tua IA, la tua chiave",
+              "fa": "هوش مصنوعی شما، کلید شما",
+              "pl": "Twoja AI, twój klucz",
+              "uk": "Ваш ШІ, ваш ключ",
+              "nl": "Jouw AI, jouw sleutel",
+              "sv": "Din AI, din nyckel",
+              "cs": "Vaše AI, váš klíč",
+              "el": "Η δική σας AI, το δικό σας κλειδί"
+            }
+          },
+          {
+            "type": "text",
+            "value": {
+              "en": "1. Add your AI provider key in app settings.\n2. Type and send: your first message starts a new chat.\n3. Tap + to attach a photo, PDF or text file, or paste an image.\n4. The gear sets this chat's model, system prompt and web access.\n5. Start a child chat to branch off a side question.",
+              "ko": "1. 앱 설정에서 AI 제공자 키를 추가하세요.\n2. 입력하고 보내세요. 첫 메시지로 새 채팅이 시작됩니다.\n3. +를 눌러 사진, PDF, 텍스트 파일을 첨부하거나 이미지를 붙여넣으세요.\n4. 톱니바퀴에서 이 채팅의 모델, 시스템 프롬프트, 웹 접근을 설정합니다.\n5. 하위 채팅을 시작해 곁가지 질문을 따로 나눌 수 있습니다.",
+              "zh": "1. 在应用设置中添加你的 AI 提供商密钥。\n2. 输入并发送：第一条消息会开始一个新聊天。\n3. 点按 + 附加照片、PDF 或文本文件，或粘贴图片。\n4. 齿轮图标可设置此聊天的模型、系统提示和网络访问。\n5. 开启子聊天，把旁支问题分开讨论。",
+              "hi": "1. ऐप सेटिंग्स में अपनी AI प्रदाता कुंजी जोड़ें।\n2. लिखें और भेजें: आपका पहला संदेश नई चैट शुरू करता है।\n3. फ़ोटो, PDF या टेक्स्ट फ़ाइल जोड़ने के लिए + दबाएँ, या कोई छवि पेस्ट करें।\n4. गियर से इस चैट का मॉडल, सिस्टम प्रॉम्प्ट और वेब एक्सेस सेट होता है।\n5. किसी अलग सवाल के लिए शाखा चैट शुरू करें।",
+              "es": "1. Añade la clave de tu proveedor de IA en los ajustes de la app.\n2. Escribe y envía: tu primer mensaje inicia un chat nuevo.\n3. Toca + para adjuntar una foto, un PDF o un archivo de texto, o pega una imagen.\n4. El engranaje define el modelo, el prompt del sistema y el acceso web de este chat.\n5. Abre un chat derivado para una pregunta aparte.",
+              "fr": "1. Ajoutez la clé de votre fournisseur d’IA dans les paramètres de l’app.\n2. Écrivez et envoyez : votre premier message démarre une nouvelle discussion.\n3. Touchez + pour joindre une photo, un PDF ou un fichier texte, ou collez une image.\n4. La roue dentée règle le modèle, l’invite système et l’accès web de cette discussion.\n5. Ouvrez une discussion dérivée pour une question à part.",
+              "ar": "1. أضف مفتاح مزوّد الذكاء الاصطناعي في إعدادات التطبيق.\n2. اكتب وأرسل: رسالتك الأولى تبدأ محادثة جديدة.\n3. اضغط + لإرفاق صورة أو ملف PDF أو ملف نصي، أو الصق صورة.\n4. يضبط رمز الترس النموذج وموجّه النظام والوصول إلى الويب لهذه المحادثة.\n5. ابدأ محادثة فرعية لسؤال جانبي.",
+              "pt": "1. Adicione a chave do seu provedor de IA nas configurações do app.\n2. Digite e envie: sua primeira mensagem inicia uma nova conversa.\n3. Toque em + para anexar uma foto, um PDF ou um arquivo de texto, ou cole uma imagem.\n4. A engrenagem define o modelo, o prompt do sistema e o acesso à web desta conversa.\n5. Abra uma conversa derivada para uma pergunta à parte.",
+              "ru": "1. Добавьте ключ вашего ИИ-провайдера в настройках приложения.\n2. Напишите и отправьте: первое сообщение начинает новый чат.\n3. Нажмите +, чтобы прикрепить фото, PDF или текстовый файл, или вставьте изображение.\n4. Шестерёнка задаёт модель, системный промпт и доступ к вебу для этого чата.\n5. Откройте дочерний чат для отдельного вопроса.",
+              "de": "1. Fügen Sie den Schlüssel Ihres KI-Anbieters in den App-Einstellungen hinzu.\n2. Tippen und senden: Ihre erste Nachricht startet einen neuen Chat.\n3. Tippen Sie auf +, um ein Foto, PDF oder eine Textdatei anzuhängen, oder fügen Sie ein Bild ein.\n4. Das Zahnrad legt Modell, System-Prompt und Webzugriff dieses Chats fest.\n5. Starten Sie einen Zweig-Chat für eine Nebenfrage.",
+              "ja": "1. アプリ設定で AI プロバイダーのキーを追加します。\n2. 入力して送信：最初のメッセージで新しいチャットが始まります。\n3. + をタップして写真、PDF、テキストファイルを添付するか、画像を貼り付けます。\n4. 歯車でこのチャットのモデル、システムプロンプト、ウェブアクセスを設定します。\n5. 子チャットを始めて、別の質問を分けられます。",
+              "tr": "1. Uygulama ayarlarından yapay zekâ sağlayıcı anahtarınızı ekleyin.\n2. Yazın ve gönderin: ilk mesajınız yeni bir sohbet başlatır.\n3. Fotoğraf, PDF veya metin dosyası eklemek için + simgesine dokunun ya da bir görsel yapıştırın.\n4. Dişli simgesi bu sohbetin modelini, sistem istemini ve web erişimini ayarlar.\n5. Yan bir soru için alt sohbet başlatın.",
+              "vi": "1. Thêm khóa nhà cung cấp AI của bạn trong cài đặt ứng dụng.\n2. Nhập và gửi: tin nhắn đầu tiên sẽ bắt đầu một cuộc trò chuyện mới.\n3. Chạm + để đính kèm ảnh, PDF hoặc tệp văn bản, hoặc dán một hình ảnh.\n4. Biểu tượng bánh răng đặt mô hình, lời nhắc hệ thống và quyền truy cập web cho cuộc trò chuyện này.\n5. Mở một cuộc trò chuyện con cho câu hỏi bên lề.",
+              "it": "1. Aggiungi la chiave del tuo fornitore di IA nelle impostazioni dell’app.\n2. Scrivi e invia: il primo messaggio avvia una nuova chat.\n3. Tocca + per allegare una foto, un PDF o un file di testo, oppure incolla un’immagine.\n4. L’ingranaggio imposta modello, prompt di sistema e accesso al web di questa chat.\n5. Avvia una chat derivata per una domanda a parte.",
+              "fa": "1. کلید ارائه‌دهندهٔ هوش مصنوعی خود را در تنظیمات برنامه اضافه کنید.\n2. بنویسید و بفرستید: نخستین پیام شما یک گفتگوی جدید را آغاز می‌کند.\n3. برای پیوست عکس، PDF یا فایل متنی روی + بزنید، یا تصویری را جای‌گذاری کنید.\n4. چرخ‌دنده مدل، دستور سیستمی و دسترسی وب این گفتگو را تنظیم می‌کند.\n5. برای یک پرسش جانبی، گفتگوی فرعی باز کنید.",
+              "pl": "1. Dodaj klucz swojego dostawcy AI w ustawieniach aplikacji.\n2. Napisz i wyślij: pierwsza wiadomość rozpoczyna nowy czat.\n3. Stuknij +, aby dołączyć zdjęcie, PDF lub plik tekstowy, albo wklej obraz.\n4. Koło zębate ustawia model, prompt systemowy i dostęp do sieci dla tego czatu.\n5. Otwórz czat podrzędny, aby zadać pytanie poboczne.",
+              "uk": "1. Додайте ключ свого постачальника ШІ в налаштуваннях застосунку.\n2. Напишіть і надішліть: перше повідомлення починає новий чат.\n3. Торкніться +, щоб прикріпити фото, PDF або текстовий файл, або вставте зображення.\n4. Шестірня задає модель, системний промпт і доступ до вебу для цього чату.\n5. Відкрийте дочірній чат для окремого запитання.",
+              "nl": "1. Voeg de sleutel van je AI-aanbieder toe in de app-instellingen.\n2. Typ en verstuur: je eerste bericht start een nieuwe chat.\n3. Tik op + om een foto, pdf of tekstbestand bij te voegen, of plak een afbeelding.\n4. Het tandwiel stelt het model, de systeemprompt en webtoegang van deze chat in.\n5. Start een afgeleide chat voor een zijvraag.",
+              "sv": "1. Lägg till nyckeln för din AI-leverantör i appens inställningar.\n2. Skriv och skicka: ditt första meddelande startar en ny chatt.\n3. Tryck på + för att bifoga ett foto, en PDF eller en textfil, eller klistra in en bild.\n4. Kugghjulet ställer in modell, systemprompt och webbåtkomst för den här chatten.\n5. Starta en förgrenad chatt för en sidofråga.",
+              "cs": "1. Přidejte klíč svého poskytovatele AI v nastavení aplikace.\n2. Napište a odešlete: první zpráva zahájí nový chat.\n3. Klepnutím na + připojíte fotku, PDF nebo textový soubor, případně vložte obrázek.\n4. Ozubené kolo nastavuje model, systémový prompt a přístup k webu pro tento chat.\n5. Pro vedlejší otázku založte podřízený chat.",
+              "el": "1. Προσθέστε το κλειδί του παρόχου ΤΝ στις ρυθμίσεις της εφαρμογής.\n2. Γράψτε και στείλτε: το πρώτο σας μήνυμα ξεκινά νέα συνομιλία.\n3. Πατήστε + για να επισυνάψετε φωτογραφία, PDF ή αρχείο κειμένου, ή επικολλήστε μια εικόνα.\n4. Το γρανάζι ορίζει το μοντέλο, την προτροπή συστήματος και την πρόσβαση στον ιστό για αυτή τη συνομιλία.\n5. Ξεκινήστε θυγατρική συνομιλία για μια παράπλευρη ερώτηση."
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Replies stream in as they are written. Tap Stop to end one early; a cut-off reply can be continued.",
+              "ko": "답변이 작성되는 대로 실시간으로 표시됩니다. 중지를 눌러 일찍 끝낼 수 있고, 잘린 답변은 이어서 작성할 수 있습니다.",
+              "zh": "回复会边写边显示。点击“停止”可提前结束；被截断的回复可以继续。",
+              "hi": "उत्तर लिखे जाते समय ही दिखते हैं। जल्दी रोकने के लिए \"रोकें\" दबाएँ; कटे हुए उत्तर को जारी रखा जा सकता है।",
+              "es": "Las respuestas aparecen a medida que se escriben. Pulsa Detener para terminar una antes; una respuesta cortada se puede continuar.",
+              "fr": "Les réponses s'affichent au fur et à mesure. Touchez Arrêter pour en terminer une plus tôt ; une réponse tronquée peut être poursuivie.",
+              "ar": "تظهر الردود أثناء كتابتها. اضغط «إيقاف» لإنهاء الرد مبكرًا، ويمكن متابعة الرد المقطوع.",
+              "pt": "As respostas aparecem à medida que são escritas. Toque em Parar para encerrar mais cedo; uma resposta cortada pode ser continuada.",
+              "ru": "Ответы появляются по мере написания. Нажмите «Стоп», чтобы закончить раньше; обрезанный ответ можно продолжить.",
+              "de": "Antworten erscheinen, während sie geschrieben werden. Mit „Stopp“ beendest du eine früher; eine abgeschnittene Antwort lässt sich fortsetzen.",
+              "ja": "返信は書かれるそばから表示されます。「停止」で途中終了でき、途中で切れた返信は続きを生成できます。",
+              "tr": "Yanıtlar yazıldıkça görünür. Erken bitirmek için Durdur'a dokunun; kesilen bir yanıt devam ettirilebilir.",
+              "vi": "Câu trả lời hiện ra khi đang được viết. Nhấn Dừng để kết thúc sớm; câu trả lời bị cắt có thể tiếp tục.",
+              "it": "Le risposte compaiono mentre vengono scritte. Tocca Ferma per terminarne una prima; una risposta troncata può essere continuata.",
+              "fa": "پاسخ‌ها همان‌طور که نوشته می‌شوند نمایش داده می‌شوند. برای پایان زودهنگام «توقف» را بزنید؛ پاسخ نیمه‌تمام را می‌توان ادامه داد.",
+              "pl": "Odpowiedzi pojawiają się w trakcie pisania. Stuknij Zatrzymaj, by zakończyć wcześniej; ucięty komunikat można kontynuować.",
+              "uk": "Відповіді з'являються в міру написання. Натисніть «Зупинити», щоб завершити раніше; обрізану відповідь можна продовжити.",
+              "nl": "Antwoorden verschijnen terwijl ze worden geschreven. Tik op Stoppen om er eerder een te beëindigen; een afgekapt antwoord kan worden voortgezet.",
+              "sv": "Svaren visas medan de skrivs. Tryck på Stoppa för att avsluta ett tidigt; ett avklippt svar kan fortsättas.",
+              "cs": "Odpovědi se zobrazují průběžně, jak vznikají. Klepnutím na Zastavit odpověď ukončíte dříve; zkrácenou odpověď lze dokončit.",
+              "el": "Οι απαντήσεις εμφανίζονται καθώς γράφονται. Πατήστε Διακοπή για να τελειώσει νωρίτερα· μια περικομμένη απάντηση μπορεί να συνεχιστεί."
+            }
+          }
+        ]
+      }
+    }
+  }
+}

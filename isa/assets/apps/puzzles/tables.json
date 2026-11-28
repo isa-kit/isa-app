@@ -1,0 +1,22 @@
+{
+  "tables": [
+    {
+      "name": "pieces",
+      "label": "Slide tiles",
+      "icon": "grid_on",
+      "description": "The 15-puzzle board. Each tile is a row; its x/y ARE the game state, so a shared room co-solves live."
+    },
+    {
+      "name": "pattern",
+      "label": "Pattern gems",
+      "icon": "dashboard",
+      "description": "Free-move co-op board: drag gems home (targetX/targetY)."
+    },
+    {
+      "name": "results",
+      "label": "Results",
+      "icon": "history",
+      "description": "Solve records \u2014 moves and seconds."
+    }
+  ]
+}

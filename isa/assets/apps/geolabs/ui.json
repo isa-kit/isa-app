@@ -1,0 +1,1405 @@
+{
+  "app": {
+    "languages": ["en", "ko", "zh", "hi", "es", "fr", "ar", "pt", "ru", "de", "ja", "tr", "vi", "it", "fa", "pl", "uk", "nl", "sv", "cs", "el"],
+    "translatable": true,
+    "appDataTools": true,
+    "intro": {
+      "purpose": {
+        "en": "Geolabs builds a geographic data report: read spatial data in, add map and chart panels, and put controls beside them.",
+        "ko": "Geolabs는 지리 데이터 보고서를 만듭니다: 공간 데이터를 읽어들이고, 지도와 차트 패널을 추가하고, 그 옆에 컨트롤을 배치합니다.",
+        "zh": "Geolabs 用于构建地理数据报告：读入空间数据，添加地图和图表面板，并在旁边放置控制项。",
+        "hi": "Geolabs भौगोलिक डेटा रिपोर्ट बनाता है: स्थानिक डेटा पढ़ें, मैप व चार्ट पैनल जोड़ें, और उनके बगल में नियंत्रण रखें।",
+        "es": "Geolabs construye un informe de datos geográficos: lee datos espaciales, añade paneles de mapa y gráfico, y coloca controles junto a ellos.",
+        "fr": "Geolabs construit un rapport de données géographiques : lisez les données spatiales, ajoutez des panneaux de carte et de graphique, et placez des contrôles à côté.",
+        "ar": "يبني Geolabs تقرير بيانات جغرافية: اقرأ البيانات المكانية، أضف لوحات الخرائط والرسوم البيانية، وضع عناصر التحكم بجانبها.",
+        "pt": "Geolabs constrói um relatório de dados geográficos: leia dados espaciais, adicione painéis de mapa e gráfico, e coloque controles ao lado.",
+        "ru": "Geolabs строит географический отчёт по данным: считывает пространственные данные, добавляет панели карты и диаграмм, размещает элементы управления рядом с ними.",
+        "de": "Geolabs erstellt einen geografischen Datenbericht: lies räumliche Daten ein, füge Karten- und Diagramm-Panels hinzu und platziere Steuerelemente daneben.",
+        "ja": "Geolabsは地理データレポートを構築します：空間データを読み込み、地図とチャートのパネルを追加し、その横にコントロールを配置します。",
+        "tr": "Geolabs coğrafi bir veri raporu oluşturur: mekansal veriyi içeri alın, harita ve grafik panelleri ekleyin, yanlarına kontroller yerleştirin.",
+        "vi": "Geolabs xây dựng báo cáo dữ liệu địa lý: đọc dữ liệu không gian vào, thêm bảng bản đồ và biểu đồ, và đặt điều khiển bên cạnh chúng.",
+        "it": "Geolabs costruisce un report di dati geografici: leggi dati spaziali, aggiungi pannelli mappa e grafico, e posiziona controlli accanto ad essi.",
+        "fa": "Geolabs یک گزارش دادهٔ جغرافیایی می‌سازد: داده‌های مکانی را بخوانید، پنل‌های نقشه و نمودار اضافه کنید، و کنترل‌ها را کنارشان بگذارید.",
+        "pl": "Geolabs tworzy raport danych geograficznych: wczytuje dane przestrzenne, dodaje panele mapy i wykresu oraz umieszcza obok nich elementy sterujące.",
+        "uk": "Geolabs будує географічний звіт з даних: зчитує просторові дані, додає панелі карти й діаграм та розміщує елементи керування поряд.",
+        "nl": "Geolabs bouwt een geografisch datarapport: lees ruimtelijke data in, voeg kaart- en grafiekpanelen toe, en plaats bediening ernaast.",
+        "sv": "Geolabs bygger en geografisk datarapport: läs in rumslig data, lägg till karta och diagrampaneler, och placera kontroller bredvid dem.",
+        "cs": "Geolabs sestavuje geografickou datovou zprávu: načtěte prostorová data, přidejte panely mapy a grafu a umístěte vedle nich ovládací prvky.",
+        "el": "Το Geolabs δημιουργεί μια γεωγραφική αναφορά δεδομένων: διαβάστε χωρικά δεδομένα, προσθέστε πάνελ χάρτη και γραφήματος, και τοποθετήστε στοιχεία ελέγχου δίπλα τους."
+      },
+      "tour": [
+        {
+          "screen": "report",
+          "label": "Databoard",
+          "note": "The report itself — every panel you've added, laid out and filterable."
+        },
+        {
+          "screen": "controls",
+          "label": "Controls",
+          "note": "Add, arrange and configure the panels and filters that build the report."
+        },
+        {
+          "screen": "data",
+          "label": "Data",
+          "note": "Bring data in and manage the tables the report reads from."
+        },
+        {
+          "screen": "about",
+          "label": "About",
+          "note": "How this report is put together."
+        }
+      ],
+      "guide": "about"
+    },
+    "title": {
+      "en": "Geolabs",
+      "ko": "Geolabs",
+      "zh": "Geolabs",
+      "hi": "Geolabs",
+      "es": "Geolabs",
+      "fr": "Geolabs",
+      "ar": "Geolabs",
+      "pt": "Geolabs",
+      "ru": "Geolabs",
+      "de": "Geolabs",
+      "ja": "Geolabs",
+      "tr": "Geolabs",
+      "vi": "Geolabs",
+      "it": "Geolabs",
+      "fa": "Geolabs",
+      "pl": "Geolabs",
+      "uk": "Geolabs",
+      "nl": "Geolabs",
+      "sv": "Geolabs",
+      "cs": "Geolabs",
+      "el": "Geolabs"
+    },
+    "primaryColor": "#1F6F8B"
+  },
+  "nav": [
+    {
+      "id": "report",
+      "label": {
+        "en": "Databoard",
+        "ko": "데이터보드",
+        "zh": "数据看板",
+        "hi": "डेटाबोर्ड",
+        "es": "Panel de datos",
+        "fr": "Databoard",
+        "ar": "لوحة البيانات",
+        "pt": "Databoard",
+        "ru": "Дата-борд",
+        "de": "Databoard",
+        "ja": "データボード",
+        "tr": "Veri panosu",
+        "vi": "Bảng dữ liệu",
+        "it": "Databoard",
+        "fa": "دیتابورد",
+        "pl": "Tablica danych",
+        "uk": "Дата-борд",
+        "nl": "Databoard",
+        "sv": "Databoard",
+        "cs": "Datový přehled",
+        "el": "Πίνακας δεδομένων"
+      },
+      "icon": "dashboard",
+      "screen": "report"
+    },
+    {
+      "id": "controls",
+      "label": {
+        "en": "Controls",
+        "ko": "컨트롤",
+        "zh": "控制项",
+        "hi": "नियंत्रण",
+        "es": "Controles",
+        "fr": "Contrôles",
+        "ar": "عناصر التحكم",
+        "pt": "Controles",
+        "ru": "Элементы управления",
+        "de": "Steuerelemente",
+        "ja": "コントロール",
+        "tr": "Kontroller",
+        "vi": "Điều khiển",
+        "it": "Controlli",
+        "fa": "کنترل‌ها",
+        "pl": "Sterowanie",
+        "uk": "Керування",
+        "nl": "Bediening",
+        "sv": "Kontroller",
+        "cs": "Ovládací prvky",
+        "el": "Στοιχεία ελέγχου"
+      },
+      "icon": "tune",
+      "screen": "controls"
+    },
+    {
+      "id": "data",
+      "label": {
+        "en": "Data",
+        "ko": "데이터",
+        "zh": "数据",
+        "hi": "डेटा",
+        "es": "Datos",
+        "fr": "Données",
+        "ar": "البيانات",
+        "pt": "Dados",
+        "ru": "Данные",
+        "de": "Daten",
+        "ja": "データ",
+        "tr": "Veri",
+        "vi": "Dữ liệu",
+        "it": "Dati",
+        "fa": "داده",
+        "pl": "Dane",
+        "uk": "Дані",
+        "nl": "Data",
+        "sv": "Data",
+        "cs": "Data",
+        "el": "Δεδομένα"
+      },
+      "icon": "table_rows",
+      "screen": "data"
+    },
+    {
+      "id": "about",
+      "label": {
+        "en": "About",
+        "ko": "정보",
+        "zh": "关于",
+        "hi": "परिचय",
+        "es": "Acerca de",
+        "fr": "À propos",
+        "ar": "حول",
+        "pt": "Sobre",
+        "ru": "О приложении",
+        "de": "Über",
+        "ja": "概要",
+        "tr": "Hakkında",
+        "vi": "Giới thiệu",
+        "it": "Informazioni",
+        "fa": "درباره",
+        "pl": "O aplikacji",
+        "uk": "Про застосунок",
+        "nl": "Over",
+        "sv": "Om",
+        "cs": "O aplikaci",
+        "el": "Σχετικά"
+      },
+      "icon": "info",
+      "screen": "about"
+    }
+  ],
+  "screens": {
+    "data": {
+      "title": {
+        "en": "Data — read it in, look at it",
+        "ko": "데이터 — 읽어들이고 살펴보기",
+        "zh": "数据——读入并查看",
+        "hi": "डेटा — इसे पढ़ें, देखें",
+        "es": "Datos — léelos, míralos",
+        "fr": "Données — lisez-les, regardez-les",
+        "ar": "البيانات — اقرأها، انظر إليها",
+        "pt": "Dados — leia-os, veja-os",
+        "ru": "Данные — прочитать и посмотреть",
+        "de": "Daten — einlesen, anschauen",
+        "ja": "データ — 読み込んで見る",
+        "tr": "Veri — içeri al, bak",
+        "vi": "Dữ liệu — đọc vào, xem",
+        "it": "Dati — leggili, guardali",
+        "fa": "داده — بخوانید، ببینید",
+        "pl": "Dane — wczytaj je, spójrz na nie",
+        "uk": "Дані — прочитати, подивитися",
+        "nl": "Data — inlezen, bekijken",
+        "sv": "Data — läs in det, titta på det",
+        "cs": "Data — načíst, podívat se",
+        "el": "Δεδομένα — διαβάστε τα, δείτε τα"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "The dataset behind every view: one row per zone × scenario. Import your own CSV with the same columns — merge adds rows, replace starts fresh. Add filters below; every filter is type-checked against the column it targets.",
+              "ko": "모든 화면 뒤에 있는 데이터셋: 구역 × 시나리오마다 한 행입니다. 같은 열을 가진 CSV를 가져오세요 — 병합은 행을 추가하고, 교체는 처음부터 다시 시작합니다. 아래에서 필터를 추가하세요. 모든 필터는 대상 열에 대해 형식이 검증됩니다.",
+              "zh": "每个视图背后的数据集：每个区域 × 情景一行。导入与其列结构相同的 CSV——合并会追加行，替换则从头开始。在下方添加筛选条件；每个筛选条件都会按其所对应的列进行类型校验。",
+              "hi": "हर व्यू के पीछे का डेटासेट: प्रति ज़ोन × परिदृश्य एक पंक्ति। समान कॉलम वाली अपनी CSV आयात करें — मर्ज पंक्तियां जोड़ता है, रिप्लेस नए सिरे से शुरू करता है। नीचे फ़िल्टर जोड़ें; हर फ़िल्टर उसके लक्षित कॉलम के अनुसार टाइप-जांचा जाता है।",
+              "es": "El conjunto de datos detrás de cada vista: una fila por zona × escenario. Importa tu propio CSV con las mismas columnas — fusionar añade filas, reemplazar empieza de cero. Añade filtros abajo; cada filtro se verifica por tipo contra la columna a la que apunta.",
+              "fr": "Le jeu de données derrière chaque vue : une ligne par zone × scénario. Importez votre propre CSV avec les mêmes colonnes — fusionner ajoute des lignes, remplacer repart de zéro. Ajoutez des filtres ci-dessous ; chaque filtre est vérifié par type par rapport à la colonne qu'il cible.",
+              "ar": "مجموعة البيانات وراء كل عرض: صف واحد لكل منطقة × سيناريو. استورد ملف CSV خاصًا بك بنفس الأعمدة — الدمج يضيف صفوفًا، والاستبدال يبدأ من جديد. أضف مرشحات أدناه؛ يُتحقق من نوع كل مرشح مقابل العمود الذي يستهدفه.",
+              "pt": "O conjunto de dados por trás de cada visão: uma linha por zona × cenário. Importe seu próprio CSV com as mesmas colunas — mesclar adiciona linhas, substituir começa do zero. Adicione filtros abaixo; cada filtro é verificado por tipo contra a coluna que visa.",
+              "ru": "Набор данных за каждым представлением: одна строка на зону × сценарий. Импортируйте собственный CSV с теми же столбцами — слияние добавляет строки, замена начинает заново. Добавляйте фильтры ниже; каждый фильтр проверяется по типу относительно столбца, к которому применяется.",
+              "de": "Der Datensatz hinter jeder Ansicht: eine Zeile pro Zone × Szenario. Importiere deine eigene CSV mit denselben Spalten — Zusammenführen fügt Zeilen hinzu, Ersetzen beginnt neu. Füge unten Filter hinzu; jeder Filter wird typgeprüft gegen die Spalte, die er anvisiert.",
+              "ja": "すべてのビューの背後にあるデータセット：ゾーン×シナリオごとに1行。同じ列を持つ独自のCSVをインポートできます — マージは行を追加し、置換は最初からやり直します。以下でフィルターを追加してください。各フィルターは対象の列に対して型チェックされます。",
+              "tr": "Her görünümün arkasındaki veri kümesi: bölge × senaryo başına bir satır. Aynı sütunlara sahip kendi CSV'nizi içe aktarın — birleştir satır ekler, değiştir sıfırdan başlar. Aşağıya filtre ekleyin; her filtre hedeflediği sütuna göre tür denetiminden geçer.",
+              "vi": "Bộ dữ liệu đằng sau mỗi khung nhìn: một hàng cho mỗi khu vực × kịch bản. Nhập tệp CSV của riêng bạn với cùng các cột — hợp nhất thêm hàng, thay thế bắt đầu lại từ đầu. Thêm bộ lọc bên dưới; mỗi bộ lọc được kiểm tra kiểu dữ liệu theo cột mà nó nhắm tới.",
+              "it": "Il dataset dietro ogni vista: una riga per zona × scenario. Importa il tuo CSV con le stesse colonne — unisci aggiunge righe, sostituisci riparte da zero. Aggiungi filtri sotto; ogni filtro viene verificato per tipo rispetto alla colonna a cui si riferisce.",
+              "fa": "مجموعه‌دادهٔ پشت هر نما: یک ردیف برای هر منطقه × سناریو. CSV خودتان را با همان ستون‌ها وارد کنید — ادغام ردیف اضافه می‌کند، جایگزینی از نو شروع می‌کند. در پایین فیلتر اضافه کنید؛ هر فیلتر بر اساس ستونی که هدف قرار می‌دهد از نظر نوع بررسی می‌شود.",
+              "pl": "Zbiór danych stojący za każdym widokiem: jeden wiersz na strefę × scenariusz. Zaimportuj własny plik CSV z tymi samymi kolumnami — scalenie dodaje wiersze, zastąpienie zaczyna od nowa. Dodaj filtry poniżej; każdy filtr jest sprawdzany pod względem typu względem kolumny, którą obejmuje.",
+              "uk": "Набір даних за кожним поданням: один рядок на зону × сценарій. Імпортуйте власний CSV із такими самими стовпцями — злиття додає рядки, заміна починає заново. Додайте фільтри нижче; кожен фільтр перевіряється за типом відповідно до стовпця, який він охоплює.",
+              "nl": "De dataset achter elke weergave: één rij per zone × scenario. Importeer je eigen CSV met dezelfde kolommen — samenvoegen voegt rijen toe, vervangen begint opnieuw. Voeg hieronder filters toe; elk filter wordt type-gecontroleerd tegen de kolom waarop het gericht is.",
+              "sv": "Datasetet bakom varje vy: en rad per zon × scenario. Importera din egen CSV med samma kolumner — sammanfoga lägger till rader, ersätt börjar om från början. Lägg till filter nedan; varje filter typkontrolleras mot kolumnen det riktar sig mot.",
+              "cs": "Datová sada za každým zobrazením: jeden řádek na zónu × scénář. Importujte vlastní CSV se stejnými sloupci — sloučení přidá řádky, nahrazení začne znovu. Přidejte filtry níže; každý filtr je typově zkontrolován vůči sloupci, na který se zaměřuje.",
+              "el": "Το σύνολο δεδομένων πίσω από κάθε προβολή: μία γραμμή ανά ζώνη × σενάριο. Εισαγάγετε το δικό σας CSV με τις ίδιες στήλες — η συγχώνευση προσθέτει γραμμές, η αντικατάσταση ξεκινά από την αρχή. Προσθέστε φίλτρα παρακάτω· κάθε φίλτρο ελέγχεται ως προς τον τύπο σε σχέση με τη στήλη που στοχεύει."
+            }
+          },
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": {
+                  "en": "Import CSV (merge)",
+                  "ko": "CSV 가져오기 (병합)",
+                  "zh": "导入CSV（合并）",
+                  "hi": "CSV आयात करें (मर्ज)",
+                  "es": "Importar CSV (fusionar)",
+                  "fr": "Importer CSV (fusionner)",
+                  "ar": "استيراد CSV (دمج)",
+                  "pt": "Importar CSV (mesclar)",
+                  "ru": "Импортировать CSV (слияние)",
+                  "de": "CSV importieren (zusammenführen)",
+                  "ja": "CSVをインポート（マージ）",
+                  "tr": "CSV içe aktar (birleştir)",
+                  "vi": "Nhập CSV (hợp nhất)",
+                  "it": "Importa CSV (unisci)",
+                  "fa": "درون‌ریزی CSV (ادغام)",
+                  "pl": "Importuj CSV (scal)",
+                  "uk": "Імпорт CSV (злиття)",
+                  "nl": "CSV importeren (samenvoegen)",
+                  "sv": "Importera CSV (sammanfoga)",
+                  "cs": "Importovat CSV (sloučit)",
+                  "el": "Εισαγωγή CSV (συγχώνευση)"
+                },
+                "icon": "upload",
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "importCsv",
+                    "table": "records"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "Import CSV (replace)",
+                  "ko": "CSV 가져오기 (교체)",
+                  "zh": "导入CSV（替换）",
+                  "hi": "CSV आयात करें (रिप्लेस)",
+                  "es": "Importar CSV (reemplazar)",
+                  "fr": "Importer CSV (remplacer)",
+                  "ar": "استيراد CSV (استبدال)",
+                  "pt": "Importar CSV (substituir)",
+                  "ru": "Импортировать CSV (замена)",
+                  "de": "CSV importieren (ersetzen)",
+                  "ja": "CSVをインポート（置換）",
+                  "tr": "CSV içe aktar (değiştir)",
+                  "vi": "Nhập CSV (thay thế)",
+                  "it": "Importa CSV (sostituisci)",
+                  "fa": "درون‌ریزی CSV (جایگزینی)",
+                  "pl": "Importuj CSV (zastąp)",
+                  "uk": "Імпорт CSV (заміна)",
+                  "nl": "CSV importeren (vervangen)",
+                  "sv": "Importera CSV (ersätt)",
+                  "cs": "Importovat CSV (nahradit)",
+                  "el": "Εισαγωγή CSV (αντικατάσταση)"
+                },
+                "icon": "restore",
+                "action": {
+                  "fn": "hostCall",
+                  "args": {
+                    "name": "importCsv",
+                    "table": "records",
+                    "replace": true
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "report",
+            "table": "records",
+            "filterable": true,
+            "tools": [
+              "table"
+            ],
+            "exclude": [
+              "id"
+            ],
+            "label": {
+              "en": "Records",
+              "ko": "레코드",
+              "zh": "记录",
+              "hi": "रिकॉर्ड",
+              "es": "Registros",
+              "fr": "Enregistrements",
+              "ar": "السجلات",
+              "pt": "Registros",
+              "ru": "Записи",
+              "de": "Datensätze",
+              "ja": "レコード",
+              "tr": "Kayıtlar",
+              "vi": "Bản ghi",
+              "it": "Record",
+              "fa": "رکوردها",
+              "pl": "Rekordy",
+              "uk": "Записи",
+              "nl": "Records",
+              "sv": "Poster",
+              "cs": "Záznamy",
+              "el": "Εγγραφές"
+            },
+            "height": 420,
+            "config": {
+              "mode": "table"
+            },
+            "showProvenance": true
+          }
+        ]
+      }
+    },
+    "about": {
+      "title": {
+        "en": "About Geolabs",
+        "ko": "Geolabs 정보",
+        "zh": "关于 Geolabs",
+        "hi": "Geolabs परिचय",
+        "es": "Acerca de Geolabs",
+        "fr": "À propos de Geolabs",
+        "ar": "حول Geolabs",
+        "pt": "Sobre o Geolabs",
+        "ru": "О Geolabs",
+        "de": "Über Geolabs",
+        "ja": "Geolabsについて",
+        "tr": "Geolabs Hakkında",
+        "vi": "Giới thiệu Geolabs",
+        "it": "Informazioni su Geolabs",
+        "fa": "دربارهٔ Geolabs",
+        "pl": "O Geolabs",
+        "uk": "Про Geolabs",
+        "nl": "Over Geolabs",
+        "sv": "Om Geolabs",
+        "cs": "O Geolabs",
+        "el": "Σχετικά με το Geolabs"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "subtitle",
+            "value": {
+              "en": "The geo databoard: your data on charts, tables — and the map.",
+              "ko": "지리 데이터보드: 차트, 표, 그리고 지도에 담긴 당신의 데이터.",
+              "zh": "地理数据看板：把你的数据呈现在图表、表格——以及地图上。",
+              "hi": "भौगोलिक डेटाबोर्ड: आपका डेटा चार्ट, तालिकाओं — और मैप पर।",
+              "es": "El databoard geográfico: tus datos en gráficos, tablas — y el mapa.",
+              "fr": "Le databoard géo : vos données sur des graphiques, des tableaux — et la carte.",
+              "ar": "لوحة البيانات الجغرافية: بياناتك على الرسوم البيانية والجداول — والخريطة.",
+              "pt": "O databoard geo: seus dados em gráficos, tabelas — e o mapa.",
+              "ru": "Гео-дата-борд: ваши данные на диаграммах, в таблицах — и на карте.",
+              "de": "Das Geo-Databoard: deine Daten in Diagrammen, Tabellen — und auf der Karte.",
+              "ja": "地理データボード：あなたのデータをチャート、テーブル、そして地図で。",
+              "tr": "Coğrafi veri panosu: verileriniz grafiklerde, tablolarda — ve haritada.",
+              "vi": "Bảng dữ liệu địa lý: dữ liệu của bạn trên biểu đồ, bảng — và bản đồ.",
+              "it": "Il databoard geo: i tuoi dati su grafici, tabelle — e la mappa.",
+              "fa": "دیتابورد جغرافیایی: داده‌های شما روی نمودارها، جدول‌ها — و نقشه.",
+              "pl": "Geo-databoard: twoje dane na wykresach, w tabelach — i na mapie.",
+              "uk": "Гео-дата-борд: ваші дані на діаграмах, у таблицях — і на карті.",
+              "nl": "Het geo-databoard: jouw data op grafieken, tabellen — en de kaart.",
+              "sv": "Geo-databoardet: din data på diagram, tabeller — och kartan.",
+              "cs": "Geo databoard: vaše data v grafech, tabulkách — a na mapě.",
+              "el": "Ο γεω-πίνακας δεδομένων: τα δεδομένα σας σε γραφήματα, πίνακες — και τον χάρτη."
+            }
+          },
+          {
+            "type": "text",
+            "value": {
+              "en": "Geolabs is Datalab's geospatial sibling — the databoard for datasets with a geographic component. Everything the data databoard does is here (charts, tables, % deltas, KPI tiles, the interactive explorer, notes), plus the geographic views: a choropleth map that paints whichever column you pick, and tap-a-town cross-filtering that narrows every panel at once. Mix panels, drag dividers to resize, switch any panel's view in place, and pick a ready-made layout — Overview, Compare, Explore or Geographic — from the template icon at the top-right.",
+              "ko": "Geolabs는 Datalab의 지리공간 자매 앱입니다 — 지리적 요소가 있는 데이터셋을 위한 데이터보드입니다. 데이터 데이터보드가 하는 모든 것(차트, 표, % 변화량, KPI 타일, 인터랙티브 탐색기, 메모)이 여기 있고, 지리적 뷰도 추가됩니다: 선택한 열을 색으로 표현하는 코로플레스 지도, 그리고 마을을 탭하면 모든 패널을 동시에 좁혀주는 교차 필터링. 패널을 섞고, 구분선을 드래그해 크기를 조절하고, 어떤 패널이든 즉시 뷰를 전환하고, 오른쪽 위 템플릿 아이콘에서 미리 만들어진 레이아웃(개요, 비교, 탐색, 지리)을 고를 수 있습니다.",
+              "zh": "Geolabs 是 Datalab 的地理空间姊妹应用——面向带地理成分数据集的数据看板。数据看板具备的一切（图表、表格、百分比差值、KPI 磁贴、交互式浏览器、备注）这里都有，此外还加上地理视图：一张按所选列上色的分级统计地图，以及点按城镇即可同时缩小所有面板范围的交叉筛选。你可以混合面板，拖动分隔线调整大小，就地切换任意面板的视图，并从右上角模板图标中选择预制布局——概览、比较、探索或地理。",
+              "hi": "Geolabs, Datalab का भौगोलिक-स्थानिक भाई ऐप है — भौगोलिक तत्व वाले डेटासेट के लिए डेटाबोर्ड। डेटा डेटाबोर्ड जो करता है वह सब यहां है (चार्ट, तालिकाएं, % बदलाव, KPI टाइल्स, इंटरएक्टिव एक्सप्लोरर, नोट्स), साथ ही भौगोलिक व्यू: एक कोरोप्लेथ मैप जो आपकी चुनी कॉलम रंगता है, और टाउन टैप करने पर सभी पैनल एक साथ संकीर्ण करने वाली क्रॉस-फ़िल्टरिंग। पैनल मिलाएं, डिवाइडर खींचकर आकार बदलें, किसी भी पैनल का व्यू तुरंत बदलें, और ऊपर-दाएं टेम्पलेट आइकन से बना-बनाया लेआउट चुनें — अवलोकन, तुलना, अन्वेषण या भौगोलिक।",
+              "es": "Geolabs es el hermano geoespacial de Datalab — el databoard para conjuntos de datos con un componente geográfico. Todo lo que hace el databoard de datos está aquí (gráficos, tablas, % de cambios, fichas KPI, el explorador interactivo, notas), más las vistas geográficas: un mapa coroplético que colorea la columna que elijas, y filtrado cruzado tocando un pueblo que estrecha todos los paneles a la vez. Mezcla paneles, arrastra divisores para redimensionar, cambia la vista de cualquier panel in situ, y elige un diseño prefabricado — Resumen, Comparar, Explorar o Geográfico — desde el icono de plantilla arriba a la derecha.",
+              "fr": "Geolabs est le frère jumeau géospatial de Datalab — le databoard pour les jeux de données avec une composante géographique. Tout ce que fait le databoard de données est là (graphiques, tableaux, % de variation, tuiles KPI, explorateur interactif, notes), plus les vues géographiques : une carte choroplèthe qui colore la colonne choisie, et un filtrage croisé en touchant une ville qui restreint tous les panneaux à la fois. Mélangez les panneaux, faites glisser les séparateurs pour redimensionner, changez la vue de n'importe quel panneau sur place, et choisissez une mise en page prête à l'emploi — Aperçu, Comparer, Explorer ou Géographique — depuis l'icône de modèle en haut à droite.",
+              "ar": "Geolabs هو الشقيق الجغرافي المكاني لـ Datalab — لوحة البيانات لمجموعات البيانات ذات المكوّن الجغرافي. كل ما تفعله لوحة بيانات البيانات موجود هنا (رسوم بيانية، جداول، فروق %، بطاقات KPI، المستكشف التفاعلي، ملاحظات)، بالإضافة إلى العروض الجغرافية: خريطة كوروبليث تلوّن العمود الذي تختاره، وتصفية متقاطعة بالضغط على بلدة تُضيّق كل اللوحات دفعة واحدة. امزج اللوحات، اسحب الفواصل لتغيير الحجم، بدّل عرض أي لوحة في مكانها، واختر تخطيطًا جاهزًا — نظرة عامة أو مقارنة أو استكشاف أو جغرافي — من أيقونة القالب أعلى اليمين.",
+              "pt": "Geolabs é o irmão geoespacial do Datalab — o databoard para conjuntos de dados com componente geográfico. Tudo que o databoard de dados faz está aqui (gráficos, tabelas, % de variação, blocos KPI, o explorador interativo, notas), mais as visões geográficas: um mapa coroplético que colore a coluna que você escolher, e filtragem cruzada tocando em uma cidade que estreita todos os painéis de uma vez. Misture painéis, arraste divisores para redimensionar, troque a visão de qualquer painel no lugar, e escolha um layout pronto — Visão geral, Comparar, Explorar ou Geográfico — no ícone de modelo no canto superior direito.",
+              "ru": "Geolabs — геопространственный собрат Datalab — дата-борд для наборов данных с географическим компонентом. Здесь есть всё, что делает обычный дата-борд (диаграммы, таблицы, % изменения, плитки KPI, интерактивный обозреватель, заметки), плюс географические представления: картограмма, окрашивающая выбранный столбец, и перекрёстная фильтрация по нажатию на город, сужающая все панели сразу. Смешивайте панели, перетаскивайте разделители для изменения размера, переключайте вид любой панели на месте и выбирайте готовый макет — Обзор, Сравнение, Исследование или Географический — из значка шаблона в правом верхнем углу.",
+              "de": "Geolabs ist Datalabs geospatiales Geschwister — das Databoard für Datensätze mit geografischer Komponente. Alles, was das Daten-Databoard kann, ist hier (Diagramme, Tabellen, %-Deltas, KPI-Kacheln, der interaktive Explorer, Notizen), plus die geografischen Ansichten: eine Choroplethenkarte, die die von dir gewählte Spalte einfärbt, und eine Kreuzfilterung per Antippen einer Stadt, die alle Panels gleichzeitig eingrenzt. Mische Panels, ziehe Trenner zum Skalieren, wechsle jede Panel-Ansicht direkt vor Ort, und wähle ein fertiges Layout — Übersicht, Vergleich, Erkunden oder Geografisch — über das Vorlagensymbol oben rechts.",
+              "ja": "GeolabsはDatalabの地理空間版の姉妹アプリです — 地理的要素を持つデータセット向けのデータボードです。データデータボードができることはすべてここにあり（チャート、テーブル、%差分、KPIタイル、インタラクティブエクスプローラー、メモ）、さらに地理ビューが加わります：選んだ列を塗り分ける階級区分図、そして町をタップするとすべてのパネルを一斉に絞り込むクロスフィルタリングです。パネルを組み合わせ、区切り線をドラッグしてサイズ変更し、任意のパネルのビューをその場で切り替え、右上のテンプレートアイコンから既製のレイアウト（概要、比較、探索、地理）を選べます。",
+              "tr": "Geolabs, Datalab'ın coğrafi mekansal kardeşidir — coğrafi bileşenli veri kümeleri için veri panosu. Veri panosunun yaptığı her şey burada (grafikler, tablolar, % farklar, KPI kutucukları, etkileşimli gezgin, notlar), artı coğrafi görünümler: seçtiğiniz sütunu boyayan bir koropleth harita ve bir kasabaya dokunarak tüm panelleri aynı anda daraltan çapraz filtreleme. Panelleri karıştırın, yeniden boyutlandırmak için ayırıcıları sürükleyin, herhangi bir panelin görünümünü yerinde değiştirin ve sağ üstteki şablon simgesinden hazır bir düzen seçin — Genel Bakış, Karşılaştır, Keşfet veya Coğrafi.",
+              "vi": "Geolabs là người anh em không gian địa lý của Datalab — bảng dữ liệu cho các bộ dữ liệu có thành phần địa lý. Mọi thứ mà bảng dữ liệu thông thường làm đều có ở đây (biểu đồ, bảng, % chênh lệch, ô KPI, trình khám phá tương tác, ghi chú), cộng thêm các khung nhìn địa lý: bản đồ phân cấp tô màu theo cột bạn chọn, và lọc chéo bằng cách nhấn vào một thị trấn để thu hẹp mọi bảng cùng lúc. Kết hợp các bảng, kéo thanh chia để đổi kích thước, chuyển khung nhìn của bất kỳ bảng nào tại chỗ, và chọn một bố cục có sẵn — Tổng quan, So sánh, Khám phá hoặc Địa lý — từ biểu tượng mẫu ở góc trên bên phải.",
+              "it": "Geolabs è il fratello geospaziale di Datalab — il databoard per dataset con una componente geografica. Tutto ciò che fa il databoard dati è qui (grafici, tabelle, % di variazione, riquadri KPI, l'esploratore interattivo, note), più le viste geografiche: una mappa coropletica che colora la colonna che scegli, e un filtro incrociato toccando una città che restringe tutti i pannelli insieme. Mescola i pannelli, trascina i divisori per ridimensionare, cambia la vista di qualsiasi pannello sul posto, e scegli un layout già pronto — Panoramica, Confronto, Esplora o Geografico — dall'icona modello in alto a destra.",
+              "fa": "Geolabs خواهر جغرافیایی-مکانی Datalab است — دیتابورد برای مجموعه‌داده‌های دارای مؤلفهٔ جغرافیایی. هرچه دیتابورد داده انجام می‌دهد اینجا هست (نمودارها، جدول‌ها، درصد تغییرات، کاشی‌های KPI، کاوشگر تعاملی، یادداشت‌ها)، به‌علاوهٔ نماهای جغرافیایی: نقشه‌ای رنگ‌بندی‌شده که ستون انتخابی شما را رنگ می‌کند، و فیلتر متقاطع با ضربه‌زدن روی یک شهر که همهٔ پنل‌ها را همزمان محدود می‌کند. پنل‌ها را ترکیب کنید، جداکننده‌ها را برای تغییر اندازه بکشید، نمای هر پنل را در جا تغییر دهید، و از نماد قالب در بالا-راست یک چیدمان آماده — نمای کلی، مقایسه، کاوش یا جغرافیایی — انتخاب کنید.",
+              "pl": "Geolabs to geoprzestrzenny brat Datalab — tablica danych dla zbiorów danych z komponentem geograficznym. Wszystko, co robi tablica danych, jest tutaj (wykresy, tabele, różnice %, kafelki KPI, eksplorator interaktywny, notatki), plus widoki geograficzne: mapa kartogramowa kolorująca wybraną kolumnę oraz filtrowanie krzyżowe przez dotknięcie miasteczka, które zawęża wszystkie panele naraz. Mieszaj panele, przeciągaj separatory, aby zmieniać rozmiar, przełączaj widok dowolnego panelu w miejscu i wybierz gotowy układ — Przegląd, Porównanie, Eksploracja lub Geograficzny — z ikony szablonu w prawym górnym rogu.",
+              "uk": "Geolabs — геопросторовий побратим Datalab — дата-борд для наборів даних із географічним компонентом. Усе, що робить звичайний дата-борд, є тут (діаграми, таблиці, % зміни, плитки KPI, інтерактивний дослідник, нотатки), плюс географічні подання: картограма, що розфарбовує обраний стовпець, і перехресна фільтрація натисканням на місто, що звужує всі панелі одночасно. Змішуйте панелі, перетягуйте роздільники для зміни розміру, перемикайте подання будь-якої панелі на місці та обирайте готовий макет — Огляд, Порівняння, Дослідження чи Географічний — зі значка шаблону у верхньому правому куті.",
+              "nl": "Geolabs is de geospatiale zusterapp van Datalab — het databoard voor datasets met een geografische component. Alles wat het gewone databoard doet, staat hier (grafieken, tabellen, %-verschillen, KPI-tegels, de interactieve verkenner, notities), plus de geografische weergaven: een choropletenkaart die de gekozen kolom inkleurt, en kruisfiltering door op een plaats te tikken waardoor alle panelen tegelijk versmallen. Meng panelen, sleep scheidingslijnen om te schalen, wissel de weergave van elk paneel ter plekke, en kies een kant-en-klare lay-out — Overzicht, Vergelijken, Verkennen of Geografisch — via het sjabloonpictogram rechtsboven.",
+              "sv": "Geolabs är Datalabs geospatiala syskon — databoardet för dataset med en geografisk komponent. Allt det vanliga databoardet gör finns här (diagram, tabeller, %-förändringar, KPI-rutor, den interaktiva utforskaren, anteckningar), plus de geografiska vyerna: en koropletkarta som färglägger vilken kolumn du än väljer, och korsfiltrering genom att trycka på en ort som smalnar av alla paneler samtidigt. Blanda paneler, dra i avdelare för att ändra storlek, växla vilken panels vy som helst på plats, och välj en färdig layout — Översikt, Jämför, Utforska eller Geografisk — från mallikonen uppe till höger.",
+              "cs": "Geolabs je geoprostorový sourozenec Datalabu — datový přehled pro datové sady s geografickou složkou. Vše, co dělá datový přehled, je zde (grafy, tabulky, % rozdíly, dlaždice KPI, interaktivní průzkumník, poznámky), plus geografická zobrazení: choroplethová mapa, která obarví vybraný sloupec, a křížové filtrování klepnutím na město, které zúží všechny panely najednou. Míchejte panely, přetahováním oddělovačů měňte velikost, přepínejte zobrazení kteréhokoli panelu na místě a vyberte hotové rozvržení — Přehled, Porovnání, Průzkum nebo Geografické — z ikony šablony vpravo nahoře.",
+              "el": "Το Geolabs είναι ο γεωχωρικός αδελφός του Datalab — ο πίνακας δεδομένων για σύνολα δεδομένων με γεωγραφικό στοιχείο. Ό,τι κάνει ο κανονικός πίνακας δεδομένων υπάρχει εδώ (γραφήματα, πίνακες, % διαφορές, πλακίδια KPI, ο διαδραστικός εξερευνητής, σημειώσεις), συν τις γεωγραφικές προβολές: έναν χρωματικό χάρτη που χρωματίζει όποια στήλη επιλέξετε, και διασταυρούμενο φιλτράρισμα πατώντας μια πόλη που στενεύει όλα τα πάνελ ταυτόχρονα. Αναμείξτε πάνελ, σύρετε διαχωριστές για αλλαγή μεγέθους, αλλάξτε την προβολή οποιουδήποτε πάνελ επιτόπου, και επιλέξτε μια έτοιμη διάταξη — Επισκόπηση, Σύγκριση, Εξερεύνηση ή Γεωγραφική — από το εικονίδιο προτύπου πάνω δεξιά."
+            }
+          },
+          {
+            "type": "text",
+            "value": {
+              "en": "Filters are type-checked against their columns and can be saved as named slices. Everything — the rows, the panel layout, your slices — is data, so it travels with the applet's share code and backups. And the HTML export writes a standalone styled report file you can open, mail or archive anywhere.",
+              "ko": "필터는 각 열에 대해 형식이 검증되며 이름 있는 슬라이스로 저장할 수 있습니다. 행, 패널 레이아웃, 슬라이스 등 모든 것이 데이터이므로 앱렛의 공유 코드 및 백업과 함께 이동합니다. 그리고 HTML 내보내기는 어디서든 열고, 메일로 보내고, 보관할 수 있는 독립형 스타일 보고서 파일을 작성합니다.",
+              "zh": "筛选条件会按其所在列进行类型校验，并可保存为命名切片。一切——行、面板布局、切片——都是数据，因此会随应用的分享码与备份一起流转。而 HTML 导出会生成一个独立的、带样式的报告文件，你可以在任何地方打开、邮寄或归档它。",
+              "hi": "फ़िल्टर उनके कॉलम के अनुसार टाइप-जांचे जाते हैं और नामित स्लाइस के रूप में सेव किए जा सकते हैं। सब कुछ — पंक्तियां, पैनल लेआउट, आपकी स्लाइस — डेटा है, इसलिए यह ऐपलेट के शेयर कोड व बैकअप के साथ जाता है। और HTML निर्यात एक स्टैंडअलोन स्टाइल्ड रिपोर्ट फ़ाइल लिखता है जिसे आप कहीं भी खोल, मेल कर या संग्रहीत कर सकते हैं।",
+              "es": "Los filtros se verifican por tipo contra sus columnas y pueden guardarse como rebanadas con nombre. Todo — las filas, el diseño de paneles, tus rebanadas — es datos, así que viaja con el código de compartir y las copias de seguridad del applet. Y la exportación HTML escribe un archivo de informe independiente con estilo que puedes abrir, enviar por correo o archivar donde quieras.",
+              "fr": "Les filtres sont vérifiés par type par rapport à leurs colonnes et peuvent être enregistrés comme tranches nommées. Tout — les lignes, la disposition des panneaux, vos tranches — est une donnée, donc cela voyage avec le code de partage et les sauvegardes de l'applet. Et l'export HTML écrit un fichier de rapport autonome et stylé que vous pouvez ouvrir, envoyer par mail ou archiver n'importe où.",
+              "ar": "يُتحقق من نوع المرشحات مقابل أعمدتها ويمكن حفظها كشرائح مسمّاة. كل شيء — الصفوف، تخطيط اللوحات، شرائحك — هو بيانات، لذا ينتقل مع رمز مشاركة التطبيق ونسخه الاحتياطية. ويكتب تصدير HTML ملف تقرير مستقل ومنسّق يمكنك فتحه أو إرساله بالبريد أو أرشفته في أي مكان.",
+              "pt": "Filtros são verificados por tipo contra suas colunas e podem ser salvos como fatias nomeadas. Tudo — as linhas, o layout dos painéis, suas fatias — é dado, então viaja com o código de compartilhamento e backups do applet. E a exportação HTML escreve um arquivo de relatório autônomo e estilizado que você pode abrir, enviar por e-mail ou arquivar em qualquer lugar.",
+              "ru": "Фильтры проверяются по типу относительно своих столбцов и могут сохраняться как именованные срезы. Всё — строки, компоновка панелей, ваши срезы — это данные, поэтому они перемещаются вместе с кодом обмена и резервными копиями приложения. А экспорт в HTML создаёт автономный оформленный файл отчёта, который можно открыть, отправить по почте или заархивировать где угодно.",
+              "de": "Filter werden typgeprüft gegen ihre Spalten und können als benannte Slices gespeichert werden. Alles — die Zeilen, das Panel-Layout, deine Slices — sind Daten, also reisen sie mit dem Freigabecode und den Backups des Applets. Und der HTML-Export schreibt eine eigenständige, gestylte Berichtsdatei, die du überall öffnen, mailen oder archivieren kannst.",
+              "ja": "フィルターは対応する列に対して型チェックされ、名前付きスライスとして保存できます。行、パネルレイアウト、スライスなどすべてがデータなので、アプレットの共有コードやバックアップと一緒に移動します。そしてHTMLエクスポートは、どこでも開いたり、メール送信したり、アーカイブしたりできる独立したスタイル付きレポートファイルを書き出します。",
+              "tr": "Filtreler ilgili sütunlara göre tür denetiminden geçer ve adlandırılmış dilimler olarak kaydedilebilir. Her şey — satırlar, panel düzeni, dilimleriniz — veridir, bu yüzden applet'in paylaşım kodu ve yedeklemeleriyle birlikte gider. Ve HTML dışa aktarma, herhangi bir yerde açabileceğiniz, postalayabileceğiniz veya arşivleyebileceğiniz bağımsız, stilize edilmiş bir rapor dosyası yazar.",
+              "vi": "Bộ lọc được kiểm tra kiểu dữ liệu theo cột tương ứng và có thể được lưu dưới dạng lát cắt có tên. Mọi thứ — các hàng, bố cục bảng, lát cắt của bạn — đều là dữ liệu, nên nó di chuyển cùng mã chia sẻ và bản sao lưu của applet. Và việc xuất HTML tạo ra một tệp báo cáo độc lập, có định dạng đẹp mà bạn có thể mở, gửi email hoặc lưu trữ ở bất cứ đâu.",
+              "it": "I filtri vengono verificati per tipo rispetto alle loro colonne e possono essere salvati come fette con nome. Tutto — le righe, il layout dei pannelli, le tue fette — è dato, quindi viaggia con il codice di condivisione e i backup dell'applet. E l'esportazione HTML scrive un file di report autonomo e formattato che puoi aprire, inviare per email o archiviare ovunque.",
+              "fa": "فیلترها بر اساس ستون‌های مربوطه از نظر نوع بررسی می‌شوند و می‌توانند به‌عنوان برش‌های نام‌دار ذخیره شوند. همه‌چیز — ردیف‌ها، چیدمان پنل، برش‌های شما — داده است، پس همراه با کد اشتراک‌گذاری و پشتیبان‌های اپلت جابه‌جا می‌شود. و خروجی HTML یک فایل گزارش مستقل و استایل‌دار می‌نویسد که می‌توانید هر جا باز کنید، ایمیل کنید یا بایگانی کنید.",
+              "pl": "Filtry są sprawdzane pod względem typu względem swoich kolumn i mogą być zapisywane jako nazwane wycinki. Wszystko — wiersze, układ paneli, twoje wycinki — to dane, więc podróżują wraz z kodem udostępniania appletu i kopiami zapasowymi. A eksport HTML zapisuje samodzielny, stylizowany plik raportu, który możesz otworzyć, wysłać mailem lub zarchiwizować gdziekolwiek.",
+              "uk": "Фільтри перевіряються за типом відповідно до своїх стовпців і можуть зберігатися як іменовані зрізи. Усе — рядки, макет панелей, ваші зрізи — це дані, тож вони переміщуються разом із кодом спільного доступу та резервними копіями застосунку. А експорт у HTML створює автономний стилізований файл звіту, який можна відкрити, надіслати поштою чи заархівувати будь-де.",
+              "nl": "Filters worden type-gecontroleerd tegen hun kolommen en kunnen worden opgeslagen als benoemde slices. Alles — de rijen, de paneelindeling, je slices — is data, dus het reist mee met de deelcode en back-ups van de applet. En de HTML-export schrijft een op zichzelf staand, opgemaakt rapportbestand dat je overal kunt openen, mailen of archiveren.",
+              "sv": "Filter typkontrolleras mot sina kolumner och kan sparas som namngivna slices. Allt — raderna, panellayouten, dina slices — är data, så det följer med appletens delningskod och säkerhetskopior. Och HTML-exporten skriver en fristående, stylad rapportfil som du kan öppna, mejla eller arkivera var som helst.",
+              "cs": "Filtry jsou typově kontrolovány vůči svým sloupcům a lze je uložit jako pojmenované řezy. Vše — řádky, rozvržení panelů, vaše řezy — jsou data, takže cestují se sdíleným kódem a zálohami appletu. A export HTML zapíše samostatný stylizovaný soubor zprávy, který můžete kdekoli otevřít, poslat e-mailem nebo archivovat.",
+              "el": "Τα φίλτρα ελέγχονται ως προς τον τύπο σε σχέση με τις στήλες τους και μπορούν να αποθηκευτούν ως ονομασμένα τμήματα. Τα πάντα — οι γραμμές, η διάταξη πάνελ, τα τμήματά σας — είναι δεδομένα, οπότε ταξιδεύουν με τον κωδικό κοινής χρήσης και τα αντίγραφα ασφαλείας της εφαρμογής. Και η εξαγωγή HTML γράφει ένα αυτόνομο, μορφοποιημένο αρχείο αναφοράς που μπορείτε να ανοίξετε, να στείλετε με email ή να αρχειοθετήσετε οπουδήποτε."
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Boundaries: 116 Massachusetts towns (decimated outlines). Seeded numbers are illustrative structure — import real data to make it yours. Basemap © OpenStreetMap contributors © CARTO.",
+              "ko": "경계: 매사추세츠주 116개 마을(단순화된 외곽선). 시드 데이터는 구조 예시일 뿐입니다 — 실제 데이터를 가져와 여러분의 것으로 만드세요. 베이스맵 © OpenStreetMap contributors © CARTO.",
+              "zh": "边界：116 个马萨诸塞州城镇（简化轮廓）。种子数据仅为结构示例——导入真实数据使其成为你自己的。底图 © OpenStreetMap contributors © CARTO。",
+              "hi": "सीमाएं: मैसाचुसेट्स के 116 शहर (सरलीकृत रूपरेखा)। सीड आंकड़े केवल संरचना दर्शाने के लिए हैं — इसे अपना बनाने के लिए असली डेटा आयात करें। बेसमैप © OpenStreetMap contributors © CARTO।",
+              "es": "Límites: 116 pueblos de Massachusetts (contornos simplificados). Los números iniciales son una estructura ilustrativa — importa datos reales para hacerlo tuyo. Mapa base © OpenStreetMap contributors © CARTO.",
+              "fr": "Limites : 116 villes du Massachusetts (contours simplifiés). Les chiffres initiaux sont une structure illustrative — importez de vraies données pour vous les approprier. Fond de carte © OpenStreetMap contributors © CARTO.",
+              "ar": "الحدود: 116 بلدة في ماساتشوستس (حدود مبسّطة). الأرقام الأولية بنية توضيحية فقط — استورد بيانات حقيقية لجعلها ملكك. خريطة الأساس © OpenStreetMap contributors © CARTO.",
+              "pt": "Limites: 116 cidades de Massachusetts (contornos simplificados). Os números iniciais são uma estrutura ilustrativa — importe dados reais para torná-la sua. Mapa base © OpenStreetMap contributors © CARTO.",
+              "ru": "Границы: 116 городов Массачусетса (упрощённые контуры). Начальные цифры — иллюстративная структура — импортируйте реальные данные, чтобы сделать их своими. Базовая карта © OpenStreetMap contributors © CARTO.",
+              "de": "Grenzen: 116 Orte in Massachusetts (vereinfachte Umrisse). Die Startwerte sind nur eine veranschaulichende Struktur — importiere echte Daten, um sie dir zu eigen zu machen. Basiskarte © OpenStreetMap contributors © CARTO.",
+              "ja": "境界：マサチューセッツ州の116の町（簡略化された輪郭）。初期データは構造を示す例にすぎません — 実データをインポートして自分のものにしてください。ベースマップ © OpenStreetMap contributors © CARTO。",
+              "tr": "Sınırlar: 116 Massachusetts kasabası (sadeleştirilmiş dış hatlar). Başlangıç sayıları örnek bir yapıdır — kendinize ait yapmak için gerçek veri içe aktarın. Temel harita © OpenStreetMap contributors © CARTO.",
+              "vi": "Ranh giới: 116 thị trấn ở Massachusetts (đường viền đơn giản hóa). Số liệu ban đầu chỉ là cấu trúc minh họa — hãy nhập dữ liệu thực để biến nó thành của bạn. Bản đồ nền © OpenStreetMap contributors © CARTO.",
+              "it": "Confini: 116 città del Massachusetts (contorni semplificati). I numeri iniziali sono una struttura illustrativa — importa dati reali per renderla tua. Mappa base © OpenStreetMap contributors © CARTO.",
+              "fa": "مرزها: ۱۱۶ شهر ماساچوست (خطوط ساده‌شده). اعداد اولیه فقط ساختار نمایشی هستند — داده‌های واقعی وارد کنید تا آن را مال خودتان کنید. نقشهٔ پایه © OpenStreetMap contributors © CARTO.",
+              "pl": "Granice: 116 miejscowości Massachusetts (uproszczone kontury). Wstępne liczby to jedynie ilustracyjna struktura — zaimportuj prawdziwe dane, aby uczynić ją swoją. Mapa bazowa © OpenStreetMap contributors © CARTO.",
+              "uk": "Межі: 116 міст Массачусетсу (спрощені контури). Початкові числа — лише ілюстративна структура — імпортуйте реальні дані, щоб зробити її своєю. Базова карта © OpenStreetMap contributors © CARTO.",
+              "nl": "Grenzen: 116 plaatsen in Massachusetts (vereenvoudigde contouren). De startgetallen zijn slechts illustratieve structuur — importeer echte data om het van jou te maken. Basiskaart © OpenStreetMap contributors © CARTO.",
+              "sv": "Gränser: 116 orter i Massachusetts (förenklade konturer). Startsiffrorna är endast en illustrativ struktur — importera riktig data för att göra den till din. Baskarta © OpenStreetMap contributors © CARTO.",
+              "cs": "Hranice: 116 měst v Massachusetts (zjednodušené obrysy). Počáteční čísla jsou pouze ilustrativní struktura — importujte skutečná data, abyste si ji přizpůsobili. Základní mapa © OpenStreetMap contributors © CARTO.",
+              "el": "Όρια: 116 πόλεις της Μασαχουσέτης (απλοποιημένα περιγράμματα). Οι αρχικοί αριθμοί είναι ενδεικτική δομή — εισαγάγετε πραγματικά δεδομένα για να τα κάνετε δικά σας. Βασικός χάρτης © OpenStreetMap contributors © CARTO."
+            }
+          }
+        ]
+      }
+    },
+    "report": {
+      "title": {
+        "en": "Databoard — data controls beside your panels",
+        "ko": "데이터보드 — 패널 옆에 데이터 컨트롤",
+        "zh": "数据看板——面板旁的数据控制项",
+        "hi": "डेटाबोर्ड — आपके पैनलों के बगल में डेटा नियंत्रण",
+        "es": "Panel de datos — controles de datos junto a tus paneles",
+        "fr": "Databoard — contrôles de données à côté de vos panneaux",
+        "ar": "لوحة البيانات — عناصر تحكم البيانات بجانب لوحاتك",
+        "pt": "Databoard — controles de dados ao lado dos seus painéis",
+        "ru": "Дата-борд — элементы управления данными рядом с панелями",
+        "de": "Databoard — Datensteuerung neben deinen Panels",
+        "ja": "データボード — パネルの横にデータコントロール",
+        "tr": "Veri panosu — panellerinizin yanında veri kontrolleri",
+        "vi": "Bảng dữ liệu — điều khiển dữ liệu bên cạnh các bảng của bạn",
+        "it": "Databoard — controlli dati accanto ai tuoi pannelli",
+        "fa": "دیتابورد — کنترل‌های داده کنار پنل‌های شما",
+        "pl": "Tablica danych — kontrolki danych obok twoich paneli",
+        "uk": "Дата-борд — елементи керування даними поряд із вашими панелями",
+        "nl": "Databoard — databediening naast je panelen",
+        "sv": "Databoard — datakontroller bredvid dina paneler",
+        "cs": "Datový přehled — ovládací prvky dat vedle vašich panelů",
+        "el": "Πίνακας δεδομένων — στοιχεία ελέγχου δεδομένων δίπλα στα πάνελ σας"
+      },
+      "body": {
+        "type": "datacontrols",
+        "table": "records",
+        "dock": "auto",
+        "blocksTable": "controlblocks",
+        "body": {
+          "type": "splitpane",
+          "axis": "col",
+          "table": "panels",
+          "weightColumn": "weight",
+          "visibleColumn": "visible",
+          "orderColumn": "order",
+          "kindColumn": "kind",
+          "titleColumn": "name",
+          "templateColumn": "template",
+          "viewsTable": "boardviews",
+          "dataset": "records",
+          "templates": [
+            {
+              "id": "overview",
+              "label": "Overview",
+              "icon": "insights"
+            },
+            {
+              "id": "compare",
+              "label": "Compare",
+              "icon": "compare"
+            },
+            {
+              "id": "explore",
+              "label": "Explore",
+              "icon": "explore"
+            },
+            {
+              "id": "geo",
+              "label": "Geographic",
+              "icon": "map"
+            }
+          ],
+          "removable": true,
+          "editable": true,
+          "reorderable": true,
+          "gap": 8,
+          "paneKinds": {
+            "chart": {
+              "type": "column",
+              "scroll": true,
+              "children": [
+                {
+                  "type": "report",
+                  "table": "records",
+                  "filterable": true,
+                  "slicesTable": "slices",
+                  "seriesColumn": "scenario",
+                  "exclude": [
+                    "id"
+                  ],
+                  "label": {
+                    "en": "Scenarios by zone",
+                    "ko": "구역별 시나리오",
+                    "zh": "按区域划分的情景",
+                    "hi": "ज़ोन के अनुसार परिदृश्य",
+                    "es": "Escenarios por zona",
+                    "fr": "Scénarios par zone",
+                    "ar": "السيناريوهات حسب المنطقة",
+                    "pt": "Cenários por zona",
+                    "ru": "Сценарии по зонам",
+                    "de": "Szenarien nach Zone",
+                    "ja": "ゾーン別シナリオ",
+                    "tr": "Bölgeye göre senaryolar",
+                    "vi": "Kịch bản theo khu vực",
+                    "it": "Scenari per zona",
+                    "fa": "سناریوها بر اساس منطقه",
+                    "pl": "Scenariusze według strefy",
+                    "uk": "Сценарії за зонами",
+                    "nl": "Scenario's per zone",
+                    "sv": "Scenarier per zon",
+                    "cs": "Scénáře podle zóny",
+                    "el": "Σενάρια ανά ζώνη"
+                  },
+                  "height": 300,
+                  "linkFilter": true,
+                  "config": {
+                    "mode": "chart",
+                    "xAxis": "zone",
+                    "series": "scenario",
+                    "value": "trips"
+                  },
+                  "configSource": "board",
+                  "showProvenance": true
+                }
+              ]
+            },
+            "delta": {
+              "type": "column",
+              "scroll": true,
+              "children": [
+                {
+                  "type": "report",
+                  "table": "records",
+                  "filterable": true,
+                  "seriesColumn": "scenario",
+                  "exclude": [
+                    "id"
+                  ],
+                  "label": {
+                    "en": "% change vs Baseline",
+                    "ko": "기준 대비 % 변화",
+                    "zh": "相对基线的百分比变化",
+                    "hi": "बेसलाइन की तुलना में % परिवर्तन",
+                    "es": "% de cambio vs Base",
+                    "fr": "% de changement vs Référence",
+                    "ar": "% التغيير مقابل خط الأساس",
+                    "pt": "% de mudança vs Base",
+                    "ru": "% изменения относительно базовой линии",
+                    "de": "% Änderung ggü. Basiswert",
+                    "ja": "ベースライン比の変化率",
+                    "tr": "Baz'a göre % değişim",
+                    "vi": "% thay đổi so với Đường cơ sở",
+                    "it": "% variazione vs Base",
+                    "fa": "% تغییر نسبت به خط پایه",
+                    "pl": "% zmiany względem wartości bazowej",
+                    "uk": "% зміни відносно базового рівня",
+                    "nl": "% verandering t.o.v. Basislijn",
+                    "sv": "% förändring mot Baslinje",
+                    "cs": "% změna oproti výchozí hodnotě",
+                    "el": "% μεταβολή έναντι Βάσης"
+                  },
+                  "height": 300,
+                  "config": {
+                    "mode": "chart",
+                    "xAxis": "zone",
+                    "series": "scenario",
+                    "value": "trips",
+                    "pctDiff": true,
+                    "pctBase": "Baseline"
+                  },
+                  "configSource": "board",
+                  "showProvenance": true
+                }
+              ]
+            },
+            "table": {
+              "type": "column",
+              "scroll": true,
+              "children": [
+                {
+                  "type": "report",
+                  "table": "records",
+                  "filterable": true,
+                  "tools": [
+                    "table"
+                  ],
+                  "exclude": [
+                    "id"
+                  ],
+                  "label": {
+                    "en": "Rows",
+                    "ko": "행",
+                    "zh": "行",
+                    "hi": "पंक्तियाँ",
+                    "es": "Filas",
+                    "fr": "Lignes",
+                    "ar": "الصفوف",
+                    "pt": "Linhas",
+                    "ru": "Строки",
+                    "de": "Zeilen",
+                    "ja": "行",
+                    "tr": "Satırlar",
+                    "vi": "Hàng",
+                    "it": "Righe",
+                    "fa": "ردیف‌ها",
+                    "pl": "Wiersze",
+                    "uk": "Рядки",
+                    "nl": "Rijen",
+                    "sv": "Rader",
+                    "cs": "Řádky",
+                    "el": "Γραμμές"
+                  },
+                  "height": 300,
+                  "config": {
+                    "mode": "table"
+                  },
+                  "configSource": "board",
+                  "showProvenance": true
+                }
+              ]
+            },
+            "map": {
+              "type": "map",
+              "table": "records",
+              "labelColumn": "zone",
+              "geojsonAsset": "apps/atlas/towns.geojson",
+              "nameProperty": "town",
+              "choroplethPick": true,
+              "pointList": false,
+              "choropleth": {
+                "table": "zone_stats",
+                "valueColumn": "trips",
+                "nameColumn": "zone",
+                "color": "teal"
+              },
+              "featureFilterColumn": "zone",
+              "overlayToggle": "Towns",
+              "height": "fill",
+              "zoom": 10,
+              "configSource": "board"
+            },
+            "kpi": {
+              "type": "column",
+              "scroll": true,
+              "children": [
+                {
+                  "type": "row",
+                  "wrap": true,
+                  "children": [
+                    {
+                      "type": "stat",
+                      "table": "records",
+                      "agg": "sum",
+                      "valueColumn": "trips",
+                      "label": {
+                        "en": "Daily trips",
+                        "ko": "일일 통행",
+                        "zh": "每日出行次数",
+                        "hi": "दैनिक यात्राएं",
+                        "es": "Viajes diarios",
+                        "fr": "Trajets quotidiens",
+                        "ar": "الرحلات اليومية",
+                        "pt": "Viagens diárias",
+                        "ru": "Ежедневные поездки",
+                        "de": "Tägliche Fahrten",
+                        "ja": "1日の移動回数",
+                        "tr": "Günlük yolculuklar",
+                        "vi": "Chuyến đi hằng ngày",
+                        "it": "Viaggi giornalieri",
+                        "fa": "سفرهای روزانه",
+                        "pl": "Podróże dzienne",
+                        "uk": "Щоденні поїздки",
+                        "nl": "Dagelijkse ritten",
+                        "sv": "Dagliga resor",
+                        "cs": "Denní cesty",
+                        "el": "Καθημερινές μετακινήσεις"
+                      },
+                      "format": "compact",
+                      "color": "teal",
+                      "configSource": "board"
+                    },
+                    {
+                      "type": "stat",
+                      "table": "records",
+                      "agg": "avg",
+                      "valueColumn": "cost_per_mi",
+                      "label": {
+                        "en": "Cost / person-mile",
+                        "ko": "비용 / 인마일",
+                        "zh": "成本 / 人英里",
+                        "hi": "लागत / व्यक्ति-मील",
+                        "es": "Costo / persona-milla",
+                        "fr": "Coût / personne-mile",
+                        "ar": "التكلفة / شخص-ميل",
+                        "pt": "Custo / pessoa-milha",
+                        "ru": "Стоимость на пассажиро-милю",
+                        "de": "Kosten / Personenmeile",
+                        "ja": "コスト／人マイル",
+                        "tr": "Maliyet / kişi-mil",
+                        "vi": "Chi phí / người-dặm",
+                        "it": "Costo / persona-miglio",
+                        "fa": "هزینه / نفر-مایل",
+                        "pl": "Koszt / osobo-mila",
+                        "uk": "Вартість / особо-миля",
+                        "nl": "Kosten / persoon-mijl",
+                        "sv": "Kostnad / person-mile",
+                        "cs": "Náklady / osobo-míle",
+                        "el": "Κόστος / άτομο-μίλι"
+                      },
+                      "format": "currency",
+                      "decimals": 2,
+                      "color": "amber",
+                      "configSource": "board"
+                    },
+                    {
+                      "type": "stat",
+                      "table": "records",
+                      "agg": "sum",
+                      "valueColumn": "jobs",
+                      "label": {
+                        "en": "Jobs reachable",
+                        "ko": "도달 가능한 일자리",
+                        "zh": "可达就业岗位",
+                        "hi": "पहुँच योग्य नौकरियाँ",
+                        "es": "Empleos accesibles",
+                        "fr": "Emplois accessibles",
+                        "ar": "الوظائف الممكن الوصول إليها",
+                        "pt": "Empregos acessíveis",
+                        "ru": "Доступные рабочие места",
+                        "de": "Erreichbare Arbeitsplätze",
+                        "ja": "到達可能な求人数",
+                        "tr": "Ulaşılabilir işler",
+                        "vi": "Việc làm có thể tiếp cận",
+                        "it": "Posti di lavoro raggiungibili",
+                        "fa": "مشاغل قابل‌دسترسی",
+                        "pl": "Osiągalne miejsca pracy",
+                        "uk": "Доступні робочі місця",
+                        "nl": "Bereikbare banen",
+                        "sv": "Nåbara jobb",
+                        "cs": "Dosažitelná pracovní místa",
+                        "el": "Προσβάσιμες θέσεις εργασίας"
+                      },
+                      "format": "compact",
+                      "color": "blue",
+                      "configSource": "board"
+                    },
+                    {
+                      "type": "stat",
+                      "table": "records",
+                      "agg": "sum",
+                      "valueColumn": "households",
+                      "label": {
+                        "en": "Households",
+                        "ko": "가구",
+                        "zh": "家庭户数",
+                        "hi": "परिवार",
+                        "es": "Hogares",
+                        "fr": "Ménages",
+                        "ar": "الأسر",
+                        "pt": "Domicílios",
+                        "ru": "Домохозяйства",
+                        "de": "Haushalte",
+                        "ja": "世帯",
+                        "tr": "Hane halkı",
+                        "vi": "Hộ gia đình",
+                        "it": "Famiglie",
+                        "fa": "خانوارها",
+                        "pl": "Gospodarstwa domowe",
+                        "uk": "Домогосподарства",
+                        "nl": "Huishoudens",
+                        "sv": "Hushåll",
+                        "cs": "Domácnosti",
+                        "el": "Νοικοκυριά"
+                      },
+                      "format": "compact",
+                      "color": "purple",
+                      "configSource": "board"
+                    }
+                  ]
+                }
+              ]
+            },
+            "explore": {
+              "type": "column",
+              "scroll": true,
+              "children": [
+                {
+                  "type": "crossfilter",
+                  "table": "records",
+                  "numeric": [
+                    {
+                      "col": "trips",
+                      "label": "Daily trips"
+                    },
+                    {
+                      "col": "cost_per_mi",
+                      "label": "Cost / person-mile"
+                    },
+                    {
+                      "col": "jobs",
+                      "label": "Jobs reachable"
+                    },
+                    {
+                      "col": "households",
+                      "label": "Households"
+                    }
+                  ],
+                  "categorical": [
+                    "scenario",
+                    "zone"
+                  ],
+                  "x": "trips",
+                  "y": "jobs"
+                }
+              ]
+            },
+            "notes": {
+              "type": "notepad",
+              "table": "notes",
+              "rowId": "note1",
+              "column": "body",
+              "placeholder": {
+                "en": "Write notes about this report…",
+                "ko": "이 보고서에 대한 메모를 작성하세요…",
+                "zh": "在此写下关于本报告的备注……",
+                "hi": "इस रिपोर्ट के बारे में नोट्स लिखें…",
+                "es": "Escribe notas sobre este informe…",
+                "fr": "Rédigez des notes sur ce rapport…",
+                "ar": "اكتب ملاحظات حول هذا التقرير…",
+                "pt": "Escreva notas sobre este relatório…",
+                "ru": "Напишите заметки об этом отчёте…",
+                "de": "Notizen zu diesem Bericht schreiben…",
+                "ja": "このレポートについてメモを書く…",
+                "tr": "Bu rapor hakkında notlar yazın…",
+                "vi": "Viết ghi chú về báo cáo này…",
+                "it": "Scrivi note su questo report…",
+                "fa": "دربارهٔ این گزارش یادداشت بنویسید…",
+                "pl": "Napisz notatki o tym raporcie…",
+                "uk": "Напишіть нотатки про цей звіт…",
+                "nl": "Schrijf notities over dit rapport…",
+                "sv": "Skriv anteckningar om denna rapport…",
+                "cs": "Napište poznámky k této zprávě…",
+                "el": "Γράψτε σημειώσεις για αυτήν την αναφορά…"
+              }
+            }
+          }
+        },
+        "children": [
+          {
+            "type": "datasegment",
+            "table": "records",
+            "column": "scenario",
+            "label": "Scenario"
+          },
+          {
+            "type": "datafilter",
+            "table": "records"
+          },
+          {
+            "type": "datagroup",
+            "table": "records"
+          },
+          {
+            "type": "datasort",
+            "table": "records"
+          },
+          {
+            "type": "datarange",
+            "table": "records",
+            "column": "trips",
+            "label": "Daily trips"
+          }
+        ]
+      }
+    },
+    "controls": {
+      "title": {
+        "en": "Controls — build your report",
+        "ko": "컨트롤 — 보고서 구성",
+        "zh": "控制项——构建你的报告",
+        "hi": "नियंत्रण — अपनी रिपोर्ट बनाएं",
+        "es": "Controles — construye tu informe",
+        "fr": "Contrôles — construisez votre rapport",
+        "ar": "عناصر التحكم — بناء تقريرك",
+        "pt": "Controles — construa seu relatório",
+        "ru": "Элементы управления — постройте отчёт",
+        "de": "Steuerelemente — Bericht erstellen",
+        "ja": "コントロール — レポートを作成",
+        "tr": "Kontroller — raporunuzu oluşturun",
+        "vi": "Điều khiển — xây dựng báo cáo của bạn",
+        "it": "Controlli — costruisci il tuo report",
+        "fa": "کنترل‌ها — گزارش خود را بسازید",
+        "pl": "Sterowanie — zbuduj swój raport",
+        "uk": "Керування — побудуйте свій звіт",
+        "nl": "Bediening — bouw je rapport",
+        "sv": "Kontroller — bygg din rapport",
+        "cs": "Ovládací prvky — sestavte svou zprávu",
+        "el": "Στοιχεία ελέγχου — δημιουργήστε την αναφορά σας"
+      },
+      "body": {
+        "type": "column",
+        "children": [
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Build the databoard: each panel is a row here — its Template, view kind, order, size and visibility. Switch templates from the icon at the top-right of the Databoard; a panel shows under its Template (leave Template empty to show it in every one). On the Databoard each panel also switches view in place (the icon beside its title), resizes by dragging the divider, and hides with its ×.",
+              "ko": "데이터보드 구성: 각 패널은 여기서 한 행입니다 — 템플릿, 보기 종류, 순서, 크기, 표시 여부. 데이터보드 오른쪽 위 아이콘으로 템플릿을 전환하세요. 패널은 자신의 템플릿 아래에 표시됩니다(템플릿을 비워두면 모든 템플릿에서 표시됩니다). 데이터보드에서 각 패널은 제목 옆 아이콘으로 즉시 보기를 전환하고, 구분선을 드래그해 크기를 조절하며, ×로 숨길 수 있습니다.",
+              "zh": "构建数据看板：每个面板在此对应一行——它的模板、视图类型、顺序、大小和可见性。通过数据看板右上角的图标切换模板；面板会显示在其所属模板下（将模板留空则在每个模板下都显示）。在数据看板上，每个面板还可通过标题旁的图标即时切换视图，拖动分隔线调整大小，用×隐藏。",
+              "hi": "डेटाबोर्ड बनाएं: हर पैनल यहां एक पंक्ति है — इसका टेम्पलेट, व्यू प्रकार, क्रम, आकार व दृश्यता। डेटाबोर्ड के ऊपरी-दाएं आइकन से टेम्पलेट बदलें; पैनल अपने टेम्पलेट के अंतर्गत दिखता है (सभी में दिखाने के लिए टेम्पलेट खाली छोड़ें)। डेटाबोर्ड पर हर पैनल शीर्षक के बगल के आइकन से तुरंत व्यू बदलता है, डिवाइडर खींचकर आकार बदलता है, और × से छिप जाता है।",
+              "es": "Construye el databoard: cada panel es una fila aquí — su Plantilla, tipo de vista, orden, tamaño y visibilidad. Cambia plantillas desde el icono arriba a la derecha del Databoard; un panel se muestra bajo su Plantilla (deja Plantilla vacía para mostrarlo en todas). En el Databoard cada panel también cambia de vista in situ (el icono junto a su título), se redimensiona arrastrando el divisor, y se oculta con su ×.",
+              "fr": "Construisez le databoard : chaque panneau est une ligne ici — son Modèle, type de vue, ordre, taille et visibilité. Changez de modèle depuis l'icône en haut à droite du Databoard ; un panneau s'affiche sous son Modèle (laissez Modèle vide pour l'afficher dans tous). Sur le Databoard, chaque panneau change aussi de vue sur place (l'icône à côté de son titre), se redimensionne en faisant glisser le séparateur, et se cache avec son ×.",
+              "ar": "ابنِ لوحة البيانات: كل لوحة هنا صف واحد — قالبها، نوع العرض، الترتيب، الحجم والظهور. بدّل القوالب من الأيقونة أعلى يمين لوحة البيانات؛ تظهر اللوحة تحت قالبها (اترك القالب فارغًا لإظهارها في كل قالب). في لوحة البيانات، تُبدّل كل لوحة عرضها في مكانها أيضًا (الأيقونة بجانب عنوانها)، وتُغيّر حجمها بسحب الفاصل، وتُخفى بعلامة × الخاصة بها.",
+              "pt": "Construa o databoard: cada painel é uma linha aqui — seu Modelo, tipo de visão, ordem, tamanho e visibilidade. Alterne modelos pelo ícone no canto superior direito do Databoard; um painel aparece sob seu Modelo (deixe Modelo vazio para mostrá-lo em todos). No Databoard cada painel também alterna a visão no lugar (o ícone ao lado do título), redimensiona arrastando o divisor, e oculta com seu ×.",
+              "ru": "Постройте дата-борд: каждая панель здесь — это строка со своим шаблоном, типом отображения, порядком, размером и видимостью. Переключайте шаблоны с помощью значка в правом верхнем углу дата-борда; панель отображается под своим шаблоном (оставьте шаблон пустым, чтобы показать её во всех). На дата-борде каждая панель также переключает отображение на месте (значок рядом с заголовком), меняет размер перетаскиванием разделителя и скрывается по ×.",
+              "de": "Baue das Databoard: jedes Panel ist hier eine Zeile — mit seiner Vorlage, Ansichtsart, Reihenfolge, Größe und Sichtbarkeit. Wechsle Vorlagen über das Symbol oben rechts im Databoard; ein Panel erscheint unter seiner Vorlage (lasse Vorlage leer, um es in jeder zu zeigen). Im Databoard wechselt jedes Panel auch direkt die Ansicht (Symbol neben dem Titel), lässt sich per Ziehen am Trenner in der Größe ändern und mit × ausblenden.",
+              "ja": "データボードを構築します：各パネルはここで1行に対応し、テンプレート、表示種類、順序、サイズ、表示状態を持ちます。データボード右上のアイコンからテンプレートを切り替えます。パネルはそのテンプレートの下に表示されます（テンプレートを空にすると全テンプレートに表示）。データボード上では各パネルもタイトル横のアイコンでその場で表示を切り替え、区切り線をドラッグしてサイズ変更し、×で非表示にできます。",
+              "tr": "Veri panosunu oluşturun: her panel burada bir satırdır — Şablonu, görünüm türü, sırası, boyutu ve görünürlüğü. Veri panosunun sağ üstündeki simgeden şablonları değiştirin; bir panel Şablonunun altında görünür (her birinde göstermek için Şablonu boş bırakın). Veri panosunda her panel ayrıca yerinde görünüm değiştirir (başlığının yanındaki simge), ayırıcıyı sürükleyerek yeniden boyutlandırılır ve × ile gizlenir.",
+              "vi": "Xây dựng bảng dữ liệu: mỗi bảng ở đây là một hàng — Mẫu, loại khung nhìn, thứ tự, kích thước và khả năng hiển thị của nó. Chuyển mẫu từ biểu tượng ở góc trên bên phải của Bảng dữ liệu; một bảng hiển thị dưới Mẫu của nó (để trống Mẫu để hiển thị trong mọi mẫu). Trên Bảng dữ liệu, mỗi bảng cũng chuyển khung nhìn tại chỗ (biểu tượng bên cạnh tiêu đề), thay đổi kích thước bằng cách kéo thanh chia, và ẩn bằng dấu ×.",
+              "it": "Costruisci il databoard: ogni pannello qui è una riga — il suo Modello, tipo di vista, ordine, dimensione e visibilità. Cambia modello dall'icona in alto a destra del Databoard; un pannello appare sotto il suo Modello (lascia Modello vuoto per mostrarlo in tutti). Sul Databoard ogni pannello cambia anche vista sul posto (l'icona accanto al titolo), si ridimensiona trascinando il divisore, e si nasconde con la sua ×.",
+              "fa": "دیتابورد را بسازید: هر پنل اینجا یک ردیف است — قالب، نوع نما، ترتیب، اندازه و نمایانی آن. قالب‌ها را از نماد بالا-راست دیتابورد تغییر دهید؛ پنل زیر قالب خودش نمایش داده می‌شود (برای نمایش در همهٔ قالب‌ها آن را خالی بگذارید). در دیتابورد هر پنل همچنین نما را در جا تغییر می‌دهد (نماد کنار عنوانش)، با کشیدن جداکننده اندازه‌اش تغییر می‌کند و با × پنهان می‌شود.",
+              "pl": "Zbuduj tablicę danych: każdy panel jest tu wierszem — jego Szablon, rodzaj widoku, kolejność, rozmiar i widoczność. Przełączaj szablony za pomocą ikony w prawym górnym rogu Tablicy danych; panel pojawia się pod swoim Szablonem (pozostaw Szablon pusty, aby pokazać go w każdym). Na Tablicy danych każdy panel również przełącza widok w miejscu (ikona obok tytułu), zmienia rozmiar przez przeciąganie separatora i ukrywa się swoim ×.",
+              "uk": "Побудуйте дата-борд: кожна панель тут — це рядок із власним Шаблоном, типом подання, порядком, розміром і видимістю. Перемикайте шаблони за допомогою значка у верхньому правому куті дата-борду; панель показується під своїм Шаблоном (залиште Шаблон порожнім, щоб показати її в кожному). На дата-борді кожна панель також перемикає подання на місці (значок біля заголовка), змінює розмір перетягуванням роздільника і ховається своїм ×.",
+              "nl": "Bouw het databoard: elk paneel is hier een rij — zijn Sjabloon, weergavetype, volgorde, grootte en zichtbaarheid. Wissel sjablonen via het pictogram rechtsboven op het Databoard; een paneel verschijnt onder zijn Sjabloon (laat Sjabloon leeg om het in elk sjabloon te tonen). Op het Databoard wisselt elk paneel ook ter plekke van weergave (het pictogram naast de titel), past het formaat aan door de scheidingslijn te slepen, en verbergt het met zijn ×.",
+              "sv": "Bygg databoardet: varje panel är en rad här — dess Mall, vytyp, ordning, storlek och synlighet. Växla mallar från ikonen uppe till höger på Databoardet; en panel visas under sin Mall (lämna Mall tom för att visa den i alla). På Databoardet växlar varje panel också vy på plats (ikonen bredvid titeln), ändrar storlek genom att dra i avdelaren, och döljs med sitt ×.",
+              "cs": "Sestavte databoard: každý panel je zde jeden řádek — jeho Šablona, typ zobrazení, pořadí, velikost a viditelnost. Přepínejte šablony pomocí ikony vpravo nahoře na Databoardu; panel se zobrazuje pod svou Šablonou (ponechte Šablonu prázdnou pro zobrazení ve všech). Na Databoardu každý panel také přepíná zobrazení na místě (ikona vedle názvu), mění velikost přetažením oddělovače a skrývá se svým ×.",
+              "el": "Δημιουργήστε τον πίνακα δεδομένων: κάθε πάνελ εδώ είναι μια γραμμή — το Πρότυπό του, τύπος προβολής, σειρά, μέγεθος και ορατότητα. Αλλάξτε πρότυπα από το εικονίδιο πάνω δεξιά στον πίνακα δεδομένων· ένα πάνελ εμφανίζεται κάτω από το Πρότυπό του (αφήστε το Πρότυπο κενό για να εμφανίζεται σε όλα). Στον πίνακα δεδομένων κάθε πάνελ αλλάζει επίσης προβολή επιτόπου (το εικονίδιο δίπλα στον τίτλο του), αλλάζει μέγεθος σέρνοντας τον διαχωριστή, και κρύβεται με το ×."
+            }
+          },
+          {
+            "type": "row",
+            "children": [
+              {
+                "type": "button",
+                "label": {
+                  "en": "Add panel",
+                  "ko": "패널 추가",
+                  "zh": "添加面板",
+                  "hi": "पैनल जोड़ें",
+                  "es": "Añadir panel",
+                  "fr": "Ajouter un panneau",
+                  "ar": "إضافة لوحة",
+                  "pt": "Adicionar painel",
+                  "ru": "Добавить панель",
+                  "de": "Panel hinzufügen",
+                  "ja": "パネルを追加",
+                  "tr": "Panel ekle",
+                  "vi": "Thêm bảng",
+                  "it": "Aggiungi pannello",
+                  "fa": "افزودن پنل",
+                  "pl": "Dodaj panel",
+                  "uk": "Додати панель",
+                  "nl": "Paneel toevoegen",
+                  "sv": "Lägg till panel",
+                  "cs": "Přidat panel",
+                  "el": "Προσθήκη πάνελ"
+                },
+                "icon": "add",
+                "action": {
+                  "fn": "addRow",
+                  "args": {
+                    "table": "panels",
+                    "values": {
+                      "kind": "chart",
+                      "visible": true,
+                      "weight": 1,
+                      "order": 9
+                    }
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "Export report (HTML)",
+                  "ko": "보고서 내보내기 (HTML)",
+                  "zh": "导出报告（HTML）",
+                  "hi": "रिपोर्ट निर्यात करें (HTML)",
+                  "es": "Exportar informe (HTML)",
+                  "fr": "Exporter le rapport (HTML)",
+                  "ar": "تصدير التقرير (HTML)",
+                  "pt": "Exportar relatório (HTML)",
+                  "ru": "Экспортировать отчёт (HTML)",
+                  "de": "Bericht exportieren (HTML)",
+                  "ja": "レポートをエクスポート（HTML）",
+                  "tr": "Raporu dışa aktar (HTML)",
+                  "vi": "Xuất báo cáo (HTML)",
+                  "it": "Esporta report (HTML)",
+                  "fa": "خروجی گزارش (HTML)",
+                  "pl": "Eksportuj raport (HTML)",
+                  "uk": "Експорт звіту (HTML)",
+                  "nl": "Rapport exporteren (HTML)",
+                  "sv": "Exportera rapport (HTML)",
+                  "cs": "Exportovat zprávu (HTML)",
+                  "el": "Εξαγωγή αναφοράς (HTML)"
+                },
+                "icon": "download",
+                "action": {
+                  "fn": "exportHtml",
+                  "args": {
+                    "title": "Geolabs report",
+                    "tables": [
+                      "records",
+                      "zone_stats"
+                    ],
+                    "filename": "geolabs-report.html"
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "Export data (CSV)",
+                  "ko": "데이터 내보내기 (CSV)",
+                  "zh": "导出数据（CSV）",
+                  "hi": "डेटा निर्यात करें (CSV)",
+                  "es": "Exportar datos (CSV)",
+                  "fr": "Exporter les données (CSV)",
+                  "ar": "تصدير البيانات (CSV)",
+                  "pt": "Exportar dados (CSV)",
+                  "ru": "Экспортировать данные (CSV)",
+                  "de": "Daten exportieren (CSV)",
+                  "ja": "データをエクスポート（CSV）",
+                  "tr": "Verileri dışa aktar (CSV)",
+                  "vi": "Xuất dữ liệu (CSV)",
+                  "it": "Esporta dati (CSV)",
+                  "fa": "خروجی داده (CSV)",
+                  "pl": "Eksportuj dane (CSV)",
+                  "uk": "Експорт даних (CSV)",
+                  "nl": "Gegevens exporteren (CSV)",
+                  "sv": "Exportera data (CSV)",
+                  "cs": "Exportovat data (CSV)",
+                  "el": "Εξαγωγή δεδομένων (CSV)"
+                },
+                "icon": "table_view",
+                "action": {
+                  "fn": "exportData",
+                  "args": {
+                    "format": "csv",
+                    "table": "records"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": {
+              "en": "Add a block",
+              "ko": "블록 추가",
+              "zh": "添加区块",
+              "hi": "एक ब्लॉक जोड़ें",
+              "es": "Añadir un bloque",
+              "fr": "Ajouter un bloc",
+              "ar": "إضافة كتلة",
+              "pt": "Adicionar um bloco",
+              "ru": "Добавить блок",
+              "de": "Block hinzufügen",
+              "ja": "ブロックを追加",
+              "tr": "Blok ekle",
+              "vi": "Thêm khối",
+              "it": "Aggiungi un blocco",
+              "fa": "افزودن یک بلوک",
+              "pl": "Dodaj blok",
+              "uk": "Додати блок",
+              "nl": "Blok toevoegen",
+              "sv": "Lägg till block",
+              "cs": "Přidat blok",
+              "el": "Προσθήκη μπλοκ"
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Mix in more block kinds beside chart/table/map/delta: KPI number tiles, an interactive explorer (brush + cohorts + scatter), or a notes panel. A newly added block has no Template, so it appears under every template until you set one in the panel row above.",
+              "ko": "차트/표/지도/변화량 외에 더 많은 블록 유형을 섞을 수 있습니다: KPI 숫자 타일, 인터랙티브 탐색기(브러시+코호트+산점도), 또는 메모 패널. 새로 추가된 블록은 템플릿이 없으므로, 위 패널 행에서 지정하기 전까지는 모든 템플릿 아래에 나타납니다.",
+              "zh": "除了图表/表格/地图/变化量之外，还可混入更多区块类型：KPI 数字磁贴、交互式浏览器（画刷+分组+散点图），或备注面板。新添加的区块没有模板，因此在你于上方面板行设置模板之前，它会出现在每个模板下。",
+              "hi": "चार्ट/तालिका/मैप/बदलाव के अलावा और भी ब्लॉक प्रकार मिलाएं: KPI संख्या टाइल्स, इंटरएक्टिव एक्सप्लोरर (ब्रश + समूह + स्कैटर), या नोट्स पैनल। नया जोड़ा गया ब्लॉक बिना टेम्पलेट के होता है, इसलिए ऊपर पैनल पंक्ति में सेट करने तक यह हर टेम्पलेट में दिखता है।",
+              "es": "Mezcla más tipos de bloques además de gráfico/tabla/mapa/delta: fichas de números KPI, un explorador interactivo (pincel + cohortes + dispersión), o un panel de notas. Un bloque recién añadido no tiene Plantilla, así que aparece bajo todas hasta que fijes una en la fila del panel de arriba.",
+              "fr": "Mélangez d'autres types de blocs en plus du graphique/tableau/carte/delta : tuiles de nombres KPI, un explorateur interactif (brossage + cohortes + nuage de points), ou un panneau de notes. Un bloc nouvellement ajouté n'a pas de Modèle, il apparaît donc sous tous jusqu'à ce que vous en définissiez un dans la ligne du panneau ci-dessus.",
+              "ar": "امزج المزيد من أنواع الكتل إلى جانب الرسم البياني/الجدول/الخريطة/الفرق: بطاقات أرقام KPI، مستكشف تفاعلي (فرشاة + مجموعات + مبعثر)، أو لوحة ملاحظات. الكتلة المضافة حديثًا ليس لها قالب، لذا تظهر تحت كل قالب حتى تحدد واحدًا في صف اللوحة أعلاه.",
+              "pt": "Misture mais tipos de bloco além de gráfico/tabela/mapa/delta: blocos de números KPI, um explorador interativo (pincel + coortes + dispersão), ou um painel de notas. Um bloco recém-adicionado não tem Modelo, então aparece sob todos até você definir um na linha do painel acima.",
+              "ru": "Добавьте больше типов блоков помимо диаграммы/таблицы/карты/дельты: числовые плитки KPI, интерактивный обозреватель (кисть + когорты + рассеяние) или панель заметок. Только что добавленный блок не имеет шаблона, поэтому появляется во всех шаблонах, пока вы не зададите его в строке панели выше.",
+              "de": "Mische weitere Blockarten neben Diagramm/Tabelle/Karte/Delta: KPI-Zahlenkacheln, einen interaktiven Explorer (Pinsel + Kohorten + Streudiagramm), oder ein Notizen-Panel. Ein neu hinzugefügter Block hat keine Vorlage, erscheint also unter jeder Vorlage, bis du oben in der Panel-Zeile eine festlegst.",
+              "ja": "チャート／テーブル／地図／差分に加えて、さらに多くのブロック種類を組み合わせられます：KPI数値タイル、インタラクティブエクスプローラー（ブラシ＋コホート＋散布図）、またはメモパネル。新しく追加されたブロックにはテンプレートがないため、上のパネル行で設定するまで、すべてのテンプレートの下に表示されます。",
+              "tr": "Grafik/tablo/harita/fark yanına daha fazla blok türü karıştırın: KPI sayı kutucukları, etkileşimli bir gezgin (fırça + kohort + dağılım) veya bir not paneli. Yeni eklenen bir blokun Şablonu yoktur, bu yüzden yukarıdaki panel satırında birini ayarlayana kadar her şablonun altında görünür.",
+              "vi": "Kết hợp thêm các loại khối bên cạnh biểu đồ/bảng/bản đồ/chênh lệch: ô số KPI, trình khám phá tương tác (bút chọn + nhóm + biểu đồ phân tán), hoặc bảng ghi chú. Một khối mới thêm vào chưa có Mẫu, nên nó xuất hiện dưới mọi mẫu cho đến khi bạn đặt một mẫu trong hàng bảng ở trên.",
+              "it": "Mescola altri tipi di blocco oltre a grafico/tabella/mappa/delta: riquadri numerici KPI, un esploratore interattivo (pennello + coorti + dispersione), o un pannello note. Un blocco appena aggiunto non ha Modello, quindi appare sotto ogni modello finché non ne imposti uno nella riga del pannello sopra.",
+              "fa": "علاوه بر نمودار/جدول/نقشه/تفاوت، انواع بلوک بیشتری اضافه کنید: کاشی‌های عددی KPI، یک کاوشگر تعاملی (قلم‌مو + کوهورت‌ها + پراکندگی)، یا یک پنل یادداشت. یک بلوک تازه‌اضافه‌شده قالبی ندارد، پس تا زمانی که در ردیف پنل بالا یکی تنظیم نکنید، زیر هر قالبی نشان داده می‌شود.",
+              "pl": "Dodaj więcej rodzajów bloków obok wykresu/tabeli/mapy/różnicy: kafelki liczbowe KPI, eksplorator interaktywny (pędzel + kohorty + wykres punktowy), lub panel notatek. Nowo dodany blok nie ma Szablonu, więc pojawia się pod każdym szablonem, dopóki nie ustawisz jednego w wierszu panelu powyżej.",
+              "uk": "Додайте більше типів блоків окрім діаграми/таблиці/карти/різниці: числові плитки KPI, інтерактивний дослідник (пензель + когорти + розсіювання), або панель нотаток. Щойно доданий блок не має Шаблону, тож з'являється під кожним шаблоном, доки ви не встановите один у рядку панелі вище.",
+              "nl": "Meng meer bloktypen naast grafiek/tabel/kaart/delta: KPI-cijfertegels, een interactieve verkenner (borstel + cohorten + spreiding), of een notitiepaneel. Een nieuw toegevoegd blok heeft geen Sjabloon, dus het verschijnt onder elk sjabloon totdat je er een instelt in de paneelrij hierboven.",
+              "sv": "Blanda in fler blocktyper förutom diagram/tabell/karta/delta: KPI-siffertegel, en interaktiv utforskare (pensel + kohorter + spridning), eller en anteckningspanel. Ett nyligen tillagt block har ingen Mall, så det visas under varje mall tills du ställer in en i panelraden ovan.",
+              "cs": "Přimíchejte další typy bloků kromě grafu/tabulky/mapy/rozdílu: číselné dlaždice KPI, interaktivní průzkumník (štětec + kohorty + rozptyl), nebo panel poznámek. Nově přidaný blok nemá Šablonu, takže se zobrazuje pod každou šablonou, dokud ji nenastavíte v řádku panelu výše.",
+              "el": "Αναμείξτε περισσότερα είδη μπλοκ δίπλα σε γράφημα/πίνακα/χάρτη/διαφορά: αριθμητικά πλακίδια KPI, έναν διαδραστικό εξερευνητή (πινέλο + κοόρτες + διάγραμμα διασποράς), ή ένα πάνελ σημειώσεων. Ένα πρόσφατα προστεθέν μπλοκ δεν έχει Πρότυπο, οπότε εμφανίζεται κάτω από κάθε πρότυπο μέχρι να ορίσετε ένα στη γραμμή πάνελ παραπάνω."
+            }
+          },
+          {
+            "type": "row",
+            "wrap": true,
+            "children": [
+              {
+                "type": "button",
+                "label": {
+                  "en": "+ KPI tiles",
+                  "ko": "+ KPI 타일",
+                  "zh": "+ KPI 磁贴",
+                  "hi": "+ KPI टाइल्स",
+                  "es": "+ Fichas KPI",
+                  "fr": "+ Tuiles KPI",
+                  "ar": "+ بطاقات KPI",
+                  "pt": "+ Blocos KPI",
+                  "ru": "+ плитки KPI",
+                  "de": "+ KPI-Kacheln",
+                  "ja": "+ KPIタイル",
+                  "tr": "+ KPI kutucukları",
+                  "vi": "+ Ô KPI",
+                  "it": "+ Riquadri KPI",
+                  "fa": "+ کاشی‌های KPI",
+                  "pl": "+ Kafelki KPI",
+                  "uk": "+ Плитки KPI",
+                  "nl": "+ KPI-tegels",
+                  "sv": "+ KPI-rutor",
+                  "cs": "+ Dlaždice KPI",
+                  "el": "+ Πλακίδια KPI"
+                },
+                "icon": "add",
+                "action": {
+                  "fn": "addRow",
+                  "args": {
+                    "table": "panels",
+                    "values": {
+                      "name": "Headline numbers",
+                      "kind": "kpi",
+                      "visible": true,
+                      "weight": 0.6,
+                      "order": 9
+                    }
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "+ Explorer",
+                  "ko": "+ 탐색기",
+                  "zh": "+ 浏览器",
+                  "hi": "+ एक्सप्लोरर",
+                  "es": "+ Explorador",
+                  "fr": "+ Explorateur",
+                  "ar": "+ المستكشف",
+                  "pt": "+ Explorador",
+                  "ru": "+ Обозреватель",
+                  "de": "+ Explorer",
+                  "ja": "+ エクスプローラー",
+                  "tr": "+ Gezgin",
+                  "vi": "+ Trình khám phá",
+                  "it": "+ Esploratore",
+                  "fa": "+ کاوشگر",
+                  "pl": "+ Eksplorator",
+                  "uk": "+ Дослідник",
+                  "nl": "+ Verkenner",
+                  "sv": "+ Utforskare",
+                  "cs": "+ Průzkumník",
+                  "el": "+ Εξερευνητής"
+                },
+                "icon": "add",
+                "action": {
+                  "fn": "addRow",
+                  "args": {
+                    "table": "panels",
+                    "values": {
+                      "name": "Explore",
+                      "kind": "explore",
+                      "visible": true,
+                      "weight": 1.2,
+                      "order": 9
+                    }
+                  }
+                }
+              },
+              {
+                "type": "button",
+                "label": {
+                  "en": "+ Notes",
+                  "ko": "+ 메모",
+                  "zh": "+ 备注",
+                  "hi": "+ नोट्स",
+                  "es": "+ Notas",
+                  "fr": "+ Notes",
+                  "ar": "+ ملاحظات",
+                  "pt": "+ Notas",
+                  "ru": "+ Заметки",
+                  "de": "+ Notizen",
+                  "ja": "+ メモ",
+                  "tr": "+ Notlar",
+                  "vi": "+ Ghi chú",
+                  "it": "+ Note",
+                  "fa": "+ یادداشت‌ها",
+                  "pl": "+ Notatki",
+                  "uk": "+ Нотатки",
+                  "nl": "+ Notities",
+                  "sv": "+ Anteckningar",
+                  "cs": "+ Poznámky",
+                  "el": "+ Σημειώσεις"
+                },
+                "icon": "add",
+                "action": {
+                  "fn": "addRow",
+                  "args": {
+                    "table": "panels",
+                    "values": {
+                      "name": "Notes",
+                      "kind": "notes",
+                      "visible": true,
+                      "weight": 0.8,
+                      "order": 9
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "table",
+            "table": "panels",
+            "columns": [
+              "name",
+              "template",
+              "kind",
+              "visible",
+              "order",
+              "weight"
+            ],
+            "height": 240,
+            "action": {
+              "fn": "editRow"
+            }
+          },
+          {
+            "type": "divider"
+          },
+          {
+            "type": "text",
+            "style": "eyebrow",
+            "value": {
+              "en": "Saved views (slices)",
+              "ko": "저장된 뷰 (슬라이스)",
+              "zh": "已保存的视图（切片）",
+              "hi": "सेव किए गए व्यू (स्लाइस)",
+              "es": "Vistas guardadas (rebanadas)",
+              "fr": "Vues enregistrées (tranches)",
+              "ar": "العروض المحفوظة (شرائح)",
+              "pt": "Visões salvas (fatias)",
+              "ru": "Сохранённые представления (срезы)",
+              "de": "Gespeicherte Ansichten (Slices)",
+              "ja": "保存されたビュー（スライス）",
+              "tr": "Kaydedilen görünümler (dilimler)",
+              "vi": "Khung nhìn đã lưu (lát cắt)",
+              "it": "Viste salvate (fette)",
+              "fa": "نماهای ذخیره‌شده (برش‌ها)",
+              "pl": "Zapisane widoki (wycinki)",
+              "uk": "Збережені подання (зрізи)",
+              "nl": "Opgeslagen weergaven (slices)",
+              "sv": "Sparade vyer (slices)",
+              "cs": "Uložená zobrazení (řezy)",
+              "el": "Αποθηκευμένες προβολές (τμήματα)"
+            }
+          },
+          {
+            "type": "text",
+            "style": "caption",
+            "value": {
+              "en": "Chart panels carry a bookmark that saves the current filters + grouping here as a named row — your slices travel with the applet's share code and backups, and the HTML export takes the whole report out of the app.",
+              "ko": "차트 패널에는 현재 필터+그룹화를 이름 있는 행으로 저장하는 북마크가 있습니다 — 슬라이스는 앱렛의 공유 코드 및 백업과 함께 이동하며, HTML 내보내기는 전체 보고서를 앱 밖으로 가져갑니다.",
+              "zh": "图表面板带有一个书签，会把当前的筛选条件+分组以命名行的形式保存在此处——你的切片会随应用的分享码和备份一起流转，而 HTML 导出会把整份报告带出应用之外。",
+              "hi": "चार्ट पैनलों में एक बुकमार्क होता है जो मौजूदा फ़िल्टर + ग्रुपिंग को यहां एक नामित पंक्ति के रूप में सेव करता है — आपकी स्लाइस ऐपलेट के शेयर कोड व बैकअप के साथ जाती हैं, और HTML निर्यात पूरी रिपोर्ट को ऐप से बाहर ले जाता है।",
+              "es": "Los paneles de gráficos llevan un marcador que guarda los filtros + agrupación actuales aquí como una fila con nombre — tus rebanadas viajan con el código de compartir y las copias de seguridad del applet, y la exportación HTML saca todo el informe fuera de la app.",
+              "fr": "Les panneaux de graphiques portent un signet qui enregistre les filtres + regroupement actuels ici comme une ligne nommée — vos tranches voyagent avec le code de partage et les sauvegardes de l'applet, et l'export HTML fait sortir tout le rapport de l'app.",
+              "ar": "تحمل لوحات الرسم البياني إشارة مرجعية تحفظ المرشحات + التجميع الحاليين هنا كصف مسمى — تنتقل شرائحك مع رمز مشاركة التطبيق ونسخه الاحتياطية، ويُخرج تصدير HTML التقرير بأكمله من التطبيق.",
+              "pt": "Painéis de gráfico carregam um marcador que salva os filtros + agrupamento atuais aqui como uma linha nomeada — suas fatias viajam com o código de compartilhamento e backups do applet, e a exportação HTML tira o relatório inteiro do app.",
+              "ru": "Панели диаграмм несут закладку, которая сохраняет текущие фильтры + группировку здесь как именованную строку — ваши срезы перемещаются вместе с кодом обмена и резервными копиями приложения, а экспорт в HTML выводит весь отчёт за пределы приложения.",
+              "de": "Diagramm-Panels tragen ein Lesezeichen, das die aktuellen Filter + Gruppierung hier als benannte Zeile speichert — deine Slices reisen mit dem Freigabecode und den Backups des Applets, und der HTML-Export bringt den ganzen Bericht aus der App heraus.",
+              "ja": "チャートパネルにはブックマークがあり、現在のフィルター＋グルーピングを名前付きの行としてここに保存します — スライスはアプレットの共有コードやバックアップと一緒に移動し、HTMLエクスポートはレポート全体をアプリの外に持ち出します。",
+              "tr": "Grafik panelleri, mevcut filtreleri + gruplamayı burada adlandırılmış bir satır olarak kaydeden bir yer imi taşır — dilimleriniz applet'in paylaşım kodu ve yedeklemeleriyle birlikte gider ve HTML dışa aktarma tüm raporu uygulamadan çıkarır.",
+              "vi": "Các bảng biểu đồ mang theo một dấu trang lưu bộ lọc + nhóm hiện tại tại đây dưới dạng một hàng có tên — các lát cắt của bạn di chuyển cùng mã chia sẻ và bản sao lưu của applet, và việc xuất HTML đưa toàn bộ báo cáo ra khỏi ứng dụng.",
+              "it": "I pannelli grafico portano un segnalibro che salva qui i filtri + il raggruppamento correnti come riga con nome — le tue fette viaggiano con il codice di condivisione e i backup dell'applet, e l'esportazione HTML porta l'intero report fuori dall'app.",
+              "fa": "پنل‌های نمودار یک نشانک دارند که فیلترها + گروه‌بندی فعلی را اینجا به‌عنوان یک ردیف نام‌دار ذخیره می‌کند — برش‌های شما همراه با کد اشتراک‌گذاری و پشتیبان‌های اپلت جابه‌جا می‌شوند، و خروجی HTML کل گزارش را از برنامه بیرون می‌برد.",
+              "pl": "Panele wykresów niosą zakładkę zapisującą tu bieżące filtry + grupowanie jako nazwany wiersz — twoje wycinki podróżują wraz z kodem udostępniania appletu i kopiami zapasowymi, a eksport HTML wynosi cały raport poza aplikację.",
+              "uk": "Панелі діаграм несуть закладку, яка зберігає поточні фільтри + групування тут як іменований рядок — ваші зрізи переміщуються разом із кодом спільного доступу та резервними копіями аплета, а експорт у HTML виносить увесь звіт за межі застосунку.",
+              "nl": "Grafiekpanelen dragen een bladwijzer die de huidige filters + groepering hier opslaat als een genoemde rij — je slices reizen mee met de deelcode en back-ups van de applet, en de HTML-export haalt het hele rapport uit de app.",
+              "sv": "Diagrampaneler har ett bokmärke som sparar aktuella filter + gruppering här som en namngiven rad — dina slices följer med appletens delningskod och säkerhetskopior, och HTML-exporten tar hela rapporten ut ur appen.",
+              "cs": "Panely grafů nesou záložku, která zde ukládá aktuální filtry + seskupení jako pojmenovaný řádek — vaše řezy cestují se sdíleným kódem a zálohami appletu a export HTML vyjme celou zprávu z aplikace.",
+              "el": "Τα πάνελ γραφημάτων φέρουν έναν σελιδοδείκτη που αποθηκεύει εδώ τα τρέχοντα φίλτρα + ομαδοποίηση ως ονομασμένη γραμμή — τα τμήματά σας ταξιδεύουν με τον κωδικό κοινής χρήσης και τα αντίγραφα ασφαλείας της εφαρμογής, και η εξαγωγή HTML βγάζει ολόκληρη την αναφορά έξω από την εφαρμογή."
+            }
+          },
+          {
+            "type": "table",
+            "table": "slices",
+            "columns": [
+              "name",
+              "config"
+            ],
+            "height": 160,
+            "action": {
+              "fn": "editRow"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

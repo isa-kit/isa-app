@@ -1,0 +1,7 @@
+{
+  "tables": [
+    { "name": "profiles", "label": "Profiles", "icon": "people", "description": "Mock dating profiles for a single-device prototype." },
+    { "name": "interests", "label": "Interests", "icon": "local_offer", "description": "Interests that profiles can list." },
+    { "name": "matches", "label": "Matches", "icon": "favorite", "description": "Mock match records between two profiles." }
+  ]
+}

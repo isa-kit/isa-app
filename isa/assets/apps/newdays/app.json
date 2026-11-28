@@ -1,0 +1,23 @@
+{
+  "id": "newdays",
+  "name": "Newdays",
+  "category": "Productivity",
+  "description": "Agenda, journal and notes in one app, on New Day's look. Import your New Day agenda and your Neujour journals and notes, nest notes inside notes, and filter everything by the same groups and tags.",
+  "icon": "auto_stories",
+  "hidden": true,
+  "unlisted": true,
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_newdays"
+  },
+  "seedVersion": "2026-11-15.newdays.v1",
+  "seedContent": "initial-only",
+  "durableSettings": [
+    "newdayExamplesHidden",
+    "newdayList.sort",
+    "newdayList.show",
+    "newdayList.hiddenGroups",
+    "newdayList.tags",
+    "newdayList.expanded"
+  ]
+}

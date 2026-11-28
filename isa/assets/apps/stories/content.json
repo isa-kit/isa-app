@@ -1,0 +1,142 @@
+{
+  "stories": [
+    {
+      "id": "st_lantern",
+      "title": "The Lantern Fox",
+      "form": "cartoon",
+      "logline": "A young fox who fears the dark guides a lost firefly home and finds the night is full of light.",
+      "order": 1,
+      "parentId": "",
+      "kind": "file",
+      "_example": true
+    }
+  ],
+  "scenes": [
+    {
+      "id": "sc_dusk",
+      "story": "st_lantern",
+      "order": 1,
+      "title": "Dusk at the den",
+      "synopsis": "The sun sets and Fen, a young fox, will not leave the den.",
+      "script": "**EDGE OF THE WOOD — DUSK**\n\nThe sun slips behind the hill. FEN, a young fox, peers out of the den and pulls back in.\n\n**FEN:** Just five more minutes of daylight?\n\n**MOTHER FOX:** The night will not bite, little one.",
+      "parentId": "",
+      "kind": "file",
+      "_example": true
+    },
+    {
+      "id": "sc_light",
+      "story": "st_lantern",
+      "order": 2,
+      "title": "A light in the grass",
+      "synopsis": "A blinking light in the grass turns out to be Luma, a firefly who has lost her meadow.",
+      "script": "**THE TALL GRASS — NIGHT**\n\nA small light blinks on, off, on. FEN creeps closer.\n\n**LUMA:** Please — which way is the meadow? I was blown off course.\n\n**FEN:** It is past the dark part of the wood.\n\nFen looks at the dark trees. Then at Luma.",
+      "parentId": "",
+      "kind": "file",
+      "_example": true
+    },
+    {
+      "id": "sc_home",
+      "story": "st_lantern",
+      "order": 3,
+      "title": "The way home",
+      "synopsis": "Fen walks Luma through the dark wood; the meadow lights up with hundreds of fireflies.",
+      "script": "**THE MEADOW — NIGHT**\n\nFen steps out of the trees. Hundreds of lights rise from the grass.\n\n**LUMA:** You walked through the dark.\n\n**FEN:** It was not so dark with you there.",
+      "parentId": "",
+      "kind": "file",
+      "_example": true
+    }
+  ],
+  "panels": [
+    {
+      "id": "pn_1",
+      "scene": "sc_dusk",
+      "order": 1,
+      "caption": "The sun goes down",
+      "dialogue": "",
+      "drawing": "{\"v\":2,\"active\":0,\"layers\":[{\"n\":\"Layer 1\",\"s\":[{\"k\":\"ellipse\",\"c\":4283315246,\"w\":3.0,\"p\":[[40,120],[220,230]]},{\"k\":\"ellipse\",\"c\":4283315246,\"w\":3.0,\"p\":[[100,150],[150,190]]},{\"k\":\"triangle\",\"c\":4283315246,\"w\":3.0,\"p\":[[104,152],[112,132],[120,152]]},{\"k\":\"triangle\",\"c\":4283315246,\"w\":3.0,\"p\":[[130,152],[138,132],[146,152]]},{\"k\":\"ellipse\",\"c\":4292984096,\"w\":3.0,\"p\":[[250,30],[300,80]]},{\"k\":\"line\",\"c\":4283315246,\"w\":2.0,\"p\":[[0,110],[360,110]]}]}]}",
+      "sprite": "",
+      "figures": "",
+      "parentId": "",
+      "kind": "file",
+      "_example": true
+    },
+    {
+      "id": "pn_2",
+      "scene": "sc_dusk",
+      "order": 2,
+      "caption": "Fen pulls back in",
+      "dialogue": "Just five more minutes of daylight?",
+      "drawing": "",
+      "sprite": "",
+      "figures": "",
+      "parentId": "",
+      "kind": "file",
+      "_example": true
+    },
+    {
+      "id": "pn_3",
+      "scene": "sc_light",
+      "order": 1,
+      "caption": "A blinking light",
+      "dialogue": "",
+      "drawing": "{\"v\":2,\"active\":0,\"layers\":[{\"n\":\"Layer 1\",\"s\":[{\"k\":\"ellipse\",\"c\":4292984096,\"w\":4.0,\"p\":[[150,90],[200,140]]},{\"k\":\"ellipse\",\"c\":4292984096,\"w\":3.0,\"p\":[[168,108],[182,122]],\"f\":true},{\"k\":\"free\",\"c\":4283315246,\"w\":2.0,\"p\":[[40,220],[80,200],[120,215],[160,198],[200,214],[240,200],[280,216]]}]}]}",
+      "sprite": "",
+      "figures": "",
+      "parentId": "",
+      "kind": "file",
+      "_example": true
+    },
+    {
+      "id": "pn_4",
+      "scene": "sc_light",
+      "order": 2,
+      "caption": "Luma asks the way",
+      "dialogue": "Which way is the meadow?",
+      "drawing": "",
+      "sprite": "",
+      "figures": "",
+      "parentId": "",
+      "kind": "file",
+      "_example": true
+    },
+    {
+      "id": "pn_5",
+      "scene": "sc_home",
+      "order": 1,
+      "caption": "The meadow lights up",
+      "dialogue": "It was not so dark with you there.",
+      "drawing": "{\"v\":2,\"active\":0,\"layers\":[{\"n\":\"Layer 1\",\"s\":[{\"k\":\"ellipse\",\"c\":4292984096,\"w\":3.0,\"p\":[[60,60],[70,70]],\"f\":true},{\"k\":\"ellipse\",\"c\":4292984096,\"w\":3.0,\"p\":[[120,40],[130,50]],\"f\":true},{\"k\":\"ellipse\",\"c\":4292984096,\"w\":3.0,\"p\":[[200,70],[210,80]],\"f\":true},{\"k\":\"ellipse\",\"c\":4292984096,\"w\":3.0,\"p\":[[260,35],[270,45]],\"f\":true},{\"k\":\"ellipse\",\"c\":4292984096,\"w\":3.0,\"p\":[[300,90],[310,100]],\"f\":true},{\"k\":\"ellipse\",\"c\":4283315246,\"w\":3.0,\"p\":[[150,160],[200,210]]},{\"k\":\"triangle\",\"c\":4283315246,\"w\":3.0,\"p\":[[154,162],[162,142],[170,162]]},{\"k\":\"triangle\",\"c\":4283315246,\"w\":3.0,\"p\":[[180,162],[188,142],[196,162]]}]}]}",
+      "sprite": "",
+      "figures": "",
+      "parentId": "",
+      "kind": "file",
+      "_example": true
+    }
+  ],
+  "story_notes": [
+    {
+      "id": "nt_fen",
+      "story": "st_lantern",
+      "kind": "character",
+      "title": "Fen",
+      "body": "A young fox, curious by day and scared of the dark. Wants to be brave but does not know how yet.",
+      "_example": true
+    },
+    {
+      "id": "nt_meadow",
+      "story": "st_lantern",
+      "kind": "setting",
+      "title": "The meadow",
+      "body": "An open field past the dark wood where the fireflies live. Quiet by day, bright at night.",
+      "_example": true
+    },
+    {
+      "id": "nt_turn",
+      "story": "st_lantern",
+      "kind": "beat",
+      "title": "Turning point",
+      "body": "Fen chooses to walk into the dark, not for himself, but to help someone else.",
+      "_example": true
+    }
+  ]
+}

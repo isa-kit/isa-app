@@ -1,0 +1,40 @@
+{
+  "tables": [
+    {
+      "name": "pinebuild",
+      "label": "Current build",
+      "icon": "tune",
+      "description": "Autosave of the indicator you are building (blocks, settings). Local scratch, never synced."
+    },
+    {
+      "name": "pinerecipes",
+      "label": "Recipes",
+      "icon": "bookmarks",
+      "description": "Builds you saved as named recipes. Local to this device, never synced."
+    },
+    {
+      "name": "pineviews",
+      "label": "Views",
+      "icon": "dashboard_customize",
+      "description": "Your own indicator views and your additions to the premade ones. Local to this device, never synced."
+    },
+    {
+      "name": "pinediscover",
+      "label": "Discover",
+      "icon": "travel_explore",
+      "description": "Your saved scans, watchlist and the matches each scan last showed. Local to this device, never synced."
+    },
+    {
+      "name": "pinefollows",
+      "label": "Portfolios followed",
+      "icon": "groups",
+      "description": "Filers you follow in Portfolios (id, kind, filer id, name, added-at, last-seen filing). Private to you, local to this device, never synced."
+    },
+    {
+      "name": "pineideas",
+      "label": "Idea Lab trials",
+      "icon": "science",
+      "description": "Owner-only journal of Idea Lab experiments (idea, round, candidate hash, settings, verdict, time). Append-only; local to this device, never synced."
+    }
+  ]
+}

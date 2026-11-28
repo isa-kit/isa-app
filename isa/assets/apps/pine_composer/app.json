@@ -1,0 +1,21 @@
+{
+  "id": "pine_composer",
+  "name": "Pine Composer",
+  "category": "Finance",
+  "description": "Build and test TradingView scripts",
+  "icon": "candlestick_chart",
+  "color": "#2962FF",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_pine_composer"
+  },
+  "seedVersion": "2026-11-13.idealab-1",
+  "durableSettings": [
+    "pinecomposerAiProvider",
+    "pinecomposerBuildView",
+    "pinecomposerDividends",
+    "aiProviders",
+    "aiProvider",
+    "marketDataSource"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "geolabs",
+  "name": "Geolabs",
+  "category": "Analytics",
+  "description": "Build a geographic data report: read data in, add panels and controls.",
+  "icon": "travel_explore",
+  "color": "#1F6F8B",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_geolabs"
+  },
+  "seedVersion": "2026-07-20.1-p3.l10n-int-0903"
+}

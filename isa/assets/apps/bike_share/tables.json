@@ -1,0 +1,16 @@
+{
+  "tables": [
+    {
+      "name": "stations",
+      "label": "Stations",
+      "icon": "list",
+      "description": "Live Boston bike-share stations from the public GBFS feed. Ships with a small offline seed; tap Refresh to pull the latest from the network. This is the isa-kit example (a remote async table) rendered by the engine.",
+      "source": {
+        "type": "rest",
+        "url": "https://gbfs.lyft.com/gbfs/1.1/bos/en/station_information.json",
+        "method": "GET",
+        "rowsPath": "data.stations"
+      }
+    }
+  ]
+}

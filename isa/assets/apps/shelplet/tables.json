@@ -1,0 +1,10 @@
+{
+  "tables": [
+    {
+      "name": "exec_summary",
+      "label": "Decision snapshot",
+      "icon": "verified",
+      "description": "A seeded snapshot of the latest precomputed runs for the 5-minute read; the live trace is one tap away in Scenarios."
+    }
+  ]
+}

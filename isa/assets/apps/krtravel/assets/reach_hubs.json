@@ -1,0 +1,69 @@
+{
+  "hubs": [
+    {
+      "key": "seoul_station",
+      "sid": "kr_005",
+      "label": "Seoul Station"
+    },
+    {
+      "key": "city_hall",
+      "sid": "kr_014",
+      "label": "City Hall"
+    },
+    {
+      "key": "gangnam",
+      "sid": "kr_027",
+      "label": "Gangnam"
+    },
+    {
+      "key": "wangsimni",
+      "sid": "kr_071",
+      "label": "Wangsimni"
+    },
+    {
+      "key": "sadang",
+      "sid": "kr_133",
+      "label": "Sadang"
+    },
+    {
+      "key": "jamsil",
+      "sid": "kr_178",
+      "label": "Jamsil (Songpa-gu Office)"
+    },
+    {
+      "key": "konkuk",
+      "sid": "kr_209",
+      "label": "Konkuk University"
+    },
+    {
+      "key": "hongik",
+      "sid": "kr_368",
+      "label": "Hongik University"
+    }
+  ],
+  "modes": [
+    "subway",
+    "rail"
+  ],
+  "capMinutes": 120,
+  "buckets": [
+    "<10",
+    "10-20",
+    "20-30",
+    "30-45",
+    "45-60",
+    "60-90",
+    "90-120",
+    "120+"
+  ],
+  "ramp": {
+    "<10": "#2b6cb0",
+    "10-20": "#3aa6a0",
+    "20-30": "#4caf50",
+    "30-45": "#c6d92e",
+    "45-60": "#f2a134",
+    "60-90": "#e2492d",
+    "90-120": "#a01818",
+    "120+": "#6b6b6b"
+  }
+}

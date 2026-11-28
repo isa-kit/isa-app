@@ -1,0 +1,13 @@
+{
+  "id": "musicmaker",
+  "name": "Music Bench",
+  "category": "Media",
+  "description": "Music Bench: sheet music you can loop and slow-scroll for piano practice, with sound, plus a 100-day plan of short daily lessons and drills. Pick a run of bars, repeat it, keep count, and press Hear it for how it should sound at full speed. Pick guitar or ukulele per piece to see where the notes sit on the frets, with chord boxes and a Chords page to strum. The sound is synthesized: piano-like or plucked strings.",
+  "icon": "music_note",
+  "color": "#6D4BC2",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_musicmaker"
+  },
+  "seedVersion": "2026-11-26.musicmaker.4"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "newday",
+  "name": "New Day",
+  "category": "Productivity",
+  "description": "Your agenda as one long list: add from the box at the bottom, drag tasks into colored groups, sort and filter, and move anything you missed to today. Plus a week view, a to-do list, notes and a habit tracker.",
+  "icon": "wb_twilight",
+  "store": {
+    "type": "sqflite",
+    "namespace": "isan_newday"
+  },
+  "seedVersion": "2026-11-27.newday.twin",
+  "seedContent": "initial-only",
+  "durableSettings": [
+    "newdayExamplesHidden",
+    "newdayList.sort",
+    "newdayList.show",
+    "newdayList.hiddenGroups",
+    "newdayList.tags",
+    "newdayList.traits",
+    "newdayList.expanded",
+    "neujourExamplesHidden",
+    "notesFilter",
+    "notesFilter.recent",
+    "notesFilter.order",
+    "notesFilter.arrange",
+    "notesFilter.migrated",
+    "notesFilter.chip",
+    "twinNotesLastGroup"
+  ]
+}

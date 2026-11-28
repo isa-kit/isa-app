@@ -1,0 +1,61 @@
+{
+  "tables": [
+    {
+      "name": "datasets",
+      "label": "Datasets",
+      "icon": "dataset",
+      "description": "Provenance rows: source, vintage, keyless/keyed, geography, citation — the data lineage spine.",
+      "source": {
+        "type": "importCsv"
+      }
+    },
+    {
+      "name": "standards",
+      "label": "Standards",
+      "icon": "verified",
+      "description": "FHWA / NCHRP-716 / TMIP / STOPS conformance frame for government-grade soundness."
+    },
+    {
+      "name": "runs",
+      "label": "Run ledger",
+      "icon": "history",
+      "description": "One row per model run — the audit anchor. Each run pins a model_version (git sha), a confidence tier, and links to its input datasets and soundness checks."
+    },
+    {
+      "name": "soundness_checks",
+      "label": "Soundness checks",
+      "icon": "fact_check",
+      "description": "The 11-check automated audit (soundness_report.py) mapped to FHWA / NCHRP-716 / TMIP / STOPS. One row per check with pass/warn/fail + detail."
+    },
+    {
+      "name": "confidence_tiers",
+      "label": "Confidence tiers",
+      "icon": "verified",
+      "description": "The honesty rule: focused (calibrated to real sourced targets) vs exploratory (NCHRP-716 transferred anchors) — what earns each and what downgrades it."
+    },
+    {
+      "name": "model_history",
+      "label": "Model history",
+      "icon": "commit",
+      "description": "Versioned-run audit trail: each model_version sha with its date, what changed, and by whom."
+    },
+    {
+      "name": "run_inputs",
+      "label": "Run inputs (join)",
+      "icon": "link",
+      "description": "JOIN run->dataset: which datasets fed which run. from=run_id, to=dataset_id, type 'uses'."
+    },
+    {
+      "name": "run_checks",
+      "label": "Run checks (join)",
+      "icon": "link",
+      "description": "JOIN run->check: which soundness checks audited which run. from=run_id, to=check_id, type 'audits'."
+    },
+    {
+      "name": "run_config",
+      "label": "Run settings",
+      "icon": "tune",
+      "description": "A single editable row (id cfg) holding the run trigger's parameters — city, year, overrides, the /model endpoint, and an inert schedule cadence."
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "app": {
+    "title": {
+      "en": "Music Bench",
+      "ko": "Music Bench",
+      "zh": "Music Bench",
+      "hi": "Music Bench",
+      "es": "Music Bench",
+      "fr": "Music Bench",
+      "ar": "Music Bench",
+      "pt": "Music Bench",
+      "ru": "Music Bench",
+      "de": "Music Bench",
+      "ja": "Music Bench",
+      "tr": "Music Bench",
+      "vi": "Music Bench",
+      "it": "Music Bench",
+      "fa": "Music Bench",
+      "pl": "Music Bench",
+      "uk": "Music Bench",
+      "nl": "Music Bench",
+      "sv": "Music Bench",
+      "cs": "Music Bench",
+      "el": "Music Bench"
+    },
+    "primaryColor": "#6D4BC2",
+    "theme": "minimal",
+    "translatable": true,
+    "languages": [
+      "en",
+      "ko",
+      "zh",
+      "hi",
+      "es",
+      "fr",
+      "ar",
+      "pt",
+      "ru",
+      "de",
+      "ja",
+      "tr",
+      "vi",
+      "it",
+      "fa",
+      "pl",
+      "uk",
+      "nl",
+      "sv",
+      "cs",
+      "el"
+    ],
+    "appDataTools": true,
+    "sync": {
+      "pocketbase": false,
+      "drive": false,
+      "room": false,
+      "mesh": false
+    },
+    "intro": {
+      "purpose": {
+        "en": "Music Bench: sheet music you can drill, with sound, and a 100-day plan. Each day is a short lesson and one drill of about ten minutes; go at your own pace or one day per date, with a streak that forgives a missed day. Pick a run of bars, loop it, and the score scrolls slowly under a fixed line while the notes play in time and the keys light up on a keyboard below. Press Hear it to hear the bars at full speed. The sound is a synthesized piano-like tone, not a recorded piano, and the app cannot hear you play. Open your own MusicXML file (.musicxml, .xml or .mxl) to add pieces. Nothing is sent anywhere.",
+        "ko": "Music Bench: sheet music you can drill, with sound, and a 100-day plan. Each day is a short lesson and one drill of about ten minutes; go at your own pace or one day per date, with a streak that forgives a missed day. Pick a run of bars, loop it, and the score scrolls slowly under a fixed line while the notes play in time and the keys light up on a keyboard below. Press Hear it to hear the bars at full speed. The sound is a synthesized piano-like tone, not a recorded piano, and the app cannot hear you play. Open your own MusicXML file (.musicxml, .xml or .mxl) to add pieces. Nothing is sent anywhere.",
+        "zh": "Music Bench: sheet music you can drill, with sound, and a 100-day plan. Each day is a short lesson and one drill of about ten minutes; go at your own pace or one day per date, with a streak that forgives a missed day. Pick a run of bars, loop it, and the score scrolls slowly under a fixed line while the notes play in time and the keys light up on a keyboard below. Press Hear it to hear the bars at full speed. The sound is a synthesized piano-like tone, not a recorded piano, and the app cannot hear you play. Open your own MusicXML file (.musicxml, .xml or .mxl) to add pieces. Nothing is sent anywhere.",
+        "hi": "Music Bench: sheet music you can drill, with sound, and a 100-day plan. Each day is a short lesson and one drill of about ten minutes; go at your own pace or one day per date, with a streak that forgives a missed day. Pick a run of bars, loop it, and the score scrolls slowly under a fixed line while the notes play in time and the keys light up on a keyboard below. Press Hear it to hear the bars at full speed. The sound is a synthesized piano-like tone, not a recorded piano, and the app cannot hear you play. Open your own MusicXML file (.musicxml, .xml or .mxl) to add pieces. Nothing is sent anywhere.",
+        "es": "Music Bench: sheet music you can drill, with sound, and a 100-day plan. Each day is a short lesson and one drill of about ten minutes; go at your own pace or one day per date, with a streak that forgives a missed day. Pick a run of bars, loop it, and the score scrolls slowly under a fixed line while the notes play in time and the keys light up on a keyboard below. Press Hear it to hear the bars at full speed. The sound is a synthesized piano-like tone, not a recorded piano, and the app cannot hear you play. Open your own MusicXML file (.musicxml, .xml or .mxl) to add pieces. Nothing is sent anywhere.",
+        "fr": "Music Bench: sheet music you can drill, with sound, and a 100-day plan. Each day is a short lesson and one drill of about ten minutes; go at your own pace or one day per date, with a streak that forgives a missed day. Pick a run of bars, loop it, and the score scrolls slowly under a fixed line while the notes play in time and the keys light up on a keyboard below. Press Hear it to hear the bars at full speed. The sound is a synthesized piano-like tone, not a recorded piano, and the app cannot hear you play. Open your own MusicXML file (.musicxml, .xml or .mxl) to add pieces. Nothing is sent anywhere.",
+        "ar": "Music Bench: sheet music you can drill, with sound, and a 100-day plan. Each day is a short lesson and one drill of about ten minutes; go at your own pace or one day per date, with a streak that forgives a missed day. Pick a run of bars, loop it, and the score scrolls slowly under a fixed line while the notes play in time and the keys light up on a keyboard below. Press Hear it to hear the bars at full speed. The sound is a synthesized piano-like tone, not a recorded piano, and the app cannot hear you play. Open your own MusicXML file (.musicxml, .xml or .mxl) to add pieces. Nothing is sent anywhere.",
+        "pt": "Music Bench: sheet music you can drill, with sound, and a 100-day plan. Each day is a short lesson and one drill of about ten minutes; go at your own pace or one day per date, with a streak that forgives a missed day. Pick a run of bars, loop it, and the score scrolls slowly under a fixed line while the notes play in time and the keys light up on a keyboard below. Press Hear it to hear the bars at full speed. The sound is a synthesized piano-like tone, not a recorded piano, and the app cannot hear you play. Open your own MusicXML file (.musicxml, .xml or .mxl) to add pieces. Nothing is sent anywhere.",
+        "ru": "Music Bench: sheet music you can drill, with sound, and a 100-day plan. Each day is a short lesson and one drill of about ten minutes; go at your own pace or one day per date, with a streak that forgives a missed day. Pick a run of bars, loop it, and the score scrolls slowly under a fixed line while the notes play in time and the keys light up on a keyboard below. Press Hear it to hear the bars at full speed. The sound is a synthesized piano-like tone, not a recorded piano, and the app cannot hear you play. Open your own MusicXML file (.musicxml, .xml or .mxl) to add pieces. Nothing is sent anywhere.",
+        "de": "Music Bench: sheet music you can drill, with sound, and a 100-day plan. Each day is a short lesson and one drill of about ten minutes; go at your own pace or one day per date, with a streak that forgives a missed day. Pick a run of bars, loop it, and the score scrolls slowly under a fixed line while the notes play in time and the keys light up on a keyboard below. Press Hear it to hear the bars at full speed. The sound is a synthesized piano-like tone, not a recorded piano, and the app cannot hear you play. Open your own MusicXML file (.musicxml, .xml or .mxl) to add pieces. Nothing is sent anywhere.",
+        "ja": "Music Bench: sheet music you can drill, with sound, and a 100-day plan. Each day is a short lesson and one drill of about ten minutes; go at your own pace or one day per date, with a streak that forgives a missed day. Pick a run of bars, loop it, and the score scrolls slowly under a fixed line while the notes play in time and the keys light up on a keyboard below. Press Hear it to hear the bars at full speed. The sound is a synthesized piano-like tone, not a recorded piano, and the app cannot hear you play. Open your own MusicXML file (.musicxml, .xml or .mxl) to add pieces. Nothing is sent anywhere.",
+        "tr": "Music Bench: sheet music you can drill, with sound, and a 100-day plan. Each day is a short lesson and one drill of about ten minutes; go at your own pace or one day per date, with a streak that forgives a missed day. Pick a run of bars, loop it, and the score scrolls slowly under a fixed line while the notes play in time and the keys light up on a keyboard below. Press Hear it to hear the bars at full speed. The sound is a synthesized piano-like tone, not a recorded piano, and the app cannot hear you play. Open your own MusicXML file (.musicxml, .xml or .mxl) to add pieces. Nothing is sent anywhere.",
+        "vi": "Music Bench: sheet music you can drill, with sound, and a 100-day plan. Each day is a short lesson and one drill of about ten minutes; go at your own pace or one day per date, with a streak that forgives a missed day. Pick a run of bars, loop it, and the score scrolls slowly under a fixed line while the notes play in time and the keys light up on a keyboard below. Press Hear it to hear the bars at full speed. The sound is a synthesized piano-like tone, not a recorded piano, and the app cannot hear you play. Open your own MusicXML file (.musicxml, .xml or .mxl) to add pieces. Nothing is sent anywhere.",
+        "it": "Music Bench: sheet music you can drill, with sound, and a 100-day plan. Each day is a short lesson and one drill of about ten minutes; go at your own pace or one day per date, with a streak that forgives a missed day. Pick a run of bars, loop it, and the score scrolls slowly under a fixed line while the notes play in time and the keys light up on a keyboard below. Press Hear it to hear the bars at full speed. The sound is a synthesized piano-like tone, not a recorded piano, and the app cannot hear you play. Open your own MusicXML file (.musicxml, .xml or .mxl) to add pieces. Nothing is sent anywhere.",
+        "fa": "Music Bench: sheet music you can drill, with sound, and a 100-day plan. Each day is a short lesson and one drill of about ten minutes; go at your own pace or one day per date, with a streak that forgives a missed day. Pick a run of bars, loop it, and the score scrolls slowly under a fixed line while the notes play in time and the keys light up on a keyboard below. Press Hear it to hear the bars at full speed. The sound is a synthesized piano-like tone, not a recorded piano, and the app cannot hear you play. Open your own MusicXML file (.musicxml, .xml or .mxl) to add pieces. Nothing is sent anywhere.",
+        "pl": "Music Bench: sheet music you can drill, with sound, and a 100-day plan. Each day is a short lesson and one drill of about ten minutes; go at your own pace or one day per date, with a streak that forgives a missed day. Pick a run of bars, loop it, and the score scrolls slowly under a fixed line while the notes play in time and the keys light up on a keyboard below. Press Hear it to hear the bars at full speed. The sound is a synthesized piano-like tone, not a recorded piano, and the app cannot hear you play. Open your own MusicXML file (.musicxml, .xml or .mxl) to add pieces. Nothing is sent anywhere.",
+        "uk": "Music Bench: sheet music you can drill, with sound, and a 100-day plan. Each day is a short lesson and one drill of about ten minutes; go at your own pace or one day per date, with a streak that forgives a missed day. Pick a run of bars, loop it, and the score scrolls slowly under a fixed line while the notes play in time and the keys light up on a keyboard below. Press Hear it to hear the bars at full speed. The sound is a synthesized piano-like tone, not a recorded piano, and the app cannot hear you play. Open your own MusicXML file (.musicxml, .xml or .mxl) to add pieces. Nothing is sent anywhere.",
+        "nl": "Music Bench: sheet music you can drill, with sound, and a 100-day plan. Each day is a short lesson and one drill of about ten minutes; go at your own pace or one day per date, with a streak that forgives a missed day. Pick a run of bars, loop it, and the score scrolls slowly under a fixed line while the notes play in time and the keys light up on a keyboard below. Press Hear it to hear the bars at full speed. The sound is a synthesized piano-like tone, not a recorded piano, and the app cannot hear you play. Open your own MusicXML file (.musicxml, .xml or .mxl) to add pieces. Nothing is sent anywhere.",
+        "sv": "Music Bench: sheet music you can drill, with sound, and a 100-day plan. Each day is a short lesson and one drill of about ten minutes; go at your own pace or one day per date, with a streak that forgives a missed day. Pick a run of bars, loop it, and the score scrolls slowly under a fixed line while the notes play in time and the keys light up on a keyboard below. Press Hear it to hear the bars at full speed. The sound is a synthesized piano-like tone, not a recorded piano, and the app cannot hear you play. Open your own MusicXML file (.musicxml, .xml or .mxl) to add pieces. Nothing is sent anywhere.",
+        "cs": "Music Bench: sheet music you can drill, with sound, and a 100-day plan. Each day is a short lesson and one drill of about ten minutes; go at your own pace or one day per date, with a streak that forgives a missed day. Pick a run of bars, loop it, and the score scrolls slowly under a fixed line while the notes play in time and the keys light up on a keyboard below. Press Hear it to hear the bars at full speed. The sound is a synthesized piano-like tone, not a recorded piano, and the app cannot hear you play. Open your own MusicXML file (.musicxml, .xml or .mxl) to add pieces. Nothing is sent anywhere.",
+        "el": "Music Bench: sheet music you can drill, with sound, and a 100-day plan. Each day is a short lesson and one drill of about ten minutes; go at your own pace or one day per date, with a streak that forgives a missed day. Pick a run of bars, loop it, and the score scrolls slowly under a fixed line while the notes play in time and the keys light up on a keyboard below. Press Hear it to hear the bars at full speed. The sound is a synthesized piano-like tone, not a recorded piano, and the app cannot hear you play. Open your own MusicXML file (.musicxml, .xml or .mxl) to add pieces. Nothing is sent anywhere."
+      }
+    }
+  },
+  "nav": [
+    {
+      "id": "home",
+      "label": {
+        "en": "Music Bench",
+        "ko": "Music Bench",
+        "zh": "Music Bench",
+        "hi": "Music Bench",
+        "es": "Music Bench",
+        "fr": "Music Bench",
+        "ar": "Music Bench",
+        "pt": "Music Bench",
+        "ru": "Music Bench",
+        "de": "Music Bench",
+        "ja": "Music Bench",
+        "tr": "Music Bench",
+        "vi": "Music Bench",
+        "it": "Music Bench",
+        "fa": "Music Bench",
+        "pl": "Music Bench",
+        "uk": "Music Bench",
+        "nl": "Music Bench",
+        "sv": "Music Bench",
+        "cs": "Music Bench",
+        "el": "Music Bench"
+      },
+      "icon": "music_note",
+      "screen": "home"
+    }
+  ],
+  "screens": {
+    "home": {
+      "title": {
+        "en": "Music Bench",
+        "ko": "Music Bench",
+        "zh": "Music Bench",
+        "hi": "Music Bench",
+        "es": "Music Bench",
+        "fr": "Music Bench",
+        "ar": "Music Bench",
+        "pt": "Music Bench",
+        "ru": "Music Bench",
+        "de": "Music Bench",
+        "ja": "Music Bench",
+        "tr": "Music Bench",
+        "vi": "Music Bench",
+        "it": "Music Bench",
+        "fa": "Music Bench",
+        "pl": "Music Bench",
+        "uk": "Music Bench",
+        "nl": "Music Bench",
+        "sv": "Music Bench",
+        "cs": "Music Bench",
+        "el": "Music Bench"
+      },
+      "body": {
+        "type": "sheetmusic",
+        "fillPhone": true,
+        "accent": "#6D4BC2",
+        "piecesTable": "sheetmusicpieces",
+        "sectionsTable": "sheetmusicsections",
+        "settingsTable": "sheetmusicsettings",
+        "planDaysTable": "sheetmusicplandays",
+        "planTable": "sheetmusicplan"
+      }
+    }
+  }
+}
